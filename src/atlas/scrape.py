@@ -8,7 +8,7 @@ from atlas.rawcheck import raw_filename
 API_URL = "https://revolutionidle.wiki.gg/api.php"
 USER_AGENT = (
     "revolution-idle-atlas/0.1 "
-    "(+https://github.com/tobydillman/revolution-idle-atlas)"
+    "(+https://github.com/lostcol0ny/revolution-idle-atlas)"
 )
 
 BASE_PARAMS: dict[str, Any] = {
