@@ -129,8 +129,8 @@ def write_raw(pages: dict[str, str], raw_dir: Path) -> int:
     for filename, content in by_filename.items():
         (raw_dir / filename).write_text(content, encoding="utf-8")
 
-    for existing in raw_dir.glob("*.wikitext"):
-        if existing.name not in by_filename:
-            existing.unlink()
+    for stale in raw_dir.glob("*.wikitext"):
+        if stale.name not in by_filename:
+            stale.unlink()
 
     return len(pages)
