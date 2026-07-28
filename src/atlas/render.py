@@ -12,6 +12,8 @@ def _clean(payload: dict[str, Any]) -> dict[str, Any]:
 def to_graph(ds: Dataset) -> dict[str, Any]:
     return {
         "version": GRAPH_SCHEMA_VERSION,
-        "nodes": [_clean(n.model_dump(mode="json")) for n in ds.nodes],
+        # by_alias on both models even though Node has no aliases today: the two
+        # sides of the output contract should not serialise by different rules.
+        "nodes": [_clean(n.model_dump(mode="json", by_alias=True)) for n in ds.nodes],
         "edges": [_clean(e.model_dump(mode="json", by_alias=True)) for e in ds.edges],
     }

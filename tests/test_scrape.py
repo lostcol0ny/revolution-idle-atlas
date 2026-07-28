@@ -1,7 +1,13 @@
 import httpx
 import pytest
 
-from atlas.scrape import USER_AGENT, ScrapeError, fetch_pages, write_raw
+from atlas.scrape import (
+    MAX_CONTINUATIONS,
+    USER_AGENT,
+    ScrapeError,
+    fetch_pages,
+    write_raw,
+)
 
 PAGE_ONE = {
     "query": {
@@ -67,6 +73,19 @@ def test_empty_result_raises():
 
     with pytest.raises(ScrapeError, match="no pages"):
         fetch_pages(_client(handler))
+
+
+def test_non_advancing_continuation_token_is_bounded():
+    # A token that never advances would otherwise loop until the job timeout.
+    calls = {"n": 0}
+
+    def handler(request):
+        calls["n"] += 1
+        return httpx.Response(200, json=PAGE_ONE)
+
+    with pytest.raises(ScrapeError, match="not advancing"):
+        fetch_pages(_client(handler))
+    assert calls["n"] == MAX_CONTINUATIONS
 
 
 def test_api_level_error_with_http_200_raises():

@@ -1,32 +1,30 @@
 import json
+from pathlib import Path
 
 from atlas.loader import load_dataset
-from atlas.render import to_graph
-from tests.test_coverage import _edge, _node  # noqa: F401
 from atlas.models import Dataset
-
-from pathlib import Path
+from atlas.render import to_graph
 
 FIXTURES = Path(__file__).parent / "fixtures"
 
 
-def test_graph_has_schema_version_and_counts():
-    ds = Dataset(nodes=[_node("a"), _node("b")], edges=[_edge("a", "b")])
+def test_graph_has_schema_version_and_counts(node, edge):
+    ds = Dataset(nodes=[node("a"), node("b")], edges=[edge("a", "b")])
     graph = to_graph(ds)
     assert graph["version"] == 1
     assert len(graph["nodes"]) == 2
     assert len(graph["edges"]) == 1
 
 
-def test_edge_uses_from_not_from_underscore():
-    ds = Dataset(nodes=[_node("a"), _node("b")], edges=[_edge("a", "b")])
-    edge = to_graph(ds)["edges"][0]
-    assert edge["from"] == "a"
-    assert "from_" not in edge
+def test_edge_uses_from_not_from_underscore(node, edge):
+    ds = Dataset(nodes=[node("a"), node("b")], edges=[edge("a", "b")])
+    serialised = to_graph(ds)["edges"][0]
+    assert serialised["from"] == "a"
+    assert "from_" not in serialised
 
 
-def test_none_fields_are_omitted():
-    ds = Dataset(nodes=[_node("a"), _node("b")], edges=[_edge("a", "b")])
+def test_none_fields_are_omitted(node, edge):
+    ds = Dataset(nodes=[node("a"), node("b")], edges=[edge("a", "b")])
     graph = to_graph(ds)
     assert "op" not in graph["edges"][0]
     assert "wiki" not in graph["nodes"][0]

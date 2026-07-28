@@ -33,6 +33,11 @@ HTTPX_DEFAULT_USER_AGENT = f"python-httpx/{httpx.__version__}"
 # truncated rather than as a genuine shrink, and refuses to write.
 REAP_FLOOR_RATIO = 0.8
 
+# The wiki is ~88 pages at gaplimit=50, so two requests cover it. 200 cannot fire
+# against any plausible wiki, but it does bound a continuation token that never
+# advances — which would otherwise spin until the CI job timeout.
+MAX_CONTINUATIONS = 200
+
 
 class ScrapeError(Exception):
     """Raised when the wiki API misbehaves or returns nothing usable."""
@@ -50,7 +55,7 @@ def fetch_pages(client: httpx.Client) -> dict[str, str]:
     if caller_ua == HTTPX_DEFAULT_USER_AGENT:
         client.headers["User-Agent"] = USER_AGENT
 
-    while True:
+    for _ in range(MAX_CONTINUATIONS):
         response = client.get(API_URL, params=params)
         if response.status_code != 200:
             raise ScrapeError(
@@ -81,6 +86,11 @@ def fetch_pages(client: httpx.Client) -> dict[str, str]:
         if not cont:
             break
         params = dict(BASE_PARAMS) | cont
+    else:
+        raise ScrapeError(
+            f"wiki API kept asking to continue after {MAX_CONTINUATIONS} requests "
+            f"— the continuation token is not advancing"
+        )
 
     if not pages:
         raise ScrapeError("wiki API returned no pages — refusing to continue")

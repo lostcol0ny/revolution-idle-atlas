@@ -63,7 +63,12 @@ def _build(root: Path, check_only: bool) -> int:
 
     graph_path = root / "public" / "graph.json"
     graph_path.parent.mkdir(parents=True, exist_ok=True)
-    graph_path.write_text(json.dumps(to_graph(dataset), indent=2) + "\n", encoding="utf-8")
+    # ensure_ascii=False: graph.json is committed and read as a diff by humans,
+    # and a name like "Café" is unreadable once escaped to "Café".
+    graph_path.write_text(
+        json.dumps(to_graph(dataset), indent=2, ensure_ascii=False) + "\n",
+        encoding="utf-8",
+    )
 
     coverage_path = root / "docs" / "coverage.md"
     coverage_path.parent.mkdir(parents=True, exist_ok=True)

@@ -31,6 +31,9 @@ def test_edge_from_is_aliased():
 def test_line_numbers_are_attached():
     ds = load_dataset(FIXTURES / "minimal.yaml")
     assert ds.nodes[0].line == 2
+    # Index 1 as well as 0: a loop that only ever attaches the first line number
+    # passes an index-0-only assertion.
+    assert ds.nodes[1].line == 8
     assert ds.edges[0].line == 16
 
 
@@ -57,9 +60,17 @@ def test_non_mapping_root_raises_schema_error_not_attribute_error(tmp_path):
     assert exc.value.problems[0] == "top level must be a mapping with 'nodes' and 'edges' keys"
 
 
-def test_python_object_tags_are_rejected(tmp_path):
+@pytest.mark.parametrize(
+    "payload",
+    [
+        "nodes: !!python/object/apply:os.system ['echo pwned']\n",
+        "nodes: !!python/object/new:os.system ['echo pwned']\n",
+        "nodes: !!python/name:os.system\n",
+    ],
+)
+def test_python_object_tags_are_rejected(tmp_path, payload):
     """The line-tracking loader must not widen SafeLoader's constructor set."""
     evil = tmp_path / "evil.yaml"
-    evil.write_text("nodes: !!python/object/apply:os.system ['echo pwned']\n")
+    evil.write_text(payload)
     with pytest.raises(yaml.YAMLError):
         load_dataset(evil)

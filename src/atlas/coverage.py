@@ -23,7 +23,12 @@ def load_inventory(path: Path) -> dict[str, list[str]] | None:
     """Read the optional IL2CPP entity inventory. None when the file is absent."""
     if not path.is_file():
         return None
-    return yaml.safe_load(path.read_text(encoding="utf-8")) or {}
+    # An empty or non-mapping file is treated as no inventory at all. `or {}`
+    # would report it as present, so the coverage report would claim "every
+    # inventoried entity has a node" against zero entities; a list-shaped root
+    # would reach .items() in analyse and surface as an AttributeError traceback.
+    result = yaml.safe_load(path.read_text(encoding="utf-8"))
+    return result if isinstance(result, dict) else None
 
 
 def _build_graph(ds: Dataset) -> nx.DiGraph:

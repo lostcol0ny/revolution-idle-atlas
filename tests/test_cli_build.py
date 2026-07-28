@@ -26,6 +26,7 @@ def test_check_mode_writes_nothing(tmp_path):
     root = _project(tmp_path)
     assert main(["build", "--root", str(root), "--check"]) == 0
     assert not (root / "public" / "graph.json").exists()
+    assert not (root / "docs" / "coverage.md").exists()
 
 
 def test_validation_error_returns_nonzero_and_writes_nothing(tmp_path):

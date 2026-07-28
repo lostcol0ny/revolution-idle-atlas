@@ -18,6 +18,8 @@ def raw_filename(wiki: str) -> str:
     # both forms must collapse to one filename here. This is the single source of
     # truth shared by the scraper (which writes) and check_against_raw (which
     # reads); normalising at a call site instead lets the two drift apart.
+    # Backslashes are not stripped: "..\\..\\win.ini" survives intact and would
+    # traverse on Windows. This project assumes POSIX (dev and CI are both Linux).
     page = wiki.split("#", 1)[0]
     return page.replace(" ", "_").replace("/", "__") + ".wikitext"
 
