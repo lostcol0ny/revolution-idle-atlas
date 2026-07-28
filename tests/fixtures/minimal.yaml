@@ -1,0 +1,21 @@
+nodes:
+  - id: refine-node-121
+    name: Refine Node 121
+    system: mineral
+    kind: tree-node
+    wiki: Minerals/Refine_Tree
+    confidence: documented
+  - id: singularity
+    name: Singularity
+    system: singularity
+    kind: currency
+    wiki: Singularity
+    confidence: provisional
+
+edges:
+  - from: refine-node-121
+    to: singularity
+    rel: unlocks
+    note: "Singularity is unlocked by Refine Node 121"
+    source: wiki:Singularity
+    confidence: provisional
