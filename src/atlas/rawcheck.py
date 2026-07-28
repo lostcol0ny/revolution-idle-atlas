@@ -17,7 +17,7 @@ def check_against_raw(ds: Dataset, raw_dir: Path) -> list[Problem]:
 
     problems: list[Problem] = []
     for node in ds.nodes:
-        if node.wiki is None:
+        if node.wiki is None or not node.wiki.strip():
             continue
 
         page_file = raw_dir / raw_filename(node.wiki)

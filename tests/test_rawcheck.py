@@ -1,5 +1,3 @@
-from pathlib import Path
-
 from atlas.models import Dataset, Node
 from atlas.rawcheck import check_against_raw, raw_filename
 
@@ -17,6 +15,10 @@ def test_raw_filename_flattens_subpages():
 
 def test_raw_filename_drops_section_anchor():
     assert raw_filename("Relics#Relic_3") == "Relics.wikitext"
+
+
+def test_raw_filename_handles_slash_and_anchor():
+    assert raw_filename("Minerals/Refine_Tree#Section") == "Minerals__Refine_Tree.wikitext"
 
 
 def test_missing_raw_dir_yields_no_warnings(tmp_path):
@@ -52,4 +54,10 @@ def test_missing_page_warns(tmp_path):
 def test_node_without_wiki_is_skipped(tmp_path):
     (tmp_path / "Relics.wikitext").write_text("stuff")
     ds = Dataset(nodes=[_node("stub", None, "unknown")], edges=[])
+    assert check_against_raw(ds, tmp_path) == []
+
+
+def test_node_with_empty_wiki_is_skipped(tmp_path):
+    (tmp_path / "Relics.wikitext").write_text("stuff")
+    ds = Dataset(nodes=[_node("stub", "", "unknown")], edges=[])
     assert check_against_raw(ds, tmp_path) == []
