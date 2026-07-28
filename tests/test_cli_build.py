@@ -45,10 +45,29 @@ def test_validation_error_returns_nonzero_and_writes_nothing(tmp_path):
     assert not (root / "public" / "graph.json").exists()
 
 
-def test_warnings_do_not_fail_the_build(tmp_path):
+def test_warnings_do_not_fail_the_build(tmp_path, capsys):
     root = _project(tmp_path)
     raw = root / "data" / "raw"
     raw.mkdir()
+    # Minerals__Refine_Tree.wikitext is deliberately absent so the missing-page
+    # warning actually fires; without it this test would assert nothing.
     (raw / "Singularity.wikitext").write_text("plain text, no marker")
-    (raw / "Minerals__Refine_Tree.wikitext").write_text("stuff")
+
     assert main(["build", "--root", str(root)]) == 0
+
+    captured = capsys.readouterr()
+    assert "warning" in captured.err
+    assert "refine-node-121" in captured.err
+    assert "1 warning(s)" in captured.out
+    assert (root / "public" / "graph.json").is_file()
+
+
+def test_malformed_yaml_returns_nonzero_and_names_the_file(tmp_path, capsys):
+    root = _project(tmp_path)
+    (root / "data" / "relationships.yaml").write_text("nodes: [unbalanced\n")
+
+    assert main(["build", "--root", str(root)]) == 1
+
+    captured = capsys.readouterr()
+    assert "relationships.yaml" in captured.err
+    assert not (root / "public" / "graph.json").exists()

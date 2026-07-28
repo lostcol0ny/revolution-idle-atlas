@@ -3,6 +3,8 @@ import json
 import sys
 from pathlib import Path
 
+import yaml
+
 from atlas.coverage import analyse, load_inventory, render_markdown
 from atlas.loader import SchemaError, load_dataset
 from atlas.problems import Problem
@@ -31,10 +33,18 @@ def _build(root: Path, check_only: bool) -> int:
         for problem in exc.problems:
             print(f"{display_path}  error  {problem}", file=sys.stderr)
         return 1
+    except yaml.YAMLError as exc:
+        # PyYAML names the source "<unicode string>" because the loader is built
+        # from text, so the real path has to come from us.
+        print(f"{dataset_path}: invalid YAML: {exc}", file=sys.stderr)
+        return 1
 
-    errors = validate_dataset(dataset)
-    warnings = check_against_raw(dataset, root / "data" / "raw")
-    _report(errors + warnings, display_path)
+    problems = validate_dataset(dataset) + check_against_raw(
+        dataset, root / "data" / "raw"
+    )
+    errors = [p for p in problems if p.severity == "error"]
+    warning_count = len(problems) - len(errors)
+    _report(problems, display_path)
 
     if errors:
         print(f"{len(errors)} error(s) — not writing output", file=sys.stderr)
@@ -44,7 +54,7 @@ def _build(root: Path, check_only: bool) -> int:
     report = analyse(dataset, inventory=inventory)
     print(
         f"ok: {report.node_count} nodes, {report.edge_count} edges, "
-        f"{len(report.orphans)} orphans, {len(warnings)} warning(s)"
+        f"{len(report.orphans)} orphans, {warning_count} warning(s)"
     )
 
     if check_only:
