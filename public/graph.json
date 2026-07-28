@@ -1,0 +1,2289 @@
+{
+  "version": 1,
+  "nodes": [
+    {
+      "confidence": "documented",
+      "id": "attack-power",
+      "kind": "stat",
+      "name": "Attack Power",
+      "system": "unity",
+      "wiki": "Unity#Attacks"
+    },
+    {
+      "confidence": "documented",
+      "id": "gold",
+      "kind": "currency",
+      "name": "Gold",
+      "system": "unity",
+      "wiki": "Unity#Attacks"
+    },
+    {
+      "confidence": "documented",
+      "id": "relic-3",
+      "kind": "relic",
+      "name": "Relic 3",
+      "system": "unity",
+      "wiki": "Relics#Relic_3"
+    },
+    {
+      "confidence": "provisional",
+      "id": "singularity",
+      "kind": "currency",
+      "name": "Singularity",
+      "system": "singularity",
+      "wiki": "Singularity"
+    },
+    {
+      "confidence": "provisional",
+      "id": "atoms-gain",
+      "kind": "stat",
+      "name": "Atoms Gain",
+      "system": "singularity",
+      "wiki": "Singularity"
+    },
+    {
+      "confidence": "provisional",
+      "id": "relic-69",
+      "kind": "relic",
+      "name": "Relic 69",
+      "system": "unity",
+      "wiki": "Relics"
+    },
+    {
+      "confidence": "unknown",
+      "id": "plague",
+      "kind": "currency",
+      "name": "Plague",
+      "system": "plague",
+      "wiki": "Plague"
+    },
+    {
+      "confidence": "documented",
+      "id": "refine-node-1",
+      "kind": "tree-node",
+      "name": "Refine Node 1",
+      "system": "mineral",
+      "wiki": "Minerals/Refine_Tree"
+    },
+    {
+      "confidence": "documented",
+      "id": "refine-node-2",
+      "kind": "tree-node",
+      "name": "Refine Node 2",
+      "system": "mineral",
+      "wiki": "Minerals/Refine_Tree"
+    },
+    {
+      "confidence": "documented",
+      "id": "refine-node-3",
+      "kind": "tree-node",
+      "name": "Refine Node 3",
+      "system": "mineral",
+      "wiki": "Minerals/Refine_Tree"
+    },
+    {
+      "confidence": "documented",
+      "id": "refine-node-4",
+      "kind": "tree-node",
+      "name": "Refine Node 4",
+      "system": "mineral",
+      "wiki": "Minerals/Refine_Tree"
+    },
+    {
+      "confidence": "documented",
+      "id": "refine-node-5",
+      "kind": "tree-node",
+      "name": "Refine Node 5",
+      "system": "mineral",
+      "wiki": "Minerals/Refine_Tree"
+    },
+    {
+      "confidence": "documented",
+      "id": "refine-node-6",
+      "kind": "tree-node",
+      "name": "Refine Node 6",
+      "system": "mineral",
+      "wiki": "Minerals/Refine_Tree"
+    },
+    {
+      "confidence": "documented",
+      "id": "refine-node-7",
+      "kind": "tree-node",
+      "name": "Refine Node 7",
+      "system": "mineral",
+      "wiki": "Minerals/Refine_Tree"
+    },
+    {
+      "confidence": "documented",
+      "id": "refine-node-8",
+      "kind": "tree-node",
+      "name": "Refine Node 8",
+      "system": "mineral",
+      "wiki": "Minerals/Refine_Tree"
+    },
+    {
+      "confidence": "documented",
+      "id": "refine-node-9",
+      "kind": "tree-node",
+      "name": "Refine Node 9",
+      "system": "mineral",
+      "wiki": "Minerals/Refine_Tree"
+    },
+    {
+      "confidence": "documented",
+      "id": "refine-node-10",
+      "kind": "tree-node",
+      "name": "Refine Node 10",
+      "system": "mineral",
+      "wiki": "Minerals/Refine_Tree"
+    },
+    {
+      "confidence": "documented",
+      "id": "refine-node-11",
+      "kind": "tree-node",
+      "name": "Refine Node 11",
+      "system": "mineral",
+      "wiki": "Minerals/Refine_Tree"
+    },
+    {
+      "confidence": "documented",
+      "id": "refine-node-12",
+      "kind": "tree-node",
+      "name": "Refine Node 12",
+      "system": "mineral",
+      "wiki": "Minerals/Refine_Tree"
+    },
+    {
+      "confidence": "documented",
+      "id": "refine-node-13",
+      "kind": "tree-node",
+      "name": "Refine Node 13",
+      "system": "mineral",
+      "wiki": "Minerals/Refine_Tree"
+    },
+    {
+      "confidence": "documented",
+      "id": "refine-node-14",
+      "kind": "tree-node",
+      "name": "Refine Node 14",
+      "system": "mineral",
+      "wiki": "Minerals/Refine_Tree"
+    },
+    {
+      "confidence": "documented",
+      "id": "refine-node-15",
+      "kind": "tree-node",
+      "name": "Refine Node 15",
+      "system": "mineral",
+      "wiki": "Minerals/Refine_Tree"
+    },
+    {
+      "confidence": "documented",
+      "id": "refine-node-16",
+      "kind": "tree-node",
+      "name": "Refine Node 16",
+      "system": "mineral",
+      "wiki": "Minerals/Refine_Tree"
+    },
+    {
+      "confidence": "documented",
+      "id": "refine-node-17",
+      "kind": "tree-node",
+      "name": "Refine Node 17",
+      "system": "mineral",
+      "wiki": "Minerals/Refine_Tree"
+    },
+    {
+      "confidence": "documented",
+      "id": "refine-node-18",
+      "kind": "tree-node",
+      "name": "Refine Node 18",
+      "system": "mineral",
+      "wiki": "Minerals/Refine_Tree"
+    },
+    {
+      "confidence": "documented",
+      "id": "refine-node-19",
+      "kind": "tree-node",
+      "name": "Refine Node 19",
+      "system": "mineral",
+      "wiki": "Minerals/Refine_Tree"
+    },
+    {
+      "confidence": "documented",
+      "id": "refine-node-20",
+      "kind": "tree-node",
+      "name": "Refine Node 20",
+      "system": "mineral",
+      "wiki": "Minerals/Refine_Tree"
+    },
+    {
+      "confidence": "documented",
+      "id": "refine-node-21",
+      "kind": "tree-node",
+      "name": "Refine Node 21",
+      "system": "mineral",
+      "wiki": "Minerals/Refine_Tree"
+    },
+    {
+      "confidence": "documented",
+      "id": "refine-node-22",
+      "kind": "tree-node",
+      "name": "Refine Node 22",
+      "system": "mineral",
+      "wiki": "Minerals/Refine_Tree"
+    },
+    {
+      "confidence": "documented",
+      "id": "refine-node-23",
+      "kind": "tree-node",
+      "name": "Refine Node 23",
+      "system": "mineral",
+      "wiki": "Minerals/Refine_Tree"
+    },
+    {
+      "confidence": "documented",
+      "id": "refine-node-24",
+      "kind": "tree-node",
+      "name": "Refine Node 24",
+      "system": "mineral",
+      "wiki": "Minerals/Refine_Tree"
+    },
+    {
+      "confidence": "documented",
+      "id": "refine-node-25",
+      "kind": "tree-node",
+      "name": "Refine Node 25",
+      "system": "mineral",
+      "wiki": "Minerals/Refine_Tree"
+    },
+    {
+      "confidence": "documented",
+      "id": "refine-node-26",
+      "kind": "tree-node",
+      "name": "Refine Node 26",
+      "system": "mineral",
+      "wiki": "Minerals/Refine_Tree"
+    },
+    {
+      "confidence": "documented",
+      "id": "refine-node-27",
+      "kind": "tree-node",
+      "name": "Refine Node 27",
+      "system": "mineral",
+      "wiki": "Minerals/Refine_Tree"
+    },
+    {
+      "confidence": "documented",
+      "id": "refine-node-28",
+      "kind": "tree-node",
+      "name": "Refine Node 28",
+      "system": "mineral",
+      "wiki": "Minerals/Refine_Tree"
+    },
+    {
+      "confidence": "documented",
+      "id": "refine-node-29",
+      "kind": "tree-node",
+      "name": "Refine Node 29",
+      "system": "mineral",
+      "wiki": "Minerals/Refine_Tree"
+    },
+    {
+      "confidence": "documented",
+      "id": "refine-node-30",
+      "kind": "tree-node",
+      "name": "Refine Node 30",
+      "system": "mineral",
+      "wiki": "Minerals/Refine_Tree"
+    },
+    {
+      "confidence": "documented",
+      "id": "refine-node-31",
+      "kind": "tree-node",
+      "name": "Refine Node 31",
+      "system": "mineral",
+      "wiki": "Minerals/Refine_Tree"
+    },
+    {
+      "confidence": "documented",
+      "id": "refine-node-32",
+      "kind": "tree-node",
+      "name": "Refine Node 32",
+      "system": "mineral",
+      "wiki": "Minerals/Refine_Tree"
+    },
+    {
+      "confidence": "documented",
+      "id": "refine-node-33",
+      "kind": "tree-node",
+      "name": "Refine Node 33",
+      "system": "mineral",
+      "wiki": "Minerals/Refine_Tree"
+    },
+    {
+      "confidence": "documented",
+      "id": "refine-node-34",
+      "kind": "tree-node",
+      "name": "Refine Node 34",
+      "system": "mineral",
+      "wiki": "Minerals/Refine_Tree"
+    },
+    {
+      "confidence": "documented",
+      "id": "refine-node-35",
+      "kind": "tree-node",
+      "name": "Refine Node 35",
+      "system": "mineral",
+      "wiki": "Minerals/Refine_Tree"
+    },
+    {
+      "confidence": "documented",
+      "id": "refine-node-36",
+      "kind": "tree-node",
+      "name": "Refine Node 36",
+      "system": "mineral",
+      "wiki": "Minerals/Refine_Tree"
+    },
+    {
+      "confidence": "documented",
+      "id": "refine-node-37",
+      "kind": "tree-node",
+      "name": "Refine Node 37",
+      "system": "mineral",
+      "wiki": "Minerals/Refine_Tree"
+    },
+    {
+      "confidence": "documented",
+      "id": "refine-node-38",
+      "kind": "tree-node",
+      "name": "Refine Node 38",
+      "system": "mineral",
+      "wiki": "Minerals/Refine_Tree"
+    },
+    {
+      "confidence": "documented",
+      "id": "refine-node-39",
+      "kind": "tree-node",
+      "name": "Refine Node 39",
+      "system": "mineral",
+      "wiki": "Minerals/Refine_Tree"
+    },
+    {
+      "confidence": "documented",
+      "id": "refine-node-40",
+      "kind": "tree-node",
+      "name": "Refine Node 40",
+      "system": "mineral",
+      "wiki": "Minerals/Refine_Tree"
+    },
+    {
+      "confidence": "documented",
+      "id": "refine-node-41",
+      "kind": "tree-node",
+      "name": "Refine Node 41",
+      "system": "mineral",
+      "wiki": "Minerals/Refine_Tree"
+    },
+    {
+      "confidence": "documented",
+      "id": "refine-node-42",
+      "kind": "tree-node",
+      "name": "Refine Node 42",
+      "system": "mineral",
+      "wiki": "Minerals/Refine_Tree"
+    },
+    {
+      "confidence": "documented",
+      "id": "refine-node-43",
+      "kind": "tree-node",
+      "name": "Refine Node 43",
+      "system": "mineral",
+      "wiki": "Minerals/Refine_Tree"
+    },
+    {
+      "confidence": "documented",
+      "id": "refine-node-44",
+      "kind": "tree-node",
+      "name": "Refine Node 44",
+      "system": "mineral",
+      "wiki": "Minerals/Refine_Tree"
+    },
+    {
+      "confidence": "documented",
+      "id": "refine-node-45",
+      "kind": "tree-node",
+      "name": "Refine Node 45",
+      "system": "mineral",
+      "wiki": "Minerals/Refine_Tree"
+    },
+    {
+      "confidence": "documented",
+      "id": "refine-node-46",
+      "kind": "tree-node",
+      "name": "Refine Node 46",
+      "system": "mineral",
+      "wiki": "Minerals/Refine_Tree"
+    },
+    {
+      "confidence": "documented",
+      "id": "refine-node-47",
+      "kind": "tree-node",
+      "name": "Refine Node 47",
+      "system": "mineral",
+      "wiki": "Minerals/Refine_Tree"
+    },
+    {
+      "confidence": "documented",
+      "id": "refine-node-48",
+      "kind": "tree-node",
+      "name": "Refine Node 48",
+      "system": "mineral",
+      "wiki": "Minerals/Refine_Tree"
+    },
+    {
+      "confidence": "documented",
+      "id": "refine-node-49",
+      "kind": "tree-node",
+      "name": "Refine Node 49",
+      "system": "mineral",
+      "wiki": "Minerals/Refine_Tree"
+    },
+    {
+      "confidence": "documented",
+      "id": "refine-node-50",
+      "kind": "tree-node",
+      "name": "Refine Node 50",
+      "system": "mineral",
+      "wiki": "Minerals/Refine_Tree"
+    },
+    {
+      "confidence": "documented",
+      "id": "refine-node-51",
+      "kind": "tree-node",
+      "name": "Refine Node 51",
+      "system": "mineral",
+      "wiki": "Minerals/Refine_Tree"
+    },
+    {
+      "confidence": "documented",
+      "id": "refine-node-52",
+      "kind": "tree-node",
+      "name": "Refine Node 52",
+      "system": "mineral",
+      "wiki": "Minerals/Refine_Tree"
+    },
+    {
+      "confidence": "documented",
+      "id": "refine-node-53",
+      "kind": "tree-node",
+      "name": "Refine Node 53",
+      "system": "mineral",
+      "wiki": "Minerals/Refine_Tree"
+    },
+    {
+      "confidence": "documented",
+      "id": "refine-node-54",
+      "kind": "tree-node",
+      "name": "Refine Node 54",
+      "system": "mineral",
+      "wiki": "Minerals/Refine_Tree"
+    },
+    {
+      "confidence": "documented",
+      "id": "refine-node-55",
+      "kind": "tree-node",
+      "name": "Refine Node 55",
+      "system": "mineral",
+      "wiki": "Minerals/Refine_Tree"
+    },
+    {
+      "confidence": "documented",
+      "id": "refine-node-56",
+      "kind": "tree-node",
+      "name": "Refine Node 56",
+      "system": "mineral",
+      "wiki": "Minerals/Refine_Tree"
+    },
+    {
+      "confidence": "documented",
+      "id": "refine-node-57",
+      "kind": "tree-node",
+      "name": "Refine Node 57",
+      "system": "mineral",
+      "wiki": "Minerals/Refine_Tree"
+    },
+    {
+      "confidence": "documented",
+      "id": "refine-node-58",
+      "kind": "tree-node",
+      "name": "Refine Node 58",
+      "system": "mineral",
+      "wiki": "Minerals/Refine_Tree"
+    },
+    {
+      "confidence": "documented",
+      "id": "refine-node-59",
+      "kind": "tree-node",
+      "name": "Refine Node 59",
+      "system": "mineral",
+      "wiki": "Minerals/Refine_Tree"
+    },
+    {
+      "confidence": "documented",
+      "id": "refine-node-60",
+      "kind": "tree-node",
+      "name": "Refine Node 60",
+      "system": "mineral",
+      "wiki": "Minerals/Refine_Tree"
+    },
+    {
+      "confidence": "documented",
+      "id": "refine-node-61",
+      "kind": "tree-node",
+      "name": "Refine Node 61",
+      "system": "mineral",
+      "wiki": "Minerals/Refine_Tree"
+    },
+    {
+      "confidence": "documented",
+      "id": "refine-node-62",
+      "kind": "tree-node",
+      "name": "Refine Node 62",
+      "system": "mineral",
+      "wiki": "Minerals/Refine_Tree"
+    },
+    {
+      "confidence": "documented",
+      "id": "refine-node-63",
+      "kind": "tree-node",
+      "name": "Refine Node 63",
+      "system": "mineral",
+      "wiki": "Minerals/Refine_Tree"
+    },
+    {
+      "confidence": "documented",
+      "id": "refine-node-64",
+      "kind": "tree-node",
+      "name": "Refine Node 64",
+      "system": "mineral",
+      "wiki": "Minerals/Refine_Tree"
+    },
+    {
+      "confidence": "documented",
+      "id": "refine-node-65",
+      "kind": "tree-node",
+      "name": "Refine Node 65",
+      "system": "mineral",
+      "wiki": "Minerals/Refine_Tree"
+    },
+    {
+      "confidence": "documented",
+      "id": "refine-node-66",
+      "kind": "tree-node",
+      "name": "Refine Node 66",
+      "system": "mineral",
+      "wiki": "Minerals/Refine_Tree"
+    },
+    {
+      "confidence": "documented",
+      "id": "refine-node-67",
+      "kind": "tree-node",
+      "name": "Refine Node 67",
+      "system": "mineral",
+      "wiki": "Minerals/Refine_Tree"
+    },
+    {
+      "confidence": "documented",
+      "id": "refine-node-68",
+      "kind": "tree-node",
+      "name": "Refine Node 68",
+      "system": "mineral",
+      "wiki": "Minerals/Refine_Tree"
+    },
+    {
+      "confidence": "documented",
+      "id": "refine-node-69",
+      "kind": "tree-node",
+      "name": "Refine Node 69",
+      "system": "mineral",
+      "wiki": "Minerals/Refine_Tree"
+    },
+    {
+      "confidence": "documented",
+      "id": "refine-node-70",
+      "kind": "tree-node",
+      "name": "Refine Node 70",
+      "system": "mineral",
+      "wiki": "Minerals/Refine_Tree"
+    },
+    {
+      "confidence": "documented",
+      "id": "refine-node-71",
+      "kind": "tree-node",
+      "name": "Refine Node 71",
+      "system": "mineral",
+      "wiki": "Minerals/Refine_Tree"
+    },
+    {
+      "confidence": "documented",
+      "id": "refine-node-72",
+      "kind": "tree-node",
+      "name": "Refine Node 72",
+      "system": "mineral",
+      "wiki": "Minerals/Refine_Tree"
+    },
+    {
+      "confidence": "documented",
+      "id": "refine-node-73",
+      "kind": "tree-node",
+      "name": "Refine Node 73",
+      "system": "mineral",
+      "wiki": "Minerals/Refine_Tree"
+    },
+    {
+      "confidence": "documented",
+      "id": "refine-node-74",
+      "kind": "tree-node",
+      "name": "Refine Node 74",
+      "system": "mineral",
+      "wiki": "Minerals/Refine_Tree"
+    },
+    {
+      "confidence": "documented",
+      "id": "refine-node-75",
+      "kind": "tree-node",
+      "name": "Refine Node 75",
+      "system": "mineral",
+      "wiki": "Minerals/Refine_Tree"
+    },
+    {
+      "confidence": "documented",
+      "id": "refine-node-76",
+      "kind": "tree-node",
+      "name": "Refine Node 76",
+      "system": "mineral",
+      "wiki": "Minerals/Refine_Tree"
+    },
+    {
+      "confidence": "documented",
+      "id": "refine-node-77",
+      "kind": "tree-node",
+      "name": "Refine Node 77",
+      "system": "mineral",
+      "wiki": "Minerals/Refine_Tree"
+    },
+    {
+      "confidence": "documented",
+      "id": "refine-node-78",
+      "kind": "tree-node",
+      "name": "Refine Node 78",
+      "system": "mineral",
+      "wiki": "Minerals/Refine_Tree"
+    },
+    {
+      "confidence": "documented",
+      "id": "refine-node-79",
+      "kind": "tree-node",
+      "name": "Refine Node 79",
+      "system": "mineral",
+      "wiki": "Minerals/Refine_Tree"
+    },
+    {
+      "confidence": "documented",
+      "id": "refine-node-80",
+      "kind": "tree-node",
+      "name": "Refine Node 80",
+      "system": "mineral",
+      "wiki": "Minerals/Refine_Tree"
+    },
+    {
+      "confidence": "documented",
+      "id": "refine-node-81",
+      "kind": "tree-node",
+      "name": "Refine Node 81",
+      "system": "mineral",
+      "wiki": "Minerals/Refine_Tree"
+    },
+    {
+      "confidence": "documented",
+      "id": "refine-node-82",
+      "kind": "tree-node",
+      "name": "Refine Node 82",
+      "system": "mineral",
+      "wiki": "Minerals/Refine_Tree"
+    },
+    {
+      "confidence": "documented",
+      "id": "refine-node-83",
+      "kind": "tree-node",
+      "name": "Refine Node 83",
+      "system": "mineral",
+      "wiki": "Minerals/Refine_Tree"
+    },
+    {
+      "confidence": "documented",
+      "id": "refine-node-84",
+      "kind": "tree-node",
+      "name": "Refine Node 84",
+      "system": "mineral",
+      "wiki": "Minerals/Refine_Tree"
+    },
+    {
+      "confidence": "documented",
+      "id": "refine-node-85",
+      "kind": "tree-node",
+      "name": "Refine Node 85",
+      "system": "mineral",
+      "wiki": "Minerals/Refine_Tree"
+    },
+    {
+      "confidence": "documented",
+      "id": "refine-node-86",
+      "kind": "tree-node",
+      "name": "Refine Node 86",
+      "system": "mineral",
+      "wiki": "Minerals/Refine_Tree"
+    },
+    {
+      "confidence": "documented",
+      "id": "refine-node-87",
+      "kind": "tree-node",
+      "name": "Refine Node 87",
+      "system": "mineral",
+      "wiki": "Minerals/Refine_Tree"
+    },
+    {
+      "confidence": "documented",
+      "id": "refine-node-88",
+      "kind": "tree-node",
+      "name": "Refine Node 88",
+      "system": "mineral",
+      "wiki": "Minerals/Refine_Tree"
+    },
+    {
+      "confidence": "documented",
+      "id": "refine-node-89",
+      "kind": "tree-node",
+      "name": "Refine Node 89",
+      "system": "mineral",
+      "wiki": "Minerals/Refine_Tree"
+    },
+    {
+      "confidence": "documented",
+      "id": "refine-node-90",
+      "kind": "tree-node",
+      "name": "Refine Node 90",
+      "system": "mineral",
+      "wiki": "Minerals/Refine_Tree"
+    },
+    {
+      "confidence": "documented",
+      "id": "refine-node-91",
+      "kind": "tree-node",
+      "name": "Refine Node 91",
+      "system": "mineral",
+      "wiki": "Minerals/Refine_Tree"
+    },
+    {
+      "confidence": "documented",
+      "id": "refine-node-92",
+      "kind": "tree-node",
+      "name": "Refine Node 92",
+      "system": "mineral",
+      "wiki": "Minerals/Refine_Tree"
+    },
+    {
+      "confidence": "documented",
+      "id": "refine-node-93",
+      "kind": "tree-node",
+      "name": "Refine Node 93",
+      "system": "mineral",
+      "wiki": "Minerals/Refine_Tree"
+    },
+    {
+      "confidence": "documented",
+      "id": "refine-node-94",
+      "kind": "tree-node",
+      "name": "Refine Node 94",
+      "system": "mineral",
+      "wiki": "Minerals/Refine_Tree"
+    },
+    {
+      "confidence": "documented",
+      "id": "refine-node-95",
+      "kind": "tree-node",
+      "name": "Refine Node 95",
+      "system": "mineral",
+      "wiki": "Minerals/Refine_Tree"
+    },
+    {
+      "confidence": "documented",
+      "id": "refine-node-96",
+      "kind": "tree-node",
+      "name": "Refine Node 96",
+      "system": "mineral",
+      "wiki": "Minerals/Refine_Tree"
+    },
+    {
+      "confidence": "documented",
+      "id": "refine-node-97",
+      "kind": "tree-node",
+      "name": "Refine Node 97",
+      "system": "mineral",
+      "wiki": "Minerals/Refine_Tree"
+    },
+    {
+      "confidence": "documented",
+      "id": "refine-node-98",
+      "kind": "tree-node",
+      "name": "Refine Node 98",
+      "system": "mineral",
+      "wiki": "Minerals/Refine_Tree"
+    },
+    {
+      "confidence": "documented",
+      "id": "refine-node-99",
+      "kind": "tree-node",
+      "name": "Refine Node 99",
+      "system": "mineral",
+      "wiki": "Minerals/Refine_Tree"
+    },
+    {
+      "confidence": "documented",
+      "id": "refine-node-100",
+      "kind": "tree-node",
+      "name": "Refine Node 100",
+      "system": "mineral",
+      "wiki": "Minerals/Refine_Tree"
+    },
+    {
+      "confidence": "documented",
+      "id": "refine-node-101",
+      "kind": "tree-node",
+      "name": "Refine Node 101",
+      "system": "mineral",
+      "wiki": "Minerals/Refine_Tree"
+    },
+    {
+      "confidence": "documented",
+      "id": "refine-node-102",
+      "kind": "tree-node",
+      "name": "Refine Node 102",
+      "system": "mineral",
+      "wiki": "Minerals/Refine_Tree"
+    },
+    {
+      "confidence": "documented",
+      "id": "refine-node-103",
+      "kind": "tree-node",
+      "name": "Refine Node 103",
+      "system": "mineral",
+      "wiki": "Minerals/Refine_Tree"
+    },
+    {
+      "confidence": "documented",
+      "id": "refine-node-104",
+      "kind": "tree-node",
+      "name": "Refine Node 104",
+      "system": "mineral",
+      "wiki": "Minerals/Refine_Tree"
+    },
+    {
+      "confidence": "documented",
+      "id": "refine-node-105",
+      "kind": "tree-node",
+      "name": "Refine Node 105",
+      "system": "mineral",
+      "wiki": "Minerals/Refine_Tree"
+    },
+    {
+      "confidence": "documented",
+      "id": "refine-node-106",
+      "kind": "tree-node",
+      "name": "Refine Node 106",
+      "system": "mineral",
+      "wiki": "Minerals/Refine_Tree"
+    },
+    {
+      "confidence": "documented",
+      "id": "refine-node-107",
+      "kind": "tree-node",
+      "name": "Refine Node 107",
+      "system": "mineral",
+      "wiki": "Minerals/Refine_Tree"
+    },
+    {
+      "confidence": "documented",
+      "id": "refine-node-108",
+      "kind": "tree-node",
+      "name": "Refine Node 108",
+      "system": "mineral",
+      "wiki": "Minerals/Refine_Tree"
+    },
+    {
+      "confidence": "documented",
+      "id": "refine-node-109",
+      "kind": "tree-node",
+      "name": "Refine Node 109",
+      "system": "mineral",
+      "wiki": "Minerals/Refine_Tree"
+    },
+    {
+      "confidence": "documented",
+      "id": "refine-node-110",
+      "kind": "tree-node",
+      "name": "Refine Node 110",
+      "system": "mineral",
+      "wiki": "Minerals/Refine_Tree"
+    },
+    {
+      "confidence": "documented",
+      "id": "refine-node-111",
+      "kind": "tree-node",
+      "name": "Refine Node 111",
+      "system": "mineral",
+      "wiki": "Minerals/Refine_Tree"
+    },
+    {
+      "confidence": "documented",
+      "id": "refine-node-112",
+      "kind": "tree-node",
+      "name": "Refine Node 112",
+      "system": "mineral",
+      "wiki": "Minerals/Refine_Tree"
+    },
+    {
+      "confidence": "documented",
+      "id": "refine-node-113",
+      "kind": "tree-node",
+      "name": "Refine Node 113",
+      "system": "mineral",
+      "wiki": "Minerals/Refine_Tree"
+    },
+    {
+      "confidence": "documented",
+      "id": "refine-node-114",
+      "kind": "tree-node",
+      "name": "Refine Node 114",
+      "system": "mineral",
+      "wiki": "Minerals/Refine_Tree"
+    },
+    {
+      "confidence": "documented",
+      "id": "refine-node-115",
+      "kind": "tree-node",
+      "name": "Refine Node 115",
+      "system": "mineral",
+      "wiki": "Minerals/Refine_Tree"
+    },
+    {
+      "confidence": "documented",
+      "id": "refine-node-116",
+      "kind": "tree-node",
+      "name": "Refine Node 116",
+      "system": "mineral",
+      "wiki": "Minerals/Refine_Tree"
+    },
+    {
+      "confidence": "documented",
+      "id": "refine-node-117",
+      "kind": "tree-node",
+      "name": "Refine Node 117",
+      "system": "mineral",
+      "wiki": "Minerals/Refine_Tree"
+    },
+    {
+      "confidence": "documented",
+      "id": "refine-node-118",
+      "kind": "tree-node",
+      "name": "Refine Node 118",
+      "system": "mineral",
+      "wiki": "Minerals/Refine_Tree"
+    },
+    {
+      "confidence": "documented",
+      "id": "refine-node-119",
+      "kind": "tree-node",
+      "name": "Refine Node 119",
+      "system": "mineral",
+      "wiki": "Minerals/Refine_Tree"
+    },
+    {
+      "confidence": "documented",
+      "id": "refine-node-120",
+      "kind": "tree-node",
+      "name": "Refine Node 120",
+      "system": "mineral",
+      "wiki": "Minerals/Refine_Tree"
+    },
+    {
+      "confidence": "documented",
+      "id": "refine-node-121",
+      "kind": "tree-node",
+      "name": "Refine Node 121",
+      "system": "mineral",
+      "wiki": "Minerals/Refine_Tree"
+    },
+    {
+      "confidence": "documented",
+      "id": "refine-node-122",
+      "kind": "tree-node",
+      "name": "Refine Node 122",
+      "system": "mineral",
+      "wiki": "Minerals/Refine_Tree"
+    },
+    {
+      "confidence": "documented",
+      "id": "refine-node-123",
+      "kind": "tree-node",
+      "name": "Refine Node 123",
+      "system": "mineral",
+      "wiki": "Minerals/Refine_Tree"
+    },
+    {
+      "confidence": "documented",
+      "id": "refine-node-124",
+      "kind": "tree-node",
+      "name": "Refine Node 124",
+      "system": "mineral",
+      "wiki": "Minerals/Refine_Tree"
+    },
+    {
+      "confidence": "documented",
+      "id": "refine-node-125",
+      "kind": "tree-node",
+      "name": "Refine Node 125",
+      "system": "mineral",
+      "wiki": "Minerals/Refine_Tree"
+    },
+    {
+      "confidence": "documented",
+      "id": "refine-node-126",
+      "kind": "tree-node",
+      "name": "Refine Node 126",
+      "system": "mineral",
+      "wiki": "Minerals/Refine_Tree"
+    },
+    {
+      "confidence": "documented",
+      "id": "refine-node-127",
+      "kind": "tree-node",
+      "name": "Refine Node 127",
+      "system": "mineral",
+      "wiki": "Minerals/Refine_Tree"
+    },
+    {
+      "confidence": "documented",
+      "id": "refine-node-128",
+      "kind": "tree-node",
+      "name": "Refine Node 128",
+      "system": "mineral",
+      "wiki": "Minerals/Refine_Tree"
+    },
+    {
+      "confidence": "documented",
+      "id": "refine-node-129",
+      "kind": "tree-node",
+      "name": "Refine Node 129",
+      "system": "mineral",
+      "wiki": "Minerals/Refine_Tree"
+    },
+    {
+      "confidence": "documented",
+      "id": "refine-node-130",
+      "kind": "tree-node",
+      "name": "Refine Node 130",
+      "system": "mineral",
+      "wiki": "Minerals/Refine_Tree"
+    },
+    {
+      "confidence": "documented",
+      "id": "refine-node-131",
+      "kind": "tree-node",
+      "name": "Refine Node 131",
+      "system": "mineral",
+      "wiki": "Minerals/Refine_Tree"
+    },
+    {
+      "confidence": "documented",
+      "id": "refine-node-132",
+      "kind": "tree-node",
+      "name": "Refine Node 132",
+      "system": "mineral",
+      "wiki": "Minerals/Refine_Tree"
+    },
+    {
+      "confidence": "documented",
+      "id": "refine-node-133",
+      "kind": "tree-node",
+      "name": "Refine Node 133",
+      "system": "mineral",
+      "wiki": "Minerals/Refine_Tree"
+    },
+    {
+      "confidence": "documented",
+      "id": "refine-node-134",
+      "kind": "tree-node",
+      "name": "Refine Node 134",
+      "system": "mineral",
+      "wiki": "Minerals/Refine_Tree"
+    },
+    {
+      "confidence": "documented",
+      "id": "refine-node-135",
+      "kind": "tree-node",
+      "name": "Refine Node 135",
+      "system": "mineral",
+      "wiki": "Minerals/Refine_Tree"
+    },
+    {
+      "confidence": "documented",
+      "id": "refine-node-136",
+      "kind": "tree-node",
+      "name": "Refine Node 136",
+      "system": "mineral",
+      "wiki": "Minerals/Refine_Tree"
+    }
+  ],
+  "edges": [
+    {
+      "confidence": "documented",
+      "from": "relic-3",
+      "rel": "boosts",
+      "source": "wiki:Relics",
+      "to": "attack-power"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "gold",
+      "note": "Relic upgrade level scales with lifetime gold",
+      "rel": "boosts",
+      "source": "wiki:Relics",
+      "to": "relic-3"
+    },
+    {
+      "confidence": "provisional",
+      "from": "refine-node-121",
+      "note": "Singularity is unlocked by Refine Node 121",
+      "rel": "unlocks",
+      "source": "wiki:Singularity",
+      "to": "singularity"
+    },
+    {
+      "confidence": "provisional",
+      "from": "relic-69",
+      "note": "Modifies the 1,000,000 atom threshold buff",
+      "op": "exp",
+      "rel": "boosts",
+      "source": "wiki:Singularity",
+      "to": "atoms-gain"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-1",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-2"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-1",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-3"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-2",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-4"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-3",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-4"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-1",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-5"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-1",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-6"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-1",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-7"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-1",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-8"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-1",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-9"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-5",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-10"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-5",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-11"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-10",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-11"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-11",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-12"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-6",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-13"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-7",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-14"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-13",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-14"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-8",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-15"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-8",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-16"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-15",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-16"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-9",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-17"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-15",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-17"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-17",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-18"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-4",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-19"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-4",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-20"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-19",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-21"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-20",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-21"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-21",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-22"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-21",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-23"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-22",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-24"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-23",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-24"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-24",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-25"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-24",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-26"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-26",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-27"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-25",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-28"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-26",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-28"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-25",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-29"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-25",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-30"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-29",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-30"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-28",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-31"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-26",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-32"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-29",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-33"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-29",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-34"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-34",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-35"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-31",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-36"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-33",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-37"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-37",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-38"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-37",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-39"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-37",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-40"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-40",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-41"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-39",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-42"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-39",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-43"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-39",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-44"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-44",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-45"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-32",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-46"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-46",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-47"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-32",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-48"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-32",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-49"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-32",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-50"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-49",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-51"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-49",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-52"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-52",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-53"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-50",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-54"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-54",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-55"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-54",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-56"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-36",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-57"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-36",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-58"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-58",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-59"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-51",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-60"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-58",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-61"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-61",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-62"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-57",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-63"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-61",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-64"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-62",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-65"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-65",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-66"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-57",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-67"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-35",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-68"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-68",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-69"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-35",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-70"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-68",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-71"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-71",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-72"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-69",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-72"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-72",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-73"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-73",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-74"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-73",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-75"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-70",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-76"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-69",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-77"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-76",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-77"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-77",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-78"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-76",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-79"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-78",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-79"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-79",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-80"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-67",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-81"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-67",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-82"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-63",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-82"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-63",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-83"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-64",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-84"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-62",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-85"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-62",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-86"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-84",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-87"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-85",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-87"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-86",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-88"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-88",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-89"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-87",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-90"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-88",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-90"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-89",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-91"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-90",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-91"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-90",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-92"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-83",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-93"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-83",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-94"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-83",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-95"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-94",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-96"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-82",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-97"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-97",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-98"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-98",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-99"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-93",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-100"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-96",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-100"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-100",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-101"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-100",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-102"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-96",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-103"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-96",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-104"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-96",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-105"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-105",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-106"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-105",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-107"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-107",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-108"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-107",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-109"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-98",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-110"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-95",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-111"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-96",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-111"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-105",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-111"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-110",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-112"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-110",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-113"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-99",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-114"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-113",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-115"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-115",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-116"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-115",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-117"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-116",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-118"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-117",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-119"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-112",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-120"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-113",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-120"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-120",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-121"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-121",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-122"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-116",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-123"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-117",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-123"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-114",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-124"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-119",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-125"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-125",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-126"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-125",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-127"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-112",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-128"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-114",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-128"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-126",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-129"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-127",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-129"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-114",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-130"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-130",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-131"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-128",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-132"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-131",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-133"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-133",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-134"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-132",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-135"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-125",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-136"
+    }
+  ]
+}
