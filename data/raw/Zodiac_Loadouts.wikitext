@@ -1,0 +1,125 @@
+A Zodiac Loadout or Zodiac Build refers to how Zodiacs are assigned to Planets for specific tasks. There is a vast number of different Loadouts for various stages of the game.
+
+== Early Attack Builds ==
+{{Zodiac Loadout|sun=Scorp|merc=Canc|venus=Pisc|moon=Scorp|mars=Canc|jupiter=Scorp|saturn=Canc|uranus=Canc|nept=Scorp|pluto=Pisc|chiron=Pisc|fortune=Pisc}}
+Full water: will push attacks the fastest at the start
+
+{{Zodiac Loadout|sun=Aries|merc=Pisc|venus=Pisc|moon=Pisc|mars=Pisc|jupiter=Aqua|saturn=Pisc|uranus=Pisc|nept=Pisc|pluto=Pisc|chiron=Pisc|fortune=Pisc}}
+Mostly Pisces: Higher quality zodiacs
+
+{{Zodiac Loadout|sun=Pisc|merc=Pisc|venus=Pisc|moon=Scorp|mars=Pisc|jupiter=Aqua|saturn=Canc|uranus=Pisc|nept=Scorp|pluto=Pisc|chiron=Pisc|fortune=Pisc}}
+Water + wind: easier to get through unity, still great for attacks
+
+== Late Attack Builds ==
+
+=== Quality Build (ht6 done) ===
+{{Zodiac Loadout|sun=Pisc|merc=Pisc|venus=Pisc|moon=Pisc|mars=Pisc|jupiter=Pisc|saturn=Pisc|uranus=Pisc|nept=Pisc|pluto=Pisc|chiron=Pisc|fortune=Pisc}}
+Full Pisces gives you a significant increase in Zodiac quality which overshadows the decrease in Zodiac level.
+
+=== Game Speed Build (ht6 done) ===
+{{Zodiac Loadout|sun=Pisc|merc=Pisc|venus=Pisc|moon=Pisc|mars=Pisc|jupiter=Pisc|saturn=Pisc|uranus=Pisc|nept=Scorp|pluto=Pisc|chiron=Pisc|fortune=Pisc}}
+Minimizes the amount of Zodiacs you would need to farm, while also maximizing all Game Speed buffs.
+
+=== Score Build (500+) and IT2 build ===
+{{Zodiac Loadout|sun=Aqua|merc=Aqua|venus=Aqua|moon=Libra|mars=Libra|jupiter=Libra|saturn=Leo|uranus=Aries|nept=Leo|pluto=Aries|chiron=Aries|fortune=Aries}}
+
+=== Gold Farm Build (ach 240 done) ===
+{{Zodiac Loadout|sun=Aqua|merc=Aqua|venus=Aqua|moon=Libra|mars=Scorp|jupiter=Scorp|saturn=Canc|uranus=Aries|nept=Canc|pluto=Aries|chiron=Aries|fortune=Aries}}
+Gets close to maximizing score and planet buffs with a large increase to your GS allowing you to get very close to where you were before, but speeding up the grind by a lot.
+Use all Gemini with the Unity Farm macro to reach up to 12 Unities per second, but this is obsolete.
+=== Astrodust Farm Build ===
+{{Zodiac Loadout|sun=Pisc|merc=Pisc|venus=Pisc|moon=Pisc|mars=Pisc|jupiter=Pisc|saturn=Pisc|uranus=Pisc|nept=Pisc|pluto=Aries|chiron=Pisc|fortune=Pisc}}
+Maximizes [[Planet Shop|zodiac sale price]] with speed, side note the Aries can go anywhere as Pisces and Aries are the same season.
+
+== Postgame Builds ==
+
+=== Score Build (1400+) ===
+{{Zodiac Loadout|sun=Aqua|merc=Aries|venus=Aqua|moon=Libra|mars=Aqua|jupiter=Libra|saturn=Leo|uranus=Aries|nept=Leo|pluto=Aries|chiron=Aries|fortune=Aries}}
+
+=== Level Build ===
+{{Zodiac Loadout|sun=Aqua|merc=Libra|venus=Aqua|moon=Libra|mars=Gem|jupiter=Libra|saturn=Gem|uranus=Libra|nept=Gem|pluto=Gem|chiron=Gem|fortune=Gem}}
+
+=== Luck Build ===
+{{Zodiac Loadout|sun=Canc|merc=Pisc|venus=Pisc|moon=Pisc|mars=Pisc|jupiter=Pisc|saturn=Aqua|uranus=Pisc|nept=Pisc|pluto=Scorp|chiron=Pisc|fortune=Pisc}}
+Useful for pushing zodiac level for getting [[Achievements|{{Keyword|ach|achievements}}]] like #188 (lv.30), #190 (lv.40), #205 (lv.50), etc.
+
+== Leaderboard Builds (obsolete) ==
+EP max
+{{Zodiac Loadout|sun=Aqua|merc=Aries|venus=Aqua|moon=Libra|mars=Aqua|jupiter=Libra|saturn=Leo|uranus=Aries|nept=Leo|pluto=Aries|chiron=Aries|fortune=Aries}}
+IP max
+{{Zodiac Loadout|sun=Aqua|merc=Aries|venus=Aqua|moon=Libra|mars=Aqua|jupiter=Libra|saturn=Leo|uranus=Aries|nept=Leo|pluto=Aries|chiron=Aries|fortune=Aries}}
+Stars Max
+{{Zodiac Loadout|sun=Aqua|merc=Aries|venus=Aqua|moon=Libra|mars=Aqua|jupiter=Libra|saturn=Leo|uranus=Aries|nept=Leo|pluto=Aries|chiron=Aries|fortune=Aries}}
+LL
+{{Zodiac Loadout|sun=Aqua|merc=Libra|venus=Aqua|moon=Libra|mars=Libra|jupiter=Libra|saturn=Gem|uranus=Libra|nept=Gem|pluto=Libra|chiron=Libra|fortune=Libra}}
+SN
+{{Zodiac Loadout|sun=Aqua|merc=Libra|venus=Aqua|moon=Libra|mars=Aqua|jupiter=Libra|saturn=Gem|uranus=Libra|nept=Gem|pluto=Aqua|chiron=Aqua|fortune=Aqua}}
+DP
+{{Zodiac Loadout|sun=Aqua|merc=Libra|venus=Aqua|moon=Libra|mars=Aqua|jupiter=Libra|saturn=Libra|uranus=Libra|nept=Libra|pluto=Aqua|chiron=Aqua|fortune=Libra}}
+Inf
+{{Zodiac Loadout|sun=Aqua|merc=Tau|venus=Virgo|moon=Virgo|mars=Tau|jupiter=Virgo|saturn=Gem|uranus=Tau|nept=Tau|pluto=Tau|chiron=Virgo|fortune=Tau}}
+ET
+{{Zodiac Loadout|sun=Gem|merc=Gem|venus=Gem|moon=Gem|mars=Gem|jupiter=Gem|saturn=Gem|uranus=Gem|nept=Gem|pluto=Gem|chiron=Gem|fortune=Gem}}
+Unitys
+{{Zodiac Loadout|sun=Gem|merc=Gem|venus=Gem|moon=Gem|mars=Gem|jupiter=Gem|saturn=Gem|uranus=Gem|nept=Gem|pluto=Gem|chiron=Gem|fortune=Gem}}
+
+== Leaderboard Builds (Minerals Update) ==
+
+=== Level Build (2000+): Max. Eternities, IP, EP, Stars, Lab Level ===
+{{Zodiac Loadout|sun=Gem|merc=Gem|venus=Gem|moon=Gem|mars=Gem|jupiter=Gem|saturn=Gem|uranus=Gem|nept=Gem|pluto=Gem|chiron=Gem|fortune=Gem}}
+
+=== Score Build (3500+): Max. Score, Common Exponent ===
+{{Zodiac Loadout|sun=Sagit|merc=Aries|venus=Sagit|moon=Libra|mars=Aries|jupiter=Libra|saturn=Leo|uranus=Aries|nept=Leo|pluto=Aries|chiron=Aries|fortune=Aries}}
+
+=== Infinity Build (3000+): Max. Infinities ===
+{{Zodiac Loadout|sun=Tau|merc=Tau|venus=Virgo|moon=Virgo|mars=Tau|jupiter=Virgo|saturn=Tau|uranus=Tau|nept=Tau|pluto=Tau|chiron=Virgo|fortune=Tau}}
+
+=== DP Build: Max. DP, Supernova ===
+{{Zodiac Loadout|sun=Aqua|merc=Libra|venus=Aqua|moon=Libra|mars=Aqua|jupiter=Libra|saturn=Libra|uranus=Libra|nept=Libra|pluto=Aqua|chiron=Aqua|fortune=Libra}}
+
+== Element tab ==
+=== Fire Focused Planet Loadouts ===
+==== Before Unlocking Etherials Rarity Fire Loadout ====
+{{Zodiac Loadout|sun=Sagit|merc=Aries|venus=Sagit|moon=Libra|mars=Aries|jupiter=Libra|saturn=Leo|uranus=Aries|nept=Leo|pluto=Aries|chiron=Aries|fortune=Aries}}
+
+==== Fire Loadout Alternative ====
+This Loadout is slightly weaker but quicker to setup.
+{{Zodiac Loadout|sun=Aries|merc=Aries|venus=Aries|moon=Aries|mars=Aries|jupiter=Aries|saturn=Aries|uranus=Aries|nept=Aries|pluto=Aries|chiron=Aries|fortune=Aries}}
+
+==== Fire Loadout After Unlocking Etherial Rarity ====
+This Loadout is used after you can get ethereal rarity.
+{{Zodiac Loadout|sun=Sagit|merc=Aries|venus=Sagit|moon=Leo|mars=Aries|jupiter=Leo|saturn=Leo|uranus=Aries|nept=Leo|pluto=Aries|chiron=Aries|fortune=Aries}}
+
+=== Earth Focused Planet Loadouts ===
+==== Earth Loadout ====
+{{Zodiac Loadout|sun=Virgo|merc=Tau|venus=Virgo|moon=Virgo|mars=Tau|jupiter=Virgo|saturn=Tau|uranus=Virgo|nept=Tau|pluto=Tau|chiron=Virgo|fortune=Tau}}
+
+==== Earth Loadout Alternative ====
+This Loadout is slightly weaker but quicker to setup.{{Zodiac Loadout|sun=Tau|merc=Tau|venus=Tau|moon=Tau|mars=Tau|jupiter=Tau|saturn=Tau|uranus=Tau|nept=Tau|pluto=Tau|chiron=Tau|fortune=Tau}}
+
+=== Wind Focused Planet Loadouts ===
+==== Wind Loadout ====
+{{Zodiac Loadout|sun=Gem|merc=Gem|venus=Gem|moon=Gem|mars=Gem|jupiter=Gem|saturn=Gem|uranus=Gem|nept=Gem|pluto=Gem|chiron=Gem|fortune=Gem}}
+
+=== Water Focused Planet Loadouts ===
+==== Water Loadout ====
+{{Zodiac Loadout|sun=Canc|merc=Pisc|venus=Pisc|moon=Pisc|mars=Pisc|jupiter=Pisc|saturn=Pisc|uranus=Pisc|nept=Scorp|pluto=Scorp|chiron=Pisc|fortune=Pisc}}
+
+==== Water Loadout Alternative ====
+This Loadout is slightly weaker but quicker to setup.{{Zodiac Loadout|sun=Pisc|merc=Pisc|venus=Pisc|moon=Pisc|mars=Pisc|jupiter=Pisc|saturn=Pisc|uranus=Pisc|nept=Pisc|pluto=Pisc|chiron=Pisc|fortune=Pisc}}
+
+== Tarot and beyond ==
+
+==== Fire Loadout ====
+{{Zodiac Loadout|sun=Sagit|merc=Leo|venus=Leo|moon=Leo|mars=Leo|jupiter=Leo|saturn=Leo|uranus=Leo|nept=Leo|pluto=Aries|chiron=Leo|fortune=Leo}}Earth Loadout
+{{Zodiac Loadout|sun=Tau|merc=Tau|venus=Tau|moon=Tau|mars=Tau|jupiter=Tau|saturn=Tau|uranus=Tau|nept=Tau|pluto=Tau|chiron=Tau|fortune=Tau}}
+==== Wind Loadout ====
+{{Zodiac Loadout|sun=Gem|merc=Gem|venus=Gem|moon=Gem|mars=Gem|jupiter=Gem|saturn=Gem|uranus=Gem|nept=Gem|pluto=Gem|chiron=Gem|fortune=Gem}}
+
+==== Water Loadout ====
+{{Zodiac Loadout|sun=Pisc|merc=Pisc|venus=Pisc|moon=Pisc|mars=Pisc|jupiter=Pisc|saturn=Pisc|uranus=Pisc|nept=Pisc|pluto=Pisc|chiron=Pisc|fortune=Pisc}}
+
+== See Also ==
+* [[Zodiacs]]
+* [[Attacks Strategy]]
+{{Guide navbox}}

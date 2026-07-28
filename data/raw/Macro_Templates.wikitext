@@ -1,0 +1,171 @@
+You can import macros by copying a macro code into your clipboard and then click on the import button in the macro builder.
+{|
+!
+=== '''Note: You do not need Macros until you have 4 Eternities''' ===
+|}
+
+== Auto Infinity Challenge Macro ==
+This macro is attended to automate Infinity Challenges.
+
+=== Prerequisites ===
+
+You must have Achievement #76 (Unlock Eternity Challenges) in order to unlock the Break/Fix Infinity macro block.<pre>
+WaitUntil (IP >= 1000)
+if (IP >= 1000)
+	BreakInfinity(false)
+	Repeat (9, false)
+		EnterIC(0, true)
+	BreakInfinity(true)
+	WaitUntil (IP >= 100 Sx)
+	BreakInfinity(false)
+	EnterIC(1, true)
+	EnterIC(2, true)
+	EnterIC(3, true)
+	EnterIC(4, true)
+	EnterIC(5, true)
+	EnterIC(6, true)
+	EnterIC(7, true)
+	EnterIC(8, true)
+	EnterIC(9, true)
+	BreakInfinity(true)
+	WaitForSeconds(10.0)
+	WaitUntil (IP == 0.00 && Score == 0.00)
+	Restart()
+</pre>
+1) Set macro on loop
+
+== Post Easy Trials Macro ==
+This macro automates going from the start of a new Unity until Dilation Tree Point (DTP) screen.
+
+=== Prerequisites ===
+
+You must have achievement #170.
+
+Turn Off Automate Infinite and Automate Eternity.
+
+Turn On all other automation, using the settings you've used to reach this point.  
+
+=== Macro Code ===
+Set macro on loop.
+<pre>
+if (DP <= 1.00e100)
+	WaitForSeconds(0.2)
+	Infinite()
+	WaitForSeconds(1.0)
+	Eternate()
+	if (EP >= 1.00e80)
+		Repeat (4, false)
+			EnterEC(0, 0, false)
+			WaitForSeconds(2.0)
+			ExitEC()
+if (AP > 100 && DP <= 1.00e1000)
+	Dilate(true)
+	if (DP <= 5000)
+		WaitForSeconds(10.0)
+	else
+		WaitForSeconds(2.0)
+	Dilate(false)
+if (DP >= 1.00e800)
+	WaitForSeconds(50.0)
+else if (DP >= 1.00e100)
+	WaitForSeconds(20.0)
+else if (DP >= 1.00e33)
+	WaitForSeconds(5.0)
+Eternate()
+</pre>
+=== Use ===
+This macro is designed to be durable, not fast.  It should /eventually/ get you to Dilation Tree Point (DTP) stage, even with sub-optimal automation settings.  You are encouraged to tweak it for speed as you progress through medium trials.
+
+Once in DTP phase, you can either leave it running or stop it for manual dilation/eternities.  If you leave it running, it will attempt to leave eternity running long enough to max AP, then run a short dilation.  You can stay on the DTP screen buying points while it manipulates the rest for you.
+
+Once you've reached your desired DTP level, go to the main screen and grab your Zodiac.
+
+Notable tweak points:
+# All WaitForSeconds can be altered, but going too quickly can cause the script to break before reaching DTP, or to result in less than max Zodiac level.
+# The EnterEC block's Repeat loop can be tuned to attempt more Eternity Challenges (EC) completions each time.  Try using 3, 4, or more.  The Full Unity Macro below uses 14.
+# The opening If statement is intentionally overshooting, to avoid 'overrun' where you gain too much DP before completing EC10x5 and the automation fails to complete the EC for you.  You may want to lower the value to something like 1.00e33 to save some time during DTP.
+
+
+== Full Unity Macro ==
+
+This basic unity macro is intended for automated gold and zodiac farming after Achievement 237, but should be working fine right after hard trials. Copy the code into your clipboard, click on import and paste it into the macro builder. 
+
+If you want to try it after HT4, adjust the EC repeat count to 18, increase loop 1 repeats to 4 and wait time to 1-2s and loop 3 wait time to 2-3s.
+
+The macro runs through the challenges to unlock Dilation tree, makes sure the Dilation Tree is fully grown and pushes DP gain close to maximum.
+
+You can tinker with the macro time values and loop counts as needed. Make the dilation runs longer and/or increase the loop counts if the macro doesn't run all the way through.
+
+If your stats allow for faster Zodiac farming, make the waiting times shorter (try 0.2 or 0.3s) and/or decrease the repeat count (try 2 for loop 1 and 3-4 for loop 3).
+
+=== Prerequisites ===
+
+Before usage, set up three dilation tree templates: 1) 21 DTP (C5;M5,1,5,5), 2) 45 DTP (C5;T1,1,5,5;M5,1,5,5;B1,1,5,5) and 3) Fully Grown (C5;T5,5,5,5;M5,5,5,5;B5,5,5,5) . The macro is intended to automatically loop through unities, but you can turn off unity automation if you want to choose your zodiac manually. 
+
+=== Macro Code ===
+
+<pre>
+Repeat (3, false)
+    WaitForSeconds(0.05)
+    Infinite()
+    WaitForSeconds(0.5)
+    Eternate()
+    Dilate(true)
+Repeat (14, false)
+    EnterEC(0, 0, false)
+    WaitUntil (Score >= 1.00e1000 || EP == 0.00)
+    WaitForSeconds(0.05)
+    ExitEC()
+Repeat (4, false)
+    WaitForSeconds(0.05)
+    LoadDT(0)
+    LoadDT(1)
+    LoadDT(2)
+    Dilate(true)
+    WaitForSeconds(0.5)
+    Dilate(false)
+WaitUntil (EP == 0.00)
+</pre>
+
+=== Usage for Gold Farming ===
+
+1) Slot in gold build ([[Zodiac_Loadouts#Gold_Farm_Build|Gold Farm Build]]) with auto unity turned off
+
+2) Reset unity, run macro and check what max attack level you get to in 25-35s real time
+
+3) Set auto unity to that attack level, set macro to loop
+
+=== Usage for Zodiac Farming/Sacrificing ===
+
+1) Slot in quality build ([[Zodiac_Loadouts#Quality_Build|Quality Build]]) with auto unity turned off
+
+2) Reset unity, run macro and check what your zodiac level is after execution
+
+3) Set auto unity to that zodiac level, set macro to loop
+
+== Fast Sacrificing Macro ==
+
+This macro is intended for usage at attack level 1000+ and maximizes sacrificing efficiency by yielding high-quality zodiacs at a fast pace.
+
+=== Macro Code ===
+
+<pre>
+WaitForSeconds(0.051)
+Infinite()
+WaitForSeconds(0.017)
+Eternate()
+WaitForSeconds(0.017)
+Dilate(true)
+WaitForSeconds(0.034)
+Dilate(false)
+WaitUntil (EP == 0.00)
+</pre>
+
+=== Usage for Sacrificing ===
+
+1) Slot in [[Zodiac_Loadouts#Quality_Build|Quality Build]]
+
+2) Set Macro to loop, Auto Eternate to 1e2467 and enable Auto Unity. 
+
+3) If you want to farm (a) specific zodiac(s), you can either configure auto unity to only pick the zodiacs you want, or you can configure auto unity to pick highest rarity and have autosell configured to sell all zodiacs you don't want.
+[[Category:General Gameplay]]

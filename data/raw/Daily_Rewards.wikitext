@@ -1,0 +1,59 @@
+== General ==
+Daily Rewards is a feature allowing the player to get {{Keyword|soul|Souls|link=Soul_Shop}} and {{Keyword|tf|Time Flux|link=Time_Flux}} by entering the game once a day. 
+
+It usually rewards {{time_flux|Time Flux|front=y|ico=y}} and {{souls|Souls|front=y|ico=y}}
+
+Average souls gained ≈ {{souls|+232|size=20px|ico=y}}/day
+
+Average time flux gained ≈ {{time_flux|+9:17|size=20px|ico=y}}/day
+
+There are 14 days with different rewards:
+{|class="wikitable"width=100%
+| Day 1
+{{time_flux|+15:00 TF|front=y|ico=y}}
+| Day 2
+{{souls|+200|front=y|ico=y}}
+| Day 3
+{{time_flux|+15:00 TF|front=y|ico=y}}
+| Day 4
+{{souls|+250|front=y|ico=y}}
+| Day 5
+{{time_flux|+20:00 TF|front=y|ico=y}}
+| Day 6
+{{souls|+250|front=y|ico=y}}
+| Day 7
+{{souls|+500|front=y|ico=y}}
+|-
+| Day 8
+{{time_flux|+25:00 TF|front=y|ico=y}}
+| Day 9
+{{souls|+250|front=y|ico=y}}
+| Day 10
+{{time_flux|+25:00 TF|front=y|ico=y}}
+| Day 11
+{{souls|+300|front=y|ico=y}}
+| Day 12
+{{time_flux|+30:00 TF|front=y|ico=y}}
+| Day 13
+{{souls|+500|front=y|ico=y}}
+| Day 14
+{{souls|+1000|front=y|ico=y}}
+|}
+
+[[File:Daily Rewards.png|Daily Reward tab|600px]]
+
+== Daily Streaks ==
+
+* As of v1.058, the ability to have Daily Streaks, where as long as you log-in and claim a reward each day, you can accumulate a streak.
+* Each day you grow your streak, you gain a +5% gain to Daily Rewards (Limited to Souls) up to +50% at Day 10.
+* With this you get average around 348/day.
+
+== Trivia ==
+
+* The reward progress does not reset. If you miss a day, you can come back and continue from the same place
+* After getting all the achievements, this is the best way to get souls for free
+* You can leave the reward 'chests' unopened and still get new rewards by opening the menu. This allows you to get multiple rewards at once. <!--but why? idk   -Li -->
+
+== History ==
+* v0.184 - introduced
+* v1.058 - streaks added

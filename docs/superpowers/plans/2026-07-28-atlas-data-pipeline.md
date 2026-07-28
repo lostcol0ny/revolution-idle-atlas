@@ -184,7 +184,7 @@ def test_edge_from_is_aliased():
 def test_line_numbers_are_attached():
     ds = load_dataset(FIXTURES / "minimal.yaml")
     assert ds.nodes[0].line == 2
-    assert ds.edges[0].line == 17
+    assert ds.edges[0].line == 16
 
 
 def test_bad_enum_raises_schema_error(tmp_path):

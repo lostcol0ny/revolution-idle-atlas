@@ -1,0 +1,228 @@
+'''Revolution''' [[File:Icon tab revo.png|16x16px]] is the first and starting stage of the game.
+
+=='''Circles'''==
+'''Circles''', also known as '''Colors''', are the main Score (ⵙ) production units for the game.
+
+Various skins for the Circles can be purchased in the [[Soul Shop]].
+
+Each time a Circle finishes a lap, also known as a Revolution, it will produce Score (equal to [[Revolution#Income_Calculation|Score income]]), and the number (multiplier/mult) at the top of the screen of the same color will increase (equal to the Circle's mult gain).
+
+Circles have levels which are bought with Score. When a Circle's level is increased, the time it takes to complete a revolution will decrease, also known as its laps per second (laps/s).
+
+Each Circle has its own base lap speed, which becomes slower the farther it is from Red (see table below for more details).
+
+There are 10 Circles in total and the player start with the {{Keyword|red|Red}} Circle unlocked (and 5 levels of {{Keyword|red|Red}}). Other Circles are unlocked after buying 5 levels of the previous Circle, in the order shown below:
+
+ {{Keyword|red|Red}} → {{Keyword|orange|Orange}} → {{Keyword|yellow|Yellow}} → {{Keyword|green|Green}} → {{Keyword|turquoise|Turquoise}} → {{Keyword|cyan|Cyan}} → {{Keyword|blue|Blue}} → {{Keyword|purple|Purple}} → {{Keyword|pink|Pink}} → White
+
+The following table shows the initial Score cost, cost multiplier (how much the cost increases after each bought level) and the base lap speed (how much the laps/s increases per level) of each Circle:
+{| class="wikitable" style="text-align:center;"
+|-
+! Circle !! Initial Cost (ⵙ)!! Cost Multiplier !! Base Lap Speed
+|-
+|{{Keyword|red|Red}} || 4 || style="text-align:center;" | 1.20 || 0.200
+|-
+|{{Keyword|orange|Orange}} || 100 ||style="text-align:center;"| 1.24 || 0.100
+|-
+|{{Keyword|yellow|Yellow}} || 1,000 || style="text-align:center;" | 1.28 || 0.067
+|-
+|{{Keyword|green|Green}} || 10,000 ||style="text-align:center;"| 1.32 || 0.050
+|-
+|{{Keyword|turquoise|Turquoise}} || 1,000,000 ||style="text-align:center;"| 1.36 || 0.040
+|-
+|{{Keyword|cyan|Cyan}} || 1e9 ||style="text-align:center;"| 1.40 || 0.033
+|-
+|{{Keyword|blue|Blue}} || 1e12 ||style="text-align:center;"| 1.44 || 0.029
+|-
+|{{Keyword|purple|Purple}} || 1e15 ||style="text-align:center;"| 1.48 || 0.025
+|-
+|{{Keyword|pink|Pink}} || 1e18 ||style="text-align:center;"| 1.52 || 0.022
+|-
+|| White || 1e27 ||style="text-align:center;"| 1.56 || 0.020
+|}
+===Income Calculation===
+Circles multiplier determines how much score you get after any circle completes a revolution.
+
+Before prestige, your score income is determined by this formula:
+
+ '''ⵙ/second''' = ⵙ/Revolution * [Sum of all Circles' Revolutions/second]
+ '''ⵙ/Revolution''' = ([Product of all Circles' Mults] * P.Mult)^Common Exponent
+Common exponent is influenced by many factors in the game so a formula wouldn't be easy to follow.
+
+===Circle Stats===
+Each circle has three critical stats:
+# '''Revolution Speed''': The speed at which the circle completes its revolution.
+# '''Asc. Power''': Ascension Power, which serves as a multiplier for Mult Gain on circle ascension.
+# '''Mult Gain''': The amount of the corresponding color multiplier added with each lap.
+To check circle stats, you need to have "show tooltip" enabled in settings then press and hold on circle.
+
+=='''Upgrading'''==
+Each circle can be upgraded using the Score earned from completing laps. Basic upgrades, referred to as Buyables, increase the circle's level and improve its speed.<br>
+Each circle can be upgraded to a maximum of 100+(amount of ascensions x10) levels before needing to be ascended.  The maximum level of each buyable increases by 10 per ascension.<br>
+Generally, the smaller circles are more efficient to buy than to buy a bigger circle, prioritize upgrading smaller circle that you can afford, and wait until the price difference between the bigger and smaller circles has disappeared before buying them.
+
+====Circle Upgrade Cost====
+Cost multiplier of each circle is increased by +0.1 each time it ascends. After first ascension red circle will have cost multiplier of 1.3 and 1.4 after the second ascension.<br>
+Circles initial price after ascension (cost at level 0) will be the same as the cost at level 100 before ascension.<br>
+
+So, for example, the cost of a orange circle at level 10 after one ascension can be calculated as follows:
+ Orange Asc. #1 Lv10 Cost
+ = 100 * (1.24 ^ 100) * (1.34 ^ 10) ⵙ
+ = 100 * 2,198,712,860 * 18.66 ⵙ
+ = 4,104,086,450,000 ⵙ 
+ ≈ 4.1e12 ⵙ
+
+=='''Ascension'''==
+After circle is upgraded to its current level cap, it can then be ascended.
+
+Ascending resets a circle to level 5, multiplies its Mult Gain by the Ascension Power, and raises its level cap by 10. <br>
+This allows for increased Mult Gain per revolution and Lap Speed, but drastically drops lap speed due to the missing levels.
+{|
+|
+{| class="wikitable"
+|→
+|}
+|style="text-align:center;"|
+{| class="wikitable" style="background-color:#ea6b6b;color:black;"
+| Red Asc. #0 
+|-style="background-color:#e64f4f; text-align:left;"
+| Asc. Power:  x10.00
+Level: 100/100
+
+Mult Gain: x0.01
+|}
+|
+{| class="wikitable"
+|→
+|}
+|style="text-align:center;"|
+{| class="wikitable" style="background-color:#ea6b6b;color:black;"
+| Red Asc. #1
+|-style="background-color:#e64f4f; text-align:left;"
+| Asc. Power: x10.00
+Level: 5/110
+
+Mult Gain: x0.11
+|}
+|}
+
+It's best to ascend when a circle hits Max Level to maximize growth. However, waiting until one or two additional circles are ready to ascend helps maintain speed.
+
+Although Revolution gain slows after ascension, level 10 onwards significantly increases growth.
+
+Ascension power is 10x by default, but can be improved later on with future upgrades.
+
+=='''Prestige'''==
+Prestige is unlocked when the score reaches 1e10 (10B). 
+Performing a prestige will grant you the P.Exponent and P.Mult displayed on the window, but in exchange, '''all progress up to this point (accumulated score, circle upgrades & ascensions) will be reset.'''
+* '''P.Mult''' - Prestige Multiplier. Considered as a static multiplier calculated like colored circles' mults (shown as the dull grey value after White)
+* '''P.Exponent''' - Prestige Exponent. Adds additional logarithmic scaling to the income. Affects common exponent.
+====Income Calculation with Prestige:====
+ '''ⵙ/second''' = ⵙ/Revolution * [Sum of all colors' Revolutions/second]
+ '''ⵙ/Revolution''' = ( [Product of all colors' Mults] * P.Mult ) ^ P.Exponent
+
+During initial runs, it is recommended to achieve at least a x10 P.Mult before prestiging.
+
+After prestiging, you will start fresh but with an increased income boost. To access the Prestige Window again, you must reach the point where you previously prestiged.<br> 
+Aim to prestige with at least one or two orders of magnitude; for example, starting with x10 P.Mult, then x1000, and so forth.
+
+=='''Promotions'''==
+Promotion becomes available for the first time when P.Mult exceeds x1000 (either on-hand or upcoming P.Mult). It resets all progress up to this point to level up '''one''' of the four promotion boosts:
+
+# '''Mult Gain Mult''': Multiplies your circles' Mult Gain.
+# '''Laps Speed Mult''': Multiplies your circles' laps per second.
+# '''Ascension Power''': Enhances your circles' Asc. Power.
+# '''Promotion Power''': Boosts the effectiveness of the first three promotions.
+
+You gain more promotion experience based on your P.Mult value (on-hand or upcoming). You cannot select a promotion boost that you cannot gain a level for.
+
+The suggested order for early game promotions is:
+
+* promotion 1 → promotion 2 → promotion 3 → promotion 4 → repeat
+
+* Mult Gain Mult → Laps Speed Mult → Ascension Power → Promotion Power → repeat.
+It is advisable to wait until achieving at least x6 Mult Gain Mult on the first promotion before performing it.
+
+===Promotion Milestones===
+{| class="wikitable mw-collapsible mw-collapsed" style="text-align:center; width: 80%; font-size: 1rem"
+!colspan="7"|Promotion Milestones
+|-
+|rowspan="2"|Level || colspan="4" |Bonus ||rowspan="2"|Exp total ||rowspan="2"|Mult needed
+|-
+|#1 Mult Gain Mult||#2 Lap Speed Mult||#3 Ascension Power||#4 Promotion Power
+|-
+|0||1||1.000||10.00||1.000||0||0
+|-
+|1||2||1.500||10.50||1.050||1||1,000
+|-
+|2||3||1.707||10.87||1.070||3||4,326
+|-
+|3||6||1.866||11.20||1.085||7||13,390
+|-
+|4||9||2.000||11.52||1.097||15||36,993
+|-
+|5||12||2.118||11.81||1.108||31||97,382
+|-
+|6||15||2.225||12.10||1.118||63||250,680
+|-
+|7||19||2.323||12.37||1.127||127||638,368
+|-
+|8||23||2.414||12.64||1.136||255||1.62e6
+|-
+|9||28||2.500||12.90||1.144||511||4.09e6
+|-
+|10||32||2.581||13.15||1.151||1,023||1.03e7
+|-
+|11||37||2.658||13.40||1.158||2,047||2.60e7
+|-
+|12||42||2.732||13.65||1.165||4,095||6.55e7
+|-
+|13||47||2.803||13.89||1.171||8,191||1.65e8
+|-
+|14||53||2.871||14.13||1.177||16,383||4.16e8
+|-
+|15||59||2.936||14.36||1.183||32,767||1.05e9
+|-
+|16||65||3.000||14.59||1.189||65,535||2.64e9
+|-
+|17||71||3.062||14.82||1.195||131,071||6.66e9
+|-
+|18||77||3.121||15.05||1.200||262,143||1.68e10
+|-
+|19||83||3.179||15.27||1.205||524,287||4.23e10
+|-
+|20||90||3.236||15.49||1.211||1,048,575||1.07e11
+|}
+
+* After these five promotions, try to level up the four promotions evenly
+* Promotion #4 acts as a multiplier that boosts the other three.
+* You should try to get to about lvl 75 on all promotions before reaching [[Infinity]].
+
+==Common Exponent==
+Common exponent is applied last right before your final score is given, and is thus extremely powerful. You should prioritize it most of the time.
+
+== Soul shop bonuses ==
+Soul shop lets you buy permanent multipliers for souls. The formula including these bonuses would look like this:
+ '''Income Calculation''' = (Income per Revolution * (1 + (Soul-Income Boost))) * [Sum of all colors' Revolutions/second]
+ '''Income per Revolution''' = Base Revolution Mult ^ Common Exponent
+ '''Base Revolution Mult''' = 
+   [Product of all Color Mults] 
+ * Prestige Mult 
+ * (1 + Soul Shop P.Mult)
+ * (1 + Soul Shop Multiplier) 
+ * (1 + Soul Shop Income Mult)
+<nowiki>*</nowiki>Prestige exponent and Revolutions per second include their respective shop bonuses in their own formulae.
+
+== Leaderboard ==
+Main Page: [[Leaderboard]]
+
+Unlocked at 1 million score.
+
+== Macro Builder ==
+Main Page: [[Macro Builder]]
+
+Unlocked upon first [[Eternity]].
+
+<noinclude>{{#titleicon_file:icon_tab_revo.png}}</noinclude>
+[[Category:Revolution]]
+{{Main navbox}}

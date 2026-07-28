@@ -1,0 +1,30 @@
+The leaderboard consists of 4 sections. You must be registered to see the players on the leaderboard or be on the leaderboards.
+Leaderboard unlocks at 1 million score, or the first [[Achievements|achievement]].
+
+The leaderboard is accessed through the [[Revolution]] tab.
+
+The leaderboard is affected by many of your ingame stats. Below is the formula used for calculating your rank score:
+<math display="block">
+\text{Rank Score} = \begin{align} ( \\
+&(1 + \lg(1 + \lg{\text{MaxScore}})) \\
+&\times \sqrt{\text{MaxExponent}} \\
+&\times (1 + \lg(1 +\text{MaxInfinites})) \\
+&\times (1 + \lg(1 + \lg( 1 + \text{MaxIP})) \\
+&\times \sqrt{1 + \frac{\text{MaxChallenges}}{10}} \\
+&\times (1 + \frac{\text{MaxStars}}{8})^{0.3} \\
+&\times (1 + \lg(1 + \text{Eternities}))^{0.25} \\
+&\times (1 + \lg(1 + \lg(1 + \text{MaxEP})) \\
+&\times \sqrt{1 + \frac{\text{MaxAnimals}}{9}} \\
+&\times (1 + \frac{\text{MaxLabLevel}}{50})^{0.35} \\
+&\times (1 + \frac{\text{MaxSupernova}}{10})^{0.6} \\
+&\times (1 + \lg(1 + \lg(1 + \text{MaxDP})) \\
+&\times (1 + \frac{\text{MaxDTP}}{8})^{0.8} \\
+)^{0.35}
+&\times (1 + \lg(1 + \text{MaxUnities})) \\
+&\times \sqrt{1 + \frac{\text{MaxZodiacLevel}}{100}} \\
+&\times \sqrt{1 + \frac{\text{MaxTrialCount}}{10}} \\
+&\times (1 + \lg(1 + \text{MaxAttackLevel}))
+\end{align}
+</math>
+
+{{Main navbox}}

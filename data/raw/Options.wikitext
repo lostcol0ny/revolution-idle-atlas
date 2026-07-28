@@ -1,0 +1,145 @@
+
+Options are a tab where you can configure the the game to your liking. Options are stored locally, which means you can have different options on different devices.
+
+== General ==
+=== Volumes ===
+[[File:Options_General.png|thumb|The General tab]]
+'''Music''' - set how loud the background music is.<br>
+'''Sound''' - set how loud the sounds of buttons and other elements are.
+
+Music/Sound when minimized (Desktop only) - determines if the music/sound continues playing when the game window is minimized or not in focus.
+
+=== Notifications (Mobile only) ===
+'''Notifications''' - determines if you get notifications on your device from Revolution Idle. Notifications include things like Daily Reward availability and when your Time Flux is full.
+
+=== Notation ===
+'''Notation''' - determines the way large numbers are represented within the game: 
+* '''Standard''' - starting at 1,000,000,000, uses abbreviated [https://en.wikipedia.org/wiki/Long_and_short_scales short scale] number names (B for billion = 10⁹, T for trillion = 10¹², etc.) until 10³⁰⁰, when it automatically switches to Scientific notation. <br> This is the game's default notation.
+* [https://en.wikipedia.org/wiki/Scientific_notation#E_notation '''Scientific'''] - displays numbers in the form m × 10^n (e.g. 2.718e9 = 2.718 x 10^9 = 2,718,000,000 = 2.718B). <br> For any n, the number is n+1 digits long.
+* '''Engineering''' - similar to Scientific notation, except n is always a multiple of 3 (e.g. 12e6 = 12 million, 986e12 = 986 trillion, etc.). <br> Engineering notation may help some players to switch from Standard to Scientific.
+<nowiki>*</nowiki>The Revo community unanimously uses Scientific notation. For Standard/Scientific conversion, you can use the reference table that can be found in the Options menu by pressing the cyan [i] button next to the notation or an [https://www.calculatorsoup.com/calculators/math/scientific-notation-converter.php online converter].
+=== Application ===
+'''Language''' - sets the language of the game's interface. <br>Currently supported languages: 
+
+* English (en) 
+* French (fr)
+* Russian (ru)
+* Spanish (es)
+* Portuguese (pt)
+* German (de)
+* Chinese (simplified) (zh)
+* Japanese (ja)
+* Korean (ko)
+* Danish (da)
+* Dutch (nl)
+* Italian (it)
+* Polish (pl)
+* Turkish (tr).
+
+'''Screen orientation''' (Mobile only):
+* '''Portrait''' - for vertical device orientation.
+* '''Landscape''' - for horizontal device orientation.
+* '''Auto''' - dynamically changes the orientation depending on the device's current orientation.
+
+'''Screen mode''' (Desktop only):
+* '''Windowed''' - displays the game in a resizable window.
+* '''Full Screen''' - displays the game in full screen mode.
+
+'''Screen resolution''' (Desktop only) - lets you choose between common screen resolutions. In windowed mode, sets the window to be that size in pixels. In fullscreen mode, sets the resolution from which the game is scaled to your display's resolution (lower = blurrier).
+
+'''Clear save''' - deletes your local save file, restarting the game from scratch. Includes [[Time Flux]] progress. Does not include [[Soul Shop]] purchases. 
+
+'''(Un)Link Account''' - Here is the image of full login for linking account 
+[[File:Linking Account.png|thumb|The full information to link account]]
+
+
+
+
+'''Save & exit''' - closes the game, enabling {{Keyword|tf|TF|link=Time Flux}} and/or {{Keyword|tf|OF|link=Time Flux#Offline Flux}} production. You can generally close the game manually on your device and get the same result, but this does not always guarantee your progress will be saved; so it is recommended to use this option to close the game.
+
+== Display ==
+[[File:Options_Display.png|thumb|The Display tab]]
+
+=== Screen Informations ===
+
+'''Achievement popup''' - toggles the display of the popup animations that happen when you get an achievement. You may want to turn it off because it prevents [[Time_Flux#Time_Warp|interactions]] with the game while playing.<!-- Please put a video/gif of the ach animation here that doesn't autoplay -->
+
+'''In-game notification''' - toggles the display of popup button-notifications that you get when, for example, completing [[File:Icon tab inf.png|20x20px]] {{Keyword|inf|Infinity}} or [[File:Icon tab etern.png|20x20px]] {{Keyword|eternity|Eternity}} Challenges and when a new daily reward is available, based on your local time.
+
+'''Show tooltips''' - toggles the display of windows with extra information when you hover over (desktop) or hold (mobile) certain buttons, such as other options and color circle information.
+
+'''FPS''' - toggles the display of your current frames per second in the top left corner. The game is forcibly limited to a maximum of 60 fps.
+
+=== Interface ===
+
+'''Bright text for dark colors''' - Changes the text color on dimmed (unaffordable) [[Revolution#Upgrading|Buyables]] from black to white, increasing the contrast.
+
+'''Anti flicker''' - Slows down the [[Revolution#Circles|revolution]] [[Skins|skin's]] animation to flicker less for photosensitive users. 
+* '''''Important note''' - the game still can flicker by other means, for example when [[Automations]] cause buyables' buttons to flash between being available and not, or [[Macro Builder|Macros]] rapidly interacting with the game process. This flickering might be too severe for some users. There is currently no known way to effectively play the game without having the strobing mentioned above.''
+
+'''Hide skin''' - toggles the display of your currently selected skin. When enabled, your current [[Revolution#Score|Score]] is moved to the center of the screen instead.
+
+'''Save battery''' - dims the game's brightness after 30 seconds of inactivity. Particularly useful on mobile, to reduce both battery drain and any potential screen burn.
+
+'''Reduce landscape sidebar''' - hides the names of tabs when in landscape mode, leaving only the icons.
+
+'''Hide tabs''' - lets you hide specific tabs to free up the space on your screen. <br> Hideable tabs: 
+*   [[File:Icon tab inf.png|20px]] {{Keyword|inf|Infinity}}
+* [[File:Icon tab etern.png|20px]] {{Keyword|eternity|Eternity}}
+* [[File:Icon tab unity.png|20px]] {{Keyword|unity|Unity}}
+*   [[File:Icon_tab_att.png|20px]] {{Keyword|atk|Attacks}}
+*   [[File:Icon_tab_ach.png|20px]] {{Keyword|ach|Achievements}}
+* [[File:Icon_tab_stats.png|20px]] {{Keyword|Auto|Statistics}}
+*  [[File:Icon_tab_cred.png|20px]] {{Keyword|Auto|Credits}}
+<!--of course you can't hide the shop tab, who expected anything else-->
+=== Animations ===
+'''Infinite animation''' - displays the animation saying "{{Keyword|inf|INFINITY REACHED}}" when you reach 1.79e308 [[Revolution#Score|Score]].
+
+'''Eternity animation''' - displays the animation saying "{{Keyword|eternity|ETERNITY REACHED}}" when you reach {{Keyword|inf|1.79e308 IP}}.
+
+'''Unity animation''' - displays the animation saying "{{Keyword|unity|UNITY REACHED}}" when you reach {{Keyword|ep|1.08e2466 EP}}.
+
+'''Digits animation''' - when enabled, your Score value and colors' multipliers at the top of the Revolution tab will "pulse" when they increase.
+<!-- ^ idk how to word this one properly ^ -Li |
+not sure my description is much better here, lol -Angel -->
+<!-- ^ i just use the animation name on my own thoughts ^^ ^ -Tachyon -->
+
+== Gameplay ==
+[[File:Options_Gameplay.png|thumb]]
+=== Advanced options ===
+'''Show tutorials''' - when enabled, tutorials will be displayed when first using certain features (e.g. there is a short tutorial when first entering the Unity tab). Experienced players may wish to disable this to save a few clicks.
+
+'''Reset speed on warp''' - sets the Time Flux [[Time_Flux#Game_Speed|Game Speed]] to x1 every time you perform a [[Time_Flux#Time_Warp|Time Warp]].
+
+'''One click to Prestige''' - changes the default 5-click confirmation for Prestige to a single click.
+
+'''One click to enter challenge''' - changes the default 3-click confirmation for entering an {{Keyword|inf|Infinity Challenge}} to a single click.
+
+'''Prevent Zodiac Unity reset''' - disables the popup confirmation window warning of a {{Keyword|unity|Unity reset}} that appears every time you move a Zodiac.
+
+'''{{Keyword|inf|Infinite}}/{{Keyword|eternity|Eternate}}/{{Keyword|unity|Unite}}''' safety lock - disables the ability to click/press the {{Keyword|inf|Infinite}}/{{Keyword|eternity|Eternate}}/{{Keyword|unity|Unite}} buttons. Can be helpful to prevent accidentally pressing these buttons at some stages of the game.
+
+=== Hotkeys (Desktop only) ===
+- Enables [https://en.wikipedia.org/wiki/Keyboard_shortcut hotkeys]
+
+'''Default states''':
+
+Buy all upgrades: [B] <br>
+Ascend all upgrades: [A] <br>
+Apply the Prestige: [P] <br>
+
+<nowiki>#</nowiki>1 Mult Gain Mult: [1] <br>
+<nowiki>#</nowiki>2 Laps Speed Mult: [2] <br>
+<nowiki>#</nowiki>3 Ascension Power: [3] <br>
+<nowiki>#</nowiki>4 Promotions Power: [4]
+
+Macro State:
+* Stop: [S]
+* Play: [M]
+* Pause: [N]
+
+'''Reset Hotkeys''' - resets all key bindings to the above defaults. <!-- who would've thunk it-->
+
+<noinclude>{{#titleicon_file:icon_tab_opt.png}}</noinclude>
+
+[[Category:General Gameplay]]

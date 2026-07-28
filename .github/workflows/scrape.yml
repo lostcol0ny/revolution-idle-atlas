@@ -1,0 +1,68 @@
+name: Daily wiki scrape
+
+on:
+  schedule:
+    - cron: "0 6 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    # fetch_pages bounds its own continuation loop, but this job also talks to a
+    # volunteer-run wiki over the network; cap it well below the 6-hour default.
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      # Third-party actions are pinned to a full commit SHA: this job holds a
+      # contents:write token and runs unattended, so a moved tag would execute
+      # unreviewed code with write access to the repository.
+      - name: Install uv
+        uses: astral-sh/setup-uv@d4b2f3b6ecc6e67c4457f6d3e41ec42d3d0fcb86 # v5.4.2
+        with:
+          enable-cache: true
+
+      - name: Install dependencies
+        run: uv sync --locked --all-extras --dev
+
+      - name: Scrape wiki
+        run: uv run atlas scrape
+
+      - name: Summarise changes
+        id: summary
+        run: |
+          {
+            echo 'body<<PRBODY'
+            echo 'Automated wiki scrape. Raw wikitext only — `relationships.yaml` is untouched.'
+            echo ''
+            echo '### New pages'
+            git ls-files --others --exclude-standard data/raw/ \
+              | sed 's|data/raw/|- |; s|\.wikitext$||' | grep . || echo '_none_'
+            echo ''
+            echo '### Changed pages'
+            git diff --numstat -- data/raw/ \
+              | awk '{printf "- %s (+%s/-%s)\n", $3, $1, $2}' | grep . || echo '_none_'
+            echo ''
+            echo '### Removed pages'
+            git diff --diff-filter=D --name-only -- data/raw/ \
+              | sed 's|data/raw/|- |; s|\.wikitext$||' | grep . || echo '_none_'
+            echo ''
+            echo '### WIP-flagged pages'
+            grep -l '{{New Content}}' data/raw/*.wikitext 2>/dev/null \
+              | sed 's|data/raw/|- |; s|\.wikitext$||' | grep . || echo '_none_'
+            echo 'PRBODY'
+          } >> "$GITHUB_OUTPUT"
+
+      - name: Open pull request
+        uses: peter-evans/create-pull-request@22a9089034f40e5a961c8808d113e2c98fb63676 # v7.0.11
+        with:
+          add-paths: data/raw
+          branch: wiki-scrape
+          title: "chore: daily wiki scrape"
+          body: "${{ steps.summary.outputs.body }}"
+          commit-message: "chore: daily wiki scrape"
+          delete-branch: true

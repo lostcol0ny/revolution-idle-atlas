@@ -1,0 +1,34 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@d4b2f3b6ecc6e67c4457f6d3e41ec42d3d0fcb86 # v5.4.2
+        with:
+          enable-cache: true
+
+      - name: Install dependencies
+        run: uv sync --locked --all-extras --dev
+
+      - name: Run tests
+        run: uv run pytest -v
+
+      # public/graph.json and docs/coverage.md are committed build products. If
+      # this step fails, the dataset was edited without re-running the build:
+      # run `uv run atlas build` locally and commit the result.
+      - name: Generated artifacts are up to date with data/relationships.yaml
+        run: |
+          uv run atlas build
+          git diff --exit-code -- public/graph.json docs/coverage.md

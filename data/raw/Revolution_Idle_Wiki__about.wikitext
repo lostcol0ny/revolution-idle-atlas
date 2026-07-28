@@ -1,0 +1,10 @@
+{{Main page box/start
+| title = About Revolution Idle
+}}
+[[File:Revo logo.png|frameless|center]]
+
+
+This wiki provides information about Revolution Idle, an idle/incremental game for IOS, Android and Windows published by [https://www.onigaming.net/ Oni Gaming].
+
+<!-- <div style="text-align:right">[[Revolution Idle|Read more...]]</div>  -->
+{{Main page box/end}}<noinclude>[[Category:Main page boxes]]</noinclude><!-- don't edit this line -->

@@ -1,0 +1,100 @@
+The Planet Shop is unlocked by completing Easy [[Trials|Trial]] #6.
+==Astrodust==
+Astrodust is a resource which can be used to buy donuts, unlock Planet Shop features and spent to use some of those features.
+
+Astrodust is obtained by selling zodiacs: to sell a zodiac, place it in the slot next to where "Sell for -" is displayed, then press "Sell for X", where X is the amount of astrodust you will receive.
+
+There are several factors which determine how much astrodust your zodiacs sell for, including: zodiac level, quality, and rarity; {{Keyword|ach|Ach.193|link=achievements}} reward; Relic #005 Wolf Skull effect.
+
+==Donuts==
+
+There are four donuts, each of which provides a different bonus:
+
+{{Keyword|donut_gs|Game Speed}} - Multiplies your Game Speed. Each level will increase your Game Speed mult by +0.01.
+
+{{Keyword|donut_lk|Luck}} - Multiplies your zodiac luck. Each level will increase your luck mult by +0.02.
+
+{{Keyword|donut_ql|Quality}} - Multiplies your zodiac quality. Each level will increase your zodiac quality mult by +0.03.
+
+{{Keyword|donut_xp|Zodiac Exp. Factor}} - Adds a new Factor. Each level will increase the Factor mult by +0.04.
+
+Donuts are upgraded by spending astrodust and a donut's astrodust cost will increase each time it is bought. Donut upgrades persist through {{Keyword|unity|Unities}}.
+<!--if/when scaling of costs details are known, please add/expand -Angel-->
+
+==Planet Shop Features==
+
+You can spend astrodust to unlock four new Planet Shop features:
+
+<!-- Keyword currently incompatible with headings; left as is for now but need to fix -Angel-->
+=== Merging ===
+{{Keyword|ps_merge|Merging}} can be unlocked for 50 astrodust and allows you to insert 3 zodiacs which will be merged to create a new zodiac of the next rarity tier. {{Keyword|ps_merge|Merged}} zodiacs must be of the same element and rarity. If you If you merge 3 of the same Zodiac, the resulting merged zodiac will always be its zodiac. 
+<!--If the merged zodiacs have different quality or level values, the created zodiac will... <insert details of how these factor into the resultant quality/level -Angel-->
+
+=== Enhancing === 
+{{Keyword|ps_ench|Enhancing}} can be unlocked for 350 astrodust and has a chance to raise the quality of the inserted zodiac, at the cost of astrodust. The higher the quality, the lower the chance of success, and the more astrodust each attempt will cost.
+<!--if details are known re: how quality increases (by what % e.g.), add here -Angel-->
+
+=== Redistribution ===
+{{Keyword|ps_redist|Redistribution}} can be unlocked for 500 astrodust and will randomize the inserted zodiac's stats, at the cost of astrodust. {{Keyword|ps_redist|Redistributed}} zodiacs have a 1/3 chance of becoming each zodiac of that element and stat values, which stats are present (if the zodiac has less than 4 stats) and the stat order are all randomized.
+
+=== Sacrificing ===
+{{Keyword|ps_sac|Sacrificing}} can be unlocked for 10,000,000 astrodust and will {{Keyword|ps_sac|Sacrifice}} the inserted zodiac in order to permanently gain a (small) portion of the zodiac's top/first listed stat.
+<!--worth expanding? re: diminishing returns, how level/rarity/quality improve gains, potentially opportunity cost vs. selling? -Angel-->
+
+== Statistics for Nerds ==
+=== Zodiac Sale Price ===
+
+ = ((1.125^ZodiacRarity
+     * ZodiacQuality
+     * (9 + ZodiacLevel^2)
+ 	 * {8 < ZodiacRarity: 2, 8 >= ZodiacRarity: 1}
+ 	 * {ZodiacLevel >= 100: ((ZodiacLevel - 90) / 10) ^ 2.5, ZodiacLevel < 100: 1}) / 10)^0.75 * 1.1^ZodiacRarity
+
+=== Zodiac Enhance Price Formula ===
+ = ZodiacSellCost * 2 * 1.3^lg(1 + ZodiacQuality)
+
+=== Zodiac Enhance Chance Formula ===
+ = 0.9^(lg(1 + ZodiacQuality)^2) * 100%
+
+=== Zodiac Score ===
+ = 1.125^ZodiacRarity * ZodiacQuality * (9 + ZodiacLevel^2) * {8 < ZodiacRarity: 2, 1} * {ZodiacLevel >= 100: ((ZodiacLevel - 90) / 10) ^ 2.5, 1}
+
+=== Sacrifice stats ===
+x is the zodiac score
+
+All soft caps are the same as in the zodiac stats soft caps 
+<!--where are the stats soft caps?? -Li -->
+Zodiac Stat Formulae 
+
+  Mults Gain          = 1.35^x
+  Prom Power          = 1.2^lg(x)
+  Common Exponent     = 1 + lg(x) * 0.016
+  Ascension Power     = 1.5^lg(x)
+  Laps Speed          = 2^lg(x)
+  Slowdown Power      = round(lg(x + 9)^1.5)
+  IP Gain             = 1 + lg(x) * 0.025
+  Infinity Gain       = 3^lg(x)
+  Gen Exponent        = 1 + lg(x) * 0.024
+  Mult Per Bought Gen = 1 + lg(x) * 0.007
+  Star Base           = 1.8^lg(x)
+  Stardust Exponent   = 1 + lg(x) * 0.02
+  Eternity Gain       = 2^lg(x)
+  EP Gain             = 1 + lg(x) * 0.011
+  Lab Mult Power      = 1 + lg(x) * 0.012
+  Supernova Req       = 1 / (1 + lg(x) * 0.02)
+  DP Gain             = 1 + lg(x) * 0.05
+  Free Lab Levels     = round(lg(x + 9)^3 * 5)
+  DTP Cost            = 1 / (1 + lg(x) * 0.015)
+  Center DTU Eff      = 1 + lg(x) * 0.02
+  Ach 29 Reward       = 1 + lg(x) * 0.005
+  Game Speed          = 1 + lg(x) * 0.1
+  Luck Add            = lg((x / 20)^0.45 * 20) * 0.07
+  Zodiac Quality Mult = 1 + lg(x) * 0.04
+
+==Help==
+Your priorities for the donuts in the Planet Shop will change based on your progress. In the beginning, it is suggested you focus on buying Quality and Zodiac Exp. Factor. Later, once you reach Hard Trials, focus on buying Luck until you can start to get Legendary zodiacs. Once you are getting Legendary zodiacs, return to buying Factor and Quality, but keep investing in Luck, evenly splitting your spending between all three. After you unlock Attacks, focusing on Game Speed to begin with is recommended, then later you can buy all 4 donuts evenly or at your own preference.
+
+<!--unsure if we are going to have sections like this on main pages; left this in to be moved to another page if necessary, since the advice is generally good -Angel-->
+
+[[Category:Unity]]
+{{Main navbox}}

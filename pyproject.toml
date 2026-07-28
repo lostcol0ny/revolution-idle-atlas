@@ -1,0 +1,27 @@
+[project]
+name = "revolution-idle-atlas"
+version = "0.1.0"
+description = "Relationship graph for Revolution Idle"
+requires-python = ">=3.12"
+dependencies = [
+    "pydantic>=2.9",
+    "pyyaml>=6.0",
+    "networkx>=3.3",
+    "httpx>=0.27",
+]
+
+[project.scripts]
+atlas = "atlas.cli:main"
+
+[dependency-groups]
+dev = ["pytest>=8.3"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/atlas"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

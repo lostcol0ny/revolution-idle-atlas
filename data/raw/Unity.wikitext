@@ -1,0 +1,101 @@
+'''{{Keyword|unity|Unity}}''' is the 3rd major prestige layer in the game. It is reached when you have {{Keyword|ep|1.08e2466 EP}}.
+When you {{Keyword|unity|Unite}}, you will be able to pick one of 4 Zodiacs from each element type: <span class="zodiacfire">Fire</span>, <span class="zodiacwind">Wind</span>, <span class="zodiacwater">Water</span>, or <span class="zodiacearth">Earth</span> <!-- Feels too walkthrough-ish imo. - ChillCatto -->
+
+== Unity Bonuses ==
+In the [[Unity#Astrology|Astrology]] tab, a panel displays passive bonuses that scale with your total number of Unities (Ʊ). These bonuses apply globally and increase important progression resources:
+
+* {{Keyword|ip|IP Gain}} = <math>[1 + Unities] ^ {[ 2 + log(Unities) ]}</math>
+* {{Keyword|ep|EP Gain}} = <math>[1 + Unities] ^ {[ 1 + 0.25 * log(Unities) ]}</math>
+* {{Keyword|eternity|Σ (Eternity Count) Gain}} = <math>[1 + Unities]</math>
+* {{Keyword|dp|DP Gain}} = <math>[1 + Unities * 3] ^ {[ 0.5 + 0.125 * log(Unities) ]}</math>
+
+These bonuses are not tied to Zodiacs or Planets and are instead a direct reward for accumulating more Unities.
+
+== Astrology ==
+[[File:Astrology Tab.png|thumb|The Astrology tab]]
+The Astrology system is the first of four core progression mechanics in {{Keyword|unity|Unity}}, alongside [[Trials]], [[Attacks]] and [[Relics]]. It revolves around acquiring and assigning <span class="zodiac">Zodiacs</span> to <span class="planet">Planets</span>, granting a wide variety of bonuses.
+
+=== Zodiacs ===
+<small>Main page: ''[[Zodiacs]]''</small>
+
+Zodiacs are collectible entities in the Astrology system that provide bonuses when assigned to Planets. Each Zodiac belongs to one of four Elements — <span class="zodiacfire">Fire</span>, <span class="zodiacwind">Wind</span>, <span class="zodiacwater">Water</span>, or <span class="zodiacearth">Earth</span> — and corresponds to one of the four seasons.
+
+There are 12 Zodiac signs in total. Each can have up to four possible bonuses unique to its sign and element group. Some bonuses are shared across signs of the same element.
+
+The strength of each Zodiac's bonuses scales with its <span style="color: #eaac2d;">Quality</span>, <span style="color: #3f6af4;">Level</span>, and Rarity.
+
+=== Planet Shop ===
+<small>Main page: ''[[Planet Shop]]''</small><br>The planet shop is unlocked after the completion of Easy Trial 6. The Planet shop is a new place in the unity main page. The planet shop uses Astrodust to buy donuts, or use Zodiac modifiers. the 4 donuts you get to buy are <span style="color: #55c0f4;">'''Game speed'''</span>, <span style="color: #5cd236;">'''Luck'''</span>, <span style="color: #eaac2d;">'''Quality'''</span>, and <span style="color: #3f6af4;">'''Zodiac Exp. Factor'''</span>. The 4 zodiac modifiers you get access to are <span style="color: #af59e9;">'''Merging'''</span>, <span style="color: #87c200;">'''Enhancing'''</span> , <span style="color: #00ca8b;">'''Redistribution'''</span> and <span style="color: #db7c00;">'''Sacrificing'''</span>.
+
+=== Planets ===
+<small>Main page: ''[[Planets]]''</small><br>
+Zodiacs must be assigned to Planets to activate their effects. This means that having a zodiac in the inventory does not automatically activate it’s effects.
+
+A Zodiac placed on a Planet contributes:
+* All its unlocked bonuses
+* A Planet bonus, determined by the Zodiac’s Season
+
+The combined effects of all Zodiacs placed on Planets are displayed under Zodiac bonuses in the Astrology tab.
+
+Each Planet can only hold one Zodiac at a time. The cumulative effects of all Planet placements are listed in the Extra bonuses panel in the Astrology tab.
+
+== Trials ==
+Main page: ''[[Trials]]'' <br>Trials are the Unity version of eternity challenges. Each completed trial will give you a unique permanent reward and +2 default EC completions. when you complete all 6 trials of a certain difficulty, you will get another reward. There are 25 trials (as of V1.068) with 6ETs, 6MTs, 6HTs, 6ITs and 1BT. When you want to attempt a trial you should hit the lock and then reset your unity. Remember to unlock the trial after you complete it!
+[[File:Trial tab.png|none|thumb|296x296px|The Trial tab]]
+
+
+== Relics ==
+Main page: ''[[Relics]]'' <br>Relics are powerful artifacts that provide various bonuses across different game stages. Relics are purchased using Gold earned from Attack runs. As of update V1.068, there are a total of 7'''0''' unique relics, each unlocking at specific Attack levels.
+[[File:Relics tab.png|none|thumb|The Relics tab]]
+
+== Attacks ==
+[[File:Attack Tab.png|thumb|The Attack tab]]
+Main page: ''[[Attacks]]'' <br>
+Attacks are unlocked after completing 15 [[Trials|trials]]. A new tab is added with a new revolution type, Attack Circles. For every Attack Level, there is an enemy, depicted as a HP bar in the middle of the screen. Your goal is to deal enough damage to deplete the enemy's HP bar and advance to the next Attack Level.
+
+There are a total 5 Attack Circles and they work similarly to the base game's circles. Every revolution/lap increases the Attack Circle's Attack Damage Multiplier on the top of the screen. In addition, each revolution/lap counts as a hit to the enemy, dealing damage to its HP bar.
+
+When you do a proper Unity by selecting a Zodiac, the Attack Level gets reset to 0 and you will be rewarded with the amount of Gold that is shown at the bottom of the screen. Your Circle Attack Multipliers will NOT be reset upon Uniting and performing a Soft Unity Reset (by e.g. swapping Zodiacs) will not reset Attack Level.
+
+== Minerals (WIP) ==
+[[File:Mineral Footage.png|thumb|The Mineral tab]]
+Main page: ''[[Minerals]]'' <br>
+Minerals are unlocked after completing {{Keyword|ach|Achievement 240}} (reach attacks level 1337), which adds a new subtab to the Unity tab. There are total of 100 minerals in the game, and each mineral generates a resource called '''Value Points (VP)'''. These can be used to buy VP upgrades. 
+
+The base formula for VP gain is: <math> 0.01 \cdot 3 ^ {(Mineral Level - 1)} </math>
+
+Upon reaching Mineral level 30, you can perform Polish Prestige. Doing this, you will gain '''Polish Points (PP)''' based on what level your highest mineral was (gains a boost every 5 levels, scales faster after lvl 50 Mineral). You can spend PP on 5 Weapons: Sword, Axe, Spear, Bow and Knuckles. Sword multiplies VP gain, Axe powers Mineral cost fall, Spear multiplies gold gain, Bow multiplies Attacks Ascension Power, and Knuckles boosts Minerals Local Speed exponent.
+
+Upon reaching Mineral level 70, you can perform Refinement Prestige. Doing this, you will gain '''Refinement Points (RfP)''' based on what level your highest Mineral was (gains a boost every 10 levels). RfP can be used to buy nodes in the Refine Tree. There are 136 nodes, and some are upgradeable to certain levels, while most are single-time buy.
+
+'''Magnets'''
+
+Magnets are unlocked through {{Keyword|node|Refine Tree Node 18}}, giving a base 1% chance to obtain a magnet upon merging common minerals. Magnets also unlock Magnet Upgrades, giving buffs to minerals.
+
+'''Special Minerals'''
+
+Special Minerals are unlocked through {{Keyword|unknown|Refine Tree Node 41}}, unlocking a new grid of minerals. 1 special mineral can be spawned at a time at the cost of Sun and Moon Runes. There are 10 special minerals, Red boosts VP gain, Blue decreases cost increase, Green increases Cost Fall, Pink boost Luck & Quality, Yellow boost Gold Gain, Orange boosts Magnet Chance, Dark Purple boosts PP Gain, Light Blue boosts RfP Gain, White boosts Game Speed, and Black grants tarot draws when destroyed. Special Mineral Progression can also be unlocked through {{Keyword|unknown|Refine Tree Node 46}} where you can spend RfP to boost the effect of the other Gems.
+
+'''Runes'''
+
+== Elements (WIP) ==
+[[File:Elements tree.png|thumb|Element Trees]]
+Main page: ''[[Elements]]'' <br>
+Elements are unlocked after completing {{Keyword|ach|Achievement 321}}, which adds a new subtab to the Unity tab.    
+ 
+== Tarot (WIP) ==
+Main page: ''[[Tarot]]'' <br>
+Tarot is unlocked after purchasing {{Keyword|node|Refine Tree Node 70}}, which adds a new subtab to the Unity tab.
+
+== Plague (WIP) ==
+Main page ''[[Plague]]'' <br>
+Plague is unlocked after purchasing {{Keyword|node|Refine Tree Node 103}}, which adds a new subtab to the Unity tab.
+
+== Trivia ==
+
+* On your first {{Keyword|unity|Unity}}, you will be guaranteed the option of a Lv3 Rare <span class="zodiacfire">Aries</span> with 2 buffs: common exponent and mult gain
+
+<noinclude>{{#titleicon_file:icon_tab_unity.png}}</noinclude>
+
+[[Category:Unity]]
+{{Main navbox}}

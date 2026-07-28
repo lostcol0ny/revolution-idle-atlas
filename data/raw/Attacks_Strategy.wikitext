@@ -1,0 +1,240 @@
+== Primary Gameplay Loop ==
+
+Your main catalyst for progressing through attacks is gold. You get gold every time you unite. The current attack level determines how much gold you will gain from uniting.
+
+The primary gameplay loop is therefore to push attack level as far as you can as fast as you can, collect the gold and start over. With the gold you earn, you can purchase relics and upgrade your attack circles.
+
+=== Getting Rich Quick ===
+
+Changing Zodiacs resets unity, but it does not reset attack level. You can make use of that game mechanic by starting your attack run with game speed zodiacs ([[Zodiac_Loadouts#Game_Speed_Build|Game Speed Build]]) and wait until your attack level isn't increasing rapidly anymore. Only then, you switch to the build that maximizes damage ([[Zodiac_Loadouts#Score Build (600+)|Score Build]]). You then go through Eternity Challenges, grow your Dilation Tree fully and do another short dilation run to maximize your attack damage. Unite when attack level isn't increasing anymore to collect the gold.
+
+Later on, you can skip the swapping process by mixing game speed and damage zodiacs ([[Zodiac_Loadouts#Gold_Farm_Build|Gold Farm Build]]). With this build, you can also fully automate Gold Farming by using a Macro ([[Macro_Templates#Full_Unity_Macro|Full Unity Macro]]) for afk gold farming.
+
+=== Spending Gold Wisely ===
+
+Farming gold is frame limited as you can only get up to 60 attack levels per second.(600 with refine node 3) If you already are at the maximum speed, gold farming can't be sped up any further using Time Flux. This makes gold farming time consuming and the right choice of how to spend that gold an important decision.
+
+You can choose to spend your gold on purchasing Relics or on leveling up your Attack Circles. After getting Achievement 239, the effectiveness of your Relics increases with your current attack level. This also applies to the purchase cost effect of Relic 14, making the purchase of Relics a lot cheaper at max attack level. If you have Achievement 239 unlocked, you should always wait for max attack level before any relic purchase. 
+
+==== Circle Ascensions ====
+
+Ascending your Attack Circles is the most powerful boost to attack progression and should always be prioritized.
+
+While leveling up your Attack Circles only increases lap speed moderately, it does not increase circle damage. Ascending Circles on the other hand increases damage massively by multiplying attack damage by its ascension power (but decreases lap speed).
+
+You generally want to avoid spending gold on leveling up Attack Circles unless you can gain an Ascension stage. By setting your purchase amount to x25, you can check the total gold cost for the next stage.
+
+After Ascending an Attack circle, you should always follow up with some [[Attacks Strategy#Attack Mult Farming|Attack Mult Farming]] to actually increase your Attack Mult Damage.
+
+==== Relics Priority ====
+
+'''1) Relic 14'''
+
+Decreases the purchase cost for all Relics and therefore should always be prioritized.
+
+'''2) Relics 20 and 21'''
+
+Your primary way to increase your gold gain per second is to increase your maximum attack level. The fastest and easiest way to do that is through [[Attacks Strategy#Attack Mult Farming|Attack Mult Farming]], so the Relics that increase Attack Mult Gain have a very high priority. Relic 20 is insanely powerful and should have a similar priority as Relic 14 and Circle Ascensions.Due to the fact that relic 21 can empower relic 17, further strengthening relic 9, it overtakes relic 20 at around level 1400.After level 100, relic 21 is softcapped, making relic 17 stronger.
+
+'''3) Relics 9, 16, 17, 18 and 24'''
+
+While not as powerful as Relic 20, Relics 16 and 18 still help with Attack Mult Gain, while Relics 9 & 17 directly increase Gold Gain. These Relics should all be high up on your priority list. Unlike for Relics 14, 20 and Circle Ascensions, you shouldn't go out of your way to save up for these though.Relic 24 boosts game speed significantly and speeds up mult farming significantly.
+
+'''4) Relics 3, 13 & 19(12 too with refine node 8)'''
+
+These Relics moderately increase damage output and should get at least some priority over others.
+
+'''5) Pretty much everything else'''
+
+All other Relics should have a low priority for progressing through attack stages.
+
+They will still slightly improve attack or revolution damage or greatly help with other aspects of the game (such as Relics 2, 4, 8, 15, 24, 25, 26 and 27 for general zodiac improvements), so just buy these when they are cheap enough to not make much of a dent into your war chest.
+
+After buying refine node 15,this priority doesn't matter at all and you can buy any relic in any order as long as you can afford it.
+
+=== Attack Mult Farming ===
+
+Your Attack Mults do not reset on Unity. Every time a circle completes a revolution, the corresponding Attack Mult increases by its Mult Gain value. This means that you can permanantly and greatly increase your attack damage by using some time flux, time warp or just go afk for a bit while maximizing your Game Speed using [[Zodiac_Loadouts#Game_Speed_Build|Game Speed Build]]. 
+
+This is incredibly powerful for increasing your gold gain by increasing your max attack level, especially after ascending your attack circles and upgrading your Mult Gain related Relics. You may feel that running the game on speed build is not effective since your attack level does not increase, but keep in mind that it will increase your attack mult damage permanently for all future runs.
+
+After Achievement 239, you should do your attack mult farming on close to maximum attack level. Don't unite while farming. Achievement 239 massively increases the Mult Gain Value at high attack levels by boosting relics 20, 16 and 18.
+
+== Other Sources of Progress ==
+
+The Score Damage Multiplier on the top left of the Attacks screen is based on the Current Score from Revolutions Tab. The formula that converts your Current Score to the Score Damage Multiplier is improved by Relics 13 and 19, but you can also work on improving your current score by relic 6.
+
+Current Score is mainly determined by your Zodiac Stats, Planet and Unity Bonuses and your Sacrifice Stats, so apart from choosing the right build, you can improve your Attack damage by improving your Zodiacs, improving your Sacrifice Stats and farming unities.
+
+Leveling up your Donuts in Planet shop will help you a lot with Zodiac Improvement. The currency to do so is Astrodust, so farming Astrodust is another viable path towards progress.
+
+=== Improving Zodiacs ===
+
+Zodiac stats are generally improved by increasing rarity, quality and level. Apart from its effect on zodiac stats, zodiac level additionally increases attack damage through Relic 3. You can further improve your Zodiacs by increasing certain stats at the expense of other stats by redistributing their [[Attacks_Strategy#Stat_Order_Optimization|Stat Orders]]. It is generally advisable to only do this for your Pisces to have Zodiac Quality as top stat until very late in the game.
+
+The generic way to improve your zodiacs is to farm new zodiacs using [[Zodiac_Loadouts#Quality_Build|Quality Build]]. Better Pisces means better Zodiacs both quality and rarity wise, so improving these should be your priority. You generally want to make sure that the zodiacs you farm this way are at maximum level and quality, so you should preferably use a [[Macro_Templates#Full_Unity_Macro|Full Unity Macro]] for this purpose.
+
+Following this advice will let you breeze through attacks handily, but your zodiacs will plateau around level 122, 80M-100M quality and +12-14 rarity. To push through early minerals faster, you will need to look into a slightly obscure game mechanic called [[Attacks_Strategy#Zodiac_Maxxing|Zodiac Maxxing]].
+
+==== Quality ====
+
+Can be improved by increasing Zodiac Quality Sacrifice Stat, increasing the quality donut in planet shop and by improving Relics 2, 15 and 26. Merging also improves quality by around 7% per merge (see [[Planet_Shop#Merging|Merging]]).
+
+==== Rarity ====
+
+Can be improved by increasing Luck Sacrifice Stat, increasing the luck donut in planet shop and by improving Relics 4, 15 and 25. If you have souls to waste, increasing shop luck in [[Soul_Shop|Soul Shop]] is not the worst way to spend them.
+
+==== Level ====
+
+Zodiac Level is improved by increasing [[Zodiacs#Zodiac_Level|Zodiac Factors]]. This is generally achieved by making sure that your farming Macro pushes DP gain close to maximum. The Factors can further be improved by increasing the level donut in planet shop, by improving Relics 8 and 27 along with farming unities. Almost all Sacrifice Stats will have a positive impact on your Factors.
+
+=== Sacrificing ===
+
+Sacrifice Stats both directly and indirectly increase your Attack damage. Direct ways include increasing revolution score by improving stats like DP gain and SN req, while indirect ways include stats like Zodiac Quality or Luck by improving your zodiac farming power.
+
+Sacrificing better zodiacs give more stat gains, but sacrificing more zodiacs gives more stat gains than sacrificing better zodiacs. To maximize gains from Sacrificing, you'll therefore generally want a good mix between speed and quality by using a  [[Macro_Templates#Fast_Sacrificing_Macro|Fast Sacrificing Macro]].
+
+The most important sac stats for attack progression are Zodiac Quality and Mult Gain. Further very useful stats are Luck &
+Center DTU (Water), Common Exp (Fire), DP Gain, SN Req, Free Labs & Lab Mult (Wind)
+
+Keep in mind that stat gains from sacrificing decrease with every sacrifice of this stat type. This means that gains are largest for the stats you have sacrificed the least, so it's worthwhile to do at least some sacrificing even for lower priority stats.
+
+Also remember that your stat gains increase with increasing quality zodiacs, so if you haven't done any sacrificing in a bit, but have improved your pisces a lot, give it another go to see if it feels worthwhile again.
+
+For more infos, see [[Planet_Shop#Sacrificing|Sacrificing]]
+
+=== Astrodust Farming ===
+
+Astrodust is the currency you use to upgrade [[Planet_Shop#Donuts|Planet Shop Donuts]]. It is also used to enhance and redistribute zodiacs. You can increase your Astrodust gain rate by upgrading Relic 5.
+
+Upgrading both Quality and Luck Donuts greatly increase your Zodiac farming power, even more so with relics 25 and 26, and also increase your Astrodust farming rate. Maximize your Astrodust gain rate by using [[Macro_Templates#Fast_Unity_Macro|Fast Unity Macro]] in conjunction with [[Zodiac_Loadouts#Astrodust_Farm_Build|Astrodust Farm Build]].
+
+Game Speed Donut helps you to increase your Attack Mult farming efficiency, while Zodiac Exp Donut helps a bit with increasing your Zodiac Levels for farming purposes. Your main focus should be on Quality and Luck, but it is still advisable to spend a bit of time upgrading the other two.
+
+If it takes seconds or minutes to upgrade, it's probably worth it. If it takes hours or days, it's probably not. Keep in mind that as your overall stats go up, you'll also increase your dust gain rate, so it might be good to check back from time to time.
+
+Formula for Zodiac Sell Price:
+
+<pre>
+Zodiac Sell Price  = (ZodiacScore / 10)^0.75 * 1.1^ZodiacRarity * (1 + Ach193 * 2) * (1 + 0.03 * Shop_Lvl_SellPrice) * (Relic 5 Effect)
+
+where
+
+Zodiac Score = 1.125^ZodiacRarity * ZodiacQuality * (9 + ZodiacLevel^2) * 2 * ((ZodiacLevel - 90) / 10) ^ 2.5
+
+and:
+
+ZodiacRarity = Immo+ Number + 9
+</pre>
+
+In more practical terms, this results in the following rough approximations:
+
+<pre>
+Rarity +1 -> Sale Price + 20%
+Quality +10% -> Sale Price +7.5%
+Level +1 -> Sale Price +8%
+</pre>
+
+=== Unity Farming ===
+
+[[Unity#Unity_Bonuses|Unity Bonuses]] gives only a very minor boost to Attack damage, so farming Unities is not the preferred option to improve Attacks. It can be noticeable if your unity count is very low or if you increase it by a lot.
+
+Unity count will also indirectly help with progression by improving various Zodiac Factors, making it easier to reach higher [[Zodiacs#Zodiac_Level|Zodiac Levels]].
+
+Maximize your Unity gain rate by using [[Macro_Templates#Fast_Unity_Macro|Fast Unity Macro]] in conjunction with [[Zodiac_Loadouts#Unity_Farm_Build|Unity Farm Build]](all Gemini).
+
+== Pushing Through Minerals ==
+
+=== Zodiac Maxing ===
+
+When you unite, zodiac choice including rarity gets locked in and stays fixed until you unite again. Your current zodiac loadout will determine the quality of the zodiac you choose, but the level stays at whatever maximum zodiac level you have reached at any point in this unity.
+
+This mechanic allows you to go for maximum level, rarity and quality at the same time:
+
+* Start out with [[Zodiac_Loadouts#Luck_Build|Luck Build]] and reroll zodiacs by repeatedly uniting until you see a zodiac with the rarity and element you want.
+
+* Wait a bit for attack levels to build up to maximize your relic boosts. After that, switch to [[Zodiac_Loadouts#Level_Build|Level Build]] to increase the zodiac level. If you don't have level build, you can instead use [[Zodiac_Loadouts#Score Build_(600+)|Score Build]] for a slightly lower zodiac level.
+
+* Finally, switch to [[Zodiac_Loadouts#Quality_Build|Quality Build]] to go for max quality before hitting the unite button.
+
+A video example demonstrating this process can be found in the discord server: [https://discord.com/channels/481594050999353345/1328726322343579741/1376614747822231612 Zodiac Maxxing Video]
+
+The zodiacs you can generate using this process will give you a significant boost over what you can reach by normal means. To make the most out of this mechanic, it is advisable to start with grinding out a full quality set. With that set, you should be able to grind out a zodiac level set with which you in turn can grind out level 130-131 zodiacs.
+
+At this point, it is advisable to switch from regular score build to [[Zodiac_Loadouts#Score Build_(1400+)|Max Score Build]] for attacks. Get the required 130/131s for both gold and score builds.
+
+You can push the boundaries even a bit further by repeating this process and combining it with the other means of attack progression described in this article. To save yourself some grinding time, you can reuse your zodiacs by e.g. merging 2xLvl 131 zodiacs with 1xLvl 130 zodiac. This will always yield a Lvl 131 zodiac with+1 rarity.
+
+For a reference to what immo+ level you should be looking out for and when you can expect to start seeing the next tier, here's a luck threshold table showing the approximate lower boundaries for the luck needed for each immo+ level:
+<pre>
+ +3   idk, but less than 1106
+ +4   1327
+ +5   1659
+ +6   2099
+ +7   2567
+ +8   3159
+ +9   3828
++10   4572
++11   5432
++12   6425
++13   7602
++14   8688
++15   9962
++16  11454
++17  13108
++18  14780
++19  16595
+</pre>
+
+=== Stat Order Optimization ===
+
+[[Planet_Shop#Redistribution|Redistributing]] a zodiac rerolls the zodiac sign within the zodiac element an also shuffles around its stat order. This is very important because the stat order has a major effect on the stat values. The top stat gets a significant boost while the bottom stat receives a major penalty. By repeatedly redistributing a zodiac, you can make sure that all your zodiacs have the stats that really matter on top and the ones that don't matter at the bottom for a noticeable boost to your overall strength.
+
+Every time you merge, the stat order gets shuffled around, so as long as you keep switching out and upgrading your zodiacs, you probably should only bother about top stat. It can take a lot of rerolls for that "perfect" order. Also note that even later on, going further than just for top stat will yield a very small difference. Both zodiac stats and overall effects may be softcapped and testing on the actual optimality of the presented stat order beyond top stat has been spotty at best.
+
+Stat Priorities:
+
+<pre>
+Aqua: DP -> SN -> LL -> FL
+Libra: DP -> SN -> EP / LL
+Gemini: ET -> SN -> EP / LL
+
+Aries: Exp -> Asc / Prom / Mult
+Leo: Exp -> Asc / Prom / LS
+
+Canc: Center -> Ach29 / GS -> DTP
+Scorp: Luck -> Center -> Ach29 / GS
+Pisc: Qual -> Luck -> Ach29 / GS
+</pre>
+
+=== Enhancing ===
+
+Once you have reached the point where you are unlikely to further improve your zodiacs by farming/merging, you have probably spent hours on each zodiac. At this point, you might as well go the extra mile and spend some Astrodust on enhancing these zodiacs for a further tiny bit of stat gains. With minerals, only enhance with Sword Lv.50. This is what makes it good again.
+
+Know that while stat order is not affected by enhancing, every time you successfully enhance a zodiac, there will be a hidden quality roll that affects stat values. A good roll will give you a big stat boost, while a bad roll might even decrease stats. 
+
+For optimal results, keep an eye on the enhancing costs. A good roll will be noticeable by observing a jump in enhancing costs, while a bad roll will barely increase or even decrease the cost a bit.
+
+You will need a lot of Astrodust and an autoclicker for this process since success rates are abysmal and you will need a lot of successes to see a meaningful difference to stats.
+
+For a reference of how much Astrodust is approximately needed, here's the formula for Enhance Price and Success Chance:
+
+<pre>
+Zodiac Enhance Price  = ZodiacSellCost * 2 * 1.3^log(1 + ZodiacQuality)
+Zodiac Enhance Chance = 0.9^(log(1 + ZodiacQuality)^2) * 100%
+
+where:
+Zodiac Score      = 1.125^ZodiacRarity * ZodiacQuality * (9 + ZodiacLevel^2) * 2 * ((ZodiacLevel - 90) / 10) ^ 2.5
+Zodiac Sell Cost  = (ZodiacScore / 10)^0.75 * 1.1^ZodiacRarity
+
+and:
+ZodiacRarity = Immo+ Number + 9
+</pre>
+
+
+== See Also ==
+* [[Zodiac Loadouts]]
+* [[Zodiacs]]
+* [[Attacks]]
+
+[[Category:Unity]]

@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "nodes": [
+    {
+      "confidence": "documented",
+      "id": "refine-node-121",
+      "kind": "tree-node",
+      "name": "Refine Node 121",
+      "system": "mineral",
+      "wiki": "Minerals/Refine_Tree"
+    },
+    {
+      "confidence": "provisional",
+      "id": "singularity",
+      "kind": "currency",
+      "name": "Singularity",
+      "system": "singularity",
+      "wiki": "Singularity"
+    }
+  ],
+  "edges": [
+    {
+      "confidence": "provisional",
+      "from": "refine-node-121",
+      "note": "Singularity is unlocked by Refine Node 121",
+      "rel": "unlocks",
+      "source": "wiki:Singularity",
+      "to": "singularity"
+    }
+  ]
+}

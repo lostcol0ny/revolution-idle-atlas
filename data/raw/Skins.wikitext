@@ -1,0 +1,130 @@
+Skins change the look of your Revolution tab. They are purchased through the [[Soul Shop]]. As of V1.014, there are 16 available skins in the game.
+
+== Ring ==
+The default skin
+
+[[File:SkinAnimated_Ring.mp4|thumb|400px|none|<10 laps/s]]
+[[File:SkinStatic_Ring.mp4|thumb|400px|none|≥10 laps/s]]
+
+
+== Orbital ==
+
+Price: 1000 {{Icon|soul_icon}} {{Keyword|soul|Souls}}
+
+[[File:SkinAnimated_Orbital.mp4|thumb|400px|none|<10 laps/s]] 
+[[File:SkinStatic_Orbital.mp4|thumb|400px|none|≥10 laps/s]]
+
+== Alpha Mask==
+
+Price: 1000 {{Icon|soul_icon}} {{Keyword|soul|Souls}} or obtaining {{Keyword|ach|Achievement #295|link=Achievements}}
+
+[[File:SkinAnimated_AlphaMask.mp4|thumb|400px|none|<10 laps/s]] 
+[[File:SkinStatic_AlphaMask.mp4|thumb|400px|none|≥10 laps/s]]
+
+== Bar Diagram ==
+
+Price: 1500 {{Icon|soul_icon}} {{Keyword|soul|Souls}} or obtaining {{Keyword|ach|Achievement #353|link=Achievements}}
+
+[[File:SkinAnimated_BarDiagram.mp4|thumb|400px|none|<10 laps/s]] 
+[[File:SkinStatic_BarDiagram.mp4|thumb|400px|none|≥10 laps/s]]
+
+== Cosmos ==
+
+Price: 3000 {{Icon|soul_icon}} {{Keyword|soul|Souls}} 
+
+[[File:SkinAnimated_Cosmos.mp4|thumb|400px|none|<10 laps/s]] 
+[[File:SkinStatic_Cosmos.mp4|thumb|400px|none|≥10 laps/s]]
+
+== Clock ==
+
+Price: 2500 {{Icon|soul_icon}} {{Keyword|soul|Souls}}
+
+[[File:SkinAnimated_Clock.mp4|thumb|400px|none|<10 laps/s]] 
+[[File:SkinStatic_Clock.mp4|thumb|400px|none|≥10 laps/s]]
+
+== Prismatic ==
+
+Price: 4000 {{Icon|soul_icon}} {{Keyword|soul|Souls}} 
+
+[[File:SkinAnimated_Prismatic.mp4|thumb|400px|none|<10 laps/s]] 
+[[File:SkinStatic_Prismatic.mp4|thumb|400px|none|≥10 laps/s]]
+
+== Pendulum ==
+
+Price: 3000 {{Icon|soul_icon}} {{Keyword|soul|Souls}} 
+
+[[File:SkinAnimated_Pendulum.mp4|thumb|400px|none|<10 laps/s]] 
+[[File:SkinStatic_Pendulum.mp4|thumb|400px|none|≥10 laps/s]]
+
+== Retro ==
+
+Price: 3000 {{Icon|soul_icon}} {{Keyword|soul|Souls}} 
+
+Includes its own OST.
+
+[[File:SkinAnimated_Retro.mp4|thumb|400px|none|<10 laps/s]] 
+[[File:SkinStatic_Retro.mp4|thumb|400px|none|≥10 laps/s]]
+
+== Hamster Crew ==
+
+Price: 5000 {{Icon|soul_icon}} {{Keyword|soul|Souls}} 
+
+[[File:SkinAnimated_HamsterCrew.mp4|thumb|400px|none|<10 laps/s]] 
+[[File:SkinStatic_HamsterCrew.mp4|thumb|400px|none|≥10 laps/s]]
+
+== Dragon Eye ==
+
+Price: 7000 {{Icon|soul_icon}} {{Keyword|soul|Souls}}
+
+[[File:SkinAnimated_DragonEye.mp4|thumb|400px|none|<10 laps/s]] 
+[[File:SkinStatic_DragonEye.mp4|thumb|400px|none|≥10 laps/s]]
+
+== Matrix ==
+
+Price: 4000 {{Icon|soul_icon}} {{Keyword|soul|Souls}}
+
+[[File:SkinAnimated_Matrix.mp4|thumb|400px|none|<10 laps/s]] 
+[[File:SkinStatic_Matrix.mp4|thumb|400px|none|≥10 laps/s]]
+
+== Abyss ==
+
+Price: 6000 {{Icon|soul_icon}} {{Keyword|soul|Souls}}
+
+[[File:SkinAnimated_Abyss.mp4|thumb|400px|none|<10 laps/s]] 
+[[File:SkinStatic_Abyss.mp4|thumb|400px|none|≥10 laps/s]]
+
+== Washing Machine ==
+
+Price: 7000 {{Icon|soul_icon}} {{Keyword|soul|Souls}}
+
+[[File:SkinAnimated_WashingMachine.mp4|thumb|400px|none|<10 laps/s]] 
+[[File:SkinStatic_WashingMachine.mp4|thumb|400px|none|≥10 laps/s]]
+
+== Black Hole ==
+
+Price: 6500 {{Icon|soul_icon}} {{Keyword|soul|Souls}}
+
+[[File:SkinAnimated_BlackHole.mp4|thumb|400px|none|<10 laps/s]] 
+[[File:SkinStatic_BlackHole.mp4|thumb|400px|none|≥10 laps/s]]
+
+== Secret Skin ==
+<div class="toccolours mw-collapsible mw-collapsed" data-expandtext="Show spoilers" data-collapsetext="Hide spoilers">
+
+One of the [[Achievements/Secrets|{{Keyword|secret|Secret Achievements}}]] rewards you with this skin:
+
+<div class="mw-collapsible-content">
+
+<big>'''Banana'''</big>
+
+Requirement: {{Keyword|secret|Secret Achievement 33}}
+
+[[File:SkinAnimated_Banana.mp4|thumb|400px|none|<10 laps/s]] 
+[[File:SkinStatic_Banana.mp4|thumb|400px|none|≥10 laps/s]]
+</div>Did you know that “Retro” is the only Skin with a OST?
+</div>
+
+== No skin ==
+In [[Options#Interface|Options -> Display]], there's a button that allows you to hide the skin, moving your [[Revolution|Score]] value to the center instead.
+
+[[Category:Shop]]
+{{Main navbox}}

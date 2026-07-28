@@ -1,0 +1,7 @@
+{{Main page box/start
+| title = Contribute to the wiki
+}}
+{{SITENAME}} is a collaborative wiki resource that is open for anyone to edit. You don't need special permission beyond [[Special:UserLogin/signup|registering]] an account to edit most pages, and your contributions can grow the wiki and help other players.
+
+Check out the [[Meta:Community Portal|Community Portal]] for more information!
+{{Main page box/end}}<noinclude>[[Category:Main page boxes]]</noinclude><!-- don't edit this line -->

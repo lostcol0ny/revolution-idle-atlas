@@ -1,0 +1,43 @@
+=='''General'''==
+Eternity Milestones is the 1st {{Keyword|eternity|Eternity}} tab, unlocked by reaching {{Keyword|eternity|Eternity}} for the first time. This tab includes [[Eternity#Eternity_Bonuses|Eternity Bonuses]]. There are three types of Eternity Milestones: Eternities, Animals and Challenges.
+
+=='''Eternities'''==
+Eternity Milestones are obtained by reaching a certain number of {{Keyword|eternity|Eternities}} (Σ). These milestones unlock automation and new mechanics, modify existing mechanics, and provide boosts, as follows:
+# Have 1 Σ : Unlocks Eternity Milestones
+# Have 2 Σ : Starting from this {{Keyword|eternity|Eternity|}}, keeps all [[Automations|{{Keyword|auto|Automations}}]]
+# Have 3 Σ : Unlocks Eternity Zoo (see [[Eternity#Animals|Animals]])
+# Have 5 Σ : Buying [[Revolution|Revolutions]] (colors) no longer take away [[Revolution#Score|Score]]
+# Have 7 Σ : Unlocks [[Automations#IP_Adjuster|{{Keyword|auto|Auto IP Adjuster}}]]
+# Have 8 Σ : Unlocks [[Eternity#Eternity_Challenges|Eternity Challenges]]
+# Have 12 Σ : Unlocks [[Automations#Autobuy_Infinity_Tree|{{Keyword|auto|Automation for Infinity Upgrades}}]]
+# Have 14 Σ : Unlocks [[Automations#Autobuy_Generators|{{Keyword|auto|Automation for Generators}}]]
+# Have 16 Σ : Unlocks [[Automations#Autobuy_Stars|{{Keyword|auto|Automation for Stars and Star/Stardust upgrades}}]] and [[Automations#Auto_Eternity|{{Keyword|auto|Auto Eternity}}]]
+# Have 32 Σ : "Breaks Eternity" ([[Infinity|{{Keyword|ip|IP}}]] is no longer limited to {{Keyword|ip|~1.79e308 IP}})
+# Have 100 Σ : x1.05 to [[Infinity|{{Keyword|ip|IP}}]] gain for each {{Keyword|eternity|Eternity}} (softcapped at 1,000 Σ)
+[[File:Eternity milestones.png|thumb|Eternity Milestones]]
+At 32 Σ, the player will Break Eternity ([[Achievements|{{Keyword|ach|Ach. 80}}]]), which removes the [[Infinity|{{Keyword|ip|IP}}]] limit of {{Keyword|ip|~1.79e308 IP}}. Reaching higher [[Infinity|{{Keyword|ip|IP}}]] values will reward more {{Keyword|ep|EP}} per {{Keyword|eternity|Eternity}}.
+
+
+=='''Animals'''==
+Animals Milestones are obtained based on how many Animals the player owns.
+They unlock new mechanics, modify existing mechanics and provide bonuses to the player, as follows:
+
+# Own 1 Animal: Unlocks [[Eternity#Slowdown|Slowdown]]
+# Own 4 Animals: Unlocks [[Automations#Auto_Slowdown|{{Keyword|auto|Auto Slowdown}}]]
+# Own 7 Animals: Unlocks [[Eternity#Laboratory|{{Keyword|rp|Lab}}]]
+# Own 10 Animals: [[Revolution#Promote|Promoting]] now resets nothing
+# Own 20 Animals: Gain 100% of the {{Keyword|ip|IP}} you would get on [[Infinity|{{Keyword|inf|Infinity}}]], every second. ''Needs [[Eternity#Eternity_Challenges|Eternity Challenges Milestone]] 4 (10 {{Keyword|eternity|EC}} completions) to work fully.''
+# Own 48 Animals: +10 free levels to all [[Eternity#Laboratory|{{Keyword|rp|RP}}]] upgrades
+# Own 81 Animals: Unlocks [[Eternity#Dilation_&_Dilation Tree|{{Keyword|dilation|Dilation}}]]
+
+=='''Challenges'''==
+{{Keyword|eternity|Eternity Challenges}} have their own milestones based on the number of EC completed.
+#3 EC completions: Keep your [[Infinity#Infinity_Challenges|{{Keyword|inf|Infinity Challenges}}]] on {{Keyword|eternity|Eternity}} ''(including fastest completion times)''
+#5 EC completions: [[Revolution#Prestige|Prestiging]] now resets nothing
+#8 EC completions: Unlocks [[Eternity#Supernova|Supernova]]
+#10 EC completions: Keep fastest [[Infinity|{{Keyword|inf|Infinity}}]] time on {{Keyword|eternity|Eternity}} ''(needed for [[Eternity#Animals_Milestones|Animals Milestone]] 5 to work correctly)''
+#30 EC completions: Every 4 Supernovae gives 1 free level to all [[Eternity#Laboratory|{{Keyword|rp|RP}}]] upgrades
+#32 EC completions: Every 4 Supernovae gives another free level to all [[Eternity#Laboratory|{{Keyword|rp|RP}}]] upgrades
+#35 EC completions: Every 2 Supernovae gives another free level on all [[Eternity#Laboratory|{{Keyword|rp|RP}}]] upgrades
+#50 EC completions: Unlocks [[Eternity#Dilation_&_Dilation_Tree|{{Keyword|dtp|Dilation Tree}}]]
+{{Main navbox}}

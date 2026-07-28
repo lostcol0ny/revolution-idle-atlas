@@ -1,0 +1,403 @@
+'''{{Keyword|inf|Infinity}}''' [[File:Icon tab inf.png|20x20px]] is the 1st major reset layer in Revolution Idle, and is the 3rd reset layer overall. Upon reaching 1.79e308 Score, an option to Infinite for Infinity Points (IP) will be displayed. Upon claiming IP, an Infinity is performed and the following stats are reset:
+
+# Current Score
+# Colors and their Ascensions
+# Prestige Mult and Exponent
+# Promotion Levels
+# Generator Power (Generator Amount is set back to their bought amounts instead)
+# Stardust Amount
+
+IP can be spent on Infinity Upgrades, Generators, Stars and Star Upgrades.
+
+== Infinity Upgrades ==
+Infinity upgrades (IU) form a skill tree. Below is a summary table:
+{| class="wikitable mw-collapsible mw-collapsed" style="text-align:center; width: 80%; font-size: 1rem"
+|colspan="5"|'''Infinity Upgrades'''
+|-
+! Code !! Icon !! Name !! Effect !! Cost (IP)
+|-
+| 1;1 || {{#tag:tabber|Current = [[File:0011.png|frameless|center|64px]]
+{{!}}-{{!}}
+Pre-1.053 = [[File:InfinityUpgrade 1 1.png|frameless|center|64px]]
+{{!}}-{{!}}
+}} || Infinity Generation and Automation || Generator mult × Infinities & unlocks Autobuy || 1
+|-
+| 2;1 || {{#tag:tabber|Current = [[File:0021.png|frameless|center|64px]]
+{{!}}-{{!}}
+Pre-1.053 = [[File:InfinityUpgrade 2 1.png|frameless|center|64px]]
+{{!}}-{{!}}
+}} || Exponential Box || +0.01 to Common Exponent || 1
+|-
+| 2;2 || {{#tag:tabber|Current = [[File:0022.png|frameless|center|64px]]
+{{!}}-{{!}}
+Pre-1.053 = [[File:InfinityUpgrade 2 2.png|frameless|center|64px]]
+{{!}}-{{!}}
+}} || Auto Ascend || Unlocks Auto Ascension || 1
+|-
+| 3;1 || {{#tag:tabber|Current = [[File:0031.png|frameless|center|64px]]
+{{!}}-{{!}}
+Pre-1.053 = [[File:InfinityUpgrade 3 1.png|frameless|center|64px]]
+{{!}}-{{!}}
+}} || Fast Laps || x1.1 to lap speed || 1
+|-
+| 4;1 || {{#tag:tabber|Current = [[File:0041.png|frameless|center|64px]]
+{{!}}-{{!}}
+Pre-1.053 = [[File:InfinityUpgrade 4 1.png|frameless|center|64px]]
+{{!}}-{{!}}
+}} || Even Faster Laps || x1.2 to lap speed || 3
+|-
+| 5;1 || {{#tag:tabber|Current = [[File:0051.png|frameless|center|64px]]
+{{!}}-{{!}}
+Pre-1.053 = [[File:InfinityUpgrade 5 1.png|frameless|center|64px]]
+{{!}}-{{!}}
+}} || Long-Term Prestiging || Boosts Prestige mult based on time in Infinity || 3
+|-
+| 5;2 || {{#tag:tabber|Current = [[File:0052.png|frameless|center|64px]]
+{{!}}-{{!}}
+Pre-1.053 = [[File:InfinityUpgrade 5 2.png|frameless|center|64px]]
+{{!}}-{{!}}
+}} || Solid Exponent || Boosts Common Exponent based on Infinities || 3
+|-
+| 5;3 || {{#tag:tabber|Current = [[File:0053.png|frameless|center|64px]]
+{{!}}-{{!}}
+Pre-1.053 = [[File:InfinityUpgrade 5 3.png|frameless|center|64px]]
+{{!}}-{{!}}
+}} || Auto Prestige || Unlocks Automation for 
+Prestiging
+| 3
+|-
+| 6;1 || {{#tag:tabber|Current = [[File:0061.png|frameless|center|64px]]
+{{!}}-{{!}}
+Pre-1.053 = [[File:InfinityUpgrade 6 1.png|frameless|center|64px]]
+{{!}}-{{!}}
+}} || Mighty Ascend || Gives +2 to Ascension Power || 3
+|-
+| 6;2 || {{#tag:tabber|Current = [[File:0062.png|frameless|center|64px]]
+{{!}}-{{!}}
+Pre-1.053 = [[File:InfinityUpgrade 6 2.png|frameless|center|64px]]
+{{!}}-{{!}}
+}} || Ascend to Ascend || Boosts Ascension Power based on Infinities || 3
+|-
+| 7;1 || {{#tag:tabber|Current = [[File:0071.png|frameless|center|64px]]
+{{!}}-{{!}}
+Pre-1.053 = [[File:InfinityUpgrade 7 1.png|frameless|center|64px]]
+{{!}}-{{!}}
+}} || Challenges! || Unlocks Infinity Challenges || 5
+|-
+| 8;1 || {{#tag:tabber|Current = [[File:0081.png|frameless|center|64px]]
+{{!}}-{{!}}
+Pre-1.053 = [[File:InfinityUpgrade 8 1.png|frameless|center|64px]]
+{{!}}-{{!}}
+}} || Generator & Time || Boosts Gen 1 based on time in Infinity || 16
+|-
+| 8;2 || {{#tag:tabber|Current = [[File:0082.png|frameless|center|64px]]
+{{!}}-{{!}}
+Pre-1.053 = [[File:InfinityUpgrade 8 2.png|frameless|center|64px]]
+{{!}}-{{!}}
+}} || Generator & Power || Boosts Gen 1 based on Gen Power || 32
+|-
+| 8;3 || {{#tag:tabber|Current = [[File:0083.png|frameless|center|64px]]
+{{!}}-{{!}}
+Pre-1.053 = [[File:InfinityUpgrade 8 3.png|frameless|center|64px]]
+{{!}}-{{!}}
+}} || Generator & Constant || Gen 1 ×5 || 16
+|-
+| 9;1 || {{#tag:tabber|Current = [[File:0091.png|frameless|center|64px]]
+{{!}}-{{!}}
+Pre-1.053 = [[File:InfinityUpgrade 9 1.png|frameless|center|64px]]
+{{!}}-{{!}}
+}} || Generator 2 & Time || Boosts Gen 2 based on time in Infinity || 128
+|-
+| 9;2 || {{#tag:tabber|Current = [[File:0092.png|frameless|center|64px]]
+{{!}}-{{!}}
+Pre-1.053 = [[File:InfinityUpgrade 9 2.png|frameless|center|64px]]
+{{!}}-{{!}}
+}} || Generator 2 & Constant || Gen 2 ×3 || 128
+|-
+| 10;1 || {{#tag:tabber|Current = [[File:0101.png|frameless|center|64px]]
+{{!}}-{{!}}
+Pre-1.053 = [[File:InfinityUpgrade 10 1.png|frameless|center|64px]]
+{{!}}-{{!}}
+}} || Auto Work || Unlocks Automation for Promotions || 256
+|-
+| 11;1 || {{#tag:tabber|Current = [[File:0111.png|frameless|center|64px]]
+{{!}}-{{!}}
+Pre-1.053 = [[File:InfinityUpgrade 11 1.png|frameless|center|64px]]
+{{!}}-{{!}}
+}} || Weak Generators || Boosts Gen 1 based on current IP || 300
+|-
+| 11;2 || {{#tag:tabber|Current = [[File:0112.png|frameless|center|64px]]
+{{!}}-{{!}}
+Pre-1.053 = [[File:InfinityUpgrade 11 2.png|frameless|center|64px]]
+{{!}}-{{!}}
+}} || Medium Generators || Boosts Gen 2 based on current IP || 400
+|-
+| 12;1 || {{#tag:tabber|Current = [[File:0121.png|frameless|center|64px]]
+{{!}}-{{!}}
+Pre-1.053 = [[File:InfinityUpgrade 12 1.png|frameless|center|64px]]
+{{!}}-{{!}}
+}} || First, but better || Infinities boost Gen 2 || 512
+|-
+| 13;1 || {{#tag:tabber|Current = [[File:0131.png|frameless|center|64px]]
+{{!}}-{{!}}
+Pre-1.053 = [[File:InfinityUpgrade 13 1.png|frameless|center|64px]]
+{{!}}-{{!}}
+}} || A Little Gift || Gives +1 to Ascension Power || 600
+|-
+| 14;1 || {{#tag:tabber|Current = [[File:0141.png|frameless|center|64px]]
+{{!}}-{{!}}
+Pre-1.053 = [[File:InfinityUpgrade 14 1.png|frameless|center|64px]]
+{{!}}-{{!}}
+}} || First for the first || Promotion 1 stronger based on its level || 1,024
+|-
+| 14;2 || {{#tag:tabber|Current = [[File:0142.png|frameless|center|64px]]
+{{!}}-{{!}}
+Pre-1.053 = [[File:InfinityUpgrade 14 2.png|frameless|center|64px]]
+{{!}}-{{!}}
+}} || Efficiency V || Gen Exponent base is increased to 0.75 || 1,024
+|-
+| 15;1 || {{#tag:tabber|Current = [[File:0151.png|frameless|center|64px]]
+{{!}}-{{!}}
+Pre-1.053 = [[File:InfinityUpgrade 15 1.png|frameless|center|64px]]
+{{!}}-{{!}}
+}} || Auto Infinity || Unlocks Automation for Infinities || 2,048
+|-
+| 15;2 || {{#tag:tabber|Current = [[File:0152.png|frameless|center|64px]]
+{{!}}-{{!}}
+Pre-1.053 = [[File:InfinityUpgrade 15 2.png|frameless|center|64px]]
+{{!}}-{{!}}
+}} || Fast IP Gain || Boosts IP gain based on challenge times || 2,048
+|-
+| 15;3 || {{#tag:tabber|Current = [[File:0153.png|frameless|center|64px]]
+{{!}}-{{!}}
+Pre-1.053 = [[File:InfinityUpgrade 15 3.png|frameless|center|64px]]
+{{!}}-{{!}}
+}} || First Generator Power || Boosts Gen 1 based on challenge times || 2,048
+|-
+| 15;4 || {{#tag:tabber|Current = [[File:0154.png|frameless|center|64px]]
+{{!}}-{{!}}
+Pre-1.053 = [[File:InfinityUpgrade 15 4.png|frameless|center|64px]]
+{{!}}-{{!}}
+}} || Second Generator Power || Boosts Gen 2 based on challenge times || 2,048
+|-
+| 16;1 || {{#tag:tabber|Current = [[File:0161.png|frameless|center|64px]]
+{{!}}-{{!}}
+Pre-1.053 = [[File:InfinityUpgrade 16 1.png|frameless|center|64px]]
+{{!}}-{{!}}
+}} || Infinity to IP || Boosts IP gain based on Infinities || 5,000
+|-
+| 16;2 || {{#tag:tabber|Current = [[File:0162.png|frameless|center|64px]]
+{{!}}-{{!}}
+Pre-1.053 = [[File:InfinityUpgrade 16 2.png|frameless|center|64px]]
+{{!}}-{{!}}
+}} || Stronger Ascension Power || Boosts Ascension Power based on Infinities || 5,000
+|-
+| 16;3 || {{#tag:tabber|Current = [[File:0163.png|frameless|center|64px]]
+{{!}}-{{!}}
+Pre-1.053 = [[File:InfinityUpgrade 16 3.png|frameless|center|64px]]
+{{!}}-{{!}}
+}} || Empowered Promotions || Boosts Promotion 4 based on challenge 9 time || 5,000
+|-
+| 17;1 || {{#tag:tabber|Current = [[File:0171.png|frameless|center|64px]]
+{{!}}-{{!}}
+Pre-1.053 = [[File:InfinityUpgrade 17 1.png|frameless|center|64px]]
+{{!}}-{{!}}
+}} || Third's Turn || Boosts Gen 3 based on Infinities || 1,000,000
+|-
+| 17;2 || {{#tag:tabber|Current = [[File:0172.png|frameless|center|64px]]
+{{!}}-{{!}}
+Pre-1.053 = [[File:InfinityUpgrade 17 2.png|frameless|center|64px]]
+{{!}}-{{!}}
+}} || Faster Infinity Gain || Boosts Infinities based on challenge times || 2,000,000
+|-
+| 17;3 || {{#tag:tabber|Current = [[File:0173.png|frameless|center|64px]]
+{{!}}-{{!}}
+Pre-1.053 = [[File:InfinityUpgrade 17 3.png|frameless|center|64px]]
+{{!}}-{{!}}
+}} || Boost to the first || Gen 1 ×10 || 1,000,000
+|-
+| 18;1 || {{#tag:tabber|Current = [[File:0181.png|frameless|center|64px]]
+{{!}}-{{!}}
+Pre-1.053 = [[File:InfinityUpgrade 18 1.png|frameless|center|64px]]
+{{!}}-{{!}}
+}} || Passive Infinities || Passive Infinities based on fastest Infinity|| 2e11 (200 billion)
+|-
+| 18;2 || {{#tag:tabber|Current = [[File:0182.png|frameless|center|64px]]
+{{!}}-{{!}}
+Pre-1.053 = [[File:InfinityUpgrade 18 2.png|frameless|center|64px]]
+{{!}}-{{!}}
+}} || Fourth from Third || Boosts Gen 4 based on bought Gen 3s || 1e11 (100 billion)
+|-
+| 18;3 || {{#tag:tabber|Current = [[File:0183.png|frameless|center|64px]]
+{{!}}-{{!}}
+Pre-1.053 = [[File:InfinityUpgrade 18 3.png|frameless|center|64px]]
+{{!}}-{{!}}
+}} || Third from Second || Boosts Gen 3 based on bought Gen 2s || 1e11 (100 billion)
+|-
+| 19;1 || {{#tag:tabber|Current = [[File:0191.png|frameless|center|64px]]
+{{!}}-{{!}}
+Pre-1.053 = [[File:InfinityUpgrade 19 1.png|frameless|center|64px]]
+{{!}}-{{!}}
+}} || Almost one || Gen Exponent base is increased to 0.9 || 1e12 (1 trillion)
+|-
+| 19;2 || {{#tag:tabber|Current = [[File:0192.png|frameless|center|64px]]
+{{!}}-{{!}}
+Pre-1.053 = [[File:InfinityUpgrade 19 2.png|frameless|center|64px]]
+{{!}}-{{!}}
+}} || Age of Inflation || Boosts Promotion 3 based on Gen Mult || 3e12 (3 trillion)
+|-
+| 19;3 || {{#tag:tabber|Current = [[File:0193.png|frameless|center|64px]]
+{{!}}-{{!}}
+Pre-1.053 = [[File:InfinityUpgrade 19 3.png|frameless|center|64px]]
+{{!}}-{{!}}
+}} || Challenge Efficiency || ×3 to lap speed || 1e12 (1 trillion)
+|-
+| 20;1 || {{#tag:tabber|Current = [[File:0201.png|frameless|center|64px]]
+{{!}}-{{!}}
+Pre-1.053 = [[File:InfinityUpgrade 20 1.png|frameless|center|64px]]
+{{!}}-{{!}}
+}} || As fast as strong || Boost Generators based on fastest Infinity || 1e21 (1 sextillion)
+|-
+| 20;2 || {{#tag:tabber|Current = [[File:0202.png|frameless|center|64px]]
+{{!}}-{{!}}
+Pre-1.053 = [[File:InfinityUpgrade 20 2.png|frameless|center|64px]]
+{{!}}-{{!}}
+}} || Dynamic Generator Exponent || Boosts Gen Exponent based on Gen Power || 1e27 (1 octillion)
+|-
+| 21;1 || {{#tag:tabber|Current = [[File:0211.png|frameless|center|64px]]
+{{!}}-{{!}}
+Pre-1.053 = [[File:InfinityUpgrade 21 1.png|frameless|center|64px]]
+{{!}}-{{!}}
+}} || A Falling Star || Unlocks Stars || 1e33 (1 decillion)
+|}
+
+For every performed Infinity, an '''Infinity (∞)''' is gained. This number boosts some Infinity upgrades. (1;1, 5;2, 6;2, 12;1, 16;1-2 and 17;1)
+
+Upgrade 18;1 makes the Infinity count go up passively.
+
+== Generators ==
+Generator 1 (G1) generates '''Generator Power''' (GP). To begin with GP is powered to 0.666, but this can be improved with Infinity Upgrades (14;2, 19;1 and 20;2).
+
+GP multiplies Mult Gain. (e.g. If GP is 16, it is powered to 0.666, meaning the mult gain mult is 16 divided by the cube root of 16, which equals ~6.35, and now if you used to get 30 Red Mult per Red revolution, now you get ~190.)
+
+Generator 2 (G2) generates G1, Generator 3 (G3) generates G2, G4 generates G3 and so on.
+
+Buying Generators multiplies its interval by 2x.
+
+Generator Mult is softcapped at 1e1,000.
+
+==Infinity Challenges==
+Challenges are unlocked when you buy Infinity Upgrade '''7;1'''. Each challenge has a handicap that you will need to overcome.
+
+The goal is to Infinite with the corresponding handicap (see table below).
+
+Each completed challenge:
+
+* Grants a challenge-specific bonus
+* Adds +1 to IP gain multiplier
+{| class="wikitable mw-collapsible" style="text-align:center; width: 80%; font-size: 1rem"
+|colspan="4"|'''Infinity Challenges'''
+|-
+!Challenge
+!Handicap
+!Reward
+!Should be done
+|-
+|1
+|Promotions 2 and 4 are disabled
+|Promotions 2 and 4 are stronger
+|Right after unlock
+|-
+|2
+|Ascension Power is divided by 4
+|Ascension Power is multiplied by 1.2
+|Right after Challenge 1
+|-
+|3
+|Common Exp. is reduced by 0.4
+|Common Exp. is increased by +0.03
+|All IU up to and including Column 8
+|-
+|4
+|Prestige and Promote gains powered to ^0.4
+| +1 level to all promotions after Infinity
+|When G2 is bought; all IU up to Column 9 (optional)
+|-
+|5
+|All Promotions are a lot weaker
+|All promotions are a bit stronger now
+|Right after Challenge 4
+|-
+|6
+|Multipliers decay over time (limited to 1 minimum)
+|All generators are twice as strong
+|Right after Challenge 5
+|-
+|7
+|All Mults are divided by (time in Infinity)^2
+|All mults are mult. by (time in Infinity)^0.2
+|All IU up to and including Column 13
+|-
+|8
+|Ascensions are disabled
+|Base Ascension Power is increased by 2
+|All IU up to and including Column 14
+|-
+|9
+|You have only four colors
+|Double Infinites gain + '''Break Infinity'''
+|Right after Challenge 8
+|}
+Challenges 4 and 9 may take several hours. Others normally take under 1 hour.
+
+After all 9 challenges are completed, you will have the option to '''Break Infinity.'''
+
+==Break Infinity==
+After completing all 9 challenges, you can break or fix Infinity in the Challenges tab.
+
+Upon reaching e3,080 score, the 10x IP bar will fill up. Every e308 increase in score will 10x the IP gain for your current run.
+
+=== Challenge Times ===
+Infinity challenges, once completed, will have an amount of time shown below every challenge. This is the best time achieved on this challenge (during this Eternity). These times should be brought down as much as possible because certain Infinity Upgrades get '''better''' with '''lower challenge times''' (15;2-4, 16;3 and 17;2). Aptly named Infinity upgrade 19;3 is really useful for this purpose. (Infinity Upgrades 15;2-4, 16;3 and 17;2 are only useful after all Infinity challenges have been completed at least once.)
+
+'''NOTE:''' Once challenges get instantly completed upon entry, make sure they're done WITHOUT Time Flux, because the time calculation is multiplied by your Time Flux speed up (e.g. If a challenge was completed with a time of 200ms while 2x game speed is enabled, if it was completed without Time Flux, the time would be 100ms). This difference is marginal with higher times.
+
+== Stars ==
+Stars are unlocked with Infinity Upgrade 21;1. They are the last tab in this prestige layer.
+
+The mechanics are straightforward and involve generating Stardust with Stars, which enhances Generators and Generator Power gain. The price of Stars increases significantly with each purchase, starting at 1e33 (1 Dc), these first increase by 1e3 each time, but later start increasing by 1e7 or more.
+
+When unlocking Stars, It's recommended to '''save up 2e33 (2 Dc) IP''' in order to buy both Infinity Upgrade 21;1 and your first Star.
+
+Stars can be upgraded by:
+
+* Buying Stars
+* Increasing Star Base (Each purchase increases it by 0.275, starting at 2.75) (Formula: 2.75 + 0.275 * n  where n is number of purchases)
+* Increasing Star Exponent (Each purchase increases it by 0.05, starting at 0.4) (Formula 0.4 + 0.05 * n  where n is number of purchases)
+
+Stars and Star Upgrades should be prioritized '''over Generators'''.
+
+Stardust can be spent on '''Stardust Upgrades''', of which there are 4:
+
+# Infinity Upgrade 1;1 applies to: G1 (with every purchase the next Generator is added, '''this upgrade is the strongest'''. Maxed out at G10)
+# Infinity Gain (Increases by +1x for every purchase. This upgrade can be bought an unlimited number of times)
+# Upgrade 2;1 Exp. Box Power (Increases by 0.01 with every purchase. Maxed out at +0.5)
+# Upgrade 18;1 is 1.05x faster (Maxes out at x62.62)
+
+Every Stardust Upgrade should be bought immediately when available. Stardust is reset to zero each Infinity, so it's worth checking if you can buy any Stardust Upgrades before you Infinite.
+
+For more information about Stars, you can refer to the [https://docs.google.com/spreadsheets/d/1912_7kvYPpKxBt95xHBcCADIdYWUeycI8JZbueDpO5g/edit?usp=sharing stardust calculator] by angelamoureux.
+
+As you progress, you'll approach the 1.79e308 IP milestone, allowing you to Eternate and enter the '''[[Eternity]]''' layer.
+
+== History ==
+
+* Originally when Revolution Idle was released, Infinity Upgrade 1;1 only affected Generators, and Automation would take longer to reach.
+** Infinity Upgrades 2;2 and 3;1 swapped.
+** Infinity Upgrade 4;1 was Automate further.
+** Infinity Upgrade 5;3 moved to 13;1, 10;1 moved to 5;3, and 13;1 moved to 10;1
+*Version #1.053 drastically revamped the Infinity UI, along with all of the icons
+<noinclude>{{#titleicon_file:icon_tab_inf.png}}</noinclude>
+
+[[Category:Infinity]]
+{{Main navbox}}

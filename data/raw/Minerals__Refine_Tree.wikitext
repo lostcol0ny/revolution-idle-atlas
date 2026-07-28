@@ -1,0 +1,555 @@
+<includeonly>
+{|class="wikitable sortable mw-collapsible mw-collapsed" style="width:100%"
+|+'''Refine Tree Node List'''<br/><small>''To edit this table, please [https://revolutionidle.wiki.gg/wiki/Minerals/Refine_Tree?action=edit click here].''</small>
+</includeonly><noinclude>
+{|class="wikitable sortable mw-collapsible" style="width:100%"
+|+'''Refine Tree Node List'''
+
+! Node !! Max Level !! width = 120px| Initial Cost 
+!Cost increase per level!! Effect !! Requires
+{{RN|1| max = 997 | rfp = 1 
+| rfp increase = 10x
+| effect = Increases mineral base by 1 (starts at 3)
+| req = 0 }}
+{{RN|2| max = 1 | rfp = 1 
+| rfp increase = 
+| effect = Now you can bulk attacks (x10.00)
+| req = 1 }}
+{{RN|3| max = 1 | rfp = 1 
+| rfp increase = 
+| effect = Attacks Prestige is a bit stronger
+| req = 1 }}
+{{RN|4| max = 10 | rfp = 2 
+| rfp increase = 2x
+| effect = Polish sword eff. x1.1 (maxes at x2)
+| req = 2,3 }}
+{{RN|5| max = 1 | rfp = 3 
+| rfp increase = 
+| effect = Unlocks merge level (you get 1.00 exp per merge)
+| req = 1 }}
+{{RN|6| max = 1 | rfp = 4 
+| rfp increase = 
+| effect = Unlocks automerge (it happens every 600 ingame seconds, affected by local mineral speed mult)
+| req = 1 }}
+{{RN|7| max = 1 | rfp = 8 
+| rfp increase = 
+| effect = Gold Gain common mineral upgrade effect is powered to ^2.00
+| req = 1 }}
+{{RN|8| max = 1 | rfp = 11 
+| rfp increase = 
+| effect = Relic 12 effect powered to ^128
+| req = 1 }}
+{{RN|9| max = 1 | rfp = 20 
+| rfp increase = 
+| effect = Polish Axe is 1.5x stronger
+| req = 1 }}
+{{RN|10| max = 10 | rfp = 10 
+| rfp increase = 2x
+| effect = PP gain is powered to ^(1 + 0.1*lvl) (+0.1, maxes at ^2)
+| req = 5 }}
+{{RN|11| max = 1 | rfp = 32 
+| rfp increase = 
+| effect = Unlocks autobuy for mineral upgrades
+| req = 5,10 }}
+{{RN|12| max = 1 | rfp = 64 
+| rfp increase = 
+| effect = Buying first ten mineral upgrades does not spend VP
+| req = 11 }}
+{{RN|13| max = 1 | rfp = 25 
+| rfp increase = 
+| effect = Unlocks autobuy for attack buyables 
+| req = 6 }}
+{{RN|14| max = 1 | rfp = 50 
+| rfp increase = 
+| effect = Unlocks autoascend for attack buyables
+| req = 7,13 }}
+{{RN|15| max = 1 | rfp = 100 
+| rfp increase = 
+| effect = Buying Relics does not spend gold
+| req = 8 }}
+{{RN|16| max = 98 | rfp = 25 
+| rfp increase = 3x
+| effect = Merge Level Bonus Eff. x(1.0 + 0.5*lvl) (maxes at x50)
+| req = 8,15 }}
+{{RN|17| max = 1 | rfp = 1,000 
+| rfp increase = 
+| effect = Relic 20's eff. is multiplied by the highest refine upgrade bought number (e.g. x17 for N17)
+| req = 9,15 }}
+{{RN|18| max = 1 | rfp = 2,500 
+| rfp increase = 
+| effect = Unlock magnets and new mineral upgrades! Magnet base chance at the start is 1% on merge.
+| req = 17 }}
+{{RN|19| max = 1 | rfp = 5,000 
+| rfp increase = 
+| effect = Mineral cost increase is pentated to 0.85 (^^^0.85) 
+| req = 4 }}
+{{RN|20| max = 1 | rfp = 7,000 
+| rfp increase = 
+| effect = Mineral cost fall is powered to ^1.50
+| req = 4 }}
+{{RN|21| max = 1 | rfp = 20,000 
+| rfp increase = 
+| effect = Gold on Unity (in Attacks) is multiplied by seconds since last Unity
+| req = 19,20 }}
+{{RN|22| max = 1 | rfp = 40,000 
+| rfp increase = 
+| effect = Spawning common minerals doesn't decrease your gold 
+| req = 21 }}
+{{RN|23| max = 1 | rfp = 60,000 
+| rfp increase = 
+| effect = Buying polish upgrades doesn't decrease your PP 
+| req = 21 }}
+{{RN|24| max = 20 | rfp = 100,000 
+| rfp increase = 1.5x
+| effect = Relic 23 is x(1 + 0.1*lvl) stronger (maxes at x3)
+| req = 22,23 }}
+{{RN|25| max = 1 | rfp = 400,000 
+| rfp increase = 
+| effect = RN19 effect is 1.03x stronger (power divided by 1.03) 
+| req = 24 }}
+{{RN|26| max = 1 | rfp = 600,000 
+| rfp increase = 
+| effect = RN20 effect is x1.1 stronger (power multiplied by 1.1) 
+| req = 24 }}
+{{RN|27| max = 1 | rfp = 1,000,000 
+| rfp increase = 
+| effect = Base mineral cost is powered to ^0.93
+| req = 26 }}
+{{RN|28| max = 1 | rfp = 1,500,000 
+| rfp increase = 
+| effect = Unlocks polishing enhance 
+| req = 25,26 }}
+{{RN|29| max = 1 | rfp = 2,500,000 
+| rfp increase = 
+| effect = Relic 23 is stronger based on your Axe Level: x(1 + 0.01*lvl) 
+| req = 25 }}
+{{RN|30| max = 1 | rfp = 3,000,000 
+| rfp increase = 
+| effect = Relic 3 effect is powered to your current merge level + 1
+| req = 25,29 }}
+{{RN|31| max = 1 | rfp = 4,000,000 
+| rfp increase = 
+| effect = Relic 14 also decreases base minerals cost by the same number
+| req = 28 }}
+{{RN|32| max = 1 | rfp = 5,000,000 
+| rfp increase = 
+| effect = Unlocks autobuy for polish upgrades 
+| req = 26 }}
+{{RN|33| max = 1 | rfp = 10,000,000 
+| rfp increase = 
+| effect = Get 100% of your Gold on Unity every second 
+| req = 29 }}
+{{RN|34| max = 1 | rfp = 12,000,000 
+| rfp increase = 
+| effect = Buying magnet mineral upgrades doesn't spend your magnets. And unlock autobuy for magnet mineral upgrades
+| req = 29 }}
+{{RN|35| max = 1 | rfp = 20,000,000 
+| rfp increase = 
+| effect = Unlock runes and rune upgrades 
+| req = 34 }}
+{{RN|36| max = 20 | rfp = 10,000,000 
+| rfp increase = 1.2x
+| effect = RN27 effect: x(1 - 0.01*lvl) (maxes at x0.8)
+| req = 31 }}
+{{RN|37| max = 1 | rfp = 16,000,000 
+| rfp increase = 
+| effect = Polish Knuckles are 20% more effective 
+| req = 33 }}
+{{RN|38| max = 1 | rfp = 24,000,000 
+| rfp increase = 
+| effect = You get more refine points based on your knuckles level: RfP^(1.01*lvl) 
+| req = 37 }}
+{{RN|39| max = 1 | rfp = 30,000,000 
+| rfp increase = 
+| effect = Relic 18 effect is cubed now (e.g. 2e6 -> 8e18)
+| req = 37 }}
+{{RN|40| max = 30 | rfp = 18,000,000 
+| rfp increase = 1.25x
+| effect = Magnet upgrades for VP gain and PP gain mults are powered to ^(1.1*lvl) (maxes at ^3) 
+| req = 37 }}
+{{RN|41| max = 1 | rfp = 50,000,000 
+| rfp increase = 
+| effect = Unlocks special minerals 
+| req = 40 }}
+{{RN|42| max = 1 | rfp = 64,000,000 
+| rfp increase = 
+| effect = Special mineral cost fall is multiplied by 5 
+| req = 39 }}
+{{RN|43| max = 1 | rfp = 80,000,000 
+| rfp increase = 
+| effect = RN25 effect is 1.03x stronger 
+| req = 39 }}
+{{RN|44| max = 6 | rfp = 50,000,000 
+| rfp increase = 3x
+| effect = Increases height and width of special grid by 1 (maxes at 9x9)
+| req = 39 }}
+{{RN|45| max = 1 | rfp = 100,000,000 
+| rfp increase = 
+| effect = PP Gain Bonus from Trials is much bigger now
+| req = 44 }}
+{{RN|46| max = 1 | rfp = 200,000,000 
+| rfp increase = 
+| effect = Unlocks special minerals progression 
+| req = 32 }}
+{{RN|47| max = 1 | rfp = 450,000,000 
+| rfp increase = 
+| effect = Sun runes generation is 1.2x faster 
+| req = 46 }}
+{{RN|48| max = 1 | rfp = 550,000,000 
+| rfp increase = 
+| effect = Moon runes generation is 1.2x faster 
+| req = 32 }}
+{{RN|49| max = 1 | rfp = 700,000,000 
+| rfp increase = 
+| effect = RN43 effect is x1.01 stronger
+| req = 32 }}
+{{RN|50| max = 10 | rfp = 1e9 
+| rfp increase = 10x
+| effect = RfP gain x(2^lvl) (maxes at x1,024)
+| req = 32 }}
+{{RN|51| max = 1 | rfp = 1e12 
+| rfp increase = 
+| effect = Special Mineral Cost fall speed is multiplied by x2.00
+| req = 49 }}
+{{RN|52| max = 1 | rfp = 3e12 
+| rfp increase = 
+| effect = Multiplies all polish enhance effects by x1.02
+| req = 49 }}
+{{RN|53| max = 1 | rfp = 1e13 
+| rfp increase = 
+| effect = Unlock automerge for special minerals (1 in 10,000 in game seconds, affected by local mineral speed)
+| req = 52 }}
+{{RN|54| max = 1 | rfp = 5e13 
+| rfp increase = 
+| effect = Buffs Relic 31 by ^1.10
+| req = 50 }}
+{{RN|55| max = 1 | rfp = 2e14 
+| rfp increase = 
+| effect = Unlock Elements
+| req = 54 }}
+{{RN|56| max = 1 | rfp = 1e20 
+| rfp increase = 
+| effect = Multiplies 2nd Refine Node effect by x3.00
+| req = 54 }}
+{{RN|57| max = 1 | rfp = 5e20 
+| rfp increase = 
+| effect = Multiplies Global Element Mult by x10.00
+| req = 36 }}
+{{RN|58| max = 1 | rfp = 3.3e21 
+| rfp increase = 
+| effect = RN 7 effect is multiplied by x1.10
+| req = 36 }}
+{{RN|59| max = 1 | rfp = 1e22 
+| rfp increase = 
+| effect = Makes First Node of each element stronger (they become Fire= 0.5, Earth= 3.50, Wind= 4.20, Water= 1.11)
+| req = 58 }}
+{{RN|60| max = 30 | rfp = 5e22 
+| rfp increase = 5x
+| effect = Multiplies Global Element Mult (x2.00 per level, maxes at x1.07e9)
+| req = 51 }}
+{{RN|61| max = 1 | rfp = 2e24 
+| rfp increase = 
+| effect = Passive Merge EXP is also boosted by Relic 28 and max spawn mineral level
+| req = 58 }}
+{{RN|62| max = 1 | rfp = 1e28 
+| rfp increase = 
+| effect = Multiplies First Wind Factor by x10.00
+| req = 61 }}
+{{RN|63| max = 1 | rfp = 1e30 
+| rfp increase = 
+| effect = Keep Dilation Tree and DTP on Unity Reset
+| req = 57 }}
+{{RN|64| max = 8 | rfp = 1e32 
+| rfp increase = 10x
+| effect = Boosts Relic 4 (^1.00) (+^0.50 per level, maxes at ^5.00)
+| req = 61 }}
+{{RN|65| max = 1 | rfp = 1e33 
+| rfp increase = 
+| effect = Empowers Relic 5 to ^2.00
+| req = 62 }}
+{{RN|66| max = 1 | rfp = 1e35 
+| rfp increase = 
+| effect = Sacrificing relics doesn't reset relic level and automatically set to max level
+| req = 65 }}
+{{RN|67| max = 1 | rfp = 1e42 
+| rfp increase = 
+| effect = Attack Prestige resets nothing
+| req = 57 }}
+{{RN|68| max = 1 | rfp = 1e43 
+| rfp increase = 
+| effect = For every 100,000 attack levels gained reduce your SM Spawned Factor by 1
+| req = 35 }}
+{{RN|69| max = 10 | rfp = 1e44 
+| rfp increase = x100
+| effect = Multiplies First Mineral Eff. by x1.00 (+x0.01 per level, maxes at x1.10) ''(improves the effect of the first Mineral Upgrade: Max Level)''
+| req = 68 }}
+{{RN|70| max = 1 | rfp = 1e45 
+| rfp increase = 
+| effect = Now you can spawn black special gems (1% chance). Unlocks Tarot. Resets SMS Factor to 5,000 if it's >6,000 or decrease it by 1,000
+| req = 35 }}
+{{RN|71| max = 1 | rfp = 1e60 
+| rfp increase = 
+| effect = Get 0.01% of your PP gain on reset every second (affected by local minerals speed)
+| req = 68 }}
+{{RN|72| max = 1 | rfp = 1e72 
+| rfp increase = 
+| effect = Increase width and height of both mineral grids by 1.00
+| req = 71,69 }}
+{{RN|73| max = 1 | rfp = 7.77e77 
+| rfp increase = 
+| effect = Multiplies RN1 effect by x10.00
+| req = 72 }}
+{{RN|74| max = 1 | rfp = 1e82 
+| rfp increase = 
+| effect = Makes effect of all suit tarot upgrade 2 - x1.50 stronger
+| req = 73 }}
+{{RN|75| max = 10 | rfp = 1e84 
+| rfp increase = x100
+| effect = Increase all elements base factor 2 by (+?/level)
+| req = 73 }}
+{{RN|76| max = 1 | rfp = 1e90 
+| rfp increase = 
+| effect = Relic 37 is ^1.50 more effective
+| req = 70 }}
+{{RN|77| max = 1 | rfp = 1e94 
+| rfp increase = 
+| effect = Multiplies first effect of all non-arcan cards by x1.50
+| req = 69,76 }}
+{{RN|78| max = 1 | rfp = 1e96 
+| rfp increase = 
+| effect = Doubles RN77 effect
+| req = 77 }}
+{{RN|79| max = 1 | rfp = 1e100 
+| rfp increase = 
+| effect = You get x2.00 cards from drawing
+| req = 76,78 }}
+{{RN|80| max = 1 | rfp = 1e105 
+| rfp increase = 
+| effect = Increase the RN72 effect by 1.00
+| req = 79 }}
+{{RN|81| max = 1 | rfp = 1e120 
+| rfp increase = 
+| effect = The Devil's base effect is 10x stonger
+| req = 67 }}
+{{RN|82| max = 1 | rfp = 1e130 
+| rfp increase = 
+| effect = The Tower now destroys the first gem instead of a random gem
+| req = 67,63 }}
+{{RN|83| max = 1 | rfp = 1e136 
+| rfp increase = 
+| effect = The Wheel of Fortune now has a 99% chance to win
+| req = 63 }}
+{{RN|84| max = 1 | rfp = 1e143 
+| rfp increase = 
+| effect = The Death now activates instantly
+| req = 64 }}
+{{RN|85| max = 1 | rfp = 1e150 
+| rfp increase = 
+| effect = Unlocks Sacrifice tab for Special Minerals. You now gain Sacrifice Dust when deleting minerals, using the Tower, or using the Delete Special Mineral macro block.
+| req = 62 }}
+{{RN|86| max = 1 | rfp = 1e210 
+| rfp increase = 
+| effect = Grants SMP EXP to all Special Minerals every second based on Relic 45, The Tower, and average SMP level (???/sec). Affected by Tarot Local Speed.
+| req = 62 }}
+{{RN|87| max = 1 | rfp = 1e218 
+| rfp increase = 
+| effect = Relic 36's effect is ^3 and applied to all elements
+| req = 84,85 }}
+{{RN|88| max = 1 | rfp = 1e220 
+| rfp increase = 
+| effect = Increase Relic 46 softcap by 1
+| req = 86 }}
+{{RN|89| max = 1 | rfp = 1e228 
+| rfp increase = 
+| effect = Unlocks Tarot Challenges! (All Special Minerals must be sacrificed)
+| req = 88 }}
+{{RN|90| max = 32 | rfp = 1e238 
+| rfp increase = x1e6
+| effect = Multiplies Sacrifice Dust gain and Relic 45 base (x2/level, max 4.29e9)
+| req = 87,88 }}
+{{RN|91| max = 1 | rfp = 1e295 
+| rfp increase = 
+| effect = Element nodes effects are boosted as if you had x1e1000 more of that element
+| req = 89,90 }}
+{{RN|92| max = 1 | rfp = 1e335 
+| rfp increase = 
+| effect = The Empress, The Emperor, The Lovers, and The Strength Tarot Cards are now set to their maximum strength values.
+| req = 90 }}
+{{RN|93| max = 1 | rfp = 1e400 
+| rfp increase = 
+| effect = SMP Gem Efficiency also boosts the second Special Mineral sacrifce effect at a reduced rate
+| req = 83 }}
+{{RN|94| max = 1 | rfp = 1e488 
+| rfp increase = 
+| effect = Slightly reduces the Fire Node 2 softcap
+| req = 83 }}
+{{RN|95| max = 1 | rfp = 1e800 
+| rfp increase = 
+| effect = Polish Spear effect ^5000
+| req = 83 }}
+{{RN|96| max = 1 | rfp = 1e875 
+| rfp increase = 
+| effect = Multiplies Special Mineral bulk spawn by 10
+| req = 94 }}
+{{RN|97| max = 1 | rfp = 1e900 
+| rfp increase = 
+| effect = Ach 443 reward is ^5
+| req = 82 }}
+{{RN|98| max = 1 | rfp = 1e950 
+| rfp increase = 
+| effect = Polish Sword Effect is ^1000
+| req = 97 }}
+{{RN|99| max = 1 | rfp = 1e1,000 
+| rfp increase = 
+| effect = Unlock Artifacts!
+| req = 98 }}
+{{RN|100| max = 9 | rfp = 1e1,024 
+| rfp increase = x1e16
+| effect = Decrease the base cooldown of all artifacts for flushing by X hours (+1/level)
+| req = 93,96 }}
+{{RN|101| max = 1 | rfp = 
+| rfp increase = 
+| effect = Achievement 443 reward is powered to ^2
+| req = 100 }}
+{{RN|102| max = 1 | rfp = 
+| rfp increase = 
+| effect = Unlocks Automation for upgrading Artifact Parts
+| req = 100 }}
+{{RN|103| max = 1 | rfp = 
+| rfp increase = 
+| effect = Unlocks Plague Tab
+| req = 96 }}
+{{RN|104| max = 1 | rfp = 
+| rfp increase = 
+| effect = Unlocks Endoplasmic Reticulum
+| req = 96 }}
+{{RN|105| max = 1 | rfp = 
+| rfp increase = 
+| effect = The Hierophant Passive Bonus is now boosted by the level of your equipped Endoplasmic Reticulum
+| req = 96 }}
+{{RN|106| max = 1 | rfp = 
+| rfp increase = 
+| effect = Spread Power of your currently equipped Endoplasmic Reticulum also boosts Black Gem base effect (x???)
+| req = 105 }}
+{{RN|107| max = 1 | rfp = 
+| rfp increase = 
+| effect = Divides cooldown of all artifacts by 2
+| req = 105 }}
+{{RN|108| max = 1 | rfp = 
+| rfp increase = 
+| effect = Max PIP now boosts sacrifice dust gain (x???)
+| req = 107 }}
+{{RN|109| max = 1 | rfp = 
+| rfp increase = 
+| effect = Multiplies PIP per PIG by x10
+| req = 107 }}
+{{RN|110| max = 1 | rfp = 
+| rfp increase = 
+| effect = Multiplies Crafting Mastery by x1.1
+| req = 98 }}
+{{RN|111| max = 25 | rfp = 
+| rfp increase = 
+| effect = Divides the ERP needed to craft an Endoplasmic Reticulum by x1.5^level
+| req = 95,96,105 }}
+{{RN|112| max = 1 | rfp = 5.9e3,141 
+| rfp increase = 
+| effect = Multiplies golden resoucres gain by xπ (x3.14)
+| req = 110 }}
+{{RN|113| max = 1 | rfp = 1e3,250 
+| rfp increase = 
+| effect = Multiplies Essence Density ER Upgrade by x20
+| req = 110 }}
+{{RN|114| max = 1 | rfp = 1e3,300 
+| rfp increase = 
+| effect = Multiplies Base Spread Power (on ER craft) by x1.25
+| req = 99 }}
+{{RN|115| max = 20 | rfp = 
+| rfp increase = 
+| effect = Multiples Max Cure Progress by 1.2^level
+| req = 113 }}
+{{RN|116| max = 1 | rfp = 1e3,450
+| rfp increase = 
+| effect = Max Infected and Total Infected effects are powered to ^2
+| req = 115 }}
+{{RN|117| max = 1 | rfp = 1e3,520
+| rfp increase = 
+| effect = Gives +10 effective levels to all Endoplasmic Reticulum upgrades
+| req = 115 }}
+{{RN|118| max = 1 | rfp = 1e3,600
+| rfp increase = 
+| effect = Divides All Artifact Flush Cooldowns by x2
+| req = 116 }}
+{{RN|119| max = 1 | rfp = 1e3,650
+| rfp increase = 
+| effect = Map PIP Effect is powered to ^1.25
+| req = 117 }}
+{{RN|120| max = 10 | rfp = 1e3,680
+| rfp increase = 
+| effect = Multiplies Attack Exponent by x1
+| req = 112,113 }}
+| colspan=6 style="text-align:center;background-color:red"| '''Note: Ach. 605 & 606 and Bonus Trial #1 lower the costs of the following nodes to the listed values.'''
+{{RN|121| max = 1 | rfp = 
+| rfp increase = 
+| effect = Unlocks Singularity
+| req = 120 }}
+{{RN|122| max = 1 | rfp = 1e4,575
+| rfp increase = 
+| effect = Adds a Singularity Effect (Based on Singularities) that boosts Spread Speed
+| req = 121 }}
+{{RN|123| max = 1 | rfp = 1e4,750<!-- prior to ach.: 1e20,850 -->
+| rfp increase = 
+| effect = Multiplies PIG Rewards by x10
+| req = 116,117 }}
+{{RN|124| max = 1 | rfp = 1e4,500<!-- prior to ach.: 1e20,950 -->
+| rfp increase = 
+| effect = PIG Rewards are powered to ^1.05
+| req = 114 }}
+{{RN|125| max = 25 | rfp = 1e4,900<!-- prior to ach.: 1e21,000 -->
+| rfp increase = 
+| effect = Adds Refine Node 125 as a Singularity Mult Factor
+| req = 119 }}
+{{RN|126| max = 1 | rfp = 1e5,000
+| rfp increase = 
+| effect = No longer applies an Atom gain penalty at 1e50
+| req = 125 }}
+{{RN|127| max = 1 | rfp = 1e5,050
+| rfp increase = 
+| effect = No longer applies an Atom gain penalty at 14e153
+| req = 125 }}
+{{RN|128| max = 10 | rfp = 1e5,200<!-- prior to ach.: 1e21,250 -->
+| rfp increase = 
+| effect = Makes the first Atom penalty weaker by 10% [per level]. At max level, removes it completely. 
+| req = 112,114 }}
+{{RN|129| max = 1 | rfp = 1e5,350
+| rfp increase = 
+| effect = Adds Refine Points to Singularity Mult Effects
+| req = 126,127 }}
+{{RN|130| max = 20 | rfp = 1e5,450<!-- prior to ach.: 1e21,550 -->
+| rfp increase = 
+| effect = Multiples Refine Node 125 Effect by x?
+| req = 114 }}
+{{RN|131| max = 1 | rfp = 
+| rfp increase = 
+| effect = Adds Atom Gain to Singularity Count effects
+| req = 130 }}
+{{RN|132| max = 1 | rfp = 1e5,750
+| rfp increase = 
+| effect = Adds Golden Resource Gain to Singularity Count Effect
+| req = 128 }}
+{{RN|133| max = 50 | rfp = 1e5,850
+| rfp increase = 
+| effect = Empowers your current luck: ^1 + level/100
+| req = 131 }}
+{{RN|134| max = 1 | rfp = 1e6,450<!-- 1e6,300 with all Queen completions -->
+| rfp increase = 
+| effect = Adds Refine Points to Singularity Count Effects
+| req = 133}}
+{{RN|135| max = 1 | rfp = 1e6,850 <!-- 1e6,700 with all Queen completions -->
+| rfp increase = 
+| effect = Adds a Singularity Mult effect that slightly boosts Luck
+| req = 132}}
+{{RN|136| max = 1 | rfp = 1e7,150
+| rfp increase = 
+| effect = Increases Local Singularity Speed Power by 0.02
+| req = 125 }}
+|}

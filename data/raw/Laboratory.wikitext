@@ -1,0 +1,26 @@
+{{Stub}}
+[[File:Screenshot 2026-02-08 182409.png|thumb|Laboratory Tab]]
+The Laboratory (Lab) is the fourth {{Keyword|eternity|Eternity}} tab, unlocked by reaching [[Eternity#Animals Milestones|Animals Milestone]] 3 (own 7 [[Eternity#Animals|Animals]]).
+
+The Lab allows the player to get Laboratory Points (LP), by purchasing 3 different upgrades which cost {{Keyword|ep|EP}}:
+
+* Base (+0.20 per level)
+* Mult (+0.50 per level)
+* Power (+0.01 per level)
+
+The formula for LP/s is:  (Base x Mult) ^ Power
+
+When enough LP has been generated to fill the flask on the center of the Laboratory page, the Lab level will increase and the player will gain a {{Keyword|rp|Research Point}} ({{Keyword|rp|RP}}).
+
+{{Keyword|rp|RP}} can be used to upgrade 6 different Lab upgrades, as follows:
+
+# [[Infinity|{{Keyword|ip|IP}}]] Gain (x4 per level)
+# [[Revolution#Ascension|Ascend Power]] (*(1 + n*0.25) ''where n is level'')
+# [[Infinity#Stars|Star Base Mult]] (*(1 + n*0.15))
+# {{Keyword|ep|EP}} Gain (*(1 + n*0.5))
+# [[Infinity#Generators|Gen. Power Exponent]] (+0.02 per level)
+# Common Exponent (+0.01 per level, softcapped at level 500)
+
+Each spent {{Keyword|rp|RP}} will increase a Lab upgrade by one level. Lab upgrades can be respecced at any time, removing all levels and refunding all {{Keyword|rp|RP}} to the player, at the cost of starting a new {{Keyword|eternity|Eternity}}.
+[[Category:Eternity]]
+{{Main navbox}}

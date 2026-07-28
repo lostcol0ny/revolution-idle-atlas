@@ -1,0 +1,109 @@
+== '''Dilation Tree''' ==
+
+=== {{Keyword|dtp|Dilation Tree}} is the seventh and final {{Keyword|eternity|Eternity}} tab, unlocked by completion all 50 [[Eternity#Eternity_Challenges|Eternity Challenges]]. ===
+<blockquote>
+====== The first DTP is unlocked at 1e27 DP. ======
+</blockquote>[[File:Dilation Tree Numbered.png|alt=The Dilation Tree with Upgrades numbered. The Tree branches from a Center into 3, 4-long, branches. The upgrades in said branches must be bought in order. The numbers are meant to illustrate that order :)|thumb|Dilation Tree]]
+
+Dilation Tree Points ({{Keyword|dtp|DTP}}) can be purchased by using the "Buy DTP" button within the tab, at the cost of {{Keyword|dp|DP}}. The player can allocate {{Keyword|dtp|DTP}} to 13 different Dilation Tree Upgrades (DTU), each providing different bonuses.
+
+The tree works like a classic skill tree, in the sense that the player must buy the upgrades in order ''(see image/below for clarification)''.
+
+''Note: only 1 {{Keyword|dtp|DTP}} needs be allocated to a preceding DTU in order to be able to allocate {{Keyword|dtp|DTP}} to the next DTU (e.g., if 1 {{Keyword|dtp|DTP}} is allocated to CENTER-1, the player can then allocate {{Keyword|dtp|DTP}} to TOP-1, MIDDLE-1 and BOTTOM-1).''
+
+==='''Dilation Tree Upgrades (DTU)'''===
+The green tile is the Center Upgrade (CENTER-1), and each branch (aka "Axis") is also colored: Red for Top, Yellow for Middle, and Blue for Bottom. Each axis contains 4 DTU (labelled e.g. for Top: TOP-1, TOP-2, TOP-3 & TOP-4).
+
+Each level of a DTU costs 1 {{Keyword|dtp|DTP}} to buy and each DTU can be bought up to 5 times. A total of 65 {{Keyword|dtp|DTP}} are required to max all DTU.
+
+Below is a table detailing the effects of each DTU:
+{| class="wikitable mw-collapsible mw-collapsed" style="text-align:center; width: 60%; font-size: 1rem"
+|colspan="4"|'''Dilation Tree Upgrades (DTU)'''
+|-
+!Axis
+!Index
+!Effect
+!Increase per level
+|-
+|Center
+|1
+|Each unspent {{Keyword|ap|AP}} boosts {{Keyword|dp|DP}} gain by 0.1%
+| +0.05%
+|-
+| rowspan="4" |Top
+|1
+|Dilation Upgrade 1 is 30% stronger
+| +15%
+|-
+|2
+|Eternities ^2.00 boost {{Keyword|dp|DP}} gain
+| +^0.25
+|-
+|3
+|Supernova Score exponent requirement is powered to ^0.90
+|x0.95
+|-
+|4
+|Bottom DT upgrades are 10% stronger
+| +10%
+|-
+| rowspan="4" |Middle
+|1
+|Dilation Upgrade 2 is 20% stronger
+| +10% 
+|-
+|2
+|Get Eternities passively based on fastest Eternity x10
+|x2
+|-
+|3
+|Supernova bonuses are ^1.08 stronger, including free [[Eternity#Animals|{{Keyword|ap|AP}}]]
+| +^0.08
+|-
+|4
+|Middle DT upgrades are 10% stronger
+| +10%
+|-
+| rowspan="4" |Bottom
+|1
+|Dilation Upgrade 3 is 40% stronger
+| +20%
+|-
+|2
+|Gives free [[Eternity#Laboratory|{{Keyword|rp|RP}}]] Upgrade levels equal to 1% of unspent [[Eternity#Animals|{{Keyword|ap|AP}}]]
+| +1%
+|-
+|3
+|Supernovae boost {{Keyword|dp|DP}} gain by x2.00
+| +0.25
+|-
+|4
+|Top DT upgrades are 10% stronger
+| +10%
+|}
+''Note: For all Axes; Index 1 improves DU, Index 2 provides unique effects, Index 3 relates to Supernovae, and Index 4 improves other DTU.
+
+Index 4 DTU effects (TOP-4, MIDDLE-4 and BOTTOM-4) can be made 30% stronger by completing both [[Achievements|{{Keyword|ach|Ach. 29}}]] and [[Achievements|{{Keyword|ach|Ach. 140}}]].
+
+''Note: It is highly recommended to complete [[Achievements|{{Keyword|ach|Ach. 29}}]] at {{Keyword|dtp|DTP}} 13, immediately after completing [[Achievements|{{Keyword|ach|Ach. 140}}]] (if you have not done so already). The bonus (detailed above) is very important; without it you will not be able to progress past DTP 16.
+
+When the player wishes to allocate their {{Keyword|dtp|DTP}} in a different way, they can use the button (two arrows, forming a circle) within the tab to "Respec". Respeccing {{Keyword|dtp|DTP}} will:
+
+* Reset your current {{Keyword|eternity|Eternity}}
+* Reset (zero) your {{Keyword|dp|Dilation Points}} ({{Keyword|dp|DP}})
+* Reset your maximum Dilation Score (to zero)
+* Reduce the levels of the first 3 Dilation Upgrades (DU1, DU2 & DU3) by 5%
+
+''Note: The cost to re-buy lost DU1, DU2 and DU3 levels will also reduce, in accordance with their reduced levels. It is recommended to re-buy these levels when you are next in a {{Keyword|dp|DP}}-Income-focused tree setup.''
+
+''Note 2: The respec penalties may seem harsh, but with limited {{Keyword|dtp|DTP}} it will be necessary to respec often in order to progress through Dilation Tree, using different setups for different purposes. More details on when and why to respec can be found in the [[Walkthrough]].
+
+==='''Dilation Tree Loadouts'''===
+Dilation Tree setups can be saved as "loadouts" by using the button (a dot followed by a line, stacked three high) within the tab. By default, 3 Loadouts can be saved, and 5 additional Loadouts can be purchased for {{souls|Souls|front=y|ico=y}} (starting at {{souls|1000 Souls|size=20px|ico=y}} and increasing in cost with each purchase).
+
+Loadouts can be used to quickly switch between commonly used setups, but note this will have the same effect as respeccing {{Keyword|dtp|DTP}} (see previous section for more details).
+
+Players can Export their loadouts to their device's clipboard from within the loadout menu, in the format: Cx;Tx,x,x,x;Mx,x,x,x;Bx,x,x,x. In this expression, C, T, M and B are the initials of the upgrade branches, and each x denotes the level of each upgrade, written in Index order. This format can also be used to Import loadouts from the clipboard.
+
+Optimized DT loadouts can be found in the [[Walkthrough]] section.
+{{Main navbox}}

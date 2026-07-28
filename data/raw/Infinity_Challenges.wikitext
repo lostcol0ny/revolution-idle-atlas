@@ -1,0 +1,57 @@
+Challenges are unlocked when you buy Infinity Upgrade '''7;1'''. Each challenge has a handicap that you will need to overcome.
+
+The goal is to Infinite with the corresponding handicap (see table below).
+
+Each completed challenge:
+
+* Grants a challenge-specific bonus
+* Adds +1 to IP gain multiplier 
+* Unlocks the next challenge
+
+{| class="wikitable mw-collapsible"
+|+
+! colspan="3" |Infinity Challenges
+|-
+!Challenge
+!Handicap
+!Reward
+|-
+|1
+|Promotions 2 and 4 are disabled              
+|Promotions 2 and 4 are stronger              
+|-
+|2
+|Ascension Power is divided by 4
+|Ascension Power is multiplied by 1.2
+|-
+|3
+|Common Exponent is reduced by -0.4
+|Common Exponent is increased by +0.03
+|-
+|4
+|Prestige and Promote gains are powered to ^0.4
+| +1 level to all promotions after Infinity
+|-
+|5
+|All Promotions are a lot weaker
+|All promotions are a bit stronger now
+|-
+|6
+|Multipliers decay over time (limited to 1 minimum)
+|All generators are twice as strong
+|-
+|7
+|All multipliers are divided by (time spent in Infinity)^2
+|All multipliers are multiplied by (time spent in Infinity)^0.2
+|-
+|8
+|Ascensions are disabled
+|Base Ascension Power is increased by +2
+|-
+|9
+|You have only four colors
+|Double Infinities gain
+|}
+Once you complete all of them you will be able to [[Guide:Break Infinity|Break Infinity]]
+[[Category:Infinity]]
+{{Main navbox}}

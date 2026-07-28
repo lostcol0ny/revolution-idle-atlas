@@ -1,0 +1,1229 @@
+Minerals are a late-game mechanic and part of the gameplay loop of [[Unity]]. 
+
+== Spawn ==
+The core mechanic allows you to spawn minerals. Each mineral costs Gold and every time you spawn one, its price increases. Over time, the cost gradually decrease back toward its minimum.
+
+Minerals generate VP and you can merge two identical minerals to create a higher-level one, which produces even more VP. To merge a mineral, simply drag it on top of a matching mineral (like a level 5 mineral on another level 5 mineral). VP can be spent on various upgrades, such as increasing the base mineral level, expanding the grid size, boosting luck and gold generation, and more!
+
+== Mineral Upgrades ==
+Spend VP (and later on, Magnets) to level upgrades to help boost your Minerals, Zodiacs, and Gold Gain.
+* Max Level
+* Grid Height (caps at 9, Refine Node ??? and ??? increase the cap by 1 each to max of 11)
+* Grid Width (caps at 9, Refine Node ??? and ??? increase the cap by 1 each to max of 11)
+* Fall Speed
+* Luck Bonus
+* Quality Bonus 
+* Gold Gain
+* Common Exponent Mult
+The below upgrades are unlocked after purchasing node 18 on the Refine Tree and cost magnets to upgrade. (Excluding first 2, which cost VP)
+* Magnet Chance Mult
+* Chance to get x2 magnets on merge 
+* VP Gain Mult
+* PP Gain Mult
+* Chance to spawn a mineral with Lv+1
+* Chance to get a mineral with Lv+2 on merge
+* More Magnets
+
+== Polish ==
+Once you obtain a mineral of level 30 or higher, you can perform a Polish Prestige. Polish resets your VP, normal Minerals, All Mineral Upgrades, Magnets, and Merge Level. In exchange, you earn PP to upgrade the five weapons that grant vastly different buffs to assist not only your minerals, but also [[Attacks]] and Gold Gain.
+[[File:Polish tab.png|thumb|The Polish tab]]
+{| class="wikitable"
+! !! Sword !! Axe !! Spear !! Bow !! Knuckles
+|-
+! Basic
+| Boosts VP gain
+| Empowers Mineral cost fall
+| Boosts gold gain
+| Boosts attacks asc. power
+| Boosts minerals' local speed exponent
+|-
+! rowspan="2" | Lv.10
+| Unlocks autospawn
+| Start Unity with 1000 eternities
+| Relic 1 effect is powered to your max mineral level reached
+| First Mineral Upgrade scales a bit slower
+| Sword Polish is 20% more effective
+|-
+|2.36 PP
+|7.04 PP
+|15.48 PP
+|29.80 PP
+|103 PP
+|-
+! rowspan="2" | Lv.25
+| Unlocks VP factor
+| Luck Mult: x2
+| Relic 9 is powered to ^(1 + (spear lvl)/100)
+| Relic 13 effect is multiplied by (1 + (bow level)/10)
+| Unlocks First Insane Trial
+|-
+|13.57 PP
+|101 PP
+|513 PP
+|2,177 PP
+|62,358 PP
+|-
+! rowspan="2" | Lv.50
+| Zodiac Enhance is better
+| VP Gain: x5
+| Unlock Second Insane Trial if First is complete
+| You don't spend any EP for animals, lab upgrades
+| Unlock Third Insane Trial if Second is complete
+|-
+|6,107 PP
+|1,298,494 PP
+|135,723,805 PP
+|9.71e9 PP
+|4.68e14 PP
+|-
+! rowspan="2" | Lv.100
+| Relics' effects: x1.03
+| Unlock Fourth Insane Trial if Third is complete
+| Relic 17 is x1.05 stronger
+| Unlock Fifth Insane Trial if Fourth is complete
+| Unlock Sixth Insane Trial if Fifth is complete
+|-
+| 3.02e35 PP
+| 3.93e54 PP
+| 8.76e71 PP
+| 1.60e88 PP
+| 1.57e131 PP
+|}
+
+== Refinement ==
+After obtaining a level 70 mineral, you can perform a Refine Prestige. Refine resets your VP, normal Minerals, normal & magnet mineral upgrades, magnets, merge level, and all polish upgrades. In exchange you earn RfP which can be spent on the Refine Tree.
+[[File:Refine tree new.png|thumb|Refine Tree]]
+
+=== Refine Tree ===
+Refine Points (RfP) can be spent in a large upgrade tree. Circle nodes offer one-time upgrades while Squares like Refine Node 1 can be leveled multiple times. These upgrades grant bonuses, QoL improvements, and unlock new features.
+
+Noteable upgrades:
+* '''Magnets''': unlock node 18 to gain a chance to get 1 or more magnets when merging common minerals, which can be spent on a new set of upgrades in the main mineral window.
+* '''Merge Level''': unlock node 5 to earn Merge Experience every time you merge two minerals. Earn enough to increase your Merge Level, which doubles VP gain earned every level.
+* '''Polishing Enhance''': spend RfP to enhance the bonuses of your Polish weapons
+* '''Runes''': earn Sun and Moon Runes that can be spent on powerful upgrades or used to spawn special minerals.
+* '''Special Minerals''': there are 10 different special minerals, each providing bonuses when spawned (only 9 are available at the beginning)
+{{:Minerals/Refine Tree}}
+
+== Common Minerals ==
+These are the common minerals which are spawned in the first time of mineral section. Every 100 thresholds, the icons will loop. 
+
+For example: Mineral 1 and 101 are paper
+
+Here are the list of Common Minerals (click [expand] to see the list):
+{|class="wikitable sortable mw-collapsible mw-collapsed" style="width:100%"
+|+'''Common Mineral List'''
+|-
+{{Minerals/Common_Minerals
+| icon = Mineral_001.png
+| mineral_name = Paper
+| mineral_level = 1
+| description = Toilet paper? Is there anything better?
+| base_value_point = 0.01
+}}
+{{Minerals/Common_Minerals
+| icon = Mineral_002.png
+| mineral_name = Dust
+| mineral_level = 2
+| description = Fine particles from worn material
+| base_value_point = 0.03
+}}
+{{Minerals/Common_Minerals
+| icon = Mineral_003.png
+| mineral_name = Straw
+| mineral_level = 3
+| description = Dried hollow stalks of grain
+| base_value_point = 0.09
+}}
+{{Minerals/Common_Minerals
+| icon = Mineral_004.png
+| mineral_name = Mud
+| mineral_level = 4
+| description = Wet soil and water mixture
+| base_value_point = 0.27
+}}
+|-
+{{Minerals/Common_Minerals
+| icon = Mineral_005.png
+| mineral_name = Stick
+| mineral_level = 5
+| description = Small branch from a tree, but great for entertaining the dog.
+| base_value_point = 0.81
+}}
+{{Minerals/Common_Minerals
+| icon = Mineral_006.png
+| mineral_name = Bark
+| mineral_level = 6
+| description = Outer protective layer of trees
+| base_value_point = 2.43
+}}
+{{Minerals/Common_Minerals
+| icon = Mineral_007.png
+| mineral_name = Thread
+| mineral_level = 7
+| description = Thin strand of flexible fiber
+| base_value_point = 7.29
+}}
+{{Minerals/Common_Minerals
+| icon = Mineral_008.png
+| mineral_name = Leaf
+| mineral_level = 8
+| description = Flat plant growth for photosynthesis
+| base_value_point = 21.87
+}}
+|-
+{{Minerals/Common_Minerals
+| icon = Mineral_009.png
+| mineral_name = Ash
+| mineral_level = 9
+| description = Gray powder from burned material
+| base_value_point = 65.61
+}}
+{{Minerals/Common_Minerals
+| icon = Mineral_010.png
+| mineral_name = Bone
+| mineral_level = 10
+| description = Hard skeletal tissue from animals
+| base_value_point = 196.83
+}}
+{{Minerals/Common_Minerals
+| icon = Mineral_011.png
+| mineral_name = Wool
+| mineral_level = 11
+| description = Soft fiber from sheep coats
+| base_value_point = 590.49
+}}
+{{Minerals/Common_Minerals
+| icon = Mineral_012.png
+| mineral_name = Hemp
+| mineral_level = 12
+| description = Don't get it confused!
+| base_value_point = 1,772
+}}
+|-
+{{Minerals/Common_Minerals
+| icon = Mineral_013.png
+| mineral_name = Hide
+| mineral_level = 13
+| description = Tanned animal skin for leather
+| base_value_point = 5,314
+}}
+{{Minerals/Common_Minerals
+| icon = Mineral_014.png
+| mineral_name = Plank
+| mineral_level = 14
+| description = Flat piece of sawn timber
+| base_value_point = 15,943
+}}
+{{Minerals/Common_Minerals
+| icon = Mineral_015.png
+| mineral_name = Wood
+| mineral_level = 15
+| description = Hard fibrous material from trees
+| base_value_point = 47,830
+}}
+{{Minerals/Common_Minerals
+| icon = Mineral_016.png
+| mineral_name = Resin
+| mineral_level = 16
+| description = Sticky substance from pine trees
+| base_value_point = 143,489
+}}
+|-
+{{Minerals/Common_Minerals
+| icon = Mineral_017.png
+| mineral_name = Silk
+| mineral_level = 17
+| description = Fine thread from silkworm cocoons
+| base_value_point = 430,467
+}}
+{{Minerals/Common_Minerals
+| icon = Mineral_018.png
+| mineral_name = Clay
+| mineral_level = 18
+| description = Fine-grained earthy material, moldable
+| base_value_point = 1,291,402
+}}
+{{Minerals/Common_Minerals
+| icon = Mineral_019.png
+| mineral_name = Moss
+| mineral_level = 19
+| description = Small flowerless plant on surfaces
+| base_value_point = 3,874,205
+}}
+{{Minerals/Common_Minerals
+| icon = Mineral_020.png
+| mineral_name = Charcoal
+| mineral_level = 20
+| description = Black carbon residue from wood
+| base_value_point = 11,622,615
+}}
+|-
+{{Minerals/Common_Minerals
+| icon = Mineral_021.png
+| mineral_name = Tin
+| mineral_level = 21
+| description = Soft silverly material, easily worked
+| base_value_point = 34,867,844
+}}
+{{Minerals/Common_Minerals
+| icon=Mineral 022.png
+| mineral_name=Copper
+| mineral_level=22
+| description=Reddish metal, excellent conductor
+| base_value_point=104,603,532
+}}
+{{Minerals/Common_Minerals
+|icon=Mineral 023.png
+|mineral_name=Lead
+|mineral_level=23
+|description=Heavy, soft, gray toxic metal
+|base_value_point=313,810,596
+}}
+{{Minerals/Common_Minerals
+|icon=Mineral 024.png
+|mineral_name=Zinc
+|mineral_level=24
+|description=Bluish-white metal with low melting
+|base_value_point=941,431,788
+}}
+|-
+{{Minerals/Common_Minerals
+| icon = Mineral_025.png
+| mineral_name = Iron
+| mineral_level = 25
+| description = Strong magnetic gray metal
+| base_value_point = 2.82e9
+}}
+{{Minerals/Common_Minerals
+| icon = Mineral 026.png
+| mineral_name = Nickel
+| mineral_level = 26
+| description = Hard silvery metal, resists corrosion
+| base_value_point = 8.47e9
+}}
+{{Minerals/Common_Minerals
+|icon = Mineral 027.png
+|mineral_name = Bronze
+|mineral_level = 27
+|description = Copper-tin alloy, historically important
+|base_value_point = 2.54e10
+}}
+{{Minerals/Common_Minerals
+|icon = Mineral 028.png
+|mineral_name = Steel
+|mineral_level = 28
+|description = Carbon-iron alloy, very, very strong
+|base_value_point = 7.62e10
+}}
+|-
+{{Minerals/Common_Minerals
+| icon = Mineral_029.png
+| mineral_name = Silver
+| mineral_level = 29
+| description = Strong magnetic gray metal
+| base_value_point = 2.29e11
+}}
+{{Minerals/Common_Minerals
+| icon = Mineral 030.png
+| mineral_name = Cobalt
+| mineral_level = 30
+| description = Hard silvery metal, resists corrosion
+| base_value_point = 6.86e11
+}}
+{{Minerals/Common_Minerals
+|icon = Mineral 031.png
+|mineral_name = Brass
+|mineral_level = 31
+|description = Copper-tin alloy, historically important
+|base_value_point = 2.06e12
+}}
+{{Minerals/Common_Minerals
+|icon = Mineral 032.png
+|mineral_name = Pewter
+|mineral_level = 32
+|description = Carbon-iron alloy, very, very strong
+|base_value_point = 6.18e12
+}}
+|-
+{{Minerals/Common_Minerals
+| icon = Mineral_033.png
+| mineral_name = Chromium
+| mineral_level = 33
+| description = Hard silver metal, highly resistant, it shines!
+| base_value_point = 1.85e13
+}}
+{{Minerals/Common_Minerals
+| icon = Mineral 034.png
+| mineral_name = Manganese
+| mineral_level = 34
+| description = Gray-white metal, oh, another one that's hard to pronounce
+| base_value_point = 5.56e13
+}}
+{{Minerals/Common_Minerals
+|icon = Mineral 035.png
+|mineral_name = Tungsten
+|mineral_level = 35
+|description = Dense metal with highest melting
+|base_value_point = 1.67e14
+}}
+{{Minerals/Common_Minerals
+|icon = Mineral 036.png
+|mineral_name = Titanium
+|mineral_level = 36
+|description = Strong lightweight silver-gray material. The kind of metal you'd find in a James Bond gadget.
+|base_value_point = 5e14
+}}
+|-
+{{Minerals/Common_Minerals
+| icon = Mineral_037.png
+| mineral_name = Iridium
+| mineral_level = 37
+| description = Dense, brittle, platinum-like metal
+| base_value_point = 1.5e15
+}}
+{{Minerals/Common_Minerals
+| icon = Mineral 038.png
+| mineral_name = Bismuth
+| mineral_level = 38
+| description = Brittle metal with rainbow oxidation
+| base_value_point = 4.5e15
+}}
+{{Minerals/Common_Minerals
+|icon = Mineral 039.png
+|mineral_name = Osmium
+|mineral_level = 39
+|description = Bluish-white, densest natural element
+|base_value_point = 1.35e16
+}}
+{{Minerals/Common_Minerals
+|icon = Mineral 040.png
+|mineral_name = Tantalum
+|mineral_level = 40
+|description = Tantalum? if you can say it, you're halfway there.
+|base_value_point = 4.05e16
+}}
+|-
+{{Minerals/Common_Minerals
+| icon = Mineral_041.png
+| mineral_name = Palladium
+| mineral_level = 41
+| description = The cool metal, but too expensive to make jewelry with
+| base_value_point = 1.22e17
+}}
+{{Minerals/Common_Minerals
+| icon = Mineral 042.png
+| mineral_name = Rhodium
+| mineral_level = 42
+| description = Rare silvery-white noble metal
+| base_value_point = 3.65e17
+}}
+{{Minerals/Common_Minerals
+|icon = Mineral 043.png
+|mineral_name = Gold
+|mineral_level = 43
+|description = If you've got bling, you've got gold
+|base_value_point = 1.09e18
+}}
+{{Minerals/Common_Minerals
+|icon = Mineral 044.png
+|mineral_name = Electrum
+|mineral_level = 44
+|description = Natural gold-silver alloy, pale
+|base_value_point = 3.28e18
+}}
+|-
+{{Minerals/Common_Minerals
+| icon = Mineral_045.png
+| mineral_name = Meteorite
+| mineral_level = 45
+| description = A fragment of space where life began
+| base_value_point = 9.85e18
+}}
+{{Minerals/Common_Minerals
+| icon = Mineral 046.png
+| mineral_name = Tellurium
+| mineral_level = 46
+| description = Brittle, mildy toxic silvery metalloid
+| base_value_point = 2.95e19
+}}
+{{Minerals/Common_Minerals
+|icon = Mineral 047.png
+|mineral_name = Platinum
+|mineral_level = 47
+|description = Dense, malleable, precious gray metal
+|base_value_point = 8.86e19
+}}
+{{Minerals/Common_Minerals
+|icon = Mineral 048.png
+|mineral_name = Aurichalcum
+|mineral_level = 48
+|description = Legendary golden metal of antiquity
+|base_value_point = 2.66e20
+}}
+|-
+{{Minerals/Common_Minerals
+|icon = Mineral 049.png
+|mineral_name = Adamantine
+|mineral_level = 49
+|description = Pure solidity
+|base_value_point = 7.98e20
+}}
+{{Minerals/Common_Minerals
+|icon = Mineral 050.png
+|mineral_name = Aetherium
+|mineral_level = 50
+|description = Ethereal metal capturing cosmic energy
+|base_value_point = 2.4e21
+}}
+{{Minerals/Common_Minerals
+|icon = Mineral 051.png
+|mineral_name = Quartz
+|mineral_level = 51
+|description = Common crystalline metal, clear
+|base_value_point = 7.18e21
+}}
+{{Minerals/Common_Minerals
+|icon = Mineral 052.png
+|mineral_name = Garnet
+|mineral_level = 52
+|description = Deep red gemstone, high hardness
+|base_value_point = 2.15e22
+}}
+|-
+{{Minerals/Common_Minerals
+|icon = Mineral 053.png
+|mineral_name = Citrine
+|mineral_level = 53
+|description = Yellow to orange quartz variety
+|base_value_point = 6.46e22
+}}
+{{Minerals/Common_Minerals
+|icon = Mineral 054.png
+|mineral_name = Jade
+|mineral_level = 54
+|description = Tough green stone, carved ornamentally
+|base_value_point = 1.94e23
+}}
+{{Minerals/Common_Minerals
+|icon = Mineral 055.png
+|mineral_name = Opal
+|mineral_level = 55
+|description = Iridescent gemstone with play-of-color
+|base_value_point = 5.81e23
+}}
+{{Minerals/Common_Minerals
+|icon = Mineral 056.png
+|mineral_name = Peridot
+|mineral_level = 56
+|description = Olive-green gem from olivine
+|base_value_point = 1.74e24
+}}
+|-
+{{Minerals/Common_Minerals
+|icon = Mineral 057.png
+|mineral_name = Moonstone
+|mineral_level = 57
+|description = Feldspar with bluish light shimmer
+|base_value_point = 5.23e24
+}}
+{{Minerals/Common_Minerals
+|icon = Mineral 058.png
+|mineral_name = Spinel
+|mineral_level = 58
+|description = Hard vitreous mineral, various colors
+|base_value_point = 1.57e25
+}}
+{{Minerals/Common_Minerals
+|icon = Mineral 059.png
+|mineral_name = Topaz
+|mineral_level = 59
+|description = Transparent silicate, often golden
+|base_value_point = 4.71e25
+}}
+{{Minerals/Common_Minerals
+|icon = Mineral 060.png
+|mineral_name = Onyx
+|mineral_level = 60
+|description = Banded form of chalcedony
+|base_value_point = 1.41e26
+}}
+|-
+{{Minerals/Common_Minerals
+|icon = Mineral 061.png
+|mineral_name = Zircon
+|mineral_level = 61
+|description = Ancient crystalline mineral, various colors
+|base_value_point = 4.24e26
+}}
+{{Minerals/Common_Minerals
+|icon = Mineral 062.png
+|mineral_name = Amber
+|mineral_level = 62
+|description = Fossilized tree resin, golden
+|base_value_point = 1.27e27
+}}
+{{Minerals/Common_Minerals
+|icon = Mineral 063.png
+|mineral_name = Aquamarine
+|mineral_level = 63
+|description = Pale blue-green beryl variety
+|base_value_point = 3.82e27
+}}
+{{Minerals/Common_Minerals
+|icon = Mineral 064.png
+|mineral_name = Tourmaline
+|mineral_level = 64
+|description = Crystalline silicate with multiple colors
+|base_value_point = 1.14e28
+}}
+|-
+{{Minerals/Common_Minerals
+|icon = Mineral 065.png
+|mineral_name = Amethyst
+|mineral_level = 65
+|description = Purple variety of quartz crystal
+|base_value_point = 3.43e28
+}}
+{{Minerals/Common_Minerals
+|icon = Mineral 066.png
+|mineral_name = Ruby
+|mineral_level = 66
+|description = Deep red corundum, precious gem
+|base_value_point = 1.03e29
+}}
+{{Minerals/Common_Minerals
+|icon = Mineral 067.png
+|mineral_name = Emerald
+|mineral_level = 67
+|description = Rich green variety of beryl
+|base_value_point = 3.09e29
+}}
+{{Minerals/Common_Minerals
+|icon = Mineral 068.png
+|mineral_name = Sapphire
+|mineral_level = 68
+|description = Blue corundum gem, highly valued
+|base_value_point = 9.27e29
+}}
+|-
+{{Minerals/Common_Minerals
+|icon = Mineral 069.png
+|mineral_name = Niceum
+|mineral_level = 69
+|description = Sounds nice, is nice, as the number of this mineral
+|base_value_point = 2.78e30
+}}
+{{Minerals/Common_Minerals
+|icon = Mineral 070.png
+|mineral_name = Diamond
+|mineral_level = 70
+|description = Hardest natural material, pure carbon
+|base_value_point = 8.34e30
+}}
+{{Minerals/Common_Minerals
+|icon = Mineral 071.png
+|mineral_name = Luminar
+|mineral_level = 71
+|description = Light-emitting crystal from deep earth
+|base_value_point = 2.5e31
+}}
+{{Minerals/Common_Minerals
+|icon = Mineral 072.png
+|mineral_name = Obscurite
+|mineral_level = 72
+|description = Dark mineral absorbing all light
+|base_value_point = 7.51e31
+}}
+|-
+{{Minerals/Common_Minerals
+|icon = Mineral 073.png
+|mineral_name = Arcanite
+|mineral_level = 73
+|description = Crystal storing magical energy patterns
+|base_value_point = 2.25e32
+}}
+{{Minerals/Common_Minerals
+|icon = Mineral 074.png
+|mineral_name = Voidite
+|mineral_level = 74
+|description = Strange mineral defying physical laws
+|base_value_point = 6.76e32
+}}
+{{Minerals/Common_Minerals
+|icon = Mineral 075.png
+|mineral_name = Cryonex
+|mineral_level = 75
+|description = Perpetually cold blue crystalline substance
+|base_value_point = 2.03e33
+}}
+{{Minerals/Common_Minerals
+|icon = Mineral 076.png
+|mineral_name = Pyronium
+|mineral_level = 76
+|description = Heat-generating red metallic element
+|base_value_point = 6.08e33
+}}
+|-
+{{Minerals/Common_Minerals
+|icon = Mineral 077.png
+|mineral_name = Frostel
+|mineral_level = 77
+|description = Ice-like metal that never melts
+|base_value_point = 1.82e34
+}}
+{{Minerals/Common_Minerals
+|icon = Mineral 078.png
+|mineral_name = Glimmeron
+|mineral_level = 78
+|description = Reflective crystal with inner light
+|base_value_point = 5.47e34
+}}
+{{Minerals/Common_Minerals
+|icon = Mineral 079.png
+|mineral_name = Umbrazine
+|mineral_level = 79
+|description = Shadow-infused dark purple crystal
+|base_value_point = 1.64e35
+}}
+{{Minerals/Common_Minerals
+|icon = Mineral 080.png
+|mineral_name = Aetheron
+|mineral_level = 80
+|description = Definitely not sold in stores
+|base_value_point = 4.93e35
+}}
+|-
+{{Minerals/Common_Minerals
+|icon = Mineral 081.png
+|mineral_name = Zephyrite
+|mineral_level = 81
+|description = Wind-attuned floating green crystal
+|base_value_point = 	1.48e36
+}}
+{{Minerals/Common_Minerals
+|icon = Mineral 082.png
+|mineral_name = Draconium
+|mineral_level = 82
+|description = 	Scale-patterned reptillian metal alloy
+|base_value_point = 	4.43e36
+}}
+{{Minerals/Common_Minerals
+|icon = Mineral 083.png
+|mineral_name = Luxium
+|mineral_level = 83
+|description = Radiant golden crystalline formation
+|base_value_point = 	1.33e37
+}}
+{{Minerals/Common_Minerals
+|icon = Mineral 084.png
+|mineral_name = Nocterra
+|mineral_level = 84
+|description = Night owl energy at its finest
+|base_value_point = 	3.99e37
+}}
+|-
+{{Minerals/Common_Minerals
+|icon = Mineral 085.png
+|mineral_name = Solenite
+|mineral_level = 85
+|description = Sunlight-storing yellow crystal formation
+|base_value_point = 	1.2e38
+}}
+{{Minerals/Common_Minerals
+|icon = Mineral 086.png
+|mineral_name = Volufiline
+|mineral_level = 86
+|description = If you care about your appearance, you should know why it's so precious
+|base_value_point = 	3.59e38
+}}
+{{Minerals/Common_Minerals
+|icon = Mineral 087.png
+|mineral_name = Eclipsite
+|mineral_level = 87
+|description = Dual-natured black and white crystal
+|base_value_point = 1.08e39
+}}
+{{Minerals/Common_Minerals
+|icon = Mineral 088.png
+|mineral_name = Radiantor
+|mineral_level = 88
+|description = Energy-projecting iridescent mineral
+|base_value_point = 3.23e39
+}}
+|-
+{{Minerals/Common_Minerals
+|icon = Mineral 089.png
+|mineral_name = Chronorium
+|mineral_level = 89
+|description = Time-warping green-blue metallic crystal, the essence behind the Time Flux
+|base_value_point = 9.7e39
+}}
+{{Minerals/Common_Minerals
+|icon = Mineral 090.png
+|mineral_name = Eternite
+|mineral_level = 90
+|description = Residual material of eternity
+|base_value_point = 2.91e40
+}}
+{{Minerals/Common_Minerals
+|icon = Mineral 091.png
+|mineral_name = Fluxite
+|mineral_level = 91
+|description = 	Crystalline fragment suspended in time
+|base_value_point = 8.73e40
+}}
+{{Minerals/Common_Minerals
+|icon = Mineral 092.png
+|mineral_name = Mythrill
+|mineral_level = 92
+|description = Legendary lightweight silver-blue metal
+|base_value_point = 2.62e41
+}}
+|-
+{{Minerals/Common_Minerals
+|icon = Mineral 093.png
+|mineral_name = Celestium
+|mineral_level = 93
+|description = Straight from the Infinity Stars, maybe
+|base_value_point = 	7.86e41
+}}
+{{Minerals/Common_Minerals
+|icon = Mineral 094.png
+|mineral_name = Divinore
+|mineral_level = 94
+|description = Godly essence crystallized form
+|base_value_point = 	2.36e42
+}}
+{{Minerals/Common_Minerals
+|icon = Mineral 095.png
+|mineral_name = Astralyte
+|mineral_level = 95
+|description = Cosmic radiation-infused stellar material
+|base_value_point = 7.07e42
+}}
+{{Minerals/Common_Minerals
+|icon = Mineral 096.png
+|mineral_name = Emphatite
+|mineral_level = 96
+|description = Literally feels your emotions
+|base_value_point = 	2.12e43
+}}
+|-
+{{Minerals/Common_Minerals
+|icon = Mineral 097.png
+|mineral_name = Seraphel
+|mineral_level = 97
+|description = Angel-touched white-gold ethereal metal
+|base_value_point = 	6.36e43
+}}
+{{Minerals/Common_Minerals
+|icon = Mineral 098.png
+|mineral_name = Chadium
+|mineral_level = 98
+|description = This mineral somehow makes everyone more attractive
+|base_value_point = 1.91e44
+}}
+{{Minerals/Common_Minerals
+|icon = Mineral 099.png
+|mineral_name = Theonis
+|mineral_level = 99
+|description = Divine power manifestation
+|base_value_point = 5.73e44
+}}
+{{Minerals/Common_Minerals
+|icon = Mineral 100.png
+|mineral_name = Godcore
+|mineral_level = 100
+|description = Primordial essence of universal creation
+|base_value_point = 1.72e45
+}}
+|}
+
+== Polish Enhance (Refine Node 28) ==
+[[File:Screenshot 2026-04-25 191027.png|thumb|Polishing Enhance tab]]
+Polish Enhance is a mostly minor mechanic unlocked through Refine Node 28. There are five upgrades, one for each polish weapon, and each level increases the respective polish upgrade's efficiency by 1%.
+
+However, the cost for each upgrade scales exponentially, so it is only viable in the late game.
+
+== Runes (Node 35) ==
+{{Stub|notes=table formula for price scaling and generation rate1 decrease}}
+[[File:Screenshot 2026-04-25 191022.png|thumb|The Runes tab]]
+Runes are a game mechanic vital to late-game progression. Runes are divided into 2 separate categories: Sun Runes and Moon Runes, each having 2 unique upgrades and 2 similar upgrades (see table below (TBA)). Moon generates faster than Sun but this is because Moon GRA upgrade (Generation Rate Amount, not to be confused with Generation Rate) is more expensive. Runes is a huge time wall between the refinement stage and the elements stage, often taking close to 2 weeks (from runes unlock to achievement 320) with minimal gameplay all throughout. They both generate at a rate of 1 every 10 days by default but are affected by local gamespeed and TF. Runes can be obtained faster by some nodes (eg. node 48), relic 34, upgrading their respective GRA (this costs runes) or by reducing the time it takes to generate Runes (by buying their respective first upgrades with RfP).
+{| class="wikitable mw-collapsible"
+! colspan="6" |Runes Upgrades
+|-
+! colspan="3" |Sun Runes
+! colspan="3" |Moon Runes
+|-
+!Upgrade
+!Effects
+!Cost Scaling
+!Upgrade
+!Effects
+!Cost Scaling
+|-
+|Generation Rate
+| -5% to Sun Runes generation duration (multiplicative, need confirmation)
+|x10/level
+|Generation Rate
+| -10% to Moon Runes generation duration (multiplicative, also need confirmation)
+|x100/level
+|-
+|Refine Node 1 efffect
+|base x1, +x0.1 to mult/level
+|x2/level
+|Refine Node 7 effect
+|base x1, +0.2 to mult/level
+|x2/level
+|-
+|Magnet Chance
+|base x1, +0.2 to mult/level
+|x1.5/level
+|Magnet Amount
+|base x1, +1 to mult/level
+|x3/level
+|-
+|Generation Amount
+| +1/level
+|x3/level (?)
+|Generation Amount
+| +1/level
+|x3/level
+|}
+
+== Special Minerals (SPM, Refine Node 41) ==
+{{Stub|notes=Spm permanent cost increase formula, runes info missing, need images for refine tree}}
+The Special Minerals (also known as SPM) section of the Minerals tab is unlocked by purchasing Refine Node 41, which costs 50,000,000 (5e7) Refine Points (RfP). Special Minerals cost Runes to spawn and are kept on both Polish Prestige and Refine Prestige, so they provide permanent bonuses.
+
+There are currently 10* Special Minerals which can be spawned, each with their own bonus, as per the table below.
+
+''*The 10th Special Mineral, the Black Gem, requires Refine Node 70 to be bought before they can be spawned, which also unlocks [[Tarot]]
+
+{| class="wikitable center"
+|-
+{{Minerals/Special_Minerals
+| icon = Special_mineral_red.png
+| mineral_name = Red Gem
+| description = A cool shining red gem. It will boost your VP gains!
+| mineral_base_boost = 3.00x VP Gain
+}}
+{{Minerals/Special_Minerals
+| icon = Special_mineral_blue.png
+| mineral_name = Blue Gem
+| description = Deep blue special gem is great for making mineral cost increase slower
+| mineral_base_boost = Cost Increase is powered to ^0.99 
+}}
+{{Minerals/Special_Minerals
+| icon = Special_mineral_green.png
+| mineral_name = Green Gem
+| description = Green like an emerald, also makes your mineral cost drop faster
+| mineral_base_boost = Cost fall is powered to ^1.01
+}}
+|-
+{{Minerals/Special_Minerals
+| icon = Special_mineral_pink.png
+| mineral_name = Pink Gem
+| description = Pink gem takes us back to astrology! Get zodiacs with better luck and quality!
+| mineral_base_boost = Luck and Quality Bonus +0.05
+}}
+{{Minerals/Special_Minerals
+| icon = Special_mineral_yellow.png
+| mineral_name = Yellow Gem
+| description = Yellow is like the color of the money! Boost your gold gain!
+| mineral_base_boost = Gold gain is multiplied by 10
+}}
+{{Minerals/Special_Minerals
+| icon = Special_mineral_orange.png
+| mineral_name = Orange Gem
+| description = Orange gem is attractive for magnetism! Gives you more magnet chance!
+| mineral_base_boost = 1.01x Magnet Chance
+}}
+|-
+{{Minerals/Special_Minerals
+| icon = Special_mineral_darkpurple.png
+| mineral_name = Dark Purple Gem
+| description = Dark Purple gem enhances your polishing skills! Get more PP on polish prestige!
+| mineral_base_boost = 1.50x PP gain
+}}
+{{Minerals/Special_Minerals
+| icon = Special_mineral_lightblue.png
+| mineral_name = Light Blue Gem
+| description = Light Blue gem is great for refinery! Get more RfP on refine prestige!
+| mineral_base_boost = +x0.05 RfP Gain
+}}
+{{Minerals/Special_Minerals
+| icon = Special_mineral_white.png
+| mineral_name = White Gem
+| description = So white, so you can think the time is faster now? Increase the game speed!
+| mineral_base_boost = Make the game speed +0.05x faster
+}}
+|-
+{{Minerals/Special_Minerals
+| icon = Special_mineral_black.png
+| mineral_name = Black Gem
+| description = Dark black gem, like hidden and mythical predictions... Gives more tarot draws
+| mineral_base_boost = Tarot Draws +0.10 ''(draws are granted when deleted)''
+}}
+|}
+
+===Spawning Special Minerals===
+
+Refine Node 41 adds a new Special Minerals grid within the Minerals tab and allows the player to spawn Special Minerals. The grid is 3x3 by default and can be increased in size (up to 9x9) by purchasing levels of Refine Node 44; up to 10x10 with Refine Node 72; and up to 11x11 with Refine Node 80.
+
+When the Spawn button is used with the Special Minerals grid active, a random Special Mineral will be spawned, selected from the 9 currently available Special Minerals (10 after Refine Node 70 has been bought). Spawning Special Minerals costs Runes, starting at 10 Sun Runes and 10 Moon Runes per spawn, with the Rune cost increasing after spawning a certain number of Special Minerals.
+
+With each spawn, you also increase your SMS factor which increases the cost of special minerals. After you hit 7500 SMS factor, the cost of special minerals significantly increase at an extreme exponential rate with each spawn, so limit your SMS factor to 7500 in your automation settings to prevent accidentally starting the extreme exponential cost that can stall progress for days.
+
+{| class="wikitable"
+! SMS Factor !! Base Spawn Cost
+|-
+|0||10
+|-
+|7||11
+|-
+|61||12
+|-
+|89||13
+|-
+|111||14
+|-
+|130||15
+|-
+|148||16
+|-
+|163||17
+|-
+|178||18
+|-
+|191||19
+|-
+|204||20
+|}
+
+Special Minerals can be merged but - unlike Common Minerals - merging does not improve the effect of Special Minerals (a Level 2 Special Mineral has the same effect as two Level 1 Special Minerals). Merging Special Minerals is therefore only useful to reduce the amount of space they take up within the grid, and for Special Minerals Progression to increase the Base Level (aka spawn level) of Special Minerals.
+
+''It is strongly recommended that you do not merge Special Minerals until Special Minerals Progression is unlocked, otherwise you will not gain progress towards increasing the Base Level of Special Minerals.''
+
+===Special Minerals Progression (Refine Node 46)===
+By default, Special Minerals spawn at Level 1, regardless of the level entered into the Spawn Lvl. box. The spawn level of Special Minerals can only be increased through Special Minerals progression, which is unlocked by purchasing Refine Node 46, which costs 200,000,000 RfP.
+
+Once unlocked, a new Special Minerals progression option appears in the Refine Tree section. Within this new section, players can:
+* Upgrade the efficiency of each Special Mineral at the cost of RfP
+* [[File:Screenshot 2026-04-25 191010.png|thumb|Special Minerals Progression]]View progress towards increasing the Base Level of each Special Mineral
+
+{{Stub|notes=SPM Efficiency Cost Scaling, Effect details}}
+
+The Base Level of each Special Mineral is increased by merging a certain number of that type of Special Mineral. Once a Special Minerals reaches Base Level 2, it will spawn at Level 2, effectively doubling the spawned amount of Special Minerals of that type.
+
+Reaching Base Level 2 (for each type of Special Mineral) requires 100 merges, which is equivalent to having a Level 7, Level 6 and two Level 3 Special Minerals of that type (104 Special Minerals). Getting a Special Mineral to Base Level 2 is the requirement for {{Keyword|ach|Achievement 320|link=Achievements}}, which was the final Achievement in the game in version 1.034.
+
+It takes a maximum of 928 Special Mineral spawns to have at least one Special Mineral reach Base Level 2, for a total maximum of 55,509 Runes of each type. On average it is more likely to need around 800 spawns, or about 40,000 Runes of each type. ''Credit: @niedzielan in the Oni Gaming Discord, for calculating the number of spawns/Runes required.''
+
+===Sacrifice Special Minerals (Refine Node 85)===
+{{Stub|notes=Needs Sacrificed Minerals Effect Scaling/level, sacrifice dust req./level}}
+[[File:Sacrifice special minerals.png|thumb|The Special Minerals Sacrifice tab]]
+Refine Node 85 adds a new tab to Minerals, accessible from the base Minerals tab. Destroying 100 Level 20 minerals of each Special Mineral type through deletion or The Tower or macros allows you to sacrifice it, granting a level 27 version of that mineral within the Sacrifice tab. Once a special mineral has been sacrificed, the player can only spawn the other special mineral types until all have been sacrificed. Sacrificing all special minerals unlocks Sacrifice Dust, which is granted through spawning special minerals instead of actually spawning a special mineral. This Dust can be used to level up sacrificed minerals.
+{| class="wikitable"
+|+
+! colspan="2" |Sacrifice Special Minerals Level-Up Requirements
+|-
+!Level                  
+!Sacrifice Dust Requirement
+|-
+|27
+|Destroy 100 Level 20 minerals
+|-
+|28
+|1,000,000 Sacrifice Dust
+|-
+|29
+|4,000,000
+|-
+|30
+|81,000,000
+|-
+|31
+|4.1e9
+|-
+|32
+|3.91e11
+|-
+|33
+|6.05e13
+|-
+|34
+|1.38e16
+|-
+|35
+|4.4e18
+|-
+|36
+|1.85e21
+|-
+|n
+|(lvl-27)^((lvl-28)×2)×1,000,000(not confirmed)
+|}
+Sacrificed minerals, in addition to having the effect of the original Special Mineral, also have a second effect that scales much slower.
+{| class="wikitable"
+|+
+! colspan="3" |Sacrificed Special Minerals Effects
+|-
+!Type
+!Effect 1
+!Effect 2
+|-
+|Red Gem
+|VP Gain mult
+|Attacks HP: ^(1/X)
+|-
+|Blue Gem
+|Common Minerals Cost Increase
+|Global Element Mult: ^X (1.1+((lvl-26)^2)×0.01, not confirmed)
+|-
+|Green Gem
+|Common Minerals Cost Fall
+|Common Tarot Cards Effect 1 (Resource Generation) mult
+|-
+|Pink Gem
+|Luck & Quality Bonus
+|Luck: ^X (base 1.03 at level 27, +0.03/lvl, not confirmed)
+|-
+|Yellow Gem
+|Gold Gain mult
+|Relic 14 Effect: ^X (1000+((lvl-27)^2)×100, not confirmed)
+|-
+|Orange Gem
+|Magnet Chance mult
+|Local Elements Speed Power: xX (base 1.1 at Level 27, +0.04/lvl, not confirmed)
+|-
+|Dark Purple Gem
+|PP Gain mult
+|The Devil Tarot card effect mult: ×X (10+(lvl-26)^2, not confirmed)
+|-
+|Light Blue Gem
+|RfP Gain mult
+|RfP Gain: ^X (base 1.02 at Level 27, +0.02/lvl)
+|-
+|White Gem
+|Game Speed mult
+|Mineral Local Speed softcaps: /X (base 1.01 at Level 27, +0.01/lvl, not confirmed)
+|-
+|Black Gem
+|Tarot Draws/sec
+|Refine Node 79 Effect (base 2 at Level 27, +1/lvl, not confirmed)
+|}
+
+= Formulae for nerds =
+
+=== VP Gain Formulas ===
+
+* '''Initial Formula:'''  <big><math>0.01 \cdot 3^{\text{MineralLevel} - 1}</math></big>
+
+* '''After Refine Node 1:'''  <big><math>0.01 \cdot (3 + Refine Node Level)^{\text{MineralLevel} - 1}</math></big>
+
+You can also boost VP by buying relics 22 and 23 and polishing sword:
+
+* Relic Formula: <big><math>(Initial Formula)\cdot Relic 22 ^{\text{Relic 23}}</math></big>
+
+* Polished Sword: <big><math>(Initial Formula)\cdot (Polished Sword Level)</math></big>
+
+=== Merging ===
+
+* Merge Level cap increment: <big><math> 10 \cdot (Merge Level + 1) ^2 </math></big>
+* Beyond Merge Level 101: <math>(10 \cdot (Merge Level + 1) ^ 2) ^ {(1+ \frac{MergeLevel-100}{100})}</math>
+
+=== Base Effect Of Mineral Upgrades ===
+
+* Mineral upgrade 1 effect:<math> UpgradeLevel+1</math>
+* Mineral upgrade 2 effect: <math>UpgradeLevel+3</math> (caps at 9)
+* Mineral upgrade 3 effect: <math>UpgradeLevel+3</math> (caps at 9)
+* Mineral upgrade 4 effect:  <math>(2+{UpgradeLevel}/2)^{UpgradeLevel}</math>
+* Mineral upgrade 5 effect: <math>1+{UpgradeLevel}/10</math>
+* Mineral upgrade 6 effect: <math>1+{UpgradeLevel}/5</math>
+* Mineral upgrade 7 effect: <math>2^{UpgradeLevel}</math>
+* Mineral upgrade 8 effect: <math>1+{UpgradeLevel}/100</math>
+* Mineral upgrade 9 effect: <math>1+ {UpgradeLevel}/100</math>
+* Mineral upgrade 10 effect: <math>({UpgradeLevel}/10)%</math>
+
+=== Special Mineral Base Spawn Cost ===
+
+<math>\text{Special Mineral Base Spawn Cost} = 9.98 + \left(\frac{\text{SMS Factor}}{60}\right)^{1.8}</math>
+
+* If [[Elements|Wind Node 2]] has been purchased, the above is then divided by this effect
+
+* If SMS Factor > 7500, where <math>x</math> is the result of the above formula: <math>x^{1+\frac{\text{SMS Factor}-7500}{1000}}</math>
+
+* The final base spawn cost is the ceiling of the result
+
+=== Polish Weapons PP Cost ===
+For the formulae below:
+* <big><math>\text{Amount } = \text{ Polish Weapon Level}</math></big>
+* <big><math>\text{Cups10TC } = \text{ The value of the Ten of Cups Tarot Card's 2nd effect}</math></big>
+
+==== Polish Sword ====
+<big><math>
+\text{Polish Sword PP Cost} = \left\{ \begin{array}{cl}
+ \text{Amount} \leq 10 : & \ x = 1.1^\text{Amount} \\
+ \text{Amount} > 10 : & \ x_1 = x^{1+\frac{\text{Amount}-10}{100}} \\
+ \text{Amount} > 25 : & \ x_2 = x_1^{1+\frac{\text{Amount}-25}{70}} \\
+ \text{Amount} > 50 : & \ x_3 = x_2^{1+\frac{\text{Amount}-50}{40}} \\
+ \text{Amount} > 100 : & \ x_4 = x_3^{1+\frac{\text{Amount}-100}{10}\frac{1}{1+\text{Cups10TC}}} \\
+ \text{Amount} > 250 : & \ x_5 = x_4^{1+\frac{\text{Amount}-250}{3}\frac{1}{1+\text{Cups10TC}}} \\
+ \text{Amount} > 1000 : & \ x_6 = x_5^{1.01^{\text{Amount}-1000}} \\
+\end{array} \right.
+</math></big>
+
+==== Polish Axe ====
+<big><math>
+\text{Polish Axe PP Cost} = \left\{ \begin{array}{cl}
+ \text{Amount} \leq 10 : & \ x = 2 \times 1.15^\text{Amount} \\
+ \text{Amount} > 10 : & \ x_1 = x^{1+\frac{\text{Amount}-10}{100}} \\
+ \text{Amount} > 25 : & \ x_2 = x_1^{1+\frac{\text{Amount}-25}{70}} \\
+ \text{Amount} > 50 : & \ x_3 = x_2^{1+\frac{\text{Amount}-50}{40}} \\
+ \text{Amount} > 100 : & \ x_4 = x_3^{1+\frac{\text{Amount}-100}{10}\frac{1}{1+\text{Cups10TC}}} \\
+ \text{Amount} > 250 : & \ x_5 = x_4^{1+\frac{\text{Amount}-250}{3}\frac{1}{1+\text{Cups10TC}}} \\
+ \text{Amount} > 1000 : & \ x_6 = x_5^{1.01^{\text{Amount}-1000}} \\
+\end{array} \right.
+</math></big>
+
+==== Polish Spear ====
+<big><math>
+\text{Polish Spear PP Cost} = \left\{ \begin{array}{cl}
+ \text{Amount} \leq 10 : & \ x = 3 \times 1.2^\text{Amount} \\
+ \text{Amount} > 10 : & \ x_1 = x^{1+\frac{\text{Amount}-10}{100}} \\
+ \text{Amount} > 25 : & \ x_2 = x_1^{1+\frac{\text{Amount}-25}{70}} \\
+ \text{Amount} > 50 : & \ x_3 = x_2^{1+\frac{\text{Amount}-50}{40}} \\
+ \text{Amount} > 100 : & \ x_4 = x_3^{1+\frac{\text{Amount}-100}{10}\frac{1}{1+\text{Cups10TC}}} \\
+ \text{Amount} > 250 : & \ x_5 = x_4^{1+\frac{\text{Amount}-250}{3}\frac{1}{1+\text{Cups10TC}}} \\
+ \text{Amount} > 1000 : & \ x_6 = x_5^{1.01^{\text{Amount}-1000}} \\
+\end{array} \right.
+</math></big>
+
+==== Polish Bow ====
+<big><math>
+\text{Polish Bow PP Cost} = \left\{ \begin{array}{cl}
+ \text{Amount} \leq 10 : & \ x = 4\times1.25^\text{Amount} \\
+ \text{Amount} > 10 : & \ x_1 = x^{1+\frac{\text{Amount}-10}{100}} \\
+ \text{Amount} > 25 : & \ x_2 = x_1^{1+\frac{\text{Amount}-25}{70}} \\
+ \text{Amount} > 50 : & \ x_3 = x_2^{1+\frac{\text{Amount}-50}{40}} \\
+ \text{Amount} > 100 : & \ x_4 = x_3^{1+\frac{\text{Amount}-100}{10}\frac{1}{1+\text{Cups10TC}}} \\
+ \text{Amount} > 250 : & \ x_5 = x_4^{1+\frac{\text{Amount}-250}{3}\frac{1}{1+\text{Cups10TC}}} \\
+ \text{Amount} > 1000 : & \ x_6 = x_5^{1.01^{\text{Amount}-1000}} \\
+\end{array} \right.
+</math></big>
+
+==== Polish Knuckles ====
+<big><math>
+\text{Polish Knuckles PP Cost} = \left\{ \begin{array}{cl}
+ \text{Amount} \leq 10 : & \ x = 5 \times 1.4^\text{Amount} \\
+ \text{Amount} > 10 : & \ x_1 = x^{1+\frac{\text{Amount}-10}{100}} \\
+ \text{Amount} > 25 : & \ x_2 = x_1^{1+\frac{\text{Amount}-25}{70}} \\
+ \text{Amount} > 50 : & \ x_3 = x_2^{1+\frac{\text{Amount}-50}{40}} \\
+ \text{Amount} > 100 : & \ x_4 = x_3^{1+\frac{\text{Amount}-100}{10}\frac{1}{1+\text{Cups10TC}}} \\
+ \text{Amount} > 250 : & \ x_5 = x_4^{1+\frac{\text{Amount}-250}{3}\frac{1}{1+\text{Cups10TC}}} \\
+ \text{Amount} > 1000 : & \ x_6 = x_5^{1.01^{\text{Amount}-1000}} \\
+\end{array} \right.
+</math></big>
+[[Category:Unity]]
+{{Main navbox}}

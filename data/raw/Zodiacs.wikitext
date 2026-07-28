@@ -1,0 +1,562 @@
+<!-- Migrated from Unity page - ChillCatto -->
+
+== Zodiacs ==
+Zodiacs are collectible entities in the [[Unity#Astrology|Astrology]] system that provide bonuses when assigned to [[Planets]]. Each Zodiac belongs to one of four Elements &mdash; {{ZodiacBadge|Fire}}, {{ZodiacBadge|Wind}}, {{ZodiacBadge|Water}} or {{ZodiacBadge|Earth}} &mdash; and corresponds to one of the four seasons.
+
+The strength of each Zodiac's bonuses scales with its [[Zodiacs#Zodiac Quality|<span style="color: #eaac2d;">Quality</span>]], [[Zodiacs#Zodiac Level|<span style="color: #3f6af4;">Level</span>]], and [[Zodiacs#Zodiac Rarity|<span style="color: inherit;">Rarity</span>]]. If you want to reroll, it will cost you 200 souls. (+50 per reroll)
+
+=== Zodiac Signs ===
+
+There are 12 Zodiac signs in total. Each can have up to four possible bonuses unique to its sign and element group. Some bonuses are shared across signs of the same element.
+
+{| class="wikitable sortable"
+|+ Zodiac Types and Bonus
+|-
+! class="sortinitialorder" | Zodiac !! class="unsortable" | Icon !! Element !! Season !! class="unsortable" | Bonus 1 !! class="unsortable" | Bonus 2 !! class="unsortable" | Bonus 3 !! class="unsortable" | Bonus 4
+|-
+| data-sort-value=1 | {{ZodiacBadge|Aries}}
+| [[File:Aries.png|25px|center|link=Zodiacs]]
+| data-sort-value=11 | {{ZodiacBadge|Fire}} 
+| data-sort-value=1 | Spring 
+| Mult Gain x 
+| Promotions Power x 
+| Ascension Power x 
+| Common Exp. Power x
+|-
+| data-sort-value=11 | {{ZodiacBadge|Taurus}} 
+| [[File:Tau.png|25px|center|link=Zodiacs]]
+| data-sort-value=21 | {{ZodiacBadge|Earth}} 
+| data-sort-value=1 | Spring 
+| IP Gain ^ 
+| Infinity Gain x 
+| Gen. Exponent x 
+| Mult/bought Gen x
+|-
+| data-sort-value=5 | {{ZodiacBadge|Gemini}} 
+| [[File:Gem.png|25px|center|link=Zodiacs]]
+| data-sort-value=31 | {{ZodiacBadge|Wind}} 
+| data-sort-value=2 | Summer 
+| Eternity Gain x 
+| EP Gain ^ 
+| Supernova Req ^^ 
+| Lab. Mult Power x
+|-
+| data-sort-value=3 | {{ZodiacBadge|Cancer}} 
+| [[File:Canc.png|25px|center|link=Zodiacs]]
+| data-sort-value=41 | {{ZodiacBadge|Water}} 
+| data-sort-value=2 | Summer 
+| DTP Cost ^^ 
+| Center DTU Effect x 
+| Ach. 29 Reward x 
+| Game Speed x
+|-
+| data-sort-value=6 | {{ZodiacBadge|Leo}} 
+| [[File:Leo.png|25px|center|link=Zodiacs]]
+| data-sort-value=2 | {{ZodiacBadge|Fire}} 
+| data-sort-value=2 | Summer 
+| Lap Speed x 
+| Promotions Power x 
+| Ascension Power x 
+| Common Exp. Power x
+|-
+| data-sort-value=12 | {{ZodiacBadge|Virgo}} 
+| [[File:Virgo.png|25px|center|link=Zodiacs]]
+| data-sort-value=22 | {{ZodiacBadge|Earth}} 
+| data-sort-value=3 | Autumn 
+| Star Base x 
+| Infinity Gain x 
+| Gen. Exponent x 
+| Mult/bought Gen x
+|-
+| data-sort-value=7 | {{ZodiacBadge|Libra}} 
+| [[File:Libra.png|25px|center|link=Zodiacs]]
+| data-sort-value=32 | {{ZodiacBadge|Wind}} 
+| data-sort-value=3 | Autumn 
+| DP Gain ^ 
+| EP Gain ^ 
+| Supernova Req ^^ 
+| Lab. Mult Power x
+|-
+| data-sort-value=10 | {{ZodiacBadge|Scorpio}} 
+| [[File:Scorp.png|25px|center|link=Zodiacs]]
+| data-sort-value=42 | {{ZodiacBadge|Water}} 
+| data-sort-value=3 | Autumn 
+| Luck + 
+| Center DTU Effect x 
+| Ach. 29 Reward x 
+| Game Speed x
+|-
+| data-sort-value=9 | {{ZodiacBadge|Sagittarius}} 
+| [[File:Sagit.png|25px|center|link=Zodiacs]]
+| data-sort-value=13 | {{ZodiacBadge|Fire}} 
+| data-sort-value=4 | Winter 
+| Lap Speed x 
+| Slowdown Power (asc amount) + 
+| Ascension Power x 
+| Common Exp. Power x
+|-
+| data-sort-value=4 | {{ZodiacBadge|Capricorn}} 
+| [[File:Capri.png|25px|center|link=Zodiacs]]
+| data-sort-value=23 | {{ZodiacBadge|Earth}} 
+| data-sort-value=4 | Winter 
+| Star Base x 
+| Stardust Exponent x 
+| Gen. Exponent x 
+| Mult/bought Gen x
+|-
+| data-sort-value=1 | {{ZodiacBadge|Aquarius}} 
+| [[File:Aqua.png|25px|center|link=Zodiacs]]
+| data-sort-value=33 | {{ZodiacBadge|Wind}} 
+| data-sort-value=4 | Winter 
+| DP Gain ^ 
+| Free Lab. Levels + 
+| Supernova Req ^^ 
+| Lab. Mult Power x
+|-
+| data-sort-value=8 | {{ZodiacBadge|Pisces}} 
+| [[File:Pisc.png|25px|center|link=Zodiacs]]
+| data-sort-value=43 | {{ZodiacBadge|Water}} 
+| data-sort-value=1 | Spring 
+| Luck + 
+| Zodiac Quality x 
+| Ach. 29 Reward x 
+| Game Speed x
+|}
+
+=== Extra Bonuses ===
+Based on the season of the zodiac and the planet it is placed on, it will give different bonus effects as seen below. it alternates between 3 sets of bonuses that get better the better the planet.
+{| class="wikitable sortable"
+|-
+! Season 
+! class="sortinitialorder" | Zodiacs 
+!Sun
+!Mercury
+!Venus
+!Moon
+!Mars
+!Jupiter
+!Saturn
+!Uranus
+!Neptune
+!Pluto
+!Chiron
+!Fortune Pars
+|-
+| data-sort-value="1" | Spring 
+| data-sort-value="1" | {{ZodiacBadge|Aries}}{{ZodiacBadge|Taurus}}{{ZodiacBadge|Pisces}}
+|Zodiac quality
+mult x1.5
+|Eternity gain x2
+|Game speed x1.2
+|Luck mult x1.2
+|Infinity gain x5
+|Lap speed x2
+|Unity rewards ^1.1
+|DP mult x5
+|Supernova rewards ^1.04
+|Eternity rewards ^1.15
+|Star cost ^0.9
+|Luck mult x1.5
+|-
+| data-sort-value="2" | Summer 
+| data-sort-value="5" | {{ZodiacBadge|Gemini}}{{ZodiacBadge|Cancer}}{{ZodiacBadge|Leo}}
+|Luck mult x1.15
+|Infinity gain x10
+|Lap speed x3
+|Unity rewards ^1.15
+|DP mult x1.8
+|Supernova 
+rewards ^1.03
+|Eternity 
+rewards ^1.2
+|Star cost ^0.93
+|Dilation upgrades x1.06
+|Zodiac quality
+mult x1.25
+|Eternity gain x2
+|Luck mult x1.5
+|-
+| data-sort-value="3" | Autumn 
+| data-sort-value="12" | {{ZodiacBadge|Virgo}}{{ZodiacBadge|Libra}}{{ZodiacBadge|Scorpio}}
+|Unity
+rewards ^1.1
+|DP mult x2
+|Supernova
+rewards ^1.02
+|Eternity 
+rewards ^1.15
+|Star cost ^0.85
+|DU power x1.03
+|Zodiac quality 
+mult x1.2
+|Eternity gain x3
+|Game speed x1.4
+|Luck mult x1.25
+|Infinity gain x100
+|Luck mult x1.5
+|-
+| data-sort-value="4" | Winter 
+| data-sort-value="9" | {{ZodiacBadge|Sagittarius}}{{ZodiacBadge|Capricorn}}{{ZodiacBadge|Aquarius}}
+|Eternity
+rewards ^1.2
+|Star cost ^0.9
+|DU power x1.05
+|Zodiac quality 
+mult x1.3
+|Eternity gain x2
+|Game speed x1.1
+|Luck mult x1.1
+|Infinity gain x3
+|Lap speed x10
+|Unity rewards ^1.15
+|DP mult x2.5
+|Luck mult x1.5
+|}
+
+=== Zodiac Level ===
+Each Zodiac has a level, which increases based on Zodiac Exp. Zodiac Exp is influenced by multiple factors and determines how strong the Zodiac’s bonuses become.
+
+Below is a list of the contributing factors to Zodiac Exp.
+{| class="wikitable"
+|-
+!Factor
+!Unlock Condition
+!Thresholds
+|-
+|Trials
+|Clear ET2 
+|No threshold 
+|-
+|<span class="unity">Unities</span>
+|Achv 167
+|No threshold 
+|-
+|<span class="ep">EP</span>
+|'''Clear HT6'''
+|1.08e2466
+|-
+|Score
+|Clear ET5
+|e1e9
+|-
+|Supernova
+|Achv 171
+|151
+|-
+|Planet Shop
+|Clear ET6
+|no threshold 
+|-
+|<span class="eternity">Eternity</span> Count
+|Achv 182
+|1e12
+|-
+|<span class= "dtp">DTP</span> Count
+|Clear MT5
+|40
+|-
+|Max <span class="ip">IP</span>
+|All MT completion
+|e1e7
+|-
+|<span class="dp">DP</span>
+|Clear HT1
+|e3000
+|-
+|Lab Level
+|Clear HT2
+|20,000
+|-
+|Relic 8
+|Attack lv 80
+|no threshold 
+|-
+|<span class="ap">AP</span>
+|Clear HT4
+|5e6
+|-
+|Luck
+|Achv 238
+|no threshold 
+|-
+|VP
+|Sword Level 15
+|no threshold
+|}
+
+=== Zodiac Quality === 
+Zodiac quality will buff the strength of your zodiac bonuses by a ^1.25
+
+buff(edit in the exact amount). Zodiac quality is very hard to buff early game, but becomes the main way to buff your zodiacs later on in attacks.
+
+=== Zodiac Rarity ===
+Zodiac Rarity will affect the base strength of the stat roll that you can have, it will also affect how many buffs your zodiac will give.
+
+* Garbage - Epic: 2 buffs
+* Legendary - Godly: 3 buffs
+* Divine - +Immortal: 4 buffs
+
+The luck range for each rarities from Garbage to Immortal are:
+{| class="wikitable"
+|+
+|-
+! Rarity !! Range Start !! End
+|-
+| Garbage || 1 || 3.00
+|-
+| Common || 1 || 5.19
+|-
+| Uncommon || 1 || 8
+|-
+| Rare || 1 || 12
+|-
+| Epic || 2.32 || 25.61
+|-
+| Legendary || 3.73 || 99.48
+|-
+| Mythic || 5.59 || 550
+|-
+| Godly || 9.30 || 997
+|-
+| Divine || 14.23 || 1665
+|-
+| Immortal || 56.74 || 1665+
+|}
+After you get ~550-600+ luck you will get {{Keyword|ach|Achievement #220|link=Achievements}}, allowing you to get +x Immortal rarity, these never stop showing up past their unlock threshold.
+{| class="wikitable"
+|+
+|-
+! +Immortal !! Min. luck
+needed
+|-
+| +4 || 1327
+|-
+| +5 || 1659
+|-
+| +6 || 2099
+|-
+| +7 || 2567
+|-
+| +8 || 3159
+|-
+| +9 || 3828
+|-
+| +10 || 4572
+|-
+| +11 || 5432
+|-
+| +12 || 6425
+|-
+| +13 || 7602
+|-
+| +14 || 8688
+|-
+| +15 || 9962
+|-
+| +16 || 11454
+|-
+| +17 || 13108
+|-
+| +18 || 14780
+|-
+| +19 || 16959
+|}After about 1e32 luck and {{Keyword|ach|Achievement #342}} (merge 3 zodiacs of Immortal+1000 rarity), you can obtain Ethereal Zodiacs and +x Ethereal rarities.
+
+All Zodiac rarities here on out will use the +x system, and progressing to the next category (as in completely new color, new everything) will require merging 3 +1000 zodiacs of the previous rarity, granting the respective achievement, which allows for obtaining the next rarity and all +x rarities up to +1000.
+{| class="wikitable"
+! colspan="4" |Additional Zodiac Rarities
+|-
+!Rarity
+!Range Start
+!Range Start for +1000 rarity
+!Respective Achievement (for merging 3 +1000 rarities)
+|-
+|Immortal
+|56.74
+|5.17e32
+|Achievement 342 ==> Ethereal Zodiacs
+|-
+|Ethereal
+|1.92e33
+|3.08e296
+|Achievement 426 ==> Amazing Zodiacs
+|-
+|Amazing
+|3.3e296
+|1.2e1472
+|Achievement 482 ==> Prime Zodiacs
+|-
+|Prime
+|1.57e1472
+|7.9e2671235
+|Achievement 670 =?> Rainbow Zodiacs
+|-
+|Rainbow
+|?
+|?
+|N/A
+|}
+Note: the requirement for Prime+x rarities scale extremely fast, hence the insane requirement for Prime+1000 Zodiacs.
+
+=== Zodiac Stats ===
+
+Zodiac Stat Formula:
+<pre>
+Mults Gain          = 1.35^x
+Prom Power          = 1.2^log(x)
+Common Exponent     = 1 + log(x) * 0.016
+Ascension Power     = 1.5^log(x)
+Laps Speed          = 2^log(x)
+Slowdown Power      = round(log(x + 9)^1.5)
+IP Gain             = 1 + log(x) * 0.025
+Infinity Gain       = 3^log(x)
+Gen Exponent        = 1 + log(x) * 0.024
+Mult Per Bought Gen = 1 + log(x) * 0.007
+Star Base           = 1.8^log(x)
+Stardust Exponent   = 1 + log(x) * 0.02
+Eternity Gain       = 2^log(x)
+EP Gain             = 1 + log(x) * 0.011
+Lab Mult Power      = 1 + log(x) * 0.012
+Supernova Req       = 1 / (1 + log(x) * 0.02)
+DP Gain             = 1 + log(x) * 0.05
+Free Lab Levels     = round(log(x + 9)^3 * 5)
+DTP Cost            = 1 / (1 + log(x) * 0.015)
+Center DTU Eff      = 1 + log(x) * 0.02
+Ach 29 Reward       = 1 + log(x) * 0.005
+Game Speed          = 1 + log(x) * 0.1
+Luck Add            = log((x / 20)^0.45 * 20) * 0.07
+Zodiac Quality Mult = 1 + log(x) * 0.04
+</pre>
+
+where:
+
+<pre>
+x = Zodiac Score = 1.125^ZodiacRarity * ZodiacQuality * (9 + ZodiacLevel^2) * 2 * ((ZodiacLevel - 90) / 10) ^ 2.5
+</pre>
+
+and:
+
+<pre>
+ZodiacRarity = Immo+ Number + 9
+</pre>
+
+
+=== Zodiac Luck ===
+
+<math>\begin{cases}
+Luck< 18: & ZodiacLuck=Luck\\
+Luck\geqslant 18: & ZodiacLuck=\left(\frac{Luck}{18}\right)^{0.3} \times 18
+\end{cases}</math>
+Zodiac luck is an internal variable that is just Luck with a soft cap after 18.
+
+=== Rarity Weight ===
+Rarity "Weight" (unofficial name) is a value derived from Zodiac Luck that is used to calculate the chance for each rarity.
+
+Garbage weight:
+
+<math>
+\begin{cases}
+1 \leqslant ZodiacLuck < 2: & Weight = 5 \times 0.8^{(ZodiacLuck - 1)}\\
+2 \leqslant ZodiacLuck < 3: & Weight = 5 \times 0.8^{(ZodiacLuck - 1)} \times 0.4^{(ZodiacLuck - 2)}\\
+3 \leqslant ZodiacLuck:       & Weight = 0
+\end{cases}
+</math>
+
+Common weight:
+
+<math>
+\begin{cases}
+1 \leqslant ZodiacLuck < 2: & Weight = 15\\
+2 \leqslant ZodiacLuck < 5: & Weight = 15 \times 0.45^{(ZodiacLuck - 2)}\\
+5 \leqslant ZodiacLuck:      & Weight = 0
+\end{cases}
+</math>
+
+Uncommon weight:
+
+<math>
+\begin{cases}
+1 \leqslant ZodiacLuck < 3: & Weight = 20 \times 1.5^{(ZodiacLuck - 1)} - 12\\
+3 \leqslant ZodiacLuck < 8: & Weight = \bigl(20 \times 1.5^{(ZodiacLuck - 1)} - 12\bigr) \times 0.5^{(ZodiacLuck - 3)}\\
+8 \leqslant ZodiacLuck:      & Weight = 0
+\end{cases}
+</math>
+
+Rare weight:
+
+<math>
+\begin{cases}
+1 \leqslant ZodiacLuck < 5:  & Weight = 30 \times 1.45^{(ZodiacLuck - 1)} - 28\\
+5 \leqslant ZodiacLuck < 12: & Weight = \bigl(30 \times 1.45^{(ZodiacLuck - 1)} - 28\bigr) \times 0.55^{(ZodiacLuck - 5)}\\
+12 \leqslant ZodiacLuck:     & Weight = 0
+\end{cases}
+</math>
+
+Epic weight:
+
+<math>
+\begin{cases}
+1 \leqslant ZodiacLuck < 8:  & Weight = \max\bigl(0,\;45 \times 1.4^{(ZodiacLuck - 2)} - 50\bigr)\\
+8 \leqslant ZodiacLuck < 20: & Weight = \max\bigl(0,\;45 \times 1.4^{(ZodiacLuck - 2)} - 50\bigr)\times 0.6^{(ZodiacLuck - 8)}\\
+20 \leqslant ZodiacLuck:     & Weight = 0
+\end{cases}
+</math>
+
+Legendary weight:
+
+<math>
+\begin{cases}
+1 \leqslant ZodiacLuck < 12:  & Weight = \max\bigl(0,\;80 \times 1.36^{(ZodiacLuck - 3)} - 100\bigr)\\
+12 \leqslant ZodiacLuck < 30: & Weight = \max\bigl(0,\;80 \times 1.36^{(ZodiacLuck - 3)} - 100\bigr)\times 0.64^{(ZodiacLuck - 12)}\\
+30 \leqslant ZodiacLuck:      & Weight = 0
+\end{cases}
+</math>
+
+Mythic weight:
+
+<math>
+\begin{cases}
+1 \leqslant ZodiacLuck < 20:  & Weight = \max\bigl(0,\;120 \times 1.3^{(ZodiacLuck - 5)} - 140\bigr)\\
+20 \leqslant ZodiacLuck < 50: & Weight = \max\bigl(0,\;120 \times 1.3^{(ZodiacLuck - 5)} - 140\bigr)\times 0.67^{(ZodiacLuck - 20)}\\
+50 \leqslant ZodiacLuck:      & Weight = 0
+\end{cases}
+</math>
+
+Godly weight:
+
+<math>
+\begin{cases}
+1 \leqslant ZodiacLuck < 30:  & Weight = \max\bigl(0,\;150 \times 1.25^{(ZodiacLuck - 8)} - 200\bigr)\\
+30 \leqslant ZodiacLuck < 60: & Weight = \max\bigl(0,\;150 \times 1.25^{(ZodiacLuck - 8)} - 200\bigr)\times 0.7^{(ZodiacLuck - 30)}\\
+60 \leqslant ZodiacLuck:      & Weight = 0
+\end{cases}
+</math>
+
+Divine weight:
+
+<math>
+\begin{cases}
+1 \leqslant ZodiacLuck < 40:  & Weight = \max\bigl(0,\;200 \times 1.2^{(ZodiacLuck - 12)} - 300\bigr)\\
+40 \leqslant ZodiacLuck < 50: & Weight = \max\bigl(0,\;200 \times 1.2^{(ZodiacLuck - 12)} - 300\bigr)\times 0.92^{(ZodiacLuck - 40)}\\
+50 \leqslant ZodiacLuck < 70: & Weight = \max\bigl(0,\;200 \times 1.2^{(ZodiacLuck - 12)} - 300\bigr)\times 0.92^{(ZodiacLuck - 40)}\times 0.75^{(ZodiacLuck - 50)}\\
+70 \leqslant ZodiacLuck:      & Weight = 0
+\end{cases}
+</math>
+
+
+Immortal weight:
+
+<math>
+\text{Weight} \;=\;\max\bigl(0,\;300 \times 1.1^{(ZodiacLuck - 20)} \;-\; 500\bigr)
+</math>
+
+=== Rarity Chance ===
+The chance that a given rarity is chosen is the fraction that its weight makes of all weights combined.
+ Chance(this Rarity) = Weight(this Rarity) / Sum(all rarity weights)
+
+== See Also ==
+* [[Zodiac Loadouts]]
+* [[Attacks Strategy]]
+
+[[Category:Unity]]
+{{Main navbox}}

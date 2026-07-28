@@ -1,0 +1,392 @@
+=='''General'''==
+Eternity Challenges (EC) are the third {{Keyword|eternity|Eternity}} tab, unlocked by reaching [[Eternity#Eternity_Milestones|Eternity Milestone]] 6 (have 8 Σ). There are 10 Eternity challenges, each with their own unique penalty (similar to [[Infinity#Infinity_Challenges|Infinity Challenges]]), with the goal being to reach the specified target [[Revolution#Score|Score]] under those penalties.
+
+* Unlike Infinity Challenges, where there is the time to complete, each EC initially has 5 difficulties to complete, and every difficulty of an EC will increase the penalties and/or raise the target Score. 
+* After completing Insane Trial 4, a 6th difficulty will be available to complete. Each EC difficulty is considered to be an individual challenge by the game, meaning there are a total of 60 ECs.
+
+Completing an EC will award the player 1 free AP, and an extra magnet chance multiplier for each clear beyond 50. Each EC (after the first) is unlocked by completing difficulty 2 of the previous EC.
+=='''Eternity Challenges'''==
+{| class="wikitable"
+|colspan="8"|'''Eternity Challenges'''
+|-
+!
+!Handicap Stat 
+!Difficulty
+!Handicap Value 
+!Goal [Score]
+!Reward Stat
+!Reward Value
+!Expected Completion
+|-
+| rowspan="6" |1
+| rowspan="6" |Lap Speed
+|1
+|x1/20
+| rowspan="5" |e30,000
+| rowspan="6" |Lap Speed
+|x2
+|[01/50] 14Σ, 8 AP
+|-
+|2
+|x1/128
+|x4
+|[02/50] 33Σ, 13 AP
+|-
+|3
+|x1/512
+|x7
+|[04/50] 18 AP
+|-
+|4
+|x1/2,000
+|x12
+|[07/50] 30 AP, 26 RP
+|-
+|5
+|x1/7,500
+|x20
+|[09/50] 52 AP, 51 RP, SN 2
+|-
+|6
+|x1/1e236
+|e1e15
+|x500
+|
+|-
+| rowspan="6" |2
+| rowspan="6" |Common Exponent
+|1
+|x0.5
+|e150 
+| rowspan="6" |Common Exponent
+| +0.03
+|[03/50] 34Σ, 14 AP
+|-
+|2
+|x0.4
+|e142
+| +0.05
+|[05/50] 19 AP, 15 RP
+|-
+|3
+|x0.3
+|e240
+| +0.07
+|[08/50] 24 AP, 31 RP
+|-
+|4
+|x0.2
+|e13,000
+| +0.10
+|[17/50] 126 AP, 152 RP, SN 6
+|-
+|5
+|x0.1
+|e5,600
+| +0.20
+|[20/50] 144 AP, 179 RP, SN 8
+|-
+|6
+|x0.001
+|e5e10
+| +0.30
+|
+|-
+| rowspan="6" |3
+| rowspan="6" |Stars
+|1
+| rowspan="6" |Disabled (x0)
+|e12,000
+| rowspan="6" |Star Base
+| +1
+|[06/50] 21 AP, 15 RP
+|-
+|2
+|e18,000
+| +3
+|[10/50] 52 AP; 52 RP, SN 2
+|-
+|3
+|e30,000
+| +5
+|[11/50] 52 AP, 55 RP, SN 2
+|-
+|4
+|e40,000
+| +10
+|[13/50] 56 AP, 58 RP, SN 2
+|-
+|5
+|e50,000
+| +20
+|[15/50] 92 AP, 92 RP, SN 4
+|-
+|6
+|e1.5e13
+| +50
+|
+|-
+| rowspan="6" |4
+| rowspan="6" |Generator Exponent
+|1
+|/10
+|e15,000
+| rowspan="6" |Generator Exponent
+|x1.03
+|[12/50] 56 AP, 57 RP, SN 2
+|-
+|2
+|/15
+|e25,000
+|x1.05
+|[14/50] 92 AP, 92 RP, SN 4
+|-
+|3
+|/20
+|e50,000
+|x1.07
+|[19/50] 140 AP, 171 RP, SN 7
+|-
+|4
+|/30
+|e60,000
+|x1.10
+|[23/50] 158 AP, 194 RP, SN 9
+|-
+|5
+|/50
+|e70,000
+|x1.15
+|[24/50] 186 AP, 252 RP, SN 13
+|-
+|6
+|/1e10
+|e1.5e13
+|x1.25
+|
+|-
+| rowspan="6" |5
+| rowspan="6" |Ascension Power
+|1
+|^0.10
+|e60,000
+| rowspan="6" |Ascension Power
+|x1.5
+|[16/50] 116 AP, 130 RP, SN 5
+|-
+|2
+|^0.07
+|e70,000
+|x2
+|[18/50] 140 AP, 170 RP, SN 7
+|-
+|3
+|^0.05
+|e80,000
+|x4
+|[21/50] 144 AP, 183 RP, SN 8
+|-
+|4
+|^0.03
+|e150,000
+|x10
+|[26/50] 216 AP, 287 RP, SN 16
+|-
+|5
+|^0.01
+|e200,000
+|x20
+|[28/50] 256 AP, 333 RP, SN 21
+|-
+|6
+|^0.001
+|e8.7e13
+|x75
+|
+|-
+| rowspan="6" |6
+| rowspan="6" |Promotion and Prestige Bonus
+|1
+| rowspan="6" |Disabled (x0)
+|e80,000
+| rowspan="6" |Prestige Bonus
+|x1.05
+|[22/50] 158 AP, 190 RP, SN 9
+|-
+|2
+|e120,000
+|x1.10
+|[25/50] 216 AP, 285 RP, SN 16
+|-
+|3
+|e200,000
+|x1.15
+|[29/50] 256 AP, 338 RP, SN 21
+|-
+|4
+|e400,000
+|x1.20
+|[30/50] 550 AP, 481 RP, SN 24
+|-
+|5
+|e750,000
+|x1.30
+|[34/50] 650 AP, 540 RP, SN 27
+|-
+|6
+|e3.33e15
+|x1.4
+|
+|-
+| rowspan="6" |7
+| rowspan="6" |RP upgrades
+|1
+| rowspan="6" |Disabled (x0)
+|e100,000
+| rowspan="6" |Free Levels to all Lab Upgrades
+| +5
+|[27/50] 236 AP, SN 19
+|-
+|2
+|e120,000
+| +10
+|[31/50] 650 AP, SN 26
+|-
+|3
+|e150,000
+| +15
+|[37/50] 716 AP, SN 27
+|-
+|4
+|e200,000
+| +20
+|[42/50] 1,454 AP, SN 34
+|-
+|5
+|e250,000
+| +30
+|
+|-
+|6
+|e2.66e14
+| +100
+|
+|-
+| rowspan="6" |8
+| rowspan="6" |IP gain
+|1
+|^0.05
+|e160,000
+| rowspan="6" |IP gain
+|^1.02
+|[32/50] 650 AP, 539 RP, SN 26
+|-
+|2
+|^0.04
+|e200,000
+|^1.04
+|[33/50] 650 AP, 539 RP, SN 26
+|-
+|3
+|^0.03
+| rowspan="2" |e250,000
+|^1.07
+|[38/50] 716 AP, 550 RP, SN 27
+|-
+|4
+|^0.02
+|^1.10
+|[39/50] 1,072 AP, 720 RP, SN 33
+|-
+|5
+|^0.01
+|e180,000
+|^1.20
+|[40/50] 1,072 AP, 720 RP, SN 33
+|-
+|6
+|^0.001
+|e6.2e15
+|^1.30
+|
+|-
+| rowspan="6" |9
+| rowspan="6" |Generators
+|1
+| rowspan="6" |Disabled (x0)
+|e210,000
+| rowspan="6" |Generator Exponent
+|x1.1
+|[35/50] 716 AP, 550 RP, SN 27
+|-
+|2
+|e225,000
+|x1.2
+|[36/50] 716 AP, 550 RP, SN 27
+|-
+|3
+|e300,000
+|x1.3
+|[41/50] 1,454 AP, 781 RP, SN 34
+|-
+|4
+|e450,000
+|x1.4
+|
+|-
+|5
+|e700,000
+|x1.5
+|
+|-
+|6
+|e5.8e15
+|x1.7
+|
+|-
+| rowspan="6" |10
+| rowspan="6" |Dilation Debuffs
+|1
+| rowspan="6" |^3
+|1,000,000
+| rowspan="6" |DP gain
+|x10
+|
+|-
+|2
+|e10
+|x50
+|
+|-
+|3
+|e100
+|x150
+|
+|-
+|4
+|e308
+|x400
+|
+|-
+|5
+|e1,000
+|x1,000
+|
+|-
+|6
+|e5.6e15
+|x1e7 (10M)
+|
+|}
+
+==='''Eternity Challenges Milestones'''===
+{{Keyword|eternity|Eternity Challenges}} have their own milestones based on the number of EC completed.
+#3 EC completions: Keep your [[Infinity#Infinity_Challenges|{{Keyword|inf|Infinity Challenges}}]] on {{Keyword|eternity|Eternity}} ''(including fastest completion times)''
+#5 EC completions: [[Revolution#Prestige|Prestiging]] now resets nothing
+#8 EC completions: Unlocks [[Eternity#Supernova|Supernova]]
+#10 EC completions: Keep fastest [[Infinity|{{Keyword|inf|Infinity}}]] time on {{Keyword|eternity|Eternity}} ''(needed for [[Eternity#Animals_Milestones|Animals Milestone]] 5 to work correctly)''
+#30 EC completions: Every 4 Supernovae gives 1 free level to all [[Eternity#Laboratory|{{Keyword|rp|RP}}]] upgrades
+#32 EC completions: Every 4 Supernovae gives another free level to all [[Eternity#Laboratory|{{Keyword|rp|RP}}]] upgrades
+#35 EC completions: Every 2 Supernovae gives another free level on all [[Eternity#Laboratory|{{Keyword|rp|RP}}]] upgrades
+#50 EC completions: Unlocks [[Eternity#Dilation_&_Dilation_Tree|{{Keyword|dtp|Dilation Tree}}]]
+{{Main navbox}}

@@ -1,0 +1,442 @@
+{{New Content}}
+Singularity is an end-game mechanic unlocked by Refine Node 121.
+
+== Buff & Penalties ==
+At various atom thresholds you will gain a buff or penalty. These buffs/penalties are only applied if your current atom count is at or above the threshold. Many of these buffs/penalties can be modified via the Mineral and Singularity refine tree nodes, as well as Relic 69. You can view your current buffs/penalties in the lower, right-hand corner of the main Singularity tab.
+{| class="wikitable"
+|+
+!Atom Threshold
+!Base Value
+!Resource Affected
+!Modifiable?*
+!Modification Source
+|-
+|1,000,000
+|^1
+|Atoms Gain
+|Yes
+|Relic 69
+|-
+|1e10
+|^0.5
+|Atoms Gain
+|Yes
+|Minerals Refine Tree Node 128
+|-
+|1e32
+|^1.05
+|Sacrifice Dust Gain
+|No
+|
+|-
+|1e50
+|^0.833
+|Atoms Gain
+|Yes
+|Minerals Refine Tree Node 126
+|-
+|1e128
+|^1.01
+|Sacrifice Dust Gain
+|No
+|
+|-
+|1.40e154
+|^0.847
+|Atoms Gain
+|Yes
+|Minerals Refine Tree Node 127
+|-
+|1e200
+|x10
+|Spread Power
+|No
+|
+|-
+|1.6e256
+|^0.714
+|Atoms Gain
+|No
+|
+|-
+|1.8e308
+|^0.125
+|Atoms Gain
+|Yes
+|Singularity Tree Node 3.1
+|-
+|1e400
+|^1.03
+|Sacrifice Dust Gain
+|No
+|
+|-
+|1e500
+|^0.05
+|Atoms Gain
+|Yes
+|Singularity Tree Node 3.2
+|-
+|1.00e600
+|^1.01
+|Spread Power
+|No
+|
+|-
+|1.00e1000
+|^0.014
+|Atoms Gain
+|Yes
+|Singularity Tree Node 6.2
+|-
+|1.00e2000
+|^0.5
+|Atoms Gain
+|No
+|
+|}*Values stated to be unmodifiable may be modifiable later in progression
+
+== Singularity Mult Gain Modifiers ==
+Whenever you Singularize you will gain a bonus to Singularity Mult which determines the speed at which you gain atoms. Various factors increase the amount of Singularity Mult gained when you Singularize and you will unlock more as you progress.
+{| class="wikitable"
+|+
+!Modification Source
+!Modification Prerequisite
+|-
+|Last Part of Vessel
+|Emotional Vessel Part 10
+|-
+|Plague Multi.
+|
+|-
+|Relic 38 Effect
+|
+|-
+|Relic 67 Effect
+|
+|-
+|Atoms
+|1.8e308 Atom Milestone
+|-
+|Singularity Tree Node 1
+|5 Singularity
+|-
+|Singularity Count
+|20 Singularity
+|-
+|Minerals Refine Node 125
+|Minerals Refine Node 125
+(Also modified by Minerals Refine Node 130)
+|-
+|Singular Zodiacs
+|Pisces Zodiac on Houses Tab
+|-
+|Singularity Mult 
+|64 Singularity
+|-
+|Each Last non-Arcana Tarot Challenges
+|
+|}
+
+== Milestones ==
+The Milestones tab automatically unlocks with your first Singularity. 
+{| class="wikitable"
+|+Singularity Milestones
+!Name
+! width=120px| Requirement
+!Reward
+|-
+|First Collapse
+|1 Singularity
+|Unlock Milestones Tab<br/>SMS Factor is locked at 0
+|-
+|Accelerated Growth
+|2 Singularity
+|Unlock Effects Tab
+|-
+|Event Horizon
+|3 Singularity
+|Keep Plague on Singularity Reset<br/>Plague Generator Awards no longer decrease
+|-
+|Spaghettification
+|5 Singularity
+|Unlocks Tree Tab
+|-
+|Beyond Time
+|8 Singularity
+|Keep Artifacts on Singularity Reset
+|-
+|Event Horizon Tax
+|10 Singularity
+|The Atom Requirement for the next Singularity starts increasing. You can still perform a Singularity at 1.8e308 Atoms to get Singularity Mult, but your Singularity Count will NOT increase.
+|-
+|The Unforgotten
+|16 Singularity
+|Keep Elements, Minerals and Tarot on Singularity Reset
+|-
+|Loop Feeds Loop
+|20 Singularity
+|Singularity Count acts as a factor for the next Singularity Mult
+|-
+|Astral Property
+|32 Singularity
+|Unlocks Houses Tab
+|-
+|Self Synergism
+|64 Singularity
+|Singularity Mult acts as a factor for the next Singularity Mult
+|-
+|One Hundred
+|100 Singularity
+|
+|-
+|COMING SOON
+|128 Singularity
+|
+|}
+{| class="wikitable"
+|+Atom Milestones
+!Name
+!Requirement
+!Reward
+|-
+|First Thousand
+|1000 Atoms
+|Sacrifice Dust Gain: ^1.1
+|-
+|Quantum Dust
+|1e9 Atoms
+|Black Gem Efficiency: ^1.1
+|-
+|Atomic Flow
+|1e16 Atoms
+|Element Factors 1 and 2 powers x3
+|-
+|Nuclear Bloom
+|1e25 Atoms
+|Divides last element nodes upgrades cost by 1e300
+|-
+|Matter Collapse
+|1e75 Atoms
+|Unlocks Auto-Highest Plague Stage
+|-
+|Quantum Pressure
+|1e225 Atoms
+|SMP Exp Requirements: ^0.75
+|-
+|Atom Overflow
+|1e308 Atoms
+|Atoms are now unlocked as a Singularity Mult Factor
+|-
+|Horoscope of the Void
+|1e1000 Atoms
+|You can now obtain Singular Zodiacs if you have already unlocked houses
+|-
+|Universe Under Pressure
+|1e2700 Atoms
+|Atoms past e1000 boost luck for a little (new effect)
+|-
+|COMING SOON
+|1e6000 Atoms
+|
+|-
+|COMING SOON
+|1e10000 Atoms
+|
+|}
+{| class="wikitable"
+|+Progression Milestones
+!Name 
+!Requirement
+!Penalty
+!Reward
+|-
+|Special Sacrificer
+|Sacrifice all Special Minerals
+|Relic 45 is powered to ^0.01, Special Mineral Spawn bulk is disabled, and RN-86 is useless
+|SMP Gain ^1.1
+|-
+|Elementary Master
+|Buy the last upgrade node for All Elements
+|First 2 factors for all elements and global element mult are powered to ^0.01
+|Factor 2 power for water is multiplied by x10
+|-
+|Full Deck
+|Get all 78 tarot cards
+|Black Gem Effect ^0.01
+|Black Gem Effect ^1.05
+|-
+|Dust Magician
+|Reach Lvl. 40 for all Sacrificed Special Minerals
+|Sacrifice Dust Gain ^0.02
+|Sacrifice Dust Gain ^1.05
+|-
+|Artifact Theory
+|Get All Artifact Parts
+|Golden Resources gain is powered to ^0.25 (if greater than 1 initially) and is divided by 100
+|Golden Resource Gain ^1.02
+|-
+|Virusologist
+|Complete Plague stage 5-12
+|None
+|ViP per VE mult x1000
+|-
+|Viral Ascension
+|Complete the previous 6 Progression Milestones
+|Atom gain ^0.02
+|Atom Gain ^1.02
+|-
+|Infinite Infection
+|Have 1e12 Infected in the Universe, complete all previous Progression Milestones, and have 4+ Singularities
+|All Previous Progression Milestones are reset on Singularity
+|Keep all progression milestones on Singularity
+|}
+== Effects ==
+Unlocked at 2 Singularities. 
+
+== Tree ==
+Unlocked at 5 Singularities. Each individual tree node can be levelled up multiple times, up to level 10, and you must purchase at least one level in the previous node in order to unlock and buy the next node. Once a node reaches level 10 you can choose to "Ascend" it which resets its level but keeps the effect bonus and resets the initial level upgrade cost. After ascending, the upgrade costs increase at a higher rate for each level and give less bonus per level. Unlike buying RfP nodes, when purchasing a Singularity tree node upgrade it divides your atom count rather than subtracting from it. 
+{| class="wikitable"
+|+
+!Tree Node #
+!Effect
+!Modifier Type
+!Initial Increase/lvl
+|-
+|1
+|Tree Factor (Adds/increases a Singularity mult gain modifier) 
+|Multiplier
+|.01
+|-
+|2
+|Increases Gold gain
+|Exponential
+|.001
+|-
+|3.1
+|Weaken e308 penalty
+|Division
+|.01
+|-
+|3.2
+|Weaken e500 penalty
+|Division
+|.01
+|-
+|4.1
+|Increase Refine Points gain
+|Exponential
+|.001
+|-
+|4.2
+|Increase Golden Resource gain
+|Multiplier
+|.25
+|-
+|5.1
+|Increase Plague Stats Rewards
+|Multiplier
+|.01
+|-
+|5.2
+|Increase Plague Generators Reward
+|Exponential
+|.03
+|-
+|6.1
+|Weaken next Singularity nerf
+|Division
+|.05
+|-
+|6.2
+|Weaken e1,000 Atom Penalty
+|Division
+|.02
+|-
+|7.1
+|Increase First Singularity Zodiac Level Mult
+|Multiplier
+|.006
+|-
+|7.2
+|Second Singularity Zodiac Level Mult
+|Multiplier
+|.006
+|-
+|8
+|All Singularity Tree Upgrade Efficiency
+|Multiplier
+|.001
+|}
+
+== Houses ==
+Unlocked at 32 Singularities. An advanced version of Astrology, grants a Zodiac after reaching 1e1,000 atoms and Singularizing<!-- i dont think theres a word for this lol-->. Zodiacs must be placed in their matching House on the circle. Each spot is numbered with roman numerals, starting with I at the west, and moving counter-clockwise.
+{| class="wikitable"
+|+Singular zodiac effects
+!House
+!Zodiac
+!First effect
+!Second Effect
+|-
+|I
+|Aries
+|Fire Element Factor 3
+|
+|-
+|II
+|Taurus
+|Earth Element Factor 3
+|
+|-
+|III
+|Gemini
+|Wind Element Factor 3
+|
+|-
+|IV
+|Cancer
+|Water Element Factor 3
+|
+|-
+|V
+|Leo
+|Sacrifice Dust Gain
+|
+|-
+|VI
+|Virgo
+|PlP per PlG Multi
+|
+|-
+|VII
+|Libra
+|VE on Disolve Multi
+|
+|-
+|VIII
+|Scorpio
+|Base Spread Multi
+|
+|-
+|IX
+|Saggitarius
+|Attack Exponent Multi
+|
+|-
+|X
+|Capricorn
+|Golden Resources Gain
+|
+|-
+|XI
+|Aquarius
+|Black Gem Effect 
+|
+|-
+|XII
+|Pisces
+|Singularity Mult Boost
+|
+|}
+[[Category:Unity]]
+{{Main navbox}}

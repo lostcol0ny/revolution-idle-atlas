@@ -1,0 +1,541 @@
+
+Relics are a part of the core gameplay loop of [[Unity]], they are unlocked along with [[Attacks]] after completing '''15''' [[Trials|trials]], they can be found as the third tab in the unity section. Relics can be purchased with gold that is obtained from the attacks tab, each relic has a different purchase price that increases exponentially based of how much of that relic you have purchased. There are '''70''' relics that apply buffs to [[Attacks]], [[Score]], [[Zodiacs]], [[Minerals]] as well as other relics. The main gameplay surrounding relics involves farming gold from attacks which will be reinvested into increasing your attack level, gold can then also be used to increase the stats of your zodiacs and score calculations to help progress the rest of the game.
+[[File:Relic tab header.png|center|thumb|1500px|Relics tab header, details the player's current score-to-damage formula on the left, current gold count and number of unlocked relics in the middle and the player's highest attack level reached, their attack ascension power and attack Mult Gain bonus on the right]]
+
+Below the header is an array of 70 relics, each showing the current number of each relic purchased, the stats they give, and the cost to buy another one of that Relic.
+All 70 relics and their effects are listed in the table below.
+
+{| class="wikitable sortable"
+! colspan="6" |Relics
+|-
+!Number
+!Name
+!Icon
+!Effect
+!Effect per level
+!Unlock requirements 
+|-
+|1
+|Silver Coin
+|[[File:Relic 001.png|128px|link=]]
+|A Simple (''flat'') Boost to [[Attacks|(''Attacks'') Damage Mult]]
+| +0.2
+|Attack level 1
+|-
+|2
+|Pinewood Bracelet
+|[[File:Relic 002.png|128px|link=]]
+|A Boost to [[Zodiacs|Zodiac Quality]]
+| +0.1
+|Attack level 10
+|-
+|3
+|Copper Bunny 
+Statuette
+|[[File:Relic 003.png|128px|link=]]
+|[[Zodiacs]] Level Sum (ZLM) Boost [[Attacks|(''Attacks'') Damage Mult]]
+| +0.0002
+|Attack level 20
+|-
+|4
+|Four Leaf Clover
+|[[File:Relic 004.png|128px|link=]]
+|A Boost to [[Zodiacs|(''Zodiac'') Luck]]
+| +0.03
+|Attack level 30
+|-
+|5
+|Wolf Skull
+|[[File:Relic 005.png|128px|link=]]
+|[[Zodiacs|Zodiac]] Sell Price Mult
+| +0.4
+|Attack level 40
+|-
+|6
+|Rusty Silver Sword
+|[[File:Relic 006.png|128px|link=]]
+|(''Boosts'') [[Revolution#Common Exponent|Common Exponent]] Mult
+| +0.005
+|Attack level 50
+|-
+|7
+|Snail Statue
+|[[File:Relic 007.png|128px|link=]]
+|(''Boosts'') [[Attacks]] Lap Speed Mult
+| +0.03
+|Attack level 60
+|-
+|8
+|Golden Tooth
+|[[File:Relic 008.png|128px|link=]]
+|8th Relic [[Zodiacs|(''Zodiac'') Exp Factor]]
+''Adds a new Zodiac Exp Factor "Relic 8", increased by gaining more levels of this relic''
+|x2
+|Attack level 80
+|-
+|9
+|Midas Hand
+|[[File:Relic 009.png|128px|link=]]
+|(''Boosts'') Gold Gain (''from [[Attacks]]'')
+| +0.05
+|Attack level 100
+|-
+|10
+|Rusty Car Engine
+|[[File:Relic 010.png|128px|link=]]
+|Power (^) to [[Dilation|DP Gain]]
+''Raises DP Gain to a power (^)''
+| +0.01
+|Attack level 150
+|-
+|11
+|Bottle of Divine Water
+|[[File:Relic 011.png|128px|link=]]
+|[[Eternity#Supernova|Supernova]] Bonuses (''are'') Powered to X
+| +0.002
+|Attack level 200
+|-
+|12
+|Sandstone Chest
+|[[File:Relic 012.png|128px|link=]]
+|Amount of unlocked relics boost [[Attacks|attack]]
+| +0.002
+|Attack level 250
+|-
+|13
+|Strategic Board 
+Game
+|[[File:Relic 013.png|128px|link=]]
+|Increases Exponent in (''[[Attacks]]'') Base Damage Formula
+''Increases the Exponent in the Formula shown on the Relic tab, which improves Base Damage in Attacks''
+| +0.05
+|Attack level 300
+|-
+|14
+|Palate Expander
+|[[File:Relic 014.png|128px|link=]]
+|Decreases costs of all relics
+|/2.00
+|Attack level 360
+|-
+|15
+|Comfortable 
+Telescope
+|[[File:Relic 015.png|128px|link=]]
+|Increases efficiency of relics 2 and 4
+''(Pinewood Bracelet and Four Leaf Clover for Zodiac Quality and Luck)''
+| +0.01
+|Attack level 400
+|-
+|16
+|Cool Glasses
+|[[File:Relic 016.png|128px|link=]]
+|Multiplies mult gain for [[attacks]]
+| +1
+|Attack level 420
+|-
+|17
+|Magical Magnet
+|[[File:Relic 017.png|128px|link=]]
+|Relic 9 is powered to X
+''(Improves gold gain)''
+| x1.02
+|Attack level 480
+|-
+|18
+|Mythical Rune
+|[[File:Relic 018.png|128px|link=]]
+|Increases Ascension Power of [[Attacks]] Revolutions
+| +0.06
+|Attack level 640
+|-
+|19 
+|Ancient Extractor
+|[[File:Relic 019.png|128px|link=]]
+|Tetrates [[Attacks|(''Attacks'')]] damage formula first divider
+''Reduces the divider in the Formula shown on the Relic tab, which improves Base Damage in Attacks''
+|^^0.999
+|Attack level 700
+|-
+|20
+|Magestic Halberd
+|[[File:Relic 020.png|128px|link=]]
+|Relic 16 effect is powered and Relic 18 effect multiplied to X & Y
+''X and Y increase different amounts per relic level''
+|X = +0.11 & Y = +1.245
+|Attack level 1,000
+|-
+|21
+|Queen of Spades
+|[[File:Relic 021.png|128px|link=]]
+|Empowers Relic 17
+''Raises Relic 17 effect to a power (^)''
+
+''Improves Gold Gain''
+| +0.01 (+0.001 after level 100)
+|Attack level 1,365
+|-
+|22
+|Nice easel
+|[[File:Relic 022.png|128px|link=]]
+|Mult to [[Minerals|VP gain]]
+''Multiplies VP gain by X''
+| +1 to x
+|Attack level 1,400
+|-
+|23
+|Awesome Brush
+|[[File:Relic 023.png|128px|link=]]
+|Empowers Relic 22
+''Raises Relic 22 effect to a power (^)''
+|^1.05 (base)
+|Attack level 1,500
+|-
+|24
+|Hourglass
+|[[File:Relic 024.png|128px|link=]]
+|Empowers [[Planet_Shop#Donuts|Game Speed Donut]]
+''Raises Game Speed Donut effect to a power (^)''
+| +0.01
+|Attack level 2,200
+|-
+|25
+|Lucky Luck Crystal
+|[[File:Relic 025.png|128px|link=]]
+|Empowers [[Planet_Shop#Donuts|Luck Donut]]
+''Raises Luck Donut effect to a power (^)''
+| +0.025
+|Attack level 2,300
+|-
+|26
+|Toy Hammer
+|[[File:Relic 026.png|128px|link=]]
+|Empowers [[Planet_Shop#Donuts|Quality Donut]]
+''Raises Quality Donut effect to a power (^)''
+| +0.035
+|Attack level 3,000
+|-
+|27
+|Painting of the Castle
+|[[File:Relic 027.png|128px|link=]]
+|Empowers [[Planet_Shop#Donuts|last Donut]]
+Raises Zodiac Exp. Factor Donut effect to a power (^)
+| +0.25
+|Attack level 3,030
+|-
+|28
+|Two Souls
+|[[File:Relic 028.png|128px|link=]]
+|You get more [[Minerals|merge exp]] based on X^[mineral level]
+| +0.001 to X
+|Attack level 3,060
+|-
+|29
+|Metal Detector
+|[[File:Relic 029.png|128px|link=]]
+|[[Minerals#Refinement|Refine]] Node 18 eff:
+| +0.05
+|Attack level 3,150
+|-
+|30
+|Cotton Candy
+|[[File:Relic 030.png|128px|link=]]
+|[[Minerals#Refinement|Refine]] Node 1 eff.
+| +0.01
+|Attack level 3,200
+|-
+|31
+|Mastic Gum
+|[[File:Relic 031.png|128px|link=]]
+|Empowers [[Minerals|Mineral]] Cost
+''Raises (Common) Mineral Cost to a power (^)''
+| -^0.01
+|Attack level 3,250
+|-
+|32
+|Futuristic Anvil
+|[[File:Relic 032.png|128px|link=]]
+|[[Minerals|PP Gain]] powered to
+| +0.01
+|Attack level 3,300
+|-
+|33
+|Weapon Evolution 
+Statue
+|[[File:Relic 033.png|128px|link=]]
+|[[Minerals#Refinement|RfP Gain]] multiplied by
+| +0.12
+|Attack level 3,333
+|-
+|34
+|Impossible Rune
+|[[File:Relic 034.png|128px|link=]]
+|[[Minerals#Runes (Node 35)|Sun and Moon runes]] gain speed
+| +0.01
+|Attack level 3,350
+|-
+|35
+|Antique Wall Clock
+|[[File:Relic 035.png|128px|link=]]
+|[[Minerals#Special Minerals (SPM, Node 41)|Special Minerals]] Cost Fall
+| +0.06
+|Attack level 3,400
+|-
+|36
+|Wild Cucumber
+|[[File:Relic 036.png|128px|link=]]
+|Boosts [[Elements|Earth]] Generation
+| +0.2?
+|Attack level 3,700
+|-
+|37
+|The Venom-Tipped Charmer
+|[[File:Relic 037.png|128px|link=]]
+|Multiplies Global [[Elements|Element]] Mult
+| +0.12
+|Attack level 3,800
+|-
+|38
+|Smart Man
+|[[File:Relic 038.png|128px|link=]]
+|Adds base to [[Minerals#Refinement|Refine]] Node 2
+''(Attacks bulk leveling)''
+| +1.00
+|Attack level 3,900
+|-
+|39
+|Windmill Pendant
+|[[File:Relic 039.png|128px|link=]]
+|Boosts First [[Elements|Wind]] Node
+| +0.12
+|Attack level 5,000
+|-
+|40
+|Ancient Gun
+|[[File:Relic 040.png|128px|link=]]
+|Multiplies Relic 30 effect
+''(RN1 Effect)''
+| +0.02
+|Attack level 5,200
+|-
+|41
+|Mayan Calendar
+|[[File:Relic 041.png|128px|link=]]
+|Multiplies [[Minerals#Special Minerals (SPM, Node 41)|Black Gem]] Eff.
+| +0.004
+|Attack level 5,500
+|-
+|42
+|Very Very Black Gem
+|[[File:Relic 042.png|128px|link=]]
+|Multiplies [[Minerals#Special Minerals (SPM, Node 41)|Black Gem]] Chance
+| +0.03
+|Attack level 6,000
+|-
+|43
+|Horrific Pentagram
+|[[File:Relic 043.png|128px|link=]]
+|Chance to get additional [[tarot]] card of the same type
+| +0.37%
+|Attack level 6,666
+|-
+|44
+|Ring Of Decieving
+|[[File:Relic 044.png|128px|link=]]
+|Increases power of all [[Tarot|arcanes (''Arcans'')]] by x%
+| +0.12%
+|Attack level 7,100
+|-
+|45
+|Star Of The Highest Hopes
+|[[File:Relic 045.png|128px|link=]]
+|Increase [[Minerals#Special_Minerals_Progression_(Node_46)|SMP Exp]] you get on merging special minerals
+| +0.12
+|Attack level 7,500
+|-
+| 46
+|Duck-Pigeon Model
+| [[File:Relic 046.png|128px|link=]]
+|Empowers Relic 45 ''(SMP EXP)''
+| +0.56(?)
+| Attack level 10,000
+|-
+| 47
+|Unknown Weapon
+| [[File:Relic 047.png|128px|link=]]
+|Empowers Relic 33 ''(RfP Gain)''
+| +^0.012(?)
+| Attack level 12,000
+|-
+| 48
+|Blue Sponge
+| [[File:Relic 048.png|128px|link=]]
+|Multiplies power for Luck boost to Water
+| +1.28
+| Attack level 14,000
+|-
+| 49
+| Alcantara Emblem
+| [[File:Relic 049.png|128px|link=]]
+|Multiplies Sacrifice Dust gain
+| +0.36(?)
+| Attack level 15,000
+|-
+| 50
+| Troll Face
+| [[File:Relic 050.png|128px|link=]]
+| Multiplies Relic 38's effect
+''(Attacks bulk leveling)''
+| +0.015(?)
+| Attack level 16,000
+|-
+| 51
+|Statue of a Real Man
+| [[File:Relic 051.png|128px|link=]]
+|Multiplies Refine Node 7's effect
+| +2.6 (?)
+| Attack level 20,000
+|-
+| 52
+|Whale Bomb
+| [[File:Relic 052.png|128px|link=]]
+|Empowers Attack Ascension Power from VP
+| +^0.013(?)
+| Attack level 20,200
+|-
+| 53
+| Cursed Tarot Card
+| [[File:Relic 053.png|128px|link=]]
+| Empowers total Tarot Challenge reward (Sacrifice Dust gain)
+| +^0.064(?)
+| Attack level 20,600
+|-
+| 54
+|Ancient Mythical Rune
+| [[File:Relic 054.png|128px|link=]]
+|Multiplies the base of Refine Node 90
+| +0.01(?)
+| Attack level 23,500
+|-
+| 55
+|Flame Trident
+| [[File:Relic 055.png|128px|link=]]
+|Multiplies The Devil's base effect
+| +0.01(?)
+| Attack level 27,000
+|-
+| 56
+|Beef Stew
+| [[File:Relic 056.png|128px|link=]]
+|Empowers Relic 41
+| *^0.013(?)
+| Attack level 30,000
+|-
+| 57
+|Oldschool Cards
+| [[File:Relic 057.png|128px|link=]]
+|Boosts the first effect of common suit Tarot cards
+| +0.01(?)
+| Attack level 30,003
+|-
+| 58
+|Island Statue
+| [[File:Relic 058.png|128px|link=]]
+|Increases Refine Node 100 efficiency by
+| +0.13%(?)
+| Attack level 30,300
+|-
+| 59
+|Mythical Triangle
+| [[File:Relic 059.png|128px|link=]]
+|Multiplies Golden Resource gain when flushing to artifacts
+| +0.01(?)
+| Attack level 31,000
+|-
+| 60
+|True Monkey
+| [[File:Relic 060.png|128px|link=]]
+|Empowers Relic 59
+| +^0.013(?)
+| Attack level 32,500
+|-
+| 61
+|Sick Swan
+| [[File:Relic 061.png|128px|link=]]
+|Multiplies PIP per PIG
+| +0.05(?)
+|Attack level 34,500
+|-
+|62
+|Hairy Coconut
+| [[File:Relic 062.png|128px|link=]]
+|Multiplies Base Spread Power on Endoplasmic reticulum craft
+| +0.13(?)
+| Attack level 35,000
+|-
+|63
+|Birdkid Statue
+| [[File:Relic 063.png|128px|link=]]
+|Multiplies the effect of Endoplasmic Reticulum Upgrade 4 (PIP to ERP conversion Rate)
+| +1.31 (?)
+| Attack level 36,000
+|-
+|64
+|Endoplasmic Reticulum Nucleus
+| [[File:Relic 064.png|128px|link=]]
+|Multiplies Crafting Mastery for ER
+| +0.015(?)
+| Attack Level 37,500
+|-
+|65
+|Cap With A Wig
+| [[File:Relic 065.png|128px|link=]]
+|Multiplies Essence Density Effect
+| (?)
+| Attack level 38,000
+|-
+|66
+|Spring Crocodile
+| [[File:Relic 066.png|128px|link=]]
+|Multiplies Relic 62 effect
+| +(?)
+| Attack level 39,000
+|-
+|67
+|Galactic Mind
+| [[File:Relic 067.png|128px|link=]]
+|Increases the chance of obtaining Achievement 600 after completing Earth Plague Stage (5-5)
+| +2.55% (?)
+| Attack level 40,067
+|-
+|68
+|Fortune Teller Monument
+| [[File:Relic 068.png|128px|link=]]
+|Multiplies Max Cure Needed Progress
+| +(?)
+| Attack level 40,400
+|-
+|69
+| Outdated "Nice" Gadget
+| [[File:Relic 069.png|128px|link=]]
+|Adds a buff in the beginning that boosts atoms gain
+| +^(?)
+| Attack level 42,000
+|-
+|70
+|Singular Spectrogram
+| [[File:Relic 070.png|128px|link=]]
+|Empowers your luck
+| +^(?)
+| Attack level 45,800
+|}
+
+== (?)Sacrificing ==
+After reaching 301 levels of any relic, it can be sacrificed. This will make a purple level counter appear below the regular level counter, and this will be set to the amount of relics you already had before you sacrificed it. After this, the level requirement is set to one above the previous sacrificed amount. The price will NOT be reset, but levels can be regained through spawning [[Minerals]]. The sacrifice level will boost the respective relic's bonus a decent amount, so relics should always be sacrificed, especially when late into minerals progression.
+
+= Notes =
+
+# Recommended relic priority is 1 and 3 in the early game, and 14 -> 20 -> 16 -> 18 -> 9 -> 17 -> 19 as you approach [[Attacks]] Level 1,337 ({{Keyword|ach|Achievement 240|link=Achievements}})
+
+[[Category:Unity]]
+{{Main navbox}}

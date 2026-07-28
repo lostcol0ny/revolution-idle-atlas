@@ -1,0 +1,24 @@
+{{Main page box/start
+ | title = Navigation
+ | class = centered-content
+}}
+<div class="mp-links columns-3">
+*{{MP link|Revolution|image=Icon tab revo.png|size=64px}}
+*{{MP link|Infinity|image=Icon tab inf.png|size=64px}}
+*{{MP link|Eternity|image=Icon tab etern.png|size=64px}}
+*{{MP link|Unity|image=Icon tab unity.png|size=64px}}
+*{{MP link|Attacks|image=Icon tab att.png|size=64px}}
+*{{MP link|Minerals|image=Icon tab minerals.png|size=64px}}
+
+
+*{{MP link|Automations|image=Icon tab auto.png|size=64px}}
+*{{MP link|Time Flux|image=Icon tab flux.png|size=64px}}
+*{{MP link|Achievements|image=Icon tab ach.png|size=64px}}
+*{{MP link|Statistics|image=Icon tab stats.png|size=64px}}
+*{{MP link|Options|image=Icon tab opt.png|size=64px}}
+*{{MP link|Soul Shop|image=Icon tab shop.png|size=64px}}
+
+
+*{{MP link|Walkthrough|image=Icon hint.png|size=64px}}
+</div>
+{{Main page box/end}}<noinclude>[[Category:Main page boxes]]</noinclude>

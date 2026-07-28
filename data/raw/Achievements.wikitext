@@ -1,0 +1,4043 @@
+{{For|secret achievements|Secret Achievements}}
+{{Keyword|ach|Achievements}} are the game's way of showing players the progression path and rewarding them for it. There are currently {{Keyword|ach|670 Achievements}} in the game.
+
+Each {{Keyword|ach|completed achievement}} grants a multiplier bonus and some achievements have rewards (Time Flux, Souls or a game related mechanic).
+
+=== Multiplier bonus ===
+==== Before Achievement #51 ====
+  <math>\text{Mult. Gain Multiplier} = 1 + (N \times 0.01)</math>
+
+==== After Achievement #51 ====
+  <math>\text{Mult. Gain Multiplier} = 1 + (N \times 0.01)</math>
+  <math>\text{Generators Gain Multiplier} = 1 + (N \times 0.01)</math>
+
+==== After Achievement #201 ====
+  <math>\text{Mult. Gain Multiplier} = 1.05 ^ N \times N ^ {(\frac{N} {20} - 10)}</math>
+  <math>\text{Generators Gain Multiplier} = 1.05 ^ N \times N ^ {(\frac{N} {20} - 10)}</math>
+  <math>\text{Dilation Points Gain Multiplier} = 1.05 ^ N \times N ^ {(\frac{N} {20} - 10)}</math>
+  <math>\text{Zodiacs Quality Multiplier} = \frac{N} {50} - 2</math>
+  <math>\text{Damage Multiplier} = \frac{N} {50} - 2</math>
+
+=== {{Keyword|ach|Achievements List}} ===
+
+{| class="wikitable left mw-collapsible" style="width: 80%; font-size: 1rem"
+|colspan="3" style="text-align:center;"|'''{{Keyword|ach|Achievements List}}'''
+|-
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_001.png
+| name = A Million
+| description = Reach 1,000,000 Score
+| reward = Unlock Leaderboard
+| reward_type = achievement
+}}
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_002.png
+| name = First Ascension
+| description = Ascend a buyable
+| reward = +200
+| reward_type = souls
+| reward_icon = y
+}}
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_003.png
+| name = RGB
+| description = Buy Blue
+| reward = +200
+| reward_type = souls
+| reward_icon = y
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_004.png
+| name = Let's Prestige
+| description = Prestige for the first time
+| reward = Unlock multiple buy
+| reward_type = achievement
+}}
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_005.png
+| name = Check the Dev 
+| description = Check credits
+| reward = +100
+| reward_type = souls
+| reward_icon = y
+}}
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_006.png
+| name = More than 1,000!
+| description = Make a mult go over 1,000
+| reward = +200
+| reward_type = souls
+| reward_icon = y
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_007.png
+| name = Second Ascension
+| description = Reach Ascension 2
+| reward = +15:00 TF
+| reward_type = time_flux
+}}
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_008.png
+| name = Double Prestige
+| description = Prestige twice
+| reward = +250
+| reward_type = souls
+| reward_icon = y
+}}
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_009.png
+| name = Time for Promotions
+| description = Reach x1,000 P.Mult
+| reward = +250
+| reward_type = souls
+| reward_icon = y
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_010.png
+| name = Color spectrum
+| description = Buy White
+| reward = x1.05 Laps Speed
+| reward_type = achievement
+}}
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_011.png
+| name = Exponential
+| description = Reach 1.1 Exponent
+| reward = +300
+| reward_type = souls
+| reward_icon = y
+}}
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_012.png
+| name = You Promoted
+| description = Promote for the first time
+| reward = +15:00 TF
+| reward_type = time_flux
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_013.png
+| name = Anti epilepsy
+| description = Get a solid circle (10 Laps/s)
+| reward = +30:00 TF
+| reward_type = time_flux
+}}
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_014.png
+| name = Big Mults
+| description = Get x1,000,000 P.Mult
+| reward = +300
+| reward_type = souls
+| reward_icon = y
+}}
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_015.png
+| name = Update when?
+| description = Play for 5 hours (Unscaled Playtime)
+| reward = x1.05 All Mults gain
+| reward_type = achievement
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_016.png
+| name = Going further
+| description = Reach 1.2 Exponent
+| reward = +250
+| reward_type = souls
+| reward_icon = y
+}}
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_017.png
+| name = Is it a big number?
+| description = Have 1.00e63 Score
+| reward = +200
+| reward_type = souls
+| reward_icon = y
+}}
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_018.png
+| name = Big multiplier
+| description = Make all mults be > 1,000
+| reward = +15:00 TF
+| reward_type = time_flux
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_019.png
+| name = Good job
+| description = Have a lvl 10 Promotion
+| reward = +30:00 TF
+| reward_type = time_flux
+}}
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_020.png
+| name = Really good job
+| description = Make all Promotions be at least lvl 10
+| reward = Promotion 4 is a bit stronger
+| reward_type = achievement
+}}
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_021.png
+| name = You don't need it
+| description = Promote without Prestiging
+| reward = P.Mult gain ^1.01
+| reward_type = achievement
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_022.png
+| name = GooGol
+| description = Reach 1.00e100 Score
+| reward = +15:00 TF
+| reward_type = time_flux
+}}
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_023.png
+| name = Fast scaling
+| description = Make base mult gain be <math>\geq</math> 1
+| reward = +250
+| reward_type = souls
+| reward_icon = y
+}}
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_024.png
+| name = Large steps
+| description = Multiply your P.Mult by 1,000,000 in one Prestige
+| reward = +300
+| reward_type = souls
+| reward_icon = y
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_025.png
+| name = Only three
+| description = Prestige with only 3 colors
+| reward = +350
+| reward_type = souls
+| reward_icon = y
+}}
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_026.png
+| name = Easy Prestige
+| description = Promote without Prestiging and Ascensions
+| reward = +350
+| reward_type = souls
+| reward_icon = y
+}}
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_027.png
+| name = Hell yeah
+| description = Red, Orange and Yellow are at 6th Ascension
+| reward = x1.6 to first 3 colors Mult gain
+| reward_type = achievement
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_028.png
+| name = Real boss
+| description = Make all Promotions be at least lvl 50
+| reward = x1.1 to All Mults gain
+| reward_type = achievement
+}}
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_029.png
+| name = Backwards
+| description = Make White mult > Pink mult > Purple mult, etc...
+| reward = A fading sense of accomplishment<br>
+Dilation Tree TOP-4, MID-4 and BOT-4<br> upgrades are 30% stronger
+| reward_type = achievement
+}}
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_030.png
+| name = Infinity
+| description = Reach Infinity
+| reward = +975<br>{{Keyword|inf|+2.5% Daily Reward Soul Streak bonus per day}}
+| reward_type = souls
+| reward_icon = y
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_031.png
+| name = Rainbow!
+| description = Make all circles go solid
+| reward = +250
+| reward_type = souls
+| reward_icon = y
+}}
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_032.png
+| name = Generations
+| description = Reach 10 Generator Power
+| reward = +15:00 TF
+| reward_type = time_flux
+}}
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_033.png
+| name = e616?
+| description = Infinity twice
+| reward = +250
+| reward_type = souls
+| reward_icon = y
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_034.png
+| name = It's getting faster
+| description = Infinity in under an hour
+| reward = +350
+| reward_type = souls
+| reward_icon = y
+}}
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_035.png
+| name = QOL
+| description = Unlock Automation
+| reward = x1.1 to 1st Generator
+| reward_type = achievement
+}}
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_036.png
+| name = Many of them
+| description = Reach 5 Infinities
+| reward = x2 IP gain
+| reward_type = achievement
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_037.png
+| name = Generators Power
+| description = Reach 1,000 GP
+| reward = x1.1 to 1st Generator
+| reward_type = achievement
+}}
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_038.png
+| name = Two generators?
+| description = Buy your 2nd, First Generator
+| reward = +30:00 TF
+| reward_type = time_flux
+}}
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_039.png
+| name = Not so promoted
+| description = Infinity with all promotions < lvl 20
+| reward = Promotion 4 is stronger
+| reward_type = achievement
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_040.png
+| name = Challenging...
+| description = Unlock Infinity Challenges
+| reward = +30:00 TF
+| reward_type = time_flux
+}}
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_041.png
+| name = First problem is solved
+| description = Complete Infinity Challenge 1
+| reward = +350
+| reward_type = souls
+| reward_icon = y
+}}
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_042.png
+| name = 2 strong generators
+| description = Reach 1,000,000 GP
+| reward = +350
+| reward_type = souls
+| reward_icon = y
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_043.png
+| name = Antimatter Dimensions?
+| description = Buy the Second Generator
+| reward = +200
+| reward_type = souls
+| reward_icon = y
+}}
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_044.png
+| name = Four of Nine
+| description = Complete Infinity Challenge 4
+| reward = x2 IP gain
+| reward_type = achievement
+}}
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_045.png
+| name = Byte IP
+| description = Reach 256 IP
+| reward = +200
+| reward_type = souls
+| reward_icon = y
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_046.png
+| name = Age of Automation
+| description = Unlock Automation for Prestige
+| reward = +15:00 TF
+| reward_type = time_flux
+}}
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_047.png
+| name = More than one thousand
+| description = Reach 1,000 IP
+| reward = +250
+| reward_type = souls
+| reward_icon = y
+}}
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_048.png
+| name = Poor but cool
+| description = Infinity without Promotions
+| reward = +350
+| reward_type = souls
+| reward_icon = y
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_049.png
+| name = Byte Infinity
+| description = Reach 256 Infinities
+| reward = +30:00 TF
+| reward_type = time_flux
+}}
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_050.png
+| name = It's broken
+| description = Break Infinity
+| reward = +400
+| reward_type = souls
+| reward_icon = y
+}}
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_051.png
+| name = Can you have exactly 50?
+| description = Have 50 Achievements
+| reward = Achievement bonus, now also applies to Generators
+| reward_type = achievement
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_052.png
+| name = Inflation Era
+| description = Reach 1.8e3080 Score
+| reward = +250
+| reward_type = souls
+| reward_icon = y
+}}
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_053.png
+| name = The Million Ascends
+| description = Reach 1,000,000 IP
+| reward = +300
+| reward_type = souls
+| reward_icon = y
+}}
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_054.png
+| name = Too many Infinities
+| description = Reach 2,048 Infinities
+| reward = +300
+| reward_type = souls
+| reward_icon = y
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_055.png
+| name = Faster challenges
+| description = Get all INF Challenges time sum < 10 minutes
+| reward = +300
+| reward_type = souls
+| reward_icon = y
+}}
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_056.png
+| name = One Million in one!
+| description = Get 1,000,000 IP in one Infinity
+| reward = +350
+| reward_type = souls
+| reward_icon = y
+}}
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_057.png
+| name = Half of generators
+| description = Buy the Fifth Generator
+| reward = +15:00 TF
+| reward_type = time_flux
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_058.png
+| name = IP is getting bigger
+| description = Have 1.00e15 IP
+| reward = +350
+| reward_type = souls
+| reward_icon = y
+}}
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_059.png
+| name = Infinity 32K
+| description = Reach 32,768 Infinities
+}}
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_060.png
+| name = Generator Exponent is good
+| description = Make your Generator Exponent <math>\geq</math> 1
+| reward = +15:00 TF
+| reward_type = time_flux
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_061.png
+| name = The World Leader
+| description = Reach lvl 1,000 for All Promotions
+}}
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_062.png
+| name = Look at the Stars
+| description = Unlock Stars
+| reward = +525
+| reward_type = souls
+| reward_icon = y
+}}
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_063.png
+| name = Nice Stardust
+| description = Get 1,000 Stardust
+| reward = +300
+| reward_type = souls
+| reward_icon = y
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_064.png
+| name = Million Infinities
+| description = Reach 1,000,000 Infinities
+| reward = +200
+| reward_type = souls
+| reward_icon = y
+}}
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_065.png
+| name = Ascended a lot!
+| description = Have All colors in Ascension 40+
+| reward = +350
+| reward_type = souls
+| reward_icon = y
+}}
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_066.png
+| name = Crazy Inflation
+| description = Reach 1.00e63 IP
+| reward = +200
+| reward_type = souls
+| reward_icon = y
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_067.png
+| name = This is going faster
+| description = Reach 1.00e93 IP
+| reward = +300
+| reward_type = souls
+| reward_icon = y
+}}
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_068.png
+| name = Star scaling
+| description = Buy 16 Stars
+| reward = +250
+| reward_type = souls
+| reward_icon = y
+}}
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_069.png
+| name = Halfway to Eternity
+| description = Reach 1.00e154 IP
+| reward = +350
+| reward_type = souls
+| reward_icon = y
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_070.png
+| name = Eternal...
+| description = Reach Eternity
+| reward = Unlocks Macro Builder<br>{{Keyword|inf|+2.5% Daily Reward Soul Streak bonus per day}}
+| reward_type = achievement
+}}
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_071.png
+| name = Double Eternity
+| description = Reach Eternity twice
+| reward = +30:00 TF
+| reward_type = time_flux
+}}
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_072.png
+| name = Mini Zoo
+| description = Buy your first Animal
+| reward = +250
+| reward_type = souls
+| reward_icon = y
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_073.png
+| name = Does it go slower?
+| description = Slowdown for the first time
+| reward = +1:00 TF
+| reward_type = time_flux
+}}
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_074.png
+| name = Quadraeternal
+| description = Reach Eternity 4
+| reward = Unlocks macro blocks for infinity challenges
+| reward_type = achievement
+}}
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_075.png
+| name = Faster Eternities
+| description = Eternity in under an hour
+| reward = +350
+| reward_type = souls
+| reward_icon = y
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_076.png
+| name = Eternally Challenging
+| description = Unlock Eternity Challenges
+| reward = Unlocks macro block for breaking/fixing Infinity
+| reward_type = achievement
+}}
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_077.png
+| name = First EC complete!
+| description = Complete Eternity Challenge 1 once
+| reward = +250
+| reward_type = souls
+| reward_icon = y
+}}
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_078.png
+| name = So much Ascension Power
+| description = Reach 1,000,000 Ascension Power
+| reward = +300
+| reward_type = souls
+| reward_icon = y
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_079.png
+| name = Two of Five
+| description = Complete Eternity Challenge 1 twice
+| reward = +15:00 TF
+| reward_type = time_flux
+}}
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_080.png
+| name = Eternal Breakdown
+| description = Break Eternity
+| reward = +350
+| reward_type = souls
+| reward_icon = y
+}}
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_081.png
+| name = Big Five
+| description = Have 5 Eternity Challenge completions
+| reward = +250
+| reward_type = souls
+| reward_icon = y
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_082.png
+| name = Quadra Eternity
+| description = Get 4 EP in one Eternity
+}}
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_083.png
+| name = Blink of an eye
+| description = Eternity in under a minute
+}}
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_084.png
+| name = One Hundred
+| description = Reach 100 Eternities
+| reward = Unlocks macro block for eternity
+| reward_type = achievement
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_085.png
+| name = Infinity Billionaire
+| description = Reach 1.00e9 Infinities
+| reward = Infinity Gain x2
+| reward_type = achievement
+}}
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_086.png
+| name = Start researching
+| description = Reach 1 total RP
+}}
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_087.png
+| name = Ten Per Eternity
+| description = Get 10 EP in one Eternity
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_088.png
+| name = More researching
+| description = Reach 10 total RP
+}}
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_089.png
+| name = You tried all researches
+| description = All RP upgrades have at least 1 lvl
+}}
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_090.png
+| name = Research Master
+| description = All RP upgrades have at least 5 lvls
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_091.png
+| name = FIRST SUPERNOVA
+| description = Reach Supernova 1
+}}
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_092.png
+| name = SECOND SUPERNOVA
+| description = Reach Supernova 2
+}}
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_093.png
+| name = Research Profit
+| description = All RP upgrades have at least 10 lvls
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_094.png
+| name = Four Of Ten EC
+| description = Complete Eternity Challenge 4 once
+}}
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_095.png
+| name = THIRD SUPERNOVA
+| description = Reach Supernova 3
+}}
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_096.png
+| name = A lot of research
+| description = Reach 100 total RP
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_097.png
+| name = FIFTH SUPERNOVA
+| description = Reach Supernova 5
+}}
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_098.png
+| name = EP Trillionaire
+| description = Reach 1.00e12 EP
+}}
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_099.png
+| name = IP affects EP
+| description = Reach 1.00e400 IP
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_100.png
+| name = Fifth Eternity is complete... once
+| description = Complete Eternity Challenge 5 once
+}}
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_101.png
+| name = Six New Stars
+| description = Reach Supernova 6
+}}
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_102.png
+| name = Eight of them
+| description = Reach Supernova 8
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_103.png
+| name = Supernova goes faster
+| description = Reach Supernova 10
+}}
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_104.png
+| name = RP gets scaling
+| description = Reach 200 total RP
+}}
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_105.png
+| name = Gen Mult is pretty softcapped
+| description = Reach 1.00e10,000 Generator Multiplier
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_106.png
+| name = SUPERNOVA 20
+| description = Reach Supernova 20
+}}
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_107.png
+| name = IP goes large too much
+| description = Reach 1.00e1,000 IP
+}}
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_108.png
+| name = Score Exponential Millionaire
+| description = Reach 1e1,000,000 Score
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_109.png
+| name = Supernova of the Dev's age at game's release
+| description = Reach Supernova 25
+}}
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_110.png
+| name = The Deceleration
+| description = Unlock Dilation
+}}
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_111.png
+| name = Trying Dilation
+| description = Buy First Dilation Upgrade
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_112.png
+| name = Dilated Infinity
+| description = Reach Infinity in Dilation
+}}
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_113.png
+| name = Dilation gets weaker
+| description = Reach 1.00e1,000 Score in Dilation
+}}
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_114.png
+| name = A lot of Dilation Points
+| description = Get 1.00e9 Dilation Points
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_115.png
+| name = Dilation is even weaker
+| description = Reach 1.00e10000 Score in Dilation
+}}
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_116.png
+| name = Almost ending it all... or is it?
+| description = Complete Eternity Challenge 10 once
+}}
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_117.png
+| name = Going closer to the end
+| description = Complete Eternity Challenge 10 twice
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_118.png
+| name = U tried them all dilated
+| description = Buy at least 1 of all 9 Dilation upgrades
+}}
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_119.png
+| name = Dilation is not as strong as before
+| description = Reach 1e100000 Score in Dilation
+}}
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_120.png
+| name = Where is Dilation Tree?
+| description = Complete all Eternity Challenges
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_121.png
+| name = The seed of the Tree
+| description = Buy first DTP
+| reward = Unlocks macro block for dilation
+| reward_type = achievement
+}}
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_122.png
+| name = Making seed stronker
+| description = Invest 2 DTP in center DT upgrade
+}}
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_123.png
+| name = Dilationnaire
+| description = Reach e1,000,000 score in Dilation
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_124.png
+| name = Halfway to one hundred supernova
+| description = Reach Supernova 50
+}}
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_125.png
+| name = A lot of AP unspent
+| description = Have 10,000 unspent AP
+}}
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_126.png
+| name = It's only beginning
+| description = Buy total 5 DTP
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_127.png
+| name = A way to get more DP
+| description = Reach e3,000,000 score in Dilation
+}}
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_128.png
+| name = Tier Two
+| description = Buy TOP-2, MID-2 or BOT-2 Dilation Tree upgrade
+}}
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_129.png
+| name = We all make mistakes
+| description = Respec Dilation Tree and buying 6+ DTP
+| reward = +10% to all dil. upgrades power
+| reward_type = achievement
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_130.png
+| name = TEN MILLION E
+| description = Reach 10,000,000 Eternities
+}}
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_131.png
+| name = Lab Master
+| description = Reach 5,000 Lab Level
+}}
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_132.png
+| name = Dilation is too weak
+| description = Reach e10,000,000 score in Dilation
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_133.png
+| name = Closer to Unity
+| description = Reach 1.00e2,200 EP
+}}
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_134.png
+| name = Need some strategy
+| description = Have 10 DTP
+}}
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_135.png
+| name = Top Supernova
+| description = Reach Supernova 80
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_136.png
+| name = New meaning for AP
+| description = Have 30,000 AP
+}}
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_137.png
+| name = What is the max number?
+| description = Reach e100,000,000 Score
+}}
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_138.png
+| name = Eternal Billionaire
+| description = Reach 1.00e9 Eternities
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_139.png
+| name = Here goes hard scaling
+| description = Reach Supernova 100
+}}
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_140.png
+| name = It is worthy now
+| description = Have at least 1 TOP-4, 1 MID-4, and 1 BOT-4 Dilation Tree upgrade
+| reward = Changes reward for Ach.29
+| reward_type = achievement
+}}
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_141.png
+| name = Eternities are useful currently
+| description = Reach 2.00e10 Eternities
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_142.png
+| name = Different strategies
+| description = Have 15 DTP
+}}
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_143.png
+| name = Worldwide Lab
+| description = Reach 10,000 Total RP
+}}
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_144.png
+| name = Farm Supernovas
+| description = Reach Supernova 120
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_145.png
+| name = So close to the Unity
+| description = Reach 1.00e2,400 EP
+}}
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_146.png
+| name = Did you break the Dilation?
+| description = Reach 1.80e308 DP
+}}
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_147.png
+| name = Dilation is 2 weak
+| description = Reach e50,000,000 score in Dilation
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_148.png
+| name = Closer to limits
+| description = Reach Supernova 150
+}}
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_149.png
+| name = We need a new BigNum library
+| description = Reach e200,000,000 score
+}}
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_150.png
+| name = DTP gain is easier
+| description = Have 25 DTP
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_151.png
+| name = Halfway to buy the whole Tree
+| description = Have 33 DTP
+}}
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_152.png
+| name = Supernova as number of this achievement
+| description = Reach Supernova 152
+}}
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_153.png
+| name = Unity is in front of us
+| description = Reach 1.00e2,433 EP
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_154.png
+| name = We don't have to buy the whole Tree to Unite
+| description = Have 40 DTP
+}}
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_155.png
+| name = Score scaling
+| description = Reach e600,000,000 score
+}}
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_156.png
+| name = Ach 152 now Ach 156
+| description = Reach Supernova 156
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_157.png
+| name = Softcap for AP effect
+| description = Reach 400,000 AP
+}}
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_158.png
+| name = Really a lot of DP
+| description = Reach 1.00e1,000 DP
+}}
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_159.png
+| name = Billion Exponent
+| description = Reach e1.00e9 score
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_160.png
+| name = R U ready 4 Z Unity?
+| description = Reach 1.08e2,466 EP
+}}
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_161.png
+| name = New Global Prestige Layer
+| description = Unite for the first time
+| reward = Keep pre-unity automation unlocked
+| reward_type = achievement
+}}
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_162.png
+| name = The Age of the Sun
+| description = Equip a zodiac on the Sun
+| reward = Unlocks Mercury
+| reward_type = achievement
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_163.png
+| name = Compatibility Test
+| description = Have 2+ unities
+| reward = Unlocks Venus
+| reward_type = achievement
+}}
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_164.png
+| name = It took less than a day
+| description = Unite in under 24 hours
+| reward = +200
+| reward_type = souls
+| reward_icon = y
+}}
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_165.png
+| name = Super Achievements?
+| description = Have 3 zodiacs equipped
+| reward = Unlocks trials tab
+| reward_type = achievement
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_166.png
+| name = To The Moon!
+| description = Complete your first easy trial
+| reward = Unlocks Moon
+| reward_type = achievement
+}}
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_167.png
+| name = More EXP Factors!
+| description = Complete 3 trials
+| reward = Unlocks Unities Exp Factor
+| reward_type = achievement
+}}
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_168.png
+| name = It's getting grindy
+| description = Have 5 unities
+| reward = Unlocks automation for AP and animals
+| reward_type = achievement
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_169.png
+| name = It's getting even more grindy
+| description = Have 10 unities
+| reward = Unlocks automation for lab and RP upgrades
+| reward_type = achievement
+}}
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_170.png
+| name = Super-easy!
+| description = Complete easy trial group
+| reward = Unlocks supernova automation and macro blocks for eternity challenges
+| reward_type = achievement
+}}
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_171.png
+| name = Is it even possible??
+| description = Perform supernova with 0 eternities
+| reward = Unlocks supernova exp factor
+| reward_type = achievement
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_172.png
+| name = Leveling up
+| description = Get Lv.5 Zodiac (through Unity)
+| reward = Unlock Jupiter
+| reward_type = achievement
+}}
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_173.png
+| name = Eternity is a goal now!
+| description = Complete your first medium trial
+| reward = x1.1 to zodiac quality
+| reward_type = achievement
+}}
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_174.png
+| name = Overbuffing ET gain
+| description = Reach 1.00e13 eternities
+| reward = +15:00 TF
+| reward_type = time_flux
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_175.png
+| name = Great factors
+| description = Reach Supernova 160
+| reward = +200
+| reward_type = souls
+| reward_icon = y
+}}
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_176.png
+| name = Yeah it's getting harder
+| description = Reach e2.00e9 score
+| reward = +150
+| reward_type = souls
+| reward_icon = y
+}}
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_177.png
+| name = Making a long run
+| description = Have 50 DTP
+| reward = Unlocks macro blocks for dilation tree
+| reward_type = achievement
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_178.png
+| name = AP bomb
+| description = Have 1,000,000 AP
+| reward = +30:00 TF
+| reward_type = time_flux
+}}
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_179.png
+| name = Dilation feels... nothing
+| description = Reach e1.00e9 score in Dilation
+| reward = +250
+| reward_type = souls
+| reward_icon = y
+}}
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_180.png
+| name = SCALLINGG
+| description = Reach e3.00e9 score
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_181.png
+| name = Destructive Planet
+| description = Get Lv.10 Zodiac (through Unity)
+| reward = Unlocks Saturn
+| reward_type = achievement
+}}
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_182.png
+| name = Moar effects
+| description = Get legendary+ zodiac
+| reward = Unlocks Eternity Count Factor
+| reward_type = achievement
+}}
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_183.png
+| name = Exponential Exponential Growth
+| description = Reach e1.00e10 score
+| reward = +150
+| reward_type = souls
+| reward_icon = y
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_184.png
+| name = Level of Apprentice
+| description = Reach and get Lv.20 Zodiac (through Unity)
+| reward = Unlocks Uranus
+| reward_type = achievement
+}}
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_185.png
+| name = Close to the Halfway
+| description = Complete all medium trials
+}}
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_186.png
+| name = Almost Full Bundle
+| description = Buy 60 DTP
+| reward = +30:00 TF
+| reward_type = time_flux
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_187.png
+| name = Scaling Scaling Scaling
+| description = Reach e2.00e10 score
+| reward = +200
+| reward_type = souls
+| reward_icon = y
+}}
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_188.png
+| name = Neptunic Powers
+| description = Get Lv.30 Zodiac (through Unity)
+| reward = Unlocks Neptune
+| reward_type = achievement
+}}
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_189.png
+| name = I don't feel difference
+| description = Reach e2.00e10 score in Dilation
+| reward = Auto-Ascend faster optimization
+| reward_type = achievement
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_190.png
+| name = Planet Or Not?
+| description = Get Lv.40 Zodiac (through Unity)
+| reward = Unlocks Pluto
+| reward_type = achievement
+}}
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_191.png
+| name = Back to 2017 trials
+| description = Complete 15 trials
+| reward = Unlock Attacks
+| reward_type = achievement
+}}
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_192.png
+| name = It was a long ride
+| description = Reach Attacks Level 1
+| reward = Score -> Dmg Mult x10
+| reward_type = achievement
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_193.png
+| name = Merging may be awesome
+| description = Merge 3 Godly Zodiacs to Divine (Or get Divine+ Zodiac on Unity)
+| reward = Sell prices for zodiacs x3
+| reward_type = achievement
+}}
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_194.png
+| name = Circle Combat Master
+| description = Reach Attacks Level 20
+| reward = +200
+| reward_type = souls
+| reward_icon = y
+}}
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_195.png
+| name = Relic Hunter
+| description = Buy first Relic
+| reward = +200
+| reward_type = souls
+| reward_icon = y
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_196.png
+| name = Ancient Collector
+| description = Buy 5 total Relic levels
+| reward = +250
+| reward_type = souls
+| reward_icon = y
+}}
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_197.png
+| name = Trinity of Treasures
+| description = Have 3 first Relics Lv.1+
+| reward = +30:00 TF
+| reward_type = time_flux
+}}
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_198.png
+| name = Aggressive Geometry
+| description = Reach Attacks Level 50
+| reward = +250
+| reward_type = souls
+| reward_icon = y
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_199.png
+| name = Chromatic Combatant
+| description = Buy second attacks color
+| reward = +15:00 TF
+| reward_type = time_flux
+}}
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_200.png
+| name = Inefficiently Efficient
+| description = Generate less than 0.05 lab pts/s, but more than 0.01 lab pts/s
+| reward = It's useless, but you can't get achievement 201 w/o this one
+| reward_type = achievement
+}}
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_201.png
+| name = Bicentennial Completionist
+| description = Complete all first 200 achievements
+| reward = Better formula for ach. rewards
+| reward_type = achievement
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_202.png
+| name = Six-Pack of Ancient Power
+| description = Have 6 first Relics
+| reward = +250
+| reward_type = souls
+| reward_icon = y
+}}
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_203.png
+| name = Three's Company
+| description = Buy third attacks color
+| reward = x1.6 to Zodiac Quality
+| reward_type = achievement
+}}
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_204.png
+| name = Gold Digger
+| description = Have 10K+ gold
+| reward = +400
+| reward_type = souls
+| reward_icon = y
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_205.png
+| name = The Wounded Healer
+| description = Get Lv.50 Zodiac (through Unity)
+| reward = Unlock Chiron
+| reward_type = achievement
+}}
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_206.png
+| name = Do you feel how it became slower?
+| description = Reach e3.00e10 Score
+| reward = +15:00 TF
+| reward_type = time_flux
+}}
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_207.png
+| name = Nice... level :P
+| description = Get Lv.69 Zodiac (through Unity)
+| reward = x1.06969 to Zodiac Quality
+| reward_type = achievement
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_208.png
+| name = Supernova Rain
+| description = Get Supernova 200
+| reward = +200
+| reward_type = souls
+| reward_icon = y
+}}
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_209.png
+| name = Full Completion
+| description = Have 65 DTP
+| reward = Respeccing Dilation Tree no longer resets Dilation Upgrades
+| reward_type = achievement
+}}
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_210.png
+| name = Here are only five
+| description = Buy 5th Attack Color
+| reward = +30:00 TF
+| reward_type = time_flux
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_211.png
+| name = Positive Attack Multi
+| description = Reach e5.00e10 score
+| reward = +250
+| reward_type = souls
+| reward_icon = y
+}}
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_212.png
+| name = Do you feel nostalgic?
+| description = Reach Attack Level 256
+| reward = +15:00 TF
+| reward_type = time_flux
+}}
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_213.png
+| name = Maybe tryin sacrifice?
+| description = Have 10M+ astrodust
+| reward = +300
+| reward_type = souls
+| reward_icon = y
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_214.png
+| name = It's an interesting choice
+| description = Sacrifice your first zodiac
+| reward = +30:00 TF
+| reward_type = time_flux
+}}
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_215.png
+| name = DP skyrocket
+| description = Buy 100 of 10th Relic
+| reward = +30:00 TF
+| reward_type = time_flux
+}}
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_216.png
+| name = How time flies
+| description = Reach 1 year of playtime
+| reward = +365
+| reward_type = souls
+| reward_icon = y
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_217.png
+| name = Permanent bonuses
+| description = Sacrifice 10 zodiacs
+| reward = +30:00 TF
+| reward_type = time_flux
+}}
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_218.png
+| name = DP score is important again
+| description = Reach e5.00e10 score in Dilation
+| reward = Score in dilation after e5e10 boosts DP gain better
+| reward_type = achievement
+}}
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_219.png
+| name = Do you feel lucky?
+| description = Get Lv.100+ Zodiac (through Unity)
+| reward = Unlocks Fortune Pars
+| reward_type = achievement
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_220.png
+| name = Best Rarity
+| description = Get Immortal Zodiac through Unity
+| reward = You will get extra rarities based on your luck (aft. ~550-600+ luck)
+| reward_type = achievement
+}}
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_221.png
+| name = Almost Here
+| description = Complete Hard Trial 5
+| reward = +350
+| reward_type = souls
+| reward_icon = y
+}}
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_222.png
+| name = Super Levels, Super Scaling
+| description = Get Lv.102+ Zodiac (through Unity)
+| reward = +300
+| reward_type = souls
+| reward_icon = y
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_223.png
+| name = Only Ones
+| description = Reach e1.00e11 score
+| reward = +111
+| reward_type = souls
+| reward_icon = y
+}}
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_224.png
+| name = Meta-Ascender
+| description = Ascend 5th attacks color
+| reward = +30:00 TF
+| reward_type = time_flux
+}}
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_225.png
+| name = Astronome
+| description = Buy 5 of Relic 15
+| reward = +250
+| reward_type = souls
+| reward_icon = y
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_226.png
+| name = L33T L3V3L
+| description = Reach Attacks Level 420
+| reward = All relics are 5% more effective
+| reward_type = achievement
+}}
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_227.png
+| name = Don't forget about dilation
+| description = Reach e1.00e11 score in Dilation
+| reward = +18:30 TF
+| reward_type = time_flux
+}}
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_228.png
+| name = EPs' Independence
+| description = Break Unity
+| reward = +950
+| reward_type = souls
+| reward_icon = y
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_229.png
+| name = It wasn't difficult at all now
+| description = Reach 1e3,000 EP
+| reward = +15:00 TF
+| reward_type = time_flux
+}}
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_230.png
+| name = Dance of Fire and Flames
+| description = Try with a full-fire build (all 12 planets slots are with only fire zodiacs) and reach e5.00e11 score
+| reward = All relics are 1% more effective, divide all relics costs by 5 and total quality for fire zodiacs is powered to ^1.1 now
+| reward_type = achievement
+}}
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_231.png
+| name = Growing Mountains
+| description = Try with a full-earth build (all 12 planets slots are with only earth zodiacs) and reach 1.10e111 Infinities, e350,000 IP and e6,200,000 Gen.Power Mult Gain
+| reward = All relics are 1% more effective, divide all relics costs by 5 and total quality for earth zodiacs is powered to ^1.1 now
+| reward_type = achievement
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_232.png
+| name = I feel it in the wind, my dear
+| description = Try with a full-wind build (all 12 planets slots are with only wind zodiacs) and reach 1.00e36 eternities and 1.00e45,000 DP
+| reward = All relics are 1% more effective, divide all relics costs by 5 and total quality for wind zodiacs is powered to ^1.1 now
+| reward_type = achievement
+}}
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_233.png
+| name = Swimming with sharks
+| description = Try with a full-water build (all 12 planets slots are with only water zodiacs) and get an Immortal+5 zodiac with 1,000,000+ quality (through Unity)
+| reward = All relics are 1% more effective, divide all relics costs by 5 and total quality for water zodiacs is powered to ^1.1 now
+| reward_type = achievement
+}}
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_234.png
+| name = A long long long way
+| description = Get Zodiac Lv.110+ (through Unity)
+| reward = +300
+| reward_type = souls
+| reward_icon = y
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_235.png
+| name = The moment of millennium
+| description = Have playtime of 1,000+ years
+| reward = +1000
+| reward_type = souls
+| reward_icon = y
+}}
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_236.png
+| name = The Most Lucky Year!
+| description = Have 2,025+ Luck
+| reward = x1.01 to Luck
+| reward_type = achievement
+}}
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_237.png
+| name = The power of 4 elements
+| description = Complete all element-themed achievements (230-233)
+| reward = All relics are 1% effective, divide all relics costs by 10 and total quality for all zodiacs is powered to ^1.05 now
+| reward_type = achievement
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_238.png
+| name = Too rare...............
+| description = Get a zodiac with Immortal+7 rarity or higher (through Unity)
+| reward = Unlocks Luck factor...
+| reward_type = achievement
+}}
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_239.png
+| name = Where the hard levelling goes...
+| description = Reach Attacks Level 1,000+
+| reward = All relics are 1% stronger per 1K atk lvls (0.001% per level, SC: 10%)
+| reward_type = achievement
+}}
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_240.png
+| name = 3L33TArY L3V3L
+| description = Reach Attacks Level 1,337+
+| reward = Unlocks Minerals
+| reward_type = achievement
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_241.png
+| name = Paper Stories
+| description = Spawn a Level 1 Mineral
+| reward = +100
+| reward_type = souls
+| reward_icon = y
+}}
+{{Achievement/NormalRowItem
+| icon = Achievement normal 242.png
+| name = Merge Incremental
+| description = Merge two Minerals and get a new Level 1+ Mineral
+| reward = Unlock Loadouts for Planets
+| reward_type = achievement
+}}
+{{Achievement/NormalRowItem
+| icon = Achievement normal 243.png
+| name = Bonfire!
+| description = Spawn a Level 5 Mineral
+| reward = +150
+| reward_type = souls
+| reward_icon = y
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Achievement normal 244.png
+| name = Valuable Boost
+| description = Buy 1st Relic 22
+| reward = +150
+| reward_type = souls
+| reward_icon = y
+}}
+{{Achievement/NormalRowItem
+| icon = Achievement normal 245.png
+| name = Collectionist
+| description = Get 1,000,000+ VP
+| reward = +20:00 TF
+| reward_type = time_flux
+}}
+{{Achievement/NormalRowItem
+| icon = Achievement normal 246.png
+| name = What we need to grow
+| description = Spawn a Level 10 Mineral
+| reward = +150
+| reward_type = souls
+| reward_icon = y
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Achievement normal 247.png
+| name = Insane Insane Rarity
+| description = Get a Immortal+15 Zodiac (through Unity)
+| reward = Divides all relics' costs by 1,000
+| reward_type = achievement
+}}
+{{Achievement/NormalRowItem
+| icon = Achievement normal 248.png
+| name = Billionist Collectionaire
+| description = Have 1.00e9+ (1B+) Value Points
+| reward = +200
+| reward_type = souls
+| reward_icon = y
+}}
+{{Achievement/NormalRowItem
+| icon = Achievement normal 249.png
+| name = Halfway on polishing
+| description = Spawn a Level 15 Mineral
+| reward = +20:00 TF
+| reward_type = time_flux
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Achievement normal 250.png
+| name = Relics Glow Up
+| description = Sacrifice a relic
+| reward = +150
+| reward_type = souls
+| reward_icon = y
+}}
+{{Achievement/NormalRowItem
+| icon = Achievement normal 251.png
+| name = This Year Level
+| description = Reach Attack Level 2025
+| reward = Unlocks attacks prestige (recommended to perform later)
+| reward_type = achievement
+}}
+{{Achievement/NormalRowItem
+| icon = Achievement normal 252.png
+| name = Sharpen Weapons
+| description = Perform Polish Prestige
+| reward = Divide all relics costs by 1,000,000
+| reward_type = achievement
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Ach 252.png
+| name = Autospawner
+| description = Reach Polish Sword Level 10+
+| reward = +200
+| reward_type = souls
+| reward_icon = y
+}}
+{{Achievement/NormalRowItem
+| icon = Achievement normal 254.png
+| name = Golden Inflation
+| description = Reach 1.08e308+ Gold
+| reward = Empowers Relic 17 by ^1.01
+| reward_type = achievement
+}}
+{{Achievement/NormalRowItem
+| icon = Achievement normal 255.png
+| name = Déjà vu
+| description = Perform Attacks Prestige
+| reward = +200
+| reward_type = souls
+| reward_icon = y
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Achievement normal 256.png
+| name = No more annoying need to infinite
+| description = Reach Polish Axe Level 10+
+| reward = +250
+| reward_type = souls
+| reward_icon = y
+}}
+{{Achievement/NormalRowItem
+| icon = Achievement normal 257.png
+| name = What is even tantalum?
+| description = Get a Level 40 Mineral
+| reward = +25:00 TF
+| reward_type = time_flux
+}}
+{{Achievement/NormalRowItem
+| icon = Achievement normal 258.png
+| name = Relic 1 overpowered
+| description = Reach Polish Spear Level 10+
+| reward = +300
+| reward_type = souls
+| reward_icon = y
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Achievement normal 259.png
+| name = A cool number
+| description = Reach Attacks Level 2,250+
+| reward = Attacks Prestige is a bit stronger
+| reward_type = achievement
+}}
+{{Achievement/NormalRowItem
+| icon = Achievement normal 260.png
+| name = When the global scalings begin
+| description = Get a Level 50 Mineral
+| reward = Unlocks Autoset mineral level and autodelete automation
+| reward_type = achievement
+}}
+{{Achievement/NormalRowItem
+| icon = Achievement normal 261.png
+| name = Luck goes lucky
+| description = Buy 1st relic 25
+| reward = +250
+| reward_type = souls
+| reward_icon = y
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Achievement normal 262.png
+| name = Enhancing is actually good again
+| description = Reach Polish Sword Level 50+
+| reward = +25:00 TF
+| reward_type = time_flux
+}}
+{{Achievement/NormalRowItem
+| icon = Achievement normal 263.png
+| name = Polishing Mid Stage
+| description = Get 2nd milestones for all polish weapons
+| reward = +20:00 TF
+| reward_type = time_flux
+}}
+{{Achievement/NormalRowItem
+| icon = Achievement normal 264.png
+| name = Just a little more...
+| description = Reach Mineral Level 60+
+| reward = +350
+| reward_type = souls
+| reward_icon = y
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Ach 265.png
+| name = Mega Rarities
+| description = Get a zodiac with rarity Immortal+50 or better (through Unity)
+| reward = You are more likely to get closer to max rarity zodiacs
+| reward_type = achievement
+}}
+{{Achievement/NormalRowItem
+| icon = Ach 266.png
+| name = Ultra Rarities
+| description = Get a zodiac with rarity Immortal+100 or better (through Unity)
+| reward = You are even more likely to get closer to max rarity zodiacs
+| reward_type = achievement
+}}
+{{Achievement/NormalRowItem
+| icon = Ach 267.png
+| name = This is INSANE!!!
+| description = Complete first insane trial
+| reward = PP Gain: x2
+| reward_type = achievement
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Ach 268.png
+| name = Bonus Swap
+| description = Complete second insane trial
+| reward = +350
+| reward_type = souls
+| reward_icon = y
+}}
+{{Achievement/NormalRowItem
+| icon = Ach 269.png
+| name = Nice... mineral ;)
+| description = Merge a Level 69 Mineral
+| reward = Unlock macro block for loading Planet Loadouts
+| reward_type = achievement
+}}
+{{Achievement/NormalRowItem
+| icon = Ach 270.png
+| name = Refinery Empire
+| description = Perform refine prestige
+| reward = {{keyword|bonus|+20 slot(s) to Zodiac Inventory Slots}}<!--not sure if we can replicate the gradient font color used in game? Change if we have a better solution. -Angel !--><br>1.01x to relics efficiency
+| reward_type = achievement
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Ach 271.png
+| name = Going Up to the sky!
+| description = Purchase Refine Nodes 2 and 3
+| reward = +23:00 TF
+| reward_type = time_flux
+}}
+{{Achievement/NormalRowItem
+| icon = Ach 272.png
+| name = Keep merging...
+| description = Reach Merge Level 1+
+| reward = +250
+| reward_type = souls
+| reward_icon = y
+}}
+{{Achievement/NormalRowItem
+| icon = Ach 273.png
+| name = So lacking of automerge!
+| description = Reach Merge Level 5+
+| reward = +300
+| reward_type = souls
+| reward_icon = y
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Ach 274.png
+| name = Better materials for the sword
+| description = Upgrade Refine Node 4 to Level 2+
+| reward = +25:00 TF
+| reward_type = time_flux
+}}
+{{Achievement/NormalRowItem
+| icon = Ach 275.png
+| name = Just as eagerly awaited as August 14, 2025
+| description = Try automerge for the first time
+| reward = +250
+| reward_type = souls
+| reward_icon = y
+}}
+{{Achievement/NormalRowItem
+| icon = Ach 276.png
+| name = Feel real progress on merging
+| description = Upgrade Refine Node 1 to Level 2+
+| reward = +300
+| reward_type = souls
+| reward_icon = y
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Ach 277.png
+| name = Refine Tree Stump
+| description = Have at least 1 Level in first 8 Refine Nodes
+| reward = +111
+| reward_type = souls
+| reward_icon = y
+}}
+{{Achievement/NormalRowItem
+| icon = Ach 278.png
+| name = Infinitely attacking prestiger
+| description = Get 1.08e308 Attacks Mult. Gain from Attacks Prestige
+| reward = +308
+| reward_type = souls
+| reward_icon = y
+}}
+{{Achievement/NormalRowItem
+| icon = Ach 279.png
+| name = Merging Level Grinder
+| description = Buy Relic 28
+| reward = +250
+| reward_type = souls
+| reward_icon = y
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Ach 280.png
+| name = MINERAL 100!
+| description = Merge a Level 100+ Mineral
+| reward = +30:00 TF
+| reward_type = time_flux
+}}
+{{Achievement/NormalRowItem
+| icon = Ach 281.png
+| name = Magnetic Attraction
+| description = Have 10+ Magnets
+| reward = +300
+| reward_type = souls
+| reward_icon = y
+}}
+{{Achievement/NormalRowItem
+| icon = Ach 282.png
+| name = Precious Infinity
+| description = Have 1.08e308+ Value Points
+| reward = +308
+| reward_type = souls
+| reward_icon = y
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Ach 283.png
+| name = Deep Refinement
+| description = Buy Refine Node 21
+| reward = +21:00 TF
+| reward_type = time_flux
+}}
+{{Achievement/NormalRowItem
+| icon = Ach 284.png
+| name = Magnet Collector
+| description = Have 1,000+ Magnets
+| reward = +350
+| reward_type = souls
+| reward_icon = y
+}}
+{{Achievement/NormalRowItem
+| icon = Ach 285.png
+| name = Halfway There
+| description = Reach Merge Level 50+
+| reward = +300
+| reward_type = souls
+| reward_icon = y
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Ach 286.png
+| name = Price scales so fast
+| description = Spawn a Level 125+ Mineral
+| reward = +25:00 TF
+| reward_type = time_flux
+}}
+{{Achievement/NormalRowItem
+| icon = Ach 287.png
+| name = Sweet Sixteen Empowered
+| description = Upgrade Refine Node 16 to Level 10+
+| reward = +30:00 TF
+| reward_type = time_flux
+}}
+{{Achievement/NormalRowItem
+| icon = Ach 288.png
+| name = Foundation Master
+| description = Upgrade Refine Node 1 to Level 7+
+| reward = +350
+| reward_type = souls
+| reward_icon = y
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Ach 289.png
+| name = Nice... Merge Level
+| description = Reach Merge Level 69+
+| reward = +69
+| reward_type = souls
+| reward_icon = y
+}}
+{{Achievement/NormalRowItem
+| icon = Ach 290.png
+| name = Reconnection expectations
+| description = Complete Insane Trial 4
+| reward = +400
+| reward_type = souls
+| reward_icon = y
+}}
+{{Achievement/NormalRowItem
+| icon = Ach 291.png
+| name = Eternity Champion
+| description = Have 60+ EC completions
+| reward = Unlocks macro block for Refine Prestige and Polish Prestige
+| reward_type = achievement
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Ach 292.png
+| name = Thirty Node Milestone
+| description = Buy Refine Node 30
+| reward = +300
+| reward_type = souls
+| reward_icon = y
+}}
+{{Achievement/NormalRowItem
+| icon = Ach 293.png
+| name = Century Merger
+| description = Reach Merge Level 100+
+| reward = +20:00 TF
+| reward_type = time_flux
+}}
+{{Achievement/NormalRowItem
+| icon = Ach 294.png
+| name = Golden Abundance
+| description = Have 1.00e2500+ Gold
+| reward = +250
+| reward_type = souls
+| reward_icon = y
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Ach 295.png
+| name = Solar Awakening
+| description = Get your first Sun Rune
+| reward = {{Keyword|bonus|Skin Alpha Mask}}
+| reward_type = achievement
+}}
+{{Achievement/NormalRowItem
+| icon = Ach 296.png
+| name = Lunar Discovery
+| description = Get your first Moon Rune
+| reward = +450
+| reward_type = souls
+| reward_icon = y
+}}
+{{Achievement/NormalRowItem
+| icon = Ach 297.png
+| name = Magnetic Luck
+| description = Have 10%+ Magnet Chance
+| reward = +10:00 TF
+| reward_type = time_flux
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Ach 298.png
+| name = Golden Infinity
+| description = Have x1.08e308+ gold gain bonus from Mineral Upgrade
+| reward = +300
+| reward_type = souls
+| reward_icon = y
+}}
+{{Achievement/NormalRowItem
+| icon = Ach 299.png
+| name = Mineral Master 150
+| description = Reach Mineral Level 150+
+| reward = +300
+| reward_type = souls
+| reward_icon = y
+}}
+{{Achievement/NormalRowItem
+| icon = Ach 300.png
+| name = Node Perfectionist
+| description = Buy Refine Node 40
+| reward = +350
+| reward_type = souls
+| reward_icon = y
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Ach 301.png
+| name = Celestial Balance 
+| description = Have both 10+ Sun and 10+ Moon Runes
+| reward = {{Keyword|runes|+1}}
+| reward_type = runes
+| reward_icon = y
+}}
+{{Achievement/NormalRowItem
+| icon = Ach 302.png
+| name = Rune Generator
+| description = Make your sun rune generation and moon rune generation be <math>\geq</math> 2 
+| reward = {{Keyword|runes|+2}}
+| reward_type = runes
+| reward_icon = y
+}}
+{{Achievement/NormalRowItem
+| icon = Ach 303.png
+| name = Special Discovery
+| description = Spawn your first special mineral
+| reward = +250
+| reward_type = souls
+| reward_icon = y
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Ach 304.png
+| name = Special Fusion
+| description = Merge two special minerals
+| reward = +300
+| reward_type = souls
+| reward_icon = y
+}}
+{{Achievement/NormalRowItem
+| icon = Ach 305.png
+| name = Enhanced Specialty
+| description = Reach Special Mineral Level 3+
+| reward = +350
+| reward_type = souls
+| reward_icon = y
+}}
+{{Achievement/NormalRowItem
+| icon = Ach 306.png
+| name = Complete Collection
+| description = Have 9 different Special Minerals of each type
+| reward = +30:00 TF
+| reward_type = time_flux
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Ach 307.png
+| name = Lucky Magnetism
+| description = Have 20%+ Magnet chance
+| reward = +20:00 TF
+| reward_type = time_flux
+}}
+{{Achievement/NormalRowItem
+| icon = Ach 308.png
+| name = Number of Limit is in it's number
+| description = Ok, fine, have 1.08e308+ Fall Speed from Mineral Upgrade
+| reward = +350
+| reward_type = souls
+| reward_icon = y
+}}
+{{Achievement/NormalRowItem
+| icon = Ach 309.png
+| name = Insane Mastery V
+| description = Complete Insane Trial 5
+| reward = +450
+| reward_type = souls
+| reward_icon = y
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Ach 310.png
+| name = Near Completion
+| description = Buy Refine Node 45
+| reward = {{keyword|bonus|+10 slot(s) to Zodiac Inventory Slots}}<!--not sure if we can replicate the gradient font color used in game? Change if we have a better solution. -Angel !-->
+| reward_type = achievement
+}}
+{{Achievement/NormalRowItem
+| icon = Ach 311.png
+| name = SMP Initiate
+| description = Get 1 exp in any of SMP (Special Minerals Progression)
+| reward = +30:00 TF
+| reward_type = time_flux
+}}
+{{Achievement/NormalRowItem
+| icon = Ach 312.png
+| name = Celestial Hoarder
+| description = Have both 100+ Sun and 100+ Moon Runes
+| reward = {{Keyword|runes|+5}}
+| reward_type = runes
+| reward_icon = y
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Ach 313.png
+| name = Polish Power
+| description = Have 1.00e100+ (10 DTg+) PP
+| reward = +400
+| reward_type = souls
+| reward_icon = y
+}}
+{{Achievement/NormalRowItem
+| icon = Ach 314.png
+| name = Milestone Completionist
+| description = Get all polish milestones
+| reward = +500
+| reward_type = souls
+| reward_icon = y
+}}
+{{Achievement/NormalRowItem
+| icon = Ach 315.png
+| name = Insane Mastery VI
+| description = Complete Insane Trial 6
+| reward = +600
+| reward_type = souls
+| reward_icon = y
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Ach 316.png
+| name = Magnet Millionaire
+| description = Have 1,000,000+ Magnets
+| reward = +45:00 TF
+| reward_type = time_flux
+}}
+{{Achievement/NormalRowItem
+| icon = Ach 317.png
+| name = Full Network (before the next update)
+| description = Buy all nodes from 1 to 50
+| reward = {{Keyword|runes|+50}}
+| reward_type = runes
+| reward_icon = y
+}}
+{{Achievement/NormalRowItem
+| icon = Ach 318.png
+| name = Relic Pioneer
+| description = Have 1+ Level in Relic 35
+| reward = +450
+| reward_type = souls
+| reward_icon = y
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Ach 319.png
+| name = Immortal Fortune
+| description = Get a Zodiac with rarity Immortal+200 or better (through Unity)
+| reward = +500
+| reward_type = souls
+| reward_icon = y
+}}
+{{Achievement/NormalRowItem
+| icon = Ach 320.png
+| name = Base Evolution
+| description = Reach Base Level 2+ for any of Special Minerals in SMP
+| reward = x1.02 to Runes generation
+| reward_type = achievement
+| reward_icon = 
+}}
+{{Achievement/NormalRowItem
+| icon = Ach 321.png
+| name = Elementary, Watson!
+| description = Buy Refine Node 55
+| reward = Unlock Elements
+| reward_type = achievement
+| reward_icon = 
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Ach 322.png
+| name = Starting Off A Little Spark
+| description = Get 1+ Fire
+| reward = +100
+| reward_type = Souls
+| reward_icon = y
+}}
+{{Achievement/NormalRowItem
+| icon = Ach 323.png
+| name = Lighting Matches
+| description = Get 100+ Fire
+| reward = +15:00
+| reward_type = time flux
+| reward_icon = y
+}}
+{{Achievement/NormalRowItem
+| icon = Ach 324.png
+| name = Required For Planting Flowers
+| description = Get 2+ Earth
+| reward = +150
+| reward_type = Souls
+| reward_icon = y
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Ach 325.png
+| name = Digging Deeper
+| description = Get 400+ Earth
+| reward = +200
+| reward_type = Souls
+| reward_icon = y
+}}
+{{Achievement/NormalRowItem
+| icon = Ach 326.png
+| name = Polishing An Infinity
+| description = Reach 1.08e308+ Polish Points
+| reward = Unlocks Autospawn special minerals automation
+| reward_type = achievement
+| reward_icon = 
+}}
+{{Achievement/NormalRowItem
+| icon = Ach 327.png
+| name = Inhale, Exhale
+| description = Get 3+ Wind
+| reward = +15:00
+| reward_type = time flux
+| reward_icon = y
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Ach 328.png
+| name = Feeling A Little Air
+| description = Get 1,000+ Wind
+| reward = 
+| reward_type = 
+| reward_icon = 
+}}
+{{Achievement/NormalRowItem
+| icon = Ach 329.png
+| name = A Drop In The Ocean
+| description = Get 5+ Water
+| reward = +150
+| reward_type = souls
+| reward_icon = y
+}}
+{{Achievement/NormalRowItem
+| icon = Ach 330.png
+| name = A Cup Of Water
+| description = Get 10,000+ Water
+| reward = +200
+| reward_type = souls
+| reward_icon = y
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Ach 331.png
+| name = Rarity Plus Goes Way Too Fast
+| description = Get a Zodiac with Immortal+300+ Rarity
+| reward = {{keyword|bonus|Lv.1 to boost Income}}<!--not sure if we can replicate the gradient font color used in game? Change if we have a better solution. -Angel !-->
+| reward_type = 
+| reward_icon = 
+}}
+{{Achievement/NormalRowItem
+| icon = Ach 332.png
+| name = WERY FUNNY MEME
+| description = Buy Relic 36
+| reward = +15:00
+| reward_type = time flux
+| reward_icon = y
+}}
+{{Achievement/NormalRowItem
+| icon = Ach 333.png
+| name = I'm Tired Of Waiting For Attack Level
+| description = Buy Refine Node 56
+| reward = +200
+| reward_type = souls
+| reward_icon = y
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Ach 334.png
+| name = The Four Elements
+| description = Have 1,000,000+ of each element
+| reward = +250
+| reward_type = souls
+| reward_icon = y
+}}
+{{Achievement/NormalRowItem
+| icon = Ach 335.png
+| name = A Gap Between Front Teeth
+| description = Sacrifice Palate Expander (Relic 14)
+| reward = +20:00
+| reward_type = time flux
+| reward_icon = y
+}}
+{{Achievement/NormalRowItem
+| icon = Ach 336.png
+| name = Out Of The Context
+| description = Buy Relic 37
+| reward = +200
+| reward_type = souls
+| reward_icon = y
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Ach 337.png
+| name = Too Many Twos
+| description = Reach 2.22e22 RFP
+| reward = +22:20
+| reward_type = time flux
+| reward_icon = y
+}}
+{{Achievement/NormalRowItem
+| icon = Ach 338.png
+| name = Elements Mastery
+| description = Have 1.00e9+ of all elements
+| reward = Unlocks Autobuy relics automation
+| reward_type = achievement
+| reward_icon = 
+}}
+{{Achievement/NormalRowItem
+| icon = Ach 339.png
+| name = Boosting Elements
+| description = Buy 2+ of RN 60
+| reward = +250
+| reward_type = souls
+| reward_icon = y
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Ach 340.png
+| name = Russian Oldskool Meme
+| description = Spawn Lv. 228 Mineral
+| reward = +228
+| reward_type = souls
+| reward_icon = y
+}}
+{{Achievement/NormalRowItem
+| icon = Ach 341.png
+| name = With a new node... it's not hard
+| description = Reach 256 Merge Level
+| reward = +256
+| reward_type = souls
+| reward_icon = y
+}}
+{{Achievement/NormalRowItem
+| icon = Ach 342.png
+| name = Here comes new rarities
+| description = Merge 3 zodiacs with Immortal+ 1,000 rarity
+| reward = Now you can naturally get higher rarity zodiacs
+| reward_type = achievement
+| reward_icon = 
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Ach 343.png
+| name = 4K
+| description = Reach 4,000 Attack Level
+| reward = +25:00
+| reward_type = time flux
+| reward_icon = y
+}}
+{{Achievement/NormalRowItem
+| icon = Ach 344.png
+| name = Rarity Plus For New Rarity
+| description = Get an Ethereal+1 Zodiac (through Unity)
+| reward = +200
+| reward_type = souls
+| reward_icon = y
+}}
+{{Achievement/NormalRowItem
+| icon = Ach 345.png
+| name = Mineral Scaling
+| description = Have a Mineral with Level 250+
+| reward = Unlocks macro block for Generate Elements
+| reward_type = achievement
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Ach 346.png
+| name = Merge Level goes brrr
+| description = Reach 300+ Merge Level
+| reward = +300
+| reward_type = souls
+| reward_icon = y
+}}
+{{Achievement/NormalRowItem
+| icon = Ach 347.png
+| name = Windy Node
+| description = Buy Refine Node 62
+| reward = +30:00
+| reward_type = time flux
+| reward_icon = y
+}}
+{{Achievement/NormalRowItem
+| icon = Ach 348.png
+| name = Rarity Plus Plus
+| description = Get an Ethereal+2 Zodiac (through Unity)
+| reward = +250
+| reward_type = souls
+| reward_icon = y
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Ach 349.png
+| name = Fire Master
+| description = Buy Fire Node 6
+| reward = +250
+| reward_type = souls
+| reward_icon = y
+}}
+{{Achievement/NormalRowItem
+| icon = Ach 350.png
+| name = Special Mineral Specialist
+| description = Reach Lv.3 of SMP for any special mineral
+| reward = {{keyword|bonus|+10 slot(s) to Zodiac Inventory Slots}}<!--not sure if we can replicate the gradient font color used in game? Change if we have a better solution. -Angel !-->
+| reward_type = 
+| reward_icon = 
+}}
+{{Achievement/NormalRowItem
+| icon = Ach 351.png
+| name = Devil's Node
+| description = Buy Refine Node 66
+| reward = +250
+| reward_type = souls
+| reward_icon = y
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Ach 352.png
+| name = Tulips Land
+| description = Buy Relic 39
+| reward = +250
+| reward_type = souls
+| reward_icon = y
+}}
+{{Achievement/NormalRowItem
+| icon = Ach 353.png
+| name = No More Debuffs
+| description = Reach x1 Element Gen. Mult
+| reward = {{Keyword|bonus|Skin Bar Diagram}}
+| reward_type = achievement
+| reward_icon = 
+}}
+{{Achievement/NormalRowItem
+| icon = Ach 354.png
+| name = Hurricane
+| description = Buy Wind Node 6
+| reward = +250
+| reward_type = souls
+| reward_icon = y
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Ach 355.png
+| name = Elemental Warlock
+| description = Have 1.00e50+ of all elements
+| reward = +300
+| reward_type = souls
+| reward_icon = y
+}}
+{{Achievement/NormalRowItem
+| icon = Ach 356.png
+| name = Scaling Of Special Minerals
+| description = Have 7,500+ SM spawned factor
+| reward = +30:00
+| reward_type = time flux
+| reward_icon = y
+}}
+{{Achievement/NormalRowItem
+| icon = Ach 357.png
+| name = Hurricane Launcher
+| description = Have 1.00e100+ Wind
+| reward = +300
+| reward_type = souls
+| reward_icon = y
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Ach 358.png
+| name = Ultra-rare
+| description = Get Ethereal+25 zodiac or better (through Unity)
+| reward = +300
+| reward_type = souls
+| reward_icon = y
+}}
+{{Achievement/NormalRowItem
+| icon = Ach 359.png
+| name = Shot Of The Destiny
+| description = Buy Relic 40
+| reward = +30:00
+| reward_type = time flux
+| reward_icon = y
+}}
+{{Achievement/NormalRowItem
+| icon = Ach 360.png
+| name = Not this joke again
+| description = Buy RN 69
+| reward = +69
+| reward_type = souls
+| reward_icon = y
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Ach 361.png
+| name = Gem Of Dark Magic
+| description = Spawn Black gem for the first time
+| reward = +350
+| reward_type = souls
+| reward_icon = y
+}}
+{{Achievement/NormalRowItem
+| icon = Ach 362.png
+| name = Ready for the prediction?
+| description = Have 1+ Tarot Draws
+| reward = +20:00
+| reward_type = time flux
+| reward_icon = y
+}}
+{{Achievement/NormalRowItem
+| icon = Ach 363.png
+| name = Cards shows the fate
+| description = Draw 2 Tarot Cards
+| reward = +300
+| reward_type = souls
+| reward_icon = y
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Ach 364.png
+| name = Dive like Scrooge
+| description = Reach e100,000 Gold
+| reward = +30:00
+| reward_type = time flux
+| reward_icon = y
+}}
+{{Achievement/NormalRowItem
+| icon = Ach 365.png
+| name = A good gift
+| description = Draw 4 Tarot Cards
+| reward = Get a free Chariot card
+| reward_type = achievement
+| reward_icon = 
+}}
+{{Achievement/NormalRowItem
+| icon = Ach 366.png
+| name = A weapon against the special mineral cost scaling
+| description = Use Chariot for the first time
+| reward = +200
+| reward_type = souls
+| reward_icon = y
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Ach 367.png
+| name = Don't always destroy your black gems
+| description = Get Lv.2 for black gem SMP
+| reward = +300
+| reward_type = souls
+| reward_icon = y
+}}
+{{Achievement/NormalRowItem
+| icon = Ach 368.png
+| name = Hopeless and depressed
+| description = Get FIVE OF CUPS card
+| reward = +250
+| reward_type = souls
+| reward_icon = y
+}}
+{{Achievement/NormalRowItem
+| icon = Ach 369.png
+| name = New Frontier
+| description = Reach 1.00e50 RFP
+| reward = +30:00
+| reward_type = time flux
+| reward_icon = y
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Ach 370.png
+| name = A pack of cards
+| description = Get 20 tarot cards (total level)
+| reward = Now you can get arcans through drawing
+| reward_type = achievement
+| reward_icon = 
+}}
+{{Achievement/NormalRowItem
+| icon = Ach 371.png
+| name = There is a difference to the prev. ach.
+| description = Get 20 different tarot cards
+| reward = +300
+| reward_type = souls
+| reward_icon = y
+}}
+{{Achievement/NormalRowItem
+| icon = Ach 372.png
+| name = Chariot's powers
+| description = Have 0 SMS Factor and have Lv.5 Black Gem on the grid at the same time
+| reward = {{Keyword|tarot|Instant Reset Arcana cooldown (1 time)}}
+| reward_type = achievement
+| reward_icon = 
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Ach 373.png
+| name = Moar Skills
+| description = Get any another arcan card
+| reward = {{Keyword|tarot|+1 Tarot Draw}}
+| reward_type = achievement
+| reward_icon = 
+}}
+{{Achievement/NormalRowItem
+| icon = Ach 374.png
+| name = Waterfall on the edge of the Earth
+| description = Reach 1.00e100 Water
+| reward = +250
+| reward_type = souls
+| reward_icon = y
+}}
+{{Achievement/NormalRowItem
+| icon = Ach 375.png
+| name = Never tell personal things on Discord
+| description = Get 7 of Swords card
+| reward = +300
+| reward_type = souls
+| reward_icon = y
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Ach 376.png
+| name = A card for each day in November
+| description = Have 30 different Tarot Cards
+| reward = {{Keyword|tarot|+2 Tarot Draw}}
+| reward_type = achievement
+| reward_icon = 
+}}
+{{Achievement/NormalRowItem
+| icon = Ach 377.png
+| name = Card's effect goes brrr
+| description = Have 5+ cards (levels) of a certain card
+| reward = +250
+| reward_type = souls
+| reward_icon = y
+}}
+{{Achievement/NormalRowItem
+| icon = Ach 378.png
+| name = More skills
+| description = Have 2+ cards (levels) of any arcan card
+| reward = +250
+| reward_type = souls
+| reward_icon = y
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Ach 379.png
+| name = A pack Of Cards
+| description = Have 50 total Cards Levels
+| reward = +30:00
+| reward_type = time flux
+| reward_icon = y
+}}
+{{Achievement/NormalRowItem
+| icon = Ach 380.png
+| name = Better Chances - More Cards
+| description = Buy Relic 42 for the first time
+| reward = +250
+| reward_type = souls
+| reward_icon = y
+}}
+{{Achievement/NormalRowItem
+| icon = Ach 381.png
+| name = Feels like a MMORPG
+| description = Have 6+ different arcan cards
+| reward = +300
+| reward_type = souls
+| reward_icon = y
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Ach 382.png
+| name = Try double buff!
+| description = Make 2 arcans be active at the same time
+| reward = {{Keyword|tarot|+5 Tarot Draw}}
+| reward_type = achievement
+| reward_icon = 
+}}
+{{Achievement/NormalRowItem
+| icon = Ach 383.png
+| name = But what about trying triple?
+| description = Make 3 arcans be active at the same time
+| reward = +300
+| reward_type = souls 
+| reward_icon = y
+}}
+{{Achievement/NormalRowItem
+| icon = Ach 384.png
+| name = It's time to say goodbye to the past
+| description = Get Special Minerals Grid be completely occupied at 9x9 size
+| reward = +25:00
+| reward_type = time flux
+| reward_icon = y
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Ach 385.png
+| name = Way too FAIR
+| description = Make SMS Factor > 10,000
+| reward = +30:00
+| reward_type = time flux
+| reward_icon = y
+}}
+{{Achievement/NormalRowItem
+| icon = Ach 386.png
+| name = Earth Population as a cap
+| description = Reach 8.15e9 ascension for common revolutions
+| reward = +400
+| reward_type = souls
+| reward_icon = y
+}}
+{{Achievement/NormalRowItem
+| icon = Ach 387.png
+| name = A skill for every situation
+| description = Have 10+ different arcan cards
+| reward = +300
+| reward_type = souls
+| reward_icon = y
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Ach 388.png
+| name = From Ace to Ten
+| description = Have 10 different cards for each suit (Swords, Wands, Pentacles, Cups)
+| reward = Now you can draw 10 cards at once
+| reward_type = achievement
+| reward_icon = 
+}}
+{{Achievement/NormalRowItem
+| icon = Ach 389.png
+| name = Doubling the effect
+| description = Have 10+ cards (levels) of a certain card
+| reward = +300
+| reward_type = souls
+| reward_icon = y
+}}
+{{Achievement/NormalRowItem
+| icon = Ach 390.png
+| name = Tarot upgrades???
+| description = Have 1,000,000+ swords, clubs, pentacles and cups resources
+| reward = Unlocks Tarot Upgrades
+| reward_type = achievement
+| reward_icon = 
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Ach 391.png
+| name = Tarot Bulks
+| description = Get Black Gem SMP Level 3+
+| reward = +30:00
+| reward_type = time flux
+| reward_icon = y
+}}
+{{Achievement/NormalRowItem
+| icon = Ach 392.png
+| name = Cooldowns go brrr
+| description = Buy First Upgrade for all suits in Tarot Upgrades
+| reward = +300
+| reward_type = souls
+| reward_icon = y
+}}
+{{Achievement/NormalRowItem
+| icon = Ach 393.png
+| name = Ultraethereal
+| description = Get an Ethereal+50 Zodiac through Unity
+| reward = +350
+| reward_type = souls
+| reward_icon = y
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Ach 394.png
+| name = 7K Club
+| description = Reach Atk Lv 7,000+
+| reward = +45:00
+| reward_type = time flux
+| reward_icon = y
+}}
+{{Achievement/NormalRowItem
+| icon = Ach 395.png
+| name = Unlucky with the wheel
+| description = Get negative tarot draws
+| reward = {{Keyword|tarot|+10 Tarot Draw}}
+| reward_type = 
+| reward_icon = 
+}}
+{{Achievement/NormalRowItem
+| icon = Ach 396.png
+| name = Lucky Gambler
+| description = Win the Wheel Of Fortune for 3 times in a row
+| reward = A sense of irritability due to bad luck and a significant amount of wasted time
+| reward_type = achievement
+| reward_icon = 
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Ach 397.png
+| name = Super Tarot 64
+| description = Have 64+ Different Cards
+| reward = Now you can draw 100 cards (at) once <!-- at is missing in game description - smilic -->
+| reward_type = achievement
+| reward_icon = 
+}}
+{{Achievement/NormalRowItem
+| icon = Ach 398.png
+| name = The Whole Set
+| description = Have all 22 arcans
+| reward = {{Keyword|tarot|+22 Tarot Draw}}
+| reward_type = achievement
+| reward_icon = 
+}}
+{{Achievement/NormalRowItem
+| icon = Ach 399.png
+| name = Are you ready to unpack all these cards?
+| description = Have 12+ lvl Black Gem
+| reward = Unlocks macro block for Delete all Black Gem
+| reward_type = achievement
+| reward_icon = 
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Ach 400.png
+| name = The deck has been assembled!
+| description = Have all different 78 cards
+| reward = {{Keyword|tarot|Instant Reset Arcana cooldown (1 time)}}
+| reward_type = achievement
+| reward_icon = 
+}}
+{{Achievement/NormalRowItem
+| icon = Ach 401.png
+| name = Self-Explaining Mineral Achievement
+| description = Have Mineral with Level 401
+| reward = +401
+| reward_type = souls
+| reward_icon = y
+}}
+{{Achievement/NormalRowItem
+| icon = Ach 402.png
+| name = Will be there new rarities after plus x10?
+| description = Get Ethereal+100+ zodiac through Unity
+| reward = +400
+| reward_type = souls
+| reward_icon = y
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Ach 403.png
+| name = A tower of cards
+| description = Have 1,000+ tarot cards (levels)
+| reward = {{Keyword|tarot|+50 Tarot Draw}}
+| reward_type = achievement
+| reward_icon = 
+}}
+{{Achievement/NormalRowItem
+| icon = Ach 404.png
+| name = Closer to the millionth exponent
+| description = Reach e700,000 gold
+| reward = +300
+| reward_type = souls
+| reward_icon = y
+}}
+{{Achievement/NormalRowItem
+| icon = Ach 405.png
+| name = Tarot upgrades are awesome!
+| description = Buy Second Upgrade for all suits in Tarot Upgrades
+| reward = +350
+| reward_type = souls
+| reward_icon = y
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Ach 406.png
+| name = Still Growing My Tree
+| description = Buy Refine Node 73
+| reward = +30:00
+| reward_type = time flux
+| reward_icon = y
+}}
+{{Achievement/NormalRowItem
+| icon = Ach 407.png
+| name = A castle of cards
+| description = Have 5,000+ tarot cards (levels)
+| reward = {{Keyword|tarot|+100 Tarot Draw}}
+| reward_type = achievement
+| reward_icon = 
+}}
+{{Achievement/NormalRowItem
+| icon = Ach 408.png
+| name = Open them all!
+| description = Have 10,000+ tarot cards (levels) and 78 unique tarot cards
+| reward = Now you can use all your draws and cards are not that random (min. - 300)
+| reward_type = achievement
+| reward_icon = 
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Ach 409.png
+| name = Tarot currencies have their own purpose
+| description = Buy Third Upgrade for all suits in Tarot Upgrades
+| reward = +45:00
+| reward_type = time flux
+| reward_icon = y
+}}
+{{Achievement/NormalRowItem
+| icon = Ach 410.png
+| name = Golden Exponential Millionaire
+| description = Reach e1,000,000 gold
+| reward = +400
+| reward_type = souls
+| reward_icon = y
+}}
+{{Achievement/NormalRowItem
+| icon = Ach 411.png
+| name = Gem Levelling Master
+| description = Have SMP Any gem Lv.5+
+| reward = +30:00
+| reward_type = time flux
+| reward_icon = y
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Ach 412.png
+| name = Mineral for 500 bucks
+| description = Have mineral with Lv.500+
+| reward = +500
+| reward_type = souls
+| reward_icon = y
+}}
+{{Achievement/NormalRowItem
+| icon = Ach 413.png
+| name = Seventh Element
+| description = Buy Element node 7 for all elements
+| reward = Unlocks macro block for Tarot Spawn
+| reward_type = achievement
+| reward_icon = 
+}}
+{{Achievement/NormalRowItem
+| icon = Ach 414.png
+| name = My PP is enormous!
+| description = Reach e100,000+ PP
+| reward = +30:00
+| reward_type = time flux
+| reward_icon = y
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Ach 415.png
+| name = New Rarity in next update
+| description = Get a Zodiac with Ethereal+1000 rarity through Unity
+| reward = +450
+| reward_type = souls
+| reward_icon = y
+}}
+{{Achievement/NormalRowItem
+| icon = Ach 416.png
+| name = High hopes and ambitions
+| description = Buy Relic 45
+| reward = +300
+| reward_type = souls
+| reward_icon = y
+}}
+{{Achievement/NormalRowItem
+| icon = Ach 417.png
+| name = So many tarot cards!
+| description = Have 1,000+ cards (levels) of each of 78 cards
+| reward = {{Keyword|tarot|+1000 Tarot Draw}} 
+| reward_type = achievement
+| reward_icon = 
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Ach 418.png
+| name = Max Level for the special minerals
+| description = Get Lv.20 Special Mineral
+| reward = +400
+| reward_type = souls
+| reward_icon = y
+}}
+{{Achievement/NormalRowItem
+| icon = Ach 419.png
+| name = Refining for the hundredth time
+| description = Reach 1.00e100 RfP+
+| reward = +35:00
+| reward_type = time flux
+| reward_icon = y
+}}
+{{Achievement/NormalRowItem
+| icon = Ach 420.png
+| name = This is how life was created
+| description = Have 1.00e1,000 of all elements
+| reward = Unlock bulk spawning for special mineral
+| reward_type = achievement
+| reward_icon = 
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Ach 421.png
+| name = Level 3 is everywhere!
+| description = Get Lv.3 for all tarot suits upgrade-3
+| reward = +45:00
+| reward_type = time flux
+| reward_icon = y
+}}
+{{Achievement/NormalRowItem
+| icon = Ach 422.png
+| name = Tarot Update's Last Refine Node
+| description = Buy RN 80
+| reward = +400
+| reward_type = souls
+| reward_icon = y
+}}
+{{Achievement/NormalRowItem
+| icon = Ach 423.png
+| name = Card Millionaire
+| description = Have 1,000,000 total cards (levels)
+| reward = Unlocks macro block for use Arcan
+| reward_type = achievement
+| reward_icon = 
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Ach 424.png
+| name = Golden Hell
+| description = Reach e6,666,666 Gold
+| reward = +666
+| reward_type = souls
+| reward_icon = y
+}}
+{{Achievement/NormalRowItem
+| icon = Ach 425.png
+| name = Can forget about element tree now
+| description = Buy last node in all elements trees
+| reward = +45:00
+| reward_type = time flux
+| reward_icon = y
+}}
+{{Achievement/NormalRowItem
+| icon = Ach 426.png
+| name = A-MAZING!
+| description = Obtain an Amazing zodiac
+| reward = You can now obtain Amazing Zodiacs through Unity
+| reward_type = achievement
+| reward_icon = 
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Ach 427.png
+| name =A Great QoL 
+| description =Purchase Relic 46 
+| reward =Auto Ascend for attacks is now much faster 
+| reward_type =achievement 
+| reward_icon = 
+}}
+{{Achievement/NormalRowItem
+| icon = Ach 428.png
+| name =Let's Get Rid of Them 
+| description =Purchase Refine Node 85 
+| reward =+400 
+| reward_type =souls 
+| reward_icon =y 
+}}
+{{Achievement/NormalRowItem
+| icon = Ach 429.png
+| name =Amazing++ 
+| description =Obtain an Amazing+1+ zodiac through Unity 
+| reward =+10:00 
+| reward_type =time flux 
+| reward_icon =y 
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Ach 430.png
+| name =Eight More Left 
+| description =Sacrifice one Special Mineral 
+| reward =+150 
+| reward_type =souls 
+| reward_icon =y 
+}}
+{{Achievement/NormalRowItem
+| icon = Ach 431.png
+| name =Halfway to Sacrificing 
+| description =Sacrifice 5 Special Minerals 
+| reward =+250 
+| reward_type =souls 
+| reward_icon =y 
+}}
+{{Achievement/NormalRowItem
+| icon = Ach 432.png
+| name =Simpler Times 
+| description =Sacrifice all Special Minerals 
+| reward =+300 
+| reward_type =souls 
+| reward_icon =y 
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Ach 433.png
+| name =Level Adjusters 
+| description =Upgrade all Tarot Upgrade 4 bonuses to Level 4+ 
+| reward =+25:00 
+| reward_type =time flux 
+| reward_icon =y 
+}}
+{{Achievement/NormalRowItem
+| icon = Ach 434.png
+| name =Tarots Go Brrr 
+| description =Reach 1.00 T+ total Tarot levels 
+| reward =+250 
+| reward_type =souls 
+| reward_icon =y 
+}}
+{{Achievement/NormalRowItem
+| icon = Ach 435.png
+| name =The Middle of the Blueprint 
+| description =Unlock Upgrade 5 for Swords Tarot Upgrades 
+| reward =+300 
+| reward_type =souls 
+| reward_icon =y 
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Ach 436.png
+| name =Special Mineral Idle Progression 
+| description =Purchase Refine Node 86 
+| reward =+10:00 
+| reward_type =time flux 
+| reward_icon =y 
+}}
+{{Achievement/NormalRowItem
+| icon = Ach 437.png
+| name =The Planet of Cards 
+| description =Reach 100 T+ total Tarot levels 
+| reward =+300 
+| reward_type =souls 
+| reward_icon =y 
+}}
+{{Achievement/NormalRowItem
+| icon = Ach 438.png
+| name =A Real Mage's Wand 
+| description =Unlock Upgrade 5 for Wands Tarot Upgrades 
+| reward =+25:00 
+| reward_type =time flux 
+| reward_icon =y 
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Ach 439.png
+| name =No More Stupid AI Polls in Recommendations 
+| description =Purchase Relic 48 
+| reward =+350 
+| reward_type =souls 
+| reward_icon =y 
+}}
+{{Achievement/NormalRowItem
+| icon = Ach 440.png
+| name =Don't Forget About The Death 
+| description =Purchase Refine Node 87 
+| reward =+300 
+| reward_type =souls 
+| reward_icon =y 
+}}
+{{Achievement/NormalRowItem
+| icon = Ach 441.png
+| name =A Truly Useful Achievement 
+| description =Reach 1.00e3,250 Fire 
+| reward =Relic 14 is ^1.5 more effective 
+| reward_type =achievement 
+| reward_icon = 
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Ach 442.png
+| name =The King of Gambling 
+| description =Win the Wheel of Fortune 64 times in a row 
+| reward =+777 
+| reward_type =souls 
+| reward_icon =y 
+}}
+{{Achievement/NormalRowItem
+| icon = Ach 443.png
+| name =Now the Real Grind Begins 
+| description =Reach SMP Lv.20 for all Special Minerals 
+| reward =Total SMP EXP (0) boosts Sacrifice Dust gain (x1) 
+| reward_type =achievement 
+| reward_icon = 
+}}
+{{Achievement/NormalRowItem
+| icon = Ach 444.png
+| name =When It's Golden, It's the Best! 
+| description =Sacrifice a Yellow Special Gem to Lv. 28+ 
+| reward =+400 
+| reward_type =souls 
+| reward_icon =y 
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Ach 445.png
+| name =Pink Tarot Cards 
+| description =Complete one Tarot Challenge 
+| reward =+10:00 
+| reward_type =time flux 
+| reward_icon =y 
+}}
+{{Achievement/NormalRowItem
+| icon = Ach 446.png
+| name =Golden Universe 
+| description =Reach e1.00B+ Gold 
+| reward =+250 
+| reward_type =souls 
+| reward_icon =y 
+}}
+{{Achievement/NormalRowItem
+| icon = Ach 447.png
+| name =Challenger of Fate 
+| description =Complete 4 Tarot Challenges 
+| reward =+200 
+| reward_type =souls 
+| reward_icon =y 
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Ach 448.png
+| name =Going Up to 28 
+| description =Have 2+ sacrificed Special Minerals at Lv.28+ 
+| reward =+200 
+| reward_type =souls 
+| reward_icon =y 
+}}
+{{Achievement/NormalRowItem
+| icon = Ach 449.png
+| name =Halfway to 28 
+| description =Have 5+ sacrificed Special Minerals at Lv.28+ 
+| reward =+28:00 
+| reward_type =time flux 
+| reward_icon =y 
+}}
+{{Achievement/NormalRowItem
+| icon = Ach 450.png
+| name =Level Up All of Them 
+| description =Have all sacrificed Special Minerals at Lv.28+ 
+| reward =+250 
+| reward_type =souls 
+| reward_icon =y 
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Ach 451.png
+| name =QoL for Faster Merge Leveling 
+| description =Reach Merge Level 10,000+ 
+| reward =+300 
+| reward_type =souls 
+| reward_icon =y 
+}}
+{{Achievement/NormalRowItem
+| icon = Ach 452.png
+| name =Sacrifice Dust Scaling 
+| description =Purchase Refine Node 90 
+| reward =+25:00 
+| reward_type =time flux 
+| reward_icon =y 
+}}
+{{Achievement/NormalRowItem
+| icon = Ach 453.png
+| name =Getting Trolled 
+| description =Purchase Relic 50 
+| reward =+350 
+| reward_type =souls 
+| reward_icon =y 
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Ach 454.png
+| name =Planet of Tarot 
+| description =Reach 1.00 Qa+ total Tarot card levels 
+| reward =+350 
+| reward_type =souls 
+| reward_icon =y 
+}}
+{{Achievement/NormalRowItem
+| icon = Ach 455.png
+| name =Almost Club 30 
+| description =Have all sacrificed Special Minerals at Lv.29+ 
+| reward =+10:00 
+| reward_type =time flux 
+| reward_icon =y 
+}}
+{{Achievement/NormalRowItem
+| icon = Ach 456.png
+| name =16-Bit Tree 
+| description =Reach 10.0 QaOg+ Refine Points 
+| reward =+250 
+| reward_type =souls 
+| reward_icon =y 
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Ach 457.png
+| name =Where's My Luck? 
+| description =Reach 1.00e1,800+ Luck 
+| reward =+300 
+| reward_type =souls 
+| reward_icon =y 
+}}
+{{Achievement/NormalRowItem
+| icon = Ach 458.png
+| name =Esoteric Challenger 
+| description =Complete 9 Tarot Challenges 
+| reward =+15:00 
+| reward_type =time flux 
+| reward_icon =y 
+}}
+{{Achievement/NormalRowItem
+| icon = Ach 459.png
+| name =Club 30 
+| description =Have all sacrificed Special Minerals at Lv.30+ 
+| reward =+300 
+| reward_type =souls 
+| reward_icon =y 
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Ach 460.png
+| name =Score Goes Way Too High! 
+| description =Reach e10.0Sp+ Score 
+| reward =+300 
+| reward_type =souls 
+| reward_icon =y 
+}}
+{{Achievement/NormalRowItem
+| icon = Ach 461.png
+| name =Was It Even Possible Before Special Mineral Sacrifice? 
+| description =Reach Upgrade 4 Lv.5+ for all Tarot Upgrades 
+| reward =+15:00 
+| reward_type =time flux 
+| reward_icon =y 
+}}
+{{Achievement/NormalRowItem
+| icon = Ach 462.png
+| name =A Real Mage 
+| description =Reach 1.00e10,000+ in all elements 
+| reward =+250 
+| reward_type =souls 
+| reward_icon =y 
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Ach 463.png
+| name =Keep Sacrificing 
+| description =Have all sacrificed Special Minerals at Lv.32+ 
+| reward =+15:00 
+| reward_type =time flux 
+| reward_icon =y 
+}}
+{{Achievement/NormalRowItem
+| icon = Ach 464.png
+| name =Better for Resource Generation 
+| description =Reach 100 Qa+ total Tarot levels 
+| reward =+400 
+| reward_type =souls 
+| reward_icon =y 
+}}
+{{Achievement/NormalRowItem
+| icon = Ach 465.png
+| name =The Strategy of the Order 
+| description =Complete The Magician Tarot Challenge 
+| reward =+250 
+| reward_type =souls 
+| reward_icon =y 
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Ach 466.png
+| name =Challenging Tarots 
+| description =Complete 18 Tarot Challenges 
+| reward =+250 
+| reward_type =souls 
+| reward_icon =y 
+}}
+{{Achievement/NormalRowItem
+| icon = Ach 467.png
+| name =Very Valuable 
+| description =Reach e1.00B+ Value Points 
+| reward =+10:00 
+| reward_type =time flux 
+| reward_icon =y 
+}}
+{{Achievement/NormalRowItem
+| icon = Ach 468.png
+| name =Pushing Tarot Challenges 
+| description =Complete 20 Tarot Challenges 
+| reward =+300 
+| reward_type =souls 
+| reward_icon =y 
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Ach 469.png
+| name =No More Sacrifice Dust Scaling? 
+| description =Reach the max level of Refine Node 90 
+| reward =+300 
+| reward_type =souls 
+| reward_icon =y 
+}}
+{{Achievement/NormalRowItem
+| icon = Ach 470.png
+| name =W-A-N-D-S 
+| description =Purchase Wands 6 Tarot Upgrade 
+| reward = 
+| reward_type = 
+| reward_icon = 
+}}
+{{Achievement/NormalRowItem
+| icon = Ach 471.png
+| name =Wise Teacher 
+| description =Complete The Hierophant Challenge 
+| reward =+250 
+| reward_type =souls 
+| reward_icon =y 
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Ach 472.png
+| name =Elementary Synergy 
+| description =Reach 1.00e30,000+ in all elements 
+| reward =+300 
+| reward_type =souls 
+| reward_icon =y 
+}}
+{{Achievement/NormalRowItem
+| icon = Ach 473.png
+| name =Tarot Incremetal 
+| description =Reach 100 Qi+ total Tarot card 
+| reward =+25:00 
+| reward_type =time flux 
+| reward_icon =y 
+}}
+{{Achievement/NormalRowItem
+| icon = Ach 474.png
+| name =Sword Level Thousand 
+| description =Reach Polish Sword Lv.1,000+ 
+| reward =+200 
+| reward_type =souls 
+| reward_icon =y 
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Ach 475.png
+| name =They Boost Attacks (A Reminder) 
+| description =Reach e2.00B+ Value Points 
+| reward =+250 
+| reward_type =souls 
+| reward_icon =y 
+}}
+{{Achievement/NormalRowItem
+| icon = Ach 476.png
+| name =Where the New Scaling Begins 
+| description =Have all sacrificed Special Minerals at Lv.40+ 
+| reward =+300 
+| reward_type =souls 
+| reward_icon =y 
+}}
+{{Achievement/NormalRowItem
+| icon = Ach 477.png
+| name =Sub-5 Canon Experience 
+| description =Complete Three of Swords Tarot Challenge 
+| reward =+250 
+| reward_type =souls 
+| reward_icon =y 
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Ach 478.png
+| name =Passing the Scaling 
+| description =Have all sacrificed Special Minerals at Lv41+ 
+| reward =+25:00 
+| reward_type =time flux 
+| reward_icon =y 
+}}
+{{Achievement/NormalRowItem
+| icon = Ach 479.png
+| name =Victory at Any Cost 
+| description =Complete Five of Swords Tarot Challenge 
+| reward =+300 
+| reward_type =souls 
+| reward_icon =y 
+}}
+{{Achievement/NormalRowItem
+| icon = Ach 480.png
+| name =Still No Bonus Trial? 
+| description =Complete 30 Tarot Challenges 
+| reward =+20:00 
+| reward_type =time flux 
+| reward_icon =y 
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Ach 481.png
+| name =The Power of Nature 
+| description =Reach e100,000+ in all Elements 
+| reward = 
+| reward_type = 
+| reward_icon = 
+}}
+{{Achievement/NormalRowItem
+| icon = Ach 482.png
+| name =It's Your Time to Shine 
+| description =Obtain a Prime Zodiac 
+| reward =You can now obtain Prime Zodiacs through Unity 
+| reward_type =achievement 
+| reward_icon = 
+}}
+{{Achievement/NormalRowItem
+| icon = Ach 483.png
+| name =New Knowledge 
+| description =Complete 35 Tarot Challenges 
+| reward =+350 
+| reward_type =souls 
+| reward_icon =y 
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Ach 484.png
+| name =A Mineral from Another Universe 
+| description =Obtain a Mineral with Lv.1,800+ 
+| reward =+250 
+| reward_type =souls 
+| reward_icon =y 
+}}
+{{Achievement/NormalRowItem
+| icon = Ach 485.png
+| name =Leaving Something Behind 
+| description =Complete Eight of Cups Tarot Challenge 
+| reward =+25:00 
+| reward_type =time flux 
+| reward_icon =y 
+}}
+{{Achievement/NormalRowItem
+| icon = Ach 486.png
+| name =Twice Your Max Ascension 
+| description =Have more than 16.0 B free Ascensions from slowdowns 
+| reward =+350 
+| reward_type =souls 
+| reward_icon =y 
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Ach 487.png
+| name =Never Overshare in Chats 
+| description =Complete Seven of Swords Tarot Challenge 
+| reward =+250 
+| reward_type =souls 
+| reward_icon =y 
+}}
+{{Achievement/NormalRowItem
+| icon = Ach 488.png
+| name =Balancing Resources 
+| description =Have 1.00e500+ of all Tarot resources 
+| reward =+20:00 
+| reward_type =time flux 
+| reward_icon =y 
+}}
+{{Achievement/NormalRowItem
+| icon = Ach 489.png
+| name =Is It Final Maxed? 
+| description =Upgrade Refine Node 1 to max level 
+| reward =+16:37 
+| reward_type =time flux 
+| reward_icon =y 
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Ach 490.png
+| name =The First Parts 
+| description =Obtain your first part for all Artifacts 
+| reward =+250 
+| reward_type =souls 
+| reward_icon =y 
+}}
+{{Achievement/NormalRowItem
+| icon = Ach 491.png
+| name =Card System 
+| description =Reach 1.00 Oc+ total Tarot card levels 
+| reward =+450 
+| reward_type =souls 
+| reward_icon =y 
+}}
+{{Achievement/NormalRowItem
+| icon = Ach 492.png
+| name =Fifty Shades of Minerals 
+| description =Have all sacrificed Special Minerals at Lv.50+ 
+| reward =Unlocks Flush Special Minerals macro block 
+| reward_type =achievement 
+| reward_icon = 
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Ach 493.png
+| name =Building Your Artifacts 
+| description =Obtain your second part for all artifacts 
+| reward =+25:00 
+| reward_type =time flux 
+| reward_icon =y 
+}}
+{{Achievement/NormalRowItem
+| icon = Ach 494.png
+| name =Grinding Levels for Upgrades 
+| description =Reach Upgrade 4 Lv.8+ for all Tarot Upgrades 
+| reward =+300 
+| reward_type =souls 
+| reward_icon =y 
+}}
+{{Achievement/NormalRowItem
+| icon = Ach 495.png
+| name =Ones of the Refiners 
+| description =Reach 1.11e1,111+ Refine Points 
+| reward =+111 
+| reward_type =souls 
+| reward_icon =y 
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Ach 496.png
+| name =Galaxy of cards 
+| description =Reach 1.00 No+ total Tarot card levels 
+| reward =+30:00 
+| reward_type =time flux 
+| reward_icon =y 
+}}
+{{Achievement/NormalRowItem
+| icon = Ach 497.png
+| name =Mid-Tier Tarot Challenger 
+| description =Complete 40 Tarot Challenges 
+| reward =+450 
+| reward_type =souls 
+| reward_icon =y 
+}}
+{{Achievement/NormalRowItem
+| icon = Ach 498.png
+| name =Not Actually a Bad Artifact 
+| description =Reach Lv.7+ on any artifact 
+| reward =+250 
+| reward_type =souls 
+| reward_icon =y 
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Ach 499.png
+| name =Prime++ 
+| description =Obtain a Prime+1 or better Zodiac through Unity 
+| reward =+250 
+| reward_type =souls 
+| reward_icon =y 
+}}
+{{Achievement/NormalRowItem
+| icon = Ach 500.png
+| name =Sunny Side of the Moon 
+| description =Have 1.00 TDc+ Sun and Moon Runes 
+| reward =+20:00 
+| reward_type =time flux 
+| reward_icon =y 
+}}
+{{Achievement/NormalRowItem
+| icon = Ach 501.png
+| name =Factors Are Imbalanced 
+| description =Obtain a Lv.1,600+ Zodiac through Unity 
+| reward =+250 
+| reward_type =souls 
+| reward_icon =y 
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Ach 502.png
+| name =Mineral of the Year 
+| description =Obtain a Lv.2,026+ mineral 
+| reward =+26:00 
+| reward_type =time flux 
+| reward_icon =y 
+}}
+{{Achievement/NormalRowItem
+| icon = Ach 503.png
+| name =The Lantern Will Always Shine 
+| description =Complete The Hermit Challenge 
+| reward =+300 
+| reward_type =souls 
+| reward_icon =y 
+}}
+{{Achievement/NormalRowItem
+| icon = Ach 504.png
+| name =The Cap for Attack Revolutions 
+| description =Reach 8.15 B Ascension in Attack Revolutions 
+| reward =+815 
+| reward_type =souls 
+| reward_icon =y 
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Ach 505.png
+| name =Summarize Their Levels 
+| description =Reach a total of 75+ Artifact levels 
+| reward =Unlock automation for flushing to Artifacts 
+| reward_type =achievement 
+| reward_icon = 
+}}
+{{Achievement/NormalRowItem
+| icon = Ach 506.png
+| name =Goated Quality 
+| description =Obtain a Zodiac with quality 1.00e3,000+ through Unity 
+| reward =+30:00 
+| reward_type =time flux 
+| reward_icon =y 
+}}
+{{Achievement/NormalRowItem
+| icon = Ach 507.png
+| name =Level 2,000 
+| description =Unite with a Lv.2,000+ Zodiac 
+| reward =+350 
+| reward_type =souls 
+| reward_icon =y 
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Ach 508.png
+| name =Last Upgrade... for Most of Them 
+| description =Purchase Upgrade 9 for every Tarot suit 
+| reward =+30:00 
+| reward_type =time flux 
+| reward_icon =y 
+}}
+{{Achievement/NormalRowItem
+| icon = Ach 509.png
+| name =Primal Prime 
+| description =Unite with a Prime+5 or better Zodiac 
+| reward =+250 
+| reward_type =souls 
+| reward_icon =y 
+}}
+{{Achievement/NormalRowItem
+| icon = Ach 510.png
+| name =Golden-Colored Gold 
+| description =Have 1,000+ of each Golden Resource type 
+| reward =+250 
+| reward_type =souls 
+| reward_icon =y 
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Ach 511.png
+| name =Improving Gonial Angle 
+| description =Upgrade Ramus to Lv.10+ 
+| reward =+400 
+| reward_type =souls 
+| reward_icon =y 
+}}
+{{Achievement/NormalRowItem
+| icon = Ach 512.png
+| name =Feels Like a Good Investment 
+| description =Reach e10.0T+ Gold 
+| reward =+300 
+| reward_type =souls 
+| reward_icon =y 
+}}
+{{Achievement/NormalRowItem
+| icon = Ach 513.png
+| name =How Did It Scale So Much? 
+| description =Have 1.00e2,000+ Refine Points 
+| reward = 
+| reward_type = 
+| reward_icon = 
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Ach 514.png
+| name =Should Open a Museum 
+| description =Reach Lv40+ on all artifacts 
+| reward =+400 
+| reward_type =souls 
+| reward_icon =y 
+}}
+{{Achievement/NormalRowItem
+| icon = Ach 515.png
+| name =When I Am 60... 
+| description =Have all sacrificed Special Minerals at Lv.60+ 
+| reward =+350 
+| reward_type =souls 
+| reward_icon =y 
+}}
+{{Achievement/NormalRowItem
+| icon = Ach 516.png
+| name =Skull Anatomy 
+| description =Obtain the 7th part of your Magic Skull 
+| reward =+400 
+| reward_type =souls 
+| reward_icon =y 
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Ach 517.png
+| name =Universe of Cards 
+| description =Reach 100 QiDi+ (1e50+) total Tarot card levels 
+| reward =+500 
+| reward_type =souls 
+| reward_icon =y 
+}}
+{{Achievement/NormalRowItem
+| icon = Ach 518.png
+| name =A Man Should Be Slightly More Handsome Than a Monkey 
+| description =Purchase Relic 60 
+| reward =+40:00 
+| reward_type =time flux 
+| reward_icon =y 
+}}
+{{Achievement/NormalRowItem
+| icon = Ach 519.png
+| name =And This Is How to Reach It 
+| description =Upgrade Maxilla to Lv.8+ 
+| reward =+450 
+| reward_type =souls 
+| reward_icon =y 
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Ach 520.png
+| name =All Basic Tarot Challenges Completed 
+| description =Complete 52 Tarot Challenges 
+| reward =Unlocks Enter/Exit Tarot Challenge macro blocks 
+| reward_type =achievement 
+| reward_icon = 
+}}
+|}
+Todo: Add achievements up to 670 
+
+== History ==
+
+* Demo
+** Only had the first 70 achievements.
+* 0.188
+** Added 50 new achievements (#71 to #120).
+** Achievements had no icons.
+* 0.212
+** Added 40 new achievements (#121 to #160).
+* 0.214
+** All achievements now have icons.
+* 0.220
+** The first 21 secret achievements have been added to the game.
+* 0.908
+** Added 80 new achievements (#161 to 240).
+** 10 new secret achievements added to the game (#22 to #31).
+* 1.013
+** Added 2 new secret achievements to the game (#032 and #033).
+** Achievements now display the unlock date (previously unlocked ones are dated January 1, 2025).
+* 1.022
+** Added 80 new achievements (#241 to 320).
+* 1.037
+** Added 11 new secret achievements (#34 to #44).
+* 1.038
+** Lowered the requirements for secrets #42-#44 by 4, 4, and 18.67 times respectively.
+* 1.044
+** Added 105 new achievements (#321 to 425).
+** Added 7 new secret achievements (#45 to 51).
+** Reward from achievement #320 changed from 10 runes to x1.02 rune generation.
+* 1.056
+** Added 95 new achievements (#426 to 520)
+** Added 4 new secret achievements (#52-55)
+* 1.065
+** Added a revamp of the achievement UI, now splitting the achievements into 5 categories ([[Revolution]], [[Infinity]], [[Eternity]], [[Unity]], [[Secret Achievements|Secrets]]), showing how much achievements was completed in a category and showing what bonuses a category gives based on completed achievements.
+
+* 1.068
+** Add 150 new achievements (#521 to 670)
+
+<noinclude>{{#titleicon_file:icon_tab_ach.png}}</noinclude>
+
+[[Category:General Gameplay]][[Category:Achievements]]
+{{Main navbox}}

@@ -1,0 +1,421 @@
+Time Flux is a system that can speed up the pace of the game through resources gained while the game is not running.
+
+There are two types of resources used here: TF (Time Flux) and OF (Offline Flux).
+Both are expressed in units of time.
+
+Both TF and OF accumulate while the game is not running, and on mobile, they accumulate even if the app is in the background.
+
+When the player first enters the game, 30 minutes of TF are granted as a bonus.
+
+TF is expressed as "days:hours:minutes:seconds", which might be a little difficult to understand.
+{| class="wikitable"
+|+Conversion rates
+!
+!To d
+!To h
+!To m
+!To s
+|-
+!From d
+|
+|×24
+|×1,440
+|×86,400
+|-
+!From h
+|÷24
+|
+|×60
+|×3,600
+|-
+!From m
+|÷1,440
+|÷60
+|
+|×60
+|-
+!From s
+|÷86,400
+|÷3,600
+|÷60
+|
+|}
+
+==Game Speed==
+By consuming TF, you can change the game's operating time.
+
+You can choose from 1x, 2x, 3x and [number]x. The last one is added in patch #1.061 to replace Time Warp until Time Warp was fully removed in version #1.068. Currently, [number] can be set to an integer from 4 to 60.<br>
+2x consumes 1 second of TF per 1 second of real time. <br>
+3x consumes 2 TF per 1 second of real time. In general, nx costs (n-1)s of TF per second of real time.<br>
+When the TF runs out, it automatically reverts to 1x.
+
+Increasing game speed reduces the time the game takes to update its state. Automations may work poorly on high game speeds because the [https://en.wikipedia.org/wiki/Netcode#Tick_rate tickrate] stays constant and instead, the game approximates the result of multiple sequential updates in one game tick.
+
+Because of this, even x2 or x3 speeds will significantly increase score gaining time, especially on early stages, so it is necessary to switch to 1x when decreasing [[Infinity#Challenges|Infinity Challenge]] time.
+
+==Time Warp (REMOVED)==
+By consuming TF, you can greatly accelerate the game progress speed for 10 seconds.
+
+After you enter a time to warp in minutes and press the [Time Warp] button, a popup will open for 10 seconds of real time, and the specified time will pass in the game.
+ Warp speed = Time(minutes) × 6
+
+For example, if you time warp 10 minutes in 10 seconds, the game will run at x60 speed 
+
+You can not interact with the game process, e.g. buy colors, during time warping. Your [[Automations]] and [[Macro Builder|Macros]] will have to do everything for you.
+
+You can interrupt the time warp at any time by pressing [Stop].
+
+For example, if you start the "60 minutes" time warp above and stop it 5 seconds later, "30 minutes" will have passed in the game.
+
+Therefore, if you want 30 minutes to pass, you can shorten the time by about 5 seconds by specifying "30 minutes" and warping.
+Of course, if you miss the stop, you will consume more TF than planned, so be careful.
+
+Please note that if you get an <span class="achievement"> achievement</span> during time warping, you will be unable to press the stop button during the <span class="achievement"> achievement</span> animation
+
+The greater the acceleration, the more unstable your automation will be (making it very inefficient at great speeds), so be careful.<br>
+Despite that, on [[Eternity#Dilation|later stages of the game]], it becomes more efficient due to new optimization.
+
+Time Warp was removed on July 10th, 2026 (version #1.068) due to bugs, exploits and progression imbalances and was replaced with Game Speed.
+
+==Offline Flux==
+You can convert your TF into OF at a conversion rate of 3:5 (1:00 of TF/h => 1:40 of OF/h).
+
+Offline Flux can only be used when the game is started, and it will try to consume all of your accumulated amount.
+
+It can be interrupted mid-way. Pressing the "Enter Game" button while using it will store the remaining amount and allow you to divide it up for use.
+
+If you uncheck "Auto use at startup", you will be able to choose whether to use it or not. It is generally recommended to leave it unchecked so that it is not used automatically, because the game needs around 20s to return to the right score after startup.
+
+The conditions for use are that you have at least 1 minute of OF, and at least 1 minute in real life has passed since you last quit.
+
+The reason why it is such an inconvenient function is that OF has a higher acquisition rate (1.67 times) compared to TF.
+
+For more details, see the difference between TF and OF.
+
+==Difference between TF and OF==
+In summary, TF is easier to use, OF is more efficient and has better storage capacity.
+
+{| class="wikitable" style="text-align:center;"
+|-
+!  !! Time Flux !! Offline 
+|-
+| Purpose ||
+:Change game speed (2x - 60x)
+:Increase Time Flux Capacity, Gain, 
+:and Offline Flux Capacity
+|| Time warp (only when restarting, until cut off)
+Super Buggy
+|-
+| Initial Capacity || 1 hour || 24 hours
+|-
+| Bonus || 
+:+0.1% for each [[Secret Achievements|secret achievement]] 
+:+5% for each [[Soul Shop|shop]] time flux increase 
+|| none
+|-
+| Efficiency Ratio || 3 × ( 1 + bonus ) || 5
+|}
+==TF and OF acquisition allocation==
+TF and OF accumulate according to the amount of time the game is not running, but the ratio at which these two accumulate can be changed.
+
+For example, of the initial setting, 6 minutes of TF and 10 minutes of OF are accumulated per hour in real life.
+By moving the [Converted TF] bar, you can adjust how much of the 6 minutes of TF per hour is reduced and put into OF.
+The conversion formula is "hourly TF x conversion % x 5/3",
+and for example, if you select 70% conversion, 7 minutes will be added to the hourly OF (6 minutes x 70% x 5/3), resulting in 17 minutes of OF per hour, which means that the hourly TF should be reduced by 70%, to about 1 minute 48 seconds.
+(For reference, 5/3 ≒ 1.67 times)
+
+However, please note that you should use the value before calculating the hidden  achievements and shop boost bonuses (basic TF acquisition amount).
+These boosts are applied to the converted hourly TF.
+
+===How to only gain TF===
+The hourly OF accumulation of 10 minutes cannot be reduced any further. For example, it is impossible to accumulate only 5 minutes of OF per hour in real life.
+
+However, as an exception, it is possible to not accumulate OF at all.
+The method is to uncheck offline flux, which will set OF per hour to 0ms, and instead increase TF acquisition by 6 minutes per hour.
+
+===How to only gain OF===
+Check offline flux and move the slider all the way to 100%.
+In the initial state, 5/3 times the time of TF6, or 10 minutes, should be added to OF, making it 20 minutes.
+
+==TF and OF usage plan==
+Use TF for acceleration and upgrades, and time warp with OF.
+Time warp is used selectively, so it is better to uncheck the automatic use when OF is started and use it in small increments only as needed.
+
+===Use for Upgrades:===
+It is recommended to obtain 2 times the very cost-effective TF acquisition increase (including the 1 time of doubling the TF capacity required for strengthening, it will pay for itself in about 22 hours). After that, it depends on your play style.
+
+===Use for 3x acceleration:===
+If you need to operate something, it is best to use this. It is especially effective in the early stages when automation is not possible.
+
+==Ads==
+In the mobile version of the app, you can get TF6 minutes by pressing the [Watch Ad] button and watching a 15-second to 1-minute ad.
+After you get TF6 minutes, you can wait 5 minutes in real time to watch an ad again. You can watch up to 30 videos in 12 hours.
+If you purchase the Remove Ads product, you can receive rewards directly without watching ads.
+
+Even if you purchase a product that removes ads in another medium, it will not be available in the Steam version.
+
+==TIPS: Idle vs. TF Saving ==
+Is it better to leave the game on or to close the game and save up TF?
+The basic structure of this game is to shorten the time it takes to reach your goal by buying upgrades.
+
+Leaving the game alone without being able to buy upgrades is not a good idea, and it tends to be more efficient to save up TF and use a high gamespeed
+
+On the other hand, leaving the game alone is more efficient in areas where you don't need to need to upgrade things manually.
+Specifically, when you have unlocked automations and macros, so there is no need to press the buttons.
+In the dilation tree, there is nothing to do but leave the game alone to earn Σ.
+When you only leave the game alone for a short time, there is not much time to wait before buying upgrades.
+
+Increased TF gain is cheap in the early stages and grows well, so it will be more comfortable to purchase a few.
+
+==Online TF Gain==
+When your accumulated Time Flux and Offline Flux gain exceed 1 hour per hour, you will generate extra Time Flux, even while playing the game. This allows you to take advantage of your excess Time Flux gain while staying online.
+
+You need to turn on the Offline Flux and change the Converted TF to 100%. Check the Time Flux per hour on the left side, it will show how many Online TF you will get in 1 hour.
+
+After level 8 of the Increasing TF Gain upgrades, you will start to have an online TF gain.
+
+When you need to stay online in the game for a long time, it's best to turn it on — even if it gives you very little TF, it's better than nothing.
+
+==Summary==
+"TF" and "OF" conversion are as follows.
+
+The basic OF gain amount is equivalent to 10 minutes per hour.
+
+The basic TF gain amount (before bonuses are applied) can be converted to OF gain amount with 5/3 times the efficiency, and this conversion is limited to a total OF gain amount of 60:00 OF/h.
+
+Therefore, the TF gain amount used for OF conversion is limited to 30:00 TF/h.
+
+(30 minutes x 100% x 5/3 = 50 minutes) Add 10 minutes of basic OF gain to that and you get 60:00 OF/h)
+
+When the total OF gain amount reaches 60:00 OF/h, TF can be gain online according to the remaining TF gain amount.
+
+In other words, since the basic TF gain amount does not exceed 30:00 TF/h unless you upgrade it to the 8th stage, you cannot acquire TF online at the 7th stage or below.
+
+Example:
+
+Let's consider a case where the amount of TF acquired becomes "31:34 TF/h" due to the 8th lvl upgrade.
+The first 30 minutes of this is used to convert to OF. This brings the total amount of OF gain to the upper limit of 60 minutes.
+Then, the remaining "1:34 TF/h" (31 minutes 34 seconds - 30 minutes) is the amount of TF that can be gain directly online, and you will be able to obtain 1 minute 34 seconds of TF per hour.
+The bonus to TF is added to the remaining 1:34 TF/h.
+
+===How long does it take to upgrade to the 8th level?===
+In the case where OF is not gained and TF gain is increased by 6 minutes. Bonuses from the shop and hidden achievements are not taken into account.
+The amount of TF gained, the time required, and the cumulative time for each upgrade lvl to increase TF gain to level 8 are as follows.
+
+The "TF Gain Amount (/h)" column shows the amount of TF gained (including bonus) applied to accumulate the cost of that upgrade.
+{| class="wikitable mw-collapsible" style="text-align:center; width: 80%; font-size: 1rem"
+| colspan="5" | How to reach lvl 8 TF Gain
+|-
+!Upgrades !! TF cost !! TF gain(/h) !!Time required
+(d:hh:mm:ss) 
+! Cumulative time
+(d:hh:mm:ss)
+|-
+|TF Gain 0 ||01:00:00TF||12:00/h||0:05:00:00||0:05:00:00
+|-
+|TF Cap 0 ||30:00TF||16:54/h||0:01:45:12||0:06:45:12
+|-
+|TF Gain 1 ||01:45:00TF||16:54/h||0:06:11:28||0:12:56:40
+|-
+|TF Cap 1 ||01:00:00TF||21:00/h||0:02:51:26||0:15:48:05
+|-
+|TF Gain 2 ||03:03:45TF||21:00/h||0:08:45:00||1:00:33:05
+|-
+|TF Cap 2 ||02:00:00TF||24:27/h||0:04:54:29||1:05:27:34
+|-
+|TF Gain 3 ||05:21:33TF||24:27/h||0:13:09:05||1:18:36:39
+|-
+|TF Cap 3 ||04:00:00TF||27:25/h||0:08:45:14||2:03:21:52
+|-
+|TF Gain 4 ||09:22:44TF||27:25/h||0:20:31:09||2:23:53:01
+|-
+|TF Cap 4 ||08:00:00TF||30:00/h||0:16:00:00||3:15:53:01
+|-
+|TF Gain 5 ||16:24:47TF||30:00/h||1:08:49:34||5:00:42:35
+|-
+|TF Gain 6 ||1:04:43:22TF||32:15/h||2:05:23:51||7:06:06:26
+|-
+|TF Cap 5 ||16:00:00TF||34:14/h||1:04:00:57||8:10:07:23
+|-
+|TF Gain 7 ||2:02:15:54TF||34:14/h||3:16:40:56||12:02:48:19
+|-
+|TF Cap 6 ||1:08:00:00TF||36:00/h||2:05:20:00||14:08:08:19
+|-
+|TF Gain 8 ||3:15:57:49TF||36:00/h||6:03:06:42||20:11:15:01
+|}
+ Final total time: 20:11:15:01
+
+==Time Flux Upgrades==
+
+The tables below show the Time Flux {{Icon|time flux}} cost and effect of Time Flux upgrades, in the format days:hours:minutes:seconds.
+===Time Flux Capacity===
+{| class="wikitable mw-collapsible mw-collapsed" style="text-align:center; width: 80%; font-size: 1rem"
+| colspan="5" | Increase TF Capacity Table
+|-
+! lvl !! TF Capacity !! Upgrade Cost {{Icon|time flux}} !! TF Capacity Added !! TF Capacity % Increase
+|-
+| 0 || 30:00 || n/a || n/a || n/a
+|-
+| 1 || 01:00:00 || 22:30 || +30:00 || 100%
+|-
+| 2 || 02:00:00 || 45:00 || +01:00:00 || 100%
+|-
+| 3 || 04:00:00 || 01:30:00 || +02:00:00 || 100%
+|-
+| 4 || 08:00:00 || 03:00:00 || +04:00:00 || 100%
+|-
+| 5 || 16:00:00 || 06:00:00 || +08:00:00 || 100%
+|-
+| 6 || 01:08:00:00 || 12:00:00 || +16:00:00 || 100%
+|-
+| 7 || 02:00:00:00 || 01:00:00:00 || +16:00:00 || 50%
+|-
+| 8 || 02:12:00:00 || 01:12:00:00 || +12:00:00 || 25%
+|-
+| 9 || 03:00:00:00 || 01:21:00:00 || +12:00:00 || 20%
+|-
+| 10 || 03:12:00:00 || 02:06:00:00 || +12:00:00 || 16.67%
+|-
+| 11 || 04:00:00:00 || 02:15:00:00 || +12:00:00 || 14.29%
+|-
+| 12 || 04:12:00:00 || 03:00:00:00 || +12:00:00 || 12.50%
+|-
+| 13 || 05:00:00:00 || 03:09:00:00 || +12:00:00 || 11.11%
+|-
+| 14 || 05:08:00:00 || 03:18:00:00 || +08:00:00 || 6.67%
+|-
+| 15 || 05:16:00:00 || 04:00:00:00 || +08:00:00 || 6.25%
+|-
+| 16 || 06:00:00:00 || 04:06:00:00 || +08:00:00 || 5.88%
+|-
+| 17 || 06:08:00:00 || 04:12:00:00 || +08:00:00 || 5.56%
+|}
+*The TF cost to upgrade TF Capacity is 75% of your current TF Capacity
+*The amount of TF Capacity at each level (in seconds) is:
+ <big><math>
+     \text{TFCap(Level)} = \left\{ \begin{array}{cl}
+     \text{Level} < 7 : & \ 1800 \times 2^\text{Level} \\
+     \text{Level} = 7 : & \ 172800 \\
+     
+     \text{Level} > 7 : & 86400 \times \begin{cases}
+     \text{Level} < 14 : & \frac{\text{Level}-7}{2}+2 \\
+     14 \leqslant \text{Level} < 20 : & \frac{\text{Level}-13}{3}+5 \\
+     20 \leqslant \text{Level} < 32 : & \frac{\text{Level}-19}{4}+7 \\
+     32 \leqslant \text{Level} < 44 : & \frac{\text{Level}-31}{6}+10 \\
+     44 \leqslant \text{Level} < 60 : & \frac{\text{Level}-43}{8}+12 \\
+     60 \leqslant \text{Level} < 144 : & \frac{\text{Level}-59}{12}+14 \\
+     144 \leqslant \text{Level} < 288 : & \frac{\text{Level}-143}{16}+21 \\
+     288 \leqslant \text{Level} : & \frac{\text{Level}-287}{24}+30 \end{cases} \\
+    \end{array} \right.
+    </math>
+
+===TF Gain===
+{| class="wikitable mw-collapsible mw-collapsed" style="text-align:center; width: 80%; font-size: 1rem"
+| colspan="5" | Increase TF Gain Table
+|-
+! lvl !! TF/hour !! Upgrade cost {{Icon|time flux}} !! TF/hour Added !! TF/hour % Increase
+|-
+| 0 || 06:00 || n/a || n/a || n/a
+|-
+| 1 || 10:54 || 30:00 || +04:54 || 81.67%
+|-
+| 2 || 15:00 || 39:00 || +04:06 || 37.61%
+|-
+| 3 || 18:27 || 50:42 || +03:27 || 23.00%
+|-
+| 4 || 21:25 || 01:05:54 || +02:58 || 16.08%
+|-
+| 5 || 24:00 || 01:25:40 || +02:35 || 12.06%
+|-
+| 6 || 26:15 || 01:51:23 || +02:15 || 9.38%
+|-
+| 7 || 28:14 || 02:24:48 || +01:59 || 7.56%
+|-
+| 8 || 30:00 || 03:08:14 || +01:46 || 6.26%
+|-
+| 9 || 31:34 || 04:04:43 || +01:34 || 5.22%
+|-
+| 10 || 33:00 || 05:18:08 || +01:26 || 4.54%
+|-
+| 11 || 34:17 || 06:53:34 || +01:17 || 3.89%
+|-
+| 12 || 35:27 || 08:57:38 || +01:10 || 3.40%
+|-
+| 13 || 36:31 || 11:38:56 || +01:04 || 3.01%
+|-
+| 14 || 37:30 || 15:08:37 || +00:59 || 2.69%
+|-
+| 15 || 38:24 || 19:41:12 || +00:54 || 2.40%
+|-
+| 16 || 39:13 || 01:01:35:34 || +00:49 || 2.13%
+|-
+| 17 || 40:00 || 01:09:16:14 || +00:47 || 2.00%
+|-
+| 18 || 40:42 || 01:19:15:07 || +00:42 || 1.75%
+|-
+| 19 || 41:22 || 02:08:13:39 || +00:40 || 1.64%
+|-
+| 20 || 42:00 || 03:01:05:45 || +00:38 || 1.53%
+|-
+| 21 || 42:34 || 03:23:01:29 || +00:34 || 1.35%
+|-
+| 22 || 43:07 || 05:03:31:56 || +00:33 || 1.29%
+|-
+| 23 || 43:38 || 06:16:35:30 || +00:31 || 1.20%
+|-
+| 24 || 44:07 || 08:16:46:10 || +00:29 || 1.11%
+|-
+| 25 || 44:34 || 11:07:24:01 || +00:27 || 1.02%
+|-
+| 26 || 45:00 || 14:16:49:13 || +00:26 || 0.97%
+|}
+*The TF cost to upgrade TF Gain to each level, n, is:
+ TF Gain Upgrade Cost = 1800 x 1.3<sup>n</sup> [''in seconds'']
+*The amount of TF/hour at each level, n, is:
+ TF/hour = 3600 x (n+1)/(n+10) [''in seconds'']
+
+===OF Capacity===
+{| class="wikitable mw-collapsible mw-collapsed" style="text-align:center; width: 80%; font-size: 1rem"
+| colspan="5" | Increase OF Capacity Table
+|-
+! lvl !! OF Capacity !! Upgrade Cost {{Icon|time flux}} !! OF Capacity Added !! OF Capacity % Increase
+|-
+| 0 || 01:00:00:00 || n/a || n/a || n/a
+|-
+| 1 || 02:00:00:00 || 12:00:00 || +01:00:00:00 || 100%
+|-
+| 2 || 04:00:00:00 || 01:00:00:00 || +02:00:00:00 || 100%
+|-
+| 3 || 06:00:00:00 || 02:00:00:00 || +02:00:00:00 || 50%
+|-
+| 4 || 07:12:00:00 || 03:00:00:00 || +01:12:00:00 || 25%
+|-
+| 5 || 09:00:00:00 || 03:18:00:00 || +01:12:00:00 || 20%
+|-
+| 6 || 10:12:00:00 || 04:12:00:00 || +01:12:00:00 || 16.67%
+|-
+| 7 || 12:00:00:00 || 05:06:00:00 || +01:12:00:00 || 14.29%
+|}
+*The TF cost to upgrade OF Capacity is 50% of your current OF Capacity
+*It is currently unknown how much OF Capacity increases beyond lvl 7, at which point it is +1 day and 12 hours per upgrade
+
+== Statistics for nerds ==
+TF gain formula:
+ TFGain = TFGBase × (shop TF mult + secret Ach TF mult)
+if Offline flux production is OFF:
+ TFGBase = 3600 × (TFG Upgrade level + 1)/(TFG Upgrade level + 10)
+if Offline flux production is ON:
+ TFGBase = 3600 × (TFG Upgrade level + 1)/(TFG Upgrade level + 10) + (OF conversion × min(1800, 3600 × (TFG Upgrade level + 1)/(TFG Upgrade level + 10)))
+OF gain formula: <br>
+if Offline flux production is OFF:
+ OFGain = 0
+if Offline flux production is ON:
+ OFGain = 5/3 × OF conversion × min(1800, 3600 × (TFG Upgrade level + 1)/(TFG Upgrade level + 10)) + 600
+All numbers are in seconds
+
+OF conversion is a fraction, not a percentage (e.g. 37% = 0.37)
+
+<noinclude>{{#titleicon_file:icon_tab_flux.png}}</noinclude>
+
+[[Category:Shop]]
+{{Main navbox}}

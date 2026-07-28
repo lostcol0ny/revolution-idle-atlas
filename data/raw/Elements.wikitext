@@ -1,0 +1,292 @@
+[[File:Elements example 1.jpg|thumb|The 4 elements.]]Elements are unlocked through {{Keyword|node|Refine Tree Node 55}}, which adds a new subtab to the Unity tab.
+
+
+There are 4 elements which are  <span style="color: #cf5649 ;">'''Fire'''</span>,  <span style="color: #5aa444 ;">'''Earth'''</span>,  <span style="color: #7bdaf9 ;">'''Wind'''</span> and <span style="color: #4b6fcb ;">'''Water'''</span>. 
+
+Each of the elements are boosted by their own zodiac element. Fire zodiacs (Aries, Leo, Sagittarius) boost <span style="color: #cf5649 ;">'''Fire'''</span> generation for example. 
+
+You can only generate one element at a time.
+
+The Elements tab also has Local game speed just like the Minerals tab. The base local game speed is ^0.05 to minerals local game speed, but it can be increased via [[Tarot]] cards.
+
+=== Element Factors ===
+The factors are what multiply your element generation rates, and they are based off of many things. You start with one factor for each element, but eventually it can be increased to three factors.
+
+{| class="wikitable"
+! colspan=2|
+! Description
+! Unlock Condition
+|-
+! rowspan="3" style="background-color:rgba(111, 54, 26, 0.5)"| Fire
+! Factor 1
+| Score
+| None
+|-
+! Factor 2
+| Score Exponent
+| King of Wands card
+|-
+! Factor 3
+| Asc. Power
+| Fire Node 11
+|-
+! rowspan="3" style="background-color:rgba(56, 65, 42, 0.5)"| Earth
+! Factor 1
+| Infinities
+| None
+|-
+! Factor 2
+| Gen Exp.
+| King of Pentacles card
+|-
+! Factor 3
+| IP
+| Earth Node 10
+|-
+! rowspan="3" style="background-color:rgba(111, 111, 111, 0.5)"| Wind
+! Factor 1
+| Eternities
+| None
+|-
+! Factor 2
+| Supernovae
+| King of Swords card
+|-
+! Factor 3
+| EP
+| Wind Node 12
+|-
+! rowspan="3" style="background-color:rgba(33, 68, 112, 0.5)"| Water
+! Factor 1
+| Luck
+| None
+|-
+! Factor 2
+| Zodiac Quality
+| King of Cups card
+|-
+! Factor 3
+| Ach 29 Reward
+| Water Node 11
+|-
+|}
+
+The third factor for each element is unique as it raises the element generation to a power (^) instead of giving a flat multiplier. There is also a global element multiplier stat at the botton of the tab, which multiplies or divides all element generation, which the base is diving all elements by 1e10.
+
+=== Element Upgrades ===
+
+==== Fire ====
+{| class="wikitable"
+|+
+!Node
+!Price
+!effect
+|-
+|1
+|0.1
+|Increase power for factor 1 for fire by 0.25
+''Increases the power on the score multiplier for fire''
+|-
+|2
+|1
+|Increase Ascension Power from VP based on you current fire
+|-
+|3
+|3
+|Attack level past 3600 boosts Fire generation
+''Formula is:'' <math>1 + \frac {(AttackLevel-3600)^2}{100}</math>
+|-
+|4
+|10
+|Fire boosts Relic 26 effect ''(improves Quality donut)''
+|-
+|5
+|1e6
+|Fire boosts Relic 31 effect ''(mineral cost)''
+|-
+|6
+|1e25
+|Fire adds base to {{Keyword|node|Refine Tree Node 60}}
+|-
+|7
+|1e500
+|Fire boosts its own factor 2
+|-
+|8
+|1e600
+|Wands boost Fire generation (factor 1)
+|-
+|9
+|1e700
+|Fire boosts first card bonuses for all wands cards
+|-
+|10
+|1e850
+|Relic 45 effect is multiplied based on your fire ''(SMP Exp)''
+|-
+|11
+|1e1300
+|Unlocks third factor for fire
+|}
+[[File:Elements tree.png|thumb|The Element Trees]]
+
+==== Earth ====
+{| class="wikitable"
+|+
+!Node
+!Price
+!Effect
+|-
+|1
+|0.1
+|Increase power for factor 1 for earth by 2
+''Increases power for Infinities multipliter for Earth''
+|-
+|2
+|2
+|Earth boosts {{Keyword|node|Refine Node 1}} effect
+|-
+|3
+|25
+|Earth boosts Gold Gain
+|-
+|4
+|1e6
+|Earth boosts Relic 32 effect ''(Polish points gain)''
+|-
+|5
+|1e9
+|Earth adds base to {{Keyword|node|Refine Node 50}}
+|-
+|6
+|1e30
+|Earth boosts Relic 37 ''(Global Element Mult.)''
+|-
+|7
+|1e500
+|Earth boosts it's own factor 2
+|-
+|8
+|1e500
+|Pentacles boost Earth Generation (factor 1)
+|-
+|9
+|1e700
+|Earth boosts first card bonuses for all pentacles cards
+|-
+|10
+|1e1350
+|Unlocks third factor for earth
+|}
+
+==== Wind ====
+{| class="wikitable"
+|+
+!Node
+!Price
+!Effect
+|-
+|1
+|0.1
+|Increase power for factor 1 for wind by 3
+''Increases power for Eternities multiplier for Wind''
+|-
+|2
+|10
+|Current wind divides base special mineral cost
+|-
+|3
+|250
+|Wind boosts Relic 25 effect ''(Luck donut)''
+|-
+|4
+|2000
+|PP after 1.79e308 boosts Wind generation
+|-
+|5
+|1e6
+|Wind boosts Relic 33 effect ''(RfP gain)''
+|-
+|6
+|1e40
+|Relic 1 now also applies to Attacks Asc. Power
+|-
+|7
+|1e500
+|Wind boosts its own factor 2
+|-
+|8
+|1e600
+|Swords boost Wind Generation (factor 1)
+|-
+|9
+|1e700
+|Wind boosts first card bonuses for all swords cards
+|-
+|10
+|1e800
+|Relic 41 effect is multiplied based on your wind
+''(Black Gem Effect, for Tarot Draws)''
+|-
+|11
+|1e1024
+|Wind slowly boosts {{Keyword|node|Refine Node 69}}
+|-
+|12
+|1e1400
+|Unlocks third factor for wind
+|}
+
+==== Water ====
+{| class="wikitable"
+|+
+!Node
+!Price
+!Effect
+|-
+|1
+|0.1
+|Each Water Zodiac multiplies your luck by x1.1
+|-
+|2
+|40
+|Water boosts {{Keyword|node|Refine Node 18}} effect ''(Magnet Chance)''
+|-
+|3
+|600
+|Water boosts Relic 24 effect ''(Game Speed Donut)''
+|-
+|4
+|1e6
+|Water boosts Relic 34 effect ''(Rune Generation Speed)''
+|-
+|5
+|1e9
+|Water boosts first node for all elements (at different rates)
+|-
+|6
+|1e70
+|Multiplies {{Keyword|node|Refine Node 60}} base by x2
+|-
+|7
+|1e350
+|Water boosts is own factor 2
+|-
+|8
+|1e500
+|Cups boost Water generation
+|-
+|9
+|1e700
+|Water boosts first card bonuses for all cups cards
+|-
+|10
+|1e900
+|Water boosts Global Element Mult
+|-
+|11
+|1e1080
+|Unlocks third factor for water
+|}
+[[Category:Unity]]
+{{Main navbox}}
