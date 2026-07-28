@@ -1,0 +1,474 @@
+The {{Keyword|shop|Soul Shop|}} is unlocked after reaching 5 minutes of unscaled playtime. In here, you can buy:
+*[[Soul Shop#Boosts|Boosts]] for various game mechanics
+*Hours of {{Icon|time flux|link=Time Flux}} {{Keyword|tf|Time Flux|link=Time Flux}}
+*Quality of Life (QoL) features, such as more [[Zodiacs|Zodiac]] Slots
+*[[skins|Skins]] to customize your [[revolution|Revolution]] tab
+*More {{Icon|soul_icon}} {{Keyword|soul|Souls}} for real money, in the form of [[Soul Shop#Soul Packs|Soul Packs]]
+*[[Soul Shop#Ascension Packs|Ascension Packs]] for real money, which contain Boosts, Skins and {{Icon|soul_icon}} {{Keyword|soul|Souls}} 
+
+''It is generally recommended to only buy {{Icon|time flux}} {{Keyword|tf|Time Flux}} Gain because it is the only resource which is relevant throughout all stages of the game. Other recommended upgrades (for QoL) are Zodiac Slots and Macro Slots.''
+
+== Souls ==
+{{Icon|soul_icon}} {{Keyword|soul|Souls}} are the currency used in the {{Keyword|shop|Soul Shop|}}. Players can earn {{Icon|soul_icon}} {{Keyword|soul|Souls}} through the following methods:
+* Claiming [[Soul_Shop#Codes|Codes]]
+* As [[Daily Rewards]] (averaging to ≈232 {{Icon|soul_icon}} {{Keyword|soul|Souls}}/day)
+* As {{Keyword|ach|Achievement|link=Achievements}} Rewards
+** Up to a total of 37,675 {{Icon|soul_icon}} {{Keyword|soul|Souls}} are available as both Normal and Secret achievement rewards (as of v1.034)
+* Purchased via [[Soul Shop#Soul Packs|Soul Packs]]
+
+== Boosts ==
+Players can purchase boosts for {{Icon|time flux}} {{Keyword|tf|Time Flux}} and other different game-play mechanics they have unlocked so far, with the most recent major reset layer's options at the very top.
+Unless stated otherwise, all Soul Boosts are multiplicative with other bonuses with similar effects
+{| class="wikitable left mw-collapsible" style="text-align:center; width: 80%; font-size: 1rem"
+|colspan="9"|'''[[Revolution]]'''
+|-
+! colspan="2" |Income !! colspan="2" |Multipliers !! colspan="2" |Lap Speed !! colspan="2" |Ascension Power || Full Total
+|-
+!Effect ||Cost ||Effect ||Cost ||Effect ||Cost ||Effect ||Cost
+|-
+|50% ||1,000 || 20% || 1,500 || 10% || 1,000 ||3% ||2,000
+|-
+|100% ||2,000 || 40% || 3,000 || 20% || 2,000 ||6% ||4,000
+|-
+|150% ||3,000 || 60% || 4,500 || 30% || 3,000 ||9% ||6,000
+|-
+|200% ||4,000 || 80% || 6,000 || 40% || 4,000 ||12% ||8,000
+|-
+|250% ||5,000 || 100% || 7,500 || 50% || 5,000 ||15% ||10,000
+|-
+|300% ||5,000 || 120% || 7,500 || 60% || 5,000 || colspan="2" rowspan="5" |
+|-
+|350% ||5,000 || 140% || 7,500 || 70% || 5,000
+|-
+|400% ||5,000 || 160% || 7,500 || 80% || 5,000
+|-
+|450% ||5,000 || 180% || 7,500 || 90% || 5,000
+|-
+|500% ||5,000 || 200% ||7,500 ||100% ||5,000
+|- <!-- I have no idea if the prices are right, please readjust if you find them! - Blixer -->
+|Total: ||35,000 ||Total: ||60,000 ||Total: ||40,000 ||Total:  ||30,000 ||'''165,000'''
+|}
+
+{| class="wikitable left mw-collapsible" style="text-align:center; width: 80%; font-size: 1rem"
+|colspan="5" |'''[[Revolution#Prestige|Prestige]]'''
+|-
+! colspan="2" |P. Exponent !! colspan="2" |P. Multiplier || Full Total
+|-
+!Effect ||Cost ||Effect ||Cost
+|-
+|0.1% ||2,000||10% ||1,500 
+|-
+|0.15% ||4,000||15% ||3,000
+|-
+|0.2% ||6,000||20% ||4,500
+|-
+|0.25% ||8,000||25% ||6,000
+|-
+|0.3% ||10,000||30% ||7,500
+|-
+|colspan="2" rowspan="5"| ||35% ||7,500 
+|-
+|40% ||7,500
+|-
+|45% ||7,500 
+|-
+|50% ||7,500 
+|-
+|55% ||7,500 
+|- <!-- I have no idea if the prices are right, please readjust if you find them! - Blixer -->
+|Total: ||30,000 ||Total: ||60,000 ||'''90,000'''
+|}
+
+{| class="wikitable left mw-collapsible" style="text-align:center; width: 80%; font-size: 1rem"
+|colspan="9" |'''[[Infinity]]'''
+|-
+! colspan="2" |Infinite Gain !! colspan="2" |IP Gain !! colspan="2" | Gen Mult !! colspan="2" |Stardust Gain || Full Total
+|-
+!Effect ||Cost ||Effect ||Cost ||Effect ||Cost ||Effect ||Cost
+|-
+|10% ||2,000 ||10% ||2,000 ||20% ||2,000 ||40% ||2,500
+|-
+|15% ||4,000 ||15% ||4,000 ||30% ||4,000 ||60% ||5,000
+|-
+|20% ||6,000 ||20% ||6,000 ||40% ||6,000 ||80% ||7,500
+|-
+|25% ||8,000 ||25% ||8,000 ||50% ||8,000 ||100% ||10,000
+|-
+|30% ||10,000 ||30% ||10,000 ||60% ||10,000 ||120% ||12,500 
+|-
+|35% ||10,000 ||35% ||10,000 ||70% ||10,000 ||140% ||15,000
+|-
+|40% ||10,000 ||40% ||10,000 ||80% ||10,000 ||160% ||15,000
+|-
+|45% ||10,000 ||45% ||10,000 ||90% ||10,000 ||180% ||15,000
+|-
+|50% ||10,000 ||50% ||10,000 ||100% ||10,000 ||200% ||15,000
+|-
+|55% ||10,000 ||55% ||10,000 ||110% ||10,000 ||220% ||15,000
+|- <!-- I have no idea if the prices are right, please readjust if you find them! - Blixer -->
+|Total: ||80,000 ||Total: ||80,000 ||Total: ||80,000 ||Total: ||100,000 ||'''340,000'''
+|}
+
+{| class="wikitable left mw-collapsible" style="text-align:center; width: 80%; font-size: 1rem"
+|colspan="7"|'''[[Eternity]]'''
+|-
+! colspan="2" |EP Gain !! colspan="2" | Eternity Gain ||! colspan="2"| DP Gain || Full Total
+|-
+! Effect || Cost || Effect || Cost || Effect || Cost | Cost
+|-
+| 10% || 2,500 || 10% || 3,000 || 20% || 2,500
+|-
+| 15% || 5,000 || 20% || 6,000 || 30% || 5,000
+|-
+| 20% || 7,500 || 30% || 9,000 || 40% || 7,500
+|-
+| 25% || 10,000 || 40% || 12,000 || 50% || 10,000
+|-
+| 30% || 10,000 || 50% || 15,000 || 60% || 12,500 
+|-
+| 35% || 10,000 || 60% || 15,000 || 70% || 12,500 
+|-
+| 40% || 10,000 || 70% || 15,000 || 80% || 12,500 
+|-
+| 45% || 10,000 || 80% || 15,000 || 90% || 12,500 
+|-
+| 50% || 10,000 || 90% || 15,000 || 100% || 12,500 
+|-
+| 55% || 15,000 || 100% ||15,000 || 110% || 12,500
+|- <!-- I have no idea if the prices are right, please readjust if you find them! - Blixer -->
+|Total: ||120,000 ||Total: ||120,000 ||Total:
+|240,000 ||'''480,000'''
+|}
+
+{| class="wikitable left mw-collapsible" style="text-align:center; width: 80%; font-size: 1rem"
+|colspan="3" |'''[[Macro Builder]]'''
+|-
+!Macro Builder Slots !!Macro Blocks !!Full Total
+|-
+!Cost ||Cost
+|-
+|Always 5,000 
+(Cap of 100 Macro Slots) 
+|Always 1,000
+(Cap of 10,000 Blocks)
+|-
+|485,000 ||9,970,000 ||'''10,455,000'''
+|}
+
+{| class="wikitable left mw-collapsible" style="text-align:center; width: 80%; font-size: 1rem"
+|colspan="8" |'''[[Unity]]'''
+|-
+! colspan="2" |Luck !! colspan="2" |Quality !! colspan="2" |Sell Price !!Zodiac Slots !!Full Total
+|-
+!Effect ||Cost ||Effect ||Cost ||Effect ||Cost |||Cost
+|-
+|1% ||2,500 ||2% ||2,500 ||5% ||3,500 || rowspan="10" |Always 500 
+(Cap of 100 Slots)
+|-
+|2% ||5,000 ||4% ||5,000 ||10% ||7,000
+|-
+|3% ||7,500 ||6% ||7,500 ||15% ||10,500
+|-
+|4% ||10,000 ||8% ||10,000 ||20% ||14,000
+|-
+|5% ||12,500 ||10% ||12,500 ||25% ||17,500 
+|-
+|6% ||12,500 ||12% ||12,500 ||30% ||17,500
+|-
+|7% ||12,500 ||14% ||12,500 ||35% ||17,500
+|-
+|8% ||12,500 ||16% ||12,500 ||40% ||17,500
+|-
+|9% ||12,500 ||18% ||12,500 ||45% ||17,500
+|-
+|10% ||12,500 ||20% ||12,500 ||50% ||17,500
+|-
+|Total: ||100,000 ||Total: ||100,000 ||Total: ||140,000 ||40,000 ||'''380,000'''
+|}
+
+{| class="wikitable left mw-collapsible" style="text-align:center; width: 80%; font-size: 1rem"
+| colspan="17" |'''[[Minerals]]'''
+|-
+! colspan="2" | VP Gain !! colspan="2" | PP Gain !! colspan="2" | Cost Fall Speed !! colspan="2" | Magnet Chance !! colspan="2" | Merge Experience 
+! colspan="2" |Sun Rune Speed
+! colspan="2" |Moon Rune Speed
+! colspan="2" |Black Gem Effect!! Full Total
+|-
+!Effect || Cost || Effect || Cost || Effect || Cost || Effect || Cost || Effect || Cost 
+!Effect
+!Cost
+!Effect
+!Cost
+!Effect
+!Cost
+|-
+|25% || 1,500 || 5% || 1,500 || 1% || 2,500 || 2% || 2,500 || 10% || 2,000 
+|2%
+|3,500
+|2%
+|3,500
+|2%
+|4,000
+|-
+|50% || 3,000 || 10% || 3,000 || 2% || 5,000 || 4% || 5,000 || 20% || 4,000 
+|4%
+|7,000
+|4%
+|7,000
+|4%
+|8,000
+|-
+|75% || 4,500 || 15% || 4,500 || 3% || 7,500 || 6% || 7,500 || 30% || 6,000 
+|6%
+|10,500
+|6%
+|10,500
+|6%
+|12,000
+|-
+|100% || 6,000 || 20% || 6,000 || 4% || 10,000 || 8% || 10,000 || 40% || 8,000 
+|8%
+|14,000
+|8%
+|14,000
+|8%
+|16,000
+|-
+|125% || 7,500 || 25% || 7,500 || 5% || 12,500 || 10% || 12,500 || 50% || 10,000 
+|10%
+|17,500
+|10%
+|17,500
+|10%
+|20,000
+|-
+|150% || 7,500 || 30% || 7,500 || 6% || 12,500 || 12% || 12,500 || 60% || 10,000 
+|12%
+|17,500
+|12%
+|17,500
+|12%
+|20,000
+|-
+|175% || 7,500 || 35% || 7,500 || 7% || 12,500 || 14% || 12,500 || 70% || 10,000 
+|14%
+|17,500
+|14%
+|17,500
+|14%
+|20,000
+|-
+|200% || 7,500 || 40% || 7,500 || 8% || 12,500 || 16% || 12,500 || 80% || 10,000 
+|16%
+|17,500
+|16%
+|17,500
+|16%
+|20,000
+|-
+|225% || 7,500 || 45% || 7,500 || 9% || 12,500 || 18% || 12,500 || 90% || 10,000 
+|18%
+|17,500
+|18%
+|17,500
+|18%
+|20,000
+|-
+|250% || 7,500 || 50% || 7,500 || 10% || 12,500 || 20% || 2,500 || 100% || 10,000 
+|20%
+|17,500
+|20%
+|17,500
+|20%
+|20,000
+|- <!-- I have no idea if the prices are right, please readjust if you find them! - Blixer -->
+|Total: || 60,000 || Total: || 60,000 || Total: || 100,000 || Total: || 100,000 || Total: 
+|60,000
+|Total:
+|140,000
+|Total:
+|140,000
+|Total:
+|160,000 
+|}
+
+{| class="wikitable left mw-collapsible" style="text-align:center; width: 80%; font-size: 1rem"
+| colspan="2" |'''[[Time Flux]]'''
+|-
+! colspan="2" |Time Flux Gain  
+|-
+!Effect ||Cost 
+|-
+|5% ||2,000
+|-
+|10% ||4,000
+|-
+|15% ||6,000
+|-
+|20% ||8,000
+|-
+|25% ||10,000
+|-
+|30% ||10,000
+|-
+|35% ||10,000
+|-
+|40% ||10,000
+|-
+|45% ||10,000
+|-
+|50% ||10,000
+|-
+|Total: ||80,000 
+|}
+<nowiki>*</nowiki> Time Flux Gain does not increase [[Time Flux#Offline Flux|Offline Flux]] gain. If OF production is enabled, only the remaining {{Keyword|tf|Time Flux|link=Time Flux}} gain will be affected. 
+{| class="wikitable left mw-collapsible" style="text-align:center; width: 80%; font-size: 1rem"
+| colspan="2" |'''[[Skins]]'''
+|-
+! colspan="2" |Skins 
+|-
+!Name ||Cost
+|-
+|Orbital ||1,000
+|-
+|Alpha Mask ||1,000
+|-
+|Bar Diagram ||1,500
+|-
+|Cosmos ||3,000
+|-
+|Clock ||2,500
+|-
+|Prismatic ||4,000
+|-
+|Pendulum ||3,000
+|-
+|Retro ||3,000
+|-
+|Hamsters Crew ||5,000
+|-
+|Dragon Eye ||7,000
+|-
+|Matrix ||4,000
+|-
+|Abyss ||6,500
+|-
+|Washing Machine
+|7,000
+|-
+|Black Hole
+|6,500
+|-
+|Total: ||55,000 
+|}
+
+ The total cost to buy all boosts and skins is 1,930,000 Souls (not including Zodiac Slots, Macro Slots and Macro Blocks) and 12,425,000 souls including Zodiac Slots, Macro Slots and Macro Blocks 
+
+== Time Flux ==
+{{Keyword|TF|Time Flux|link=Time Flux}} {{Icon|time flux}} can be purchased with {{Keyword|soul|Souls}} {{Icon|soul_icon}}, as follows:
+*2 hours: {{Keyword|soul|3,000}} {{Icon|soul_icon}} (''{{Keyword|soul|1,500}} {{Icon|soul_icon}} per hour'')
+*8 hours:  {{Keyword|soul|10,000}} {{Icon|soul_icon}} (''{{Keyword|soul|1,250}} {{Icon|soul_icon}} per hour'')
+*24 hours:  {{Keyword|soul|25,000}} {{Icon|soul_icon}} (''{{Keyword|soul|1,042}} {{Icon|soul_icon}} per hour'')
+
+== Soul Packs ==
+{{Keyword|soul|Souls}} {{Icon|soul_icon}} can be purchased with real money in the Packs tab within the Soul Shop.
+The following Soul Packs are available to buy:
+*Souls Pack 1: {{Keyword|soul|2,000}} {{Icon|soul_icon}}
+*Souls Pack 2: {{Keyword|soul|11,000}} {{Icon|soul_icon}}
+*Souls Pack 3: {{Keyword|soul|50,000}} {{Icon|soul_icon}}
+*Ultra Souls Pack: {{Keyword|soul|130,000}} {{Icon|soul_icon}}
+*Legendary Souls Pack: {{Keyword|soul|280,000}} {{Icon|soul_icon}}
+''The cost and relative value of Soul Packs varies based on your local currency. It may be worth checking if the claims of how many "bonus" souls you are getting with each pack are true before you buy, as some discrepancies have been found between different currencies.
+
+== Ascension Packs ==
+Ascension Packs are available for purchase with real money in the Packs tab. When these packs first become available, they are also advertised for sale on the main [[Revolution|Revolution]] tab, to the left of the Daily Reward icon.
+
+{| class="wikitable left mw-collapsible" style="text-align:center; width: 80%; font-size: 1rem"
+| colspan="23" |'''Ascension Packs'''
+|-
+! colspan="23" |Ascension Pack Contents
+|-
+! rowspan="2" | Name || rowspan="2" | Souls || rowspan="2" | Skin || rowspan="2" | Skin Souls Value || colspan="3" |Boost 1 || colspan="3" |Boost 2 || colspan="3" |Boost 3 || colspan="3" |Boost 4 
+! colspan="3" |Boost 5
+! colspan="3" |Boost 6|| rowspan="2" | Total Souls Value
+|-
+!Boost ||Effect ||Souls Value ||Boost ||Effect ||Souls Value ||Boost ||Effect ||Souls Value ||Boost ||Effect ||Souls Value
+!Boost
+!Effect
+!Souls Value
+!Boost
+!Effect
+!Souls Value
+|-
+|Starter Pack ||1,000 ||Orbital ||1,000 ||TF Gain ||10% ||6,000 ||Income ||100% ||3,000 ||Multipliers ||40% ||4,500 ||Lap Speed ||20% ||3,000 
+| colspan="3" |
+| colspan="3" | ||'''18,500'''
+|-
+|Infinity Pack ||5,000 ||Cosmos ||3,000 ||Infinite Gain ||20% ||12,000 ||IP Gain ||20% ||12,000 ||Generator Mult ||30% ||6,000 || colspan="3" | 
+| colspan="3" |
+| colspan="3" | ||'''38,000'''
+|-
+|Eternity Pack ||10,000 ||Prismatic ||4,000 ||EP Gain ||25% ||25,000 || colspan="3" | || colspan="3" | || colspan="3" | 
+| colspan="3" |
+| colspan="3" | ||'''39,000'''
+|-
+|Astrology Pack ||15,000 || colspan="2" | ||Zodiac Luck ||3% ||15,000 ||Zodiac Quality ||6% ||15,000 ||Zodiac Sell Price ||15% ||21,000 ||Zodiac Inventory Slots ||+20 ||10,000 
+| colspan="3" |
+| colspan="3" | ||'''76,000'''
+|-
+|Minerals Pack
+|22500
+| colspan="2" |
+|VP Gain
+|75%
+|9,000
+|PP Gain
+|15%
+|9,000
+|Fall Speed
+|2%
+|7,500
+|Magnet Chance
+|4%
+|7,500
+|Merge
+XP
+|30%
+|12,000
+|Minerals Local Game Speed
+|4%
+|?
+|'''75,000'''
+|}
+''The cost for each Ascension Pack depends on your local currency.
+
+If you have already purchased some of the contents of an Ascension Pack, it seems that you will receive more Souls in compensation.
+== Codes ==
+Codes can be redeemed within the Soul Shop by pressing the "Add a code" button (QR code icon) at the top-left, entering the code and pressing "Add".
+
+Warning: Some codes can be missing or are no longer working, if you are desperate, check in the official discord server for the codes.
+
+The following Codes can be redeemed, awarding {{Keyword|soul|Souls}} {{Icon|soul_icon}}, {{Keyword|TF|Time Flux}}
+({{Keyword|TF|TF}}) {{Icon|time flux}}, or both. Some Codes can only unlock a [[Secret Achievements|Secret Achievement]].
+
+Working codes:
+
+*BYEBYE2025 ({{Keyword|soul|2,025}} {{Icon|soul_icon}}) - Requires version #1.051+
+
+*WELCOME2026  ({{Keyword|soul|2,026}} {{Icon|soul_icon}}) - Requires version #1.051+
+
+*PROSPERITYBONUS ({{Keyword|soul|500}} {{Icon|soul_icon}} & {{Keyword|TF|15:00 TF}} {{Icon|time flux}}) - Requires version #1.056+
+
+<div class="mw-collapsible mw-collapsed" style="width:400px; overflow:auto;">
+* UNITY ({{Keyword|secret|Secret Ach. 007|link=Secret Achievements}}) - Secret Code
+</div>
+
+Codes can be redeemed only once per account.
+
+New codes are often added when new content is released, and older codes may be withdrawn/stop working.
+
+*Codes verified as working for version #1.061
+<noinclude>{{#titleicon_file:icon_tab_shop.png}}</noinclude>
+
+[[Category:Shop]]
+{{Main navbox}}

@@ -1,0 +1,271 @@
+[[File:Macro Builder Button.png|thumb|Macro Builder Button]]
+The Macro Builder is a powerful advanced automation tool, which can be used to automate sequences of in-game actions using logic blocks. It is unlocked by reaching {{Keyword|eternity|Eternity|link=Eternity}} for the first time ([[Achievements|{{Keyword|ach|Achievement #070|}}]]). 
+
+
+__toc__
+
+== Macro Builder Workspace Overview ==
+The macro builder can be accessed via the ''Macro'' button located at the bottom-right of the [[Revolution]] screen, next to [[Credits]]. 
+
+On the left side is the macro builder workspace for the currently selected macro slot. Macro blocks can be added, modified, or rearranged to define a desired sequence of actions.
+
+On the right side is a panel with configuration options and information for the currently selected macro slot. 
+[[File:Macro Builder Workspace.png|thumb|The Macro Builder Workspace]]
+From top to bottom on the right panel:
+* Current Macro Slot: When the macro builder is first unlocked, a total of 3 macros slots are available. The dropdown menu will change the currently selected macro slot and the [[File:Add 64.png|20x20px]] button will create a new macro (if a slot is available). Additional macro slots can be purchased for [[Soul Shop|{{keyword|soul|5000}}]] {{icon|soul_icon}} each.
+* Macro Name: Displays the currently selected macro slot name. Can be edited using the pencil button.
+* Loop Mode: Displays the current loop mode for the macro slot. There are 3 types of loop: Once[[File:Once loop mode.png]], Loop [[File:Loop mode.png]] and Ping Pong[[File:Pingpong loop mode.png]]. "Once" will execute the macro only once, "Loop" will execute the macro in a continuous loop until stopped, and "Ping Pong" will run the macro from top to bottom, and then bottom to top, back and forth.
+* Startup Execution: When enabled, the currently selected macro will automatically run when you open the game, after a delay of 30 seconds.
+* Logs: Enable to show a window that displays logs when the currently selected macro is run. Useful for debugging macros.
+* The Execution Bar: A button to start/stop/pause the current macro. Also displays the macro's current status.
+
+In the bottom-right corner, the current macro can be exported in the form of revoscript, or import revoscript into the macro (both export and import use the device's clipboard). There's also an option to delete the macro, which deletes all blocks in the current macro, but does not remove the macro slot.
+
+== Blockdex ==
+[[File:Blockdex.png|thumb|184x184px|The Blockdex]]
+When adding a block to the current macro, the Blockdex will appear. The Blockdex is a list of all available blocks which can be added to a macro to perform specific actions.
+
+Currently, there are a total of 30 blocks available, separated into categories: Conditional Blocks, Execution/Loop, Awaiters, In-game Events Blocks and Notifications.
+
+''For detailed explanations of each block, expand the Macro blocks section below.''
+
+{| class="wikitable mw-collapsible mw-collapsed"
+|+Macro blocks
+!Type
+!Block name
+!Effect
+!Unlock Condition*
+!Icon?
+|-
+| rowspan="3" |Conditional Blocks
+|If
+|Executes the indented blocks if one or more conditions (Score, IP, EP,...) are met.
+|Free
+| rowspan="3" |[[File:If_macro_block.png|center|64x64px]]
+|-
+|Else
+|Executes the indented blocks if ALL of the previous conditions are NOT met. (From If block)
+|Free
+|-
+|Else If
+|Executes the indented blocks if the previous conditions are not met and the Else If conditions are. (From If block)
+|Free
+|-
+| rowspan="8" |Execution/Loop
+|Repeat
+|Repeats the indented blocks a number of times, or indefinitely if Loop is checked.
+|Free
+|[[File:Repeat macro block.png|center|64x64px]]
+|-
+|Repeat Until
+|Repeats the indented blocks until one or more conditions are met.
+|Free
+|[[File:Repeatuntil.png|center|64x64px]]
+|-
+|Move to Block*
+|Moves to a specific block within the macro.
+|Coming soon
+|[[File:Moveto.png|center|64x64px]]
+|-
+|Stop Macro
+|Stops the macro.
+|Free
+|[[File:Stop macro.png|center|64x64px]]
+|-
+|Pause Macro
+|Pauses the macro.
+|Free
+|[[File:Pause.png|center|64x64px]]
+|-
+|Restart Macro
+|Restarts the macro.
+|Free
+|[[File:Restart.png|center|64x64px]]
+|-
+|Go to Macro*
+|Starts another macro.
+|[[Soul Shop|{{keyword|soul|7500}}]] {{icon|soul_icon}}
+|[[File:Gotomacro.png|center|64x64px]]
+|-
+|Leave the game*
+|Exits the game. 
+|[[Soul Shop|{{keyword|soul|4000}}]] {{icon|soul_icon}}
+|[[File:Leave game macro.png|center|64x64px]]
+|-
+| rowspan="2" |Awaiters
+|Wait For Seconds
+|Waits for the specified amount of seconds.
+|Free
+|[[File:Waitforseconds.png|center|64x64px]]
+|-
+|Wait Until
+|Waits until one or more conditions are met.
+|Free
+|[[File:Waituntil.png|center|64x64px]]
+|-
+| rowspan="24" |In-Game Events Blocks
+|Prestige
+|Prestiges.
+|Free
+|[[File:Prestige.png|center|64x64px]]
+|-
+|Promote
+|Promotes the promotion you want.
+|Free
+|[[File:Promote.png|center|64x64px]]
+|-
+|Infinite
+|Infinites.
+|Free
+|[[File:Infinite.png|center|64x64px]]
+|-
+|Enters Infinity Challenge
+|Enters the selected IC, or the Highest available (lowest IC not yet completed). Has the option to wait until completed.
+| rowspan="2" |[[Achievements|{{Keyword|ach|Ach. #074|}}]] ([[Eternity|{{Keyword|eternity|4 Σ|}}]])
+|[[File:Enteric.png|center|64x64px]]
+|-
+|Exits Infinity Challenge
+|Exits an IC, given you're in one. 
+|[[File:Exitic.png|center|64x64px]]
+|-
+|Break/Fix Infinity
+|Breaks or fixes Infinity.
+|[[Achievements|{{Keyword|ach|Ach. #076|}}]] ([[Eternity|{{Keyword|eternity|8 Σ|}}]])
+|[[File:Breakinfinity.png|center|64x64px]]
+|-
+|Eternate
+|Eternates.
+|[[Achievements|{{Keyword|ach|Ach. #084|}}]] ([[Eternity|{{Keyword|eternity|100 Σ|}}]])
+|[[File:Eternate.png|center|64x64px]]
+|-
+|Enters Eternity Challenge
+|Enters the selected EC difficulty, or the Highest available (lowest EC difficulty not yet completed). Has the option to wait until completed.
+| rowspan="2" |[[Achievements|{{Keyword|ach|Ach. #170|}}]] ([[Trials|{{Keyword|unity|ET6|}}]])
+|[[File:Enterec.png|center|64x64px]]
+|-
+|Exits Eternity Challenge
+|Exits an EC, given you're in one.
+|[[File:Exitec.png|center|64x64px]]
+|-
+|Dilate
+|Enters (checked) or exits (unchecked) Dilation.
+||[[Achievements|{{Keyword|ach|Ach. #121|}}]] ([[Eternity/Dilation & Dilation Tree#Dilation Tree|{{Keyword|dtp|1 DTP|}}]])
+|[[File:Dilate.png|center|64x64px]]
+|-
+|Dilation Tree Upgrade
+|Buys up to the specified level of the selected DTU. Will fail if you do not have the prerequisite DTU.
+| rowspan="2" |[[Achievements|{{Keyword|ach|Ach. #177|}}]] ([[Eternity/Dilation & Dilation Tree#Dilation Tree|{{Keyword|dtp|50 DTP|}}]])
+|[[File:Dtu.png|center|64x64px]]
+|-
+|Load Dilation Tree
+|Loads a saved DT loadout. Will fail if you do not have enough DTP.
+|[[File:Loaddt.png|center|64x64px]]
+|-
+|Planet Loadouts
+|Loads a specific Zodiac planet loadout. Causes a soft Unity reset.
+||[[Achievements|{{Keyword|ach|Ach. #269|}}]]
+|[[File:Loadplanets.png|center|64x64px]]
+|-
+|Refine Prestige
+|Perform a Refine Prestige. 
+Resets: VP, normal Minerals, normal and magnet mineral upgrades, Magnets, Merge level, and all Polish upgrades.
+| rowspan="2" |[[Achievements|{{Keyword|ach|Ach. #291|}}]]
+|
+|-
+|Polish Prestige
+|Perform a Polish Prestige.
+Resets: VP, normal Minerals, Mineral Upgrades, and Merge Level.
+|
+|-
+|Generate Elements
+|
+|[[Achievements|{{Keyword|ach|Ach. #345|}}]]
+|
+|-
+|Delete all Black Gem
+|
+|[[Achievements|{{Keyword|ach|Ach. #399|}}]]
+|
+|-
+|Tarot Spawn
+|
+|[[Achievements|{{Keyword|ach|Ach. #413|}}]]
+|
+|-
+|Use Arcan
+|
+|[[Achievements|{{Keyword|ach|Ach. #423|}}]]
+|
+|-
+|Redirection*
+|Switches the view to a menu of your choice. Will fail if the menu isn't unlocked yet.
+|[[Soul Shop|{{keyword|soul|4500}}]] {{icon|soul_icon}}
+|[[File:Redirection.png|center|64x64px]]
+|-
+|Time Flux*
+|Enables 1x, 2x or 3x Time Flux Game Speed mult. for the specified time.
+|[[Soul Shop|{{keyword|soul|4500}}]] {{icon|soul_icon}}
+|[[File:Timeflux.png|border|center|64x64px]]
+|-
+|Time Warp*
+|Spends the specified amount of TF to warp forward. Opens the Time Warp window.
+|[[Soul Shop|{{keyword|soul|6500}}]] {{icon|soul_icon}}
+|[[File:Timewrap.png|center|64x64px]]
+|-
+|Daily Reward*
+|Claims any available Daily Rewards.
+|[[Soul Shop|{{keyword|soul|3500}}]] {{icon|soul_icon}}
+|[[File:Dailyreward.png|center|64x64px]]
+|-
+|Switch Skin*
+|Switches the currently applied skin.
+|[[Soul Shop|{{keyword|soul|3000}}]] {{icon|soul_icon}}
+|[[File:Skin.png|center|64x64px]]
+|-
+| rowspan="2" |Notifications
+|Alert Message*
+|Displays a message at a specific time, either as a notification or a dialogue.
+|[[Soul Shop|{{keyword|soul|5500}}]] {{icon|soul_icon}}
+|[[File:Alertmessage.png|center|64x64px]]
+|-
+|Play Sound*
+|Plays a predefined sound.
+|[[Soul Shop|{{keyword|soul|5000}}]] {{icon|soul_icon}}
+|[[File:Playsound.png|center|64x64px]]
+|}
+
+== In-game scripting ==
+To add a block, either click on the "Add a block" button to add a block at the bottom of the macro, or the macro button [[File:Macro Icon.png|24x24px]] on each block to add a new block directly below it.
+[[File:A Macro block example.png|thumb|633x633px|An example Macro Block]]
+On each macro block, you can:
+
+* Duplicate the block using [[File:Copy 64.png|23x23px]]. The duplicated block will be added directly below the selected block.
+* Add a new block directly below it using [[File:Macro Icon.png|24x24px]].
+* Move the block up or down using [[File:Arrow Up.png|24x24px]] or [[File:Arrow Down.png|23x23px]].
+* Delete the block using [[File:Cross 64.png|21x21px]].
+* Additionally, some macro blocks have additional parameters; either dropdown, checkbox, or textbox which can be changed accordingly.
+[[File:Macro Break Loop.png|thumb|Special case when an If block is inside a Repeat block - the Break block becomes available]]
+Special cases exist for some macro blocks:
+
+* For If, Wait Until and Repeat Until blocks, there's an option to add one or more conditions using [[File:Add 64.png|20x20px]]. Multiple conditions can be combined with the AND, OR, and XOR operators.
+* For If, Repeat and Repeat Until blocks, blocks can be added inside the loop or conditions by clicking on the [[File:Macro Icon.png|23x23px]] button at the bottom-left of the block.
+* For If block, there's an option to add more logic branches using the "Else If" and "Else" buttons.
+* If the Wait Until or If blocks are inside a Repeat block, there's an option to break out of/exit the loop after the conditions of the block are met, by adding a "Break" block.
+
+== Macro Settings ==
+[[File:Macro Settings.png|thumb|170x170px|Macro Settings]]
+Macro settings can be accessed by clicking the [[File:Option 64.png|23x23px]] button in the bottom-left corner of the panel on the right.
+
+From top to bottom:
+* Start with a macro slot: The macro slot will switch to the selected macro on startup (when the game is launched).
+* Logs permanent: When enabled, overrides individual macro's settings for displaying logs, such that logs are always displayed.
+* Notification from Macro: Enables/disables in-game notification pop-ups from macro actions. For example, disabling this will prevent the pop-ups for challenge completions, when completed by a macro.
+* Scroll on Play mode: Enables/disables the automatic scrolling to follow the macro when the macro is running. This is enabled by default, but can be disabled if preferred/to assist with debugging macros.
+
+== Prebuilt Macros ==
+Macros can be imported by copying a revoscript macro code into the device's clipboard, then clicking on the import button in the macro builder. 
+
+''For prebuilt macros for different purposes, see [[Macro Templates]].''
+
+[[Category:General Gameplay]]
+{{Main navbox}}

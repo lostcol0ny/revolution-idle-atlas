@@ -1,0 +1,300 @@
+Automations are often QoL changes to the game rewarded after [[achievements]], [[trials]], milestone completions, and in the Infinity Tree.
+== Unlocked in Infinity ==
+=== Autobuy Buyables ===
+
+Unlocked in [1;1] in the Infinity Tree for {{Keyword|ip|1 IP}}
+
+Automatically purchases colors when affordable.
+
+When unlocked, immediately put all colors on 100%. Keep these on for the rest of the run.
+
+=== Auto Ascend ===
+
+Unlocked in [2;2] in the Infinity Tree for {{Keyword|ip|1 IP}}.
+
+Automatically ascends colors upon reaching the required level.
+
+When unlocked, immediately enable all colors.  Keep these on for the rest of the run.
+
+=== Auto Prestige ===
+
+Unlocked in [5;3] in the Infinity Tree for {{Keyword|ip|3 IP}}.
+
+Automatically prestiges when the requirements you set are met.
+
+When unlocked, put it on 0.00, 1,000, 0.20. When reducing times for infinity challenges, turn auto promote off and turn auto prestige off or put on 1.00, 1e20, 0.00. Upon reaching EC milestone 2, put it on 0.00, 1.01, 0.00. This milestone is reset upon Unity, so follow the "when unlocked" part again (maybe slighty increase it), but once beating 3 Trials, due to getting 6 free EC, you will permanently have this milestone. Now just use 0.00, 1.01, 0.00.
+
+=== Auto Promote ===
+
+Unlocked in [10;1] in the Infinity Tree for {{Keyword|ip|256 IP}}.
+
+Automatically promotes, in the order, level and delay you desire.
+
+When unlocked, [???] (around 10-25lvls, 0s delay?) Upon reaching Animal Milestone 4, put all on 1 lvl 0s.  This milestone is reset upon Unity, so follow the "when unlocked" part again (maybe slightly decrease seconds and increase levels), but once you beat all Easy Trials, the reward for beating all of them makes it so you can put it on 1 lvl 0s.
+
+=== Auto Infinity ===
+
+Unlocked in [15;1] in the Infinity Tree for {{Keyword|ip|2048 IP}}.
+
+Automatically infinites when the IP gain and time requirement are met.
+
+When unlocked, [???] (not all that useful upon unlocking) After reaching Animal Milestone 5, this becomes basically useless. This milestone is reset upon Unity. 
+
+== Unlocked in Eternity ==
+
+=== IP Adjuster ===
+
+Unlocked in the 5th Eternity milestone for reaching 7 Eternities.
+
+Allows to automatically change the IP gain requirement by some factor upon infinity.
+
+When unlocked, set it to 1000-10000.  After reaching Animal Milestone 5, this becomes basically useless. This milestone is reset upon Unity.
+
+=== Autobuy Infinity Tree ===
+
+Unlocked in the 7th Eternity milestone for reaching 12 Eternities.
+
+Automatically buys Infinity tree upgrades when purchasable, buys top to bottom, left to right.
+
+When unlocked, enable it. Keep it like this for the rest of the run.
+
+=== Autobuy Generators ===
+
+Unlocked in the 8th Eternity milestone for reaching 14 Eternities.
+
+Automatically buys generators you enabled, when purchasable.
+
+When unlocked, fully enable it. Keep it like this for the rest of the run.
+
+=== Autobuy Stars ===
+
+Unlocked in the 9th Eternity milestone for reaching 16 Eternities.
+
+Automatically buys stars, star base and factor, as well as stardust upgrades. (Stardust upgrades are ordered so that the second upgrade is the one on the top right.)
+
+When unlocked, fully enable it. Keep it like this for the rest of the run.
+
+=== Auto Eternity ===
+
+Unlocked in the 9th Eternity milestone for reaching 16 Eternities.
+
+Automatically eternates when the EP gain and time requirements are met
+
+When unlocked, you can adjust it to whatever fits you most. After getting Dilation Tree Upgrade MID-2, it becomes useless. 
+
+=== Auto Slowdown ===
+
+Unlocked in the 2nd Animal milestone for having 4 Animals.
+
+Automatically slows down when lap speed of all colors exceeds the entered value.
+
+When unlocked, it is recommended to put at 500. going slightly off isn't bad. Later on, putting it at 10 is usually the best.
+
+== Unlocked in Unity ==
+
+=== Autobuy AP ===
+
+Unlocked by Ach. #168 for reaching 5 Unities.
+
+Automatically purchases AP when affordable, individual currencies can be chosen.
+
+When unlocked, fully enable it. Keep it like this for the rest of the run.
+
+=== Autobuy Animals ===
+
+Unlocked by Ach. #168 for reaching 5 Unities.
+
+Automatically buys animals in the order you choose.
+
+When unlocked,  copy over image in bottom right: Later on, order doesn't matter much anymore, it is recommended to just not change it from the image.<br>
+[[File:Screenshot 2025-06-23 084224.png|thumb]]
+
+=== Autobuy Lab Upgrades ===
+
+Unlocked by Ach. #169 for reaching 10 Unities.
+
+Automatically buys Lab Base, Mult and Power upgrades.
+
+When unlocked, fully enable it. Keep it like this for the rest of the run.
+
+=== Autobuy RP ===
+
+Unlocked by Ach. #169 for reaching 10 Unities.
+
+Allows you to automatically distribute RP to all upgrades.
+
+When unlocked, set it to 0:0:0:0:0:1 (all sliders to the left) Keep it like this for the whole run, except for Ach #231 (0:0:0:0:1:0)
+
+=== Auto Supernova ===
+
+Unlocked by Ach. #170 for beating all Easy Trials.
+
+Executes a supernova when the score requirement is met.
+
+When unlocked, enable it. Keep it like this for the rest of the run.
+
+=== Autobuy DTP ===
+
+Unlocked by beating Medium Trial 3 for reaching Eternity without Prestiging
+
+Automatically buys DTP when you reach the required DP.
+
+When unlocked, put it at 65 (The max amount of DTP) or leave it (it will default at 65). Keep it like this for the rest of the run.
+
+=== Autobuy Dilation Upgrades ===
+
+Unlocked by beating Medium Trial 3 for reaching Eternity without Prestiging
+
+Automatically buys DUs when affordable.
+
+When unlocked, fully enable it. Keep it like this for the rest of the run.
+
+=== Auto-sell Zodiacs ===
+
+Unlocked by beating Hard Trial 3 for reaching Unity without performing a Supernova
+
+Allows you to automatically sell unwanted zodiacs based on: Sign, Rarity, Quality and Level.
+
+Optional for cases when you're getting lots of zodiacs and need to get rid of some. Be very careful with this so as to not sell the zodiacs you need!
+
+This is an automation that if you get or have any zodiacs that meet all 5 specified req, it will be sold into the shop for Astrodust.
+
+Reqs
+
+1 sign - you must specify the signs that you want the automation to sell (you can select multiple)
+
+2 Rarity - you much select every rarity that you want the automation to sell (you can select multiple)
+
+3 Quality - you must input the range that you want any zodiacs to be for it to sell, so if you want it to sell any zodiac from qual 1 to qual 100 you need to put in min 1 and max 100, using this example any zodiacs with their quality being 1-100 will be sold (assuming all other checks are also correct)
+
+4 Level - you must input the range of levels that you want to sell, so if you want it to sell any zodiacs from lv 1-100 you must input 1 in min and 100 in max, this will sell any lv1-100 zodiacs any 101 or higher will not be sold
+
+5 Inventory - for any zodiacs to be eligible to be sold they must be in your inventory, if you have a zodiac and it meets all other reqs for being sold, but you have it equipped on one of your planets it will not be sold, the automation will only check for zodiacs in your inventory
+
+ALL 5 REQS MUST BE MET TO BE SOLD BY YOUR AUTOMATION
+
+=== Auto Unity ===
+
+Unlocked by beating Medium Trial 4 for reaching Eternity by performing Infinity a maximum of 2 times.
+
+Allows you to automatically unite after reaching required EP, Zodiac lvl, Attack lvl and Gold gain upon unity. Chooses a zodiac based on Rarity, Sign, Stat, Element and Season, priority levels can be assigned to these requirements.
+
+Can be useful for farming better quality zodiacs, astrodust, gold, etc.
+
+When configuring auto unite, the priority is lowest to highest so 0>1>2>3>4>5, also as of v.1.1004, the game sees all Immortal and Immortal+ zodiacs as just Immortal, so your secondary priority is also very important to set, if you want max rarity.
+
+=== Autospawn Minerals===
+
+Unlocked by reaching the first Sword Milestone level 10
+
+Automatically spawns Minerals for you, aslong as you have 10x the needed gold for it.
+Don't worry it takes only 1x of it.
+
+Best to keep it on and turn it off right before polishing or refining, having all your space filled up with paper isn't fun.
+
+=== Automerge Minerals ===
+
+Unlocked by buying node 6 from the Refinement Tree.
+
+Automatically merges all your minerals every 600 seconds, local game speed is applied.
+
+when Unlocked, keep it on forever.
+=== Autobuy Mineral Upgrades ===
+
+Unlocked by buying node 11 from the Refinement Tree.
+
+Automatically buys the mineral upgrades that cost VP.
+
+When unlocked you can keep quality and luck off until you buy node 12, node 12 makes the VP based mineral upgrades to not spend Gold.
+
+=== Autobuy Attack Circles ===
+
+Unlocked by buying node 13 from the Refinement Tree.
+
+Automatically buys attack circles, but must have 10x the gold of the attack circles price to be able to autobuy it, don’t worry it’s still spending only 1x of the price.
+
+Best to keep it on.
+
+=== Auto Ascend Attack Circles === 
+
+Unlocked by buying node 14 from the Refinement Tree.
+
+Automatically Ascends your Attack circles whenever they become Ascendable.
+
+Best to keep it on.
+
+=== AutoBuy Polish Upgrades ===
+
+Unlocked by buying node 32 from the Refinement Tree.
+
+Automatically Buys Weapons upgrades once you Polish Prestige.
+
+Recommended to buy node 23, you will no longer lose PP so its perfect for node 32 (why would you not buy it before that?).
+
+Keep it on FOREVER.
+
+=== Autobuy Magnet Upgrades ===
+
+Unlocked by buying node 34 from the Refinement Tree.
+
+Automatically buys the Minerals Magnet based upgrades.
+
+You also no longer lose magnets when purchasing Mineral Magnet based upgrades.
+
+Keep it on forever.
+
+=== Autobuy Relics ===
+Unlocked through {{Keyword|ach|Achievement 338}} for having 1e9+ of every element.
+
+Automatically buys relics.
+
+Keep it on forever.
+
+=== Autospawn Special Minerals ===
+Unlocked through {{Keyword|ach|Achievement 326}} for reaching 1.80e308 Polish Points.
+
+Automatically spawns Special Minerals.
+
+Best to keep it on.
+
+
+=== Auto Flush Artifacts ===
+
+Unlocked through {{Keyword|ach|Achievement 505}} for reaching 75 artifact levels.
+
+Turn on auto flush for all artifacts and set to 0%. Turn off periodically to check Tarot Upgrades.
+
+== Macros ==
+Macros allow you to execute a specific order of actions without any need for your input. Initially you have a limit of 3 macros (more can be bought with souls) and 30 blocks (same applies) within every macro. Some blocks need to bought with souls before they can be used.
+
+Additionally every macro can have 3 extra settings applied: 
+
+Loop mode, making it loop back when completed.
+
+Startup Execution, executing the macro upon entering the game.
+
+Logs, allows you to view the logs of the macro. They show every step of the macro and can help in debugging.
+
+=== Macro blocks ===
+There are 30* macro blocks you can use, categorized by their type of action, see the table for details. (Blocks denoted with an * are either bought with souls or not in the game yet.)
+
+''For macro blocks explanations, see [[Macro Builder#Blockdex|Blockdex]].''
+
+Some useful Macros throughout the game are:
+
+* IC macro
+* EC macro
+* Unity farm macro
+* Astrodust farm macro
+* Zodiac quality farm macro
+* Attacks grind macro
+''For macro templates, see [[Macro Templates]].''
+
+The 30 macro block maximum is pretty limiting, buying the "Go to macro" block is recommended, especially after getting to the mid to late stages of unity.
+
+The other buyable blocks are not all that useful in comparison.
+
+<noinclude>{{#titleicon_file:icon_tab_auto.png}}</noinclude>
+
+[[Category:General Gameplay]]
+{{Main navbox}}

@@ -1,0 +1,91 @@
+
+=='''Dilation'''==
+{{Keyword|dilation|Dilation}} is the sixth {{Keyword|eternity|Eternity}} tab, unlocked by reaching [[Eternity#Animals_Milestones|Animals Milestone]] 7 (own all 81 [[Eternity#Animals|Animals]]).
+
+Now the player can enter and exit {{Keyword|dilation|Dilation}}, by using the Go/Exit Dilation button within the tab. Upon entering, a new {{Keyword|eternity|Eternity}} will begin, but with {{Keyword|dilation|Dilation}} penalties applied.
+
+The base {{Keyword|dilation|Dilation}} penalties are as follows:
+
+* Common Exponent / 25
+* [[Infinity#Generators|Gen Exp]] / 1,000
+* [[Infinity#Stars|Star Exp]] / 100
+* [[Revolution#Ascension|Ascension Power]] ^0.10
+* ([[Revolution|Laps Speed]] ^0.10) / 10
+* [[Infinity|{{Keyword|ip|IP}}]] gain ^0.01
+Exiting {{Keyword|dilation|Dilation}} will start a new {{Keyword|eternity|Eternity}} and the player's Max Score will be set to the maximum [[Revolution#Score|Score]] reached in {{Keyword|dilation|Dilation}}.
+
+The purpose of increasing Max Score is to generate more {{Keyword|dp|Dilation Points}} ({{Keyword|dp|DP}}), as the player's {{Keyword|dp|DP}} Income ({{Keyword|dp|DP}} per second) is based on this.
+[[File:Dilation tab.png|thumb|Dilation tab]]
+[[File:DU7-9.png|thumb|Dilation Upgrade 7, 8, 9]]
+==='''Dilation Upgrades'''===
+{{Keyword|dp|DP}} can be spent to purchase levels of 9 different {{Keyword|dilation|Dilation}} Upgrades (DU), as follows:
+
+{| class="wikitable mw-collapsible mw-collapsed" style="text-align:center; width: 80%; font-size: 1rem"
+|colspan="5"|'''Dilation Upgrades'''
+|-
+!#
+!Effect
+!Base Effect
+!Effect / level
+!Base Cost [{{Keyword|dp|DP}}]
+|-
+|1
+|{{Keyword|dilation|Dilation}} penalties are weaker
+| /1.00
+| +0.03
+|500
+|-
+|2
+|{{Keyword|dp|DP}} Income mult
+|x1.00
+|x1.07
+|10,000
+|-
+|3
+| + free levels to all [[Eternity#Laboratory|{{Keyword|rp|RP}}]] upgrades
+| +0.00
+| +3.00
+|1,000,000
+|-
+|4
+|Common Exponent mult
+|x1.00
+|x1.001
+|20,000,000
+|-
+|5
+| [[Eternity#Supernova|Supernova]] bonuses power
+|^1.00
+| +^0.02
+|1e9
+|-
+|6
+|[[Infinity#Generators|Generator]] Exponent mult
+|x1.00
+| +0.01
+|1e10
+|-
+|7
+|{{Keyword|ep|EP}} gain mult
+|x1.00
+|x10.00
+|1e12
+|-
+|8
+|[[Revolution#Ascension|Asc. Power]] Mult
+|x1.00
+| +1.00
+|1e13
+|-
+|9
+|[[Eternity#Laboratory|Lab]] power mult
+|x1.00
+| +0.01
+|1e16
+|}
+The cost for the next level of a DU will increase after each purchased level. There is currently no known maximum level for DU, but Dilation Upgrade 4 (DU4), DU5 and DU9 effects eventually softcap.
+
+The effect per level of all DU are increased by 10% (x1.10) when the player completes [[Achievements|{{Keyword|ach|Ach. 129}}]]. DU1, DU2 and DU3 effect per level can be increased by allocating {{Keyword|dtp|DTP}} to Dilation Tree Upgrades TOP-1, MIDDLE-1 and BOTTOM-1 respectively.
+
+[[Category:Eternity]]
+{{Main navbox}}

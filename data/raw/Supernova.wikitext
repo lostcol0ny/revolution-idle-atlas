@@ -1,0 +1,14 @@
+{{Stub}}
+Supernova is the fifth {{Keyword|eternity|Eternity}} tab, unlocked by reaching [[Eternity#Eternity Challenges Milestones|Eternity Challenges Milestone]] 3 (8 {{Keyword|eternity|EC}} completions).
+[[File:Supernova.png|thumb|The Supernova tab]]
+Supernovae are obtained by reaching a certain [[Revolution#Score|Score]] and using the "Go Supernova" button within the tab. Going Supernova will start a new {{Keyword|eternity|Eternity}} and provide Supernova bonuses to the player, as follows:
+
+* [[Eternity#Eternity Bonuses|Eternity reward]] Mult (+0.50x / supernova)
+* [[Infinity#Stars|Star Base]] Mult (+0.40x / supernova)
+* [[Eternity#Laboratory|Lab Base]] Mult (x2 / supernova)
+* {{Keyword|ep|EP}} gain Mult (x3 / supernova)
+* + [[Eternity#Animals|{{Keyword|ap|AP}}]] (+2 / supernova)
+
+In general, Supernovae should be performed as soon as possible, for the bonuses they reward. However, in some cases the player may want to delay going Supernova (for example, in the later part of [[Eternity#Dilation & Dilation Tree|{{Keyword|dilation|Dilation Tree}}]], in order to first gain more [[Eternity#Animals|{{Keyword|ap|AP}}]]).
+[[Category:Eternity]]
+{{Main navbox}}

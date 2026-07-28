@@ -1,0 +1,157 @@
+{{Zodiac Loadout|loadname=TestBuild123|sun=Aqua|merc=Aries|venus=Aqua|moon=Libra|mars=Scorp|jupiter=Libra|saturn=Canc|uranus=Aries|nept=Canc|pluto=Aries|chiron=Aries|fortune=Aries}}{{Zodiac Loadout|sun=Locked|merc=Locked|venus=Locked|moon=Locked|mars=Locked|jupiter=Locked|saturn=Locked|uranus=Locked|nept=Locked|pluto=Locked|chiron=Locked|fortune=Locked}}
+
+
+
+{{Keyword|unity|Unity|link=Unity}}
+
+
+
+
+{| class="bigtable"
+|+ Caption text
+|-
+! Header text !! Header text !! Header text
+|-
+| Example || Example || Example
+|-
+| Example || Example || Example
+|-
+| Example || Example || Example
+|}
+
+
+
+
+{| class="wikitable"
+|+ Caption text
+|-
+! Header text !! Header text !! Header text !! Header text !! Header text !! Header text !! Header text !! Header text !! Header text !! Header text !! Header text !! Header text !! Header text !! Header text !! Header text !! Header text !! Header text !! Header text !! Header text !! Header text !! Header text !! Header text !! Header text !! Header text !! Header text !! Header text !! Header text !! Header text !! Header text !! Header text
+|-
+| Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example
+|-
+| Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example
+|-
+| Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example
+|-
+| Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example
+|-
+| Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example
+|-
+| Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example
+|-
+| Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example
+|-
+| Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example
+|-
+| Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example
+|-
+| Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example
+|-
+| Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example
+|-
+| Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example
+|-
+| Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example
+|-
+| Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example
+|-
+| Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example
+|-
+| Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example
+|-
+| Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example
+|-
+| Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example
+|-
+| Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example
+|-
+| Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example
+|-
+| Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example
+|-
+| Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example
+|-
+| Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example
+|-
+| Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example
+|-
+| Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example
+|-
+| Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example
+|-
+| Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example
+|-
+| Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example
+|-
+| Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example
+|-
+| Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example
+|}
+
+
+
+{| class="wikitable bigtable"
+|+ Caption text
+|-
+! Header text !! Header text !! Header text !! Header text !! Header text !! Header text !! Header text !! Header text !! Header text !! Header text !! Header text !! Header text !! Header text !! Header text !! Header text !! Header text !! Header text !! Header text !! Header text !! Header text !! Header text !! Header text !! Header text !! Header text !! Header text !! Header text !! Header text !! Header text !! Header text !! Header text
+|-
+| Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example
+|-
+| Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example
+|-
+| Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example
+|-
+| Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example
+|-
+| Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example
+|-
+| Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example
+|-
+| Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example
+|-
+| Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example
+|-
+| Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example
+|-
+| Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example
+|-
+| Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example
+|-
+| Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example
+|-
+| Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example
+|-
+| Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example
+|-
+| Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example
+|-
+| Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example
+|-
+| Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example
+|-
+| Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example
+|-
+| Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example
+|-
+| Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example
+|-
+| Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example
+|-
+| Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example
+|-
+| Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example
+|-
+| Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example
+|-
+| Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example
+|-
+| Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example
+|-
+| Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example
+|-
+| Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example
+|-
+| Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example
+|-
+| Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example || Example
+|}

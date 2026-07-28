@@ -1,0 +1,16 @@
+{{Main page box/start
+ | title = Links
+}}
+<div class="mp-links columns-2">
+* {{MP link|Oni Gaming|link=https://www.onigaming.net|image=icon_oni.png|size=64x64px}}
+* {{MP link|Oni Gaming|link=https://discord.gg/onigaming|image=Discord.svg|size=64x64px}}
+* {{MP link|Nu Games|link=https://denisolenison.github.io/|image=icon_nu.png|size=64x64px}}
+* {{MP link|Wiki server|link=https://discord.gg/apEk7SUCTB|image=Discord.svg|size=64x64px}}
+* {{MP link|Revolution Idle - Steam|link=https://store.steampowered.com/app/2763740/Revolution_Idle/|image=Site-favicon.ico|size=64x64px}}
+* {{MP_link|Revolution Idle - Android|link=https://play.google.com/store/apps/details?id=com.oninou.revolution|image=Site-favicon.ico|size=64x64px}}
+* {{MP_link|Revolution Idle - Apple|link=https://apps.apple.com/us/app/revolution-idle/id6475233313|image=Site-favicon.ico|size=64x64px}}
+</div>
+<div class="mp-links columns-2">
+* <h2>Revolution Idle Wiki Discord</h2>{{Discord|full=yes|id=1382756175384154135}}
+</div>
+{{Main page box/end}}<noinclude>[[Category:Main page boxes]]</noinclude><!-- don't edit this line -->

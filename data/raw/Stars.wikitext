@@ -1,0 +1,34 @@
+'''Stars''' are unlocked with Infinity Upgrade 21;1. They are the last tab in this prestige layer.
+
+The mechanics are straightforward and involve generating Stardust with Stars, which enhances Generators and Generator Power gain. The price of Stars increases significantly with each purchase, starting at 1e33 (1 Dc) IP, these first increase by 1e3 each time, but later start increasing by 1e7 or more.
+
+When unlocking Stars, It's recommended to '''save up 2e33 (2 Dc) IP''' in order to buy both Infinity Upgrade 21;1 and your first Star.
+
+Stars can be upgraded by:
+
+* Buying Stars
+* Increasing Star Base (Each purchase increases it by 0.275, starting at 2.75) (Formula: 2.75 + 0.275 * n  where n is number of purchases)
+* Increasing Star Exponent (Each purchase increases it by 0.05, starting at 0.4) (Formula 0.4 + 0.05 * n  where n is number of purchases)
+
+Stars and Star Upgrades should be prioritized '''over Generators'''.
+
+Based on empirical testing, Stardust generation appears to follow the formula:
+
+Stardust/sec = 0.25 × (Star Base ^ Number of Stars)
+
+This formula is not currently documented in the in-game guide or elsewhere on the wiki. It has been verified against multiple in-game measurements with a maximum observed error below 1%, likely due to rounding in the game's displayed values.
+
+Stardust can be spent on '''Stardust Upgrades''', of which there are 4:
+
+# Infinity Upgrade 1;1 applies to: G1 (with every purchase the next Generator is added, '''this upgrade is the strongest'''. Maxed out at G10)
+# Infinity Gain (Increases by +1x for every purchase. This upgrade can be bought an unlimited number of times)
+# Upgrade 2;1 Exp. Box Power (Increases by 0.01 with every purchase. Maxed out at +0.5)
+# Upgrade 18;1 is 1.05x faster (Maxes out at x62.62)
+
+Every Stardust Upgrade should be bought immediately when available. Stardust is reset to zero each Infinity, so it's worth checking if you can buy any Stardust Upgrades before you Infinite.
+
+For more information about Stars, you can refer to the [https://docs.google.com/spreadsheets/d/1912_7kvYPpKxBt95xHBcCADIdYWUeycI8JZbueDpO5g/edit?usp=sharing stardust calculator] by angelamoureux.
+
+As you progress, you'll approach the 1.79e308 IP milestone, allowing you to Eternate and enter the '''[[Eternity]]''' layer.
+
+{{Main navbox}}

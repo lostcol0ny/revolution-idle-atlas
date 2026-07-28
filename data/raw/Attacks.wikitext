@@ -1,0 +1,141 @@
+Attacks are unlocked after completing 15 [[Trials|trials]]. A new tab is added with a new revolution type, Attack Circles. For every Attack Level, there is an enemy, depicted as an HP bar on the top of the screen. Your goal is to deal enough damage to deplete the enemy's HP bar and advance to the next Attack Level.
+
+There are a total 5 Attack Circles and they work similarly to the [[Revolution|base game's circles]]. Every revolution/lap increases the Attack Circle's Attack Damage Multiplier on the top of the screen. In addition, each revolution/lap counts as a hit to the enemy, dealing damage to its HP bar.
+
+When you Unite and get a new Zodiac, the Attack Level gets reset to 0 and you will be rewarded with the amount of Gold that is shown at the bottom of the screen. Your Circle Attack Multipliers will NOT be reset upon Uniting and performing a Soft Unity Reset (by e.g. swapping Zodiacs) will not reset Attack Level.
+
+[[File:Attacks Tab Visual Overview.png|x400px|thumb|right| Depiction of where the items discussed in this article can be found in-game.<br> 1 - Buyables<br>1.1-1.6 - Attack Circle Stats<br>2.1 - HP Bar<br>2.2 - Current Gold<br>3.1 - Current Revolution Score and the Score Damage Mult<br>3.2 - Attack Circle Mults<br>3.3 - Cumulative Multiplier <br>3.4 - Damage Exponent<br>3.5 - Base Damage]]
+
+
+== Attack Circles ==
+Every Attack Circle has its own button showing its current Lap Speed and cost to upgrade. Clicking the button will level up the Attack Circle by 1. Each Circle Level will cost <code><math>1.25 + ( 0.15 \times Current Ascension Stage )</math></code> more than the previous one.
+
+Upgrading will increase its lap speed by 5% of its base speed. For Max Level (20), the Lap Speed is double of what it is at Level 1.
+
+When  Max Level is reached, you will be able to Ascend the Attack Circle by pressing the A on the left of the Circle Button. This will reset Circle Level to 1 and increase the Circle's Ascension Stage by 1. 
+
+{| class="wikitable"
+|+Attack Circles
+!Circle
+!Color
+!Base Lap Speed
+!Base Cost [Gold]
+!Base Damage
+|-
+|1
+|Electric Red
+|1/100s
+|10
+|1
+|-
+|2
+|Firebrick Red
+|1/200s
+|100
+|3
+|-
+|3
+|Burnt Umber
+|1/400s
+|1000
+|10
+|-
+|4
+|Van Dyke Brown
+|1/1600s
+|1e6
+|150
+|-
+|5
+|Dark Lava
+|1/4000s
+|1e9
+|5000
+|}
+
+By mousing over the Circle Buttons, the following stats will be shown for the respective Circle:
+
+=== Ascension Stage ===
+Current Ascension stage. Ascending increases Ascension Stage by 1 and resets circle Level to 1. Reduces Lap Speed by 50%, but multiplies Mult Gain and Damage Mult by Ascension Power. This is extremely powerful.
+
+For each Ascension stage, the cost scaling of purchasing Circle Levels increases.
+
+=== Level ===
+Current Circle Level. Lap speed is increased by 5% of its Level 1 speed for each Level. Each Circle Level will cost <code><math>1.25 + ( 0.15 \times Current Ascension Stage )</math></code> more than the previous one.
+
+Base Cost for next Ascension Stage = <code><math>Base Cost for current Ascension Stage \times ( 1.25 + ( 0.15 \times Current Ascension Stage ) ) ^ {20}</math></code>
+
+=== Lap Speed ===
+Number of revolutions per second. Affected by the Circle's current Level and multiplied by [[Relics|Relic 7]] (Snail Statue).
+
+=== Mult Gain ===
+Every time the circle completes a revolution, its corresponding Attack Multiplier increases by this value.
+
+For every Ascension Stage, Mult Gain gets multiplied by Ascension Power. This is extremely powerful.
+
+=== Damage Multiplier ===
+Every time the circle completes a revolution, the enemy gets hit and the HP bar is reduced by the total Attack Base Damage multiplied by this Damage Mult.
+
+For every Ascension Stage, Damage Mult gets multiplied by Ascension Power:
+
+<code><big><math>
+\text{Damage Mult} = Circle Base Damage \times Asc. Power ^{Asc. Stage}
+</math></big></code>
+
+=== Ascension Power ===
+Every time you ascend the circle, Mult Gain and Damage Mult get multiplied by Ascension Power.
+
+== The Enemy ==
+[[File:Enemy HP by Attack Level.webp|120px|thumb|right|Table showing Enemy HP at select Attack Levels]]
+A list of Enemy HP values at select Attack Levels is provided to the right. For all enemy HP values and Gold calculations, you will need to use the Excel-Sheet provided here: [https://discord.com/channels/481594050999353345/1368509750777741342/1384085504928256092 Attack Gold & HP Scaling Calculator v2]
+
+=== Enemy HP Bar ===
+Displays the amount of damage your Attack Circles need to deal to advance to the next Attack Level. Your current Attack level is shown to the left. 
+
+=== Gold Gain ===
+How much Gold you will gain from Uniting at the current Attack Level. Increases with every enemy you defeat and is increased by [[Relics]] 9 (Midas Hand), 17 (Magical Magnet) and 21 (Queen of spades). The small number shown with a “+” is your Gold Gain for uniting, the larger number is the total amount of gold you currently own.
+
+
+== Damage Multipliers ==
+Every time a circle completes a revolution, damage is dealt to the enemy. The amount of damage is determined by the Circle's Damage Multiplier as well as the Multipliers listed at the Top of the Attacks tab:
+
+=== Score Damage Multiplier ===
+The number to the right of the Arrow shown at the top left of the Attacks tab. Results from the formula on the top left of the [[relics|relics tab]]. The Score Damage Multiplier is based on your Current Score from [[Revolution|Revolutions Tab]] (shown at the top left before the arrow).
+
+Current Score is mainly determined by your Zodiac Stats, Planet and Unity Bonuses and your [[Planet_Shop#Sacrificing|Sacrifice Stats]]. The formula that converts your Current Score to the Score Damage Multiplier can be improved by [[Relics]] 13 (Strategic Board Game: Increased Exponent, strengthened by bow level 25) and 19 (Ancient Extractor: Reduced Divider).
+
+=== Attack Multipliers ===
+The 5 numbers shown on the top middle of the Attacks tab. This is the primary way to increase attack damage. If you understand the concept behind Attack Mults, you understand how Attack Progression works.
+
+Every Attack Circle has its own Attack Mult, so there's a total of 5 of them. Every time a circle completes a revolution, the corresponding Attack Mult increases by its Mult Gain value. Mouse over the Attack Circle buttons to see the value.
+
+Attack Mult increases with every revolution, so game speed greatly increases your gains. After Achievement 239, this can be improved even further by reaching max attack level before switching to game speed build.
+
+This is because max attack level improves [[Relics]] 16 (Cool Glasses), 18 (Mythical Rune) and 20 (Majestic Halberd), which all improve Mult Gain as follows:
+
+Mult Gain = <code><math>\text{Base Mult Gain displayed in and improved by Relic 16} \times \text{Ascension Power displayed in and improved by Relic 18} ^ {Ascension Stage - 1}</math></code>
+Relic 20 raises both Base Mult Gain AND multiplies Ascension Power. This leads to some sort of positive feedback loop that makes the concept of farming Attack Multipliers the single most important game mechanic to progress through attacks.
+
+=== Cumulative Multiplier ===
+The number shown on the top right of Attacks tab. Product of the Multipliers gained from Relics 1 (Silver Coin), 3 (Copper Bunny Statuette) and 12 (Sandstone Chest) as well as your Damage Multiplier from Achievement Rewards (Unlocked at Ach 201 for a current Maximum of x4.4 at 320/320 achievements).
+
+The main component for the Cumulative Multiplier is Relic 3 (Copper Bunny Statuette). This Multiplier is greatly improved by increasing your Zodiac Levels.
+
+=== Attack Exponent ===
+The Exponent shown near the top right of the Attacks tab. It is increased by performing an attack prestige, which unlock after getting [[Achievements|Achievement]] 251, as of the 1.025 update.
+
+=== Total Attack Base Damage ===
+The number shown as Base damage near the top right of the Attacks tab. Product of Score Damage, Attack Multiplier Damage, Cumulative Multipliers and Attack Exponent. Every time a circle completes a revolution, the enemy gets hit and the HP bar is reduced by this base damage value multiplied by the Circle's Damage Mult.
+
+== Attacks Strategy ==
+
+After your first few unities, the gameplay becomes a lot less linear as zodiac selection and choice is different for each playthrough. There still are a number of general concepts, strategies and ideas to be followed for fast progression through attacks.
+
+For progression up to and including Elemental Challenges, please refer to the [[Walkthrough]]. After completing these, the general gameplay loop revolves around gathering Gold to spend on Relics and Attack Circle Levels.
+
+A detailed guide on how to progress through attacks is provided in [[Attacks Strategy]].
+
+<noinclude>{{#titleicon_file:Icon_tab_att.png}}</noinclude>
+
+[[Category:Unity]]
+{{Main navbox}}

@@ -1,0 +1,52 @@
+The Statistics page displays information such as the highest [[Revolution|Score]] reached and game completion percentage. It contains 4 tabs: '''Global''', '''{{Keyword|inf|Infinity}}''', '''{{Keyword|eternity|Eternity}}''' and '''{{Keyword|unity|Unity}}'''. 
+
+== Global ==
+[[File:Statistics Global.png|thumb|Global Page]]
+
+The first being the global page with 4 sections of information:
+
+* The first section is all about how long you've played the game, displaying your playtime, total time, unscaled playtime, and unscaled total time. 
+* The second one shows the game completion progress, number of achievements you got, including Normal and Secret.
+* The third one shows the statistics, consists of Ascension Power, Lap Speed Mult and Game Speed Mult.
+* On the right of these global stats. It shows the highest point you get, you can see your highest score, infinities, IPs, EPs, Eternities and Unities.
+*The final section of global page, is your total rank score this will affect your place on the global leaderboard, you can find more information about it here [[leaderboard]].
+
+== [[File:Icon tab inf.png|30x30px]] {{Keyword|inf|Infinity}} ==
+[[File:Statistics Infinity.png|thumb|Infinity Page]]
+The Infinity page will show all of your Infinity stats, including: 
+* The last 10 Infinity runs on the right
+* The time before you Infinite
+* The unscaled time in this Infinity
+* The fastest Infinity you made
+* The sum of all ICs time
+* Total score
+* The best IP you got
+
+== [[File:Icon tab etern.png|30x30px]] {{Keyword|eternity|Eternity}} ==
+[[File:Statistics Eternity.png|thumb|Eternity Page]]
+The Eternity page will show all of your Eternity stats, including: 
+* The last 10 Eternity runs on the right
+* The time before you Eternate
+* The unscaled time in this Eternity
+* The fastest Eternity you made
+
+== [[File:Icon tab unity.png|30x30px]] {{Keyword|unity|Unity}} ==
+[[File:Statistics Unity.png|thumb|Unity Page]]
+The Unity page will show all of your Unity stats, including: 
+* Time in this Unity
+* Time last Unity
+* Unscaled time in this Unity
+* The fastest Unity you made
+* Max score in this Unity
+* Number of sacrificed Zodiacs
+* Total devil bonus for swords, wand, pentacles and cups
+* Max Infeccted in Universe Stage
+* Max ER level you can craft
+* The total of your singularities
+* Max Atoms
+* Last 10 Unity runs, with zodiac information on the right
+
+<noinclude>{{#titleicon_file:icon_tab_stats.png}}</noinclude>
+
+[[Category:General Gameplay]]
+{{Main navbox}}

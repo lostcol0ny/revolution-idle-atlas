@@ -1,0 +1,105 @@
+'''Planets''' are "identifiers" for slots where [[Zodiacs]] are put in. When slotted, Zodiacs give their respective effects alongside bonuses based on the planet and the Zodiac's [[Zodiacs#Zodiac_Signs|season]].
+
+When you assign a Zodiac to a planet, a confirmation pops up saying that assigning will trigger an [[Unity]] reset. This warning can be removed by going into Settings > Gameplay > Hide confirmation from: Zodiac Unity Reset or by clicking the "Don't show again" button in the window.
+
+==Planet Unlock==
+
+:[[File:Sun.png|20x20px]] '''Sun''' - Unlocked at start 
+:[[File:Merc.png|20x20px]] '''Mercury''' - Ach 161 (put a zodiac on Sun)
+:[[File:Venus.png|20x20px]] '''Venus''' - Ach 162 (Have 2 Unities)
+:[[File:Moon.png|20x20px]] '''Moon''' - Ach 166 (Clear 1 Easy Trial)
+:[[File:Pluto.png|20x20px]] '''Mars''' - Clear ET 4 (No Promo 2 & 4)
+:[[File:Jupiter.png|20x20px]] '''Jupiter''' - Ach 172 (Level 5+ Zodiac)
+:[[File:Saturn.png|20x20px]] '''Saturn''' - Ach 181 (Level 10+ Zodiac)
+:[[File:Uranus.png|20x20px]] '''Uranus''' - Ach 184 (Level 20+ Zodiac)
+:[[File:Nept.png|20x20px]] '''Neptune''' - Ach 188 (Level 30+ Zodiac)
+:[[File:Pluto.png|20x20px]] '''Pluto''' - Ach 190 (Level 40+ Zodiac)
+:[[File:Chiron.png|20x20px]] '''Chiron''' - Ach 205 (Level 50+ Zodiac)
+:[[File:Fortune.png|20x20px]] '''Fortune Pars''' - Ach 219 (Level 100+ Zodiac)
+
+== Planet Bonuses ==
+{| class="wikitable" 
+! Season !! Spring !! Summer !! Autumn !! Winter
+|-
+! Sun
+| Zodiac Quality x1.5 
+| Luck Mult x1.15 
+| Unity Rewards ^1.1 
+| Eternity Rewards ^1.2 
+|-
+! Mercury
+| Eternity Gain x2 
+| Infinity Gain x10 
+| DP Mult x2 
+| Star Cost ^0.9 
+|-
+! Venus
+| Game Speed x2 
+| Lap Speed x3 
+| Supernova Rewards ^1.02 
+| DU Power x1.05 
+|-
+! Moon
+| Luck Mult x1.2 
+| Unity Rewards ^1.15 
+| Eternity Rewards ^1.15 
+| Zodiac Quality x1.3 
+|-
+! Mars
+| Infinity Gain x5 
+| DP Mult x1.8 
+| Star Cost ^0.85 
+| Eternity Gain x2 
+|-
+! Jupiter
+| Lap Speed x2 
+| Supernova Rewards ^1.03 
+| DU Power x1.03 
+| Game Speed x1.1 
+|-
+! Saturn
+| Unity Rewards ^1.1 
+| Eternity Rewards ^1.2 
+| Zodiac Quality x1.2 
+| Luck Mult x1.1 
+|-
+! Uranus
+| DP Mult x5 
+| Star Cost ^0.93 
+| Eternity Gain x3 
+| Infinity Gain x3 
+|-
+! Neptune
+| Supernova Rewards ^1.04 
+| DU Power x1.06 
+| Game Speed x1.4 
+| Lap Speed x10 
+|-
+! Pluto
+| Eternity Rewards ^1.15 
+| Zodiac Quality x1.25 
+| Luck Mult x1.25 
+| Unity Rewards ^1.5 
+|-
+! Chiron
+| Star Cost ^0.9
+| Eternity Gain x2
+| Infinity Gain x100
+| DP Mult x2.5
+|-style="text-align:center"
+! Fortune Pars
+| colspan=4 | Luck Mult x1.5
+|-style="text-align:center"
+! [[Zodiacs]]
+| {{ZodiacBadge|Aries}} • {{ZodiacBadge|Taurus}} • {{ZodiacBadge|Pisces}} 
+| {{ZodiacBadge|Gemini}} • {{ZodiacBadge|Cancer}} • {{ZodiacBadge|Leo}} 
+| {{ZodiacBadge|Virgo}} • {{ZodiacBadge|Libra}} • {{ZodiacBadge|Scorpio}} 
+| {{ZodiacBadge|Sagittarius}} • {{ZodiacBadge|Capricorn}} • {{ZodiacBadge|Aquarius}} 
+|}
+
+== Trivia ==
+
+* All the planets are based on the Astrology, mainly the Solar System, with the exception of Fortune Pars.
+
+[[Category:Unity]]
+{{Main navbox}}

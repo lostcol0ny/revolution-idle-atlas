@@ -1,0 +1,937 @@
+{{Split|Eternity Milestones|Animals|Eternity Challenges}}
+{{Split|Supernova|Dilation|Dilation Tree}}
+
+'''{{Keyword|eternity|Eternity}}''' {{Icon|icon tab etern|size=20px}} is the 2nd major reset layer in Revolution Idle, and is the 4th reset layer overall.
+
+=='''Eternity'''==
+Upon having {{Keyword|ip|~1.79e308 IP}} (2^1024 IP), an option to {{Keyword|eternity|Eternate}} for {{Keyword|ep|Eternity Points}} ({{Keyword|ep|EP}}) will be displayed.
+
+When the player {{Keyword|eternity|Eternates}}, they will gain {{Keyword|ep|EP}} and {{Keyword|eternity|Eternities}} (Σ), and the following are reset:
+
+# [[Infinity#Infinity Upgrades|{{Keyword|inf|Infinity Upgrades}}]]
+# Bought [[Infinity#Generators|Generators]]
+# [[Infinity#Infinity Challenges|{{Keyword|inf|Infinity Challenge}}]] completions, their fastest completion times and challenges time sum
+# Fastest [[Infinity|{{Keyword|inf|Infinity}}]]
+# [[Infinity#Stars|Stars]] and [[Infinity#Stars|Star Upgrades]]
+# Everything that [[Infinity|{{Keyword|inf|Infinity}}]] also resets
+
+By default, only 1 {{Keyword|ep|EP}} and 1 {{Keyword|eternity|Eternity}} will be gained upon {{Keyword|eternity|Eternating}}. It is only possible to get more {{Keyword|ep|EP}} per {{Keyword|eternity|Eternate}} after reaching [[Eternity#Eternity_Milestones|Eternity Milestone]] 10 aka "[[Eternity#Eternity_Milestones|Break Eternity]]". Gaining more than 1 {{Keyword|eternity|Eternity}} per {{Keyword|eternity|Eternation}} is only possible after the player has [[Unity|{{Keyword|unity|United}}]] for the first time.
+
+{{Keyword|ep|EP}} is a resource which can be spent on [[Eternity#Animals|{{Keyword|ap|Animal Points}}]] ([[Eternity#Eternity_Milestones|Eternity Milestone]] 3) and [[Eternity#Laboratory|Lab Upgrades]] ([[Eternity#Animals_Milestones|Animals Milestone]] 3). {{Keyword|ep|EP}} is initially limited to {{Keyword|ep|1.08e2466 EP}}, and this amount is required for '''[[Unity|{{Keyword|unity|Unity}}]]''', the next major reset layer.
+
+{{Keyword|eternity|Eternities}} are a resource which are not spent, much like [[Infinity|{{Keyword|inf|Infinities}}]] (∞) in the [[Infinity|{{Keyword|inf|Infinity}}]] layer. Some effects in the game are improved by having more {{Keyword|eternity|Eternities}}, and [[Eternity#Eternity_Milestones|Eternity Milestones]] are reached when the player obtains certain amounts of them.
+
+=='''Eternity Milestones'''==
+Eternity Milestones is the 1st {{Keyword|eternity|Eternity}} tab, unlocked by reaching {{Keyword|eternity|Eternity}} for the first time. This tab includes [[Eternity#Eternity_Bonuses|Eternity Bonuses]].
+
+Eternity Milestones are obtained by reaching a certain number of {{Keyword|eternity|Eternities}} (Σ). These milestones unlock automation and new mechanics, modify existing mechanics, and provide boosts, as follows:
+# Have 1 Σ : Unlocks Eternity Milestones
+# Have 2 Σ : Starting from this {{Keyword|eternity|Eternity|}}, keeps all [[Automations|{{Keyword|auto|Automations}}]]
+# [[File:Eternity milestones.png|thumb|Eternity Milestones]]Have 3 Σ : Unlocks Eternity Zoo (see [[Eternity#Animals|Animals]])
+# Have 5 Σ : Buying [[Revolution|Revolutions]] (colors) no longer take away [[Revolution#Score|Score]]
+# Have 7 Σ : Unlocks [[Automations#IP_Adjuster|{{Keyword|auto|Auto IP Adjuster}}]]
+# Have 8 Σ : Unlocks [[Eternity#Eternity_Challenges|Eternity Challenges]]
+# Have 12 Σ : Unlocks [[Automations#Autobuy_Infinity_Tree|{{Keyword|auto|Automation for Infinity Upgrades}}]]
+# Have 14 Σ : Unlocks [[Automations#Autobuy_Generators|{{Keyword|auto|Automation for Generators}}]]
+# Have 16 Σ : Unlocks [[Automations#Autobuy_Stars|{{Keyword|auto|Automation for Stars and Star/Stardust upgrades}}]] and [[Automations#Auto_Eternity|{{Keyword|auto|Auto Eternity}}]]
+# Have 32 Σ : "Breaks Eternity" ([[Infinity|{{Keyword|ip|IP}}]] is no longer limited to {{Keyword|ip|~1.79e308 IP}} [2^1024 IP])
+# Have 100 Σ : x1.05 to [[Infinity|{{Keyword|ip|IP}}]] gain for each {{Keyword|eternity|Eternity}} (softcapped at 1,000 Σ)
+
+At 32 Σ, the player will Break Eternity ([[Achievements|{{Keyword|ach|Ach. 80}}]]), which removes the [[Infinity|{{Keyword|ip|IP}}]] limit of {{Keyword|ip|~1.79e308 IP}} (2^1024 IP). Reaching higher [[Infinity|{{Keyword|ip|IP}}]] values will reward more {{Keyword|ep|EP}} per {{Keyword|eternity|Eternity}}.
+
+=='''Eternity Bonuses'''==
+There are 6 different {{Keyword|eternity|Eternity bonuses}}, as follows:
+* Mult gain (starts at x2)
+* Lap speed (starts at x2)
+* Ascension Power (starts at x1.1)
+* Infinity gain (starts at x2)
+* Generators power (starts at x2.14)
+* Stardust gain (starts at x10)  
+{{Keyword|eternity|Eternity bonuses}} improve based on the number of {{Keyword|eternity|Eternities}} (Σ) the player has.
+
+=='''Animals'''==
+Animals is the 2nd {{Keyword|eternity|Eternity}} tab, unlocked by reaching [[Eternity#Eternity_Milestones|Eternity Milestone]] 3 (3 Σ). Here, the player can purchase {{Keyword|ap|Animal Points}} ({{Keyword|ap|AP}}) and Animals in the Eternity Zoo. [[Eternity#Animals_Milestones|Animals Milestones]] are now also unlocked (a new sub-tab in the Milestones tab).
+
+==='''AP and Animals'''===
+{{Keyword|ap|AP}} is a resource that can be bought with {{Keyword|ep|EP}}, [[Infinity|{{Keyword|ip|IP}}]] and [[Revolution#Score|Score]]. The cost to buy {{Keyword|ap|AP}} will increase with each purchase (individually for each resource).
+
+Animals are bought with {{Keyword|ap|AP}} and will provide the player with many different bonuses that persist through {{Keyword|eternity|Eternities}}.
+[[File:Animals.png|thumb|The Animals tab]]
+You can "respec" your Animals at any time by using the button (two arrows, forming a circle) within the tab, which will:
+
+* Return you to having no Animals bought
+* Return all of your spent {{Keyword|ap|AP}} to you
+* Reset your ''current'' {{Keyword|eternity|Eternity}}
+
+There are 81 different Animals and a total of {{Keyword|ap|1,524 AP}} is required to buy them all.
+
+For details on individual Animal costs and bonuses, see the table below:
+{{AnimalGrid||true}}
+
+==='''Animals Milestones'''===
+
+Animals Milestones are obtained based on how many Animals the player owns.
+They unlock new mechanics, modify existing mechanics and provide bonuses to the player, as follows:
+
+# Own 1 Animal: Unlocks [[Eternity#Slowdown|Slowdown]]
+# Own 4 Animals: Unlocks [[Automations#Auto_Slowdown|{{Keyword|auto|Auto Slowdown}}]]
+# Own 7 Animals: Unlocks [[Eternity#Laboratory|{{Keyword|rp|Lab}}]]
+# Own 10 Animals: [[Revolution#Promote|Promoting]] now resets nothing
+# Own 20 Animals: Gain 100% of the {{Keyword|ip|IP}} you would get on [[Infinity|{{Keyword|inf|Infinity}}]], every second. ''Needs [[Eternity#Eternity_Challenges|Eternity Challenges Milestone]] 4 (10 {{Keyword|eternity|EC}} completions) to work fully.''
+# Own 48 Animals: +10 free levels to all [[Eternity#Laboratory|{{Keyword|rp|RP}}]] upgrades
+# Own 81 Animals: Unlocks [[Eternity#Dilation_&_Dilation Tree|{{Keyword|dilation|Dilation}}]]
+
+==='''Slowdown''' ===
+
+Slowdown is a new mechanic unlocked after the player buys their first Animal and reaches Animals Milestone 1. This mechanic allows the player to exchange lap speed (divides lap speed by 10) for bonus ascensions (+1 [[Revolution#Ascension|Ascension]] to all [[Revolution#Circles|colors]]).
+
+''Note: This is generally a very good trade, but too many Slowdowns can actually decelerate progress by making the first [[Revolution]] take a long time to complete after [[Revolution#Prestige|Prestige]]/[[Revolution#Promote|Promote]].''
+
+The Slowdown menu is displayed by clicking on the Slowdown button located at the bottom-left of the [[Revolution]] page.
+
+When all colors' laps per second (Laps/s) are greater than 10, the player can click the Slowdown button within the menu to gain a Slowdown. Slowdown can also be undone at any time by clicking the Speedup button within the menu.
+
+Slowdown is reset to 0 on [[Infinity|{{Keyword|inf|Infinity}}]] (and by extension, also on {{Keyword|eternity|Eternity}} and [[Unity|{{Keyword|unity|Unity}}]]).
+
+After the player owns 4 Animals, they will reach Animals Milestone 2 and unlock [[Automations#Auto_Slowdown|{{Keyword|auto|Auto Slowdown}}]], which can be used to {{Keyword|auto|automate}} Slowdown. This is done by setting a Laps/s value which all colors must be greater than before a Slowdown is triggered.
+
+When the player reaches both Animals Milestone 4 (own 10 Animals) and [[Eternity#Eternity_Challenges_Milestones|Eternity Challenges Milestone]] 2 (5 {{Keyword|eternity|EC}} completions), having too many Slowdowns is no longer a problem, since they no longer reset anything when they [[Revolution#Promote|Promote]] and [[Revolution#Prestige|Prestige]] (respectively). As such, [[Automations#Auto_Slowdown|{{Keyword|auto|Auto Slowdown}}]] can be set to 10 from now on, in order to achieve the maximum possible Slowdown.
+
+=='''Laboratory'''==
+The Laboratory (Lab) is the fourth {{Keyword|eternity|Eternity}} tab, unlocked by reaching [[Eternity#Animals_Milestones|Animals Milestone]] 3 (own 7 [[Eternity#Animals|Animals]]).
+
+The Lab allows the player to get Laboratory Points (LP), by purchasing 3 different upgrades which cost {{Keyword|ep|EP}}:
+
+* Base (+0.20 per level)
+* Mult (+0.50 per level)
+* Power (+0.01 per level)
+
+The formula for LP/s is:  (Base x Mult) ^ Power
+
+When enough LP has been generated to fill the flask on the right-hand side of the Laboratory page, the Lab level will increase and the player will gain a {{Keyword|rp|Research Point}} ({{Keyword|rp|RP}}).
+
+{{Keyword|rp|RP}} can be used to upgrade 6 different Lab upgrades, as follows:
+
+# [[Infinity|{{Keyword|ip|IP}}]] Gain (x4 per level)
+# [[Revolution#Ascension|Ascend Power]] (*(1 + n*0.25) ''where n is level'')
+# [[Infinity#Stars|Star Base Mult]] (*(1 + n*0.15))
+# {{Keyword|ep|EP}} Gain (*(1 + n*0.5))
+# [[Infinity#Generators|Gen. Power Exponent]] (+0.02 per level)
+# Common Exponent (+0.01 per level, softcapped at level 500)
+
+Each spent {{Keyword|rp|RP}} will increase a Lab upgrade by one level. Lab upgrades can be respecced at any time, removing all levels and refunding all {{Keyword|rp|RP}} to the player, at the cost of starting a new {{Keyword|eternity|Eternity}}.
+
+=='''Eternity Challenges'''==
+Eternity Challenges (EC) is the third {{Keyword|eternity|Eternity}} tab, unlocked by reaching [[Eternity#Eternity_Milestones|Eternity Milestone]] 6 (have 8 Σ). There are 10 Eternity challenges, each with their own unique penalty (similar to [[Infinity#Infinity_Challenges|Infinity Challenges]]), with the goal being to reach the specified target [[Revolution#Score|Score]] under those penalties.
+
+* Unlike Infinity Challenges, where there is the time to complete, each EC initially has 5 difficulties to complete, and every difficulty of an EC will increase the penalties and/or raise the target Score. 
+* After completing Insane Trial 4, a 6th difficulty will be available to complete. Each EC difficulty is considered to be an individual challenge by the game, meaning there are a total of 60 ECs.
+
+Completing an EC will award the player 1 free AP, and an extra magnet chance multiplier for each clear beyond 50. Each EC (after the first) is unlocked by completing difficulty 2 of the previous EC.
+
+In the below collapsible, refer to the '''Expected Completion''' column for when you should start each challenge. '''[01/50]''' is the first EC you should complete when you have at least '''14 ET''' and '''8 AP'''.
+
+{|class="wikitable sortable mw-collapsible mw-collapsed" style="width:100%"
+|colspan="8"|'''Eternity Challenges'''
+|-
+!
+!Handicap Stat 
+!Difficulty
+!Handicap Value 
+!Goal [Score]
+!Reward Stat
+!Reward Value
+!Expected Completion
+|-
+| rowspan="6" |1
+| rowspan="6" |Lap Speed
+|1
+|x1/20
+| rowspan="5" |e30,000
+| rowspan="6" |Lap Speed
+|x2
+|[01/50] 14Σ, 8 AP
+|-
+|2
+|x1/128
+|x4
+|[02/50] 33Σ, 13 AP
+|-
+|3
+|x1/512
+|x7
+|[04/50] 18 AP
+|-
+|4
+|x1/2,000
+|x12
+|[07/50] 30 AP, 26 RP
+|-
+|5
+|x1/7,500
+|x20
+|[09/50] 52 AP, 51 RP, SN 2
+|-
+|6
+|x1/1e236
+|e1e15
+|x500
+|
+|-
+| rowspan="6" |2
+| rowspan="6" |Common Exponent
+|1
+|x0.5
+|e150 
+| rowspan="6" |Common Exponent
+| +0.03
+|[03/50] 34Σ, 14 AP
+|-
+|2
+|x0.4
+|e142
+| +0.05
+|[05/50] 19 AP, 15 RP
+|-
+|3
+|x0.3
+|e240
+| +0.07
+|[08/50] 24 AP, 31 RP
+|-
+|4
+|x0.2
+|e13,000
+| +0.10
+|[17/50] 126 AP, 152 RP, SN 6
+|-
+|5
+|x0.1
+|e5,600
+| +0.20
+|[20/50] 144 AP, 179 RP, SN 8
+|-
+|6
+|x0.001
+|e5e10
+| +0.30
+|
+|-
+| rowspan="6" |3
+| rowspan="6" |Stars
+|1
+| rowspan="6" |Disabled (x0)
+|e12,000
+| rowspan="6" |Star Base
+| +1
+|[06/50] 21 AP, 15 RP
+|-
+|2
+|e18,000
+| +3
+|[10/50] 52 AP; 52 RP, SN 2
+|-
+|3
+|e30,000
+| +5
+|[11/50] 52 AP, 55 RP, SN 2
+|-
+|4
+|e40,000
+| +10
+|[13/50] 56 AP, 58 RP, SN 2
+|-
+|5
+|e50,000
+| +20
+|[15/50] 92 AP, 92 RP, SN 4
+|-
+|6
+|e1.5e13
+| +50
+|
+|-
+| rowspan="6" |4
+| rowspan="6" |Generator Exponent
+|1
+|/10
+|e15,000
+| rowspan="6" |Generator Exponent
+|x1.03
+|[12/50] 56 AP, 57 RP, SN 2
+|-
+|2
+|/15
+|e25,000
+|x1.05
+|[14/50] 92 AP, 92 RP, SN 4
+|-
+|3
+|/20
+|e50,000
+|x1.07
+|[19/50] 140 AP, 171 RP, SN 7
+|-
+|4
+|/30
+|e60,000
+|x1.10
+|[23/50] 158 AP, 194 RP, SN 9
+|-
+|5
+|/50
+|e70,000
+|x1.15
+|[24/50] 186 AP, 252 RP, SN 13
+|-
+|6
+|/1e10
+|e1.5e13
+|x1.25
+|
+|-
+| rowspan="6" |5
+| rowspan="6" |Ascension Power
+|1
+|^0.10
+|e60,000
+| rowspan="6" |Ascension Power
+|x1.5
+|[16/50] 116 AP, 130 RP, SN 5
+|-
+|2
+|^0.07
+|e70,000
+|x2
+|[18/50] 140 AP, 170 RP, SN 7
+|-
+|3
+|^0.05
+|e80,000
+|x4
+|[21/50] 144 AP, 183 RP, SN 8
+|-
+|4
+|^0.03
+|e150,000
+|x10
+|[26/50] 216 AP, 287 RP, SN 16
+|-
+|5
+|^0.01
+|e200,000
+|x20
+|[28/50] 256 AP, 333 RP, SN 21
+|-
+|6
+|^0.001
+|e8.7e13
+|x75
+|
+|-
+| rowspan="6" |6
+| rowspan="6" |Promotion and Prestige Bonus
+|1
+| rowspan="6" |Disabled (x0)
+|e80,000
+| rowspan="6" |Prestige Bonus
+|x1.05
+|[22/50] 158 AP, 190 RP, SN 9
+|-
+|2
+|e120,000
+|x1.10
+|[25/50] 216 AP, 285 RP, SN 16
+|-
+|3
+|e200,000
+|x1.15
+|[29/50] 256 AP, 338 RP, SN 21
+|-
+|4
+|e400,000
+|x1.20
+|[30/50] 550 AP, 481 RP, SN 24
+|-
+|5
+|e750,000
+|x1.30
+|[34/50] 650 AP, 540 RP, SN 27
+|-
+|6
+|e3.33e15
+|x1.4
+|
+|-
+| rowspan="6" |7
+| rowspan="6" |RP upgrades
+|1
+| rowspan="6" |Disabled (x0)
+|e100,000
+| rowspan="6" |Free Levels to all Lab Upgrades
+| +5
+|[27/50] 236 AP, SN 19
+|-
+|2
+|e120,000
+| +10
+|[31/50] 650 AP, SN 26
+|-
+|3
+|e150,000
+| +15
+|[37/50] 716 AP, SN 27
+|-
+|4
+|e200,000
+| +20
+|[42/50] 1,454 AP, SN 34
+|-
+|5
+|e250,000
+| +30
+|
+|-
+|6
+|e2.66e14
+| +100
+|
+|-
+| rowspan="6" |8
+| rowspan="6" |IP gain
+|1
+|^0.05
+|e160,000
+| rowspan="6" |IP gain
+|^1.02
+|[32/50] 650 AP, 539 RP, SN 26
+|-
+|2
+|^0.04
+|e200,000
+|^1.04
+|[33/50] 650 AP, 539 RP, SN 26
+|-
+|3
+|^0.03
+| rowspan="2" |e250,000
+|^1.07
+|[38/50] 716 AP, 550 RP, SN 27
+|-
+|4
+|^0.02
+|^1.10
+|[39/50] 1,072 AP, 720 RP, SN 33
+|-
+|5
+|^0.01
+|e180,000
+|^1.20
+|[40/50] 1,072 AP, 720 RP, SN 33
+|-
+|6
+|^0.001
+|e6.2e15
+|^1.30
+|
+|-
+| rowspan="6" |9
+| rowspan="6" |Generators
+|1
+| rowspan="6" |Disabled (x0)
+|e210,000
+| rowspan="6" |Generator Exponent
+|x1.1
+|[35/50] 716 AP, 550 RP, SN 27
+|-
+|2
+|e225,000
+|x1.2
+|[36/50] 716 AP, 550 RP, SN 27
+|-
+|3
+|e300,000
+|x1.3
+|[41/50] 1,454 AP, 781 RP, SN 34
+|-
+|4
+|e450,000
+|x1.4
+|
+|-
+|5
+|e700,000
+|x1.5
+|
+|-
+|6
+|e5.8e15
+|x1.7
+|
+|-
+| rowspan="6" |10
+| rowspan="6" |Dilation Debuffs
+|1
+| rowspan="6" |^3
+|1,000,000
+| rowspan="6" |DP gain
+|x10
+|
+|-
+|2
+|e10
+|x50
+|
+|-
+|3
+|e100
+|x150
+|
+|-
+|4
+|e308
+|x400
+|
+|-
+|5
+|e1,000
+|x1,000
+|
+|-
+|6
+|e5.6e15
+|x1e7 (10M)
+|
+|}
+
+==='''Eternity Challenges Milestones'''===
+{{Keyword|eternity|Eternity Challenges}} have their own milestones based on the number of EC completed.
+#3 EC completions: Keep your [[Infinity#Infinity_Challenges|{{Keyword|inf|Infinity Challenges}}]] on {{Keyword|eternity|Eternity}} ''(including fastest completion times)''
+#5 EC completions: [[Revolution#Prestige|Prestiging]] now resets nothing
+#8 EC completions: Unlocks [[Eternity#Supernova|Supernova]]
+#10 EC completions: Keep fastest [[Infinity|{{Keyword|inf|Infinity}}]] time on {{Keyword|eternity|Eternity}} ''(needed for [[Eternity#Animals_Milestones|Animals Milestone]] 5 to work correctly)''
+#30 EC completions: Every 4 Supernovae gives 1 free level to all [[Eternity#Laboratory|{{Keyword|rp|RP}}]] upgrades
+#32 EC completions: Every 4 Supernovae gives another free level to all [[Eternity#Laboratory|{{Keyword|rp|RP}}]] upgrades
+#35 EC completions: Every 2 Supernovae gives another free level on all [[Eternity#Laboratory|{{Keyword|rp|RP}}]] upgrades
+#50 EC completions: Unlocks [[Eternity#Dilation_&_Dilation_Tree|{{Keyword|dtp|Dilation Tree}}]]
+#60 EC completions: 2x more Magnet Chance
+=='''Supernova'''==
+Supernova is the fifth {{Keyword|eternity|Eternity}} tab, unlocked by reaching [[Eternity#Eternity_Challenges_Milestones|Eternity Challenges Milestone]] 3 (8 {{Keyword|eternity|EC}} completions).
+
+Supernovae are obtained by reaching a certain [[Revolution#Score|Score]] and using the "Go Supernova" button within the tab. Going Supernova will start a new {{Keyword|eternity|Eternity}} and provide Supernova bonuses to the player, as follows:
+
+* [[Eternity#Eternity_Bonuses|Eternity reward]] Mult
+* [[Infinity#Stars|Star Base]] Mult
+* [[Eternity#Laboratory|Lab Base]] Mult
+* {{Keyword|ep|EP}} gain Mult
+* + [[Eternity#Animals|{{Keyword|ap|AP}}]]
+
+In general, Supernovae should be performed as soon as possible, for the bonuses they reward. However, in some cases the player may want to delay going Supernova (for example, in the later part of [[Eternity#Dilation_&_Dilation_Tree|{{Keyword|dilation|Dilation Tree}}]], in order to first gain more [[Eternity#Animals|{{Keyword|ap|AP}}]]).
+
+=='''Dilation'''==
+{{Keyword|dilation|Dilation}} is the sixth {{Keyword|eternity|Eternity}} tab, unlocked by reaching [[Eternity#Animals_Milestones|Animals Milestone]] 7 (own all 81 [[Eternity#Animals|Animals]]).
+
+Now the player can enter and exit {{Keyword|dilation|Dilation}}, by using the Go/Exit Dilation button within the tab. Upon entering, a new {{Keyword|eternity|Eternity}} will begin, but with {{Keyword|dilation|Dilation}} penalties applied.
+
+The base {{Keyword|dilation|Dilation}} penalties are as follows:
+
+* Common Exponent / 25
+* [[Infinity#Generators|Gen Exp]] / 1,000
+* [[Infinity#Stars|Star Exp]] / 100
+* [[Revolution#Ascension|Ascension Power]] ^0.10
+* ([[Revolution|Laps Speed]] ^0.10) / 10
+* [[Infinity|{{Keyword|ip|IP}}]] gain ^0.01
+Exiting {{Keyword|dilation|Dilation}} will start a new {{Keyword|eternity|Eternity}} and the player's Max Score will be set to the maximum [[Revolution#Score|Score]] reached in {{Keyword|dilation|Dilation}}.
+
+The purpose of increasing Max Score is to generate more {{Keyword|dp|Dilation Points}} ({{Keyword|dp|DP}}), as the player's {{Keyword|dp|DP}} Income ({{Keyword|dp|DP}} per second) is based on this.
+
+==='''Dilation Upgrades'''===
+{{Keyword|dp|DP}} can be spent to purchase levels of 9 different {{Keyword|dilation|Dilation}} Upgrades (DU), as follows:
+
+{| class="wikitable mw-collapsible mw-collapsed" style="text-align:center; width: 80%; font-size: 1rem"
+|colspan="5"|'''Dilation Upgrades'''
+|-
+!#
+!Effect
+!Base Effect
+!Effect / level
+!Base Cost [{{Keyword|dp|DP}}]
+|-
+|1
+|{{Keyword|dilation|Dilation}} penalties are weaker
+| /1.00
+| +0.03
+|500
+|-
+|2
+|{{Keyword|dp|DP}} Income mult
+|x1.00
+|x1.07
+|10,000
+|-
+|3
+| + free levels to all [[Eternity#Laboratory|{{Keyword|rp|RP}}]] upgrades
+| +0.00
+| +3.00
+|1,000,000
+|-
+|4
+|Common Exponent mult
+|x1.00
+|x1.001
+|20,000,000
+|-
+|5
+| [[Eternity#Supernova|Supernova]] bonuses power
+|^1.00
+| +^0.02
+|1e9
+|-
+|6
+|[[Infinity#Generators|Generator]] Exponent mult
+|x1.00
+| +0.01
+|1e10
+|-
+|7
+|{{Keyword|ep|EP}} gain mult
+|x1.00
+|x10.00
+|1e12
+|-
+|8
+|[[Revolution#Ascension|Asc. Power]] Mult
+|x1.00
+| +1.00
+|1e13
+|-
+|9
+|[[Eternity#Laboratory|Lab]] power mult
+|x1.00
+| +0.01
+|1e16
+|}
+The cost for the next level of a DU will increase after each purchased level. There is currently no known maximum level for DU, but Dilation Upgrade 4 (DU4), DU5 and DU9 effects eventually softcap.
+
+The effect per level of all DU are increased by 10% (x1.10) when the player completes [[Achievements|{{Keyword|ach|Ach. 129}}]]. DU1, DU2 and DU3 effect per level can be increased by allocating {{Keyword|dtp|DTP}} to Dilation Tree Upgrades TOP-1, MIDDLE-1 and BOTTOM-1 respectively.
+
+== '''Dilation Tree''' ==
+{{Keyword|dtp|Dilation Tree}} is the seventh and final {{Keyword|eternity|Eternity}} tab, unlocked by completion of all 50 [[Eternity#Eternity_Challenges|Eternity Challenges]].
+
+[[File:Dilation Tree Numbered.png|alt=The Dilation Tree with Upgrades numbered. The Tree branches from a Center into 3, 4-long, branches. The upgrades in said branches must be bought in order. The numbers are meant to illustrate that order :)|thumb|Dilation Tree]]
+
+Dilation Tree Points ({{Keyword|dtp|DTP}}) can be purchased by using the "Buy DTP" button within the tab, at the cost of {{Keyword|dp|DP}}. The player can allocate {{Keyword|dtp|DTP}} to 13 different Dilation Tree Upgrades (DTU), each providing different bonuses.
+
+The tree works like a classic skill tree, in the sense that the player must buy the upgrades in order ''(see image/below for clarification)''.
+
+''Note: only 1 {{Keyword|dtp|DTP}} needs be allocated to a preceding DTU in order to be able to allocate {{Keyword|dtp|DTP}} to the next DTU (e.g., if 1 {{Keyword|dtp|DTP}} is allocated to CENTER-1, the player can then allocate {{Keyword|dtp|DTP}} to TOP-1, MIDDLE-1 and BOTTOM-1).''
+
+==='''Dilation Tree Upgrades (DTU)'''===
+The green tile is the Center Upgrade (CENTER-1), and each branch (aka "Axis") is also colored: Red for Top, Yellow for Middle, and Blue for Bottom. Each axis contains 4 DTU (labelled e.g. for Top: TOP-1, TOP-2, TOP-3 & TOP-4).
+
+Each level of a DTU costs 1 {{Keyword|dtp|DTP}} to buy and each DTU can be bought up to 5 times. A total of 65 {{Keyword|dtp|DTP}} are required to max all DTU.
+
+Below is a table detailing the effects of each DTU:
+{| class="wikitable mw-collapsible mw-collapsed" style="text-align:center; width: 60%; font-size: 1rem"
+|colspan="4"|'''Dilation Tree Upgrades (DTU)'''
+|-
+!Axis
+!Index
+!Effect
+!Increase per level
+|-
+|Center
+|1
+|Each unspent {{Keyword|ap|AP}} boosts {{Keyword|dp|DP}} gain by 0.1%
+| +0.05%
+|-
+| rowspan="4" |Top
+|1
+|Dilation Upgrade 1 is 30% stronger
+| +15%
+|-
+|2
+|Eternities ^2.00 boost {{Keyword|dp|DP}} gain
+| +^0.25
+|-
+|3
+|Supernova Score exponent requirement is powered to ^0.90
+|x0.95
+|-
+|4
+|Bottom DT upgrades are 10% stronger
+| +10%
+|-
+| rowspan="4" |Middle
+|1
+|Dilation Upgrade 2 is 20% stronger
+| +10% 
+|-
+|2
+|Get Eternities passively based on fastest Eternity x10
+|x2
+|-
+|3
+|Supernova bonuses are ^1.08 stronger, including free [[Eternity#Animals|{{Keyword|ap|AP}}]]
+| +^0.08
+|-
+|4
+|Middle DT upgrades are 10% stronger
+| +10%
+|-
+| rowspan="4" |Bottom
+|1
+|Dilation Upgrade 3 is 40% stronger
+| +20%
+|-
+|2
+|Gives free [[Eternity#Laboratory|{{Keyword|rp|RP}}]] Upgrade levels equal to 1% of unspent [[Eternity#Animals|{{Keyword|ap|AP}}]]
+| +1%
+|-
+|3
+|Supernovae boost {{Keyword|dp|DP}} gain by x2.00
+| +0.25
+|-
+|4
+|Top DT upgrades are 10% stronger
+| +10%
+|}
+''Note: For all Axes; Index 1 improves DU, Index 2 provides unique effects, Index 3 relates to Supernovae, and Index 4 improves other DTU.
+
+Index 4 DTU effects (TOP-4, MIDDLE-4 and BOTTOM-4) can be made 30% stronger by completing both [[Achievements|{{Keyword|ach|Ach. 29}}]] and [[Achievements|{{Keyword|ach|Ach. 140}}]].
+
+''Note: It is highly recommended to complete [[Achievements|{{Keyword|ach|Ach. 29}}]] at {{Keyword|dtp|DTP}} 13, immediately after completing [[Achievements|{{Keyword|ach|Ach. 140}}]] (if you have not done so already). The bonus (detailed above) is very important; without it you will not be able to progress past DTP 16.
+
+When the player wishes to allocate their {{Keyword|dtp|DTP}} in a different way, they can use the button (two arrows, forming a circle) within the tab to "Respec". Respeccing {{Keyword|dtp|DTP}} will:
+
+* Reset your current {{Keyword|eternity|Eternity}}
+* Reset (zero) your {{Keyword|dp|Dilation Points}} ({{Keyword|dp|DP}})
+* Reset your maximum Dilation Score (to zero)
+* Reduce the levels of the first 3 Dilation Upgrades (DU1, DU2 & DU3) by 5%
+
+''Note: The cost to re-buy lost DU1, DU2 and DU3 levels will also reduce, in accordance with their reduced levels. It is recommended to re-buy these levels when you are next in a {{Keyword|dp|DP}}-Income-focused tree setup.''
+
+''Note 2: The respec penalties may seem harsh, but with limited {{Keyword|dtp|DTP}} it will be necessary to respec often in order to progress through Dilation Tree, using different setups for different purposes. More details on when and why to respec can be found in the [[Walkthrough]].
+
+==='''Dilation Tree Loadouts'''===
+Dilation Tree setups can be saved as "loadouts" by using the button (a dot followed by a line, stacked three high) within the tab. By default, 3 Loadouts can be saved, and 5 additional Loadouts can be purchased for {{Keyword|soul|Souls}} {{Icon|souls}} (starting at {{Keyword|soul|1,000 Souls}} and increasing in cost with each purchase).
+
+Loadouts can be used to quickly switch between commonly used setups, but note this will have the same effect as respeccing {{Keyword|dtp|DTP}} (see previous section for more details).
+
+Players can Export their loadouts to their device's clipboard from within the loadout menu, in the format: Cx;Tx,x,x,x;Mx,x,x,x;Bx,x,x,x. In this expression, C, T, M and B are the initials of the upgrade branches, and each x denotes the level of each upgrade, written in Index order. This format can also be used to Import loadouts from the clipboard.
+
+=== Optimized DT loadouts can be found in the [[Walkthrough]] section. ===
+
+=='''Statistics for nerds'''==
+==='''Eternity Bonuses & Milestones formulae'''===
+
+==== <big>
+<math>
+\text{Eternity Mult Gain Bonus} = \left\{ \begin{array}{cl}
+ \text{Eternities} < 20 : & \ 1 + \text{Eternities} \\
+ \text{Eternities} \geqslant 20 : & \ (\frac{1 + \text{Eternities}}{21})^{0.1} \times 21 \\
+\end{array} \right.
+</math> ====
+
+
+<math>
+\text{Eternity Lap Speed Bonus} = \left\{ \begin{array}{cl}
+ \text{Eternities} < 20 : & \ 1 + \text{Eternities} \\
+ \text{Eternities} \geqslant 20 : & \ (\frac{1 + \text{Eternities}}{21})^{0.1} \times 21 \\
+\end{array} \right.
+</math>
+
+<math>
+\text{Eternity Ascension Power Bonus} = \left\{ \begin{array}{cl}
+ \text{Eternities} < 20 : & \ 1 + \frac{\text{Eternities}}{10} \\
+ \text{Eternities} \geqslant 20 : & \ (\frac{1 + \frac{\text{Eternities}}{10}}{3})^{0.3} \times 3 \\
+\end{array} \right.
+</math>
+
+<math>
+\text{Eternity Infinity Gain Bonus} = \left\{ \begin{array}{cl}
+ \text{Eternities} < 20 : & \ \lfloor (1 + \times{Eternities})^{1.2} \rfloor \\
+ \text{Eternities} \geqslant 20 : & \ \lfloor (\frac{\lfloor (1 + \times{Eternities})^{1.2} \rfloor}{21^{1.5}})^{0.1} \times 21^{1.5} \rfloor \\
+\end{array} \right.
+</math>
+
+<math>
+\text{Eternity Generators Power Bonus} = \left\{ \begin{array}{cl}
+ \text{Eternities} < 20 : & \ (\text{Eternities} + 1)^{1.1} \\
+ \text{Eternities} \geqslant 20 : & \ (\frac{(\text{Eternities} + 1)^{1.1}}{21^{1.3}})^{0.1} \times 21^{1.3} \\
+\end{array} \right.
+</math>
+
+<math>
+\text{Eternity Stardust Gain Bonus} = \left\{ \begin{array}{cl}
+ \text{Eternities} < 10 : & \ 10^\text{Eternities} \\
+ \text{Eternities} \geqslant 10 : & \ \text{Eternities}^{10} \\
+\end{array} \right.
+</math>
+
+<hr />
+
+<math>
+\text{Eternity Milestone 11 Bonus} = \left\{ \begin{array}{cl}
+ \text{Eternities} < 1000 : & \ {1.05}^\text{Eternities} \\
+ \text{Eternities} \geqslant 1000 : & \ {1.05}^{(\frac{\text{Eternities}}{1000})^{0.1} \times 1000} \\
+\end{array} \right.
+</math>
+</big>
+
+==='''Animals ({{Keyword|ap|AP}}) formulae'''===
+<big>
+<math>
+\text{AP Cost (EP)} = 2^\text{Bought AP with EP} \times \max(1, 3^{\text{Bought AP with EP} - 50}) \times \max(1, 5^{\text{Bought AP with EP} - 150})
+</math>
+
+<math>
+\text{AP Cost (IP)} = 292 \times 8^\text{Bought AP with IP} \times \left\{ \begin{array}{cl}
+ \text{Bought AP with IP} < 10^7 : & \ 1 \\
+ \text{Bought AP with IP} \geqslant 10^7 : & \ 1000^{(1 + \frac{\text{Bought AP with IP} - 10^7}{10^6}) \times (\text{Bought AP with IP} - 10^7)} \\
+\end{array} \right.
+</math>
+
+<math>
+\text{AP Cost (Score)} = 25000 \times 5000^\text{Bought AP with Score} \times \left\{ \begin{array}{cl}
+ \text{Bought AP with Score} < 10^7 : & \ 1 \\
+ \text{Bought AP with Score} \geqslant 10^7 : & \ 100^{(1 + \frac{\text{Bought AP with Score} - 10^7}{10^6})^{2} \times (\text{Bought AP with Score} - 10^7)} \\
+\end{array} \right.
+</math>
+</big>
+
+
+
+
+
+
+
+
+
+
+
+
+
+==='''Laboratory formulae'''===
+<big>
+<math>
+\text{Lab Power Cost} = 250 \times (2 \times 1.01^\text{Amount})^\text{Amount}
+</math>
+</big>
+
+
+==='''Supernova formulae'''===
+<big><math>
+\lg(\text{Supernova Cost}) = {({\left\{ \begin{array}{cl}
+ \text{SN Level} \leq 42 : & \ \text{Hardcoded} \\
+ \text{SN Level} > 42 : & \ {\left[ 16500000 \times {1.1}^{\text{SN Level} - 42} \right]} \\
+\end{array} \right.})^{\text{Top-3 Effect} \times \text{Zodiac SN Tetration} \times \text{Sacrifice SN Tetration}}}
+</math></big><br/>
+Scales extra after 100 supernova levels, before tetration:
+<br/><big><math>
+{(X \times (1 + \frac{\text{Supernova Level} - 99}{10}))}^{(1 + \frac{\text{Supernova Level} - 99}{100})}
+</math></big><br/>
+Scales extra after 179 supernova levels, before tetration:
+<br/><big><math>
+{(X \times (1 + \frac{\text{Supernova Level} - 179}{10}))}^{(1 + (\text{Supernova Level} - 179) \times {0.015})}
+</math></big><br/>
+And hardcaps at <math>10^{10^{256}}</math> score cost.
+
+
+==='''{{Keyword|dilation|Dilation}}, {{Keyword|dp|DP}} & DU formulae'''===
+<big><math>
+\text{Dilation Point Income} = \frac{\lg(1 + \text{MaxScore})}{20}^{1.702} \times {1.0006}^{\left\{ \begin{array}{cl}
+ & \ \frac{\lg(1 + \text{MaxScore})}{5} \\
+ \text{MaxScore} \geqslant 10^{15000} - 1 : & \ (\frac{\lg(1 + \text{MaxScore})}{15000})^{0.6} \times 3000 \\
+ \text{MaxScore} \gtrsim 3.33 \times 10^{354219} : & \ (\frac{(\frac{\lg(1 + \text{MaxScore})}{15000})^{0.6} \times 3}{20})^{0.4} \times 20000 \\
+\end{array} \right.}
+</math></big><br/>
+After completing [[Achievements|Achievement 218]], the formula is additional powered by the following:
+<br/><math>
+\max(1, \left\{ \begin{array}{cl}
+   & \frac{\lg(1 + \text{MaxScore})}{5 \times 10^{10}}^{0.375} \\
+   \text{MaxScore} \gtrsim 10^{5.94 * 10^{12}} - 1: & (\frac{\frac{\lg(1 + \text{MaxScore})}{5 \times 10^{10}}^{0.375}}{6})^{0.25} \times 6 \\
+\end{array} \right.
+</math>
+
+<hr/>
+
+<big>
+<math>
+\text{Dilation Common Exponent Penalty} = 1 + \frac{24}{1 + \text{DU1}}
+</math>
+
+<math>
+\text{Dilation Generator Exponent Penalty} = 1 + \frac{999}{1 + \text{DU1}}
+</math>
+
+<math>
+\text{Dilation Star Exponent Penalty} = 1 + \frac{99}{1 + \text{DU1}}
+</math>
+
+<math>
+\text{Dilation Ascension Power Penalty} = 1 - 0.9^{1 + \text{DU1}}
+</math>
+
+<math>
+\text{Dilation Laps Speed Penalty (Exponent)} = 1 - 0.9^{1 + \text{DU1}}
+</math>
+
+<math>
+\text{Dilation Laps Speed Penalty (Division)} = 1 + \frac{9}{1 + \text{DU1}}
+</math>
+
+<math>
+\text{Dilation IP Gain Penalty} = 1 - 0.99^{1 + \text{DU1}}
+</math>
+
+<hr/>
+
+<math>
+\text{Dilation Upgrade 1 Cost} = 500 \times {1.1}^\text{DU1 Level}
+</math>
+
+<math>
+\text{Dilation Upgrade 2 Cost} = 10000 \times {1.2}^\text{DU2 Level}
+</math>
+
+<math>
+\text{Dilation Upgrade 3 Cost} = 1000000 \times {1.3}^\text{DU3 Level}
+</math>
+
+<math>
+\text{Dilation Upgrade 4 Cost} = 20000000 \times {1.4}^\text{DU4 Level}
+</math>
+
+<math>
+\text{Dilation Upgrade 5 Cost} = 10^9 \times {1.5}^\text{DU5 Level}
+</math>
+
+<math>
+\text{Dilation Upgrade 6 Cost} = 10^{10} \times {1.6}^\text{DU6 Level}
+</math>
+
+<math>
+\text{Dilation Upgrade 7 Cost} = 10^{12} \times {1.7}^\text{DU6 Level}
+</math>
+
+<math>
+\text{Dilation Upgrade 8 Cost} = 10^{13} \times {1.8}^\text{DU6 Level}
+</math>
+
+<math>
+\text{Dilation Upgrade 9 Cost} = 10^{16} \times {2}^\text{DU6 Level}
+</math>
+</big>
+
+TODO: DU effect formulae
+
+==='''Dilation Tree formulae'''===
+
+DTP Cost: 
+
+=== EP softcap formula(WIP) ===
+At around e2400 EP(Needs testing)<noinclude>{{#titleicon_file:icon_tab_etern.png}}</noinclude>
+
+[[Category:Eternity]]
+{{Main navbox}}

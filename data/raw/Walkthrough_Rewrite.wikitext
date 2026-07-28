@@ -1,0 +1,72 @@
+{{Main page box/start
+ | title = Walkthrough
+ | class = centered-content
+}}
+{| class="wikitable" style="width: 100%"
+
+|-
+! scope="col" | Info Pages
+! scope="col" | Guides
+|-
+| style="width:20% | 
+<div class="mp-links">
+*[[File:Icon tab revo.png|20x20px|link=Revolution]][[Revolution|<span style="color:#c0c0c0;">'''Revolution'''</span>]]
+</div>
+| 
+<div class="mp-links">
+*[[Guide:Pre_Infinity|<span style="color:#c0c0c0;">'''0.00-1.08e308_Score'''</span>]] 
+</div>
+|-
+|
+<div class="mp-links">
+*[[File:Icon tab inf.png|20x20px|link=Infinity]]{{Keyword|inf|'''Infinity'''|link=Infinity}}
+</div>
+|
+<div class="mp-links">
+*[[Guide:Infinity|<span style="color:#bc5bcc;">'''Infinity'''</span>]]
+*[[Guide:Break_Infinity|<span style="color:#bc5bcc;">'''Break Infinity'''</span>]]
+</div>
+|-
+| style="width:20%" |
+<div class="mp-links">
+*[[File:Icon tab etern.png|20x20px|link=Eternity]]{{Keyword|eternity|'''Eternity'''|link=Eternity}}
+</div>
+|
+<div class="mp-links">
+*[[Guide:Infinity|<span style="color:#5faaff;">'''Eternity'''</span>]]
+*[[Guide:Break_Infinity|<span style="color:#5faaff;">'''Break Eternity'''</span>]]
+*[[Guide:Dilation|<span style="color:#5faaff;">'''Dilation'''</span>]]
+*[[Guide:Dilation_Tree|<span style="color:#5faaff;">'''Dilation Tree'''</span>]]
+</div>
+|-
+| style="width:20%" |
+<div class="mp-links">
+*[[File:Icon tab unity.png|20x20px|link=Unity]]{{Keyword|unity|'''Unity'''|link=Unity}}
+</div>
+|
+<div class="mp-links">
+*[[Guide:Unity|<span style="color:#ffac17;">'''Unity'''</span>]]
+*[[Guide:Trials|<span style="color:#ffac17;">'''Trials'''</span>]]
+</div>
+|-
+| style="width:20%" |
+<div class="mp-links">
+*[[File:Icon tab att.png|20x20px|link=Attacks]]{{Keyword|atk|'''Attacks'''|link=Attacks}}
+</div>
+|
+<div class="mp-links">
+*[[Guide:Attacks|<span style="color:#f15a5a;">'''Attacks'''</span>]]
+</div>
+|-
+| style="width:20%" |
+<div class="mp-links">
+*[[File:Jawlinium eye.png|20x20px|link=Minerals]]{{Keyword|Minerals|Minerals|link=Minerals}}
+</div>
+|
+<div class="mp-links">
+*[[Guide:Minerals|{{Keyword|Minerals|Minerals}}]]
+*[[Guide:Refinement|{{Keyword|Minerals|Refinement}}]]
+*[[Guide:Runes|{{Keyword|Minerals|Runes}}]]
+</div>
+|}
+{{Main page box/end}}<noinclude>[[Category:Main page boxes]]</noinclude><!-- don't edit this line -->

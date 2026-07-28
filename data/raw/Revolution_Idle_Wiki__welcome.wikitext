@@ -1,0 +1,7 @@
+{{Main page box/start
+| title = Welcome to the Official {{SITENAME}}!
+}}
+[[Special:Statistics|{{NUMBEROFACTIVEUSERS}} active editors]] are currently maintaining [[Special:Statistics|{{NUMBEROFARTICLES}} articles]].
+
+Please read the [[Meta:Rules|Wiki rules]] first and then feel free to explore and contribute by creating new articles or expanding existing ones.
+{{Main page box/end}}<noinclude>[[Category:Main page boxes]]</noinclude><!-- don't edit this line -->

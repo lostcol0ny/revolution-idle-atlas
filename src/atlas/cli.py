@@ -10,6 +10,7 @@ from atlas.loader import SchemaError, load_dataset
 from atlas.problems import Problem
 from atlas.rawcheck import check_against_raw
 from atlas.render import to_graph
+from atlas.scrape import ScrapeError, fetch_pages, make_client, write_raw
 from atlas.validate import validate_dataset
 
 DATASET_REL_PATH = Path("data") / "relationships.yaml"
@@ -71,6 +72,18 @@ def _build(root: Path, check_only: bool) -> int:
     return 0
 
 
+def _scrape(root: Path) -> int:
+    try:
+        with make_client() as client:
+            pages = fetch_pages(client)
+        count = write_raw(pages, root / "data" / "raw")
+    except ScrapeError as exc:
+        print(f"scrape failed: {exc}", file=sys.stderr)
+        return 1
+    print(f"ok: wrote {count} pages to data/raw/")
+    return 0
+
+
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(prog="atlas")
     sub = parser.add_subparsers(dest="command", required=True)
@@ -81,9 +94,14 @@ def main(argv: list[str] | None = None) -> int:
         "--check", action="store_true", help="validate only; write no files"
     )
 
+    scrape = sub.add_parser("scrape", help="fetch raw wikitext into data/raw/")
+    scrape.add_argument("--root", type=Path, default=Path.cwd())
+
     args = parser.parse_args(argv)
     if args.command == "build":
         return _build(args.root, args.check)
+    if args.command == "scrape":
+        return _scrape(args.root)
     return 1
 
 

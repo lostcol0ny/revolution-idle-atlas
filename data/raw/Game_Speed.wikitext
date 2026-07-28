@@ -1,0 +1,5 @@
+Not to be confused with [[Time Flux|Time warping]].
+
+Game Speed is how fast the game is running, time warping can change the Game speed to skip forward in time.
+
+In early game,the only way to increase game speed is time warping.The second and third ways come shortly after [[unity]]:they are boosts from [[zodiacs]] and the game speed donut from [[Planet Shop|planet shop]].

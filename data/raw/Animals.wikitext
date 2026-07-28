@@ -1,0 +1,48 @@
+Animals is the 2nd {{Keyword|eternity|Eternity}} tab, unlocked by reaching [[Eternity#Eternity Milestones|Eternity Milestone]] 3 (3 Σ). Here, the player can purchase {{Keyword|ap|Animal Points}} ({{Keyword|ap|AP}}) and Animals in the Eternity Zoo. [[Eternity#Animals Milestones|Animals Milestones]] are now also unlocked (a new sub-tab in the Milestones tab).
+
+=== '''AP and Animals''' ===
+{{Keyword|ap|AP}} is a resource that can be bought with {{Keyword|ep|EP}}, [[Infinity|{{Keyword|ip|IP}}]] and [[Revolution#Score|Score]]. The cost to buy {{Keyword|ap|AP}} will increase with each purchase (individually for each resource).
+
+Animals are bought with {{Keyword|ap|AP}} and will provide the player with many different bonuses that persist through {{Keyword|eternity|Eternities}}.
+[[File:Animals.png|thumb|The Animals tab]]
+You can "respec" your Animals at any time by using the button (two arrows, forming a circle) within the tab, which will:
+
+* Return you to having no Animals bought
+* Return all of your spent {{Keyword|ap|AP}} to you
+* Reset your ''current'' {{Keyword|eternity|Eternity}}
+
+There are 81 different Animals and a total of {{Keyword|ap|1,524 AP}} is required to buy them all.
+
+For details on individual Animal costs and bonuses, see the table below:{{AnimalGrid||true}}
+
+=== '''Animals Milestones''' ===
+Animals Milestones are obtained based on how many Animals the player owns. They unlock new mechanics, modify existing mechanics and provide bonuses to the player, as follows:
+
+# Own 1 Animal: Unlocks [[Eternity#Slowdown|Slowdown]]
+# Own 4 Animals: Unlocks [[Automations#Auto Slowdown|{{Keyword|auto|Auto Slowdown}}]]
+# Own 7 Animals: Unlocks [[Eternity#Laboratory|{{Keyword|rp|Lab}}]]
+# Own 10 Animals: [[Revolution#Promote|Promoting]] now resets nothing
+# Own 20 Animals: Gain 100% of the {{Keyword|ip|IP}} you would get on [[Infinity|{{Keyword|inf|Infinity}}]], every second. ''Needs [[Eternity#Eternity Challenges|Eternity Challenges Milestone]] 4 (10 {{Keyword|eternity|EC}} completions) to work fully.''
+# Own 48 Animals: +10 free levels to all [[Eternity#Laboratory|{{Keyword|rp|RP}}]] upgrades
+# Own 81 Animals: Unlocks [[Eternity#Dilation & Dilation Tree|{{Keyword|dilation|Dilation}}]]
+
+=== '''Slowdown''' ===
+Slowdown is a new mechanic unlocked after the player buys their first Animal and reaches Animals Milestone 1. This mechanic allows the player to exchange lap speed (divides lap speed by 10) for bonus ascensions (+1 [[Revolution#Ascension|Ascension]] to all [[Revolution#Circles|colors]]).
+
+''Note: This is generally a very good trade, but too many Slowdowns can actually decelerate progress by making the first [[Revolution]] take a long time to complete after [[Revolution#Prestige|Prestige]]/[[Revolution#Promote|Promote]].''
+
+The Slowdown menu is displayed by clicking on the Slowdown button located at the bottom-left of the [[Revolution]] page.
+
+When all colors' laps per second (Laps/s) are greater than 10, the player can click the Slowdown button within the menu to gain a Slowdown. Slowdown can also be undone at any time by clicking the Speedup button within the menu.
+
+Slowdown is reset to 0 on [[Infinity|{{Keyword|inf|Infinity}}]] (and by extension, also on {{Keyword|eternity|Eternity}} and [[Unity|{{Keyword|unity|Unity}}]]).
+
+After the player owns 4 Animals, they will reach Animals Milestone 2 and unlock [[Automations#Auto Slowdown|{{Keyword|auto|Auto Slowdown}}]], which can be used to {{Keyword|auto|automate}} Slowdown. This is done by setting a Laps/s value which all colors must be greater than before a Slowdown is triggered.
+
+When the player reaches both Animals Milestone 4 (own 10 Animals) and [[Eternity#Eternity Challenges Milestones|Eternity Challenges Milestone]] 2 (5 {{Keyword|eternity|EC}} completions), having too many Slowdowns is no longer a problem, since they no longer reset anything when they [[Revolution#Promote|Promote]] and [[Revolution#Prestige|Prestige]] (respectively). As such, [[Automations#Auto Slowdown|{{Keyword|auto|Auto Slowdown}}]] can be set to 10 from now on, in order to achieve the maximum possible Slowdown.
+
+== '''Animal Automation''' ==
+After reaching 5 Unity, you will be able to autobuy animal
+[[File:Animal Automation Guide.png|thumb|Animal Automation Guide]]
+[[Category:Eternity]]
+{{Main navbox}}

@@ -1,0 +1,1462 @@
+Tarot is an endgame mechanic and part of the gameplay loop of [[Unity]]. It's unlocked after acquiring [[Minerals#Refine Tree|Refine Tree Node 70]].
+
+== Spawn ==
+To earn a tarot card draw, you discard Black Gems, rare Special Minerals that initially have a 1% chance to spawn. To start, you will need at least ten level 1 Black Gems, as they give 0.10 draws. After drawing 4 cards, earn {{keyword|ach|Achievement 365}} which grants the Chariot Arcana, which lets you decrease your SMP to spawn more Special Minerals.
+
+== Suits ==
+There are four common suits: Swords, Wands, Pentacles, and Cups. Each suit contains 14 cards. The Ace of each suit generates Tarot resources, while the higher cards boost the resource generation effect of previous cards in addition to providing passive bonuses to earlier game stages. The Arcana suit contains special cards with usable skills that have instant or timed effects, followed by a cooldown period, and has a total of 22 cards, but the cards become a passive effect after completing their respective Tarot Challenge.
+
+Cards in the common suits are drawn in order; for example, you cannot get the three of cups without already having the two of cups. The spawn chance for each suit is listed in their header, along with the chance to draw a new card of that suit if pulled.
+
+=== Swords ===
+This suit mainly buffs [[Attacks]].
+
+{| class="wikitable center mw-collapsible"
+|-
+|colspan=3|Swords
+|-
+{{Tarot Cards
+| icon = Tarot ace of swords.png
+| card_name = Ace of Swords
+| effect1 = Base Swords Generation /s
+| effect2 = Attack Mult Gain from VP +^
+}}
+{{Tarot Cards
+| icon = Tarot two of swords.png
+| card_name = Two of Swords
+| effect1 = Swords 1 first effect mult x
+| effect2 = Attacks Ascend Power from VP +^
+}}
+{{Tarot Cards
+| icon = Tarot three of swords.png
+| card_name = Three of Swords
+| effect1 = Swords 2 first effect mult x
+| effect2 = Attacks Prestige Power +^
+}}
+|-
+{{Tarot Cards
+| icon = Tarot four of swords.png
+| card_name = Four of Swords
+| effect1 = Swords 3 first effect mult x
+| effect2 = Relic 3 Power +^
+}}
+{{Tarot Cards
+| icon = Tarot five of swords.png
+| card_name = Five of Swords
+| effect1 = Swords 4 first effect mult x
+| effect2 = Relic 13 Power +x
+}}
+{{Tarot Cards
+| icon = Tarot six of swords.png
+| card_name = Six of Swords
+| effect1 = Swords 5 first effect mult x
+| effect2 = Relic 20 Effect +x
+}}
+|-
+{{Tarot Cards
+| icon = Tarot seven of swords.png
+| card_name = Seven of Swords
+| effect1 = Swords 6 first effect mult x
+| effect2 = Refine Node 4 Effect +x
+}}
+{{Tarot Cards
+| icon = Tarot eight of swords.png
+| card_name = Eight of Swords
+| effect1 = Swords 7 first effect mult x
+| effect2 = Polish Sword Effect +^
+}}
+{{Tarot Cards
+| icon = Tarot nine of swords.png
+| card_name = Nine of Swords
+| effect1 = Swords 8 first effect mult x
+| effect2 = DTU MID-2 is +x stronger
+}}
+|-
+{{Tarot Cards
+| icon = Tarot ten of swords.png
+| card_name = Ten of Swords
+| effect1 = Swords 9 first effect mult x
+| effect2 = Increase Atk. Exp +0.050
+}}
+{{Tarot Cards
+| icon = Tarot page of swords.png
+| card_name = Page of Swords
+| effect1 = Swords 10 first effect mult x
+| effect2 = First 10 swords tarot cards effects are +x stronger
+}}
+{{Tarot Cards
+| icon = Tarot knight of swords.png
+| card_name = Knight of Swords
+| effect1 = Swords Page first effect mult x
+| effect2 = Common Exp Mult +x
+}}
+|-
+{{Tarot Cards
+| icon = Tarot queen of swords.png
+| card_name = Queen of Swords
+| effect1 = Swords Knight first effect mult x
+| effect2 = {{Keyword|ach|Ach 232|link=Achievements}} reward is multiplied by +x
+}}
+{{Tarot Cards
+| icon = Tarot king of swords.png
+| card_name = King of Swords
+| effect1 = Swords Queen first effect mult x
+| effect2 = Unlocks 2nd wind factor and multiply 1st factor for all elements by x (aft. e308 softcap)
+}}
+|}
+
+=== Wands ===
+This suit mainly buffs [[Elements]].
+{| class="wikitable center mw-collapsible"
+|-
+|colspan=3|Wands
+|-
+{{Tarot Cards
+| icon = Tarot ace of wands.png
+| card_name = Ace of Wands
+| effect1 = Base Wands Generations /s
+| effect2 = Fire Factor 1 +^
+}}
+{{Tarot Cards
+| icon = Tarot two of wands.png
+| card_name = Two of Wands
+| effect1 = Wands 1 first effect mult x
+| effect2 = Earth Factor 1 +^
+}}
+{{Tarot Cards
+| icon = Tarot three of wands.png
+| card_name = Three of Wands
+| effect1 = Wands 2 first effect mult x
+| effect2 = Wind Factor 1 +^
+}}
+|-
+{{Tarot Cards
+| icon = Tarot four of wands.png
+| card_name = Four of Wands
+| effect1 = Wands 3 first effect mult x
+| effect2 = Water Factor 1 +^
+}}
+{{Tarot Cards
+| icon = Tarot five of wands.png
+| card_name = Five of Wands
+| effect1 = Wands 4 first effect mult x
+| effect2 = All Elements Factor 1 +^
+}}
+{{Tarot Cards
+| icon = Tarot six of wands.png
+| card_name = Six of Wands
+| effect1 = Wands 5 first effect mult x
+| effect2 = Fire Node 3 Effect +^
+}}
+|-
+{{Tarot Cards
+| icon = Tarot seven of wands.png
+| card_name = Seven of Wands
+| effect1 = Wands 6 first effect mult x
+| effect2 = Water Node 1 Effect +^
+}}
+{{Tarot Cards
+| icon = Tarot eight of wands.png
+| card_name = Eight of Wands
+| effect1 = Wands 7 first effect mult x
+| effect2 = Elements Local Speed +^
+}}
+{{Tarot Cards
+| icon = Tarot nine of wands.png
+| card_name = Nine of Wands
+| effect1 = Wands 8 first effect mult x
+| effect2 = Infinity Upgrade (2;1) is +x stronger
+}}
+|-
+{{Tarot Cards
+| icon = Tarot ten of wands.png
+| card_name = Ten of Wands
+| effect1 = Wands 9 first effect mult x
+| effect2 = Makes First Nodes of each element +x stronger
+}}
+{{Tarot Cards
+| icon = Tarot page of wands.png
+| card_name = Page of Wands
+| effect1 = Wands 10 first effect mult x
+| effect2 = First 10 wands tarot cards effects are +x stronger
+}}
+{{Tarot Cards
+| icon = Tarot knight of wands.png
+| card_name = Knight of Wands
+| effect1 = Wands Page first effect mult x
+| effect2 = Tarot Arcans Cooldowns +/
+}}
+|-
+{{Tarot Cards
+| icon = Tarot queen of wands.png
+| card_name = Queen of Wands
+| effect1 = Wands Knight first effect mult x
+| effect2 = {{Keyword|ach|Ach 230|link=Achievements}} reward is multiplied by +x
+}}
+{{Tarot Cards
+| icon = Tarot king of wands.png
+| card_name = King of Wands
+| effect1 = Wands Queen first effect mult x
+| effect2 = Unlocks 2nd fire factor and multiply 1st factor for all elements by x# (''base 1,000'') (aft. e308 softcap)
+}}
+|}
+
+=== Pentacles ===
+This suit buffs various game stages, including [[Zodiacs]] and matching [[Relics]].
+{| class="wikitable center mw-collapsible"
+|-
+|colspan=3|Pentacles
+|-
+{{Tarot Cards
+| icon = Tarot ace of pentacles.png
+| card_name = Ace of Pentacles
+| effect1 = Base Pentacles Generation /s
+| effect2 = Gold Gain +^
+}}
+{{Tarot Cards
+| icon = Tarot two of pentacles.png
+| card_name = Two of Pentacles
+| effect1 = Pentacles 1 first effect mult x
+| effect2 = Zodiac Sell Cost x
+}}
+{{Tarot Cards
+| icon = Tarot three of pentacles.png
+| card_name = Three of Pentacles
+| effect1 = Pentacles 2 first effect mult x
+| effect2 = Relic 36 effect +^
+}}
+|-
+{{Tarot Cards
+| icon = Tarot four of pentacles.png
+| card_name = Four of Pentacles
+| effect1 = Pentacles 3 first effect mult x
+| effect2 = Luck Donut Power +^
+}}
+{{Tarot Cards
+| icon = Tarot five of pentacles.png
+| card_name = Five of Pentacles
+| effect1 = Pentacles 4 first effect mult x
+| effect2 = Zodiac Sacrifice Power +^
+}}
+{{Tarot Cards
+| icon = Tarot six of pentacles.png
+| card_name = Six of Pentacles
+| effect1 = Pentacles 5 first effect mult x
+| effect2 = Relic 28 Effect +^
+}}
+|-
+{{Tarot Cards
+| icon = Tarot seven of pentacles.png
+| card_name = Seven of Pentacles
+| effect1 = Pentacles 6 first effect mult x
+| effect2 = Relic 31 Softcap is +x weaker
+}}
+{{Tarot Cards
+| icon = Tarot eight of pentacles.png
+| card_name = Eight of Pentacles
+| effect1 = Pentacles 7 first effect mult x
+| effect2 = Post 300 Mineral Cost Scaling is +x weaker
+}}
+{{Tarot Cards
+| icon = Tarot nine of pentacles.png
+| card_name = Nine of Pentacles
+| effect1 = Pentacles 8 first effect mult x
+| effect2 = Relic 17 is +x stronger
+}}
+|-
+{{Tarot Cards
+| icon = Tarot ten of pentacles.png
+| card_name = Ten of Pentacles
+| effect1 = Pentacles 9 first effect mult x
+| effect2 = Makes Pentacles 8's effect +x stronger
+}}
+{{Tarot Cards
+| icon = Tarot page of pentacles.png
+| card_name = Page of Pentacles
+| effect1 = Pentacles 10 first effect mult x
+| effect2 = First 10 pentacles tarot cards effects are +x stronger
+}}
+{{Tarot Cards
+| icon = Tarot knight of pentacles.png
+| card_name = Knight of Pentacles
+| effect1 = Pentacles Page first effect mult x
+| effect2 = Relic 41 eff. mult +x
+}}
+|-
+{{Tarot Cards
+| icon = Tarot queen of pentacles.png
+| card_name = Queen of Pentacles
+| effect1 = Pentacles Knight first effect mult x
+| effect2 = {{Keyword|ach|Ach 231|link=Achievements}} reward is multiplied by +x
+}}
+{{Tarot Cards
+| icon = Tarot king of pentacles.png
+| card_name = King of Pentacles
+| effect1 = Pentacles Queen first effect mult x
+| effect2 = Unlocks 2nd earth factor and multiply 1st factor for all elements by x (aft. e308 softcap)
+}}
+|}
+
+=== Cups ===
+This suit buffs various game stages, including [[Minerals]] and matching [[Relics]].
+{| class="wikitable center mw-collapsible"
+|-
+|colspan=3|Cups
+|-
+{{Tarot Cards
+| icon = Tarot ace of cups.png
+| card_name = Ace of Cups
+| effect1 = Base Cups Generation /s
+| effect2 = Zodiac Quality +^
+}}
+{{Tarot Cards
+| icon = Tarot two of cups.png
+| card_name = Two of Cups
+| effect1 = Cups 1 first effect mult x
+| effect2 = Relic 37 Effect +^
+}}
+{{Tarot Cards
+| icon = Tarot three of cups.png
+| card_name = Three of Cups
+| effect1 = Cups 2 first effect mult x
+| effect2 = Relic 33 Effect x
+}}
+|-
+{{Tarot Cards
+| icon = Tarot four of cups.png
+| card_name = Four of Cups
+| effect1 = Cups 3 first effect mult x
+| effect2 = Relic 14 power +^
+}}
+{{Tarot Cards
+| icon = Tarot five of cups.png
+| card_name = Five of Cups
+| effect1 = Cups 4 first effect mult x
+| effect2 = Refine Node 16 Effect +x
+}}
+{{Tarot Cards
+| icon = Tarot six of cups.png
+| card_name = Six of Cups
+| effect1 = Cups 5 first effect mult x
+| effect2 = Polish Spear Effect +^
+}}
+|-
+{{Tarot Cards
+| icon = Tarot seven of cups.png
+| card_name = Seven of Cups
+| effect1 = Cups 6 first effect mult x
+| effect2 = Refine Node 52 Effect +x
+}}
+{{Tarot Cards
+| icon = Tarot eight of cups.png
+| card_name = Eight of Cups
+| effect1 = Cups 7 first effect mult x
+| effect2 = Runes Generation +x (Rounded Total)
+}}
+{{Tarot Cards
+| icon = Tarot nine of cups.png
+| card_name = Nine of Cups
+| effect1 = Cups 8 first effect mult x
+| effect2 = Basically divides the exponent of base mineral cost by +/
+}}
+|-
+{{Tarot Cards
+| icon = Tarot ten of cups.png
+| card_name = Ten of Cups
+| effect1 = Cups 9 first effect mult x
+| effect2 = Post 100 Polish Upgrades Cost Scaling is +x weaker
+}}
+{{Tarot Cards
+| icon = Tarot page of cups.png
+| card_name = Page of Cups
+| effect1 = Cups 10 first effect mult x
+| effect2 = First 10 cups tarot cards effects are +x stronger
+}}
+{{Tarot Cards
+| icon = Tarot knight of cups.png
+| card_name = Knight of Cups
+| effect1 = Cups Page first effect mult x
+| effect2 = Special Minerals Merge Factor (SMMF) +
+}}
+|-
+{{Tarot Cards
+| icon = Tarot queen of cups.png
+| card_name = Queen of Cups
+| effect1 = Cups Knight first effect mult x
+| effect2 = {{Keyword|ach|Ach 233|link=Achievements}} reward is multiplied by +x
+}}
+{{Tarot Cards
+| icon = Tarot king of cups.png
+| card_name = King of Cups
+| effect1 = Cups Queen first effect mult x
+| effect2 = Unlocks 2nd water factor and multiply 1st factor for all elements by x (aft. e308 softcap)
+}}
+|}
+
+=== Arcans ===
+The Arcana cards, stylized as Arcans in-game, require {{keyword|ach|Achievement 370}} to be able to draw them from packs.
+
+{| class="wikitable center mw-collapsible"
+|-
+|colspan=3|Arcans
+|-
+{{Tarot Cards/Arcans
+| icon = Tarot the fool.png
+| card_name = The Fool
+| effect = Instantly spawns a black gem with Lv.# (''base lvl + 1'')
+| duration = 0ms
+| cooldown = 3 hours
+}}
+{{Tarot Cards/Arcans
+| icon = Tarot the magician.png
+| card_name = The Magician
+| effect = You will get # (''base 3,600'') seconds of production of currently generating element (you have to generate any element to use this arcan)
+| duration = 0ms
+| cooldown = 4 hours
+}}
+{{Tarot Cards/Arcans
+| icon = Tarot the high priestess.png
+| card_name = The High Priestess
+| effect = Increases Refine Node 1 effect by x# (''base 2.000'') during some times
+| duration = 30 seconds
+| cooldown = 2 hours
+}}
+|-
+{{Tarot Cards/Arcans
+| icon = Tarot the empress.png
+| card_name = The Empress
+| effect = Slowly Increases and Decreases Zodiac Sell Cost by x# (''base 10.00'')
+| duration = 1 minute
+| cooldown = 4 hours
+}}
+{{Tarot Cards/Arcans
+| icon = Tarot the emperor.png
+| card_name = The Emperor
+| effect = Slowly Increases and Decreases Mineral Cost Exp by # (''base 0.200'')
+| duration = 30 seconds
+| cooldown = 4 hours
+}}
+{{Tarot Cards/Arcans
+| icon = Tarot the hierophant.png
+| card_name = The Hierophant
+| effect = Levels Up all of your common minerals by # (''base 1.000'') (but can't be bigger than max spawn level + 50)
+| duration = 0ms
+| cooldown = 7 hours
+}}
+|-
+{{Tarot Cards/Arcans
+| icon = Tarot the lovers.png
+| card_name = The Lovers
+| effect = Slowly Increases and Decreases Relic 28 effect by # (''base 0.100'')
+| duration = 40 seconds
+| cooldown = 3 hours
+}}
+{{Tarot Cards/Arcans
+| icon = Tarot the chariot.png
+| card_name = The Chariot
+| effect = Decreases your SMS factor by # (''base 1,000'')
+| duration = 0ms
+| cooldown = 12 hours
+}}
+{{Tarot Cards/Arcans
+| icon = Tarot justice.png
+| card_name = Justice
+| effect = Keep the lowest cost for spawning next Special Minerals (4.000 secs)
+| duration = 4 seconds
+| cooldown = 3 hours, 30 minutes
+}}
+|-
+{{Tarot Cards/Arcans
+| icon = Tarot the hermit.png
+| card_name = The Hermit
+| effect = Make Other Tarot Arcans be x# (''base 1.050'') more effective for some time
+| duration = 3 minutes
+| cooldown = 9 hours
+}}
+{{Tarot Cards/Arcans
+| icon = Tarot wheel of fortune.png
+| card_name = Wheel of Fortune
+| effect = Gambling :D - 50% - get more tarot draws, 50% - lost them. Max amount of gain/lose - # (''base 10.00'') (they can go negative, but you need positive amount of draws to use it)
+| duration = 0ms
+| cooldown = 30 minutes
+}}
+{{Tarot Cards/Arcans
+| icon = Tarot the strength.png
+| card_name = The Strength
+| effect = Slowly Increases and Decreases your Attack Exponent by # (''base 0.100'')
+| duration = 20 seconds
+| cooldown = 5 hours
+}}
+|-
+{{Tarot Cards/Arcans
+| icon = Tarot the hanged man.png
+| card_name = The Hanged Man
+| effect = Makes Polish Knuckles +# (''base 40.00'') levels effective
+| duration = 30 seconds
+| cooldown = 5 hours, 30 minutes
+}}
+{{Tarot Cards/Arcans
+| icon = Tarot death.png
+| card_name = Death
+| effect = During this skill is active will randomly perform refine prestige, granting x# (''base 10.00'') more RfP
+| duration = 1 minute
+| cooldown = 3 hours
+}}
+{{Tarot Cards/Arcans
+| icon = Tarot temperance.png
+| card_name = Temperance
+| effect = Add # (''base 3.000'') zodiacs of that type which is in your Fortune Pars slot, but with stats you'd get on Unity
+| duration = 0ms
+| cooldown = 2 hours
+}}
+|-
+{{Tarot Cards/Arcans
+| icon = Tarot the devil.png
+| card_name = The Devil
+| effect = Will boost 1st effect of all common tarot cards by +x (''base 0.007'') with a chance of 66%. With a chance 33% will apply one of 5 debuffs (descr. in help). Have 1% chance to take your soul (''-1 {{keyword|soul|Soul}} {{Icon|soul_icon}}'')
+| duration = 0ms* (''some debuffs have durations)
+| cooldown = 11 minutes, 6 seconds (''666 seconds'')
+}}
+{{Tarot Cards/Arcans
+| icon = Tarot the tower.png
+| card_name = The Tower
+| effect = Will destroy random special gem granting #^[Gem Lv] (''base 1.800'') SMP to this gem
+| duration = 0ms
+| cooldown = 8 hours
+}}
+{{Tarot Cards/Arcans
+| icon = Tarot the star.png
+| card_name = The Star
+| effect = Multiplies Your Luck by amount of stars you have powered to ^# (''base 0.400'')
+| duration = 1 minute
+| cooldown = 2 hours, 30 minutes
+}}
+|-
+{{Tarot Cards/Arcans
+| icon = Tarot the moon.png
+| card_name = The Moon
+| effect = Upgrades zodiac on moon postiton (''position'') x# (''base 1,000'') quality. But it's weaker after e1,000 quality
+| duration = 0ms
+| cooldown = 4 hours
+}}
+{{Tarot Cards/Arcans
+| icon = Tarot the sun.png
+| card_name = The Sun
+| effect = Gives # (''base 1.000'') levels to a random card you already have
+| duration = 0ms
+| cooldown = 10 hours
+}}
+{{Tarot Cards/Arcans
+| icon = Tarot judgement.png
+| card_name = Judgement
+| effect = Makes your tarot resources be equal and increase their values by ^# (''base 0.800'') of they value
+| duration = 0ms
+| cooldown = 10 hours
+}}
+|-
+{{Tarot Cards/Arcans
+| icon = Tarot the world.png
+| card_name = The World
+| effect = Decrease cooldowns of all previous arcanes (''Arcans'') by # (''base 4,000'') sec (''seconds'')
+| duration = 0ms
+| cooldown = 24 hours
+}}
+|}
+
+== Tarot Upgrades ==
+After getting {{keyword|ach|Achievement 390|link=Achievements}} (1,000,000 of each Tarot resource i.e. Swords, Wands, Pentacles and Cups), the Tarot Upgrades menu is unlocked.
+
+Here you can spend resources earned from common suits (generated by the Ace of each suit) on various upgrades which provide bonuses.
+{{Stub|notes=Needs cost and cost scaling for many upgrades}}
+{| class="wikitable mw-collapsible"
+! colspan="7" |Tarot Upgrades
+|-
+! colspan="7" |Swords Tarot Upgrades
+|-
+!Upgrade
+!Effect
+!Effect scaling
+!Base Cost
+!Cost Scaling
+!Max Level
+!Requirement
+|-
+|1
+|Increases Tarot Local Speed Power
+| +0.01 for level 1, +0.012 for Level 2, +0.001/level before softcaps
+|1000000
+|unknown
+|1
+|N/A
+|-
+|2
+|Increases Wind 2nd Factor power by x#
+|x1.04 for level 1, x1.12 for level 2, +x0.06/level after
+|1e9
+|x1e11/level
+|1
+|U-1 Lv.1+
+|-
+|3
+|Increases Wind 2nd factor base based on your Swords amount: +<math>\log10(Swords)*\sqrt{Level}</math>
+|<==
+|1e12
+|x1e13/level
+|1
+|U-2 Lv.1+
+|-
+|4
+|Increase Max Level of first 4 Swords upgrades by 1 per level
+|<==
+|1e15
+|''uses pre-set values''
+|1
+|U-3 Lv.1+
+|-
+|5
+|Refine Node 1 effect is ^x
+|1000 for level 1, x1.1 to this number per level afterwards
+|1e200
+|x1e50/level (?)
+|3
+|U-4 Lv.4+
+|-
+|6
+|x# to Two of Swords card effect
+|x1.5 for Level 1, +0.5 to this number per level afterwards
+|1e300
+|
+|2
+|U-5 Lv.2+
+|-
+|7
+|Challenge Suit Reward for Swords: ^#
+|2 for level 1, +1 per level after
+|
+|
+|2
+|U-6 Lv.2+
+|-
+|8
+|Artifacts Local Speed Power: +#
+| +0.01 for Level 1, +0.001/level after
+|
+|
+|1
+|U-7 Lv.2+
+|-
+|9
+|Increase max level of Swords upgrades 5-8 by 2 per level
+|<==
+|
+|''uses pre-set values''
+|3
+|U-8 Lv.1+
+|-
+! colspan="7" |Wands Tarot Upgrades
+|-
+|1
+|Increases Tarot Local Speed Power
+| +0.01 for level 1, +0.012 for Level 2, +0.001/level before softcaps
+|1000000
+|unknown
+|1
+|N/A
+|-
+|2
+|Increases Fire 2nd Factor power by x#
+|x1.04 for level 1, x1.12 for level 2, +x0.06/level after
+|1e9
+|x1e11/level
+|1
+|U-1 Lv.1+
+|-
+|3
+|Increases Fire 2nd factor base based on your Wands amount: +<math>\log10(Wands)*\sqrt{Level}</math>
+|<==
+|1e12
+|x1e13/level
+|1
+|U-2 Lv.1+
+|-
+|4
+|Increase Max Level of first 4 Wands upgrades by 1 per level
+|<==
+|1e15
+|''uses pre-set values''
+|1
+|U-3 Lv.1+
+|-
+|5
+|Refine Node 16 effect is ^#
+|1000 for level 1, x1.05 to this number per level afterwards
+|1e210
+|
+|3
+|U-4 Lv.4+
+|-
+|6
+|Relic 41 is ^#
+|^1.5 for Level 1, +0.5 to this number per level afterwards
+|
+|
+|2
+|U-5 Lv.2+
+|-
+|7
+|Challenge Suit Reward for Wands: ^#
+|2 for level 1, +1 per level after
+|
+|
+|2
+|U-6 Lv.2+
+|-
+|8
+|Artifacts Local Speed Power: +#
+| +0.01 for Level 1, +0.001/level after
+|
+|
+|1
+|U-7 Lv.2+
+|-
+|9
+|Increase max level of Wands upgrades 5-8 by 2 per level
+|<==
+|
+|''uses pre-set values''
+|3
+|U-8 Lv.1+
+|-
+! colspan="7" |Pentacles Tarot Upgrades
+|-
+|1
+|Increases Tarot Local Speed Power
+| +0.01 for level 1, +0.012 for Level 2, +0.001/level before softcaps
+|1000000
+|unknown
+|1
+|N/A
+|-
+|2
+|Increases Earth 2nd Factor power by x#
+|x1.04 for level 1, x1.12 for level 2, +x0.06/level after
+|1e9
+|x1e11/level
+|1
+|U-1 Lv.1+
+|-
+|3
+|Increases Earth 2nd factor base based on your Pentacles amount: +<math>\log100(Pentacles)*\sqrt{Level}</math>
+|<==
+|1e12
+|x1e13/level
+|1
+|U-2 Lv.1+
+|-
+|4
+|Increase Max Level of first 4 Pentacles upgrades by 1 per level
+|<==
+|1e15
+|''uses pre-set values''
+|1
+|U-3 Lv.1+
+|-
+|5
+|Empowers Luck to ^#
+|^1.4 for level 1, +0.1 to this number per level afterwards (?)
+|1e240
+|
+|3
+|U-4 Lv.4+
+|-
+|6
+|Multiplies Sacrifice Dust gain by #
+|x20 per level, multiplicative
+|
+|
+|2
+|U-5 Lv.2+
+|-
+|7
+|Challenge Suit Reward for Pentacles: ^#
+|2 for level 1, +1 per level after
+|
+|
+|2
+|U-6 Lv.2+
+|-
+|8
+|Artifacts Local Speed Power: +#
+| +0.01 for Level 1, +0.001/level after
+|
+|
+|1
+|U-7 Lv.2+
+|-
+|9
+|Increase max level of Pentacles upgrades 5-8 by 2 per level
+|<==
+|
+|''uses pre-set values''
+|3
+|U-8 Lv.1+
+|-
+! colspan="7" |Cups Tarot Upgrades
+|-
+|1
+|Increases Tarot Local Speed Power
+| +0.01 for level 1, +0.012 for Level 2, +0.001/level before softcaps
+|1000000
+|unknown
+|1
+|N/A
+|-
+|2
+|Increases Water 2nd Factor power by x#
+|x1.04 for level 1, x1.12 for level 2, +x0.06/level after
+|1e9
+|x1e11/level
+|1
+|U-1 Lv.1+
+|-
+|3
+|Increases Water 2nd factor base based on your Wands amount: +<math>\log8(Cups)*\sqrt{Level}</math>
+|<==
+|1e12
+|x1e13/level
+|1
+|U-2 Lv.1+
+|-
+|4
+|Increase Max Level of first 4 Cups upgrades by 1 per level
+|<==
+|1e15
+|''uses pre-set values''
+|1
+|U-3 Lv.1+
+|-
+|5
+|Increase Relic 46 softcap by 1 per level
+|<==
+|1e250
+|
+|3
+|U-4 Lv.4+
+|-
+|6
+|Multiplies Sacrifice Dust gain by #
+|x100 per level, multiplicative
+|
+|
+|2
+|U-5 Lv.2+
+|-
+|7
+|Challenge Suit Reward for Cups: ^#
+|2 for level 1, +1 per level after
+|
+|
+|3
+|U-6 Lv.2+
+|-
+|8
+|Artifacts Local Speed Power: +#
+| +0.01 for Level 1, +0.001/level after
+|
+|
+|1
+|U-7 Lv.2+
+|-
+|9
+|Increase max level of Cups upgrades 5-8 by 2 per level
+|<==
+|
+|''uses pre-set values''
+|3
+|U-8 Lv.1+
+|}
+Upgrade 4 for each suit does in fact affect itself, which allows for infinite scaling of it and the 3 previous upgrades.
+
+== Tarot Challenges ==
+After getting {{keyword|rf|Refine Tree Node #89|link=Minerals#Refine Tree}}, you unlock Tarot Challenges.
+
+Each Tarot card has it's own respective challenge. For each of the five suits (including arcans), you must complete the previous challenge before unlocking the next one (i.e. you need to complete the challenge for the Ace of Pentacles before you can unlock the Two of Pentacles Challenge, and you need to complete The Chariot challenge before unlocking the Justice challenge.)
+
+Each Challenge provides a boost to the respective cards effect, and a boost to the first effect of every card in that suit. Kings Tarot Challenges also adds a Singularity Factor.
+{| class="wikitable mw-collapsible"
+! colspan="3" |Swords Tarot Challenges
+|-
+!Challenge
+!Penalty
+!Completion Requirement
+|-
+|Ace of Swords
+|Resets Attack Levels. Attack and Damage mults are logarithmed. You cannot gain them during the challenge.
+|Attack Level 1500
+|-
+|Two of Swords
+|Game Speed, Attack, and Damage mults are put to double Log10 of their values. You cannot gain them during the challenge. ''(Double Log10 means Log10(Log10(X)).)''
+|Attack Level 400
+|-
+|Three of Swords
+|Game Speed, Attack and Damage mults are logarithmed, raised to ^0.05, then divided by 10. You cannot gain them during the challenge.
+|Attack Level 200
+|-
+|Four of Swords
+|Resets Attack Levels and attack mults are set to 1. Game speed and other mults are logarithmed. Mult gain is put to double log10.
+|Attack Level 2000
+|-
+|Five of Swords
+|Resets Attack Levels and attack mults are set to 1. Game speed and other mults are logarithmed. Mult gain is logarithmed and ^0.2.
+|Attack Level 2026
+|-
+|Six of Swords
+|Resets Attack Levels and gold and attack mults are set to 1. Game speed and other mults are logarithmed. Ascension power is reduced to double Log10. Gold gain is logarithmed.
+|Attack Level 2240
+|-
+|Seven of Swords
+|Resets Attack Levels and gold and attack mults are set to 1. Game speed and gold gain is logarithmed. Other mults are reduced to double Log10. Ascension Power is heavily nerfed, but the penalty weakens based on Attack Level.
+|Attack Level 2525
+|-
+|Eight of Swords
+|Resets Attack Levels and attack mults are set to 1. Ascension Power and all other mults are set to 1. Mult gain only comes from Attack Prestige.
+|Attack Level 7350
+|-
+|Nine of Swords
+|Resets Attack levels and mults. Only attack mult from score is effective, and it is ^(1/1e10). Game Speed is reduced to double Log10.
+|Attack Level 850
+|-
+|Ten of Swords
+|Resets Attack Levels and sets Attack mults to 1. Game speed and other mults are logarithmed. Mult gain is set to Sword's LOGPOW.
+|Attack Level 3200
+|-
+|Page of Swords
+|Resets Attack Levels and sets Attack mults to 1, Game speed and other multipliers are logarithmed. Mult Gain is set to Sword's LOGPOW twice.
+|Attack Level 2500
+|-
+|Knight of Swords
+|Resets Attack Levels and sets Attack mults to 1, Game speed and other multipliers are logarithmed. Mult Gain is heavily nerfed, but this penalty becomes weaker based on the spread power of your equipped Endoplasmic Reticulum.
+|Attack Level 2560
+|-
+|Queen of Swords
+|Resets Attack Level and sets Attack mults to 1, Game speed and other multipliers are logarithmed. Mult Gain is heavily nerfed, but this penalty becomes weaker based on your current Singularity Mult
+|Attack Level 3250
+|-
+|King of Swords
+|Requires 1.8e308 Atoms to enter. Resets Attack Level and sets Attack mults to 1, Game speed and other multipliers are logarithmed, then raised to ^0.3, Mult gain is heavily nerfed, but this penalty becomes weaker based on your current Atoms, Entering the challenge performs a Singularity and resets Atoms to 1. Adds a dynamic penalty that heavily nerfs Atom gain, but this becomes weaker based on your current attack level.
+|Perform a Singularity at Attack Level 5005+
+|}
+{| class="wikitable mw-collapsible"
+! colspan="3" |Wands Tarot Challenges
+|-
+!Challenge
+!Penalty
+!Completion Requirement
+|-
+|Ace of Wands
+|Reset all of your elements. First two element factors, Relic 36, and Global Element mult are logarithmed.
+|1e20 Water
+|-
+|Two of Wands
+|Reset all of your elements. First two element factors, Relic 36, and Global Element mult are put to double Log10 of their values. Upgrades Fire-3 and Wind-4 are useless. The Magician is disabled.
+|1e9 of all elements
+|-
+|Three of Wands
+|Reset all of your elements. First two element factors, Relic 36, and Global Element mult are put to double Log10 of their values, and divided by 1000. Upgrades Fire-3 and Wind-4 are useless. The Magician is disabled.
+|100 of all elements
+|-
+|Four of Wands
+|Reset all of your elements except Earth and Water. Global Element Mult is divided by 1e10000.
+|1e4600 Fire
+|-
+|Five of Wands
+|Resets all elements to 1. Global Element mult is nerfed a lot, but it increases the more elements you have.
+|1e5000+ Wind
+|-
+|Six of Wands
+|Resets all elements to 0. All factors are set to 1 and Global Element mult is set to 1/1e10 for the duration of the challenge. The Magician, Fire Node 3, Wind Node 4, and Relic 36 are useless.
+|100+ of all elements
+|-
+|Seven of Wands
+|Resets all elements to 1. All three factors, Relic 36, game speed and Global Element mult are logarithmed. Nodes Fire-3 and Wind-4 are useless. The Magician is disabled.
+|2.5e10+ of all elements
+|-
+|Eight of Wands
+|Resets all elements to 1. Relic 36, game speed and Global Element mult are logarithmed. Nodes Fire-3 and Wind-4 are useless. The Magician is disabled. Adds a heavy softcap for first 2 factors after x10.
+|1e16+ of all elements
+|-
+|Nine of Wands
+|Resets all elements to 1. Relic 36, game speed and Global Element mult are logarithmed. Nodes Fire-3 and Wind-4 are useless. The Magician is disabled. Elements Third factor is -1, then /10.
+|1e765+ multiplication of all elements
+|-
+|Ten of Wands
+|Resets all elements to 1. Relic 36, game speed, and Global element mult are put to Wand's LOGPOW. Nodes Fire-3 and Wind-4 are useless. The Magician is disabled. Factor 1 and 2 are also put to Wand's LOGPOW.
+|1e40+ multiplication of all elements
+|-
+|Page of Wands
+|Reset your Elements to 1. The total gain of each Element is set to the Wand's LOGPOW.
+|1e2026+ multiplication of all elements
+|-
+|Knight of Wands
+|Reset your Elements to 1. Relic 36 game speed and Global Element mult are logarithmed. Nodes Fire-3 and Wind-4 are useless. The Magician is disabled. All factors are nerfed, but this penalty becomes weaker based on the Infectivity of your equipped Endoplasmic Reticulum.
+|1e268+ multiplication of all elements
+|-
+|Queen of Wands
+|Reset your Elements to 1. Element factors 1 and 2 are capped at 2 raised to your current Singularity mult. Nodes Fire-3 and Wind-4 are useless. The Magician is disabled. Global Element mult is capped at 1000 raised to your current Singularity Count. Local Element Speed is capped at 1.
+|1e3000+ multiplication of all elements
+|-
+|King of Wands
+|Requires 1.8e308 Atoms to enter ,Element factors 1 and 2 are capped at your current Atoms. Nodes Fire-3 and Wind-4 are useless. The Magician is disabled. Global Element mult is capped at your current Singularity mult. Local Element Speed is capped at 1. King Tarot cards and other multipliers are useless. Entering Performs a Singularity and resets atoms to 1. Adds a Dynamic Penalty that heavily nerfs Atom Gain, but becomes weaker based on your current Fire
+|Perform a Singularity with 1e2026+ Fire
+|}
+{| class="wikitable mw-collapsible"
+! colspan="3" |Pentacles Tarot Challenges
+|-
+!Challenge
+!Penalty
+!Completion Requirement
+|-
+|Ace of Pentacles
+|Performs Refine Prestige. First Mineral upgrade cost scaling is much heavier.
+|640+ Max Mineral Level
+|-
+|Two of Pentacles
+|Performs Refine Prestige. RN1, RN16, Red Gem, VP Gain Mult Magnet upgrade, Relic 23 effect, and Polish Sword values are logarithmed. The Hierophant is disabled.
+|425+ Max Mineral Level
+|-
+|Three of Pentacles
+|Performs Refine Prestige. Blue and Green Gems are useless. Mineral cost growth is much heavier. Relic 14 and 31 are useless. Local game speed is capped at x777. The Hierophant is disabled.
+|1000+ Max Mineral Level
+|-
+|Four of Pentacles
+|Performs Refine Prestige. Red Gem is useless, and you cannot obtain magnets.
+|1125+ Max Mineral Level
+|-
+|Five of Pentacles
+|Performs Refine Prestige. VP Gain is logarithmed.
+|1e20+ VP
+|-
+|Six of Pentacles
+|Performs Refine Prestige and resets Gold. Blue, Green, Yellow gems, along with Relic 14 and 31 are all useless. Gold Gain is logarithmed.
+|167+ Max Mineral Level
+|-
+|Seven of Pentacles
+|Performs Refine Prestige and resets Gold. Blue, Green, gems, along with Relic 14 and 31 are all useless. Gold Gain is ^(1/1,000,000,000) and game speed is logarithmed.
+|105+ Max Mineral Level
+|-
+|Eight of Pentacles
+|Performs Refine Prestige and resets Gold. Blue, Green, gems, along with Relic 14 and 31 are all useless. Gold is calculated based only off of Attack Level.
+|1640+ Max Mineral Level
+|-
+|Nine of Pentacles
+|Performs Refine Prestige. Mineral base is much worse; it's nerfed exponentially. (mineral base is the number the VP gain is multiplied by per level increase)
+|270+ Max Mineral Level
+|-
+|Ten of Pentacles
+|Performs Refine Prestige. Red Gem is useless. You cant get magnets nor merge XP. RN1, Game speed, Relic 22, and Polish Sword values are all set to Sword's LOGPOW
+|560+ Max Mineral Level
+|-
+|Page of Pentacles
+|Performs Refine Prestige. Base Max level Upgrade Effect is multiplied by Pentacle's base LOGPOW.
+|420+ Max Mineral Level
+|-
+|Knight of Pentacles
+|Performs Refine Prestige. Red Gem is useless. You cant get magnets nor merge XP. RN1, Game Speed, Relic 22, and Polish Sword values are heavily nerfed, but this penalty becomes weaker based on the Stealth of your equipped Endoplasmic Reticulum.
+|1000+ Max Mineral Level
+|-
+|Queen of Pentacles
+|Performs Refine Prestige. Red Gem is useless. You cant get magnets nor merge XP. RN1's effect is capped by your current Singularity mult. Local Mineral Speed is capped at 10x. Relic 22 and Polish Sword are useless
+|700+ Max Mineral Level
+|-
+|King of Pentacles
+|Requires 1.8e308 Atoms to enter. Performs Refine Prestige. Red Gem is useless. You cant get magnets nor merge XP. RN1's effect is capped at Log10(atoms)+1. Local Mineral Speed is capped at 100x. The First Mineral upgrades effect is capped at the Square Root of your Singularity mult rounded down. Relic 22 and Polish Sword are useless. Entering Performs a Singularity and resets atoms to 1. Adds a Dynamic Penalty that heavily nerfs Atom Gain, but becomes weaker based on your Max Mineral Level
+|Perform a Singularity at 1e200+ VP
+|}
+{| class="wikitable mw-collapsible"
+! colspan="3" |Cups Tarot Challenges
+|-
+!Challenge
+!Penalty
+!Completion Requirement
+|-
+|Ace of Cups
+|Performs Unity Reset. All Zodiac EXP factors are logarithmed.
+|Unite with a Level 90+ Zodiac
+|-
+|Two of Cups
+|Performs Unity Reset. Luck is logarithmed, divided by 1000, then increased by 1.
+|Unite with Epic+ rarity Zodiac
+|-
+|Three of Cups
+|Performs Unity Reset. Luck is ^(1/999)
+|Unite with an Immortal+ rarity Zodiac
+|-
+|Four of Cups
+|Performs Unity Reset. Luck is heavily reduced, but the penalty weakens based off of the highest rarity Zodiac obtained during the challenge.
+|Unite with Amazing+ rarity Zodiac
+|-
+|Five of Cups
+|Performs Unity Reset. All Zodiac EXP factors are reduced to double Log10 of their values.
+|Unite with a Level 10+ Zodiac
+|-
+|Six of Cups
+|Performs Unity Reset. Max VP factor is disabled.
+|Unite with a Level 808+ Zodiac
+|-
+|Seven of Cups
+|Performs a Unity Reset. Your luck is heavily reduced, but the penalty weakens each time you Unite during this challenge.
+|Unite with a Prime+ rarity Zodiac
+|-
+|Eight of Cups
+|Performs a Unity Reset. Your luck and quality are heavily reduced, but the penalty weakens based off of the highest quality Zodiac you unite with during this challenge.
+|Unite with a Legendary+ rarity Zodiac
+|-
+|Nine of Cups
+|Performs Unity Reset. All Zodiac EXP factors are useless, besides the Relic 8 factor, which is logarithmed.
+|Unite with a Level 25+ Zodiac
+|-
+|Ten of Cups
+|Performs a Unity Reset. All Zodiac EXP factors are set to Cup's LOGPOW.
+|Unite with a Level 65+ Zodiac
+|-
+|Page of Cups
+|Performs a Unity Reset. Total Factors multiplication is set to Cup's LOGPOW.
+|Unite with a Level 100+ Zodiac
+|-
+|Knight of Cups
+|Performs a Unity Reset. All Factors are heavily nerfed, but this penalty becomes weaker based on your total infected population
+|Unite with a Level 625+ Zodiac
+|-
+|Queen of Cups
+|Performs a Unity Reset. Current Zodiac EXP is capped at your next Singularity Mult raised to the 5th power, plue 1
+|Unite with a Level 6+ Zodiac
+|-
+|King of Cups
+|Requires 1.8e308 Atoms to enter. Performs a Unity Reset. All Factors are set to Log2 of their values and are heavily nerfed. This Penalty becomes weaker based on your current Atom Count. Entering performs a Singularity and resets atoms to 1. Adds a Dynamic Penalty that heavily nerfs Atom Gain, but becomes weaker based on the highest level Zodiac you've obtained during the Challenge.
+|Perform a Singularity while the next expected Zodiac Level is 67+
+|}
+Arcana Challenges are much more unique as they're centered around the respective Arcan card. Each challenge provides a boost to each card, a boost to Sacrifice dust gain and turns it into a passive effect instead.
+{| class="wikitable mw-collapsible"
+! colspan="3" |Arcans Tarot Challenges
+|-
+!Challenge
+!Penalty
+!Completion Requirement
+|-
+|The Fool
+|All other arcans are disabled, and all special minerals are removed. You can only spawn Black Gems via The Fool, but the bonus is reduced by 10 (pre-caps).
+|Destroy a Level 20 Black Gem
+|-
+|The Magician
+|Resets your Elements. You can only generate them using the Magician skill, but the Global Element mult decreases with each use.
+|1e5000+ of all Elements
+|-
+|The High Priestess
+|Performs Refine Prestige. Red Gem, Relic 22, and Polish Sword are useless. You can no longer obtain magnets or merge levels. RN1's effect is ^(1/10000) (pre-skill).
+|200+ Max Mineral Level
+|-
+|The Empress
+|Base sell cost for Zodiacs is set to 1. Using The Empress will gradually increase this from 1 to 100. Auto-sell Zodiacs is disabled.
+|Sell a Zodiac for exactly 67 Astrodust (lol)
+|-
+|The Emperor
+|Performs Refine Prestige. Blue and Green gems are useless. Mineral cost growth is much steeper and increases over time. Relics 14 and 31 are useless. Use the card to decrease Mineral cost.
+|1333+ Max Mineral Level
+|-
+|The Hierophant
+|Performs Refine Prestige. You can only spawn level 1 minerals no matter what. The Hierophant's cooldown is 50x shorter.
+|1380+ Max Mineral Level
+|-
+|The Lovers
+|Performs Refine Prestige. Passive Merge EXP is disabled. Relic 28 effect is ^0.04 after all bonuses. Max mineral spawn level is capped at Merge Level + 1.
+|Merge Level 250+
+|-
+|The Chariot
+|None ''(yeah this challenge is just kind of a benchmark)''
+|Sacrifice Level 40 for all Gems
+|-
+|Justice
+|Tarot Local Speed is capped at 1. Chariot Passive Effect is also capped at 1.
+|111,111+ SMS Factor
+|-
+|The Hermit
+|Resets Tarot resources. Tarot Local speed and both effects are heavily reduced (cooldowns are greatly increased), but the penalty weakens with each use of The Hermit. The Hermit's duration is also capped at one second.
+|1e1000+ of all Tarot Resources
+|-
+|Wheel of Fortune
+|Resets your Tarot draws to the sum of all Artifact levels. Draws cannot be gained in any way except winning the wheel, but the chance of winning is heavily reduced. Losing the wheel will weaken this penalty.  Skill cooldown time is multiplied by 10, and Tarot local speed is capped at 1.
+|Win the Wheel 10 times in a row
+|-
+|Strength
+|Resets attack levels and attack mult is set to 1. Game Speed, other mults, mult gain are set to Mean LOGPOW / 2 (Mean LOGPOW is the average LOGPOW across all suits). Attack Exponent base is set to 0 and can only be increased via The Strength. The Strength's duration is set to 0.1 seconds and the effect is heavily reduced, but the penalty weakens based on Attack Level.
+|Attack Level 2000+
+|-
+|The Hanged Man
+|Performs a Refine Prestige and resets your Polish Upgrades and Polish Points. You cant gain any polish points, Special Minerals and Special Minerals Sacrifice are useless.
+|x5e9 Minerals Local Speed
+|-
+|Death
+|Activating the death tarot card secretly selects a random time between 0 and 60 seconds. You must perform a refine prestige while Death is still active.
+|Refine Prestige within 10 seconds of the selected time.
+|-
+|Temperance
+|At the start of the challenge, you receive a random low-stat Temperate Zodiac in your inventory. It must be placed into your Fortune Pars slot immediately. Each time you use temperance you receive a temperance zodiac based off the one in your Fortune Pars spot. 67% chance its the same zodiac, 20% chance you receive a different zodiac of the same element, 10% chance to receive an adjacent zodiac, 3% chance to receive the opposite zodiac. Tarot local speed is capped at 1x and Tarot skill cooldown timer is multiplied by x10
+|Fill Every Planet slot with a temperate zodiac that matches one of that planet's ruling signs.
+|-
+|The Devil
+|When you use this arcana card, it spawns 10 chads on the screen.
+|Catch all 10 Chads by clicking on them
+|-
+|The Tower
+|You need 20,000 infected in the universe stage to enter this challenge, While inside the challenge, using the tower arcana has a chance to complete the challenge based off of the chance given by Relic 67, If it fails, reset Universe High Score, Plague points, and get rid of all of your Endoplasmic Reticulums.
+|Complete the challenge by the chance given to you by Relic 67
+|-
+|The Star
+|You need 1.8e308 atoms to enter this challenge, Performs a Singularity reset and a Unity reset, Luck donut base is set and 1 and the first effect for the Pink Gem is useless, The star effect is also applied to the luck donut instead.
+|Perform a Singularity with an Uncommon+ Singular Zodiac
+|-
+|The Moon
+|You need 1.8e308 atoms to enter this challenge, Performs a Singularity reset and a Unity reset, Tarot Local speed is capped at 10x, sets the quality of the zodiac in the Moon slot to 1. You can upgrade it by using The Moon, but everytime you change zodiacs, the zodiac in the Moon slot's quality is set to 1. Adds a dynamic penalty that heavily nerfs Atom gain, but becomes weaker based on the quality of the zodiac in the Moon Slot.
+|Perform a Singularity with 1e1000+ Atoms
+|}
+Each Arcan card also becomes a passive effect after completing its repective Tarot Challenge.
+{| class="wikitable mw-collapsible"
+! colspan="3" |Arcan Passive Effects
+|-
+!Arcan Card
+!Effect 1
+!Effect 2 (if applicable)
+|-
+|The Fool
+|Base Black Gem Effect mult
+|
+|-
+|The Magician
+|Global Element mult
+|
+|-
+|The High Priestess
+|Refine Node 1 effect power (^)
+|
+|-
+|The Empress
+|Zodiac Sell Cost mult
+|
+|-
+|The Emperor
+|Mineral Cost Exponent decrease
+|First mineral upgrade effect (Max mineral spawn level)
+|-
+|The Hierophant
+|Increase First mineral upgrade base
+|
+|-
+|The Lovers
+|Relic 28 effect mult
+|
+|-
+|The Chariot
+|Decreases SMS Factor by X/sec
+|
+|-
+|Justice
+|Current Special Mineral cost is always set to base cost.
+|Refine Node 96 effect
+|-
+|The Hermit
+|Arcans Effiecieny mult
+|
+|-
+|Wheel of Fortune
+|Has a X% chance to decrease Artifacts cooldown by 0% to 100% of total cooldown upon flushing.
+|
+|-
+|The Strength
+|Attack Exponent +
+|
+|-
+|The Hanged Man
+|Increases Effective Level of Polish Upgrades
+|
+|-
+|Death
+|RfP gain Mult
+|
+|-
+|Temperance
+|You can now manually choose which zodiacs will be chosen on unity and how many copies you will recieve.
+|Empowers Base Luck and quality
+|-
+|The Devil
+|Passively increase Devil Bonus Mult
+|
+|-
+|The Tower
+|SMP EXP and Sacrifice Dust Mult
+|
+|-
+|The Star
+|Luck and Quality Donuts Mult based on number of Stars ^ X
+|
+|-
+|The Moon
+|Luck and Quality Donuts Base Effects Mult by X (per level)
+|
+|}
+
+== Artifacts ==
+Artifacts are unlocked through {{Keyword|node|Refine Tree Node 99}}, purchased with 1e1000 RfP. There are four different artifacts, one for each card suit. Each Tarot resource can be converted into their golden form using the Flush button on the right side of the tab. Doing so will grant you the respective amount of golden resources, but a ^0.001 resource generation penalty will be incurred, though this will weaken gradually over 10 hours. The Flush button will also be on cooldown for 10% of this duration. This cooldown can be reduced with levels in {{Keyword|node|Refine Tree Node 100}}, and Relic 58, with Wheel of Fortune occasionally after completing it’s challenge
+
+Here are the four artifacts:<gallery>
+File:Crystal Mirror.png|A complete Crystal Mirror artifact, for Swords
+File:Magic Skull.png|A complete Magic Skull artifact, for Wands
+File:Prosperity Engine.png|A complete Prosperity Engine artifact, for Pentacles
+File:Emotional Vessel.png|A complete Emotional Vessel artifact, for Cups
+</gallery>
+{| class="wikitable mw-collapsible"
+! colspan="9" |Artifact Parts and their Effects
+|-
+!Part #
+! colspan="2" |Crystal Mirror
+! colspan="2" |Magic Skull
+! colspan="2" |Prosperity Engine
+! colspan="2" |Emotional Vessel
+|-
+!
+!Part Name
+!Effect
+!Part Name
+!Effect
+!Part Name
+!Effect
+!Part Name
+!Effect
+|-
+|1
+|Glass Surface
+|Sacrifice Dust Gain (x10000/level)
+|Ramus
+|Sacrifice Dust Gain (x10000/level)
+|Abundance Gears
+|Sacrifice Dust Gain (x10000/level)
+|Heart Chamber
+|Sacrifice Dust Gain (x10000/level)
+|-
+|2
+|Silver Backing
+|Relic 24 Effect (+0.01x/level)
+|Mandible
+|Relic 25 Effect (+0.01x/level)
+|Manifestation Pistons
+|Relic 26 Effect (+0.01x/level)
+|Empathy Valves
+|Relic 27 Effect (+0.01x/level)
+|-
+|3
+|Obsidian Frame
+|Relic 56 Effect (+0.01x/level)
+|Teeth
+|Relic 8 Effect (+^1000/level)
+|Fortune Cogs
+|Polish Sword Effect (+^0.02/level)
+|Sorrow Filters
+|Elements Factor 3 (+^0.02/level)
+|-
+|4
+|Focal Point
+|Relic 13 Effect (+0.2x/level)
+|Maxilla
+|Relic 14 Effect (+0.1x/level)
+|Stability Foundation
+|The Hierophant effect (+0.01/level)
+|Joy Reservoir
+|Relic 2 Effect (scaling unknown)
+|-
+|5
+|Light Refractors
+|Relic 2 Effect (+^0.25/level)
+|Nasal Bone
+|Relic 2 Effect (+^0.25/level)
+|Growth Chambers
+|Relic 2 Effect (+^0.25/level)
+|Memory Liquid
+|Relic 2 Effect (+^0.25/level)
+|-
+|6
+|Truth Facets
+|Relic 21 Effect (+0.01x/level)
+|Infraorbitals
+|Refine Node 7 Effect (+0.01x/level)
+|Wealth Circulation System
+|Yellow Gem base effect (+0.01x/level)
+|Connection Handles
+|Polish Spear effect (+0.01x/level)
+|-
+|7
+|Memory Crystal
+|Sword LOGPOW base (0.09+0.01*level)
+|Zygomatics
+|Wands LOGPOW base (0.09+0.01*level)
+|Value Assessors
+|Pentacles LOGPOW base (0.09+0.01*level)
+|Authenticity Glaze
+|Cups LOGPOW base (0.09+0.01*lvl)
+|-
+|8
+|Perception Lens
+|Base Spread Power on Endoplasmic Reticulum Craft Mult (+0.25x/lvl)
+|Frontal Bone
+|Relic 52 Effect (+0.02x/level)
+|Legacy Encoders
+|Earth-2 Node effect power (+^4/level)
+|Inner Reflection Surface
+|Polish Enhance effect (+0.25x/lvl)
+|-
+|9
+|
+|
+|Parietal Bone
+|The Hermit base effect (+0.05x/level)
+|Reality Anchors
+|Base Virus Essence from Disolving Endoplasmic Reticulum. (+0.5x/lvl
+|Vulnerability Aperture
+|Relic 32 Effect (+0.02x/lvl)
+|-
+|10
+|
+|
+|Temporal Bone
+|Water Quality Factor (+^0.5/level)
+|
+|
+|Trauma Alchemizer
+|Singularity Multiplier (+0.001x/lvl)
+|-
+|11
+|
+|
+|Occipital Bone
+|Plague Points per Plague Generator Mult (+1x/lvl)
+|
+|
+|
+|
+|}
+
+=== LOGPOW ===
+Part 7 for each Artifact unlocks the LOGPOW stat for the respective suit, which, in effect, raises the ''exponent'' of the amount of resource you have to a certain power instead of affecting the entire value.
+
+Later Tarot Challenges use a LOGPOW function for a significant penalty, but even slight increases in the LOGPOW stat can drastically weaken these penalties.
+
+<math>LOGPOW(x)=10^{(log10(x+1)^{LOGPOW stat})-1}</math>
+
+==Trivia==
+When you get a level of a tarot card, for Suits, it increases the effect of it. For arcanas, it both reduces its cooldown and boosts its effect.
+
+Tip: If you use a (DRAW ALL CARDS) block in your macro while in the Wheel Of Fortune challenge the challenge can’t be completed.
+
+Tip: Use the Arcan specified in an Arcan Challenge in a seperate Macro.
+
+Tip: Before Doing the Nine of Swords Challenge, beat Eight of Swords.
+[[Category:Unity]]
+{{Main navbox}}

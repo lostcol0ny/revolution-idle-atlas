@@ -1,0 +1,233 @@
+Trials are unlocked when you have 3 zodiacs equipped. There are currently 25 trials as of v1.068.
+
+==='''Easy Trials'''===
+{| class="wikitable" style="text-align:center;  font-size: 1rem"
+!Trial
+!Goal
+!Handicap
+!Reward
+|-
+|Easy Trial 1
+| rowspan="6" |Reach Infinity
+|You can only buy the first 6 colors
+|x1.4 to zodiac quality
+|-
+|Easy Trial 2
+|You can't buy promotion 3 and 4
+|Unlocks Trials exp factor
+|-
+|Easy Trial 3
+|Common exponent is multiplied by 0.6
+|Common exponent multiplied by 1.05
+|-
+|Easy Trial 4
+|You can't buy promotion 2 and 4 or prestige
+|Unlocks Mars
+|-
+|Easy Trial 5
+|Common exponent can't be >0.7
+|Unlocks Max Score factor
+|-
+|Easy Trial 6
+|You can't prestige, promote or ascend
+|Unlocks Planet Shop
+|}
+
+'''Reward for completing all Easy Trials'''
+
+{| class="wikitable" style="text-align:center; font-size: 1rem"
+|+
+!Requirement
+!Reward
+|-
+|Beat all Easy Trials
+|Keep revolutions don't take away score, Prestige & Promotions reset nothing, Unlocks Medium Trials.
+|}
+
+==='''Medium Trials'''===
+
+{| class="wikitable" style="text-align:center; font-size: 1rem"
+!Trial
+!Goal
+!Handicap
+!Reward
+|-
+|Medium Trial 1
+| rowspan="6" |Reach Eternity
+|You can only buy the first two Infinity Generators
+|x1.337 to luck
+|-
+|Medium Trial 2
+|You can't buy Stars
+|Infinity & Infinity Challenges are now always 1ms
+|-
+|Medium Trial 3
+|You can't Prestige
+|Supernova resets nothing, unlocks Autobuy Dp Upgrades & DTP
+|-
+|Medium Trial 4
+|You can only Infinite twice
+|Unlocks Auto Unity
+|-
+|Medium Trial 5
+|You can only Infinite once
+|Unlocks DTP factor
+|-
+|Medium Trial 6
+|You can't prestige/promote and can only buy the first 5 colors
+|Keeps fastest Eternity at 5ms
+|}
+
+'''Reward for completing all Medium Trials'''
+
+{| class="wikitable" style="text-align:center; font-size: 1rem"
+|+
+!Requirement
+!Reward
+|-
+|Beat all Medium Trials
+|Keep IP/second, unlocks Max IP factor, unlocks Hard Trials.
+|}
+
+==='''Hard Trials'''===
+
+{| class="wikitable" style="text-align:center; font-size: 1rem"
+!Trial
+!Goal
+!Handicap
+!Reward
+|-
+|Hard Trial 1
+| rowspan="6" |Reach Unity
+|You can't buy more than 20 DTP
+|Unlocks DP factor
+|-
+|Hard Trial 2
+|You can't buy Lab or RP upgrades
+|Unlocks Lab level factor
+|-
+|Hard Trial 3
+|You can't Supernova
+|Unlocks Autosell zodiacs
+|-
+|Hard Trial 4
+|You can't buy more than 1500 AP/get past Supernova 10
+|Unlocks AP factor
+|-
+|Hard Trial 5
+|You can only buy 50 of each Dilation upgrade & 2 DTP
+|Divide all Relic costs by 1M
+|-
+|Hard Trial 6
+|You can't dilate or enter EC
+|Unlocks EP factor
+|}
+
+'''Reward for completing all Hard Trials'''
+
+{| class="wikitable" style="text-align:center; font-size: 1rem"
+|+
+!Requirement
+!Reward
+|-
+|Beat all Hard Trials
+|Breaks Unity
+|}
+
+
+==='''Insane Trials'''===
+These trials work a bit differently than prior trials, as they must be completed in order. To unlock a trial, you must get the respective level to unlock it on weapons in Polish Prestige (under Unity → Minerals, must get a level 30 mineral to unlock).
+{| class="wikitable" style="text-align:center; font-size: 1rem"
+!Trial
+!Unlock
+!Goal
+!Handicap
+!Reward
+|-
+|Insane Trial 1
+| Level 25 Knuckles
+| Buy 65 DTP
+| First DU is useless and dilation penalties are ^2 stronger.
+| You get 10 more EC from trials
+|-
+|Insane Trial 2
+| Level 50 Spear
+| Unite with e5.8M+ score
+| Common Exponent is divided by 1M
+| Now you keep all of your EC on Unity Reset. Trials reward is changed to PP gain mult.
+|-
+|Insane Trial 3
+| Level 50 Knuckles
+| Reach Unity
+| IP and EP gains are much worse now. DP Gain is multiplied by Min(1, Eternities amount). Reset eternites amount to 0 on Unity Reset.
+| Get additional 100% of IP and EP per second passively
+|-
+|Insane Trial 4
+| Level 100 Axe
+| Reach 2.018e705+ EP and 8.14e2025+ IP
+| All EC rewards are much worse now and actually are penalties.
+| You can complete 1 more difficulty for each EC. EC past 50 boost your magnet gain chance
+|-
+|Insane Trial 5
+| Level 100 Bow
+| Reach 65 DTP
+| DU1 is disabled. Dilation Penalties and DP gain scales much harsher.
+| Dilation's best score is automatically set to your current score raised to DU Power Penalty
+|-
+|Insane Trial 6
+| Level 100 Knuckles
+| Reach Attack Level 100
+| Attack Divider and Level Scalings are harsher, R13 is inverted, Gold and Ascend Strength is logarithmed. Attack Stats are wiped on Unity.
+| Passively gain 1 Unity per second, multiplied by Minerals' Game Speed
+|} 
+
+'''Reward for completing all Insane Trials'''
+
+{| class="wikitable" style="text-align:center; font-size: 1rem"
+|+
+!Requirement
+!Reward
+|-
+|Beat all Insane Trials
+|You gain 1 merge exp per second, boosted by local speed in minerals tab
+|}
+
+=== Bonus Trial ===
+{| class="wikitable"
+!Trial
+!Unlock
+!Goal
+!Handicap
+!Reward
+|-
+|Bonus Trial
+|Complete Earth Plague Stage (5-5) after unlocking Relic 67 (May need to complete multiple times)
+|Complete Earth Plague Stage (5-5)
+|You may only equip a Decay ER with a level no higher than 50% of the max level
+|Divides all refine nodes costs past 120 by /1e6750
+|}
+Reward for completing the Bonus Trial
+{| class="wikitable"
+|+
+!Requirement
+!Reward
+|-
+|Beat the Bonus Trial
+|Multiplies Golden Resource Gain by 10x
+|}
+'''<big>Formulas for nerds</big>'''
+
+Here are the formulas of the boost based on the number of trials completed shown below here.
+
+'''The formula for Eternity challenges kept across Unities before IT2 is completed:''' <math>[2 * TrialsCompleted]</math>
+
+'''The formulas for the multiplier for PP gain after IT2 is completed and before IT6 is completed:'''
+
+'''Before RTn 45 is bought:''' <math>* 2^{2^{TrialsCompleted-19}}</math>
+
+'''After RTn 45 is bought:''' <math>* 2^{2^{TrialsCompleted-18}}</math>
+
+'''The PP multiplier after IT6 is completed:''' <math>*2^{128}(\approx3.80282e38)</math>
+
+[[Category:Unity]]
+{{Main navbox}}

@@ -1,0 +1,513 @@
+{{New Content}}
+Plague is the 7th subtab in {{Keyword|unity|Unity}}, and can be unlocked through {{Keyword|unknown|Refine Tree Node 103}}. 
+
+__toc__
+
+== Infection ==
+In order to release your plague, you must click the “INITIATE INFECTION” button at the bottom of the tab, which allows you to begin the infection. Your plague will spread slowly at first, based off of the “spread speed” number displayed.
+
+=== Stages ===
+There are 6 main levels, with the first 5 having 12 stages each, and the last one having one. Each stage has a certain number of people that must all be infected by your plague in order to complete that stage. Completing a stage will reward you Plague Generators, or PlG. Each PlG will produce a certain amount of Plague Points, or PlP, per second, which is shown by your PlP per PlG stat. 
+{| class="wikitable mw-collapsible"
+! colspan="4" |Plague Stages
+|-
+!Stage
+!Name
+!Population
+!PlG Reward
+|-
+! colspan="4" |Level 1 Plague Stages - Houses (1-x)
+|-
+|1-1
+|Tent
+|5
+|1 PlG
+|-
+|1-2
+|Shack
+|7
+|2 PlG
+|-
+|1-3
+|Cabin
+|10
+|4 PlG
+|-
+|1-4
+|Trailer 
+|12
+|5 PlG
+|-
+|1-5
+|Bunker
+|16
+|8 PlG
+|-
+|1-6
+|Hostel
+|20
+|12 PlG
+|-
+|1-7
+|Dorm
+|25
+|16 PlG
+|-
+|1-8
+|Shelter
+|40
+|40 PlG
+|-
+|1-9
+|Barracks
+|60
+|75 PlG
+|-
+|1-10
+|Block
+|100
+|160 PlG
+|-
+|1-11
+|Complex
+|220
+|420 PlG
+|-
+|1-12
+|Compound 
+|400
+|1000 PlG
+|-
+! colspan="4" |Level 2 - Towns (2-x)
+|-
+|2-1
+|Mudville
+|80
+|300
+|-
+|2-2
+|Dulltone
+|92
+|450
+|-
+|2-3
+|Smallwick
+|360
+|2500
+|-
+|2-4
+|Greyburg
+|800
+|7200
+|-
+|2-5
+|Millford
+|1200
+|12000
+|-
+|2-6
+|Coldsham
+|2000
+|16000
+|-
+|2-7
+|Ashtown
+|2500
+|21000
+|-
+|2-8
+|Rustfield
+|3200
+|28000
+|-
+|2-9
+|Grimsby
+|4500
+|36000
+|-
+|2-10
+|Brickton
+|7000
+|50000
+|-
+|2-11
+|Ironvale
+|10000
+|70000
+|-
+|2-12
+|Smokehaven
+|24000
+|200000
+|-
+! colspan="4" |Level 3 - Islands
+|-
+|3-1
+|Pebble Isle
+|120
+|2500
+|-
+|3-2
+|Damp Rock
+|150
+|3500
+|-
+|3-3
+|Foggy Atoll
+|500
+|8000
+|-
+|3-4
+|Crab Island 
+|1250
+|35000
+|-
+|3-5
+|Saltmere
+|3000
+|80000
+|-
+|3-6
+|Breezy Isle
+|5000
+|140000
+|-
+|3-7
+|Fernwood
+|11000
+|300000
+|-
+|3-8
+|Coral Bay
+|25000
+|640000
+|-
+|3-9
+|Greenveil
+|42000
+|900000
+|-
+|3-10
+|Palm Beach Island 
+|67000
+|1,200,000
+|-
+|3-11
+|Sunrock
+|100000
+|1,800,000
+|-
+|3-12
+|Grand Mere
+|125000
+|2,500,000
+|-
+! colspan="4" |Level 4 - Countries
+|-
+|4-1
+|Vatican
+|860
+|150000
+|-
+|4-2
+|Monaco
+|38300
+|8,000,000
+|-
+|4-3
+|Iceland
+|390000
+|70,000,000
+|-
+|4-4
+|Georgia
+|3800000
+|500,000,000
+|-
+|4-5
+|Dominican Republic
+|11,400,000
+|1.4e9
+|-
+|4-6
+|Netherlands
+|18,500,000
+|2.5e9
+|-
+|4-7
+|Canada
+|41,000,000
+|5.5e9
+|-
+|4-8
+|France
+|67,676,767
+|8.5e9
+|-
+|4-9
+|United Kingdom
+|69,696,969
+|1e10
+|-
+|4-10
+|Russia
+|143,676,961
+|1.6e10
+|-
+|4-11
+|USA
+|342,420,067
+|4e10
+|-
+|4-12
+|China
+|1.41e9
+|2e11
+|-
+! colspan="4" |Level 5 - Planets
+|-
+|5-1
+|Ashfel
+|7,000,000
+|8e11
+|-
+|5-2
+|Drovak
+|45,000,000
+|3e12
+|-
+|5-3
+|Calnyth
+|600,000,000
+|8e12
+|-
+|5-4
+|Orrund
+|2.8e9
+|7e13
+|-
+|5-5
+|Earth
+|8.3e9
+|2e14
+|-
+|5-6
+|Velmoris
+|1.15e10
+|4e14
+|-
+|5-7
+|Skaveth
+|1.62e10
+|1e15
+|-
+|5-8
+|Brundar
+|2.25e10
+|3e15
+|-
+|5-9
+|Zolhara
+|3.8e10
+|7e15
+|-
+|5-10
+|Nythros
+|6.1e10
+|1e16
+|-
+|5-11
+|Valdecrum
+|2.45e11
+|2e16
+|-
+|5-12
+|Omnharr
+|7e11
+|3e16
+|-
+! colspan="4" |Level 6 - Universes
+|-
+|6-1
+|Universe
+|?
+|N/A
+|}
+
+==== Immunity ====
+Each level will also have an Immunity stat, which basically slows down your plague the higher it is.
+{| class="wikitable mw-collapsible"
+! colspan="3" |Immunity Stats
+|-
+!Level
+!Name
+!Immunity
+|-
+|1
+|Houses
+|1
+|-
+|2
+|Towns
+|2
+|-
+|3
+|Islands
+|4
+|-
+|4
+|Countries
+|10
+|-
+|5
+|Planets
+|160
+|-
+|6
+|Universes
+|1,000,000
+|}
+
+==== Cure ====
+After you reach Islands, the healthy population of your current Plague Stage will begin slowly working on a cure. Their progress will slow down the less healthy people remain, and after a certain point, the cure and all of their research will be destroyed by your plague. However, if the cure is completed, it will begin decreasing your spread speed, and may even make it go negative, in which case the sick people will be cured and will become healthy again.
+
+=== Statistics ===
+There are 6 different statistics, and each provide significant boosts.
+{| class="wikitable mw-collapsible"
+! colspan="2" |Plague Statistics
+|-
+!Statistic
+!Boost
+|-
+|Max Stage Completed
+|Gold Gain ^
+|-
+|Max Infected 
+|Tarot Resources Gain ^
+|-
+|Total Infected
+|Black Gem mult
+|-
+|Max PlP
+|Golden Resources Gain mult
+|-
+|Max PlG
+|Singularity mult
+|-
+|Max Infected in Universe
+|PlP per PlG mult
+|}
+
+=== Naming ===
+In the top left, where the animated viruses are, the player has an option to name their plague, and doing so will grant {{Keyword|ach|Achievement 529}}.
+
+== Endoplasmic Reticulum ==
+Endoplasmic Reticula (ERs) are unlocked through {{Keyword|node|Refine Tree Node 104}}. Here, you can craft ERs by flushing an amount of your current PlP, anywhere from 1% to 100% at a time.
+
+=== Crafting ===
+You generate Endoplastic Reticulum Points (ERP) based on your flushed PlP. This conversation rate starts at 1% (i.e. your ERP generation per second is equal to 1% of your flushed PlP). Once your ERP amount satisfies the requirement, you will receive a new ER at the cost of your ERP and flushed PlP. Each ER will have a rarity tier, type, and level. The level can be increased by simply increasing the craft level, though this increases the ERP requirement quite a lot and you need to have crafted an ER of the previous level.
+
+There are 6 rarity tiers: 
+* F: Trash
+* D: Common
+* C: Uncommon
+* B: Rare
+* A: Epic
+* S: Legendary
+Increases in rarity will significantly boost the effectiveness of your ER.
+
+Each ER also falls into one of 5 types:
+{{Stub|notes=Needs icons}}
+{| class="wikitable mw-collapsible"
+! colspan="3" |ER Types
+|-
+!Icon
+!Type
+!Notes
+|-
+|
+|Outbreak
+|Excellent Spread Power, but weaker Infectivity and Stealth.
+|-
+|
+|Latent
+|Average Spread Power with exceptional Stealth
+|-
+|
+|Virulent
+|Average Spread Power with very high Infectivity
+|-
+|
+|Strain
+|Strong Spread Power with only slightly weaker secondary stats
+|-
+|
+|Decay
+|Weak overall stats, but yields a high amount of VE when dissolved.
+|}
+
+=== Dissolving and ER Upgrades ===
+Unwanted ERs can be dissolved for Virus Essence, or VE. Similarly to how PlG generates PlP,  VE also generates Virus Points, or ViP, which can be spent on ER upgrades.
+
+There are 7 ER upgrades.
+{| class="wikitable mw-collapsible"
+! colspan="6" |ER Upgrades
+|-
+!#
+!Name
+!Effect
+!Effect Scaling
+!Base Cost
+!Cost Scaling
+|-
+|1
+|Base Spread Power
+|<==
+| + 0.025/level
+|1000
+|x2/level
+|-
+|2
+|Base Infectivity
+|<==
+| + 0.02/level
+|1000
+|X2/level
+|-
+|3
+|Base Stealth
+|<==
+| + 0.02/level
+|1000
+|x2/level
+|-
+|4
+|Conversion Rate
+|Increases PlP to ERP conversion rate
+|
+|
+|
+|-
+|5
+|Dissolve Efficiency
+|Increases base VE from dissolving ERs
+|
+|
+|
+|-
+|6
+|Crafting Mastery
+|Increases chances of crafting better ERs
+|
+|
+|
+|-
+|7
+|Essence Density
+|Increases ViP/s per VE
+|
+|
+|
+|}
+[[Category:Unity]]
+{{Main navbox}}
