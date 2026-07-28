@@ -49,6 +49,14 @@ def test_bad_enum_raises_schema_error(tmp_path):
     assert any("system" in p for p in exc.value.problems)
 
 
+def test_non_mapping_root_raises_schema_error_not_attribute_error(tmp_path):
+    bad = tmp_path / "list_root.yaml"
+    bad.write_text("- a\n- b\n")
+    with pytest.raises(SchemaError) as exc:
+        load_dataset(bad)
+    assert exc.value.problems[0] == "top level must be a mapping with 'nodes' and 'edges' keys"
+
+
 def test_python_object_tags_are_rejected(tmp_path):
     """The line-tracking loader must not widen SafeLoader's constructor set."""
     evil = tmp_path / "evil.yaml"

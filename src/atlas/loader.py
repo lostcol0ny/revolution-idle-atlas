@@ -46,6 +46,10 @@ def load_dataset(path: Path) -> Dataset:
         loader.dispose()
     if raw is None:
         raw = {}
+    if not isinstance(raw, dict):
+        raise SchemaError(
+            ["top level must be a mapping with 'nodes' and 'edges' keys"]
+        )
     raw.pop(LINE_KEY, None)
 
     lines: dict[str, list[int | None]] = {}
