@@ -1,0 +1,62 @@
+name: Daily wiki scrape
+
+on:
+  schedule:
+    - cron: "0 6 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v5
+        with:
+          enable-cache: true
+
+      - name: Install dependencies
+        run: uv sync --all-extras --dev
+
+      - name: Scrape wiki
+        run: uv run atlas scrape
+
+      - name: Summarise changes
+        id: summary
+        run: |
+          {
+            echo 'body<<PRBODY'
+            echo 'Automated wiki scrape. Raw wikitext only — `relationships.yaml` is untouched.'
+            echo ''
+            echo '### New pages'
+            git ls-files --others --exclude-standard data/raw/ \
+              | sed 's|data/raw/|- |; s|\.wikitext$||' | grep . || echo '_none_'
+            echo ''
+            echo '### Changed pages'
+            git diff --numstat -- data/raw/ \
+              | awk '{printf "- %s (+%s/-%s)\n", $3, $1, $2}' | grep . || echo '_none_'
+            echo ''
+            echo '### Removed pages'
+            git diff --diff-filter=D --name-only -- data/raw/ \
+              | sed 's|data/raw/|- |; s|\.wikitext$||' | grep . || echo '_none_'
+            echo ''
+            echo '### WIP-flagged pages'
+            grep -l '{{New Content}}' data/raw/*.wikitext 2>/dev/null \
+              | sed 's|data/raw/|- |; s|\.wikitext$||' | grep . || echo '_none_'
+            echo 'PRBODY'
+          } >> "$GITHUB_OUTPUT"
+
+      - name: Open pull request
+        uses: peter-evans/create-pull-request@v7
+        with:
+          add-paths: data/raw
+          branch: wiki-scrape
+          title: "chore: daily wiki scrape"
+          body: ${{ steps.summary.outputs.body }}
+          commit-message: "chore: daily wiki scrape"
+          delete-branch: true
