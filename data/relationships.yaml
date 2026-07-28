@@ -54,7 +54,7 @@ nodes:
     system: plague
     kind: currency
     wiki: Plague
-    confidence: provisional
+    confidence: unknown
 
   - id: refine-node-1
     name: Refine Node 1

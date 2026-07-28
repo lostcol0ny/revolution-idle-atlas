@@ -28,6 +28,11 @@ BASE_PARAMS: dict[str, Any] = {
 # httpx's own default is the only signal that tells the two apart.
 HTTPX_DEFAULT_USER_AGENT = f"python-httpx/{httpx.__version__}"
 
+# write_raw deletes any raw file the incoming scrape did not produce. A scrape
+# holding fewer than this fraction of what is already on disk is treated as
+# truncated rather than as a genuine shrink, and refuses to write.
+REAP_FLOOR_RATIO = 0.8
+
 
 class ScrapeError(Exception):
     """Raised when the wiki API misbehaves or returns nothing usable."""
@@ -53,6 +58,16 @@ def fetch_pages(client: httpx.Client) -> dict[str, str]:
             )
 
         payload = response.json()
+        # MediaWiki reports API-level failures (readonly, maxlag, throttling)
+        # with HTTP 200 and an "error" body. Such a response carries no
+        # "continue" key, so without this the loop exits *normally* holding a
+        # partial page set — which write_raw would then treat as the whole wiki.
+        if "error" in payload:
+            error = payload["error"]
+            code = error.get("code", "unknown") if isinstance(error, dict) else "unknown"
+            info = error.get("info", error) if isinstance(error, dict) else error
+            raise ScrapeError(f"wiki API error [{code}]: {info}")
+
         for page in payload.get("query", {}).get("pages", {}).values():
             revisions = page.get("revisions") or []
             if not revisions:
@@ -86,6 +101,18 @@ def write_raw(pages: dict[str, str], raw_dir: Path) -> int:
         if "\x00" in filename:
             raise ScrapeError(f"wiki title {title!r} yields an unusable filename")
         by_filename[filename] = content
+
+    # A truncated scrape looks exactly like a wiki that shrank, and the reap
+    # below cannot tell them apart. Refuse rather than guess: the cost of a
+    # false positive is a human re-running one command, the cost of a false
+    # negative is destroying the committed corpus in an unattended PR.
+    existing = {p.name for p in raw_dir.glob("*.wikitext")}
+    if existing and len(by_filename) < len(existing) * REAP_FLOOR_RATIO:
+        raise ScrapeError(
+            f"scrape returned {len(by_filename)} pages against {len(existing)} "
+            f"already in {raw_dir} — refusing to reap. Re-run the scrape; if the "
+            f"wiki genuinely shrank this much, delete the stale files by hand."
+        )
 
     raw_dir.mkdir(parents=True, exist_ok=True)
 

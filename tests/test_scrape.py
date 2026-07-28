@@ -69,6 +69,69 @@ def test_empty_result_raises():
         fetch_pages(_client(handler))
 
 
+def test_api_level_error_with_http_200_raises():
+    # MediaWiki answers readonly/maxlag with HTTP 200 and an error body. Without
+    # an explicit check the loop exits normally with a partial page set.
+    def handler(request):
+        return httpx.Response(
+            200,
+            json={"error": {"code": "readonly", "info": "The wiki is in read-only mode."}},
+        )
+
+    with pytest.raises(ScrapeError, match="readonly"):
+        fetch_pages(_client(handler))
+
+
+def test_api_error_after_a_successful_page_still_raises():
+    # The dangerous shape: page 1 succeeds, page 2 errors. The result is a
+    # non-empty dict, so the `if not pages` guard passes it straight through.
+    responses = [PAGE_ONE, {"error": {"code": "maxlag", "info": "Waiting for a database"}}]
+
+    def handler(request):
+        return httpx.Response(200, json=responses.pop(0))
+
+    with pytest.raises(ScrapeError, match="maxlag"):
+        fetch_pages(_client(handler))
+
+
+def _fill_raw(raw_dir, count: int) -> None:
+    raw_dir.mkdir(parents=True, exist_ok=True)
+    for i in range(count):
+        (raw_dir / f"Page{i}.wikitext").write_text("old", encoding="utf-8")
+
+
+def test_write_raw_refuses_a_scrape_below_the_reap_floor(tmp_path):
+    raw = tmp_path / "raw"
+    _fill_raw(raw, 10)
+    # 7 of 10 is below the 80% floor.
+    pages = {f"Page{i}": "new" for i in range(7)}
+
+    with pytest.raises(ScrapeError, match="refusing to reap"):
+        write_raw(pages, raw)
+
+    # Nothing was written and nothing was reaped.
+    assert len(list(raw.glob("*.wikitext"))) == 10
+    assert (raw / "Page9.wikitext").read_text() == "old"
+
+
+def test_write_raw_proceeds_exactly_at_the_reap_floor(tmp_path):
+    raw = tmp_path / "raw"
+    _fill_raw(raw, 10)
+    # 8 of 10 is exactly the floor, which must be allowed through.
+    pages = {f"Page{i}": "new" for i in range(8)}
+
+    assert write_raw(pages, raw) == 8
+    assert len(list(raw.glob("*.wikitext"))) == 8
+    assert (raw / "Page0.wikitext").read_text() == "new"
+    assert not (raw / "Page9.wikitext").exists()
+
+
+def test_write_raw_reap_floor_ignores_an_empty_directory(tmp_path):
+    # A first-ever scrape has nothing on disk to compare against.
+    raw = tmp_path / "raw"
+    assert write_raw({"Relics": "text"}, raw) == 1
+
+
 def test_write_raw_flattens_subpage_titles(tmp_path):
     count = write_raw({"Minerals/Refine Tree": "text"}, tmp_path)
     assert count == 1

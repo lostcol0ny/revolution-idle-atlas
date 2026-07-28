@@ -61,6 +61,15 @@ def test_new_content_page_with_provisional_is_quiet(tmp_path):
     assert check_against_raw(ds, tmp_path) == []
 
 
+def test_new_content_page_with_unknown_is_quiet(tmp_path):
+    # 'unknown' under-claims confidence relative to 'provisional', so it cannot
+    # be an over-claim against a WIP page. Warning here would be a false positive
+    # and would push every stub node to 'provisional' to silence it.
+    (tmp_path / "Plague.wikitext").write_text("{{New Content}}\nPlague is...")
+    ds = Dataset(nodes=[_node("plague", "Plague", "unknown")], edges=[])
+    assert check_against_raw(ds, tmp_path) == []
+
+
 def test_missing_page_warns(tmp_path):
     (tmp_path / "Relics.wikitext").write_text("stuff")
     ds = Dataset(nodes=[_node("gone", "DeletedPage")], edges=[])

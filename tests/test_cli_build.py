@@ -3,6 +3,7 @@ import shutil
 from pathlib import Path
 
 from atlas.cli import main
+from atlas.problems import Problem
 
 FIXTURES = Path(__file__).parent / "fixtures"
 
@@ -59,6 +60,30 @@ def test_warnings_do_not_fail_the_build(tmp_path, capsys):
     assert "warning" in captured.err
     assert "refine-node-121" in captured.err
     assert "1 warning(s)" in captured.out
+    assert (root / "public" / "graph.json").is_file()
+
+
+def test_rawcheck_error_fails_the_build(tmp_path, monkeypatch):
+    # The exit gate reads Problem.severity, not which module emitted the problem.
+    # An implementation that only inspects validate_dataset's output, or that
+    # drops rawcheck from the gate, must not pass this.
+    root = _project(tmp_path)
+    monkeypatch.setattr(
+        "atlas.cli.check_against_raw",
+        lambda ds, raw_dir: [Problem(severity="error", message="raw is broken")],
+    )
+    assert main(["build", "--root", str(root)]) == 1
+    assert not (root / "public" / "graph.json").exists()
+
+
+def test_validate_warning_does_not_fail_the_build(tmp_path, monkeypatch):
+    # The symmetric direction: a warning from validate is still only a warning.
+    root = _project(tmp_path)
+    monkeypatch.setattr(
+        "atlas.cli.validate_dataset",
+        lambda ds: [Problem(severity="warning", message="soft")],
+    )
+    assert main(["build", "--root", str(root)]) == 0
     assert (root / "public" / "graph.json").is_file()
 
 

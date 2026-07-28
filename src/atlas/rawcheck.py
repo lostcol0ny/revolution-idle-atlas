@@ -5,6 +5,13 @@ from atlas.problems import Problem
 
 NEW_CONTENT_MARKER = "{{New Content}}"
 
+# The check's purpose is "do not claim documented confidence for content the
+# wiki itself flags as in flux". 'unknown' claims strictly less confidence than
+# 'provisional', so it under-claims rather than over-claims and must be accepted
+# too — warning on it is a false positive, and one that pushes stub nodes into
+# 'provisional' and quietly zeroes the coverage report's stub count.
+ACCEPTED_ON_WIP = frozenset({NodeConfidence.PROVISIONAL, NodeConfidence.UNKNOWN})
+
 
 def raw_filename(wiki: str) -> str:
     # MediaWiki treats spaces and underscores as equivalent in a page title, so
@@ -39,13 +46,14 @@ def check_against_raw(ds: Dataset, raw_dir: Path) -> list[Problem]:
             continue
 
         text = page_file.read_text(encoding="utf-8")
-        if NEW_CONTENT_MARKER in text and node.confidence is not NodeConfidence.PROVISIONAL:
+        if NEW_CONTENT_MARKER in text and node.confidence not in ACCEPTED_ON_WIP:
             problems.append(
                 Problem(
                     severity="warning",
                     message=(
                         f"node '{node.id}' sources from a {NEW_CONTENT_MARKER} page "
-                        f"but confidence is '{node.confidence}' — expected 'provisional'"
+                        f"but confidence is '{node.confidence}' — expected "
+                        f"'provisional' or 'unknown'"
                     ),
                     line=node.line,
                 )
