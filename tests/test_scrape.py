@@ -87,6 +87,40 @@ def test_write_raw_refuses_empty_mapping(tmp_path):
         write_raw({}, tmp_path)
 
 
+def test_caller_supplied_user_agent_is_respected():
+    seen = {}
+
+    def handler(request):
+        seen["ua"] = request.headers["user-agent"]
+        return httpx.Response(200, json=PAGE_TWO)
+
+    client = httpx.Client(
+        transport=httpx.MockTransport(handler),
+        headers={"User-Agent": "my-deliberate-ua/9"},
+    )
+    fetch_pages(client)
+    assert seen["ua"] == "my-deliberate-ua/9"
+
+
+def test_write_raw_leaves_disk_untouched_when_a_title_is_unusable(tmp_path):
+    # Filename derivation must happen before any disk mutation, so a bad title
+    # cannot leave data/raw/ half-written with stale files not yet reaped.
+    (tmp_path / "Existing.wikitext").write_text("original")
+    pages = {"Relics": "new text", "Bad\x00Title": "boom"}
+
+    with pytest.raises(ScrapeError, match="unusable filename"):
+        write_raw(pages, tmp_path)
+
+    assert (tmp_path / "Existing.wikitext").read_text() == "original"
+    assert not (tmp_path / "Relics.wikitext").exists()
+
+
+def test_write_raw_normalises_spaces_via_raw_filename(tmp_path):
+    count = write_raw({"Attacks Strategy": "text"}, tmp_path)
+    assert count == 1
+    assert (tmp_path / "Attacks_Strategy.wikitext").read_text() == "text"
+
+
 def test_path_traversal_stays_inside_raw_dir(tmp_path):
     # A hostile wiki title like "../../etc/passwd" must not write outside tmp_path.
     # raw_filename replaces "/" with "__", so "../.." becomes "..__.."; the result

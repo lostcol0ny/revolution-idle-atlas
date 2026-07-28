@@ -7,8 +7,12 @@ NEW_CONTENT_MARKER = "{{New Content}}"
 
 
 def raw_filename(wiki: str) -> str:
+    # MediaWiki treats spaces and underscores as equivalent in a page title, so
+    # both forms must collapse to one filename here. This is the single source of
+    # truth shared by the scraper (which writes) and check_against_raw (which
+    # reads); normalising at a call site instead lets the two drift apart.
     page = wiki.split("#", 1)[0]
-    return page.replace("/", "__") + ".wikitext"
+    return page.replace(" ", "_").replace("/", "__") + ".wikitext"
 
 
 def check_against_raw(ds: Dataset, raw_dir: Path) -> list[Problem]:

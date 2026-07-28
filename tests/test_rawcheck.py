@@ -21,6 +21,25 @@ def test_raw_filename_handles_slash_and_anchor():
     assert raw_filename("Minerals/Refine_Tree#Section") == "Minerals__Refine_Tree.wikitext"
 
 
+def test_raw_filename_normalises_spaces_to_underscores():
+    assert raw_filename("Attacks Strategy") == "Attacks_Strategy.wikitext"
+
+
+def test_raw_filename_spaced_and_underscored_titles_agree():
+    # MediaWiki treats spaces and underscores as the same character in a title.
+    # The scraper and rawcheck must therefore derive one filename for both forms,
+    # or a dataset author writing "Attacks Strategy" gets a spurious missing-page
+    # warning against a file the scraper wrote as "Attacks_Strategy.wikitext".
+    assert raw_filename("Attacks Strategy") == raw_filename("Attacks_Strategy")
+    assert raw_filename("Minerals/Refine Tree") == raw_filename("Minerals/Refine_Tree")
+
+
+def test_spaced_wiki_reference_matches_scraped_file(tmp_path):
+    (tmp_path / "Attacks_Strategy.wikitext").write_text("stuff")
+    ds = Dataset(nodes=[_node("atk", "Attacks Strategy")], edges=[])
+    assert check_against_raw(ds, tmp_path) == []
+
+
 def test_missing_raw_dir_yields_no_warnings(tmp_path):
     ds = Dataset(nodes=[_node("a", "Relics")], edges=[])
     assert check_against_raw(ds, tmp_path / "absent") == []
