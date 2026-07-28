@@ -4,6 +4,7 @@
 # confidence (nodes): documented | provisional | unknown
 # confidence (edges): documented | provisional | uncertain
 # source: wiki:<PageName> | observed | il2cpp | discord
+# Edges point upstream -> downstream: 'from' boosts / unlocks / is-required-by 'to'.
 
 nodes:
   - id: attack-power
@@ -53,7 +54,7 @@ nodes:
     system: plague
     kind: currency
     wiki: Plague
-    confidence: unknown
+    confidence: provisional
 
   - id: refine-node-1
     name: Refine Node 1

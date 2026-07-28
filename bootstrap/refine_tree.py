@@ -46,7 +46,10 @@ def main() -> int:
         req = params.get("req", "").strip()
         if not req:
             continue
-        for prereq in (r.strip() for r in req.split(",") if r.strip()):
+        # "0" is the wiki's root-node sentinel meaning "no prerequisite" (RN1
+        # uses it), not a reference to a node. Filtered per-entry rather than on
+        # the whole `req` string so a hypothetical "0,5" drops only the sentinel.
+        for prereq in (r.strip() for r in req.split(",") if r.strip() and r.strip() != "0"):
             print(f"  - from: refine-node-{prereq}")
             print(f"    to: refine-node-{number}")
             print("    rel: requires")
