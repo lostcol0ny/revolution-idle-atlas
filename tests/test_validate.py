@@ -1,4 +1,5 @@
 from atlas.models import Dataset, Edge, Node
+from atlas.problems import Problem
 from atlas.validate import suggest, validate_dataset
 
 
@@ -62,7 +63,36 @@ def test_suggest_returns_none_for_empty_candidates():
     assert suggest("anything", []) is None
 
 
+def test_suggest_near_miss_returns_closest():
+    assert suggest("relic-96", ["relic-69"]) == "relic-69"
+
+
+def test_suggest_no_match_returns_none():
+    assert suggest("zzzzzzzz", ["relic-69"]) is None
+
+
+def test_suggest_respects_the_similarity_cutoff():
+    # 'atom'/'atoms-gain' scores ~0.571 — under the 0.6 cutoff but over a
+    # loosened one. Pins the cutoff: a change to 0.3 would return a match here.
+    assert suggest("atom", ["atoms-gain"]) is None
+
+
 def test_problem_render_includes_path_and_line():
     ds = Dataset(nodes=[_node("a")], edges=[_edge("b", "a", line=42)])
     rendered = validate_dataset(ds)[0].render("data/relationships.yaml")
     assert rendered.startswith("data/relationships.yaml:42  error  ")
+
+
+def test_problem_render_omits_line_when_none():
+    p = Problem(severity="error", message="some problem", line=None)
+    rendered = p.render("data/relationships.yaml")
+    assert rendered == "data/relationships.yaml  error  some problem"
+    assert "None" not in rendered  # guard against accidental f-string interpolation
+
+
+def test_problem_render_keeps_line_zero():
+    # Guards the `is not None` check: a falsy `if not self.line` would drop line 0.
+    p = Problem(severity="warning", message="some problem", line=0)
+    assert p.render("data/relationships.yaml").startswith(
+        "data/relationships.yaml:0  warning  "
+    )
