@@ -9,8 +9,6 @@ const SYSTEM_COLOURS: Record<KnownSystem, string> = {
   infinity: '#b0621c',
   eternity: '#3f7a37',
   unity: '#7d4f77',
-  zodiac: '#8a6d12',
-  mineral: '#2f7d78',
   tarot: '#a83c3e',
   singularity: '#6d5343',
   plague: '#a3505b',

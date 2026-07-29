@@ -1,13 +1,15 @@
-// The nine systems that existed when the palette was fixed. This is a colour
-// and ordering hint, not a closed vocabulary: `system` is a free string in the
+// The systems declared in data/relationships.yaml. This is a colour and
+// ordering hint, not a closed vocabulary: `system` is a free string in the
 // dataset, and graph.json may carry ids that are not listed here.
+//
+// Keep this list minimal — an id nobody declares is dead weight that Sidebar
+// orders on and TypeScript cannot flag, because `Record<KnownSystem, string>`
+// checks that the colour map covers the union, not that the union is minimal.
 export const KNOWN_SYSTEMS = [
   'revolution',
   'infinity',
   'eternity',
   'unity',
-  'zodiac',
-  'mineral',
   'tarot',
   'singularity',
   'plague',
