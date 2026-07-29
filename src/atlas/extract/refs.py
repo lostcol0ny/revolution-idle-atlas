@@ -155,6 +155,14 @@ _RANKS = (
     "eight", "nine", "ten", "page", "knight", "queen", "king",
 )
 _SUITS = ("swords", "wands", "pentacles", "cups")
+# Minor Arcana only, and deliberately so. The 22 Major Arcana ("The Fool",
+# "The Devil", ...) are bare title-case noun phrases with no structural marker
+# dividing them from ordinary prose, so matching them here would take a
+# hardcoded name list and would still fire on any sentence that merely used the
+# words. Task 7 resolves them instead, where the card names actually parsed off
+# the page are in hand and a candidate match can be checked against them.
+# Until then `resolve("Multiplies The Devil's base effect") == []` is the
+# designed outcome, not a bug.
 _TAROT_RE = re.compile(
     rf"\b({'|'.join(_RANKS)})\s+of\s+({'|'.join(_SUITS)})\b", re.IGNORECASE
 )

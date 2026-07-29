@@ -113,4 +113,10 @@ def test_resolve_returns_references_in_order_of_appearance_without_duplicates():
 def test_resolve_ignores_bare_node_references():
     # "Node 1" inside Elements means an element node, not a refine node. An
     # ambiguous match would manufacture a wrong edge, which is worse than none.
+    # The first two inputs carry the guard: they contain the bare "Node <n>"
+    # form, so they start failing the moment a pattern matches it. The third
+    # has no digit at all and so can never fail — it is kept only to document
+    # that prose naming "Node" without a number is inert too.
+    assert resolve("Node 5 provides bonus") == []
+    assert resolve("each Node 11 is boosted") == []
     assert resolve("Makes First Node of each element stronger") == []
