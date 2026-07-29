@@ -63,13 +63,6 @@ nodes:
     wiki: Unity#Attacks
     confidence: documented
 
-  - id: relic-3
-    name: Relic 3
-    system: relics
-    kind: relic
-    wiki: Relics#Relic_3
-    confidence: documented
-
   - id: singularity
     name: Singularity
     system: singularity
@@ -82,13 +75,6 @@ nodes:
     system: singularity
     kind: stat
     wiki: Singularity
-    confidence: provisional
-
-  - id: relic-69
-    name: Relic 69
-    system: relics
-    kind: relic
-    wiki: Relics
     confidence: provisional
 
   - id: plague

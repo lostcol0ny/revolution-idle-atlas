@@ -42,9 +42,9 @@
       ],
       "id": "relic-3",
       "kind": "relic",
-      "name": "Relic 3",
+      "name": "Relic 3 (Copper Bunny Statuette)",
       "system": "relics",
-      "wiki": "Relics#Relic_3"
+      "wiki": "Relics"
     },
     {
       "confidence": "documented",
@@ -1020,7 +1020,7 @@
       "wiki": "Relics"
     },
     {
-      "confidence": "provisional",
+      "confidence": "documented",
       "effects": [
         {
           "text": "Adds a buff in the beginning that boosts atoms gain",
@@ -1030,7 +1030,7 @@
       ],
       "id": "relic-69",
       "kind": "relic",
-      "name": "Relic 69",
+      "name": "Relic 69 (Outdated \"Nice\" Gadget)",
       "system": "relics",
       "wiki": "Relics"
     },
