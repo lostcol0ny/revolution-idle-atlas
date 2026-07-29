@@ -2,10 +2,11 @@ import type { Kind, Rel, System } from '../types';
 
 // One colour per System enum member, fixed up front. Only four systems appear
 // in the data today; adding zodiac later must not re-shuffle existing colours.
-// All are dark enough to carry white label text at >= 4.5:1 contrast.
+// All are dark enough to carry white label text at >= 4.5:1 contrast, which
+// palette.test.ts enforces rather than trusting this sentence.
 const SYSTEM_COLOURS: Record<System, string> = {
   revolution: '#3d6a99',
-  infinity: '#b5651d',
+  infinity: '#b0621c',
   eternity: '#3f7a37',
   unity: '#7d4f77',
   zodiac: '#8a6d12',
