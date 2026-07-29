@@ -32,8 +32,8 @@ def test_an_alias_becomes_a_surface_form_alongside_the_name():
 
 def test_every_node_participates_not_only_the_ones_with_aliases():
     # A node with no aliases must still be matchable by its name. Scoping the
-    # vocabulary to alias-bearing nodes would silently drop 9 of the 11 seeded
-    # stats, which have no abbreviation the wiki uses.
+    # vocabulary to alias-bearing nodes would silently drop most stats, which
+    # have no abbreviation the wiki uses.
     vocab = build_vocabulary(
         [_stat("mineral-cost-exp", "Mineral Cost Exp"), _stat("luck", "Luck", ["LK"])]
     )
@@ -43,8 +43,15 @@ def test_every_node_participates_not_only_the_ones_with_aliases():
 def test_a_name_too_short_to_be_safe_is_dropped_by_the_vocabulary_not_by_the_builder():
     # The builder hands everything over; Vocabulary owns the length floor. Two
     # places enforcing it means two places to get it wrong.
-    vocab = build_vocabulary([_stat("xp", "xp")])
-    assert len(vocab) == 0
+    #
+    # Both names are two characters, so a length filter inside the builder would
+    # drop both and yield 0. Only Vocabulary separates them: "OK" is ALL-UPPERCASE
+    # and alphabetic, so it clears the relaxed two-character floor that exists for
+    # abbreviations, while lowercase "xp" takes the strict floor of three. Getting
+    # exactly one term back is reachable only if the builder submitted both and
+    # left the decision to Vocabulary.
+    vocab = build_vocabulary([_stat("xp", "xp"), _stat("ok", "OK")])
+    assert len(vocab) == 1
 
 
 def test_no_nodes_yields_an_empty_vocabulary():
@@ -59,7 +66,11 @@ def test_two_nodes_claiming_the_same_surface_form_raises():
     # a duplicate name. Letting it through would produce a wrong edge that looks
     # true — Vocabulary would resolve the surface to whichever node won the sort,
     # with no indication the other node ever competed for that span.
-    with pytest.raises(ValueError):
+    #
+    # The pattern pins both ids rather than the whole message. Naming which two
+    # nodes collided is what lets a curator find them, so rewording the prefix
+    # should leave this test passing while dropping the ids must fail it.
+    with pytest.raises(ValueError, match=r"'a'.*'b'"):
         build_vocabulary([_stat("a", "Merge Factor"), _stat("b", "Merge Factor")])
 
 

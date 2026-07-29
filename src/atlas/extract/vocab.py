@@ -12,9 +12,8 @@ def build_vocabulary(nodes: Iterable[Node]) -> Vocabulary:
     rules, and duplicating that judgement in a second place is how the two
     drift apart.
 
-    Every node participates, not only alias-bearing ones. Nine of the eleven
-    seeded stats have no abbreviation the wiki uses, so an alias-only rule
-    would drop them.
+    Every node participates, not only alias-bearing ones. Most stats have no
+    abbreviation the wiki uses, so an alias-only rule would drop them.
 
     Raises:
         ValueError: If two distinct nodes claim the same surface form, after
