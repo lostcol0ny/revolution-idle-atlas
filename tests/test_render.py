@@ -199,3 +199,18 @@ def test_composition_does_not_mutate_the_input_dataset():
     node = Node(id="relic-18", name="Mythical Rune", system="relics", kind=Kind.RELIC)
     to_graph(Dataset(nodes=[node]))
     assert node.name == "Mythical Rune"
+
+
+def test_empty_aliases_are_omitted_from_graph_json():
+    # graph.json stays version 1 only because every added field is optional AND
+    # absent when empty. A `"aliases": []` on all 345 nodes would rewrite the
+    # whole artifact and fail CI's diff guard.
+    ds = Dataset(nodes=[Node(id="a", name="A", system="unity", kind=Kind.STAT)])
+    assert "aliases" not in to_graph(ds)["nodes"][0]
+
+
+def test_populated_aliases_reach_graph_json():
+    ds = Dataset(
+        nodes=[Node(id="a", name="A", system="unity", kind=Kind.STAT, aliases=["AAA"])]
+    )
+    assert to_graph(ds)["nodes"][0]["aliases"] == ["AAA"]

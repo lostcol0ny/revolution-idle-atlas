@@ -74,6 +74,10 @@ class Node(BaseModel):
     wiki: str | None = None
     confidence: NodeConfidence = NodeConfidence.DOCUMENTED
     effects: list[Effect] = Field(default_factory=list)
+    # Other names the wiki uses for the same entity. Read by
+    # extract/vocab.py to build the resolver's vocabulary, which is the only
+    # consumer — an alias is matching input, not display text.
+    aliases: list[str] = Field(default_factory=list)
     line: int | None = Field(default=None, exclude=True)
 
 

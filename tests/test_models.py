@@ -1,7 +1,7 @@
 import pytest
 from pydantic import ValidationError
 
-from atlas.models import Dataset, Edge, Effect, Node, Op, Suppression, SystemDef
+from atlas.models import Dataset, Edge, Effect, Kind, Node, Op, Suppression, SystemDef
 
 
 def test_system_is_a_free_string():
@@ -70,3 +70,25 @@ def test_dataset_systems_and_suppress_default_to_empty():
     ds = Dataset()
     assert ds.systems == []
     assert ds.suppress == []
+
+
+def test_a_node_may_carry_aliases():
+    node = Node(
+        id="special-minerals-merge-factor",
+        name="Special Minerals Merge Factor",
+        system="minerals",
+        kind=Kind.STAT,
+        aliases=["SMMF"],
+    )
+    assert node.aliases == ["SMMF"]
+
+
+def test_aliases_default_to_empty_and_are_not_shared_between_instances():
+    # A bare `aliases: list[str] = []` on a Pydantic model is safe, but a plain
+    # dataclass default would alias one list across every node. Pin the
+    # behaviour so a future refactor away from Pydantic cannot regress it
+    # silently.
+    a = Node(id="a", name="A", system="unity", kind=Kind.STAT)
+    b = Node(id="b", name="B", system="unity", kind=Kind.STAT)
+    a.aliases.append("X")
+    assert b.aliases == []

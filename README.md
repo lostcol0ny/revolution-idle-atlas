@@ -110,6 +110,7 @@ absent" and "no value" as the same thing.
 | `wiki` | string | no | Wiki page title, optionally with a `#Section` anchor. |
 | `confidence` | enum | no | Defaults to `documented`. |
 | `effects` | array | no | What the entity does. Omitted when empty. |
+| `aliases` | array of string | no | Other names the wiki uses for this entity. Matching input, not display text. Omitted when empty. |
 
 `system` is a **free string**, deliberately. The taxonomy is data, not an enum:
 the declared systems live in this document's own `systems` array, and a
@@ -141,6 +142,15 @@ An entry in a node's `effects` array.
 | `text` | string | yes | The effect as prose. |
 | `per_level` | string | no | **A string, not a number.** Kept exactly as the wiki writes it, including forms like `+(?)` and `*^`. The wiki's own notation carries information a parsed number cannot: `+(?)` means the operator is known and the coefficient is not. |
 | `op` | enum | no | How the effect combines, when known. |
+
+`aliases` exist because the wiki names one stat several ways — "Special Minerals Merge
+Factor", "SMMF" and "Merge Factor" are one node. The extraction layer matches effect prose
+against every node's `name` plus its `aliases`, longest surface form first. An
+ALL-UPPERCASE alias is matched **case-sensitively** so that `AP` cannot fire inside
+"Appears"; everything else is matched case-insensitively. Aliases shorter than three
+characters are ignored unless they are ALL-UPPERCASE, where two is allowed. Every edge
+produced by prose matching is stamped `confidence: uncertain`, because prose is weaker
+evidence than a structural table cell.
 
 **Node `confidence`**: `documented`, `provisional`, `unknown`.
 
