@@ -303,7 +303,7 @@ def test_an_edge_repeated_across_both_files_is_not_reported():
 
 def test_two_derived_edges_with_same_key_but_distinct_payload_warn():
     # Two generated edges sharing (from, to, rel) but differing in targets_effect
-    # or note represent distinct claims — the second being silently discarded
+    # or note represent distinct claims — the first being silently discarded
     # deletes evidence. The merge must warn so the collision is visible.
     derived = Dataset(
         nodes=[],
@@ -324,7 +324,7 @@ def test_two_derived_edges_with_same_key_but_distinct_payload_warn():
             ),
         ],
     )
-    _, problems = merge(derived, Dataset(), derived_path="data/derived.yaml")
+    merged, problems = merge(derived, Dataset(), derived_path="data/derived.yaml")
 
     assert len(problems) == 1
     assert problems[0].severity == "warning"
@@ -332,3 +332,7 @@ def test_two_derived_edges_with_same_key_but_distinct_payload_warn():
     # knowing which parser produced it.
     assert "relic-38" in problems[0].message
     assert "refine-node-2" in problems[0].message
+    # The message tells a curator the earlier edge is the one that was lost, so
+    # something has to pin which one actually survives. Without this the message
+    # could be re-inverted and the suite would stay green.
+    assert [e.targets_effect for e in merged.edges] == [1]
