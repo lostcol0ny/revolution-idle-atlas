@@ -2,7 +2,7 @@ import { useMemo, useState } from 'react';
 import type { GraphIndex } from '../graph/adjacency';
 import { systemColour } from '../graph/palette';
 import type { GraphNode, System } from '../types';
-import { SYSTEMS } from '../types';
+import { KNOWN_SYSTEMS } from '../types';
 
 export function Sidebar({
   index,
@@ -16,7 +16,7 @@ export function Sidebar({
   const [filter, setFilter] = useState('');
   const [open, setOpen] = useState<Set<System>>(() => new Set());
 
-  const bySystem = useMemo(() => {
+  const { bySystem, systemOrder } = useMemo(() => {
     const groups = new Map<System, GraphNode[]>();
     for (const id of index.order) {
       const node = index.nodes.get(id);
@@ -25,7 +25,13 @@ export function Sidebar({
       group.push(node);
       groups.set(node.system, group);
     }
-    return groups;
+    // Known systems keep their historical order so the sidebar does not
+    // re-shuffle when the dataset grows; anything new sorts in after them.
+    const known = KNOWN_SYSTEMS.filter((system) => groups.has(system));
+    const extra = [...groups.keys()]
+      .filter((system) => !(KNOWN_SYSTEMS as readonly string[]).includes(system))
+      .sort();
+    return { bySystem: groups, systemOrder: [...known, ...extra] };
   }, [index]);
 
   const needle = filter.trim().toLowerCase();
@@ -69,7 +75,7 @@ export function Sidebar({
           ))}
         </ul>
       ) : (
-        SYSTEMS.map((system) => {
+        systemOrder.map((system) => {
           const nodes = bySystem.get(system);
           if (!nodes || nodes.length === 0) return null;
           const expanded = open.has(system);

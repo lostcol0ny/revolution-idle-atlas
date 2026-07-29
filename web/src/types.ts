@@ -1,4 +1,7 @@
-export const SYSTEMS = [
+// The nine systems that existed when the palette was fixed. This is a colour
+// and ordering hint, not a closed vocabulary: `system` is a free string in the
+// dataset, and graph.json may carry ids that are not listed here.
+export const KNOWN_SYSTEMS = [
   'revolution',
   'infinity',
   'eternity',
@@ -9,7 +12,8 @@ export const SYSTEMS = [
   'singularity',
   'plague',
 ] as const;
-export type System = (typeof SYSTEMS)[number];
+export type KnownSystem = (typeof KNOWN_SYSTEMS)[number];
+export type System = string;
 
 export const KINDS = [
   'relic',
@@ -31,6 +35,18 @@ export type Op = 'add' | 'mult' | 'exp';
 export type NodeConfidence = 'documented' | 'provisional' | 'unknown';
 export type EdgeConfidence = 'documented' | 'provisional' | 'uncertain';
 
+export interface GraphEffect {
+  text: string;
+  per_level?: string;
+  op?: Op;
+}
+
+export interface GraphSystem {
+  id: string;
+  name: string;
+  parent?: string;
+}
+
 export interface GraphNode {
   id: string;
   name: string;
@@ -38,6 +54,7 @@ export interface GraphNode {
   kind: Kind;
   wiki?: string;
   confidence?: NodeConfidence;
+  effects?: GraphEffect[];
 }
 
 export interface GraphEdge {
@@ -46,6 +63,7 @@ export interface GraphEdge {
   rel: Rel;
   op?: Op;
   note?: string;
+  targets_effect?: number;
   source: string;
   confidence?: EdgeConfidence;
 }
@@ -54,4 +72,5 @@ export interface GraphDocument {
   version: number;
   nodes: GraphNode[];
   edges: GraphEdge[];
+  systems?: GraphSystem[];
 }

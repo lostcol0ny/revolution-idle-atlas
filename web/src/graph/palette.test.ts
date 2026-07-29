@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import { systemColour } from './palette';
-import { SYSTEMS } from '../types';
+import { KNOWN_SYSTEMS } from '../types';
 
 // palette.ts asserts in prose that every system colour carries white label text
 // at >= 4.5:1. AtlasNode renders exactly that — white 13px text on the system
@@ -21,8 +21,16 @@ function contrastWithWhite(hex: string): number {
 }
 
 describe('system colours', () => {
-  it.each(SYSTEMS)('carries white label text at AA contrast: %s', (system) => {
+  it.each(KNOWN_SYSTEMS)('carries white label text at AA contrast: %s', (system) => {
     const colour = systemColour(system);
+    expect(colour).toMatch(/^#[0-9a-f]{6}$/);
+    expect(contrastWithWhite(colour)).toBeGreaterThanOrEqual(WCAG_AA_NORMAL_TEXT);
+  });
+});
+
+describe('unknown system colours', () => {
+  it('returns a readable fallback rather than undefined', () => {
+    const colour = systemColour('a-system-that-does-not-exist');
     expect(colour).toMatch(/^#[0-9a-f]{6}$/);
     expect(contrastWithWhite(colour)).toBeGreaterThanOrEqual(WCAG_AA_NORMAL_TEXT);
   });

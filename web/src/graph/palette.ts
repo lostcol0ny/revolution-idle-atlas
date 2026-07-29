@@ -1,10 +1,10 @@
-import type { Kind, Rel, System } from '../types';
+import type { Kind, KnownSystem, Rel } from '../types';
 
-// One colour per System enum member, fixed up front. Only four systems appear
-// in the data today; adding zodiac later must not re-shuffle existing colours.
-// All are dark enough to carry white label text at >= 4.5:1 contrast, which
-// palette.test.ts enforces rather than trusting this sentence.
-const SYSTEM_COLOURS: Record<System, string> = {
+// One colour per system known at the time the palette was fixed. Adding a
+// system later must not re-shuffle these. All are dark enough to carry white
+// label text at >= 4.5:1 contrast, which palette.test.ts enforces rather than
+// trusting this sentence.
+const SYSTEM_COLOURS: Record<KnownSystem, string> = {
   revolution: '#3d6a99',
   infinity: '#b0621c',
   eternity: '#3f7a37',
@@ -26,8 +26,14 @@ const KIND_BADGES: Record<Kind, string> = {
   group: 'G',
 };
 
-export function systemColour(system: System): string {
-  return SYSTEM_COLOURS[system];
+// System ids come from the dataset, not from this file, so a node can legally
+// carry one nobody has picked a colour for. Rendering it grey is a worse
+// outcome than a bespoke colour and a far better one than `undefined`, which
+// reaches the DOM as a missing fill and makes the node invisible.
+const UNKNOWN_SYSTEM_COLOUR = '#4b5563';
+
+export function systemColour(system: string): string {
+  return SYSTEM_COLOURS[system as KnownSystem] ?? UNKNOWN_SYSTEM_COLOUR;
 }
 
 export function kindBadge(kind: Kind): string {
