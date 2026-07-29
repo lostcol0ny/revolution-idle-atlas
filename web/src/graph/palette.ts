@@ -14,6 +14,13 @@ const SYSTEM_COLOURS: Record<KnownSystem, string> = {
   tarot: '#a83c3e',
   singularity: '#6d5343',
   plague: '#a3505b',
+  attacks: '#8c3f2a',
+  astrology: '#4a4f8a',
+  trials: '#6b4a2f',
+  relics: '#7d4f77',
+  minerals: '#2f7d78',
+  'refine-tree': '#2a6560',
+  elements: '#2b6b8a',
 };
 
 const KIND_BADGES: Record<Kind, string> = {

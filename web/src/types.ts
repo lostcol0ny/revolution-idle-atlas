@@ -11,6 +11,13 @@ export const KNOWN_SYSTEMS = [
   'tarot',
   'singularity',
   'plague',
+  'attacks',
+  'astrology',
+  'trials',
+  'relics',
+  'minerals',
+  'refine-tree',
+  'elements',
 ] as const;
 export type KnownSystem = (typeof KNOWN_SYSTEMS)[number];
 export type System = string;
