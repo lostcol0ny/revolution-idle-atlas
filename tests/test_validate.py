@@ -98,6 +98,28 @@ def test_problem_render_keeps_line_zero():
     )
 
 
+def test_problem_render_prefers_its_own_path_over_the_callers():
+    # A problem built during the merge knows which of the two input files it
+    # read. The caller printing it holds one path and cannot recover that, so
+    # the problem's own path has to win.
+    p = Problem(
+        severity="error",
+        message="duplicate node id 'b'",
+        line=6,
+        path="data/derived.yaml",
+    )
+    assert p.render("data/relationships.yaml") == (
+        "data/derived.yaml:6  error  duplicate node id 'b'"
+    )
+
+
+def test_problem_render_falls_back_to_the_callers_path_when_it_has_none():
+    # The common case: validation problems see the merged dataset and have no
+    # provenance to carry, so they must still render under the caller's path.
+    p = Problem(severity="error", message="some problem", line=6)
+    assert p.render("data/relationships.yaml").startswith("data/relationships.yaml:6")
+
+
 def test_node_system_must_be_declared_when_systems_are_present(node):
     ds = Dataset(
         systems=[SystemDef(id="unity", name="Unity")],

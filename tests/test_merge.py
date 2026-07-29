@@ -231,6 +231,47 @@ def test_a_node_id_repeated_in_the_derived_file_is_an_error():
     assert "duplicate node id 'relic-1'" in problems[0].message
 
 
+def test_a_duplicate_carries_the_path_of_the_file_it_was_found_in():
+    """Each side must be labelled with its own file, not one shared path.
+
+    A duplicate is found before the merge nulls derived line numbers, so it is
+    the one problem that still knows its provenance — and the one that renders
+    against the wrong file if it does not carry it.
+    """
+    def _dupes() -> list[Node]:
+        return [
+            Node(id="x", name="A", system="relics", kind=Kind.RELIC),
+            Node(id="x", name="B", system="relics", kind=Kind.RELIC),
+        ]
+
+    _, problems = merge(
+        Dataset(nodes=_dupes()),
+        Dataset(nodes=_dupes()),
+        derived_path="data/derived.yaml",
+        curated_path="data/relationships.yaml",
+    )
+
+    # Both sides duplicate the same id, so a single shared path would still
+    # produce two problems — only the paths tell the implementations apart.
+    assert [p.path for p in problems] == [
+        "data/derived.yaml",
+        "data/relationships.yaml",
+    ]
+
+
+def test_a_duplicate_has_no_path_when_the_caller_names_no_files():
+    # The path arguments are optional, so a caller that omits them must still
+    # get the problem — just with nothing to render it under.
+    derived = Dataset(
+        nodes=[
+            Node(id="x", name="A", system="relics", kind=Kind.RELIC),
+            Node(id="x", name="B", system="relics", kind=Kind.RELIC),
+        ]
+    )
+    _, problems = merge(derived, Dataset())
+    assert problems[0].path is None
+
+
 def test_the_same_id_in_both_files_is_an_override_not_a_duplicate():
     # This is the whole point of the merge and must never be reported. The
     # check is per-file, so an id present once on each side is fine.

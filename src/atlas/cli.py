@@ -27,20 +27,18 @@ MERGED_LABEL = "dataset"
 def _report(problems: list[Problem], curated_path: str) -> None:
     """Print each problem against a file the reader can actually open.
 
-    Relies on this invariant: **a line number is always a curated line
-    number**. `merge` nulls `line` on every derived record, and every Problem
-    takes its line from a system's, node's or edge's `line`, so there is no
-    path by which a derived line survives into the merged dataset.
-
-    That makes `line is not None` a sound test for "this came from the curated
-    file", which is worth having because curating `relationships.yaml` is the
-    main loop — labelling its errors generically would cost far more than the
-    mislabelling it avoids. A line-less problem cannot be pinned to a file
-    anyway, so the neutral label costs nothing there.
+    A problem that knows its own file renders under it — `Problem.render`
+    handles that. This chooses the fallback for the ones that do not, which
+    are the problems found after the merge, against a dataset with no
+    provenance left in it. There a line number can only have come from a
+    curated record, since `merge` nulls `line` on every derived one, and using
+    it is worth it because curating `relationships.yaml` is the main loop. A
+    line-less problem cannot be pinned to a file at all, so it gets the
+    neutral label.
     """
     for problem in problems:
-        path = curated_path if problem.line is not None else MERGED_LABEL
-        print(problem.render(path), file=sys.stderr)
+        fallback = curated_path if problem.line is not None else MERGED_LABEL
+        print(problem.render(fallback), file=sys.stderr)
 
 
 def _load(path: Path, display_path: str) -> Dataset | None:
@@ -80,7 +78,12 @@ def _build(root: Path, check_only: bool) -> int:
             return 1
         derived = loaded
 
-    dataset, merge_problems = merge(derived, curated)
+    dataset, merge_problems = merge(
+        derived,
+        curated,
+        derived_path=str(DERIVED_REL_PATH),
+        curated_path=display_path,
+    )
 
     problems = (
         merge_problems

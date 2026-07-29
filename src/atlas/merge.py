@@ -15,8 +15,13 @@ def _edge_key(edge: Edge | Suppression) -> EdgeKey:
     return (edge.from_, edge.to, str(edge.rel))
 
 
-def _duplicate_node_problems(nodes: list[Node]) -> list[Problem]:
+def _duplicate_node_problems(nodes: list[Node], path: str | None) -> list[Problem]:
     """Report a node id that repeats within a single input file.
+
+    `path` names the file being scanned and is carried on each Problem. These
+    are the only problems raised while the two inputs are still separable: once
+    the merge finishes, a derived record is indistinguishable from a curated
+    one, and its line number points into a file the reporter cannot name.
 
     `validate_dataset` has this same check, but `_build` merges before it
     validates and `merge` collapses nodes into a dict keyed by id — so by the
@@ -41,6 +46,7 @@ def _duplicate_node_problems(nodes: list[Node]) -> list[Problem]:
                     severity="error",
                     message=f"duplicate node id '{node.id}'",
                     line=node.line,
+                    path=path,
                 )
             )
         seen.add(node.id)
@@ -62,21 +68,32 @@ def _overlay(base: Node, override: Node) -> Node:
     return Node.model_validate(data)
 
 
-def merge(derived: Dataset, curated: Dataset) -> tuple[Dataset, list[Problem]]:
+def merge(
+    derived: Dataset,
+    curated: Dataset,
+    derived_path: str | None = None,
+    curated_path: str | None = None,
+) -> tuple[Dataset, list[Problem]]:
     """Combine the generated dataset with the curated one. Curated wins.
 
     `derived` is rewritten in full by every `atlas extract` run, so nothing in
     it is durable; `curated` survives, which is why it holds the last word on
     every field, and why `suppress` exists to delete generated edges outright.
 
+    `derived_path` and `curated_path` name the files the two datasets were read
+    from. They are only used to label problems, so they are optional — a caller
+    that omits them gets problems with no path and leaves the choice to whoever
+    renders them.
+
     Returns the merged dataset and any problems the merge itself found: a node
     id repeated within one file (error), and a suppression that matched no edge
     (warning).
     """
-    # Collected before the dicts below collapse each id to one record.
-    problems = _duplicate_node_problems(derived.nodes) + _duplicate_node_problems(
-        curated.nodes
-    )
+    # Collected before the dicts below collapse each id to one record, which is
+    # also the last moment at which the two inputs can still be told apart.
+    problems = _duplicate_node_problems(
+        derived.nodes, derived_path
+    ) + _duplicate_node_problems(curated.nodes, curated_path)
 
     nodes: dict[str, Node] = {}
     for node in derived.nodes:

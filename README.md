@@ -63,20 +63,33 @@ Version 1. The top-level document:
 {
   "version": 1,
   "nodes": [ ... ],
-  "edges": [ ... ]
+  "edges": [ ... ],
+  "systems": [ ... ]
 }
 ```
 
 `version` is an integer. It increments when the shape changes incompatibly; a
 consumer should refuse a version it does not recognise.
 
+`systems` is **optional** — it is omitted entirely when the dataset declares no
+systems, which is what keeps a system-less document byte-identical to an older
+v1 one. Everything added since v1 has been optional for the same reason.
+
 Node and edge order is deterministic: generated records come first in the order
 `atlas extract` produced them, then records that exist only in
 `data/relationships.yaml`, in that file's order. A curated record that overrides
 a generated one keeps the generated one's position. Keys within each object are
-sorted alphabetically. **Fields whose value is null are omitted entirely** rather than
-emitted as `null`, so a consumer must treat "key absent" and "no value" as the
-same thing.
+sorted alphabetically. **Fields whose value is null or an empty list are omitted
+entirely** rather than emitted as `null` or `[]`, so a consumer must treat "key
+absent" and "no value" as the same thing.
+
+### System
+
+| Field | Type | Required | Notes |
+|---|---|---|---|
+| `id` | string | yes | What a node's `system` refers to. |
+| `name` | string | yes | Human-readable display label. |
+| `parent` | string | no | Another system's `id`. Systems nest one level in practice, but nothing enforces a depth limit; cycles are rejected. |
 
 ### Node
 
@@ -84,16 +97,35 @@ same thing.
 |---|---|---|---|
 | `id` | string | yes | Unique across all nodes. Edges reference this. |
 | `name` | string | yes | Human-readable display label. |
-| `system` | enum | yes | Which game system the node belongs to. |
+| `system` | string | yes | Which game system the node belongs to. **Free string, not an enum** — see below. |
 | `kind` | enum | yes | What sort of thing the node is. |
 | `wiki` | string | no | Wiki page title, optionally with a `#Section` anchor. |
 | `confidence` | enum | no | Defaults to `documented`. |
+| `effects` | array | no | What the entity does. Omitted when empty. |
 
-`system`: `revolution`, `infinity`, `eternity`, `unity`, `zodiac`, `mineral`,
-`tarot`, `singularity`, `plague`.
+`system` is a **free string**, deliberately. The taxonomy is data, not an enum:
+the declared systems live in this document's own `systems` array, and a
+consumer should read them from there rather than hard-coding a union. It was an
+enum once, and the same list had to be repeated in the Python models, the
+frontend types and this README — they drifted, and a value present in one and
+absent in another rendered a blank canvas.
+
+A consumer may still keep a list of ids it has colours or ordering for
+(`web/src/types.ts` does exactly this), but it must treat that list as a hint
+and tolerate an id it has never seen.
 
 `kind`: `relic`, `stat`, `tree-node`, `currency`, `tarot-card`, `upgrade`,
 `group`.
+
+#### Effect
+
+An entry in a node's `effects` array.
+
+| Field | Type | Required | Notes |
+|---|---|---|---|
+| `text` | string | yes | The effect as prose. |
+| `per_level` | string | no | **A string, not a number.** Kept exactly as the wiki writes it, including forms like `+(?)` and `*^`. The wiki's own notation carries information a parsed number cannot: `+(?)` means the operator is known and the coefficient is not. |
+| `op` | enum | no | How the effect combines, when known. |
 
 **Node `confidence`**: `documented`, `provisional`, `unknown`.
 
@@ -111,11 +143,18 @@ same thing.
 | `rel` | enum | yes | The kind of relationship. |
 | `op` | enum | no | How the effect combines, when known. |
 | `note` | string | no | Free text. |
-| `source` | string | yes | Where the claim came from: `wiki:<PageName>`, `observed`, `il2cpp`, or `discord`. |
+| `targets_effect` | integer | no | 0-based index into the **target** node's `effects` array. See below. |
+| `source` | string | yes | Where the claim came from. A free string; the convention is `wiki:<PageName>`, `observed`, `il2cpp`, or `discord`. |
 | `confidence` | enum | no | Defaults to `documented`. |
 
 `rel`: `boosts`, `unlocks`, `requires`. Edges point upstream → downstream:
 `from` boosts / unlocks / is required by `to`.
+
+`targets_effect` is set when the source modifies one specific effect of the
+target rather than the target as a whole — "Relic 66 multiplies Relic 62's
+*effect*" is second-order, and the two endpoint ids alone cannot say which
+effect it lands on. It indexes the `effects` array of the node named by `to`,
+and the build rejects an index that array does not have.
 
 `op`: `add`, `mult`, `exp`.
 

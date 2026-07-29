@@ -307,9 +307,46 @@ def test_build_reports_a_duplicate_node_id_in_the_curated_file(tmp_path, capsys)
     (data / "derived.yaml").write_text("nodes: []\nedges: []\n", encoding="utf-8")
 
     assert main(["build", "--root", str(tmp_path)]) == 1
-    assert "duplicate node id 'relic-1'" in capsys.readouterr().err
+    err = capsys.readouterr().err
+    line = next(ln for ln in err.splitlines() if "duplicate node id 'relic-1'" in ln)
+    # Asserting only the message substring lets any filename through, which is
+    # how the derived-side mislabelling in the next test went unnoticed.
+    assert line.startswith("data/relationships.yaml:")
     # An error must block the artifact, not merely be printed alongside it.
     assert not (tmp_path / "public" / "graph.json").exists()
+
+
+def test_build_names_the_derived_file_for_a_duplicate_it_contains(tmp_path, capsys):
+    """A generated duplicate must name `derived.yaml`, not the curated file.
+
+    These problems are built before the merge nulls derived line numbers, so
+    they carry a line pointing into `derived.yaml`. Rendering them under the
+    curated path sends the reader to the wrong file *and* to a line that means
+    something else there — or, as here, does not exist in it at all.
+
+    This fires exactly when the extractor has a bug, which is when a wrong
+    pointer costs the most.
+    """
+    data = tmp_path / "data"
+    data.mkdir(parents=True)
+    # Two lines long, so a derived line number rendered against this file is
+    # visibly past EOF rather than plausibly correct.
+    (data / "relationships.yaml").write_text("nodes: []\nedges: []\n", encoding="utf-8")
+    (data / "derived.yaml").write_text(
+        "nodes:\n"
+        "  - id: a\n    name: A\n    system: relics\n    kind: relic\n"
+        "  - id: b\n    name: B\n    system: relics\n    kind: relic\n"
+        "  - id: b\n    name: B2\n    system: relics\n    kind: relic\n"
+        "edges: []\n",
+        encoding="utf-8",
+    )
+
+    assert main(["build", "--root", str(tmp_path)]) == 1
+    err = capsys.readouterr().err
+    line = next(ln for ln in err.splitlines() if "duplicate node id 'b'" in ln)
+
+    assert line.startswith("data/derived.yaml:")
+    assert "relationships.yaml" not in line
 
 
 def test_each_problem_is_labelled_with_the_file_it_can_be_found_in(tmp_path, capsys):
