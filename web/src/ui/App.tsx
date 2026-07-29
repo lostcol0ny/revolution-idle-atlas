@@ -85,7 +85,9 @@ export default function App() {
 
   return (
     <div className="layout">
-      <aside className="sidebar">
+      {/* Two complementary landmarks on one page are indistinguishable to a
+          screen reader without names — both announce as "complementary". */}
+      <aside className="sidebar" aria-label="Node browser">
         <Sidebar index={index} selectedId={urlState.nodeId} onSelect={select} />
       </aside>
       <main className="canvas">
@@ -105,7 +107,7 @@ export default function App() {
         )}
       </main>
       {selected !== undefined && (
-        <aside className="detail">
+        <aside className="detail" aria-label="Node detail">
           <NodeCard index={index} node={selected} onSelect={select} />
         </aside>
       )}

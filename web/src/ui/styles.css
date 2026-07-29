@@ -149,8 +149,9 @@ button.link {
 }
 
 /* These buttons strip their native background and border, so the focus
-   affordance stops being the browser's responsibility and becomes ours. The
-   sidebar is the primary navigation surface, at ~140 targets. */
+   affordance stops being the browser's responsibility and becomes ours. This
+   covers every chrome-less control in the app: the sidebar's ~140 targets, the
+   depth chips, and the detail panel's cross-links. */
 .group-header:focus-visible,
 .node-row:focus-visible,
 .filter:focus-visible,
@@ -249,7 +250,7 @@ button.link {
   font-size: 12px;
   text-transform: uppercase;
   letter-spacing: 0.04em;
-  color: #64748b;
+  color: var(--muted);
 }
 
 .nodecard__facts {
@@ -261,7 +262,7 @@ button.link {
 }
 
 .nodecard__facts dt {
-  color: #64748b;
+  color: var(--muted);
 }
 
 .nodecard__facts dd {
@@ -293,7 +294,7 @@ button.link {
 
 .edgerow__note {
   margin-top: 3px;
-  color: #64748b;
+  color: var(--muted);
   font-size: 12px;
 }
 

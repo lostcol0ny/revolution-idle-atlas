@@ -53,7 +53,12 @@ export function NodeCard({
   const incoming = index.incoming.get(node.id) ?? [];
   const outgoing = index.outgoing.get(node.id) ?? [];
   const href = wikiUrl(node.wiki);
-  const confidence = node.confidence ?? 'documented';
+  // Defaults differ from EdgeRow's on purpose. NodeConfidence has 'unknown',
+  // meaning "nothing curated yet", which is exactly what an absent field says;
+  // EdgeConfidence has no such member, so its three values are all positive
+  // claims and any default there is a guess. Giving both the same fallback
+  // would merge two vocabularies that types.ts keeps separate deliberately.
+  const confidence = node.confidence ?? 'unknown';
 
   return (
     <div className="nodecard">
