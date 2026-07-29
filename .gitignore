@@ -6,3 +6,5 @@ out/
 .env.local
 .superpowers/
 docs/superpowers/
+.claude/worktrees/
+dist/

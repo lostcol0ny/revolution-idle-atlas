@@ -125,3 +125,46 @@ written on the assumption of acyclicity will not terminate.
 
 Self-edges (`from == to`) *are* rejected as errors, so a cycle always has length
 two or more.
+
+## The frontend
+
+`web/` is a Vite + React single-page app that renders `public/graph.json` as an
+ego graph: pick a node, see what feeds it on the left and what it feeds on the
+right.
+
+```sh
+cd web
+npm install
+npm run dev        # http://localhost:5173
+npm run typecheck  # both tsconfig projects: app, then tests + vite.config
+npm run test       # vitest
+npm run build      # -> web/dist
+```
+
+The app reads `public/graph.json` at runtime rather than importing it, and
+`vite.config.ts` sets `publicDir: '../public'` so the repo-root committed
+artifact is served and built directly. There is no copy step, so the app cannot
+render a stale graph — what CI verified is what ships.
+
+The app is a **read-only consumer**. It never writes the dataset and never
+derives it. It shows *that* A boosts B, never by how much; formulas and
+coefficients are out of scope and the pipeline does not carry them.
+
+### Deployment
+
+Deployed to Vercel as static files. There is no `vercel.json` and no rewrite
+rules are needed — deep links use query parameters (`/?node=attack-power`),
+not path segments, so every request already hits `/`.
+
+| Setting | Value |
+|---|---|
+| Root directory | `web/` |
+| Framework preset | Vite |
+| Build command | `npm run build` |
+| Output directory | `dist` |
+| Node.js version | 20.x |
+
+Set these in the Vercel project dashboard. Because the root directory is
+`web/` but `publicDir` points at `../public`, the project must be configured to
+include files outside the root directory — Vercel does this by default when the
+repository is imported whole, which is the standard flow.
