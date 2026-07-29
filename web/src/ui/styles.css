@@ -19,3 +19,63 @@ body {
 #root {
   height: 100vh;
 }
+
+.layout {
+  display: flex;
+  height: 100%;
+}
+
+.sidebar {
+  width: var(--sidebar-width);
+  flex: 0 0 var(--sidebar-width);
+  border-right: 1px solid var(--border);
+  overflow-y: auto;
+  padding: 12px;
+}
+
+.canvas {
+  flex: 1 1 auto;
+  position: relative;
+  min-width: 0;
+}
+
+.panel {
+  width: var(--panel-width);
+  flex: 0 0 var(--panel-width);
+  border-left: 1px solid var(--border);
+  overflow-y: auto;
+  padding: 16px;
+}
+
+.screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  height: 100%;
+  text-align: center;
+  padding: 24px;
+}
+
+.banner {
+  background: #fffbeb;
+  border-bottom: 1px solid #fcd34d;
+  padding: 8px 12px;
+  font-size: 13px;
+}
+
+.muted {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+button.link {
+  background: none;
+  border: none;
+  padding: 0;
+  color: #2563eb;
+  cursor: pointer;
+  font: inherit;
+  text-decoration: underline;
+}
