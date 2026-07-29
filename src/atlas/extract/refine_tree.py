@@ -40,11 +40,17 @@ def parse(raw: str) -> ExtractResult:
         for parent in _NUMBER_RE.findall(fields.get("req", "")):
             if parent == ROOT_SENTINEL:
                 continue
+            # Parent -> child, which reads backwards against the word
+            # "requires": the child requires the parent, not the reverse.
+            # Direction here is flow, not grammar — the frontend renders
+            # `from -> to` as "This feeds" / "Feeds this"
+            # (web/src/ui/NodeCard.tsx), so the prerequisite must be `from`.
+            # `requires` is the only rel whose verb opposes its own arrow.
             result.edges.append(
                 Edge(
                     **{
-                        "from": node_id,
-                        "to": f"refine-node-{int(parent)}",
+                        "from": f"refine-node-{int(parent)}",
+                        "to": node_id,
                         "rel": "requires",
                         "source": SOURCE,
                         "confidence": EdgeConfidence.DOCUMENTED,
