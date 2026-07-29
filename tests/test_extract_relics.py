@@ -88,6 +88,22 @@ def test_the_real_page_yields_seventy_relics():
     result = extract(RAW_DIR)
     assert len(result.nodes) == 70
     assert [n.id for n in result.nodes][:3] == ["relic-1", "relic-2", "relic-3"]
+    # Documents the wiki's current shape — one Effect column per relic row —
+    # not the parser's handling of multi-effect relics. If the page grew a
+    # second effect column the parser would silently ignore it and this would
+    # stay green; Node.effects is a list precisely so that can be fixed then.
     assert all(len(n.effects) == 1 for n in result.nodes)
     # The whole point of the exercise: relics must actually point at things.
     assert len(result.edges) >= 20
+    # The count alone cannot tell 20 correct edges from 20 wrong ones, and a
+    # fabricated edge is worse than a missing one — the UI renders it as an
+    # authoritative claim about game mechanics. These name the endpoints.
+    edge_set = {(e.from_, e.to) for e in result.edges}
+    # Both targets come out of one sentence ("relics 2 and 4"), pinning the
+    # multi-reference path through the resolver.
+    assert ("relic-15", "relic-2") in edge_set  # Comfortable Telescope -> Pinewood Bracelet
+    assert ("relic-15", "relic-4") in edge_set  # Comfortable Telescope -> Four Leaf Clover
+    assert ("relic-50", "relic-38") in edge_set  # Troll Face -> Smart Man
+    # Crosses from a relic to a refine-tree node, pinning the id vocabulary
+    # across two sources — the seam Tasks 6-8 lean on.
+    assert ("relic-38", "refine-node-2") in edge_set
