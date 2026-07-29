@@ -216,7 +216,14 @@ class Vocabulary:
 
     def __init__(self, terms: Iterable[tuple[str, str]]) -> None:
         accepted: list[tuple[str, str]] = []
-        claims: dict[str, str] = {}
+        # Keyed on the case-folded surface, because two spellings that differ
+        # only in case still collide at match time: at least one of any such
+        # pair is non-uppercase (two ALL-UPPERCASE strings that fold alike are
+        # identical), and a non-uppercase surface compiles case-insensitively,
+        # so it matches the other spelling too. Keying on the exact string would
+        # let that pair through to fight over the same spans.
+        claims: dict[str, tuple[str, str]] = {}
+        seen_pairs: set[tuple[str, str]] = set()
         for surface, target_id in terms:
             surface = normalise_space(surface)
             # The 2-character floor is for letter abbreviations only. isalpha()
@@ -231,22 +238,34 @@ class Vocabulary:
             )
             if len(surface) < floor:
                 continue
-            claimed_by = claims.get(surface)
-            if claimed_by == target_id:
+            if (surface, target_id) in seen_pairs:
                 # The same pair twice is harmless — one node listing an alias
                 # that is also its name, or a union that overlaps. Dedupe it.
                 continue
-            if claimed_by is not None:
-                # One phrase cannot mean two nodes. Whichever term happened to
-                # sort first would claim the span and silently suppress the
-                # other, so the edge would be decided by input order — a wrong
-                # edge indistinguishable from a true one. This is a data
-                # conflict for a curator to resolve, so say so loudly.
-                raise ValueError(
-                    f"surface form {surface!r} is claimed by two nodes: "
-                    f"{claimed_by!r} and {target_id!r}"
+            claimed = claims.get(surface.casefold())
+            if claimed is not None and claimed[1] != target_id:
+                # One phrase cannot mean two nodes. Only one of the two would
+                # ever claim a span; the loser becomes unreachable and can never
+                # produce an edge, while text the curator spelled for it resolves
+                # to the winner instead — a wrong edge indistinguishable from a
+                # true one, decided by sort order rather than by meaning. This is
+                # a data conflict for a curator to resolve, so say so loudly.
+                prior_surface, prior_target = claimed
+                spelling = (
+                    repr(surface)
+                    if prior_surface == surface
+                    else f"{prior_surface!r}/{surface!r}"
                 )
-            claims[surface] = target_id
+                raise ValueError(
+                    f"surface form {spelling} is claimed by two nodes: "
+                    f"{prior_target!r} and {target_id!r}"
+                )
+            # Two case spellings of one node's name are not a conflict, just an
+            # alias spelled twice, so both are kept: the exact-pair dedupe above
+            # is the only thing that drops a term. Their match spans coincide,
+            # which hits() and resolve()'s dedup already collapse to one edge.
+            seen_pairs.add((surface, target_id))
+            claims.setdefault(surface.casefold(), (surface, target_id))
             accepted.append((surface, target_id))
 
         # Longest first so "Special Minerals Merge Factor" claims the span

@@ -370,6 +370,44 @@ def test_with_terms_cannot_smuggle_in_a_conflicting_claim():
         base.with_terms([("Merge Factor", "zodiac-merge-factor")])
 
 
+def test_two_case_spellings_claimed_by_two_nodes_is_also_a_hard_error():
+    # Case variants reach the same collision by a different door. Two surfaces
+    # that fold alike cannot both be ALL-UPPERCASE, so at least one compiles
+    # case-insensitively and therefore matches the other's spelling too. Only
+    # one can ever claim a span; the loser is unreachable, and prose the curator
+    # spelled for it resolves to the winner. An exact-string key missed this.
+    with pytest.raises(ValueError) as excinfo:
+        Vocabulary([("Merge Factor", "smmf"), ("merge factor", "zodiac-mf")])
+    message = str(excinfo.value)
+    assert "smmf" in message and "zodiac-mf" in message
+    # Both spellings are named, so a curator can find each entry in the YAML.
+    assert "Merge Factor" in message and "merge factor" in message
+
+
+def test_with_terms_cannot_smuggle_in_a_conflicting_case_variant():
+    base = Vocabulary([("Merge Factor", "smmf")])
+    with pytest.raises(ValueError, match="zodiac-mf"):
+        base.with_terms([("merge factor", "zodiac-mf")])
+
+
+def test_two_case_spellings_of_the_same_node_are_not_a_conflict():
+    # One node spelled two ways is a legitimate use of aliases and must not
+    # raise: the check compares target ids, not just folded surfaces.
+    vocab = Vocabulary(
+        [("Merge Factor", "merge-factor"), ("merge factor", "merge-factor")]
+    )
+    # Coinciding spans still yield one edge, not one per spelling.
+    assert [r.target_id for r in resolve("Boosts Merge Factor", vocab)] == [
+        "merge-factor"
+    ]
+    assert [r.target_id for r in resolve("Boosts merge factor", vocab)] == [
+        "merge-factor"
+    ]
+    # And the same holds when the second spelling arrives through with_terms.
+    extended = Vocabulary([("TF", "time-flux")]).with_terms([("Tf", "time-flux")])
+    assert [r.target_id for r in resolve("Grants 2 TF", extended)] == ["time-flux"]
+
+
 def test_an_identically_repeated_pair_is_deduped_rather_than_rejected():
     # Same surface, same target is not a conflict: a node whose alias repeats
     # its name, or a with_terms union that overlaps, is harmless.
