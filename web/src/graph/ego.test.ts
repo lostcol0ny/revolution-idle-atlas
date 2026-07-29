@@ -1,5 +1,6 @@
 import { readFileSync } from 'node:fs';
 import { describe, expect, it } from 'vitest';
+import type { GraphDocument } from '../types';
 import { buildIndex } from './adjacency';
 import { ego, UnknownNodeError } from './ego';
 import { chainDoc, cycleDoc, diamondDoc } from './fixtures';
@@ -35,6 +36,27 @@ describe('ego', () => {
     // and upstream at 2 hops; c is upstream at 1 hop and downstream at 2.
     const graph = ego(buildIndex(cycleDoc), 'a', 2);
     expect(columnsOf(graph)).toEqual({ a: 0, b: 1, c: -1 });
+  });
+
+  it('breaks ties toward upstream for an equidistant node', () => {
+    // The cycleDoc case above is settled by one direction being strictly
+    // shorter, so it never evaluates the equal-distance branch. Here a and b
+    // point at each other: rooted at a, b sits at hop 1 both ways, so only the
+    // deliberate upstream-wins rule can decide it. Guards against someone
+    // swapping the order of the two walk() calls in ego().
+    const biDoc: GraphDocument = {
+      version: 1,
+      nodes: [
+        { id: 'a', name: 'a', system: 'unity', kind: 'stat' },
+        { id: 'b', name: 'b', system: 'unity', kind: 'stat' },
+      ],
+      edges: [
+        { from: 'a', to: 'b', rel: 'boosts', source: 'observed' },
+        { from: 'b', to: 'a', rel: 'boosts', source: 'observed' },
+      ],
+    };
+    const graph = ego(buildIndex(biDoc), 'a', 1);
+    expect(columnsOf(graph)).toEqual({ a: 0, b: -1 });
   });
 
   it('terminates on a cycle', () => {
