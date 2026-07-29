@@ -6,6 +6,8 @@ from pathlib import Path
 import yaml
 
 from atlas.coverage import analyse, load_inventory, render_markdown
+from atlas.extract import ExtractError, run_all
+from atlas.extract.emit import to_yaml
 from atlas.loader import SchemaError, load_dataset
 from atlas.problems import Problem
 from atlas.rawcheck import check_against_raw
@@ -14,6 +16,7 @@ from atlas.scrape import ScrapeError, fetch_pages, make_client, write_raw
 from atlas.validate import validate_dataset
 
 DATASET_REL_PATH = Path("data") / "relationships.yaml"
+DERIVED_REL_PATH = Path("data") / "derived.yaml"
 
 
 def _report(problems: list[Problem], path: str) -> None:
@@ -77,6 +80,39 @@ def _build(root: Path, check_only: bool) -> int:
     return 0
 
 
+def _extract(root: Path) -> int:
+    raw_dir = root / "data" / "raw"
+    if not raw_dir.is_dir():
+        print(
+            "data/raw/: not found — the scrape workflow populates it",
+            file=sys.stderr,
+        )
+        return 1
+
+    try:
+        result = run_all(raw_dir)
+    except ExtractError as exc:
+        print(f"extract failed: {exc}", file=sys.stderr)
+        return 1
+
+    for dropped in result.dropped:
+        print(
+            f"{DERIVED_REL_PATH}  warning  dropped edge "
+            f"'{dropped.from_id}' -> '{dropped.to_id}': {dropped.reason}",
+            file=sys.stderr,
+        )
+
+    derived_path = root / DERIVED_REL_PATH
+    derived_path.parent.mkdir(parents=True, exist_ok=True)
+    derived_path.write_text(to_yaml(result), encoding="utf-8")
+
+    print(
+        f"ok: {len(result.nodes)} nodes, {len(result.edges)} edges, "
+        f"{len(result.dropped)} dropped edge(s)"
+    )
+    return 0
+
+
 def _scrape(root: Path) -> int:
     try:
         with make_client() as client:
@@ -99,12 +135,19 @@ def main(argv: list[str] | None = None) -> int:
         "--check", action="store_true", help="validate only; write no files"
     )
 
+    extract = sub.add_parser(
+        "extract", help="parse data/raw/ into the generated data/derived.yaml"
+    )
+    extract.add_argument("--root", type=Path, default=Path.cwd())
+
     scrape = sub.add_parser("scrape", help="fetch raw wikitext into data/raw/")
     scrape.add_argument("--root", type=Path, default=Path.cwd())
 
     args = parser.parse_args(argv)
     if args.command == "build":
         return _build(args.root, args.check)
+    if args.command == "extract":
+        return _extract(args.root)
     if args.command == "scrape":
         return _scrape(args.root)
     return 1

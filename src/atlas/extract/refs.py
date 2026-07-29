@@ -150,11 +150,11 @@ _RELIC_RE = re.compile(
 )
 _REFINE_RE = re.compile(r"\brefine(?:\s+tree)?\s+node\s+(\d+)", re.IGNORECASE)
 _ELEMENT_RE = re.compile(r"\b(fire|earth|wind|water)\s+node\s+(\d+)", re.IGNORECASE)
-_RANKS = (
+RANKS = (
     "ace", "two", "three", "four", "five", "six", "seven",
     "eight", "nine", "ten", "page", "knight", "queen", "king",
 )
-_SUITS = ("swords", "wands", "pentacles", "cups")
+SUITS = ("swords", "wands", "pentacles", "cups")
 # Minor Arcana only, and deliberately so. The 22 Major Arcana ("The Fool",
 # "The Devil", ...) are bare title-case noun phrases with no structural marker
 # dividing them from ordinary prose, so matching them here would take a
@@ -164,19 +164,19 @@ _SUITS = ("swords", "wands", "pentacles", "cups")
 # Until then `resolve("Multiplies The Devil's base effect") == []` is the
 # designed outcome, not a bug.
 _TAROT_RE = re.compile(
-    rf"\b({'|'.join(_RANKS)})\s+of\s+({'|'.join(_SUITS)})\b", re.IGNORECASE
+    rf"\b({'|'.join(RANKS)})\s+of\s+({'|'.join(SUITS)})\b", re.IGNORECASE
 )
 _NUMBER_RE = re.compile(r"\d+")
 
-_ORDINALS = {"first": 0, "second": 1, "third": 2}
+ORDINALS = {"first": 0, "second": 1, "third": 2}
 _EFFECT_POINTER_RE = re.compile(
-    rf"^(?:'s)?\s+({'|'.join(_ORDINALS)})\s+effect\b", re.IGNORECASE
+    rf"^(?:'s)?\s+({'|'.join(ORDINALS)})\s+effect\b", re.IGNORECASE
 )
 
 
 def _effect_index(text: str, after: int) -> int | None:
     match = _EFFECT_POINTER_RE.match(text[after:])
-    return _ORDINALS[match.group(1).lower()] if match else None
+    return ORDINALS[match.group(1).lower()] if match else None
 
 
 def resolve(text: str) -> list[Reference]:

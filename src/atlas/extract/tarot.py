@@ -2,7 +2,8 @@ import re
 from pathlib import Path
 
 from atlas.extract.refs import (
-    _ORDINALS,
+    ORDINALS,
+    SUITS,
     plain_text,
     resolve,
     slugify,
@@ -36,7 +37,6 @@ _EFFECT_FIELDS = ("effect", "effect1", "effect2")
 # resolver in refs.py handles `rank of suit` prose but not this compact
 # suit-internal shorthand; the parser handles it here where the card names
 # themselves are in hand to validate against.
-_SUITS = ("swords", "wands", "pentacles", "cups")
 _NUMBER_TO_RANK: dict[str, str] = {
     "1": "ace",
     "2": "two",
@@ -50,6 +50,7 @@ _NUMBER_TO_RANK: dict[str, str] = {
     "10": "ten",
 }
 # Named ranks that appear literally in the shorthand (e.g. "Swords Page").
+# These are the non-numeric entries from refs.RANKS.
 _NAMED_RANKS = ("ace", "page", "knight", "queen", "king")
 
 # Matches: {suit} {number_or_rank}['s] [{ordinal}] effect
@@ -61,8 +62,8 @@ _NAMED_RANKS = ("ace", "page", "knight", "queen", "king")
 # ordinal and the plain "N first effect" shape. refs._EFFECT_POINTER_RE already
 # anticipates the possessive, so this is a known form on the wiki, not an oddity.
 _SUIT_REF_RE = re.compile(
-    rf"\b({'|'.join(_SUITS)})\s+(\d{{1,2}}|{'|'.join(_NAMED_RANKS)})"
-    rf"(?:'s)?\s+(?:({'|'.join(_ORDINALS)})\s+)?effect\b",
+    rf"\b({'|'.join(SUITS)})\s+(\d{{1,2}}|{'|'.join(_NAMED_RANKS)})"
+    rf"(?:'s)?\s+(?:({'|'.join(ORDINALS)})\s+)?effect\b",
     re.IGNORECASE,
 )
 
@@ -100,7 +101,7 @@ def _resolve_suit_refs(text: str) -> list[tuple[str, int | None]]:
         if target_id is None:
             continue
         ordinal = match.group(3)
-        targets_effect = _ORDINALS[ordinal.lower()] if ordinal else None
+        targets_effect = ORDINALS[ordinal.lower()] if ordinal else None
         key = (target_id, targets_effect)
         if key in seen:
             continue
