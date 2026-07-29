@@ -1,4 +1,5 @@
 import { describe, expect, it } from 'vitest';
+import type { GraphDocument } from '../types';
 import { buildIndex } from './adjacency';
 import { breakCycles } from './cycles';
 import { ego } from './ego';
@@ -35,5 +36,26 @@ describe('breakCycles', () => {
     const { dag } = breakCycles(graph);
     expect(dag.nodes).toEqual(graph.nodes);
     expect(dag.rootId).toBe('a');
+  });
+
+  it('preserves object identity of back-edges', () => {
+    const graph = ego(buildIndex(cycleDoc), 'a', 3);
+    const { backEdges } = breakCycles(graph);
+    expect(backEdges).toHaveLength(1);
+    // Task 11 styles back-edges via new Set(backEdges).has(edge), so this must
+    // be the same object, not an equal one.
+    expect(graph.edges).toContain(backEdges[0]);
+  });
+
+  it('classifies a self-loop as a back-edge', () => {
+    const selfDoc: GraphDocument = {
+      version: 1,
+      nodes: [{ id: 'a', name: 'a', system: 'unity', kind: 'stat' }],
+      edges: [{ from: 'a', to: 'a', rel: 'boosts', source: 'observed' }],
+    };
+    const graph = ego(buildIndex(selfDoc), 'a', 1);
+    const { dag, backEdges } = breakCycles(graph);
+    expect(backEdges).toHaveLength(1);
+    expect(dag.edges).toHaveLength(0);
   });
 });
