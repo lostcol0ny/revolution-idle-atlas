@@ -1,5 +1,5 @@
-from atlas.coverage import analyse, load_inventory, render_markdown
-from atlas.models import Dataset
+from atlas.coverage import SystemRollup, analyse, load_inventory, render_markdown
+from atlas.models import Dataset, Edge, Effect, Kind, Node, Rel, SystemDef
 
 
 def test_orphans_are_nodes_with_no_edges(node, edge):
@@ -146,3 +146,124 @@ def test_empty_inventory_file_omits_the_known_unknowns_section(node, tmp_path):
         analyse(Dataset(nodes=[node("a")], edges=[]), inventory=load_inventory(path))
     )
     assert "Known unknowns" not in md
+
+
+def _ds() -> Dataset:
+    return Dataset(
+        systems=[
+            SystemDef(id="unity", name="Unity"),
+            SystemDef(id="relics", name="Relics", parent="unity"),
+            SystemDef(id="refine-tree", name="Refine Tree", parent="minerals"),
+            SystemDef(id="minerals", name="Minerals", parent="unity"),
+        ],
+        nodes=[
+            Node(
+                id="relic-38",
+                name="Smart Man",
+                system="relics",
+                kind=Kind.RELIC,
+                effects=[Effect(text="Adds base to Refine Node 2")],
+            ),
+            Node(
+                id="relic-39",
+                name="Windmill Pendant",
+                system="relics",
+                kind=Kind.RELIC,
+                effects=[Effect(text="Boosts something we could not resolve")],
+            ),
+            Node(id="refine-node-2", name="Refine Node 2", system="refine-tree", kind=Kind.TREE_NODE),
+            # Carries an effect AND an outgoing edge, but that edge is `requires`.
+            # This node is the only reason the `rel is not Rel.REQUIRES` filter is
+            # testable: without it, dropping the filter changes no expected value.
+            Node(
+                id="refine-node-3",
+                name="Refine Node 3",
+                system="refine-tree",
+                kind=Kind.TREE_NODE,
+                effects=[Effect(text="Multiplies something we could not resolve")],
+            ),
+            Node(id="singularity", name="Singularity", system="unity", kind=Kind.CURRENCY),
+        ],
+        edges=[
+            Edge(from_="relic-38", to="refine-node-2", rel=Rel.BOOSTS, source="Relics"),
+            Edge(from_="refine-node-3", to="refine-node-2", rel=Rel.REQUIRES, source="Refine Tree"),
+        ],
+    )
+
+
+def test_unresolved_lists_nodes_whose_effects_produced_no_effect_edge():
+    report = analyse(_ds())
+    # relic-38's effect became a `boosts` edge, so it resolved. relic-39 states
+    # an effect and has no outgoing edge at all. refine-node-3 states an effect
+    # and DOES have an outgoing edge, but `requires` is tree structure rather
+    # than an effect — so it is still unresolved. That last case is what makes
+    # this test able to fail: drop the `requires` filter and refine-node-3
+    # disappears from this list.
+    assert report.unresolved == ["refine-node-3", "relic-39"]
+
+
+def test_a_requires_edge_alone_does_not_resolve_an_effect():
+    # The same property stated as its own assertion, so a future edit to the
+    # list above cannot quietly take the `requires` filter's coverage with it.
+    ds = _ds()
+    ds.edges = [Edge(from_="relic-39", to="relic-38", rel=Rel.REQUIRES, source="x")]
+    assert "relic-39" in analyse(ds).unresolved
+
+
+def test_rollup_totals_climb_the_parent_chain():
+    rollup = {r.id: r for r in analyse(_ds()).rollup}
+    assert rollup["relics"].direct == 2
+    assert rollup["relics"].total == 2
+    assert rollup["minerals"].direct == 0
+    assert rollup["minerals"].total == 2
+    assert rollup["unity"].direct == 1
+    assert rollup["unity"].total == 5
+
+
+def test_rollup_is_ordered_parents_before_children_with_depth():
+    rollup = analyse(_ds()).rollup
+    assert [(r.id, r.depth) for r in rollup] == [
+        ("unity", 0),
+        ("relics", 1),
+        ("minerals", 1),
+        ("refine-tree", 2),
+    ]
+
+
+def test_rollup_is_empty_when_the_dataset_declares_no_systems():
+    ds = _ds()
+    ds.systems = []
+    assert analyse(ds).rollup == []
+
+
+def test_a_parent_cycle_is_reported_flat_rather_than_dropped():
+    ds = _ds()
+    ds.systems = [
+        SystemDef(id="a", name="A", parent="b"),
+        SystemDef(id="b", name="B", parent="a"),
+    ]
+    ds.nodes = [Node(id="x", name="X", system="a", kind=Kind.CURRENCY)]
+    # validate_dataset rejects a parent cycle before a real build reaches
+    # analyse, but analyse is public. Neither system is a child of any root, so
+    # both arrive via the unplaced-systems fallback: depth 0, no rollup.
+    rollup = {r.id: r for r in analyse(ds).rollup}
+    assert set(rollup) == {"a", "b"}
+    assert rollup["a"].depth == 0 and rollup["b"].depth == 0
+    # The node inside the cycle still counts. Dropping it is the actual failure
+    # mode here — a silently-shrinking total is worse than a flat report.
+    assert rollup["a"].direct == 1 and rollup["a"].total == 1
+
+
+def test_render_markdown_includes_the_new_sections():
+    text = render_markdown(analyse(_ds()))
+    assert "## Unresolved effects" in text
+    assert "`relic-39`" in text
+    assert "## System hierarchy" in text
+    assert "**Unity** — 5 nodes" in text
+    assert "  - **Relics** — 2 nodes" in text
+
+
+def test_render_markdown_omits_the_hierarchy_when_there_is_none():
+    ds = _ds()
+    ds.systems = []
+    assert "## System hierarchy" not in render_markdown(analyse(ds))

@@ -4,7 +4,17 @@ from pathlib import Path
 import networkx as nx
 import yaml
 
-from atlas.models import Dataset, NodeConfidence
+from atlas.models import Dataset, NodeConfidence, Rel
+
+
+@dataclass(frozen=True)
+class SystemRollup:
+    id: str
+    name: str
+    depth: int
+    direct: int
+    total: int
+    connected: int
 
 
 @dataclass
@@ -17,6 +27,8 @@ class CoverageReport:
     edge_count: int = 0
     missing_entities: dict[str, list[str]] = field(default_factory=dict)
     has_inventory: bool = False
+    unresolved: list[str] = field(default_factory=list)
+    rollup: list[SystemRollup] = field(default_factory=list)
 
 
 def load_inventory(path: Path) -> dict[str, list[str]] | None:
@@ -39,6 +51,83 @@ def _build_graph(ds: Dataset) -> nx.DiGraph:
         if edge.from_ in known and edge.to in known:
             graph.add_edge(edge.from_, edge.to)
     return graph
+
+
+def _unresolved(ds: Dataset) -> list[str]:
+    """Nodes that state an effect but point at nothing.
+
+    `requires` describes tree structure, not an effect, so an edge of that kind
+    does not count as having resolved anything. This list is the extraction's
+    accuracy gap made visible: it shrinks as the resolver improves and as
+    corrections land in relationships.yaml.
+    """
+    resolved = {e.from_ for e in ds.edges if e.rel is not Rel.REQUIRES}
+    return sorted(n.id for n in ds.nodes if n.effects and n.id not in resolved)
+
+
+def _rollup(ds: Dataset, graph: nx.DiGraph) -> list[SystemRollup]:
+    if not ds.systems:
+        return []
+
+    direct: dict[str, int] = {s.id: 0 for s in ds.systems}
+    connected: dict[str, int] = {s.id: 0 for s in ds.systems}
+    for node in ds.nodes:
+        if node.system not in direct:
+            continue
+        direct[node.system] += 1
+        connected[node.system] += int(graph.degree(node.id) > 0)
+
+    children: dict[str | None, list[str]] = {}
+    known = {s.id for s in ds.systems}
+    for system in ds.systems:
+        # A parent that is not itself declared cannot be climbed to, so the
+        # system is treated as a root rather than dropped from the report.
+        parent = system.parent if system.parent in known else None
+        children.setdefault(parent, []).append(system.id)
+
+    by_id = {s.id: s for s in ds.systems}
+
+    def walk(system_id: str, depth: int) -> list[SystemRollup]:
+        rows: list[SystemRollup] = []
+        for child in children.get(system_id, []):
+            rows.extend(walk(child, depth + 1))
+        system = by_id[system_id]
+        return [
+            SystemRollup(
+                id=system_id,
+                name=system.name,
+                depth=depth,
+                direct=direct[system_id],
+                total=direct[system_id] + sum(r.total for r in rows if r.depth == depth + 1),
+                connected=connected[system_id]
+                + sum(r.connected for r in rows if r.depth == depth + 1),
+            )
+        ] + rows
+
+    ordered: list[SystemRollup] = []
+    for root in children.get(None, []):
+        ordered.extend(walk(root, 0))
+
+    # `walk` needs no cycle guard, and this loop is the reason. A system has one
+    # parent, so every member of a parent cycle has its parent inside that cycle
+    # — which means no cycle member is ever a child of a root, and `walk`, which
+    # only ever starts from `children[None]`, cannot reach one. Cycle members
+    # therefore fall through to here. Report them flat rather than silently
+    # dropping their nodes out of the totals.
+    placed = {r.id for r in ordered}
+    for system in ds.systems:
+        if system.id not in placed:
+            ordered.append(
+                SystemRollup(
+                    id=system.id,
+                    name=system.name,
+                    depth=0,
+                    direct=direct[system.id],
+                    total=direct[system.id],
+                    connected=connected[system.id],
+                )
+            )
+    return ordered
 
 
 def analyse(
@@ -80,6 +169,8 @@ def analyse(
         edge_count=len(ds.edges),
         missing_entities=missing_entities,
         has_inventory=inventory is not None,
+        unresolved=_unresolved(ds),
+        rollup=_rollup(ds, graph),
     )
 
 
@@ -103,9 +194,32 @@ def render_markdown(report: CoverageReport) -> str:
         pct = (100 * connected // total) if total else 0
         lines.append(f"| {system} | {connected} | {total} | {pct}% |")
 
+    if report.rollup:
+        lines += ["", "## System hierarchy", ""]
+        lines.append("Node counts rolled up through each system's parent.")
+        lines.append("")
+        for row in report.rollup:
+            indent = "  " * row.depth
+            detail = f"{row.total} nodes, {row.connected} connected"
+            if row.direct != row.total:
+                detail += f" ({row.direct} directly)"
+            lines.append(f"{indent}- **{row.name}** — {detail}")
+
+    lines += ["", "## Unresolved effects", ""]
+    if report.unresolved:
+        lines.append(
+            "Nodes that describe an effect but point at no other node. Each one "
+            "is either a resolver gap or an edge waiting to be written into "
+            "`data/relationships.yaml`."
+        )
+        lines.append("")
+        lines += [f"- `{node_id}`" for node_id in report.unresolved]
+    else:
+        lines.append("None — every stated effect resolves to at least one edge.")
+
     lines += ["", "## Orphan nodes", ""]
     if report.orphans:
-        lines.append("Nodes with no edges in either direction — the curation to-do list.")
+        lines.append("Nodes with no edges in either direction.")
         lines.append("")
         lines += [f"- `{node_id}`" for node_id in report.orphans]
     else:
