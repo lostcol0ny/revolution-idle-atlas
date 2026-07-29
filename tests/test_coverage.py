@@ -220,13 +220,18 @@ def test_rollup_totals_climb_the_parent_chain():
     assert rollup["unity"].total == 5
 
 
-def test_rollup_is_ordered_parents_before_children_with_depth():
-    rollup = analyse(_ds()).rollup
-    assert [(r.id, r.depth) for r in rollup] == [
-        ("unity", 0),
-        ("relics", 1),
-        ("minerals", 1),
-        ("refine-tree", 2),
+def test_rollup_reports_every_field_in_parent_before_child_order():
+    # Compared as whole SystemRollup values rather than field-by-field: this is
+    # the only assertion pinning `connected`, and a tuple of (id, depth) leaves
+    # the two count columns free to be anything. `connected` climbs the parent
+    # chain the same way `total` does, so Minerals shows 2 while owning 0 nodes.
+    assert analyse(_ds()).rollup == [
+        SystemRollup(id="unity", name="Unity", depth=0, direct=1, total=5, connected=3),
+        SystemRollup(id="relics", name="Relics", depth=1, direct=2, total=2, connected=1),
+        SystemRollup(id="minerals", name="Minerals", depth=1, direct=0, total=2, connected=2),
+        SystemRollup(
+            id="refine-tree", name="Refine Tree", depth=2, direct=2, total=2, connected=2
+        ),
     ]
 
 
@@ -252,6 +257,7 @@ def test_a_parent_cycle_is_reported_flat_rather_than_dropped():
     # The node inside the cycle still counts. Dropping it is the actual failure
     # mode here — a silently-shrinking total is worse than a flat report.
     assert rollup["a"].direct == 1 and rollup["a"].total == 1
+    assert rollup["a"].connected == 0  # node "x" has no edges
 
 
 def test_render_markdown_includes_the_new_sections():
@@ -259,8 +265,8 @@ def test_render_markdown_includes_the_new_sections():
     assert "## Unresolved effects" in text
     assert "`relic-39`" in text
     assert "## System hierarchy" in text
-    assert "**Unity** — 5 nodes" in text
-    assert "  - **Relics** — 2 nodes" in text
+    assert "- **Unity** — 5 nodes, 3 connected (1 directly)" in text
+    assert "  - **Relics** — 2 nodes, 1 connected" in text
 
 
 def test_render_markdown_omits_the_hierarchy_when_there_is_none():
