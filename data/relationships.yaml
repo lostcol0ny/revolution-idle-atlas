@@ -220,6 +220,174 @@ nodes:
 
 
 
+  # --- Stats. Not extractable: the wiki names these in prose only, so
+  # they exist to give effect text something to resolve to.
+
+  - id: special-minerals-merge-factor
+    name: Special Minerals Merge Factor
+    system: minerals
+    kind: stat
+    aliases: [SMMF]
+    wiki: Minerals
+    confidence: documented
+
+  - id: sms-factor
+    name: SMS Factor
+    system: minerals
+    kind: stat
+    aliases: [SMS]
+    wiki: Minerals
+    confidence: documented
+
+  - id: mineral-cost-exp
+    name: Mineral Cost Exp
+    system: minerals
+    kind: stat
+    wiki: Minerals
+    confidence: documented
+
+  - id: polish-knuckles
+    name: Polish Knuckles
+    system: minerals
+    kind: stat
+    wiki: Minerals
+    confidence: documented
+
+  - id: attack-exponent
+    name: Attack Exponent
+    system: attacks
+    kind: stat
+    wiki: Unity#Attacks
+    confidence: documented
+
+  - id: damage-mult
+    name: Damage Mult
+    system: attacks
+    kind: stat
+    wiki: Unity#Attacks
+    confidence: documented
+
+  - id: zodiac-sell-cost
+    name: Zodiac Sell Cost
+    system: astrology
+    kind: stat
+    wiki: Zodiacs
+    confidence: documented
+
+  - id: zodiac-exp-factor
+    name: Zodiac Exp. Factor
+    system: astrology
+    kind: stat
+    wiki: Zodiacs
+    confidence: documented
+
+  - id: quality
+    name: Quality
+    system: astrology
+    kind: stat
+    wiki: Zodiacs
+    confidence: documented
+
+  - id: luck
+    name: Luck
+    system: unity
+    kind: stat
+    wiki: Unity
+    confidence: documented
+
+  - id: game-speed
+    name: Game Speed
+    system: unity
+    kind: stat
+    wiki: Unity
+    confidence: documented
+
+  # --- Currencies. One per {{Keyword}} currency type in data/raw/, keyed on
+  # the TYPE field because the label is often a quantity rather than a name:
+  # {{Keyword|ep|1.08e2466 EP}}. Hand-written rather than extracted because
+  # the four donut_* keyword types map onto four of these same stats, so an
+  # extractor would emit derived duplicates of nodes curated here.
+  # The ALL-UPPERCASE alias is what the wiki actually writes in prose;
+  # Vocabulary matches it case-sensitively so it cannot fire inside a word.
+
+  - id: eternity-points
+    name: Eternity Points
+    system: eternity
+    kind: currency
+    aliases: [EP]
+    wiki: Eternity
+    confidence: documented
+
+  - id: infinity-points
+    name: Infinity Points
+    system: infinity
+    kind: currency
+    aliases: [IP]
+    wiki: Infinity
+    confidence: documented
+
+  - id: animal-points
+    name: Animal Points
+    system: revolution
+    kind: currency
+    aliases: [AP]
+    wiki: Animals
+    confidence: documented
+
+  - id: dilation-points
+    name: Dilation Points
+    system: eternity
+    kind: currency
+    aliases: [DP]
+    wiki: Dilation_Tree
+    confidence: documented
+
+  - id: dilation-tree-points
+    name: Dilation Tree Points
+    system: eternity
+    kind: currency
+    aliases: [DTP]
+    wiki: Dilation_Tree
+    confidence: documented
+
+  - id: research-points
+    name: Research Points
+    system: eternity
+    kind: currency
+    aliases: [RP]
+    wiki: Laboratory
+    confidence: documented
+
+  - id: souls
+    name: Souls
+    system: unity
+    kind: currency
+    wiki: Soul_Shop
+    confidence: provisional
+
+  - id: time-flux
+    name: Time Flux
+    system: unity
+    kind: currency
+    aliases: [TF]
+    wiki: Time_Flux
+    confidence: provisional
+
+  - id: runes
+    name: Runes
+    system: relics
+    kind: currency
+    wiki: Relics
+    confidence: provisional
+
+  - id: tarot-draws
+    name: Tarot Draws
+    system: tarot
+    kind: currency
+    aliases: [Tarot Draw]
+    wiki: Tarot
+    confidence: provisional
+
 edges:
   - from: relic-3
     to: attack-power

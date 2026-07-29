@@ -4766,6 +4766,204 @@
       "name": "Plague",
       "system": "plague",
       "wiki": "Plague"
+    },
+    {
+      "aliases": [
+        "SMMF"
+      ],
+      "confidence": "documented",
+      "id": "special-minerals-merge-factor",
+      "kind": "stat",
+      "name": "Special Minerals Merge Factor",
+      "system": "minerals",
+      "wiki": "Minerals"
+    },
+    {
+      "aliases": [
+        "SMS"
+      ],
+      "confidence": "documented",
+      "id": "sms-factor",
+      "kind": "stat",
+      "name": "SMS Factor",
+      "system": "minerals",
+      "wiki": "Minerals"
+    },
+    {
+      "confidence": "documented",
+      "id": "mineral-cost-exp",
+      "kind": "stat",
+      "name": "Mineral Cost Exp",
+      "system": "minerals",
+      "wiki": "Minerals"
+    },
+    {
+      "confidence": "documented",
+      "id": "polish-knuckles",
+      "kind": "stat",
+      "name": "Polish Knuckles",
+      "system": "minerals",
+      "wiki": "Minerals"
+    },
+    {
+      "confidence": "documented",
+      "id": "attack-exponent",
+      "kind": "stat",
+      "name": "Attack Exponent",
+      "system": "attacks",
+      "wiki": "Unity#Attacks"
+    },
+    {
+      "confidence": "documented",
+      "id": "damage-mult",
+      "kind": "stat",
+      "name": "Damage Mult",
+      "system": "attacks",
+      "wiki": "Unity#Attacks"
+    },
+    {
+      "confidence": "documented",
+      "id": "zodiac-sell-cost",
+      "kind": "stat",
+      "name": "Zodiac Sell Cost",
+      "system": "astrology",
+      "wiki": "Zodiacs"
+    },
+    {
+      "confidence": "documented",
+      "id": "zodiac-exp-factor",
+      "kind": "stat",
+      "name": "Zodiac Exp. Factor",
+      "system": "astrology",
+      "wiki": "Zodiacs"
+    },
+    {
+      "confidence": "documented",
+      "id": "quality",
+      "kind": "stat",
+      "name": "Quality",
+      "system": "astrology",
+      "wiki": "Zodiacs"
+    },
+    {
+      "confidence": "documented",
+      "id": "luck",
+      "kind": "stat",
+      "name": "Luck",
+      "system": "unity",
+      "wiki": "Unity"
+    },
+    {
+      "confidence": "documented",
+      "id": "game-speed",
+      "kind": "stat",
+      "name": "Game Speed",
+      "system": "unity",
+      "wiki": "Unity"
+    },
+    {
+      "aliases": [
+        "EP"
+      ],
+      "confidence": "documented",
+      "id": "eternity-points",
+      "kind": "currency",
+      "name": "Eternity Points",
+      "system": "eternity",
+      "wiki": "Eternity"
+    },
+    {
+      "aliases": [
+        "IP"
+      ],
+      "confidence": "documented",
+      "id": "infinity-points",
+      "kind": "currency",
+      "name": "Infinity Points",
+      "system": "infinity",
+      "wiki": "Infinity"
+    },
+    {
+      "aliases": [
+        "AP"
+      ],
+      "confidence": "documented",
+      "id": "animal-points",
+      "kind": "currency",
+      "name": "Animal Points",
+      "system": "revolution",
+      "wiki": "Animals"
+    },
+    {
+      "aliases": [
+        "DP"
+      ],
+      "confidence": "documented",
+      "id": "dilation-points",
+      "kind": "currency",
+      "name": "Dilation Points",
+      "system": "eternity",
+      "wiki": "Dilation_Tree"
+    },
+    {
+      "aliases": [
+        "DTP"
+      ],
+      "confidence": "documented",
+      "id": "dilation-tree-points",
+      "kind": "currency",
+      "name": "Dilation Tree Points",
+      "system": "eternity",
+      "wiki": "Dilation_Tree"
+    },
+    {
+      "aliases": [
+        "RP"
+      ],
+      "confidence": "documented",
+      "id": "research-points",
+      "kind": "currency",
+      "name": "Research Points",
+      "system": "eternity",
+      "wiki": "Laboratory"
+    },
+    {
+      "confidence": "provisional",
+      "id": "souls",
+      "kind": "currency",
+      "name": "Souls",
+      "system": "unity",
+      "wiki": "Soul_Shop"
+    },
+    {
+      "aliases": [
+        "TF"
+      ],
+      "confidence": "provisional",
+      "id": "time-flux",
+      "kind": "currency",
+      "name": "Time Flux",
+      "system": "unity",
+      "wiki": "Time_Flux"
+    },
+    {
+      "confidence": "provisional",
+      "id": "runes",
+      "kind": "currency",
+      "name": "Runes",
+      "system": "relics",
+      "wiki": "Relics"
+    },
+    {
+      "aliases": [
+        "Tarot Draw"
+      ],
+      "confidence": "provisional",
+      "id": "tarot-draws",
+      "kind": "currency",
+      "name": "Tarot Draws",
+      "system": "tarot",
+      "wiki": "Tarot"
     }
   ],
   "edges": [

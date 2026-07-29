@@ -68,3 +68,62 @@ def test_all_seventy_relics_are_present_and_composed(graph: dict):
     assert len(relics) == 70
     uncomposed = [n["id"] for n in relics if not composed.match(n["name"])]
     assert uncomposed == []
+
+
+def test_the_seeded_stats_are_all_present(graph: dict):
+    ids = {n["id"] for n in graph["nodes"]}
+    expected = {
+        "special-minerals-merge-factor",
+        "sms-factor",
+        "mineral-cost-exp",
+        "polish-knuckles",
+        "attack-exponent",
+        "damage-mult",
+        "zodiac-sell-cost",
+        "zodiac-exp-factor",
+        "quality",
+        "luck",
+        "game-speed",
+    }
+    assert expected <= ids
+
+
+def test_the_seeded_currencies_are_all_present_and_are_currencies(graph: dict):
+    by_id = {n["id"]: n for n in graph["nodes"]}
+    expected = {
+        "eternity-points",
+        "infinity-points",
+        "animal-points",
+        "dilation-points",
+        "dilation-tree-points",
+        "research-points",
+        "souls",
+        "time-flux",
+        "runes",
+        "tarot-draws",
+    }
+    assert expected <= set(by_id)
+    assert {by_id[i]["kind"] for i in expected} == {"currency"}
+
+
+def test_the_abbreviations_the_wiki_uses_are_declared_as_aliases(graph: dict):
+    # These are the surface forms the vocabulary matcher actually fires on. A missing
+    # alias is a silently missing edge, which is exactly the failure the
+    # coverage report cannot distinguish from "the wiki never said it".
+    aliases = {n["id"]: set(n.get("aliases", [])) for n in graph["nodes"]}
+    assert aliases["special-minerals-merge-factor"] == {"SMMF"}
+    assert aliases["sms-factor"] == {"SMS"}
+    assert aliases["eternity-points"] == {"EP"}
+    assert aliases["animal-points"] == {"AP"}
+    assert aliases["dilation-tree-points"] == {"DTP"}
+    assert aliases["time-flux"] == {"TF"}
+
+
+def test_every_seeded_node_declares_a_system_that_exists(graph: dict):
+    # An undeclared system is a build error, so `atlas build` already enforces
+    # this. Asserting it here names the failure: it says "a seeded system id is
+    # wrong" instead of "the build exited 1".
+    declared = {s["id"] for s in graph.get("systems", [])}
+    assert declared
+    for node in graph["nodes"]:
+        assert node["system"] in declared, node["id"]
