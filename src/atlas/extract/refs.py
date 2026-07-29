@@ -1,4 +1,5 @@
 import re
+from collections.abc import Iterable
 from dataclasses import dataclass
 
 from atlas.models import Op
@@ -143,6 +144,11 @@ def is_uncertain(*texts: str | None) -> bool:
 class Reference:
     target_id: str
     targets_effect: int | None = None
+    # True when a Vocabulary surface form produced this, rather than one of the
+    # four entity regexes. Callers stamp `confidence: uncertain` on these: prose
+    # matching is weaker evidence than a structural table cell, and a flat
+    # per-call-site confidence cannot express the difference.
+    from_vocabulary: bool = False
 
 
 _RELIC_RE = re.compile(
@@ -179,13 +185,130 @@ def _effect_index(text: str, after: int) -> int | None:
     return ORDINALS[match.group(1).lower()] if match else None
 
 
-def resolve(text: str) -> list[Reference]:
+# 3 characters, or 2 when the surface form is ALL-UPPERCASE. The floor exists to
+# stop short forms firing inside ordinary words; for an abbreviation,
+# case-sensitivity already does that job, and AP/EP/IP/DP/RP/TF are the wiki's
+# most-used currency names. A flat floor of 3 would discard exactly those.
+_MIN_SURFACE_LENGTH = 3
+_MIN_UPPERCASE_SURFACE_LENGTH = 2
+
+
+@dataclass(frozen=True)
+class _Term:
+    pattern: re.Pattern[str]
+    target_id: str
+
+
+class Vocabulary:
+    """Surface forms to match in effect prose, longest form first.
+
+    Built from the node set's names and aliases (see extract/vocab.py), so
+    teaching the resolver a new stat is a YAML entry rather than a code change.
+
+    Every guard here exists because a wrong edge is worse than a missing one: a
+    missing one shows up in the coverage report, a wrong one just looks true.
+    Callers therefore stamp `confidence: uncertain` on anything this produces —
+    prose is weaker evidence than a structural table cell.
+    """
+
+    EMPTY: "Vocabulary"
+
+    def __init__(self, terms: Iterable[tuple[str, str]]) -> None:
+        accepted: list[tuple[str, str]] = []
+        for surface, target_id in terms:
+            surface = normalise_space(surface)
+            # isupper() is False for "SMMF Factor" (mixed) and for "" — both of
+            # which should take the stricter floor, which is what we want.
+            floor = (
+                _MIN_UPPERCASE_SURFACE_LENGTH
+                if surface.isupper()
+                else _MIN_SURFACE_LENGTH
+            )
+            if len(surface) < floor:
+                continue
+            accepted.append((surface, target_id))
+
+        # Longest first so "Special Minerals Merge Factor" claims the span
+        # before "Merge Factor" can. Ties broken alphabetically so the term
+        # order — and therefore the emitted edge order — is deterministic
+        # across runs; graph.json is a committed artifact diffed by CI.
+        accepted.sort(key=lambda item: (-len(item[0]), item[0]))
+
+        # Kept so with_terms() can re-sort across the union. Storing the
+        # accepted pairs rather than the input means a term rejected by the
+        # length floor stays rejected through any number of extensions.
+        self._pairs = tuple(accepted)
+
+        self._terms = tuple(
+            _Term(
+                # re.escape because a surface form is data: "Zodiac Exp. Factor"
+                # contains a dot, and an unescaped one both over-matches and
+                # risks re.error on a malformed alias.
+                re.compile(
+                    rf"\b{re.escape(surface)}\b",
+                    0 if surface.isupper() else re.IGNORECASE,
+                ),
+                target_id,
+            )
+            for surface, target_id in accepted
+        )
+
+    def __len__(self) -> int:
+        return len(self._terms)
+
+    def with_terms(self, terms: Iterable[tuple[str, str]]) -> "Vocabulary":
+        """A new vocabulary over the union of this one's terms and `terms`.
+
+        Returns a new instance rather than mutating: the curated vocabulary is
+        built once and every parser shares it, so an in-place extend in
+        tarot.py would leak the Major Arcana into every other parser.
+
+        Constructing a fresh Vocabulary re-sorts longest-first across both sets,
+        which is the whole point. Appending would let a short curated form claim
+        a span a longer added form should have taken.
+        """
+        return Vocabulary([*self._pairs, *terms])
+
+    def hits(
+        self, text: str, claimed: list[tuple[int, int]]
+    ) -> list[tuple[int, str, int]]:
+        """Find (start, target_id, end) triples, skipping already-claimed spans.
+
+        `claimed` carries the spans the entity regexes matched. A stat aliased
+        "Refine Node 2" must not produce a second reference for a phrase the
+        refine-tree regex already resolved — one phrase, one edge.
+        """
+        taken = list(claimed)
+        found: list[tuple[int, str, int]] = []
+        for term in self._terms:
+            for match in term.pattern.finditer(text):
+                start, end = match.span()
+                if any(
+                    start < other_end and other_start < end
+                    for other_start, other_end in taken
+                ):
+                    continue
+                taken.append((start, end))
+                found.append((start, term.target_id, end))
+        return found
+
+
+Vocabulary.EMPTY = Vocabulary(())  # type: ignore[attr-defined]
+
+
+def resolve(text: str, vocabulary: Vocabulary | None = None) -> list[Reference]:
     """Find the node ids a sentence names.
 
     Precision over recall throughout. A bare "Node 4" is not matched: inside
     Elements it means an element node and inside Minerals a refine node, and a
     wrong edge is worse than a missing one — a missing one shows up in the
     coverage report, a wrong one just looks true.
+
+    `vocabulary` is optional and defaulted so the four hardcoded entity regexes
+    remain the whole behaviour for a caller that passes nothing. When supplied,
+    its surface forms are matched after the regexes and never over a span a
+    regex already claimed, and the references it produces carry
+    `from_vocabulary=True` so a caller can weaken their confidence.
     """
     hits: list[tuple[int, str, int]] = []
 
@@ -203,10 +326,23 @@ def resolve(text: str) -> list[Reference]:
         card = slugify(f"{match.group(1)} of {match.group(2)}")
         hits.append((match.start(), f"tarot-{card}", match.end()))
 
+    # A 4-tuple rather than a flag threaded separately, so position ordering and
+    # provenance stay in one sortable record. Entity hits are marked first, and
+    # the claimed spans handed to the vocabulary are exactly theirs.
+    marked: list[tuple[int, str, int, bool]] = [
+        (start, target_id, end, False) for start, target_id, end in hits
+    ]
+    if vocabulary is not None:
+        claimed = [(start, end) for start, _, end in hits]
+        marked += [
+            (start, target_id, end, True)
+            for start, target_id, end in vocabulary.hits(text, claimed)
+        ]
+
     references: list[Reference] = []
     seen: set[tuple[str, int | None]] = set()
-    for _, target_id, end in sorted(hits, key=lambda hit: hit[0]):
-        reference = Reference(target_id, _effect_index(text, end))
+    for _, target_id, end, from_vocabulary in sorted(marked, key=lambda hit: hit[0]):
+        reference = Reference(target_id, _effect_index(text, end), from_vocabulary)
         key = (reference.target_id, reference.targets_effect)
         if key in seen:
             continue
