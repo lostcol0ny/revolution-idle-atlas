@@ -27,9 +27,10 @@ describe('wikiUrl', () => {
   it('cannot produce a javascript: URL', () => {
     const url = wikiUrl('javascript:alert(1)');
     expect(url?.startsWith(WIKI_BASE)).toBe(true);
-    // Pinned to the exact encoded output rather than the absence of a payload:
-    // an absence assertion passes against raw concatenation for any payload
-    // whose only encodable character is the colon.
+    // Pinned to the exact encoded output rather than the absence of a payload.
+    // An absence assertion only rules out one specific wrong answer, so it is
+    // satisfied by any output that mangles the substring — a truncated URL, a
+    // dropped segment, a different origin — none of which are correct either.
     expect(url).toBe(`${WIKI_BASE}javascript%3Aalert(1)`);
   });
 
