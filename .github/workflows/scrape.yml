@@ -16,7 +16,7 @@ jobs:
     # volunteer-run wiki over the network; cap it well below the 6-hour default.
     timeout-minutes: 15
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
 
       # Third-party actions are pinned to a full commit SHA: this job holds a
       # contents:write token and runs unattended, so a moved tag would execute
