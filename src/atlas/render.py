@@ -20,8 +20,8 @@ def _clean(payload: dict[str, Any]) -> dict[str, Any]:
 def to_graph(ds: Dataset) -> dict[str, Any]:
     doc: dict[str, Any] = {
         "version": GRAPH_SCHEMA_VERSION,
-        "nodes": [_clean(n.model_dump(mode="json", by_alias=True)) for n in ds.nodes],
-        "edges": [_clean(e.model_dump(mode="json", by_alias=True)) for e in ds.edges],
+        "nodes": [_clean(n.model_dump(mode="json", by_alias=True, exclude_none=True)) for n in ds.nodes],
+        "edges": [_clean(e.model_dump(mode="json", by_alias=True, exclude_none=True)) for e in ds.edges],
     }
     # Appended last so a document without systems is byte-identical to a v1
     # document. `load.ts` ignores unknown keys, so this stays version 1.

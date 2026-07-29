@@ -2,7 +2,7 @@ import json
 from pathlib import Path
 
 from atlas.loader import load_dataset
-from atlas.models import Dataset, Edge, Node, SystemDef
+from atlas.models import Dataset, Edge, Effect, Kind, Node, Op, SystemDef
 from atlas.render import to_graph
 
 FIXTURES = Path(__file__).parent / "fixtures"
@@ -102,3 +102,48 @@ def test_targets_effect_is_omitted_when_unset_and_emitted_when_set():
 def test_document_key_order_is_version_nodes_edges_then_systems():
     ds = Dataset(systems=[SystemDef(id="unity", name="Unity")], nodes=[_node()])
     assert list(to_graph(ds)) == ["version", "nodes", "edges", "systems"]
+
+
+def test_nested_effect_fields_are_dropped_when_unset():
+    """`_clean` only reaches the top level; effects are nested one deeper.
+
+    Asserted with `not in` rather than `.get(...) is None`, which passes both
+    when the key is absent and when it is present-and-null — the exact
+    distinction this test exists to make.
+    """
+    ds = Dataset(
+        nodes=[
+            Node(
+                id="relic-1",
+                name="One",
+                system="relics",
+                kind=Kind.RELIC,
+                effects=[Effect(text="no op and no per_level here")],
+            )
+        ]
+    )
+    effect = to_graph(ds)["nodes"][0]["effects"][0]
+    assert effect == {"text": "no op and no per_level here"}
+    assert "op" not in effect
+    assert "per_level" not in effect
+
+
+def test_nested_effect_fields_are_kept_when_set():
+    """The guard against fixing the null by dropping the field entirely.
+
+    Without this, `_clean`-recurses and `del effect["op"]` are
+    indistinguishable, and the second one silently deletes real data.
+    """
+    ds = Dataset(
+        nodes=[
+            Node(
+                id="relic-1",
+                name="One",
+                system="relics",
+                kind=Kind.RELIC,
+                effects=[Effect(text="boosts things", per_level="+0.2", op=Op.ADD)],
+            )
+        ]
+    )
+    effect = to_graph(ds)["nodes"][0]["effects"][0]
+    assert effect == {"text": "boosts things", "per_level": "+0.2", "op": "add"}

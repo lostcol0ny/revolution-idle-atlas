@@ -291,8 +291,7 @@
       "effects": [
         {
           "text": "Relic 16 effect is powered and Relic 18 effect multiplied to X & Y X and Y increase different amounts per relic level",
-          "per_level": "X = +0.11 & Y = +1.245",
-          "op": null
+          "per_level": "X = +0.11 & Y = +1.245"
         }
       ],
       "id": "relic-20",
@@ -966,8 +965,7 @@
       "effects": [
         {
           "text": "Multiplies Essence Density Effect",
-          "per_level": "(?)",
-          "op": null
+          "per_level": "(?)"
         }
       ],
       "id": "relic-65",
@@ -1055,9 +1053,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Increases mineral base by 1 (starts at 3)",
-          "per_level": null,
-          "op": null
+          "text": "Increases mineral base by 1 (starts at 3)"
         }
       ],
       "id": "refine-node-1",
@@ -1070,9 +1066,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Now you can bulk attacks (x10.00)",
-          "per_level": null,
-          "op": null
+          "text": "Now you can bulk attacks (x10.00)"
         }
       ],
       "id": "refine-node-2",
@@ -1085,9 +1079,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Attacks Prestige is a bit stronger",
-          "per_level": null,
-          "op": null
+          "text": "Attacks Prestige is a bit stronger"
         }
       ],
       "id": "refine-node-3",
@@ -1100,9 +1092,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Polish sword eff. x1.1 (maxes at x2)",
-          "per_level": null,
-          "op": null
+          "text": "Polish sword eff. x1.1 (maxes at x2)"
         }
       ],
       "id": "refine-node-4",
@@ -1115,9 +1105,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Unlocks merge level (you get 1.00 exp per merge)",
-          "per_level": null,
-          "op": null
+          "text": "Unlocks merge level (you get 1.00 exp per merge)"
         }
       ],
       "id": "refine-node-5",
@@ -1130,9 +1118,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Unlocks automerge (it happens every 600 ingame seconds, affected by local mineral speed mult)",
-          "per_level": null,
-          "op": null
+          "text": "Unlocks automerge (it happens every 600 ingame seconds, affected by local mineral speed mult)"
         }
       ],
       "id": "refine-node-6",
@@ -1145,9 +1131,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Gold Gain common mineral upgrade effect is powered to ^2.00",
-          "per_level": null,
-          "op": null
+          "text": "Gold Gain common mineral upgrade effect is powered to ^2.00"
         }
       ],
       "id": "refine-node-7",
@@ -1160,9 +1144,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Relic 12 effect powered to ^128",
-          "per_level": null,
-          "op": null
+          "text": "Relic 12 effect powered to ^128"
         }
       ],
       "id": "refine-node-8",
@@ -1175,9 +1157,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Polish Axe is 1.5x stronger",
-          "per_level": null,
-          "op": null
+          "text": "Polish Axe is 1.5x stronger"
         }
       ],
       "id": "refine-node-9",
@@ -1190,9 +1170,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "PP gain is powered to ^(1 + 0.1*lvl) (+0.1, maxes at ^2)",
-          "per_level": null,
-          "op": null
+          "text": "PP gain is powered to ^(1 + 0.1*lvl) (+0.1, maxes at ^2)"
         }
       ],
       "id": "refine-node-10",
@@ -1205,9 +1183,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Unlocks autobuy for mineral upgrades",
-          "per_level": null,
-          "op": null
+          "text": "Unlocks autobuy for mineral upgrades"
         }
       ],
       "id": "refine-node-11",
@@ -1220,9 +1196,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Buying first ten mineral upgrades does not spend VP",
-          "per_level": null,
-          "op": null
+          "text": "Buying first ten mineral upgrades does not spend VP"
         }
       ],
       "id": "refine-node-12",
@@ -1235,9 +1209,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Unlocks autobuy for attack buyables",
-          "per_level": null,
-          "op": null
+          "text": "Unlocks autobuy for attack buyables"
         }
       ],
       "id": "refine-node-13",
@@ -1250,9 +1222,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Unlocks autoascend for attack buyables",
-          "per_level": null,
-          "op": null
+          "text": "Unlocks autoascend for attack buyables"
         }
       ],
       "id": "refine-node-14",
@@ -1265,9 +1235,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Buying Relics does not spend gold",
-          "per_level": null,
-          "op": null
+          "text": "Buying Relics does not spend gold"
         }
       ],
       "id": "refine-node-15",
@@ -1280,9 +1248,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Merge Level Bonus Eff. x(1.0 + 0.5*lvl) (maxes at x50)",
-          "per_level": null,
-          "op": null
+          "text": "Merge Level Bonus Eff. x(1.0 + 0.5*lvl) (maxes at x50)"
         }
       ],
       "id": "refine-node-16",
@@ -1295,9 +1261,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Relic 20's eff. is multiplied by the highest refine upgrade bought number (e.g. x17 for N17)",
-          "per_level": null,
-          "op": null
+          "text": "Relic 20's eff. is multiplied by the highest refine upgrade bought number (e.g. x17 for N17)"
         }
       ],
       "id": "refine-node-17",
@@ -1310,9 +1274,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Unlock magnets and new mineral upgrades! Magnet base chance at the start is 1% on merge.",
-          "per_level": null,
-          "op": null
+          "text": "Unlock magnets and new mineral upgrades! Magnet base chance at the start is 1% on merge."
         }
       ],
       "id": "refine-node-18",
@@ -1325,9 +1287,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Mineral cost increase is pentated to 0.85 (^^^0.85)",
-          "per_level": null,
-          "op": null
+          "text": "Mineral cost increase is pentated to 0.85 (^^^0.85)"
         }
       ],
       "id": "refine-node-19",
@@ -1340,9 +1300,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Mineral cost fall is powered to ^1.50",
-          "per_level": null,
-          "op": null
+          "text": "Mineral cost fall is powered to ^1.50"
         }
       ],
       "id": "refine-node-20",
@@ -1355,9 +1313,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Gold on Unity (in Attacks) is multiplied by seconds since last Unity",
-          "per_level": null,
-          "op": null
+          "text": "Gold on Unity (in Attacks) is multiplied by seconds since last Unity"
         }
       ],
       "id": "refine-node-21",
@@ -1370,9 +1326,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Spawning common minerals doesn't decrease your gold",
-          "per_level": null,
-          "op": null
+          "text": "Spawning common minerals doesn't decrease your gold"
         }
       ],
       "id": "refine-node-22",
@@ -1385,9 +1339,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Buying polish upgrades doesn't decrease your PP",
-          "per_level": null,
-          "op": null
+          "text": "Buying polish upgrades doesn't decrease your PP"
         }
       ],
       "id": "refine-node-23",
@@ -1400,9 +1352,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Relic 23 is x(1 + 0.1*lvl) stronger (maxes at x3)",
-          "per_level": null,
-          "op": null
+          "text": "Relic 23 is x(1 + 0.1*lvl) stronger (maxes at x3)"
         }
       ],
       "id": "refine-node-24",
@@ -1415,9 +1365,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "RN19 effect is 1.03x stronger (power divided by 1.03)",
-          "per_level": null,
-          "op": null
+          "text": "RN19 effect is 1.03x stronger (power divided by 1.03)"
         }
       ],
       "id": "refine-node-25",
@@ -1430,9 +1378,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "RN20 effect is x1.1 stronger (power multiplied by 1.1)",
-          "per_level": null,
-          "op": null
+          "text": "RN20 effect is x1.1 stronger (power multiplied by 1.1)"
         }
       ],
       "id": "refine-node-26",
@@ -1445,9 +1391,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Base mineral cost is powered to ^0.93",
-          "per_level": null,
-          "op": null
+          "text": "Base mineral cost is powered to ^0.93"
         }
       ],
       "id": "refine-node-27",
@@ -1460,9 +1404,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Unlocks polishing enhance",
-          "per_level": null,
-          "op": null
+          "text": "Unlocks polishing enhance"
         }
       ],
       "id": "refine-node-28",
@@ -1475,9 +1417,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Relic 23 is stronger based on your Axe Level: x(1 + 0.01*lvl)",
-          "per_level": null,
-          "op": null
+          "text": "Relic 23 is stronger based on your Axe Level: x(1 + 0.01*lvl)"
         }
       ],
       "id": "refine-node-29",
@@ -1490,9 +1430,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Relic 3 effect is powered to your current merge level + 1",
-          "per_level": null,
-          "op": null
+          "text": "Relic 3 effect is powered to your current merge level + 1"
         }
       ],
       "id": "refine-node-30",
@@ -1505,9 +1443,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Relic 14 also decreases base minerals cost by the same number",
-          "per_level": null,
-          "op": null
+          "text": "Relic 14 also decreases base minerals cost by the same number"
         }
       ],
       "id": "refine-node-31",
@@ -1520,9 +1456,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Unlocks autobuy for polish upgrades",
-          "per_level": null,
-          "op": null
+          "text": "Unlocks autobuy for polish upgrades"
         }
       ],
       "id": "refine-node-32",
@@ -1535,9 +1469,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Get 100% of your Gold on Unity every second",
-          "per_level": null,
-          "op": null
+          "text": "Get 100% of your Gold on Unity every second"
         }
       ],
       "id": "refine-node-33",
@@ -1550,9 +1482,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Buying magnet mineral upgrades doesn't spend your magnets. And unlock autobuy for magnet mineral upgrades",
-          "per_level": null,
-          "op": null
+          "text": "Buying magnet mineral upgrades doesn't spend your magnets. And unlock autobuy for magnet mineral upgrades"
         }
       ],
       "id": "refine-node-34",
@@ -1565,9 +1495,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Unlock runes and rune upgrades",
-          "per_level": null,
-          "op": null
+          "text": "Unlock runes and rune upgrades"
         }
       ],
       "id": "refine-node-35",
@@ -1580,9 +1508,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "RN27 effect: x(1 - 0.01*lvl) (maxes at x0.8)",
-          "per_level": null,
-          "op": null
+          "text": "RN27 effect: x(1 - 0.01*lvl) (maxes at x0.8)"
         }
       ],
       "id": "refine-node-36",
@@ -1595,9 +1521,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Polish Knuckles are 20% more effective",
-          "per_level": null,
-          "op": null
+          "text": "Polish Knuckles are 20% more effective"
         }
       ],
       "id": "refine-node-37",
@@ -1610,9 +1534,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "You get more refine points based on your knuckles level: RfP^(1.01*lvl)",
-          "per_level": null,
-          "op": null
+          "text": "You get more refine points based on your knuckles level: RfP^(1.01*lvl)"
         }
       ],
       "id": "refine-node-38",
@@ -1625,9 +1547,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Relic 18 effect is cubed now (e.g. 2e6 -> 8e18)",
-          "per_level": null,
-          "op": null
+          "text": "Relic 18 effect is cubed now (e.g. 2e6 -> 8e18)"
         }
       ],
       "id": "refine-node-39",
@@ -1640,9 +1560,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Magnet upgrades for VP gain and PP gain mults are powered to ^(1.1*lvl) (maxes at ^3)",
-          "per_level": null,
-          "op": null
+          "text": "Magnet upgrades for VP gain and PP gain mults are powered to ^(1.1*lvl) (maxes at ^3)"
         }
       ],
       "id": "refine-node-40",
@@ -1655,9 +1573,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Unlocks special minerals",
-          "per_level": null,
-          "op": null
+          "text": "Unlocks special minerals"
         }
       ],
       "id": "refine-node-41",
@@ -1670,9 +1586,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Special mineral cost fall is multiplied by 5",
-          "per_level": null,
-          "op": null
+          "text": "Special mineral cost fall is multiplied by 5"
         }
       ],
       "id": "refine-node-42",
@@ -1685,9 +1599,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "RN25 effect is 1.03x stronger",
-          "per_level": null,
-          "op": null
+          "text": "RN25 effect is 1.03x stronger"
         }
       ],
       "id": "refine-node-43",
@@ -1700,9 +1612,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Increases height and width of special grid by 1 (maxes at 9x9)",
-          "per_level": null,
-          "op": null
+          "text": "Increases height and width of special grid by 1 (maxes at 9x9)"
         }
       ],
       "id": "refine-node-44",
@@ -1715,9 +1625,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "PP Gain Bonus from Trials is much bigger now",
-          "per_level": null,
-          "op": null
+          "text": "PP Gain Bonus from Trials is much bigger now"
         }
       ],
       "id": "refine-node-45",
@@ -1730,9 +1638,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Unlocks special minerals progression",
-          "per_level": null,
-          "op": null
+          "text": "Unlocks special minerals progression"
         }
       ],
       "id": "refine-node-46",
@@ -1745,9 +1651,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Sun runes generation is 1.2x faster",
-          "per_level": null,
-          "op": null
+          "text": "Sun runes generation is 1.2x faster"
         }
       ],
       "id": "refine-node-47",
@@ -1760,9 +1664,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Moon runes generation is 1.2x faster",
-          "per_level": null,
-          "op": null
+          "text": "Moon runes generation is 1.2x faster"
         }
       ],
       "id": "refine-node-48",
@@ -1775,9 +1677,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "RN43 effect is x1.01 stronger",
-          "per_level": null,
-          "op": null
+          "text": "RN43 effect is x1.01 stronger"
         }
       ],
       "id": "refine-node-49",
@@ -1790,9 +1690,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "RfP gain x(2^lvl) (maxes at x1,024)",
-          "per_level": null,
-          "op": null
+          "text": "RfP gain x(2^lvl) (maxes at x1,024)"
         }
       ],
       "id": "refine-node-50",
@@ -1805,9 +1703,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Special Mineral Cost fall speed is multiplied by x2.00",
-          "per_level": null,
-          "op": null
+          "text": "Special Mineral Cost fall speed is multiplied by x2.00"
         }
       ],
       "id": "refine-node-51",
@@ -1820,9 +1716,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Multiplies all polish enhance effects by x1.02",
-          "per_level": null,
-          "op": null
+          "text": "Multiplies all polish enhance effects by x1.02"
         }
       ],
       "id": "refine-node-52",
@@ -1835,9 +1729,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Unlock automerge for special minerals (1 in 10,000 in game seconds, affected by local mineral speed)",
-          "per_level": null,
-          "op": null
+          "text": "Unlock automerge for special minerals (1 in 10,000 in game seconds, affected by local mineral speed)"
         }
       ],
       "id": "refine-node-53",
@@ -1850,9 +1742,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Buffs Relic 31 by ^1.10",
-          "per_level": null,
-          "op": null
+          "text": "Buffs Relic 31 by ^1.10"
         }
       ],
       "id": "refine-node-54",
@@ -1865,9 +1755,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Unlock Elements",
-          "per_level": null,
-          "op": null
+          "text": "Unlock Elements"
         }
       ],
       "id": "refine-node-55",
@@ -1880,9 +1768,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Multiplies 2nd Refine Node effect by x3.00",
-          "per_level": null,
-          "op": null
+          "text": "Multiplies 2nd Refine Node effect by x3.00"
         }
       ],
       "id": "refine-node-56",
@@ -1895,9 +1781,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Multiplies Global Element Mult by x10.00",
-          "per_level": null,
-          "op": null
+          "text": "Multiplies Global Element Mult by x10.00"
         }
       ],
       "id": "refine-node-57",
@@ -1910,9 +1794,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "RN 7 effect is multiplied by x1.10",
-          "per_level": null,
-          "op": null
+          "text": "RN 7 effect is multiplied by x1.10"
         }
       ],
       "id": "refine-node-58",
@@ -1925,9 +1807,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Makes First Node of each element stronger (they become Fire= 0.5, Earth= 3.50, Wind= 4.20, Water= 1.11)",
-          "per_level": null,
-          "op": null
+          "text": "Makes First Node of each element stronger (they become Fire= 0.5, Earth= 3.50, Wind= 4.20, Water= 1.11)"
         }
       ],
       "id": "refine-node-59",
@@ -1940,9 +1820,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Multiplies Global Element Mult (x2.00 per level, maxes at x1.07e9)",
-          "per_level": null,
-          "op": null
+          "text": "Multiplies Global Element Mult (x2.00 per level, maxes at x1.07e9)"
         }
       ],
       "id": "refine-node-60",
@@ -1955,9 +1833,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Passive Merge EXP is also boosted by Relic 28 and max spawn mineral level",
-          "per_level": null,
-          "op": null
+          "text": "Passive Merge EXP is also boosted by Relic 28 and max spawn mineral level"
         }
       ],
       "id": "refine-node-61",
@@ -1970,9 +1846,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Multiplies First Wind Factor by x10.00",
-          "per_level": null,
-          "op": null
+          "text": "Multiplies First Wind Factor by x10.00"
         }
       ],
       "id": "refine-node-62",
@@ -1985,9 +1859,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Keep Dilation Tree and DTP on Unity Reset",
-          "per_level": null,
-          "op": null
+          "text": "Keep Dilation Tree and DTP on Unity Reset"
         }
       ],
       "id": "refine-node-63",
@@ -2000,9 +1872,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Boosts Relic 4 (^1.00) (+^0.50 per level, maxes at ^5.00)",
-          "per_level": null,
-          "op": null
+          "text": "Boosts Relic 4 (^1.00) (+^0.50 per level, maxes at ^5.00)"
         }
       ],
       "id": "refine-node-64",
@@ -2015,9 +1885,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Empowers Relic 5 to ^2.00",
-          "per_level": null,
-          "op": null
+          "text": "Empowers Relic 5 to ^2.00"
         }
       ],
       "id": "refine-node-65",
@@ -2030,9 +1898,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Sacrificing relics doesn't reset relic level and automatically set to max level",
-          "per_level": null,
-          "op": null
+          "text": "Sacrificing relics doesn't reset relic level and automatically set to max level"
         }
       ],
       "id": "refine-node-66",
@@ -2045,9 +1911,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Attack Prestige resets nothing",
-          "per_level": null,
-          "op": null
+          "text": "Attack Prestige resets nothing"
         }
       ],
       "id": "refine-node-67",
@@ -2060,9 +1924,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "For every 100,000 attack levels gained reduce your SM Spawned Factor by 1",
-          "per_level": null,
-          "op": null
+          "text": "For every 100,000 attack levels gained reduce your SM Spawned Factor by 1"
         }
       ],
       "id": "refine-node-68",
@@ -2075,9 +1937,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Multiplies First Mineral Eff. by x1.00 (+x0.01 per level, maxes at x1.10) (improves the effect of the first Mineral Upgrade: Max Level)",
-          "per_level": null,
-          "op": null
+          "text": "Multiplies First Mineral Eff. by x1.00 (+x0.01 per level, maxes at x1.10) (improves the effect of the first Mineral Upgrade: Max Level)"
         }
       ],
       "id": "refine-node-69",
@@ -2090,9 +1950,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Now you can spawn black special gems (1% chance). Unlocks Tarot. Resets SMS Factor to 5,000 if it's >6,000 or decrease it by 1,000",
-          "per_level": null,
-          "op": null
+          "text": "Now you can spawn black special gems (1% chance). Unlocks Tarot. Resets SMS Factor to 5,000 if it's >6,000 or decrease it by 1,000"
         }
       ],
       "id": "refine-node-70",
@@ -2105,9 +1963,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Get 0.01% of your PP gain on reset every second (affected by local minerals speed)",
-          "per_level": null,
-          "op": null
+          "text": "Get 0.01% of your PP gain on reset every second (affected by local minerals speed)"
         }
       ],
       "id": "refine-node-71",
@@ -2120,9 +1976,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Increase width and height of both mineral grids by 1.00",
-          "per_level": null,
-          "op": null
+          "text": "Increase width and height of both mineral grids by 1.00"
         }
       ],
       "id": "refine-node-72",
@@ -2135,9 +1989,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Multiplies RN1 effect by x10.00",
-          "per_level": null,
-          "op": null
+          "text": "Multiplies RN1 effect by x10.00"
         }
       ],
       "id": "refine-node-73",
@@ -2150,9 +2002,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Makes effect of all suit tarot upgrade 2 - x1.50 stronger",
-          "per_level": null,
-          "op": null
+          "text": "Makes effect of all suit tarot upgrade 2 - x1.50 stronger"
         }
       ],
       "id": "refine-node-74",
@@ -2165,9 +2015,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Increase all elements base factor 2 by (+?/level)",
-          "per_level": null,
-          "op": null
+          "text": "Increase all elements base factor 2 by (+?/level)"
         }
       ],
       "id": "refine-node-75",
@@ -2180,9 +2028,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Relic 37 is ^1.50 more effective",
-          "per_level": null,
-          "op": null
+          "text": "Relic 37 is ^1.50 more effective"
         }
       ],
       "id": "refine-node-76",
@@ -2195,9 +2041,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Multiplies first effect of all non-arcan cards by x1.50",
-          "per_level": null,
-          "op": null
+          "text": "Multiplies first effect of all non-arcan cards by x1.50"
         }
       ],
       "id": "refine-node-77",
@@ -2210,9 +2054,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Doubles RN77 effect",
-          "per_level": null,
-          "op": null
+          "text": "Doubles RN77 effect"
         }
       ],
       "id": "refine-node-78",
@@ -2225,9 +2067,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "You get x2.00 cards from drawing",
-          "per_level": null,
-          "op": null
+          "text": "You get x2.00 cards from drawing"
         }
       ],
       "id": "refine-node-79",
@@ -2240,9 +2080,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Increase the RN72 effect by 1.00",
-          "per_level": null,
-          "op": null
+          "text": "Increase the RN72 effect by 1.00"
         }
       ],
       "id": "refine-node-80",
@@ -2255,9 +2093,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "The Devil's base effect is 10x stonger",
-          "per_level": null,
-          "op": null
+          "text": "The Devil's base effect is 10x stonger"
         }
       ],
       "id": "refine-node-81",
@@ -2270,9 +2106,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "The Tower now destroys the first gem instead of a random gem",
-          "per_level": null,
-          "op": null
+          "text": "The Tower now destroys the first gem instead of a random gem"
         }
       ],
       "id": "refine-node-82",
@@ -2285,9 +2119,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "The Wheel of Fortune now has a 99% chance to win",
-          "per_level": null,
-          "op": null
+          "text": "The Wheel of Fortune now has a 99% chance to win"
         }
       ],
       "id": "refine-node-83",
@@ -2300,9 +2132,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "The Death now activates instantly",
-          "per_level": null,
-          "op": null
+          "text": "The Death now activates instantly"
         }
       ],
       "id": "refine-node-84",
@@ -2315,9 +2145,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Unlocks Sacrifice tab for Special Minerals. You now gain Sacrifice Dust when deleting minerals, using the Tower, or using the Delete Special Mineral macro block.",
-          "per_level": null,
-          "op": null
+          "text": "Unlocks Sacrifice tab for Special Minerals. You now gain Sacrifice Dust when deleting minerals, using the Tower, or using the Delete Special Mineral macro block."
         }
       ],
       "id": "refine-node-85",
@@ -2330,9 +2158,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Grants SMP EXP to all Special Minerals every second based on Relic 45, The Tower, and average SMP level (???/sec). Affected by Tarot Local Speed.",
-          "per_level": null,
-          "op": null
+          "text": "Grants SMP EXP to all Special Minerals every second based on Relic 45, The Tower, and average SMP level (???/sec). Affected by Tarot Local Speed."
         }
       ],
       "id": "refine-node-86",
@@ -2345,9 +2171,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Relic 36's effect is ^3 and applied to all elements",
-          "per_level": null,
-          "op": null
+          "text": "Relic 36's effect is ^3 and applied to all elements"
         }
       ],
       "id": "refine-node-87",
@@ -2360,9 +2184,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Increase Relic 46 softcap by 1",
-          "per_level": null,
-          "op": null
+          "text": "Increase Relic 46 softcap by 1"
         }
       ],
       "id": "refine-node-88",
@@ -2375,9 +2197,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Unlocks Tarot Challenges! (All Special Minerals must be sacrificed)",
-          "per_level": null,
-          "op": null
+          "text": "Unlocks Tarot Challenges! (All Special Minerals must be sacrificed)"
         }
       ],
       "id": "refine-node-89",
@@ -2390,9 +2210,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Multiplies Sacrifice Dust gain and Relic 45 base (x2/level, max 4.29e9)",
-          "per_level": null,
-          "op": null
+          "text": "Multiplies Sacrifice Dust gain and Relic 45 base (x2/level, max 4.29e9)"
         }
       ],
       "id": "refine-node-90",
@@ -2405,9 +2223,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Element nodes effects are boosted as if you had x1e1000 more of that element",
-          "per_level": null,
-          "op": null
+          "text": "Element nodes effects are boosted as if you had x1e1000 more of that element"
         }
       ],
       "id": "refine-node-91",
@@ -2420,9 +2236,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "The Empress, The Emperor, The Lovers, and The Strength Tarot Cards are now set to their maximum strength values.",
-          "per_level": null,
-          "op": null
+          "text": "The Empress, The Emperor, The Lovers, and The Strength Tarot Cards are now set to their maximum strength values."
         }
       ],
       "id": "refine-node-92",
@@ -2435,9 +2249,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "SMP Gem Efficiency also boosts the second Special Mineral sacrifce effect at a reduced rate",
-          "per_level": null,
-          "op": null
+          "text": "SMP Gem Efficiency also boosts the second Special Mineral sacrifce effect at a reduced rate"
         }
       ],
       "id": "refine-node-93",
@@ -2450,9 +2262,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Slightly reduces the Fire Node 2 softcap",
-          "per_level": null,
-          "op": null
+          "text": "Slightly reduces the Fire Node 2 softcap"
         }
       ],
       "id": "refine-node-94",
@@ -2465,9 +2275,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Polish Spear effect ^5000",
-          "per_level": null,
-          "op": null
+          "text": "Polish Spear effect ^5000"
         }
       ],
       "id": "refine-node-95",
@@ -2480,9 +2288,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Multiplies Special Mineral bulk spawn by 10",
-          "per_level": null,
-          "op": null
+          "text": "Multiplies Special Mineral bulk spawn by 10"
         }
       ],
       "id": "refine-node-96",
@@ -2495,9 +2301,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Ach 443 reward is ^5",
-          "per_level": null,
-          "op": null
+          "text": "Ach 443 reward is ^5"
         }
       ],
       "id": "refine-node-97",
@@ -2510,9 +2314,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Polish Sword Effect is ^1000",
-          "per_level": null,
-          "op": null
+          "text": "Polish Sword Effect is ^1000"
         }
       ],
       "id": "refine-node-98",
@@ -2525,9 +2327,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Unlock Artifacts!",
-          "per_level": null,
-          "op": null
+          "text": "Unlock Artifacts!"
         }
       ],
       "id": "refine-node-99",
@@ -2540,9 +2340,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Decrease the base cooldown of all artifacts for flushing by X hours (+1/level)",
-          "per_level": null,
-          "op": null
+          "text": "Decrease the base cooldown of all artifacts for flushing by X hours (+1/level)"
         }
       ],
       "id": "refine-node-100",
@@ -2555,9 +2353,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Achievement 443 reward is powered to ^2",
-          "per_level": null,
-          "op": null
+          "text": "Achievement 443 reward is powered to ^2"
         }
       ],
       "id": "refine-node-101",
@@ -2570,9 +2366,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Unlocks Automation for upgrading Artifact Parts",
-          "per_level": null,
-          "op": null
+          "text": "Unlocks Automation for upgrading Artifact Parts"
         }
       ],
       "id": "refine-node-102",
@@ -2585,9 +2379,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Unlocks Plague Tab",
-          "per_level": null,
-          "op": null
+          "text": "Unlocks Plague Tab"
         }
       ],
       "id": "refine-node-103",
@@ -2600,9 +2392,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Unlocks Endoplasmic Reticulum",
-          "per_level": null,
-          "op": null
+          "text": "Unlocks Endoplasmic Reticulum"
         }
       ],
       "id": "refine-node-104",
@@ -2615,9 +2405,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "The Hierophant Passive Bonus is now boosted by the level of your equipped Endoplasmic Reticulum",
-          "per_level": null,
-          "op": null
+          "text": "The Hierophant Passive Bonus is now boosted by the level of your equipped Endoplasmic Reticulum"
         }
       ],
       "id": "refine-node-105",
@@ -2630,9 +2418,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Spread Power of your currently equipped Endoplasmic Reticulum also boosts Black Gem base effect (x???)",
-          "per_level": null,
-          "op": null
+          "text": "Spread Power of your currently equipped Endoplasmic Reticulum also boosts Black Gem base effect (x???)"
         }
       ],
       "id": "refine-node-106",
@@ -2645,9 +2431,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Divides cooldown of all artifacts by 2",
-          "per_level": null,
-          "op": null
+          "text": "Divides cooldown of all artifacts by 2"
         }
       ],
       "id": "refine-node-107",
@@ -2660,9 +2444,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Max PIP now boosts sacrifice dust gain (x???)",
-          "per_level": null,
-          "op": null
+          "text": "Max PIP now boosts sacrifice dust gain (x???)"
         }
       ],
       "id": "refine-node-108",
@@ -2675,9 +2457,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Multiplies PIP per PIG by x10",
-          "per_level": null,
-          "op": null
+          "text": "Multiplies PIP per PIG by x10"
         }
       ],
       "id": "refine-node-109",
@@ -2690,9 +2470,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Multiplies Crafting Mastery by x1.1",
-          "per_level": null,
-          "op": null
+          "text": "Multiplies Crafting Mastery by x1.1"
         }
       ],
       "id": "refine-node-110",
@@ -2705,9 +2483,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Divides the ERP needed to craft an Endoplasmic Reticulum by x1.5^level",
-          "per_level": null,
-          "op": null
+          "text": "Divides the ERP needed to craft an Endoplasmic Reticulum by x1.5^level"
         }
       ],
       "id": "refine-node-111",
@@ -2720,9 +2496,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Multiplies golden resoucres gain by xπ (x3.14)",
-          "per_level": null,
-          "op": null
+          "text": "Multiplies golden resoucres gain by xπ (x3.14)"
         }
       ],
       "id": "refine-node-112",
@@ -2735,9 +2509,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Multiplies Essence Density ER Upgrade by x20",
-          "per_level": null,
-          "op": null
+          "text": "Multiplies Essence Density ER Upgrade by x20"
         }
       ],
       "id": "refine-node-113",
@@ -2750,9 +2522,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Multiplies Base Spread Power (on ER craft) by x1.25",
-          "per_level": null,
-          "op": null
+          "text": "Multiplies Base Spread Power (on ER craft) by x1.25"
         }
       ],
       "id": "refine-node-114",
@@ -2765,9 +2535,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Multiples Max Cure Progress by 1.2^level",
-          "per_level": null,
-          "op": null
+          "text": "Multiples Max Cure Progress by 1.2^level"
         }
       ],
       "id": "refine-node-115",
@@ -2780,9 +2548,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Max Infected and Total Infected effects are powered to ^2",
-          "per_level": null,
-          "op": null
+          "text": "Max Infected and Total Infected effects are powered to ^2"
         }
       ],
       "id": "refine-node-116",
@@ -2795,9 +2561,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Gives +10 effective levels to all Endoplasmic Reticulum upgrades",
-          "per_level": null,
-          "op": null
+          "text": "Gives +10 effective levels to all Endoplasmic Reticulum upgrades"
         }
       ],
       "id": "refine-node-117",
@@ -2810,9 +2574,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Divides All Artifact Flush Cooldowns by x2",
-          "per_level": null,
-          "op": null
+          "text": "Divides All Artifact Flush Cooldowns by x2"
         }
       ],
       "id": "refine-node-118",
@@ -2825,9 +2587,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Map PIP Effect is powered to ^1.25",
-          "per_level": null,
-          "op": null
+          "text": "Map PIP Effect is powered to ^1.25"
         }
       ],
       "id": "refine-node-119",
@@ -2840,9 +2600,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Multiplies Attack Exponent by x1",
-          "per_level": null,
-          "op": null
+          "text": "Multiplies Attack Exponent by x1"
         }
       ],
       "id": "refine-node-120",
@@ -2855,9 +2613,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Unlocks Singularity",
-          "per_level": null,
-          "op": null
+          "text": "Unlocks Singularity"
         }
       ],
       "id": "refine-node-121",
@@ -2870,9 +2626,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Adds a Singularity Effect (Based on Singularities) that boosts Spread Speed",
-          "per_level": null,
-          "op": null
+          "text": "Adds a Singularity Effect (Based on Singularities) that boosts Spread Speed"
         }
       ],
       "id": "refine-node-122",
@@ -2885,9 +2639,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Multiplies PIG Rewards by x10",
-          "per_level": null,
-          "op": null
+          "text": "Multiplies PIG Rewards by x10"
         }
       ],
       "id": "refine-node-123",
@@ -2900,9 +2652,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "PIG Rewards are powered to ^1.05",
-          "per_level": null,
-          "op": null
+          "text": "PIG Rewards are powered to ^1.05"
         }
       ],
       "id": "refine-node-124",
@@ -2915,9 +2665,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Adds Refine Node 125 as a Singularity Mult Factor",
-          "per_level": null,
-          "op": null
+          "text": "Adds Refine Node 125 as a Singularity Mult Factor"
         }
       ],
       "id": "refine-node-125",
@@ -2930,9 +2678,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "No longer applies an Atom gain penalty at 1e50",
-          "per_level": null,
-          "op": null
+          "text": "No longer applies an Atom gain penalty at 1e50"
         }
       ],
       "id": "refine-node-126",
@@ -2945,9 +2691,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "No longer applies an Atom gain penalty at 14e153",
-          "per_level": null,
-          "op": null
+          "text": "No longer applies an Atom gain penalty at 14e153"
         }
       ],
       "id": "refine-node-127",
@@ -2960,9 +2704,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Makes the first Atom penalty weaker by 10% [per level]. At max level, removes it completely.",
-          "per_level": null,
-          "op": null
+          "text": "Makes the first Atom penalty weaker by 10% [per level]. At max level, removes it completely."
         }
       ],
       "id": "refine-node-128",
@@ -2975,9 +2717,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Adds Refine Points to Singularity Mult Effects",
-          "per_level": null,
-          "op": null
+          "text": "Adds Refine Points to Singularity Mult Effects"
         }
       ],
       "id": "refine-node-129",
@@ -2990,9 +2730,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Multiples Refine Node 125 Effect by x?",
-          "per_level": null,
-          "op": null
+          "text": "Multiples Refine Node 125 Effect by x?"
         }
       ],
       "id": "refine-node-130",
@@ -3005,9 +2743,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Adds Atom Gain to Singularity Count effects",
-          "per_level": null,
-          "op": null
+          "text": "Adds Atom Gain to Singularity Count effects"
         }
       ],
       "id": "refine-node-131",
@@ -3020,9 +2756,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Adds Golden Resource Gain to Singularity Count Effect",
-          "per_level": null,
-          "op": null
+          "text": "Adds Golden Resource Gain to Singularity Count Effect"
         }
       ],
       "id": "refine-node-132",
@@ -3035,9 +2769,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Empowers your current luck: ^1 + level/100",
-          "per_level": null,
-          "op": null
+          "text": "Empowers your current luck: ^1 + level/100"
         }
       ],
       "id": "refine-node-133",
@@ -3050,9 +2782,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Adds Refine Points to Singularity Count Effects",
-          "per_level": null,
-          "op": null
+          "text": "Adds Refine Points to Singularity Count Effects"
         }
       ],
       "id": "refine-node-134",
@@ -3065,9 +2795,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Adds a Singularity Mult effect that slightly boosts Luck",
-          "per_level": null,
-          "op": null
+          "text": "Adds a Singularity Mult effect that slightly boosts Luck"
         }
       ],
       "id": "refine-node-135",
@@ -3080,9 +2808,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Increases Local Singularity Speed Power by 0.02",
-          "per_level": null,
-          "op": null
+          "text": "Increases Local Singularity Speed Power by 0.02"
         }
       ],
       "id": "refine-node-136",
@@ -3095,14 +2821,10 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Base Swords Generation /s",
-          "per_level": null,
-          "op": null
+          "text": "Base Swords Generation /s"
         },
         {
-          "text": "Attack Mult Gain from VP +^",
-          "per_level": null,
-          "op": null
+          "text": "Attack Mult Gain from VP +^"
         }
       ],
       "id": "tarot-ace-of-swords",
@@ -3115,14 +2837,10 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Swords 1 first effect mult x",
-          "per_level": null,
-          "op": null
+          "text": "Swords 1 first effect mult x"
         },
         {
-          "text": "Attacks Ascend Power from VP +^",
-          "per_level": null,
-          "op": null
+          "text": "Attacks Ascend Power from VP +^"
         }
       ],
       "id": "tarot-two-of-swords",
@@ -3135,14 +2853,10 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Swords 2 first effect mult x",
-          "per_level": null,
-          "op": null
+          "text": "Swords 2 first effect mult x"
         },
         {
-          "text": "Attacks Prestige Power +^",
-          "per_level": null,
-          "op": null
+          "text": "Attacks Prestige Power +^"
         }
       ],
       "id": "tarot-three-of-swords",
@@ -3155,14 +2869,10 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Swords 3 first effect mult x",
-          "per_level": null,
-          "op": null
+          "text": "Swords 3 first effect mult x"
         },
         {
-          "text": "Relic 3 Power +^",
-          "per_level": null,
-          "op": null
+          "text": "Relic 3 Power +^"
         }
       ],
       "id": "tarot-four-of-swords",
@@ -3175,14 +2885,10 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Swords 4 first effect mult x",
-          "per_level": null,
-          "op": null
+          "text": "Swords 4 first effect mult x"
         },
         {
-          "text": "Relic 13 Power +x",
-          "per_level": null,
-          "op": null
+          "text": "Relic 13 Power +x"
         }
       ],
       "id": "tarot-five-of-swords",
@@ -3195,14 +2901,10 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Swords 5 first effect mult x",
-          "per_level": null,
-          "op": null
+          "text": "Swords 5 first effect mult x"
         },
         {
-          "text": "Relic 20 Effect +x",
-          "per_level": null,
-          "op": null
+          "text": "Relic 20 Effect +x"
         }
       ],
       "id": "tarot-six-of-swords",
@@ -3215,14 +2917,10 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Swords 6 first effect mult x",
-          "per_level": null,
-          "op": null
+          "text": "Swords 6 first effect mult x"
         },
         {
-          "text": "Refine Node 4 Effect +x",
-          "per_level": null,
-          "op": null
+          "text": "Refine Node 4 Effect +x"
         }
       ],
       "id": "tarot-seven-of-swords",
@@ -3235,14 +2933,10 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Swords 7 first effect mult x",
-          "per_level": null,
-          "op": null
+          "text": "Swords 7 first effect mult x"
         },
         {
-          "text": "Polish Sword Effect +^",
-          "per_level": null,
-          "op": null
+          "text": "Polish Sword Effect +^"
         }
       ],
       "id": "tarot-eight-of-swords",
@@ -3255,14 +2949,10 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Swords 8 first effect mult x",
-          "per_level": null,
-          "op": null
+          "text": "Swords 8 first effect mult x"
         },
         {
-          "text": "DTU MID-2 is +x stronger",
-          "per_level": null,
-          "op": null
+          "text": "DTU MID-2 is +x stronger"
         }
       ],
       "id": "tarot-nine-of-swords",
@@ -3275,14 +2965,10 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Swords 9 first effect mult x",
-          "per_level": null,
-          "op": null
+          "text": "Swords 9 first effect mult x"
         },
         {
-          "text": "Increase Atk. Exp +0.050",
-          "per_level": null,
-          "op": null
+          "text": "Increase Atk. Exp +0.050"
         }
       ],
       "id": "tarot-ten-of-swords",
@@ -3295,14 +2981,10 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Swords 10 first effect mult x",
-          "per_level": null,
-          "op": null
+          "text": "Swords 10 first effect mult x"
         },
         {
-          "text": "First 10 swords tarot cards effects are +x stronger",
-          "per_level": null,
-          "op": null
+          "text": "First 10 swords tarot cards effects are +x stronger"
         }
       ],
       "id": "tarot-page-of-swords",
@@ -3315,14 +2997,10 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Swords Page first effect mult x",
-          "per_level": null,
-          "op": null
+          "text": "Swords Page first effect mult x"
         },
         {
-          "text": "Common Exp Mult +x",
-          "per_level": null,
-          "op": null
+          "text": "Common Exp Mult +x"
         }
       ],
       "id": "tarot-knight-of-swords",
@@ -3335,14 +3013,10 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Swords Knight first effect mult x",
-          "per_level": null,
-          "op": null
+          "text": "Swords Knight first effect mult x"
         },
         {
-          "text": "Ach 232 reward is multiplied by +x",
-          "per_level": null,
-          "op": null
+          "text": "Ach 232 reward is multiplied by +x"
         }
       ],
       "id": "tarot-queen-of-swords",
@@ -3355,14 +3029,10 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Swords Queen first effect mult x",
-          "per_level": null,
-          "op": null
+          "text": "Swords Queen first effect mult x"
         },
         {
-          "text": "Unlocks 2nd wind factor and multiply 1st factor for all elements by x (aft. e308 softcap)",
-          "per_level": null,
-          "op": null
+          "text": "Unlocks 2nd wind factor and multiply 1st factor for all elements by x (aft. e308 softcap)"
         }
       ],
       "id": "tarot-king-of-swords",
@@ -3375,14 +3045,10 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Base Wands Generations /s",
-          "per_level": null,
-          "op": null
+          "text": "Base Wands Generations /s"
         },
         {
-          "text": "Fire Factor 1 +^",
-          "per_level": null,
-          "op": null
+          "text": "Fire Factor 1 +^"
         }
       ],
       "id": "tarot-ace-of-wands",
@@ -3395,14 +3061,10 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Wands 1 first effect mult x",
-          "per_level": null,
-          "op": null
+          "text": "Wands 1 first effect mult x"
         },
         {
-          "text": "Earth Factor 1 +^",
-          "per_level": null,
-          "op": null
+          "text": "Earth Factor 1 +^"
         }
       ],
       "id": "tarot-two-of-wands",
@@ -3415,14 +3077,10 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Wands 2 first effect mult x",
-          "per_level": null,
-          "op": null
+          "text": "Wands 2 first effect mult x"
         },
         {
-          "text": "Wind Factor 1 +^",
-          "per_level": null,
-          "op": null
+          "text": "Wind Factor 1 +^"
         }
       ],
       "id": "tarot-three-of-wands",
@@ -3435,14 +3093,10 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Wands 3 first effect mult x",
-          "per_level": null,
-          "op": null
+          "text": "Wands 3 first effect mult x"
         },
         {
-          "text": "Water Factor 1 +^",
-          "per_level": null,
-          "op": null
+          "text": "Water Factor 1 +^"
         }
       ],
       "id": "tarot-four-of-wands",
@@ -3455,14 +3109,10 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Wands 4 first effect mult x",
-          "per_level": null,
-          "op": null
+          "text": "Wands 4 first effect mult x"
         },
         {
-          "text": "All Elements Factor 1 +^",
-          "per_level": null,
-          "op": null
+          "text": "All Elements Factor 1 +^"
         }
       ],
       "id": "tarot-five-of-wands",
@@ -3475,14 +3125,10 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Wands 5 first effect mult x",
-          "per_level": null,
-          "op": null
+          "text": "Wands 5 first effect mult x"
         },
         {
-          "text": "Fire Node 3 Effect +^",
-          "per_level": null,
-          "op": null
+          "text": "Fire Node 3 Effect +^"
         }
       ],
       "id": "tarot-six-of-wands",
@@ -3495,14 +3141,10 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Wands 6 first effect mult x",
-          "per_level": null,
-          "op": null
+          "text": "Wands 6 first effect mult x"
         },
         {
-          "text": "Water Node 1 Effect +^",
-          "per_level": null,
-          "op": null
+          "text": "Water Node 1 Effect +^"
         }
       ],
       "id": "tarot-seven-of-wands",
@@ -3515,14 +3157,10 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Wands 7 first effect mult x",
-          "per_level": null,
-          "op": null
+          "text": "Wands 7 first effect mult x"
         },
         {
-          "text": "Elements Local Speed +^",
-          "per_level": null,
-          "op": null
+          "text": "Elements Local Speed +^"
         }
       ],
       "id": "tarot-eight-of-wands",
@@ -3535,14 +3173,10 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Wands 8 first effect mult x",
-          "per_level": null,
-          "op": null
+          "text": "Wands 8 first effect mult x"
         },
         {
-          "text": "Infinity Upgrade (2;1) is +x stronger",
-          "per_level": null,
-          "op": null
+          "text": "Infinity Upgrade (2;1) is +x stronger"
         }
       ],
       "id": "tarot-nine-of-wands",
@@ -3555,14 +3189,10 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Wands 9 first effect mult x",
-          "per_level": null,
-          "op": null
+          "text": "Wands 9 first effect mult x"
         },
         {
-          "text": "Makes First Nodes of each element +x stronger",
-          "per_level": null,
-          "op": null
+          "text": "Makes First Nodes of each element +x stronger"
         }
       ],
       "id": "tarot-ten-of-wands",
@@ -3575,14 +3205,10 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Wands 10 first effect mult x",
-          "per_level": null,
-          "op": null
+          "text": "Wands 10 first effect mult x"
         },
         {
-          "text": "First 10 wands tarot cards effects are +x stronger",
-          "per_level": null,
-          "op": null
+          "text": "First 10 wands tarot cards effects are +x stronger"
         }
       ],
       "id": "tarot-page-of-wands",
@@ -3595,14 +3221,10 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Wands Page first effect mult x",
-          "per_level": null,
-          "op": null
+          "text": "Wands Page first effect mult x"
         },
         {
-          "text": "Tarot Arcans Cooldowns +/",
-          "per_level": null,
-          "op": null
+          "text": "Tarot Arcans Cooldowns +/"
         }
       ],
       "id": "tarot-knight-of-wands",
@@ -3615,14 +3237,10 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Wands Knight first effect mult x",
-          "per_level": null,
-          "op": null
+          "text": "Wands Knight first effect mult x"
         },
         {
-          "text": "Ach 230 reward is multiplied by +x",
-          "per_level": null,
-          "op": null
+          "text": "Ach 230 reward is multiplied by +x"
         }
       ],
       "id": "tarot-queen-of-wands",
@@ -3635,14 +3253,10 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Wands Queen first effect mult x",
-          "per_level": null,
-          "op": null
+          "text": "Wands Queen first effect mult x"
         },
         {
-          "text": "Unlocks 2nd fire factor and multiply 1st factor for all elements by x# (base 1,000) (aft. e308 softcap)",
-          "per_level": null,
-          "op": null
+          "text": "Unlocks 2nd fire factor and multiply 1st factor for all elements by x# (base 1,000) (aft. e308 softcap)"
         }
       ],
       "id": "tarot-king-of-wands",
@@ -3655,14 +3269,10 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Base Pentacles Generation /s",
-          "per_level": null,
-          "op": null
+          "text": "Base Pentacles Generation /s"
         },
         {
-          "text": "Gold Gain +^",
-          "per_level": null,
-          "op": null
+          "text": "Gold Gain +^"
         }
       ],
       "id": "tarot-ace-of-pentacles",
@@ -3675,14 +3285,10 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Pentacles 1 first effect mult x",
-          "per_level": null,
-          "op": null
+          "text": "Pentacles 1 first effect mult x"
         },
         {
-          "text": "Zodiac Sell Cost x",
-          "per_level": null,
-          "op": null
+          "text": "Zodiac Sell Cost x"
         }
       ],
       "id": "tarot-two-of-pentacles",
@@ -3695,14 +3301,10 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Pentacles 2 first effect mult x",
-          "per_level": null,
-          "op": null
+          "text": "Pentacles 2 first effect mult x"
         },
         {
-          "text": "Relic 36 effect +^",
-          "per_level": null,
-          "op": null
+          "text": "Relic 36 effect +^"
         }
       ],
       "id": "tarot-three-of-pentacles",
@@ -3715,14 +3317,10 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Pentacles 3 first effect mult x",
-          "per_level": null,
-          "op": null
+          "text": "Pentacles 3 first effect mult x"
         },
         {
-          "text": "Luck Donut Power +^",
-          "per_level": null,
-          "op": null
+          "text": "Luck Donut Power +^"
         }
       ],
       "id": "tarot-four-of-pentacles",
@@ -3735,14 +3333,10 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Pentacles 4 first effect mult x",
-          "per_level": null,
-          "op": null
+          "text": "Pentacles 4 first effect mult x"
         },
         {
-          "text": "Zodiac Sacrifice Power +^",
-          "per_level": null,
-          "op": null
+          "text": "Zodiac Sacrifice Power +^"
         }
       ],
       "id": "tarot-five-of-pentacles",
@@ -3755,14 +3349,10 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Pentacles 5 first effect mult x",
-          "per_level": null,
-          "op": null
+          "text": "Pentacles 5 first effect mult x"
         },
         {
-          "text": "Relic 28 Effect +^",
-          "per_level": null,
-          "op": null
+          "text": "Relic 28 Effect +^"
         }
       ],
       "id": "tarot-six-of-pentacles",
@@ -3775,14 +3365,10 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Pentacles 6 first effect mult x",
-          "per_level": null,
-          "op": null
+          "text": "Pentacles 6 first effect mult x"
         },
         {
-          "text": "Relic 31 Softcap is +x weaker",
-          "per_level": null,
-          "op": null
+          "text": "Relic 31 Softcap is +x weaker"
         }
       ],
       "id": "tarot-seven-of-pentacles",
@@ -3795,14 +3381,10 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Pentacles 7 first effect mult x",
-          "per_level": null,
-          "op": null
+          "text": "Pentacles 7 first effect mult x"
         },
         {
-          "text": "Post 300 Mineral Cost Scaling is +x weaker",
-          "per_level": null,
-          "op": null
+          "text": "Post 300 Mineral Cost Scaling is +x weaker"
         }
       ],
       "id": "tarot-eight-of-pentacles",
@@ -3815,14 +3397,10 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Pentacles 8 first effect mult x",
-          "per_level": null,
-          "op": null
+          "text": "Pentacles 8 first effect mult x"
         },
         {
-          "text": "Relic 17 is +x stronger",
-          "per_level": null,
-          "op": null
+          "text": "Relic 17 is +x stronger"
         }
       ],
       "id": "tarot-nine-of-pentacles",
@@ -3835,14 +3413,10 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Pentacles 9 first effect mult x",
-          "per_level": null,
-          "op": null
+          "text": "Pentacles 9 first effect mult x"
         },
         {
-          "text": "Makes Pentacles 8's effect +x stronger",
-          "per_level": null,
-          "op": null
+          "text": "Makes Pentacles 8's effect +x stronger"
         }
       ],
       "id": "tarot-ten-of-pentacles",
@@ -3855,14 +3429,10 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Pentacles 10 first effect mult x",
-          "per_level": null,
-          "op": null
+          "text": "Pentacles 10 first effect mult x"
         },
         {
-          "text": "First 10 pentacles tarot cards effects are +x stronger",
-          "per_level": null,
-          "op": null
+          "text": "First 10 pentacles tarot cards effects are +x stronger"
         }
       ],
       "id": "tarot-page-of-pentacles",
@@ -3875,14 +3445,10 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Pentacles Page first effect mult x",
-          "per_level": null,
-          "op": null
+          "text": "Pentacles Page first effect mult x"
         },
         {
-          "text": "Relic 41 eff. mult +x",
-          "per_level": null,
-          "op": null
+          "text": "Relic 41 eff. mult +x"
         }
       ],
       "id": "tarot-knight-of-pentacles",
@@ -3895,14 +3461,10 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Pentacles Knight first effect mult x",
-          "per_level": null,
-          "op": null
+          "text": "Pentacles Knight first effect mult x"
         },
         {
-          "text": "Ach 231 reward is multiplied by +x",
-          "per_level": null,
-          "op": null
+          "text": "Ach 231 reward is multiplied by +x"
         }
       ],
       "id": "tarot-queen-of-pentacles",
@@ -3915,14 +3477,10 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Pentacles Queen first effect mult x",
-          "per_level": null,
-          "op": null
+          "text": "Pentacles Queen first effect mult x"
         },
         {
-          "text": "Unlocks 2nd earth factor and multiply 1st factor for all elements by x (aft. e308 softcap)",
-          "per_level": null,
-          "op": null
+          "text": "Unlocks 2nd earth factor and multiply 1st factor for all elements by x (aft. e308 softcap)"
         }
       ],
       "id": "tarot-king-of-pentacles",
@@ -3935,14 +3493,10 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Base Cups Generation /s",
-          "per_level": null,
-          "op": null
+          "text": "Base Cups Generation /s"
         },
         {
-          "text": "Zodiac Quality +^",
-          "per_level": null,
-          "op": null
+          "text": "Zodiac Quality +^"
         }
       ],
       "id": "tarot-ace-of-cups",
@@ -3955,14 +3509,10 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Cups 1 first effect mult x",
-          "per_level": null,
-          "op": null
+          "text": "Cups 1 first effect mult x"
         },
         {
-          "text": "Relic 37 Effect +^",
-          "per_level": null,
-          "op": null
+          "text": "Relic 37 Effect +^"
         }
       ],
       "id": "tarot-two-of-cups",
@@ -3975,14 +3525,10 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Cups 2 first effect mult x",
-          "per_level": null,
-          "op": null
+          "text": "Cups 2 first effect mult x"
         },
         {
-          "text": "Relic 33 Effect x",
-          "per_level": null,
-          "op": null
+          "text": "Relic 33 Effect x"
         }
       ],
       "id": "tarot-three-of-cups",
@@ -3995,14 +3541,10 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Cups 3 first effect mult x",
-          "per_level": null,
-          "op": null
+          "text": "Cups 3 first effect mult x"
         },
         {
-          "text": "Relic 14 power +^",
-          "per_level": null,
-          "op": null
+          "text": "Relic 14 power +^"
         }
       ],
       "id": "tarot-four-of-cups",
@@ -4015,14 +3557,10 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Cups 4 first effect mult x",
-          "per_level": null,
-          "op": null
+          "text": "Cups 4 first effect mult x"
         },
         {
-          "text": "Refine Node 16 Effect +x",
-          "per_level": null,
-          "op": null
+          "text": "Refine Node 16 Effect +x"
         }
       ],
       "id": "tarot-five-of-cups",
@@ -4035,14 +3573,10 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Cups 5 first effect mult x",
-          "per_level": null,
-          "op": null
+          "text": "Cups 5 first effect mult x"
         },
         {
-          "text": "Polish Spear Effect +^",
-          "per_level": null,
-          "op": null
+          "text": "Polish Spear Effect +^"
         }
       ],
       "id": "tarot-six-of-cups",
@@ -4055,14 +3589,10 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Cups 6 first effect mult x",
-          "per_level": null,
-          "op": null
+          "text": "Cups 6 first effect mult x"
         },
         {
-          "text": "Refine Node 52 Effect +x",
-          "per_level": null,
-          "op": null
+          "text": "Refine Node 52 Effect +x"
         }
       ],
       "id": "tarot-seven-of-cups",
@@ -4075,14 +3605,10 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Cups 7 first effect mult x",
-          "per_level": null,
-          "op": null
+          "text": "Cups 7 first effect mult x"
         },
         {
-          "text": "Runes Generation +x (Rounded Total)",
-          "per_level": null,
-          "op": null
+          "text": "Runes Generation +x (Rounded Total)"
         }
       ],
       "id": "tarot-eight-of-cups",
@@ -4095,14 +3621,10 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Cups 8 first effect mult x",
-          "per_level": null,
-          "op": null
+          "text": "Cups 8 first effect mult x"
         },
         {
-          "text": "Basically divides the exponent of base mineral cost by +/",
-          "per_level": null,
-          "op": null
+          "text": "Basically divides the exponent of base mineral cost by +/"
         }
       ],
       "id": "tarot-nine-of-cups",
@@ -4115,14 +3637,10 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Cups 9 first effect mult x",
-          "per_level": null,
-          "op": null
+          "text": "Cups 9 first effect mult x"
         },
         {
-          "text": "Post 100 Polish Upgrades Cost Scaling is +x weaker",
-          "per_level": null,
-          "op": null
+          "text": "Post 100 Polish Upgrades Cost Scaling is +x weaker"
         }
       ],
       "id": "tarot-ten-of-cups",
@@ -4135,14 +3653,10 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Cups 10 first effect mult x",
-          "per_level": null,
-          "op": null
+          "text": "Cups 10 first effect mult x"
         },
         {
-          "text": "First 10 cups tarot cards effects are +x stronger",
-          "per_level": null,
-          "op": null
+          "text": "First 10 cups tarot cards effects are +x stronger"
         }
       ],
       "id": "tarot-page-of-cups",
@@ -4155,14 +3669,10 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Cups Page first effect mult x",
-          "per_level": null,
-          "op": null
+          "text": "Cups Page first effect mult x"
         },
         {
-          "text": "Special Minerals Merge Factor (SMMF) +",
-          "per_level": null,
-          "op": null
+          "text": "Special Minerals Merge Factor (SMMF) +"
         }
       ],
       "id": "tarot-knight-of-cups",
@@ -4175,14 +3685,10 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Cups Knight first effect mult x",
-          "per_level": null,
-          "op": null
+          "text": "Cups Knight first effect mult x"
         },
         {
-          "text": "Ach 233 reward is multiplied by +x",
-          "per_level": null,
-          "op": null
+          "text": "Ach 233 reward is multiplied by +x"
         }
       ],
       "id": "tarot-queen-of-cups",
@@ -4195,14 +3701,10 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Cups Queen first effect mult x",
-          "per_level": null,
-          "op": null
+          "text": "Cups Queen first effect mult x"
         },
         {
-          "text": "Unlocks 2nd water factor and multiply 1st factor for all elements by x (aft. e308 softcap)",
-          "per_level": null,
-          "op": null
+          "text": "Unlocks 2nd water factor and multiply 1st factor for all elements by x (aft. e308 softcap)"
         }
       ],
       "id": "tarot-king-of-cups",
@@ -4215,9 +3717,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Instantly spawns a black gem with Lv.# (base lvl + 1)",
-          "per_level": null,
-          "op": null
+          "text": "Instantly spawns a black gem with Lv.# (base lvl + 1)"
         }
       ],
       "id": "tarot-the-fool",
@@ -4230,9 +3730,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "You will get # (base 3,600) seconds of production of currently generating element (you have to generate any element to use this arcan)",
-          "per_level": null,
-          "op": null
+          "text": "You will get # (base 3,600) seconds of production of currently generating element (you have to generate any element to use this arcan)"
         }
       ],
       "id": "tarot-the-magician",
@@ -4245,9 +3743,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Increases Refine Node 1 effect by x# (base 2.000) during some times",
-          "per_level": null,
-          "op": null
+          "text": "Increases Refine Node 1 effect by x# (base 2.000) during some times"
         }
       ],
       "id": "tarot-the-high-priestess",
@@ -4260,9 +3756,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Slowly Increases and Decreases Zodiac Sell Cost by x# (base 10.00)",
-          "per_level": null,
-          "op": null
+          "text": "Slowly Increases and Decreases Zodiac Sell Cost by x# (base 10.00)"
         }
       ],
       "id": "tarot-the-empress",
@@ -4275,9 +3769,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Slowly Increases and Decreases Mineral Cost Exp by # (base 0.200)",
-          "per_level": null,
-          "op": null
+          "text": "Slowly Increases and Decreases Mineral Cost Exp by # (base 0.200)"
         }
       ],
       "id": "tarot-the-emperor",
@@ -4290,9 +3782,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Levels Up all of your common minerals by # (base 1.000) (but can't be bigger than max spawn level + 50)",
-          "per_level": null,
-          "op": null
+          "text": "Levels Up all of your common minerals by # (base 1.000) (but can't be bigger than max spawn level + 50)"
         }
       ],
       "id": "tarot-the-hierophant",
@@ -4305,9 +3795,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Slowly Increases and Decreases Relic 28 effect by # (base 0.100)",
-          "per_level": null,
-          "op": null
+          "text": "Slowly Increases and Decreases Relic 28 effect by # (base 0.100)"
         }
       ],
       "id": "tarot-the-lovers",
@@ -4320,9 +3808,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Decreases your SMS factor by # (base 1,000)",
-          "per_level": null,
-          "op": null
+          "text": "Decreases your SMS factor by # (base 1,000)"
         }
       ],
       "id": "tarot-the-chariot",
@@ -4335,9 +3821,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Keep the lowest cost for spawning next Special Minerals (4.000 secs)",
-          "per_level": null,
-          "op": null
+          "text": "Keep the lowest cost for spawning next Special Minerals (4.000 secs)"
         }
       ],
       "id": "tarot-justice",
@@ -4350,9 +3834,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Make Other Tarot Arcans be x# (base 1.050) more effective for some time",
-          "per_level": null,
-          "op": null
+          "text": "Make Other Tarot Arcans be x# (base 1.050) more effective for some time"
         }
       ],
       "id": "tarot-the-hermit",
@@ -4365,9 +3847,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Gambling :D - 50% - get more tarot draws, 50% - lost them. Max amount of gain/lose - # (base 10.00) (they can go negative, but you need positive amount of draws to use it)",
-          "per_level": null,
-          "op": null
+          "text": "Gambling :D - 50% - get more tarot draws, 50% - lost them. Max amount of gain/lose - # (base 10.00) (they can go negative, but you need positive amount of draws to use it)"
         }
       ],
       "id": "tarot-wheel-of-fortune",
@@ -4380,9 +3860,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Slowly Increases and Decreases your Attack Exponent by # (base 0.100)",
-          "per_level": null,
-          "op": null
+          "text": "Slowly Increases and Decreases your Attack Exponent by # (base 0.100)"
         }
       ],
       "id": "tarot-the-strength",
@@ -4395,9 +3873,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Makes Polish Knuckles +# (base 40.00) levels effective",
-          "per_level": null,
-          "op": null
+          "text": "Makes Polish Knuckles +# (base 40.00) levels effective"
         }
       ],
       "id": "tarot-the-hanged-man",
@@ -4410,9 +3886,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "During this skill is active will randomly perform refine prestige, granting x# (base 10.00) more RfP",
-          "per_level": null,
-          "op": null
+          "text": "During this skill is active will randomly perform refine prestige, granting x# (base 10.00) more RfP"
         }
       ],
       "id": "tarot-death",
@@ -4425,9 +3899,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Add # (base 3.000) zodiacs of that type which is in your Fortune Pars slot, but with stats you'd get on Unity",
-          "per_level": null,
-          "op": null
+          "text": "Add # (base 3.000) zodiacs of that type which is in your Fortune Pars slot, but with stats you'd get on Unity"
         }
       ],
       "id": "tarot-temperance",
@@ -4440,9 +3912,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Will boost 1st effect of all common tarot cards by +x (base 0.007) with a chance of 66%. With a chance 33% will apply one of 5 debuffs (descr. in help). Have 1% chance to take your soul (-1 Soul )",
-          "per_level": null,
-          "op": null
+          "text": "Will boost 1st effect of all common tarot cards by +x (base 0.007) with a chance of 66%. With a chance 33% will apply one of 5 debuffs (descr. in help). Have 1% chance to take your soul (-1 Soul )"
         }
       ],
       "id": "tarot-the-devil",
@@ -4455,9 +3925,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Will destroy random special gem granting #^[Gem Lv] (base 1.800) SMP to this gem",
-          "per_level": null,
-          "op": null
+          "text": "Will destroy random special gem granting #^[Gem Lv] (base 1.800) SMP to this gem"
         }
       ],
       "id": "tarot-the-tower",
@@ -4470,9 +3938,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Multiplies Your Luck by amount of stars you have powered to ^# (base 0.400)",
-          "per_level": null,
-          "op": null
+          "text": "Multiplies Your Luck by amount of stars you have powered to ^# (base 0.400)"
         }
       ],
       "id": "tarot-the-star",
@@ -4485,9 +3951,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Upgrades zodiac on moon postiton (position) x# (base 1,000) quality. But it's weaker after e1,000 quality",
-          "per_level": null,
-          "op": null
+          "text": "Upgrades zodiac on moon postiton (position) x# (base 1,000) quality. But it's weaker after e1,000 quality"
         }
       ],
       "id": "tarot-the-moon",
@@ -4500,9 +3964,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Gives # (base 1.000) levels to a random card you already have",
-          "per_level": null,
-          "op": null
+          "text": "Gives # (base 1.000) levels to a random card you already have"
         }
       ],
       "id": "tarot-the-sun",
@@ -4515,9 +3977,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Makes your tarot resources be equal and increase their values by ^# (base 0.800) of they value",
-          "per_level": null,
-          "op": null
+          "text": "Makes your tarot resources be equal and increase their values by ^# (base 0.800) of they value"
         }
       ],
       "id": "tarot-judgement",
@@ -4530,9 +3990,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Decrease cooldowns of all previous arcanes (Arcans) by # (base 4,000) sec (seconds)",
-          "per_level": null,
-          "op": null
+          "text": "Decrease cooldowns of all previous arcanes (Arcans) by # (base 4,000) sec (seconds)"
         }
       ],
       "id": "tarot-the-world",
@@ -4545,9 +4003,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Score",
-          "per_level": null,
-          "op": null
+          "text": "Score"
         }
       ],
       "id": "fire-factor-1",
@@ -4560,9 +4016,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Score Exponent",
-          "per_level": null,
-          "op": null
+          "text": "Score Exponent"
         }
       ],
       "id": "fire-factor-2",
@@ -4575,9 +4029,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Asc. Power",
-          "per_level": null,
-          "op": null
+          "text": "Asc. Power"
         }
       ],
       "id": "fire-factor-3",
@@ -4590,9 +4042,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Infinities",
-          "per_level": null,
-          "op": null
+          "text": "Infinities"
         }
       ],
       "id": "earth-factor-1",
@@ -4605,9 +4055,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Gen Exp.",
-          "per_level": null,
-          "op": null
+          "text": "Gen Exp."
         }
       ],
       "id": "earth-factor-2",
@@ -4620,9 +4068,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "IP",
-          "per_level": null,
-          "op": null
+          "text": "IP"
         }
       ],
       "id": "earth-factor-3",
@@ -4635,9 +4081,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Eternities",
-          "per_level": null,
-          "op": null
+          "text": "Eternities"
         }
       ],
       "id": "wind-factor-1",
@@ -4650,9 +4094,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Supernovae",
-          "per_level": null,
-          "op": null
+          "text": "Supernovae"
         }
       ],
       "id": "wind-factor-2",
@@ -4665,9 +4107,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "EP",
-          "per_level": null,
-          "op": null
+          "text": "EP"
         }
       ],
       "id": "wind-factor-3",
@@ -4680,9 +4120,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Luck",
-          "per_level": null,
-          "op": null
+          "text": "Luck"
         }
       ],
       "id": "water-factor-1",
@@ -4695,9 +4133,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Zodiac Quality",
-          "per_level": null,
-          "op": null
+          "text": "Zodiac Quality"
         }
       ],
       "id": "water-factor-2",
@@ -4710,9 +4146,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Ach 29 Reward",
-          "per_level": null,
-          "op": null
+          "text": "Ach 29 Reward"
         }
       ],
       "id": "water-factor-3",
@@ -4725,9 +4159,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Increase power for factor 1 for fire by 0.25 Increases the power on the score multiplier for fire",
-          "per_level": null,
-          "op": null
+          "text": "Increase power for factor 1 for fire by 0.25 Increases the power on the score multiplier for fire"
         }
       ],
       "id": "fire-node-1",
@@ -4740,9 +4172,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Increase Ascension Power from VP based on you current fire",
-          "per_level": null,
-          "op": null
+          "text": "Increase Ascension Power from VP based on you current fire"
         }
       ],
       "id": "fire-node-2",
@@ -4755,9 +4185,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Attack level past 3600 boosts Fire generation Formula is:",
-          "per_level": null,
-          "op": null
+          "text": "Attack level past 3600 boosts Fire generation Formula is:"
         }
       ],
       "id": "fire-node-3",
@@ -4770,9 +4198,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Fire boosts Relic 26 effect (improves Quality donut)",
-          "per_level": null,
-          "op": null
+          "text": "Fire boosts Relic 26 effect (improves Quality donut)"
         }
       ],
       "id": "fire-node-4",
@@ -4785,9 +4211,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Fire boosts Relic 31 effect (mineral cost)",
-          "per_level": null,
-          "op": null
+          "text": "Fire boosts Relic 31 effect (mineral cost)"
         }
       ],
       "id": "fire-node-5",
@@ -4800,9 +4224,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Fire adds base to Refine Tree Node 60",
-          "per_level": null,
-          "op": null
+          "text": "Fire adds base to Refine Tree Node 60"
         }
       ],
       "id": "fire-node-6",
@@ -4815,9 +4237,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Fire boosts its own factor 2",
-          "per_level": null,
-          "op": null
+          "text": "Fire boosts its own factor 2"
         }
       ],
       "id": "fire-node-7",
@@ -4830,9 +4250,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Wands boost Fire generation (factor 1)",
-          "per_level": null,
-          "op": null
+          "text": "Wands boost Fire generation (factor 1)"
         }
       ],
       "id": "fire-node-8",
@@ -4845,9 +4263,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Fire boosts first card bonuses for all wands cards",
-          "per_level": null,
-          "op": null
+          "text": "Fire boosts first card bonuses for all wands cards"
         }
       ],
       "id": "fire-node-9",
@@ -4860,9 +4276,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Relic 45 effect is multiplied based on your fire (SMP Exp)",
-          "per_level": null,
-          "op": null
+          "text": "Relic 45 effect is multiplied based on your fire (SMP Exp)"
         }
       ],
       "id": "fire-node-10",
@@ -4875,9 +4289,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Unlocks third factor for fire",
-          "per_level": null,
-          "op": null
+          "text": "Unlocks third factor for fire"
         }
       ],
       "id": "fire-node-11",
@@ -4890,9 +4302,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Increase power for factor 1 for earth by 2 Increases power for Infinities multipliter for Earth",
-          "per_level": null,
-          "op": null
+          "text": "Increase power for factor 1 for earth by 2 Increases power for Infinities multipliter for Earth"
         }
       ],
       "id": "earth-node-1",
@@ -4905,9 +4315,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Earth boosts Refine Node 1 effect",
-          "per_level": null,
-          "op": null
+          "text": "Earth boosts Refine Node 1 effect"
         }
       ],
       "id": "earth-node-2",
@@ -4920,9 +4328,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Earth boosts Gold Gain",
-          "per_level": null,
-          "op": null
+          "text": "Earth boosts Gold Gain"
         }
       ],
       "id": "earth-node-3",
@@ -4935,9 +4341,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Earth boosts Relic 32 effect (Polish points gain)",
-          "per_level": null,
-          "op": null
+          "text": "Earth boosts Relic 32 effect (Polish points gain)"
         }
       ],
       "id": "earth-node-4",
@@ -4950,9 +4354,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Earth adds base to Refine Node 50",
-          "per_level": null,
-          "op": null
+          "text": "Earth adds base to Refine Node 50"
         }
       ],
       "id": "earth-node-5",
@@ -4965,9 +4367,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Earth boosts Relic 37 (Global Element Mult.)",
-          "per_level": null,
-          "op": null
+          "text": "Earth boosts Relic 37 (Global Element Mult.)"
         }
       ],
       "id": "earth-node-6",
@@ -4980,9 +4380,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Earth boosts it's own factor 2",
-          "per_level": null,
-          "op": null
+          "text": "Earth boosts it's own factor 2"
         }
       ],
       "id": "earth-node-7",
@@ -4995,9 +4393,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Pentacles boost Earth Generation (factor 1)",
-          "per_level": null,
-          "op": null
+          "text": "Pentacles boost Earth Generation (factor 1)"
         }
       ],
       "id": "earth-node-8",
@@ -5010,9 +4406,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Earth boosts first card bonuses for all pentacles cards",
-          "per_level": null,
-          "op": null
+          "text": "Earth boosts first card bonuses for all pentacles cards"
         }
       ],
       "id": "earth-node-9",
@@ -5025,9 +4419,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Unlocks third factor for earth",
-          "per_level": null,
-          "op": null
+          "text": "Unlocks third factor for earth"
         }
       ],
       "id": "earth-node-10",
@@ -5040,9 +4432,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Increase power for factor 1 for wind by 3 Increases power for Eternities multiplier for Wind",
-          "per_level": null,
-          "op": null
+          "text": "Increase power for factor 1 for wind by 3 Increases power for Eternities multiplier for Wind"
         }
       ],
       "id": "wind-node-1",
@@ -5055,9 +4445,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Current wind divides base special mineral cost",
-          "per_level": null,
-          "op": null
+          "text": "Current wind divides base special mineral cost"
         }
       ],
       "id": "wind-node-2",
@@ -5070,9 +4458,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Wind boosts Relic 25 effect (Luck donut)",
-          "per_level": null,
-          "op": null
+          "text": "Wind boosts Relic 25 effect (Luck donut)"
         }
       ],
       "id": "wind-node-3",
@@ -5085,9 +4471,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "PP after 1.79e308 boosts Wind generation",
-          "per_level": null,
-          "op": null
+          "text": "PP after 1.79e308 boosts Wind generation"
         }
       ],
       "id": "wind-node-4",
@@ -5100,9 +4484,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Wind boosts Relic 33 effect (RfP gain)",
-          "per_level": null,
-          "op": null
+          "text": "Wind boosts Relic 33 effect (RfP gain)"
         }
       ],
       "id": "wind-node-5",
@@ -5115,9 +4497,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Relic 1 now also applies to Attacks Asc. Power",
-          "per_level": null,
-          "op": null
+          "text": "Relic 1 now also applies to Attacks Asc. Power"
         }
       ],
       "id": "wind-node-6",
@@ -5130,9 +4510,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Wind boosts its own factor 2",
-          "per_level": null,
-          "op": null
+          "text": "Wind boosts its own factor 2"
         }
       ],
       "id": "wind-node-7",
@@ -5145,9 +4523,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Swords boost Wind Generation (factor 1)",
-          "per_level": null,
-          "op": null
+          "text": "Swords boost Wind Generation (factor 1)"
         }
       ],
       "id": "wind-node-8",
@@ -5160,9 +4536,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Wind boosts first card bonuses for all swords cards",
-          "per_level": null,
-          "op": null
+          "text": "Wind boosts first card bonuses for all swords cards"
         }
       ],
       "id": "wind-node-9",
@@ -5175,9 +4549,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Relic 41 effect is multiplied based on your wind (Black Gem Effect, for Tarot Draws)",
-          "per_level": null,
-          "op": null
+          "text": "Relic 41 effect is multiplied based on your wind (Black Gem Effect, for Tarot Draws)"
         }
       ],
       "id": "wind-node-10",
@@ -5190,9 +4562,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Wind slowly boosts Refine Node 69",
-          "per_level": null,
-          "op": null
+          "text": "Wind slowly boosts Refine Node 69"
         }
       ],
       "id": "wind-node-11",
@@ -5205,9 +4575,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Unlocks third factor for wind",
-          "per_level": null,
-          "op": null
+          "text": "Unlocks third factor for wind"
         }
       ],
       "id": "wind-node-12",
@@ -5220,9 +4588,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Each Water Zodiac multiplies your luck by x1.1",
-          "per_level": null,
-          "op": null
+          "text": "Each Water Zodiac multiplies your luck by x1.1"
         }
       ],
       "id": "water-node-1",
@@ -5235,9 +4601,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Water boosts Refine Node 18 effect (Magnet Chance)",
-          "per_level": null,
-          "op": null
+          "text": "Water boosts Refine Node 18 effect (Magnet Chance)"
         }
       ],
       "id": "water-node-2",
@@ -5250,9 +4614,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Water boosts Relic 24 effect (Game Speed Donut)",
-          "per_level": null,
-          "op": null
+          "text": "Water boosts Relic 24 effect (Game Speed Donut)"
         }
       ],
       "id": "water-node-3",
@@ -5265,9 +4627,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Water boosts Relic 34 effect (Rune Generation Speed)",
-          "per_level": null,
-          "op": null
+          "text": "Water boosts Relic 34 effect (Rune Generation Speed)"
         }
       ],
       "id": "water-node-4",
@@ -5280,9 +4640,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Water boosts first node for all elements (at different rates)",
-          "per_level": null,
-          "op": null
+          "text": "Water boosts first node for all elements (at different rates)"
         }
       ],
       "id": "water-node-5",
@@ -5295,9 +4653,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Multiplies Refine Node 60 base by x2",
-          "per_level": null,
-          "op": null
+          "text": "Multiplies Refine Node 60 base by x2"
         }
       ],
       "id": "water-node-6",
@@ -5310,9 +4666,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Water boosts is own factor 2",
-          "per_level": null,
-          "op": null
+          "text": "Water boosts is own factor 2"
         }
       ],
       "id": "water-node-7",
@@ -5325,9 +4679,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Cups boost Water generation",
-          "per_level": null,
-          "op": null
+          "text": "Cups boost Water generation"
         }
       ],
       "id": "water-node-8",
@@ -5340,9 +4692,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Water boosts first card bonuses for all cups cards",
-          "per_level": null,
-          "op": null
+          "text": "Water boosts first card bonuses for all cups cards"
         }
       ],
       "id": "water-node-9",
@@ -5355,9 +4705,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Water boosts Global Element Mult",
-          "per_level": null,
-          "op": null
+          "text": "Water boosts Global Element Mult"
         }
       ],
       "id": "water-node-10",
@@ -5370,9 +4718,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Unlocks third factor for water",
-          "per_level": null,
-          "op": null
+          "text": "Unlocks third factor for water"
         }
       ],
       "id": "water-node-11",
