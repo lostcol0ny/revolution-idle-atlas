@@ -39,7 +39,9 @@ Node counts rolled up through each system's parent.
 
 ## Unresolved effects
 
-Nodes that describe an effect but point at no other node. Each one is either a resolver gap or an edge waiting to be written into `data/relationships.yaml`.
+Nodes that describe an effect but point at no other node.
+
+Some are resolver gaps, or edges waiting to be written into `data/relationships.yaml`. Others never will be: an effect that modifies a stat rather than a node — "a flat boost to Damage Mult" — has no node-to-node edge to resolve to. This is a search space, not a checklist.
 
 - `earth-factor-1`
 - `earth-factor-2`

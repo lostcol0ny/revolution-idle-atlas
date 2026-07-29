@@ -59,7 +59,10 @@ def _unresolved(ds: Dataset) -> list[str]:
     `requires` describes tree structure, not an effect, so an edge of that kind
     does not count as having resolved anything. This list is the extraction's
     accuracy gap made visible: it shrinks as the resolver improves and as
-    corrections land in relationships.yaml.
+    corrections land in relationships.yaml. It has a non-zero floor, though —
+    an effect that modifies a stat rather than a node has no node-to-node edge
+    to resolve to — so it is a search space to work through, not a list to
+    drive to empty.
     """
     resolved = {e.from_ for e in ds.edges if e.rel is not Rel.REQUIRES}
     return sorted(n.id for n in ds.nodes if n.effects and n.id not in resolved)
@@ -208,9 +211,15 @@ def render_markdown(report: CoverageReport) -> str:
     lines += ["", "## Unresolved effects", ""]
     if report.unresolved:
         lines.append(
-            "Nodes that describe an effect but point at no other node. Each one "
-            "is either a resolver gap or an edge waiting to be written into "
-            "`data/relationships.yaml`."
+            "Nodes that describe an effect but point at no other node."
+        )
+        lines.append("")
+        lines.append(
+            "Some are resolver gaps, or edges waiting to be written into "
+            "`data/relationships.yaml`. Others never will be: an effect that "
+            "modifies a stat rather than a node — \"a flat boost to Damage "
+            "Mult\" — has no node-to-node edge to resolve to. This is a search "
+            "space, not a checklist."
         )
         lines.append("")
         lines += [f"- `{node_id}`" for node_id in report.unresolved]
