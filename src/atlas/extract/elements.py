@@ -117,8 +117,9 @@ def _parse_upgrades(raw: str) -> ExtractResult:
             # and a per-line filter would silently drop that continuation.
             cells = [cell.strip() for cell in row.split("\n|")]
             cells[0] = cells[0].lstrip("|").strip()
-            # The table opener's "|+" caption row survives the split as a stray
-            # single cell; a real row is number, price, effect.
+            # The table opener carries its "|+" caption and "!" header cells into
+            # the first row, which this split yields as 2 cells; a real row is
+            # number, price, effect.
             if len(cells) < 3 or not cells[0].isdigit():
                 continue
             number, _price, effect = cells[0], cells[1], "\n".join(cells[2:])

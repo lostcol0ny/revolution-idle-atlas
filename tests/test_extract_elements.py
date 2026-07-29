@@ -222,6 +222,11 @@ def test_real_page_effect_text_keeps_its_continuation_line():
     assert "Infinities" in by_id["earth-node-1"].effects[0].text
     assert "Eternities" in by_id["wind-node-1"].effects[0].text
     assert "Black Gem Effect" in by_id["wind-node-10"].effects[0].text
+    # The fifth node. Its continuation line is `''Formula is:''` followed by a
+    # <math> block that `plain_text` strips, so the recovered text is a bare
+    # lead-in rather than a sentence — pinned anyway, because the line is either
+    # attached or it is not, and that is what this test measures.
+    assert "Formula is" in by_id["fire-node-3"].effects[0].text
     # The wiki's own typo ("multipliter"). Preserved verbatim: data/raw is read
     # only and the parser is not in the business of correcting the source.
     assert (
