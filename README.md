@@ -55,9 +55,9 @@ duplicate ids, self-edges, malformed YAML, a node whose `system` is not declared
 in the `systems` array, a system whose `parent` is not a declared system, a cycle
 in the system parent chain, or an out-of-range `targets_effect`). Warnings — a
 node pointing at a wiki page no longer in `data/raw/`, a page the wiki flags as
-work in progress paired with `documented` confidence, or a generated edge
-colliding with an earlier one on `(from, to, rel)` — are printed but never fail
-the build.
+work in progress paired with `documented` confidence, a `suppress` rule that
+matches no edge, or a generated edge colliding with an earlier one on
+`(from, to, rel)` — are printed but never fail the build.
 
 `atlas scrape` talks to a live, volunteer-run wiki. Do not run it in a loop. A
 scheduled GitHub Actions workflow runs it daily and opens a pull request when the

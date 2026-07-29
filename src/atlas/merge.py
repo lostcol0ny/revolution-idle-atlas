@@ -114,7 +114,8 @@ def merge(
                 severity="warning",
                 message=(
                     f"generated edge '{edge.from_}' -> '{edge.to}' ({edge.rel}) "
-                    f"collides with an earlier one and was discarded"
+                    f"collides with an earlier one on (from, to, rel); the "
+                    f"earlier one was discarded"
                 ),
                 path=derived_path,
             ))
