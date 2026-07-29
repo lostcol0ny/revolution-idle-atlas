@@ -1,0 +1,21 @@
+:root {
+  --sidebar-width: 280px;
+  --panel-width: 320px;
+  --border: #e2e8f0;
+  --text: #0f172a;
+  --muted: #64748b;
+  font-family: system-ui, -apple-system, sans-serif;
+  color: var(--text);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+#root {
+  height: 100vh;
+}
