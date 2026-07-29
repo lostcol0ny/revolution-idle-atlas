@@ -104,7 +104,7 @@ absent" and "no value" as the same thing.
 | Field | Type | Required | Notes |
 |---|---|---|---|
 | `id` | string | yes | Unique across all nodes. Edges reference this. |
-| `name` | string | yes | Human-readable display label. |
+| `name` | string | yes | Human-readable display label. For `relic-<n>` nodes this is composed at render time as `Relic <n> (<wiki name>)`, because players refer to relics by number; see below. |
 | `system` | string | yes | Which game system the node belongs to. **Free string, not an enum** — see below. |
 | `kind` | enum | yes | What sort of thing the node is. |
 | `wiki` | string | no | Wiki page title, optionally with a `#Section` anchor. |
@@ -124,6 +124,13 @@ and tolerate an id it has never seen.
 
 `kind`: `relic`, `stat`, `tree-node`, `currency`, `tarot-card`, `upgrade`,
 `group`.
+
+**Relic labels are composed, not stored.** A node whose `kind` is `relic` and whose `id`
+matches `relic-<n>` is emitted with `name` set to `Relic <n> (<name>)`. The composition
+happens in `src/atlas/render.py`, after the merge, because a name can arrive from either
+dataset file and composing it in the parser would be bypassed by any curated `name`
+override. When the underlying name is empty or already equal to `Relic <n>`, the bare
+`Relic <n>` is emitted — so `Relic 3 (Relic 3)` is unrepresentable.
 
 #### Effect
 

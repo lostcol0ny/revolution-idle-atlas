@@ -147,3 +147,55 @@ def test_nested_effect_fields_are_kept_when_set():
     )
     effect = to_graph(ds)["nodes"][0]["effects"][0]
     assert effect == {"text": "boosts things", "per_level": "+0.2", "op": "add"}
+
+
+def test_relic_name_is_composed_with_its_number():
+    ds = Dataset(
+        nodes=[Node(id="relic-18", name="Mythical Rune", system="relics", kind=Kind.RELIC)]
+    )
+    assert to_graph(ds)["nodes"][0]["name"] == "Relic 18 (Mythical Rune)"
+
+
+def test_a_relic_already_named_after_its_number_is_not_doubled():
+    # Makes "Relic 7 (Relic 7)" unrepresentable no matter which dataset file
+    # supplies the name. This is not hypothetical: two curated placeholders in
+    # data/relationships.yaml said exactly this until Part A removed them, and
+    # the guard means a future stale placeholder degrades to a plain label
+    # instead of a malformed one.
+    ds = Dataset(
+        nodes=[Node(id="relic-7", name="Relic 7", system="relics", kind=Kind.RELIC)]
+    )
+    assert to_graph(ds)["nodes"][0]["name"] == "Relic 7"
+
+
+def test_a_relic_with_a_blank_name_falls_back_to_the_bare_number():
+    ds = Dataset(nodes=[Node(id="relic-7", name="   ", system="relics", kind=Kind.RELIC)])
+    assert to_graph(ds)["nodes"][0]["name"] == "Relic 7"
+
+
+def test_a_non_relic_node_name_is_untouched():
+    # The composition is keyed on kind AND on the id shape. A stat that happens
+    # to be named "Relic 4 Booster" must survive verbatim.
+    ds = Dataset(
+        nodes=[Node(id="relic-4-booster", name="Relic 4 Booster", system="relics", kind=Kind.STAT)]
+    )
+    assert to_graph(ds)["nodes"][0]["name"] == "Relic 4 Booster"
+
+
+def test_a_relic_kind_node_whose_id_is_not_relic_n_is_untouched():
+    # Guards the id regex specifically. A group node like "relics-tier-3" is
+    # kind=relic but has no number to compose from, and must not become
+    # "Relic None (...)" or raise.
+    ds = Dataset(
+        nodes=[Node(id="relics-tier-3", name="Tier 3 Relics", system="relics", kind=Kind.RELIC)]
+    )
+    assert to_graph(ds)["nodes"][0]["name"] == "Tier 3 Relics"
+
+
+def test_composition_does_not_mutate_the_input_dataset():
+    # to_graph is called by the CLI after coverage analysis reads the same
+    # Dataset. If composition mutated in place, coverage.md and graph.json
+    # would disagree about every relic name depending on call order.
+    node = Node(id="relic-18", name="Mythical Rune", system="relics", kind=Kind.RELIC)
+    to_graph(Dataset(nodes=[node]))
+    assert node.name == "Mythical Rune"

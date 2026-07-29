@@ -12,7 +12,7 @@
       ],
       "id": "relic-1",
       "kind": "relic",
-      "name": "Silver Coin",
+      "name": "Relic 1 (Silver Coin)",
       "system": "relics",
       "wiki": "Relics"
     },
@@ -27,7 +27,7 @@
       ],
       "id": "relic-2",
       "kind": "relic",
-      "name": "Pinewood Bracelet",
+      "name": "Relic 2 (Pinewood Bracelet)",
       "system": "relics",
       "wiki": "Relics"
     },
@@ -57,7 +57,7 @@
       ],
       "id": "relic-4",
       "kind": "relic",
-      "name": "Four Leaf Clover",
+      "name": "Relic 4 (Four Leaf Clover)",
       "system": "relics",
       "wiki": "Relics"
     },
@@ -72,7 +72,7 @@
       ],
       "id": "relic-5",
       "kind": "relic",
-      "name": "Wolf Skull",
+      "name": "Relic 5 (Wolf Skull)",
       "system": "relics",
       "wiki": "Relics"
     },
@@ -87,7 +87,7 @@
       ],
       "id": "relic-6",
       "kind": "relic",
-      "name": "Rusty Silver Sword",
+      "name": "Relic 6 (Rusty Silver Sword)",
       "system": "relics",
       "wiki": "Relics"
     },
@@ -102,7 +102,7 @@
       ],
       "id": "relic-7",
       "kind": "relic",
-      "name": "Snail Statue",
+      "name": "Relic 7 (Snail Statue)",
       "system": "relics",
       "wiki": "Relics"
     },
@@ -117,7 +117,7 @@
       ],
       "id": "relic-8",
       "kind": "relic",
-      "name": "Golden Tooth",
+      "name": "Relic 8 (Golden Tooth)",
       "system": "relics",
       "wiki": "Relics"
     },
@@ -132,7 +132,7 @@
       ],
       "id": "relic-9",
       "kind": "relic",
-      "name": "Midas Hand",
+      "name": "Relic 9 (Midas Hand)",
       "system": "relics",
       "wiki": "Relics"
     },
@@ -147,7 +147,7 @@
       ],
       "id": "relic-10",
       "kind": "relic",
-      "name": "Rusty Car Engine",
+      "name": "Relic 10 (Rusty Car Engine)",
       "system": "relics",
       "wiki": "Relics"
     },
@@ -162,7 +162,7 @@
       ],
       "id": "relic-11",
       "kind": "relic",
-      "name": "Bottle of Divine Water",
+      "name": "Relic 11 (Bottle of Divine Water)",
       "system": "relics",
       "wiki": "Relics"
     },
@@ -177,7 +177,7 @@
       ],
       "id": "relic-12",
       "kind": "relic",
-      "name": "Sandstone Chest",
+      "name": "Relic 12 (Sandstone Chest)",
       "system": "relics",
       "wiki": "Relics"
     },
@@ -192,7 +192,7 @@
       ],
       "id": "relic-13",
       "kind": "relic",
-      "name": "Strategic Board Game",
+      "name": "Relic 13 (Strategic Board Game)",
       "system": "relics",
       "wiki": "Relics"
     },
@@ -207,7 +207,7 @@
       ],
       "id": "relic-14",
       "kind": "relic",
-      "name": "Palate Expander",
+      "name": "Relic 14 (Palate Expander)",
       "system": "relics",
       "wiki": "Relics"
     },
@@ -222,7 +222,7 @@
       ],
       "id": "relic-15",
       "kind": "relic",
-      "name": "Comfortable Telescope",
+      "name": "Relic 15 (Comfortable Telescope)",
       "system": "relics",
       "wiki": "Relics"
     },
@@ -237,7 +237,7 @@
       ],
       "id": "relic-16",
       "kind": "relic",
-      "name": "Cool Glasses",
+      "name": "Relic 16 (Cool Glasses)",
       "system": "relics",
       "wiki": "Relics"
     },
@@ -252,7 +252,7 @@
       ],
       "id": "relic-17",
       "kind": "relic",
-      "name": "Magical Magnet",
+      "name": "Relic 17 (Magical Magnet)",
       "system": "relics",
       "wiki": "Relics"
     },
@@ -267,7 +267,7 @@
       ],
       "id": "relic-18",
       "kind": "relic",
-      "name": "Mythical Rune",
+      "name": "Relic 18 (Mythical Rune)",
       "system": "relics",
       "wiki": "Relics"
     },
@@ -282,7 +282,7 @@
       ],
       "id": "relic-19",
       "kind": "relic",
-      "name": "Ancient Extractor",
+      "name": "Relic 19 (Ancient Extractor)",
       "system": "relics",
       "wiki": "Relics"
     },
@@ -296,7 +296,7 @@
       ],
       "id": "relic-20",
       "kind": "relic",
-      "name": "Magestic Halberd",
+      "name": "Relic 20 (Magestic Halberd)",
       "system": "relics",
       "wiki": "Relics"
     },
@@ -311,7 +311,7 @@
       ],
       "id": "relic-21",
       "kind": "relic",
-      "name": "Queen of Spades",
+      "name": "Relic 21 (Queen of Spades)",
       "system": "relics",
       "wiki": "Relics"
     },
@@ -326,7 +326,7 @@
       ],
       "id": "relic-22",
       "kind": "relic",
-      "name": "Nice easel",
+      "name": "Relic 22 (Nice easel)",
       "system": "relics",
       "wiki": "Relics"
     },
@@ -341,7 +341,7 @@
       ],
       "id": "relic-23",
       "kind": "relic",
-      "name": "Awesome Brush",
+      "name": "Relic 23 (Awesome Brush)",
       "system": "relics",
       "wiki": "Relics"
     },
@@ -356,7 +356,7 @@
       ],
       "id": "relic-24",
       "kind": "relic",
-      "name": "Hourglass",
+      "name": "Relic 24 (Hourglass)",
       "system": "relics",
       "wiki": "Relics"
     },
@@ -371,7 +371,7 @@
       ],
       "id": "relic-25",
       "kind": "relic",
-      "name": "Lucky Luck Crystal",
+      "name": "Relic 25 (Lucky Luck Crystal)",
       "system": "relics",
       "wiki": "Relics"
     },
@@ -386,7 +386,7 @@
       ],
       "id": "relic-26",
       "kind": "relic",
-      "name": "Toy Hammer",
+      "name": "Relic 26 (Toy Hammer)",
       "system": "relics",
       "wiki": "Relics"
     },
@@ -401,7 +401,7 @@
       ],
       "id": "relic-27",
       "kind": "relic",
-      "name": "Painting of the Castle",
+      "name": "Relic 27 (Painting of the Castle)",
       "system": "relics",
       "wiki": "Relics"
     },
@@ -416,7 +416,7 @@
       ],
       "id": "relic-28",
       "kind": "relic",
-      "name": "Two Souls",
+      "name": "Relic 28 (Two Souls)",
       "system": "relics",
       "wiki": "Relics"
     },
@@ -431,7 +431,7 @@
       ],
       "id": "relic-29",
       "kind": "relic",
-      "name": "Metal Detector",
+      "name": "Relic 29 (Metal Detector)",
       "system": "relics",
       "wiki": "Relics"
     },
@@ -446,7 +446,7 @@
       ],
       "id": "relic-30",
       "kind": "relic",
-      "name": "Cotton Candy",
+      "name": "Relic 30 (Cotton Candy)",
       "system": "relics",
       "wiki": "Relics"
     },
@@ -461,7 +461,7 @@
       ],
       "id": "relic-31",
       "kind": "relic",
-      "name": "Mastic Gum",
+      "name": "Relic 31 (Mastic Gum)",
       "system": "relics",
       "wiki": "Relics"
     },
@@ -476,7 +476,7 @@
       ],
       "id": "relic-32",
       "kind": "relic",
-      "name": "Futuristic Anvil",
+      "name": "Relic 32 (Futuristic Anvil)",
       "system": "relics",
       "wiki": "Relics"
     },
@@ -491,7 +491,7 @@
       ],
       "id": "relic-33",
       "kind": "relic",
-      "name": "Weapon Evolution Statue",
+      "name": "Relic 33 (Weapon Evolution Statue)",
       "system": "relics",
       "wiki": "Relics"
     },
@@ -506,7 +506,7 @@
       ],
       "id": "relic-34",
       "kind": "relic",
-      "name": "Impossible Rune",
+      "name": "Relic 34 (Impossible Rune)",
       "system": "relics",
       "wiki": "Relics"
     },
@@ -521,7 +521,7 @@
       ],
       "id": "relic-35",
       "kind": "relic",
-      "name": "Antique Wall Clock",
+      "name": "Relic 35 (Antique Wall Clock)",
       "system": "relics",
       "wiki": "Relics"
     },
@@ -536,7 +536,7 @@
       ],
       "id": "relic-36",
       "kind": "relic",
-      "name": "Wild Cucumber",
+      "name": "Relic 36 (Wild Cucumber)",
       "system": "relics",
       "wiki": "Relics"
     },
@@ -551,7 +551,7 @@
       ],
       "id": "relic-37",
       "kind": "relic",
-      "name": "The Venom-Tipped Charmer",
+      "name": "Relic 37 (The Venom-Tipped Charmer)",
       "system": "relics",
       "wiki": "Relics"
     },
@@ -566,7 +566,7 @@
       ],
       "id": "relic-38",
       "kind": "relic",
-      "name": "Smart Man",
+      "name": "Relic 38 (Smart Man)",
       "system": "relics",
       "wiki": "Relics"
     },
@@ -581,7 +581,7 @@
       ],
       "id": "relic-39",
       "kind": "relic",
-      "name": "Windmill Pendant",
+      "name": "Relic 39 (Windmill Pendant)",
       "system": "relics",
       "wiki": "Relics"
     },
@@ -596,7 +596,7 @@
       ],
       "id": "relic-40",
       "kind": "relic",
-      "name": "Ancient Gun",
+      "name": "Relic 40 (Ancient Gun)",
       "system": "relics",
       "wiki": "Relics"
     },
@@ -611,7 +611,7 @@
       ],
       "id": "relic-41",
       "kind": "relic",
-      "name": "Mayan Calendar",
+      "name": "Relic 41 (Mayan Calendar)",
       "system": "relics",
       "wiki": "Relics"
     },
@@ -626,7 +626,7 @@
       ],
       "id": "relic-42",
       "kind": "relic",
-      "name": "Very Very Black Gem",
+      "name": "Relic 42 (Very Very Black Gem)",
       "system": "relics",
       "wiki": "Relics"
     },
@@ -641,7 +641,7 @@
       ],
       "id": "relic-43",
       "kind": "relic",
-      "name": "Horrific Pentagram",
+      "name": "Relic 43 (Horrific Pentagram)",
       "system": "relics",
       "wiki": "Relics"
     },
@@ -656,7 +656,7 @@
       ],
       "id": "relic-44",
       "kind": "relic",
-      "name": "Ring Of Decieving",
+      "name": "Relic 44 (Ring Of Decieving)",
       "system": "relics",
       "wiki": "Relics"
     },
@@ -671,7 +671,7 @@
       ],
       "id": "relic-45",
       "kind": "relic",
-      "name": "Star Of The Highest Hopes",
+      "name": "Relic 45 (Star Of The Highest Hopes)",
       "system": "relics",
       "wiki": "Relics"
     },
@@ -686,7 +686,7 @@
       ],
       "id": "relic-46",
       "kind": "relic",
-      "name": "Duck-Pigeon Model",
+      "name": "Relic 46 (Duck-Pigeon Model)",
       "system": "relics",
       "wiki": "Relics"
     },
@@ -701,7 +701,7 @@
       ],
       "id": "relic-47",
       "kind": "relic",
-      "name": "Unknown Weapon",
+      "name": "Relic 47 (Unknown Weapon)",
       "system": "relics",
       "wiki": "Relics"
     },
@@ -716,7 +716,7 @@
       ],
       "id": "relic-48",
       "kind": "relic",
-      "name": "Blue Sponge",
+      "name": "Relic 48 (Blue Sponge)",
       "system": "relics",
       "wiki": "Relics"
     },
@@ -731,7 +731,7 @@
       ],
       "id": "relic-49",
       "kind": "relic",
-      "name": "Alcantara Emblem",
+      "name": "Relic 49 (Alcantara Emblem)",
       "system": "relics",
       "wiki": "Relics"
     },
@@ -746,7 +746,7 @@
       ],
       "id": "relic-50",
       "kind": "relic",
-      "name": "Troll Face",
+      "name": "Relic 50 (Troll Face)",
       "system": "relics",
       "wiki": "Relics"
     },
@@ -761,7 +761,7 @@
       ],
       "id": "relic-51",
       "kind": "relic",
-      "name": "Statue of a Real Man",
+      "name": "Relic 51 (Statue of a Real Man)",
       "system": "relics",
       "wiki": "Relics"
     },
@@ -776,7 +776,7 @@
       ],
       "id": "relic-52",
       "kind": "relic",
-      "name": "Whale Bomb",
+      "name": "Relic 52 (Whale Bomb)",
       "system": "relics",
       "wiki": "Relics"
     },
@@ -791,7 +791,7 @@
       ],
       "id": "relic-53",
       "kind": "relic",
-      "name": "Cursed Tarot Card",
+      "name": "Relic 53 (Cursed Tarot Card)",
       "system": "relics",
       "wiki": "Relics"
     },
@@ -806,7 +806,7 @@
       ],
       "id": "relic-54",
       "kind": "relic",
-      "name": "Ancient Mythical Rune",
+      "name": "Relic 54 (Ancient Mythical Rune)",
       "system": "relics",
       "wiki": "Relics"
     },
@@ -821,7 +821,7 @@
       ],
       "id": "relic-55",
       "kind": "relic",
-      "name": "Flame Trident",
+      "name": "Relic 55 (Flame Trident)",
       "system": "relics",
       "wiki": "Relics"
     },
@@ -836,7 +836,7 @@
       ],
       "id": "relic-56",
       "kind": "relic",
-      "name": "Beef Stew",
+      "name": "Relic 56 (Beef Stew)",
       "system": "relics",
       "wiki": "Relics"
     },
@@ -851,7 +851,7 @@
       ],
       "id": "relic-57",
       "kind": "relic",
-      "name": "Oldschool Cards",
+      "name": "Relic 57 (Oldschool Cards)",
       "system": "relics",
       "wiki": "Relics"
     },
@@ -866,7 +866,7 @@
       ],
       "id": "relic-58",
       "kind": "relic",
-      "name": "Island Statue",
+      "name": "Relic 58 (Island Statue)",
       "system": "relics",
       "wiki": "Relics"
     },
@@ -881,7 +881,7 @@
       ],
       "id": "relic-59",
       "kind": "relic",
-      "name": "Mythical Triangle",
+      "name": "Relic 59 (Mythical Triangle)",
       "system": "relics",
       "wiki": "Relics"
     },
@@ -896,7 +896,7 @@
       ],
       "id": "relic-60",
       "kind": "relic",
-      "name": "True Monkey",
+      "name": "Relic 60 (True Monkey)",
       "system": "relics",
       "wiki": "Relics"
     },
@@ -911,7 +911,7 @@
       ],
       "id": "relic-61",
       "kind": "relic",
-      "name": "Sick Swan",
+      "name": "Relic 61 (Sick Swan)",
       "system": "relics",
       "wiki": "Relics"
     },
@@ -926,7 +926,7 @@
       ],
       "id": "relic-62",
       "kind": "relic",
-      "name": "Hairy Coconut",
+      "name": "Relic 62 (Hairy Coconut)",
       "system": "relics",
       "wiki": "Relics"
     },
@@ -941,7 +941,7 @@
       ],
       "id": "relic-63",
       "kind": "relic",
-      "name": "Birdkid Statue",
+      "name": "Relic 63 (Birdkid Statue)",
       "system": "relics",
       "wiki": "Relics"
     },
@@ -956,7 +956,7 @@
       ],
       "id": "relic-64",
       "kind": "relic",
-      "name": "Endoplasmic Reticulum Nucleus",
+      "name": "Relic 64 (Endoplasmic Reticulum Nucleus)",
       "system": "relics",
       "wiki": "Relics"
     },
@@ -970,7 +970,7 @@
       ],
       "id": "relic-65",
       "kind": "relic",
-      "name": "Cap With A Wig",
+      "name": "Relic 65 (Cap With A Wig)",
       "system": "relics",
       "wiki": "Relics"
     },
@@ -985,7 +985,7 @@
       ],
       "id": "relic-66",
       "kind": "relic",
-      "name": "Spring Crocodile",
+      "name": "Relic 66 (Spring Crocodile)",
       "system": "relics",
       "wiki": "Relics"
     },
@@ -1000,7 +1000,7 @@
       ],
       "id": "relic-67",
       "kind": "relic",
-      "name": "Galactic Mind",
+      "name": "Relic 67 (Galactic Mind)",
       "system": "relics",
       "wiki": "Relics"
     },
@@ -1015,7 +1015,7 @@
       ],
       "id": "relic-68",
       "kind": "relic",
-      "name": "Fortune Teller Monument",
+      "name": "Relic 68 (Fortune Teller Monument)",
       "system": "relics",
       "wiki": "Relics"
     },
@@ -1045,7 +1045,7 @@
       ],
       "id": "relic-70",
       "kind": "relic",
-      "name": "Singular Spectrogram",
+      "name": "Relic 70 (Singular Spectrogram)",
       "system": "relics",
       "wiki": "Relics"
     },

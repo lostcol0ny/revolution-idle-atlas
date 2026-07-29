@@ -243,9 +243,9 @@ def test_build_merges_the_derived_file_when_present(tmp_path):
     names = [n["name"] for n in doc["nodes"]]
     # relic-39 only exists in derived.yaml — if it's absent, derived was never read.
     assert "Relic 39" in names
-    # Curated name wins for relic-38.
-    assert "Smart Man" in names
-    assert "Relic 38" not in names
+    # Curated name wins for relic-38; render composes it into "Relic 38 (Smart Man)".
+    assert "Relic 38 (Smart Man)" in names
+    assert "Smart Man" not in names
 
 
 def test_build_warns_about_a_suppression_that_matches_nothing(tmp_path, capsys):
