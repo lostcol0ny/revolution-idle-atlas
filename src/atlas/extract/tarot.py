@@ -1,7 +1,13 @@
 import re
 from pathlib import Path
 
-from atlas.extract.refs import plain_text, resolve, slugify, template_fields
+from atlas.extract.refs import (
+    _ORDINALS,
+    plain_text,
+    resolve,
+    slugify,
+    template_fields,
+)
 from atlas.extract.result import ExtractResult
 from atlas.models import Edge, EdgeConfidence, Effect, Node
 
@@ -18,10 +24,16 @@ _TEMPLATE_RE = re.compile(
 # Suit cards declare two effects under effect1/effect2; Arcans declare one
 # under the bare "effect" key. Ordering matters: `targets_effect` is an index
 # into the effects list, and that list is assembled in this order.
+#
+# The Arcans template also carries `duration` and `cooldown`, which are read by
+# template_fields and then deliberately discarded: they describe an activated
+# skill's timing, and neither Node nor Effect has a field for it. They are the
+# only information the Arcans schema carries that the suit schema does not, so
+# their absence downstream is a modelling gap, not a parsing oversight.
 _EFFECT_FIELDS = ("effect", "effect1", "effect2")
 
-# "Swords Knight first effect mult x" — Suit + rank/number, then "first effect".
-# The resolver in refs.py handles `rank of suit` prose but not this compact
+# "Swords Knight first effect mult x" — suit first, then rank or number. The
+# resolver in refs.py handles `rank of suit` prose but not this compact
 # suit-internal shorthand; the parser handles it here where the card names
 # themselves are in hand to validate against.
 _SUITS = ("swords", "wands", "pentacles", "cups")
@@ -40,10 +52,17 @@ _NUMBER_TO_RANK: dict[str, str] = {
 # Named ranks that appear literally in the shorthand (e.g. "Swords Page").
 _NAMED_RANKS = ("ace", "page", "knight", "queen", "king")
 
-# Matches: {suit} {number_or_rank} first effect
-# Group 1 = suit, Group 2 = number or rank token, Group 3 = "first"
+# Matches: {suit} {number_or_rank}['s] [{ordinal}] effect
+# Group 1 = suit, Group 2 = number or rank token, Group 3 = ordinal or None.
+#
+# The ordinal is optional and the possessive is allowed because Ten of Pentacles
+# writes "Makes Pentacles 8's effect +x stronger" — the one card in the deck
+# that boosts a non-adjacent sibling, and the one place the page drops both the
+# ordinal and the plain "N first effect" shape. refs._EFFECT_POINTER_RE already
+# anticipates the possessive, so this is a known form on the wiki, not an oddity.
 _SUIT_REF_RE = re.compile(
-    rf"\b({'|'.join(_SUITS)})\s+(\d{{1,2}}|{'|'.join(_NAMED_RANKS)})\s+(first)\s+effect\b",
+    rf"\b({'|'.join(_SUITS)})\s+(\d{{1,2}}|{'|'.join(_NAMED_RANKS)})"
+    rf"(?:'s)?\s+(?:({'|'.join(_ORDINALS)})\s+)?effect\b",
     re.IGNORECASE,
 )
 
@@ -63,20 +82,30 @@ def _suit_ref_to_id(suit: str, token: str) -> str | None:
     return f"tarot-{rank}-of-{suit_lc}"
 
 
-def _resolve_suit_refs(text: str) -> list[tuple[str, int]]:
+def _resolve_suit_refs(text: str) -> list[tuple[str, int | None]]:
     """Return (target_id, targets_effect) pairs found by the suit-internal RE.
 
-    `targets_effect` is always 0 because the shorthand always ends with
-    "first effect" — there is no "second effect" variant in the source data.
+    `targets_effect` comes from the ordinal the wiki actually wrote, so almost
+    every hit is 0 ("... first effect mult x"). When the ordinal is absent —
+    "Makes Pentacles 8's effect +x stronger" — the value is None rather than 0:
+    the source does not say which of that card's two effects it means, and
+    guessing 0 would fabricate a precision the wiki does not have.
     """
-    hits: list[tuple[str, int]] = []
-    seen: set[str] = set()
+    hits: list[tuple[str, int | None]] = []
+    # Keyed on the pair, matching refs.resolve: the same card named twice with
+    # two different ordinals is two distinct claims, not one repeated.
+    seen: set[tuple[str, int | None]] = set()
     for match in _SUIT_REF_RE.finditer(text):
         target_id = _suit_ref_to_id(match.group(1), match.group(2))
-        if target_id is None or target_id in seen:
+        if target_id is None:
             continue
-        seen.add(target_id)
-        hits.append((target_id, 0))
+        ordinal = match.group(3)
+        targets_effect = _ORDINALS[ordinal.lower()] if ordinal else None
+        key = (target_id, targets_effect)
+        if key in seen:
+            continue
+        seen.add(key)
+        hits.append(key)
     return hits
 
 

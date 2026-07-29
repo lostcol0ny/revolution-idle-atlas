@@ -63,6 +63,10 @@ def test_the_real_page_yields_seventy_eight_cards():
     assert len(result.nodes) == 78
     assert sum(1 for n in result.nodes if len(n.effects) == 2) == 56
     assert sum(1 for n in result.nodes if len(n.effects) == 1) == 22
+    # Pins one Major Arcana id from the real page. relic-55's effect text names
+    # "The Devil" and will resolve against this id at Task 9, so the spelling is
+    # a cross-task contract and not merely an internal detail.
+    assert "tarot-the-devil" in {n.id for n in result.nodes}
 
 
 def test_numeric_suit_ref_produces_an_edge():
@@ -71,3 +75,27 @@ def test_numeric_suit_ref_produces_an_edge():
     result = extract(RAW_DIR)
     edge_tuples = {(e.from_, e.to, e.targets_effect) for e in result.edges}
     assert ("tarot-two-of-swords", "tarot-ace-of-swords", 0) in edge_tuples
+
+
+def test_cross_system_edges_point_outward_from_the_card():
+    edges = extract(RAW_DIR).edges
+    tuples = {(e.from_, e.to, e.targets_effect) for e in edges}
+    assert ("tarot-four-of-swords", "relic-3", None) in tuples
+    assert ("tarot-the-high-priestess", "refine-node-1", None) in tuples
+    assert ("tarot-six-of-wands", "fire-node-3", None) in tuples
+    assert ("tarot-seven-of-wands", "water-node-1", None) in tuples
+    # The direction guard. Written as a check on the `from_` *side* rather than
+    # as `not any(e.to == ...)`: a single-field negative goes silently
+    # unfalsifiable the moment the value starts surfacing on the other endpoint,
+    # which is how Task 6 shipped 158 reversed edges under a passing test.
+    assert not any(e.from_.startswith(("relic-", "refine-node-")) for e in edges)
+
+
+def test_a_possessive_reference_without_an_ordinal_still_produces_an_edge():
+    # Ten of Pentacles: "Makes Pentacles 8's effect +x stronger" — the only
+    # card that boosts a non-adjacent sibling, and the only possessive on the
+    # page. targets_effect is None because the wiki does not say which of the
+    # two effects it means; 0 would fabricate precision the source lacks.
+    result = extract(RAW_DIR)
+    tuples = {(e.from_, e.to, e.targets_effect) for e in result.edges}
+    assert ("tarot-ten-of-pentacles", "tarot-eight-of-pentacles", None) in tuples
