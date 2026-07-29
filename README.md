@@ -136,7 +136,7 @@ right.
 cd web
 npm install
 npm run dev        # http://localhost:5173
-npm run typecheck  # tsc --noEmit
+npm run typecheck  # both tsconfig projects: app, then tests + vite.config
 npm run test       # vitest
 npm run build      # -> web/dist
 ```
