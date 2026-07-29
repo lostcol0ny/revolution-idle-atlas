@@ -39,20 +39,20 @@ def test_relic_18_carries_its_real_name(graph: dict):
 
 
 def test_the_two_previously_stale_relics_carry_their_real_names(graph: dict):
-    # These two are the reason Part A exists. Their curated placeholder names
-    # masked correctly-extracted wiki names. Naming them explicitly means a
-    # regression that re-masks them fails here rather than looking plausible.
+    # These two nodes had curated placeholder names that masked
+    # correctly-extracted wiki names. Naming them explicitly means a regression
+    # that re-masks them fails here rather than looking plausible.
     names = {n["id"]: n["name"] for n in graph["nodes"]}
     assert names["relic-3"] == "Relic 3 (Copper Bunny Statuette)"
     assert names["relic-69"] == 'Relic 69 (Outdated "Nice" Gadget)'
-    assert names["relic-18"] == "Relic 18 (Mythical Rune)"
 
 
 def test_no_relic_is_left_with_a_bare_number_label(graph: dict):
     # Nothing in the curated file should override any of the 70 relics, so every
     # one of them must carry a real wiki name in parentheses. A bare "Relic N"
     # means a placeholder name has crept back into relationships.yaml and is
-    # masking the derived name again — the exact fault Part A removed.
+    # masking the derived name again — the exact fault the `relationships.yaml`
+    # cleanup removed.
     bare = re.compile(r"^Relic \d+$")
     offenders = [n["id"] for n in graph["nodes"] if bare.match(n["name"])]
     assert offenders == []

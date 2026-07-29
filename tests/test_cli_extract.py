@@ -219,7 +219,7 @@ def test_build_merges_the_derived_file_when_present(tmp_path):
         "    system: relics\n"
         "    kind: relic\n"
         "  - id: relic-39\n"
-        "    name: Relic 39\n"
+        "    name: Snail Statue\n"
         "    system: relics\n"
         "    kind: relic\n"
         "edges: []\n",
@@ -242,7 +242,10 @@ def test_build_merges_the_derived_file_when_present(tmp_path):
     doc = json.loads((tmp_path / "public" / "graph.json").read_text(encoding="utf-8"))
     names = [n["name"] for n in doc["nodes"]]
     # relic-39 only exists in derived.yaml — if it's absent, derived was never read.
-    assert "Relic 39" in names
+    # Its name is deliberately not "Relic 39": a name equal to the bare label hits
+    # the no-doubling guard and returns a string the pre-composition code produced
+    # too, so the assertion would pass even if composition were stripped entirely.
+    assert "Relic 39 (Snail Statue)" in names
     # Curated name wins for relic-38; render composes it into "Relic 38 (Smart Man)".
     assert "Relic 38 (Smart Man)" in names
     assert "Smart Man" not in names

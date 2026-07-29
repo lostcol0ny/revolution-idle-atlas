@@ -159,9 +159,9 @@ def test_relic_name_is_composed_with_its_number():
 def test_a_relic_already_named_after_its_number_is_not_doubled():
     # Makes "Relic 7 (Relic 7)" unrepresentable no matter which dataset file
     # supplies the name. This is not hypothetical: two curated placeholders in
-    # data/relationships.yaml said exactly this until Part A removed them, and
-    # the guard means a future stale placeholder degrades to a plain label
-    # instead of a malformed one.
+    # data/relationships.yaml said exactly this until the two stale curated
+    # entries were removed, and the guard means a future stale placeholder
+    # degrades to a plain label instead of a malformed one.
     ds = Dataset(
         nodes=[Node(id="relic-7", name="Relic 7", system="relics", kind=Kind.RELIC)]
     )
