@@ -153,7 +153,8 @@ button.link {
    sidebar is the primary navigation surface, at ~140 targets. */
 .group-header:focus-visible,
 .node-row:focus-visible,
-.filter:focus-visible {
+.filter:focus-visible,
+.chip:focus-visible {
   outline: 2px solid #2563eb;
   outline-offset: 2px;
 }

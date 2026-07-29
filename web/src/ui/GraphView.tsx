@@ -77,6 +77,7 @@ export function GraphView({
             key={value}
             type="button"
             className={value === depth ? 'chip chip--on' : 'chip'}
+            aria-pressed={value === depth}
             onClick={() => onDepthChange(value)}
           >
             {value}

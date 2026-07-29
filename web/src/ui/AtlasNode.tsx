@@ -31,7 +31,11 @@ export function AtlasNode({ data }: NodeProps<AtlasFlowNode>) {
       title={`${data.label} — ${data.system} · ${data.kind}`}
     >
       <Handle type="target" position={HandlePosition.Left} />
-      <span className="atlas-node__badge">{kindBadge(data.kind)}</span>
+      {/* role="img" is what makes aria-label binding; on a bare span it is
+          advisory and assistive tech may drop it, leaving a lone "R" or "$". */}
+      <span className="atlas-node__badge" role="img" aria-label={data.kind}>
+        {kindBadge(data.kind)}
+      </span>
       <span className="atlas-node__label">{data.label}</span>
       <Handle type="source" position={HandlePosition.Right} />
     </div>
