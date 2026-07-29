@@ -9,6 +9,7 @@ import {
   LoadingScreen,
   UnknownNodeBanner,
 } from './Screens';
+import { Sidebar } from './Sidebar';
 
 type LoadState =
   | { status: 'loading' }
@@ -83,7 +84,7 @@ export default function App() {
   return (
     <div className="layout">
       <aside className="sidebar">
-        <p className="muted">{index.order.length} nodes</p>
+        <Sidebar index={index} selectedId={urlState.nodeId} onSelect={select} />
       </aside>
       <main className="canvas">
         {missing && urlState.nodeId !== null && (
