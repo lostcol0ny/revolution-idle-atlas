@@ -47,4 +47,22 @@ describe('toSearch', () => {
     const state = { nodeId: 'relic-3', depth: 3 } as const;
     expect(parseUrlState(toSearch(state))).toEqual(state);
   });
+
+  it('round-trips an id containing characters the query string uses', () => {
+    // Every id in today's graph.json is kebab-case ASCII, but ids come from a
+    // hand-maintained YAML and nothing enforces that. Pin the property, not the
+    // current data.
+    const state = { nodeId: 'a b&c=d#e+f%g', depth: 2 } as const;
+    expect(parseUrlState(toSearch(state))).toEqual(state);
+  });
+});
+
+describe('parseUrlState with a repeated key', () => {
+  it('takes the first value', () => {
+    // Task 9 only ever writes these via toSearch, so a repeat can arrive only
+    // from a hand-edited URL. First-wins is what URLSearchParams does; assert it
+    // so a later rewrite cannot quietly make a trailing ?depth=999 the winner.
+    expect(parseUrlState('?depth=2&depth=999').depth).toBe(2);
+    expect(parseUrlState('?node=a&node=b').nodeId).toBe('a');
+  });
 });
