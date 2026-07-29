@@ -24,8 +24,8 @@ def _section(raw: str, heading: str, until: str | None) -> str:
     return raw[start:] if end == -1 else raw[start:end]
 
 
-def _table(section: str, after: int = 0) -> str:
-    start = section.find("{|", after)
+def _table(section: str) -> str:
+    start = section.find("{|")
     end = section.find("|}", start)
     return section[start:end] if start != -1 and end != -1 else ""
 
@@ -74,6 +74,8 @@ def _parse_factors(raw: str) -> ExtractResult:
         if factor is None or not element:
             continue
         # Data cells follow the two "!" header cells: description, then unlock.
+        # Unlike _parse_upgrades, this must filter per line: "|" is the only
+        # thing separating a data cell from a "!" header cell in this table.
         cells = [line[1:].strip() for line in row.splitlines() if line.startswith("|")]
         if len(cells) < 2:
             continue
@@ -110,7 +112,11 @@ def _parse_upgrades(raw: str) -> ExtractResult:
         following = ELEMENTS[index + 1] if index + 1 < len(ELEMENTS) else None
         block = _section(upgrades, heading, f"==== {following} ====" if following else None)
         for row in _ROW_SPLIT_RE.split(_table(block)):
-            cells = [line[1:].strip() for line in row.splitlines() if line.startswith("|")]
+            # Split on newline-then-pipe, not per-line: an effect that continues
+            # onto an italic or <math> second line belongs to the cell above it,
+            # and a per-line filter would silently drop that continuation.
+            cells = [cell.strip() for cell in row.split("\n|")]
+            cells[0] = cells[0].lstrip("|").strip()
             # The table opener's "|+" caption row survives the split as a stray
             # single cell; a real row is number, price, effect.
             if len(cells) < 3 or not cells[0].isdigit():

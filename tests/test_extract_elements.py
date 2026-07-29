@@ -113,19 +113,12 @@ def test_unlock_edge_direction_is_unlocking_node_to_factor():
     assert ("fire-factor-3", "fire-node-11") not in unlocks
 
 
-def test_none_unlock_produces_no_edge_either_direction():
-    # Checks both sides so the assertion is not silently satisfied if the factor
-    # appears as `from_` instead.
-    edges = [(e.from_, e.to) for e in parse(PAGE).edges]
-    assert not any(
-        "fire-factor-1" in pair for pair in edges
-    )
-
-
 def test_real_page_all_four_king_unlock_edges_present():
-    # The four tarot→factor unlock edges are the cross-system claims this parser
-    # uniquely produces. They cannot be reached via the PAGE fixture (which only
-    # has Fire), so the real-page test pins identity for all four.
+    # This is the only test pinning the suit-to-element mapping: wands→fire,
+    # pentacles→earth, swords→wind, cups→water. That mapping is not derivable
+    # from anything structural — it comes from four separate rows of the factors
+    # table — so a row-ordering bug or a mis-paired element header would swap
+    # two of these and nothing else in the suite would notice.
     result = extract(RAW_DIR)
     unlocks = {(e.from_, e.to) for e in result.edges if e.rel == "unlocks"}
     assert ("tarot-king-of-wands", "fire-factor-2") in unlocks
@@ -168,12 +161,11 @@ def test_real_page_boosts_edges_point_outward_from_element_nodes():
     # would still show up on one side of an endpoint check.
     result = extract(RAW_DIR)
     boosts = {(e.from_, e.to) for e in result.edges if e.rel == "boosts"}
-    # Two representative cross-system boosts edges.
-    assert ("fire-node-4", "relic-26") in boosts
-    assert ("earth-node-2", "refine-node-1") in boosts
-    assert ("wind-node-11", "refine-node-69") in boosts
-    assert ("water-node-6", "refine-node-60") in boosts
-    # Direction guard: element nodes must never appear as `to` in boosts edges.
+    # The direction guard runs FIRST, deliberately. Placed after the identity
+    # assertions below it would be unreachable under the very mutation it names:
+    # a reversal breaks those assertions, the test short-circuits there, and the
+    # guard never executes. Leading with it means a reversal is reported as a
+    # direction failure rather than a missing-edge failure.
     assert not any(
         e.to.endswith(("-node-1", "-node-2", "-node-3", "-node-4",
                        "-node-5", "-node-6", "-node-7", "-node-8",
@@ -182,11 +174,17 @@ def test_real_page_boosts_edges_point_outward_from_element_nodes():
         for e in result.edges
         if e.rel == "boosts"
     )
+    # Representative cross-system boosts edges, one per element.
+    assert ("fire-node-4", "relic-26") in boosts
+    assert ("earth-node-2", "refine-node-1") in boosts
+    assert ("wind-node-11", "refine-node-69") in boosts
+    assert ("water-node-6", "refine-node-60") in boosts
 
 
-def test_real_page_edge_counts_with_identity():
-    # 17 boosts + 8 unlocks = 25 total. Alongside the identity tests above this
-    # confirms there are no phantom duplicates or dropped edges.
+def test_real_page_edge_counts():
+    # Counts only. Identity for these edges is pinned by the three tests above
+    # (king unlocks, node unlocks, boosts); this one exists to catch phantom
+    # duplicates and dropped edges, which a set-membership check cannot see.
     result = extract(RAW_DIR)
     boosts = [e for e in result.edges if e.rel == "boosts"]
     unlocks = [e for e in result.edges if e.rel == "unlocks"]
@@ -211,6 +209,37 @@ def test_unlock_edges_are_documented_confidence():
         for e in result.edges
         if e.rel == "boosts"
     )
+
+
+def test_real_page_effect_text_keeps_its_continuation_line():
+    # Five upgrade rows put half their meaning on a second line that begins with
+    # its own "|". A per-line `startswith("|")` filter drops those lines, and the
+    # loss is invisible to every other test here because no edge depends on them
+    # — the references all sit on the first line. Each assertion below names a
+    # substring that exists ONLY on the continuation line.
+    by_id = {n.id: n for n in extract(RAW_DIR).nodes}
+    assert "score multiplier" in by_id["fire-node-1"].effects[0].text
+    assert "Infinities" in by_id["earth-node-1"].effects[0].text
+    assert "Eternities" in by_id["wind-node-1"].effects[0].text
+    assert "Black Gem Effect" in by_id["wind-node-10"].effects[0].text
+    # The wiki's own typo ("multipliter"). Preserved verbatim: data/raw is read
+    # only and the parser is not in the business of correcting the source.
+    assert (
+        by_id["earth-node-1"].effects[0].text
+        == "Increase power for factor 1 for earth by 2 "
+           "Increases power for Infinities multipliter for Earth"
+    )
+
+
+def test_real_page_factor_descriptions_stay_short_and_clean():
+    # The guard for the other cell-splitting site. _parse_factors must keep its
+    # per-line filter: the factors table separates data cells from "!" header
+    # cells by the leading "|" alone, so splitting on "\n|" there would pull raw
+    # header markup ("rowspan=...") into these strings and drop all 8 unlocks.
+    by_id = {n.id: n for n in extract(RAW_DIR).nodes}
+    assert by_id["fire-factor-1"].effects[0].text == "Score"
+    assert by_id["earth-factor-1"].effects[0].text == "Infinities"
+    assert by_id["water-factor-2"].effects[0].text == "Zodiac Quality"
 
 
 def test_factor_nodes_all_live_in_elements_system():
