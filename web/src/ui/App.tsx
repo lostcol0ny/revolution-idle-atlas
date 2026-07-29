@@ -11,6 +11,7 @@ import {
 } from './Screens';
 import { Sidebar } from './Sidebar';
 import { GraphView } from './GraphView';
+import { NodeCard } from './NodeCard';
 
 type LoadState =
   | { status: 'loading' }
@@ -103,6 +104,11 @@ export default function App() {
           />
         )}
       </main>
+      {selected !== undefined && (
+        <aside className="detail">
+          <NodeCard index={index} node={selected} onSelect={select} />
+        </aside>
+      )}
     </div>
   );
 }

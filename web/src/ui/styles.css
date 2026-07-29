@@ -39,12 +39,12 @@ body {
   min-width: 0;
 }
 
-.panel {
+.detail {
   width: var(--panel-width);
-  flex: 0 0 var(--panel-width);
-  border-left: 1px solid var(--border);
+  flex: none;
   overflow-y: auto;
-  padding: 16px;
+  border-left: 1px solid var(--border);
+  padding: 12px 14px;
 }
 
 .screen {
@@ -154,7 +154,8 @@ button.link {
 .group-header:focus-visible,
 .node-row:focus-visible,
 .filter:focus-visible,
-.chip:focus-visible {
+.chip:focus-visible,
+.link:focus-visible {
   outline: 2px solid #2563eb;
   outline-offset: 2px;
 }
@@ -236,4 +237,66 @@ button.link {
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
+}
+
+.nodecard__name {
+  margin: 0 0 8px;
+  font-size: 17px;
+}
+
+.nodecard__heading {
+  margin: 16px 0 6px;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #64748b;
+}
+
+.nodecard__facts {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 2px 10px;
+  margin: 0;
+  font-size: 13px;
+}
+
+.nodecard__facts dt {
+  color: #64748b;
+}
+
+.nodecard__facts dd {
+  margin: 0;
+}
+
+.edgelist {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.edgerow {
+  padding: 6px 0;
+  border-bottom: 1px solid #f1f5f9;
+  font-size: 13px;
+}
+
+.edgerow__line {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 4px;
+}
+
+.edgerow__rel {
+  font-weight: 600;
+}
+
+.edgerow__note {
+  margin-top: 3px;
+  color: #64748b;
+  font-size: 12px;
+}
+
+.sep {
+  color: #cbd5e1;
 }
