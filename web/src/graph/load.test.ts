@@ -28,28 +28,28 @@ describe('parseGraph', () => {
     expect(() => parseGraph({ version: 1, nodes: [] })).toThrow(GraphFormatError);
     expect(() => parseGraph({ version: 1, edges: [] })).toThrow(GraphFormatError);
   });
-});
 
-it('preserves the optional systems array', () => {
-  const doc = parseGraph({
-    version: 1,
-    nodes: [],
-    edges: [],
-    systems: [{ id: 'unity', name: 'Unity' }],
+  it('preserves the optional systems array', () => {
+    const doc = parseGraph({
+      version: 1,
+      nodes: [],
+      edges: [],
+      systems: [{ id: 'unity', name: 'Unity' }],
+    });
+    expect(doc.systems).toEqual([{ id: 'unity', name: 'Unity' }]);
   });
-  expect(doc.systems).toEqual([{ id: 'unity', name: 'Unity' }]);
-});
 
-// `toBeUndefined()` would be unfalsifiable here: it passes both when the key is
-// absent and when it is present-and-undefined, so a plain `systems: doc.systems`
-// passthrough would satisfy it. `in` is the only form that pins key absence, and
-// key absence is what the conditional spread in Step 3 exists to produce.
-it('leaves systems off the returned object entirely when the document omits it', () => {
-  expect('systems' in parseGraph({ version: 1, nodes: [], edges: [] })).toBe(false);
-});
+  // `toBeUndefined()` would be unfalsifiable here: it passes both when the key is
+  // absent and when it is present-and-undefined, so a plain `systems: doc.systems`
+  // passthrough would satisfy it. `in` is the only form that pins key absence, and
+  // key absence is what the conditional spread in Step 3 exists to produce.
+  it('leaves systems off the returned object entirely when the document omits it', () => {
+    expect('systems' in parseGraph({ version: 1, nodes: [], edges: [] })).toBe(false);
+  });
 
-it('rejects a systems field that is not an array', () => {
-  expect(() => parseGraph({ version: 1, nodes: [], edges: [], systems: {} })).toThrow(
-    GraphFormatError,
-  );
+  it('rejects a systems field that is not an array', () => {
+    expect(() => parseGraph({ version: 1, nodes: [], edges: [], systems: {} })).toThrow(
+      GraphFormatError,
+    );
+  });
 });
