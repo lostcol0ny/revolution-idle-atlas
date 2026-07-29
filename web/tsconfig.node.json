@@ -1,0 +1,12 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "types": ["node", "vite/client"],
+    "noEmit": true
+  },
+  // The base config excludes test files so they stay out of the browser
+  // project. That `exclude` is inherited through `extends`, and it would
+  // silently drop these same files back out here, so it is reset explicitly.
+  "exclude": [],
+  "include": ["vite.config.ts", "src/**/*.test.ts", "src/**/*.test.tsx"]
+}
