@@ -3,7 +3,7 @@ import yaml
 from atlas.extract.emit import to_yaml
 from atlas.extract.result import ExtractResult
 from atlas.loader import load_dataset
-from atlas.models import Edge, Effect, Kind, Node, Op, Rel
+from atlas.models import Edge, EdgeConfidence, Effect, Kind, Node, Op, Rel
 
 
 def _result() -> ExtractResult:
@@ -74,14 +74,40 @@ def test_emitted_yaml_carries_a_do_not_edit_header():
     assert "data/relationships.yaml" in text.splitlines()[1]
 
 
-def test_emit_is_byte_stable_and_drops_duplicates():
+def test_emit_drops_exact_duplicates():
+    # No `to_yaml(x) == to_yaml(x)` assertion here: `to_yaml` is a pure function
+    # called twice in one process, so that holds for every possible
+    # implementation and would prove nothing. Cross-process stability — the
+    # property CI actually depends on — is tested in test_cli_extract.py.
     result = _result()
     result.nodes.append(result.nodes[0].model_copy())
     result.edges.append(result.edges[0].model_copy())
 
-    text = to_yaml(result)
-    assert text == to_yaml(result)
-
-    doc = yaml.safe_load(text)
+    doc = yaml.safe_load(to_yaml(result))
     assert [n["id"] for n in doc["nodes"]] == ["relic-38", "refine-node-2"]
     assert len(doc["edges"]) == 1
+
+
+def test_emit_keeps_edges_that_share_endpoints_but_differ_in_detail():
+    # A card with two effects that both point at one target writes a distinct
+    # `note` per effect. Keying dedup on endpoints alone would delete the second
+    # claim silently — no DroppedEdge, no warning, just a missing edge.
+    result = _result()
+    base = result.edges[0]
+    result.edges.append(
+        base.model_copy(
+            update={
+                "note": "and the second effect says something else",
+                "confidence": EdgeConfidence.PROVISIONAL,
+            }
+        )
+    )
+
+    doc = yaml.safe_load(to_yaml(result))
+
+    assert len(doc["edges"]) == 2
+    assert [e.get("note") for e in doc["edges"]] == [
+        None,
+        "and the second effect says something else",
+    ]
+    assert [e["confidence"] for e in doc["edges"]] == ["documented", "provisional"]

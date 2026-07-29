@@ -11,9 +11,12 @@ class ExtractError(Exception):
 def run_all(raw_dir: Path) -> ExtractResult:
     """Run every parser over data/raw/ and drop edges with no endpoint.
 
-    Parser order is the order ids are minted in, and `to_yaml` keeps the first
-    definition of each id. Sources that own a page come before sources that
-    merely mention it.
+    Parser order fixes the order ids are minted in, and so the order of the
+    emitted file. Each parser currently mints ids only for its own system, so
+    no id is produced twice and `to_yaml`'s first-wins dedup never actually has
+    to choose between two definitions — today this ordering governs the diff,
+    not resolution. Were a later parser to name a node another one owns, the
+    owner running first is what would make first-wins the correct rule.
 
     A parser that returns zero nodes raises rather than returning quietly. The
     wiki is edited by volunteers; a renamed heading or a restructured table

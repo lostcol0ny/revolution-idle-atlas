@@ -1,3 +1,4 @@
+import json
 from typing import Any
 
 import yaml
@@ -12,14 +13,30 @@ HEADER = (
 
 
 def _dump(model: Any) -> dict[str, Any]:
-    # mode="json" matters twice over: it turns StrEnum members into plain str
-    # (yaml.safe_dump refuses to represent a str subclass) and it renders nested
-    # Effect models as dicts. by_alias emits `from` rather than `from_`.
+    # mode="json" is what converts StrEnum members to plain str, including the
+    # ones nested inside Effect — yaml.safe_dump refuses to represent a str
+    # subclass. (Nested models become dicts under mode="python" too, so that
+    # part is not what this argument buys.) by_alias emits `from`, not `from_`.
     return model.model_dump(mode="json", by_alias=True, exclude_none=True)
 
 
 def _without_empty_lists(payload: dict[str, Any]) -> dict[str, Any]:
     return {k: v for k, v in payload.items() if v != []}
+
+
+def _identity(payload: dict[str, Any]) -> str:
+    """A stable key standing for the whole payload.
+
+    Keyed on every field rather than on the endpoints, because two edges that
+    share `from`/`to`/`rel` are not necessarily the same claim: a card with two
+    effects pointing at one target writes a distinct `note` for each, and
+    dropping the second would delete evidence with nothing to report it.
+
+    `json.dumps` rather than `tuple(sorted(payload.items()))` because a payload
+    field may be a list or dict — `effects` already is on the node side — and a
+    tuple of those is unhashable. mode="json" guarantees this cannot raise.
+    """
+    return json.dumps(payload, sort_keys=True, ensure_ascii=False)
 
 
 def to_yaml(result: ExtractResult) -> str:
@@ -34,10 +51,10 @@ def to_yaml(result: ExtractResult) -> str:
     for node in result.nodes:
         nodes.setdefault(node.id, _without_empty_lists(_dump(node)))
 
-    edges: dict[tuple[str, str, str, int | None], dict[str, Any]] = {}
+    edges: dict[str, dict[str, Any]] = {}
     for edge in result.edges:
-        key = (edge.from_, edge.to, str(edge.rel), edge.targets_effect)
-        edges.setdefault(key, _dump(edge))
+        payload = _dump(edge)
+        edges.setdefault(_identity(payload), payload)
 
     doc = {"nodes": list(nodes.values()), "edges": list(edges.values())}
     body = yaml.safe_dump(

@@ -3,6 +3,7 @@ from pathlib import Path
 
 from atlas.extract.refs import (
     ORDINALS,
+    RANKS,
     SUITS,
     plain_text,
     resolve,
@@ -49,9 +50,17 @@ _NUMBER_TO_RANK: dict[str, str] = {
     "9": "nine",
     "10": "ten",
 }
-# Named ranks that appear literally in the shorthand (e.g. "Swords Page").
-# These are the non-numeric entries from refs.RANKS.
-_NAMED_RANKS = ("ace", "page", "knight", "queen", "king")
+# Ranks the compact shorthand spells as a word rather than a digit. The wiki
+# writes "Swords 2", never "Swords Two", so the number-word ranks reach the
+# parser only through _NUMBER_TO_RANK above; "ace" is written both ways and so
+# belongs in both. Yields ("ace", "page", "knight", "queen", "king").
+#
+# Derived from RANKS rather than written out, because the two must not drift: a
+# literal tuple could keep _SUIT_REF_RE matching a rank that RANKS no longer
+# contains, and the id built from it would name a card the parser never mints.
+# That failure deletes suit-internal edges while leaving every test green.
+_DIGIT_ONLY_RANKS = frozenset(_NUMBER_TO_RANK.values()) - {"ace"}
+_NAMED_RANKS = tuple(rank for rank in RANKS if rank not in _DIGIT_ONLY_RANKS)
 
 # Matches: {suit} {number_or_rank}['s] [{ordinal}] effect
 # Group 1 = suit, Group 2 = number or rank token, Group 3 = ordinal or None.

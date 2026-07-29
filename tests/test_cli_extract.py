@@ -1,10 +1,12 @@
+import os
+import subprocess
+import sys
 from pathlib import Path
 
-import pytest
-import yaml
-
 from atlas.cli import main
+from atlas.extract.result import DroppedEdge, ExtractResult
 from atlas.loader import load_dataset
+from atlas.models import Kind, Node
 
 REAL_RAW = Path(__file__).resolve().parents[1] / "data" / "raw"
 
@@ -84,4 +86,74 @@ def test_extract_is_idempotent(tmp_path):
     assert main(["extract", "--root", str(tmp_path)]) == 0
     # CI runs `git diff --exit-code` on this file. A run that is not
     # byte-identical to its predecessor turns every unrelated PR red.
+    #
+    # Both runs share one interpreter, so this cannot catch an ordering that
+    # varies with the hash seed — set iteration is stable within a process.
+    # test_extract_is_stable_across_hash_seeds covers that half.
     assert derived.read_text(encoding="utf-8") == first
+
+
+def test_extract_is_stable_across_hash_seeds(tmp_path):
+    """The real idempotency property: stable between *processes*, not calls.
+
+    CI compares a fresh run against a file committed by an earlier run in a
+    different interpreter. PYTHONHASHSEED randomises set iteration order, so a
+    refactor that let a set reach the output would pass every same-process test
+    and then flap in CI.
+    """
+    raw = tmp_path / "data" / "raw"
+    raw.mkdir(parents=True)
+    for path in REAL_RAW.glob("*.wikitext"):
+        (raw / path.name).write_text(path.read_text(encoding="utf-8"), encoding="utf-8")
+
+    outputs = []
+    for seed in ("0", "1"):
+        root = tmp_path / f"run{seed}"
+        (root / "data").mkdir(parents=True)
+        (root / "data" / "raw").symlink_to(raw, target_is_directory=True)
+        subprocess.run(
+            [sys.executable, "-m", "atlas.cli", "extract", "--root", str(root)],
+            check=True,
+            capture_output=True,
+            env={**os.environ, "PYTHONHASHSEED": seed},
+        )
+        outputs.append((root / "data" / "derived.yaml").read_text(encoding="utf-8"))
+
+    assert outputs[0] == outputs[1]
+
+
+def test_extract_warns_about_dropped_edges_but_still_succeeds(
+    tmp_path, capsys, monkeypatch
+):
+    """A dropped edge is a warning, never an error.
+
+    The resolver reads prose, so a wiki typo produces an id no parser minted.
+    Failing the command would let one typo block every build, so the run must
+    still write its output and still exit 0.
+    """
+    (tmp_path / "data" / "raw").mkdir(parents=True)
+
+    stub = ExtractResult(
+        nodes=[Node(id="relic-1", name="Kindling", system="relics", kind=Kind.RELIC)],
+        edges=[],
+        dropped=[
+            DroppedEdge(
+                from_id="relic-1",
+                to_id="relic-99",
+                reason="no extracted node with id relic-99",
+            )
+        ],
+    )
+    monkeypatch.setattr("atlas.cli.run_all", lambda _raw_dir: stub)
+
+    assert main(["extract", "--root", str(tmp_path)]) == 0
+
+    captured = capsys.readouterr()
+    # Both endpoints are named so the fix is a relationships.yaml edit rather
+    # than a debugging session.
+    assert "relic-1" in captured.err
+    assert "relic-99" in captured.err
+    assert "no extracted node with id relic-99" in captured.err
+    assert "warning" in captured.err
+    assert (tmp_path / "data" / "derived.yaml").exists()
+    assert "1 dropped edge(s)" in captured.out

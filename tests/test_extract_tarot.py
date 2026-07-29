@@ -1,8 +1,25 @@
 from pathlib import Path
 
-from atlas.extract.tarot import extract, parse
+from atlas.extract.refs import RANKS
+from atlas.extract.tarot import _NAMED_RANKS, _NUMBER_TO_RANK, extract, parse
 
 RAW_DIR = Path(__file__).resolve().parents[1] / "data" / "raw"
+
+
+def test_named_ranks_are_the_word_spelled_subset_of_the_shared_rank_list():
+    """Pin the derivation, which today's page cannot exercise on its own.
+
+    The Tarot page writes "Swords 1", never "Swords Ace", so `ace` reaches the
+    parser only through _NUMBER_TO_RANK and dropping it from _NAMED_RANKS
+    changes no output. It still has to stay: the word form is valid on the wiki
+    and one edit away. `king` is likewise unmatched today.
+    """
+    assert _NAMED_RANKS == ("ace", "page", "knight", "queen", "king")
+    # Every named rank must be a real rank, or the id built from it would name
+    # a card the parser never mints and the edge would silently vanish.
+    assert set(_NAMED_RANKS) <= set(RANKS)
+    # The number-word ranks are reachable only as digits, never as words.
+    assert set(_NAMED_RANKS) & set(_NUMBER_TO_RANK.values()) == {"ace"}
 
 PAGE = """
 {{Tarot Cards

@@ -1,5 +1,6 @@
 import argparse
 import json
+import os
 import sys
 from pathlib import Path
 
@@ -104,7 +105,13 @@ def _extract(root: Path) -> int:
 
     derived_path = root / DERIVED_REL_PATH
     derived_path.parent.mkdir(parents=True, exist_ok=True)
-    derived_path.write_text(to_yaml(result), encoding="utf-8")
+    # Write-then-rename: write_text truncates in place, so an interrupted run
+    # would leave a half-written derived.yaml that the next `atlas build` reads
+    # as a corrupt dataset. The temp file sits in the destination directory so
+    # os.replace stays within one filesystem, where it is atomic.
+    staged_path = derived_path.with_suffix(".yaml.tmp")
+    staged_path.write_text(to_yaml(result), encoding="utf-8")
+    os.replace(staged_path, derived_path)
 
     print(
         f"ok: {len(result.nodes)} nodes, {len(result.edges)} edges, "
