@@ -104,7 +104,21 @@ def merge(
 
     edges: dict[EdgeKey, Edge] = {}
     for edge in derived.edges:
-        edges[_edge_key(edge)] = edge.model_copy(update={"line": None})
+        key = _edge_key(edge)
+        if key in edges:
+            # Two generated edges share (from, to, rel) but differ in payload
+            # (e.g. targets_effect or note). The emit layer preserves both, but
+            # a dict keyed on (from, to, rel) can only keep one — report rather
+            # than silently discarding evidence.
+            problems.append(Problem(
+                severity="warning",
+                message=(
+                    f"generated edge '{edge.from_}' -> '{edge.to}' ({edge.rel}) "
+                    f"collides with an earlier one and was discarded"
+                ),
+                path=derived_path,
+            ))
+        edges[key] = edge.model_copy(update={"line": None})
     for edge in curated.edges:
         edges[_edge_key(edge)] = edge
 

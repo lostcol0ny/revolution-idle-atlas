@@ -31,9 +31,13 @@ correction an overlay cannot express.
 | `docs/coverage.md` | Generated. The curation to-do list. Committed. |
 | `bootstrap/` | Historical. Held one-off seeding scripts; all have been superseded by `atlas extract` and removed. |
 
-`public/graph.json` and `docs/coverage.md` are build products that are committed
-to the repository. CI rebuilds them and fails if the result differs, so if a CI
-run goes red on the artifact step, run `uv run atlas build` and commit the result.
+`data/derived.yaml`, `public/graph.json` and `docs/coverage.md` are build
+products that are committed to the repository. CI rebuilds them and fails if the
+result differs. If a CI run goes red on the artifact step, run
+`uv run atlas extract && uv run atlas build` and commit the result. A change to
+`data/raw/` — the most common trigger — requires the extraction step first;
+running only `atlas build` will leave `data/derived.yaml` stale and the step
+stays red.
 
 ## Commands
 
@@ -47,9 +51,13 @@ uv run pytest            # tests
 ```
 
 `atlas build` exits non-zero only on **errors** (unresolvable references,
-duplicate ids, self-edges, malformed YAML). Warnings — a node pointing at a wiki
-page no longer in `data/raw/`, or claiming `documented` confidence for a page the
-wiki flags as work in progress — are printed but never fail the build.
+duplicate ids, self-edges, malformed YAML, a node whose `system` is not declared
+in the `systems` array, a system whose `parent` is not a declared system, a cycle
+in the system parent chain, or an out-of-range `targets_effect`). Warnings — a
+node pointing at a wiki page no longer in `data/raw/`, a page the wiki flags as
+work in progress paired with `documented` confidence, or a generated edge
+colliding with an earlier one on `(from, to, rel)` — are printed but never fail
+the build.
 
 `atlas scrape` talks to a live, volunteer-run wiki. Do not run it in a loop. A
 scheduled GitHub Actions workflow runs it daily and opens a pull request when the
@@ -203,6 +211,14 @@ render a stale graph — what CI verified is what ships.
 The app is a **read-only consumer**. It never writes the dataset and never
 derives it. It shows *that* A boosts B, never by how much; formulas and
 coefficients are out of scope and the pipeline does not carry them.
+
+### Known gaps
+
+`graph.json` now carries `effects`, `targets_effect` and the `systems` hierarchy
+added in v2, but the React viewer has not been updated to render them — the
+sidebar and node card still show only v1's fields. This is a recorded decision:
+the data layer was stabilised first so the schema contract is fixed before the UI
+is built on top of it.
 
 ### Deployment
 

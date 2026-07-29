@@ -6,7 +6,7 @@ from pathlib import Path
 from atlas.cli import main
 from atlas.extract.result import DroppedEdge, ExtractResult
 from atlas.loader import load_dataset
-from atlas.models import Kind, Node
+from atlas.models import Edge, Kind, Node
 
 REAL_RAW = Path(__file__).resolve().parents[1] / "data" / "raw"
 
@@ -159,6 +159,53 @@ def test_extract_warns_about_dropped_edges_but_still_succeeds(
     assert "1 dropped edge(s)" in captured.out
 
 
+def test_run_all_prunes_dangling_edges(tmp_path, monkeypatch):
+    """run_all must call prune_dangling — replacing it with `return combined` is silent.
+
+    The real corpus currently has zero dangling edges, so the CI artifact check
+    cannot catch a missing call. This test wires a stub parser that emits an edge
+    pointing at a node no parser mints, then asserts that edge is absent from the
+    result and present in `dropped`.
+    """
+    import types
+
+    import atlas.extract as extract_module
+    from atlas.extract.result import ExtractResult
+
+    known_node = Node(id="relic-1", name="One", system="relics", kind=Kind.RELIC)
+    # "ghost-node" is never produced by any parser, so this edge is dangling.
+    dangling_edge = Edge(
+        **{"from": "relic-1", "to": "ghost-node", "rel": "boosts", "source": "Relics"}
+    )
+
+    stub_with_dangling = ExtractResult(nodes=[known_node], edges=[dangling_edge])
+    filler = ExtractResult(
+        nodes=[Node(id="filler", name="Filler", system="relics", kind=Kind.RELIC)],
+        edges=[],
+    )
+
+    # Build four SimpleNamespace stubs so run_all's module-tuple iteration works
+    # without touching the filesystem or the network.
+    def _stub(result: ExtractResult) -> types.SimpleNamespace:
+        return types.SimpleNamespace(extract=lambda _raw_dir: result)
+
+    monkeypatch.setattr(extract_module, "relics", _stub(stub_with_dangling))
+    monkeypatch.setattr(extract_module, "refine_tree", _stub(filler))
+    monkeypatch.setattr(extract_module, "tarot", _stub(filler))
+    monkeypatch.setattr(extract_module, "elements", _stub(filler))
+
+    raw_dir = tmp_path / "data" / "raw"
+    raw_dir.mkdir(parents=True)
+
+    result = extract_module.run_all(raw_dir)
+
+    edge_pairs = [(e.from_, e.to) for e in result.edges]
+    assert ("relic-1", "ghost-node") not in edge_pairs
+
+    dropped_pairs = [(d.from_id, d.to_id) for d in result.dropped]
+    assert ("relic-1", "ghost-node") in dropped_pairs
+
+
 def test_build_merges_the_derived_file_when_present(tmp_path):
     data = tmp_path / "data"
     data.mkdir(parents=True)
@@ -222,6 +269,8 @@ def test_build_warns_about_a_suppression_that_matches_nothing(tmp_path, capsys):
 
 
 def test_build_works_when_the_derived_file_is_absent(tmp_path):
+    import json
+
     data = tmp_path / "data"
     data.mkdir(parents=True)
     (data / "relationships.yaml").write_text(
@@ -236,6 +285,11 @@ def test_build_works_when_the_derived_file_is_absent(tmp_path):
     # A missing generated file degrades to the curated file alone rather than
     # failing: a fresh clone that has not run `atlas extract` still builds.
     assert main(["build", "--root", str(tmp_path)]) == 0
+
+    doc = json.loads((tmp_path / "public" / "graph.json").read_text(encoding="utf-8"))
+    # The curated node must appear in the output — an empty graph would also exit 0.
+    node_ids = [n["id"] for n in doc["nodes"]]
+    assert "singularity" in node_ids
 
 
 def test_build_applies_a_curated_suppression_when_the_derived_file_is_absent(

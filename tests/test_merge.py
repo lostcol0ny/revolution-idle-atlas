@@ -299,3 +299,36 @@ def test_an_edge_repeated_across_both_files_is_not_reported():
     )
     _, problems = merge(_derived(), curated)
     assert problems == []
+
+
+def test_two_derived_edges_with_same_key_but_distinct_payload_warn():
+    # Two generated edges sharing (from, to, rel) but differing in targets_effect
+    # or note represent distinct claims — the second being silently discarded
+    # deletes evidence. The merge must warn so the collision is visible.
+    derived = Dataset(
+        nodes=[],
+        edges=[
+            Edge(
+                from_="relic-38",
+                to="refine-node-2",
+                rel=Rel.BOOSTS,
+                source="Relics",
+                targets_effect=0,
+            ),
+            Edge(
+                from_="relic-38",
+                to="refine-node-2",
+                rel=Rel.BOOSTS,
+                source="Relics",
+                targets_effect=1,
+            ),
+        ],
+    )
+    _, problems = merge(derived, Dataset(), derived_path="data/derived.yaml")
+
+    assert len(problems) == 1
+    assert problems[0].severity == "warning"
+    # Both endpoints must be named so the reader can find the collision without
+    # knowing which parser produced it.
+    assert "relic-38" in problems[0].message
+    assert "refine-node-2" in problems[0].message

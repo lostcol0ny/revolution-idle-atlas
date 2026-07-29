@@ -229,3 +229,27 @@ def test_targets_effect_within_range_is_accepted(node):
         ],
     )
     assert validate_dataset(ds) == []
+
+
+def test_targets_effect_equal_to_effect_count_is_rejected(node):
+    # `targets_effect` is a 0-based index, so the valid range is [0, len-1].
+    # An index equal to len is one past the end and must be rejected.
+    target = node("b")
+    target.effects = [{"text": "effect 0"}, {"text": "effect 1"}]
+    ds = Dataset(
+        nodes=[node("a"), target],
+        edges=[
+            Edge(
+                **{
+                    "from": "a",
+                    "to": "b",
+                    "rel": "boosts",
+                    "source": "wiki:Relics",
+                    "targets_effect": 2,
+                }
+            )
+        ],
+    )
+    problems = validate_dataset(ds)
+    assert any("targets_effect 2" in p.message for p in problems)
+    assert all(p.severity == "error" for p in problems)

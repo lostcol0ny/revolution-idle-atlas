@@ -51,7 +51,7 @@ def _load(path: Path, display_path: str) -> Dataset | None:
     except yaml.YAMLError as exc:
         # PyYAML names the source "<unicode string>" because the loader is built
         # from text, so the real path has to come from us.
-        print(f"{path}: invalid YAML: {exc}", file=sys.stderr)
+        print(f"{display_path}: invalid YAML: {exc}", file=sys.stderr)
     return None
 
 
