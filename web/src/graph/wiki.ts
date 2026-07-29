@@ -22,10 +22,19 @@ export function wikiUrl(page: string | undefined): string | null {
 
   if (segments.length === 0) return null;
 
-  const path = segments.map(encodeURIComponent).join('/');
-  const fragment = anchor ? `#${encodeURIComponent(anchor.replace(/ /g, '_'))}` : '';
+  // A lone surrogate is unencodable and makes encodeURIComponent throw, and one
+  // survives JSON.parse intact so it can reach here from graph.json. The
+  // contract above is dead link, not crash, so an unencodable title yields no
+  // link rather than propagating into a React render.
+  try {
+    const path = segments.map(encodeURIComponent).join('/');
+    const fragment = anchor ? `#${encodeURIComponent(anchor.replace(/ /g, '_'))}` : '';
 
-  return `${WIKI_BASE}${path}${fragment}`;
+    return `${WIKI_BASE}${path}${fragment}`;
+  } catch (error) {
+    if (error instanceof URIError) return null;
+    throw error;
+  }
 }
 
 export interface SourceLabel {

@@ -27,7 +27,10 @@ describe('wikiUrl', () => {
   it('cannot produce a javascript: URL', () => {
     const url = wikiUrl('javascript:alert(1)');
     expect(url?.startsWith(WIKI_BASE)).toBe(true);
-    expect(url).not.toContain('javascript:alert');
+    // Pinned to the exact encoded output rather than the absence of a payload:
+    // an absence assertion passes against raw concatenation for any payload
+    // whose only encodable character is the colon.
+    expect(url).toBe(`${WIKI_BASE}javascript%3Aalert(1)`);
   });
 
   it('cannot escape the wiki path with traversal segments', () => {
@@ -43,6 +46,18 @@ describe('wikiUrl', () => {
 
   it('encodes characters that would otherwise change the URL structure', () => {
     expect(wikiUrl('A?b=c')).toBe(`${WIKI_BASE}A%3Fb%3Dc`);
+  });
+
+  it('degrades to no link instead of throwing on an unencodable title', () => {
+    // A lone surrogate survives JSON.parse, so it can arrive from graph.json.
+    expect(() => wikiUrl('\uD800')).not.toThrow();
+    expect(wikiUrl('\uD800')).toBeNull();
+    expect(() => wikiUrl('Unity#\uDFFF')).not.toThrow();
+    expect(wikiUrl('Unity#\uDFFF')).toBeNull();
+  });
+
+  it('still links a title containing a well-formed astral character', () => {
+    expect(wikiUrl('Relic 😀')).toBe(`${WIKI_BASE}Relic_%F0%9F%98%80`);
   });
 });
 
