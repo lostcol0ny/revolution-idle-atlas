@@ -1,9 +1,11 @@
+import { readFileSync } from 'node:fs';
 import { describe, expect, it } from 'vitest';
 import { buildIndex } from './adjacency';
 import { breakCycles } from './cycles';
 import { ego } from './ego';
 import { chainDoc, cycleDoc, diamondDoc } from './fixtures';
-import { layout } from './layout';
+import { NODE_HEIGHT, layout } from './layout';
+import { parseGraph } from './load';
 
 describe('layout', () => {
   it('assigns a position to every node', () => {
@@ -57,5 +59,26 @@ describe('layout', () => {
     const positions = layout(dag);
     expect(positions.size).toBe(1);
     expect(Number.isFinite(positions.get('lonely')?.x)).toBe(true);
+  });
+
+  it('never overlaps two nodes anywhere in the real graph', () => {
+    const url = new URL('../../../public/graph.json', import.meta.url);
+    const doc = parseGraph(JSON.parse(readFileSync(url, 'utf8')));
+    const index = buildIndex(doc);
+    const collisions: string[] = [];
+    for (const id of index.order) {
+      const { dag } = breakCycles(ego(index, id, 2));
+      const placed = [...layout(dag)].map(([n, p]) => ({ n, ...p }));
+      for (let i = 0; i < placed.length; i++) {
+        for (let j = i + 1; j < placed.length; j++) {
+          const a = placed[i]!,
+            b = placed[j]!;
+          if (a.x === b.x && Math.abs(a.y - b.y) < NODE_HEIGHT) {
+            collisions.push(`root=${id}: ${a.n} vs ${b.n}`);
+          }
+        }
+      }
+    }
+    expect(collisions).toEqual([]);
   });
 });
