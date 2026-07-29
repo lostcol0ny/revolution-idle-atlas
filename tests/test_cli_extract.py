@@ -159,7 +159,7 @@ def test_extract_warns_about_dropped_edges_but_still_succeeds(
     assert "1 dropped edge(s)" in captured.out
 
 
-def test_build_merges_the_derived_file_when_present(tmp_path, capsys):
+def test_build_merges_the_derived_file_when_present(tmp_path):
     data = tmp_path / "data"
     data.mkdir(parents=True)
     # relic-38 appears in both files: derived has the raw name, curated overrides it.
@@ -312,35 +312,56 @@ def test_build_reports_a_duplicate_node_id_in_the_curated_file(tmp_path, capsys)
     assert not (tmp_path / "public" / "graph.json").exists()
 
 
-def test_build_does_not_blame_the_curated_file_for_a_merged_problem(tmp_path, capsys):
-    """A problem about a generated node must not name `relationships.yaml`.
+def test_each_problem_is_labelled_with_the_file_it_can_be_found_in(tmp_path, capsys):
+    """Both halves of the labelling rule, in one build.
 
-    The generated node below is an orphan-free dangling edge source, so the
-    error originates entirely in `derived.yaml`. Printing it under the curated
-    path sends the reader to a file that does not contain the record.
+    A line number is always a curated line number — `merge` nulls `line` on
+    every derived record — so a problem carrying one must name the curated
+    file, and a problem without one must not. Asserting only the derived half
+    would let "label everything generically" pass, which regresses the main
+    curation loop; asserting only the curated half would let the original
+    blame-everything-on-relationships.yaml bug back in.
     """
     data = tmp_path / "data"
     data.mkdir(parents=True)
-    (data / "relationships.yaml").write_text("nodes: []\nedges: []\n", encoding="utf-8")
-    (data / "derived.yaml").write_text(
+    (data / "relationships.yaml").write_text(
         "nodes:\n"
-        "  - id: relic-1\n"
-        "    name: One\n"
+        "  - id: c1\n"
+        "    name: C1\n"
         "    system: relics\n"
         "    kind: relic\n"
         "edges:\n"
-        "  - from: relic-1\n"
-        "    to: does-not-exist\n"
+        "  - from: c1\n"
+        "    to: curated-ghost\n"
+        "    rel: boosts\n"
+        "    source: wiki\n",
+        encoding="utf-8",
+    )
+    (data / "derived.yaml").write_text(
+        "nodes:\n"
+        "  - id: d1\n"
+        "    name: D1\n"
+        "    system: relics\n"
+        "    kind: relic\n"
+        "edges:\n"
+        "  - from: d1\n"
+        "    to: derived-ghost\n"
         "    rel: boosts\n"
         "    source: Relics\n",
         encoding="utf-8",
     )
 
     assert main(["build", "--root", str(tmp_path)]) == 1
-    err = capsys.readouterr().err
-    assert "does-not-exist" in err
-    # The record lives in derived.yaml; naming the curated file would be a lie.
-    assert "data/relationships.yaml" not in err
+    lines = capsys.readouterr().err.splitlines()
+
+    curated_line = next(line for line in lines if "curated-ghost" in line)
+    derived_line = next(line for line in lines if "derived-ghost" in line)
+
+    # The curated record has a line number, so it names a file and a position.
+    assert curated_line.startswith("data/relationships.yaml:")
+    # The derived record's line was nulled by the merge, so it cannot claim one.
+    assert derived_line.startswith("dataset ")
+    assert "data/relationships.yaml" not in derived_line
 
 
 def test_build_fails_loudly_on_a_malformed_derived_file(tmp_path, capsys):
