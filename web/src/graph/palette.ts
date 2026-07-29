@@ -4,7 +4,7 @@ import type { Kind, KnownSystem, Rel } from '../types';
 // system later must not re-shuffle these. All are dark enough to carry white
 // label text at >= 4.5:1 contrast, which palette.test.ts enforces rather than
 // trusting this sentence.
-const SYSTEM_COLOURS: Record<KnownSystem, string> = {
+export const SYSTEM_COLOURS: Record<KnownSystem, string> = {
   revolution: '#3d6a99',
   infinity: '#b0621c',
   eternity: '#3f7a37',
@@ -47,7 +47,7 @@ export function kindBadge(kind: Kind): string {
 
 // `rel` gets two channels — line style and lightness. Style separates the
 // categories; lightness separates signal from background. Both are needed
-// because `requires` is 97% of edges and the app's subject is the other 3%.
+// because `requires` is just over half of edges and the app's subject is the rest.
 export const REL_STYLE: Record<Rel, { stroke: string; dash?: string; width: number }> = {
   boosts: { stroke: '#0f172a', width: 2 },
   unlocks: { stroke: '#0f172a', dash: '6 4', width: 2 },
