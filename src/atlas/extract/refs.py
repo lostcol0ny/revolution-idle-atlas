@@ -165,10 +165,11 @@ SUITS = ("swords", "wands", "pentacles", "cups")
 # "The Devil", ...) are bare title-case noun phrases with no structural marker
 # dividing them from ordinary prose, so matching them here would take a
 # hardcoded name list and would still fire on any sentence that merely used the
-# words. Task 7 resolves them instead, where the card names actually parsed off
-# the page are in hand and a candidate match can be checked against them.
-# Until then `resolve("Multiplies The Devil's base effect") == []` is the
-# designed outcome, not a bug.
+# words. They are resolved through a Vocabulary instead, by the caller that has
+# the card names actually parsed off the page in hand and can therefore check a
+# candidate match against them. With no vocabulary supplied,
+# `resolve("Multiplies The Devil's base effect") == []` is the designed
+# outcome, not a bug.
 _TAROT_RE = re.compile(
     rf"\b({'|'.join(RANKS)})\s+of\s+({'|'.join(SUITS)})\b", re.IGNORECASE
 )
@@ -202,8 +203,8 @@ class _Term:
 class Vocabulary:
     """Surface forms to match in effect prose, longest form first.
 
-    Built from the node set's names and aliases (see extract/vocab.py), so
-    teaching the resolver a new stat is a YAML entry rather than a code change.
+    Built from the node set's names and aliases, so teaching the resolver a new
+    stat is a YAML entry rather than a code change.
 
     Every guard here exists because a wrong edge is worse than a missing one: a
     missing one shows up in the coverage report, a wrong one just looks true.
@@ -215,17 +216,37 @@ class Vocabulary:
 
     def __init__(self, terms: Iterable[tuple[str, str]]) -> None:
         accepted: list[tuple[str, str]] = []
+        claims: dict[str, str] = {}
         for surface, target_id in terms:
             surface = normalise_space(surface)
-            # isupper() is False for "SMMF Factor" (mixed) and for "" — both of
-            # which should take the stricter floor, which is what we want.
+            # The 2-character floor is for letter abbreviations only. isalpha()
+            # excludes "A1", "2X" and "A-": their digits and punctuation give
+            # case-sensitivity nothing to grip on, so they get no exemption.
+            # isupper() is already False for "SMMF Factor" (mixed) and for "",
+            # both of which should take the stricter floor.
             floor = (
                 _MIN_UPPERCASE_SURFACE_LENGTH
-                if surface.isupper()
+                if surface.isupper() and surface.isalpha()
                 else _MIN_SURFACE_LENGTH
             )
             if len(surface) < floor:
                 continue
+            claimed_by = claims.get(surface)
+            if claimed_by == target_id:
+                # The same pair twice is harmless — one node listing an alias
+                # that is also its name, or a union that overlaps. Dedupe it.
+                continue
+            if claimed_by is not None:
+                # One phrase cannot mean two nodes. Whichever term happened to
+                # sort first would claim the span and silently suppress the
+                # other, so the edge would be decided by input order — a wrong
+                # edge indistinguishable from a true one. This is a data
+                # conflict for a curator to resolve, so say so loudly.
+                raise ValueError(
+                    f"surface form {surface!r} is claimed by two nodes: "
+                    f"{claimed_by!r} and {target_id!r}"
+                )
+            claims[surface] = target_id
             accepted.append((surface, target_id))
 
         # Longest first so "Special Minerals Merge Factor" claims the span
@@ -244,8 +265,14 @@ class Vocabulary:
                 # re.escape because a surface form is data: "Zodiac Exp. Factor"
                 # contains a dot, and an unescaped one both over-matches and
                 # risks re.error on a malformed alias.
+                #
+                # Lookarounds rather than \b, because \b is a boundary *between*
+                # a word and a non-word character and so asserts nothing when
+                # the surface itself starts or ends with punctuation: r"\bZodiac
+                # Exp.\b" can never match "Zodiac Exp." at all. These behave
+                # identically on word-character edges and correctly on the rest.
                 re.compile(
-                    rf"\b{re.escape(surface)}\b",
+                    rf"(?<!\w){re.escape(surface)}(?!\w)",
                     0 if surface.isupper() else re.IGNORECASE,
                 ),
                 target_id,
@@ -265,7 +292,11 @@ class Vocabulary:
 
         Constructing a fresh Vocabulary re-sorts longest-first across both sets,
         which is the whole point. Appending would let a short curated form claim
-        a span a longer added form should have taken.
+        a span a longer added form should have taken. Routing through __init__
+        also re-runs the conflicting-claim check over the union, so an added
+        term cannot quietly contest a surface form the receiver already owns.
+
+        Raises ValueError if it does.
         """
         return Vocabulary([*self._pairs, *terms])
 

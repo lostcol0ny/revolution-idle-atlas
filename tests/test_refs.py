@@ -1,3 +1,5 @@
+import pytest
+
 from atlas.extract.refs import (
     Reference,
     Vocabulary,
@@ -124,11 +126,15 @@ def test_resolve_ignores_bare_node_references():
 
 
 def _vocab() -> Vocabulary:
+    # "Merge Factor" is listed BEFORE the longer form it is a substring of, on
+    # purpose: with the specific form first, plain input-order iteration would
+    # pass the longest-first test by luck and the sort could be deleted without
+    # any test noticing.
     return Vocabulary(
         [
+            ("Merge Factor", "merge-factor"),
             ("Special Minerals Merge Factor", "special-minerals-merge-factor"),
             ("SMMF", "special-minerals-merge-factor"),
-            ("Merge Factor", "merge-factor"),
             ("Attack Exponent", "attack-exponent"),
             ("AP", "animal-points"),
             ("Luck", "luck"),
@@ -151,7 +157,10 @@ def test_a_shorter_form_still_matches_when_the_longer_one_is_absent():
     assert [r.target_id for r in refs] == ["merge-factor"]
 
 
-def test_an_uppercase_alias_matches_case_sensitively():
+def test_an_uppercase_alias_resolves_when_the_case_matches():
+    # The positive half only. The rule that uppercase forms are matched
+    # case-*sensitively* is carried by the next test, which is where a
+    # regression would show.
     assert [r.target_id for r in resolve("Grants 3 AP per lap", _vocab())] == ["animal-points"]
 
 
@@ -196,12 +205,33 @@ def test_a_one_character_uppercase_alias_is_rejected():
     assert len(Vocabulary([("E", "eternity-points")])) == 0
 
 
+def test_the_two_character_exemption_requires_letters_only():
+    # str.isupper() is True for "A1", "2X" and "A-", none of which are the
+    # letter abbreviations the exemption was written for: a digit or a dash
+    # gives case-sensitivity nothing to grip on, so these take the floor of 3.
+    assert len(Vocabulary([("A1", "some-stat")])) == 0
+    assert len(Vocabulary([("2X", "some-stat")])) == 0
+    assert len(Vocabulary([("A-", "some-stat")])) == 0
+    # Only the floor is affected; a 3-character form with a digit is still fine.
+    assert len(Vocabulary([("A1B", "some-stat")])) == 1
+
+
 def test_a_vocabulary_match_does_not_overlap_an_entity_regex_match():
     # A stat unluckily aliased "Refine Node 2" must not produce a second
     # reference for text the refine-tree regex already resolved. One phrase,
     # one edge.
     vocab = Vocabulary([("Refine Node 2", "some-stat")])
     refs = resolve("Adds base to Refine Node 2", vocab)
+    assert [r.target_id for r in refs] == ["refine-node-2"]
+
+
+def test_a_vocabulary_match_overlapping_an_entity_span_only_partially_is_dropped():
+    # The test above shares a start offset with the entity span, so a check as
+    # weak as `start == other_start` would satisfy it. Here the surface form
+    # begins mid-span and runs past the end, so only a real interval-overlap
+    # test rejects it. An off-by-one at either edge double-counts the phrase.
+    vocab = Vocabulary([("Node 2 boost", "some-stat")])
+    refs = resolve("Adds base to Refine Node 2 boost", vocab)
     assert [r.target_id for r in refs] == ["refine-node-2"]
 
 
@@ -257,6 +287,25 @@ def test_a_surface_form_with_regex_metacharacters_is_matched_literally():
     assert resolve("Raises Zodiac ExpX Factor", vocab) == []
 
 
+def test_a_surface_form_ending_in_punctuation_can_still_match():
+    # r"\b" asserts a transition between a word and a non-word character, so it
+    # asserts nothing at all when the surface itself ends in punctuation:
+    # r"\bZodiac Exp\.\b" can never match "Zodiac Exp." anywhere. A mis-shaped
+    # alias would then match nothing, silently, with no warning to the curator.
+    vocab = Vocabulary([("Zodiac Exp.", "zodiac-exp")])
+    assert [r.target_id for r in resolve("Raises Zodiac Exp.", vocab)] == ["zodiac-exp"]
+    assert [r.target_id for r in resolve("Raises Zodiac Exp. by 2x", vocab)] == [
+        "zodiac-exp"
+    ]
+    # The trailing guard still holds: this is not a reference to the stat.
+    assert resolve("Raises Zodiac Exp.tra", vocab) == []
+
+
+def test_a_surface_form_wrapped_in_punctuation_can_still_match():
+    vocab = Vocabulary([("(Fire)", "fire")])
+    assert [r.target_id for r in resolve("Boosts (Fire) output", vocab)] == ["fire"]
+
+
 def test_a_vocabulary_reference_is_flagged_and_an_entity_one_is_not():
     # This flag is the only thing that lets a parser stamp `uncertain` on prose
     # matches while leaving a structural match's confidence alone. Without it
@@ -292,3 +341,39 @@ def test_with_terms_resorts_longest_first_across_both_sets():
     assert [r.target_id for r in resolve("Draw The Devil", extended)] == [
         "tarot-the-devil"
     ]
+
+
+def test_one_surface_form_claimed_by_two_nodes_is_a_hard_error():
+    # Without this, the tie-break key (-len, surface) ignores target_id, so
+    # whichever term happened to be listed first would claim the span and
+    # suppress its rival — an edge decided by input order, indistinguishable
+    # from a true one. A curator claiming one phrase for two stats is a data
+    # conflict to fix in the YAML, so it must fail loudly rather than coin-flip.
+    with pytest.raises(ValueError, match="Merge Factor"):
+        Vocabulary(
+            [("Merge Factor", "smmf"), ("Merge Factor", "zodiac-merge-factor")]
+        )
+
+
+def test_the_conflict_error_names_both_claimants():
+    with pytest.raises(ValueError) as excinfo:
+        Vocabulary([("Luck", "luck"), ("Luck", "luck-multiplier")])
+    message = str(excinfo.value)
+    assert "luck" in message and "luck-multiplier" in message
+
+
+def test_with_terms_cannot_smuggle_in_a_conflicting_claim():
+    # The check has to cover the union, not just a single constructor call,
+    # or tarot.py could contest a curated surface form after the fact.
+    base = Vocabulary([("Merge Factor", "smmf")])
+    with pytest.raises(ValueError, match="Merge Factor"):
+        base.with_terms([("Merge Factor", "zodiac-merge-factor")])
+
+
+def test_an_identically_repeated_pair_is_deduped_rather_than_rejected():
+    # Same surface, same target is not a conflict: a node whose alias repeats
+    # its name, or a with_terms union that overlaps, is harmless.
+    vocab = Vocabulary([("Luck", "luck"), ("Luck", "luck")])
+    assert len(vocab) == 1
+    assert [r.target_id for r in resolve("Increases Luck", vocab)] == ["luck"]
+    assert len(vocab.with_terms([("Luck", "luck")])) == 1
