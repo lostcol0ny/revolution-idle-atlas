@@ -236,3 +236,132 @@ def test_build_works_when_the_derived_file_is_absent(tmp_path):
     # A missing generated file degrades to the curated file alone rather than
     # failing: a fresh clone that has not run `atlas extract` still builds.
     assert main(["build", "--root", str(tmp_path)]) == 0
+
+
+def test_build_applies_a_curated_suppression_when_the_derived_file_is_absent(
+    tmp_path,
+):
+    """Suppression must not depend on `derived.yaml` existing.
+
+    A branch that skips the merge when the generated file is absent makes every
+    curated-vs-curated suppression silently inert, which is the one failure the
+    `suppress` mechanism cannot survive: the edge stays and nothing says so.
+    """
+    data = tmp_path / "data"
+    data.mkdir(parents=True)
+    (data / "relationships.yaml").write_text(
+        "nodes:\n"
+        "  - id: a\n"
+        "    name: A\n"
+        "    system: relics\n"
+        "    kind: relic\n"
+        "  - id: b\n"
+        "    name: B\n"
+        "    system: relics\n"
+        "    kind: relic\n"
+        "edges:\n"
+        "  - from: a\n"
+        "    to: b\n"
+        "    rel: boosts\n"
+        "    source: wiki\n"
+        "suppress:\n"
+        "  - from: a\n"
+        "    to: b\n"
+        "    rel: boosts\n"
+        "    reason: the wiki sentence was a comparison\n",
+        encoding="utf-8",
+    )
+    assert not (data / "derived.yaml").exists()
+
+    assert main(["build", "--root", str(tmp_path)]) == 0
+
+    import json
+
+    doc = json.loads((tmp_path / "public" / "graph.json").read_text(encoding="utf-8"))
+    assert doc["edges"] == []
+
+
+def test_build_reports_a_duplicate_node_id_in_the_curated_file(tmp_path, capsys):
+    """Merging collapses ids into a dict, so merge must catch this itself.
+
+    With `derived.yaml` present the merge runs before `validate_dataset`, and
+    the dict has already discarded one of the two records by the time the
+    validator looks. Without merge reporting it, a curated record vanishes in
+    silence and the build still exits 0.
+    """
+    data = tmp_path / "data"
+    data.mkdir(parents=True)
+    (data / "relationships.yaml").write_text(
+        "nodes:\n"
+        "  - id: relic-1\n"
+        "    name: One\n"
+        "    system: relics\n"
+        "    kind: relic\n"
+        "  - id: relic-1\n"
+        "    name: Duplicate\n"
+        "    system: relics\n"
+        "    kind: relic\n"
+        "edges: []\n",
+        encoding="utf-8",
+    )
+    (data / "derived.yaml").write_text("nodes: []\nedges: []\n", encoding="utf-8")
+
+    assert main(["build", "--root", str(tmp_path)]) == 1
+    assert "duplicate node id 'relic-1'" in capsys.readouterr().err
+    # An error must block the artifact, not merely be printed alongside it.
+    assert not (tmp_path / "public" / "graph.json").exists()
+
+
+def test_build_does_not_blame_the_curated_file_for_a_merged_problem(tmp_path, capsys):
+    """A problem about a generated node must not name `relationships.yaml`.
+
+    The generated node below is an orphan-free dangling edge source, so the
+    error originates entirely in `derived.yaml`. Printing it under the curated
+    path sends the reader to a file that does not contain the record.
+    """
+    data = tmp_path / "data"
+    data.mkdir(parents=True)
+    (data / "relationships.yaml").write_text("nodes: []\nedges: []\n", encoding="utf-8")
+    (data / "derived.yaml").write_text(
+        "nodes:\n"
+        "  - id: relic-1\n"
+        "    name: One\n"
+        "    system: relics\n"
+        "    kind: relic\n"
+        "edges:\n"
+        "  - from: relic-1\n"
+        "    to: does-not-exist\n"
+        "    rel: boosts\n"
+        "    source: Relics\n",
+        encoding="utf-8",
+    )
+
+    assert main(["build", "--root", str(tmp_path)]) == 1
+    err = capsys.readouterr().err
+    assert "does-not-exist" in err
+    # The record lives in derived.yaml; naming the curated file would be a lie.
+    assert "data/relationships.yaml" not in err
+
+
+def test_build_fails_loudly_on_a_malformed_derived_file(tmp_path, capsys):
+    """A corrupt generated file must stop the build, not be skipped.
+
+    Falling through to a curated-only graph would quietly drop every generated
+    node and still exit 0, which looks identical to a successful build.
+    """
+    data = tmp_path / "data"
+    data.mkdir(parents=True)
+    (data / "relationships.yaml").write_text(
+        "nodes:\n"
+        "  - id: singularity\n"
+        "    name: Singularity\n"
+        "    system: unity\n"
+        "    kind: currency\n"
+        "edges: []\n",
+        encoding="utf-8",
+    )
+    (data / "derived.yaml").write_text("nodes: [oops\n", encoding="utf-8")
+
+    assert main(["build", "--root", str(tmp_path)]) == 1
+    assert "derived.yaml" in capsys.readouterr().err
+    assert not (tmp_path / "public" / "graph.json").exists()

@@ -53,15 +53,22 @@ def _build(root: Path, check_only: bool) -> int:
     if curated is None:
         return 1
 
+    # A missing generated file degrades to an empty one rather than skipping the
+    # merge: `suppress` and the duplicate-id check are merge's job, and a branch
+    # that bypasses it would make both silently inert on a fresh clone.
     derived_path = root / DERIVED_REL_PATH
-    merge_problems: list[Problem] = []
+    derived = Dataset()
     if derived_path.is_file():
-        derived = _load(derived_path, str(DERIVED_REL_PATH))
-        if derived is None:
+        loaded = _load(derived_path, str(DERIVED_REL_PATH))
+        if loaded is None:
             return 1
-        dataset, merge_problems = merge(derived, curated)
-    else:
-        dataset = curated
+        derived = loaded
+        # Problems are reported against a merged dataset, so naming the curated
+        # file would send anyone chasing an error about a generated node to a
+        # file that does not contain it.
+        display_path = "dataset"
+
+    dataset, merge_problems = merge(derived, curated)
 
     problems = (
         merge_problems

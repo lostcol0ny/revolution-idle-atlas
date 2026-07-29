@@ -1,23 +1,35 @@
 # Revolution Idle Atlas
 
-A data pipeline that turns a hand-curated map of stat and resource dependencies in
-the idle game [Revolution Idle](https://revolutionidle.wiki.gg/) into
+A data pipeline that turns a map of stat and resource dependencies in the idle
+game [Revolution Idle](https://revolutionidle.wiki.gg/) into
 `public/graph.json`, a graph document for a visualisation frontend.
 
-## The single source of truth
+## The dataset is two files, split by durability
 
-`data/relationships.yaml` is **hand-maintained**. Nothing generates it, and
-nothing may generate it. Every other piece of this repository exists to make
-curating that one file tolerable:
+The dataset lives in two files, and what separates them is **how long they
+survive**, not who or what is allowed to write them:
+
+- `data/derived.yaml` is **disposable**. `atlas extract` regenerates it in full
+  from `data/raw/` on every run, so any edit to it lasts until the next run.
+- `data/relationships.yaml` is **durable**. It survives extraction and **wins
+  every merge**, which is what makes it the place to correct or delete anything
+  generated.
+
+`atlas build` loads both and merges them. A curated node overlays the generated
+one **field by field**, so correcting one relic's name does not mean restating
+its kind, wiki page and effects. A curated edge replaces the generated one
+wholesale. A `suppress:` entry deletes a generated edge outright — the one
+correction an overlay cannot express.
 
 | Path | Role |
 |---|---|
-| `data/relationships.yaml` | The dataset. Written by a human, reviewed by a human. |
-| `data/raw/` | Scraped wikitext, one file per wiki page. Read-only reference used for **diffing** — it tells you when the wiki changed under you. It never feeds the dataset. |
+| `data/relationships.yaml` | The durable half. Survives extraction and wins every merge. Committed. |
+| `data/derived.yaml` | The disposable half. Regenerated in full by `atlas extract`; do not hand-edit it, because the next run overwrites it. Committed. |
+| `data/raw/` | Scraped wikitext, one file per wiki page. The input `atlas extract` parses, and the reference `atlas build` diffs against to tell you when the wiki changed under you. |
 | `data/inventory.yaml` | Optional. A map of system → known entity ids, used to report gaps. Absent by default; its absence is silent. |
 | `public/graph.json` | Generated. The contract with the frontend. Committed. |
 | `docs/coverage.md` | Generated. The curation to-do list. Committed. |
-| `bootstrap/` | Throwaway. One-off scripts used to seed the initial dataset. Not imported by `src/`, not run by CI, not tested. Delete it rather than fix it. |
+| `bootstrap/` | Historical. Held one-off seeding scripts; all have been superseded by `atlas extract` and removed. |
 
 `public/graph.json` and `docs/coverage.md` are build products that are committed
 to the repository. CI rebuilds them and fails if the result differs, so if a CI
@@ -27,8 +39,9 @@ run goes red on the artifact step, run `uv run atlas build` and commit the resul
 
 ```sh
 uv sync                  # install
-uv run atlas build       # validate, then write public/graph.json and docs/coverage.md
+uv run atlas build       # merge both dataset files, validate, then write the artifacts
 uv run atlas build --check   # validate only; write nothing
+uv run atlas extract     # parse data/raw/ into data/derived.yaml
 uv run atlas scrape      # re-fetch data/raw/ from the wiki
 uv run pytest            # tests
 ```
@@ -57,9 +70,11 @@ Version 1. The top-level document:
 `version` is an integer. It increments when the shape changes incompatibly; a
 consumer should refuse a version it does not recognise.
 
-Node and edge order is deterministic — it follows the order of
-`data/relationships.yaml` — and keys within each object are sorted
-alphabetically. **Fields whose value is null are omitted entirely** rather than
+Node and edge order is deterministic: generated records come first in the order
+`atlas extract` produced them, then records that exist only in
+`data/relationships.yaml`, in that file's order. A curated record that overrides
+a generated one keeps the generated one's position. Keys within each object are
+sorted alphabetically. **Fields whose value is null are omitted entirely** rather than
 emitted as `null`, so a consumer must treat "key absent" and "no value" as the
 same thing.
 
