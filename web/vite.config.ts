@@ -14,6 +14,8 @@ export default defineConfig({
   },
   test: {
     environment: 'node',
-    include: ['src/**/*.test.ts'],
+    // tsconfig.node.json already typechecks .test.tsx. Matching it here means a
+    // future component test cannot land typechecked but silently never run.
+    include: ['src/**/*.test.{ts,tsx}'],
   },
 });

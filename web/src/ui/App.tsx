@@ -41,10 +41,11 @@ export default function App() {
         } else if (error instanceof GraphFetchError) {
           setLoad({ status: 'fetch-error', message: error.message });
         } else {
-          // Neither load error type, so the throw came from somewhere that does
-          // not currently throw (buildIndex warns and continues). Offering Retry
-          // is wrong for such an error, but a screen for a path that cannot yet
-          // be reached is worse — log it so it is diagnosable if it ever is.
+          // Neither load error type. buildIndex warns-and-continues only for
+          // dangling edges; a malformed element still throws, because parseGraph
+          // checks that nodes/edges are arrays but never checks the elements.
+          // Retry is the wrong affordance for that, but a dedicated screen is
+          // more machinery than it earns — log it so it stays diagnosable.
           console.error('Unexpected error while loading the graph', error);
           setLoad({
             status: 'fetch-error',

@@ -70,7 +70,10 @@ body {
   font-size: 13px;
 }
 
-button.link {
+/* Not `button.link`: the detail panel puts a cross-link button and a wiki
+   anchor on the same row, and an element-qualified selector would style only
+   the button, leaving the anchor on the UA's default blue. */
+.link {
   background: none;
   border: none;
   padding: 0;

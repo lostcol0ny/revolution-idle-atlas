@@ -27,7 +27,7 @@ function EdgeRow({
         </button>
         <span className="sep">·</span>
         {source.href ? (
-          <a href={source.href} target="_blank" rel="noreferrer noopener">
+          <a className="link" href={source.href} target="_blank" rel="noreferrer noopener">
             {source.text}
           </a>
         ) : (
@@ -53,12 +53,11 @@ export function NodeCard({
   const incoming = index.incoming.get(node.id) ?? [];
   const outgoing = index.outgoing.get(node.id) ?? [];
   const href = wikiUrl(node.wiki);
-  // Defaults differ from EdgeRow's on purpose. NodeConfidence has 'unknown',
-  // meaning "nothing curated yet", which is exactly what an absent field says;
-  // EdgeConfidence has no such member, so its three values are all positive
-  // claims and any default there is a guess. Giving both the same fallback
-  // would merge two vocabularies that types.ts keeps separate deliberately.
-  const confidence = node.confidence ?? 'unknown';
+  // Matches the pipeline, which is the authority on what an absent field means:
+  // models.py defaults both node and edge confidence to `documented`. Rendering
+  // an absent value as 'unknown' would relabel every documented node the day the
+  // field stops being emitted.
+  const confidence = node.confidence ?? 'documented';
 
   return (
     <div className="nodecard">
@@ -78,7 +77,7 @@ export function NodeCard({
 
       {href !== null && (
         <p>
-          <a href={href} target="_blank" rel="noreferrer noopener">
+          <a className="link" href={href} target="_blank" rel="noreferrer noopener">
             Open on the wiki
           </a>
         </p>

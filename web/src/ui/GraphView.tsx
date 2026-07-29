@@ -49,7 +49,10 @@ export function GraphView({
 
     const flowEdges: Edge[] = subgraph.edges.map((edge, position) => {
       const isBack = back.has(edge);
-      const style = isBack ? BACK_EDGE_STYLE : REL_STYLE[edge.rel];
+      // `rel` is typed but never validated on the TS path, same as the edge
+      // endpoints in adjacency.ts. Without the fallback an unrecognised value
+      // reads as undefined and blanks the whole canvas on the next line.
+      const style = isBack ? BACK_EDGE_STYLE : (REL_STYLE[edge.rel] ?? REL_STYLE.requires);
       return {
         id: `${edge.from}|${edge.to}|${edge.rel}|${position}`,
         source: edge.from,
