@@ -1,5 +1,7 @@
 # Revolution Idle Atlas — relationship dataset.
-# Single source of truth. Hand-maintained. Nothing but a human writes here.
+# The durable half of the dataset. `data/derived.yaml` is regenerated in full by
+# `atlas extract`; this file survives extraction and wins every merge, which is
+# what makes it the place to correct or delete anything generated.
 #
 # confidence (nodes): documented | provisional | unknown
 # confidence (edges): documented | provisional | uncertain
@@ -96,957 +98,141 @@ nodes:
     wiki: Plague
     confidence: unknown
 
-  - id: refine-node-1
-    name: Refine Node 1
-    system: refine-tree
-    kind: tree-node
-    wiki: Minerals/Refine_Tree
-    confidence: documented
-
-  - id: refine-node-2
-    name: Refine Node 2
-    system: refine-tree
-    kind: tree-node
-    wiki: Minerals/Refine_Tree
-    confidence: documented
-
-  - id: refine-node-3
-    name: Refine Node 3
-    system: refine-tree
-    kind: tree-node
-    wiki: Minerals/Refine_Tree
-    confidence: documented
-
-  - id: refine-node-4
-    name: Refine Node 4
-    system: refine-tree
-    kind: tree-node
-    wiki: Minerals/Refine_Tree
-    confidence: documented
-
-  - id: refine-node-5
-    name: Refine Node 5
-    system: refine-tree
-    kind: tree-node
-    wiki: Minerals/Refine_Tree
-    confidence: documented
-
-  - id: refine-node-6
-    name: Refine Node 6
-    system: refine-tree
-    kind: tree-node
-    wiki: Minerals/Refine_Tree
-    confidence: documented
-
-  - id: refine-node-7
-    name: Refine Node 7
-    system: refine-tree
-    kind: tree-node
-    wiki: Minerals/Refine_Tree
-    confidence: documented
-
-  - id: refine-node-8
-    name: Refine Node 8
-    system: refine-tree
-    kind: tree-node
-    wiki: Minerals/Refine_Tree
-    confidence: documented
-
-  - id: refine-node-9
-    name: Refine Node 9
-    system: refine-tree
-    kind: tree-node
-    wiki: Minerals/Refine_Tree
-    confidence: documented
-
-  - id: refine-node-10
-    name: Refine Node 10
-    system: refine-tree
-    kind: tree-node
-    wiki: Minerals/Refine_Tree
-    confidence: documented
-
-  - id: refine-node-11
-    name: Refine Node 11
-    system: refine-tree
-    kind: tree-node
-    wiki: Minerals/Refine_Tree
-    confidence: documented
-
-  - id: refine-node-12
-    name: Refine Node 12
-    system: refine-tree
-    kind: tree-node
-    wiki: Minerals/Refine_Tree
-    confidence: documented
-
-  - id: refine-node-13
-    name: Refine Node 13
-    system: refine-tree
-    kind: tree-node
-    wiki: Minerals/Refine_Tree
-    confidence: documented
-
-  - id: refine-node-14
-    name: Refine Node 14
-    system: refine-tree
-    kind: tree-node
-    wiki: Minerals/Refine_Tree
-    confidence: documented
-
-  - id: refine-node-15
-    name: Refine Node 15
-    system: refine-tree
-    kind: tree-node
-    wiki: Minerals/Refine_Tree
-    confidence: documented
-
-  - id: refine-node-16
-    name: Refine Node 16
-    system: refine-tree
-    kind: tree-node
-    wiki: Minerals/Refine_Tree
-    confidence: documented
-
-  - id: refine-node-17
-    name: Refine Node 17
-    system: refine-tree
-    kind: tree-node
-    wiki: Minerals/Refine_Tree
-    confidence: documented
-
-  - id: refine-node-18
-    name: Refine Node 18
-    system: refine-tree
-    kind: tree-node
-    wiki: Minerals/Refine_Tree
-    confidence: documented
-
-  - id: refine-node-19
-    name: Refine Node 19
-    system: refine-tree
-    kind: tree-node
-    wiki: Minerals/Refine_Tree
-    confidence: documented
-
-  - id: refine-node-20
-    name: Refine Node 20
-    system: refine-tree
-    kind: tree-node
-    wiki: Minerals/Refine_Tree
-    confidence: documented
-
-  - id: refine-node-21
-    name: Refine Node 21
-    system: refine-tree
-    kind: tree-node
-    wiki: Minerals/Refine_Tree
-    confidence: documented
-
-  - id: refine-node-22
-    name: Refine Node 22
-    system: refine-tree
-    kind: tree-node
-    wiki: Minerals/Refine_Tree
-    confidence: documented
-
-  - id: refine-node-23
-    name: Refine Node 23
-    system: refine-tree
-    kind: tree-node
-    wiki: Minerals/Refine_Tree
-    confidence: documented
-
-  - id: refine-node-24
-    name: Refine Node 24
-    system: refine-tree
-    kind: tree-node
-    wiki: Minerals/Refine_Tree
-    confidence: documented
-
-  - id: refine-node-25
-    name: Refine Node 25
-    system: refine-tree
-    kind: tree-node
-    wiki: Minerals/Refine_Tree
-    confidence: documented
-
-  - id: refine-node-26
-    name: Refine Node 26
-    system: refine-tree
-    kind: tree-node
-    wiki: Minerals/Refine_Tree
-    confidence: documented
-
-  - id: refine-node-27
-    name: Refine Node 27
-    system: refine-tree
-    kind: tree-node
-    wiki: Minerals/Refine_Tree
-    confidence: documented
-
-  - id: refine-node-28
-    name: Refine Node 28
-    system: refine-tree
-    kind: tree-node
-    wiki: Minerals/Refine_Tree
-    confidence: documented
-
-  - id: refine-node-29
-    name: Refine Node 29
-    system: refine-tree
-    kind: tree-node
-    wiki: Minerals/Refine_Tree
-    confidence: documented
-
-  - id: refine-node-30
-    name: Refine Node 30
-    system: refine-tree
-    kind: tree-node
-    wiki: Minerals/Refine_Tree
-    confidence: documented
-
-  - id: refine-node-31
-    name: Refine Node 31
-    system: refine-tree
-    kind: tree-node
-    wiki: Minerals/Refine_Tree
-    confidence: documented
-
-  - id: refine-node-32
-    name: Refine Node 32
-    system: refine-tree
-    kind: tree-node
-    wiki: Minerals/Refine_Tree
-    confidence: documented
-
-  - id: refine-node-33
-    name: Refine Node 33
-    system: refine-tree
-    kind: tree-node
-    wiki: Minerals/Refine_Tree
-    confidence: documented
-
-  - id: refine-node-34
-    name: Refine Node 34
-    system: refine-tree
-    kind: tree-node
-    wiki: Minerals/Refine_Tree
-    confidence: documented
-
-  - id: refine-node-35
-    name: Refine Node 35
-    system: refine-tree
-    kind: tree-node
-    wiki: Minerals/Refine_Tree
-    confidence: documented
-
-  - id: refine-node-36
-    name: Refine Node 36
-    system: refine-tree
-    kind: tree-node
-    wiki: Minerals/Refine_Tree
-    confidence: documented
-
-  - id: refine-node-37
-    name: Refine Node 37
-    system: refine-tree
-    kind: tree-node
-    wiki: Minerals/Refine_Tree
-    confidence: documented
-
-  - id: refine-node-38
-    name: Refine Node 38
-    system: refine-tree
-    kind: tree-node
-    wiki: Minerals/Refine_Tree
-    confidence: documented
-
-  - id: refine-node-39
-    name: Refine Node 39
-    system: refine-tree
-    kind: tree-node
-    wiki: Minerals/Refine_Tree
-    confidence: documented
-
-  - id: refine-node-40
-    name: Refine Node 40
-    system: refine-tree
-    kind: tree-node
-    wiki: Minerals/Refine_Tree
-    confidence: documented
-
-  - id: refine-node-41
-    name: Refine Node 41
-    system: refine-tree
-    kind: tree-node
-    wiki: Minerals/Refine_Tree
-    confidence: documented
-
-  - id: refine-node-42
-    name: Refine Node 42
-    system: refine-tree
-    kind: tree-node
-    wiki: Minerals/Refine_Tree
-    confidence: documented
-
-  - id: refine-node-43
-    name: Refine Node 43
-    system: refine-tree
-    kind: tree-node
-    wiki: Minerals/Refine_Tree
-    confidence: documented
-
-  - id: refine-node-44
-    name: Refine Node 44
-    system: refine-tree
-    kind: tree-node
-    wiki: Minerals/Refine_Tree
-    confidence: documented
-
-  - id: refine-node-45
-    name: Refine Node 45
-    system: refine-tree
-    kind: tree-node
-    wiki: Minerals/Refine_Tree
-    confidence: documented
-
-  - id: refine-node-46
-    name: Refine Node 46
-    system: refine-tree
-    kind: tree-node
-    wiki: Minerals/Refine_Tree
-    confidence: documented
-
-  - id: refine-node-47
-    name: Refine Node 47
-    system: refine-tree
-    kind: tree-node
-    wiki: Minerals/Refine_Tree
-    confidence: documented
-
-  - id: refine-node-48
-    name: Refine Node 48
-    system: refine-tree
-    kind: tree-node
-    wiki: Minerals/Refine_Tree
-    confidence: documented
-
-  - id: refine-node-49
-    name: Refine Node 49
-    system: refine-tree
-    kind: tree-node
-    wiki: Minerals/Refine_Tree
-    confidence: documented
-
-  - id: refine-node-50
-    name: Refine Node 50
-    system: refine-tree
-    kind: tree-node
-    wiki: Minerals/Refine_Tree
-    confidence: documented
-
-  - id: refine-node-51
-    name: Refine Node 51
-    system: refine-tree
-    kind: tree-node
-    wiki: Minerals/Refine_Tree
-    confidence: documented
-
-  - id: refine-node-52
-    name: Refine Node 52
-    system: refine-tree
-    kind: tree-node
-    wiki: Minerals/Refine_Tree
-    confidence: documented
-
-  - id: refine-node-53
-    name: Refine Node 53
-    system: refine-tree
-    kind: tree-node
-    wiki: Minerals/Refine_Tree
-    confidence: documented
-
-  - id: refine-node-54
-    name: Refine Node 54
-    system: refine-tree
-    kind: tree-node
-    wiki: Minerals/Refine_Tree
-    confidence: documented
-
-  - id: refine-node-55
-    name: Refine Node 55
-    system: refine-tree
-    kind: tree-node
-    wiki: Minerals/Refine_Tree
-    confidence: documented
-
-  - id: refine-node-56
-    name: Refine Node 56
-    system: refine-tree
-    kind: tree-node
-    wiki: Minerals/Refine_Tree
-    confidence: documented
-
-  - id: refine-node-57
-    name: Refine Node 57
-    system: refine-tree
-    kind: tree-node
-    wiki: Minerals/Refine_Tree
-    confidence: documented
-
-  - id: refine-node-58
-    name: Refine Node 58
-    system: refine-tree
-    kind: tree-node
-    wiki: Minerals/Refine_Tree
-    confidence: documented
-
-  - id: refine-node-59
-    name: Refine Node 59
-    system: refine-tree
-    kind: tree-node
-    wiki: Minerals/Refine_Tree
-    confidence: documented
-
-  - id: refine-node-60
-    name: Refine Node 60
-    system: refine-tree
-    kind: tree-node
-    wiki: Minerals/Refine_Tree
-    confidence: documented
-
-  - id: refine-node-61
-    name: Refine Node 61
-    system: refine-tree
-    kind: tree-node
-    wiki: Minerals/Refine_Tree
-    confidence: documented
-
-  - id: refine-node-62
-    name: Refine Node 62
-    system: refine-tree
-    kind: tree-node
-    wiki: Minerals/Refine_Tree
-    confidence: documented
-
-  - id: refine-node-63
-    name: Refine Node 63
-    system: refine-tree
-    kind: tree-node
-    wiki: Minerals/Refine_Tree
-    confidence: documented
-
-  - id: refine-node-64
-    name: Refine Node 64
-    system: refine-tree
-    kind: tree-node
-    wiki: Minerals/Refine_Tree
-    confidence: documented
-
-  - id: refine-node-65
-    name: Refine Node 65
-    system: refine-tree
-    kind: tree-node
-    wiki: Minerals/Refine_Tree
-    confidence: documented
-
-  - id: refine-node-66
-    name: Refine Node 66
-    system: refine-tree
-    kind: tree-node
-    wiki: Minerals/Refine_Tree
-    confidence: documented
-
-  - id: refine-node-67
-    name: Refine Node 67
-    system: refine-tree
-    kind: tree-node
-    wiki: Minerals/Refine_Tree
-    confidence: documented
-
-  - id: refine-node-68
-    name: Refine Node 68
-    system: refine-tree
-    kind: tree-node
-    wiki: Minerals/Refine_Tree
-    confidence: documented
-
-  - id: refine-node-69
-    name: Refine Node 69
-    system: refine-tree
-    kind: tree-node
-    wiki: Minerals/Refine_Tree
-    confidence: documented
-
-  - id: refine-node-70
-    name: Refine Node 70
-    system: refine-tree
-    kind: tree-node
-    wiki: Minerals/Refine_Tree
-    confidence: documented
-
-  - id: refine-node-71
-    name: Refine Node 71
-    system: refine-tree
-    kind: tree-node
-    wiki: Minerals/Refine_Tree
-    confidence: documented
-
-  - id: refine-node-72
-    name: Refine Node 72
-    system: refine-tree
-    kind: tree-node
-    wiki: Minerals/Refine_Tree
-    confidence: documented
-
-  - id: refine-node-73
-    name: Refine Node 73
-    system: refine-tree
-    kind: tree-node
-    wiki: Minerals/Refine_Tree
-    confidence: documented
-
-  - id: refine-node-74
-    name: Refine Node 74
-    system: refine-tree
-    kind: tree-node
-    wiki: Minerals/Refine_Tree
-    confidence: documented
-
-  - id: refine-node-75
-    name: Refine Node 75
-    system: refine-tree
-    kind: tree-node
-    wiki: Minerals/Refine_Tree
-    confidence: documented
-
-  - id: refine-node-76
-    name: Refine Node 76
-    system: refine-tree
-    kind: tree-node
-    wiki: Minerals/Refine_Tree
-    confidence: documented
-
-  - id: refine-node-77
-    name: Refine Node 77
-    system: refine-tree
-    kind: tree-node
-    wiki: Minerals/Refine_Tree
-    confidence: documented
-
-  - id: refine-node-78
-    name: Refine Node 78
-    system: refine-tree
-    kind: tree-node
-    wiki: Minerals/Refine_Tree
-    confidence: documented
-
-  - id: refine-node-79
-    name: Refine Node 79
-    system: refine-tree
-    kind: tree-node
-    wiki: Minerals/Refine_Tree
-    confidence: documented
-
-  - id: refine-node-80
-    name: Refine Node 80
-    system: refine-tree
-    kind: tree-node
-    wiki: Minerals/Refine_Tree
-    confidence: documented
-
-  - id: refine-node-81
-    name: Refine Node 81
-    system: refine-tree
-    kind: tree-node
-    wiki: Minerals/Refine_Tree
-    confidence: documented
-
-  - id: refine-node-82
-    name: Refine Node 82
-    system: refine-tree
-    kind: tree-node
-    wiki: Minerals/Refine_Tree
-    confidence: documented
-
-  - id: refine-node-83
-    name: Refine Node 83
-    system: refine-tree
-    kind: tree-node
-    wiki: Minerals/Refine_Tree
-    confidence: documented
-
-  - id: refine-node-84
-    name: Refine Node 84
-    system: refine-tree
-    kind: tree-node
-    wiki: Minerals/Refine_Tree
-    confidence: documented
-
-  - id: refine-node-85
-    name: Refine Node 85
-    system: refine-tree
-    kind: tree-node
-    wiki: Minerals/Refine_Tree
-    confidence: documented
-
-  - id: refine-node-86
-    name: Refine Node 86
-    system: refine-tree
-    kind: tree-node
-    wiki: Minerals/Refine_Tree
-    confidence: documented
-
-  - id: refine-node-87
-    name: Refine Node 87
-    system: refine-tree
-    kind: tree-node
-    wiki: Minerals/Refine_Tree
-    confidence: documented
-
-  - id: refine-node-88
-    name: Refine Node 88
-    system: refine-tree
-    kind: tree-node
-    wiki: Minerals/Refine_Tree
-    confidence: documented
-
-  - id: refine-node-89
-    name: Refine Node 89
-    system: refine-tree
-    kind: tree-node
-    wiki: Minerals/Refine_Tree
-    confidence: documented
-
-  - id: refine-node-90
-    name: Refine Node 90
-    system: refine-tree
-    kind: tree-node
-    wiki: Minerals/Refine_Tree
-    confidence: documented
-
-  - id: refine-node-91
-    name: Refine Node 91
-    system: refine-tree
-    kind: tree-node
-    wiki: Minerals/Refine_Tree
-    confidence: documented
-
-  - id: refine-node-92
-    name: Refine Node 92
-    system: refine-tree
-    kind: tree-node
-    wiki: Minerals/Refine_Tree
-    confidence: documented
-
-  - id: refine-node-93
-    name: Refine Node 93
-    system: refine-tree
-    kind: tree-node
-    wiki: Minerals/Refine_Tree
-    confidence: documented
-
-  - id: refine-node-94
-    name: Refine Node 94
-    system: refine-tree
-    kind: tree-node
-    wiki: Minerals/Refine_Tree
-    confidence: documented
-
-  - id: refine-node-95
-    name: Refine Node 95
-    system: refine-tree
-    kind: tree-node
-    wiki: Minerals/Refine_Tree
-    confidence: documented
-
-  - id: refine-node-96
-    name: Refine Node 96
-    system: refine-tree
-    kind: tree-node
-    wiki: Minerals/Refine_Tree
-    confidence: documented
-
-  - id: refine-node-97
-    name: Refine Node 97
-    system: refine-tree
-    kind: tree-node
-    wiki: Minerals/Refine_Tree
-    confidence: documented
-
-  - id: refine-node-98
-    name: Refine Node 98
-    system: refine-tree
-    kind: tree-node
-    wiki: Minerals/Refine_Tree
-    confidence: documented
-
-  - id: refine-node-99
-    name: Refine Node 99
-    system: refine-tree
-    kind: tree-node
-    wiki: Minerals/Refine_Tree
-    confidence: documented
-
-  - id: refine-node-100
-    name: Refine Node 100
-    system: refine-tree
-    kind: tree-node
-    wiki: Minerals/Refine_Tree
-    confidence: documented
-
-  - id: refine-node-101
-    name: Refine Node 101
-    system: refine-tree
-    kind: tree-node
-    wiki: Minerals/Refine_Tree
-    confidence: documented
-
-  - id: refine-node-102
-    name: Refine Node 102
-    system: refine-tree
-    kind: tree-node
-    wiki: Minerals/Refine_Tree
-    confidence: documented
-
-  - id: refine-node-103
-    name: Refine Node 103
-    system: refine-tree
-    kind: tree-node
-    wiki: Minerals/Refine_Tree
-    confidence: documented
-
-  - id: refine-node-104
-    name: Refine Node 104
-    system: refine-tree
-    kind: tree-node
-    wiki: Minerals/Refine_Tree
-    confidence: documented
-
-  - id: refine-node-105
-    name: Refine Node 105
-    system: refine-tree
-    kind: tree-node
-    wiki: Minerals/Refine_Tree
-    confidence: documented
-
-  - id: refine-node-106
-    name: Refine Node 106
-    system: refine-tree
-    kind: tree-node
-    wiki: Minerals/Refine_Tree
-    confidence: documented
-
-  - id: refine-node-107
-    name: Refine Node 107
-    system: refine-tree
-    kind: tree-node
-    wiki: Minerals/Refine_Tree
-    confidence: documented
-
-  - id: refine-node-108
-    name: Refine Node 108
-    system: refine-tree
-    kind: tree-node
-    wiki: Minerals/Refine_Tree
-    confidence: documented
-
-  - id: refine-node-109
-    name: Refine Node 109
-    system: refine-tree
-    kind: tree-node
-    wiki: Minerals/Refine_Tree
-    confidence: documented
-
-  - id: refine-node-110
-    name: Refine Node 110
-    system: refine-tree
-    kind: tree-node
-    wiki: Minerals/Refine_Tree
-    confidence: documented
-
-  - id: refine-node-111
-    name: Refine Node 111
-    system: refine-tree
-    kind: tree-node
-    wiki: Minerals/Refine_Tree
-    confidence: documented
-
-  - id: refine-node-112
-    name: Refine Node 112
-    system: refine-tree
-    kind: tree-node
-    wiki: Minerals/Refine_Tree
-    confidence: documented
-
-  - id: refine-node-113
-    name: Refine Node 113
-    system: refine-tree
-    kind: tree-node
-    wiki: Minerals/Refine_Tree
-    confidence: documented
-
-  - id: refine-node-114
-    name: Refine Node 114
-    system: refine-tree
-    kind: tree-node
-    wiki: Minerals/Refine_Tree
-    confidence: documented
-
-  - id: refine-node-115
-    name: Refine Node 115
-    system: refine-tree
-    kind: tree-node
-    wiki: Minerals/Refine_Tree
-    confidence: documented
-
-  - id: refine-node-116
-    name: Refine Node 116
-    system: refine-tree
-    kind: tree-node
-    wiki: Minerals/Refine_Tree
-    confidence: documented
-
-  - id: refine-node-117
-    name: Refine Node 117
-    system: refine-tree
-    kind: tree-node
-    wiki: Minerals/Refine_Tree
-    confidence: documented
-
-  - id: refine-node-118
-    name: Refine Node 118
-    system: refine-tree
-    kind: tree-node
-    wiki: Minerals/Refine_Tree
-    confidence: documented
-
-  - id: refine-node-119
-    name: Refine Node 119
-    system: refine-tree
-    kind: tree-node
-    wiki: Minerals/Refine_Tree
-    confidence: documented
-
-  - id: refine-node-120
-    name: Refine Node 120
-    system: refine-tree
-    kind: tree-node
-    wiki: Minerals/Refine_Tree
-    confidence: documented
-
-  - id: refine-node-121
-    name: Refine Node 121
-    system: refine-tree
-    kind: tree-node
-    wiki: Minerals/Refine_Tree
-    confidence: documented
-
-  - id: refine-node-122
-    name: Refine Node 122
-    system: refine-tree
-    kind: tree-node
-    wiki: Minerals/Refine_Tree
-    confidence: documented
-
-  - id: refine-node-123
-    name: Refine Node 123
-    system: refine-tree
-    kind: tree-node
-    wiki: Minerals/Refine_Tree
-    confidence: documented
-
-  - id: refine-node-124
-    name: Refine Node 124
-    system: refine-tree
-    kind: tree-node
-    wiki: Minerals/Refine_Tree
-    confidence: documented
-
-  - id: refine-node-125
-    name: Refine Node 125
-    system: refine-tree
-    kind: tree-node
-    wiki: Minerals/Refine_Tree
-    confidence: documented
-
-  - id: refine-node-126
-    name: Refine Node 126
-    system: refine-tree
-    kind: tree-node
-    wiki: Minerals/Refine_Tree
-    confidence: documented
-
-  - id: refine-node-127
-    name: Refine Node 127
-    system: refine-tree
-    kind: tree-node
-    wiki: Minerals/Refine_Tree
-    confidence: documented
-
-  - id: refine-node-128
-    name: Refine Node 128
-    system: refine-tree
-    kind: tree-node
-    wiki: Minerals/Refine_Tree
-    confidence: documented
-
-  - id: refine-node-129
-    name: Refine Node 129
-    system: refine-tree
-    kind: tree-node
-    wiki: Minerals/Refine_Tree
-    confidence: documented
-
-  - id: refine-node-130
-    name: Refine Node 130
-    system: refine-tree
-    kind: tree-node
-    wiki: Minerals/Refine_Tree
-    confidence: documented
-
-  - id: refine-node-131
-    name: Refine Node 131
-    system: refine-tree
-    kind: tree-node
-    wiki: Minerals/Refine_Tree
-    confidence: documented
-
-  - id: refine-node-132
-    name: Refine Node 132
-    system: refine-tree
-    kind: tree-node
-    wiki: Minerals/Refine_Tree
-    confidence: documented
-
-  - id: refine-node-133
-    name: Refine Node 133
-    system: refine-tree
-    kind: tree-node
-    wiki: Minerals/Refine_Tree
-    confidence: documented
-
-  - id: refine-node-134
-    name: Refine Node 134
-    system: refine-tree
-    kind: tree-node
-    wiki: Minerals/Refine_Tree
-    confidence: documented
-
-  - id: refine-node-135
-    name: Refine Node 135
-    system: refine-tree
-    kind: tree-node
-    wiki: Minerals/Refine_Tree
-    confidence: documented
-
-  - id: refine-node-136
-    name: Refine Node 136
-    system: refine-tree
-    kind: tree-node
-    wiki: Minerals/Refine_Tree
-    confidence: documented
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 edges:
   - from: relic-3
@@ -1077,950 +263,160 @@ edges:
     source: wiki:Singularity
     confidence: provisional
 
-  - from: refine-node-1
-    to: refine-node-2
-    rel: requires
-    source: wiki:Minerals/Refine_Tree
-    confidence: documented
-
-  - from: refine-node-1
-    to: refine-node-3
-    rel: requires
-    source: wiki:Minerals/Refine_Tree
-    confidence: documented
-
-  - from: refine-node-2
-    to: refine-node-4
-    rel: requires
-    source: wiki:Minerals/Refine_Tree
-    confidence: documented
-
-  - from: refine-node-3
-    to: refine-node-4
-    rel: requires
-    source: wiki:Minerals/Refine_Tree
-    confidence: documented
-
-  - from: refine-node-1
-    to: refine-node-5
-    rel: requires
-    source: wiki:Minerals/Refine_Tree
-    confidence: documented
-
-  - from: refine-node-1
-    to: refine-node-6
-    rel: requires
-    source: wiki:Minerals/Refine_Tree
-    confidence: documented
-
-  - from: refine-node-1
-    to: refine-node-7
-    rel: requires
-    source: wiki:Minerals/Refine_Tree
-    confidence: documented
-
-  - from: refine-node-1
-    to: refine-node-8
-    rel: requires
-    source: wiki:Minerals/Refine_Tree
-    confidence: documented
-
-  - from: refine-node-1
-    to: refine-node-9
-    rel: requires
-    source: wiki:Minerals/Refine_Tree
-    confidence: documented
-
-  - from: refine-node-5
-    to: refine-node-10
-    rel: requires
-    source: wiki:Minerals/Refine_Tree
-    confidence: documented
-
-  - from: refine-node-5
-    to: refine-node-11
-    rel: requires
-    source: wiki:Minerals/Refine_Tree
-    confidence: documented
-
-  - from: refine-node-10
-    to: refine-node-11
-    rel: requires
-    source: wiki:Minerals/Refine_Tree
-    confidence: documented
-
-  - from: refine-node-11
-    to: refine-node-12
-    rel: requires
-    source: wiki:Minerals/Refine_Tree
-    confidence: documented
-
-  - from: refine-node-6
-    to: refine-node-13
-    rel: requires
-    source: wiki:Minerals/Refine_Tree
-    confidence: documented
-
-  - from: refine-node-7
-    to: refine-node-14
-    rel: requires
-    source: wiki:Minerals/Refine_Tree
-    confidence: documented
-
-  - from: refine-node-13
-    to: refine-node-14
-    rel: requires
-    source: wiki:Minerals/Refine_Tree
-    confidence: documented
-
-  - from: refine-node-8
-    to: refine-node-15
-    rel: requires
-    source: wiki:Minerals/Refine_Tree
-    confidence: documented
-
-  - from: refine-node-8
-    to: refine-node-16
-    rel: requires
-    source: wiki:Minerals/Refine_Tree
-    confidence: documented
-
-  - from: refine-node-15
-    to: refine-node-16
-    rel: requires
-    source: wiki:Minerals/Refine_Tree
-    confidence: documented
-
-  - from: refine-node-9
-    to: refine-node-17
-    rel: requires
-    source: wiki:Minerals/Refine_Tree
-    confidence: documented
-
-  - from: refine-node-15
-    to: refine-node-17
-    rel: requires
-    source: wiki:Minerals/Refine_Tree
-    confidence: documented
-
-  - from: refine-node-17
-    to: refine-node-18
-    rel: requires
-    source: wiki:Minerals/Refine_Tree
-    confidence: documented
-
-  - from: refine-node-4
-    to: refine-node-19
-    rel: requires
-    source: wiki:Minerals/Refine_Tree
-    confidence: documented
-
-  - from: refine-node-4
-    to: refine-node-20
-    rel: requires
-    source: wiki:Minerals/Refine_Tree
-    confidence: documented
-
-  - from: refine-node-19
-    to: refine-node-21
-    rel: requires
-    source: wiki:Minerals/Refine_Tree
-    confidence: documented
-
-  - from: refine-node-20
-    to: refine-node-21
-    rel: requires
-    source: wiki:Minerals/Refine_Tree
-    confidence: documented
-
-  - from: refine-node-21
-    to: refine-node-22
-    rel: requires
-    source: wiki:Minerals/Refine_Tree
-    confidence: documented
-
-  - from: refine-node-21
-    to: refine-node-23
-    rel: requires
-    source: wiki:Minerals/Refine_Tree
-    confidence: documented
-
-  - from: refine-node-22
-    to: refine-node-24
-    rel: requires
-    source: wiki:Minerals/Refine_Tree
-    confidence: documented
-
-  - from: refine-node-23
-    to: refine-node-24
-    rel: requires
-    source: wiki:Minerals/Refine_Tree
-    confidence: documented
-
-  - from: refine-node-24
-    to: refine-node-25
-    rel: requires
-    source: wiki:Minerals/Refine_Tree
-    confidence: documented
-
-  - from: refine-node-24
-    to: refine-node-26
-    rel: requires
-    source: wiki:Minerals/Refine_Tree
-    confidence: documented
-
-  - from: refine-node-26
-    to: refine-node-27
-    rel: requires
-    source: wiki:Minerals/Refine_Tree
-    confidence: documented
-
-  - from: refine-node-25
-    to: refine-node-28
-    rel: requires
-    source: wiki:Minerals/Refine_Tree
-    confidence: documented
-
-  - from: refine-node-26
-    to: refine-node-28
-    rel: requires
-    source: wiki:Minerals/Refine_Tree
-    confidence: documented
-
-  - from: refine-node-25
-    to: refine-node-29
-    rel: requires
-    source: wiki:Minerals/Refine_Tree
-    confidence: documented
-
-  - from: refine-node-25
-    to: refine-node-30
-    rel: requires
-    source: wiki:Minerals/Refine_Tree
-    confidence: documented
-
-  - from: refine-node-29
-    to: refine-node-30
-    rel: requires
-    source: wiki:Minerals/Refine_Tree
-    confidence: documented
-
-  - from: refine-node-28
-    to: refine-node-31
-    rel: requires
-    source: wiki:Minerals/Refine_Tree
-    confidence: documented
-
-  - from: refine-node-26
-    to: refine-node-32
-    rel: requires
-    source: wiki:Minerals/Refine_Tree
-    confidence: documented
-
-  - from: refine-node-29
-    to: refine-node-33
-    rel: requires
-    source: wiki:Minerals/Refine_Tree
-    confidence: documented
-
-  - from: refine-node-29
-    to: refine-node-34
-    rel: requires
-    source: wiki:Minerals/Refine_Tree
-    confidence: documented
-
-  - from: refine-node-34
-    to: refine-node-35
-    rel: requires
-    source: wiki:Minerals/Refine_Tree
-    confidence: documented
-
-  - from: refine-node-31
-    to: refine-node-36
-    rel: requires
-    source: wiki:Minerals/Refine_Tree
-    confidence: documented
-
-  - from: refine-node-33
-    to: refine-node-37
-    rel: requires
-    source: wiki:Minerals/Refine_Tree
-    confidence: documented
-
-  - from: refine-node-37
-    to: refine-node-38
-    rel: requires
-    source: wiki:Minerals/Refine_Tree
-    confidence: documented
-
-  - from: refine-node-37
-    to: refine-node-39
-    rel: requires
-    source: wiki:Minerals/Refine_Tree
-    confidence: documented
-
-  - from: refine-node-37
-    to: refine-node-40
-    rel: requires
-    source: wiki:Minerals/Refine_Tree
-    confidence: documented
-
-  - from: refine-node-40
-    to: refine-node-41
-    rel: requires
-    source: wiki:Minerals/Refine_Tree
-    confidence: documented
-
-  - from: refine-node-39
-    to: refine-node-42
-    rel: requires
-    source: wiki:Minerals/Refine_Tree
-    confidence: documented
-
-  - from: refine-node-39
-    to: refine-node-43
-    rel: requires
-    source: wiki:Minerals/Refine_Tree
-    confidence: documented
-
-  - from: refine-node-39
-    to: refine-node-44
-    rel: requires
-    source: wiki:Minerals/Refine_Tree
-    confidence: documented
-
-  - from: refine-node-44
-    to: refine-node-45
-    rel: requires
-    source: wiki:Minerals/Refine_Tree
-    confidence: documented
-
-  - from: refine-node-32
-    to: refine-node-46
-    rel: requires
-    source: wiki:Minerals/Refine_Tree
-    confidence: documented
-
-  - from: refine-node-46
-    to: refine-node-47
-    rel: requires
-    source: wiki:Minerals/Refine_Tree
-    confidence: documented
-
-  - from: refine-node-32
-    to: refine-node-48
-    rel: requires
-    source: wiki:Minerals/Refine_Tree
-    confidence: documented
-
-  - from: refine-node-32
-    to: refine-node-49
-    rel: requires
-    source: wiki:Minerals/Refine_Tree
-    confidence: documented
-
-  - from: refine-node-32
-    to: refine-node-50
-    rel: requires
-    source: wiki:Minerals/Refine_Tree
-    confidence: documented
-
-  - from: refine-node-49
-    to: refine-node-51
-    rel: requires
-    source: wiki:Minerals/Refine_Tree
-    confidence: documented
-
-  - from: refine-node-49
-    to: refine-node-52
-    rel: requires
-    source: wiki:Minerals/Refine_Tree
-    confidence: documented
-
-  - from: refine-node-52
-    to: refine-node-53
-    rel: requires
-    source: wiki:Minerals/Refine_Tree
-    confidence: documented
-
-  - from: refine-node-50
-    to: refine-node-54
-    rel: requires
-    source: wiki:Minerals/Refine_Tree
-    confidence: documented
-
-  - from: refine-node-54
-    to: refine-node-55
-    rel: requires
-    source: wiki:Minerals/Refine_Tree
-    confidence: documented
-
-  - from: refine-node-54
-    to: refine-node-56
-    rel: requires
-    source: wiki:Minerals/Refine_Tree
-    confidence: documented
-
-  - from: refine-node-36
-    to: refine-node-57
-    rel: requires
-    source: wiki:Minerals/Refine_Tree
-    confidence: documented
-
-  - from: refine-node-36
-    to: refine-node-58
-    rel: requires
-    source: wiki:Minerals/Refine_Tree
-    confidence: documented
-
-  - from: refine-node-58
-    to: refine-node-59
-    rel: requires
-    source: wiki:Minerals/Refine_Tree
-    confidence: documented
-
-  - from: refine-node-51
-    to: refine-node-60
-    rel: requires
-    source: wiki:Minerals/Refine_Tree
-    confidence: documented
-
-  - from: refine-node-58
-    to: refine-node-61
-    rel: requires
-    source: wiki:Minerals/Refine_Tree
-    confidence: documented
-
-  - from: refine-node-61
-    to: refine-node-62
-    rel: requires
-    source: wiki:Minerals/Refine_Tree
-    confidence: documented
-
-  - from: refine-node-57
-    to: refine-node-63
-    rel: requires
-    source: wiki:Minerals/Refine_Tree
-    confidence: documented
-
-  - from: refine-node-61
-    to: refine-node-64
-    rel: requires
-    source: wiki:Minerals/Refine_Tree
-    confidence: documented
-
-  - from: refine-node-62
-    to: refine-node-65
-    rel: requires
-    source: wiki:Minerals/Refine_Tree
-    confidence: documented
-
-  - from: refine-node-65
-    to: refine-node-66
-    rel: requires
-    source: wiki:Minerals/Refine_Tree
-    confidence: documented
-
-  - from: refine-node-57
-    to: refine-node-67
-    rel: requires
-    source: wiki:Minerals/Refine_Tree
-    confidence: documented
-
-  - from: refine-node-35
-    to: refine-node-68
-    rel: requires
-    source: wiki:Minerals/Refine_Tree
-    confidence: documented
-
-  - from: refine-node-68
-    to: refine-node-69
-    rel: requires
-    source: wiki:Minerals/Refine_Tree
-    confidence: documented
-
-  - from: refine-node-35
-    to: refine-node-70
-    rel: requires
-    source: wiki:Minerals/Refine_Tree
-    confidence: documented
-
-  - from: refine-node-68
-    to: refine-node-71
-    rel: requires
-    source: wiki:Minerals/Refine_Tree
-    confidence: documented
-
-  - from: refine-node-71
-    to: refine-node-72
-    rel: requires
-    source: wiki:Minerals/Refine_Tree
-    confidence: documented
-
-  - from: refine-node-69
-    to: refine-node-72
-    rel: requires
-    source: wiki:Minerals/Refine_Tree
-    confidence: documented
-
-  - from: refine-node-72
-    to: refine-node-73
-    rel: requires
-    source: wiki:Minerals/Refine_Tree
-    confidence: documented
-
-  - from: refine-node-73
-    to: refine-node-74
-    rel: requires
-    source: wiki:Minerals/Refine_Tree
-    confidence: documented
-
-  - from: refine-node-73
-    to: refine-node-75
-    rel: requires
-    source: wiki:Minerals/Refine_Tree
-    confidence: documented
-
-  - from: refine-node-70
-    to: refine-node-76
-    rel: requires
-    source: wiki:Minerals/Refine_Tree
-    confidence: documented
-
-  - from: refine-node-69
-    to: refine-node-77
-    rel: requires
-    source: wiki:Minerals/Refine_Tree
-    confidence: documented
-
-  - from: refine-node-76
-    to: refine-node-77
-    rel: requires
-    source: wiki:Minerals/Refine_Tree
-    confidence: documented
-
-  - from: refine-node-77
-    to: refine-node-78
-    rel: requires
-    source: wiki:Minerals/Refine_Tree
-    confidence: documented
-
-  - from: refine-node-76
-    to: refine-node-79
-    rel: requires
-    source: wiki:Minerals/Refine_Tree
-    confidence: documented
-
-  - from: refine-node-78
-    to: refine-node-79
-    rel: requires
-    source: wiki:Minerals/Refine_Tree
-    confidence: documented
-
-  - from: refine-node-79
-    to: refine-node-80
-    rel: requires
-    source: wiki:Minerals/Refine_Tree
-    confidence: documented
-
-  - from: refine-node-67
-    to: refine-node-81
-    rel: requires
-    source: wiki:Minerals/Refine_Tree
-    confidence: documented
-
-  - from: refine-node-67
-    to: refine-node-82
-    rel: requires
-    source: wiki:Minerals/Refine_Tree
-    confidence: documented
-
-  - from: refine-node-63
-    to: refine-node-82
-    rel: requires
-    source: wiki:Minerals/Refine_Tree
-    confidence: documented
-
-  - from: refine-node-63
-    to: refine-node-83
-    rel: requires
-    source: wiki:Minerals/Refine_Tree
-    confidence: documented
-
-  - from: refine-node-64
-    to: refine-node-84
-    rel: requires
-    source: wiki:Minerals/Refine_Tree
-    confidence: documented
-
-  - from: refine-node-62
-    to: refine-node-85
-    rel: requires
-    source: wiki:Minerals/Refine_Tree
-    confidence: documented
-
-  - from: refine-node-62
-    to: refine-node-86
-    rel: requires
-    source: wiki:Minerals/Refine_Tree
-    confidence: documented
-
-  - from: refine-node-84
-    to: refine-node-87
-    rel: requires
-    source: wiki:Minerals/Refine_Tree
-    confidence: documented
-
-  - from: refine-node-85
-    to: refine-node-87
-    rel: requires
-    source: wiki:Minerals/Refine_Tree
-    confidence: documented
-
-  - from: refine-node-86
-    to: refine-node-88
-    rel: requires
-    source: wiki:Minerals/Refine_Tree
-    confidence: documented
-
-  - from: refine-node-88
-    to: refine-node-89
-    rel: requires
-    source: wiki:Minerals/Refine_Tree
-    confidence: documented
-
-  - from: refine-node-87
-    to: refine-node-90
-    rel: requires
-    source: wiki:Minerals/Refine_Tree
-    confidence: documented
-
-  - from: refine-node-88
-    to: refine-node-90
-    rel: requires
-    source: wiki:Minerals/Refine_Tree
-    confidence: documented
-
-  - from: refine-node-89
-    to: refine-node-91
-    rel: requires
-    source: wiki:Minerals/Refine_Tree
-    confidence: documented
-
-  - from: refine-node-90
-    to: refine-node-91
-    rel: requires
-    source: wiki:Minerals/Refine_Tree
-    confidence: documented
-
-  - from: refine-node-90
-    to: refine-node-92
-    rel: requires
-    source: wiki:Minerals/Refine_Tree
-    confidence: documented
-
-  - from: refine-node-83
-    to: refine-node-93
-    rel: requires
-    source: wiki:Minerals/Refine_Tree
-    confidence: documented
-
-  - from: refine-node-83
-    to: refine-node-94
-    rel: requires
-    source: wiki:Minerals/Refine_Tree
-    confidence: documented
-
-  - from: refine-node-83
-    to: refine-node-95
-    rel: requires
-    source: wiki:Minerals/Refine_Tree
-    confidence: documented
-
-  - from: refine-node-94
-    to: refine-node-96
-    rel: requires
-    source: wiki:Minerals/Refine_Tree
-    confidence: documented
-
-  - from: refine-node-82
-    to: refine-node-97
-    rel: requires
-    source: wiki:Minerals/Refine_Tree
-    confidence: documented
-
-  - from: refine-node-97
-    to: refine-node-98
-    rel: requires
-    source: wiki:Minerals/Refine_Tree
-    confidence: documented
-
-  - from: refine-node-98
-    to: refine-node-99
-    rel: requires
-    source: wiki:Minerals/Refine_Tree
-    confidence: documented
-
-  - from: refine-node-93
-    to: refine-node-100
-    rel: requires
-    source: wiki:Minerals/Refine_Tree
-    confidence: documented
-
-  - from: refine-node-96
-    to: refine-node-100
-    rel: requires
-    source: wiki:Minerals/Refine_Tree
-    confidence: documented
-
-  - from: refine-node-100
-    to: refine-node-101
-    rel: requires
-    source: wiki:Minerals/Refine_Tree
-    confidence: documented
-
-  - from: refine-node-100
-    to: refine-node-102
-    rel: requires
-    source: wiki:Minerals/Refine_Tree
-    confidence: documented
-
-  - from: refine-node-96
-    to: refine-node-103
-    rel: requires
-    source: wiki:Minerals/Refine_Tree
-    confidence: documented
-
-  - from: refine-node-96
-    to: refine-node-104
-    rel: requires
-    source: wiki:Minerals/Refine_Tree
-    confidence: documented
-
-  - from: refine-node-96
-    to: refine-node-105
-    rel: requires
-    source: wiki:Minerals/Refine_Tree
-    confidence: documented
-
-  - from: refine-node-105
-    to: refine-node-106
-    rel: requires
-    source: wiki:Minerals/Refine_Tree
-    confidence: documented
-
-  - from: refine-node-105
-    to: refine-node-107
-    rel: requires
-    source: wiki:Minerals/Refine_Tree
-    confidence: documented
-
-  - from: refine-node-107
-    to: refine-node-108
-    rel: requires
-    source: wiki:Minerals/Refine_Tree
-    confidence: documented
-
-  - from: refine-node-107
-    to: refine-node-109
-    rel: requires
-    source: wiki:Minerals/Refine_Tree
-    confidence: documented
-
-  - from: refine-node-98
-    to: refine-node-110
-    rel: requires
-    source: wiki:Minerals/Refine_Tree
-    confidence: documented
-
-  - from: refine-node-95
-    to: refine-node-111
-    rel: requires
-    source: wiki:Minerals/Refine_Tree
-    confidence: documented
-
-  - from: refine-node-96
-    to: refine-node-111
-    rel: requires
-    source: wiki:Minerals/Refine_Tree
-    confidence: documented
-
-  - from: refine-node-105
-    to: refine-node-111
-    rel: requires
-    source: wiki:Minerals/Refine_Tree
-    confidence: documented
-
-  - from: refine-node-110
-    to: refine-node-112
-    rel: requires
-    source: wiki:Minerals/Refine_Tree
-    confidence: documented
-
-  - from: refine-node-110
-    to: refine-node-113
-    rel: requires
-    source: wiki:Minerals/Refine_Tree
-    confidence: documented
-
-  - from: refine-node-99
-    to: refine-node-114
-    rel: requires
-    source: wiki:Minerals/Refine_Tree
-    confidence: documented
-
-  - from: refine-node-113
-    to: refine-node-115
-    rel: requires
-    source: wiki:Minerals/Refine_Tree
-    confidence: documented
-
-  - from: refine-node-115
-    to: refine-node-116
-    rel: requires
-    source: wiki:Minerals/Refine_Tree
-    confidence: documented
-
-  - from: refine-node-115
-    to: refine-node-117
-    rel: requires
-    source: wiki:Minerals/Refine_Tree
-    confidence: documented
-
-  - from: refine-node-116
-    to: refine-node-118
-    rel: requires
-    source: wiki:Minerals/Refine_Tree
-    confidence: documented
-
-  - from: refine-node-117
-    to: refine-node-119
-    rel: requires
-    source: wiki:Minerals/Refine_Tree
-    confidence: documented
-
-  - from: refine-node-112
-    to: refine-node-120
-    rel: requires
-    source: wiki:Minerals/Refine_Tree
-    confidence: documented
-
-  - from: refine-node-113
-    to: refine-node-120
-    rel: requires
-    source: wiki:Minerals/Refine_Tree
-    confidence: documented
-
-  - from: refine-node-120
-    to: refine-node-121
-    rel: requires
-    source: wiki:Minerals/Refine_Tree
-    confidence: documented
-
-  - from: refine-node-121
-    to: refine-node-122
-    rel: requires
-    source: wiki:Minerals/Refine_Tree
-    confidence: documented
-
-  - from: refine-node-116
-    to: refine-node-123
-    rel: requires
-    source: wiki:Minerals/Refine_Tree
-    confidence: documented
-
-  - from: refine-node-117
-    to: refine-node-123
-    rel: requires
-    source: wiki:Minerals/Refine_Tree
-    confidence: documented
-
-  - from: refine-node-114
-    to: refine-node-124
-    rel: requires
-    source: wiki:Minerals/Refine_Tree
-    confidence: documented
-
-  - from: refine-node-119
-    to: refine-node-125
-    rel: requires
-    source: wiki:Minerals/Refine_Tree
-    confidence: documented
-
-  - from: refine-node-125
-    to: refine-node-126
-    rel: requires
-    source: wiki:Minerals/Refine_Tree
-    confidence: documented
-
-  - from: refine-node-125
-    to: refine-node-127
-    rel: requires
-    source: wiki:Minerals/Refine_Tree
-    confidence: documented
-
-  - from: refine-node-112
-    to: refine-node-128
-    rel: requires
-    source: wiki:Minerals/Refine_Tree
-    confidence: documented
-
-  - from: refine-node-114
-    to: refine-node-128
-    rel: requires
-    source: wiki:Minerals/Refine_Tree
-    confidence: documented
-
-  - from: refine-node-126
-    to: refine-node-129
-    rel: requires
-    source: wiki:Minerals/Refine_Tree
-    confidence: documented
-
-  - from: refine-node-127
-    to: refine-node-129
-    rel: requires
-    source: wiki:Minerals/Refine_Tree
-    confidence: documented
-
-  - from: refine-node-114
-    to: refine-node-130
-    rel: requires
-    source: wiki:Minerals/Refine_Tree
-    confidence: documented
-
-  - from: refine-node-130
-    to: refine-node-131
-    rel: requires
-    source: wiki:Minerals/Refine_Tree
-    confidence: documented
-
-  - from: refine-node-128
-    to: refine-node-132
-    rel: requires
-    source: wiki:Minerals/Refine_Tree
-    confidence: documented
-
-  - from: refine-node-131
-    to: refine-node-133
-    rel: requires
-    source: wiki:Minerals/Refine_Tree
-    confidence: documented
-
-  - from: refine-node-133
-    to: refine-node-134
-    rel: requires
-    source: wiki:Minerals/Refine_Tree
-    confidence: documented
-
-  - from: refine-node-132
-    to: refine-node-135
-    rel: requires
-    source: wiki:Minerals/Refine_Tree
-    confidence: documented
-
-  - from: refine-node-125
-    to: refine-node-136
-    rel: requires
-    source: wiki:Minerals/Refine_Tree
-    confidence: documented
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

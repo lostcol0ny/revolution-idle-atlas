@@ -1,0 +1,176 @@
+from atlas.merge import merge
+from atlas.models import (
+    Dataset,
+    Edge,
+    Effect,
+    Kind,
+    Node,
+    NodeConfidence,
+    Op,
+    Rel,
+    Suppression,
+    SystemDef,
+)
+
+
+def _derived() -> Dataset:
+    return Dataset(
+        nodes=[
+            Node(
+                id="relic-38",
+                name="Relic 38",
+                system="relics",
+                kind=Kind.RELIC,
+                wiki="Relics",
+                effects=[Effect(text="Adds base to Refine Node 2", per_level="+1.00")],
+                line=7,
+            ),
+            Node(id="relic-39", name="Relic 39", system="relics", kind=Kind.RELIC, line=14),
+        ],
+        edges=[
+            Edge(
+                from_="relic-38",
+                to="refine-node-2",
+                rel=Rel.BOOSTS,
+                source="Relics",
+                targets_effect=0,
+                line=21,
+            ),
+            Edge(from_="relic-39", to="refine-node-3", rel=Rel.BOOSTS, source="Relics", line=25),
+        ],
+    )
+
+
+def test_curated_node_overlays_field_by_field():
+    curated = Dataset(
+        nodes=[Node(id="relic-39", name="Windmill Pendant", system="relics", kind=Kind.RELIC)]
+    )
+    merged, _ = merge(_derived(), curated)
+
+    node = next(n for n in merged.nodes if n.id == "relic-39")
+    assert node.name == "Windmill Pendant"
+    # Untouched derived fields survive the overlay.
+    assert node.system == "relics"
+    assert node.kind is Kind.RELIC
+
+
+def test_curated_node_overlay_keeps_derived_fields_it_does_not_mention():
+    curated = Dataset(
+        nodes=[
+            Node(
+                id="relic-38",
+                name="Smart Man",
+                system="relics",
+                kind=Kind.RELIC,
+                confidence=NodeConfidence.PROVISIONAL,
+            )
+        ]
+    )
+    merged, _ = merge(_derived(), curated)
+
+    node = next(n for n in merged.nodes if n.id == "relic-38")
+    assert node.confidence is NodeConfidence.PROVISIONAL
+    assert node.wiki == "Relics"
+    assert node.effects[0].per_level == "+1.00"
+
+
+def test_curated_node_that_is_new_is_appended_after_the_derived_ones():
+    curated = Dataset(
+        nodes=[Node(id="singularity", name="Singularity", system="unity", kind=Kind.CURRENCY)]
+    )
+    merged, _ = merge(_derived(), curated)
+    assert [n.id for n in merged.nodes] == ["relic-38", "relic-39", "singularity"]
+
+
+def test_curated_edge_replaces_the_derived_one_wholesale():
+    curated = Dataset(
+        edges=[
+            Edge(
+                from_="relic-38",
+                to="refine-node-2",
+                rel=Rel.BOOSTS,
+                op=Op.ADD,
+                note="confirmed in game at level 3",
+                source="in-game",
+            )
+        ]
+    )
+    merged, _ = merge(_derived(), curated)
+
+    edge = next(e for e in merged.edges if e.from_ == "relic-38")
+    # This assertion is the whole point of the test, and it must come first.
+    # The derived edge set `targets_effect=0`; the curated one does not mention
+    # it. Under a field-by-field overlay the derived 0 would survive, so this is
+    # the ONLY assertion here that can tell wholesale replacement from overlay —
+    # every other field below is set by the curated edge and would therefore be
+    # applied under either implementation.
+    assert edge.targets_effect is None
+    assert edge.op is Op.ADD
+    assert edge.note == "confirmed in game at level 3"
+    assert edge.source == "in-game"
+    assert len(merged.edges) == 2
+
+
+def test_suppress_removes_a_derived_edge():
+    curated = Dataset(
+        suppress=[
+            Suppression(
+                from_="relic-39",
+                to="refine-node-3",
+                rel=Rel.BOOSTS,
+                reason="the wiki sentence names refine node 3 as a comparison",
+            )
+        ]
+    )
+    merged, problems = merge(_derived(), curated)
+    assert [(e.from_, e.to) for e in merged.edges] == [("relic-38", "refine-node-2")]
+    assert problems == []
+
+
+def test_suppress_removes_a_curated_edge_too():
+    # Suppression is applied to the merged result, not to the derived half, so
+    # a rule cannot silently stop working when the edge migrates between files.
+    curated = Dataset(
+        edges=[Edge(from_="a", to="b", rel=Rel.UNLOCKS, source="wiki")],
+        suppress=[Suppression(from_="a", to="b", rel=Rel.UNLOCKS, reason="wrong")],
+    )
+    merged, _ = merge(Dataset(), curated)
+    assert merged.edges == []
+
+
+def test_suppression_that_matches_nothing_is_reported_as_a_warning():
+    curated = Dataset(
+        suppress=[
+            Suppression(
+                from_="relic-1", to="relic-2", rel=Rel.BOOSTS, reason="no longer real", line=9
+            )
+        ]
+    )
+    _, problems = merge(_derived(), curated)
+    assert len(problems) == 1
+    assert problems[0].severity == "warning"
+    assert "relic-1" in problems[0].message
+    assert problems[0].line == 9
+
+
+def test_derived_line_numbers_are_cleared_and_curated_ones_survive():
+    curated = Dataset(
+        nodes=[Node(id="relic-39", name="Windmill Pendant", system="relics", kind=Kind.RELIC, line=3)]
+    )
+    merged, _ = merge(_derived(), curated)
+
+    assert next(n for n in merged.nodes if n.id == "relic-38").line is None
+    assert next(n for n in merged.nodes if n.id == "relic-39").line == 3
+    assert all(e.line is None for e in merged.edges)
+
+
+def test_systems_come_from_the_curated_file_only():
+    curated = Dataset(systems=[SystemDef(id="unity", name="Unity")])
+    merged, _ = merge(_derived(), curated)
+    assert [s.id for s in merged.systems] == ["unity"]
+
+
+def test_merging_into_an_empty_curated_file_is_the_derived_dataset():
+    merged, _ = merge(_derived(), Dataset())
+    assert [n.id for n in merged.nodes] == ["relic-38", "relic-39"]
+    assert len(merged.edges) == 2

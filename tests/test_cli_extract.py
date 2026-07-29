@@ -157,3 +157,82 @@ def test_extract_warns_about_dropped_edges_but_still_succeeds(
     assert "warning" in captured.err
     assert (tmp_path / "data" / "derived.yaml").exists()
     assert "1 dropped edge(s)" in captured.out
+
+
+def test_build_merges_the_derived_file_when_present(tmp_path, capsys):
+    data = tmp_path / "data"
+    data.mkdir(parents=True)
+    # relic-38 appears in both files: derived has the raw name, curated overrides it.
+    # relic-39 appears only in derived: the merged output must include it, which
+    # proves that derived.yaml was actually read (not just the curated file alone).
+    (data / "derived.yaml").write_text(
+        "nodes:\n"
+        "  - id: relic-38\n"
+        "    name: Relic 38\n"
+        "    system: relics\n"
+        "    kind: relic\n"
+        "  - id: relic-39\n"
+        "    name: Relic 39\n"
+        "    system: relics\n"
+        "    kind: relic\n"
+        "edges: []\n",
+        encoding="utf-8",
+    )
+    (data / "relationships.yaml").write_text(
+        "nodes:\n"
+        "  - id: relic-38\n"
+        "    name: Smart Man\n"
+        "    system: relics\n"
+        "    kind: relic\n"
+        "edges: []\n",
+        encoding="utf-8",
+    )
+
+    assert main(["build", "--root", str(tmp_path)]) == 0
+
+    import json
+
+    doc = json.loads((tmp_path / "public" / "graph.json").read_text(encoding="utf-8"))
+    names = [n["name"] for n in doc["nodes"]]
+    # relic-39 only exists in derived.yaml — if it's absent, derived was never read.
+    assert "Relic 39" in names
+    # Curated name wins for relic-38.
+    assert "Smart Man" in names
+    assert "Relic 38" not in names
+
+
+def test_build_warns_about_a_suppression_that_matches_nothing(tmp_path, capsys):
+    data = tmp_path / "data"
+    data.mkdir(parents=True)
+    (data / "relationships.yaml").write_text(
+        "nodes: []\n"
+        "edges: []\n"
+        "suppress:\n"
+        "  - from: relic-1\n"
+        "    to: relic-2\n"
+        "    rel: boosts\n"
+        "    reason: the wiki removed this sentence\n",
+        encoding="utf-8",
+    )
+    (data / "derived.yaml").write_text("nodes: []\nedges: []\n", encoding="utf-8")
+
+    # A stale suppression is a warning, so the build still succeeds.
+    assert main(["build", "--root", str(tmp_path)]) == 0
+    assert "matches no edge" in capsys.readouterr().err
+
+
+def test_build_works_when_the_derived_file_is_absent(tmp_path):
+    data = tmp_path / "data"
+    data.mkdir(parents=True)
+    (data / "relationships.yaml").write_text(
+        "nodes:\n"
+        "  - id: singularity\n"
+        "    name: Singularity\n"
+        "    system: unity\n"
+        "    kind: currency\n"
+        "edges: []\n",
+        encoding="utf-8",
+    )
+    # A missing generated file degrades to the curated file alone rather than
+    # failing: a fresh clone that has not run `atlas extract` still builds.
+    assert main(["build", "--root", str(tmp_path)]) == 0

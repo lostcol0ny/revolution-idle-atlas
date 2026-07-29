@@ -10,6 +10,8 @@ from atlas.coverage import analyse, load_inventory, render_markdown
 from atlas.extract import ExtractError, run_all
 from atlas.extract.emit import to_yaml
 from atlas.loader import SchemaError, load_dataset
+from atlas.merge import merge
+from atlas.models import Dataset
 from atlas.problems import Problem
 from atlas.rawcheck import check_against_raw
 from atlas.render import to_graph
@@ -25,27 +27,46 @@ def _report(problems: list[Problem], path: str) -> None:
         print(problem.render(path), file=sys.stderr)
 
 
+def _load(path: Path, display_path: str) -> Dataset | None:
+    """Load one dataset file, printing any failure. None means "do not build"."""
+    try:
+        return load_dataset(path)
+    except SchemaError as exc:
+        for problem in exc.problems:
+            print(f"{display_path}  error  {problem}", file=sys.stderr)
+    except yaml.YAMLError as exc:
+        # PyYAML names the source "<unicode string>" because the loader is built
+        # from text, so the real path has to come from us.
+        print(f"{path}: invalid YAML: {exc}", file=sys.stderr)
+    return None
+
+
 def _build(root: Path, check_only: bool) -> int:
     dataset_path = root / DATASET_REL_PATH
     display_path = str(DATASET_REL_PATH)
 
-    try:
-        dataset = load_dataset(dataset_path)
-    except FileNotFoundError:
+    if not dataset_path.is_file():
         print(f"{display_path}: not found", file=sys.stderr)
         return 1
-    except SchemaError as exc:
-        for problem in exc.problems:
-            print(f"{display_path}  error  {problem}", file=sys.stderr)
-        return 1
-    except yaml.YAMLError as exc:
-        # PyYAML names the source "<unicode string>" because the loader is built
-        # from text, so the real path has to come from us.
-        print(f"{dataset_path}: invalid YAML: {exc}", file=sys.stderr)
+
+    curated = _load(dataset_path, display_path)
+    if curated is None:
         return 1
 
-    problems = validate_dataset(dataset) + check_against_raw(
-        dataset, root / "data" / "raw"
+    derived_path = root / DERIVED_REL_PATH
+    merge_problems: list[Problem] = []
+    if derived_path.is_file():
+        derived = _load(derived_path, str(DERIVED_REL_PATH))
+        if derived is None:
+            return 1
+        dataset, merge_problems = merge(derived, curated)
+    else:
+        dataset = curated
+
+    problems = (
+        merge_problems
+        + validate_dataset(dataset)
+        + check_against_raw(dataset, root / "data" / "raw")
     )
     errors = [p for p in problems if p.severity == "error"]
     warning_count = len(problems) - len(errors)
