@@ -10,6 +10,7 @@ import {
   UnknownNodeBanner,
 } from './Screens';
 import { Sidebar } from './Sidebar';
+import { GraphView } from './GraphView';
 
 type LoadState =
   | { status: 'loading' }
@@ -93,7 +94,13 @@ export default function App() {
         {selected === undefined ? (
           <EmptyScreen suggestions={suggestions} onPick={select} />
         ) : (
-          <p className="muted">Selected: {selected.name}</p>
+          <GraphView
+            index={index}
+            rootId={selected.id}
+            depth={urlState.depth}
+            onSelect={select}
+            onDepthChange={(depth) => setUrlState({ depth })}
+          />
         )}
       </main>
     </div>
