@@ -2,7 +2,7 @@ import json
 from pathlib import Path
 
 from atlas.loader import load_dataset
-from atlas.models import Dataset
+from atlas.models import Dataset, Edge, Node, SystemDef
 from atlas.render import to_graph
 
 FIXTURES = Path(__file__).parent / "fixtures"
@@ -46,3 +46,59 @@ def test_matches_golden_file():
     ds = load_dataset(FIXTURES / "minimal.yaml")
     expected = json.loads((FIXTURES / "expected_graph.json").read_text())
     assert to_graph(ds) == expected
+
+
+def _node(**overrides):
+    base = {"id": "relic-1", "name": "Relic 1", "system": "relics", "kind": "relic"}
+    return Node(**(base | overrides))
+
+
+def test_empty_effects_are_omitted_entirely():
+    doc = to_graph(Dataset(nodes=[_node()]))
+    assert "effects" not in doc["nodes"][0]
+
+
+def test_populated_effects_are_emitted():
+    node = _node(effects=[{"text": "Boosts gold", "per_level": "+0.01", "op": "add"}])
+    doc = to_graph(Dataset(nodes=[node]))
+    assert doc["nodes"][0]["effects"] == [
+        {"op": "add", "per_level": "+0.01", "text": "Boosts gold"}
+    ]
+
+
+def test_systems_key_is_absent_when_no_systems_are_declared():
+    doc = to_graph(Dataset(nodes=[_node()]))
+    assert "systems" not in doc
+
+
+def test_systems_are_emitted_when_declared():
+    ds = Dataset(
+        systems=[SystemDef(id="unity", name="Unity"), SystemDef(id="relics", name="Relics", parent="unity")],
+        nodes=[_node()],
+    )
+    doc = to_graph(ds)
+    assert doc["systems"] == [
+        {"id": "unity", "name": "Unity"},
+        {"id": "relics", "name": "Relics", "parent": "unity"},
+    ]
+
+
+def test_targets_effect_is_omitted_when_unset_and_emitted_when_set():
+    bare = Edge(**{"from": "a", "to": "b", "rel": "boosts", "source": "wiki:Relics"})
+    pointed = Edge(
+        **{
+            "from": "a",
+            "to": "b",
+            "rel": "boosts",
+            "source": "wiki:Relics",
+            "targets_effect": 1,
+        }
+    )
+    doc = to_graph(Dataset(edges=[bare, pointed]))
+    assert "targets_effect" not in doc["edges"][0]
+    assert doc["edges"][1]["targets_effect"] == 1
+
+
+def test_document_key_order_is_version_nodes_edges_then_systems():
+    ds = Dataset(systems=[SystemDef(id="unity", name="Unity")], nodes=[_node()])
+    assert list(to_graph(ds)) == ["version", "nodes", "edges", "systems"]
