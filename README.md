@@ -69,10 +69,14 @@ in the `systems` array, a system whose `parent` is not a declared system, a cycl
 in the system parent chain, or an out-of-range `targets_effect`). Warnings — a
 node pointing at a wiki page no longer in `data/raw/`, a page the wiki flags as
 work in progress paired with `documented` confidence, a `suppress` rule that
-matches no edge, a generated edge colliding with an earlier one on
-`(from, to, rel)`, a sweep manifest page that yields no records,
-a sweep page named in the manifest with no file in `data/raw/`, or two manifest
-entries minting the same node id — are printed but never fail the build.
+matches no edge, or a generated edge colliding with an earlier one on
+`(from, to, rel)` — are printed but never fail the build.
+
+The sweep manifest is read by `atlas extract`, not by `atlas build`, so its
+warnings appear only on an extraction run: a manifest page that yields no
+records, a page named in the manifest with no file in `data/raw/`, or two
+manifest entries minting the same node id. Looking for them after `atlas build`
+finds nothing, because that command never opens `data/sweep.yaml`.
 
 A manifest page yielding no records is a **warning and not an error**, unlike one
 of the four hand-written parsers producing no nodes, which is fatal. Those four
@@ -318,7 +322,8 @@ coefficients are out of scope and the pipeline does not carry them.
 ### Known gaps
 
 `graph.json` carries `effects`, `targets_effect`, `aliases` and the `systems`
-hierarchy, and the sweep has added 131 more nodes — but the React viewer still
+hierarchy, and the sweep has added 131 more nodes to `data/derived.yaml` — but
+the React viewer still
 renders only v1's fields. No component reads `effects` or `targets_effect`, so
 the thing this pipeline exists to show is not yet visible in the UI. This is a
 recorded sequencing decision: the schema contract was fixed before any UI was
