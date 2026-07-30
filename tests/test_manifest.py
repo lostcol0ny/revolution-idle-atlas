@@ -121,12 +121,21 @@ def test_a_missing_manifest_is_an_empty_one(tmp_path: Path):
     assert load_manifest(tmp_path / "nope.yaml").pages == []
 
 
-def test_python_object_tags_are_rejected(tmp_path: Path):
-    # Same guard as tests/test_loader.py. The manifest is a data file like any
-    # other and must never be able to construct a Python object.
+@pytest.mark.parametrize(
+    "payload",
+    [
+        "pages: !!python/object/apply:os.system ['echo pwned']\n",
+        "pages: !!python/object/new:os.system ['echo pwned']\n",
+        # FullLoader rejects the two above but accepts this one, handing back a
+        # live reference to os.system. Without it the guard proves only "not
+        # UnsafeLoader" rather than "SafeLoader".
+        "pages: !!python/name:os.system\n",
+    ],
+)
+def test_python_object_tags_are_rejected(tmp_path: Path, payload: str):
+    # The manifest is a data file like any other and must never be able to
+    # construct a Python object.
     path = tmp_path / "sweep.yaml"
-    path.write_text(
-        "pages: !!python/object/apply:os.system ['echo hi']\n", encoding="utf-8"
-    )
+    path.write_text(payload, encoding="utf-8")
     with pytest.raises(yaml.YAMLError):
         load_manifest(path)
