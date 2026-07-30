@@ -21,11 +21,18 @@ its kind, wiki page and effects. A curated edge replaces the generated one
 wholesale. A `suppress:` entry deletes a generated edge outright — the one
 correction an overlay cannot express.
 
+A third file, `data/sweep.yaml`, is neither half of that pair. It is not data
+about the game; it is a description of where in `data/raw/` to find data about
+the game. Editing it changes what `atlas extract` produces, so it is an input to
+the disposable half, and everything read through it arrives at the lowest
+confidence the schema has.
+
 | Path | Role |
 |---|---|
 | `data/relationships.yaml` | The durable half. Survives extraction and wins every merge. Committed. |
 | `data/derived.yaml` | The disposable half. Regenerated in full by `atlas extract`; do not hand-edit it, because the next run overwrites it. Committed. |
 | `data/raw/` | Scraped wikitext, one file per wiki page. The input `atlas extract` parses, and the reference `atlas build` diffs against to tell you when the wiki changed under you. |
+| `data/sweep.yaml` | The sweep manifest. Names which columns of which `data/raw/` pages carry an entity name and an effect, so a page can be swept without new Python. Committed. |
 | `data/inventory.yaml` | Optional. A map of system → known entity ids, used to report gaps. Absent by default; its absence is silent. |
 | `public/graph.json` | Generated. The contract with the frontend. Committed. |
 | `docs/coverage.md` | Generated. The curation to-do list. Committed. |
@@ -38,6 +45,12 @@ result differs. If a CI run goes red on the artifact step, run
 `data/raw/` — the most common trigger — requires the extraction step first;
 running only `atlas build` will leave `data/derived.yaml` stale and the step
 stays red.
+
+`atlas extract` reads `data/relationships.yaml` as well as `data/raw/`, because
+the curated stats and their aliases are the vocabulary it matches effect prose
+against. Adding a stat node or an alias therefore changes `data/derived.yaml`,
+and a run of `atlas build` alone will not pick it up. It still makes no network
+request, which is what keeps it safe to run in CI.
 
 ## Commands
 
@@ -56,12 +69,85 @@ in the `systems` array, a system whose `parent` is not a declared system, a cycl
 in the system parent chain, or an out-of-range `targets_effect`). Warnings — a
 node pointing at a wiki page no longer in `data/raw/`, a page the wiki flags as
 work in progress paired with `documented` confidence, a `suppress` rule that
-matches no edge, or a generated edge colliding with an earlier one on
-`(from, to, rel)` — are printed but never fail the build.
+matches no edge, a generated edge colliding with an earlier one on
+`(from, to, rel)`, a sweep manifest page that yields no records,
+a sweep page named in the manifest with no file in `data/raw/`, or two manifest
+entries minting the same node id — are printed but never fail the build.
+
+A manifest page yielding no records is a **warning and not an error**, unlike one
+of the four hand-written parsers producing no nodes, which is fatal. Those four
+cover pages known to hold data, so zero means the page or the parser broke. A
+manifest entry is a guess about a page's shape, and one wrong guess must not
+block every build — including the artifact check in CI.
 
 `atlas scrape` talks to a live, volunteer-run wiki. Do not run it in a loop. A
 scheduled GitHub Actions workflow runs it daily and opens a pull request when the
 raw wikitext changes; that PR touches `data/raw/` only.
+
+## The sweep manifest
+
+`data/sweep.yaml` lets a wiki page be read without writing a parser for it. Each
+entry names a page and says which of its columns or template fields carry an
+entity's name and its effects.
+
+Everything read through the manifest is deliberately low-confidence: swept nodes
+are `provisional` and swept edges are `uncertain` and always `boosts`. A column
+heading is a guess about what a page means, and a wrong edge is worse than a
+missing one — a missing one shows up in `docs/coverage.md`, a wrong one just
+looks true. Correct anything wrong in `data/relationships.yaml`, which wins every
+merge.
+
+Two readers are available, selected by `reader`.
+
+Fields common to both:
+
+| Field | Required | Notes |
+|---|---|---|
+| `reader` | yes | `wikitable` or `record_template`. |
+| `page` | yes | The wiki page **title**, underscored (`Dilation_Tree`, `Minerals/Refine_Tree`). Resolved to a file in `data/raw/` and written to each swept node's `wiki`. |
+| `system` | yes | Must be declared in `data/relationships.yaml`'s `systems` array, or the build fails. |
+| `kind` | yes | Any node `kind`. |
+| `id_prefix` | yes | Node ids are `<id_prefix>-<slugified name>`. |
+| `name_prefix` | no | Prepended to the name. For a table whose name column is a bare number — Singularity's tree rows are `1`, `2`, `3.1`, and `name_prefix: Tree Node` makes them readable. |
+
+`reader: wikitable`:
+
+| Field | Required | Notes |
+|---|---|---|
+| `name_columns` | yes | One or more header names, joined by a space. Two are needed when neither identifies a row alone — `Dilation_Tree` rows are an `Axis` plus an `Index`. |
+| `effect_columns` | yes | One or more header names. **Each becomes a separate effect**, because a Zodiac really does have four independent bonuses. |
+| `per_level_column` | no | Only valid alongside exactly one `effect_columns` entry; with two there would be no way to say which effect it scales. |
+
+`reader: record_template`:
+
+| Field | Required | Notes |
+|---|---|---|
+| `template` | yes | Template name, e.g. `Minerals/Special_Minerals`. Matched case-insensitively. |
+| `name_field` | yes | Template field holding the name. |
+| `effect_fields` | yes | One or more template fields. Each becomes a separate effect. |
+| `per_level_field` | no | Same single-effect restriction as `per_level_column`. |
+
+**A page needs one entry per column shape, not one per page.** `Plague` has two:
+its ER Upgrades table is `Name`/`Effect`, and its Statistics table is
+`Statistic`/`Boost`. Every table on the page whose headers match an entry is
+read, so `Trials` needs only one entry to cover all five of its difficulty tiers.
+
+**What the reader will not do**, each for a reason:
+
+- A row with fewer cells than headers is skipped, unless the shortfall is
+  explained by a `rowspan` above it — which is carried down, because on
+  `Dilation_Tree` the rowspan column is the name column.
+- A `colspan` header cell is discarded as a caption, and a `colspan` data row is
+  skipped.
+- A table where a wanted column name appears twice is skipped entirely.
+  `Minerals` lays two independent upgrade tables side by side in one wikitable;
+  reading it positionally would take the right-hand half and silently drop the
+  left.
+- An effect cell containing no letters is not an effect. `Plague`'s ER Upgrades
+  table writes `<==` to mean "see the Name column".
+
+`docs/coverage.md`'s **Not swept** section lists every page in `data/raw/` that
+no node points at, largest first. That is the queue.
 
 ## `public/graph.json` schema
 
@@ -231,11 +317,15 @@ coefficients are out of scope and the pipeline does not carry them.
 
 ### Known gaps
 
-`graph.json` now carries `effects`, `targets_effect` and the `systems` hierarchy
-added in v2, but the React viewer has not been updated to render them — the
-sidebar and node card still show only v1's fields. This is a recorded decision:
-the data layer was stabilised first so the schema contract is fixed before the UI
-is built on top of it.
+`graph.json` carries `effects`, `targets_effect`, `aliases` and the `systems`
+hierarchy, and the sweep has added 131 more nodes — but the React viewer still
+renders only v1's fields. No component reads `effects` or `targets_effect`, so
+the thing this pipeline exists to show is not yet visible in the UI. This is a
+recorded sequencing decision: the schema contract was fixed before any UI was
+built on it.
+
+Every edge produced by the sweep carries `confidence: uncertain`. A consumer that
+renders them identically to `documented` edges will present guesses as facts.
 
 ### Deployment
 
