@@ -6,7 +6,25 @@
 # a guess about what a page means. Correct anything wrong in
 # data/relationships.yaml, which wins every merge.
 #
-# Tables surveyed but deliberately excluded from all seven swept pages:
+# Pages surveyed and deliberately not listed:
+#
+#   Infinity_Challenges — a second copy of the Infinity page's challenge table,
+#     three columns instead of four. Both would mint `infinity-challenge-1`
+#     through `-9`, so one reading would lose to the other's first-wins dedup.
+#     Infinity is swept instead because its copy is the fuller one: challenge 9's
+#     reward there also names Break Infinity, which this copy omits.
+#
+#   Infinity_Upgrades — prose and two {{Stub}} markers, no table.
+#
+#   Generators — a #REDIRECT to Infinity#Generators. That section is prose, not
+#     a table, so the generator chain is curated in data/relationships.yaml.
+#     Refinement, Promotions, Ascension, Prestige and Promote are redirects too.
+#
+#   Stars — repeats the Infinity page's Stars section. Its Stardust Upgrades are
+#     a numbered list rather than a table, so no reader here can see them; they
+#     are curated in data/relationships.yaml.
+#
+# Tables surveyed but deliberately excluded from all eight swept pages:
 #
 #   Singularity — Atom Threshold|Base Value|Resource Affected|Modifiable?*|Modification Source (14 rows)
 #     The "Resource Affected" column names other graph nodes, but the table
@@ -158,3 +176,29 @@ pages:
     name_columns: ['#']
     effect_columns: [Effect]
     per_level_column: Effect / level
+
+  # `Code` is part of the name because it is the only handle the wiki itself
+  # uses: the page cross-references these as "Infinity Upgrade 7;1" and
+  # "(1;1, 5;2, 6;2, 12;1, 16;1-2 and 17;1)", never by title. A node named only
+  # "Solid Exponent" cannot be found from the sentence that boosts it.
+  # `Icon` and `Cost (IP)` are not swept: one is an image, the other a price.
+  - reader: wikitable
+    page: Infinity
+    system: infinity
+    kind: upgrade
+    id_prefix: infinity-upgrade
+    name_columns: [Code, Name]
+    effect_columns: [Effect]
+
+  # Rows are numbered "1".."9", so name_prefix supplies the noun. As on Trials,
+  # `Handicap` is deliberately not swept — it is the restriction the challenge
+  # imposes, not something it boosts, and sweeping it would point edges the wrong
+  # way. `Should be done` is ordering advice, not an effect.
+  - reader: wikitable
+    page: Infinity
+    system: infinity
+    kind: upgrade
+    id_prefix: infinity-challenge
+    name_prefix: Infinity Challenge
+    name_columns: [Challenge]
+    effect_columns: [Reward]

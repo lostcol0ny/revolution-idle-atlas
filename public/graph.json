@@ -6596,6 +6596,669 @@
       "wiki": "Eternity"
     },
     {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Generator mult × Infinities & unlocks Autobuy"
+        }
+      ],
+      "id": "infinity-upgrade-1-1-infinity-generation-and-automation",
+      "kind": "upgrade",
+      "name": "1;1 Infinity Generation and Automation",
+      "system": "infinity",
+      "wiki": "Infinity"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "+0.01 to Common Exponent"
+        }
+      ],
+      "id": "infinity-upgrade-2-1-exponential-box",
+      "kind": "upgrade",
+      "name": "2;1 Exponential Box",
+      "system": "infinity",
+      "wiki": "Infinity"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Unlocks Auto Ascension"
+        }
+      ],
+      "id": "infinity-upgrade-2-2-auto-ascend",
+      "kind": "upgrade",
+      "name": "2;2 Auto Ascend",
+      "system": "infinity",
+      "wiki": "Infinity"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "x1.1 to lap speed"
+        }
+      ],
+      "id": "infinity-upgrade-3-1-fast-laps",
+      "kind": "upgrade",
+      "name": "3;1 Fast Laps",
+      "system": "infinity",
+      "wiki": "Infinity"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "x1.2 to lap speed"
+        }
+      ],
+      "id": "infinity-upgrade-4-1-even-faster-laps",
+      "kind": "upgrade",
+      "name": "4;1 Even Faster Laps",
+      "system": "infinity",
+      "wiki": "Infinity"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Boosts Prestige mult based on time in Infinity"
+        }
+      ],
+      "id": "infinity-upgrade-5-1-long-term-prestiging",
+      "kind": "upgrade",
+      "name": "5;1 Long-Term Prestiging",
+      "system": "infinity",
+      "wiki": "Infinity"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Boosts Common Exponent based on Infinities"
+        }
+      ],
+      "id": "infinity-upgrade-5-2-solid-exponent",
+      "kind": "upgrade",
+      "name": "5;2 Solid Exponent",
+      "system": "infinity",
+      "wiki": "Infinity"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Unlocks Automation for Prestiging"
+        }
+      ],
+      "id": "infinity-upgrade-5-3-auto-prestige",
+      "kind": "upgrade",
+      "name": "5;3 Auto Prestige",
+      "system": "infinity",
+      "wiki": "Infinity"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Gives +2 to Ascension Power"
+        }
+      ],
+      "id": "infinity-upgrade-6-1-mighty-ascend",
+      "kind": "upgrade",
+      "name": "6;1 Mighty Ascend",
+      "system": "infinity",
+      "wiki": "Infinity"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Boosts Ascension Power based on Infinities"
+        }
+      ],
+      "id": "infinity-upgrade-6-2-ascend-to-ascend",
+      "kind": "upgrade",
+      "name": "6;2 Ascend to Ascend",
+      "system": "infinity",
+      "wiki": "Infinity"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Unlocks Infinity Challenges"
+        }
+      ],
+      "id": "infinity-upgrade-7-1-challenges",
+      "kind": "upgrade",
+      "name": "7;1 Challenges!",
+      "system": "infinity",
+      "wiki": "Infinity"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Boosts Gen 1 based on time in Infinity"
+        }
+      ],
+      "id": "infinity-upgrade-8-1-generator-time",
+      "kind": "upgrade",
+      "name": "8;1 Generator & Time",
+      "system": "infinity",
+      "wiki": "Infinity"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Boosts Gen 1 based on Gen Power"
+        }
+      ],
+      "id": "infinity-upgrade-8-2-generator-power",
+      "kind": "upgrade",
+      "name": "8;2 Generator & Power",
+      "system": "infinity",
+      "wiki": "Infinity"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Gen 1 ×5"
+        }
+      ],
+      "id": "infinity-upgrade-8-3-generator-constant",
+      "kind": "upgrade",
+      "name": "8;3 Generator & Constant",
+      "system": "infinity",
+      "wiki": "Infinity"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Boosts Gen 2 based on time in Infinity"
+        }
+      ],
+      "id": "infinity-upgrade-9-1-generator-2-time",
+      "kind": "upgrade",
+      "name": "9;1 Generator 2 & Time",
+      "system": "infinity",
+      "wiki": "Infinity"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Gen 2 ×3"
+        }
+      ],
+      "id": "infinity-upgrade-9-2-generator-2-constant",
+      "kind": "upgrade",
+      "name": "9;2 Generator 2 & Constant",
+      "system": "infinity",
+      "wiki": "Infinity"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Unlocks Automation for Promotions"
+        }
+      ],
+      "id": "infinity-upgrade-10-1-auto-work",
+      "kind": "upgrade",
+      "name": "10;1 Auto Work",
+      "system": "infinity",
+      "wiki": "Infinity"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Boosts Gen 1 based on current IP"
+        }
+      ],
+      "id": "infinity-upgrade-11-1-weak-generators",
+      "kind": "upgrade",
+      "name": "11;1 Weak Generators",
+      "system": "infinity",
+      "wiki": "Infinity"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Boosts Gen 2 based on current IP"
+        }
+      ],
+      "id": "infinity-upgrade-11-2-medium-generators",
+      "kind": "upgrade",
+      "name": "11;2 Medium Generators",
+      "system": "infinity",
+      "wiki": "Infinity"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Infinities boost Gen 2"
+        }
+      ],
+      "id": "infinity-upgrade-12-1-first-but-better",
+      "kind": "upgrade",
+      "name": "12;1 First, but better",
+      "system": "infinity",
+      "wiki": "Infinity"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Gives +1 to Ascension Power"
+        }
+      ],
+      "id": "infinity-upgrade-13-1-a-little-gift",
+      "kind": "upgrade",
+      "name": "13;1 A Little Gift",
+      "system": "infinity",
+      "wiki": "Infinity"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Promotion 1 stronger based on its level"
+        }
+      ],
+      "id": "infinity-upgrade-14-1-first-for-the-first",
+      "kind": "upgrade",
+      "name": "14;1 First for the first",
+      "system": "infinity",
+      "wiki": "Infinity"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Gen Exponent base is increased to 0.75"
+        }
+      ],
+      "id": "infinity-upgrade-14-2-efficiency-v",
+      "kind": "upgrade",
+      "name": "14;2 Efficiency V",
+      "system": "infinity",
+      "wiki": "Infinity"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Unlocks Automation for Infinities"
+        }
+      ],
+      "id": "infinity-upgrade-15-1-auto-infinity",
+      "kind": "upgrade",
+      "name": "15;1 Auto Infinity",
+      "system": "infinity",
+      "wiki": "Infinity"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Boosts IP gain based on challenge times"
+        }
+      ],
+      "id": "infinity-upgrade-15-2-fast-ip-gain",
+      "kind": "upgrade",
+      "name": "15;2 Fast IP Gain",
+      "system": "infinity",
+      "wiki": "Infinity"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Boosts Gen 1 based on challenge times"
+        }
+      ],
+      "id": "infinity-upgrade-15-3-first-generator-power",
+      "kind": "upgrade",
+      "name": "15;3 First Generator Power",
+      "system": "infinity",
+      "wiki": "Infinity"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Boosts Gen 2 based on challenge times"
+        }
+      ],
+      "id": "infinity-upgrade-15-4-second-generator-power",
+      "kind": "upgrade",
+      "name": "15;4 Second Generator Power",
+      "system": "infinity",
+      "wiki": "Infinity"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Boosts IP gain based on Infinities"
+        }
+      ],
+      "id": "infinity-upgrade-16-1-infinity-to-ip",
+      "kind": "upgrade",
+      "name": "16;1 Infinity to IP",
+      "system": "infinity",
+      "wiki": "Infinity"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Boosts Ascension Power based on Infinities"
+        }
+      ],
+      "id": "infinity-upgrade-16-2-stronger-ascension-power",
+      "kind": "upgrade",
+      "name": "16;2 Stronger Ascension Power",
+      "system": "infinity",
+      "wiki": "Infinity"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Boosts Promotion 4 based on challenge 9 time"
+        }
+      ],
+      "id": "infinity-upgrade-16-3-empowered-promotions",
+      "kind": "upgrade",
+      "name": "16;3 Empowered Promotions",
+      "system": "infinity",
+      "wiki": "Infinity"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Boosts Gen 3 based on Infinities"
+        }
+      ],
+      "id": "infinity-upgrade-17-1-third-s-turn",
+      "kind": "upgrade",
+      "name": "17;1 Third's Turn",
+      "system": "infinity",
+      "wiki": "Infinity"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Boosts Infinities based on challenge times"
+        }
+      ],
+      "id": "infinity-upgrade-17-2-faster-infinity-gain",
+      "kind": "upgrade",
+      "name": "17;2 Faster Infinity Gain",
+      "system": "infinity",
+      "wiki": "Infinity"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Gen 1 ×10"
+        }
+      ],
+      "id": "infinity-upgrade-17-3-boost-to-the-first",
+      "kind": "upgrade",
+      "name": "17;3 Boost to the first",
+      "system": "infinity",
+      "wiki": "Infinity"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Passive Infinities based on fastest Infinity"
+        }
+      ],
+      "id": "infinity-upgrade-18-1-passive-infinities",
+      "kind": "upgrade",
+      "name": "18;1 Passive Infinities",
+      "system": "infinity",
+      "wiki": "Infinity"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Boosts Gen 4 based on bought Gen 3s"
+        }
+      ],
+      "id": "infinity-upgrade-18-2-fourth-from-third",
+      "kind": "upgrade",
+      "name": "18;2 Fourth from Third",
+      "system": "infinity",
+      "wiki": "Infinity"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Boosts Gen 3 based on bought Gen 2s"
+        }
+      ],
+      "id": "infinity-upgrade-18-3-third-from-second",
+      "kind": "upgrade",
+      "name": "18;3 Third from Second",
+      "system": "infinity",
+      "wiki": "Infinity"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Gen Exponent base is increased to 0.9"
+        }
+      ],
+      "id": "infinity-upgrade-19-1-almost-one",
+      "kind": "upgrade",
+      "name": "19;1 Almost one",
+      "system": "infinity",
+      "wiki": "Infinity"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Boosts Promotion 3 based on Gen Mult"
+        }
+      ],
+      "id": "infinity-upgrade-19-2-age-of-inflation",
+      "kind": "upgrade",
+      "name": "19;2 Age of Inflation",
+      "system": "infinity",
+      "wiki": "Infinity"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "×3 to lap speed"
+        }
+      ],
+      "id": "infinity-upgrade-19-3-challenge-efficiency",
+      "kind": "upgrade",
+      "name": "19;3 Challenge Efficiency",
+      "system": "infinity",
+      "wiki": "Infinity"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Boost Generators based on fastest Infinity"
+        }
+      ],
+      "id": "infinity-upgrade-20-1-as-fast-as-strong",
+      "kind": "upgrade",
+      "name": "20;1 As fast as strong",
+      "system": "infinity",
+      "wiki": "Infinity"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Boosts Gen Exponent based on Gen Power"
+        }
+      ],
+      "id": "infinity-upgrade-20-2-dynamic-generator-exponent",
+      "kind": "upgrade",
+      "name": "20;2 Dynamic Generator Exponent",
+      "system": "infinity",
+      "wiki": "Infinity"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Unlocks Stars"
+        }
+      ],
+      "id": "infinity-upgrade-21-1-a-falling-star",
+      "kind": "upgrade",
+      "name": "21;1 A Falling Star",
+      "system": "infinity",
+      "wiki": "Infinity"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Promotions 2 and 4 are stronger"
+        }
+      ],
+      "id": "infinity-challenge-1",
+      "kind": "upgrade",
+      "name": "Infinity Challenge 1",
+      "system": "infinity",
+      "wiki": "Infinity"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Ascension Power is multiplied by 1.2"
+        }
+      ],
+      "id": "infinity-challenge-2",
+      "kind": "upgrade",
+      "name": "Infinity Challenge 2",
+      "system": "infinity",
+      "wiki": "Infinity"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Common Exp. is increased by +0.03"
+        }
+      ],
+      "id": "infinity-challenge-3",
+      "kind": "upgrade",
+      "name": "Infinity Challenge 3",
+      "system": "infinity",
+      "wiki": "Infinity"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "+1 level to all promotions after Infinity"
+        }
+      ],
+      "id": "infinity-challenge-4",
+      "kind": "upgrade",
+      "name": "Infinity Challenge 4",
+      "system": "infinity",
+      "wiki": "Infinity"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "All promotions are a bit stronger now"
+        }
+      ],
+      "id": "infinity-challenge-5",
+      "kind": "upgrade",
+      "name": "Infinity Challenge 5",
+      "system": "infinity",
+      "wiki": "Infinity"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "All generators are twice as strong"
+        }
+      ],
+      "id": "infinity-challenge-6",
+      "kind": "upgrade",
+      "name": "Infinity Challenge 6",
+      "system": "infinity",
+      "wiki": "Infinity"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "All mults are mult. by (time in Infinity)^0.2"
+        }
+      ],
+      "id": "infinity-challenge-7",
+      "kind": "upgrade",
+      "name": "Infinity Challenge 7",
+      "system": "infinity",
+      "wiki": "Infinity"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Base Ascension Power is increased by 2"
+        }
+      ],
+      "id": "infinity-challenge-8",
+      "kind": "upgrade",
+      "name": "Infinity Challenge 8",
+      "system": "infinity",
+      "wiki": "Infinity"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Double Infinites gain + Break Infinity"
+        }
+      ],
+      "id": "infinity-challenge-9",
+      "kind": "upgrade",
+      "name": "Infinity Challenge 9",
+      "system": "infinity",
+      "wiki": "Infinity"
+    },
+    {
       "confidence": "documented",
       "id": "attack-power",
       "kind": "stat",
@@ -10032,6 +10695,34 @@
       "rel": "boosts",
       "source": "wiki:Eternity",
       "to": "eternity-points"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "infinity-upgrade-11-1-weak-generators",
+      "rel": "boosts",
+      "source": "wiki:Infinity",
+      "to": "infinity-points"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "infinity-upgrade-11-2-medium-generators",
+      "rel": "boosts",
+      "source": "wiki:Infinity",
+      "to": "infinity-points"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "infinity-upgrade-15-2-fast-ip-gain",
+      "rel": "boosts",
+      "source": "wiki:Infinity",
+      "to": "infinity-points"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "infinity-upgrade-16-1-infinity-to-ip",
+      "rel": "boosts",
+      "source": "wiki:Infinity",
+      "to": "infinity-points"
     },
     {
       "confidence": "documented",
