@@ -371,7 +371,7 @@ class Vocabulary:
         return found
 
 
-Vocabulary.EMPTY = Vocabulary(())  # type: ignore[attr-defined]
+Vocabulary.EMPTY = Vocabulary(())
 
 
 def resolve(text: str, vocabulary: Vocabulary | None = None) -> list[Reference]:
