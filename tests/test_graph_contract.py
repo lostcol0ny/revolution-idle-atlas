@@ -211,6 +211,11 @@ def test_every_swept_edge_is_uncertain(graph: dict):
     # `from` id prefix rather than by `confidence` discriminates on something
     # independent of the property under assertion, so a sweep emitting the
     # wrong confidence cannot satisfy this test by shrinking its own input.
+    #
+    # Infinity is absent from both sets on purpose. Its curated edges cite
+    # wiki:Infinity and start with `infinity-upgrade-`, exactly like its swept
+    # ones, so no id-prefix filter separates the two and the discrimination this
+    # test depends on is unavailable for that page.
     swept_sources = {
         "wiki:Zodiacs",
         "wiki:Trials",
@@ -237,7 +242,7 @@ def test_every_swept_edge_is_uncertain(graph: dict):
         for e in graph["edges"]
         if e["source"] in swept_sources and e["from"].startswith(swept_prefixes)
     ]
-    assert len(swept) == 61, f"expected 61 swept edges, got {len(swept)}"
+    assert len(swept) == 76, f"expected 76 swept edges, got {len(swept)}"
     assert all(e.get("confidence") == "uncertain" for e in swept)
 
 

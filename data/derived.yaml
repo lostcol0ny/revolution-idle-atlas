@@ -4520,6 +4520,20 @@ edges:
   note: A Boost to (Zodiac) Luck
   source: wiki:Relics
   confidence: uncertain
+- from: relic-6
+  to: common-exponent
+  rel: boosts
+  op: add
+  note: (Boosts) Common Exponent Mult
+  source: wiki:Relics
+  confidence: uncertain
+- from: relic-7
+  to: lap-speed
+  rel: boosts
+  op: add
+  note: (Boosts) Attacks Lap Speed Mult
+  source: wiki:Relics
+  confidence: uncertain
 - from: relic-9
   to: gold
   rel: boosts
@@ -4566,6 +4580,13 @@ edges:
     and Luck)
   source: wiki:Relics
   confidence: uncertain
+- from: relic-16
+  to: mult-gain
+  rel: boosts
+  op: add
+  note: Multiplies mult gain for attacks
+  source: wiki:Relics
+  confidence: uncertain
 - from: relic-17
   to: relic-9
   rel: boosts
@@ -4578,6 +4599,13 @@ edges:
   rel: boosts
   op: mult
   note: Relic 9 is powered to X (Improves gold gain)
+  source: wiki:Relics
+  confidence: uncertain
+- from: relic-18
+  to: ascension-power
+  rel: boosts
+  op: add
+  note: Increases Ascension Power of Attacks Revolutions
   source: wiki:Relics
   confidence: uncertain
 - from: relic-20
@@ -4711,6 +4739,13 @@ edges:
   rel: boosts
   op: add
   note: Multiplies Refine Node 7's effect
+  source: wiki:Relics
+  confidence: uncertain
+- from: relic-52
+  to: ascension-power
+  rel: boosts
+  op: exp
+  note: Empowers Attack Ascension Power from VP
   source: wiki:Relics
   confidence: uncertain
 - from: relic-54
@@ -5813,6 +5848,12 @@ edges:
   note: Increases Local Singularity Speed Power by 0.02
   source: wiki:Minerals/Refine_Tree
   confidence: uncertain
+- from: tarot-ace-of-swords
+  to: mult-gain
+  rel: boosts
+  note: Attack Mult Gain from VP +^
+  source: wiki:Tarot
+  confidence: uncertain
 - from: tarot-two-of-swords
   to: tarot-ace-of-swords
   rel: boosts
@@ -5914,6 +5955,12 @@ edges:
   targets_effect: 0
   source: wiki:Tarot
   confidence: provisional
+- from: tarot-knight-of-swords
+  to: common-exponent
+  rel: boosts
+  note: Common Exp Mult +x
+  source: wiki:Tarot
+  confidence: uncertain
 - from: tarot-queen-of-swords
   to: tarot-knight-of-swords
   rel: boosts
@@ -6370,6 +6417,12 @@ edges:
   note: Multiplies Your Luck by amount of stars you have powered to ^# (base 0.400)
   source: wiki:Tarot
   confidence: uncertain
+- from: tarot-the-star
+  to: stars
+  rel: boosts
+  note: Multiplies Your Luck by amount of stars you have powered to ^# (base 0.400)
+  source: wiki:Tarot
+  confidence: uncertain
 - from: tarot-the-moon
   to: quality
   rel: boosts
@@ -6425,6 +6478,12 @@ edges:
   note: Water Node 11
   source: wiki:Elements
   confidence: documented
+- from: fire-node-2
+  to: ascension-power
+  rel: boosts
+  note: Increase Ascension Power from VP based on you current fire
+  source: wiki:Elements
+  confidence: uncertain
 - from: fire-node-4
   to: relic-26
   rel: boosts
@@ -6455,6 +6514,12 @@ edges:
   note: Relic 45 effect is multiplied based on your fire (SMP Exp)
   source: wiki:Elements
   confidence: provisional
+- from: earth-node-1
+  to: infinities
+  rel: boosts
+  note: Increase power for factor 1 for earth by 2 Increases power for Infinities multipliter for Earth
+  source: wiki:Elements
+  confidence: uncertain
 - from: earth-node-2
   to: refine-node-1
   rel: boosts
@@ -6588,6 +6653,21 @@ edges:
   rel: boosts
   source: wiki:Minerals
   confidence: uncertain
+- from: zodiac-aries
+  to: mult-gain
+  rel: boosts
+  source: wiki:Zodiacs
+  confidence: uncertain
+- from: zodiac-aries
+  to: ascension-power
+  rel: boosts
+  source: wiki:Zodiacs
+  confidence: uncertain
+- from: zodiac-aries
+  to: common-exponent
+  rel: boosts
+  source: wiki:Zodiacs
+  confidence: uncertain
 - from: zodiac-taurus
   to: infinity-points
   rel: boosts
@@ -6608,6 +6688,26 @@ edges:
   rel: boosts
   source: wiki:Zodiacs
   confidence: uncertain
+- from: zodiac-leo
+  to: lap-speed
+  rel: boosts
+  source: wiki:Zodiacs
+  confidence: uncertain
+- from: zodiac-leo
+  to: ascension-power
+  rel: boosts
+  source: wiki:Zodiacs
+  confidence: uncertain
+- from: zodiac-leo
+  to: common-exponent
+  rel: boosts
+  source: wiki:Zodiacs
+  confidence: uncertain
+- from: zodiac-virgo
+  to: star-base
+  rel: boosts
+  source: wiki:Zodiacs
+  confidence: uncertain
 - from: zodiac-libra
   to: dilation-points
   rel: boosts
@@ -6625,6 +6725,31 @@ edges:
   confidence: uncertain
 - from: zodiac-scorpio
   to: game-speed
+  rel: boosts
+  source: wiki:Zodiacs
+  confidence: uncertain
+- from: zodiac-sagittarius
+  to: lap-speed
+  rel: boosts
+  source: wiki:Zodiacs
+  confidence: uncertain
+- from: zodiac-sagittarius
+  to: ascension-power
+  rel: boosts
+  source: wiki:Zodiacs
+  confidence: uncertain
+- from: zodiac-sagittarius
+  to: common-exponent
+  rel: boosts
+  source: wiki:Zodiacs
+  confidence: uncertain
+- from: zodiac-capricorn
+  to: star-base
+  rel: boosts
+  source: wiki:Zodiacs
+  confidence: uncertain
+- from: zodiac-capricorn
+  to: stardust
   rel: boosts
   source: wiki:Zodiacs
   confidence: uncertain
@@ -6650,6 +6775,11 @@ edges:
   confidence: uncertain
 - from: trial-easy-trial-1
   to: quality
+  rel: boosts
+  source: wiki:Trials
+  confidence: uncertain
+- from: trial-easy-trial-3
+  to: common-exponent
   rel: boosts
   source: wiki:Trials
   confidence: uncertain
@@ -6773,6 +6903,11 @@ edges:
   rel: boosts
   source: wiki:Singularity
   confidence: uncertain
+- from: singularity-tree-1
+  to: mult-gain
+  rel: boosts
+  source: wiki:Singularity
+  confidence: uncertain
 - from: singularity-tree-2
   to: gold
   rel: boosts
@@ -6863,13 +6998,118 @@ edges:
   rel: boosts
   source: wiki:Eternity
   confidence: uncertain
+- from: dilation-upgrade-4
+  to: common-exponent
+  rel: boosts
+  source: wiki:Eternity
+  confidence: uncertain
+- from: dilation-upgrade-6
+  to: generator-exponent
+  rel: boosts
+  source: wiki:Eternity
+  confidence: uncertain
 - from: dilation-upgrade-7
   to: eternity-points
   rel: boosts
   source: wiki:Eternity
   confidence: uncertain
+- from: infinity-upgrade-1-1-infinity-generation-and-automation
+  to: generator-mult
+  rel: boosts
+  source: wiki:Infinity
+  confidence: uncertain
+- from: infinity-upgrade-1-1-infinity-generation-and-automation
+  to: infinities
+  rel: boosts
+  source: wiki:Infinity
+  confidence: uncertain
+- from: infinity-upgrade-2-1-exponential-box
+  to: common-exponent
+  rel: boosts
+  source: wiki:Infinity
+  confidence: uncertain
+- from: infinity-upgrade-3-1-fast-laps
+  to: lap-speed
+  rel: boosts
+  source: wiki:Infinity
+  confidence: uncertain
+- from: infinity-upgrade-4-1-even-faster-laps
+  to: lap-speed
+  rel: boosts
+  source: wiki:Infinity
+  confidence: uncertain
+- from: infinity-upgrade-5-1-long-term-prestiging
+  to: prestige-mult
+  rel: boosts
+  source: wiki:Infinity
+  confidence: uncertain
+- from: infinity-upgrade-5-2-solid-exponent
+  to: common-exponent
+  rel: boosts
+  source: wiki:Infinity
+  confidence: uncertain
+- from: infinity-upgrade-5-2-solid-exponent
+  to: infinities
+  rel: boosts
+  source: wiki:Infinity
+  confidence: uncertain
+- from: infinity-upgrade-6-1-mighty-ascend
+  to: ascension-power
+  rel: boosts
+  source: wiki:Infinity
+  confidence: uncertain
+- from: infinity-upgrade-6-2-ascend-to-ascend
+  to: ascension-power
+  rel: boosts
+  source: wiki:Infinity
+  confidence: uncertain
+- from: infinity-upgrade-6-2-ascend-to-ascend
+  to: infinities
+  rel: boosts
+  source: wiki:Infinity
+  confidence: uncertain
+- from: infinity-upgrade-8-1-generator-time
+  to: generator-1
+  rel: boosts
+  source: wiki:Infinity
+  confidence: uncertain
+- from: infinity-upgrade-8-2-generator-power
+  to: generator-1
+  rel: boosts
+  source: wiki:Infinity
+  confidence: uncertain
+- from: infinity-upgrade-8-2-generator-power
+  to: generator-power
+  rel: boosts
+  source: wiki:Infinity
+  confidence: uncertain
+- from: infinity-upgrade-8-3-generator-constant
+  to: generator-1
+  rel: boosts
+  source: wiki:Infinity
+  confidence: uncertain
+- from: infinity-upgrade-9-1-generator-2-time
+  to: generator-2
+  rel: boosts
+  source: wiki:Infinity
+  confidence: uncertain
+- from: infinity-upgrade-9-2-generator-2-constant
+  to: generator-2
+  rel: boosts
+  source: wiki:Infinity
+  confidence: uncertain
+- from: infinity-upgrade-11-1-weak-generators
+  to: generator-1
+  rel: boosts
+  source: wiki:Infinity
+  confidence: uncertain
 - from: infinity-upgrade-11-1-weak-generators
   to: infinity-points
+  rel: boosts
+  source: wiki:Infinity
+  confidence: uncertain
+- from: infinity-upgrade-11-2-medium-generators
+  to: generator-2
   rel: boosts
   source: wiki:Infinity
   confidence: uncertain
@@ -6878,13 +7118,193 @@ edges:
   rel: boosts
   source: wiki:Infinity
   confidence: uncertain
+- from: infinity-upgrade-12-1-first-but-better
+  to: infinities
+  rel: boosts
+  source: wiki:Infinity
+  confidence: uncertain
+- from: infinity-upgrade-12-1-first-but-better
+  to: generator-2
+  rel: boosts
+  source: wiki:Infinity
+  confidence: uncertain
+- from: infinity-upgrade-13-1-a-little-gift
+  to: ascension-power
+  rel: boosts
+  source: wiki:Infinity
+  confidence: uncertain
+- from: infinity-upgrade-14-1-first-for-the-first
+  to: promotion-1
+  rel: boosts
+  source: wiki:Infinity
+  confidence: uncertain
+- from: infinity-upgrade-14-2-efficiency-v
+  to: generator-exponent
+  rel: boosts
+  source: wiki:Infinity
+  confidence: uncertain
+- from: infinity-upgrade-15-1-auto-infinity
+  to: infinities
+  rel: boosts
+  source: wiki:Infinity
+  confidence: uncertain
 - from: infinity-upgrade-15-2-fast-ip-gain
   to: infinity-points
   rel: boosts
   source: wiki:Infinity
   confidence: uncertain
+- from: infinity-upgrade-15-2-fast-ip-gain
+  to: challenge-times
+  rel: boosts
+  source: wiki:Infinity
+  confidence: uncertain
+- from: infinity-upgrade-15-3-first-generator-power
+  to: generator-1
+  rel: boosts
+  source: wiki:Infinity
+  confidence: uncertain
+- from: infinity-upgrade-15-3-first-generator-power
+  to: challenge-times
+  rel: boosts
+  source: wiki:Infinity
+  confidence: uncertain
+- from: infinity-upgrade-15-4-second-generator-power
+  to: generator-2
+  rel: boosts
+  source: wiki:Infinity
+  confidence: uncertain
+- from: infinity-upgrade-15-4-second-generator-power
+  to: challenge-times
+  rel: boosts
+  source: wiki:Infinity
+  confidence: uncertain
 - from: infinity-upgrade-16-1-infinity-to-ip
   to: infinity-points
+  rel: boosts
+  source: wiki:Infinity
+  confidence: uncertain
+- from: infinity-upgrade-16-1-infinity-to-ip
+  to: infinities
+  rel: boosts
+  source: wiki:Infinity
+  confidence: uncertain
+- from: infinity-upgrade-16-2-stronger-ascension-power
+  to: ascension-power
+  rel: boosts
+  source: wiki:Infinity
+  confidence: uncertain
+- from: infinity-upgrade-16-2-stronger-ascension-power
+  to: infinities
+  rel: boosts
+  source: wiki:Infinity
+  confidence: uncertain
+- from: infinity-upgrade-16-3-empowered-promotions
+  to: promotion-4
+  rel: boosts
+  source: wiki:Infinity
+  confidence: uncertain
+- from: infinity-upgrade-17-1-third-s-turn
+  to: generator-3
+  rel: boosts
+  source: wiki:Infinity
+  confidence: uncertain
+- from: infinity-upgrade-17-1-third-s-turn
+  to: infinities
+  rel: boosts
+  source: wiki:Infinity
+  confidence: uncertain
+- from: infinity-upgrade-17-2-faster-infinity-gain
+  to: infinities
+  rel: boosts
+  source: wiki:Infinity
+  confidence: uncertain
+- from: infinity-upgrade-17-2-faster-infinity-gain
+  to: challenge-times
+  rel: boosts
+  source: wiki:Infinity
+  confidence: uncertain
+- from: infinity-upgrade-17-3-boost-to-the-first
+  to: generator-1
+  rel: boosts
+  source: wiki:Infinity
+  confidence: uncertain
+- from: infinity-upgrade-18-1-passive-infinities
+  to: infinities
+  rel: boosts
+  source: wiki:Infinity
+  confidence: uncertain
+- from: infinity-upgrade-18-2-fourth-from-third
+  to: generator-4
+  rel: boosts
+  source: wiki:Infinity
+  confidence: uncertain
+- from: infinity-upgrade-18-2-fourth-from-third
+  to: generator-3
+  rel: boosts
+  source: wiki:Infinity
+  confidence: uncertain
+- from: infinity-upgrade-18-3-third-from-second
+  to: generator-3
+  rel: boosts
+  source: wiki:Infinity
+  confidence: uncertain
+- from: infinity-upgrade-18-3-third-from-second
+  to: generator-2
+  rel: boosts
+  source: wiki:Infinity
+  confidence: uncertain
+- from: infinity-upgrade-19-1-almost-one
+  to: generator-exponent
+  rel: boosts
+  source: wiki:Infinity
+  confidence: uncertain
+- from: infinity-upgrade-19-2-age-of-inflation
+  to: promotion-3
+  rel: boosts
+  source: wiki:Infinity
+  confidence: uncertain
+- from: infinity-upgrade-19-2-age-of-inflation
+  to: generator-mult
+  rel: boosts
+  source: wiki:Infinity
+  confidence: uncertain
+- from: infinity-upgrade-19-3-challenge-efficiency
+  to: lap-speed
+  rel: boosts
+  source: wiki:Infinity
+  confidence: uncertain
+- from: infinity-upgrade-20-2-dynamic-generator-exponent
+  to: generator-exponent
+  rel: boosts
+  source: wiki:Infinity
+  confidence: uncertain
+- from: infinity-upgrade-20-2-dynamic-generator-exponent
+  to: generator-power
+  rel: boosts
+  source: wiki:Infinity
+  confidence: uncertain
+- from: infinity-upgrade-21-1-a-falling-star
+  to: stars
+  rel: boosts
+  source: wiki:Infinity
+  confidence: uncertain
+- from: infinity-challenge-2
+  to: ascension-power
+  rel: boosts
+  source: wiki:Infinity
+  confidence: uncertain
+- from: infinity-challenge-3
+  to: common-exponent
+  rel: boosts
+  source: wiki:Infinity
+  confidence: uncertain
+- from: infinity-challenge-8
+  to: ascension-power
+  rel: boosts
+  source: wiki:Infinity
+  confidence: uncertain
+- from: infinity-challenge-9
+  to: break-infinity
   rel: boosts
   source: wiki:Infinity
   confidence: uncertain

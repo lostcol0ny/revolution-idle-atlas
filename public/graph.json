@@ -7299,6 +7299,459 @@
       "wiki": "Plague"
     },
     {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "One is gained for every performed Infinity"
+        }
+      ],
+      "id": "infinities",
+      "kind": "stat",
+      "name": "Infinities",
+      "system": "infinity",
+      "wiki": "Infinity"
+    },
+    {
+      "aliases": [
+        "Gen 1"
+      ],
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "Generates Generator Power",
+          "per_level": "Buying multiplies its interval by 2x"
+        }
+      ],
+      "id": "generator-1",
+      "kind": "upgrade",
+      "name": "Generator 1",
+      "system": "infinity",
+      "wiki": "Infinity#Generators"
+    },
+    {
+      "aliases": [
+        "Gen 2",
+        "Gen 2s"
+      ],
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "Generates Generator 1",
+          "per_level": "Buying multiplies its interval by 2x"
+        }
+      ],
+      "id": "generator-2",
+      "kind": "upgrade",
+      "name": "Generator 2",
+      "system": "infinity",
+      "wiki": "Infinity#Generators"
+    },
+    {
+      "aliases": [
+        "Gen 3",
+        "Gen 3s"
+      ],
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "Generates Generator 2",
+          "per_level": "Buying multiplies its interval by 2x"
+        }
+      ],
+      "id": "generator-3",
+      "kind": "upgrade",
+      "name": "Generator 3",
+      "system": "infinity",
+      "wiki": "Infinity#Generators"
+    },
+    {
+      "aliases": [
+        "Gen 4",
+        "Gen 4s"
+      ],
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "Generates Generator 3",
+          "per_level": "Buying multiplies its interval by 2x"
+        }
+      ],
+      "id": "generator-4",
+      "kind": "upgrade",
+      "name": "Generator 4",
+      "system": "infinity",
+      "wiki": "Infinity#Generators"
+    },
+    {
+      "aliases": [
+        "Gen 5",
+        "Gen 5s"
+      ],
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Generates Generator 4",
+          "per_level": "Buying multiplies its interval by 2x"
+        }
+      ],
+      "id": "generator-5",
+      "kind": "upgrade",
+      "name": "Generator 5",
+      "system": "infinity",
+      "wiki": "Infinity#Generators"
+    },
+    {
+      "aliases": [
+        "Gen 6",
+        "Gen 6s"
+      ],
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Generates Generator 5",
+          "per_level": "Buying multiplies its interval by 2x"
+        }
+      ],
+      "id": "generator-6",
+      "kind": "upgrade",
+      "name": "Generator 6",
+      "system": "infinity",
+      "wiki": "Infinity#Generators"
+    },
+    {
+      "aliases": [
+        "Gen 7",
+        "Gen 7s"
+      ],
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Generates Generator 6",
+          "per_level": "Buying multiplies its interval by 2x"
+        }
+      ],
+      "id": "generator-7",
+      "kind": "upgrade",
+      "name": "Generator 7",
+      "system": "infinity",
+      "wiki": "Infinity#Generators"
+    },
+    {
+      "aliases": [
+        "Gen 8",
+        "Gen 8s"
+      ],
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Generates Generator 7",
+          "per_level": "Buying multiplies its interval by 2x"
+        }
+      ],
+      "id": "generator-8",
+      "kind": "upgrade",
+      "name": "Generator 8",
+      "system": "infinity",
+      "wiki": "Infinity#Generators"
+    },
+    {
+      "aliases": [
+        "Gen 9",
+        "Gen 9s"
+      ],
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Generates Generator 8",
+          "per_level": "Buying multiplies its interval by 2x"
+        }
+      ],
+      "id": "generator-9",
+      "kind": "upgrade",
+      "name": "Generator 9",
+      "system": "infinity",
+      "wiki": "Infinity#Generators"
+    },
+    {
+      "aliases": [
+        "Gen 10",
+        "Gen 10s"
+      ],
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Generates Generator 9",
+          "per_level": "Buying multiplies its interval by 2x"
+        }
+      ],
+      "id": "generator-10",
+      "kind": "upgrade",
+      "name": "Generator 10",
+      "system": "infinity",
+      "wiki": "Infinity#Generators"
+    },
+    {
+      "aliases": [
+        "GP",
+        "Gen Power"
+      ],
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "Multiplies Mult Gain, powered to 0.666"
+        }
+      ],
+      "id": "generator-power",
+      "kind": "stat",
+      "name": "Generator Power",
+      "system": "infinity",
+      "wiki": "Infinity#Generators"
+    },
+    {
+      "aliases": [
+        "Gen Mult"
+      ],
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "Softcapped at 1e1,000"
+        }
+      ],
+      "id": "generator-mult",
+      "kind": "stat",
+      "name": "Generator Mult",
+      "system": "infinity",
+      "wiki": "Infinity#Generators"
+    },
+    {
+      "aliases": [
+        "Gen Exponent"
+      ],
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "The power Generator Power is raised to, 0.666 before upgrades"
+        }
+      ],
+      "id": "generator-exponent",
+      "kind": "stat",
+      "name": "Generator Exponent",
+      "system": "infinity",
+      "wiki": "Infinity#Generators"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "Generate Stardust, which enhances Generators and Generator Power gain",
+          "per_level": "Price starts at 1e33 and rises by 1e3, later 1e7 or more"
+        }
+      ],
+      "id": "stars",
+      "kind": "upgrade",
+      "name": "Stars",
+      "system": "infinity",
+      "wiki": "Stars"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "Spent on Stardust Upgrades; reset to zero each Infinity"
+        }
+      ],
+      "id": "stardust",
+      "kind": "currency",
+      "name": "Stardust",
+      "system": "infinity",
+      "wiki": "Stars"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "Boosts Stars",
+          "per_level": "+0.275, starting at 2.75 (2.75 + 0.275n)"
+        }
+      ],
+      "id": "star-base",
+      "kind": "upgrade",
+      "name": "Star Base",
+      "system": "infinity",
+      "wiki": "Stars"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "Boosts Stars",
+          "per_level": "+0.05, starting at 0.4 (0.4 + 0.05n)"
+        }
+      ],
+      "id": "star-exponent",
+      "kind": "upgrade",
+      "name": "Star Exponent",
+      "system": "infinity",
+      "wiki": "Stars"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "Widens Infinity Upgrade 1;1 from Generator 1 to later Generators",
+          "per_level": "Adds the next Generator, maxed out at Generator 10"
+        }
+      ],
+      "id": "stardust-upgrade-1",
+      "kind": "upgrade",
+      "name": "Stardust Upgrade 1",
+      "system": "infinity",
+      "wiki": "Stars"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "Boosts Infinities gain",
+          "per_level": "+1x per purchase, unlimited purchases"
+        }
+      ],
+      "id": "stardust-upgrade-2",
+      "kind": "upgrade",
+      "name": "Stardust Upgrade 2",
+      "system": "infinity",
+      "wiki": "Stars"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "Boosts the Exponential Box power of Infinity Upgrade 2;1",
+          "per_level": "+0.01 per purchase, maxed out at +0.5"
+        }
+      ],
+      "id": "stardust-upgrade-3",
+      "kind": "upgrade",
+      "name": "Stardust Upgrade 3",
+      "system": "infinity",
+      "wiki": "Stars"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "Makes Infinity Upgrade 18;1 faster",
+          "per_level": "x1.05 per purchase, maxed out at x62.62"
+        }
+      ],
+      "id": "stardust-upgrade-4",
+      "kind": "upgrade",
+      "name": "Stardust Upgrade 4",
+      "system": "infinity",
+      "wiki": "Stars"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "Best time achieved on each Infinity Challenge this Eternity; several Infinity Upgrades get stronger as it falls"
+        }
+      ],
+      "id": "challenge-times",
+      "kind": "stat",
+      "name": "Challenge Times",
+      "system": "infinity",
+      "wiki": "Infinity#Challenge_Times"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "Every e308 of score past e3,080 multiplies this run's IP gain by 10"
+        }
+      ],
+      "id": "break-infinity",
+      "kind": "upgrade",
+      "name": "Break Infinity",
+      "system": "infinity",
+      "wiki": "Infinity#Break_Infinity"
+    },
+    {
+      "confidence": "documented",
+      "id": "ascension-power",
+      "kind": "stat",
+      "name": "Ascension Power",
+      "system": "revolution",
+      "wiki": "Revolution"
+    },
+    {
+      "aliases": [
+        "Common Exp"
+      ],
+      "confidence": "documented",
+      "id": "common-exponent",
+      "kind": "stat",
+      "name": "Common Exponent",
+      "system": "revolution",
+      "wiki": "Common_Exponent"
+    },
+    {
+      "confidence": "documented",
+      "id": "lap-speed",
+      "kind": "stat",
+      "name": "Lap Speed",
+      "system": "revolution",
+      "wiki": "Revolution"
+    },
+    {
+      "confidence": "documented",
+      "id": "prestige-mult",
+      "kind": "stat",
+      "name": "Prestige Mult",
+      "system": "revolution",
+      "wiki": "Revolution"
+    },
+    {
+      "confidence": "documented",
+      "id": "mult-gain",
+      "kind": "stat",
+      "name": "Mult Gain",
+      "system": "revolution",
+      "wiki": "Revolution"
+    },
+    {
+      "confidence": "documented",
+      "id": "promotion-1",
+      "kind": "upgrade",
+      "name": "Promotion 1",
+      "system": "revolution",
+      "wiki": "Revolution"
+    },
+    {
+      "confidence": "documented",
+      "id": "promotion-2",
+      "kind": "upgrade",
+      "name": "Promotion 2",
+      "system": "revolution",
+      "wiki": "Revolution"
+    },
+    {
+      "confidence": "documented",
+      "id": "promotion-3",
+      "kind": "upgrade",
+      "name": "Promotion 3",
+      "system": "revolution",
+      "wiki": "Revolution"
+    },
+    {
+      "confidence": "documented",
+      "id": "promotion-4",
+      "kind": "upgrade",
+      "name": "Promotion 4",
+      "system": "revolution",
+      "wiki": "Revolution"
+    },
+    {
       "aliases": [
         "SMMF"
       ],
@@ -7536,6 +7989,24 @@
     },
     {
       "confidence": "uncertain",
+      "from": "relic-6",
+      "note": "(Boosts) Common Exponent Mult",
+      "op": "add",
+      "rel": "boosts",
+      "source": "wiki:Relics",
+      "to": "common-exponent"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "relic-7",
+      "note": "(Boosts) Attacks Lap Speed Mult",
+      "op": "add",
+      "rel": "boosts",
+      "source": "wiki:Relics",
+      "to": "lap-speed"
+    },
+    {
+      "confidence": "uncertain",
       "from": "relic-9",
       "note": "(Boosts) Gold Gain (from Attacks)",
       "op": "add",
@@ -7589,6 +8060,15 @@
       "to": "luck"
     },
     {
+      "confidence": "uncertain",
+      "from": "relic-16",
+      "note": "Multiplies mult gain for attacks",
+      "op": "add",
+      "rel": "boosts",
+      "source": "wiki:Relics",
+      "to": "mult-gain"
+    },
+    {
       "confidence": "provisional",
       "from": "relic-17",
       "note": "Relic 9 is powered to X (Improves gold gain)",
@@ -7605,6 +8085,15 @@
       "rel": "boosts",
       "source": "wiki:Relics",
       "to": "gold"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "relic-18",
+      "note": "Increases Ascension Power of Attacks Revolutions",
+      "op": "add",
+      "rel": "boosts",
+      "source": "wiki:Relics",
+      "to": "ascension-power"
     },
     {
       "confidence": "provisional",
@@ -7774,6 +8263,15 @@
       "rel": "boosts",
       "source": "wiki:Relics",
       "to": "refine-node-7"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "relic-52",
+      "note": "Empowers Attack Ascension Power from VP",
+      "op": "exp",
+      "rel": "boosts",
+      "source": "wiki:Relics",
+      "to": "ascension-power"
     },
     {
       "confidence": "uncertain",
@@ -9290,6 +9788,14 @@
       "to": "singularity"
     },
     {
+      "confidence": "uncertain",
+      "from": "tarot-ace-of-swords",
+      "note": "Attack Mult Gain from VP +^",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "mult-gain"
+    },
+    {
       "confidence": "provisional",
       "from": "tarot-two-of-swords",
       "note": "Swords 1 first effect mult x",
@@ -9419,6 +9925,14 @@
       "source": "wiki:Tarot",
       "targets_effect": 0,
       "to": "tarot-page-of-swords"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-knight-of-swords",
+      "note": "Common Exp Mult +x",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "common-exponent"
     },
     {
       "confidence": "provisional",
@@ -10015,6 +10529,14 @@
     },
     {
       "confidence": "uncertain",
+      "from": "tarot-the-star",
+      "note": "Multiplies Your Luck by amount of stars you have powered to ^# (base 0.400)",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "stars"
+    },
+    {
+      "confidence": "uncertain",
       "from": "tarot-the-moon",
       "note": "Upgrades zodiac on moon postiton (position) x# (base 1,000) quality. But it's weaker after e1,000 quality",
       "rel": "boosts",
@@ -10086,6 +10608,14 @@
       "to": "water-factor-3"
     },
     {
+      "confidence": "uncertain",
+      "from": "fire-node-2",
+      "note": "Increase Ascension Power from VP based on you current fire",
+      "rel": "boosts",
+      "source": "wiki:Elements",
+      "to": "ascension-power"
+    },
+    {
       "confidence": "provisional",
       "from": "fire-node-4",
       "note": "Fire boosts Relic 26 effect (improves Quality donut)",
@@ -10124,6 +10654,14 @@
       "rel": "boosts",
       "source": "wiki:Elements",
       "to": "relic-45"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "earth-node-1",
+      "note": "Increase power for factor 1 for earth by 2 Increases power for Infinities multipliter for Earth",
+      "rel": "boosts",
+      "source": "wiki:Elements",
+      "to": "infinities"
     },
     {
       "confidence": "provisional",
@@ -10306,6 +10844,27 @@
     },
     {
       "confidence": "uncertain",
+      "from": "zodiac-aries",
+      "rel": "boosts",
+      "source": "wiki:Zodiacs",
+      "to": "mult-gain"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "zodiac-aries",
+      "rel": "boosts",
+      "source": "wiki:Zodiacs",
+      "to": "ascension-power"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "zodiac-aries",
+      "rel": "boosts",
+      "source": "wiki:Zodiacs",
+      "to": "common-exponent"
+    },
+    {
+      "confidence": "uncertain",
       "from": "zodiac-taurus",
       "rel": "boosts",
       "source": "wiki:Zodiacs",
@@ -10334,6 +10893,34 @@
     },
     {
       "confidence": "uncertain",
+      "from": "zodiac-leo",
+      "rel": "boosts",
+      "source": "wiki:Zodiacs",
+      "to": "lap-speed"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "zodiac-leo",
+      "rel": "boosts",
+      "source": "wiki:Zodiacs",
+      "to": "ascension-power"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "zodiac-leo",
+      "rel": "boosts",
+      "source": "wiki:Zodiacs",
+      "to": "common-exponent"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "zodiac-virgo",
+      "rel": "boosts",
+      "source": "wiki:Zodiacs",
+      "to": "star-base"
+    },
+    {
+      "confidence": "uncertain",
       "from": "zodiac-libra",
       "rel": "boosts",
       "source": "wiki:Zodiacs",
@@ -10359,6 +10946,41 @@
       "rel": "boosts",
       "source": "wiki:Zodiacs",
       "to": "game-speed"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "zodiac-sagittarius",
+      "rel": "boosts",
+      "source": "wiki:Zodiacs",
+      "to": "lap-speed"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "zodiac-sagittarius",
+      "rel": "boosts",
+      "source": "wiki:Zodiacs",
+      "to": "ascension-power"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "zodiac-sagittarius",
+      "rel": "boosts",
+      "source": "wiki:Zodiacs",
+      "to": "common-exponent"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "zodiac-capricorn",
+      "rel": "boosts",
+      "source": "wiki:Zodiacs",
+      "to": "star-base"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "zodiac-capricorn",
+      "rel": "boosts",
+      "source": "wiki:Zodiacs",
+      "to": "stardust"
     },
     {
       "confidence": "uncertain",
@@ -10394,6 +11016,13 @@
       "rel": "boosts",
       "source": "wiki:Trials",
       "to": "quality"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "trial-easy-trial-3",
+      "rel": "boosts",
+      "source": "wiki:Trials",
+      "to": "common-exponent"
     },
     {
       "confidence": "uncertain",
@@ -10691,10 +11320,150 @@
     },
     {
       "confidence": "uncertain",
+      "from": "dilation-upgrade-4",
+      "rel": "boosts",
+      "source": "wiki:Eternity",
+      "to": "common-exponent"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "dilation-upgrade-6",
+      "rel": "boosts",
+      "source": "wiki:Eternity",
+      "to": "generator-exponent"
+    },
+    {
+      "confidence": "uncertain",
       "from": "dilation-upgrade-7",
       "rel": "boosts",
       "source": "wiki:Eternity",
       "to": "eternity-points"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "infinity-upgrade-1-1-infinity-generation-and-automation",
+      "rel": "boosts",
+      "source": "wiki:Infinity",
+      "to": "generator-mult"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "infinity-upgrade-1-1-infinity-generation-and-automation",
+      "rel": "boosts",
+      "source": "wiki:Infinity",
+      "to": "infinities"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "infinity-upgrade-2-1-exponential-box",
+      "rel": "boosts",
+      "source": "wiki:Infinity",
+      "to": "common-exponent"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "infinity-upgrade-3-1-fast-laps",
+      "rel": "boosts",
+      "source": "wiki:Infinity",
+      "to": "lap-speed"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "infinity-upgrade-4-1-even-faster-laps",
+      "rel": "boosts",
+      "source": "wiki:Infinity",
+      "to": "lap-speed"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "infinity-upgrade-5-1-long-term-prestiging",
+      "rel": "boosts",
+      "source": "wiki:Infinity",
+      "to": "prestige-mult"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "infinity-upgrade-5-2-solid-exponent",
+      "rel": "boosts",
+      "source": "wiki:Infinity",
+      "to": "common-exponent"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "infinity-upgrade-5-2-solid-exponent",
+      "rel": "boosts",
+      "source": "wiki:Infinity",
+      "to": "infinities"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "infinity-upgrade-6-1-mighty-ascend",
+      "rel": "boosts",
+      "source": "wiki:Infinity",
+      "to": "ascension-power"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "infinity-upgrade-6-2-ascend-to-ascend",
+      "rel": "boosts",
+      "source": "wiki:Infinity",
+      "to": "ascension-power"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "infinity-upgrade-6-2-ascend-to-ascend",
+      "rel": "boosts",
+      "source": "wiki:Infinity",
+      "to": "infinities"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "infinity-upgrade-8-1-generator-time",
+      "rel": "boosts",
+      "source": "wiki:Infinity",
+      "to": "generator-1"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "infinity-upgrade-8-2-generator-power",
+      "rel": "boosts",
+      "source": "wiki:Infinity",
+      "to": "generator-1"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "infinity-upgrade-8-2-generator-power",
+      "rel": "boosts",
+      "source": "wiki:Infinity",
+      "to": "generator-power"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "infinity-upgrade-8-3-generator-constant",
+      "rel": "boosts",
+      "source": "wiki:Infinity",
+      "to": "generator-1"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "infinity-upgrade-9-1-generator-2-time",
+      "rel": "boosts",
+      "source": "wiki:Infinity",
+      "to": "generator-2"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "infinity-upgrade-9-2-generator-2-constant",
+      "rel": "boosts",
+      "source": "wiki:Infinity",
+      "to": "generator-2"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "infinity-upgrade-11-1-weak-generators",
+      "rel": "boosts",
+      "source": "wiki:Infinity",
+      "to": "generator-1"
     },
     {
       "confidence": "uncertain",
@@ -10708,7 +11477,56 @@
       "from": "infinity-upgrade-11-2-medium-generators",
       "rel": "boosts",
       "source": "wiki:Infinity",
+      "to": "generator-2"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "infinity-upgrade-11-2-medium-generators",
+      "rel": "boosts",
+      "source": "wiki:Infinity",
       "to": "infinity-points"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "infinity-upgrade-12-1-first-but-better",
+      "rel": "boosts",
+      "source": "wiki:Infinity",
+      "to": "infinities"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "infinity-upgrade-12-1-first-but-better",
+      "rel": "boosts",
+      "source": "wiki:Infinity",
+      "to": "generator-2"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "infinity-upgrade-13-1-a-little-gift",
+      "rel": "boosts",
+      "source": "wiki:Infinity",
+      "to": "ascension-power"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "infinity-upgrade-14-1-first-for-the-first",
+      "rel": "boosts",
+      "source": "wiki:Infinity",
+      "to": "promotion-1"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "infinity-upgrade-14-2-efficiency-v",
+      "rel": "boosts",
+      "source": "wiki:Infinity",
+      "to": "generator-exponent"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "infinity-upgrade-15-1-auto-infinity",
+      "rel": "boosts",
+      "source": "wiki:Infinity",
+      "to": "infinities"
     },
     {
       "confidence": "uncertain",
@@ -10719,10 +11537,220 @@
     },
     {
       "confidence": "uncertain",
+      "from": "infinity-upgrade-15-2-fast-ip-gain",
+      "rel": "boosts",
+      "source": "wiki:Infinity",
+      "to": "challenge-times"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "infinity-upgrade-15-3-first-generator-power",
+      "rel": "boosts",
+      "source": "wiki:Infinity",
+      "to": "generator-1"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "infinity-upgrade-15-3-first-generator-power",
+      "rel": "boosts",
+      "source": "wiki:Infinity",
+      "to": "challenge-times"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "infinity-upgrade-15-4-second-generator-power",
+      "rel": "boosts",
+      "source": "wiki:Infinity",
+      "to": "generator-2"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "infinity-upgrade-15-4-second-generator-power",
+      "rel": "boosts",
+      "source": "wiki:Infinity",
+      "to": "challenge-times"
+    },
+    {
+      "confidence": "uncertain",
       "from": "infinity-upgrade-16-1-infinity-to-ip",
       "rel": "boosts",
       "source": "wiki:Infinity",
       "to": "infinity-points"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "infinity-upgrade-16-1-infinity-to-ip",
+      "rel": "boosts",
+      "source": "wiki:Infinity",
+      "to": "infinities"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "infinity-upgrade-16-2-stronger-ascension-power",
+      "rel": "boosts",
+      "source": "wiki:Infinity",
+      "to": "ascension-power"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "infinity-upgrade-16-2-stronger-ascension-power",
+      "rel": "boosts",
+      "source": "wiki:Infinity",
+      "to": "infinities"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "infinity-upgrade-16-3-empowered-promotions",
+      "rel": "boosts",
+      "source": "wiki:Infinity",
+      "to": "promotion-4"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "infinity-upgrade-17-1-third-s-turn",
+      "rel": "boosts",
+      "source": "wiki:Infinity",
+      "to": "generator-3"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "infinity-upgrade-17-1-third-s-turn",
+      "rel": "boosts",
+      "source": "wiki:Infinity",
+      "to": "infinities"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "infinity-upgrade-17-2-faster-infinity-gain",
+      "rel": "boosts",
+      "source": "wiki:Infinity",
+      "to": "infinities"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "infinity-upgrade-17-2-faster-infinity-gain",
+      "rel": "boosts",
+      "source": "wiki:Infinity",
+      "to": "challenge-times"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "infinity-upgrade-17-3-boost-to-the-first",
+      "rel": "boosts",
+      "source": "wiki:Infinity",
+      "to": "generator-1"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "infinity-upgrade-18-1-passive-infinities",
+      "rel": "boosts",
+      "source": "wiki:Infinity",
+      "to": "infinities"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "infinity-upgrade-18-2-fourth-from-third",
+      "rel": "boosts",
+      "source": "wiki:Infinity",
+      "to": "generator-4"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "infinity-upgrade-18-2-fourth-from-third",
+      "rel": "boosts",
+      "source": "wiki:Infinity",
+      "to": "generator-3"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "infinity-upgrade-18-3-third-from-second",
+      "rel": "boosts",
+      "source": "wiki:Infinity",
+      "to": "generator-3"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "infinity-upgrade-18-3-third-from-second",
+      "rel": "boosts",
+      "source": "wiki:Infinity",
+      "to": "generator-2"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "infinity-upgrade-19-1-almost-one",
+      "rel": "boosts",
+      "source": "wiki:Infinity",
+      "to": "generator-exponent"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "infinity-upgrade-19-2-age-of-inflation",
+      "rel": "boosts",
+      "source": "wiki:Infinity",
+      "to": "promotion-3"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "infinity-upgrade-19-2-age-of-inflation",
+      "rel": "boosts",
+      "source": "wiki:Infinity",
+      "to": "generator-mult"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "infinity-upgrade-19-3-challenge-efficiency",
+      "rel": "boosts",
+      "source": "wiki:Infinity",
+      "to": "lap-speed"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "infinity-upgrade-20-2-dynamic-generator-exponent",
+      "rel": "boosts",
+      "source": "wiki:Infinity",
+      "to": "generator-exponent"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "infinity-upgrade-20-2-dynamic-generator-exponent",
+      "rel": "boosts",
+      "source": "wiki:Infinity",
+      "to": "generator-power"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "infinity-upgrade-21-1-a-falling-star",
+      "rel": "boosts",
+      "source": "wiki:Infinity",
+      "to": "stars"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "infinity-challenge-2",
+      "rel": "boosts",
+      "source": "wiki:Infinity",
+      "to": "ascension-power"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "infinity-challenge-3",
+      "rel": "boosts",
+      "source": "wiki:Infinity",
+      "to": "common-exponent"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "infinity-challenge-8",
+      "rel": "boosts",
+      "source": "wiki:Infinity",
+      "to": "ascension-power"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "infinity-challenge-9",
+      "rel": "boosts",
+      "source": "wiki:Infinity",
+      "to": "break-infinity"
     },
     {
       "confidence": "documented",
@@ -10746,6 +11774,226 @@
       "rel": "unlocks",
       "source": "wiki:Singularity",
       "to": "singularity"
+    },
+    {
+      "confidence": "documented",
+      "from": "generator-1",
+      "rel": "boosts",
+      "source": "wiki:Infinity",
+      "to": "generator-power"
+    },
+    {
+      "confidence": "documented",
+      "from": "generator-power",
+      "note": "GP is powered to 0.666 before it multiplies",
+      "op": "mult",
+      "rel": "boosts",
+      "source": "wiki:Infinity",
+      "to": "mult-gain"
+    },
+    {
+      "confidence": "documented",
+      "from": "generator-2",
+      "rel": "boosts",
+      "source": "wiki:Infinity",
+      "to": "generator-1"
+    },
+    {
+      "confidence": "documented",
+      "from": "generator-3",
+      "rel": "boosts",
+      "source": "wiki:Infinity",
+      "to": "generator-2"
+    },
+    {
+      "confidence": "documented",
+      "from": "generator-4",
+      "rel": "boosts",
+      "source": "wiki:Infinity",
+      "to": "generator-3"
+    },
+    {
+      "confidence": "provisional",
+      "from": "generator-5",
+      "rel": "boosts",
+      "source": "wiki:Infinity",
+      "to": "generator-4"
+    },
+    {
+      "confidence": "provisional",
+      "from": "generator-6",
+      "rel": "boosts",
+      "source": "wiki:Infinity",
+      "to": "generator-5"
+    },
+    {
+      "confidence": "provisional",
+      "from": "generator-7",
+      "rel": "boosts",
+      "source": "wiki:Infinity",
+      "to": "generator-6"
+    },
+    {
+      "confidence": "provisional",
+      "from": "generator-8",
+      "rel": "boosts",
+      "source": "wiki:Infinity",
+      "to": "generator-7"
+    },
+    {
+      "confidence": "provisional",
+      "from": "generator-9",
+      "rel": "boosts",
+      "source": "wiki:Infinity",
+      "to": "generator-8"
+    },
+    {
+      "confidence": "provisional",
+      "from": "generator-10",
+      "rel": "boosts",
+      "source": "wiki:Infinity",
+      "to": "generator-9"
+    },
+    {
+      "confidence": "documented",
+      "from": "stars",
+      "rel": "boosts",
+      "source": "wiki:Infinity",
+      "to": "stardust"
+    },
+    {
+      "confidence": "documented",
+      "from": "star-base",
+      "rel": "boosts",
+      "source": "wiki:Infinity",
+      "to": "stars"
+    },
+    {
+      "confidence": "documented",
+      "from": "star-exponent",
+      "rel": "boosts",
+      "source": "wiki:Infinity",
+      "to": "stars"
+    },
+    {
+      "confidence": "documented",
+      "from": "stardust",
+      "rel": "requires",
+      "source": "wiki:Infinity",
+      "to": "stardust-upgrade-1"
+    },
+    {
+      "confidence": "documented",
+      "from": "stardust",
+      "rel": "requires",
+      "source": "wiki:Infinity",
+      "to": "stardust-upgrade-2"
+    },
+    {
+      "confidence": "documented",
+      "from": "stardust",
+      "rel": "requires",
+      "source": "wiki:Infinity",
+      "to": "stardust-upgrade-3"
+    },
+    {
+      "confidence": "documented",
+      "from": "stardust",
+      "rel": "requires",
+      "source": "wiki:Infinity",
+      "to": "stardust-upgrade-4"
+    },
+    {
+      "confidence": "documented",
+      "from": "stardust-upgrade-1",
+      "note": "Widens Infinity Upgrade 1;1, which applies to Gen 1 first",
+      "rel": "boosts",
+      "source": "wiki:Infinity",
+      "to": "generator-1"
+    },
+    {
+      "confidence": "documented",
+      "from": "stardust-upgrade-2",
+      "rel": "boosts",
+      "source": "wiki:Infinity",
+      "to": "infinities"
+    },
+    {
+      "confidence": "documented",
+      "from": "stardust-upgrade-3",
+      "rel": "boosts",
+      "source": "wiki:Infinity",
+      "to": "infinity-upgrade-2-1-exponential-box"
+    },
+    {
+      "confidence": "documented",
+      "from": "stardust-upgrade-4",
+      "rel": "boosts",
+      "source": "wiki:Infinity",
+      "to": "infinity-upgrade-18-1-passive-infinities"
+    },
+    {
+      "confidence": "documented",
+      "from": "infinity-upgrade-7-1-challenges",
+      "rel": "unlocks",
+      "source": "wiki:Infinity",
+      "to": "infinity-challenge-1"
+    },
+    {
+      "confidence": "documented",
+      "from": "infinity-upgrade-7-1-challenges",
+      "rel": "unlocks",
+      "source": "wiki:Infinity",
+      "to": "infinity-challenge-2"
+    },
+    {
+      "confidence": "documented",
+      "from": "infinity-upgrade-7-1-challenges",
+      "rel": "unlocks",
+      "source": "wiki:Infinity",
+      "to": "infinity-challenge-3"
+    },
+    {
+      "confidence": "documented",
+      "from": "infinity-upgrade-7-1-challenges",
+      "rel": "unlocks",
+      "source": "wiki:Infinity",
+      "to": "infinity-challenge-4"
+    },
+    {
+      "confidence": "documented",
+      "from": "infinity-upgrade-7-1-challenges",
+      "rel": "unlocks",
+      "source": "wiki:Infinity",
+      "to": "infinity-challenge-5"
+    },
+    {
+      "confidence": "documented",
+      "from": "infinity-upgrade-7-1-challenges",
+      "rel": "unlocks",
+      "source": "wiki:Infinity",
+      "to": "infinity-challenge-6"
+    },
+    {
+      "confidence": "documented",
+      "from": "infinity-upgrade-7-1-challenges",
+      "rel": "unlocks",
+      "source": "wiki:Infinity",
+      "to": "infinity-challenge-7"
+    },
+    {
+      "confidence": "documented",
+      "from": "infinity-upgrade-7-1-challenges",
+      "rel": "unlocks",
+      "source": "wiki:Infinity",
+      "to": "infinity-challenge-8"
+    },
+    {
+      "confidence": "documented",
+      "from": "infinity-upgrade-7-1-challenges",
+      "rel": "unlocks",
+      "source": "wiki:Infinity",
+      "to": "infinity-challenge-9"
     }
   ],
   "systems": [

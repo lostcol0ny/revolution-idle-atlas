@@ -220,8 +220,339 @@ nodes:
 
 
 
+  # --- Infinity. The Infinity page's Upgrades and Challenges are tables and are
+  # swept; its Generators and Stars sections are prose and a numbered list, so no
+  # table reader can see them and they are curated here instead.
+  #
+  # The aliases are "Gen 1", not "G1": a two-character surface form is only
+  # matched when it is uppercase letters, and "G1" is not, so it would be
+  # dropped. The plural "Gen 2s" is a separate surface because the matcher
+  # anchors on word boundaries — "Gen 2" does not fire inside "bought Gen 2s".
+
+  - id: infinities
+    name: Infinities
+    system: infinity
+    kind: stat
+    wiki: Infinity
+    confidence: documented
+    effects:
+      - text: One is gained for every performed Infinity
+
+  - id: generator-1
+    name: Generator 1
+    system: infinity
+    kind: upgrade
+    aliases: [Gen 1]
+    wiki: Infinity#Generators
+    confidence: documented
+    effects:
+      - text: Generates Generator Power
+        per_level: Buying multiplies its interval by 2x
+
+  - id: generator-2
+    name: Generator 2
+    system: infinity
+    kind: upgrade
+    aliases: [Gen 2, Gen 2s]
+    wiki: Infinity#Generators
+    confidence: documented
+    effects:
+      - text: Generates Generator 1
+        per_level: Buying multiplies its interval by 2x
+
+  - id: generator-3
+    name: Generator 3
+    system: infinity
+    kind: upgrade
+    aliases: [Gen 3, Gen 3s]
+    wiki: Infinity#Generators
+    confidence: documented
+    effects:
+      - text: Generates Generator 2
+        per_level: Buying multiplies its interval by 2x
+
+  - id: generator-4
+    name: Generator 4
+    system: infinity
+    kind: upgrade
+    aliases: [Gen 4, Gen 4s]
+    wiki: Infinity#Generators
+    confidence: documented
+    effects:
+      - text: Generates Generator 3
+        per_level: Buying multiplies its interval by 2x
+
+  # Generators 5 to 10 are `provisional`: the page names only the first four and
+  # then says "and so on", and the only evidence for where the chain stops is
+  # Stardust Upgrade 1 being "maxed out at G10".
+
+  - id: generator-5
+    name: Generator 5
+    system: infinity
+    kind: upgrade
+    aliases: [Gen 5, Gen 5s]
+    wiki: Infinity#Generators
+    confidence: provisional
+    effects:
+      - text: Generates Generator 4
+        per_level: Buying multiplies its interval by 2x
+
+  - id: generator-6
+    name: Generator 6
+    system: infinity
+    kind: upgrade
+    aliases: [Gen 6, Gen 6s]
+    wiki: Infinity#Generators
+    confidence: provisional
+    effects:
+      - text: Generates Generator 5
+        per_level: Buying multiplies its interval by 2x
+
+  - id: generator-7
+    name: Generator 7
+    system: infinity
+    kind: upgrade
+    aliases: [Gen 7, Gen 7s]
+    wiki: Infinity#Generators
+    confidence: provisional
+    effects:
+      - text: Generates Generator 6
+        per_level: Buying multiplies its interval by 2x
+
+  - id: generator-8
+    name: Generator 8
+    system: infinity
+    kind: upgrade
+    aliases: [Gen 8, Gen 8s]
+    wiki: Infinity#Generators
+    confidence: provisional
+    effects:
+      - text: Generates Generator 7
+        per_level: Buying multiplies its interval by 2x
+
+  - id: generator-9
+    name: Generator 9
+    system: infinity
+    kind: upgrade
+    aliases: [Gen 9, Gen 9s]
+    wiki: Infinity#Generators
+    confidence: provisional
+    effects:
+      - text: Generates Generator 8
+        per_level: Buying multiplies its interval by 2x
+
+  - id: generator-10
+    name: Generator 10
+    system: infinity
+    kind: upgrade
+    aliases: [Gen 10, Gen 10s]
+    wiki: Infinity#Generators
+    confidence: provisional
+    effects:
+      - text: Generates Generator 9
+        per_level: Buying multiplies its interval by 2x
+
+  - id: generator-power
+    name: Generator Power
+    system: infinity
+    kind: stat
+    aliases: [GP, Gen Power]
+    wiki: Infinity#Generators
+    confidence: documented
+    effects:
+      - text: Multiplies Mult Gain, powered to 0.666
+
+  - id: generator-mult
+    name: Generator Mult
+    system: infinity
+    kind: stat
+    aliases: [Gen Mult]
+    wiki: Infinity#Generators
+    confidence: documented
+    effects:
+      - text: Softcapped at 1e1,000
+
+  - id: generator-exponent
+    name: Generator Exponent
+    system: infinity
+    kind: stat
+    aliases: [Gen Exponent]
+    wiki: Infinity#Generators
+    confidence: documented
+    effects:
+      - text: The power Generator Power is raised to, 0.666 before upgrades
+
+  - id: stars
+    name: Stars
+    system: infinity
+    kind: upgrade
+    wiki: Stars
+    confidence: documented
+    effects:
+      - text: Generate Stardust, which enhances Generators and Generator Power gain
+        per_level: Price starts at 1e33 and rises by 1e3, later 1e7 or more
+
+  - id: stardust
+    name: Stardust
+    system: infinity
+    kind: currency
+    wiki: Stars
+    confidence: documented
+    effects:
+      - text: Spent on Stardust Upgrades; reset to zero each Infinity
+
+  - id: star-base
+    name: Star Base
+    system: infinity
+    kind: upgrade
+    wiki: Stars
+    confidence: documented
+    effects:
+      - text: Boosts Stars
+        per_level: "+0.275, starting at 2.75 (2.75 + 0.275n)"
+
+  - id: star-exponent
+    name: Star Exponent
+    system: infinity
+    kind: upgrade
+    wiki: Stars
+    confidence: documented
+    effects:
+      - text: Boosts Stars
+        per_level: "+0.05, starting at 0.4 (0.4 + 0.05n)"
+
+  # The four Stardust Upgrades. The wiki gives them no titles, only positions in
+  # a numbered list, so the number is the whole name.
+
+  - id: stardust-upgrade-1
+    name: Stardust Upgrade 1
+    system: infinity
+    kind: upgrade
+    wiki: Stars
+    confidence: documented
+    effects:
+      - text: Widens Infinity Upgrade 1;1 from Generator 1 to later Generators
+        per_level: Adds the next Generator, maxed out at Generator 10
+
+  - id: stardust-upgrade-2
+    name: Stardust Upgrade 2
+    system: infinity
+    kind: upgrade
+    wiki: Stars
+    confidence: documented
+    effects:
+      - text: Boosts Infinities gain
+        per_level: "+1x per purchase, unlimited purchases"
+
+  - id: stardust-upgrade-3
+    name: Stardust Upgrade 3
+    system: infinity
+    kind: upgrade
+    wiki: Stars
+    confidence: documented
+    effects:
+      - text: Boosts the Exponential Box power of Infinity Upgrade 2;1
+        per_level: "+0.01 per purchase, maxed out at +0.5"
+
+  - id: stardust-upgrade-4
+    name: Stardust Upgrade 4
+    system: infinity
+    kind: upgrade
+    wiki: Stars
+    confidence: documented
+    effects:
+      - text: Makes Infinity Upgrade 18;1 faster
+        per_level: x1.05 per purchase, maxed out at x62.62
+
+  - id: challenge-times
+    name: Challenge Times
+    system: infinity
+    kind: stat
+    wiki: Infinity#Challenge_Times
+    confidence: documented
+    effects:
+      - text: Best time achieved on each Infinity Challenge this Eternity; several
+          Infinity Upgrades get stronger as it falls
+
+  - id: break-infinity
+    name: Break Infinity
+    system: infinity
+    kind: upgrade
+    wiki: Infinity#Break_Infinity
+    confidence: documented
+    effects:
+      - text: Every e308 of score past e3,080 multiplies this run's IP gain by 10
+
   # --- Stats. Not extractable: the wiki names these in prose only, so
   # they exist to give effect text something to resolve to.
+
+  - id: ascension-power
+    name: Ascension Power
+    system: revolution
+    kind: stat
+    wiki: Revolution
+    confidence: documented
+
+  # `Common Exp` is deliberately the alias rather than `Common Exp.`: the
+  # trailing period is not a word character, so the shorter surface matches both
+  # "Common Exp Mult" and "Common Exp." while still refusing to fire inside
+  # "Common Exponent", which the full name claims.
+  - id: common-exponent
+    name: Common Exponent
+    system: revolution
+    kind: stat
+    aliases: [Common Exp]
+    wiki: Common_Exponent
+    confidence: documented
+
+  - id: lap-speed
+    name: Lap Speed
+    system: revolution
+    kind: stat
+    wiki: Revolution
+    confidence: documented
+
+  - id: prestige-mult
+    name: Prestige Mult
+    system: revolution
+    kind: stat
+    wiki: Revolution
+    confidence: documented
+
+  - id: mult-gain
+    name: Mult Gain
+    system: revolution
+    kind: stat
+    wiki: Revolution
+    confidence: documented
+
+  - id: promotion-1
+    name: Promotion 1
+    system: revolution
+    kind: upgrade
+    wiki: Revolution
+    confidence: documented
+
+  - id: promotion-2
+    name: Promotion 2
+    system: revolution
+    kind: upgrade
+    wiki: Revolution
+    confidence: documented
+
+  - id: promotion-3
+    name: Promotion 3
+    system: revolution
+    kind: upgrade
+    wiki: Revolution
+    confidence: documented
+
+  - id: promotion-4
+    name: Promotion 4
+    system: revolution
+    kind: upgrade
+    wiki: Revolution
+    confidence: documented
 
   - id: special-minerals-merge-factor
     name: Special Minerals Merge Factor
@@ -416,6 +747,213 @@ edges:
     note: "Modifies the 1,000,000 atom threshold buff"
     source: wiki:Singularity
     confidence: provisional
+
+  # The generator chain. Prose, so nothing generated can see it.
+
+  - from: generator-1
+    to: generator-power
+    rel: boosts
+    source: wiki:Infinity
+    confidence: documented
+
+  - from: generator-power
+    to: mult-gain
+    rel: boosts
+    op: mult
+    note: "GP is powered to 0.666 before it multiplies"
+    source: wiki:Infinity
+    confidence: documented
+
+  - from: generator-2
+    to: generator-1
+    rel: boosts
+    source: wiki:Infinity
+    confidence: documented
+
+  - from: generator-3
+    to: generator-2
+    rel: boosts
+    source: wiki:Infinity
+    confidence: documented
+
+  - from: generator-4
+    to: generator-3
+    rel: boosts
+    source: wiki:Infinity
+    confidence: documented
+
+  # The page names only the first four generators and then says "and so on".
+
+  - from: generator-5
+    to: generator-4
+    rel: boosts
+    source: wiki:Infinity
+    confidence: provisional
+
+  - from: generator-6
+    to: generator-5
+    rel: boosts
+    source: wiki:Infinity
+    confidence: provisional
+
+  - from: generator-7
+    to: generator-6
+    rel: boosts
+    source: wiki:Infinity
+    confidence: provisional
+
+  - from: generator-8
+    to: generator-7
+    rel: boosts
+    source: wiki:Infinity
+    confidence: provisional
+
+  - from: generator-9
+    to: generator-8
+    rel: boosts
+    source: wiki:Infinity
+    confidence: provisional
+
+  - from: generator-10
+    to: generator-9
+    rel: boosts
+    source: wiki:Infinity
+    confidence: provisional
+
+  # Stars and Stardust.
+
+  - from: stars
+    to: stardust
+    rel: boosts
+    source: wiki:Infinity
+    confidence: documented
+
+  - from: star-base
+    to: stars
+    rel: boosts
+    source: wiki:Infinity
+    confidence: documented
+
+  - from: star-exponent
+    to: stars
+    rel: boosts
+    source: wiki:Infinity
+    confidence: documented
+
+  - from: stardust
+    to: stardust-upgrade-1
+    rel: requires
+    source: wiki:Infinity
+    confidence: documented
+
+  - from: stardust
+    to: stardust-upgrade-2
+    rel: requires
+    source: wiki:Infinity
+    confidence: documented
+
+  - from: stardust
+    to: stardust-upgrade-3
+    rel: requires
+    source: wiki:Infinity
+    confidence: documented
+
+  - from: stardust
+    to: stardust-upgrade-4
+    rel: requires
+    source: wiki:Infinity
+    confidence: documented
+
+  - from: stardust-upgrade-1
+    to: generator-1
+    rel: boosts
+    note: "Widens Infinity Upgrade 1;1, which applies to Gen 1 first"
+    source: wiki:Infinity
+    confidence: documented
+
+  - from: stardust-upgrade-2
+    to: infinities
+    rel: boosts
+    source: wiki:Infinity
+    confidence: documented
+
+  - from: stardust-upgrade-3
+    to: infinity-upgrade-2-1-exponential-box
+    rel: boosts
+    source: wiki:Infinity
+    confidence: documented
+
+  - from: stardust-upgrade-4
+    to: infinity-upgrade-18-1-passive-infinities
+    rel: boosts
+    source: wiki:Infinity
+    confidence: documented
+
+  # "Challenges are unlocked when you buy Infinity Upgrade 7;1." The upgrade's
+  # own effect text says only "Unlocks Infinity Challenges", which names no
+  # single challenge, so the nine edges are curated one by one.
+
+  - from: infinity-upgrade-7-1-challenges
+    to: infinity-challenge-1
+    rel: unlocks
+    source: wiki:Infinity
+    confidence: documented
+
+  - from: infinity-upgrade-7-1-challenges
+    to: infinity-challenge-2
+    rel: unlocks
+    source: wiki:Infinity
+    confidence: documented
+
+  - from: infinity-upgrade-7-1-challenges
+    to: infinity-challenge-3
+    rel: unlocks
+    source: wiki:Infinity
+    confidence: documented
+
+  - from: infinity-upgrade-7-1-challenges
+    to: infinity-challenge-4
+    rel: unlocks
+    source: wiki:Infinity
+    confidence: documented
+
+  - from: infinity-upgrade-7-1-challenges
+    to: infinity-challenge-5
+    rel: unlocks
+    source: wiki:Infinity
+    confidence: documented
+
+  - from: infinity-upgrade-7-1-challenges
+    to: infinity-challenge-6
+    rel: unlocks
+    source: wiki:Infinity
+    confidence: documented
+
+  - from: infinity-upgrade-7-1-challenges
+    to: infinity-challenge-7
+    rel: unlocks
+    source: wiki:Infinity
+    confidence: documented
+
+  - from: infinity-upgrade-7-1-challenges
+    to: infinity-challenge-8
+    rel: unlocks
+    source: wiki:Infinity
+    confidence: documented
+
+  - from: infinity-upgrade-7-1-challenges
+    to: infinity-challenge-9
+    rel: unlocks
+    source: wiki:Infinity
+    confidence: documented
+
+suppress:
+  - from: singularity-tree-1
+    to: mult-gain
+    rel: boosts
+    reason: >-
+      The tree node modifies a Singularity mult gain modifier, a different stat
+      that only happens to contain the Revolution-layer stat's name.
 
 
 
