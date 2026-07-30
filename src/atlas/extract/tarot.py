@@ -5,6 +5,7 @@ from atlas.extract.refs import (
     ORDINALS,
     RANKS,
     SUITS,
+    Vocabulary,
     plain_text,
     resolve,
     slugify,
@@ -119,14 +120,41 @@ def _resolve_suit_refs(text: str) -> list[tuple[str, int | None]]:
     return hits
 
 
-def parse(raw: str) -> ExtractResult:
+def _card_terms(raw: str) -> list[tuple[str, str]]:
+    """Every card name on the page, paired with the id `parse` mints for it.
+
+    A pre-pass rather than accumulation inside the main loop: a card's effect
+    text names cards defined further down the page, and the page is not ordered
+    by who references whom.
+
+    This is the promise `_TAROT_RE` in refs.py makes. The 22 Major Arcana are
+    bare title-case noun phrases ("The Devil", "Strength") with no structural
+    marker dividing them from ordinary prose, so a hardcoded regex would fire on
+    any sentence using the words. Matching only the names actually parsed off
+    this page, and only within this page's own effect text, is the containment
+    that makes them safe to match at all — which is also why these terms are not
+    added to the shared curated vocabulary.
+    """
+    terms: list[tuple[str, str]] = []
+    for match in _TEMPLATE_RE.finditer(raw):
+        name = plain_text(template_fields("|" + match.group(2)).get("card_name", ""))
+        if name:
+            terms.append((name, f"{SYSTEM}-{slugify(name)}"))
+    return terms
+
+
+def parse(raw: str, vocabulary: Vocabulary = Vocabulary.EMPTY) -> ExtractResult:
     """Parse the Tarot wiki page into nodes and edges.
 
     Each suit card produces one node with two effects; each Arcan produces one
     node with one effect. Suit-internal "Swords Knight first effect mult x"
     references become edges. Cross-system references (relic-N, refine-node-N,
     element-node-N) are delegated to the shared `resolve()` function.
+
+    `vocabulary` is extended with every card name found on this page before the
+    main loop runs, so an effect text can reference a card defined below it.
     """
+    vocabulary = vocabulary.with_terms(_card_terms(raw))
     result = ExtractResult()
     for match in _TEMPLATE_RE.finditer(raw):
         fields = template_fields("|" + match.group(2))
@@ -171,8 +199,9 @@ def parse(raw: str) -> ExtractResult:
                 )
 
             # Cross-system references: relic-N, refine-node-N, element-node-N,
-            # and rank-of-suit tarot cards (handled by refs.resolve).
-            for reference in resolve(effect.text):
+            # rank-of-suit tarot cards, and curated stat/currency names
+            # (all handled by refs.resolve with the extended vocabulary).
+            for reference in resolve(effect.text, vocabulary):
                 if reference.target_id == node_id:
                     continue
                 result.edges.append(
@@ -184,7 +213,11 @@ def parse(raw: str) -> ExtractResult:
                             "note": effect.text,
                             "targets_effect": reference.targets_effect,
                             "source": SOURCE,
-                            "confidence": EdgeConfidence.PROVISIONAL,
+                            "confidence": (
+                                EdgeConfidence.UNCERTAIN
+                                if reference.from_vocabulary
+                                else EdgeConfidence.PROVISIONAL
+                            ),
                         }
                     )
                 )
@@ -192,6 +225,6 @@ def parse(raw: str) -> ExtractResult:
     return result
 
 
-def extract(raw_dir: Path) -> ExtractResult:
+def extract(raw_dir: Path, vocabulary: Vocabulary = Vocabulary.EMPTY) -> ExtractResult:
     """Extract tarot cards from the raw Tarot wiki page."""
-    return parse((raw_dir / "Tarot.wikitext").read_text(encoding="utf-8"))
+    return parse((raw_dir / "Tarot.wikitext").read_text(encoding="utf-8"), vocabulary)

@@ -4968,6 +4968,60 @@
   ],
   "edges": [
     {
+      "confidence": "uncertain",
+      "from": "relic-1",
+      "note": "A Simple (flat) Boost to (Attacks) Damage Mult",
+      "op": "add",
+      "rel": "boosts",
+      "source": "wiki:Relics",
+      "to": "damage-mult"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "relic-2",
+      "note": "A Boost to Zodiac Quality",
+      "op": "add",
+      "rel": "boosts",
+      "source": "wiki:Relics",
+      "to": "quality"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "relic-3",
+      "note": "Zodiacs Level Sum (ZLM) Boost (Attacks) Damage Mult",
+      "op": "add",
+      "rel": "boosts",
+      "source": "wiki:Relics",
+      "to": "damage-mult"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "relic-4",
+      "note": "A Boost to (Zodiac) Luck",
+      "op": "add",
+      "rel": "boosts",
+      "source": "wiki:Relics",
+      "to": "luck"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "relic-9",
+      "note": "(Boosts) Gold Gain (from Attacks)",
+      "op": "add",
+      "rel": "boosts",
+      "source": "wiki:Relics",
+      "to": "gold"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "relic-10",
+      "note": "Power (^) to DP Gain Raises DP Gain to a power (^)",
+      "op": "add",
+      "rel": "boosts",
+      "source": "wiki:Relics",
+      "to": "dilation-points"
+    },
+    {
       "confidence": "provisional",
       "from": "relic-15",
       "note": "Increases efficiency of relics 2 and 4 (Pinewood Bracelet and Four Leaf Clover for Zodiac Quality and Luck)",
@@ -4986,6 +5040,24 @@
       "to": "relic-4"
     },
     {
+      "confidence": "uncertain",
+      "from": "relic-15",
+      "note": "Increases efficiency of relics 2 and 4 (Pinewood Bracelet and Four Leaf Clover for Zodiac Quality and Luck)",
+      "op": "add",
+      "rel": "boosts",
+      "source": "wiki:Relics",
+      "to": "quality"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "relic-15",
+      "note": "Increases efficiency of relics 2 and 4 (Pinewood Bracelet and Four Leaf Clover for Zodiac Quality and Luck)",
+      "op": "add",
+      "rel": "boosts",
+      "source": "wiki:Relics",
+      "to": "luck"
+    },
+    {
       "confidence": "provisional",
       "from": "relic-17",
       "note": "Relic 9 is powered to X (Improves gold gain)",
@@ -4993,6 +5065,15 @@
       "rel": "boosts",
       "source": "wiki:Relics",
       "to": "relic-9"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "relic-17",
+      "note": "Relic 9 is powered to X (Improves gold gain)",
+      "op": "mult",
+      "rel": "boosts",
+      "source": "wiki:Relics",
+      "to": "gold"
     },
     {
       "confidence": "provisional",
@@ -5020,6 +5101,15 @@
       "to": "relic-17"
     },
     {
+      "confidence": "uncertain",
+      "from": "relic-21",
+      "note": "Empowers Relic 17 Raises Relic 17 effect to a power (^) Improves Gold Gain",
+      "op": "add",
+      "rel": "boosts",
+      "source": "wiki:Relics",
+      "to": "gold"
+    },
+    {
       "confidence": "provisional",
       "from": "relic-23",
       "note": "Empowers Relic 22 Raises Relic 22 effect to a power (^)",
@@ -5027,6 +5117,42 @@
       "rel": "boosts",
       "source": "wiki:Relics",
       "to": "relic-22"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "relic-24",
+      "note": "Empowers Game Speed Donut Raises Game Speed Donut effect to a power (^)",
+      "op": "add",
+      "rel": "boosts",
+      "source": "wiki:Relics",
+      "to": "game-speed"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "relic-25",
+      "note": "Empowers Luck Donut Raises Luck Donut effect to a power (^)",
+      "op": "add",
+      "rel": "boosts",
+      "source": "wiki:Relics",
+      "to": "luck"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "relic-26",
+      "note": "Empowers Quality Donut Raises Quality Donut effect to a power (^)",
+      "op": "add",
+      "rel": "boosts",
+      "source": "wiki:Relics",
+      "to": "quality"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "relic-27",
+      "note": "Empowers last Donut Raises Zodiac Exp. Factor Donut effect to a power (^)",
+      "op": "add",
+      "rel": "boosts",
+      "source": "wiki:Relics",
+      "to": "zodiac-exp-factor"
     },
     {
       "confidence": "provisional",
@@ -5045,6 +5171,15 @@
       "rel": "boosts",
       "source": "wiki:Relics",
       "to": "refine-node-1"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "relic-34",
+      "note": "Sun and Moon runes gain speed",
+      "op": "add",
+      "rel": "boosts",
+      "source": "wiki:Relics",
+      "to": "runes"
     },
     {
       "confidence": "provisional",
@@ -5081,6 +5216,15 @@
       "rel": "boosts",
       "source": "wiki:Relics",
       "to": "relic-33"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "relic-48",
+      "note": "Multiplies power for Luck boost to Water",
+      "op": "add",
+      "rel": "boosts",
+      "source": "wiki:Relics",
+      "to": "luck"
     },
     {
       "confidence": "uncertain",
@@ -5146,6 +5290,33 @@
       "to": "relic-62"
     },
     {
+      "confidence": "uncertain",
+      "from": "relic-67",
+      "note": "Increases the chance of obtaining Achievement 600 after completing Earth Plague Stage (5-5)",
+      "op": "add",
+      "rel": "boosts",
+      "source": "wiki:Relics",
+      "to": "plague"
+    },
+    {
+      "confidence": "provisional",
+      "from": "relic-69",
+      "note": "Modifies the 1,000,000 atom threshold buff",
+      "op": "exp",
+      "rel": "boosts",
+      "source": "wiki:Singularity",
+      "to": "atoms-gain"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "relic-70",
+      "note": "Empowers your luck",
+      "op": "exp",
+      "rel": "boosts",
+      "source": "wiki:Relics",
+      "to": "luck"
+    },
+    {
       "confidence": "documented",
       "from": "refine-node-1",
       "rel": "requires",
@@ -5193,6 +5364,14 @@
       "rel": "requires",
       "source": "wiki:Minerals/Refine_Tree",
       "to": "refine-node-7"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "refine-node-7",
+      "note": "Gold Gain common mineral upgrade effect is powered to ^2.00",
+      "rel": "boosts",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "gold"
     },
     {
       "confidence": "documented",
@@ -5273,6 +5452,14 @@
       "to": "refine-node-15"
     },
     {
+      "confidence": "uncertain",
+      "from": "refine-node-15",
+      "note": "Buying Relics does not spend gold",
+      "rel": "boosts",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "gold"
+    },
+    {
       "confidence": "documented",
       "from": "refine-node-8",
       "rel": "requires",
@@ -5344,11 +5531,27 @@
       "to": "refine-node-21"
     },
     {
+      "confidence": "uncertain",
+      "from": "refine-node-21",
+      "note": "Gold on Unity (in Attacks) is multiplied by seconds since last Unity",
+      "rel": "boosts",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "gold"
+    },
+    {
       "confidence": "documented",
       "from": "refine-node-21",
       "rel": "requires",
       "source": "wiki:Minerals/Refine_Tree",
       "to": "refine-node-22"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "refine-node-22",
+      "note": "Spawning common minerals doesn't decrease your gold",
+      "rel": "boosts",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "gold"
     },
     {
       "confidence": "documented",
@@ -5481,6 +5684,14 @@
       "to": "refine-node-33"
     },
     {
+      "confidence": "uncertain",
+      "from": "refine-node-33",
+      "note": "Get 100% of your Gold on Unity every second",
+      "rel": "boosts",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "gold"
+    },
+    {
       "confidence": "documented",
       "from": "refine-node-29",
       "rel": "requires",
@@ -5495,6 +5706,14 @@
       "to": "refine-node-35"
     },
     {
+      "confidence": "uncertain",
+      "from": "refine-node-35",
+      "note": "Unlock runes and rune upgrades",
+      "rel": "boosts",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "runes"
+    },
+    {
       "confidence": "documented",
       "from": "refine-node-31",
       "rel": "requires",
@@ -5507,6 +5726,14 @@
       "rel": "requires",
       "source": "wiki:Minerals/Refine_Tree",
       "to": "refine-node-37"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "refine-node-37",
+      "note": "Polish Knuckles are 20% more effective",
+      "rel": "boosts",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "polish-knuckles"
     },
     {
       "confidence": "documented",
@@ -5587,11 +5814,27 @@
       "to": "refine-node-47"
     },
     {
+      "confidence": "uncertain",
+      "from": "refine-node-47",
+      "note": "Sun runes generation is 1.2x faster",
+      "rel": "boosts",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "runes"
+    },
+    {
       "confidence": "documented",
       "from": "refine-node-32",
       "rel": "requires",
       "source": "wiki:Minerals/Refine_Tree",
       "to": "refine-node-48"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "refine-node-48",
+      "note": "Moon runes generation is 1.2x faster",
+      "rel": "boosts",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "runes"
     },
     {
       "confidence": "documented",
@@ -5715,6 +5958,14 @@
       "to": "refine-node-63"
     },
     {
+      "confidence": "uncertain",
+      "from": "refine-node-63",
+      "note": "Keep Dilation Tree and DTP on Unity Reset",
+      "rel": "boosts",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "dilation-tree-points"
+    },
+    {
       "confidence": "documented",
       "from": "refine-node-61",
       "rel": "requires",
@@ -5778,6 +6029,14 @@
       "rel": "requires",
       "source": "wiki:Minerals/Refine_Tree",
       "to": "refine-node-70"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "refine-node-70",
+      "note": "Now you can spawn black special gems (1% chance). Unlocks Tarot. Resets SMS Factor to 5,000 if it's >6,000 or decrease it by 1,000",
+      "rel": "boosts",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "sms-factor"
     },
     {
       "confidence": "documented",
@@ -6115,6 +6374,14 @@
       "to": "refine-node-103"
     },
     {
+      "confidence": "uncertain",
+      "from": "refine-node-103",
+      "note": "Unlocks Plague Tab",
+      "rel": "boosts",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "plague"
+    },
+    {
       "confidence": "documented",
       "from": "refine-node-96",
       "rel": "requires",
@@ -6255,6 +6522,14 @@
       "to": "refine-node-120"
     },
     {
+      "confidence": "uncertain",
+      "from": "refine-node-120",
+      "note": "Multiplies Attack Exponent by x1",
+      "rel": "boosts",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "attack-exponent"
+    },
+    {
       "confidence": "documented",
       "from": "refine-node-120",
       "rel": "requires",
@@ -6262,11 +6537,27 @@
       "to": "refine-node-121"
     },
     {
+      "confidence": "uncertain",
+      "from": "refine-node-121",
+      "note": "Unlocks Singularity",
+      "rel": "boosts",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "singularity"
+    },
+    {
       "confidence": "documented",
       "from": "refine-node-121",
       "rel": "requires",
       "source": "wiki:Minerals/Refine_Tree",
       "to": "refine-node-122"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "refine-node-122",
+      "note": "Adds a Singularity Effect (Based on Singularities) that boosts Spread Speed",
+      "rel": "boosts",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "singularity"
     },
     {
       "confidence": "documented",
@@ -6295,6 +6586,14 @@
       "rel": "requires",
       "source": "wiki:Minerals/Refine_Tree",
       "to": "refine-node-125"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "refine-node-125",
+      "note": "Adds Refine Node 125 as a Singularity Mult Factor",
+      "rel": "boosts",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "singularity"
     },
     {
       "confidence": "documented",
@@ -6339,6 +6638,14 @@
       "to": "refine-node-129"
     },
     {
+      "confidence": "uncertain",
+      "from": "refine-node-129",
+      "note": "Adds Refine Points to Singularity Mult Effects",
+      "rel": "boosts",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "singularity"
+    },
+    {
       "confidence": "documented",
       "from": "refine-node-114",
       "rel": "requires",
@@ -6361,11 +6668,27 @@
       "to": "refine-node-131"
     },
     {
+      "confidence": "uncertain",
+      "from": "refine-node-131",
+      "note": "Adds Atom Gain to Singularity Count effects",
+      "rel": "boosts",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "singularity"
+    },
+    {
       "confidence": "documented",
       "from": "refine-node-128",
       "rel": "requires",
       "source": "wiki:Minerals/Refine_Tree",
       "to": "refine-node-132"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "refine-node-132",
+      "note": "Adds Golden Resource Gain to Singularity Count Effect",
+      "rel": "boosts",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "singularity"
     },
     {
       "confidence": "documented",
@@ -6375,11 +6698,27 @@
       "to": "refine-node-133"
     },
     {
+      "confidence": "uncertain",
+      "from": "refine-node-133",
+      "note": "Empowers your current luck: ^1 + level/100",
+      "rel": "boosts",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "luck"
+    },
+    {
       "confidence": "documented",
       "from": "refine-node-133",
       "rel": "requires",
       "source": "wiki:Minerals/Refine_Tree",
       "to": "refine-node-134"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "refine-node-134",
+      "note": "Adds Refine Points to Singularity Count Effects",
+      "rel": "boosts",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "singularity"
     },
     {
       "confidence": "documented",
@@ -6389,11 +6728,35 @@
       "to": "refine-node-135"
     },
     {
+      "confidence": "uncertain",
+      "from": "refine-node-135",
+      "note": "Adds a Singularity Mult effect that slightly boosts Luck",
+      "rel": "boosts",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "singularity"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "refine-node-135",
+      "note": "Adds a Singularity Mult effect that slightly boosts Luck",
+      "rel": "boosts",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "luck"
+    },
+    {
       "confidence": "documented",
       "from": "refine-node-125",
       "rel": "requires",
       "source": "wiki:Minerals/Refine_Tree",
       "to": "refine-node-136"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "refine-node-136",
+      "note": "Increases Local Singularity Speed Power by 0.02",
+      "rel": "boosts",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "singularity"
     },
     {
       "confidence": "provisional",
@@ -6678,6 +7041,14 @@
       "to": "tarot-queen-of-wands"
     },
     {
+      "confidence": "uncertain",
+      "from": "tarot-ace-of-pentacles",
+      "note": "Gold Gain +^",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "gold"
+    },
+    {
       "confidence": "provisional",
       "from": "tarot-two-of-pentacles",
       "note": "Pentacles 1 first effect mult x",
@@ -6685,6 +7056,14 @@
       "source": "wiki:Tarot",
       "targets_effect": 0,
       "to": "tarot-ace-of-pentacles"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-two-of-pentacles",
+      "note": "Zodiac Sell Cost x",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "zodiac-sell-cost"
     },
     {
       "confidence": "provisional",
@@ -6711,6 +7090,14 @@
       "source": "wiki:Tarot",
       "targets_effect": 0,
       "to": "tarot-three-of-pentacles"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-four-of-pentacles",
+      "note": "Luck Donut Power +^",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "luck"
     },
     {
       "confidence": "provisional",
@@ -6843,6 +7230,14 @@
       "to": "tarot-queen-of-pentacles"
     },
     {
+      "confidence": "uncertain",
+      "from": "tarot-ace-of-cups",
+      "note": "Zodiac Quality +^",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "quality"
+    },
+    {
       "confidence": "provisional",
       "from": "tarot-two-of-cups",
       "note": "Cups 1 first effect mult x",
@@ -6946,6 +7341,14 @@
       "to": "tarot-seven-of-cups"
     },
     {
+      "confidence": "uncertain",
+      "from": "tarot-eight-of-cups",
+      "note": "Runes Generation +x (Rounded Total)",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "runes"
+    },
+    {
       "confidence": "provisional",
       "from": "tarot-nine-of-cups",
       "note": "Cups 8 first effect mult x",
@@ -6982,6 +7385,14 @@
       "to": "tarot-page-of-cups"
     },
     {
+      "confidence": "uncertain",
+      "from": "tarot-knight-of-cups",
+      "note": "Special Minerals Merge Factor (SMMF) +",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "special-minerals-merge-factor"
+    },
+    {
       "confidence": "provisional",
       "from": "tarot-queen-of-cups",
       "note": "Cups Knight first effect mult x",
@@ -7008,12 +7419,76 @@
       "to": "refine-node-1"
     },
     {
+      "confidence": "uncertain",
+      "from": "tarot-the-empress",
+      "note": "Slowly Increases and Decreases Zodiac Sell Cost by x# (base 10.00)",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "zodiac-sell-cost"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-the-emperor",
+      "note": "Slowly Increases and Decreases Mineral Cost Exp by # (base 0.200)",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "mineral-cost-exp"
+    },
+    {
       "confidence": "provisional",
       "from": "tarot-the-lovers",
       "note": "Slowly Increases and Decreases Relic 28 effect by # (base 0.100)",
       "rel": "boosts",
       "source": "wiki:Tarot",
       "to": "relic-28"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-the-chariot",
+      "note": "Decreases your SMS factor by # (base 1,000)",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "sms-factor"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-wheel-of-fortune",
+      "note": "Gambling :D - 50% - get more tarot draws, 50% - lost them. Max amount of gain/lose - # (base 10.00) (they can go negative, but you need positive amount of draws to use it)",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "tarot-draws"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-the-strength",
+      "note": "Slowly Increases and Decreases your Attack Exponent by # (base 0.100)",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "attack-exponent"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-the-hanged-man",
+      "note": "Makes Polish Knuckles +# (base 40.00) levels effective",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "polish-knuckles"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-the-star",
+      "note": "Multiplies Your Luck by amount of stars you have powered to ^# (base 0.400)",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "luck"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-the-moon",
+      "note": "Upgrades zodiac on moon postiton (position) x# (base 1,000) quality. But it's weaker after e1,000 quality",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "quality"
     },
     {
       "confidence": "documented",
@@ -7088,6 +7563,14 @@
       "to": "relic-26"
     },
     {
+      "confidence": "uncertain",
+      "from": "fire-node-4",
+      "note": "Fire boosts Relic 26 effect (improves Quality donut)",
+      "rel": "boosts",
+      "source": "wiki:Elements",
+      "to": "quality"
+    },
+    {
       "confidence": "provisional",
       "from": "fire-node-5",
       "note": "Fire boosts Relic 31 effect (mineral cost)",
@@ -7118,6 +7601,14 @@
       "rel": "boosts",
       "source": "wiki:Elements",
       "to": "refine-node-1"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "earth-node-3",
+      "note": "Earth boosts Gold Gain",
+      "rel": "boosts",
+      "source": "wiki:Elements",
+      "to": "gold"
     },
     {
       "confidence": "provisional",
@@ -7152,6 +7643,14 @@
       "to": "relic-25"
     },
     {
+      "confidence": "uncertain",
+      "from": "wind-node-3",
+      "note": "Wind boosts Relic 25 effect (Luck donut)",
+      "rel": "boosts",
+      "source": "wiki:Elements",
+      "to": "luck"
+    },
+    {
       "confidence": "provisional",
       "from": "wind-node-5",
       "note": "Wind boosts Relic 33 effect (RfP gain)",
@@ -7176,12 +7675,28 @@
       "to": "relic-41"
     },
     {
+      "confidence": "uncertain",
+      "from": "wind-node-10",
+      "note": "Relic 41 effect is multiplied based on your wind (Black Gem Effect, for Tarot Draws)",
+      "rel": "boosts",
+      "source": "wiki:Elements",
+      "to": "tarot-draws"
+    },
+    {
       "confidence": "provisional",
       "from": "wind-node-11",
       "note": "Wind slowly boosts Refine Node 69",
       "rel": "boosts",
       "source": "wiki:Elements",
       "to": "refine-node-69"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "water-node-1",
+      "note": "Each Water Zodiac multiplies your luck by x1.1",
+      "rel": "boosts",
+      "source": "wiki:Elements",
+      "to": "luck"
     },
     {
       "confidence": "provisional",
@@ -7198,6 +7713,14 @@
       "rel": "boosts",
       "source": "wiki:Elements",
       "to": "relic-24"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "water-node-3",
+      "note": "Water boosts Relic 24 effect (Game Speed Donut)",
+      "rel": "boosts",
+      "source": "wiki:Elements",
+      "to": "game-speed"
     },
     {
       "confidence": "provisional",
@@ -7237,15 +7760,6 @@
       "rel": "unlocks",
       "source": "wiki:Singularity",
       "to": "singularity"
-    },
-    {
-      "confidence": "provisional",
-      "from": "relic-69",
-      "note": "Modifies the 1,000,000 atom threshold buff",
-      "op": "exp",
-      "rel": "boosts",
-      "source": "wiki:Singularity",
-      "to": "atoms-gain"
     }
   ],
   "systems": [

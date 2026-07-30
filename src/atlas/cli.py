@@ -9,6 +9,7 @@ import yaml
 from atlas.coverage import analyse, load_inventory, render_markdown
 from atlas.extract import ExtractError, run_all
 from atlas.extract.emit import to_yaml
+from atlas.extract.vocab import build_vocabulary
 from atlas.loader import SchemaError, load_dataset
 from atlas.merge import merge
 from atlas.models import Dataset
@@ -133,8 +134,24 @@ def _extract(root: Path) -> int:
         )
         return 1
 
+    # The curated file supplies the vocabulary. Missing is tolerated — extract
+    # did not read this file before, and requiring it would break a bare tree.
+    # Malformed is not: an empty vocabulary and a broken one are
+    # indistinguishable downstream, since both simply stop producing stat edges.
+    curated_path = root / DATASET_REL_PATH
+    curated = Dataset()
+    if curated_path.is_file():
+        loaded = _load(curated_path, str(DATASET_REL_PATH))
+        if loaded is None:
+            return 1
+        curated = loaded
+
     try:
-        result = run_all(raw_dir)
+        result = run_all(
+            raw_dir,
+            build_vocabulary(curated.nodes),
+            frozenset(curated.node_ids()),
+        )
     except ExtractError as exc:
         print(f"extract failed: {exc}", file=sys.stderr)
         return 1

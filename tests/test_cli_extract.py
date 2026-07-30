@@ -144,7 +144,7 @@ def test_extract_warns_about_dropped_edges_but_still_succeeds(
             )
         ],
     )
-    monkeypatch.setattr("atlas.cli.run_all", lambda _raw_dir: stub)
+    monkeypatch.setattr("atlas.cli.run_all", lambda _raw_dir, _vocab=None, _ids=None: stub)
 
     assert main(["extract", "--root", str(tmp_path)]) == 0
 
@@ -187,7 +187,7 @@ def test_run_all_prunes_dangling_edges(tmp_path, monkeypatch):
     # Build four SimpleNamespace stubs so run_all's module-tuple iteration works
     # without touching the filesystem or the network.
     def _stub(result: ExtractResult) -> types.SimpleNamespace:
-        return types.SimpleNamespace(extract=lambda _raw_dir: result)
+        return types.SimpleNamespace(extract=lambda _raw_dir, _vocab=None: result)
 
     monkeypatch.setattr(extract_module, "relics", _stub(stub_with_dangling))
     monkeypatch.setattr(extract_module, "refine_tree", _stub(filler))
@@ -336,6 +336,67 @@ def test_build_applies_a_curated_suppression_when_the_derived_file_is_absent(
 
     doc = json.loads((tmp_path / "public" / "graph.json").read_text(encoding="utf-8"))
     assert doc["edges"] == []
+
+
+def _tree(tmp_path: Path, curated: str | None) -> Path:
+    """A repo root with the four real raw pages and an optional curated file."""
+    raw = tmp_path / "data" / "raw"
+    raw.mkdir(parents=True)
+    for path in REAL_RAW.glob("*.wikitext"):
+        (raw / path.name).write_text(path.read_text(encoding="utf-8"), encoding="utf-8")
+    if curated is not None:
+        (tmp_path / "data" / "relationships.yaml").write_text(curated, encoding="utf-8")
+    return tmp_path
+
+
+CURATED = """systems:
+  - id: attacks
+    name: Attacks
+
+nodes:
+  - id: game-speed
+    name: Game Speed
+    system: attacks
+    kind: stat
+    aliases: [GS]
+"""
+
+
+def test_extract_reads_the_curated_file_to_build_its_vocabulary(tmp_path):
+    # The wiring test. Without it every parser could take a vocabulary
+    # correctly and the CLI could still pass Vocabulary.EMPTY forever, which no
+    # parser-level test can detect.
+    root = _tree(tmp_path, CURATED)
+    assert main(["extract", "--root", str(root)]) == 0
+
+    ds = load_dataset(root / "data" / "derived.yaml")
+    # "Game Speed" appears in effect prose on the real pages the four parsers
+    # read. prune_dangling would have deleted this edge if the vocabulary had
+    # not reached the parsers, because no parser mints `game-speed` — so its
+    # presence proves the whole path.
+    assert any(e.to == "game-speed" for e in ds.edges)
+
+
+def test_extract_still_succeeds_when_there_is_no_curated_file(tmp_path):
+    # `atlas extract` did not read relationships.yaml before this task, and
+    # making it a hard requirement would break a bare tree for no gain.
+    root = _tree(tmp_path, None)
+    assert not (root / "data" / "relationships.yaml").exists()
+    assert main(["extract", "--root", str(root)]) == 0
+    assert (root / "data" / "derived.yaml").is_file()
+
+
+def test_extract_fails_loudly_on_a_malformed_curated_file(tmp_path, capsys):
+    # An empty vocabulary and a broken one are indistinguishable downstream:
+    # both just stop producing stat edges. `kind: nonsense` is not a valid Kind,
+    # so _load raises SchemaError and the CLI must report it rather than
+    # degrading to an empty vocabulary.
+    root = _tree(
+        tmp_path,
+        "nodes:\n  - id: x\n    name: X\n    system: attacks\n    kind: nonsense\n",
+    )
+    assert main(["extract", "--root", str(root)]) == 1
+    assert "relationships.yaml" in capsys.readouterr().err
 
 
 def test_build_reports_a_duplicate_node_id_in_the_curated_file(tmp_path, capsys):

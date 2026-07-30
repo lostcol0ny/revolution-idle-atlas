@@ -1,6 +1,8 @@
 from pathlib import Path
 
+from atlas.extract.refs import Vocabulary
 from atlas.extract.refine_tree import extract, parse
+from atlas.models import EdgeConfidence
 
 RAW_DIR = Path(__file__).resolve().parents[1] / "data" / "raw"
 
@@ -98,3 +100,10 @@ def test_the_real_page_yields_eighteen_boosts_edges():
     boosts = [e for e in extract(RAW_DIR).edges if e.rel == "boosts"]
     assert len(boosts) == 18
     assert not any(e.from_ == e.to for e in boosts)
+
+
+def test_a_vocabulary_hit_in_a_refine_node_effect_becomes_an_uncertain_edge():
+    raw = "{{RN|2| max = 10 | rfp = 2\n| effect = Boosts Special Minerals Merge Factor\n| req = 1 }}"
+    result = parse(raw, Vocabulary([("Special Minerals Merge Factor", "smmf")]))
+    edge = next(e for e in result.edges if e.to == "smmf")
+    assert edge.confidence is EdgeConfidence.UNCERTAIN

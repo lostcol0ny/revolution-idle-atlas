@@ -2942,6 +2942,48 @@ nodes:
   effects:
   - text: Unlocks third factor for water
 edges:
+- from: relic-1
+  to: damage-mult
+  rel: boosts
+  op: add
+  note: A Simple (flat) Boost to (Attacks) Damage Mult
+  source: wiki:Relics
+  confidence: uncertain
+- from: relic-2
+  to: quality
+  rel: boosts
+  op: add
+  note: A Boost to Zodiac Quality
+  source: wiki:Relics
+  confidence: uncertain
+- from: relic-3
+  to: damage-mult
+  rel: boosts
+  op: add
+  note: Zodiacs Level Sum (ZLM) Boost (Attacks) Damage Mult
+  source: wiki:Relics
+  confidence: uncertain
+- from: relic-4
+  to: luck
+  rel: boosts
+  op: add
+  note: A Boost to (Zodiac) Luck
+  source: wiki:Relics
+  confidence: uncertain
+- from: relic-9
+  to: gold
+  rel: boosts
+  op: add
+  note: (Boosts) Gold Gain (from Attacks)
+  source: wiki:Relics
+  confidence: uncertain
+- from: relic-10
+  to: dilation-points
+  rel: boosts
+  op: add
+  note: Power (^) to DP Gain Raises DP Gain to a power (^)
+  source: wiki:Relics
+  confidence: uncertain
 - from: relic-15
   to: relic-2
   rel: boosts
@@ -2958,6 +3000,22 @@ edges:
     and Luck)
   source: wiki:Relics
   confidence: provisional
+- from: relic-15
+  to: quality
+  rel: boosts
+  op: add
+  note: Increases efficiency of relics 2 and 4 (Pinewood Bracelet and Four Leaf Clover for Zodiac Quality
+    and Luck)
+  source: wiki:Relics
+  confidence: uncertain
+- from: relic-15
+  to: luck
+  rel: boosts
+  op: add
+  note: Increases efficiency of relics 2 and 4 (Pinewood Bracelet and Four Leaf Clover for Zodiac Quality
+    and Luck)
+  source: wiki:Relics
+  confidence: uncertain
 - from: relic-17
   to: relic-9
   rel: boosts
@@ -2965,6 +3023,13 @@ edges:
   note: Relic 9 is powered to X (Improves gold gain)
   source: wiki:Relics
   confidence: provisional
+- from: relic-17
+  to: gold
+  rel: boosts
+  op: mult
+  note: Relic 9 is powered to X (Improves gold gain)
+  source: wiki:Relics
+  confidence: uncertain
 - from: relic-20
   to: relic-16
   rel: boosts
@@ -2986,6 +3051,13 @@ edges:
   note: Empowers Relic 17 Raises Relic 17 effect to a power (^) Improves Gold Gain
   source: wiki:Relics
   confidence: provisional
+- from: relic-21
+  to: gold
+  rel: boosts
+  op: add
+  note: Empowers Relic 17 Raises Relic 17 effect to a power (^) Improves Gold Gain
+  source: wiki:Relics
+  confidence: uncertain
 - from: relic-23
   to: relic-22
   rel: boosts
@@ -2993,6 +3065,34 @@ edges:
   note: Empowers Relic 22 Raises Relic 22 effect to a power (^)
   source: wiki:Relics
   confidence: provisional
+- from: relic-24
+  to: game-speed
+  rel: boosts
+  op: add
+  note: Empowers Game Speed Donut Raises Game Speed Donut effect to a power (^)
+  source: wiki:Relics
+  confidence: uncertain
+- from: relic-25
+  to: luck
+  rel: boosts
+  op: add
+  note: Empowers Luck Donut Raises Luck Donut effect to a power (^)
+  source: wiki:Relics
+  confidence: uncertain
+- from: relic-26
+  to: quality
+  rel: boosts
+  op: add
+  note: Empowers Quality Donut Raises Quality Donut effect to a power (^)
+  source: wiki:Relics
+  confidence: uncertain
+- from: relic-27
+  to: zodiac-exp-factor
+  rel: boosts
+  op: add
+  note: Empowers last Donut Raises Zodiac Exp. Factor Donut effect to a power (^)
+  source: wiki:Relics
+  confidence: uncertain
 - from: relic-29
   to: refine-node-18
   rel: boosts
@@ -3007,6 +3107,13 @@ edges:
   note: Refine Node 1 eff.
   source: wiki:Relics
   confidence: provisional
+- from: relic-34
+  to: runes
+  rel: boosts
+  op: add
+  note: Sun and Moon runes gain speed
+  source: wiki:Relics
+  confidence: uncertain
 - from: relic-38
   to: refine-node-2
   rel: boosts
@@ -3033,6 +3140,13 @@ edges:
   rel: boosts
   op: exp
   note: Empowers Relic 33 (RfP Gain)
+  source: wiki:Relics
+  confidence: uncertain
+- from: relic-48
+  to: luck
+  rel: boosts
+  op: add
+  note: Multiplies power for Luck boost to Water
   source: wiki:Relics
   confidence: uncertain
 - from: relic-50
@@ -3084,6 +3198,27 @@ edges:
   note: Multiplies Relic 62 effect
   source: wiki:Relics
   confidence: uncertain
+- from: relic-67
+  to: plague
+  rel: boosts
+  op: add
+  note: Increases the chance of obtaining Achievement 600 after completing Earth Plague Stage (5-5)
+  source: wiki:Relics
+  confidence: uncertain
+- from: relic-69
+  to: atoms-gain
+  rel: boosts
+  op: exp
+  note: Adds a buff in the beginning that boosts atoms gain
+  source: wiki:Relics
+  confidence: uncertain
+- from: relic-70
+  to: luck
+  rel: boosts
+  op: exp
+  note: Empowers your luck
+  source: wiki:Relics
+  confidence: uncertain
 - from: refine-node-1
   to: refine-node-2
   rel: requires
@@ -3119,6 +3254,12 @@ edges:
   rel: requires
   source: wiki:Minerals/Refine_Tree
   confidence: documented
+- from: refine-node-7
+  to: gold
+  rel: boosts
+  note: Gold Gain common mineral upgrade effect is powered to ^2.00
+  source: wiki:Minerals/Refine_Tree
+  confidence: uncertain
 - from: refine-node-1
   to: refine-node-8
   rel: requires
@@ -3175,6 +3316,12 @@ edges:
   rel: requires
   source: wiki:Minerals/Refine_Tree
   confidence: documented
+- from: refine-node-15
+  to: gold
+  rel: boosts
+  note: Buying Relics does not spend gold
+  source: wiki:Minerals/Refine_Tree
+  confidence: uncertain
 - from: refine-node-8
   to: refine-node-16
   rel: requires
@@ -3227,10 +3374,22 @@ edges:
   source: wiki:Minerals/Refine_Tree
   confidence: documented
 - from: refine-node-21
+  to: gold
+  rel: boosts
+  note: Gold on Unity (in Attacks) is multiplied by seconds since last Unity
+  source: wiki:Minerals/Refine_Tree
+  confidence: uncertain
+- from: refine-node-21
   to: refine-node-22
   rel: requires
   source: wiki:Minerals/Refine_Tree
   confidence: documented
+- from: refine-node-22
+  to: gold
+  rel: boosts
+  note: Spawning common minerals doesn't decrease your gold
+  source: wiki:Minerals/Refine_Tree
+  confidence: uncertain
 - from: refine-node-21
   to: refine-node-23
   rel: requires
@@ -3325,6 +3484,12 @@ edges:
   rel: requires
   source: wiki:Minerals/Refine_Tree
   confidence: documented
+- from: refine-node-33
+  to: gold
+  rel: boosts
+  note: Get 100% of your Gold on Unity every second
+  source: wiki:Minerals/Refine_Tree
+  confidence: uncertain
 - from: refine-node-29
   to: refine-node-34
   rel: requires
@@ -3335,6 +3500,12 @@ edges:
   rel: requires
   source: wiki:Minerals/Refine_Tree
   confidence: documented
+- from: refine-node-35
+  to: runes
+  rel: boosts
+  note: Unlock runes and rune upgrades
+  source: wiki:Minerals/Refine_Tree
+  confidence: uncertain
 - from: refine-node-31
   to: refine-node-36
   rel: requires
@@ -3345,6 +3516,12 @@ edges:
   rel: requires
   source: wiki:Minerals/Refine_Tree
   confidence: documented
+- from: refine-node-37
+  to: polish-knuckles
+  rel: boosts
+  note: Polish Knuckles are 20% more effective
+  source: wiki:Minerals/Refine_Tree
+  confidence: uncertain
 - from: refine-node-37
   to: refine-node-38
   rel: requires
@@ -3401,11 +3578,23 @@ edges:
   rel: requires
   source: wiki:Minerals/Refine_Tree
   confidence: documented
+- from: refine-node-47
+  to: runes
+  rel: boosts
+  note: Sun runes generation is 1.2x faster
+  source: wiki:Minerals/Refine_Tree
+  confidence: uncertain
 - from: refine-node-32
   to: refine-node-48
   rel: requires
   source: wiki:Minerals/Refine_Tree
   confidence: documented
+- from: refine-node-48
+  to: runes
+  rel: boosts
+  note: Moon runes generation is 1.2x faster
+  source: wiki:Minerals/Refine_Tree
+  confidence: uncertain
 - from: refine-node-32
   to: refine-node-49
   rel: requires
@@ -3493,6 +3682,12 @@ edges:
   rel: requires
   source: wiki:Minerals/Refine_Tree
   confidence: documented
+- from: refine-node-63
+  to: dilation-tree-points
+  rel: boosts
+  note: Keep Dilation Tree and DTP on Unity Reset
+  source: wiki:Minerals/Refine_Tree
+  confidence: uncertain
 - from: refine-node-61
   to: refine-node-64
   rel: requires
@@ -3540,6 +3735,13 @@ edges:
   rel: requires
   source: wiki:Minerals/Refine_Tree
   confidence: documented
+- from: refine-node-70
+  to: sms-factor
+  rel: boosts
+  note: Now you can spawn black special gems (1% chance). Unlocks Tarot. Resets SMS Factor to 5,000 if
+    it's >6,000 or decrease it by 1,000
+  source: wiki:Minerals/Refine_Tree
+  confidence: uncertain
 - from: refine-node-68
   to: refine-node-71
   rel: requires
@@ -3782,6 +3984,12 @@ edges:
   rel: requires
   source: wiki:Minerals/Refine_Tree
   confidence: documented
+- from: refine-node-103
+  to: plague
+  rel: boosts
+  note: Unlocks Plague Tab
+  source: wiki:Minerals/Refine_Tree
+  confidence: uncertain
 - from: refine-node-96
   to: refine-node-104
   rel: requires
@@ -3883,15 +4091,33 @@ edges:
   source: wiki:Minerals/Refine_Tree
   confidence: documented
 - from: refine-node-120
+  to: attack-exponent
+  rel: boosts
+  note: Multiplies Attack Exponent by x1
+  source: wiki:Minerals/Refine_Tree
+  confidence: uncertain
+- from: refine-node-120
   to: refine-node-121
   rel: requires
   source: wiki:Minerals/Refine_Tree
   confidence: documented
 - from: refine-node-121
+  to: singularity
+  rel: boosts
+  note: Unlocks Singularity
+  source: wiki:Minerals/Refine_Tree
+  confidence: uncertain
+- from: refine-node-121
   to: refine-node-122
   rel: requires
   source: wiki:Minerals/Refine_Tree
   confidence: documented
+- from: refine-node-122
+  to: singularity
+  rel: boosts
+  note: Adds a Singularity Effect (Based on Singularities) that boosts Spread Speed
+  source: wiki:Minerals/Refine_Tree
+  confidence: uncertain
 - from: refine-node-116
   to: refine-node-123
   rel: requires
@@ -3912,6 +4138,12 @@ edges:
   rel: requires
   source: wiki:Minerals/Refine_Tree
   confidence: documented
+- from: refine-node-125
+  to: singularity
+  rel: boosts
+  note: Adds Refine Node 125 as a Singularity Mult Factor
+  source: wiki:Minerals/Refine_Tree
+  confidence: uncertain
 - from: refine-node-125
   to: refine-node-126
   rel: requires
@@ -3942,6 +4174,12 @@ edges:
   rel: requires
   source: wiki:Minerals/Refine_Tree
   confidence: documented
+- from: refine-node-129
+  to: singularity
+  rel: boosts
+  note: Adds Refine Points to Singularity Mult Effects
+  source: wiki:Minerals/Refine_Tree
+  confidence: uncertain
 - from: refine-node-114
   to: refine-node-130
   rel: requires
@@ -3958,31 +4196,73 @@ edges:
   rel: requires
   source: wiki:Minerals/Refine_Tree
   confidence: documented
+- from: refine-node-131
+  to: singularity
+  rel: boosts
+  note: Adds Atom Gain to Singularity Count effects
+  source: wiki:Minerals/Refine_Tree
+  confidence: uncertain
 - from: refine-node-128
   to: refine-node-132
   rel: requires
   source: wiki:Minerals/Refine_Tree
   confidence: documented
+- from: refine-node-132
+  to: singularity
+  rel: boosts
+  note: Adds Golden Resource Gain to Singularity Count Effect
+  source: wiki:Minerals/Refine_Tree
+  confidence: uncertain
 - from: refine-node-131
   to: refine-node-133
   rel: requires
   source: wiki:Minerals/Refine_Tree
   confidence: documented
 - from: refine-node-133
+  to: luck
+  rel: boosts
+  note: 'Empowers your current luck: ^1 + level/100'
+  source: wiki:Minerals/Refine_Tree
+  confidence: uncertain
+- from: refine-node-133
   to: refine-node-134
   rel: requires
   source: wiki:Minerals/Refine_Tree
   confidence: documented
+- from: refine-node-134
+  to: singularity
+  rel: boosts
+  note: Adds Refine Points to Singularity Count Effects
+  source: wiki:Minerals/Refine_Tree
+  confidence: uncertain
 - from: refine-node-132
   to: refine-node-135
   rel: requires
   source: wiki:Minerals/Refine_Tree
   confidence: documented
+- from: refine-node-135
+  to: singularity
+  rel: boosts
+  note: Adds a Singularity Mult effect that slightly boosts Luck
+  source: wiki:Minerals/Refine_Tree
+  confidence: uncertain
+- from: refine-node-135
+  to: luck
+  rel: boosts
+  note: Adds a Singularity Mult effect that slightly boosts Luck
+  source: wiki:Minerals/Refine_Tree
+  confidence: uncertain
 - from: refine-node-125
   to: refine-node-136
   rel: requires
   source: wiki:Minerals/Refine_Tree
   confidence: documented
+- from: refine-node-136
+  to: singularity
+  rel: boosts
+  note: Increases Local Singularity Speed Power by 0.02
+  source: wiki:Minerals/Refine_Tree
+  confidence: uncertain
 - from: tarot-two-of-swords
   to: tarot-ace-of-swords
   rel: boosts
@@ -4201,6 +4481,12 @@ edges:
   targets_effect: 0
   source: wiki:Tarot
   confidence: provisional
+- from: tarot-ace-of-pentacles
+  to: gold
+  rel: boosts
+  note: Gold Gain +^
+  source: wiki:Tarot
+  confidence: uncertain
 - from: tarot-two-of-pentacles
   to: tarot-ace-of-pentacles
   rel: boosts
@@ -4208,6 +4494,12 @@ edges:
   targets_effect: 0
   source: wiki:Tarot
   confidence: provisional
+- from: tarot-two-of-pentacles
+  to: zodiac-sell-cost
+  rel: boosts
+  note: Zodiac Sell Cost x
+  source: wiki:Tarot
+  confidence: uncertain
 - from: tarot-three-of-pentacles
   to: tarot-two-of-pentacles
   rel: boosts
@@ -4228,6 +4520,12 @@ edges:
   targets_effect: 0
   source: wiki:Tarot
   confidence: provisional
+- from: tarot-four-of-pentacles
+  to: luck
+  rel: boosts
+  note: Luck Donut Power +^
+  source: wiki:Tarot
+  confidence: uncertain
 - from: tarot-five-of-pentacles
   to: tarot-four-of-pentacles
   rel: boosts
@@ -4328,6 +4626,12 @@ edges:
   targets_effect: 0
   source: wiki:Tarot
   confidence: provisional
+- from: tarot-ace-of-cups
+  to: quality
+  rel: boosts
+  note: Zodiac Quality +^
+  source: wiki:Tarot
+  confidence: uncertain
 - from: tarot-two-of-cups
   to: tarot-ace-of-cups
   rel: boosts
@@ -4407,6 +4711,12 @@ edges:
   targets_effect: 0
   source: wiki:Tarot
   confidence: provisional
+- from: tarot-eight-of-cups
+  to: runes
+  rel: boosts
+  note: Runes Generation +x (Rounded Total)
+  source: wiki:Tarot
+  confidence: uncertain
 - from: tarot-nine-of-cups
   to: tarot-eight-of-cups
   rel: boosts
@@ -4435,6 +4745,12 @@ edges:
   targets_effect: 0
   source: wiki:Tarot
   confidence: provisional
+- from: tarot-knight-of-cups
+  to: special-minerals-merge-factor
+  rel: boosts
+  note: Special Minerals Merge Factor (SMMF) +
+  source: wiki:Tarot
+  confidence: uncertain
 - from: tarot-queen-of-cups
   to: tarot-knight-of-cups
   rel: boosts
@@ -4455,12 +4771,62 @@ edges:
   note: Increases Refine Node 1 effect by x# (base 2.000) during some times
   source: wiki:Tarot
   confidence: provisional
+- from: tarot-the-empress
+  to: zodiac-sell-cost
+  rel: boosts
+  note: Slowly Increases and Decreases Zodiac Sell Cost by x# (base 10.00)
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-the-emperor
+  to: mineral-cost-exp
+  rel: boosts
+  note: 'Slowly Increases and Decreases Mineral Cost Exp by # (base 0.200)'
+  source: wiki:Tarot
+  confidence: uncertain
 - from: tarot-the-lovers
   to: relic-28
   rel: boosts
   note: 'Slowly Increases and Decreases Relic 28 effect by # (base 0.100)'
   source: wiki:Tarot
   confidence: provisional
+- from: tarot-the-chariot
+  to: sms-factor
+  rel: boosts
+  note: 'Decreases your SMS factor by # (base 1,000)'
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-wheel-of-fortune
+  to: tarot-draws
+  rel: boosts
+  note: 'Gambling :D - 50% - get more tarot draws, 50% - lost them. Max amount of gain/lose - # (base
+    10.00) (they can go negative, but you need positive amount of draws to use it)'
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-the-strength
+  to: attack-exponent
+  rel: boosts
+  note: 'Slowly Increases and Decreases your Attack Exponent by # (base 0.100)'
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-the-hanged-man
+  to: polish-knuckles
+  rel: boosts
+  note: Makes Polish Knuckles +# (base 40.00) levels effective
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-the-star
+  to: luck
+  rel: boosts
+  note: Multiplies Your Luck by amount of stars you have powered to ^# (base 0.400)
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-the-moon
+  to: quality
+  rel: boosts
+  note: Upgrades zodiac on moon postiton (position) x# (base 1,000) quality. But it's weaker after e1,000
+    quality
+  source: wiki:Tarot
+  confidence: uncertain
 - from: tarot-king-of-wands
   to: fire-factor-2
   rel: unlocks
@@ -4515,6 +4881,12 @@ edges:
   note: Fire boosts Relic 26 effect (improves Quality donut)
   source: wiki:Elements
   confidence: provisional
+- from: fire-node-4
+  to: quality
+  rel: boosts
+  note: Fire boosts Relic 26 effect (improves Quality donut)
+  source: wiki:Elements
+  confidence: uncertain
 - from: fire-node-5
   to: relic-31
   rel: boosts
@@ -4539,6 +4911,12 @@ edges:
   note: Earth boosts Refine Node 1 effect
   source: wiki:Elements
   confidence: provisional
+- from: earth-node-3
+  to: gold
+  rel: boosts
+  note: Earth boosts Gold Gain
+  source: wiki:Elements
+  confidence: uncertain
 - from: earth-node-4
   to: relic-32
   rel: boosts
@@ -4563,6 +4941,12 @@ edges:
   note: Wind boosts Relic 25 effect (Luck donut)
   source: wiki:Elements
   confidence: provisional
+- from: wind-node-3
+  to: luck
+  rel: boosts
+  note: Wind boosts Relic 25 effect (Luck donut)
+  source: wiki:Elements
+  confidence: uncertain
 - from: wind-node-5
   to: relic-33
   rel: boosts
@@ -4581,12 +4965,24 @@ edges:
   note: Relic 41 effect is multiplied based on your wind (Black Gem Effect, for Tarot Draws)
   source: wiki:Elements
   confidence: provisional
+- from: wind-node-10
+  to: tarot-draws
+  rel: boosts
+  note: Relic 41 effect is multiplied based on your wind (Black Gem Effect, for Tarot Draws)
+  source: wiki:Elements
+  confidence: uncertain
 - from: wind-node-11
   to: refine-node-69
   rel: boosts
   note: Wind slowly boosts Refine Node 69
   source: wiki:Elements
   confidence: provisional
+- from: water-node-1
+  to: luck
+  rel: boosts
+  note: Each Water Zodiac multiplies your luck by x1.1
+  source: wiki:Elements
+  confidence: uncertain
 - from: water-node-2
   to: refine-node-18
   rel: boosts
@@ -4599,6 +4995,12 @@ edges:
   note: Water boosts Relic 24 effect (Game Speed Donut)
   source: wiki:Elements
   confidence: provisional
+- from: water-node-3
+  to: game-speed
+  rel: boosts
+  note: Water boosts Relic 24 effect (Game Speed Donut)
+  source: wiki:Elements
+  confidence: uncertain
 - from: water-node-4
   to: relic-34
   rel: boosts

@@ -1,6 +1,8 @@
 from pathlib import Path
 
+from atlas.extract.refs import Vocabulary
 from atlas.extract.elements import extract, parse
+from atlas.models import EdgeConfidence, Rel
 
 RAW_DIR = Path(__file__).resolve().parents[1] / "data" / "raw"
 
@@ -252,3 +254,29 @@ def test_factor_nodes_all_live_in_elements_system():
     for node in result.nodes:
         assert node.system == "elements"
         assert node.wiki == "Elements"
+
+
+def _fixture() -> str:
+    """The shared PAGE fixture, returned as a function so tests can call it uniformly."""
+    return PAGE
+
+
+def test_a_vocabulary_hit_in_an_element_upgrade_becomes_an_uncertain_edge():
+    # "improves Quality donut" appears in fire-node-4's upgrade effect. "Quality"
+    # is the surface form; this test checks that the vocabulary path stamps
+    # confidence: uncertain rather than the structural baseline of provisional.
+    result = parse(_fixture(), Vocabulary([("Quality", "quality")]))
+    edges = [e for e in result.edges if e.to == "quality"]
+    assert edges, "the fixture's upgrade text must name Quality for this test to bite"
+    assert all(e.confidence is EdgeConfidence.UNCERTAIN for e in edges)
+
+
+def test_the_unlock_column_is_not_matched_against_the_vocabulary():
+    # The load-bearing negative test. The unlock site emits reversed
+    # `rel: unlocks` edges with `confidence: documented`, so a stat matching
+    # there would assert "Quality unlocks Fire Factor 2" and assert it as
+    # established fact. Passing the vocabulary to that resolve() call is the
+    # mutation this test exists to catch.
+    result = parse(_fixture(), Vocabulary([("Quality", "quality")]))
+    assert all(e.rel is not Rel.UNLOCKS for e in result.edges if e.to == "quality")
+    assert all(e.from_ != "quality" for e in result.edges)

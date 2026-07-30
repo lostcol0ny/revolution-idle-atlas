@@ -1,7 +1,7 @@
 import re
 from pathlib import Path
 
-from atlas.extract.refs import plain_text, resolve
+from atlas.extract.refs import Vocabulary, plain_text, resolve
 from atlas.extract.result import ExtractResult
 from atlas.models import Edge, EdgeConfidence, Effect, Node
 
@@ -41,9 +41,9 @@ def _node(node_id: str, name: str, kind: str, text: str) -> Node:
     )
 
 
-def _boosts(source_id: str, text: str) -> list[Edge]:
+def _boosts(source_id: str, text: str, vocabulary: Vocabulary) -> list[Edge]:
     edges: list[Edge] = []
-    for reference in resolve(text):
+    for reference in resolve(text, vocabulary):
         if reference.target_id == source_id:
             continue
         edges.append(
@@ -55,7 +55,11 @@ def _boosts(source_id: str, text: str) -> list[Edge]:
                     "note": text,
                     "targets_effect": reference.targets_effect,
                     "source": SOURCE,
-                    "confidence": EdgeConfidence.PROVISIONAL,
+                    "confidence": (
+                        EdgeConfidence.UNCERTAIN
+                        if reference.from_vocabulary
+                        else EdgeConfidence.PROVISIONAL
+                    ),
                 }
             )
         )
@@ -88,6 +92,10 @@ def _parse_factors(raw: str) -> ExtractResult:
 
         if unlock.strip().lower() == NO_UNLOCK:
             continue
+        # No vocabulary here, deliberately. These edges are reversed
+        # (`from` is the reference) and land as `rel: unlocks` with
+        # `confidence: documented`. A stat name matching in this cell would
+        # assert "Game Speed unlocks Fire Factor 2" as established fact.
         for reference in resolve(unlock):
             result.edges.append(
                 Edge(
@@ -104,7 +112,7 @@ def _parse_factors(raw: str) -> ExtractResult:
     return result
 
 
-def _parse_upgrades(raw: str) -> ExtractResult:
+def _parse_upgrades(raw: str, vocabulary: Vocabulary) -> ExtractResult:
     result = ExtractResult()
     upgrades = _section(raw, "=== Element Upgrades ===", None)
     for index, element in enumerate(ELEMENTS):
@@ -128,15 +136,15 @@ def _parse_upgrades(raw: str) -> ExtractResult:
             result.nodes.append(
                 _node(node_id, f"{element} Node {int(number)}", "upgrade", text)
             )
-            result.edges.extend(_boosts(node_id, text))
+            result.edges.extend(_boosts(node_id, text, vocabulary))
     return result
 
 
-def parse(raw: str) -> ExtractResult:
+def parse(raw: str, vocabulary: Vocabulary = Vocabulary.EMPTY) -> ExtractResult:
     result = _parse_factors(raw)
-    result.extend(_parse_upgrades(raw))
+    result.extend(_parse_upgrades(raw, vocabulary))
     return result
 
 
-def extract(raw_dir: Path) -> ExtractResult:
-    return parse((raw_dir / "Elements.wikitext").read_text(encoding="utf-8"))
+def extract(raw_dir: Path, vocabulary: Vocabulary = Vocabulary.EMPTY) -> ExtractResult:
+    return parse((raw_dir / "Elements.wikitext").read_text(encoding="utf-8"), vocabulary)

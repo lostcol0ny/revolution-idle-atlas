@@ -1,7 +1,7 @@
 import re
 from pathlib import Path
 
-from atlas.extract.refs import derive_op, is_uncertain, plain_text, resolve
+from atlas.extract.refs import Vocabulary, derive_op, is_uncertain, plain_text, resolve
 from atlas.extract.result import ExtractResult
 from atlas.models import Edge, EdgeConfidence, Effect, Node
 
@@ -28,7 +28,7 @@ def _cells(row: str) -> list[str]:
     return cells
 
 
-def parse(raw: str) -> ExtractResult:
+def parse(raw: str, vocabulary: Vocabulary = Vocabulary.EMPTY) -> ExtractResult:
     result = ExtractResult()
     # [0] is the table opener, [1] the column headers; the rest are relics.
     for row in _ROW_SPLIT_RE.split(_table(raw))[2:]:
@@ -60,7 +60,7 @@ def parse(raw: str) -> ExtractResult:
             if is_uncertain(coefficient)
             else EdgeConfidence.PROVISIONAL
         )
-        for reference in resolve(text):
+        for reference in resolve(text, vocabulary):
             if reference.target_id == node_id:
                 continue
             result.edges.append(
@@ -73,12 +73,19 @@ def parse(raw: str) -> ExtractResult:
                         "note": text,
                         "targets_effect": reference.targets_effect,
                         "source": SOURCE,
-                        "confidence": confidence,
+                        # Prose is weaker evidence than a table cell, so a
+                        # vocabulary hit is uncertain regardless of whether the
+                        # wiki hedged the coefficient.
+                        "confidence": (
+                            EdgeConfidence.UNCERTAIN
+                            if reference.from_vocabulary
+                            else confidence
+                        ),
                     }
                 )
             )
     return result
 
 
-def extract(raw_dir: Path) -> ExtractResult:
-    return parse((raw_dir / "Relics.wikitext").read_text(encoding="utf-8"))
+def extract(raw_dir: Path, vocabulary: Vocabulary = Vocabulary.EMPTY) -> ExtractResult:
+    return parse((raw_dir / "Relics.wikitext").read_text(encoding="utf-8"), vocabulary)

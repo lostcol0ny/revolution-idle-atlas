@@ -1,7 +1,8 @@
 from pathlib import Path
 
+from atlas.extract.refs import Vocabulary
 from atlas.extract.relics import extract, parse
-from atlas.models import EdgeConfidence, Op
+from atlas.models import EdgeConfidence, Op, Rel
 
 RAW_DIR = Path(__file__).resolve().parents[1] / "data" / "raw"
 
@@ -107,3 +108,51 @@ def test_the_real_page_yields_seventy_relics():
     # Crosses from a relic to a refine-tree node, pinning the id vocabulary
     # across two sources — the seam Tasks 6-8 lean on.
     assert ("relic-38", "refine-node-2") in edge_set
+
+
+def _table_with_row(number: str, name: str, effect: str, per_level: str) -> str:
+    """One relic row wrapped in the six-column table structure parse() expects."""
+    return (
+        '{| class="wikitable sortable"\n'
+        "! colspan=\"6\" |Relics\n"
+        "|-\n"
+        "!Number\n!Name\n!Icon\n!Effect\n!Effect per level\n!Unlock requirements\n"
+        "|-\n"
+        f"|{number}\n"
+        f"|{name}\n"
+        f"|[[File:Relic 00{number}.png|128px|link=]]\n"
+        f"|{effect}\n"
+        f"| {per_level}\n"
+        f"|Attack level 1\n"
+        "|}"
+    )
+
+
+def test_a_vocabulary_hit_in_a_relic_effect_becomes_an_uncertain_edge():
+    raw = _table_with_row("38", "Smart Man", "Multiplies your Luck", "+1.00")
+    vocab = Vocabulary([("Luck", "luck")])
+    result = parse(raw, vocab)
+
+    edge = next(e for e in result.edges if e.to == "luck")
+    # Uncertain even though the per_level "+1.00" carries no "?" — so the base
+    # confidence at this call site would have been provisional. Only the
+    # from_vocabulary flag can produce uncertain here.
+    assert edge.confidence is EdgeConfidence.UNCERTAIN
+    assert edge.rel is Rel.BOOSTS
+    assert edge.from_ == "relic-38"
+
+
+def test_a_structural_hit_keeps_its_own_confidence_when_a_vocabulary_is_supplied():
+    # The other half of the pair. Passing a vocabulary must not weaken the edges
+    # the entity regexes produce, or every relic edge in derived.yaml would
+    # silently downgrade to uncertain.
+    raw = _table_with_row("38", "Smart Man", "Adds base to Refine Node 2", "+1.00")
+    result = parse(raw, Vocabulary([("Luck", "luck")]))
+
+    edge = next(e for e in result.edges if e.to == "refine-node-2")
+    assert edge.confidence is EdgeConfidence.PROVISIONAL
+
+
+def test_parse_without_a_vocabulary_is_unchanged():
+    raw = _table_with_row("38", "Smart Man", "Multiplies your Luck", "+1.00")
+    assert parse(raw).edges == []

@@ -127,3 +127,21 @@ def test_every_seeded_node_declares_a_system_that_exists(graph: dict):
     assert declared
     for node in graph["nodes"]:
         assert node["system"] in declared, node["id"]
+
+
+def test_the_owners_worked_example_resolves(graph: dict):
+    # The one node the owner named by hand: "picking a stat (like Special
+    # Minerals Merge Factor) and then looking to see all of the nodes that lead
+    # up to it". If nothing points at it, the primary use case has no data.
+    upstream = [e["from"] for e in graph["edges"] if e["to"] == "sms-factor"]
+    assert upstream, "no edge reaches sms-factor"
+
+
+def test_the_major_arcana_are_no_longer_islands(graph: dict):
+    # 20 of the 22 Major Arcana were unconnected islands before the vocabulary
+    # landed. This is the coverage number that says the feature works on real
+    # data rather than on a fixture.
+    touched = {e["from"] for e in graph["edges"]} | {e["to"] for e in graph["edges"]}
+    cards = {n["id"] for n in graph["nodes"] if n["kind"] == "tarot-card"}
+    islands = cards - touched
+    assert len(islands) < 20, sorted(islands)

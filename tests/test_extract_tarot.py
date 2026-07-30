@@ -1,7 +1,8 @@
 from pathlib import Path
 
-from atlas.extract.refs import RANKS
+from atlas.extract.refs import RANKS, Vocabulary
 from atlas.extract.tarot import _NAMED_RANKS, _NUMBER_TO_RANK, extract, parse
+from atlas.models import EdgeConfidence
 
 RAW_DIR = Path(__file__).resolve().parents[1] / "data" / "raw"
 
@@ -116,3 +117,60 @@ def test_a_possessive_reference_without_an_ordinal_still_produces_an_edge():
     result = extract(RAW_DIR)
     tuples = {(e.from_, e.to, e.targets_effect) for e in result.edges}
     assert ("tarot-ten-of-pentacles", "tarot-eight-of-pentacles", None) in tuples
+
+
+def _card(name: str, effect: str) -> str:
+    """One Arcana card template in the shape the Tarot page uses."""
+    return (
+        "{{Tarot Cards/Arcans\n"
+        f"| icon = Tarot {name.lower().replace(' ', '-')}.png\n"
+        f"| card_name = {name}\n"
+        f"| effect = {effect}\n"
+        "| duration = 0ms\n"
+        "| cooldown = 1 hour\n"
+        "}}\n"
+    )
+
+
+def test_the_chariot_resolves_to_the_sms_factor_stat():
+    # The spec's worked example, and the shape of the whole feature: the wiki
+    # writes "SMS factor" in lower case, the curated node is named "SMS Factor",
+    # and full names match case-insensitively.
+    raw = _card("The Chariot", "Decreases your SMS factor by # (''base 1,000'')")
+    result = parse(raw, Vocabulary([("SMS Factor", "sms-factor"), ("SMS", "sms-factor")]))
+
+    edge = next(e for e in result.edges if e.to == "sms-factor")
+    assert edge.from_ == "tarot-the-chariot"
+    assert edge.confidence is EdgeConfidence.UNCERTAIN
+    # One edge, not two: "SMS Factor" claims the span before the "SMS" alias can.
+    assert len([e for e in result.edges if e.to == "sms-factor"]) == 1
+
+
+def test_a_major_arcana_name_resolves_even_though_it_is_not_curated():
+    # refs.py's _TAROT_RE comment promises this: the 22 Major Arcana are bare
+    # title-case noun phrases, so they are matched from the names parsed off this
+    # very page rather than from a hardcoded list or the curated file.
+    raw = _card("The Devil", "Boost") + _card(
+        "The Fool", "Doubles The Devil's first effect"
+    )
+    result = parse(raw)
+
+    edge = next(e for e in result.edges if e.from_ == "tarot-the-fool")
+    assert edge.to == "tarot-the-devil"
+    assert edge.targets_effect == 0
+    assert edge.confidence is EdgeConfidence.UNCERTAIN
+
+
+def test_a_card_named_later_on_the_page_still_resolves():
+    # The pre-pass is what makes this work. Building the vocabulary inside the
+    # main loop would only ever see cards already parsed, and the page does not
+    # order cards by who references whom.
+    raw = _card("The Fool", "Doubles The Devil's first effect") + _card("The Devil", "Boost")
+    result = parse(raw)
+    assert any(e.from_ == "tarot-the-fool" and e.to == "tarot-the-devil" for e in result.edges)
+
+
+def test_a_card_does_not_resolve_to_itself():
+    raw = _card("The Devil", "The Devil doubles its own output")
+    result = parse(raw)
+    assert all(e.to != "tarot-the-devil" for e in result.edges)

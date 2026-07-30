@@ -1,7 +1,7 @@
 import re
 from pathlib import Path
 
-from atlas.extract.refs import plain_text, resolve, template_fields
+from atlas.extract.refs import Vocabulary, plain_text, resolve, template_fields
 from atlas.extract.result import ExtractResult
 from atlas.models import Edge, EdgeConfidence, Effect, Node
 
@@ -15,7 +15,7 @@ _TEMPLATE_RE = re.compile(r"\{\{RN\|(.*?)\}\}", re.DOTALL)
 _NUMBER_RE = re.compile(r"\d+")
 
 
-def parse(raw: str) -> ExtractResult:
+def parse(raw: str, vocabulary: Vocabulary = Vocabulary.EMPTY) -> ExtractResult:
     result = ExtractResult()
     for match in _TEMPLATE_RE.finditer(raw):
         body = match.group(1)
@@ -58,7 +58,7 @@ def parse(raw: str) -> ExtractResult:
                 )
             )
 
-        for reference in resolve(text):
+        for reference in resolve(text, vocabulary):
             if reference.target_id == node_id:
                 continue
             result.edges.append(
@@ -70,13 +70,17 @@ def parse(raw: str) -> ExtractResult:
                         "note": text,
                         "targets_effect": reference.targets_effect,
                         "source": SOURCE,
-                        "confidence": EdgeConfidence.PROVISIONAL,
+                        "confidence": (
+                            EdgeConfidence.UNCERTAIN
+                            if reference.from_vocabulary
+                            else EdgeConfidence.PROVISIONAL
+                        ),
                     }
                 )
             )
     return result
 
 
-def extract(raw_dir: Path) -> ExtractResult:
+def extract(raw_dir: Path, vocabulary: Vocabulary = Vocabulary.EMPTY) -> ExtractResult:
     text = (raw_dir / "Minerals__Refine_Tree.wikitext").read_text(encoding="utf-8")
-    return parse(text)
+    return parse(text, vocabulary)
