@@ -328,7 +328,7 @@ class Vocabulary:
         also re-runs the conflicting-claim check over the union, so an added
         term cannot quietly contest a surface form the receiver already owns.
 
-        Raises ValueError if it does.
+        Raises SurfaceFormCollision if it does.
         """
         return Vocabulary([*self._pairs, *terms])
 
