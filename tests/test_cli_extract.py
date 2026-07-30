@@ -4,6 +4,8 @@ import sys
 from pathlib import Path
 
 from atlas.cli import main
+from atlas.extract.manifest import Manifest
+from atlas.extract.refs import Vocabulary
 from atlas.extract.result import DroppedEdge, ExtractResult
 from atlas.loader import load_dataset
 from atlas.models import Edge, Kind, Node
@@ -144,7 +146,21 @@ def test_extract_warns_about_dropped_edges_but_still_succeeds(
             )
         ],
     )
-    monkeypatch.setattr("atlas.cli.run_all", lambda _raw_dir, _vocab=None, _ids=None, **_kw: stub)
+    def run_all(raw_dir, vocabulary, external_ids, *, manifest):
+        # This stub is the only exercise the CLI's call into run_all gets, so it
+        # asserts the shape rather than accepting anything. A `**kwargs` stub
+        # passes just as happily when the CLI stops handing over the vocabulary
+        # or the manifest, and neither omission is visible downstream: an empty
+        # vocabulary simply produces no stat edges and an absent manifest simply
+        # sweeps nothing. The keyword-only `manifest` is part of the assertion —
+        # passing it positionally raises TypeError here.
+        assert raw_dir == tmp_path / "data" / "raw"
+        assert isinstance(vocabulary, Vocabulary)
+        assert isinstance(external_ids, frozenset)
+        assert isinstance(manifest, Manifest)
+        return stub
+
+    monkeypatch.setattr("atlas.cli.run_all", run_all)
 
     assert main(["extract", "--root", str(tmp_path)]) == 0
 
