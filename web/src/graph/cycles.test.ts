@@ -42,8 +42,8 @@ describe('breakCycles', () => {
     const graph = ego(buildIndex(cycleDoc), 'a', 3);
     const { backEdges } = breakCycles(graph);
     expect(backEdges).toHaveLength(1);
-    // Task 11 styles back-edges via new Set(backEdges).has(edge), so this must
-    // be the same object, not an equal one.
+    // The renderer styles back-edges via new Set(backEdges).has(edge), an
+    // identity lookup, so this must be the same object and not an equal one.
     expect(graph.edges).toContain(backEdges[0]);
   });
 

@@ -75,9 +75,9 @@ describe('the committed graph.json', () => {
     expect(bad).toEqual([]);
   });
 
-  // Step 11 check (b): every distinct system value in graph.json must have a
-  // palette entry. A grey swatch in the UI means a missing palette entry, and a
-  // missing palette entry is checkable from disk without a browser.
+  // Every distinct system value in graph.json must have a palette entry. A grey
+  // swatch in the UI means a missing one, and that is checkable from disk
+  // without a browser.
   // The failure message names the offending system ids rather than just
   // saying `false !== true`.
   it('every system id in the graph has a colour in SYSTEM_COLOURS', () => {
