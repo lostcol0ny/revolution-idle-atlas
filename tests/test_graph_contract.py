@@ -254,6 +254,29 @@ def test_a_zodiac_carries_all_four_of_its_bonuses(graph: dict):
     assert len(aries["effects"]) == 4
 
 
+def test_an_input_a_bonus_reads_points_at_the_bonus_not_away_from_it(graph: dict):
+    # "Boosts IP gain based on challenge times" names two nodes doing opposite
+    # jobs. Reading both as targets says the upgrade boosts the very quantity it
+    # measures, which puts the stat downstream of the thing that consumes it and
+    # breaks the upstream chain the viewer is built around.
+    pairs = {(e["from"], e["to"]) for e in graph["edges"] if e["rel"] == "boosts"}
+    for upgrade, stat in (
+        ("infinity-upgrade-15-2-fast-ip-gain", "challenge-times"),
+        ("infinity-upgrade-8-2-generator-power", "generator-power"),
+        ("tarot-the-star", "stars"),
+    ):
+        assert (stat, upgrade) in pairs, f"{stat} should feed {upgrade}"
+        assert (upgrade, stat) not in pairs, f"{upgrade} still points at {stat}"
+
+
+def test_an_upgrade_that_grants_a_thing_still_points_at_it(graph: dict):
+    # The guard on the test above: reversing everything would satisfy it too.
+    # "A Falling Star" grants stars with no input marker in sight, so it must
+    # keep running forwards.
+    pairs = {(e["from"], e["to"]) for e in graph["edges"]}
+    assert ("infinity-upgrade-21-1-a-falling-star", "stars") in pairs
+
+
 def test_a_dilation_node_kept_its_rowspan_name(graph: dict):
     # "Top 2" only exists if the rowspan carry-forward works: that row's own
     # cells are ["2", effect, per_level] with no axis of its own.

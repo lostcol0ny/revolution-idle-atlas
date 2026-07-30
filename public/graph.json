@@ -9217,11 +9217,11 @@
     },
     {
       "confidence": "provisional",
-      "from": "refine-node-86",
+      "from": "relic-45",
       "note": "Grants SMP EXP to all Special Minerals every second based on Relic 45, The Tower, and average SMP level (???/sec). Affected by Tarot Local Speed.",
       "rel": "boosts",
       "source": "wiki:Minerals/Refine_Tree",
-      "to": "relic-45"
+      "to": "refine-node-86"
     },
     {
       "confidence": "documented",
@@ -10529,11 +10529,11 @@
     },
     {
       "confidence": "uncertain",
-      "from": "tarot-the-star",
+      "from": "stars",
       "note": "Multiplies Your Luck by amount of stars you have powered to ^# (base 0.400)",
       "rel": "boosts",
       "source": "wiki:Tarot",
-      "to": "stars"
+      "to": "tarot-the-star"
     },
     {
       "confidence": "uncertain",
@@ -10745,11 +10745,11 @@
     },
     {
       "confidence": "uncertain",
-      "from": "wind-node-10",
+      "from": "tarot-draws",
       "note": "Relic 41 effect is multiplied based on your wind (Black Gem Effect, for Tarot Draws)",
       "rel": "boosts",
       "source": "wiki:Elements",
-      "to": "tarot-draws"
+      "to": "wind-node-10"
     },
     {
       "confidence": "provisional",
@@ -11390,10 +11390,10 @@
     },
     {
       "confidence": "uncertain",
-      "from": "infinity-upgrade-5-2-solid-exponent",
+      "from": "infinities",
       "rel": "boosts",
       "source": "wiki:Infinity",
-      "to": "infinities"
+      "to": "infinity-upgrade-5-2-solid-exponent"
     },
     {
       "confidence": "uncertain",
@@ -11411,10 +11411,10 @@
     },
     {
       "confidence": "uncertain",
-      "from": "infinity-upgrade-6-2-ascend-to-ascend",
+      "from": "infinities",
       "rel": "boosts",
       "source": "wiki:Infinity",
-      "to": "infinities"
+      "to": "infinity-upgrade-6-2-ascend-to-ascend"
     },
     {
       "confidence": "uncertain",
@@ -11432,10 +11432,10 @@
     },
     {
       "confidence": "uncertain",
-      "from": "infinity-upgrade-8-2-generator-power",
+      "from": "generator-power",
       "rel": "boosts",
       "source": "wiki:Infinity",
-      "to": "generator-power"
+      "to": "infinity-upgrade-8-2-generator-power"
     },
     {
       "confidence": "uncertain",
@@ -11467,10 +11467,10 @@
     },
     {
       "confidence": "uncertain",
-      "from": "infinity-upgrade-11-1-weak-generators",
+      "from": "infinity-points",
       "rel": "boosts",
       "source": "wiki:Infinity",
-      "to": "infinity-points"
+      "to": "infinity-upgrade-11-1-weak-generators"
     },
     {
       "confidence": "uncertain",
@@ -11481,10 +11481,10 @@
     },
     {
       "confidence": "uncertain",
-      "from": "infinity-upgrade-11-2-medium-generators",
+      "from": "infinity-points",
       "rel": "boosts",
       "source": "wiki:Infinity",
-      "to": "infinity-points"
+      "to": "infinity-upgrade-11-2-medium-generators"
     },
     {
       "confidence": "uncertain",
@@ -11537,10 +11537,10 @@
     },
     {
       "confidence": "uncertain",
-      "from": "infinity-upgrade-15-2-fast-ip-gain",
+      "from": "challenge-times",
       "rel": "boosts",
       "source": "wiki:Infinity",
-      "to": "challenge-times"
+      "to": "infinity-upgrade-15-2-fast-ip-gain"
     },
     {
       "confidence": "uncertain",
@@ -11551,10 +11551,10 @@
     },
     {
       "confidence": "uncertain",
-      "from": "infinity-upgrade-15-3-first-generator-power",
+      "from": "challenge-times",
       "rel": "boosts",
       "source": "wiki:Infinity",
-      "to": "challenge-times"
+      "to": "infinity-upgrade-15-3-first-generator-power"
     },
     {
       "confidence": "uncertain",
@@ -11565,10 +11565,10 @@
     },
     {
       "confidence": "uncertain",
-      "from": "infinity-upgrade-15-4-second-generator-power",
+      "from": "challenge-times",
       "rel": "boosts",
       "source": "wiki:Infinity",
-      "to": "challenge-times"
+      "to": "infinity-upgrade-15-4-second-generator-power"
     },
     {
       "confidence": "uncertain",
@@ -11579,10 +11579,10 @@
     },
     {
       "confidence": "uncertain",
-      "from": "infinity-upgrade-16-1-infinity-to-ip",
+      "from": "infinities",
       "rel": "boosts",
       "source": "wiki:Infinity",
-      "to": "infinities"
+      "to": "infinity-upgrade-16-1-infinity-to-ip"
     },
     {
       "confidence": "uncertain",
@@ -11593,10 +11593,10 @@
     },
     {
       "confidence": "uncertain",
-      "from": "infinity-upgrade-16-2-stronger-ascension-power",
+      "from": "infinities",
       "rel": "boosts",
       "source": "wiki:Infinity",
-      "to": "infinities"
+      "to": "infinity-upgrade-16-2-stronger-ascension-power"
     },
     {
       "confidence": "uncertain",
@@ -11614,10 +11614,10 @@
     },
     {
       "confidence": "uncertain",
-      "from": "infinity-upgrade-17-1-third-s-turn",
+      "from": "infinities",
       "rel": "boosts",
       "source": "wiki:Infinity",
-      "to": "infinities"
+      "to": "infinity-upgrade-17-1-third-s-turn"
     },
     {
       "confidence": "uncertain",
@@ -11628,10 +11628,10 @@
     },
     {
       "confidence": "uncertain",
-      "from": "infinity-upgrade-17-2-faster-infinity-gain",
+      "from": "challenge-times",
       "rel": "boosts",
       "source": "wiki:Infinity",
-      "to": "challenge-times"
+      "to": "infinity-upgrade-17-2-faster-infinity-gain"
     },
     {
       "confidence": "uncertain",
@@ -11656,10 +11656,10 @@
     },
     {
       "confidence": "uncertain",
-      "from": "infinity-upgrade-18-2-fourth-from-third",
+      "from": "generator-3",
       "rel": "boosts",
       "source": "wiki:Infinity",
-      "to": "generator-3"
+      "to": "infinity-upgrade-18-2-fourth-from-third"
     },
     {
       "confidence": "uncertain",
@@ -11670,10 +11670,10 @@
     },
     {
       "confidence": "uncertain",
-      "from": "infinity-upgrade-18-3-third-from-second",
+      "from": "generator-2",
       "rel": "boosts",
       "source": "wiki:Infinity",
-      "to": "generator-2"
+      "to": "infinity-upgrade-18-3-third-from-second"
     },
     {
       "confidence": "uncertain",
@@ -11691,10 +11691,10 @@
     },
     {
       "confidence": "uncertain",
-      "from": "infinity-upgrade-19-2-age-of-inflation",
+      "from": "generator-mult",
       "rel": "boosts",
       "source": "wiki:Infinity",
-      "to": "generator-mult"
+      "to": "infinity-upgrade-19-2-age-of-inflation"
     },
     {
       "confidence": "uncertain",
@@ -11712,10 +11712,10 @@
     },
     {
       "confidence": "uncertain",
-      "from": "infinity-upgrade-20-2-dynamic-generator-exponent",
+      "from": "generator-power",
       "rel": "boosts",
       "source": "wiki:Infinity",
-      "to": "generator-power"
+      "to": "infinity-upgrade-20-2-dynamic-generator-exponent"
     },
     {
       "confidence": "uncertain",

@@ -51,7 +51,6 @@ Nodes that describe an effect but point at no other node.
 Some are resolver gaps, or edges waiting to be written into `data/relationships.yaml`. Others never will be: an effect that modifies a stat rather than a node — "a flat boost to Damage Mult" — has no node-to-node edge to resolve to. This is a search space, not a checklist.
 
 - `break-infinity`
-- `challenge-times`
 - `dilation-node-bottom-1`
 - `dilation-node-bottom-4`
 - `dilation-node-middle-1`
@@ -79,8 +78,6 @@ Some are resolver gaps, or edges waiting to be written into `data/relationships.
 - `fire-node-8`
 - `fire-node-9`
 - `generator-exponent`
-- `generator-mult`
-- `infinities`
 - `infinity-challenge-1`
 - `infinity-challenge-4`
 - `infinity-challenge-5`
@@ -183,6 +180,7 @@ Some are resolver gaps, or edges waiting to be written into `data/relationships.
 - `refine-node-83`
 - `refine-node-84`
 - `refine-node-85`
+- `refine-node-86`
 - `refine-node-89`
 - `refine-node-9`
 - `refine-node-91`
@@ -211,7 +209,6 @@ Some are resolver gaps, or edges waiting to be written into `data/relationships.
 - `relic-42`
 - `relic-43`
 - `relic-44`
-- `relic-45`
 - `relic-49`
 - `relic-5`
 - `relic-53`
@@ -446,7 +443,11 @@ Nodes with no edges in either direction.
 
 ## Feedback loops
 
-None.
+Strongly connected components. These are real game mechanics, not errors.
+
+- `generator-2` → `generator-3` → `generator-4` → `infinity-upgrade-18-2-fourth-from-third` → `infinity-upgrade-18-3-third-from-second`
+- `refine-node-86` → `refine-node-88` → `refine-node-90` → `relic-45` → `relic-46`
+- `generator-1` → `generator-power` → `infinity-upgrade-8-2-generator-power`
 
 ## Not swept
 

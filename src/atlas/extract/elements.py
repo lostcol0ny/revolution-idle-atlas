@@ -46,11 +46,12 @@ def _boosts(source_id: str, text: str, vocabulary: Vocabulary) -> list[Edge]:
     for reference in resolve(text, vocabulary):
         if reference.target_id == source_id:
             continue
+        origin, target = reference.endpoints(source_id)
         edges.append(
             Edge(
                 **{
-                    "from": source_id,
-                    "to": reference.target_id,
+                    "from": origin,
+                    "to": target,
                     "rel": "boosts",
                     "note": text,
                     "targets_effect": reference.targets_effect,

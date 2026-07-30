@@ -337,6 +337,70 @@ def test_from_vocabulary_defaults_to_false_so_existing_construction_is_unchanged
     assert Reference("relic-38").from_vocabulary is False
 
 
+def test_a_reference_after_based_on_is_an_input_not_a_target():
+    # "Boosts X based on Y" names two nodes doing opposite jobs: X is changed,
+    # Y is only read. Treating both as targets says the upgrade boosts the very
+    # quantity it measures, which points the edge backwards.
+    vocab = Vocabulary([("Gen 1", "generator-1"), ("Gen Power", "generator-power")])
+    refs = {r.target_id: r for r in resolve("Boosts Gen 1 based on Gen Power", vocab)}
+    assert refs["generator-1"].is_input is False
+    assert refs["generator-power"].is_input is True
+
+
+def test_by_amount_of_marks_an_input_too():
+    vocab = Vocabulary([("Luck", "luck"), ("stars", "stars")])
+    refs = {
+        r.target_id: r
+        for r in resolve("Multiplies Your Luck by amount of stars you have", vocab)
+    }
+    assert refs["luck"].is_input is False
+    assert refs["stars"].is_input is True
+
+
+def test_a_parenthesised_based_on_releases_the_text_after_the_closing_bracket():
+    # "Adds a Singularity Effect (Based on Singularities) that boosts Spread
+    # Speed" puts the marker inside brackets and the real target after them.
+    # Running the input span to the end of the string would reverse that target
+    # as well, turning one backwards edge into two.
+    vocab = Vocabulary([("Singularities", "singularity"), ("Spread Speed", "spread")])
+    refs = {
+        r.target_id: r
+        for r in resolve(
+            "Adds a Singularity Effect (Based on Singularities) that boosts "
+            "Spread Speed",
+            vocab,
+        )
+    }
+    assert refs["singularity"].is_input is True
+    assert refs["spread"].is_input is False
+
+
+def test_an_input_reference_carries_no_effect_pointer():
+    # `targets_effect` indexes into the effects of the edge's `to` node. An
+    # input reference becomes the `from` end, so an index read off it would
+    # point into the wrong node's list.
+    vocab = Vocabulary([("Luck", "luck")])
+    refs = resolve("Grows based on Relic 38's second effect", vocab)
+    assert [(r.target_id, r.is_input, r.targets_effect) for r in refs] == [
+        ("relic-38", True, None)
+    ]
+
+
+def test_the_same_node_named_on_both_sides_of_the_marker_yields_both_directions():
+    vocab = Vocabulary([("Luck", "luck")])
+    refs = resolve("Boosts Luck based on Luck", vocab)
+    assert [(r.target_id, r.is_input) for r in refs] == [("luck", False), ("luck", True)]
+
+
+def test_endpoints_swaps_only_for_an_input_reference():
+    assert Reference("luck").endpoints("relic-38") == ("relic-38", "luck")
+    assert Reference("luck", is_input=True).endpoints("relic-38") == ("luck", "relic-38")
+
+
+def test_is_input_defaults_to_false_so_existing_construction_is_unchanged():
+    assert Reference("relic-38").is_input is False
+
+
 def test_with_terms_returns_a_new_vocabulary_over_the_union():
     base = Vocabulary([("Luck", "luck")])
     extended = base.with_terms([("The Devil", "tarot-the-devil")])

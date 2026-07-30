@@ -63,13 +63,18 @@ def parse(raw: str, vocabulary: Vocabulary = Vocabulary.EMPTY) -> ExtractResult:
         for reference in resolve(text, vocabulary):
             if reference.target_id == node_id:
                 continue
+            origin, target = reference.endpoints(node_id)
             result.edges.append(
                 Edge(
                     **{
-                        "from": node_id,
-                        "to": reference.target_id,
+                        "from": origin,
+                        "to": target,
                         "rel": "boosts",
-                        "op": op,
+                        # `op` is the relic's own per-level coefficient, so it
+                        # only describes an edge the relic drives. On a reversed
+                        # edge the relic is the far end and the coefficient says
+                        # nothing about how the input scales it.
+                        "op": None if reference.is_input else op,
                         "note": text,
                         "targets_effect": reference.targets_effect,
                         "source": SOURCE,

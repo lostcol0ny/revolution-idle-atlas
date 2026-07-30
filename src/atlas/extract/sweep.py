@@ -350,10 +350,11 @@ def _build(
                 # an error, so emitting one turns normal phrasing into a broken
                 # build.
                 continue
+            origin, target = reference.endpoints(node_id)
             edges.append(
                 Edge(
-                    from_=node_id,
-                    to=reference.target_id,
+                    from_=origin,
+                    to=target,
                     # Always `boosts`. The sweep's job is finding that a
                     # relationship exists; deciding it is really an unlock or a
                     # requirement is curation, and guessing from prose is how a

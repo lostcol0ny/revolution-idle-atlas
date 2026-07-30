@@ -5433,8 +5433,8 @@ edges:
   rel: requires
   source: wiki:Minerals/Refine_Tree
   confidence: documented
-- from: refine-node-86
-  to: relic-45
+- from: relic-45
+  to: refine-node-86
   rel: boosts
   note: Grants SMP EXP to all Special Minerals every second based on Relic 45, The Tower, and average
     SMP level (???/sec). Affected by Tarot Local Speed.
@@ -6417,8 +6417,8 @@ edges:
   note: Multiplies Your Luck by amount of stars you have powered to ^# (base 0.400)
   source: wiki:Tarot
   confidence: uncertain
-- from: tarot-the-star
-  to: stars
+- from: stars
+  to: tarot-the-star
   rel: boosts
   note: Multiplies Your Luck by amount of stars you have powered to ^# (base 0.400)
   source: wiki:Tarot
@@ -6580,8 +6580,8 @@ edges:
   note: Relic 41 effect is multiplied based on your wind (Black Gem Effect, for Tarot Draws)
   source: wiki:Elements
   confidence: provisional
-- from: wind-node-10
-  to: tarot-draws
+- from: tarot-draws
+  to: wind-node-10
   rel: boosts
   note: Relic 41 effect is multiplied based on your wind (Black Gem Effect, for Tarot Draws)
   source: wiki:Elements
@@ -7048,8 +7048,8 @@ edges:
   rel: boosts
   source: wiki:Infinity
   confidence: uncertain
-- from: infinity-upgrade-5-2-solid-exponent
-  to: infinities
+- from: infinities
+  to: infinity-upgrade-5-2-solid-exponent
   rel: boosts
   source: wiki:Infinity
   confidence: uncertain
@@ -7063,8 +7063,8 @@ edges:
   rel: boosts
   source: wiki:Infinity
   confidence: uncertain
-- from: infinity-upgrade-6-2-ascend-to-ascend
-  to: infinities
+- from: infinities
+  to: infinity-upgrade-6-2-ascend-to-ascend
   rel: boosts
   source: wiki:Infinity
   confidence: uncertain
@@ -7078,8 +7078,8 @@ edges:
   rel: boosts
   source: wiki:Infinity
   confidence: uncertain
-- from: infinity-upgrade-8-2-generator-power
-  to: generator-power
+- from: generator-power
+  to: infinity-upgrade-8-2-generator-power
   rel: boosts
   source: wiki:Infinity
   confidence: uncertain
@@ -7103,8 +7103,8 @@ edges:
   rel: boosts
   source: wiki:Infinity
   confidence: uncertain
-- from: infinity-upgrade-11-1-weak-generators
-  to: infinity-points
+- from: infinity-points
+  to: infinity-upgrade-11-1-weak-generators
   rel: boosts
   source: wiki:Infinity
   confidence: uncertain
@@ -7113,8 +7113,8 @@ edges:
   rel: boosts
   source: wiki:Infinity
   confidence: uncertain
-- from: infinity-upgrade-11-2-medium-generators
-  to: infinity-points
+- from: infinity-points
+  to: infinity-upgrade-11-2-medium-generators
   rel: boosts
   source: wiki:Infinity
   confidence: uncertain
@@ -7153,8 +7153,8 @@ edges:
   rel: boosts
   source: wiki:Infinity
   confidence: uncertain
-- from: infinity-upgrade-15-2-fast-ip-gain
-  to: challenge-times
+- from: challenge-times
+  to: infinity-upgrade-15-2-fast-ip-gain
   rel: boosts
   source: wiki:Infinity
   confidence: uncertain
@@ -7163,8 +7163,8 @@ edges:
   rel: boosts
   source: wiki:Infinity
   confidence: uncertain
-- from: infinity-upgrade-15-3-first-generator-power
-  to: challenge-times
+- from: challenge-times
+  to: infinity-upgrade-15-3-first-generator-power
   rel: boosts
   source: wiki:Infinity
   confidence: uncertain
@@ -7173,8 +7173,8 @@ edges:
   rel: boosts
   source: wiki:Infinity
   confidence: uncertain
-- from: infinity-upgrade-15-4-second-generator-power
-  to: challenge-times
+- from: challenge-times
+  to: infinity-upgrade-15-4-second-generator-power
   rel: boosts
   source: wiki:Infinity
   confidence: uncertain
@@ -7183,8 +7183,8 @@ edges:
   rel: boosts
   source: wiki:Infinity
   confidence: uncertain
-- from: infinity-upgrade-16-1-infinity-to-ip
-  to: infinities
+- from: infinities
+  to: infinity-upgrade-16-1-infinity-to-ip
   rel: boosts
   source: wiki:Infinity
   confidence: uncertain
@@ -7193,8 +7193,8 @@ edges:
   rel: boosts
   source: wiki:Infinity
   confidence: uncertain
-- from: infinity-upgrade-16-2-stronger-ascension-power
-  to: infinities
+- from: infinities
+  to: infinity-upgrade-16-2-stronger-ascension-power
   rel: boosts
   source: wiki:Infinity
   confidence: uncertain
@@ -7208,8 +7208,8 @@ edges:
   rel: boosts
   source: wiki:Infinity
   confidence: uncertain
-- from: infinity-upgrade-17-1-third-s-turn
-  to: infinities
+- from: infinities
+  to: infinity-upgrade-17-1-third-s-turn
   rel: boosts
   source: wiki:Infinity
   confidence: uncertain
@@ -7218,8 +7218,8 @@ edges:
   rel: boosts
   source: wiki:Infinity
   confidence: uncertain
-- from: infinity-upgrade-17-2-faster-infinity-gain
-  to: challenge-times
+- from: challenge-times
+  to: infinity-upgrade-17-2-faster-infinity-gain
   rel: boosts
   source: wiki:Infinity
   confidence: uncertain
@@ -7238,8 +7238,8 @@ edges:
   rel: boosts
   source: wiki:Infinity
   confidence: uncertain
-- from: infinity-upgrade-18-2-fourth-from-third
-  to: generator-3
+- from: generator-3
+  to: infinity-upgrade-18-2-fourth-from-third
   rel: boosts
   source: wiki:Infinity
   confidence: uncertain
@@ -7248,8 +7248,8 @@ edges:
   rel: boosts
   source: wiki:Infinity
   confidence: uncertain
-- from: infinity-upgrade-18-3-third-from-second
-  to: generator-2
+- from: generator-2
+  to: infinity-upgrade-18-3-third-from-second
   rel: boosts
   source: wiki:Infinity
   confidence: uncertain
@@ -7263,8 +7263,8 @@ edges:
   rel: boosts
   source: wiki:Infinity
   confidence: uncertain
-- from: infinity-upgrade-19-2-age-of-inflation
-  to: generator-mult
+- from: generator-mult
+  to: infinity-upgrade-19-2-age-of-inflation
   rel: boosts
   source: wiki:Infinity
   confidence: uncertain
@@ -7278,8 +7278,8 @@ edges:
   rel: boosts
   source: wiki:Infinity
   confidence: uncertain
-- from: infinity-upgrade-20-2-dynamic-generator-exponent
-  to: generator-power
+- from: generator-power
+  to: infinity-upgrade-20-2-dynamic-generator-exponent
   rel: boosts
   source: wiki:Infinity
   confidence: uncertain

@@ -162,6 +162,18 @@ class Reference:
     # True when a Vocabulary surface form produced this, rather than one of the
     # four entity regexes. Read it through `confidence` rather than directly.
     from_vocabulary: bool = False
+    # True when the sentence named this node as something it reads rather than
+    # something it changes. Read it through `endpoints` rather than directly.
+    is_input: bool = False
+
+    def endpoints(self, node_id: str) -> tuple[str, str]:
+        """The (from, to) pair for an edge between `node_id` and this target.
+
+        Edge direction is flow, not grammar: `from` is the prerequisite or
+        actor. A node the effect only measures is upstream of the node whose
+        effect it is, so an input reference swaps the two ends.
+        """
+        return (self.target_id, node_id) if self.is_input else (node_id, self.target_id)
 
     def confidence(self, default: EdgeConfidence) -> EdgeConfidence:
         """The confidence to stamp on an edge built from this reference.
@@ -214,6 +226,44 @@ _EFFECT_POINTER_RE = re.compile(
 def _effect_index(text: str, after: int) -> int | None:
     match = _EFFECT_POINTER_RE.match(text[after:])
     return ORDINALS[match.group(1).lower()] if match else None
+
+
+# Two markers, and only two, because these are the two the corpus actually
+# writes: 33 effect strings say "based on" or "by amount of" and no other
+# phrasing separates what an effect changes from what it merely measures.
+# "from", "multiplied by" and "per" were all considered and rejected — each
+# reads as an input in some sentences and as an operator or a qualifier in
+# others ("PP Gain Bonus from Trials", "multiplied by 5"), and reversing a real
+# target is a wrong edge exactly like failing to reverse an input is.
+_INPUT_MARKER_RE = re.compile(r"\bbased on\b|\bby amount of\b", re.IGNORECASE)
+
+
+def _clause_end(text: str, marker_start: int) -> int:
+    """Where the region an input marker governs stops.
+
+    The end of the string, except when the marker opened inside brackets: the
+    wiki writes "Adds a Singularity Effect (Based on Singularities) that boosts
+    Spread Speed", where the real target follows the closing bracket. Running
+    to the end there would reverse it too, turning one backwards edge into two.
+    """
+    depth = text.count("(", 0, marker_start) - text.count(")", 0, marker_start)
+    if depth <= 0:
+        return len(text)
+    for index in range(marker_start, len(text)):
+        if text[index] == "(":
+            depth += 1
+        elif text[index] == ")":
+            depth -= 1
+            if depth == 0:
+                return index
+    return len(text)
+
+
+def _input_spans(text: str) -> list[tuple[int, int]]:
+    return [
+        (match.end(), _clause_end(text, match.start()))
+        for match in _INPUT_MARKER_RE.finditer(text)
+    ]
 
 
 # 3 characters, or 2 when the surface form is ALL-UPPERCASE. The floor exists to
@@ -432,11 +482,21 @@ def resolve(text: str, vocabulary: Vocabulary | None = None) -> list[Reference]:
             for start, target_id, end in vocabulary.hits(text, claimed)
         ]
 
+    spans = _input_spans(text)
     references: list[Reference] = []
-    seen: set[tuple[str, int | None]] = set()
-    for _, target_id, end, from_vocabulary in sorted(marked, key=lambda hit: hit[0]):
-        reference = Reference(target_id, _effect_index(text, end), from_vocabulary)
-        key = (reference.target_id, reference.targets_effect)
+    seen: set[tuple[str, int | None, bool]] = set()
+    for start, target_id, end, from_vocabulary in sorted(marked, key=lambda hit: hit[0]):
+        is_input = any(lower <= start < upper for lower, upper in spans)
+        reference = Reference(
+            target_id,
+            # Dropped rather than carried across the swap: the index counts into
+            # the effects of the edge's `to` node, and an input reference is the
+            # `from` end, so keeping it would point into the wrong node's list.
+            None if is_input else _effect_index(text, end),
+            from_vocabulary,
+            is_input,
+        )
+        key = (reference.target_id, reference.targets_effect, reference.is_input)
         if key in seen:
             continue
         seen.add(key)

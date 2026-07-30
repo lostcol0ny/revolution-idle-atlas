@@ -242,11 +242,12 @@ def parse(raw: str, vocabulary: Vocabulary = Vocabulary.EMPTY) -> ExtractResult:
             for reference in resolve(effect.text, vocabulary):
                 if reference.target_id == node_id:
                     continue
+                origin, target = reference.endpoints(node_id)
                 result.edges.append(
                     Edge(
                         **{
-                            "from": node_id,
-                            "to": reference.target_id,
+                            "from": origin,
+                            "to": target,
                             "rel": "boosts",
                             "note": effect.text,
                             "targets_effect": reference.targets_effect,
