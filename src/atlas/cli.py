@@ -26,6 +26,10 @@ DERIVED_REL_PATH = Path("data") / "derived.yaml"
 SWEEP_REL_PATH = Path("data") / "sweep.yaml"
 # Used when a problem cannot be pinned to a single file. See _report.
 MERGED_LABEL = "dataset"
+# Extraction warnings come from more than one source — a manifest page that
+# reads empty, a tarot card whose name another node claims — and no single file
+# is the one to open for all of them, so each message names its own subject.
+EXTRACT_LABEL = "extract"
 
 
 def _report(problems: list[Problem], curated_path: str) -> None:
@@ -169,7 +173,7 @@ def _extract(root: Path) -> int:
         return 1
 
     for warning in result.warnings:
-        print(f"{SWEEP_REL_PATH}  warning  {warning}", file=sys.stderr)
+        print(f"{EXTRACT_LABEL}  warning  {warning}", file=sys.stderr)
 
     for dropped in result.dropped:
         print(

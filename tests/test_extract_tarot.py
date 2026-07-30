@@ -170,6 +170,46 @@ def test_a_card_named_later_on_the_page_still_resolves():
     assert any(e.from_ == "tarot-the-fool" and e.to == "tarot-the-devil" for e in result.edges)
 
 
+def test_a_card_name_a_curated_node_already_claims_is_a_warning_not_a_failure():
+    # Card names come off a page volunteers edit. Renaming one onto a curated
+    # node's name used to abort the whole extraction, which would take out CI's
+    # artifact check as well — one wiki edit, every build red. The colliding card
+    # loses its vocabulary term and is reported; nothing else changes.
+    raw = _card("Luck", "Boost") + _card("The Fool", "Doubles Luck")
+    result = parse(raw, Vocabulary([("Luck", "luck")]))
+
+    # Both cards are still parsed, so this cannot pass by producing nothing.
+    assert [n.id for n in result.nodes] == ["tarot-luck", "tarot-the-fool"]
+    assert len(result.warnings) == 1
+    warning = result.warnings[0]
+    # The card and the node it lost to, so the reader can tell a wiki rename
+    # from a curation mistake without opening either file.
+    assert "Luck" in warning
+    assert "'luck'" in warning
+    assert "tarot-luck" in warning
+    # The surviving curated claim still wins the span, so the reference in The
+    # Fool's effect resolves to the stat rather than to the card.
+    assert [(e.from_, e.to) for e in result.edges] == [("tarot-the-fool", "luck")]
+
+
+def test_a_card_that_does_not_collide_keeps_its_vocabulary_term():
+    # The other half of the drop: only the offending term is discarded. Without
+    # this, dropping the entire card vocabulary on the first collision would
+    # satisfy the test above and silently delete every Major Arcana edge.
+    raw = (
+        _card("Luck", "Boost")
+        + _card("The Devil", "Boost")
+        + _card("The Fool", "Doubles The Devil's first effect")
+    )
+    result = parse(raw, Vocabulary([("Luck", "luck")]))
+
+    assert len(result.warnings) == 1
+    assert any(
+        e.from_ == "tarot-the-fool" and e.to == "tarot-the-devil"
+        for e in result.edges
+    )
+
+
 def test_a_card_does_not_resolve_to_itself():
     raw = _card("The Devil", "The Devil doubles its own output")
     result = parse(raw)

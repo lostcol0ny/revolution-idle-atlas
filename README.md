@@ -72,17 +72,25 @@ work in progress paired with `documented` confidence, a `suppress` rule that
 matches no edge, or a generated edge colliding with an earlier one on
 `(from, to, rel)` — are printed but never fail the build.
 
-The sweep manifest is read by `atlas extract`, not by `atlas build`, so its
-warnings appear only on an extraction run: a manifest page that yields no
-records, a page named in the manifest with no file in `data/raw/`, or two
-manifest entries minting the same node id. Looking for them after `atlas build`
-finds nothing, because that command never opens `data/sweep.yaml`.
+Some warnings belong to `atlas extract` and appear only on an extraction run: a
+manifest page that yields no records, a page named in the manifest with no file
+in `data/raw/`, two manifest entries minting the same node id, or a Tarot card
+whose name another node already claims. Looking for them after `atlas build`
+finds nothing, because that command reads neither `data/sweep.yaml` nor
+`data/raw/`. Each one names its own subject rather than a file to open, because
+the fix can lie in the manifest, in `data/relationships.yaml`, or nowhere at all
+when the wiki has simply been re-worded.
 
 A manifest page yielding no records is a **warning and not an error**, unlike one
 of the four hand-written parsers producing no nodes, which is fatal. Those four
 cover pages known to hold data, so zero means the page or the parser broke. A
 manifest entry is a guess about a page's shape, and one wrong guess must not
 block every build — including the artifact check in CI.
+
+A colliding Tarot card name is warned about for the same reason. Card names are
+read off a page volunteers edit, so a rename can put a card in contest with a
+curated node; the card loses its place in the page vocabulary and the edges it
+would have produced, and everything else extracts as usual.
 
 `atlas scrape` talks to a live, volunteer-run wiki. Do not run it in a loop. A
 scheduled GitHub Actions workflow runs it daily and opens a pull request when the

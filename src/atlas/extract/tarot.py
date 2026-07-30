@@ -5,6 +5,7 @@ from atlas.extract.refs import (
     ORDINALS,
     RANKS,
     SUITS,
+    SurfaceFormCollision,
     Vocabulary,
     plain_text,
     resolve,
@@ -143,6 +144,41 @@ def _card_terms(raw: str) -> list[tuple[str, str]]:
     return terms
 
 
+def _with_cards(
+    vocabulary: Vocabulary, raw: str
+) -> tuple[Vocabulary, list[str]]:
+    """Add this page's card names to `vocabulary`, dropping the ones that clash.
+
+    A card name is read off a page volunteers edit, so it can arrive already
+    claimed by a curated node — rename the card "Luck" and it contests the stat
+    of that name. `with_terms` refuses the whole union in that case, which would
+    turn one wiki edit into a failed extraction and take CI's artifact check down
+    with it. The offending card is dropped and reported instead, exactly as the
+    sweep reports a page it cannot read: the cost is the edges that one card
+    would have produced, and the report says which card and which node.
+
+    The union is tried in bulk first so the ordinary run pays for one build. Only
+    when it is refused does each term go in on its own, which is what isolates
+    the term at fault from the ones that were fine.
+    """
+    terms = _card_terms(raw)
+    try:
+        return vocabulary.with_terms(terms), []
+    except SurfaceFormCollision:
+        pass
+
+    warnings: list[str] = []
+    for term in terms:
+        try:
+            vocabulary = vocabulary.with_terms([term])
+        except SurfaceFormCollision as exc:
+            warnings.append(
+                f"tarot page '{PAGE}': card {term[0]!r} is not matched in effect "
+                f"prose — {exc}"
+            )
+    return vocabulary, warnings
+
+
 def parse(raw: str, vocabulary: Vocabulary = Vocabulary.EMPTY) -> ExtractResult:
     """Parse the Tarot wiki page into nodes and edges.
 
@@ -152,10 +188,12 @@ def parse(raw: str, vocabulary: Vocabulary = Vocabulary.EMPTY) -> ExtractResult:
     element-node-N) are delegated to the shared `resolve()` function.
 
     `vocabulary` is extended with every card name found on this page before the
-    main loop runs, so an effect text can reference a card defined below it.
+    main loop runs, so an effect text can reference a card defined below it. A
+    card name another node already claims is dropped with a warning rather than
+    raising, so one wiki rename cannot fail every extraction.
     """
-    vocabulary = vocabulary.with_terms(_card_terms(raw))
-    result = ExtractResult()
+    vocabulary, warnings = _with_cards(vocabulary, raw)
+    result = ExtractResult(warnings=warnings)
     for match in _TEMPLATE_RE.finditer(raw):
         fields = template_fields("|" + match.group(2))
         name = plain_text(fields.get("card_name", ""))
