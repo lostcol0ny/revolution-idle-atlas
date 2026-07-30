@@ -180,11 +180,37 @@ def test_a_colspan_header_cell_is_not_a_column():
     ]
 
 
-def test_a_colspan_row_in_the_middle_of_the_data_is_not_a_record():
-    # The same Plague table repeats a colspan header between data rows. Read as
-    # data it is a one-cell row; read as a header it would redefine the columns.
+def test_a_header_row_in_the_middle_of_the_data_does_not_redefine_the_columns():
+    # Plague's interior header is a single colspan cell, which cannot show what
+    # goes wrong if a later header row wins: the columns are read once, from the
+    # first header row, and every data row on the table maps through those. This
+    # shape reverses the column order in an interior header row so that letting
+    # it win would silently swap name and effect on the rows above it as well as
+    # below. It also stands in for the interior row becoming a record itself,
+    # since its four cells would align against a four-column table.
+    page = """{| class="wikitable"
+!Stage
+!Name
+!Population
+!PlG Reward
+|-
+|1-1
+|Tent
+|5
+|1 PlG
+|-
+!PlG Reward
+!Population
+!Name
+!Stage
+|-
+|1-2
+|Shack
+|7
+|2 PlG
+|}"""
     records = read_wikitable(
-        PLAGUE,
+        page,
         _entry(
             page="Plague",
             system="plague",
@@ -193,7 +219,73 @@ def test_a_colspan_row_in_the_middle_of_the_data_is_not_a_record():
             effect_columns=["PlG Reward"],
         ),
     )
-    assert all("Level 1" not in r.name for r in records)
+    assert [(r.name, r.effects) for r in records] == [
+        ("Tent", ["1 PlG"]),
+        ("Shack", ["2 PlG"]),
+    ]
+
+
+def test_a_caption_row_of_only_colspan_cells_is_not_the_header_row():
+    # Every colspan caption elsewhere on the real pages is a single cell, so the
+    # "at least two named columns" floor alone is enough to reject it and the
+    # colspan filter never has to do anything. A two-part banner clears that
+    # floor, so only discarding colspan cells keeps the real header row below it
+    # from being shadowed.
+    page = """{| class="wikitable"
+! colspan="2" |Plague Stages !! colspan="2" |Houses
+|-
+!Stage
+!Name
+!Population
+!PlG Reward
+|-
+|1-1
+|Tent
+|5
+|1 PlG
+|}"""
+    records = read_wikitable(
+        page,
+        _entry(
+            page="Plague",
+            system="plague",
+            id_prefix="plague",
+            name_columns=["Name"],
+            effect_columns=["PlG Reward"],
+        ),
+    )
+    assert [(r.name, r.effects) for r in records] == [("Tent", ["1 PlG"])]
+
+
+def test_a_single_named_header_cell_is_a_caption_not_a_one_column_table():
+    # The companion to the colspan filter: a banner written without colspan is
+    # an ordinary header cell, so nothing marks it as a caption except that one
+    # column cannot describe a table. Accepting it would fix the table's width
+    # at one and leave the real header row below it unreachable.
+    page = """{| class="wikitable"
+!Plague Stages
+|-
+!Stage
+!Name
+!Population
+!PlG Reward
+|-
+|1-1
+|Tent
+|5
+|1 PlG
+|}"""
+    records = read_wikitable(
+        page,
+        _entry(
+            page="Plague",
+            system="plague",
+            id_prefix="plague",
+            name_columns=["Name"],
+            effect_columns=["PlG Reward"],
+        ),
+    )
+    assert [(r.name, r.effects) for r in records] == [("Tent", ["1 PlG"])]
 
 
 def test_headers_are_found_when_a_caption_row_precedes_them():
