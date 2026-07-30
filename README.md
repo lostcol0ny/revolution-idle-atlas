@@ -142,7 +142,7 @@ Fields common to both:
 **A page needs one entry per column shape, not one per page.** `Plague` has two:
 its ER Upgrades table is `Name`/`Effect`, and its Statistics table is
 `Statistic`/`Boost`. Every table on the page whose headers match an entry is
-read, so `Trials` needs only one entry to cover all five of its difficulty tiers.
+read, so `Trials` needs only one entry to cover all five of its trial tables.
 
 **What the reader will not do**, each for a reason:
 

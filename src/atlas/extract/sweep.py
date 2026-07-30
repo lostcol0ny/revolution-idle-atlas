@@ -181,8 +181,8 @@ def read_wikitable(raw: str, entry: WikitableEntry) -> list[SweptRecord]:
     """Read every table on the page whose headers match the manifest entry.
 
     Every matching table is read, not just the first: Trials repeats the same
-    four columns once per difficulty tier, and stopping at the first table would
-    sweep the easy trials and silently drop the rest.
+    four columns across five tables — easy, medium, hard, insane and bonus — and
+    stopping at the first would sweep the easy trials and silently drop the rest.
     """
     records: list[SweptRecord] = []
     for match in _TABLE_RE.finditer(raw):
@@ -214,8 +214,9 @@ def read_wikitable(raw: str, entry: WikitableEntry) -> list[SweptRecord]:
             if not name or not effects:
                 continue
             per_level = None
-            if entry.per_level_column in column_of:
-                per_level = plain_text(row[column_of[entry.per_level_column]]) or None
+            scaling = entry.per_level_column
+            if scaling is not None and scaling in column_of:
+                per_level = plain_text(row[column_of[scaling]]) or None
             records.append(SweptRecord(name=name, effects=effects, per_level=per_level))
     return records
 

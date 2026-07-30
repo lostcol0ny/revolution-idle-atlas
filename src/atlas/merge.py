@@ -29,9 +29,10 @@ def _duplicate_node_problems(nodes: list[Node], path: str | None) -> list[Proble
     two records has been silently discarded. Merging ahead of validation is
     what makes this check `merge`'s job rather than a redundant copy of one.
 
-    This is why `merge` reports errors and not only warnings: the brief scoped
-    it to warnings because it did not anticipate that merging first would
-    swallow an existing error check.
+    This is also why `merge` reports errors at all and not only warnings.
+    Everything else it has to say is advisory, so an advisory-only channel looks
+    sufficient right up until it silently downgrades a check that was already
+    fatal.
 
     Scoped to node ids deliberately. A repeated `(from, to, rel)` across the
     two files is the intended override mechanism, not an error, and
