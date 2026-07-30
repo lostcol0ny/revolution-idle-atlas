@@ -13,7 +13,7 @@ MINERALS = """{| class="wikitable center"
 | icon = Special_mineral_blue.png
 | mineral_name = Blue Gem
 | description = Deep blue special gem is great for making mineral cost increase slower
-| mineral_base_boost = Cost Increase is powered to ^0.99
+| mineral_base_boost = Cost Increase is powered to ^0.99 
 }}
 |-
 {{Minerals/Special_Minerals
@@ -90,8 +90,8 @@ def test_a_nested_template_does_not_end_the_instance():
 def test_an_inline_instance_is_read_too():
     # tarot.py can rely on its templates closing on their own line; this reader
     # cannot, because a template written inline would otherwise sweep zero
-    # records and Task 10 reports zero records as a warning — a quiet failure
-    # that reads like "the page has no data".
+    # records and the caller reports zero records as a warning — a quiet
+    # failure that reads like "the page has no data".
     page = "{{Minerals/Special_Minerals|mineral_name=Cyan Gem|mineral_base_boost=x2 Luck}}"
     records = read_record_template(page, _entry())
     assert [(r.name, r.effects) for r in records] == [("Cyan Gem", ["x2 Luck"])]
