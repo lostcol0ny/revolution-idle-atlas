@@ -49,15 +49,16 @@ describe('the committed graph.json', () => {
     expect(effectEdges.length).toBeGreaterThan(50);
   });
 
-  // The consumer-side half of Step 0. `types.ts` declares `op?: Op`, so a
-  // `null` in the artifact is a value the app's own types claim cannot occur.
+  // The consumer-side half of the renderer's promise to omit an unset field
+  // rather than write null. `types.ts` declares `op?: Op`, so a `null` in the
+  // artifact is a value the app's own types claim cannot occur.
   //
   // This reads the RAW json, not the parsed document, and that is not an
   // arbitrary choice: `GraphEffect.op` is `Op | undefined`, so TypeScript
   // rejects `parsed.op === null` outright as a comparison between types with
-  // no overlap, and `npm run typecheck` in Step 7 would fail. The mismatch
-  // being tested is between the declared type and the bytes on disk, so the
-  // bytes on disk are what the test has to look at.
+  // no overlap, and `npm run typecheck` would fail. The mismatch being tested
+  // is between the declared type and the bytes on disk, so the bytes on disk
+  // are what the test has to look at.
   it('never carries a null where an optional effect field is unset', () => {
     const raw = rawGraph() as { nodes: { effects?: Record<string, unknown>[] }[] };
     const effects = raw.nodes.flatMap((n) => n.effects ?? []);

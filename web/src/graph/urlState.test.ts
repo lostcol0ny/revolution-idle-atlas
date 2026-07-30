@@ -59,7 +59,7 @@ describe('toSearch', () => {
 
 describe('parseUrlState with a repeated key', () => {
   it('takes the first value', () => {
-    // Task 9 only ever writes these via toSearch, so a repeat can arrive only
+    // The app only ever writes these via toSearch, so a repeat can arrive only
     // from a hand-edited URL. First-wins is what URLSearchParams does; assert it
     // so a later rewrite cannot quietly make a trailing ?depth=999 the winner.
     expect(parseUrlState('?depth=2&depth=999').depth).toBe(2);

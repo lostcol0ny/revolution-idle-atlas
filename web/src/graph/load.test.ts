@@ -42,7 +42,7 @@ describe('parseGraph', () => {
   // `toBeUndefined()` would be unfalsifiable here: it passes both when the key is
   // absent and when it is present-and-undefined, so a plain `systems: doc.systems`
   // passthrough would satisfy it. `in` is the only form that pins key absence, and
-  // key absence is what the conditional spread in Step 3 exists to produce.
+  // key absence is what the conditional spread in parseGraph exists to produce.
   it('leaves systems off the returned object entirely when the document omits it', () => {
     expect('systems' in parseGraph({ version: 1, nodes: [], edges: [] })).toBe(false);
   });
