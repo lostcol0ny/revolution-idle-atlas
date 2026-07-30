@@ -9,6 +9,7 @@ import yaml
 from atlas.coverage import analyse, load_inventory, render_markdown
 from atlas.extract import ExtractError, run_all
 from atlas.extract.emit import to_yaml
+from atlas.extract.manifest import load_manifest
 from atlas.extract.refs import SurfaceFormCollision
 from atlas.extract.vocab import build_vocabulary
 from atlas.loader import SchemaError, load_dataset
@@ -22,6 +23,7 @@ from atlas.validate import validate_dataset
 
 DATASET_REL_PATH = Path("data") / "relationships.yaml"
 DERIVED_REL_PATH = Path("data") / "derived.yaml"
+SWEEP_REL_PATH = Path("data") / "sweep.yaml"
 # Used when a problem cannot be pinned to a single file. See _report.
 MERGED_LABEL = "dataset"
 
@@ -152,6 +154,7 @@ def _extract(root: Path) -> int:
             raw_dir,
             build_vocabulary(curated.nodes),
             frozenset(curated.node_ids()),
+            manifest=load_manifest(root / SWEEP_REL_PATH),
         )
     except SurfaceFormCollision as exc:
         print(f"{DATASET_REL_PATH}  error  {exc}", file=sys.stderr)
@@ -159,6 +162,9 @@ def _extract(root: Path) -> int:
     except ExtractError as exc:
         print(f"extract failed: {exc}", file=sys.stderr)
         return 1
+
+    for warning in result.warnings:
+        print(f"{SWEEP_REL_PATH}  warning  {warning}", file=sys.stderr)
 
     for dropped in result.dropped:
         print(

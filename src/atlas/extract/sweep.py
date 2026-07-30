@@ -1,8 +1,20 @@
 import re
 from dataclasses import dataclass
+from pathlib import Path
 
-from atlas.extract.manifest import RecordTemplateEntry, WikitableEntry
-from atlas.extract.refs import normalise_space, plain_text, template_fields
+from atlas.extract.manifest import Manifest, RecordTemplateEntry, SweepEntry, WikitableEntry
+from atlas.extract.refs import (
+    Vocabulary,
+    derive_op,
+    normalise_space,
+    plain_text,
+    resolve,
+    slugify,
+    template_fields,
+)
+from atlas.extract.result import ExtractResult
+from atlas.models import Edge, EdgeConfidence, Effect, Node, NodeConfidence, Rel
+from atlas.rawcheck import raw_filename
 
 _TABLE_RE = re.compile(r"\{\|(.*?)\n\|\}", re.DOTALL)
 _ROWSPAN_RE = re.compile(r'rowspan\s*=\s*"?(\d+)"?', re.IGNORECASE)
@@ -301,3 +313,118 @@ def read_record_template(
             per_level = plain_text(fields.get(entry.per_level_field.lower(), "")) or None
         records.append(SweptRecord(name=name, effects=effects, per_level=per_level))
     return records
+
+
+def _read(raw: str, entry: SweepEntry) -> list[SweptRecord]:
+    if isinstance(entry, WikitableEntry):
+        return read_wikitable(raw, entry)
+    return read_record_template(raw, entry)
+
+
+def _build(
+    record: SweptRecord, entry: SweepEntry, vocabulary: Vocabulary
+) -> ExtractResult:
+    name = record.name
+    if entry.name_prefix is not None:
+        name = f"{entry.name_prefix} {name}"
+    node_id = f"{entry.id_prefix}-{slugify(name)}"
+    per_level = record.per_level
+    effects = [
+        Effect(
+            text=text,
+            # The manifest permits per_level only alongside a single effect
+            # column or field, so there is never a second effect it could have
+            # belonged to instead.
+            per_level=per_level if index == 0 else None,
+            op=derive_op(per_level) if index == 0 else None,
+        )
+        for index, text in enumerate(record.effects)
+    ]
+    node = Node(
+        id=node_id,
+        name=name,
+        system=entry.system,
+        kind=entry.kind,
+        wiki=entry.page,
+        # The wiki names this entity in a table, so it exists. `provisional`
+        # says nobody has reviewed the reading — not that its existence is in
+        # doubt, which is what `unknown` would mean.
+        confidence=NodeConfidence.PROVISIONAL,
+        effects=effects,
+    )
+
+    edges: list[Edge] = []
+    for effect in effects:
+        for reference in resolve(effect.text, vocabulary):
+            if reference.target_id == node_id:
+                # "Red Gem gain is doubled" is how the wiki writes a
+                # self-scaling effect. validate_dataset rejects a self-edge as
+                # an error, so emitting one turns normal phrasing into a broken
+                # build.
+                continue
+            edges.append(
+                Edge(
+                    from_=node_id,
+                    to=reference.target_id,
+                    # Always `boosts`. The sweep's job is finding that a
+                    # relationship exists; deciding it is really an unlock or a
+                    # requirement is curation, and guessing from prose is how a
+                    # wrong edge gets made. `op` is left unset for the same
+                    # reason — the effect carries it, the edge does not claim it.
+                    rel=Rel.BOOSTS,
+                    targets_effect=reference.targets_effect,
+                    source=f"wiki:{entry.page}",
+                    # Prose matching is weaker evidence than a structural table
+                    # cell. This is the one field standing between the sweep and
+                    # hundreds of guesses asserted as fact.
+                    confidence=EdgeConfidence.UNCERTAIN,
+                )
+            )
+    return ExtractResult(nodes=[node], edges=edges)
+
+
+def extract(
+    raw_dir: Path, manifest: Manifest, vocabulary: Vocabulary
+) -> ExtractResult:
+    """Sweep every page the manifest names.
+
+    A page that cannot be read is a warning, never an error. `run_all` raises
+    when one of the four hand-written parsers returns nothing, because those
+    pages are known to hold data. A manifest entry is a guess about a page's
+    shape, and under the same rule one wrong guess would block every build —
+    including the CI artifact guard.
+    """
+    result = ExtractResult()
+    # Two entries can name the same entity: Minerals describes its ten Special
+    # Minerals once as templates and again in a later table with different
+    # effect wording. `to_yaml`'s node dedup is first-wins, so the second
+    # reading would vanish with nothing to say it had. Report it instead.
+    minted: dict[str, str] = {}
+    for entry in manifest.pages:
+        path = raw_dir / raw_filename(entry.page)
+        if not path.is_file():
+            result.warnings.append(
+                f"sweep page '{entry.page}': no {path.name} in data/raw/ — "
+                "the manifest names a page the scrape does not fetch"
+            )
+            continue
+        records = _read(path.read_text(encoding="utf-8"), entry)
+        if not records:
+            result.warnings.append(
+                f"sweep page '{entry.page}': the {entry.reader} reader found no "
+                "records — the page's shape has probably changed"
+            )
+            continue
+        for record in records:
+            built = _build(record, entry, vocabulary)
+            node_id = built.nodes[0].id
+            owner = minted.get(node_id)
+            if owner is not None:
+                result.warnings.append(
+                    f"sweep page '{entry.page}': node id '{node_id}' was already "
+                    f"minted from '{owner}' — the later reading is discarded"
+                )
+                continue
+            minted[node_id] = entry.page
+            result.extend(built)
+    return result

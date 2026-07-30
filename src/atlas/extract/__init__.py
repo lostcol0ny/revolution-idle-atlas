@@ -1,6 +1,7 @@
 from pathlib import Path
 
-from atlas.extract import elements, refine_tree, relics, tarot
+from atlas.extract import elements, refine_tree, relics, sweep, tarot
+from atlas.extract.manifest import Manifest
 from atlas.extract.refs import Vocabulary
 from atlas.extract.result import ExtractResult, prune_dangling
 
@@ -13,6 +14,7 @@ def run_all(
     raw_dir: Path,
     vocabulary: Vocabulary = Vocabulary.EMPTY,
     external_ids: frozenset[str] = frozenset(),
+    manifest: Manifest | None = None,
 ) -> ExtractResult:
     """Run every parser over data/raw/ and drop edges with no endpoint.
 
@@ -37,6 +39,13 @@ def run_all(
     `external_ids` are node ids the curated dataset already defines, so pruning
     keeps vocabulary-matched edges that point at them rather than treating them
     as typos.
+
+    The manifest-driven sweep runs last and is held to a different standard: a
+    page it cannot read is a warning on the result, not an exception. The four
+    parsers above cover pages known to hold data, so zero nodes means something
+    broke. A manifest entry is a guess about a page's shape, and one wrong guess
+    must not block every build. Running last also means the four parsers' ids
+    win `to_yaml`'s first-wins dedup wherever a swept name collides with one.
     """
     combined = ExtractResult()
     for module in (relics, refine_tree, tarot, elements):
@@ -45,4 +54,5 @@ def run_all(
             name = module.__name__.rsplit(".", 1)[-1]
             raise ExtractError(f"{name} produced no nodes — its source page changed shape")
         combined.extend(result)
+    combined.extend(sweep.extract(raw_dir, manifest or Manifest(), vocabulary))
     return prune_dangling(combined, external_ids)

@@ -105,6 +105,23 @@ def test_prune_dangling_keeps_every_edge_when_all_endpoints_are_known():
     assert pruned.dropped == []
 
 
+def test_extend_carries_warnings():
+    from atlas.extract.result import ExtractResult
+
+    combined = ExtractResult(warnings=["first"])
+    combined.extend(ExtractResult(warnings=["second"]))
+    assert combined.warnings == ["first", "second"]
+
+
+def test_prune_dangling_keeps_warnings():
+    # prune_dangling rebuilds the result, so a field it forgets to copy is lost
+    # silently — the warning simply never reaches the CLI.
+    from atlas.extract.result import ExtractResult, prune_dangling
+
+    pruned = prune_dangling(ExtractResult(warnings=["kept"]))
+    assert pruned.warnings == ["kept"]
+
+
 def test_prune_dangling_with_external_ids_keeps_curated_targets_but_still_drops_typos():
     # An edge pointing at a curated-only id (never minted by a parser) must
     # survive because external_ids widens the known set. An edge pointing at an

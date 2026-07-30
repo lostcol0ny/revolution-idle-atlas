@@ -15,11 +15,16 @@ class ExtractResult:
     nodes: list[Node] = field(default_factory=list)
     edges: list[Edge] = field(default_factory=list)
     dropped: list[DroppedEdge] = field(default_factory=list)
+    # Free-text problems that are not about one edge. The sweep reports a
+    # manifest page it could not read here, because a bad manifest guess must
+    # not fail the build the way a broken hand-written parser does.
+    warnings: list[str] = field(default_factory=list)
 
     def extend(self, other: "ExtractResult") -> None:
         self.nodes.extend(other.nodes)
         self.edges.extend(other.edges)
         self.dropped.extend(other.dropped)
+        self.warnings.extend(other.warnings)
 
 
 def prune_dangling(
@@ -53,4 +58,9 @@ def prune_dangling(
             )
             continue
         kept.append(edge)
-    return ExtractResult(nodes=result.nodes, edges=kept, dropped=dropped)
+    return ExtractResult(
+        nodes=result.nodes,
+        edges=kept,
+        dropped=dropped,
+        warnings=result.warnings,
+    )

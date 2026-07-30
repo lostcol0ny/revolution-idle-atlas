@@ -144,7 +144,7 @@ def test_extract_warns_about_dropped_edges_but_still_succeeds(
             )
         ],
     )
-    monkeypatch.setattr("atlas.cli.run_all", lambda _raw_dir, _vocab=None, _ids=None: stub)
+    monkeypatch.setattr("atlas.cli.run_all", lambda _raw_dir, _vocab=None, _ids=None, **_kw: stub)
 
     assert main(["extract", "--root", str(tmp_path)]) == 0
 
@@ -561,3 +561,34 @@ def test_build_fails_loudly_on_a_malformed_derived_file(tmp_path, capsys):
     assert main(["build", "--root", str(tmp_path)]) == 1
     assert "derived.yaml" in capsys.readouterr().err
     assert not (tmp_path / "public" / "graph.json").exists()
+
+
+GHOST_MANIFEST = """pages:
+  - reader: wikitable
+    page: Nonexistent
+    system: minerals
+    kind: upgrade
+    id_prefix: ghost
+    name_columns: [Name]
+    effect_columns: [Effect]
+"""
+
+
+def test_a_sweep_page_that_reads_empty_is_reported_and_does_not_fail(
+    tmp_path, capsys
+):
+    # The one behaviour the whole warning channel exists for. If this ever
+    # returns 1, a wrong guess in data/sweep.yaml breaks CI's artifact guard.
+    root = _tree(tmp_path, CURATED)
+    (root / "data" / "sweep.yaml").write_text(GHOST_MANIFEST, encoding="utf-8")
+
+    assert main(["extract", "--root", str(root)]) == 0
+    assert "Nonexistent" in capsys.readouterr().err
+
+
+def test_extract_still_works_with_no_sweep_manifest(tmp_path):
+    # The sweep is additive: a checkout without data/sweep.yaml must extract the
+    # four original pages exactly as before.
+    root = _tree(tmp_path, CURATED)
+    assert not (root / "data" / "sweep.yaml").exists()
+    assert main(["extract", "--root", str(root)]) == 0
