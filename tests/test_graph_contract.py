@@ -157,16 +157,16 @@ def test_the_sweep_reached_the_graph(graph: dict):
     # a scrape PR lands is the most useful thing the suite can say at that point.
     #
     # Each prefix is tested against provisional nodes only, so curated nodes
-    # sharing a prefix (e.g. zodiac-sell-cost) are not counted. The antichain
-    # exclusion removes sub-prefix matches: a node counted for "plague-stat-"
-    # is not also counted for "plague-", so the two entries stay independent.
+    # sharing a prefix (e.g. zodiac-sell-cost) are not counted. No prefix below
+    # is a prefix of another — the manifest schema rejects that — so a plain
+    # startswith attributes every node to exactly one entry.
     expected = {
         "special-mineral-": 10,
         "zodiac-": 12,
         "trial-": 25,
-        "plague-": 4,
+        "plague-er-": 4,
         "plague-stat-": 6,
-        "singularity-": 27,
+        "singularity-milestone-": 27,
         "singularity-tree-": 13,
         "singularity-zodiac-": 12,
         "dilation-node-": 13,
@@ -174,16 +174,7 @@ def test_the_sweep_reached_the_graph(graph: dict):
     }
     swept = [n for n in graph["nodes"] if n.get("confidence") == "provisional"]
     for prefix, count in expected.items():
-        owned = [
-            n
-            for n in swept
-            if n["id"].startswith(prefix)
-            and not any(
-                n["id"].startswith(p)
-                for p in expected
-                if p != prefix and p.startswith(prefix)
-            )
-        ]
+        owned = [n for n in swept if n["id"].startswith(prefix)]
         assert len(owned) == count, (prefix, len(owned))
 
 
@@ -205,7 +196,7 @@ def test_the_plague_statistics_table_wires_plague_into_the_graph(graph: dict):
 def test_a_numbered_row_got_a_readable_name(graph: dict):
     # Singularity's tree rows are named "1", "2", "3.1" on the page. Without
     # name_prefix the node is called "1" and nothing says what it is.
-    node = next(n for n in graph["nodes"] if n["id"] == "singularity-tree-tree-node-1")
+    node = next(n for n in graph["nodes"] if n["id"] == "singularity-tree-1")
     assert node["name"] == "Tree Node 1"
 
 
@@ -233,8 +224,11 @@ def test_every_swept_edge_is_uncertain(graph: dict):
         "special-mineral-",
         "zodiac-",
         "trial-",
-        "plague-",
-        "singularity-",
+        "plague-er-",
+        "plague-stat-",
+        "singularity-milestone-",
+        "singularity-tree-",
+        "singularity-zodiac-",
         "dilation-node-",
         "dilation-upgrade-",
     )

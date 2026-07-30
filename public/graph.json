@@ -5453,7 +5453,7 @@
           "text": "Increases PlP to ERP conversion rate"
         }
       ],
-      "id": "plague-conversion-rate",
+      "id": "plague-er-conversion-rate",
       "kind": "upgrade",
       "name": "Conversion Rate",
       "system": "plague",
@@ -5466,7 +5466,7 @@
           "text": "Increases base VE from dissolving ERs"
         }
       ],
-      "id": "plague-dissolve-efficiency",
+      "id": "plague-er-dissolve-efficiency",
       "kind": "upgrade",
       "name": "Dissolve Efficiency",
       "system": "plague",
@@ -5479,7 +5479,7 @@
           "text": "Increases chances of crafting better ERs"
         }
       ],
-      "id": "plague-crafting-mastery",
+      "id": "plague-er-crafting-mastery",
       "kind": "upgrade",
       "name": "Crafting Mastery",
       "system": "plague",
@@ -5492,7 +5492,7 @@
           "text": "Increases ViP/s per VE"
         }
       ],
-      "id": "plague-essence-density",
+      "id": "plague-er-essence-density",
       "kind": "upgrade",
       "name": "Essence Density",
       "system": "plague",
@@ -5583,7 +5583,7 @@
           "text": "Unlock Milestones Tab SMS Factor is locked at 0"
         }
       ],
-      "id": "singularity-first-collapse",
+      "id": "singularity-milestone-first-collapse",
       "kind": "upgrade",
       "name": "First Collapse",
       "system": "singularity",
@@ -5596,7 +5596,7 @@
           "text": "Unlock Effects Tab"
         }
       ],
-      "id": "singularity-accelerated-growth",
+      "id": "singularity-milestone-accelerated-growth",
       "kind": "upgrade",
       "name": "Accelerated Growth",
       "system": "singularity",
@@ -5609,7 +5609,7 @@
           "text": "Keep Plague on Singularity Reset Plague Generator Awards no longer decrease"
         }
       ],
-      "id": "singularity-event-horizon",
+      "id": "singularity-milestone-event-horizon",
       "kind": "upgrade",
       "name": "Event Horizon",
       "system": "singularity",
@@ -5622,7 +5622,7 @@
           "text": "Unlocks Tree Tab"
         }
       ],
-      "id": "singularity-spaghettification",
+      "id": "singularity-milestone-spaghettification",
       "kind": "upgrade",
       "name": "Spaghettification",
       "system": "singularity",
@@ -5635,7 +5635,7 @@
           "text": "Keep Artifacts on Singularity Reset"
         }
       ],
-      "id": "singularity-beyond-time",
+      "id": "singularity-milestone-beyond-time",
       "kind": "upgrade",
       "name": "Beyond Time",
       "system": "singularity",
@@ -5648,7 +5648,7 @@
           "text": "The Atom Requirement for the next Singularity starts increasing. You can still perform a Singularity at 1.8e308 Atoms to get Singularity Mult, but your Singularity Count will NOT increase."
         }
       ],
-      "id": "singularity-event-horizon-tax",
+      "id": "singularity-milestone-event-horizon-tax",
       "kind": "upgrade",
       "name": "Event Horizon Tax",
       "system": "singularity",
@@ -5661,7 +5661,7 @@
           "text": "Keep Elements, Minerals and Tarot on Singularity Reset"
         }
       ],
-      "id": "singularity-the-unforgotten",
+      "id": "singularity-milestone-the-unforgotten",
       "kind": "upgrade",
       "name": "The Unforgotten",
       "system": "singularity",
@@ -5674,7 +5674,7 @@
           "text": "Singularity Count acts as a factor for the next Singularity Mult"
         }
       ],
-      "id": "singularity-loop-feeds-loop",
+      "id": "singularity-milestone-loop-feeds-loop",
       "kind": "upgrade",
       "name": "Loop Feeds Loop",
       "system": "singularity",
@@ -5687,7 +5687,7 @@
           "text": "Unlocks Houses Tab"
         }
       ],
-      "id": "singularity-astral-property",
+      "id": "singularity-milestone-astral-property",
       "kind": "upgrade",
       "name": "Astral Property",
       "system": "singularity",
@@ -5700,7 +5700,7 @@
           "text": "Singularity Mult acts as a factor for the next Singularity Mult"
         }
       ],
-      "id": "singularity-self-synergism",
+      "id": "singularity-milestone-self-synergism",
       "kind": "upgrade",
       "name": "Self Synergism",
       "system": "singularity",
@@ -5713,7 +5713,7 @@
           "text": "Sacrifice Dust Gain: ^1.1"
         }
       ],
-      "id": "singularity-first-thousand",
+      "id": "singularity-milestone-first-thousand",
       "kind": "upgrade",
       "name": "First Thousand",
       "system": "singularity",
@@ -5726,7 +5726,7 @@
           "text": "Black Gem Efficiency: ^1.1"
         }
       ],
-      "id": "singularity-quantum-dust",
+      "id": "singularity-milestone-quantum-dust",
       "kind": "upgrade",
       "name": "Quantum Dust",
       "system": "singularity",
@@ -5739,7 +5739,7 @@
           "text": "Element Factors 1 and 2 powers x3"
         }
       ],
-      "id": "singularity-atomic-flow",
+      "id": "singularity-milestone-atomic-flow",
       "kind": "upgrade",
       "name": "Atomic Flow",
       "system": "singularity",
@@ -5752,7 +5752,7 @@
           "text": "Divides last element nodes upgrades cost by 1e300"
         }
       ],
-      "id": "singularity-nuclear-bloom",
+      "id": "singularity-milestone-nuclear-bloom",
       "kind": "upgrade",
       "name": "Nuclear Bloom",
       "system": "singularity",
@@ -5765,7 +5765,7 @@
           "text": "Unlocks Auto-Highest Plague Stage"
         }
       ],
-      "id": "singularity-matter-collapse",
+      "id": "singularity-milestone-matter-collapse",
       "kind": "upgrade",
       "name": "Matter Collapse",
       "system": "singularity",
@@ -5778,7 +5778,7 @@
           "text": "SMP Exp Requirements: ^0.75"
         }
       ],
-      "id": "singularity-quantum-pressure",
+      "id": "singularity-milestone-quantum-pressure",
       "kind": "upgrade",
       "name": "Quantum Pressure",
       "system": "singularity",
@@ -5791,7 +5791,7 @@
           "text": "Atoms are now unlocked as a Singularity Mult Factor"
         }
       ],
-      "id": "singularity-atom-overflow",
+      "id": "singularity-milestone-atom-overflow",
       "kind": "upgrade",
       "name": "Atom Overflow",
       "system": "singularity",
@@ -5804,7 +5804,7 @@
           "text": "You can now obtain Singular Zodiacs if you have already unlocked houses"
         }
       ],
-      "id": "singularity-horoscope-of-the-void",
+      "id": "singularity-milestone-horoscope-of-the-void",
       "kind": "upgrade",
       "name": "Horoscope of the Void",
       "system": "singularity",
@@ -5817,7 +5817,7 @@
           "text": "Atoms past e1000 boost luck for a little (new effect)"
         }
       ],
-      "id": "singularity-universe-under-pressure",
+      "id": "singularity-milestone-universe-under-pressure",
       "kind": "upgrade",
       "name": "Universe Under Pressure",
       "system": "singularity",
@@ -5830,7 +5830,7 @@
           "text": "SMP Gain ^1.1"
         }
       ],
-      "id": "singularity-special-sacrificer",
+      "id": "singularity-milestone-special-sacrificer",
       "kind": "upgrade",
       "name": "Special Sacrificer",
       "system": "singularity",
@@ -5843,7 +5843,7 @@
           "text": "Factor 2 power for water is multiplied by x10"
         }
       ],
-      "id": "singularity-elementary-master",
+      "id": "singularity-milestone-elementary-master",
       "kind": "upgrade",
       "name": "Elementary Master",
       "system": "singularity",
@@ -5856,7 +5856,7 @@
           "text": "Black Gem Effect ^1.05"
         }
       ],
-      "id": "singularity-full-deck",
+      "id": "singularity-milestone-full-deck",
       "kind": "upgrade",
       "name": "Full Deck",
       "system": "singularity",
@@ -5869,7 +5869,7 @@
           "text": "Sacrifice Dust Gain ^1.05"
         }
       ],
-      "id": "singularity-dust-magician",
+      "id": "singularity-milestone-dust-magician",
       "kind": "upgrade",
       "name": "Dust Magician",
       "system": "singularity",
@@ -5882,7 +5882,7 @@
           "text": "Golden Resource Gain ^1.02"
         }
       ],
-      "id": "singularity-artifact-theory",
+      "id": "singularity-milestone-artifact-theory",
       "kind": "upgrade",
       "name": "Artifact Theory",
       "system": "singularity",
@@ -5895,7 +5895,7 @@
           "text": "ViP per VE mult x1000"
         }
       ],
-      "id": "singularity-virusologist",
+      "id": "singularity-milestone-virusologist",
       "kind": "upgrade",
       "name": "Virusologist",
       "system": "singularity",
@@ -5908,7 +5908,7 @@
           "text": "Atom Gain ^1.02"
         }
       ],
-      "id": "singularity-viral-ascension",
+      "id": "singularity-milestone-viral-ascension",
       "kind": "upgrade",
       "name": "Viral Ascension",
       "system": "singularity",
@@ -5921,7 +5921,7 @@
           "text": "Keep all progression milestones on Singularity"
         }
       ],
-      "id": "singularity-infinite-infection",
+      "id": "singularity-milestone-infinite-infection",
       "kind": "upgrade",
       "name": "Infinite Infection",
       "system": "singularity",
@@ -5935,7 +5935,7 @@
           "per_level": ".01"
         }
       ],
-      "id": "singularity-tree-tree-node-1",
+      "id": "singularity-tree-1",
       "kind": "tree-node",
       "name": "Tree Node 1",
       "system": "singularity",
@@ -5949,7 +5949,7 @@
           "per_level": ".001"
         }
       ],
-      "id": "singularity-tree-tree-node-2",
+      "id": "singularity-tree-2",
       "kind": "tree-node",
       "name": "Tree Node 2",
       "system": "singularity",
@@ -5963,7 +5963,7 @@
           "per_level": ".01"
         }
       ],
-      "id": "singularity-tree-tree-node-3-1",
+      "id": "singularity-tree-3-1",
       "kind": "tree-node",
       "name": "Tree Node 3.1",
       "system": "singularity",
@@ -5977,7 +5977,7 @@
           "per_level": ".01"
         }
       ],
-      "id": "singularity-tree-tree-node-3-2",
+      "id": "singularity-tree-3-2",
       "kind": "tree-node",
       "name": "Tree Node 3.2",
       "system": "singularity",
@@ -5991,7 +5991,7 @@
           "per_level": ".001"
         }
       ],
-      "id": "singularity-tree-tree-node-4-1",
+      "id": "singularity-tree-4-1",
       "kind": "tree-node",
       "name": "Tree Node 4.1",
       "system": "singularity",
@@ -6005,7 +6005,7 @@
           "per_level": ".25"
         }
       ],
-      "id": "singularity-tree-tree-node-4-2",
+      "id": "singularity-tree-4-2",
       "kind": "tree-node",
       "name": "Tree Node 4.2",
       "system": "singularity",
@@ -6019,7 +6019,7 @@
           "per_level": ".01"
         }
       ],
-      "id": "singularity-tree-tree-node-5-1",
+      "id": "singularity-tree-5-1",
       "kind": "tree-node",
       "name": "Tree Node 5.1",
       "system": "singularity",
@@ -6033,7 +6033,7 @@
           "per_level": ".03"
         }
       ],
-      "id": "singularity-tree-tree-node-5-2",
+      "id": "singularity-tree-5-2",
       "kind": "tree-node",
       "name": "Tree Node 5.2",
       "system": "singularity",
@@ -6047,7 +6047,7 @@
           "per_level": ".05"
         }
       ],
-      "id": "singularity-tree-tree-node-6-1",
+      "id": "singularity-tree-6-1",
       "kind": "tree-node",
       "name": "Tree Node 6.1",
       "system": "singularity",
@@ -6061,7 +6061,7 @@
           "per_level": ".02"
         }
       ],
-      "id": "singularity-tree-tree-node-6-2",
+      "id": "singularity-tree-6-2",
       "kind": "tree-node",
       "name": "Tree Node 6.2",
       "system": "singularity",
@@ -6075,7 +6075,7 @@
           "per_level": ".006"
         }
       ],
-      "id": "singularity-tree-tree-node-7-1",
+      "id": "singularity-tree-7-1",
       "kind": "tree-node",
       "name": "Tree Node 7.1",
       "system": "singularity",
@@ -6089,7 +6089,7 @@
           "per_level": ".006"
         }
       ],
-      "id": "singularity-tree-tree-node-7-2",
+      "id": "singularity-tree-7-2",
       "kind": "tree-node",
       "name": "Tree Node 7.2",
       "system": "singularity",
@@ -6103,7 +6103,7 @@
           "per_level": ".001"
         }
       ],
-      "id": "singularity-tree-tree-node-8",
+      "id": "singularity-tree-8",
       "kind": "tree-node",
       "name": "Tree Node 8",
       "system": "singularity",
@@ -6469,7 +6469,7 @@
           "op": "add"
         }
       ],
-      "id": "dilation-upgrade-dilation-upgrade-1",
+      "id": "dilation-upgrade-1",
       "kind": "upgrade",
       "name": "Dilation Upgrade 1",
       "system": "eternity",
@@ -6484,7 +6484,7 @@
           "op": "mult"
         }
       ],
-      "id": "dilation-upgrade-dilation-upgrade-2",
+      "id": "dilation-upgrade-2",
       "kind": "upgrade",
       "name": "Dilation Upgrade 2",
       "system": "eternity",
@@ -6499,7 +6499,7 @@
           "op": "add"
         }
       ],
-      "id": "dilation-upgrade-dilation-upgrade-3",
+      "id": "dilation-upgrade-3",
       "kind": "upgrade",
       "name": "Dilation Upgrade 3",
       "system": "eternity",
@@ -6514,7 +6514,7 @@
           "op": "mult"
         }
       ],
-      "id": "dilation-upgrade-dilation-upgrade-4",
+      "id": "dilation-upgrade-4",
       "kind": "upgrade",
       "name": "Dilation Upgrade 4",
       "system": "eternity",
@@ -6529,7 +6529,7 @@
           "op": "exp"
         }
       ],
-      "id": "dilation-upgrade-dilation-upgrade-5",
+      "id": "dilation-upgrade-5",
       "kind": "upgrade",
       "name": "Dilation Upgrade 5",
       "system": "eternity",
@@ -6544,7 +6544,7 @@
           "op": "add"
         }
       ],
-      "id": "dilation-upgrade-dilation-upgrade-6",
+      "id": "dilation-upgrade-6",
       "kind": "upgrade",
       "name": "Dilation Upgrade 6",
       "system": "eternity",
@@ -6559,7 +6559,7 @@
           "op": "mult"
         }
       ],
-      "id": "dilation-upgrade-dilation-upgrade-7",
+      "id": "dilation-upgrade-7",
       "kind": "upgrade",
       "name": "Dilation Upgrade 7",
       "system": "eternity",
@@ -6574,7 +6574,7 @@
           "op": "add"
         }
       ],
-      "id": "dilation-upgrade-dilation-upgrade-8",
+      "id": "dilation-upgrade-8",
       "kind": "upgrade",
       "name": "Dilation Upgrade 8",
       "system": "eternity",
@@ -6589,7 +6589,7 @@
           "op": "add"
         }
       ],
-      "id": "dilation-upgrade-dilation-upgrade-9",
+      "id": "dilation-upgrade-9",
       "kind": "upgrade",
       "name": "Dilation Upgrade 9",
       "system": "eternity",
@@ -9811,140 +9811,140 @@
     },
     {
       "confidence": "uncertain",
-      "from": "singularity-first-collapse",
+      "from": "singularity-milestone-first-collapse",
       "rel": "boosts",
       "source": "wiki:Singularity",
       "to": "sms-factor"
     },
     {
       "confidence": "uncertain",
-      "from": "singularity-event-horizon",
+      "from": "singularity-milestone-event-horizon",
       "rel": "boosts",
       "source": "wiki:Singularity",
       "to": "plague"
     },
     {
       "confidence": "uncertain",
-      "from": "singularity-event-horizon",
+      "from": "singularity-milestone-event-horizon",
       "rel": "boosts",
       "source": "wiki:Singularity",
       "to": "singularity"
     },
     {
       "confidence": "uncertain",
-      "from": "singularity-beyond-time",
+      "from": "singularity-milestone-beyond-time",
       "rel": "boosts",
       "source": "wiki:Singularity",
       "to": "singularity"
     },
     {
       "confidence": "uncertain",
-      "from": "singularity-event-horizon-tax",
+      "from": "singularity-milestone-event-horizon-tax",
       "rel": "boosts",
       "source": "wiki:Singularity",
       "to": "singularity"
     },
     {
       "confidence": "uncertain",
-      "from": "singularity-the-unforgotten",
+      "from": "singularity-milestone-the-unforgotten",
       "rel": "boosts",
       "source": "wiki:Singularity",
       "to": "singularity"
     },
     {
       "confidence": "uncertain",
-      "from": "singularity-loop-feeds-loop",
+      "from": "singularity-milestone-loop-feeds-loop",
       "rel": "boosts",
       "source": "wiki:Singularity",
       "to": "singularity"
     },
     {
       "confidence": "uncertain",
-      "from": "singularity-self-synergism",
+      "from": "singularity-milestone-self-synergism",
       "rel": "boosts",
       "source": "wiki:Singularity",
       "to": "singularity"
     },
     {
       "confidence": "uncertain",
-      "from": "singularity-matter-collapse",
+      "from": "singularity-milestone-matter-collapse",
       "rel": "boosts",
       "source": "wiki:Singularity",
       "to": "plague"
     },
     {
       "confidence": "uncertain",
-      "from": "singularity-atom-overflow",
+      "from": "singularity-milestone-atom-overflow",
       "rel": "boosts",
       "source": "wiki:Singularity",
       "to": "singularity"
     },
     {
       "confidence": "uncertain",
-      "from": "singularity-universe-under-pressure",
+      "from": "singularity-milestone-universe-under-pressure",
       "rel": "boosts",
       "source": "wiki:Singularity",
       "to": "luck"
     },
     {
       "confidence": "uncertain",
-      "from": "singularity-infinite-infection",
+      "from": "singularity-milestone-infinite-infection",
       "rel": "boosts",
       "source": "wiki:Singularity",
       "to": "singularity"
     },
     {
       "confidence": "uncertain",
-      "from": "singularity-tree-tree-node-1",
+      "from": "singularity-tree-1",
       "rel": "boosts",
       "source": "wiki:Singularity",
       "to": "singularity"
     },
     {
       "confidence": "uncertain",
-      "from": "singularity-tree-tree-node-2",
+      "from": "singularity-tree-2",
       "rel": "boosts",
       "source": "wiki:Singularity",
       "to": "gold"
     },
     {
       "confidence": "uncertain",
-      "from": "singularity-tree-tree-node-5-1",
+      "from": "singularity-tree-5-1",
       "rel": "boosts",
       "source": "wiki:Singularity",
       "to": "plague"
     },
     {
       "confidence": "uncertain",
-      "from": "singularity-tree-tree-node-5-2",
+      "from": "singularity-tree-5-2",
       "rel": "boosts",
       "source": "wiki:Singularity",
       "to": "plague"
     },
     {
       "confidence": "uncertain",
-      "from": "singularity-tree-tree-node-6-1",
+      "from": "singularity-tree-6-1",
       "rel": "boosts",
       "source": "wiki:Singularity",
       "to": "singularity"
     },
     {
       "confidence": "uncertain",
-      "from": "singularity-tree-tree-node-7-1",
+      "from": "singularity-tree-7-1",
       "rel": "boosts",
       "source": "wiki:Singularity",
       "to": "singularity"
     },
     {
       "confidence": "uncertain",
-      "from": "singularity-tree-tree-node-7-2",
+      "from": "singularity-tree-7-2",
       "rel": "boosts",
       "source": "wiki:Singularity",
       "to": "singularity"
     },
     {
       "confidence": "uncertain",
-      "from": "singularity-tree-tree-node-8",
+      "from": "singularity-tree-8",
       "rel": "boosts",
       "source": "wiki:Singularity",
       "to": "singularity"
@@ -10014,21 +10014,21 @@
     },
     {
       "confidence": "uncertain",
-      "from": "dilation-upgrade-dilation-upgrade-2",
+      "from": "dilation-upgrade-2",
       "rel": "boosts",
       "source": "wiki:Eternity",
       "to": "dilation-points"
     },
     {
       "confidence": "uncertain",
-      "from": "dilation-upgrade-dilation-upgrade-3",
+      "from": "dilation-upgrade-3",
       "rel": "boosts",
       "source": "wiki:Eternity",
       "to": "research-points"
     },
     {
       "confidence": "uncertain",
-      "from": "dilation-upgrade-dilation-upgrade-7",
+      "from": "dilation-upgrade-7",
       "rel": "boosts",
       "source": "wiki:Eternity",
       "to": "eternity-points"

@@ -20,8 +20,9 @@ class _Entry(BaseModel):
     id_prefix: str
     # Prepended to the name, for a table whose name column is a bare number.
     # Singularity's tree table numbers its rows "1", "2", "3.1"; a node named
-    # "1" is useless in the UI and its id `singularity-tree-1` says nothing
-    # about what it is. With `name_prefix: Tree Node` it reads "Tree Node 1".
+    # "1" is useless in the UI. With `name_prefix: Tree Node` it reads "Tree
+    # Node 1". Display only: the id is minted from the raw name, where
+    # `id_prefix` already supplies the noun.
     name_prefix: str | None = None
 
 
@@ -71,6 +72,31 @@ class Manifest(BaseModel):
     model_config = ConfigDict(extra="forbid")
 
     pages: list[SweepEntry] = []
+
+    @model_validator(mode="after")
+    def _no_id_prefix_contains_another(self) -> Self:
+        """Reject an `id_prefix` that is a proper prefix of another entry's.
+
+        Node ids are `{id_prefix}-{slug}`, so nested prefixes put two entries one
+        row name apart from minting the same id: with `singularity` alongside
+        `singularity-tree`, a milestone called "Tree Node 7" mints
+        `singularity-tree-node-7`, and whichever entry runs second loses its
+        reading to the first-wins dedup. Two entries sharing one prefix exactly
+        is a different thing — that is one page read twice — and stays allowed.
+
+        Rejected at load time because it is a mistake in this file that can be
+        seen without reading a single wiki page.
+        """
+        prefixes = [entry.id_prefix for entry in self.pages]
+        for prefix in prefixes:
+            for other in prefixes:
+                if other != prefix and other.startswith(prefix):
+                    raise ValueError(
+                        f"id_prefix '{prefix}' is a prefix of id_prefix "
+                        f"'{other}' — the two entries can mint the same node "
+                        "id, so give one of them a longer, distinct prefix"
+                    )
+        return self
 
 
 def load_manifest(path: Path) -> Manifest:

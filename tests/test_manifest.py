@@ -108,6 +108,36 @@ def test_name_prefix_defaults_to_absent():
     assert prefixed.pages[0].name_prefix == "Tree Node"
 
 
+def test_an_id_prefix_that_is_a_prefix_of_another_is_rejected():
+    # Node ids are `{id_prefix}-{slug}`, so `singularity` and `singularity-tree`
+    # are one row name apart from minting the same id: a milestone row called
+    # "Tree Node 7" would become `singularity-tree-node-7`. Nothing collides
+    # until it does, and then the loser vanishes into the first-wins dedup with
+    # only a warning, so the shape is refused at load time.
+    #
+    # The offending prefix is the SECOND entry here, so a check that only
+    # compared each entry against the ones before it would let this through.
+    with pytest.raises(ValidationError, match="prefix"):
+        Manifest.model_validate(
+            {
+                "pages": [
+                    _wikitable(id_prefix="singularity-tree"),
+                    _wikitable(id_prefix="singularity"),
+                ]
+            }
+        )
+
+
+def test_two_entries_may_share_one_id_prefix_exactly():
+    # Not the same fault: one page read twice under one prefix is how Minerals
+    # is swept, and the sweep already reports the resulting id collisions as
+    # warnings. Only a PROPER prefix is refused.
+    manifest = Manifest.model_validate(
+        {"pages": [_wikitable(), _wikitable(page="Trials")]}
+    )
+    assert [p.id_prefix for p in manifest.pages] == ["zodiac", "zodiac"]
+
+
 def test_load_manifest_reads_a_file(tmp_path: Path):
     path = tmp_path / "sweep.yaml"
     path.write_text(yaml.safe_dump({"pages": [_wikitable()]}), encoding="utf-8")

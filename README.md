@@ -111,8 +111,8 @@ Fields common to both:
 | `page` | yes | The wiki page **title**, underscored (`Dilation_Tree`, `Minerals/Refine_Tree`). Resolved to a file in `data/raw/` and written to each swept node's `wiki`. |
 | `system` | yes | Must be declared in `data/relationships.yaml`'s `systems` array, or the build fails. |
 | `kind` | yes | Any node `kind`. |
-| `id_prefix` | yes | Node ids are `<id_prefix>-<slugified name>`. |
-| `name_prefix` | no | Prepended to the name. For a table whose name column is a bare number — Singularity's tree rows are `1`, `2`, `3.1`, and `name_prefix: Tree Node` makes them readable. |
+| `id_prefix` | yes | Node ids are `<id_prefix>-<slugified name>`. No entry's `id_prefix` may be a prefix of another's — `singularity` alongside `singularity-tree` is rejected, because the two are one row name apart from minting the same id. |
+| `name_prefix` | no | Prepended to the name, and to the name only. For a table whose name column is a bare number — Singularity's tree rows are `1`, `2`, `3.1`, and `name_prefix: Tree Node` makes them readable. The id keeps the raw name (`singularity-tree-3-1`), since `id_prefix` already supplies the noun. |
 
 `reader: wikitable`:
 

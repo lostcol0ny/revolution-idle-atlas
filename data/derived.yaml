@@ -3353,7 +3353,7 @@ nodes:
   confidence: provisional
   effects:
   - text: Divides all refine nodes costs past 120 by /1e6750
-- id: plague-conversion-rate
+- id: plague-er-conversion-rate
   name: Conversion Rate
   system: plague
   kind: upgrade
@@ -3361,7 +3361,7 @@ nodes:
   confidence: provisional
   effects:
   - text: Increases PlP to ERP conversion rate
-- id: plague-dissolve-efficiency
+- id: plague-er-dissolve-efficiency
   name: Dissolve Efficiency
   system: plague
   kind: upgrade
@@ -3369,7 +3369,7 @@ nodes:
   confidence: provisional
   effects:
   - text: Increases base VE from dissolving ERs
-- id: plague-crafting-mastery
+- id: plague-er-crafting-mastery
   name: Crafting Mastery
   system: plague
   kind: upgrade
@@ -3377,7 +3377,7 @@ nodes:
   confidence: provisional
   effects:
   - text: Increases chances of crafting better ERs
-- id: plague-essence-density
+- id: plague-er-essence-density
   name: Essence Density
   system: plague
   kind: upgrade
@@ -3433,7 +3433,7 @@ nodes:
   confidence: provisional
   effects:
   - text: PlP per PlG mult
-- id: singularity-first-collapse
+- id: singularity-milestone-first-collapse
   name: First Collapse
   system: singularity
   kind: upgrade
@@ -3441,7 +3441,7 @@ nodes:
   confidence: provisional
   effects:
   - text: Unlock Milestones Tab SMS Factor is locked at 0
-- id: singularity-accelerated-growth
+- id: singularity-milestone-accelerated-growth
   name: Accelerated Growth
   system: singularity
   kind: upgrade
@@ -3449,7 +3449,7 @@ nodes:
   confidence: provisional
   effects:
   - text: Unlock Effects Tab
-- id: singularity-event-horizon
+- id: singularity-milestone-event-horizon
   name: Event Horizon
   system: singularity
   kind: upgrade
@@ -3457,7 +3457,7 @@ nodes:
   confidence: provisional
   effects:
   - text: Keep Plague on Singularity Reset Plague Generator Awards no longer decrease
-- id: singularity-spaghettification
+- id: singularity-milestone-spaghettification
   name: Spaghettification
   system: singularity
   kind: upgrade
@@ -3465,7 +3465,7 @@ nodes:
   confidence: provisional
   effects:
   - text: Unlocks Tree Tab
-- id: singularity-beyond-time
+- id: singularity-milestone-beyond-time
   name: Beyond Time
   system: singularity
   kind: upgrade
@@ -3473,7 +3473,7 @@ nodes:
   confidence: provisional
   effects:
   - text: Keep Artifacts on Singularity Reset
-- id: singularity-event-horizon-tax
+- id: singularity-milestone-event-horizon-tax
   name: Event Horizon Tax
   system: singularity
   kind: upgrade
@@ -3482,7 +3482,7 @@ nodes:
   effects:
   - text: The Atom Requirement for the next Singularity starts increasing. You can still perform a Singularity
       at 1.8e308 Atoms to get Singularity Mult, but your Singularity Count will NOT increase.
-- id: singularity-the-unforgotten
+- id: singularity-milestone-the-unforgotten
   name: The Unforgotten
   system: singularity
   kind: upgrade
@@ -3490,7 +3490,7 @@ nodes:
   confidence: provisional
   effects:
   - text: Keep Elements, Minerals and Tarot on Singularity Reset
-- id: singularity-loop-feeds-loop
+- id: singularity-milestone-loop-feeds-loop
   name: Loop Feeds Loop
   system: singularity
   kind: upgrade
@@ -3498,7 +3498,7 @@ nodes:
   confidence: provisional
   effects:
   - text: Singularity Count acts as a factor for the next Singularity Mult
-- id: singularity-astral-property
+- id: singularity-milestone-astral-property
   name: Astral Property
   system: singularity
   kind: upgrade
@@ -3506,7 +3506,7 @@ nodes:
   confidence: provisional
   effects:
   - text: Unlocks Houses Tab
-- id: singularity-self-synergism
+- id: singularity-milestone-self-synergism
   name: Self Synergism
   system: singularity
   kind: upgrade
@@ -3514,7 +3514,7 @@ nodes:
   confidence: provisional
   effects:
   - text: Singularity Mult acts as a factor for the next Singularity Mult
-- id: singularity-first-thousand
+- id: singularity-milestone-first-thousand
   name: First Thousand
   system: singularity
   kind: upgrade
@@ -3522,7 +3522,7 @@ nodes:
   confidence: provisional
   effects:
   - text: 'Sacrifice Dust Gain: ^1.1'
-- id: singularity-quantum-dust
+- id: singularity-milestone-quantum-dust
   name: Quantum Dust
   system: singularity
   kind: upgrade
@@ -3530,7 +3530,7 @@ nodes:
   confidence: provisional
   effects:
   - text: 'Black Gem Efficiency: ^1.1'
-- id: singularity-atomic-flow
+- id: singularity-milestone-atomic-flow
   name: Atomic Flow
   system: singularity
   kind: upgrade
@@ -3538,7 +3538,7 @@ nodes:
   confidence: provisional
   effects:
   - text: Element Factors 1 and 2 powers x3
-- id: singularity-nuclear-bloom
+- id: singularity-milestone-nuclear-bloom
   name: Nuclear Bloom
   system: singularity
   kind: upgrade
@@ -3546,7 +3546,7 @@ nodes:
   confidence: provisional
   effects:
   - text: Divides last element nodes upgrades cost by 1e300
-- id: singularity-matter-collapse
+- id: singularity-milestone-matter-collapse
   name: Matter Collapse
   system: singularity
   kind: upgrade
@@ -3554,7 +3554,7 @@ nodes:
   confidence: provisional
   effects:
   - text: Unlocks Auto-Highest Plague Stage
-- id: singularity-quantum-pressure
+- id: singularity-milestone-quantum-pressure
   name: Quantum Pressure
   system: singularity
   kind: upgrade
@@ -3562,7 +3562,7 @@ nodes:
   confidence: provisional
   effects:
   - text: 'SMP Exp Requirements: ^0.75'
-- id: singularity-atom-overflow
+- id: singularity-milestone-atom-overflow
   name: Atom Overflow
   system: singularity
   kind: upgrade
@@ -3570,7 +3570,7 @@ nodes:
   confidence: provisional
   effects:
   - text: Atoms are now unlocked as a Singularity Mult Factor
-- id: singularity-horoscope-of-the-void
+- id: singularity-milestone-horoscope-of-the-void
   name: Horoscope of the Void
   system: singularity
   kind: upgrade
@@ -3578,7 +3578,7 @@ nodes:
   confidence: provisional
   effects:
   - text: You can now obtain Singular Zodiacs if you have already unlocked houses
-- id: singularity-universe-under-pressure
+- id: singularity-milestone-universe-under-pressure
   name: Universe Under Pressure
   system: singularity
   kind: upgrade
@@ -3586,7 +3586,7 @@ nodes:
   confidence: provisional
   effects:
   - text: Atoms past e1000 boost luck for a little (new effect)
-- id: singularity-special-sacrificer
+- id: singularity-milestone-special-sacrificer
   name: Special Sacrificer
   system: singularity
   kind: upgrade
@@ -3594,7 +3594,7 @@ nodes:
   confidence: provisional
   effects:
   - text: SMP Gain ^1.1
-- id: singularity-elementary-master
+- id: singularity-milestone-elementary-master
   name: Elementary Master
   system: singularity
   kind: upgrade
@@ -3602,7 +3602,7 @@ nodes:
   confidence: provisional
   effects:
   - text: Factor 2 power for water is multiplied by x10
-- id: singularity-full-deck
+- id: singularity-milestone-full-deck
   name: Full Deck
   system: singularity
   kind: upgrade
@@ -3610,7 +3610,7 @@ nodes:
   confidence: provisional
   effects:
   - text: Black Gem Effect ^1.05
-- id: singularity-dust-magician
+- id: singularity-milestone-dust-magician
   name: Dust Magician
   system: singularity
   kind: upgrade
@@ -3618,7 +3618,7 @@ nodes:
   confidence: provisional
   effects:
   - text: Sacrifice Dust Gain ^1.05
-- id: singularity-artifact-theory
+- id: singularity-milestone-artifact-theory
   name: Artifact Theory
   system: singularity
   kind: upgrade
@@ -3626,7 +3626,7 @@ nodes:
   confidence: provisional
   effects:
   - text: Golden Resource Gain ^1.02
-- id: singularity-virusologist
+- id: singularity-milestone-virusologist
   name: Virusologist
   system: singularity
   kind: upgrade
@@ -3634,7 +3634,7 @@ nodes:
   confidence: provisional
   effects:
   - text: ViP per VE mult x1000
-- id: singularity-viral-ascension
+- id: singularity-milestone-viral-ascension
   name: Viral Ascension
   system: singularity
   kind: upgrade
@@ -3642,7 +3642,7 @@ nodes:
   confidence: provisional
   effects:
   - text: Atom Gain ^1.02
-- id: singularity-infinite-infection
+- id: singularity-milestone-infinite-infection
   name: Infinite Infection
   system: singularity
   kind: upgrade
@@ -3650,7 +3650,7 @@ nodes:
   confidence: provisional
   effects:
   - text: Keep all progression milestones on Singularity
-- id: singularity-tree-tree-node-1
+- id: singularity-tree-1
   name: Tree Node 1
   system: singularity
   kind: tree-node
@@ -3659,7 +3659,7 @@ nodes:
   effects:
   - text: Tree Factor (Adds/increases a Singularity mult gain modifier)
     per_level: '.01'
-- id: singularity-tree-tree-node-2
+- id: singularity-tree-2
   name: Tree Node 2
   system: singularity
   kind: tree-node
@@ -3668,7 +3668,7 @@ nodes:
   effects:
   - text: Increases Gold gain
     per_level: '.001'
-- id: singularity-tree-tree-node-3-1
+- id: singularity-tree-3-1
   name: Tree Node 3.1
   system: singularity
   kind: tree-node
@@ -3677,7 +3677,7 @@ nodes:
   effects:
   - text: Weaken e308 penalty
     per_level: '.01'
-- id: singularity-tree-tree-node-3-2
+- id: singularity-tree-3-2
   name: Tree Node 3.2
   system: singularity
   kind: tree-node
@@ -3686,7 +3686,7 @@ nodes:
   effects:
   - text: Weaken e500 penalty
     per_level: '.01'
-- id: singularity-tree-tree-node-4-1
+- id: singularity-tree-4-1
   name: Tree Node 4.1
   system: singularity
   kind: tree-node
@@ -3695,7 +3695,7 @@ nodes:
   effects:
   - text: Increase Refine Points gain
     per_level: '.001'
-- id: singularity-tree-tree-node-4-2
+- id: singularity-tree-4-2
   name: Tree Node 4.2
   system: singularity
   kind: tree-node
@@ -3704,7 +3704,7 @@ nodes:
   effects:
   - text: Increase Golden Resource gain
     per_level: '.25'
-- id: singularity-tree-tree-node-5-1
+- id: singularity-tree-5-1
   name: Tree Node 5.1
   system: singularity
   kind: tree-node
@@ -3713,7 +3713,7 @@ nodes:
   effects:
   - text: Increase Plague Stats Rewards
     per_level: '.01'
-- id: singularity-tree-tree-node-5-2
+- id: singularity-tree-5-2
   name: Tree Node 5.2
   system: singularity
   kind: tree-node
@@ -3722,7 +3722,7 @@ nodes:
   effects:
   - text: Increase Plague Generators Reward
     per_level: '.03'
-- id: singularity-tree-tree-node-6-1
+- id: singularity-tree-6-1
   name: Tree Node 6.1
   system: singularity
   kind: tree-node
@@ -3731,7 +3731,7 @@ nodes:
   effects:
   - text: Weaken next Singularity nerf
     per_level: '.05'
-- id: singularity-tree-tree-node-6-2
+- id: singularity-tree-6-2
   name: Tree Node 6.2
   system: singularity
   kind: tree-node
@@ -3740,7 +3740,7 @@ nodes:
   effects:
   - text: Weaken e1,000 Atom Penalty
     per_level: '.02'
-- id: singularity-tree-tree-node-7-1
+- id: singularity-tree-7-1
   name: Tree Node 7.1
   system: singularity
   kind: tree-node
@@ -3749,7 +3749,7 @@ nodes:
   effects:
   - text: Increase First Singularity Zodiac Level Mult
     per_level: '.006'
-- id: singularity-tree-tree-node-7-2
+- id: singularity-tree-7-2
   name: Tree Node 7.2
   system: singularity
   kind: tree-node
@@ -3758,7 +3758,7 @@ nodes:
   effects:
   - text: Second Singularity Zodiac Level Mult
     per_level: '.006'
-- id: singularity-tree-tree-node-8
+- id: singularity-tree-8
   name: Tree Node 8
   system: singularity
   kind: tree-node
@@ -3993,7 +3993,7 @@ nodes:
   - text: Top DT upgrades are 10% stronger
     per_level: +10%
     op: add
-- id: dilation-upgrade-dilation-upgrade-1
+- id: dilation-upgrade-1
   name: Dilation Upgrade 1
   system: eternity
   kind: upgrade
@@ -4003,7 +4003,7 @@ nodes:
   - text: Dilation penalties are weaker
     per_level: '+0.03'
     op: add
-- id: dilation-upgrade-dilation-upgrade-2
+- id: dilation-upgrade-2
   name: Dilation Upgrade 2
   system: eternity
   kind: upgrade
@@ -4013,7 +4013,7 @@ nodes:
   - text: DP Income mult
     per_level: x1.07
     op: mult
-- id: dilation-upgrade-dilation-upgrade-3
+- id: dilation-upgrade-3
   name: Dilation Upgrade 3
   system: eternity
   kind: upgrade
@@ -4023,7 +4023,7 @@ nodes:
   - text: + free levels to all RP upgrades
     per_level: '+3.00'
     op: add
-- id: dilation-upgrade-dilation-upgrade-4
+- id: dilation-upgrade-4
   name: Dilation Upgrade 4
   system: eternity
   kind: upgrade
@@ -4033,7 +4033,7 @@ nodes:
   - text: Common Exponent mult
     per_level: x1.001
     op: mult
-- id: dilation-upgrade-dilation-upgrade-5
+- id: dilation-upgrade-5
   name: Dilation Upgrade 5
   system: eternity
   kind: upgrade
@@ -4043,7 +4043,7 @@ nodes:
   - text: Supernova bonuses power
     per_level: +^0.02
     op: exp
-- id: dilation-upgrade-dilation-upgrade-6
+- id: dilation-upgrade-6
   name: Dilation Upgrade 6
   system: eternity
   kind: upgrade
@@ -4053,7 +4053,7 @@ nodes:
   - text: Generator Exponent mult
     per_level: '+0.01'
     op: add
-- id: dilation-upgrade-dilation-upgrade-7
+- id: dilation-upgrade-7
   name: Dilation Upgrade 7
   system: eternity
   kind: upgrade
@@ -4063,7 +4063,7 @@ nodes:
   - text: EP gain mult
     per_level: x10.00
     op: mult
-- id: dilation-upgrade-dilation-upgrade-8
+- id: dilation-upgrade-8
   name: Dilation Upgrade 8
   system: eternity
   kind: upgrade
@@ -4073,7 +4073,7 @@ nodes:
   - text: Asc. Power Mult
     per_level: '+1.00'
     op: add
-- id: dilation-upgrade-dilation-upgrade-9
+- id: dilation-upgrade-9
   name: Dilation Upgrade 9
   system: eternity
   kind: upgrade
@@ -6300,102 +6300,102 @@ edges:
   rel: boosts
   source: wiki:Plague
   confidence: uncertain
-- from: singularity-first-collapse
+- from: singularity-milestone-first-collapse
   to: sms-factor
   rel: boosts
   source: wiki:Singularity
   confidence: uncertain
-- from: singularity-event-horizon
+- from: singularity-milestone-event-horizon
   to: plague
   rel: boosts
   source: wiki:Singularity
   confidence: uncertain
-- from: singularity-event-horizon
+- from: singularity-milestone-event-horizon
   to: singularity
   rel: boosts
   source: wiki:Singularity
   confidence: uncertain
-- from: singularity-beyond-time
+- from: singularity-milestone-beyond-time
   to: singularity
   rel: boosts
   source: wiki:Singularity
   confidence: uncertain
-- from: singularity-event-horizon-tax
+- from: singularity-milestone-event-horizon-tax
   to: singularity
   rel: boosts
   source: wiki:Singularity
   confidence: uncertain
-- from: singularity-the-unforgotten
+- from: singularity-milestone-the-unforgotten
   to: singularity
   rel: boosts
   source: wiki:Singularity
   confidence: uncertain
-- from: singularity-loop-feeds-loop
+- from: singularity-milestone-loop-feeds-loop
   to: singularity
   rel: boosts
   source: wiki:Singularity
   confidence: uncertain
-- from: singularity-self-synergism
+- from: singularity-milestone-self-synergism
   to: singularity
   rel: boosts
   source: wiki:Singularity
   confidence: uncertain
-- from: singularity-matter-collapse
+- from: singularity-milestone-matter-collapse
   to: plague
   rel: boosts
   source: wiki:Singularity
   confidence: uncertain
-- from: singularity-atom-overflow
+- from: singularity-milestone-atom-overflow
   to: singularity
   rel: boosts
   source: wiki:Singularity
   confidence: uncertain
-- from: singularity-universe-under-pressure
+- from: singularity-milestone-universe-under-pressure
   to: luck
   rel: boosts
   source: wiki:Singularity
   confidence: uncertain
-- from: singularity-infinite-infection
+- from: singularity-milestone-infinite-infection
   to: singularity
   rel: boosts
   source: wiki:Singularity
   confidence: uncertain
-- from: singularity-tree-tree-node-1
+- from: singularity-tree-1
   to: singularity
   rel: boosts
   source: wiki:Singularity
   confidence: uncertain
-- from: singularity-tree-tree-node-2
+- from: singularity-tree-2
   to: gold
   rel: boosts
   source: wiki:Singularity
   confidence: uncertain
-- from: singularity-tree-tree-node-5-1
+- from: singularity-tree-5-1
   to: plague
   rel: boosts
   source: wiki:Singularity
   confidence: uncertain
-- from: singularity-tree-tree-node-5-2
+- from: singularity-tree-5-2
   to: plague
   rel: boosts
   source: wiki:Singularity
   confidence: uncertain
-- from: singularity-tree-tree-node-6-1
+- from: singularity-tree-6-1
   to: singularity
   rel: boosts
   source: wiki:Singularity
   confidence: uncertain
-- from: singularity-tree-tree-node-7-1
+- from: singularity-tree-7-1
   to: singularity
   rel: boosts
   source: wiki:Singularity
   confidence: uncertain
-- from: singularity-tree-tree-node-7-2
+- from: singularity-tree-7-2
   to: singularity
   rel: boosts
   source: wiki:Singularity
   confidence: uncertain
-- from: singularity-tree-tree-node-8
+- from: singularity-tree-8
   to: singularity
   rel: boosts
   source: wiki:Singularity
@@ -6445,17 +6445,17 @@ edges:
   rel: boosts
   source: wiki:Dilation_Tree
   confidence: uncertain
-- from: dilation-upgrade-dilation-upgrade-2
+- from: dilation-upgrade-2
   to: dilation-points
   rel: boosts
   source: wiki:Eternity
   confidence: uncertain
-- from: dilation-upgrade-dilation-upgrade-3
+- from: dilation-upgrade-3
   to: research-points
   rel: boosts
   source: wiki:Eternity
   confidence: uncertain
-- from: dilation-upgrade-dilation-upgrade-7
+- from: dilation-upgrade-7
   to: eternity-points
   rel: boosts
   source: wiki:Eternity

@@ -215,12 +215,16 @@ def test_the_record_template_reader_is_dispatched_too(tmp_path: Path):
     assert [n.id for n in result.nodes] == ["special-mineral-cyan-gem"]
 
 
-def test_name_prefix_reaches_the_name_and_the_id(tmp_path: Path):
+def test_name_prefix_reaches_the_name_but_not_the_id(tmp_path: Path):
     # Singularity's tree table names its rows "1", "2", "3.1". Without the
-    # prefix the node is called "1" and its id says nothing about what it is.
+    # prefix the node is called "1" and nothing says what it is.
+    #
+    # The id is minted from the raw name, so it stays `special-mineral-red-gem`.
+    # Folding the prefix in too would stutter the noun `id_prefix` already
+    # carries: `special-mineral-gem-red-gem`.
     result = extract(_raw(tmp_path), _manifest(name_prefix="Gem"), VOCABULARY)
     assert (result.nodes[0].id, result.nodes[0].name) == (
-        "special-mineral-gem-red-gem",
+        "special-mineral-red-gem",
         "Gem Red Gem",
     )
 

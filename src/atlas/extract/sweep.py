@@ -324,10 +324,14 @@ def _read(raw: str, entry: SweepEntry) -> list[SweptRecord]:
 def _build(
     record: SweptRecord, entry: SweepEntry, vocabulary: Vocabulary
 ) -> ExtractResult:
+    # The id is minted from the row's own name, before `name_prefix` is applied.
+    # `name_prefix` exists because the name column holds a bare number, and
+    # `id_prefix` already supplies the noun — folding both in would stutter, as
+    # in `dilation-upgrade-dilation-upgrade-1`.
+    node_id = f"{entry.id_prefix}-{slugify(record.name)}"
     name = record.name
     if entry.name_prefix is not None:
         name = f"{entry.name_prefix} {name}"
-    node_id = f"{entry.id_prefix}-{slugify(name)}"
     per_level = record.per_level
     effects = [
         Effect(

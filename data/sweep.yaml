@@ -90,7 +90,7 @@ pages:
     page: Plague
     system: plague
     kind: upgrade
-    id_prefix: plague
+    id_prefix: plague-er
     name_columns: [Name]
     effect_columns: [Effect]
 
@@ -108,7 +108,7 @@ pages:
     page: Singularity
     system: singularity
     kind: upgrade
-    id_prefix: singularity
+    id_prefix: singularity-milestone
     name_columns: [Name]
     effect_columns: [Reward]
 
