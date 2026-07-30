@@ -71,36 +71,42 @@ def plain_text(raw: str) -> str:
     return normalise_space(text)
 
 
-def split_fields(body: str) -> list[str]:
-    """Split a template body on its own field separators.
+def split_outside(text: str, separator: str) -> list[str]:
+    """Split on `separator`, but not inside a template or a link.
 
-    A naive `body.split("|")` cuts {{Keyword|ach|Ach 232}} into three pieces
-    and destroys the effect text around it, so pipes inside a nested template
-    or link have to be held together.
+    A naive `split("|")` cuts {{Keyword|ach|Ach 232}} into three pieces and
+    destroys the effect text around it; a naive `split("!!")` breaks the same way
+    on a table header cell containing one. Every caller wants the same rule, so
+    they share one implementation rather than each carrying its own depth
+    counter to drift.
     """
     parts: list[str] = []
-    current: list[str] = []
     depth = 0
+    start = 0
     index = 0
-    while index < len(body):
-        pair = body[index : index + 2]
+    while index < len(text):
+        pair = text[index : index + 2]
         if pair in ("{{", "[["):
             depth += 1
-            current.append(pair)
             index += 2
-        elif pair in ("}}", "]]"):
-            depth = max(depth - 1, 0)
-            current.append(pair)
+            continue
+        if pair in ("}}", "]]"):
+            depth = max(0, depth - 1)
             index += 2
-        elif body[index] == "|" and depth == 0:
-            parts.append("".join(current))
-            current = []
-            index += 1
-        else:
-            current.append(body[index])
-            index += 1
-    parts.append("".join(current))
+            continue
+        if depth == 0 and text.startswith(separator, index):
+            parts.append(text[start:index])
+            index += len(separator)
+            start = index
+            continue
+        index += 1
+    parts.append(text[start:])
     return parts
+
+
+def split_fields(body: str) -> list[str]:
+    """Split a template body on its own field separators."""
+    return split_outside(body, "|")
 
 
 def template_fields(body: str) -> dict[str, str]:

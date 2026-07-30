@@ -10,6 +10,7 @@ from atlas.extract.refs import (
     resolve,
     slugify,
     split_fields,
+    split_outside,
     template_fields,
 )
 from atlas.models import Op
@@ -55,6 +56,21 @@ def test_split_fields_ignores_pipes_inside_templates_and_links():
         "B\n",
         " effect2 = {{Keyword|ach|Ach 232|link=Achievements}} reward\n",
     ]
+
+
+def test_split_outside_holds_a_multi_character_separator_inside_markup():
+    # The reason `split_fields` and the wikitable reader's header split share one
+    # implementation. `!!` separates header cells, and a `{{Keyword|...}}` in one
+    # of them must not be cut open — nor may the two callers disagree about that.
+    row = 'class="x" | Zodiac !! Icon !! {{Keyword|el|Element !! Season}} !! Bonus 1'
+    assert split_outside(row, "!!") == [
+        'class="x" | Zodiac ',
+        " Icon ",
+        " {{Keyword|el|Element !! Season}} ",
+        " Bonus 1",
+    ]
+    # And the pipe split is that same function, not a second copy of it.
+    assert split_fields("a|{{T|b|c}}|d") == split_outside("a|{{T|b|c}}|d", "|")
 
 
 def test_template_fields_keeps_equals_signs_inside_values():

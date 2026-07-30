@@ -10,6 +10,7 @@ from atlas.extract.refs import (
     plain_text,
     resolve,
     slugify,
+    split_outside,
     template_fields,
 )
 from atlas.extract.result import ExtractResult
@@ -55,37 +56,6 @@ def effect_texts(raws: list[str]) -> list[str]:
     """
     texts = [plain_text(raw) for raw in raws]
     return [text for text in texts if any(char.isalpha() for char in text)]
-
-
-def _split_outside(text: str, separator: str) -> list[str]:
-    """Split on `separator`, but not inside a template or a link.
-
-    A naive `split("||")` is safe today, but a naive `split("!!")` is not once a
-    cell contains `{{Keyword|...}}`, and the two call sites should not differ in
-    how much they can be trusted.
-    """
-    parts: list[str] = []
-    depth = 0
-    start = 0
-    index = 0
-    while index < len(text):
-        pair = text[index : index + 2]
-        if pair in ("{{", "[["):
-            depth += 1
-            index += 2
-            continue
-        if pair in ("}}", "]]"):
-            depth = max(0, depth - 1)
-            index += 2
-            continue
-        if depth == 0 and text.startswith(separator, index):
-            parts.append(text[start:index])
-            index += len(separator)
-            start = index
-            continue
-        index += 1
-    parts.append(text[start:])
-    return parts
 
 
 def _cell(raw: str) -> _Cell:
@@ -134,10 +104,10 @@ def _groups(body: str) -> list[tuple[bool, list[str]]]:
             continue
         if stripped.startswith("!"):
             is_header = True
-            current.extend(_split_outside(stripped[1:], "!!"))
+            current.extend(split_outside(stripped[1:], "!!"))
             continue
         if stripped.startswith("|"):
-            current.extend(_split_outside(stripped[1:], "||"))
+            current.extend(split_outside(stripped[1:], "||"))
             continue
         if current:
             # A long cell wrapped onto the next source line with no leading
@@ -259,6 +229,11 @@ def _instances(raw: str, template: str) -> list[str]:
 
     Case-insensitive on the template name, matching `_unwrap_template`: the wiki
     writes both `{{Keyword|...}}` and `{{keyword|...}}` for the same template.
+
+    Only braces are counted. A link cannot close a template, so counting `[[` and
+    `]]` here adds nothing and costs precision: an unbalanced `]]` in an effect —
+    a link a volunteer half-deleted — drove the counter to zero early and cut the
+    record's body off mid-instance, losing every field after it.
     """
     needle = ("{{" + template).lower()
     lowered = raw.lower()
@@ -279,10 +254,10 @@ def _instances(raw: str, template: str) -> list[str]:
         depth = 1
         while cursor < len(raw) and depth:
             pair = raw[cursor : cursor + 2]
-            if pair in ("{{", "[["):
+            if pair == "{{":
                 depth += 1
                 cursor += 2
-            elif pair in ("}}", "]]"):
+            elif pair == "}}":
                 depth -= 1
                 cursor += 2
             else:

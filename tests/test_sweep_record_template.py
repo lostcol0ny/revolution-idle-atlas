@@ -87,6 +87,26 @@ def test_a_nested_template_does_not_end_the_instance():
     assert [r.name for r in records] == ["Red Gem", "Blue Gem", "Pink Gem"]
 
 
+def test_a_stray_closing_link_does_not_truncate_the_instance():
+    # A half-deleted link leaves an unmatched "]]" behind. Counted as a closing
+    # bracket alongside the braces, it drove the depth counter to zero and ended
+    # the instance in the middle of the description, so the effect field below it
+    # was never read and the record was dropped for having no effect.
+    #
+    # The two later records are asserted as well: a scanner that ends early here
+    # resumes at the wrong offset and misreads the rest of the page too.
+    page = MINERALS.replace(
+        "| description = A cool shining red gem. It will boost your VP gains!",
+        "| description = A cool shining red gem]] It will boost your VP gains!",
+    )
+    records = read_record_template(page, _entry())
+    assert [(r.name, r.effects) for r in records] == [
+        ("Red Gem", ["3.00x VP Gain"]),
+        ("Blue Gem", ["Cost Increase is powered to ^0.99"]),
+        ("Pink Gem", ["Luck and Quality Bonus +0.05"]),
+    ]
+
+
 def test_an_inline_instance_is_read_too():
     # tarot.py can rely on its templates closing on their own line; this reader
     # cannot, because a template written inline would otherwise sweep zero
