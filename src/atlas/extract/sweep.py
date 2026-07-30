@@ -1,8 +1,8 @@
 import re
 from dataclasses import dataclass
 
-from atlas.extract.manifest import WikitableEntry
-from atlas.extract.refs import normalise_space, plain_text
+from atlas.extract.manifest import RecordTemplateEntry, WikitableEntry
+from atlas.extract.refs import normalise_space, plain_text, template_fields
 
 _TABLE_RE = re.compile(r"\{\|(.*?)\n\|\}", re.DOTALL)
 _ROWSPAN_RE = re.compile(r'rowspan\s*=\s*"?(\d+)"?', re.IGNORECASE)
@@ -235,4 +235,69 @@ def read_wikitable(raw: str, entry: WikitableEntry) -> list[SweptRecord]:
             if entry.per_level_column in column_of:
                 per_level = plain_text(row[column_of[entry.per_level_column]]) or None
             records.append(SweptRecord(name=name, effects=effects, per_level=per_level))
+    return records
+
+
+def _instances(raw: str, template: str) -> list[str]:
+    """Return the body of every `{{template|...}}` on the page.
+
+    Braces are counted rather than matched with a regex so that an instance
+    written inline is found as readily as one closing on its own line, and so a
+    nested {{Keyword|...}} inside an effect cannot end the instance early.
+
+    Case-insensitive on the template name, matching `_unwrap_template`: the wiki
+    writes both `{{Keyword|...}}` and `{{keyword|...}}` for the same template.
+    """
+    needle = ("{{" + template).lower()
+    lowered = raw.lower()
+    bodies: list[str] = []
+    index = 0
+    while True:
+        start = lowered.find(needle, index)
+        if start == -1:
+            return bodies
+        after = start + len(needle)
+        # The name has to end here. Without this, a search for
+        # "Minerals/Special_Minerals" also matches
+        # "{{Minerals/Special_MineralsV2" and reads its fields as this one's.
+        if raw[after:].lstrip()[:1] not in ("|", "}"):
+            index = after
+            continue
+        cursor = start + 2
+        depth = 1
+        while cursor < len(raw) and depth:
+            pair = raw[cursor : cursor + 2]
+            if pair in ("{{", "[["):
+                depth += 1
+                cursor += 2
+            elif pair in ("}}", "]]"):
+                depth -= 1
+                cursor += 2
+            else:
+                cursor += 1
+        if depth:
+            # Unterminated. Everything after this point is unreadable, and
+            # guessing where the instance ended would invent a record.
+            return bodies
+        bodies.append(raw[after : cursor - 2])
+        index = cursor
+
+
+def read_record_template(
+    raw: str, entry: RecordTemplateEntry
+) -> list[SweptRecord]:
+    """Read every instance of one record template on the page."""
+    records: list[SweptRecord] = []
+    for body in _instances(raw, entry.template):
+        fields = template_fields(body)
+        name = plain_text(fields.get(entry.name_field.lower(), ""))
+        effects = effect_texts(
+            [fields[f.lower()] for f in entry.effect_fields if f.lower() in fields]
+        )
+        if not name or not effects:
+            continue
+        per_level = None
+        if entry.per_level_field is not None:
+            per_level = plain_text(fields.get(entry.per_level_field.lower(), "")) or None
+        records.append(SweptRecord(name=name, effects=effects, per_level=per_level))
     return records
