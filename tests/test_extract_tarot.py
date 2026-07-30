@@ -82,8 +82,8 @@ def test_the_real_page_yields_seventy_eight_cards():
     assert sum(1 for n in result.nodes if len(n.effects) == 2) == 56
     assert sum(1 for n in result.nodes if len(n.effects) == 1) == 22
     # Pins one Major Arcana id from the real page. relic-55's effect text names
-    # "The Devil" and will resolve against this id at Task 9, so the spelling is
-    # a cross-task contract and not merely an internal detail.
+    # "The Devil" and will resolve against this id once relic effects are wired,
+    # so the spelling is a cross-parser contract and not merely an internal detail.
     assert "tarot-the-devil" in {n.id for n in result.nodes}
 
 
@@ -105,7 +105,7 @@ def test_cross_system_edges_point_outward_from_the_card():
     # The direction guard. Written as a check on the `from_` *side* rather than
     # as `not any(e.to == ...)`: a single-field negative goes silently
     # unfalsifiable the moment the value starts surfacing on the other endpoint,
-    # which is how Task 6 shipped 158 reversed edges under a passing test.
+    # which is how 158 reversed edges can ship under a passing test.
     assert not any(e.from_.startswith(("relic-", "refine-node-")) for e in edges)
 
 
@@ -133,7 +133,7 @@ def _card(name: str, effect: str) -> str:
 
 
 def test_the_chariot_resolves_to_the_sms_factor_stat():
-    # The spec's worked example, and the shape of the whole feature: the wiki
+    # The owner's worked example, and the shape of the whole feature: the wiki
     # writes "SMS factor" in lower case, the curated node is named "SMS Factor",
     # and full names match case-insensitively.
     raw = _card("The Chariot", "Decreases your SMS factor by # (''base 1,000'')")

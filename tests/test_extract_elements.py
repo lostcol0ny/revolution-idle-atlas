@@ -271,12 +271,49 @@ def test_a_vocabulary_hit_in_an_element_upgrade_becomes_an_uncertain_edge():
     assert all(e.confidence is EdgeConfidence.UNCERTAIN for e in edges)
 
 
+_UNLOCK_VOCAB_PAGE = """
+=== Element Factors ===
+{| class="wikitable"
+! colspan=2|
+! Description
+! Unlock Condition
+|-
+! rowspan="2" style="background-color:rgba(111, 54, 26, 0.5)"| Fire
+! Factor 1
+| Score
+| None
+|-
+! Factor 2
+| Score Exponent
+| Luck
+|-
+|}
+
+=== Element Upgrades ===
+
+==== Fire ====
+{| class="wikitable"
+|+
+!Node
+!Price
+!effect
+|-
+|4
+|10
+|Fire boosts Relic 26
+|}
+"""
+
+
 def test_the_unlock_column_is_not_matched_against_the_vocabulary():
     # The load-bearing negative test. The unlock site emits reversed
     # `rel: unlocks` edges with `confidence: documented`, so a stat matching
-    # there would assert "Quality unlocks Fire Factor 2" and assert it as
-    # established fact. Passing the vocabulary to that resolve() call is the
-    # mutation this test exists to catch.
-    result = parse(_fixture(), Vocabulary([("Quality", "quality")]))
-    assert all(e.rel is not Rel.UNLOCKS for e in result.edges if e.to == "quality")
-    assert all(e.from_ != "quality" for e in result.edges)
+    # in that cell would assert "Luck unlocks Fire Factor 2" as established
+    # fact. Passing the vocabulary to that resolve() call is the mutation this
+    # test exists to catch.
+    #
+    # The fixture has "Luck" in an Unlock Condition cell. "Luck" is not matched
+    # by any entity regex, so a `luck` edge here could only come from the
+    # vocabulary reaching the unlock resolve() call.
+    result = parse(_UNLOCK_VOCAB_PAGE, Vocabulary([("Luck", "luck")]))
+    assert all(e.from_ != "luck" for e in result.edges)

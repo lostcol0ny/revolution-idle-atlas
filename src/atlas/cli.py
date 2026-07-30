@@ -152,6 +152,9 @@ def _extract(root: Path) -> int:
             build_vocabulary(curated.nodes),
             frozenset(curated.node_ids()),
         )
+    except ValueError as exc:
+        print(f"{DATASET_REL_PATH}  error  {exc}", file=sys.stderr)
+        return 1
     except ExtractError as exc:
         print(f"extract failed: {exc}", file=sys.stderr)
         return 1

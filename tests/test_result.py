@@ -103,3 +103,28 @@ def test_prune_dangling_keeps_every_edge_when_all_endpoints_are_known():
 
     assert len(pruned.edges) == 2
     assert pruned.dropped == []
+
+
+def test_prune_dangling_with_external_ids_keeps_curated_targets_but_still_drops_typos():
+    # An edge pointing at a curated-only id (never minted by a parser) must
+    # survive because external_ids widens the known set. An edge pointing at an
+    # id in neither the parsed nodes nor external_ids must still be dropped with
+    # its DroppedEdge reason intact, proving that widening does not mask real
+    # typos introduced by parsers.
+    result = ExtractResult(
+        nodes=[node("relic-1")],
+        edges=[
+            edge("relic-1", "luck"),      # curated node — must survive
+            edge("relic-1", "relic-99"),  # genuine typo — must drop
+        ],
+    )
+
+    pruned = prune_dangling(result, external_ids=frozenset({"luck"}))
+
+    surviving = [(e.from_, e.to) for e in pruned.edges]
+    assert ("relic-1", "luck") in surviving
+    assert ("relic-1", "relic-99") not in surviving
+
+    assert len(pruned.dropped) == 1
+    assert pruned.dropped[0].to_id == "relic-99"
+    assert "relic-99" in pruned.dropped[0].reason

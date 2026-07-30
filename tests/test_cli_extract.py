@@ -378,8 +378,8 @@ def test_extract_reads_the_curated_file_to_build_its_vocabulary(tmp_path):
 
 
 def test_extract_still_succeeds_when_there_is_no_curated_file(tmp_path):
-    # `atlas extract` did not read relationships.yaml before this task, and
-    # making it a hard requirement would break a bare tree for no gain.
+    # `atlas extract` treats a missing relationships.yaml as an empty vocabulary
+    # rather than an error; making it a hard requirement would break a bare tree.
     root = _tree(tmp_path, None)
     assert not (root / "data" / "relationships.yaml").exists()
     assert main(["extract", "--root", str(root)]) == 0
@@ -397,6 +397,26 @@ def test_extract_fails_loudly_on_a_malformed_curated_file(tmp_path, capsys):
     )
     assert main(["extract", "--root", str(root)]) == 1
     assert "relationships.yaml" in capsys.readouterr().err
+
+
+def test_extract_fails_loudly_on_a_surface_form_collision(tmp_path, capsys):
+    # Two curated nodes sharing the same case-folded surface form make the
+    # vocabulary ambiguous: any hit would resolve to whichever node happened to
+    # sort first, producing a wrong edge with no warning. build_vocabulary raises
+    # ValueError on the collision; the CLI must translate that into the standard
+    # error format rather than letting the traceback through.
+    root = _tree(
+        tmp_path,
+        "systems:\n  - id: relics\n    name: Relics\n"
+        "nodes:\n"
+        "  - id: luck-a\n    name: Luck\n    system: relics\n    kind: stat\n"
+        "  - id: luck-b\n    name: luck\n    system: relics\n    kind: stat\n",
+    )
+    assert main(["extract", "--root", str(root)]) == 1
+    err = capsys.readouterr().err
+    assert "relationships.yaml" in err
+    assert "luck-a" in err
+    assert "luck-b" in err
 
 
 def test_build_reports_a_duplicate_node_id_in_the_curated_file(tmp_path, capsys):
