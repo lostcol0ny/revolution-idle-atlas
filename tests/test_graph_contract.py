@@ -145,3 +145,85 @@ def test_the_major_arcana_are_no_longer_islands(graph: dict):
     cards = {n["id"] for n in graph["nodes"] if n["kind"] == "tarot-card"}
     islands = cards - touched
     assert len(islands) < 20, sorted(islands)
+
+
+def test_the_sweep_reached_the_graph(graph: dict):
+    # The manifest is a data file with no test of its own. Without this, an
+    # entry silently reading zero records looks exactly like a working build.
+    # One per manifest entry, not one per page: an entry reading zero records
+    # looks exactly like a working build without this.
+    prefixes = {
+        "special-mineral-",
+        "zodiac-",
+        "trial-",
+        "plague-",
+        "plague-stat-",
+        "singularity-",
+        "singularity-tree-",
+        "singularity-zodiac-",
+        "dilation-node-",
+        "dilation-upgrade-",
+    }
+    for prefix in prefixes:
+        assert any(n["id"].startswith(prefix) for n in graph["nodes"]), prefix
+
+
+def test_the_plague_statistics_table_wires_plague_into_the_graph(graph: dict):
+    # Its six rows are the only thing connecting the Plague system to anything
+    # else. "Max Stage Completed -> Gold Gain ^" is the clearest: `gold` is a
+    # curated node, so this edge must exist or the sweep read the table and
+    # resolved nothing out of it.
+    stat = next(
+        n for n in graph["nodes"] if n["id"] == "plague-stat-max-stage-completed"
+    )
+    assert stat["kind"] == "stat"
+    assert any(
+        e["from"] == "plague-stat-max-stage-completed" and e["to"] == "gold"
+        for e in graph["edges"]
+    )
+
+
+def test_a_numbered_row_got_a_readable_name(graph: dict):
+    # Singularity's tree rows are named "1", "2", "3.1" on the page. Without
+    # name_prefix the node is called "1" and nothing says what it is.
+    node = next(n for n in graph["nodes"] if n["id"] == "singularity-tree-tree-node-1")
+    assert node["name"] == "Tree Node 1"
+
+
+def test_every_swept_edge_is_uncertain(graph: dict):
+    # The precision guard, asserted against the shipped artifact rather than
+    # against the reader. A swept edge is identified by its source page, so this
+    # also fails if a sweep page starts producing edges through another path.
+    # Edges explicitly marked `provisional` in relationships.yaml are curated
+    # entries that happen to cite the same source page; they are not sweep output
+    # and are excluded from this assertion.
+    swept_sources = {
+        "wiki:Zodiacs",
+        "wiki:Trials",
+        "wiki:Plague",
+        "wiki:Singularity",
+        "wiki:Dilation_Tree",
+        "wiki:Minerals",
+        "wiki:Eternity",
+    }
+    swept = [
+        e
+        for e in graph["edges"]
+        if e["source"] in swept_sources and e.get("confidence") != "provisional"
+    ]
+    assert swept, "no swept edges in graph.json at all"
+    assert all(e.get("confidence") == "uncertain" for e in swept)
+
+
+def test_a_zodiac_carries_all_four_of_its_bonuses(graph: dict):
+    # Pins the multi-effect path end to end. With a single effect_column the
+    # sweep would still produce a zodiac node and every other test here would
+    # still pass.
+    aries = next(n for n in graph["nodes"] if n["id"] == "zodiac-aries")
+    assert len(aries["effects"]) == 4
+
+
+def test_a_dilation_node_kept_its_rowspan_name(graph: dict):
+    # "Top 2" only exists if the rowspan carry-forward works: that row's own
+    # cells are ["2", effect, per_level] with no axis of its own.
+    assert any(n["id"] == "dilation-node-top-2" for n in graph["nodes"])

@@ -1,0 +1,110 @@
+# Pages swept generically. Adding a page here is a data edit: no page gets
+# bespoke Python. See README.md for the field reference.
+#
+# Everything read through this file is deliberately low-confidence — swept nodes
+# are `provisional` and swept edges are `uncertain` — because a column heading is
+# a guess about what a page means. Correct anything wrong in
+# data/relationships.yaml, which wins every merge.
+pages:
+  - reader: record_template
+    page: Minerals
+    template: Minerals/Special_Minerals
+    system: minerals
+    kind: upgrade
+    id_prefix: special-mineral
+    name_field: mineral_name
+    effect_fields: [mineral_base_boost]
+
+  - reader: wikitable
+    page: Zodiacs
+    system: astrology
+    kind: upgrade
+    id_prefix: zodiac
+    name_columns: [Zodiac]
+    # Four independent bonuses, not one concatenated string. This is the same
+    # reason `effects` is a list on the model.
+    effect_columns: [Bonus 1, Bonus 2, Bonus 3, Bonus 4]
+
+  - reader: wikitable
+    page: Trials
+    system: trials
+    kind: upgrade
+    id_prefix: trial
+    name_columns: [Trial]
+    # `Handicap` is deliberately not swept. It describes a restriction the trial
+    # imposes, not something the trial boosts, and sweeping it would produce
+    # edges pointing the wrong way.
+    effect_columns: [Reward]
+
+  - reader: wikitable
+    page: Plague
+    system: plague
+    kind: upgrade
+    id_prefix: plague
+    name_columns: [Name]
+    effect_columns: [Effect]
+
+  # The Plague Statistics table. Six stats, each boosting a named resource, and
+  # the only thing wiring the Plague system into the rest of the graph.
+  - reader: wikitable
+    page: Plague
+    system: plague
+    kind: stat
+    id_prefix: plague-stat
+    name_columns: [Statistic]
+    effect_columns: [Boost]
+
+  - reader: wikitable
+    page: Singularity
+    system: singularity
+    kind: upgrade
+    id_prefix: singularity
+    name_columns: [Name]
+    effect_columns: [Reward]
+
+  # Rows are numbered "1", "2", "3.1", so name_prefix supplies the noun.
+  - reader: wikitable
+    page: Singularity
+    system: singularity
+    kind: tree-node
+    id_prefix: singularity-tree
+    name_prefix: Tree Node
+    name_columns: ['Tree Node #']
+    effect_columns: [Effect]
+    per_level_column: Initial Increase/lvl
+
+  # `Second Effect` is blank in all twelve rows today. It is read anyway: the
+  # owner's note that these gain a second and third effect at higher tiers is
+  # why `effects` is a list, and reading the column now means no code change
+  # when the wiki documents them.
+  - reader: wikitable
+    page: Singularity
+    system: singularity
+    kind: upgrade
+    id_prefix: singularity-zodiac
+    # `House` (I, II, III) is deliberately not part of the name: it is an
+    # ordinal, and `Zodiac` alone is unique within this table.
+    name_columns: [Zodiac]
+    effect_columns: [First effect, Second Effect]
+
+  - reader: wikitable
+    page: Dilation_Tree
+    system: eternity
+    kind: tree-node
+    id_prefix: dilation-node
+    # Neither column identifies a row alone: every axis has an Index 1.
+    name_columns: [Axis, Index]
+    effect_columns: [Effect]
+    per_level_column: Increase per level
+
+  # Rows are numbered "1".."9", so name_prefix supplies the noun. Distinct from
+  # the Dilation Tree above: these are the nine flat Dilation Upgrades.
+  - reader: wikitable
+    page: Eternity
+    system: eternity
+    kind: upgrade
+    id_prefix: dilation-upgrade
+    name_prefix: Dilation Upgrade
+    name_columns: ['#']
+    effect_columns: [Effect]
+    per_level_column: Effect / level

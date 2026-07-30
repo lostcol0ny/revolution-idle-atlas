@@ -4728,6 +4728,1874 @@
       "wiki": "Elements"
     },
     {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "3.00x VP Gain"
+        }
+      ],
+      "id": "special-mineral-red-gem",
+      "kind": "upgrade",
+      "name": "Red Gem",
+      "system": "minerals",
+      "wiki": "Minerals"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Cost Increase is powered to ^0.99"
+        }
+      ],
+      "id": "special-mineral-blue-gem",
+      "kind": "upgrade",
+      "name": "Blue Gem",
+      "system": "minerals",
+      "wiki": "Minerals"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Cost fall is powered to ^1.01"
+        }
+      ],
+      "id": "special-mineral-green-gem",
+      "kind": "upgrade",
+      "name": "Green Gem",
+      "system": "minerals",
+      "wiki": "Minerals"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Luck and Quality Bonus +0.05"
+        }
+      ],
+      "id": "special-mineral-pink-gem",
+      "kind": "upgrade",
+      "name": "Pink Gem",
+      "system": "minerals",
+      "wiki": "Minerals"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Gold gain is multiplied by 10"
+        }
+      ],
+      "id": "special-mineral-yellow-gem",
+      "kind": "upgrade",
+      "name": "Yellow Gem",
+      "system": "minerals",
+      "wiki": "Minerals"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "1.01x Magnet Chance"
+        }
+      ],
+      "id": "special-mineral-orange-gem",
+      "kind": "upgrade",
+      "name": "Orange Gem",
+      "system": "minerals",
+      "wiki": "Minerals"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "1.50x PP gain"
+        }
+      ],
+      "id": "special-mineral-dark-purple-gem",
+      "kind": "upgrade",
+      "name": "Dark Purple Gem",
+      "system": "minerals",
+      "wiki": "Minerals"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "+x0.05 RfP Gain"
+        }
+      ],
+      "id": "special-mineral-light-blue-gem",
+      "kind": "upgrade",
+      "name": "Light Blue Gem",
+      "system": "minerals",
+      "wiki": "Minerals"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Make the game speed +0.05x faster"
+        }
+      ],
+      "id": "special-mineral-white-gem",
+      "kind": "upgrade",
+      "name": "White Gem",
+      "system": "minerals",
+      "wiki": "Minerals"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Tarot Draws +0.10 (draws are granted when deleted)"
+        }
+      ],
+      "id": "special-mineral-black-gem",
+      "kind": "upgrade",
+      "name": "Black Gem",
+      "system": "minerals",
+      "wiki": "Minerals"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Mult Gain x"
+        },
+        {
+          "text": "Promotions Power x"
+        },
+        {
+          "text": "Ascension Power x"
+        },
+        {
+          "text": "Common Exp. Power x"
+        }
+      ],
+      "id": "zodiac-aries",
+      "kind": "upgrade",
+      "name": "Aries",
+      "system": "astrology",
+      "wiki": "Zodiacs"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "IP Gain ^"
+        },
+        {
+          "text": "Infinity Gain x"
+        },
+        {
+          "text": "Gen. Exponent x"
+        },
+        {
+          "text": "Mult/bought Gen x"
+        }
+      ],
+      "id": "zodiac-taurus",
+      "kind": "upgrade",
+      "name": "Taurus",
+      "system": "astrology",
+      "wiki": "Zodiacs"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Eternity Gain x"
+        },
+        {
+          "text": "EP Gain ^"
+        },
+        {
+          "text": "Supernova Req ^^"
+        },
+        {
+          "text": "Lab. Mult Power x"
+        }
+      ],
+      "id": "zodiac-gemini",
+      "kind": "upgrade",
+      "name": "Gemini",
+      "system": "astrology",
+      "wiki": "Zodiacs"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "DTP Cost ^^"
+        },
+        {
+          "text": "Center DTU Effect x"
+        },
+        {
+          "text": "Ach. 29 Reward x"
+        },
+        {
+          "text": "Game Speed x"
+        }
+      ],
+      "id": "zodiac-cancer",
+      "kind": "upgrade",
+      "name": "Cancer",
+      "system": "astrology",
+      "wiki": "Zodiacs"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Lap Speed x"
+        },
+        {
+          "text": "Promotions Power x"
+        },
+        {
+          "text": "Ascension Power x"
+        },
+        {
+          "text": "Common Exp. Power x"
+        }
+      ],
+      "id": "zodiac-leo",
+      "kind": "upgrade",
+      "name": "Leo",
+      "system": "astrology",
+      "wiki": "Zodiacs"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Star Base x"
+        },
+        {
+          "text": "Infinity Gain x"
+        },
+        {
+          "text": "Gen. Exponent x"
+        },
+        {
+          "text": "Mult/bought Gen x"
+        }
+      ],
+      "id": "zodiac-virgo",
+      "kind": "upgrade",
+      "name": "Virgo",
+      "system": "astrology",
+      "wiki": "Zodiacs"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "DP Gain ^"
+        },
+        {
+          "text": "EP Gain ^"
+        },
+        {
+          "text": "Supernova Req ^^"
+        },
+        {
+          "text": "Lab. Mult Power x"
+        }
+      ],
+      "id": "zodiac-libra",
+      "kind": "upgrade",
+      "name": "Libra",
+      "system": "astrology",
+      "wiki": "Zodiacs"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Luck +"
+        },
+        {
+          "text": "Center DTU Effect x"
+        },
+        {
+          "text": "Ach. 29 Reward x"
+        },
+        {
+          "text": "Game Speed x"
+        }
+      ],
+      "id": "zodiac-scorpio",
+      "kind": "upgrade",
+      "name": "Scorpio",
+      "system": "astrology",
+      "wiki": "Zodiacs"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Lap Speed x"
+        },
+        {
+          "text": "Slowdown Power (asc amount) +"
+        },
+        {
+          "text": "Ascension Power x"
+        },
+        {
+          "text": "Common Exp. Power x"
+        }
+      ],
+      "id": "zodiac-sagittarius",
+      "kind": "upgrade",
+      "name": "Sagittarius",
+      "system": "astrology",
+      "wiki": "Zodiacs"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Star Base x"
+        },
+        {
+          "text": "Stardust Exponent x"
+        },
+        {
+          "text": "Gen. Exponent x"
+        },
+        {
+          "text": "Mult/bought Gen x"
+        }
+      ],
+      "id": "zodiac-capricorn",
+      "kind": "upgrade",
+      "name": "Capricorn",
+      "system": "astrology",
+      "wiki": "Zodiacs"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "DP Gain ^"
+        },
+        {
+          "text": "Free Lab. Levels +"
+        },
+        {
+          "text": "Supernova Req ^^"
+        },
+        {
+          "text": "Lab. Mult Power x"
+        }
+      ],
+      "id": "zodiac-aquarius",
+      "kind": "upgrade",
+      "name": "Aquarius",
+      "system": "astrology",
+      "wiki": "Zodiacs"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Luck +"
+        },
+        {
+          "text": "Zodiac Quality x"
+        },
+        {
+          "text": "Ach. 29 Reward x"
+        },
+        {
+          "text": "Game Speed x"
+        }
+      ],
+      "id": "zodiac-pisces",
+      "kind": "upgrade",
+      "name": "Pisces",
+      "system": "astrology",
+      "wiki": "Zodiacs"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "x1.4 to zodiac quality"
+        }
+      ],
+      "id": "trial-easy-trial-1",
+      "kind": "upgrade",
+      "name": "Easy Trial 1",
+      "system": "trials",
+      "wiki": "Trials"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Unlocks Trials exp factor"
+        }
+      ],
+      "id": "trial-easy-trial-2",
+      "kind": "upgrade",
+      "name": "Easy Trial 2",
+      "system": "trials",
+      "wiki": "Trials"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Common exponent multiplied by 1.05"
+        }
+      ],
+      "id": "trial-easy-trial-3",
+      "kind": "upgrade",
+      "name": "Easy Trial 3",
+      "system": "trials",
+      "wiki": "Trials"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Unlocks Mars"
+        }
+      ],
+      "id": "trial-easy-trial-4",
+      "kind": "upgrade",
+      "name": "Easy Trial 4",
+      "system": "trials",
+      "wiki": "Trials"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Unlocks Max Score factor"
+        }
+      ],
+      "id": "trial-easy-trial-5",
+      "kind": "upgrade",
+      "name": "Easy Trial 5",
+      "system": "trials",
+      "wiki": "Trials"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Unlocks Planet Shop"
+        }
+      ],
+      "id": "trial-easy-trial-6",
+      "kind": "upgrade",
+      "name": "Easy Trial 6",
+      "system": "trials",
+      "wiki": "Trials"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "x1.337 to luck"
+        }
+      ],
+      "id": "trial-medium-trial-1",
+      "kind": "upgrade",
+      "name": "Medium Trial 1",
+      "system": "trials",
+      "wiki": "Trials"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Infinity & Infinity Challenges are now always 1ms"
+        }
+      ],
+      "id": "trial-medium-trial-2",
+      "kind": "upgrade",
+      "name": "Medium Trial 2",
+      "system": "trials",
+      "wiki": "Trials"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Supernova resets nothing, unlocks Autobuy Dp Upgrades & DTP"
+        }
+      ],
+      "id": "trial-medium-trial-3",
+      "kind": "upgrade",
+      "name": "Medium Trial 3",
+      "system": "trials",
+      "wiki": "Trials"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Unlocks Auto Unity"
+        }
+      ],
+      "id": "trial-medium-trial-4",
+      "kind": "upgrade",
+      "name": "Medium Trial 4",
+      "system": "trials",
+      "wiki": "Trials"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Unlocks DTP factor"
+        }
+      ],
+      "id": "trial-medium-trial-5",
+      "kind": "upgrade",
+      "name": "Medium Trial 5",
+      "system": "trials",
+      "wiki": "Trials"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Keeps fastest Eternity at 5ms"
+        }
+      ],
+      "id": "trial-medium-trial-6",
+      "kind": "upgrade",
+      "name": "Medium Trial 6",
+      "system": "trials",
+      "wiki": "Trials"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Unlocks DP factor"
+        }
+      ],
+      "id": "trial-hard-trial-1",
+      "kind": "upgrade",
+      "name": "Hard Trial 1",
+      "system": "trials",
+      "wiki": "Trials"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Unlocks Lab level factor"
+        }
+      ],
+      "id": "trial-hard-trial-2",
+      "kind": "upgrade",
+      "name": "Hard Trial 2",
+      "system": "trials",
+      "wiki": "Trials"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Unlocks Autosell zodiacs"
+        }
+      ],
+      "id": "trial-hard-trial-3",
+      "kind": "upgrade",
+      "name": "Hard Trial 3",
+      "system": "trials",
+      "wiki": "Trials"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Unlocks AP factor"
+        }
+      ],
+      "id": "trial-hard-trial-4",
+      "kind": "upgrade",
+      "name": "Hard Trial 4",
+      "system": "trials",
+      "wiki": "Trials"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Divide all Relic costs by 1M"
+        }
+      ],
+      "id": "trial-hard-trial-5",
+      "kind": "upgrade",
+      "name": "Hard Trial 5",
+      "system": "trials",
+      "wiki": "Trials"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Unlocks EP factor"
+        }
+      ],
+      "id": "trial-hard-trial-6",
+      "kind": "upgrade",
+      "name": "Hard Trial 6",
+      "system": "trials",
+      "wiki": "Trials"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "You get 10 more EC from trials"
+        }
+      ],
+      "id": "trial-insane-trial-1",
+      "kind": "upgrade",
+      "name": "Insane Trial 1",
+      "system": "trials",
+      "wiki": "Trials"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Now you keep all of your EC on Unity Reset. Trials reward is changed to PP gain mult."
+        }
+      ],
+      "id": "trial-insane-trial-2",
+      "kind": "upgrade",
+      "name": "Insane Trial 2",
+      "system": "trials",
+      "wiki": "Trials"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Get additional 100% of IP and EP per second passively"
+        }
+      ],
+      "id": "trial-insane-trial-3",
+      "kind": "upgrade",
+      "name": "Insane Trial 3",
+      "system": "trials",
+      "wiki": "Trials"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "You can complete 1 more difficulty for each EC. EC past 50 boost your magnet gain chance"
+        }
+      ],
+      "id": "trial-insane-trial-4",
+      "kind": "upgrade",
+      "name": "Insane Trial 4",
+      "system": "trials",
+      "wiki": "Trials"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Dilation's best score is automatically set to your current score raised to DU Power Penalty"
+        }
+      ],
+      "id": "trial-insane-trial-5",
+      "kind": "upgrade",
+      "name": "Insane Trial 5",
+      "system": "trials",
+      "wiki": "Trials"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Passively gain 1 Unity per second, multiplied by Minerals' Game Speed"
+        }
+      ],
+      "id": "trial-insane-trial-6",
+      "kind": "upgrade",
+      "name": "Insane Trial 6",
+      "system": "trials",
+      "wiki": "Trials"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Divides all refine nodes costs past 120 by /1e6750"
+        }
+      ],
+      "id": "trial-bonus-trial",
+      "kind": "upgrade",
+      "name": "Bonus Trial",
+      "system": "trials",
+      "wiki": "Trials"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Increases PlP to ERP conversion rate"
+        }
+      ],
+      "id": "plague-conversion-rate",
+      "kind": "upgrade",
+      "name": "Conversion Rate",
+      "system": "plague",
+      "wiki": "Plague"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Increases base VE from dissolving ERs"
+        }
+      ],
+      "id": "plague-dissolve-efficiency",
+      "kind": "upgrade",
+      "name": "Dissolve Efficiency",
+      "system": "plague",
+      "wiki": "Plague"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Increases chances of crafting better ERs"
+        }
+      ],
+      "id": "plague-crafting-mastery",
+      "kind": "upgrade",
+      "name": "Crafting Mastery",
+      "system": "plague",
+      "wiki": "Plague"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Increases ViP/s per VE"
+        }
+      ],
+      "id": "plague-essence-density",
+      "kind": "upgrade",
+      "name": "Essence Density",
+      "system": "plague",
+      "wiki": "Plague"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Gold Gain ^"
+        }
+      ],
+      "id": "plague-stat-max-stage-completed",
+      "kind": "stat",
+      "name": "Max Stage Completed",
+      "system": "plague",
+      "wiki": "Plague"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Tarot Resources Gain ^"
+        }
+      ],
+      "id": "plague-stat-max-infected",
+      "kind": "stat",
+      "name": "Max Infected",
+      "system": "plague",
+      "wiki": "Plague"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Black Gem mult"
+        }
+      ],
+      "id": "plague-stat-total-infected",
+      "kind": "stat",
+      "name": "Total Infected",
+      "system": "plague",
+      "wiki": "Plague"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Golden Resources Gain mult"
+        }
+      ],
+      "id": "plague-stat-max-plp",
+      "kind": "stat",
+      "name": "Max PlP",
+      "system": "plague",
+      "wiki": "Plague"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Singularity mult"
+        }
+      ],
+      "id": "plague-stat-max-plg",
+      "kind": "stat",
+      "name": "Max PlG",
+      "system": "plague",
+      "wiki": "Plague"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "PlP per PlG mult"
+        }
+      ],
+      "id": "plague-stat-max-infected-in-universe",
+      "kind": "stat",
+      "name": "Max Infected in Universe",
+      "system": "plague",
+      "wiki": "Plague"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Unlock Milestones Tab SMS Factor is locked at 0"
+        }
+      ],
+      "id": "singularity-first-collapse",
+      "kind": "upgrade",
+      "name": "First Collapse",
+      "system": "singularity",
+      "wiki": "Singularity"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Unlock Effects Tab"
+        }
+      ],
+      "id": "singularity-accelerated-growth",
+      "kind": "upgrade",
+      "name": "Accelerated Growth",
+      "system": "singularity",
+      "wiki": "Singularity"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Keep Plague on Singularity Reset Plague Generator Awards no longer decrease"
+        }
+      ],
+      "id": "singularity-event-horizon",
+      "kind": "upgrade",
+      "name": "Event Horizon",
+      "system": "singularity",
+      "wiki": "Singularity"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Unlocks Tree Tab"
+        }
+      ],
+      "id": "singularity-spaghettification",
+      "kind": "upgrade",
+      "name": "Spaghettification",
+      "system": "singularity",
+      "wiki": "Singularity"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Keep Artifacts on Singularity Reset"
+        }
+      ],
+      "id": "singularity-beyond-time",
+      "kind": "upgrade",
+      "name": "Beyond Time",
+      "system": "singularity",
+      "wiki": "Singularity"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "The Atom Requirement for the next Singularity starts increasing. You can still perform a Singularity at 1.8e308 Atoms to get Singularity Mult, but your Singularity Count will NOT increase."
+        }
+      ],
+      "id": "singularity-event-horizon-tax",
+      "kind": "upgrade",
+      "name": "Event Horizon Tax",
+      "system": "singularity",
+      "wiki": "Singularity"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Keep Elements, Minerals and Tarot on Singularity Reset"
+        }
+      ],
+      "id": "singularity-the-unforgotten",
+      "kind": "upgrade",
+      "name": "The Unforgotten",
+      "system": "singularity",
+      "wiki": "Singularity"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Singularity Count acts as a factor for the next Singularity Mult"
+        }
+      ],
+      "id": "singularity-loop-feeds-loop",
+      "kind": "upgrade",
+      "name": "Loop Feeds Loop",
+      "system": "singularity",
+      "wiki": "Singularity"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Unlocks Houses Tab"
+        }
+      ],
+      "id": "singularity-astral-property",
+      "kind": "upgrade",
+      "name": "Astral Property",
+      "system": "singularity",
+      "wiki": "Singularity"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Singularity Mult acts as a factor for the next Singularity Mult"
+        }
+      ],
+      "id": "singularity-self-synergism",
+      "kind": "upgrade",
+      "name": "Self Synergism",
+      "system": "singularity",
+      "wiki": "Singularity"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Sacrifice Dust Gain: ^1.1"
+        }
+      ],
+      "id": "singularity-first-thousand",
+      "kind": "upgrade",
+      "name": "First Thousand",
+      "system": "singularity",
+      "wiki": "Singularity"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Black Gem Efficiency: ^1.1"
+        }
+      ],
+      "id": "singularity-quantum-dust",
+      "kind": "upgrade",
+      "name": "Quantum Dust",
+      "system": "singularity",
+      "wiki": "Singularity"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Element Factors 1 and 2 powers x3"
+        }
+      ],
+      "id": "singularity-atomic-flow",
+      "kind": "upgrade",
+      "name": "Atomic Flow",
+      "system": "singularity",
+      "wiki": "Singularity"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Divides last element nodes upgrades cost by 1e300"
+        }
+      ],
+      "id": "singularity-nuclear-bloom",
+      "kind": "upgrade",
+      "name": "Nuclear Bloom",
+      "system": "singularity",
+      "wiki": "Singularity"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Unlocks Auto-Highest Plague Stage"
+        }
+      ],
+      "id": "singularity-matter-collapse",
+      "kind": "upgrade",
+      "name": "Matter Collapse",
+      "system": "singularity",
+      "wiki": "Singularity"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "SMP Exp Requirements: ^0.75"
+        }
+      ],
+      "id": "singularity-quantum-pressure",
+      "kind": "upgrade",
+      "name": "Quantum Pressure",
+      "system": "singularity",
+      "wiki": "Singularity"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Atoms are now unlocked as a Singularity Mult Factor"
+        }
+      ],
+      "id": "singularity-atom-overflow",
+      "kind": "upgrade",
+      "name": "Atom Overflow",
+      "system": "singularity",
+      "wiki": "Singularity"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "You can now obtain Singular Zodiacs if you have already unlocked houses"
+        }
+      ],
+      "id": "singularity-horoscope-of-the-void",
+      "kind": "upgrade",
+      "name": "Horoscope of the Void",
+      "system": "singularity",
+      "wiki": "Singularity"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Atoms past e1000 boost luck for a little (new effect)"
+        }
+      ],
+      "id": "singularity-universe-under-pressure",
+      "kind": "upgrade",
+      "name": "Universe Under Pressure",
+      "system": "singularity",
+      "wiki": "Singularity"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "SMP Gain ^1.1"
+        }
+      ],
+      "id": "singularity-special-sacrificer",
+      "kind": "upgrade",
+      "name": "Special Sacrificer",
+      "system": "singularity",
+      "wiki": "Singularity"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Factor 2 power for water is multiplied by x10"
+        }
+      ],
+      "id": "singularity-elementary-master",
+      "kind": "upgrade",
+      "name": "Elementary Master",
+      "system": "singularity",
+      "wiki": "Singularity"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Black Gem Effect ^1.05"
+        }
+      ],
+      "id": "singularity-full-deck",
+      "kind": "upgrade",
+      "name": "Full Deck",
+      "system": "singularity",
+      "wiki": "Singularity"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Sacrifice Dust Gain ^1.05"
+        }
+      ],
+      "id": "singularity-dust-magician",
+      "kind": "upgrade",
+      "name": "Dust Magician",
+      "system": "singularity",
+      "wiki": "Singularity"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Golden Resource Gain ^1.02"
+        }
+      ],
+      "id": "singularity-artifact-theory",
+      "kind": "upgrade",
+      "name": "Artifact Theory",
+      "system": "singularity",
+      "wiki": "Singularity"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "ViP per VE mult x1000"
+        }
+      ],
+      "id": "singularity-virusologist",
+      "kind": "upgrade",
+      "name": "Virusologist",
+      "system": "singularity",
+      "wiki": "Singularity"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Atom Gain ^1.02"
+        }
+      ],
+      "id": "singularity-viral-ascension",
+      "kind": "upgrade",
+      "name": "Viral Ascension",
+      "system": "singularity",
+      "wiki": "Singularity"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Keep all progression milestones on Singularity"
+        }
+      ],
+      "id": "singularity-infinite-infection",
+      "kind": "upgrade",
+      "name": "Infinite Infection",
+      "system": "singularity",
+      "wiki": "Singularity"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Tree Factor (Adds/increases a Singularity mult gain modifier)",
+          "per_level": ".01"
+        }
+      ],
+      "id": "singularity-tree-tree-node-1",
+      "kind": "tree-node",
+      "name": "Tree Node 1",
+      "system": "singularity",
+      "wiki": "Singularity"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Increases Gold gain",
+          "per_level": ".001"
+        }
+      ],
+      "id": "singularity-tree-tree-node-2",
+      "kind": "tree-node",
+      "name": "Tree Node 2",
+      "system": "singularity",
+      "wiki": "Singularity"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Weaken e308 penalty",
+          "per_level": ".01"
+        }
+      ],
+      "id": "singularity-tree-tree-node-3-1",
+      "kind": "tree-node",
+      "name": "Tree Node 3.1",
+      "system": "singularity",
+      "wiki": "Singularity"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Weaken e500 penalty",
+          "per_level": ".01"
+        }
+      ],
+      "id": "singularity-tree-tree-node-3-2",
+      "kind": "tree-node",
+      "name": "Tree Node 3.2",
+      "system": "singularity",
+      "wiki": "Singularity"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Increase Refine Points gain",
+          "per_level": ".001"
+        }
+      ],
+      "id": "singularity-tree-tree-node-4-1",
+      "kind": "tree-node",
+      "name": "Tree Node 4.1",
+      "system": "singularity",
+      "wiki": "Singularity"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Increase Golden Resource gain",
+          "per_level": ".25"
+        }
+      ],
+      "id": "singularity-tree-tree-node-4-2",
+      "kind": "tree-node",
+      "name": "Tree Node 4.2",
+      "system": "singularity",
+      "wiki": "Singularity"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Increase Plague Stats Rewards",
+          "per_level": ".01"
+        }
+      ],
+      "id": "singularity-tree-tree-node-5-1",
+      "kind": "tree-node",
+      "name": "Tree Node 5.1",
+      "system": "singularity",
+      "wiki": "Singularity"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Increase Plague Generators Reward",
+          "per_level": ".03"
+        }
+      ],
+      "id": "singularity-tree-tree-node-5-2",
+      "kind": "tree-node",
+      "name": "Tree Node 5.2",
+      "system": "singularity",
+      "wiki": "Singularity"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Weaken next Singularity nerf",
+          "per_level": ".05"
+        }
+      ],
+      "id": "singularity-tree-tree-node-6-1",
+      "kind": "tree-node",
+      "name": "Tree Node 6.1",
+      "system": "singularity",
+      "wiki": "Singularity"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Weaken e1,000 Atom Penalty",
+          "per_level": ".02"
+        }
+      ],
+      "id": "singularity-tree-tree-node-6-2",
+      "kind": "tree-node",
+      "name": "Tree Node 6.2",
+      "system": "singularity",
+      "wiki": "Singularity"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Increase First Singularity Zodiac Level Mult",
+          "per_level": ".006"
+        }
+      ],
+      "id": "singularity-tree-tree-node-7-1",
+      "kind": "tree-node",
+      "name": "Tree Node 7.1",
+      "system": "singularity",
+      "wiki": "Singularity"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Second Singularity Zodiac Level Mult",
+          "per_level": ".006"
+        }
+      ],
+      "id": "singularity-tree-tree-node-7-2",
+      "kind": "tree-node",
+      "name": "Tree Node 7.2",
+      "system": "singularity",
+      "wiki": "Singularity"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "All Singularity Tree Upgrade Efficiency",
+          "per_level": ".001"
+        }
+      ],
+      "id": "singularity-tree-tree-node-8",
+      "kind": "tree-node",
+      "name": "Tree Node 8",
+      "system": "singularity",
+      "wiki": "Singularity"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Fire Element Factor 3"
+        }
+      ],
+      "id": "singularity-zodiac-aries",
+      "kind": "upgrade",
+      "name": "Aries",
+      "system": "singularity",
+      "wiki": "Singularity"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Earth Element Factor 3"
+        }
+      ],
+      "id": "singularity-zodiac-taurus",
+      "kind": "upgrade",
+      "name": "Taurus",
+      "system": "singularity",
+      "wiki": "Singularity"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Wind Element Factor 3"
+        }
+      ],
+      "id": "singularity-zodiac-gemini",
+      "kind": "upgrade",
+      "name": "Gemini",
+      "system": "singularity",
+      "wiki": "Singularity"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Water Element Factor 3"
+        }
+      ],
+      "id": "singularity-zodiac-cancer",
+      "kind": "upgrade",
+      "name": "Cancer",
+      "system": "singularity",
+      "wiki": "Singularity"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Sacrifice Dust Gain"
+        }
+      ],
+      "id": "singularity-zodiac-leo",
+      "kind": "upgrade",
+      "name": "Leo",
+      "system": "singularity",
+      "wiki": "Singularity"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "PlP per PlG Multi"
+        }
+      ],
+      "id": "singularity-zodiac-virgo",
+      "kind": "upgrade",
+      "name": "Virgo",
+      "system": "singularity",
+      "wiki": "Singularity"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "VE on Disolve Multi"
+        }
+      ],
+      "id": "singularity-zodiac-libra",
+      "kind": "upgrade",
+      "name": "Libra",
+      "system": "singularity",
+      "wiki": "Singularity"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Base Spread Multi"
+        }
+      ],
+      "id": "singularity-zodiac-scorpio",
+      "kind": "upgrade",
+      "name": "Scorpio",
+      "system": "singularity",
+      "wiki": "Singularity"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Attack Exponent Multi"
+        }
+      ],
+      "id": "singularity-zodiac-saggitarius",
+      "kind": "upgrade",
+      "name": "Saggitarius",
+      "system": "singularity",
+      "wiki": "Singularity"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Golden Resources Gain"
+        }
+      ],
+      "id": "singularity-zodiac-capricorn",
+      "kind": "upgrade",
+      "name": "Capricorn",
+      "system": "singularity",
+      "wiki": "Singularity"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Black Gem Effect"
+        }
+      ],
+      "id": "singularity-zodiac-aquarius",
+      "kind": "upgrade",
+      "name": "Aquarius",
+      "system": "singularity",
+      "wiki": "Singularity"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Singularity Mult Boost"
+        }
+      ],
+      "id": "singularity-zodiac-pisces",
+      "kind": "upgrade",
+      "name": "Pisces",
+      "system": "singularity",
+      "wiki": "Singularity"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Each unspent AP boosts DP gain by 0.1%",
+          "per_level": "+0.05%",
+          "op": "add"
+        }
+      ],
+      "id": "dilation-node-center-1",
+      "kind": "tree-node",
+      "name": "Center 1",
+      "system": "eternity",
+      "wiki": "Dilation_Tree"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Dilation Upgrade 1 is 30% stronger",
+          "per_level": "+15%",
+          "op": "add"
+        }
+      ],
+      "id": "dilation-node-top-1",
+      "kind": "tree-node",
+      "name": "Top 1",
+      "system": "eternity",
+      "wiki": "Dilation_Tree"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Eternities ^2.00 boost DP gain",
+          "per_level": "+^0.25",
+          "op": "exp"
+        }
+      ],
+      "id": "dilation-node-top-2",
+      "kind": "tree-node",
+      "name": "Top 2",
+      "system": "eternity",
+      "wiki": "Dilation_Tree"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Supernova Score exponent requirement is powered to ^0.90",
+          "per_level": "x0.95",
+          "op": "mult"
+        }
+      ],
+      "id": "dilation-node-top-3",
+      "kind": "tree-node",
+      "name": "Top 3",
+      "system": "eternity",
+      "wiki": "Dilation_Tree"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Bottom DT upgrades are 10% stronger",
+          "per_level": "+10%",
+          "op": "add"
+        }
+      ],
+      "id": "dilation-node-top-4",
+      "kind": "tree-node",
+      "name": "Top 4",
+      "system": "eternity",
+      "wiki": "Dilation_Tree"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Dilation Upgrade 2 is 20% stronger",
+          "per_level": "+10%",
+          "op": "add"
+        }
+      ],
+      "id": "dilation-node-middle-1",
+      "kind": "tree-node",
+      "name": "Middle 1",
+      "system": "eternity",
+      "wiki": "Dilation_Tree"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Get Eternities passively based on fastest Eternity x10",
+          "per_level": "x2",
+          "op": "mult"
+        }
+      ],
+      "id": "dilation-node-middle-2",
+      "kind": "tree-node",
+      "name": "Middle 2",
+      "system": "eternity",
+      "wiki": "Dilation_Tree"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Supernova bonuses are ^1.08 stronger, including free AP",
+          "per_level": "+^0.08",
+          "op": "exp"
+        }
+      ],
+      "id": "dilation-node-middle-3",
+      "kind": "tree-node",
+      "name": "Middle 3",
+      "system": "eternity",
+      "wiki": "Dilation_Tree"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Middle DT upgrades are 10% stronger",
+          "per_level": "+10%",
+          "op": "add"
+        }
+      ],
+      "id": "dilation-node-middle-4",
+      "kind": "tree-node",
+      "name": "Middle 4",
+      "system": "eternity",
+      "wiki": "Dilation_Tree"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Dilation Upgrade 3 is 40% stronger",
+          "per_level": "+20%",
+          "op": "add"
+        }
+      ],
+      "id": "dilation-node-bottom-1",
+      "kind": "tree-node",
+      "name": "Bottom 1",
+      "system": "eternity",
+      "wiki": "Dilation_Tree"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Gives free RP Upgrade levels equal to 1% of unspent AP",
+          "per_level": "+1%",
+          "op": "add"
+        }
+      ],
+      "id": "dilation-node-bottom-2",
+      "kind": "tree-node",
+      "name": "Bottom 2",
+      "system": "eternity",
+      "wiki": "Dilation_Tree"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Supernovae boost DP gain by x2.00",
+          "per_level": "+0.25",
+          "op": "add"
+        }
+      ],
+      "id": "dilation-node-bottom-3",
+      "kind": "tree-node",
+      "name": "Bottom 3",
+      "system": "eternity",
+      "wiki": "Dilation_Tree"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Top DT upgrades are 10% stronger",
+          "per_level": "+10%",
+          "op": "add"
+        }
+      ],
+      "id": "dilation-node-bottom-4",
+      "kind": "tree-node",
+      "name": "Bottom 4",
+      "system": "eternity",
+      "wiki": "Dilation_Tree"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Dilation penalties are weaker",
+          "per_level": "+0.03",
+          "op": "add"
+        }
+      ],
+      "id": "dilation-upgrade-dilation-upgrade-1",
+      "kind": "upgrade",
+      "name": "Dilation Upgrade 1",
+      "system": "eternity",
+      "wiki": "Eternity"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "DP Income mult",
+          "per_level": "x1.07",
+          "op": "mult"
+        }
+      ],
+      "id": "dilation-upgrade-dilation-upgrade-2",
+      "kind": "upgrade",
+      "name": "Dilation Upgrade 2",
+      "system": "eternity",
+      "wiki": "Eternity"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "+ free levels to all RP upgrades",
+          "per_level": "+3.00",
+          "op": "add"
+        }
+      ],
+      "id": "dilation-upgrade-dilation-upgrade-3",
+      "kind": "upgrade",
+      "name": "Dilation Upgrade 3",
+      "system": "eternity",
+      "wiki": "Eternity"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Common Exponent mult",
+          "per_level": "x1.001",
+          "op": "mult"
+        }
+      ],
+      "id": "dilation-upgrade-dilation-upgrade-4",
+      "kind": "upgrade",
+      "name": "Dilation Upgrade 4",
+      "system": "eternity",
+      "wiki": "Eternity"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Supernova bonuses power",
+          "per_level": "+^0.02",
+          "op": "exp"
+        }
+      ],
+      "id": "dilation-upgrade-dilation-upgrade-5",
+      "kind": "upgrade",
+      "name": "Dilation Upgrade 5",
+      "system": "eternity",
+      "wiki": "Eternity"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Generator Exponent mult",
+          "per_level": "+0.01",
+          "op": "add"
+        }
+      ],
+      "id": "dilation-upgrade-dilation-upgrade-6",
+      "kind": "upgrade",
+      "name": "Dilation Upgrade 6",
+      "system": "eternity",
+      "wiki": "Eternity"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "EP gain mult",
+          "per_level": "x10.00",
+          "op": "mult"
+        }
+      ],
+      "id": "dilation-upgrade-dilation-upgrade-7",
+      "kind": "upgrade",
+      "name": "Dilation Upgrade 7",
+      "system": "eternity",
+      "wiki": "Eternity"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Asc. Power Mult",
+          "per_level": "+1.00",
+          "op": "add"
+        }
+      ],
+      "id": "dilation-upgrade-dilation-upgrade-8",
+      "kind": "upgrade",
+      "name": "Dilation Upgrade 8",
+      "system": "eternity",
+      "wiki": "Eternity"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Lab power mult",
+          "per_level": "+0.01",
+          "op": "add"
+        }
+      ],
+      "id": "dilation-upgrade-dilation-upgrade-9",
+      "kind": "upgrade",
+      "name": "Dilation Upgrade 9",
+      "system": "eternity",
+      "wiki": "Eternity"
+    },
+    {
       "confidence": "documented",
       "id": "attack-power",
       "kind": "stat",
@@ -7737,6 +9605,433 @@
       "rel": "boosts",
       "source": "wiki:Elements",
       "to": "refine-node-60"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "special-mineral-pink-gem",
+      "rel": "boosts",
+      "source": "wiki:Minerals",
+      "to": "luck"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "special-mineral-pink-gem",
+      "rel": "boosts",
+      "source": "wiki:Minerals",
+      "to": "quality"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "special-mineral-yellow-gem",
+      "rel": "boosts",
+      "source": "wiki:Minerals",
+      "to": "gold"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "special-mineral-white-gem",
+      "rel": "boosts",
+      "source": "wiki:Minerals",
+      "to": "game-speed"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "special-mineral-black-gem",
+      "rel": "boosts",
+      "source": "wiki:Minerals",
+      "to": "tarot-draws"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "zodiac-taurus",
+      "rel": "boosts",
+      "source": "wiki:Zodiacs",
+      "to": "infinity-points"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "zodiac-gemini",
+      "rel": "boosts",
+      "source": "wiki:Zodiacs",
+      "to": "eternity-points"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "zodiac-cancer",
+      "rel": "boosts",
+      "source": "wiki:Zodiacs",
+      "to": "dilation-tree-points"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "zodiac-cancer",
+      "rel": "boosts",
+      "source": "wiki:Zodiacs",
+      "to": "game-speed"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "zodiac-libra",
+      "rel": "boosts",
+      "source": "wiki:Zodiacs",
+      "to": "dilation-points"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "zodiac-libra",
+      "rel": "boosts",
+      "source": "wiki:Zodiacs",
+      "to": "eternity-points"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "zodiac-scorpio",
+      "rel": "boosts",
+      "source": "wiki:Zodiacs",
+      "to": "luck"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "zodiac-scorpio",
+      "rel": "boosts",
+      "source": "wiki:Zodiacs",
+      "to": "game-speed"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "zodiac-aquarius",
+      "rel": "boosts",
+      "source": "wiki:Zodiacs",
+      "to": "dilation-points"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "zodiac-pisces",
+      "rel": "boosts",
+      "source": "wiki:Zodiacs",
+      "to": "luck"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "zodiac-pisces",
+      "rel": "boosts",
+      "source": "wiki:Zodiacs",
+      "to": "quality"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "zodiac-pisces",
+      "rel": "boosts",
+      "source": "wiki:Zodiacs",
+      "to": "game-speed"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "trial-easy-trial-1",
+      "rel": "boosts",
+      "source": "wiki:Trials",
+      "to": "quality"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "trial-medium-trial-1",
+      "rel": "boosts",
+      "source": "wiki:Trials",
+      "to": "luck"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "trial-medium-trial-3",
+      "rel": "boosts",
+      "source": "wiki:Trials",
+      "to": "dilation-tree-points"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "trial-medium-trial-5",
+      "rel": "boosts",
+      "source": "wiki:Trials",
+      "to": "dilation-tree-points"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "trial-hard-trial-1",
+      "rel": "boosts",
+      "source": "wiki:Trials",
+      "to": "dilation-points"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "trial-hard-trial-4",
+      "rel": "boosts",
+      "source": "wiki:Trials",
+      "to": "animal-points"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "trial-hard-trial-6",
+      "rel": "boosts",
+      "source": "wiki:Trials",
+      "to": "eternity-points"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "trial-insane-trial-3",
+      "rel": "boosts",
+      "source": "wiki:Trials",
+      "to": "infinity-points"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "trial-insane-trial-3",
+      "rel": "boosts",
+      "source": "wiki:Trials",
+      "to": "eternity-points"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "trial-insane-trial-6",
+      "rel": "boosts",
+      "source": "wiki:Trials",
+      "to": "game-speed"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "plague-stat-max-stage-completed",
+      "rel": "boosts",
+      "source": "wiki:Plague",
+      "to": "gold"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "plague-stat-max-plg",
+      "rel": "boosts",
+      "source": "wiki:Plague",
+      "to": "singularity"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "singularity-first-collapse",
+      "rel": "boosts",
+      "source": "wiki:Singularity",
+      "to": "sms-factor"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "singularity-event-horizon",
+      "rel": "boosts",
+      "source": "wiki:Singularity",
+      "to": "plague"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "singularity-event-horizon",
+      "rel": "boosts",
+      "source": "wiki:Singularity",
+      "to": "singularity"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "singularity-beyond-time",
+      "rel": "boosts",
+      "source": "wiki:Singularity",
+      "to": "singularity"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "singularity-event-horizon-tax",
+      "rel": "boosts",
+      "source": "wiki:Singularity",
+      "to": "singularity"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "singularity-the-unforgotten",
+      "rel": "boosts",
+      "source": "wiki:Singularity",
+      "to": "singularity"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "singularity-loop-feeds-loop",
+      "rel": "boosts",
+      "source": "wiki:Singularity",
+      "to": "singularity"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "singularity-self-synergism",
+      "rel": "boosts",
+      "source": "wiki:Singularity",
+      "to": "singularity"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "singularity-matter-collapse",
+      "rel": "boosts",
+      "source": "wiki:Singularity",
+      "to": "plague"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "singularity-atom-overflow",
+      "rel": "boosts",
+      "source": "wiki:Singularity",
+      "to": "singularity"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "singularity-universe-under-pressure",
+      "rel": "boosts",
+      "source": "wiki:Singularity",
+      "to": "luck"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "singularity-infinite-infection",
+      "rel": "boosts",
+      "source": "wiki:Singularity",
+      "to": "singularity"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "singularity-tree-tree-node-1",
+      "rel": "boosts",
+      "source": "wiki:Singularity",
+      "to": "singularity"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "singularity-tree-tree-node-2",
+      "rel": "boosts",
+      "source": "wiki:Singularity",
+      "to": "gold"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "singularity-tree-tree-node-5-1",
+      "rel": "boosts",
+      "source": "wiki:Singularity",
+      "to": "plague"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "singularity-tree-tree-node-5-2",
+      "rel": "boosts",
+      "source": "wiki:Singularity",
+      "to": "plague"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "singularity-tree-tree-node-6-1",
+      "rel": "boosts",
+      "source": "wiki:Singularity",
+      "to": "singularity"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "singularity-tree-tree-node-7-1",
+      "rel": "boosts",
+      "source": "wiki:Singularity",
+      "to": "singularity"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "singularity-tree-tree-node-7-2",
+      "rel": "boosts",
+      "source": "wiki:Singularity",
+      "to": "singularity"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "singularity-tree-tree-node-8",
+      "rel": "boosts",
+      "source": "wiki:Singularity",
+      "to": "singularity"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "singularity-zodiac-saggitarius",
+      "rel": "boosts",
+      "source": "wiki:Singularity",
+      "to": "attack-exponent"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "singularity-zodiac-pisces",
+      "rel": "boosts",
+      "source": "wiki:Singularity",
+      "to": "singularity"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "dilation-node-center-1",
+      "rel": "boosts",
+      "source": "wiki:Dilation_Tree",
+      "to": "animal-points"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "dilation-node-center-1",
+      "rel": "boosts",
+      "source": "wiki:Dilation_Tree",
+      "to": "dilation-points"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "dilation-node-top-2",
+      "rel": "boosts",
+      "source": "wiki:Dilation_Tree",
+      "to": "dilation-points"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "dilation-node-middle-3",
+      "rel": "boosts",
+      "source": "wiki:Dilation_Tree",
+      "to": "animal-points"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "dilation-node-bottom-2",
+      "rel": "boosts",
+      "source": "wiki:Dilation_Tree",
+      "to": "research-points"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "dilation-node-bottom-2",
+      "rel": "boosts",
+      "source": "wiki:Dilation_Tree",
+      "to": "animal-points"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "dilation-node-bottom-3",
+      "rel": "boosts",
+      "source": "wiki:Dilation_Tree",
+      "to": "dilation-points"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "dilation-upgrade-dilation-upgrade-2",
+      "rel": "boosts",
+      "source": "wiki:Eternity",
+      "to": "dilation-points"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "dilation-upgrade-dilation-upgrade-3",
+      "rel": "boosts",
+      "source": "wiki:Eternity",
+      "to": "research-points"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "dilation-upgrade-dilation-upgrade-7",
+      "rel": "boosts",
+      "source": "wiki:Eternity",
+      "to": "eternity-points"
     },
     {
       "confidence": "documented",
