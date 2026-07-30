@@ -3,6 +3,7 @@ import { describe, expect, it } from 'vitest';
 
 import { parseGraph } from './load';
 import { SYSTEM_COLOURS } from './palette';
+import { buildSystemTree } from './systems';
 import type { GraphDocument } from '../types';
 
 // Reads the committed artifact off disk rather than over the network. The
@@ -80,6 +81,24 @@ describe('the committed graph.json', () => {
   // without a browser.
   // The failure message names the offending system ids rather than just
   // saying `false !== true`.
+  // The sidebar nests on `parent`, so a hierarchy that flattens — every system
+  // declaring no parent — would render correctly and still be wrong. Pinning one
+  // known chain catches that, and `data/relationships.yaml` is where it breaks.
+  it('nests Refine Tree under Minerals under Unity', () => {
+    const doc = realGraph();
+    const counts = new Map<string, number>();
+    for (const node of doc.nodes) counts.set(node.system, (counts.get(node.system) ?? 0) + 1);
+    const tree = buildSystemTree(doc.systems ?? [], counts);
+
+    const unity = tree.find((s) => s.id === 'unity');
+    const minerals = unity?.children.find((s) => s.id === 'minerals');
+    const refineTree = minerals?.children.find((s) => s.id === 'refine-tree');
+    expect(refineTree?.name).toBe('Refine Tree');
+    // A parent's roll-up must exceed the child's, or the count is not rolling up.
+    expect(minerals!.total).toBeGreaterThan(refineTree!.total);
+    expect(unity!.total).toBeGreaterThan(minerals!.total);
+  });
+
   it('every system id in the graph has a colour in SYSTEM_COLOURS', () => {
     const doc = realGraph();
     const systemIds = [...new Set(doc.nodes.map((n) => n.system))];

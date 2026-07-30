@@ -110,6 +110,14 @@ body {
   background: #f1f5f9;
 }
 
+.caret {
+  width: 8px;
+  flex: 0 0 8px;
+  color: var(--muted);
+  font-size: 9px;
+  line-height: 1;
+}
+
 .swatch {
   width: 10px;
   height: 10px;

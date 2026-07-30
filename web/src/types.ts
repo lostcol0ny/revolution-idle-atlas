@@ -2,9 +2,10 @@
 // ordering hint, not a closed vocabulary: `system` is a free string in the
 // dataset, and graph.json may carry ids that are not listed here.
 //
-// Keep this list minimal — an id nobody declares is dead weight that Sidebar
-// orders on and TypeScript cannot flag, because `Record<KnownSystem, string>`
-// checks that the colour map covers the union, not that the union is minimal.
+// Keep this list minimal — an id nobody declares is dead weight that the
+// sidebar tree orders on and TypeScript cannot flag, because
+// `Record<KnownSystem, string>` checks that the colour map covers the union,
+// not that the union is minimal.
 export const KNOWN_SYSTEMS = [
   'revolution',
   'infinity',

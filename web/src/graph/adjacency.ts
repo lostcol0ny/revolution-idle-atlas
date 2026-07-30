@@ -1,4 +1,4 @@
-import type { GraphDocument, GraphEdge, GraphNode } from '../types';
+import type { GraphDocument, GraphEdge, GraphNode, GraphSystem } from '../types';
 
 export interface GraphIndex {
   nodes: Map<string, GraphNode>;
@@ -6,6 +6,8 @@ export interface GraphIndex {
   outgoing: Map<string, GraphEdge[]>;
   /** Node ids in document order, which the pipeline emits deterministically. */
   order: string[];
+  /** The declared hierarchy, which the document is free to omit entirely. */
+  systems: GraphSystem[];
 }
 
 export function buildIndex(doc: GraphDocument): GraphIndex {
@@ -37,5 +39,5 @@ export function buildIndex(doc: GraphDocument): GraphIndex {
     inc.push(edge);
   }
 
-  return { nodes, incoming, outgoing, order };
+  return { nodes, incoming, outgoing, order, systems: doc.systems ?? [] };
 }
