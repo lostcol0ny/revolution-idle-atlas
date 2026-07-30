@@ -46,7 +46,6 @@
 #   Zodiacs — Factor|Unlock Condition|Thresholds (15 rows)
 #     The "Thresholds" column holds numbers (e.g. 1.08e2466, "No threshold"),
 #     not effects. Sweeping it would produce twelve nodes stating a quantity.
-#     (This is the table already listed in the brief's exclusion ledger.)
 #
 #   Zodiacs — Rarity|Range Start|End (11 rows)
 #     Luck thresholds for rarity tiers. Numeric data with no effect prose.
