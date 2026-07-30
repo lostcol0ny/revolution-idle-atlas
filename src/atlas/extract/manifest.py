@@ -2,7 +2,7 @@ from pathlib import Path
 from typing import Annotated, Literal, Self
 
 import yaml
-from pydantic import BaseModel, ConfigDict, Field, model_validator
+from pydantic import BaseModel, ConfigDict, Field, field_validator, model_validator
 
 from atlas.models import Kind
 
@@ -24,6 +24,27 @@ class _Entry(BaseModel):
     # Node 1". Display only: the id is minted from the raw name, where
     # `id_prefix` already supplies the noun.
     name_prefix: str | None = None
+
+    @field_validator("page")
+    @classmethod
+    def _page_is_underscored(cls, value: str) -> str:
+        """Reject a space in the title, because only the file lookup forgives it.
+
+        `rawcheck.raw_filename` normalises " " to "_", so "Dilation Tree" finds
+        the right file and the sweep reads the page. The verbatim string is what
+        lands in each node's `wiki` field, though, and the coverage report
+        compares that against `coverage.page_title`, which always underscores —
+        so a spaced title reads the page and then reports it as never swept, with
+        the pipeline succeeding either way. One accepted spelling is cheaper than
+        reconciling two.
+        """
+        if " " in value:
+            raise ValueError(
+                f"page '{value}' contains a space — write the underscored form "
+                f"'{value.replace(' ', '_')}', which is what the wiki: field on "
+                "every node in this repo uses"
+            )
+        return value
 
 
 class WikitableEntry(_Entry):

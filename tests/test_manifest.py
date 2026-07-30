@@ -138,6 +138,21 @@ def test_two_entries_may_share_one_id_prefix_exactly():
     assert [p.id_prefix for p in manifest.pages] == ["zodiac", "zodiac"]
 
 
+def test_a_spaced_page_title_is_rejected():
+    # A space is the one spelling that half-works, which is why it has to be
+    # refused rather than tolerated: `rawcheck.raw_filename` folds " " into "_"
+    # and finds the file, so the page really is swept, but the spaced string is
+    # copied verbatim into every node's `wiki` field and the coverage report
+    # matches those against `coverage.page_title`, which always underscores.
+    # The page would be read and reported as unswept at the same time, and the
+    # build would succeed while saying so.
+    with pytest.raises(ValidationError, match="Dilation_Tree"):
+        Manifest.model_validate({"pages": [_wikitable(page="Dilation Tree")]})
+
+    ok = Manifest.model_validate({"pages": [_wikitable(page="Dilation_Tree")]})
+    assert ok.pages[0].page == "Dilation_Tree"
+
+
 def test_load_manifest_reads_a_file(tmp_path: Path):
     path = tmp_path / "sweep.yaml"
     path.write_text(yaml.safe_dump({"pages": [_wikitable()]}), encoding="utf-8")
