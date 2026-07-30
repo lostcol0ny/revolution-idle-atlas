@@ -415,3 +415,24 @@ def test_an_identically_repeated_pair_is_deduped_rather_than_rejected():
     assert len(vocab) == 1
     assert [r.target_id for r in resolve("Increases Luck", vocab)] == ["luck"]
     assert len(vocab.with_terms([("Luck", "luck")])) == 1
+
+
+def test_zodiacbadge_unwraps_to_its_content():
+    # {{ZodiacBadge|Aries}} is the entire content of the Zodiac name column on
+    # Zodiacs.wikitext. Without it in the content whitelist the column reads as
+    # the empty string and every zodiac row is dropped for having no name.
+    assert plain_text("{{ZodiacBadge|Aries}}") == "Aries"
+
+
+def test_an_unlisted_template_is_still_decoration():
+    # The whitelist must stay a whitelist: adding zodiacbadge may not turn every
+    # template into content, or icons and banners start appearing in graph.json.
+    assert plain_text("Gold {{Icon|gold}} gain") == "Gold gain"
+
+
+def test_a_line_break_becomes_a_space_not_nothing():
+    # A <br/> is a sentence boundary. Stripped to nothing it joins the last word
+    # of one sentence to the first word of the next.
+    assert plain_text("Unlock Tab<br/>SMS Factor is 0") == "Unlock Tab SMS Factor is 0"
+    assert plain_text("a<br>b") == "a b"
+    assert plain_text("a<BR />b") == "a b"

@@ -1,0 +1,88 @@
+from pathlib import Path
+from typing import Annotated, Literal, Self
+
+import yaml
+from pydantic import BaseModel, ConfigDict, Field, model_validator
+
+from atlas.models import Kind
+
+
+class _Entry(BaseModel):
+    model_config = ConfigDict(extra="forbid")
+
+    # The wiki page TITLE, not the filename. `rawcheck.raw_filename` converts
+    # a title to a file stem (" " -> "_", "/" -> "__"), and the same string is
+    # written to each swept node's `wiki` field — so "Minerals/Refine_Tree"
+    # style titles work without a second field to keep in sync.
+    page: str
+    system: str
+    kind: Kind
+    id_prefix: str
+    # Prepended to the name, for a table whose name column is a bare number.
+    # Singularity's tree table numbers its rows "1", "2", "3.1"; a node named
+    # "1" is useless in the UI and its id `singularity-tree-1` says nothing
+    # about what it is. With `name_prefix: Tree Node` it reads "Tree Node 1".
+    name_prefix: str | None = None
+
+
+class WikitableEntry(_Entry):
+    reader: Literal["wikitable"]
+    # Joined with a space when a page needs two columns to name a row uniquely
+    # (Dilation_Tree's rows are identified by Axis + Index, neither alone).
+    name_columns: list[str] = Field(min_length=1)
+    # A list because one row can carry several effects: a Zodiac has four
+    # bonus columns and each is a separate effect, not one concatenated blob.
+    effect_columns: list[str] = Field(min_length=1)
+    per_level_column: str | None = None
+
+    @model_validator(mode="after")
+    def _per_level_needs_one_effect(self) -> Self:
+        if self.per_level_column is not None and len(self.effect_columns) != 1:
+            raise ValueError(
+                "per_level_column requires exactly one effect_column, "
+                f"got {len(self.effect_columns)}"
+            )
+        return self
+
+
+class RecordTemplateEntry(_Entry):
+    reader: Literal["record_template"]
+    template: str
+    name_field: str
+    effect_fields: list[str] = Field(min_length=1)
+    per_level_field: str | None = None
+
+    @model_validator(mode="after")
+    def _per_level_needs_one_effect(self) -> Self:
+        if self.per_level_field is not None and len(self.effect_fields) != 1:
+            raise ValueError(
+                "per_level_field requires exactly one effect_field, "
+                f"got {len(self.effect_fields)}"
+            )
+        return self
+
+
+SweepEntry = Annotated[
+    WikitableEntry | RecordTemplateEntry, Field(discriminator="reader")
+]
+
+
+class Manifest(BaseModel):
+    model_config = ConfigDict(extra="forbid")
+
+    pages: list[SweepEntry] = []
+
+
+def load_manifest(path: Path) -> Manifest:
+    """Read the sweep manifest, or return an empty one if it does not exist.
+
+    Absence is silent because the sweep is additive: a checkout with no
+    `data/sweep.yaml` must still extract the four original pages.
+
+    Parsed with `yaml.SafeLoader` for the same reason `atlas.loader` is — a
+    data file may never construct a Python object.
+    """
+    if not path.is_file():
+        return Manifest()
+    data = yaml.load(path.read_text(encoding="utf-8"), Loader=yaml.SafeLoader)
+    return Manifest.model_validate(data or {})

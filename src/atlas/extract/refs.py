@@ -11,9 +11,15 @@ _FILE_LINK_RE = re.compile(r"\[\[File:[^\]]*\]\]", re.IGNORECASE)
 _TEMPLATE_RE = re.compile(r"\{\{([^{}]*)\}\}")
 _PIPED_LINK_RE = re.compile(r"\[\[[^\]|]*\|([^\]|]*)\]\]")
 _PLAIN_LINK_RE = re.compile(r"\[\[([^\]|]*)\]\]")
+_BREAK_RE = re.compile(r"<br\s*/?>", re.IGNORECASE)
 _HTML_TAG_RE = re.compile(
     r"</?(?:br|sup|sub|ref|small|big|span|div|center)[^>]*>", re.IGNORECASE
 )
+
+# A template is decoration until proven otherwise, so this is a whitelist and
+# not a blocklist: an unrecognised template renders as the empty string. Adding
+# a name here is the deliberate act of proving one carries content.
+_CONTENT_TEMPLATES = frozenset({"keyword", "zodiacbadge"})
 
 
 def slugify(text: str) -> str:
@@ -29,11 +35,11 @@ def _unwrap_template(match: re.Match[str]) -> str:
     name = parts[0].strip().lower()
     # Named arguments (link=Achievements) are presentation, not content.
     positional = [p.strip() for p in parts[1:] if "=" not in p]
-    if name == "keyword" and positional:
-        # {{Keyword|<type>|<label>}} — the label is the readable text, and it
-        # is also what the resolver matches on, so it must survive.
+    if name in _CONTENT_TEMPLATES and positional:
+        # {{Keyword|<type>|<label>}} and {{ZodiacBadge|<name>}} both put the
+        # readable text last, and it is also what the resolver matches on, so
+        # it must survive.
         return positional[-1]
-    # Everything else on these four pages is decoration: icons and banners.
     return ""
 
 
@@ -57,6 +63,9 @@ def plain_text(raw: str) -> str:
         text = unwrapped
     text = _PIPED_LINK_RE.sub(r"\1", text)
     text = _PLAIN_LINK_RE.sub(r"\1", text)
+    # A <br> is a sentence boundary, so it becomes a space. _HTML_TAG_RE below
+    # would delete it outright and weld the two sentences into one word.
+    text = _BREAK_RE.sub(" ", text)
     text = _HTML_TAG_RE.sub("", text)
     text = text.replace("'''", "").replace("''", "")
     return normalise_space(text)
