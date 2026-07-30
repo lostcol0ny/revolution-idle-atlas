@@ -425,6 +425,49 @@ def test_a_cell_continued_on_the_next_line_is_kept_whole():
     assert records[0].effects == ["x1.4 to zodiac quality and x2 to luck"]
 
 
+def test_a_multi_line_template_cell_does_not_swallow_the_rest_of_the_row():
+    # Verbatim from data/raw/Infinity.wikitext. The Icon column holds a
+    # `{{#tag:tabber|...}}` spanning four source lines, and the line closing it
+    # also carries the row's three remaining cells. Appended verbatim, that tail
+    # becomes part of the icon cell, every row lands three columns short, and the
+    # whole table reads as zero records.
+    page = """{| class="wikitable mw-collapsible mw-collapsed" style="text-align:center; width: 80%"
+|colspan="5"|'''Infinity Upgrades'''
+|-
+! Code !! Icon !! Name !! Effect !! Cost (IP)
+|-
+| 1;1 || {{#tag:tabber|Current = [[File:0011.png|frameless|center|64px]]
+{{!}}-{{!}}
+Pre-1.053 = [[File:InfinityUpgrade 1 1.png|frameless|center|64px]]
+{{!}}-{{!}}
+}} || Infinity Generation and Automation || Generator mult × Infinities & unlocks Autobuy || 1
+|-
+| 2;1 || {{#tag:tabber|Current = [[File:0021.png|frameless|center|64px]]
+{{!}}-{{!}}
+Pre-1.053 = [[File:InfinityUpgrade 2 1.png|frameless|center|64px]]
+{{!}}-{{!}}
+}} || Exponential Box || +0.01 to Common Exponent || 1
+|}"""
+    records = read_wikitable(
+        page,
+        _entry(
+            page="Infinity",
+            system="infinity",
+            id_prefix="infinity-upgrade",
+            name_columns=["Name"],
+            effect_columns=["Effect"],
+        ),
+    )
+    # Names, not just a count: a row rebuilt off the wrong cell boundary would
+    # still be two records, holding the icon blob or the cost.
+    assert [r.name for r in records] == [
+        "Infinity Generation and Automation",
+        "Exponential Box",
+    ]
+    assert records[0].effects == ["Generator mult × Infinities & unlocks Autobuy"]
+    assert records[1].effects == ["+0.01 to Common Exponent"]
+
+
 def test_a_line_break_inside_a_cell_becomes_a_space():
     # Verbatim from data/raw/Singularity.wikitext. plain_text strips <br/> to
     # nothing, which welds the two sentences into "Unlock Milestones TabSMS

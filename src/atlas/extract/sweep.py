@@ -112,7 +112,15 @@ def _groups(body: str) -> list[tuple[bool, list[str]]]:
         if current:
             # A long cell wrapped onto the next source line with no leading
             # pipe. Dropping it truncates the effect text mid-sentence.
-            current[-1] = current[-1] + " " + stripped
+            #
+            # Re-split after joining instead of keeping the join whole. A cell
+            # holding a template that spans source lines leaves the markup
+            # unbalanced at the end of each of them, so a separator sitting
+            # after the closing braces was not at depth zero while the earlier
+            # line was being split, and only becomes visible once the closing
+            # braces rejoin the opening ones.
+            joined = current[-1] + " " + stripped
+            current[-1:] = split_outside(joined, "!!" if is_header else "||")
     flush()
     return groups
 
