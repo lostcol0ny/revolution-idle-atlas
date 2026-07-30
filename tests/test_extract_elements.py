@@ -2,7 +2,7 @@ from pathlib import Path
 
 from atlas.extract.refs import Vocabulary
 from atlas.extract.elements import extract, parse
-from atlas.models import EdgeConfidence, Rel
+from atlas.models import EdgeConfidence
 
 RAW_DIR = Path(__file__).resolve().parents[1] / "data" / "raw"
 

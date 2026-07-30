@@ -194,6 +194,19 @@ _MIN_SURFACE_LENGTH = 3
 _MIN_UPPERCASE_SURFACE_LENGTH = 2
 
 
+class SurfaceFormCollision(ValueError):
+    """Two distinct nodes claim the same surface form.
+
+    Fatal rather than resolved in favour of one side, for the reason
+    `build_vocabulary` sets out: the loser becomes unreachable and text spelled
+    for it silently resolves to the winner.
+
+    Subclasses ValueError so callers that only care that the input was bad keep
+    working; the distinct type is what lets the CLI tell a curation error apart
+    from an ordinary ValueError raised while parsing a wiki page.
+    """
+
+
 @dataclass(frozen=True)
 class _Term:
     pattern: re.Pattern[str]
@@ -256,7 +269,7 @@ class Vocabulary:
                     if prior_surface == surface
                     else f"{prior_surface!r}/{surface!r}"
                 )
-                raise ValueError(
+                raise SurfaceFormCollision(
                     f"surface form {spelling} is claimed by two nodes: "
                     f"{prior_target!r} and {target_id!r}"
                 )

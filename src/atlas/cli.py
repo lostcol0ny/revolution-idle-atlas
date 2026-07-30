@@ -9,6 +9,7 @@ import yaml
 from atlas.coverage import analyse, load_inventory, render_markdown
 from atlas.extract import ExtractError, run_all
 from atlas.extract.emit import to_yaml
+from atlas.extract.refs import SurfaceFormCollision
 from atlas.extract.vocab import build_vocabulary
 from atlas.loader import SchemaError, load_dataset
 from atlas.merge import merge
@@ -152,7 +153,7 @@ def _extract(root: Path) -> int:
             build_vocabulary(curated.nodes),
             frozenset(curated.node_ids()),
         )
-    except ValueError as exc:
+    except SurfaceFormCollision as exc:
         print(f"{DATASET_REL_PATH}  error  {exc}", file=sys.stderr)
         return 1
     except ExtractError as exc:
