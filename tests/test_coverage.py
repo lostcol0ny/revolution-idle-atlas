@@ -300,8 +300,11 @@ def test_not_swept_lists_pages_no_node_points_at():
 def test_not_swept_is_largest_first():
     # The section is a work queue, so the ordering is the feature. Sorted by
     # name instead, 38 sub-200-byte redirect stubs sit above Achievements.
-    report = analyse(Dataset(), raw_pages={"Small": 20, "Huge": 90000, "Mid": 500})
-    assert [name for name, _ in report.not_swept] == ["Huge", "Mid", "Small"]
+    #
+    # The page names run counter to their sizes on purpose: sorted by name they
+    # come back reversed, so a sort that ignores the size cannot pass this.
+    report = analyse(Dataset(), raw_pages={"Aaa": 20, "Zzz": 90000, "Mmm": 500})
+    assert [name for name, _ in report.not_swept] == ["Zzz", "Mmm", "Aaa"]
 
 
 def test_a_wiki_anchor_still_counts_as_covering_the_page():
