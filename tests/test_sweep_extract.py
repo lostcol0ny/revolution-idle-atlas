@@ -8,6 +8,8 @@ from atlas.extract.refs import Vocabulary
 from atlas.extract.sweep import extract
 from atlas.models import EdgeConfidence, Kind, NodeConfidence
 
+REAL_RAW = Path(__file__).resolve().parents[1] / "data" / "raw"
+
 TABLE = """{| class="wikitable"
 !Name
 !Effect
@@ -84,6 +86,27 @@ def test_a_swept_edge_runs_from_the_swept_node_to_what_it_boosts(tmp_path: Path)
     ]
 
 
+def test_an_ordinal_reference_reaches_the_edges_targets_effect(tmp_path: Path):
+    # `targets_effect` is the one edge field that degrades into a build ERROR
+    # rather than a wrong-looking edge: validate rejects an index past the end
+    # of the target's effect list. An edge naming the wrong effect of the right
+    # node still looks true, so the value is asserted rather than its presence.
+    #
+    # "second" (index 1) not "first" (index 0), because 0 == False in Python and
+    # a constant `targets_effect=False` would satisfy an assertion against 0.
+    body = TABLE.replace(
+        "|3.00x Attack Power gain", "|Boosts Gold's second effect"
+    )
+    result = extract(_raw(tmp_path, body=body), _manifest(), VOCABULARY)
+
+    # Both shapes in one assertion: the indexed reference must carry its index
+    # through, and the plain one must stay None. A constant fails on both.
+    assert [(e.from_, e.to, e.targets_effect) for e in result.edges] == [
+        ("special-mineral-red-gem", "gold", 1),
+        ("special-mineral-blue-gem", "gold", None),
+    ]
+
+
 def test_the_source_names_the_page_it_was_read_from(tmp_path: Path):
     result = extract(_raw(tmp_path), _manifest(), VOCABULARY)
     assert {e.source for e in result.edges} == {"wiki:Minerals"}
@@ -119,6 +142,11 @@ def test_a_manifest_page_with_no_raw_file_is_a_warning(tmp_path: Path):
     assert result.nodes == []
     assert len(result.warnings) == 1
     assert "Nonexistent" in result.warnings[0]
+    # The two warnings send a curator to different places — this one to the
+    # scrape's page list, the shape one to the manifest's columns. Asserting
+    # only the page name lets the messages be swapped without a test noticing.
+    assert "Nonexistent.wikitext" in result.warnings[0]
+    assert "the scrape does not fetch" in result.warnings[0]
 
 
 def test_a_manifest_page_that_yields_no_records_is_a_warning(tmp_path: Path):
@@ -128,6 +156,11 @@ def test_a_manifest_page_that_yields_no_records_is_a_warning(tmp_path: Path):
     assert result.nodes == []
     assert len(result.warnings) == 1
     assert "Minerals" in result.warnings[0]
+    # The file was found and read; it is the manifest's guess about the page's
+    # shape that failed. Pinned so this cannot be confused with the missing-file
+    # diagnosis, which names a different fix in a different file.
+    assert "found no records" in result.warnings[0]
+    assert "wikitable reader" in result.warnings[0]
 
 
 def test_a_page_that_yields_records_produces_no_warning(tmp_path: Path):
@@ -218,12 +251,54 @@ def test_run_all_does_not_raise_when_only_the_sweep_is_empty(tmp_path: Path):
     # The four hand-written parsers still raise on zero nodes. The sweep must
     # not, or one bad manifest guess blocks every build and the CI artifact
     # guard with it.
-    raw_dir = Path("data/raw")
     result = run_all(
-        raw_dir, Vocabulary.EMPTY, manifest=_manifest(page="Nonexistent")
+        REAL_RAW, Vocabulary.EMPTY, manifest=_manifest(page="Nonexistent")
     )
     assert result.nodes  # the four parsers still ran
     assert any("Nonexistent" in w for w in result.warnings)
+
+
+COLLIDING_TABLE = """{| class="wikitable"
+!Name
+!Effect
+|-
+|38
+|Boosts Gold gain
+|}"""
+
+
+def test_a_swept_node_loses_to_a_parser_that_minted_the_same_id(tmp_path: Path):
+    # `to_yaml`'s node dedup is first-wins, so whichever reading is emitted
+    # first is the one that survives into derived.yaml. Running the sweep last
+    # is what makes the hand-parsed reading win; moving it earlier would let a
+    # swept guess silently override a curated-quality parse.
+    #
+    # `id_prefix: relic` over a name column of "38" mints `relic-38`, which
+    # relics.py also mints from the real Relics page.
+    raw_dir = tmp_path / "raw"
+    raw_dir.mkdir()
+    for path in REAL_RAW.glob("*.wikitext"):
+        (raw_dir / path.name).write_text(
+            path.read_text(encoding="utf-8"), encoding="utf-8"
+        )
+    (raw_dir / "Collide.wikitext").write_text(COLLIDING_TABLE, encoding="utf-8")
+
+    result = run_all(
+        raw_dir,
+        Vocabulary.EMPTY,
+        manifest=_manifest(page="Collide", id_prefix="relic", system="relics"),
+    )
+
+    readings = [n for n in result.nodes if n.id == "relic-38"]
+    # Both readings are present, so this pins the ORDER rather than accidentally
+    # passing because the sweep produced nothing to collide with.
+    assert len(readings) == 2
+    # The parser's reading comes first and therefore wins first-wins dedup.
+    # Asserting the parsed name rather than just the confidence means a swept
+    # node that happened to be provisional cannot satisfy this by coincidence.
+    assert (readings[0].name, readings[0].wiki) == ("Smart Man", "Relics")
+    assert readings[0].confidence is NodeConfidence.DOCUMENTED
+    assert readings[1].wiki == "Collide"
 
 
 def test_run_all_still_raises_when_a_real_parser_is_empty(tmp_path: Path):
