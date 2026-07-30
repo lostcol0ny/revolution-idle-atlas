@@ -273,3 +273,65 @@ def test_render_markdown_omits_the_hierarchy_when_there_is_none():
     ds = _ds()
     ds.systems = []
     assert "## System hierarchy" not in render_markdown(analyse(ds))
+
+
+def test_page_title_inverts_raw_filename():
+    from atlas.coverage import page_title
+    from atlas.rawcheck import raw_filename
+
+    # Underscored titles round-trip exactly; a spaced one comes back
+    # underscored, which MediaWiki treats as the same page.
+    for title in ("Relics", "Minerals/Refine_Tree", "Dilation_Tree"):
+        assert page_title(raw_filename(title)) == title
+    assert page_title(raw_filename("Dilation Tree")) == "Dilation_Tree"
+
+
+def test_not_swept_lists_pages_no_node_points_at():
+    ds = Dataset(
+        systems=[SystemDef(id="relics", name="Relics")],
+        nodes=[
+            Node(id="a", name="A", system="relics", kind=Kind.RELIC, wiki="Relics"),
+        ],
+    )
+    report = analyse(ds, raw_pages={"Relics": 100, "Achievements": 5000})
+    assert report.not_swept == [("Achievements", 5000)]
+
+
+def test_not_swept_is_largest_first():
+    # The section is a work queue, so the ordering is the feature. Sorted by
+    # name instead, 38 sub-200-byte redirect stubs sit above Achievements.
+    report = analyse(Dataset(), raw_pages={"Small": 20, "Huge": 90000, "Mid": 500})
+    assert [name for name, _ in report.not_swept] == ["Huge", "Mid", "Small"]
+
+
+def test_a_wiki_anchor_still_counts_as_covering_the_page():
+    # node.wiki carries "Tarot#Major_Arcana" on some curated nodes. Compared
+    # whole, the page reads as unswept while its nodes sit in the graph.
+    ds = Dataset(
+        systems=[SystemDef(id="tarot", name="Tarot")],
+        nodes=[
+            Node(
+                id="a",
+                name="A",
+                system="tarot",
+                kind=Kind.TAROT_CARD,
+                wiki="Tarot#Major_Arcana",
+            )
+        ],
+    )
+    assert analyse(ds, raw_pages={"Tarot": 100}).not_swept == []
+
+
+def test_the_section_is_absent_when_no_raw_pages_are_given():
+    # Same contract as `has_inventory`: analyse must stay callable with a
+    # dataset alone, which every existing test and tests/fixtures rely on.
+    assert analyse(Dataset()).not_swept == []
+    assert "Not swept" not in render_markdown(analyse(Dataset()))
+
+
+def test_the_section_renders_the_pages_it_found():
+    report = analyse(Dataset(), raw_pages={"Achievements": 101707})
+    rendered = render_markdown(report)
+    assert "## Not swept" in rendered
+    assert "Achievements" in rendered
+    assert "101707" in rendered

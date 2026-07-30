@@ -6,7 +6,7 @@ from pathlib import Path
 
 import yaml
 
-from atlas.coverage import analyse, load_inventory, render_markdown
+from atlas.coverage import analyse, load_inventory, page_title, render_markdown
 from atlas.extract import ExtractError, run_all
 from atlas.extract.emit import to_yaml
 from atlas.extract.manifest import load_manifest
@@ -89,10 +89,11 @@ def _build(root: Path, check_only: bool) -> int:
         curated_path=display_path,
     )
 
+    raw_dir = root / "data" / "raw"
     problems = (
         merge_problems
         + validate_dataset(dataset)
-        + check_against_raw(dataset, root / "data" / "raw")
+        + check_against_raw(dataset, raw_dir)
     )
     errors = [p for p in problems if p.severity == "error"]
     warning_count = len(problems) - len(errors)
@@ -103,7 +104,11 @@ def _build(root: Path, check_only: bool) -> int:
         return 1
 
     inventory = load_inventory(root / "data" / "inventory.yaml")
-    report = analyse(dataset, inventory=inventory)
+    raw_pages = {
+        page_title(path.name): path.stat().st_size
+        for path in sorted(raw_dir.glob("*.wikitext"))
+    } if raw_dir.is_dir() else None
+    report = analyse(dataset, inventory=inventory, raw_pages=raw_pages)
     print(
         f"ok: {report.node_count} nodes, {report.edge_count} edges, "
         f"{len(report.orphans)} orphans, {warning_count} warning(s)"

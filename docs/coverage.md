@@ -455,3 +455,83 @@ Nodes with no edges in either direction.
 ## Feedback loops
 
 None.
+
+## Not swept
+
+Pages in `data/raw/` that no node points at. Largest first, because this is a work queue: adding one is an entry in `data/sweep.yaml`, not a new parser.
+
+The tail is redirect stubs of a few dozen bytes. They sort to the bottom on their own rather than being filtered by a size threshold nobody could justify.
+
+| Page | Bytes |
+|---|---|
+| `Achievements` | 101707 |
+| `Suicons_playroom` | 21509 |
+| `Secret_Achievements` | 18203 |
+| `Attacks_Strategy` | 17849 |
+| `Automations` | 11625 |
+| `Macro_Builder` | 11610 |
+| `Revolution` | 10482 |
+| `Options` | 9079 |
+| `Attacks` | 8835 |
+| `Zodiac_Loadouts` | 8101 |
+| `Macro_Templates` | 6042 |
+| `Eternity_Challenges` | 5918 |
+| `Planet_Shop` | 5811 |
+| `Eternity_Milestones` | 4042 |
+| `Skins` | 4010 |
+| `Planets` | 3062 |
+| `Dilation` | 2793 |
+| `Statistics` | 2473 |
+| `Stars` | 2305 |
+| `Walkthrough_Rewrite` | 2257 |
+| `Daily_Rewards` | 1862 |
+| `Revolution_Idle_Wiki` | 1636 |
+| `Infinity_Challenges` | 1352 |
+| `Leaderboard` | 1319 |
+| `Supernova` | 1170 |
+| `Revolution_Idle_Wiki/Links` | 1094 |
+| `Revolution_Idle_Wiki/Index` | 929 |
+| `Infinity_Upgrades` | 705 |
+| `Credits` | 527 |
+| `Revolution_Idle_Wiki/contribute` | 496 |
+| `Revolution_Idle_Wiki/welcome` | 463 |
+| `Revolution_Idle_Wiki/about` | 443 |
+| `Game_Speed` | 374 |
+| `Other_Resources` | 185 |
+| `DTP` | 63 |
+| `Ascension` | 58 |
+| `Prestige` | 58 |
+| `Generators` | 56 |
+| `Promote` | 56 |
+| `DP` | 49 |
+| `DU` | 49 |
+| `EC` | 42 |
+| `Offline_Flux` | 36 |
+| `Walkthrough` | 35 |
+| `Main_Page` | 34 |
+| `SA` | 34 |
+| `Achievements/Secrets` | 33 |
+| `IC` | 33 |
+| `RP` | 33 |
+| `Refinement` | 33 |
+| `Research_Points` | 33 |
+| `Promotions` | 32 |
+| `SN` | 32 |
+| `AP` | 30 |
+| `External_Tools` | 30 |
+| `Score` | 30 |
+| `Guide` | 25 |
+| `PS` | 25 |
+| `GS` | 24 |
+| `Revolution_Idle` | 24 |
+| `Shop` | 23 |
+| `TF` | 23 |
+| `EP` | 22 |
+| `IP` | 22 |
+| `ET` | 20 |
+| `Easy_trials` | 20 |
+| `HT` | 20 |
+| `Hard_Trials` | 20 |
+| `MT` | 20 |
+| `Medium_trials` | 20 |
+| `Common_Exponent` | 0 |

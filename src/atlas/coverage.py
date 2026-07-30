@@ -29,6 +29,10 @@ class CoverageReport:
     has_inventory: bool = False
     unresolved: list[str] = field(default_factory=list)
     rollup: list[SystemRollup] = field(default_factory=list)
+    # (page title, byte size), largest first. Empty when analyse was called
+    # without raw_pages, which is what keeps the section out of the document
+    # rather than rendering it as "None".
+    not_swept: list[tuple[str, int]] = field(default_factory=list)
 
 
 def load_inventory(path: Path) -> dict[str, list[str]] | None:
@@ -41,6 +45,22 @@ def load_inventory(path: Path) -> dict[str, list[str]] | None:
     # would reach .items() in analyse and surface as an AttributeError traceback.
     result = yaml.safe_load(path.read_text(encoding="utf-8"))
     return result if isinstance(result, dict) else None
+
+
+def page_title(filename: str) -> str:
+    """Turn a data/raw/ filename back into the wiki page title it came from.
+
+    Not a strict inverse of `rawcheck.raw_filename`, and it cannot be: that
+    function maps both "Dilation Tree" and "Dilation_Tree" onto the same file,
+    so the spelling that was written is not recoverable. This returns the
+    underscored form, which is what every `wiki:` value in this repo already
+    uses and what MediaWiki treats as equivalent to the spaced one in a URL.
+
+    The two must nonetheless agree on the `/` <-> `__` mapping, because they are
+    compared against each other to decide whether a page has been read — a
+    divergence there reports a swept page as unswept.
+    """
+    return filename.removesuffix(".wikitext").replace("__", "/")
 
 
 def _build_graph(ds: Dataset) -> nx.DiGraph:
@@ -134,7 +154,9 @@ def _rollup(ds: Dataset, graph: nx.DiGraph) -> list[SystemRollup]:
 
 
 def analyse(
-    ds: Dataset, inventory: dict[str, list[str]] | None = None
+    ds: Dataset,
+    inventory: dict[str, list[str]] | None = None,
+    raw_pages: dict[str, int] | None = None,
 ) -> CoverageReport:
     graph = _build_graph(ds)
 
@@ -163,6 +185,19 @@ def analyse(
         if absent:
             missing_entities[system] = absent
 
+    # A page counts as read when some node points at it — which covers the four
+    # hand-written parsers, every sweep manifest entry and any hand-curated
+    # node through one rule. The anchor is stripped because node.wiki carries
+    # "Tarot#Major_Arcana" on some curated nodes.
+    covered = {n.wiki.split("#", 1)[0] for n in ds.nodes if n.wiki}
+    not_swept = sorted(
+        ((page, size) for page, size in (raw_pages or {}).items() if page not in covered),
+        # Largest first: this is a work queue, and 38 of the 88 files are
+        # sub-200-byte redirect stubs that must not sit above Achievements.
+        # The name breaks ties so the generated file is byte-stable.
+        key=lambda item: (-item[1], item[0]),
+    )
+
     return CoverageReport(
         orphans=orphans,
         cycles=cycles,
@@ -174,6 +209,7 @@ def analyse(
         has_inventory=inventory is not None,
         unresolved=_unresolved(ds),
         rollup=_rollup(ds, graph),
+        not_swept=not_swept,
     )
 
 
@@ -242,6 +278,23 @@ def render_markdown(report: CoverageReport) -> str:
             lines.append("- " + " → ".join(f"`{n}`" for n in component))
     else:
         lines.append("None.")
+
+    if report.not_swept:
+        lines += ["", "## Not swept", ""]
+        lines.append(
+            "Pages in `data/raw/` that no node points at. Largest first, "
+            "because this is a work queue: adding one is an entry in "
+            "`data/sweep.yaml`, not a new parser."
+        )
+        lines.append("")
+        lines.append(
+            "The tail is redirect stubs of a few dozen bytes. They sort to the "
+            "bottom on their own rather than being filtered by a size "
+            "threshold nobody could justify."
+        )
+        lines.append("")
+        lines += ["| Page | Bytes |", "|---|---|"]
+        lines += [f"| `{page}` | {size} |" for page, size in report.not_swept]
 
     if report.has_inventory:
         lines += ["", "## Known unknowns", ""]
