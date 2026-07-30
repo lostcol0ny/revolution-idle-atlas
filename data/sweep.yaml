@@ -5,6 +5,57 @@
 # are `provisional` and swept edges are `uncertain` — because a column heading is
 # a guess about what a page means. Correct anything wrong in
 # data/relationships.yaml, which wins every merge.
+#
+# Tables surveyed but deliberately excluded from all seven swept pages:
+#
+#   Singularity — Atom Threshold|Base Value|Resource Affected|Modifiable?*|Modification Source (14 rows)
+#     The "Resource Affected" column names other graph nodes, but the table
+#     describes game-engine buffs and penalties that activate at atom thresholds,
+#     not upgrade effects. Each row is a threshold event, not a named entity that
+#     should become a node, so sweeping it would produce nodes with numeric
+#     threshold ids rather than meaningful ones.
+#
+#   Singularity — Modification Source|Modification Prerequisite (11 rows)
+#     A reference table listing what can boost Singularity Mult gain. Its rows
+#     are source names (e.g. "Relic 67 Effect"), not distinct entities — the
+#     actual nodes are modelled elsewhere. Sweeping it would duplicate existing
+#     nodes under different ids.
+#
+#   Plague — Stage|Name|Population|PlG Reward (61 rows)
+#     Per-stage numeric data (population, PlG reward). No effect prose; nothing
+#     to resolve against the vocabulary. Sweeping it would produce 61 nodes
+#     that describe populations, not effects on other nodes.
+#
+#   Plague — Level|Name|Immunity (6 rows)
+#     Immunity is a numeric stat, not an effect on another graph node.
+#
+#   Plague — Icon|Type|Notes (5 rows)
+#     ER type descriptions. The "Notes" column holds prose about spread/stealth
+#     tradeoffs, not the name of a resource or node being boosted.
+#
+#   Minerals — SMS Factor|Base Spawn Cost (11 rows)
+#     A lookup table of numeric thresholds, not entities with effects.
+#
+#   Minerals — Level|Sacrifice Dust Requirement (12 rows)
+#     A level-up cost ladder. Rows are levels (27–n), not named entities.
+#
+#   Zodiacs — Season|Zodiacs|Sun|Mercury|...|Chiron|Fortune Pars (5 rows)
+#     A placement chart showing which zodiac belongs to which celestial position.
+#     No effect column; the data is structural, not graph-edge material.
+#
+#   Zodiacs — Factor|Unlock Condition|Thresholds (15 rows)
+#     The "Thresholds" column holds numbers (e.g. 1.08e2466, "No threshold"),
+#     not effects. Sweeping it would produce twelve nodes stating a quantity.
+#     (This is the table already listed in the brief's exclusion ledger.)
+#
+#   Zodiacs — Rarity|Range Start|End (11 rows)
+#     Luck thresholds for rarity tiers. Numeric data with no effect prose.
+#
+#   Zodiacs — +Immortal|Min. luck needed (17 rows)
+#     Same: luck thresholds for extended rarity tiers.
+#
+#   Zodiacs — Rarity|Range Start|Range Start for +1000 rarity|... (5 rows)
+#     Same pattern extended to post-Immortal rarities (Ethereal, Amazing, etc.).
 pages:
   - reader: record_template
     page: Minerals
@@ -73,10 +124,10 @@ pages:
     effect_columns: [Effect]
     per_level_column: Initial Increase/lvl
 
-  # `Second Effect` is blank in all twelve rows today. It is read anyway: the
-  # owner's note that these gain a second and third effect at higher tiers is
-  # why `effects` is a list, and reading the column now means no code change
-  # when the wiki documents them.
+  # `Second Effect` is blank in all twelve rows today. It is read anyway:
+  # these gain a second and third effect at higher tiers, so `effects` is a
+  # list and reading the column now means no code change when the wiki
+  # documents them.
   - reader: wikitable
     page: Singularity
     system: singularity

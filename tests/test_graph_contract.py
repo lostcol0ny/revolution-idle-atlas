@@ -152,20 +152,39 @@ def test_the_sweep_reached_the_graph(graph: dict):
     # entry silently reading zero records looks exactly like a working build.
     # One per manifest entry, not one per page: an entry reading zero records
     # looks exactly like a working build without this.
-    prefixes = {
-        "special-mineral-",
-        "zodiac-",
-        "trial-",
-        "plague-",
-        "plague-stat-",
-        "singularity-",
-        "singularity-tree-",
-        "singularity-zodiac-",
-        "dilation-node-",
-        "dilation-upgrade-",
+    #
+    # Counts are pinned to the committed snapshot in data/raw/. A mismatch after
+    # a scrape PR lands is the most useful thing the suite can say at that point.
+    #
+    # Each prefix is tested against provisional nodes only, so curated nodes
+    # sharing a prefix (e.g. zodiac-sell-cost) are not counted. The antichain
+    # exclusion removes sub-prefix matches: a node counted for "plague-stat-"
+    # is not also counted for "plague-", so the two entries stay independent.
+    expected = {
+        "special-mineral-": 10,
+        "zodiac-": 12,
+        "trial-": 25,
+        "plague-": 4,
+        "plague-stat-": 6,
+        "singularity-": 27,
+        "singularity-tree-": 13,
+        "singularity-zodiac-": 12,
+        "dilation-node-": 13,
+        "dilation-upgrade-": 9,
     }
-    for prefix in prefixes:
-        assert any(n["id"].startswith(prefix) for n in graph["nodes"]), prefix
+    swept = [n for n in graph["nodes"] if n.get("confidence") == "provisional"]
+    for prefix, count in expected.items():
+        owned = [
+            n
+            for n in swept
+            if n["id"].startswith(prefix)
+            and not any(
+                n["id"].startswith(p)
+                for p in expected
+                if p != prefix and p.startswith(prefix)
+            )
+        ]
+        assert len(owned) == count, (prefix, len(owned))
 
 
 def test_the_plague_statistics_table_wires_plague_into_the_graph(graph: dict):
@@ -192,11 +211,15 @@ def test_a_numbered_row_got_a_readable_name(graph: dict):
 
 def test_every_swept_edge_is_uncertain(graph: dict):
     # The precision guard, asserted against the shipped artifact rather than
-    # against the reader. A swept edge is identified by its source page, so this
-    # also fails if a sweep page starts producing edges through another path.
-    # Edges explicitly marked `provisional` in relationships.yaml are curated
-    # entries that happen to cite the same source page; they are not sweep output
-    # and are excluded from this assertion.
+    # against the reader. Swept edges must carry `uncertain` confidence because
+    # a generic column-heading reader has no structural basis for claiming more.
+    #
+    # Two curated edges in relationships.yaml cite wiki:Singularity as their
+    # source (relic-69 -> atoms-gain and refine-node-121 -> singularity). They
+    # originate from parser-minted nodes, not swept ones. Filtering by the
+    # `from` id prefix rather than by `confidence` discriminates on something
+    # independent of the property under assertion, so a sweep emitting the
+    # wrong confidence cannot satisfy this test by shrinking its own input.
     swept_sources = {
         "wiki:Zodiacs",
         "wiki:Trials",
@@ -206,12 +229,21 @@ def test_every_swept_edge_is_uncertain(graph: dict):
         "wiki:Minerals",
         "wiki:Eternity",
     }
+    swept_prefixes = (
+        "special-mineral-",
+        "zodiac-",
+        "trial-",
+        "plague-",
+        "singularity-",
+        "dilation-node-",
+        "dilation-upgrade-",
+    )
     swept = [
         e
         for e in graph["edges"]
-        if e["source"] in swept_sources and e.get("confidence") != "provisional"
+        if e["source"] in swept_sources and e["from"].startswith(swept_prefixes)
     ]
-    assert swept, "no swept edges in graph.json at all"
+    assert len(swept) == 61, f"expected 61 swept edges, got {len(swept)}"
     assert all(e.get("confidence") == "uncertain" for e in swept)
 
 
