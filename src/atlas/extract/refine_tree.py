@@ -70,10 +70,8 @@ def parse(raw: str, vocabulary: Vocabulary = Vocabulary.EMPTY) -> ExtractResult:
                         "note": text,
                         "targets_effect": reference.targets_effect,
                         "source": SOURCE,
-                        "confidence": (
-                            EdgeConfidence.UNCERTAIN
-                            if reference.from_vocabulary
-                            else EdgeConfidence.PROVISIONAL
+                        "confidence": reference.confidence(
+                            EdgeConfidence.PROVISIONAL
                         ),
                     }
                 )

@@ -73,14 +73,9 @@ def parse(raw: str, vocabulary: Vocabulary = Vocabulary.EMPTY) -> ExtractResult:
                         "note": text,
                         "targets_effect": reference.targets_effect,
                         "source": SOURCE,
-                        # Prose is weaker evidence than a table cell, so a
-                        # vocabulary hit is uncertain regardless of whether the
-                        # wiki hedged the coefficient.
-                        "confidence": (
-                            EdgeConfidence.UNCERTAIN
-                            if reference.from_vocabulary
-                            else confidence
-                        ),
+                        # The hedge reading is only the floor for a structural
+                        # match; a vocabulary hit is uncertain either way.
+                        "confidence": reference.confidence(confidence),
                     }
                 )
             )

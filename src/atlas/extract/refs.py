@@ -2,7 +2,7 @@ import re
 from collections.abc import Iterable
 from dataclasses import dataclass
 
-from atlas.models import Op
+from atlas.models import EdgeConfidence, Op
 
 _SLUG_RE = re.compile(r"[^a-z0-9]+")
 _COMMENT_RE = re.compile(r"<!--.*?-->", re.DOTALL)
@@ -160,10 +160,25 @@ class Reference:
     target_id: str
     targets_effect: int | None = None
     # True when a Vocabulary surface form produced this, rather than one of the
-    # four entity regexes. Callers stamp `confidence: uncertain` on these: prose
-    # matching is weaker evidence than a structural table cell, and a flat
-    # per-call-site confidence cannot express the difference.
+    # four entity regexes. Read it through `confidence` rather than directly.
     from_vocabulary: bool = False
+
+    def confidence(self, default: EdgeConfidence) -> EdgeConfidence:
+        """The confidence to stamp on an edge built from this reference.
+
+        A vocabulary hit is a name spotted in running prose, which is weaker
+        evidence than the four entity regexes: those match a shape the wiki only
+        writes when it means it ("Relic 12", "Fire Node 3"), while a surface form
+        matches wherever its letters appear. So a vocabulary hit is capped at
+        `uncertain` no matter how sure the caller otherwise is, and a wrong edge
+        is worse than a missing one.
+
+        `default` is what a non-vocabulary reference gets, and it is the caller's
+        alone: the relics page has already downgraded itself to `uncertain` when
+        the wiki hedged its coefficient with a "?", and that reading must not be
+        promoted back to `provisional` here.
+        """
+        return EdgeConfidence.UNCERTAIN if self.from_vocabulary else default
 
 
 _RELIC_RE = re.compile(
