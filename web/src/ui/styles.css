@@ -1,11 +1,36 @@
+/* One dark theme, no toggle. Every colour below is a variable so that adding a
+   light one later is a second block rather than a re-audit of this file. */
 :root {
   --sidebar-width: 280px;
   --panel-width: 320px;
-  --border: #e2e8f0;
-  --text: #0f172a;
-  --muted: #64748b;
+
+  --bg: #0f172a;
+  --surface: #172033;
+  --border: #2b374d;
+  --divider: #1e293b;
+  --hover: #1e293b;
+  --text: #e2e8f0;
+  --muted: #94a3b8;
+  --accent: #7dd3fc;
+  /* The selected row inverts rather than tinting: at this contrast a tint
+     strong enough to read is nearly the inverted swatch anyway. */
+  --selected-bg: #e2e8f0;
+  --selected-text: #0f172a;
+  --banner-bg: #3b2f0b;
+  --banner-border: #a16207;
+
+  /* Every system colour is dark enough to carry white label text, which leaves
+     the darkest of them at 1.5:1 against this background -- the fill vanishes
+     and the label appears to float. The rim, not the fill, is what gives a node
+     an edge here, so it is not decoration. */
+  --node-rim: rgba(255, 255, 255, 0.38);
+  --node-root-rim: #f8fafc;
+
   font-family: system-ui, -apple-system, sans-serif;
   color: var(--text);
+  /* Hands the UA dark scrollbars, form controls and caret. Without it the
+     sidebar and detail panel keep bright scrollbars down their whole length. */
+  color-scheme: dark;
 }
 
 * {
@@ -14,6 +39,7 @@
 
 body {
   margin: 0;
+  background: var(--bg);
 }
 
 #root {
@@ -59,8 +85,8 @@ body {
 }
 
 .banner {
-  background: #fffbeb;
-  border-bottom: 1px solid #fcd34d;
+  background: var(--banner-bg);
+  border-bottom: 1px solid var(--banner-border);
   padding: 8px 12px;
   font-size: 13px;
 }
@@ -77,7 +103,7 @@ body {
   background: none;
   border: none;
   padding: 0;
-  color: #2563eb;
+  color: var(--accent);
   cursor: pointer;
   font: inherit;
   text-decoration: underline;
@@ -107,7 +133,7 @@ body {
 }
 
 .group-header:hover {
-  background: #f1f5f9;
+  background: var(--hover);
 }
 
 .caret {
@@ -151,12 +177,12 @@ body {
 }
 
 .node-row:hover {
-  background: #f1f5f9;
+  background: var(--hover);
 }
 
 .node-row.selected {
-  background: #0f172a;
-  color: #ffffff;
+  background: var(--selected-bg);
+  color: var(--selected-text);
 }
 
 /* These buttons strip their native background and border, so the focus
@@ -168,7 +194,7 @@ body {
 .filter:focus-visible,
 .chip:focus-visible,
 .link:focus-visible {
-  outline: 2px solid #2563eb;
+  outline: 2px solid var(--accent);
   outline-offset: 2px;
 }
 
@@ -184,7 +210,7 @@ body {
   align-items: center;
   gap: 8px;
   padding: 8px 12px;
-  border-bottom: 1px solid #e2e8f0;
+  border-bottom: 1px solid var(--border);
   font-size: 13px;
 }
 
@@ -193,8 +219,9 @@ body {
 }
 
 .chip {
-  border: 1px solid #cbd5e1;
-  background: #fff;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text);
   border-radius: 999px;
   padding: 2px 10px;
   font-size: 12px;
@@ -202,9 +229,9 @@ body {
 }
 
 .chip--on {
-  background: #0f172a;
-  border-color: #0f172a;
-  color: #fff;
+  background: var(--selected-bg);
+  border-color: var(--selected-bg);
+  color: var(--selected-text);
 }
 
 .graphview .react-flow {
@@ -220,7 +247,7 @@ body {
   width: 180px;
   height: 56px;
   padding: 0 10px;
-  border: 2px solid;
+  border: 2px solid var(--node-rim);
   border-radius: 6px;
   color: #fff;
   font-size: 13px;
@@ -228,8 +255,9 @@ body {
 }
 
 .atlas-node--root {
+  border-color: var(--node-root-rim);
   border-width: 4px;
-  box-shadow: 0 0 0 2px #fff, 0 0 0 5px #0f172a;
+  box-shadow: 0 0 0 2px var(--bg), 0 0 0 5px var(--node-root-rim);
 }
 
 .atlas-node__badge {
@@ -288,7 +316,7 @@ body {
 
 .edgerow {
   padding: 6px 0;
-  border-bottom: 1px solid #f1f5f9;
+  border-bottom: 1px solid var(--divider);
   font-size: 13px;
 }
 
@@ -310,5 +338,5 @@ body {
 }
 
 .sep {
-  color: #cbd5e1;
+  color: var(--border);
 }

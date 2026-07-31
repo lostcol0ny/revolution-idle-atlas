@@ -89,10 +89,15 @@ export function kindBadge(kind: Kind): string {
 // `rel` gets two channels — line style and lightness. Style separates the
 // categories; lightness separates signal from background. Both are needed
 // because `requires` is just over half of edges and the app's subject is the rest.
+// The two lightnesses swapped when the canvas went dark: the emphasised pair was
+// near-black ink on white and is now near-white on slate, and `requires` moved the
+// other way. The ordering is what carries the meaning, not the particular hexes.
 export const REL_STYLE: Record<Rel, { stroke: string; dash?: string; width: number }> = {
-  boosts: { stroke: '#0f172a', width: 2 },
-  unlocks: { stroke: '#0f172a', dash: '6 4', width: 2 },
-  requires: { stroke: '#cbd5e1', dash: '2 4', width: 1.5 },
+  boosts: { stroke: '#e2e8f0', width: 2 },
+  unlocks: { stroke: '#e2e8f0', dash: '6 4', width: 2 },
+  requires: { stroke: '#64748b', dash: '2 4', width: 1.5 },
 };
 
-export const BACK_EDGE_STYLE = { stroke: '#b45309', dash: '4 3', width: 2 };
+// Amber either way, but the light-canvas shade sat at 1.9:1 here. This one clears
+// 7:1 and still reads as a warning rather than as a third relation.
+export const BACK_EDGE_STYLE = { stroke: '#f59e0b', dash: '4 3', width: 2 };

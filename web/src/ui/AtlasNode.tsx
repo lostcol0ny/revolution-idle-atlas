@@ -23,11 +23,7 @@ export function AtlasNode({ data }: NodeProps<AtlasFlowNode>) {
   return (
     <div
       className={data.isRoot ? 'atlas-node atlas-node--root' : 'atlas-node'}
-      style={
-        data.isRoot
-          ? { background: colour, borderColor: '#0f172a' }
-          : { background: colour, borderColor: colour }
-      }
+      style={{ background: colour }}
       title={`${data.label} — ${data.system} · ${data.kind}`}
     >
       <Handle type="target" position={HandlePosition.Left} />
