@@ -8999,6 +8999,11 @@
     },
     {
       "confidence": "documented",
+      "effects": [
+        {
+          "text": "Boosts the minerals' local speed exponent"
+        }
+      ],
       "id": "polish-knuckles",
       "kind": "stat",
       "name": "Polish Knuckles",
@@ -9157,8 +9162,8 @@
       "id": "runes",
       "kind": "currency",
       "name": "Runes",
-      "system": "relics",
-      "wiki": "Relics"
+      "system": "minerals",
+      "wiki": "Minerals"
     },
     {
       "aliases": [
@@ -12161,7 +12166,7 @@
       "id": "rune-sun",
       "kind": "currency",
       "name": "Sun Runes",
-      "system": "relics",
+      "system": "minerals",
       "wiki": "Minerals"
     },
     {
@@ -12174,8 +12179,335 @@
       "id": "rune-moon",
       "kind": "currency",
       "name": "Moon Runes",
-      "system": "relics",
+      "system": "minerals",
       "wiki": "Minerals"
+    },
+    {
+      "aliases": [
+        "Common Minerals"
+      ],
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "Spawned with Gold at a price that rises per spawn and decays back toward a minimum"
+        },
+        {
+          "text": "Two minerals of the same level merge into one of the next level up"
+        },
+        {
+          "text": "Generate Value Points passively"
+        }
+      ],
+      "id": "minerals",
+      "kind": "group",
+      "name": "Minerals",
+      "system": "minerals",
+      "wiki": "Minerals"
+    },
+    {
+      "aliases": [
+        "VP"
+      ],
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "A mineral generates 0.01 x 3^(Mineral Level - 1) per second before bonuses"
+        },
+        {
+          "text": "Spent on the ten Mineral Upgrades"
+        }
+      ],
+      "id": "value-points",
+      "kind": "currency",
+      "name": "Value Points",
+      "system": "minerals",
+      "wiki": "Minerals"
+    },
+    {
+      "aliases": [
+        "PP"
+      ],
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "Earned by Polishing, which resets Value Points, minerals, Mineral Upgrades, Magnets and Merge Level"
+        },
+        {
+          "text": "Spent on the five Polish weapons"
+        }
+      ],
+      "id": "polish-points",
+      "kind": "currency",
+      "name": "Polish Points",
+      "system": "minerals",
+      "wiki": "Minerals"
+    },
+    {
+      "aliases": [
+        "RfP"
+      ],
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "Earned by Refining, which resets everything Polishing resets plus the Polish upgrades themselves"
+        },
+        {
+          "text": "Spent on the Refine Tree"
+        }
+      ],
+      "id": "refinement-points",
+      "kind": "currency",
+      "name": "Refinement Points",
+      "system": "minerals",
+      "wiki": "Minerals"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "Dropped when common minerals merge, at the Magnet Chance rate"
+        },
+        {
+          "text": "Spent on the magnet Mineral Upgrades"
+        }
+      ],
+      "id": "magnets",
+      "kind": "currency",
+      "name": "Magnets",
+      "system": "minerals",
+      "wiki": "Minerals"
+    },
+    {
+      "aliases": [
+        "SPM"
+      ],
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "Spawned for a cost in Sun Runes and Moon Runes, starting at 10 of each"
+        },
+        {
+          "text": "Kept through both the Polish and the Refine prestige"
+        }
+      ],
+      "id": "special-minerals",
+      "kind": "currency",
+      "name": "Special Minerals",
+      "system": "minerals",
+      "wiki": "Minerals"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "Unlocked by sacrificing every Special Mineral type"
+        },
+        {
+          "text": "Gained by deleting minerals and from Tarot Challenge rewards"
+        }
+      ],
+      "id": "sacrifice-dust",
+      "kind": "currency",
+      "name": "Sacrifice Dust",
+      "system": "minerals",
+      "wiki": "Minerals"
+    },
+    {
+      "aliases": [
+        "Mineral Levels"
+      ],
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "Polishing unlocks at level 30 and Refining at level 70"
+        }
+      ],
+      "id": "mineral-level",
+      "kind": "stat",
+      "name": "Mineral Level",
+      "system": "minerals",
+      "wiki": "Minerals"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "Each level doubles Value Point gain"
+        },
+        {
+          "text": "The cap to the next level is 10 x (Merge Level + 1)^2"
+        }
+      ],
+      "id": "merge-level",
+      "kind": "stat",
+      "name": "Merge Level",
+      "system": "minerals",
+      "wiki": "Minerals"
+    },
+    {
+      "aliases": [
+        "Merge EXP",
+        "Merge XP"
+      ],
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "Earned per merge and spent raising the Merge Level"
+        }
+      ],
+      "id": "merge-experience",
+      "kind": "stat",
+      "name": "Merge Experience",
+      "system": "minerals",
+      "wiki": "Minerals"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "Starts at 1% per merge of common minerals"
+        }
+      ],
+      "id": "magnet-chance",
+      "kind": "stat",
+      "name": "Magnet Chance",
+      "system": "minerals",
+      "wiki": "Minerals"
+    },
+    {
+      "aliases": [
+        "Minerals Local Speed"
+      ],
+      "confidence": "documented",
+      "id": "mineral-local-speed",
+      "kind": "stat",
+      "name": "Mineral Local Speed",
+      "system": "minerals",
+      "wiki": "Minerals"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "Boosts Value Point gain"
+        },
+        {
+          "text": "Level 10 unlocks mineral autospawn, level 25 unlocks the VP factor"
+        }
+      ],
+      "id": "polish-sword",
+      "kind": "stat",
+      "name": "Polish Sword",
+      "system": "minerals",
+      "wiki": "Minerals"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "Empowers the fall of the mineral spawn cost"
+        },
+        {
+          "text": "Level 10 starts Unity with 1,000 eternities"
+        }
+      ],
+      "id": "polish-axe",
+      "kind": "stat",
+      "name": "Polish Axe",
+      "system": "minerals",
+      "wiki": "Minerals"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "Boosts Gold Gain"
+        },
+        {
+          "text": "Level 50 unlocks the Second Insane Trial"
+        }
+      ],
+      "id": "polish-spear",
+      "kind": "stat",
+      "name": "Polish Spear",
+      "system": "minerals",
+      "wiki": "Minerals"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "Boosts Attack Ascension Power"
+        },
+        {
+          "text": "Level 50 removes the EP cost of animals and lab upgrades"
+        }
+      ],
+      "id": "polish-bow",
+      "kind": "stat",
+      "name": "Polish Bow",
+      "system": "minerals",
+      "wiki": "Minerals"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "Five upgrades, one per Polish weapon, each adding 1% efficiency per level"
+        }
+      ],
+      "id": "polish-enhance",
+      "kind": "upgrade",
+      "name": "Polish Enhance",
+      "system": "minerals",
+      "wiki": "Minerals"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "136 nodes bought with Refinement Points; circles are bought once, squares are levelable"
+        }
+      ],
+      "id": "refine-tree",
+      "kind": "group",
+      "name": "Refine Tree",
+      "system": "refine-tree",
+      "wiki": "Minerals"
+    },
+    {
+      "confidence": "documented",
+      "id": "elements",
+      "kind": "group",
+      "name": "Elements",
+      "system": "elements",
+      "wiki": "Elements"
+    },
+    {
+      "confidence": "documented",
+      "id": "tarot",
+      "kind": "group",
+      "name": "Tarot",
+      "system": "tarot",
+      "wiki": "Tarot"
+    },
+    {
+      "aliases": [
+        "Attacks Ascension Power",
+        "Attack Ascend Power",
+        "Attacks Ascend Power"
+      ],
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "Gained from Value Points"
+        }
+      ],
+      "id": "attack-ascension-power",
+      "kind": "stat",
+      "name": "Attack Ascension Power",
+      "system": "attacks",
+      "wiki": "Attacks"
     }
   ],
   "edges": [
@@ -12431,6 +12763,15 @@
       "to": "gold-gain"
     },
     {
+      "confidence": "uncertain",
+      "from": "relic-22",
+      "note": "Mult to VP gain Multiplies VP gain by X",
+      "op": "add",
+      "rel": "boosts",
+      "source": "wiki:Relics",
+      "to": "value-points"
+    },
+    {
       "confidence": "provisional",
       "from": "relic-23",
       "note": "Empowers Relic 22 Raises Relic 22 effect to a power (^)",
@@ -12476,6 +12817,23 @@
       "to": "donut-zodiac-exp-factor"
     },
     {
+      "confidence": "uncertain",
+      "from": "relic-28",
+      "note": "You get more merge exp based on X^[mineral level]",
+      "op": "add",
+      "rel": "boosts",
+      "source": "wiki:Relics",
+      "to": "merge-experience"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "mineral-level",
+      "note": "You get more merge exp based on X^[mineral level]",
+      "rel": "boosts",
+      "source": "wiki:Relics",
+      "to": "relic-28"
+    },
+    {
       "confidence": "provisional",
       "from": "relic-29",
       "note": "Refine Node 18 eff:",
@@ -12495,12 +12853,39 @@
     },
     {
       "confidence": "uncertain",
+      "from": "relic-32",
+      "note": "PP Gain powered to",
+      "op": "add",
+      "rel": "boosts",
+      "source": "wiki:Relics",
+      "to": "polish-points"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "relic-33",
+      "note": "RfP Gain multiplied by",
+      "op": "add",
+      "rel": "boosts",
+      "source": "wiki:Relics",
+      "to": "refinement-points"
+    },
+    {
+      "confidence": "uncertain",
       "from": "relic-34",
       "note": "Sun and Moon runes gain speed",
       "op": "add",
       "rel": "boosts",
       "source": "wiki:Relics",
       "to": "rune-moon"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "relic-35",
+      "note": "Special Minerals Cost Fall",
+      "op": "add",
+      "rel": "boosts",
+      "source": "wiki:Relics",
+      "to": "special-minerals"
     },
     {
       "confidence": "provisional",
@@ -12531,6 +12916,24 @@
     },
     {
       "confidence": "uncertain",
+      "from": "relic-43",
+      "note": "Chance to get additional tarot card of the same type",
+      "op": "add",
+      "rel": "boosts",
+      "source": "wiki:Relics",
+      "to": "tarot"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "relic-45",
+      "note": "Increase SMP Exp you get on merging special minerals",
+      "op": "add",
+      "rel": "boosts",
+      "source": "wiki:Relics",
+      "to": "special-minerals"
+    },
+    {
+      "confidence": "uncertain",
       "from": "relic-46",
       "note": "Empowers Relic 45 (SMP EXP)",
       "op": "add",
@@ -12549,12 +12952,30 @@
     },
     {
       "confidence": "uncertain",
+      "from": "relic-47",
+      "note": "Empowers Relic 33 (RfP Gain)",
+      "op": "exp",
+      "rel": "boosts",
+      "source": "wiki:Relics",
+      "to": "refinement-points"
+    },
+    {
+      "confidence": "uncertain",
       "from": "relic-48",
       "note": "Multiplies power for Luck boost to Water",
       "op": "add",
       "rel": "boosts",
       "source": "wiki:Relics",
       "to": "luck"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "relic-49",
+      "note": "Multiplies Sacrifice Dust gain",
+      "op": "add",
+      "rel": "boosts",
+      "source": "wiki:Relics",
+      "to": "sacrifice-dust"
     },
     {
       "confidence": "uncertain",
@@ -12590,7 +13011,34 @@
       "op": "exp",
       "rel": "boosts",
       "source": "wiki:Relics",
-      "to": "ascension-power"
+      "to": "attack-ascension-power"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "relic-52",
+      "note": "Empowers Attack Ascension Power from VP",
+      "op": "exp",
+      "rel": "boosts",
+      "source": "wiki:Relics",
+      "to": "value-points"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "relic-53",
+      "note": "Empowers total Tarot Challenge reward (Sacrifice Dust gain)",
+      "op": "exp",
+      "rel": "boosts",
+      "source": "wiki:Relics",
+      "to": "tarot"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "relic-53",
+      "note": "Empowers total Tarot Challenge reward (Sacrifice Dust gain)",
+      "op": "exp",
+      "rel": "boosts",
+      "source": "wiki:Relics",
+      "to": "sacrifice-dust"
     },
     {
       "confidence": "uncertain",
@@ -12609,6 +13057,15 @@
       "rel": "boosts",
       "source": "wiki:Relics",
       "to": "relic-41"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "relic-57",
+      "note": "Boosts the first effect of common suit Tarot cards",
+      "op": "add",
+      "rel": "boosts",
+      "source": "wiki:Relics",
+      "to": "tarot"
     },
     {
       "confidence": "uncertain",
@@ -12709,11 +13166,27 @@
       "to": "refine-node-4"
     },
     {
+      "confidence": "uncertain",
+      "from": "refine-node-4",
+      "note": "Polish sword eff. x1.1 (maxes at x2)",
+      "rel": "boosts",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "polish-sword"
+    },
+    {
       "confidence": "documented",
       "from": "refine-node-1",
       "rel": "requires",
       "source": "wiki:Minerals/Refine_Tree",
       "to": "refine-node-5"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "refine-node-5",
+      "note": "Unlocks merge level (you get 1.00 exp per merge)",
+      "rel": "boosts",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "merge-level"
     },
     {
       "confidence": "documented",
@@ -12760,11 +13233,27 @@
       "to": "refine-node-9"
     },
     {
+      "confidence": "uncertain",
+      "from": "refine-node-9",
+      "note": "Polish Axe is 1.5x stronger",
+      "rel": "boosts",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "polish-axe"
+    },
+    {
       "confidence": "documented",
       "from": "refine-node-5",
       "rel": "requires",
       "source": "wiki:Minerals/Refine_Tree",
       "to": "refine-node-10"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "refine-node-10",
+      "note": "PP gain is powered to ^(1 + 0.1*lvl) (+0.1, maxes at ^2)",
+      "rel": "boosts",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "polish-points"
     },
     {
       "confidence": "documented",
@@ -12786,6 +13275,14 @@
       "rel": "requires",
       "source": "wiki:Minerals/Refine_Tree",
       "to": "refine-node-12"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "refine-node-12",
+      "note": "Buying first ten mineral upgrades does not spend VP",
+      "rel": "boosts",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "value-points"
     },
     {
       "confidence": "documented",
@@ -12838,6 +13335,14 @@
       "to": "refine-node-16"
     },
     {
+      "confidence": "uncertain",
+      "from": "refine-node-16",
+      "note": "Merge Level Bonus Eff. x(1.0 + 0.5*lvl) (maxes at x50)",
+      "rel": "boosts",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "merge-level"
+    },
+    {
       "confidence": "documented",
       "from": "refine-node-9",
       "rel": "requires",
@@ -12865,6 +13370,14 @@
       "rel": "requires",
       "source": "wiki:Minerals/Refine_Tree",
       "to": "refine-node-18"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "refine-node-18",
+      "note": "Unlock magnets and new mineral upgrades! Magnet base chance at the start is 1% on merge.",
+      "rel": "boosts",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "magnets"
     },
     {
       "confidence": "documented",
@@ -12931,6 +13444,14 @@
       "note": "Spawning common minerals doesn't decrease your gold",
       "rel": "boosts",
       "source": "wiki:Minerals/Refine_Tree",
+      "to": "minerals"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "refine-node-22",
+      "note": "Spawning common minerals doesn't decrease your gold",
+      "rel": "boosts",
+      "source": "wiki:Minerals/Refine_Tree",
       "to": "gold"
     },
     {
@@ -12939,6 +13460,14 @@
       "rel": "requires",
       "source": "wiki:Minerals/Refine_Tree",
       "to": "refine-node-23"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "refine-node-23",
+      "note": "Buying polish upgrades doesn't decrease your PP",
+      "rel": "boosts",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "polish-points"
     },
     {
       "confidence": "documented",
@@ -13035,6 +13564,14 @@
       "to": "relic-3"
     },
     {
+      "confidence": "uncertain",
+      "from": "refine-node-30",
+      "note": "Relic 3 effect is powered to your current merge level + 1",
+      "rel": "boosts",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "merge-level"
+    },
+    {
       "confidence": "documented",
       "from": "refine-node-28",
       "rel": "requires",
@@ -13048,6 +13585,14 @@
       "rel": "boosts",
       "source": "wiki:Minerals/Refine_Tree",
       "to": "relic-14"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "refine-node-31",
+      "note": "Relic 14 also decreases base minerals cost by the same number",
+      "rel": "boosts",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "minerals"
     },
     {
       "confidence": "documented",
@@ -13085,6 +13630,14 @@
       "rel": "requires",
       "source": "wiki:Minerals/Refine_Tree",
       "to": "refine-node-34"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "refine-node-34",
+      "note": "Buying magnet mineral upgrades doesn't spend your magnets. And unlock autobuy for magnet mineral upgrades",
+      "rel": "boosts",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "magnets"
     },
     {
       "confidence": "documented",
@@ -13131,6 +13684,14 @@
       "to": "refine-node-38"
     },
     {
+      "confidence": "uncertain",
+      "from": "refinement-points",
+      "note": "You get more refine points based on your knuckles level: RfP^(1.01*lvl)",
+      "rel": "boosts",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-38"
+    },
+    {
       "confidence": "documented",
       "from": "refine-node-37",
       "rel": "requires",
@@ -13153,11 +13714,35 @@
       "to": "refine-node-40"
     },
     {
+      "confidence": "uncertain",
+      "from": "refine-node-40",
+      "note": "Magnet upgrades for VP gain and PP gain mults are powered to ^(1.1*lvl) (maxes at ^3)",
+      "rel": "boosts",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "value-points"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "refine-node-40",
+      "note": "Magnet upgrades for VP gain and PP gain mults are powered to ^(1.1*lvl) (maxes at ^3)",
+      "rel": "boosts",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "polish-points"
+    },
+    {
       "confidence": "documented",
       "from": "refine-node-40",
       "rel": "requires",
       "source": "wiki:Minerals/Refine_Tree",
       "to": "refine-node-41"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "refine-node-41",
+      "note": "Unlocks special minerals",
+      "rel": "boosts",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "special-minerals"
     },
     {
       "confidence": "documented",
@@ -13193,6 +13778,14 @@
       "note": "PP Gain Bonus from Trials is much bigger now",
       "rel": "boosts",
       "source": "wiki:Minerals/Refine_Tree",
+      "to": "polish-points"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "refine-node-45",
+      "note": "PP Gain Bonus from Trials is much bigger now",
+      "rel": "boosts",
+      "source": "wiki:Minerals/Refine_Tree",
       "to": "trials"
     },
     {
@@ -13201,6 +13794,14 @@
       "rel": "requires",
       "source": "wiki:Minerals/Refine_Tree",
       "to": "refine-node-46"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "refine-node-46",
+      "note": "Unlocks special minerals progression",
+      "rel": "boosts",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "special-minerals"
     },
     {
       "confidence": "documented",
@@ -13247,6 +13848,14 @@
       "to": "refine-node-50"
     },
     {
+      "confidence": "uncertain",
+      "from": "refine-node-50",
+      "note": "RfP gain x(2^lvl) (maxes at x1,024)",
+      "rel": "boosts",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refinement-points"
+    },
+    {
       "confidence": "documented",
       "from": "refine-node-49",
       "rel": "requires",
@@ -13261,11 +13870,27 @@
       "to": "refine-node-52"
     },
     {
+      "confidence": "uncertain",
+      "from": "refine-node-52",
+      "note": "Multiplies all polish enhance effects by x1.02",
+      "rel": "boosts",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "polish-enhance"
+    },
+    {
       "confidence": "documented",
       "from": "refine-node-52",
       "rel": "requires",
       "source": "wiki:Minerals/Refine_Tree",
       "to": "refine-node-53"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "refine-node-53",
+      "note": "Unlock automerge for special minerals (1 in 10,000 in game seconds, affected by local mineral speed)",
+      "rel": "boosts",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "special-minerals"
     },
     {
       "confidence": "documented",
@@ -13288,6 +13913,14 @@
       "rel": "requires",
       "source": "wiki:Minerals/Refine_Tree",
       "to": "refine-node-55"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "refine-node-55",
+      "note": "Unlock Elements",
+      "rel": "boosts",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "elements"
     },
     {
       "confidence": "documented",
@@ -13332,12 +13965,28 @@
       "to": "refine-node-61"
     },
     {
+      "confidence": "uncertain",
+      "from": "refine-node-61",
+      "note": "Passive Merge EXP is also boosted by Relic 28 and max spawn mineral level",
+      "rel": "boosts",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "merge-experience"
+    },
+    {
       "confidence": "provisional",
       "from": "refine-node-61",
       "note": "Passive Merge EXP is also boosted by Relic 28 and max spawn mineral level",
       "rel": "boosts",
       "source": "wiki:Minerals/Refine_Tree",
       "to": "relic-28"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "refine-node-61",
+      "note": "Passive Merge EXP is also boosted by Relic 28 and max spawn mineral level",
+      "rel": "boosts",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "mineral-level"
     },
     {
       "confidence": "documented",
@@ -13456,6 +14105,14 @@
       "note": "Now you can spawn black special gems (1% chance). Unlocks Tarot. Resets SMS Factor to 5,000 if it's >6,000 or decrease it by 1,000",
       "rel": "boosts",
       "source": "wiki:Minerals/Refine_Tree",
+      "to": "tarot"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "refine-node-70",
+      "note": "Now you can spawn black special gems (1% chance). Unlocks Tarot. Resets SMS Factor to 5,000 if it's >6,000 or decrease it by 1,000",
+      "rel": "boosts",
+      "source": "wiki:Minerals/Refine_Tree",
       "to": "sms-factor"
     },
     {
@@ -13464,6 +14121,22 @@
       "rel": "requires",
       "source": "wiki:Minerals/Refine_Tree",
       "to": "refine-node-71"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "refine-node-71",
+      "note": "Get 0.01% of your PP gain on reset every second (affected by local minerals speed)",
+      "rel": "boosts",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "polish-points"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "refine-node-71",
+      "note": "Get 0.01% of your PP gain on reset every second (affected by local minerals speed)",
+      "rel": "boosts",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "minerals"
     },
     {
       "confidence": "documented",
@@ -13494,11 +14167,27 @@
       "to": "refine-node-74"
     },
     {
+      "confidence": "uncertain",
+      "from": "refine-node-74",
+      "note": "Makes effect of all suit tarot upgrade 2 - x1.50 stronger",
+      "rel": "boosts",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "tarot"
+    },
+    {
       "confidence": "documented",
       "from": "refine-node-73",
       "rel": "requires",
       "source": "wiki:Minerals/Refine_Tree",
       "to": "refine-node-75"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "refine-node-75",
+      "note": "Increase all elements base factor 2 by (+?/level)",
+      "rel": "boosts",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "elements"
     },
     {
       "confidence": "documented",
@@ -13600,6 +14289,30 @@
       "to": "refine-node-85"
     },
     {
+      "confidence": "uncertain",
+      "from": "refine-node-85",
+      "note": "Unlocks Sacrifice tab for Special Minerals. You now gain Sacrifice Dust when deleting minerals, using the Tower, or using the Delete Special Mineral macro block.",
+      "rel": "boosts",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "special-minerals"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "refine-node-85",
+      "note": "Unlocks Sacrifice tab for Special Minerals. You now gain Sacrifice Dust when deleting minerals, using the Tower, or using the Delete Special Mineral macro block.",
+      "rel": "boosts",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "sacrifice-dust"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "refine-node-85",
+      "note": "Unlocks Sacrifice tab for Special Minerals. You now gain Sacrifice Dust when deleting minerals, using the Tower, or using the Delete Special Mineral macro block.",
+      "rel": "boosts",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "minerals"
+    },
+    {
       "confidence": "documented",
       "from": "refine-node-62",
       "rel": "requires",
@@ -13607,8 +14320,24 @@
       "to": "refine-node-86"
     },
     {
+      "confidence": "uncertain",
+      "from": "refine-node-86",
+      "note": "Grants SMP EXP to all Special Minerals every second based on Relic 45, The Tower, and average SMP level (???/sec). Affected by Tarot Local Speed.",
+      "rel": "boosts",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "special-minerals"
+    },
+    {
       "confidence": "provisional",
       "from": "relic-45",
+      "note": "Grants SMP EXP to all Special Minerals every second based on Relic 45, The Tower, and average SMP level (???/sec). Affected by Tarot Local Speed.",
+      "rel": "boosts",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-86"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot",
       "note": "Grants SMP EXP to all Special Minerals every second based on Relic 45, The Tower, and average SMP level (???/sec). Affected by Tarot Local Speed.",
       "rel": "boosts",
       "source": "wiki:Minerals/Refine_Tree",
@@ -13637,6 +14366,14 @@
       "to": "relic-36"
     },
     {
+      "confidence": "uncertain",
+      "from": "refine-node-87",
+      "note": "Relic 36's effect is ^3 and applied to all elements",
+      "rel": "boosts",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "elements"
+    },
+    {
       "confidence": "documented",
       "from": "refine-node-86",
       "rel": "requires",
@@ -13659,6 +14396,22 @@
       "to": "refine-node-89"
     },
     {
+      "confidence": "uncertain",
+      "from": "refine-node-89",
+      "note": "Unlocks Tarot Challenges! (All Special Minerals must be sacrificed)",
+      "rel": "boosts",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "tarot"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "refine-node-89",
+      "note": "Unlocks Tarot Challenges! (All Special Minerals must be sacrificed)",
+      "rel": "boosts",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "special-minerals"
+    },
+    {
       "confidence": "documented",
       "from": "refine-node-87",
       "rel": "requires",
@@ -13671,6 +14424,14 @@
       "rel": "requires",
       "source": "wiki:Minerals/Refine_Tree",
       "to": "refine-node-90"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "refine-node-90",
+      "note": "Multiplies Sacrifice Dust gain and Relic 45 base (x2/level, max 4.29e9)",
+      "rel": "boosts",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "sacrifice-dust"
     },
     {
       "confidence": "provisional",
@@ -13702,6 +14463,14 @@
       "to": "refine-node-92"
     },
     {
+      "confidence": "uncertain",
+      "from": "refine-node-92",
+      "note": "The Empress, The Emperor, The Lovers, and The Strength Tarot Cards are now set to their maximum strength values.",
+      "rel": "boosts",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "tarot"
+    },
+    {
       "confidence": "documented",
       "from": "refine-node-83",
       "rel": "requires",
@@ -13731,6 +14500,14 @@
       "to": "refine-node-95"
     },
     {
+      "confidence": "uncertain",
+      "from": "refine-node-95",
+      "note": "Polish Spear effect ^5000",
+      "rel": "boosts",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "polish-spear"
+    },
+    {
       "confidence": "documented",
       "from": "refine-node-94",
       "rel": "requires",
@@ -13750,6 +14527,14 @@
       "rel": "requires",
       "source": "wiki:Minerals/Refine_Tree",
       "to": "refine-node-98"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "refine-node-98",
+      "note": "Polish Sword Effect is ^1000",
+      "rel": "boosts",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "polish-sword"
     },
     {
       "confidence": "documented",
@@ -13835,6 +14620,14 @@
       "rel": "requires",
       "source": "wiki:Minerals/Refine_Tree",
       "to": "refine-node-108"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "refine-node-108",
+      "note": "Max PIP now boosts sacrifice dust gain (x???)",
+      "rel": "boosts",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "sacrifice-dust"
     },
     {
       "confidence": "documented",
@@ -14187,6 +14980,14 @@
       "to": "attack-mult"
     },
     {
+      "confidence": "uncertain",
+      "from": "tarot-ace-of-swords",
+      "note": "Attack Mult Gain from VP +^",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "value-points"
+    },
+    {
       "confidence": "provisional",
       "from": "tarot-two-of-swords",
       "note": "Swords 1 first effect mult x",
@@ -14201,7 +15002,15 @@
       "note": "Attacks Ascend Power from VP +^",
       "rel": "boosts",
       "source": "wiki:Tarot",
-      "to": "attacks"
+      "to": "attack-ascension-power"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-two-of-swords",
+      "note": "Attacks Ascend Power from VP +^",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "value-points"
     },
     {
       "confidence": "provisional",
@@ -14298,6 +15107,14 @@
       "to": "tarot-seven-of-swords"
     },
     {
+      "confidence": "uncertain",
+      "from": "tarot-eight-of-swords",
+      "note": "Polish Sword Effect +^",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "polish-sword"
+    },
+    {
       "confidence": "provisional",
       "from": "tarot-nine-of-swords",
       "note": "Swords 8 first effect mult x",
@@ -14323,6 +15140,14 @@
       "source": "wiki:Tarot",
       "targets_effect": 0,
       "to": "tarot-ten-of-swords"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-page-of-swords",
+      "note": "First 10 swords tarot cards effects are +x stronger",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "tarot"
     },
     {
       "confidence": "provisional",
@@ -14360,6 +15185,14 @@
       "to": "tarot-queen-of-swords"
     },
     {
+      "confidence": "uncertain",
+      "from": "tarot-king-of-swords",
+      "note": "Unlocks 2nd wind factor and multiply 1st factor for all elements by x (aft. e308 softcap)",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "elements"
+    },
+    {
       "confidence": "provisional",
       "from": "tarot-two-of-wands",
       "note": "Wands 1 first effect mult x",
@@ -14394,6 +15227,14 @@
       "source": "wiki:Tarot",
       "targets_effect": 0,
       "to": "tarot-four-of-wands"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-five-of-wands",
+      "note": "All Elements Factor 1 +^",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "elements"
     },
     {
       "confidence": "provisional",
@@ -14439,6 +15280,14 @@
       "to": "tarot-seven-of-wands"
     },
     {
+      "confidence": "uncertain",
+      "from": "tarot-eight-of-wands",
+      "note": "Elements Local Speed +^",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "elements"
+    },
+    {
       "confidence": "provisional",
       "from": "tarot-nine-of-wands",
       "note": "Wands 8 first effect mult x",
@@ -14466,6 +15315,14 @@
       "to": "tarot-ten-of-wands"
     },
     {
+      "confidence": "uncertain",
+      "from": "tarot-page-of-wands",
+      "note": "First 10 wands tarot cards effects are +x stronger",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "tarot"
+    },
+    {
       "confidence": "provisional",
       "from": "tarot-knight-of-wands",
       "note": "Wands Page first effect mult x",
@@ -14473,6 +15330,14 @@
       "source": "wiki:Tarot",
       "targets_effect": 0,
       "to": "tarot-page-of-wands"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-knight-of-wands",
+      "note": "Tarot Arcans Cooldowns +/",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "tarot"
     },
     {
       "confidence": "provisional",
@@ -14491,6 +15356,14 @@
       "source": "wiki:Tarot",
       "targets_effect": 0,
       "to": "tarot-queen-of-wands"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-king-of-wands",
+      "note": "Unlocks 2nd fire factor and multiply 1st factor for all elements by x# (base 1,000) (aft. e308 softcap)",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "elements"
     },
     {
       "confidence": "uncertain",
@@ -14647,6 +15520,14 @@
       "to": "tarot-ten-of-pentacles"
     },
     {
+      "confidence": "uncertain",
+      "from": "tarot-page-of-pentacles",
+      "note": "First 10 pentacles tarot cards effects are +x stronger",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "tarot"
+    },
+    {
       "confidence": "provisional",
       "from": "tarot-knight-of-pentacles",
       "note": "Pentacles Page first effect mult x",
@@ -14680,6 +15561,14 @@
       "source": "wiki:Tarot",
       "targets_effect": 0,
       "to": "tarot-queen-of-pentacles"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-king-of-pentacles",
+      "note": "Unlocks 2nd earth factor and multiply 1st factor for all elements by x (aft. e308 softcap)",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "elements"
     },
     {
       "confidence": "uncertain",
@@ -14767,6 +15656,14 @@
       "to": "tarot-five-of-cups"
     },
     {
+      "confidence": "uncertain",
+      "from": "tarot-six-of-cups",
+      "note": "Polish Spear Effect +^",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "polish-spear"
+    },
+    {
       "confidence": "provisional",
       "from": "tarot-seven-of-cups",
       "note": "Cups 6 first effect mult x",
@@ -14828,6 +15725,14 @@
       "to": "tarot-ten-of-cups"
     },
     {
+      "confidence": "uncertain",
+      "from": "tarot-page-of-cups",
+      "note": "First 10 cups tarot cards effects are +x stronger",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "tarot"
+    },
+    {
       "confidence": "provisional",
       "from": "tarot-knight-of-cups",
       "note": "Cups Page first effect mult x",
@@ -14863,6 +15768,14 @@
       "to": "tarot-queen-of-cups"
     },
     {
+      "confidence": "uncertain",
+      "from": "tarot-king-of-cups",
+      "note": "Unlocks 2nd water factor and multiply 1st factor for all elements by x (aft. e308 softcap)",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "elements"
+    },
+    {
       "confidence": "provisional",
       "from": "tarot-the-high-priestess",
       "note": "Increases Refine Node 1 effect by x# (base 2.000) during some times",
@@ -14887,6 +15800,14 @@
       "to": "mineral-cost-exp"
     },
     {
+      "confidence": "uncertain",
+      "from": "tarot-the-hierophant",
+      "note": "Levels Up all of your common minerals by # (base 1.000) (but can't be bigger than max spawn level + 50)",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "minerals"
+    },
+    {
       "confidence": "provisional",
       "from": "tarot-the-lovers",
       "note": "Slowly Increases and Decreases Relic 28 effect by # (base 0.100)",
@@ -14901,6 +15822,22 @@
       "rel": "boosts",
       "source": "wiki:Tarot",
       "to": "sms-factor"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-justice",
+      "note": "Keep the lowest cost for spawning next Special Minerals (4.000 secs)",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "special-minerals"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-the-hermit",
+      "note": "Make Other Tarot Arcans be x# (base 1.050) more effective for some time",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "tarot"
     },
     {
       "confidence": "uncertain",
@@ -14928,6 +15865,14 @@
     },
     {
       "confidence": "uncertain",
+      "from": "tarot-death",
+      "note": "During this skill is active will randomly perform refine prestige, granting x# (base 10.00) more RfP",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "refinement-points"
+    },
+    {
+      "confidence": "uncertain",
       "from": "tarot-temperance",
       "note": "Add # (base 3.000) zodiacs of that type which is in your Fortune Pars slot, but with stats you'd get on Unity",
       "rel": "boosts",
@@ -14941,6 +15886,14 @@
       "rel": "boosts",
       "source": "wiki:Tarot",
       "to": "unity"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-the-devil",
+      "note": "Will boost 1st effect of all common tarot cards by +x (base 0.007) with a chance of 66%. With a chance 33% will apply one of 5 debuffs (descr. in help). Have 1% chance to take your soul (-1 Soul )",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "tarot"
     },
     {
       "confidence": "uncertain",
@@ -14973,6 +15926,14 @@
       "rel": "boosts",
       "source": "wiki:Tarot",
       "to": "quality"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-judgement",
+      "note": "Makes your tarot resources be equal and increase their values by ^# (base 0.800) of they value",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "tarot"
     },
     {
       "confidence": "documented",
@@ -15056,6 +16017,14 @@
     },
     {
       "confidence": "uncertain",
+      "from": "fire-node-2",
+      "note": "Increase Ascension Power from VP based on you current fire",
+      "rel": "boosts",
+      "source": "wiki:Elements",
+      "to": "value-points"
+    },
+    {
+      "confidence": "uncertain",
       "from": "fire-node-3",
       "note": "Attack level past 3600 boosts Fire generation Formula is:",
       "rel": "boosts",
@@ -15135,6 +16104,14 @@
       "to": "relic-32"
     },
     {
+      "confidence": "uncertain",
+      "from": "earth-node-4",
+      "note": "Earth boosts Relic 32 effect (Polish points gain)",
+      "rel": "boosts",
+      "source": "wiki:Elements",
+      "to": "polish-points"
+    },
+    {
       "confidence": "provisional",
       "from": "earth-node-5",
       "note": "Earth adds base to Refine Node 50",
@@ -15175,12 +16152,28 @@
       "to": "donut-luck"
     },
     {
+      "confidence": "uncertain",
+      "from": "wind-node-4",
+      "note": "PP after 1.79e308 boosts Wind generation",
+      "rel": "boosts",
+      "source": "wiki:Elements",
+      "to": "polish-points"
+    },
+    {
       "confidence": "provisional",
       "from": "wind-node-5",
       "note": "Wind boosts Relic 33 effect (RfP gain)",
       "rel": "boosts",
       "source": "wiki:Elements",
       "to": "relic-33"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "wind-node-5",
+      "note": "Wind boosts Relic 33 effect (RfP gain)",
+      "rel": "boosts",
+      "source": "wiki:Elements",
+      "to": "refinement-points"
     },
     {
       "confidence": "provisional",
@@ -15239,6 +16232,14 @@
       "to": "refine-node-18"
     },
     {
+      "confidence": "uncertain",
+      "from": "water-node-2",
+      "note": "Water boosts Refine Node 18 effect (Magnet Chance)",
+      "rel": "boosts",
+      "source": "wiki:Elements",
+      "to": "magnet-chance"
+    },
+    {
       "confidence": "provisional",
       "from": "water-node-3",
       "note": "Water boosts Relic 24 effect (Game Speed Donut)",
@@ -15263,12 +16264,27 @@
       "to": "relic-34"
     },
     {
+      "confidence": "uncertain",
+      "from": "water-node-5",
+      "note": "Water boosts first node for all elements (at different rates)",
+      "rel": "boosts",
+      "source": "wiki:Elements",
+      "to": "elements"
+    },
+    {
       "confidence": "provisional",
       "from": "water-node-6",
       "note": "Multiplies Refine Node 60 base by x2",
       "rel": "boosts",
       "source": "wiki:Elements",
       "to": "refine-node-60"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "special-mineral-red-gem",
+      "rel": "boosts",
+      "source": "wiki:Minerals",
+      "to": "value-points"
     },
     {
       "confidence": "uncertain",
@@ -15290,6 +16306,27 @@
       "rel": "boosts",
       "source": "wiki:Minerals",
       "to": "gold-gain"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "special-mineral-orange-gem",
+      "rel": "boosts",
+      "source": "wiki:Minerals",
+      "to": "magnet-chance"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "special-mineral-dark-purple-gem",
+      "rel": "boosts",
+      "source": "wiki:Minerals",
+      "to": "polish-points"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "special-mineral-light-blue-gem",
+      "rel": "boosts",
+      "source": "wiki:Minerals",
+      "to": "refinement-points"
     },
     {
       "confidence": "uncertain",
@@ -15685,6 +16722,13 @@
     },
     {
       "confidence": "uncertain",
+      "from": "trial-insane-trial-2",
+      "rel": "boosts",
+      "source": "wiki:Trials",
+      "to": "polish-points"
+    },
+    {
+      "confidence": "uncertain",
       "from": "trial-insane-trial-3",
       "rel": "boosts",
       "source": "wiki:Trials",
@@ -15737,6 +16781,13 @@
       "from": "trial-insane-trial-6",
       "rel": "boosts",
       "source": "wiki:Trials",
+      "to": "minerals"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "trial-insane-trial-6",
+      "rel": "boosts",
+      "source": "wiki:Trials",
       "to": "game-speed"
     },
     {
@@ -15745,6 +16796,13 @@
       "rel": "boosts",
       "source": "wiki:Plague",
       "to": "gold-gain"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "plague-stat-max-infected",
+      "rel": "boosts",
+      "source": "wiki:Plague",
+      "to": "tarot"
     },
     {
       "confidence": "uncertain",
@@ -15793,6 +16851,27 @@
       "from": "singularity-milestone-the-unforgotten",
       "rel": "boosts",
       "source": "wiki:Singularity",
+      "to": "elements"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "singularity-milestone-the-unforgotten",
+      "rel": "boosts",
+      "source": "wiki:Singularity",
+      "to": "minerals"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "singularity-milestone-the-unforgotten",
+      "rel": "boosts",
+      "source": "wiki:Singularity",
+      "to": "tarot"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "singularity-milestone-the-unforgotten",
+      "rel": "boosts",
+      "source": "wiki:Singularity",
       "to": "singularity"
     },
     {
@@ -15808,6 +16887,13 @@
       "rel": "boosts",
       "source": "wiki:Singularity",
       "to": "singularity"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "singularity-milestone-first-thousand",
+      "rel": "boosts",
+      "source": "wiki:Singularity",
+      "to": "sacrifice-dust"
     },
     {
       "confidence": "uncertain",
@@ -15829,6 +16915,13 @@
       "rel": "boosts",
       "source": "wiki:Singularity",
       "to": "luck"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "singularity-milestone-dust-magician",
+      "rel": "boosts",
+      "source": "wiki:Singularity",
+      "to": "sacrifice-dust"
     },
     {
       "confidence": "uncertain",
@@ -15892,6 +16985,13 @@
       "rel": "boosts",
       "source": "wiki:Singularity",
       "to": "singularity"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "singularity-zodiac-leo",
+      "rel": "boosts",
+      "source": "wiki:Singularity",
+      "to": "sacrifice-dust"
     },
     {
       "confidence": "uncertain",
@@ -16843,7 +17943,21 @@
       "from": "tarot-challenge-ace-of-wands",
       "rel": "boosts",
       "source": "wiki:Tarot",
+      "to": "elements"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-ace-of-wands",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
       "to": "relic-36"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-two-of-wands",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "elements"
     },
     {
       "confidence": "uncertain",
@@ -16857,7 +17971,35 @@
       "from": "tarot-challenge-three-of-wands",
       "rel": "boosts",
       "source": "wiki:Tarot",
+      "to": "elements"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-three-of-wands",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
       "to": "relic-36"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-four-of-wands",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "elements"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-five-of-wands",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "elements"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-six-of-wands",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "elements"
     },
     {
       "confidence": "uncertain",
@@ -16885,6 +18027,13 @@
       "from": "tarot-challenge-seven-of-wands",
       "rel": "boosts",
       "source": "wiki:Tarot",
+      "to": "elements"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-seven-of-wands",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
       "to": "relic-36"
     },
     {
@@ -16899,6 +18048,13 @@
       "from": "tarot-challenge-eight-of-wands",
       "rel": "boosts",
       "source": "wiki:Tarot",
+      "to": "elements"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-eight-of-wands",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
       "to": "relic-36"
     },
     {
@@ -16913,6 +18069,13 @@
       "from": "tarot-challenge-nine-of-wands",
       "rel": "boosts",
       "source": "wiki:Tarot",
+      "to": "elements"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-nine-of-wands",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
       "to": "relic-36"
     },
     {
@@ -16927,6 +18090,13 @@
       "from": "tarot-challenge-ten-of-wands",
       "rel": "boosts",
       "source": "wiki:Tarot",
+      "to": "elements"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-ten-of-wands",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
       "to": "relic-36"
     },
     {
@@ -16935,6 +18105,20 @@
       "rel": "boosts",
       "source": "wiki:Tarot",
       "to": "game-speed"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-page-of-wands",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "elements"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-knight-of-wands",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "elements"
     },
     {
       "confidence": "uncertain",
@@ -16955,6 +18139,13 @@
       "from": "tarot-challenge-queen-of-wands",
       "rel": "boosts",
       "source": "wiki:Tarot",
+      "to": "elements"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-queen-of-wands",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
       "to": "singularity"
     },
     {
@@ -16966,6 +18157,27 @@
     },
     {
       "confidence": "uncertain",
+      "from": "tarot-challenge-king-of-wands",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "tarot"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-ace-of-pentacles",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "mineral-level"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-two-of-pentacles",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "value-points"
+    },
+    {
+      "confidence": "uncertain",
       "from": "tarot-challenge-two-of-pentacles",
       "rel": "boosts",
       "source": "wiki:Tarot",
@@ -16973,6 +18185,20 @@
     },
     {
       "confidence": "uncertain",
+      "from": "tarot-challenge-two-of-pentacles",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "polish-sword"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-two-of-pentacles",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "mineral-level"
+    },
+    {
+      "confidence": "uncertain",
       "from": "tarot-challenge-three-of-pentacles",
       "rel": "boosts",
       "source": "wiki:Tarot",
@@ -16991,6 +18217,34 @@
       "rel": "boosts",
       "source": "wiki:Tarot",
       "to": "game-speed"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-three-of-pentacles",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "mineral-level"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-four-of-pentacles",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "magnets"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-four-of-pentacles",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "mineral-level"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-five-of-pentacles",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "value-points"
     },
     {
       "confidence": "uncertain",
@@ -17022,6 +18276,13 @@
     },
     {
       "confidence": "uncertain",
+      "from": "tarot-challenge-six-of-pentacles",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "mineral-level"
+    },
+    {
+      "confidence": "uncertain",
       "from": "tarot-challenge-seven-of-pentacles",
       "rel": "boosts",
       "source": "wiki:Tarot",
@@ -17054,6 +18315,13 @@
       "rel": "boosts",
       "source": "wiki:Tarot",
       "to": "game-speed"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-seven-of-pentacles",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "mineral-level"
     },
     {
       "confidence": "uncertain",
@@ -17085,6 +18353,41 @@
     },
     {
       "confidence": "uncertain",
+      "from": "tarot-challenge-eight-of-pentacles",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "mineral-level"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-nine-of-pentacles",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "value-points"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-nine-of-pentacles",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "mineral-level"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-ten-of-pentacles",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "magnets"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-ten-of-pentacles",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "merge-experience"
+    },
+    {
+      "confidence": "uncertain",
       "from": "tarot-challenge-ten-of-pentacles",
       "rel": "boosts",
       "source": "wiki:Tarot",
@@ -17096,6 +18399,41 @@
       "rel": "boosts",
       "source": "wiki:Tarot",
       "to": "relic-22"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-ten-of-pentacles",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "polish-sword"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-ten-of-pentacles",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "mineral-level"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-page-of-pentacles",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "mineral-level"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-knight-of-pentacles",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "magnets"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-knight-of-pentacles",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "merge-experience"
     },
     {
       "confidence": "uncertain",
@@ -17113,6 +18451,34 @@
     },
     {
       "confidence": "uncertain",
+      "from": "tarot-challenge-knight-of-pentacles",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "polish-sword"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-knight-of-pentacles",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "mineral-level"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-queen-of-pentacles",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "magnets"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-queen-of-pentacles",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "merge-experience"
+    },
+    {
+      "confidence": "uncertain",
       "from": "tarot-challenge-queen-of-pentacles",
       "rel": "boosts",
       "source": "wiki:Tarot",
@@ -17127,6 +18493,34 @@
     },
     {
       "confidence": "uncertain",
+      "from": "tarot-challenge-queen-of-pentacles",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "polish-sword"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-queen-of-pentacles",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "mineral-level"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-king-of-pentacles",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "magnets"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-king-of-pentacles",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "merge-experience"
+    },
+    {
+      "confidence": "uncertain",
       "from": "tarot-challenge-king-of-pentacles",
       "rel": "boosts",
       "source": "wiki:Tarot",
@@ -17138,6 +18532,27 @@
       "rel": "boosts",
       "source": "wiki:Tarot",
       "to": "relic-22"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-king-of-pentacles",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "polish-sword"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "mineral-level",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "tarot-challenge-king-of-pentacles"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-king-of-pentacles",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "value-points"
     },
     {
       "confidence": "uncertain",
@@ -17201,6 +18616,13 @@
       "rel": "boosts",
       "source": "wiki:Tarot",
       "to": "unity"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-six-of-cups",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "value-points"
     },
     {
       "confidence": "uncertain",
@@ -17316,10 +18738,45 @@
     },
     {
       "confidence": "uncertain",
+      "from": "tarot-challenge-the-fool",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "special-minerals"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-the-magician",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "elements"
+    },
+    {
+      "confidence": "uncertain",
       "from": "tarot-challenge-the-high-priestess",
       "rel": "boosts",
       "source": "wiki:Tarot",
       "to": "relic-22"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-the-high-priestess",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "polish-sword"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-the-high-priestess",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "magnets"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-the-high-priestess",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "mineral-level"
     },
     {
       "confidence": "uncertain",
@@ -17344,10 +18801,52 @@
     },
     {
       "confidence": "uncertain",
+      "from": "tarot-challenge-the-emperor",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "mineral-level"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-the-hierophant",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "minerals"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-the-hierophant",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "mineral-level"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-the-lovers",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "merge-experience"
+    },
+    {
+      "confidence": "uncertain",
       "from": "tarot-challenge-the-lovers",
       "rel": "boosts",
       "source": "wiki:Tarot",
       "to": "relic-28"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-the-lovers",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "merge-level"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-justice",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "tarot"
     },
     {
       "confidence": "uncertain",
@@ -17358,10 +18857,24 @@
     },
     {
       "confidence": "uncertain",
+      "from": "tarot-challenge-the-hermit",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "tarot"
+    },
+    {
+      "confidence": "uncertain",
       "from": "tarot-challenge-wheel-of-fortune",
       "rel": "boosts",
       "source": "wiki:Tarot",
       "to": "tarot-draws"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-wheel-of-fortune",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "tarot"
     },
     {
       "confidence": "uncertain",
@@ -17407,10 +18920,45 @@
     },
     {
       "confidence": "uncertain",
+      "from": "tarot-challenge-the-hanged-man",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "polish-points"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-the-hanged-man",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "special-minerals"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-the-hanged-man",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "mineral-local-speed"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-death",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "tarot"
+    },
+    {
+      "confidence": "uncertain",
       "from": "tarot-challenge-temperance",
       "rel": "boosts",
       "source": "wiki:Tarot",
       "to": "planet-fortune-pars"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-temperance",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "tarot"
     },
     {
       "confidence": "uncertain",
@@ -17467,6 +19015,13 @@
       "rel": "boosts",
       "source": "wiki:Tarot",
       "to": "unity"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-the-moon",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "tarot"
     },
     {
       "confidence": "uncertain",
@@ -20379,6 +21934,293 @@
       "rel": "boosts",
       "source": "wiki:Relics",
       "to": "rune-sun"
+    },
+    {
+      "confidence": "documented",
+      "from": "attack-level",
+      "rel": "unlocks",
+      "source": "wiki:Unity",
+      "to": "minerals"
+    },
+    {
+      "confidence": "documented",
+      "from": "mineral-level",
+      "rel": "unlocks",
+      "source": "wiki:Minerals",
+      "to": "polish-points"
+    },
+    {
+      "confidence": "documented",
+      "from": "mineral-level",
+      "rel": "unlocks",
+      "source": "wiki:Minerals",
+      "to": "refinement-points"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-5",
+      "rel": "unlocks",
+      "source": "wiki:Minerals",
+      "to": "merge-level"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-18",
+      "rel": "unlocks",
+      "source": "wiki:Minerals",
+      "to": "magnets"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-28",
+      "rel": "unlocks",
+      "source": "wiki:Minerals",
+      "to": "polish-enhance"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-35",
+      "rel": "unlocks",
+      "source": "wiki:Minerals",
+      "to": "runes"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-41",
+      "rel": "unlocks",
+      "source": "wiki:Minerals",
+      "to": "special-minerals"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-55",
+      "rel": "unlocks",
+      "source": "wiki:Minerals",
+      "to": "elements"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-70",
+      "rel": "unlocks",
+      "source": "wiki:Minerals",
+      "to": "tarot"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-85",
+      "rel": "unlocks",
+      "source": "wiki:Minerals",
+      "to": "sacrifice-dust"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-103",
+      "rel": "unlocks",
+      "source": "wiki:Minerals",
+      "to": "plague"
+    },
+    {
+      "confidence": "documented",
+      "from": "refinement-points",
+      "rel": "requires",
+      "source": "wiki:Minerals",
+      "to": "refine-tree"
+    },
+    {
+      "confidence": "documented",
+      "from": "gold",
+      "rel": "requires",
+      "source": "wiki:Minerals",
+      "to": "minerals"
+    },
+    {
+      "confidence": "documented",
+      "from": "minerals",
+      "rel": "boosts",
+      "source": "wiki:Minerals",
+      "to": "value-points"
+    },
+    {
+      "confidence": "documented",
+      "from": "mineral-level",
+      "rel": "boosts",
+      "source": "wiki:Minerals",
+      "to": "value-points"
+    },
+    {
+      "confidence": "documented",
+      "from": "value-points",
+      "rel": "boosts",
+      "source": "wiki:Minerals",
+      "to": "mineral-level"
+    },
+    {
+      "confidence": "documented",
+      "from": "merge-experience",
+      "rel": "boosts",
+      "source": "wiki:Minerals",
+      "to": "merge-level"
+    },
+    {
+      "confidence": "documented",
+      "from": "merge-level",
+      "rel": "boosts",
+      "source": "wiki:Minerals",
+      "to": "value-points"
+    },
+    {
+      "confidence": "documented",
+      "from": "magnet-chance",
+      "rel": "boosts",
+      "source": "wiki:Minerals",
+      "to": "magnets"
+    },
+    {
+      "confidence": "documented",
+      "from": "mineral-local-speed",
+      "rel": "boosts",
+      "source": "wiki:Minerals",
+      "to": "minerals"
+    },
+    {
+      "confidence": "documented",
+      "from": "rune-sun",
+      "rel": "requires",
+      "source": "wiki:Minerals",
+      "to": "special-minerals"
+    },
+    {
+      "confidence": "documented",
+      "from": "rune-moon",
+      "rel": "requires",
+      "source": "wiki:Minerals",
+      "to": "special-minerals"
+    },
+    {
+      "confidence": "documented",
+      "from": "sms-factor",
+      "rel": "boosts",
+      "source": "wiki:Minerals",
+      "to": "special-minerals"
+    },
+    {
+      "confidence": "documented",
+      "from": "special-minerals-merge-factor",
+      "rel": "boosts",
+      "source": "wiki:Minerals",
+      "to": "special-minerals"
+    },
+    {
+      "confidence": "documented",
+      "from": "special-minerals",
+      "rel": "requires",
+      "source": "wiki:Minerals",
+      "to": "sacrifice-dust"
+    },
+    {
+      "confidence": "documented",
+      "from": "polish-points",
+      "rel": "requires",
+      "source": "wiki:Minerals",
+      "to": "polish-sword"
+    },
+    {
+      "confidence": "documented",
+      "from": "polish-enhance",
+      "rel": "boosts",
+      "source": "wiki:Minerals",
+      "to": "polish-sword"
+    },
+    {
+      "confidence": "documented",
+      "from": "polish-points",
+      "rel": "requires",
+      "source": "wiki:Minerals",
+      "to": "polish-axe"
+    },
+    {
+      "confidence": "documented",
+      "from": "polish-enhance",
+      "rel": "boosts",
+      "source": "wiki:Minerals",
+      "to": "polish-axe"
+    },
+    {
+      "confidence": "documented",
+      "from": "polish-points",
+      "rel": "requires",
+      "source": "wiki:Minerals",
+      "to": "polish-spear"
+    },
+    {
+      "confidence": "documented",
+      "from": "polish-enhance",
+      "rel": "boosts",
+      "source": "wiki:Minerals",
+      "to": "polish-spear"
+    },
+    {
+      "confidence": "documented",
+      "from": "polish-points",
+      "rel": "requires",
+      "source": "wiki:Minerals",
+      "to": "polish-bow"
+    },
+    {
+      "confidence": "documented",
+      "from": "polish-enhance",
+      "rel": "boosts",
+      "source": "wiki:Minerals",
+      "to": "polish-bow"
+    },
+    {
+      "confidence": "documented",
+      "from": "polish-points",
+      "rel": "requires",
+      "source": "wiki:Minerals",
+      "to": "polish-knuckles"
+    },
+    {
+      "confidence": "documented",
+      "from": "polish-enhance",
+      "rel": "boosts",
+      "source": "wiki:Minerals",
+      "to": "polish-knuckles"
+    },
+    {
+      "confidence": "documented",
+      "from": "polish-sword",
+      "rel": "boosts",
+      "source": "wiki:Minerals",
+      "to": "value-points"
+    },
+    {
+      "confidence": "documented",
+      "from": "polish-axe",
+      "rel": "boosts",
+      "source": "wiki:Minerals",
+      "to": "mineral-cost-exp"
+    },
+    {
+      "confidence": "documented",
+      "from": "polish-spear",
+      "rel": "boosts",
+      "source": "wiki:Minerals",
+      "to": "gold-gain"
+    },
+    {
+      "confidence": "documented",
+      "from": "polish-bow",
+      "rel": "boosts",
+      "source": "wiki:Minerals",
+      "to": "attack-ascension-power"
+    },
+    {
+      "confidence": "documented",
+      "from": "polish-knuckles",
+      "rel": "boosts",
+      "source": "wiki:Minerals",
+      "to": "mineral-local-speed"
     }
   ],
   "systems": [

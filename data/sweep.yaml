@@ -87,6 +87,32 @@
 #   Minerals — Level|Sacrifice Dust Requirement (12 rows)
 #     A level-up cost ladder. Rows are levels (27–n), not named entities.
 #
+#   Minerals — {{Minerals/Common_Minerals}} (100 records)
+#     A record_template the reader could handle as-is, but its fields are an
+#     icon, a level, a flavour line ("Toilet paper? Is there anything better?")
+#     and a base VP number. A hundred nodes stating a quantity, none of them
+#     naming another node. The chain they feed is curated as one Minerals node.
+#
+#   Minerals — |Sword|Axe|Spear|Bow|Knuckles (5 rows)
+#     The Polish weapons, transposed: the entities are the columns and the rows
+#     are the tiers (Basic, Lv.10, Lv.25, Lv.50, Lv.100, the last four spanning
+#     two rows apiece). Any row reader mints five nodes named after the tiers and
+#     files each weapon's five effects under whichever tier it happened to read.
+#     The five weapons are curated instead, one node each.
+#
+#   Minerals — Upgrade|Effects|Cost Scaling ×2 (5 rows)
+#     Sun Runes and Moon Runes laid side by side under a two-deep banner, so all
+#     three headings appear twice and the duplicate-header guard rejects the
+#     table. Splitting it would still need the banner row to tell the halves
+#     apart, which is exactly the bespoke logic no page gets.
+#
+#   Minerals — Type|Effect 1|Effect 2 (10 rows)
+#     Real effects, and the only place they are written down — but Type reads
+#     "Red Gem", "Blue Gem" and so on, the same ten names the swept
+#     Minerals/Special_Minerals records already carry. Sweeping it mints a second
+#     node per gem, and the two halves of each gem's story then sit in different
+#     nodes. One gem is one node, so these belong on the records that exist.
+#
 #   Zodiacs — Season|Zodiacs|Sun|Mercury|...|Chiron|Fortune Pars (5 rows)
 #     A placement chart showing which zodiac belongs to which celestial position.
 #     No effect column; the data is structural, not graph-edge material.

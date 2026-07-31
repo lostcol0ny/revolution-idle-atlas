@@ -247,7 +247,7 @@ def test_every_swept_edge_is_uncertain(graph: dict):
         for e in graph["edges"]
         if e["source"] in swept_sources and e["from"].startswith(swept_prefixes)
     ]
-    assert len(swept) == 111, f"expected 111 swept edges, got {len(swept)}"
+    assert len(swept) == 124, f"expected 124 swept edges, got {len(swept)}"
     assert all(e.get("confidence") == "uncertain" for e in swept)
 
 
@@ -396,3 +396,73 @@ def test_the_attack_damage_formula_converges_on_one_node(graph: dict):
     ):
         assert (factor, "attack-base-damage") in pairs
     assert ("attack-base-damage", "attack-level") in pairs
+
+
+def test_an_unlock_is_curated_rather_than_left_to_the_vocabulary(graph: dict):
+    # Every gate below is also stated in prose the vocabulary matcher can see
+    # ("Unlocks Tarot", "Unlock magnets"), so dropping the curated edge does not
+    # disconnect anything — it silently downgrades the gate to a `boosts` edge at
+    # `uncertain`. Pinning the rel is what makes that regression visible: an
+    # unlock and a boost read identically in the viewer but mean opposite things
+    # about whether the target exists yet.
+    rels = {(e["from"], e["to"]): e["rel"] for e in graph["edges"]}
+    for source, target in (
+        ("attack-level", "minerals"),
+        ("mineral-level", "polish-points"),
+        ("mineral-level", "refinement-points"),
+        ("refine-node-5", "merge-level"),
+        ("refine-node-18", "magnets"),
+        ("refine-node-28", "polish-enhance"),
+        ("refine-node-35", "runes"),
+        ("refine-node-41", "special-minerals"),
+        ("refine-node-55", "elements"),
+        ("refine-node-70", "tarot"),
+        ("refine-node-85", "sacrifice-dust"),
+        ("refine-node-103", "plague"),
+    ):
+        assert rels.get((source, target)) == "unlocks", f"{source} -> {target}"
+
+
+def test_each_polish_weapon_is_bought_with_one_currency_and_pays_a_different_stat(
+    graph: dict,
+):
+    # The five weapons share a cost and nothing else: they are the one place the
+    # Minerals layer reaches out to Attacks and to Gold. Written as a single
+    # "Polish" node the fan-out collapses and every downstream chain through
+    # Gold Gain or Attack Ascension Power loses its origin. The two rels differ
+    # on purpose — spending Polish Points is a cost, the weapon's output is not.
+    edges = {(e["from"], e["to"]): e["rel"] for e in graph["edges"]}
+    payouts = {
+        "polish-sword": "value-points",
+        "polish-axe": "mineral-cost-exp",
+        "polish-spear": "gold-gain",
+        "polish-bow": "attack-ascension-power",
+        "polish-knuckles": "mineral-local-speed",
+    }
+    assert len(set(payouts.values())) == 5
+    for weapon, stat in payouts.items():
+        assert edges.get(("polish-points", weapon)) == "requires"
+        assert edges.get((weapon, stat)) == "boosts"
+        assert edges.get(("polish-enhance", weapon)) == "boosts"
+
+
+def test_the_attack_stat_claims_its_words_before_the_revolution_stat(graph: dict):
+    # Relic 52 and the Two of Swords both say "Ascension Power from VP", but the
+    # power they mean belongs to Attacks, not to the Revolution stat of nearly
+    # the same name. The longer surface exists so it claims the span first; drop
+    # the node and both edges land back on `ascension-power`, which is wrong in a
+    # way nothing else in the graph would report.
+    pairs = {(e["from"], e["to"]) for e in graph["edges"]}
+    assert ("relic-52", "attack-ascension-power") in pairs
+    assert ("relic-52", "ascension-power") not in pairs
+    assert ("tarot-two-of-swords", "attack-ascension-power") in pairs
+
+
+def test_runes_are_filed_where_they_are_earned(graph: dict):
+    # Runes were first curated under Relics because Relic 34 is what named them,
+    # but they are unlocked by Refine Node 35 and documented on the Minerals
+    # page. The system decides which sidebar branch they render under, so the
+    # wrong one hides them from the layer that actually produces them.
+    by_id = {n["id"]: n for n in graph["nodes"]}
+    for rune in ("runes", "rune-sun", "rune-moon"):
+        assert by_id[rune]["system"] == "minerals"

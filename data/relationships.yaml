@@ -589,6 +589,8 @@ nodes:
     kind: stat
     wiki: Minerals
     confidence: documented
+    effects:
+      - text: Boosts the minerals' local speed exponent
 
   - id: attack-exponent
     name: Attack Exponent
@@ -714,9 +716,9 @@ nodes:
 
   - id: runes
     name: Runes
-    system: relics
+    system: minerals
     kind: currency
-    wiki: Relics
+    wiki: Minerals
     confidence: provisional
 
   - id: tarot-draws
@@ -2752,7 +2754,7 @@ nodes:
   # names "Moon" and "Sun" can resolve against them.
   - id: rune-sun
     name: Sun Runes
-    system: relics
+    system: minerals
     kind: currency
     wiki: Minerals
     confidence: documented
@@ -2761,12 +2763,217 @@ nodes:
 
   - id: rune-moon
     name: Moon Runes
-    system: relics
+    system: minerals
     kind: currency
     wiki: Minerals
     confidence: documented
     effects:
       - text: Spent alongside Sun Runes to spawn a Special Mineral
+
+  - id: minerals
+    name: Minerals
+    aliases: [Common Minerals]
+    system: minerals
+    kind: group
+    wiki: Minerals
+    confidence: documented
+    effects:
+      - text: Spawned with Gold at a price that rises per spawn and decays back toward a minimum
+      - text: Two minerals of the same level merge into one of the next level up
+      - text: Generate Value Points passively
+
+  - id: value-points
+    name: Value Points
+    aliases: [VP]
+    system: minerals
+    kind: currency
+    wiki: Minerals
+    confidence: documented
+    effects:
+      - text: A mineral generates 0.01 x 3^(Mineral Level - 1) per second before bonuses
+      - text: Spent on the ten Mineral Upgrades
+
+  - id: polish-points
+    name: Polish Points
+    aliases: [PP]
+    system: minerals
+    kind: currency
+    wiki: Minerals
+    confidence: documented
+    effects:
+      - text: Earned by Polishing, which resets Value Points, minerals, Mineral Upgrades, Magnets and Merge Level
+      - text: Spent on the five Polish weapons
+
+  - id: refinement-points
+    name: Refinement Points
+    aliases: [RfP]
+    system: minerals
+    kind: currency
+    wiki: Minerals
+    confidence: documented
+    effects:
+      - text: Earned by Refining, which resets everything Polishing resets plus the Polish upgrades themselves
+      - text: Spent on the Refine Tree
+
+  - id: magnets
+    name: Magnets
+    system: minerals
+    kind: currency
+    wiki: Minerals
+    confidence: documented
+    effects:
+      - text: Dropped when common minerals merge, at the Magnet Chance rate
+      - text: Spent on the magnet Mineral Upgrades
+
+  - id: special-minerals
+    name: Special Minerals
+    aliases: [SPM]
+    system: minerals
+    kind: currency
+    wiki: Minerals
+    confidence: documented
+    effects:
+      - text: Spawned for a cost in Sun Runes and Moon Runes, starting at 10 of each
+      - text: Kept through both the Polish and the Refine prestige
+
+  - id: sacrifice-dust
+    name: Sacrifice Dust
+    system: minerals
+    kind: currency
+    wiki: Minerals
+    confidence: documented
+    effects:
+      - text: Unlocked by sacrificing every Special Mineral type
+      - text: Gained by deleting minerals and from Tarot Challenge rewards
+
+  - id: mineral-level
+    name: Mineral Level
+    aliases: [Mineral Levels]
+    system: minerals
+    kind: stat
+    wiki: Minerals
+    confidence: documented
+    effects:
+      - text: Polishing unlocks at level 30 and Refining at level 70
+
+  - id: merge-level
+    name: Merge Level
+    system: minerals
+    kind: stat
+    wiki: Minerals
+    confidence: documented
+    effects:
+      - text: Each level doubles Value Point gain
+      - text: The cap to the next level is 10 x (Merge Level + 1)^2
+
+  - id: merge-experience
+    name: Merge Experience
+    aliases: [Merge EXP, Merge XP]
+    system: minerals
+    kind: stat
+    wiki: Minerals
+    confidence: documented
+    effects:
+      - text: Earned per merge and spent raising the Merge Level
+
+  - id: magnet-chance
+    name: Magnet Chance
+    system: minerals
+    kind: stat
+    wiki: Minerals
+    confidence: documented
+    effects:
+      - text: Starts at 1% per merge of common minerals
+
+  - id: mineral-local-speed
+    name: Mineral Local Speed
+    aliases: [Minerals Local Speed]
+    system: minerals
+    kind: stat
+    wiki: Minerals
+    confidence: documented
+
+  - id: polish-sword
+    name: Polish Sword
+    system: minerals
+    kind: stat
+    wiki: Minerals
+    confidence: documented
+    effects:
+      - text: Boosts Value Point gain
+      - text: Level 10 unlocks mineral autospawn, level 25 unlocks the VP factor
+
+  - id: polish-axe
+    name: Polish Axe
+    system: minerals
+    kind: stat
+    wiki: Minerals
+    confidence: documented
+    effects:
+      - text: Empowers the fall of the mineral spawn cost
+      - text: Level 10 starts Unity with 1,000 eternities
+
+  - id: polish-spear
+    name: Polish Spear
+    system: minerals
+    kind: stat
+    wiki: Minerals
+    confidence: documented
+    effects:
+      - text: Boosts Gold Gain
+      - text: Level 50 unlocks the Second Insane Trial
+
+  - id: polish-bow
+    name: Polish Bow
+    system: minerals
+    kind: stat
+    wiki: Minerals
+    confidence: documented
+    effects:
+      - text: Boosts Attack Ascension Power
+      - text: Level 50 removes the EP cost of animals and lab upgrades
+
+  - id: polish-enhance
+    name: Polish Enhance
+    system: minerals
+    kind: upgrade
+    wiki: Minerals
+    confidence: documented
+    effects:
+      - text: Five upgrades, one per Polish weapon, each adding 1% efficiency per level
+
+  - id: refine-tree
+    name: Refine Tree
+    system: refine-tree
+    kind: group
+    wiki: Minerals
+    confidence: documented
+    effects:
+      - text: 136 nodes bought with Refinement Points; circles are bought once, squares are levelable
+
+  - id: elements
+    name: Elements
+    system: elements
+    kind: group
+    wiki: Elements
+    confidence: documented
+
+  - id: tarot
+    name: Tarot
+    system: tarot
+    kind: group
+    wiki: Tarot
+    confidence: documented
+
+  - id: attack-ascension-power
+    name: Attack Ascension Power
+    aliases: [Attacks Ascension Power, Attack Ascend Power, Attacks Ascend Power]
+    system: attacks
+    kind: stat
+    wiki: Attacks
+    confidence: documented
+    effects:
+      - text: Gained from Value Points
 
 edges:
   - from: relic-3
@@ -5294,6 +5501,252 @@ edges:
     to: rune-sun
     rel: boosts
     source: wiki:Relics
+    confidence: documented
+
+  - from: attack-level
+    to: minerals
+    rel: unlocks
+    source: wiki:Unity
+    confidence: documented
+
+  - from: mineral-level
+    to: polish-points
+    rel: unlocks
+    source: wiki:Minerals
+    confidence: documented
+
+  - from: mineral-level
+    to: refinement-points
+    rel: unlocks
+    source: wiki:Minerals
+    confidence: documented
+
+  - from: refine-node-5
+    to: merge-level
+    rel: unlocks
+    source: wiki:Minerals
+    confidence: documented
+
+  - from: refine-node-18
+    to: magnets
+    rel: unlocks
+    source: wiki:Minerals
+    confidence: documented
+
+  - from: refine-node-28
+    to: polish-enhance
+    rel: unlocks
+    source: wiki:Minerals
+    confidence: documented
+
+  - from: refine-node-35
+    to: runes
+    rel: unlocks
+    source: wiki:Minerals
+    confidence: documented
+
+  - from: refine-node-41
+    to: special-minerals
+    rel: unlocks
+    source: wiki:Minerals
+    confidence: documented
+
+  - from: refine-node-55
+    to: elements
+    rel: unlocks
+    source: wiki:Minerals
+    confidence: documented
+
+  - from: refine-node-70
+    to: tarot
+    rel: unlocks
+    source: wiki:Minerals
+    confidence: documented
+
+  - from: refine-node-85
+    to: sacrifice-dust
+    rel: unlocks
+    source: wiki:Minerals
+    confidence: documented
+
+  - from: refine-node-103
+    to: plague
+    rel: unlocks
+    source: wiki:Minerals
+    confidence: documented
+
+  - from: refinement-points
+    to: refine-tree
+    rel: requires
+    source: wiki:Minerals
+    confidence: documented
+
+  - from: gold
+    to: minerals
+    rel: requires
+    source: wiki:Minerals
+    confidence: documented
+
+  - from: minerals
+    to: value-points
+    rel: boosts
+    source: wiki:Minerals
+    confidence: documented
+
+  - from: mineral-level
+    to: value-points
+    rel: boosts
+    source: wiki:Minerals
+    confidence: documented
+
+  - from: value-points
+    to: mineral-level
+    rel: boosts
+    source: wiki:Minerals
+    confidence: documented
+
+  - from: merge-experience
+    to: merge-level
+    rel: boosts
+    source: wiki:Minerals
+    confidence: documented
+
+  - from: merge-level
+    to: value-points
+    rel: boosts
+    source: wiki:Minerals
+    confidence: documented
+
+  - from: magnet-chance
+    to: magnets
+    rel: boosts
+    source: wiki:Minerals
+    confidence: documented
+
+  - from: mineral-local-speed
+    to: minerals
+    rel: boosts
+    source: wiki:Minerals
+    confidence: documented
+
+  - from: rune-sun
+    to: special-minerals
+    rel: requires
+    source: wiki:Minerals
+    confidence: documented
+
+  - from: rune-moon
+    to: special-minerals
+    rel: requires
+    source: wiki:Minerals
+    confidence: documented
+
+  - from: sms-factor
+    to: special-minerals
+    rel: boosts
+    source: wiki:Minerals
+    confidence: documented
+
+  - from: special-minerals-merge-factor
+    to: special-minerals
+    rel: boosts
+    source: wiki:Minerals
+    confidence: documented
+
+  - from: special-minerals
+    to: sacrifice-dust
+    rel: requires
+    source: wiki:Minerals
+    confidence: documented
+
+  - from: polish-points
+    to: polish-sword
+    rel: requires
+    source: wiki:Minerals
+    confidence: documented
+
+  - from: polish-enhance
+    to: polish-sword
+    rel: boosts
+    source: wiki:Minerals
+    confidence: documented
+
+  - from: polish-points
+    to: polish-axe
+    rel: requires
+    source: wiki:Minerals
+    confidence: documented
+
+  - from: polish-enhance
+    to: polish-axe
+    rel: boosts
+    source: wiki:Minerals
+    confidence: documented
+
+  - from: polish-points
+    to: polish-spear
+    rel: requires
+    source: wiki:Minerals
+    confidence: documented
+
+  - from: polish-enhance
+    to: polish-spear
+    rel: boosts
+    source: wiki:Minerals
+    confidence: documented
+
+  - from: polish-points
+    to: polish-bow
+    rel: requires
+    source: wiki:Minerals
+    confidence: documented
+
+  - from: polish-enhance
+    to: polish-bow
+    rel: boosts
+    source: wiki:Minerals
+    confidence: documented
+
+  - from: polish-points
+    to: polish-knuckles
+    rel: requires
+    source: wiki:Minerals
+    confidence: documented
+
+  - from: polish-enhance
+    to: polish-knuckles
+    rel: boosts
+    source: wiki:Minerals
+    confidence: documented
+
+  - from: polish-sword
+    to: value-points
+    rel: boosts
+    source: wiki:Minerals
+    confidence: documented
+
+  - from: polish-axe
+    to: mineral-cost-exp
+    rel: boosts
+    source: wiki:Minerals
+    confidence: documented
+
+  - from: polish-spear
+    to: gold-gain
+    rel: boosts
+    source: wiki:Minerals
+    confidence: documented
+
+  - from: polish-bow
+    to: attack-ascension-power
+    rel: boosts
+    source: wiki:Minerals
+    confidence: documented
+
+  - from: polish-knuckles
+    to: mineral-local-speed
+    rel: boosts
+    source: wiki:Minerals
     confidence: documented
 
 suppress:
