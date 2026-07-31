@@ -25,13 +25,16 @@ jobs:
       - name: Run tests
         run: uv run pytest -v
 
-      # public/graph.json and docs/coverage.md are committed build products. If
-      # this step fails, the dataset was edited without re-running the build:
-      # run `uv run atlas build` locally and commit the result.
-      - name: Generated artifacts are up to date with data/relationships.yaml
+      # data/derived.yaml, public/graph.json and docs/coverage.md are committed
+      # build products. If this step fails, either the dataset was edited
+      # without re-running the build or data/raw/ changed without re-running the
+      # extraction: run `uv run atlas extract && uv run atlas build` locally and
+      # commit the result.
+      - name: Generated artifacts are up to date with data/
         run: |
+          uv run atlas extract
           uv run atlas build
-          git diff --exit-code -- public/graph.json docs/coverage.md
+          git diff --exit-code -- data/derived.yaml public/graph.json docs/coverage.md
 
   web:
     runs-on: ubuntu-latest

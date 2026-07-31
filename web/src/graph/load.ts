@@ -38,7 +38,20 @@ export function parseGraph(data: unknown): GraphDocument {
     throw new GraphFormatError('graph.json is missing "nodes" or "edges"');
   }
 
-  return { version: doc.version, nodes: doc.nodes, edges: doc.edges };
+  if (doc.systems !== undefined && !Array.isArray(doc.systems)) {
+    throw new GraphFormatError('graph.json has a non-array "systems" field');
+  }
+
+  // The returned object is rebuilt field by field rather than passed through,
+  // so a future producer-side key cannot reach the app without a deliberate
+  // change here. `systems` is spread conditionally to keep the key absent
+  // rather than present-and-undefined, which the contract test asserts.
+  return {
+    version: doc.version,
+    nodes: doc.nodes,
+    edges: doc.edges,
+    ...(doc.systems !== undefined ? { systems: doc.systems } : {}),
+  };
 }
 
 export async function loadGraph(url: string = GRAPH_URL): Promise<GraphDocument> {

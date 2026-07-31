@@ -1,8 +1,8 @@
 import { useMemo, useState } from 'react';
 import type { GraphIndex } from '../graph/adjacency';
 import { systemColour } from '../graph/palette';
+import { buildSystemTree, type SystemTreeNode } from '../graph/systems';
 import type { GraphNode, System } from '../types';
-import { SYSTEMS } from '../types';
 
 export function Sidebar({
   index,
@@ -16,7 +16,7 @@ export function Sidebar({
   const [filter, setFilter] = useState('');
   const [open, setOpen] = useState<Set<System>>(() => new Set());
 
-  const bySystem = useMemo(() => {
+  const { bySystem, tree } = useMemo(() => {
     const groups = new Map<System, GraphNode[]>();
     for (const id of index.order) {
       const node = index.nodes.get(id);
@@ -25,7 +25,8 @@ export function Sidebar({
       group.push(node);
       groups.set(node.system, group);
     }
-    return groups;
+    const counts = new Map([...groups].map(([system, nodes]) => [system, nodes.length]));
+    return { bySystem: groups, tree: buildSystemTree(index.systems, counts) };
   }, [index]);
 
   const needle = filter.trim().toLowerCase();
@@ -69,39 +70,96 @@ export function Sidebar({
           ))}
         </ul>
       ) : (
-        SYSTEMS.map((system) => {
-          const nodes = bySystem.get(system);
-          if (!nodes || nodes.length === 0) return null;
-          const expanded = open.has(system);
-          return (
-            <section key={system}>
-              <button
-                type="button"
-                className="group-header"
-                aria-expanded={expanded}
-                onClick={() => toggle(system)}
-              >
-                <span className="swatch" style={{ background: systemColour(system) }} />
-                <span>{system}</span>
-                <span className="count">{nodes.length}</span>
-              </button>
-              {expanded && (
-                <ul className="node-list">
-                  {nodes.map((node) => (
-                    <NodeRow
-                      key={node.id}
-                      node={node}
-                      selected={node.id === selectedId}
-                      onSelect={onSelect}
-                    />
-                  ))}
-                </ul>
-              )}
-            </section>
-          );
-        })
+        tree.map((system) => (
+          <SystemSection
+            key={system.id}
+            system={system}
+            depth={0}
+            bySystem={bySystem}
+            open={open}
+            toggle={toggle}
+            selectedId={selectedId}
+            onSelect={onSelect}
+          />
+        ))
       )}
     </>
+  );
+}
+
+function SystemSection({
+  system,
+  depth,
+  bySystem,
+  open,
+  toggle,
+  selectedId,
+  onSelect,
+}: {
+  system: SystemTreeNode;
+  depth: number;
+  bySystem: Map<System, GraphNode[]>;
+  open: Set<System>;
+  toggle: (system: System) => void;
+  selectedId: string | null;
+  onSelect: (id: string) => void;
+}) {
+  const expanded = open.has(system.id);
+  const nodes = bySystem.get(system.id) ?? [];
+  // The count is the rolled-up total, so a parent reads as the size of the
+  // branch rather than of whatever happens to sit directly on it. The title
+  // carries the split for the cases where those differ.
+  const label =
+    system.direct === system.total
+      ? `${system.total} nodes`
+      : `${system.total} nodes, ${system.direct} directly`;
+
+  return (
+    <section>
+      <button
+        type="button"
+        className="group-header"
+        style={{ paddingLeft: 4 + depth * 14 }}
+        aria-expanded={expanded}
+        title={label}
+        onClick={() => toggle(system.id)}
+      >
+        <span className="caret" aria-hidden="true">
+          {expanded ? '▾' : '▸'}
+        </span>
+        <span className="swatch" style={{ background: systemColour(system.id) }} />
+        <span>{system.name}</span>
+        <span className="count">{system.total}</span>
+      </button>
+      {expanded && (
+        <>
+          {nodes.length > 0 && (
+            <ul className="node-list" style={{ paddingLeft: 18 + depth * 14 }}>
+              {nodes.map((node) => (
+                <NodeRow
+                  key={node.id}
+                  node={node}
+                  selected={node.id === selectedId}
+                  onSelect={onSelect}
+                />
+              ))}
+            </ul>
+          )}
+          {system.children.map((child) => (
+            <SystemSection
+              key={child.id}
+              system={child}
+              depth={depth + 1}
+              bySystem={bySystem}
+              open={open}
+              toggle={toggle}
+              selectedId={selectedId}
+              onSelect={onSelect}
+            />
+          ))}
+        </>
+      )}
+    </section>
   );
 }
 

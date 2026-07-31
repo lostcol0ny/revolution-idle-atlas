@@ -61,7 +61,13 @@ describe('layout', () => {
     expect(Number.isFinite(positions.get('lonely')?.x)).toBe(true);
   });
 
-  it('never overlaps two nodes anywhere in the real graph', () => {
+  // Sweeps the shipped graph the way pipeline.test.ts does, so it takes that
+  // test's declared budget for the same reason: the cost tracks the corpus, and
+  // curating a few hundred more nodes should not turn this into a bare timeout
+  // that reads as an overlap regression. It cleared the implicit 5s default
+  // locally and missed it on a two-core runner, which is the worst version of
+  // the failure -- green for whoever wrote the nodes, red for CI.
+  it('never overlaps two nodes anywhere in the real graph', { timeout: 120_000 }, () => {
     const url = new URL('../../../public/graph.json', import.meta.url);
     const doc = parseGraph(JSON.parse(readFileSync(url, 'utf8')));
     const index = buildIndex(doc);

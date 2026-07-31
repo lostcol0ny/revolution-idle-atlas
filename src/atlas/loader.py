@@ -36,6 +36,22 @@ _LineLoader.add_constructor(
 )
 
 
+def _strip_nested_lines(value: Any) -> None:
+    """Remove line markers from mappings below a section item.
+
+    Only section items get a line number; anything deeper would collide with
+    the models' `extra="forbid"`. The recursion is over parsed YAML, so the
+    only container types it can meet are dict and list.
+    """
+    if isinstance(value, dict):
+        value.pop(LINE_KEY, None)
+        for nested in value.values():
+            _strip_nested_lines(nested)
+    elif isinstance(value, list):
+        for nested in value:
+            _strip_nested_lines(nested)
+
+
 def load_dataset(path: Path) -> Dataset:
     # Equivalent to yaml.load(..., Loader=_LineLoader), spelled out so the
     # SafeLoader lineage is the only thing a reader has to verify.
@@ -52,13 +68,16 @@ def load_dataset(path: Path) -> Dataset:
         )
     raw.pop(LINE_KEY, None)
 
+    sections = ("systems", "nodes", "edges", "suppress")
     lines: dict[str, list[int | None]] = {}
-    for section in ("nodes", "edges"):
+    for section in sections:
         items = raw.get(section) or []
         section_lines: list[int | None] = []
         for item in items:
             if isinstance(item, dict):
                 section_lines.append(item.pop(LINE_KEY, None))
+                for value in item.values():
+                    _strip_nested_lines(value)
             else:
                 section_lines.append(None)
         lines[section] = section_lines
@@ -72,9 +91,8 @@ def load_dataset(path: Path) -> Dataset:
         ]
         raise SchemaError(problems) from exc
 
-    for node, line in zip(dataset.nodes, lines["nodes"], strict=True):
-        node.line = line
-    for edge, line in zip(dataset.edges, lines["edges"], strict=True):
-        edge.line = line
+    for section in sections:
+        for item, line in zip(getattr(dataset, section), lines[section], strict=True):
+            item.line = line
 
     return dataset

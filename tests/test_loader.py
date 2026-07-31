@@ -4,7 +4,7 @@ import pytest
 import yaml
 
 from atlas.loader import SchemaError, load_dataset
-from atlas.models import EdgeConfidence, Kind, Rel, System
+from atlas.models import EdgeConfidence, Kind, Rel
 
 FIXTURES = Path(__file__).parent / "fixtures"
 
@@ -14,7 +14,7 @@ def test_loads_nodes_and_edges():
     assert len(ds.nodes) == 2
     assert len(ds.edges) == 1
     assert ds.nodes[0].id == "refine-node-121"
-    assert ds.nodes[0].system is System.MINERAL
+    assert ds.nodes[0].system == "mineral"
     assert ds.nodes[0].kind is Kind.TREE_NODE
 
 
@@ -43,13 +43,13 @@ def test_bad_enum_raises_schema_error(tmp_path):
         "nodes:\n"
         "  - id: x\n"
         "    name: X\n"
-        "    system: not-a-system\n"
-        "    kind: relic\n"
+        "    system: unity\n"
+        "    kind: not-a-kind\n"
         "edges: []\n"
     )
     with pytest.raises(SchemaError) as exc:
         load_dataset(bad)
-    assert any("system" in p for p in exc.value.problems)
+    assert any("kind" in p for p in exc.value.problems)
 
 
 def test_non_mapping_root_raises_schema_error_not_attribute_error(tmp_path):
@@ -74,3 +74,45 @@ def test_python_object_tags_are_rejected(tmp_path, payload):
     evil.write_text(payload)
     with pytest.raises(yaml.YAMLError):
         load_dataset(evil)
+
+
+def test_nested_effect_mappings_do_not_leak_line_markers(tmp_path):
+    path = tmp_path / "effects.yaml"
+    path.write_text(
+        "nodes:\n"
+        "  - id: relic-38\n"
+        "    name: Smart Man\n"
+        "    system: relics\n"
+        "    kind: relic\n"
+        "    effects:\n"
+        "      - text: Adds base to Refine Node 2\n"
+        "        per_level: '+1.00'\n"
+        "edges: []\n"
+    )
+    ds = load_dataset(path)
+    assert ds.nodes[0].effects[0].per_level == "+1.00"
+
+
+def test_systems_and_suppress_sections_load_with_line_numbers(tmp_path):
+    path = tmp_path / "systems.yaml"
+    path.write_text(
+        "systems:\n"
+        "  - id: unity\n"
+        "    name: Unity\n"
+        "  - id: relics\n"
+        "    name: Relics\n"
+        "    parent: unity\n"
+        "nodes: []\n"
+        "edges: []\n"
+        "suppress:\n"
+        "  - from: a\n"
+        "    to: b\n"
+        "    rel: requires\n"
+        "    reason: the wiki table lists this row twice\n"
+    )
+    ds = load_dataset(path)
+    assert [s.id for s in ds.systems] == ["unity", "relics"]
+    assert ds.systems[0].line == 2
+    assert ds.systems[1].line == 4
+    assert ds.suppress[0].from_ == "a"
+    assert ds.suppress[0].line == 10
