@@ -233,11 +233,16 @@ pages:
   # documents them.
   - reader: wikitable
     page: Singularity
-    system: singularity
+    system: houses
     kind: upgrade
     id_prefix: singularity-zodiac
     # `House` (I, II, III) is deliberately not part of the name: it is an
-    # ordinal, and `Zodiac` alone is unique within this table.
+    # ordinal. `Zodiac` alone is unique within this table but not in the graph —
+    # the Zodiacs page mints the same twelve names — and the sidebar matches and
+    # renders `name` with no system beside it. `name_prefix` separates the two
+    # sets, and it composes after the id is minted, so the ids the frontend
+    # deep-links to are unchanged.
+    name_prefix: Singular Zodiac
     name_columns: [Zodiac]
     effect_columns: [First effect, Second Effect]
 

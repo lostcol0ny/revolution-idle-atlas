@@ -210,6 +210,27 @@ def test_the_plague_statistics_table_wires_plague_into_the_graph(graph: dict):
     )
 
 
+def test_no_two_nodes_share_a_display_name(graph: dict):
+    # `name` is what the search box matches and what a node label renders, and
+    # neither shows the system beside it, so two nodes sharing one name are
+    # indistinguishable in the UI.
+    #
+    # The Houses table is why this exists: it names its rows "Aries".."Pisces",
+    # the same twelve names the Zodiacs page uses, and a manifest entry that
+    # justifies its name column by uniqueness *within its own table* cannot see
+    # that. The pair below is asserted by hand as well, so removing the
+    # `name_prefix` that separates them fails on the case that motivated the
+    # test rather than on an anonymous count.
+    names = {n["id"]: n["name"] for n in graph["nodes"]}
+    assert names["singularity-zodiac-aries"] != names["zodiac-aries"]
+
+    by_name: dict[str, list[str]] = {}
+    for node_id, name in names.items():
+        by_name.setdefault(name, []).append(node_id)
+    shared = {name: ids for name, ids in by_name.items() if len(ids) > 1}
+    assert shared == {}, shared
+
+
 def test_a_numbered_row_got_a_readable_name(graph: dict):
     # Singularity's tree rows are named "1", "2", "3.1" on the page. Without
     # name_prefix the node is called "1" and nothing says what it is.

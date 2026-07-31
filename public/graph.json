@@ -6160,8 +6160,8 @@
       ],
       "id": "singularity-zodiac-aries",
       "kind": "upgrade",
-      "name": "Aries",
-      "system": "singularity",
+      "name": "Singular Zodiac Aries",
+      "system": "houses",
       "wiki": "Singularity"
     },
     {
@@ -6173,8 +6173,8 @@
       ],
       "id": "singularity-zodiac-taurus",
       "kind": "upgrade",
-      "name": "Taurus",
-      "system": "singularity",
+      "name": "Singular Zodiac Taurus",
+      "system": "houses",
       "wiki": "Singularity"
     },
     {
@@ -6186,8 +6186,8 @@
       ],
       "id": "singularity-zodiac-gemini",
       "kind": "upgrade",
-      "name": "Gemini",
-      "system": "singularity",
+      "name": "Singular Zodiac Gemini",
+      "system": "houses",
       "wiki": "Singularity"
     },
     {
@@ -6199,8 +6199,8 @@
       ],
       "id": "singularity-zodiac-cancer",
       "kind": "upgrade",
-      "name": "Cancer",
-      "system": "singularity",
+      "name": "Singular Zodiac Cancer",
+      "system": "houses",
       "wiki": "Singularity"
     },
     {
@@ -6212,8 +6212,8 @@
       ],
       "id": "singularity-zodiac-leo",
       "kind": "upgrade",
-      "name": "Leo",
-      "system": "singularity",
+      "name": "Singular Zodiac Leo",
+      "system": "houses",
       "wiki": "Singularity"
     },
     {
@@ -6225,8 +6225,8 @@
       ],
       "id": "singularity-zodiac-virgo",
       "kind": "upgrade",
-      "name": "Virgo",
-      "system": "singularity",
+      "name": "Singular Zodiac Virgo",
+      "system": "houses",
       "wiki": "Singularity"
     },
     {
@@ -6238,8 +6238,8 @@
       ],
       "id": "singularity-zodiac-libra",
       "kind": "upgrade",
-      "name": "Libra",
-      "system": "singularity",
+      "name": "Singular Zodiac Libra",
+      "system": "houses",
       "wiki": "Singularity"
     },
     {
@@ -6251,8 +6251,8 @@
       ],
       "id": "singularity-zodiac-scorpio",
       "kind": "upgrade",
-      "name": "Scorpio",
-      "system": "singularity",
+      "name": "Singular Zodiac Scorpio",
+      "system": "houses",
       "wiki": "Singularity"
     },
     {
@@ -6264,8 +6264,8 @@
       ],
       "id": "singularity-zodiac-saggitarius",
       "kind": "upgrade",
-      "name": "Saggitarius",
-      "system": "singularity",
+      "name": "Singular Zodiac Saggitarius",
+      "system": "houses",
       "wiki": "Singularity"
     },
     {
@@ -6277,8 +6277,8 @@
       ],
       "id": "singularity-zodiac-capricorn",
       "kind": "upgrade",
-      "name": "Capricorn",
-      "system": "singularity",
+      "name": "Singular Zodiac Capricorn",
+      "system": "houses",
       "wiki": "Singularity"
     },
     {
@@ -6290,8 +6290,8 @@
       ],
       "id": "singularity-zodiac-aquarius",
       "kind": "upgrade",
-      "name": "Aquarius",
-      "system": "singularity",
+      "name": "Singular Zodiac Aquarius",
+      "system": "houses",
       "wiki": "Singularity"
     },
     {
@@ -6303,8 +6303,8 @@
       ],
       "id": "singularity-zodiac-pisces",
       "kind": "upgrade",
-      "name": "Pisces",
-      "system": "singularity",
+      "name": "Singular Zodiac Pisces",
+      "system": "houses",
       "wiki": "Singularity"
     },
     {
@@ -23811,6 +23811,11 @@
       "id": "singularity",
       "name": "Singularity",
       "parent": "unity"
+    },
+    {
+      "id": "houses",
+      "name": "Houses",
+      "parent": "singularity"
     }
   ]
 }

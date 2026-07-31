@@ -3768,96 +3768,96 @@ nodes:
   - text: All Singularity Tree Upgrade Efficiency
     per_level: '.001'
 - id: singularity-zodiac-aries
-  name: Aries
-  system: singularity
+  name: Singular Zodiac Aries
+  system: houses
   kind: upgrade
   wiki: Singularity
   confidence: provisional
   effects:
   - text: Fire Element Factor 3
 - id: singularity-zodiac-taurus
-  name: Taurus
-  system: singularity
+  name: Singular Zodiac Taurus
+  system: houses
   kind: upgrade
   wiki: Singularity
   confidence: provisional
   effects:
   - text: Earth Element Factor 3
 - id: singularity-zodiac-gemini
-  name: Gemini
-  system: singularity
+  name: Singular Zodiac Gemini
+  system: houses
   kind: upgrade
   wiki: Singularity
   confidence: provisional
   effects:
   - text: Wind Element Factor 3
 - id: singularity-zodiac-cancer
-  name: Cancer
-  system: singularity
+  name: Singular Zodiac Cancer
+  system: houses
   kind: upgrade
   wiki: Singularity
   confidence: provisional
   effects:
   - text: Water Element Factor 3
 - id: singularity-zodiac-leo
-  name: Leo
-  system: singularity
+  name: Singular Zodiac Leo
+  system: houses
   kind: upgrade
   wiki: Singularity
   confidence: provisional
   effects:
   - text: Sacrifice Dust Gain
 - id: singularity-zodiac-virgo
-  name: Virgo
-  system: singularity
+  name: Singular Zodiac Virgo
+  system: houses
   kind: upgrade
   wiki: Singularity
   confidence: provisional
   effects:
   - text: PlP per PlG Multi
 - id: singularity-zodiac-libra
-  name: Libra
-  system: singularity
+  name: Singular Zodiac Libra
+  system: houses
   kind: upgrade
   wiki: Singularity
   confidence: provisional
   effects:
   - text: VE on Disolve Multi
 - id: singularity-zodiac-scorpio
-  name: Scorpio
-  system: singularity
+  name: Singular Zodiac Scorpio
+  system: houses
   kind: upgrade
   wiki: Singularity
   confidence: provisional
   effects:
   - text: Base Spread Multi
 - id: singularity-zodiac-saggitarius
-  name: Saggitarius
-  system: singularity
+  name: Singular Zodiac Saggitarius
+  system: houses
   kind: upgrade
   wiki: Singularity
   confidence: provisional
   effects:
   - text: Attack Exponent Multi
 - id: singularity-zodiac-capricorn
-  name: Capricorn
-  system: singularity
+  name: Singular Zodiac Capricorn
+  system: houses
   kind: upgrade
   wiki: Singularity
   confidence: provisional
   effects:
   - text: Golden Resources Gain
 - id: singularity-zodiac-aquarius
-  name: Aquarius
-  system: singularity
+  name: Singular Zodiac Aquarius
+  system: houses
   kind: upgrade
   wiki: Singularity
   confidence: provisional
   effects:
   - text: Black Gem Effect
 - id: singularity-zodiac-pisces
-  name: Pisces
-  system: singularity
+  name: Singular Zodiac Pisces
+  system: houses
   kind: upgrade
   wiki: Singularity
   confidence: provisional

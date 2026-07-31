@@ -48,6 +48,13 @@ systems:
   - id: singularity
     name: Singularity
     parent: unity
+  # The Houses tab is an advanced Astrology unlocked at 32 Singularities, and
+  # its zodiacs share nothing with the Astrology set but their twelve names.
+  # Nested under Singularity rather than beside it, the way Refine Tree sits
+  # under Minerals, because that is where the game puts the tab.
+  - id: houses
+    name: Houses
+    parent: singularity
 
 nodes:
   - id: attack-power

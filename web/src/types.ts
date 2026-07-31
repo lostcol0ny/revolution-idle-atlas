@@ -21,6 +21,7 @@ export const KNOWN_SYSTEMS = [
   'minerals',
   'refine-tree',
   'elements',
+  'houses',
 ] as const;
 export type KnownSystem = (typeof KNOWN_SYSTEMS)[number];
 export type System = string;

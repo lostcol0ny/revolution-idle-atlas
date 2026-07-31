@@ -19,6 +19,9 @@ export const SYSTEM_COLOURS: Record<KnownSystem, string> = {
   minerals: '#2f7d78',
   'refine-tree': '#2a6560',
   elements: '#2b6b8a',
+  // Darker Singularity, the way refine-tree is darker Minerals: a child system
+  // reads as its parent's shade rather than competing with it.
+  houses: '#574235',
 };
 
 const KIND_BADGES: Record<Kind, string> = {
