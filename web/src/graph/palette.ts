@@ -39,6 +39,10 @@ export const SYSTEM_COLOURS: Record<KnownSystem, string> = {
   // off the hue: the cards and their challenges are the same subject and the
   // sidebar is what separates them.
   'tarot-challenges': '#7d2e30',
+  // Tarot's second child, so the darker-shade slot was taken. Rotated toward wine
+  // instead of darkened further: a third near-black red would separate the tabs on
+  // paper and not on the canvas.
+  'tarot-artifacts': '#8a2f52',
   singularity: '#6d5343',
   // The Milestones tab holds no nodes of its own, so this paints a sidebar row
   // and nothing on the canvas. That is why it sits 11 from `singularity` when

@@ -5189,6 +5189,381 @@ nodes:
       is set to 1. Adds a dynamic penalty that heavily nerfs Atom gain, but becomes weaker based on the
       quality of the zodiac in the Moon Slot.
   - text: Perform a Singularity with 1e1000+ Atoms
+- id: tarot-artifact-glass-surface
+  name: Glass Surface
+  system: tarot-artifacts
+  kind: upgrade
+  wiki: Tarot
+  confidence: provisional
+  effects:
+  - text: Sacrifice Dust Gain
+    per_level: x10000/level
+    op: mult
+- id: tarot-artifact-silver-backing
+  name: Silver Backing
+  system: tarot-artifacts
+  kind: upgrade
+  wiki: Tarot
+  confidence: provisional
+  effects:
+  - text: Relic 24 Effect
+    per_level: +0.01x/level
+    op: add
+- id: tarot-artifact-obsidian-frame
+  name: Obsidian Frame
+  system: tarot-artifacts
+  kind: upgrade
+  wiki: Tarot
+  confidence: provisional
+  effects:
+  - text: Relic 56 Effect
+    per_level: +0.01x/level
+    op: add
+- id: tarot-artifact-focal-point
+  name: Focal Point
+  system: tarot-artifacts
+  kind: upgrade
+  wiki: Tarot
+  confidence: provisional
+  effects:
+  - text: Relic 13 Effect
+    per_level: +0.2x/level
+    op: add
+- id: tarot-artifact-light-refractors
+  name: Light Refractors
+  system: tarot-artifacts
+  kind: upgrade
+  wiki: Tarot
+  confidence: provisional
+  effects:
+  - text: Relic 2 Effect
+    per_level: +^0.25/level
+    op: exp
+- id: tarot-artifact-truth-facets
+  name: Truth Facets
+  system: tarot-artifacts
+  kind: upgrade
+  wiki: Tarot
+  confidence: provisional
+  effects:
+  - text: Relic 21 Effect
+    per_level: +0.01x/level
+    op: add
+- id: tarot-artifact-memory-crystal
+  name: Memory Crystal
+  system: tarot-artifacts
+  kind: upgrade
+  wiki: Tarot
+  confidence: provisional
+  effects:
+  - text: Sword LOGPOW base
+    per_level: 0.09+0.01*level
+- id: tarot-artifact-perception-lens
+  name: Perception Lens
+  system: tarot-artifacts
+  kind: upgrade
+  wiki: Tarot
+  confidence: provisional
+  effects:
+  - text: Base Spread Power on ER Craft (see Plague
+    per_level: +0.25x/level
+    op: add
+- id: tarot-artifact-ramus
+  name: Ramus
+  system: tarot-artifacts
+  kind: upgrade
+  wiki: Tarot
+  confidence: provisional
+  effects:
+  - text: Sacrifice Dust Gain
+    per_level: x10000/level
+    op: mult
+- id: tarot-artifact-mandible
+  name: Mandible
+  system: tarot-artifacts
+  kind: upgrade
+  wiki: Tarot
+  confidence: provisional
+  effects:
+  - text: Relic 25 Effect
+    per_level: +0.01x/level
+    op: add
+- id: tarot-artifact-teeth
+  name: Teeth
+  system: tarot-artifacts
+  kind: upgrade
+  wiki: Tarot
+  confidence: provisional
+  effects:
+  - text: Relic 8 Effect
+    per_level: +^1000/level
+    op: exp
+- id: tarot-artifact-maxilla
+  name: Maxilla
+  system: tarot-artifacts
+  kind: upgrade
+  wiki: Tarot
+  confidence: provisional
+  effects:
+  - text: Relic 14 Effect
+    per_level: +0.1x/level
+    op: add
+- id: tarot-artifact-nasal-bone
+  name: Nasal Bone
+  system: tarot-artifacts
+  kind: upgrade
+  wiki: Tarot
+  confidence: provisional
+  effects:
+  - text: Relic 2 Effect
+    per_level: +^0.25/level
+    op: exp
+- id: tarot-artifact-infraorbitals
+  name: Infraorbitals
+  system: tarot-artifacts
+  kind: upgrade
+  wiki: Tarot
+  confidence: provisional
+  effects:
+  - text: Refine Node 7 Effect
+    per_level: +0.01/level
+    op: add
+- id: tarot-artifact-zygomatics
+  name: Zygomatics
+  system: tarot-artifacts
+  kind: upgrade
+  wiki: Tarot
+  confidence: provisional
+  effects:
+  - text: Wands LOGPOW base
+    per_level: 0.09+0.01*level
+- id: tarot-artifact-frontal-bone
+  name: Frontal Bone
+  system: tarot-artifacts
+  kind: upgrade
+  wiki: Tarot
+  confidence: provisional
+  effects:
+  - text: Relic 52 Effect
+    per_level: +0.02/level
+    op: add
+- id: tarot-artifact-parietal-bone
+  name: Parietal Bone
+  system: tarot-artifacts
+  kind: upgrade
+  wiki: Tarot
+  confidence: provisional
+  effects:
+  - text: The Hermit base effect
+    per_level: +0.05x/level
+    op: add
+- id: tarot-artifact-temporal-bone
+  name: Temporal Bone
+  system: tarot-artifacts
+  kind: upgrade
+  wiki: Tarot
+  confidence: provisional
+  effects:
+  - text: Water Quality factor
+    per_level: +^0.5/level
+    op: exp
+- id: tarot-artifact-occipital-bone
+  name: Occipital Bone
+  system: tarot-artifacts
+  kind: upgrade
+  wiki: Tarot
+  confidence: provisional
+  effects:
+  - text: PlP per PlG mult (see Plague)
+    per_level: +1x/level
+    op: add
+- id: tarot-artifact-abundance-gears
+  name: Abundance Gears
+  system: tarot-artifacts
+  kind: upgrade
+  wiki: Tarot
+  confidence: provisional
+  effects:
+  - text: Sacrifice Dust Gain
+    per_level: x10000/level
+    op: mult
+- id: tarot-artifact-manifestation-pistons
+  name: Manifestation Pistons
+  system: tarot-artifacts
+  kind: upgrade
+  wiki: Tarot
+  confidence: provisional
+  effects:
+  - text: Relic 26 Effect
+    per_level: +0.01x/level
+    op: add
+- id: tarot-artifact-fortune-cogs
+  name: Fortune Cogs
+  system: tarot-artifacts
+  kind: upgrade
+  wiki: Tarot
+  confidence: provisional
+  effects:
+  - text: Polish Sword effect
+    per_level: +^0.02/level
+    op: exp
+- id: tarot-artifact-stability-foundation
+  name: Stability Foundation
+  system: tarot-artifacts
+  kind: upgrade
+  wiki: Tarot
+  confidence: provisional
+  effects:
+  - text: The Hierophant effect
+    per_level: +0.01x/level
+    op: add
+- id: tarot-artifact-growth-chambers
+  name: Growth Chambers
+  system: tarot-artifacts
+  kind: upgrade
+  wiki: Tarot
+  confidence: provisional
+  effects:
+  - text: Relic 2 Effect
+    per_level: +^0.25/level
+    op: exp
+- id: tarot-artifact-wealth-circulation-system
+  name: Wealth Circulation System
+  system: tarot-artifacts
+  kind: upgrade
+  wiki: Tarot
+  confidence: provisional
+  effects:
+  - text: Yellow Gem base effect
+    per_level: +0.01x/level
+    op: add
+- id: tarot-artifact-value-assessors
+  name: Value Assessors
+  system: tarot-artifacts
+  kind: upgrade
+  wiki: Tarot
+  confidence: provisional
+  effects:
+  - text: Pentacles LOGPOW base
+    per_level: 0.09+0.01*level
+- id: tarot-artifact-legacy-encoders
+  name: Legacy Encoders
+  system: tarot-artifacts
+  kind: upgrade
+  wiki: Tarot
+  confidence: provisional
+  effects:
+  - text: Earth Node 2 effect
+    per_level: +^4/level
+    op: exp
+- id: tarot-artifact-reality-anchors
+  name: Reality Anchors
+  system: tarot-artifacts
+  kind: upgrade
+  wiki: Tarot
+  confidence: provisional
+  effects:
+  - text: Base VE from dissolving ERs (see Plague)
+    per_level: +0.5x/level
+    op: add
+- id: tarot-artifact-heart-chamber
+  name: Heart Chamber
+  system: tarot-artifacts
+  kind: upgrade
+  wiki: Tarot
+  confidence: provisional
+  effects:
+  - text: Sacrifice Dust Gain
+    per_level: x10000/level
+    op: mult
+- id: tarot-artifact-empathy-valves
+  name: Empathy Valves
+  system: tarot-artifacts
+  kind: upgrade
+  wiki: Tarot
+  confidence: provisional
+  effects:
+  - text: Relic 27 Effect
+    per_level: +0.01x/level
+    op: add
+- id: tarot-artifact-sorrow-filters
+  name: Sorrow Filters
+  system: tarot-artifacts
+  kind: upgrade
+  wiki: Tarot
+  confidence: provisional
+  effects:
+  - text: All Elements Factor 3
+    per_level: +^0.02/level
+    op: exp
+- id: tarot-artifact-joy-reservoir
+  name: Joy Reservoir
+  system: tarot-artifacts
+  kind: upgrade
+  wiki: Tarot
+  confidence: provisional
+  effects:
+  - text: Relic 2 Effect
+    per_level: ???
+- id: tarot-artifact-memory-liquid
+  name: Memory Liquid
+  system: tarot-artifacts
+  kind: upgrade
+  wiki: Tarot
+  confidence: provisional
+  effects:
+  - text: Relic 2 Effect
+    per_level: +^0.25/level
+    op: exp
+- id: tarot-artifact-connection-handles
+  name: Connection Handles
+  system: tarot-artifacts
+  kind: upgrade
+  wiki: Tarot
+  confidence: provisional
+  effects:
+  - text: Polish Spear effect
+    per_level: +0.01x/level
+    op: add
+- id: tarot-artifact-authenticity-glaze
+  name: Authenticity Glaze
+  system: tarot-artifacts
+  kind: upgrade
+  wiki: Tarot
+  confidence: provisional
+  effects:
+  - text: Cups LOGPOW base
+    per_level: 0.09+0.01*level
+- id: tarot-artifact-inner-reflection-surface
+  name: Inner Reflection Surface
+  system: tarot-artifacts
+  kind: upgrade
+  wiki: Tarot
+  confidence: provisional
+  effects:
+  - text: Polish Enhance effects
+    per_level: +0.25x/level
+    op: add
+- id: tarot-artifact-vulnerability-aperture
+  name: Vulnerability Aperture
+  system: tarot-artifacts
+  kind: upgrade
+  wiki: Tarot
+  confidence: provisional
+  effects:
+  - text: Relic 32 Effect
+    per_level: +0.02x/level
+    op: add
+- id: tarot-artifact-trauma-alchemizer
+  name: Trauma Alchemizer
+  system: tarot-artifacts
+  kind: upgrade
+  wiki: Tarot
+  confidence: provisional
+  effects:
+  - text: Singularity Multiplier (see Singularity)
+    per_level: +0.001x/level
+    op: add
 - id: infinity-challenge-1
   name: Infinity Challenge 1
   system: infinity-challenges
@@ -10860,6 +11235,191 @@ edges:
   confidence: uncertain
 - from: planet-moon
   to: tarot-challenge-the-moon
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-artifact-glass-surface
+  to: sacrifice-dust
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-artifact-silver-backing
+  to: relic-24
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-artifact-obsidian-frame
+  to: relic-56
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-artifact-focal-point
+  to: relic-13
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-artifact-light-refractors
+  to: relic-2
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-artifact-truth-facets
+  to: relic-21
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-artifact-perception-lens
+  to: base-spread-power
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-artifact-perception-lens
+  to: plague
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-artifact-ramus
+  to: sacrifice-dust
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-artifact-mandible
+  to: relic-25
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-artifact-teeth
+  to: relic-8
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-artifact-maxilla
+  to: relic-14
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-artifact-nasal-bone
+  to: relic-2
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-artifact-infraorbitals
+  to: refine-node-7
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-artifact-frontal-bone
+  to: relic-52
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-artifact-temporal-bone
+  to: quality
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-artifact-occipital-bone
+  to: plp-per-plg
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-artifact-occipital-bone
+  to: plague
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-artifact-abundance-gears
+  to: sacrifice-dust
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-artifact-manifestation-pistons
+  to: relic-26
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-artifact-fortune-cogs
+  to: polish-sword
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-artifact-growth-chambers
+  to: relic-2
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-artifact-wealth-circulation-system
+  to: special-mineral-yellow-gem
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-artifact-legacy-encoders
+  to: earth-node-2
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-artifact-reality-anchors
+  to: virus-essence
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-artifact-reality-anchors
+  to: endoplasmic-reticula
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-artifact-reality-anchors
+  to: plague
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-artifact-heart-chamber
+  to: sacrifice-dust
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-artifact-empathy-valves
+  to: relic-27
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-artifact-sorrow-filters
+  to: elements
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-artifact-joy-reservoir
+  to: relic-2
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-artifact-memory-liquid
+  to: relic-2
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-artifact-connection-handles
+  to: polish-spear
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-artifact-inner-reflection-surface
+  to: polish-enhance
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-artifact-vulnerability-aperture
+  to: relic-32
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-artifact-trauma-alchemizer
+  to: singularity-mult
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-artifact-trauma-alchemizer
+  to: singularity
   rel: boosts
   source: wiki:Tarot
   confidence: uncertain
