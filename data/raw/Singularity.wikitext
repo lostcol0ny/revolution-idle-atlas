@@ -94,6 +94,12 @@ At various atom thresholds you will gain a buff or penalty. These buffs/penaltie
 |Atoms Gain
 |No
 |
+|-
+|1.00e3000
+|^0.333
+|Atoms Gain
+|No
+|
 |}*Values stated to be unmodifiable may be modifiable later in progression
 
 == Singularity Mult Gain Modifiers ==
@@ -134,7 +140,7 @@ Whenever you Singularize you will gain a bonus to Singularity Mult which determi
 |Singularity Mult 
 |64 Singularity
 |-
-|Each Last non-Arcana Tarot Challenges
+|Each King Tarot Challenges
 |
 |}
 

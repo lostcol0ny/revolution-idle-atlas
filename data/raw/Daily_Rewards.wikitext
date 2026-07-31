@@ -57,3 +57,5 @@ There are 14 days with different rewards:
 == History ==
 * v0.184 - introduced
 * v1.058 - streaks added
+
+{{Main navbox}}

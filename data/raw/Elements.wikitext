@@ -202,6 +202,11 @@ The third factor for each element is unique as it raises the element generation 
 |4
 |2000
 |PP after 1.79e308 boosts Wind generation
+''The Formula is'': <math>1.01+(x-308)^2/100
+</math>
+
+(Only the <math>(x-308)^2
+</math> is divided by 100)
 |-
 |5
 |1e6

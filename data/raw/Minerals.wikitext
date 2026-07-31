@@ -97,13 +97,14 @@ After obtaining a level 70 mineral, you can perform a Refine Prestige. Refine re
 === Refine Tree ===
 Refine Points (RfP) can be spent in a large upgrade tree. Circle nodes offer one-time upgrades while Squares like Refine Node 1 can be leveled multiple times. These upgrades grant bonuses, QoL improvements, and unlock new features.
 
+[[Minerals/Refine Tree|View the full Refine Tree here.]]
+
 Noteable upgrades:
 * '''Magnets''': unlock node 18 to gain a chance to get 1 or more magnets when merging common minerals, which can be spent on a new set of upgrades in the main mineral window.
 * '''Merge Level''': unlock node 5 to earn Merge Experience every time you merge two minerals. Earn enough to increase your Merge Level, which doubles VP gain earned every level.
 * '''Polishing Enhance''': spend RfP to enhance the bonuses of your Polish weapons
 * '''Runes''': earn Sun and Moon Runes that can be spent on powerful upgrades or used to spawn special minerals.
 * '''Special Minerals''': there are 10 different special minerals, each providing bonuses when spawned (only 9 are available at the beginning)
-{{:Minerals/Refine Tree}}
 
 == Common Minerals ==
 These are the common minerals which are spawned in the first time of mineral section. Every 100 thresholds, the icons will loop. 
