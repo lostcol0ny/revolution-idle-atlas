@@ -48,13 +48,13 @@ systems:
   - id: singularity
     name: Singularity
     parent: unity
-  # The Houses tab is an advanced Astrology unlocked at 32 Singularities, and
-  # its zodiacs share nothing with the Astrology set but their twelve names.
-  # Nested under Singularity rather than beside it, the way Refine Tree sits
-  # under Minerals, because that is where the game puts the tab.
+  # The Houses tab is an advanced Astrology unlocked at 32 Singularities. It
+  # sits beside Singularity rather than under it: Singularity is the reset layer
+  # that unlocks the tab, but the twelve zodiacs it holds are a feature in their
+  # own right, and they share nothing with the Astrology set but their names.
   - id: houses
     name: Houses
-    parent: singularity
+    parent: unity
 
 nodes:
   - id: attack-power
@@ -3281,10 +3281,25 @@ nodes:
 
   - id: singularity-houses-tab
     name: Houses Tab
-    system: singularity
+    system: houses
     kind: group
     wiki: Singularity#Houses
     confidence: provisional
+
+  # The wiki writes "Saggitarius" in this one table cell and spells it correctly
+  # in all five other places it appears, so the sweep mints a misspelled name
+  # off a typo. The id keeps the misspelling because it is minted from the same
+  # cell and the frontend deep-links to it.
+  #
+  # The name is written out in full rather than left to the manifest's
+  # `name_prefix`, which a curated name replaces wholesale. Spelling it out is
+  # also what keeps this safe: the surface this hands the resolver is the whole
+  # string, not a bare "Sagittarius" that would match the Astrology zodiac's
+  # name wherever the wiki mentions it.
+  - id: singularity-zodiac-saggitarius
+    name: Singular Zodiac Sagittarius
+    system: houses
+    kind: upgrade
 
   # Named `singular-` rather than `singularity-` so the id does not nest under
   # the `singularity-zodiac` mint prefix that the sweep manifest uses.

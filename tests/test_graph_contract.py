@@ -231,6 +231,24 @@ def test_no_two_nodes_share_a_display_name(graph: dict):
     assert shared == {}, shared
 
 
+def test_the_misspelled_zodiac_overlay_still_has_a_row_to_correct(graph: dict):
+    # The Houses table spells one cell "Saggitarius" and every other page spells
+    # it correctly, so the sweep mints a misspelled node and a curated node
+    # rewrites the name. The id keeps the misspelling: it is minted from the
+    # same cell, and the frontend deep-links to it.
+    #
+    # If the wiki ever fixes that cell, the swept id moves and the curated node
+    # stops overlaying anything -- it becomes a second Sagittarius rather than
+    # an error, because a curated node matching no derived id is just a node.
+    # Pinning both spellings turns that into a failure naming what to delete.
+    derived = {n["id"] for n in _load_yaml("derived.yaml")["nodes"]}
+    assert "singularity-zodiac-saggitarius" in derived
+    assert "singularity-zodiac-sagittarius" not in derived
+
+    names = {n["id"]: n["name"] for n in graph["nodes"]}
+    assert names["singularity-zodiac-saggitarius"] == "Singular Zodiac Sagittarius"
+
+
 def test_a_numbered_row_got_a_readable_name(graph: dict):
     # Singularity's tree rows are named "1", "2", "3.1" on the page. Without
     # name_prefix the node is called "1" and nothing says what it is.

@@ -6264,7 +6264,7 @@
       ],
       "id": "singularity-zodiac-saggitarius",
       "kind": "upgrade",
-      "name": "Singular Zodiac Saggitarius",
+      "name": "Singular Zodiac Sagittarius",
       "system": "houses",
       "wiki": "Singularity"
     },
@@ -12805,7 +12805,7 @@
       "id": "singularity-houses-tab",
       "kind": "group",
       "name": "Houses Tab",
-      "system": "singularity",
+      "system": "houses",
       "wiki": "Singularity#Houses"
     },
     {
@@ -23815,7 +23815,7 @@
     {
       "id": "houses",
       "name": "Houses",
-      "parent": "singularity"
+      "parent": "unity"
     }
   ]
 }
