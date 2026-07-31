@@ -451,13 +451,11 @@ Warning: Some codes can be missing or are no longer working, if you are desperat
 The following Codes can be redeemed, awarding {{Keyword|soul|Souls}} {{Icon|soul_icon}}, {{Keyword|TF|Time Flux}}
 ({{Keyword|TF|TF}}) {{Icon|time flux}}, or both. Some Codes can only unlock a [[Secret Achievements|Secret Achievement]].
 
-Working codes:
+*SICKSOULS ({{Keyword|soul|1,000}} {{Icon|soul_icon}}) - Requires version #1.070+
 
-*BYEBYE2025 ({{Keyword|soul|2,025}} {{Icon|soul_icon}}) - Requires version #1.051+
+*SPREADFASTER  ({{Keyword|TF|30:00 TF}} {{Icon|time flux}}) - Requires version #1.070+
 
-*WELCOME2026  ({{Keyword|soul|2,026}} {{Icon|soul_icon}}) - Requires version #1.051+
-
-*PROSPERITYBONUS ({{Keyword|soul|500}} {{Icon|soul_icon}} & {{Keyword|TF|15:00 TF}} {{Icon|time flux}}) - Requires version #1.056+
+*INFECTIONBONUS ({{Keyword|soul|500}} {{Icon|soul_icon}} & {{Keyword|TF|15:00 TF}} {{Icon|time flux}}) - Requires version #1.070+
 
 <div class="mw-collapsible mw-collapsed" style="width:400px; overflow:auto;">
 * UNITY ({{Keyword|secret|Secret Ach. 007|link=Secret Achievements}}) - Secret Code

@@ -1,14 +1,14 @@
 <includeonly>
-{|class="wikitable sortable mw-collapsible mw-collapsed" style="width:100%"
+{|class="wikitable sortable" style="width:100%"
 |+'''Refine Tree Node List'''<br/><small>''To edit this table, please [https://revolutionidle.wiki.gg/wiki/Minerals/Refine_Tree?action=edit click here].''</small>
 </includeonly><noinclude>
-{|class="wikitable sortable mw-collapsible" style="width:100%"
+{|class="wikitable sortable" style="width:100%"
 |+'''Refine Tree Node List'''
 
 ! Node !! Max Level !! width = 120px| Initial Cost 
 !Cost increase per level!! Effect !! Requires
 {{RN|1| max = 997 | rfp = 1 
-| rfp increase = 10x
+| rfp increase = x10
 | effect = Increases mineral base by 1 (starts at 3)
 | req = 0 }}
 {{RN|2| max = 1 | rfp = 1 
@@ -20,7 +20,7 @@
 | effect = Attacks Prestige is a bit stronger
 | req = 1 }}
 {{RN|4| max = 10 | rfp = 2 
-| rfp increase = 2x
+| rfp increase = x2
 | effect = Polish sword eff. x1.1 (maxes at x2)
 | req = 2,3 }}
 {{RN|5| max = 1 | rfp = 3 
@@ -44,7 +44,7 @@
 | effect = Polish Axe is 1.5x stronger
 | req = 1 }}
 {{RN|10| max = 10 | rfp = 10 
-| rfp increase = 2x
+| rfp increase = x2
 | effect = PP gain is powered to ^(1 + 0.1*lvl) (+0.1, maxes at ^2)
 | req = 5 }}
 {{RN|11| max = 1 | rfp = 32 
@@ -68,7 +68,7 @@
 | effect = Buying Relics does not spend gold
 | req = 8 }}
 {{RN|16| max = 98 | rfp = 25 
-| rfp increase = 3x
+| rfp increase = x3
 | effect = Merge Level Bonus Eff. x(1.0 + 0.5*lvl) (maxes at x50)
 | req = 8,15 }}
 {{RN|17| max = 1 | rfp = 1,000 
@@ -100,7 +100,7 @@
 | effect = Buying polish upgrades doesn't decrease your PP 
 | req = 21 }}
 {{RN|24| max = 20 | rfp = 100,000 
-| rfp increase = 1.5x
+| rfp increase = x1.5
 | effect = Relic 23 is x(1 + 0.1*lvl) stronger (maxes at x3)
 | req = 22,23 }}
 {{RN|25| max = 1 | rfp = 400,000 
@@ -148,7 +148,7 @@
 | effect = Unlock runes and rune upgrades 
 | req = 34 }}
 {{RN|36| max = 20 | rfp = 10,000,000 
-| rfp increase = 1.2x
+| rfp increase = x1.2
 | effect = RN27 effect: x(1 - 0.01*lvl) (maxes at x0.8)
 | req = 31 }}
 {{RN|37| max = 1 | rfp = 16,000,000 
@@ -164,7 +164,7 @@
 | effect = Relic 18 effect is cubed now (e.g. 2e6 -> 8e18)
 | req = 37 }}
 {{RN|40| max = 30 | rfp = 18,000,000 
-| rfp increase = 1.25x
+| rfp increase = x1.25
 | effect = Magnet upgrades for VP gain and PP gain mults are powered to ^(1.1*lvl) (maxes at ^3) 
 | req = 37 }}
 {{RN|41| max = 1 | rfp = 50,000,000 
@@ -180,7 +180,7 @@
 | effect = RN25 effect is 1.03x stronger 
 | req = 39 }}
 {{RN|44| max = 6 | rfp = 50,000,000 
-| rfp increase = 3x
+| rfp increase = x3
 | effect = Increases height and width of special grid by 1 (maxes at 9x9)
 | req = 39 }}
 {{RN|45| max = 1 | rfp = 100,000,000 
@@ -204,7 +204,7 @@
 | effect = RN43 effect is x1.01 stronger
 | req = 32 }}
 {{RN|50| max = 10 | rfp = 1e9 
-| rfp increase = 10x
+| rfp increase = x10
 | effect = RfP gain x(2^lvl) (maxes at x1,024)
 | req = 32 }}
 {{RN|51| max = 1 | rfp = 1e12 
@@ -244,7 +244,7 @@
 | effect = Makes First Node of each element stronger (they become Fire= 0.5, Earth= 3.50, Wind= 4.20, Water= 1.11)
 | req = 58 }}
 {{RN|60| max = 30 | rfp = 5e22 
-| rfp increase = 5x
+| rfp increase = x5
 | effect = Multiplies Global Element Mult (x2.00 per level, maxes at x1.07e9)
 | req = 51 }}
 {{RN|61| max = 1 | rfp = 2e24 
@@ -260,7 +260,7 @@
 | effect = Keep Dilation Tree and DTP on Unity Reset
 | req = 57 }}
 {{RN|64| max = 8 | rfp = 1e32 
-| rfp increase = 10x
+| rfp increase = x10
 | effect = Boosts Relic 4 (^1.00) (+^0.50 per level, maxes at ^5.00)
 | req = 61 }}
 {{RN|65| max = 1 | rfp = 1e33 
@@ -505,7 +505,7 @@
 | effect = PIG Rewards are powered to ^1.05
 | req = 114 }}
 {{RN|125| max = 25 | rfp = 1e4,900<!-- prior to ach.: 1e21,000 -->
-| rfp increase = 
+| rfp increase = x1e25
 | effect = Adds Refine Node 125 as a Singularity Mult Factor
 | req = 119 }}
 {{RN|126| max = 1 | rfp = 1e5,000
@@ -517,7 +517,7 @@
 | effect = No longer applies an Atom gain penalty at 14e153
 | req = 125 }}
 {{RN|128| max = 10 | rfp = 1e5,200<!-- prior to ach.: 1e21,250 -->
-| rfp increase = 
+| rfp increase = x1e40
 | effect = Makes the first Atom penalty weaker by 10% [per level]. At max level, removes it completely. 
 | req = 112,114 }}
 {{RN|129| max = 1 | rfp = 1e5,350
@@ -525,7 +525,7 @@
 | effect = Adds Refine Points to Singularity Mult Effects
 | req = 126,127 }}
 {{RN|130| max = 20 | rfp = 1e5,450<!-- prior to ach.: 1e21,550 -->
-| rfp increase = 
+| rfp increase = x1e35(?)
 | effect = Multiples Refine Node 125 Effect by x?
 | req = 114 }}
 {{RN|131| max = 1 | rfp = 
@@ -537,7 +537,7 @@
 | effect = Adds Golden Resource Gain to Singularity Count Effect
 | req = 128 }}
 {{RN|133| max = 50 | rfp = 1e5,850
-| rfp increase = 
+| rfp increase = x1e10
 | effect = Empowers your current luck: ^1 + level/100
 | req = 131 }}
 {{RN|134| max = 1 | rfp = 1e6,450<!-- 1e6,300 with all Queen completions -->

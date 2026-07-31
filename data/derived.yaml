@@ -2788,7 +2788,8 @@ nodes:
   wiki: Elements
   confidence: documented
   effects:
-  - text: PP after 1.79e308 boosts Wind generation
+  - text: 'PP after 1.79e308 boosts Wind generation The Formula is: 1.01+(x-308)^2/100 (Only the (x-308)^2
+      is divided by 100)'
 - id: wind-node-5
   name: Wind Node 5
   system: elements
@@ -8360,13 +8361,15 @@ edges:
 - from: wind-node-4
   to: polish-points
   rel: boosts
-  note: PP after 1.79e308 boosts Wind generation
+  note: 'PP after 1.79e308 boosts Wind generation The Formula is: 1.01+(x-308)^2/100 (Only the (x-308)^2
+    is divided by 100)'
   source: wiki:Elements
   confidence: uncertain
 - from: wind-node-4
   to: wind
   rel: boosts
-  note: PP after 1.79e308 boosts Wind generation
+  note: 'PP after 1.79e308 boosts Wind generation The Formula is: 1.01+(x-308)^2/100 (Only the (x-308)^2
+    is divided by 100)'
   source: wiki:Elements
   confidence: uncertain
 - from: wind-node-5
