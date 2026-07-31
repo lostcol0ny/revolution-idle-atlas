@@ -12566,6 +12566,82 @@
       "name": "Elements Local Speed",
       "system": "elements",
       "wiki": "Elements"
+    },
+    {
+      "confidence": "documented",
+      "id": "fire",
+      "kind": "currency",
+      "name": "Fire Generation",
+      "system": "elements",
+      "wiki": "Elements"
+    },
+    {
+      "confidence": "documented",
+      "id": "earth",
+      "kind": "currency",
+      "name": "Earth Generation",
+      "system": "elements",
+      "wiki": "Elements"
+    },
+    {
+      "confidence": "documented",
+      "id": "wind",
+      "kind": "currency",
+      "name": "Wind Generation",
+      "system": "elements",
+      "wiki": "Elements"
+    },
+    {
+      "confidence": "documented",
+      "id": "water",
+      "kind": "currency",
+      "name": "Water Generation",
+      "system": "elements",
+      "wiki": "Elements"
+    },
+    {
+      "aliases": [
+        "wands tarot cards"
+      ],
+      "confidence": "documented",
+      "id": "tarot-suit-wands",
+      "kind": "group",
+      "name": "Wands Cards",
+      "system": "tarot",
+      "wiki": "Tarot"
+    },
+    {
+      "aliases": [
+        "pentacles tarot cards"
+      ],
+      "confidence": "documented",
+      "id": "tarot-suit-pentacles",
+      "kind": "group",
+      "name": "Pentacles Cards",
+      "system": "tarot",
+      "wiki": "Tarot"
+    },
+    {
+      "aliases": [
+        "swords tarot cards"
+      ],
+      "confidence": "documented",
+      "id": "tarot-suit-swords",
+      "kind": "group",
+      "name": "Swords Cards",
+      "system": "tarot",
+      "wiki": "Tarot"
+    },
+    {
+      "aliases": [
+        "cups tarot cards"
+      ],
+      "confidence": "documented",
+      "id": "tarot-suit-cups",
+      "kind": "group",
+      "name": "Cups Cards",
+      "system": "tarot",
+      "wiki": "Tarot"
     }
   ],
   "edges": [
@@ -12944,6 +13020,15 @@
       "rel": "boosts",
       "source": "wiki:Relics",
       "to": "special-minerals"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "relic-36",
+      "note": "Boosts Earth Generation",
+      "op": "add",
+      "rel": "boosts",
+      "source": "wiki:Relics",
+      "to": "earth"
     },
     {
       "confidence": "uncertain",
@@ -15256,7 +15341,7 @@
       "note": "First 10 swords tarot cards effects are +x stronger",
       "rel": "boosts",
       "source": "wiki:Tarot",
-      "to": "tarot"
+      "to": "tarot-suit-swords"
     },
     {
       "confidence": "provisional",
@@ -15429,7 +15514,7 @@
       "note": "First 10 wands tarot cards effects are +x stronger",
       "rel": "boosts",
       "source": "wiki:Tarot",
-      "to": "tarot"
+      "to": "tarot-suit-wands"
     },
     {
       "confidence": "provisional",
@@ -15634,7 +15719,7 @@
       "note": "First 10 pentacles tarot cards effects are +x stronger",
       "rel": "boosts",
       "source": "wiki:Tarot",
-      "to": "tarot"
+      "to": "tarot-suit-pentacles"
     },
     {
       "confidence": "provisional",
@@ -15839,7 +15924,7 @@
       "note": "First 10 cups tarot cards effects are +x stronger",
       "rel": "boosts",
       "source": "wiki:Tarot",
-      "to": "tarot"
+      "to": "tarot-suit-cups"
     },
     {
       "confidence": "provisional",
@@ -16213,6 +16298,14 @@
       "to": "attack-level"
     },
     {
+      "confidence": "uncertain",
+      "from": "fire-node-3",
+      "note": "Attack level past 3600 boosts Fire generation Formula is:",
+      "rel": "boosts",
+      "source": "wiki:Elements",
+      "to": "fire"
+    },
+    {
       "confidence": "provisional",
       "from": "fire-node-4",
       "note": "Fire boosts Relic 26 effect (improves Quality donut)",
@@ -16243,6 +16336,22 @@
       "rel": "boosts",
       "source": "wiki:Elements",
       "to": "refine-node-60"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "fire-node-8",
+      "note": "Wands boost Fire generation (factor 1)",
+      "rel": "boosts",
+      "source": "wiki:Elements",
+      "to": "fire"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "fire-node-9",
+      "note": "Fire boosts first card bonuses for all wands cards",
+      "rel": "boosts",
+      "source": "wiki:Elements",
+      "to": "tarot-suit-wands"
     },
     {
       "confidence": "provisional",
@@ -16318,6 +16427,22 @@
     },
     {
       "confidence": "uncertain",
+      "from": "earth-node-8",
+      "note": "Pentacles boost Earth Generation (factor 1)",
+      "rel": "boosts",
+      "source": "wiki:Elements",
+      "to": "earth"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "earth-node-9",
+      "note": "Earth boosts first card bonuses for all pentacles cards",
+      "rel": "boosts",
+      "source": "wiki:Elements",
+      "to": "tarot-suit-pentacles"
+    },
+    {
+      "confidence": "uncertain",
       "from": "wind-node-1",
       "note": "Increase power for factor 1 for wind by 3 Increases power for Eternities multiplier for Wind",
       "rel": "boosts",
@@ -16347,6 +16472,14 @@
       "rel": "boosts",
       "source": "wiki:Elements",
       "to": "polish-points"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "wind-node-4",
+      "note": "PP after 1.79e308 boosts Wind generation",
+      "rel": "boosts",
+      "source": "wiki:Elements",
+      "to": "wind"
     },
     {
       "confidence": "provisional",
@@ -16379,6 +16512,22 @@
       "rel": "boosts",
       "source": "wiki:Elements",
       "to": "attacks"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "wind-node-8",
+      "note": "Swords boost Wind Generation (factor 1)",
+      "rel": "boosts",
+      "source": "wiki:Elements",
+      "to": "wind"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "wind-node-9",
+      "note": "Wind boosts first card bonuses for all swords cards",
+      "rel": "boosts",
+      "source": "wiki:Elements",
+      "to": "tarot-suit-swords"
     },
     {
       "confidence": "provisional",
@@ -16459,6 +16608,22 @@
       "rel": "boosts",
       "source": "wiki:Elements",
       "to": "refine-node-60"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "water-node-8",
+      "note": "Cups boost Water generation",
+      "rel": "boosts",
+      "source": "wiki:Elements",
+      "to": "water"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "water-node-9",
+      "note": "Water boosts first card bonuses for all cups cards",
+      "rel": "boosts",
+      "source": "wiki:Elements",
+      "to": "tarot-suit-cups"
     },
     {
       "confidence": "uncertain",
@@ -22669,6 +22834,70 @@
       "rel": "boosts",
       "source": "wiki:Minerals",
       "to": "refine-node-79"
+    },
+    {
+      "confidence": "documented",
+      "from": "fire-node-7",
+      "note": "Fire boosts its own factor 2",
+      "rel": "boosts",
+      "source": "wiki:Elements",
+      "to": "fire-factor-2"
+    },
+    {
+      "confidence": "documented",
+      "from": "earth-node-7",
+      "note": "Earth boosts its own factor 2",
+      "rel": "boosts",
+      "source": "wiki:Elements",
+      "to": "earth-factor-2"
+    },
+    {
+      "confidence": "documented",
+      "from": "wind-node-7",
+      "note": "Wind boosts its own factor 2",
+      "rel": "boosts",
+      "source": "wiki:Elements",
+      "to": "wind-factor-2"
+    },
+    {
+      "confidence": "documented",
+      "from": "water-node-7",
+      "note": "Water boosts its own factor 2",
+      "rel": "boosts",
+      "source": "wiki:Elements",
+      "to": "water-factor-2"
+    },
+    {
+      "confidence": "documented",
+      "from": "tarot-suit-wands",
+      "note": "Wands boost Fire generation (factor 1), once Fire Node 8 is bought",
+      "rel": "boosts",
+      "source": "wiki:Elements",
+      "to": "fire-factor-1"
+    },
+    {
+      "confidence": "documented",
+      "from": "tarot-suit-pentacles",
+      "note": "Pentacles boost Earth generation (factor 1), once Earth Node 8 is bought",
+      "rel": "boosts",
+      "source": "wiki:Elements",
+      "to": "earth-factor-1"
+    },
+    {
+      "confidence": "documented",
+      "from": "tarot-suit-swords",
+      "note": "Swords boost Wind generation (factor 1), once Wind Node 8 is bought",
+      "rel": "boosts",
+      "source": "wiki:Elements",
+      "to": "wind-factor-1"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-suit-cups",
+      "note": "Cups boost Water generation, once Water Node 8 is bought. The wiki omits the factor number here that it states for the other three elements, so factor 1 is inferred from the parallel rows",
+      "rel": "boosts",
+      "source": "wiki:Elements",
+      "to": "water-factor-1"
     }
   ],
   "systems": [

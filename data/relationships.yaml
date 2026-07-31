@@ -3073,6 +3073,66 @@ nodes:
       - text: Tarot Draws +0.10 (draws are granted when deleted)
       - text: 'Sacrificed: boosts Refine Node 79''s effect (base 2 at level 27, +1 per level, not confirmed)'
 
+  - id: fire
+    name: Fire Generation
+    system: elements
+    kind: currency
+    wiki: Elements
+    confidence: documented
+
+  - id: earth
+    name: Earth Generation
+    system: elements
+    kind: currency
+    wiki: Elements
+    confidence: documented
+
+  - id: wind
+    name: Wind Generation
+    system: elements
+    kind: currency
+    wiki: Elements
+    confidence: documented
+
+  - id: water
+    name: Water Generation
+    system: elements
+    kind: currency
+    wiki: Elements
+    confidence: documented
+
+  - id: tarot-suit-wands
+    name: Wands Cards
+    aliases: [wands tarot cards]
+    system: tarot
+    kind: group
+    wiki: Tarot
+    confidence: documented
+
+  - id: tarot-suit-pentacles
+    name: Pentacles Cards
+    aliases: [pentacles tarot cards]
+    system: tarot
+    kind: group
+    wiki: Tarot
+    confidence: documented
+
+  - id: tarot-suit-swords
+    name: Swords Cards
+    aliases: [swords tarot cards]
+    system: tarot
+    kind: group
+    wiki: Tarot
+    confidence: documented
+
+  - id: tarot-suit-cups
+    name: Cups Cards
+    aliases: [cups tarot cards]
+    system: tarot
+    kind: group
+    wiki: Tarot
+    confidence: documented
+
 edges:
   - from: relic-3
     to: attack-power
@@ -5906,6 +5966,62 @@ edges:
     rel: boosts
     source: wiki:Minerals
     confidence: documented
+
+  - from: fire-node-7
+    to: fire-factor-2
+    rel: boosts
+    note: Fire boosts its own factor 2
+    source: wiki:Elements
+    confidence: documented
+
+  - from: earth-node-7
+    to: earth-factor-2
+    rel: boosts
+    note: Earth boosts its own factor 2
+    source: wiki:Elements
+    confidence: documented
+
+  - from: wind-node-7
+    to: wind-factor-2
+    rel: boosts
+    note: Wind boosts its own factor 2
+    source: wiki:Elements
+    confidence: documented
+
+  - from: water-node-7
+    to: water-factor-2
+    rel: boosts
+    note: Water boosts its own factor 2
+    source: wiki:Elements
+    confidence: documented
+
+  - from: tarot-suit-wands
+    to: fire-factor-1
+    rel: boosts
+    note: Wands boost Fire generation (factor 1), once Fire Node 8 is bought
+    source: wiki:Elements
+    confidence: documented
+
+  - from: tarot-suit-pentacles
+    to: earth-factor-1
+    rel: boosts
+    note: Pentacles boost Earth generation (factor 1), once Earth Node 8 is bought
+    source: wiki:Elements
+    confidence: documented
+
+  - from: tarot-suit-swords
+    to: wind-factor-1
+    rel: boosts
+    note: Swords boost Wind generation (factor 1), once Wind Node 8 is bought
+    source: wiki:Elements
+    confidence: documented
+
+  - from: tarot-suit-cups
+    to: water-factor-1
+    rel: boosts
+    note: Cups boost Water generation, once Water Node 8 is bought. The wiki omits the factor number here that it states for the other three elements, so factor 1 is inferred from the parallel rows
+    source: wiki:Elements
+    confidence: uncertain
 
 suppress:
   - from: special-mineral-black-gem

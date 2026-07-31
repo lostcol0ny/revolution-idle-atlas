@@ -493,3 +493,48 @@ def test_runes_are_filed_where_they_are_earned(graph: dict):
     by_id = {n["id"]: n for n in graph["nodes"]}
     for rune in ("runes", "rune-sun", "rune-moon"):
         assert by_id[rune]["system"] == "minerals"
+
+
+def test_no_node_claims_a_bare_element_or_suit_name(graph: dict):
+    # The load-bearing guard on a rejected design. build_vocabulary() hands a
+    # node's `name` to the resolver unconditionally, so naming these nodes
+    # "Fire" or "Wands" -- the obvious display choice -- silently turns them
+    # into match surfaces, and a scan of the corpus showed what that costs:
+    # "Wands 1 first effect mult x" is a positional reference to a sibling
+    # card, "Earth Plague Stage" is a plague stage, "each Water Zodiac" is a
+    # zodiac category, and "1e4600 Fire" is a challenge entry requirement.
+    # That is roughly sixty wrong edges bought for eight right ones.
+    #
+    # The failure mode is silent: nothing else in the suite counts edges into
+    # these nodes, so a rename would land as a large quiet regression. Aliases
+    # are checked too -- an alias is a surface by exactly the same path.
+    bare = {"fire", "earth", "wind", "water",
+            "wands", "cups", "swords", "pentacles"}
+    for node in graph["nodes"]:
+        for surface in [node["name"], *(node.get("aliases") or [])]:
+            assert surface.casefold() not in bare, (
+                f"{node['id']} claims the bare surface {surface!r}; use the "
+                f"multiword form ('Fire Generation', 'Wands Cards') instead"
+            )
+
+
+def test_every_element_upgrade_node_7_boosts_its_own_factor_2(graph: dict):
+    # Curated, because "boosts its own factor 2" is a relative reference no
+    # surface-form matcher can resolve. Four hand-written edges are exactly the
+    # kind of thing a later bulk edit drops without noticing.
+    pairs = {(e["from"], e["to"]) for e in graph["edges"]}
+    for element in ("fire", "earth", "wind", "water"):
+        assert (f"{element}-node-7", f"{element}-factor-2") in pairs
+
+
+def test_each_tarot_suit_feeds_its_own_element_factor_1(graph: dict):
+    # The suit-to-element mapping (wands->fire, pentacles->earth,
+    # swords->wind, cups->water) is stated once per element in four separate
+    # rows of the upgrades table. Nothing structural enforces it, so a
+    # mis-paired curation would swap two suits and stay green everywhere else.
+    pairs = {(e["from"], e["to"]) for e in graph["edges"]}
+    for suit, element in (("wands", "fire"), ("pentacles", "earth"),
+                          ("swords", "wind"), ("cups", "water")):
+        assert (f"tarot-suit-{suit}", f"{element}-factor-1") in pairs
+        # Direction guard: the factor is never the source.
+        assert (f"{element}-factor-1", f"tarot-suit-{suit}") not in pairs

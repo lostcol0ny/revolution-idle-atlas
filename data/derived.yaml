@@ -5574,6 +5574,13 @@ edges:
   note: Special Minerals Cost Fall
   source: wiki:Relics
   confidence: uncertain
+- from: relic-36
+  to: earth
+  rel: boosts
+  op: add
+  note: Boosts Earth Generation
+  source: wiki:Relics
+  confidence: uncertain
 - from: relic-37
   to: global-element-mult
   rel: boosts
@@ -7311,7 +7318,7 @@ edges:
   source: wiki:Tarot
   confidence: provisional
 - from: tarot-page-of-swords
-  to: tarot
+  to: tarot-suit-swords
   rel: boosts
   note: First 10 swords tarot cards effects are +x stronger
   source: wiki:Tarot
@@ -7444,7 +7451,7 @@ edges:
   source: wiki:Tarot
   confidence: provisional
 - from: tarot-page-of-wands
-  to: tarot
+  to: tarot-suit-wands
   rel: boosts
   note: First 10 wands tarot cards effects are +x stronger
   source: wiki:Tarot
@@ -7602,7 +7609,7 @@ edges:
   source: wiki:Tarot
   confidence: provisional
 - from: tarot-page-of-pentacles
-  to: tarot
+  to: tarot-suit-pentacles
   rel: boosts
   note: First 10 pentacles tarot cards effects are +x stronger
   source: wiki:Tarot
@@ -7759,7 +7766,7 @@ edges:
   source: wiki:Tarot
   confidence: provisional
 - from: tarot-page-of-cups
-  to: tarot
+  to: tarot-suit-cups
   rel: boosts
   note: First 10 cups tarot cards effects are +x stronger
   source: wiki:Tarot
@@ -8052,6 +8059,12 @@ edges:
   note: 'Attack level past 3600 boosts Fire generation Formula is:'
   source: wiki:Elements
   confidence: uncertain
+- from: fire-node-3
+  to: fire
+  rel: boosts
+  note: 'Attack level past 3600 boosts Fire generation Formula is:'
+  source: wiki:Elements
+  confidence: uncertain
 - from: fire-node-4
   to: relic-26
   rel: boosts
@@ -8076,6 +8089,18 @@ edges:
   note: Fire adds base to Refine Tree Node 60
   source: wiki:Elements
   confidence: provisional
+- from: fire-node-8
+  to: fire
+  rel: boosts
+  note: Wands boost Fire generation (factor 1)
+  source: wiki:Elements
+  confidence: uncertain
+- from: fire-node-9
+  to: tarot-suit-wands
+  rel: boosts
+  note: Fire boosts first card bonuses for all wands cards
+  source: wiki:Elements
+  confidence: uncertain
 - from: fire-node-10
   to: relic-45
   rel: boosts
@@ -8130,6 +8155,18 @@ edges:
   note: Earth boosts Relic 37 (Global Element Mult.)
   source: wiki:Elements
   confidence: uncertain
+- from: earth-node-8
+  to: earth
+  rel: boosts
+  note: Pentacles boost Earth Generation (factor 1)
+  source: wiki:Elements
+  confidence: uncertain
+- from: earth-node-9
+  to: tarot-suit-pentacles
+  rel: boosts
+  note: Earth boosts first card bonuses for all pentacles cards
+  source: wiki:Elements
+  confidence: uncertain
 - from: wind-node-1
   to: eternities
   rel: boosts
@@ -8150,6 +8187,12 @@ edges:
   confidence: uncertain
 - from: wind-node-4
   to: polish-points
+  rel: boosts
+  note: PP after 1.79e308 boosts Wind generation
+  source: wiki:Elements
+  confidence: uncertain
+- from: wind-node-4
+  to: wind
   rel: boosts
   note: PP after 1.79e308 boosts Wind generation
   source: wiki:Elements
@@ -8176,6 +8219,18 @@ edges:
   to: attacks
   rel: boosts
   note: Relic 1 now also applies to Attacks Asc. Power
+  source: wiki:Elements
+  confidence: uncertain
+- from: wind-node-8
+  to: wind
+  rel: boosts
+  note: Swords boost Wind Generation (factor 1)
+  source: wiki:Elements
+  confidence: uncertain
+- from: wind-node-9
+  to: tarot-suit-swords
+  rel: boosts
+  note: Wind boosts first card bonuses for all swords cards
   source: wiki:Elements
   confidence: uncertain
 - from: wind-node-10
@@ -8250,6 +8305,18 @@ edges:
   note: Multiplies Refine Node 60 base by x2
   source: wiki:Elements
   confidence: provisional
+- from: water-node-8
+  to: water
+  rel: boosts
+  note: Cups boost Water generation
+  source: wiki:Elements
+  confidence: uncertain
+- from: water-node-9
+  to: tarot-suit-cups
+  rel: boosts
+  note: Water boosts first card bonuses for all cups cards
+  source: wiki:Elements
+  confidence: uncertain
 - from: water-node-10
   to: global-element-mult
   rel: boosts
