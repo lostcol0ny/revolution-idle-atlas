@@ -78,7 +78,11 @@ def test_unlock_conditions_become_edges_into_the_factor():
 
 
 def test_the_none_unlock_condition_produces_no_edge():
-    assert not any(e.to == "fire-factor-1" for e in parse(PAGE).edges)
+    # Scoped to `rel: unlocks` -- the Description column legitimately puts
+    # `boosts` edges into this same factor.
+    assert not any(
+        e.to == "fire-factor-1" for e in parse(PAGE).edges if e.rel == "unlocks"
+    )
 
 
 def test_upgrade_effects_become_boosts_edges():
@@ -269,6 +273,29 @@ def test_a_vocabulary_hit_in_an_element_upgrade_becomes_an_uncertain_edge():
     edges = [e for e in result.edges if e.to == "quality"]
     assert edges, "the fixture's upgrade text must name Quality for this test to bite"
     assert all(e.confidence is EdgeConfidence.UNCERTAIN for e in edges)
+
+
+def test_the_factor_description_column_becomes_a_boosts_edge_into_the_factor():
+    # The Description cell names what the factor is computed from: "Fire Factor 1
+    # -- Score" means score feeds fire-factor-1. The edge is therefore reversed
+    # (the named stat is `from_`), and the direction is hardcoded rather than
+    # taken from endpoints(): the column structurally means "based on", so a
+    # grammar cue inside the cell text must not be allowed to flip it.
+    result = parse(PAGE, Vocabulary([("Score", "score")]))
+    edges = [e for e in result.edges if e.to == "fire-factor-1"]
+    assert [(e.from_, e.rel) for e in edges] == [("score", "boosts")]
+    assert edges[0].confidence is EdgeConfidence.UNCERTAIN
+    # Direction guard: the factor never appears on the `from_` side of its own
+    # description edge.
+    assert not any(e.from_ == "fire-factor-1" and e.to == "score" for e in result.edges)
+
+
+def test_the_factor_description_edge_survives_a_none_unlock():
+    # fire-factor-1's unlock is "None", which short-circuits the rest of the row.
+    # The description edge must be emitted before that guard, or the four
+    # Factor 1 rows -- the only ones with no unlock -- lose their inputs.
+    result = parse(PAGE, Vocabulary([("Score", "score")]))
+    assert ("score", "fire-factor-1") in {(e.from_, e.to) for e in result.edges}
 
 
 _UNLOCK_VOCAB_PAGE = """

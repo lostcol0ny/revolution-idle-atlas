@@ -7932,6 +7932,18 @@ edges:
   note: Makes your tarot resources be equal and increase their values by ^# (base 0.800) of they value
   source: wiki:Tarot
   confidence: uncertain
+- from: score
+  to: fire-factor-1
+  rel: boosts
+  note: Score
+  source: wiki:Elements
+  confidence: uncertain
+- from: score-exponent
+  to: fire-factor-2
+  rel: boosts
+  note: Score Exponent
+  source: wiki:Elements
+  confidence: uncertain
 - from: tarot-king-of-wands
   to: fire-factor-2
   rel: unlocks
@@ -7944,30 +7956,66 @@ edges:
   note: Fire Node 11
   source: wiki:Elements
   confidence: documented
+- from: infinities
+  to: earth-factor-1
+  rel: boosts
+  note: Infinities
+  source: wiki:Elements
+  confidence: uncertain
 - from: tarot-king-of-pentacles
   to: earth-factor-2
   rel: unlocks
   note: King of Pentacles card
   source: wiki:Elements
   confidence: documented
+- from: infinity-points
+  to: earth-factor-3
+  rel: boosts
+  note: IP
+  source: wiki:Elements
+  confidence: uncertain
 - from: earth-node-10
   to: earth-factor-3
   rel: unlocks
   note: Earth Node 10
   source: wiki:Elements
   confidence: documented
+- from: eternities
+  to: wind-factor-1
+  rel: boosts
+  note: Eternities
+  source: wiki:Elements
+  confidence: uncertain
 - from: tarot-king-of-swords
   to: wind-factor-2
   rel: unlocks
   note: King of Swords card
   source: wiki:Elements
   confidence: documented
+- from: eternity-points
+  to: wind-factor-3
+  rel: boosts
+  note: EP
+  source: wiki:Elements
+  confidence: uncertain
 - from: wind-node-12
   to: wind-factor-3
   rel: unlocks
   note: Wind Node 12
   source: wiki:Elements
   confidence: documented
+- from: luck
+  to: water-factor-1
+  rel: boosts
+  note: Luck
+  source: wiki:Elements
+  confidence: uncertain
+- from: quality
+  to: water-factor-2
+  rel: boosts
+  note: Zodiac Quality
+  source: wiki:Elements
+  confidence: uncertain
 - from: tarot-king-of-cups
   to: water-factor-2
   rel: unlocks

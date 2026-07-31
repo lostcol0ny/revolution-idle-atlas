@@ -16053,6 +16053,22 @@
       "to": "tarot"
     },
     {
+      "confidence": "uncertain",
+      "from": "score",
+      "note": "Score",
+      "rel": "boosts",
+      "source": "wiki:Elements",
+      "to": "fire-factor-1"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "score-exponent",
+      "note": "Score Exponent",
+      "rel": "boosts",
+      "source": "wiki:Elements",
+      "to": "fire-factor-2"
+    },
+    {
       "confidence": "documented",
       "from": "tarot-king-of-wands",
       "note": "King of Wands card",
@@ -16069,12 +16085,28 @@
       "to": "fire-factor-3"
     },
     {
+      "confidence": "uncertain",
+      "from": "infinities",
+      "note": "Infinities",
+      "rel": "boosts",
+      "source": "wiki:Elements",
+      "to": "earth-factor-1"
+    },
+    {
       "confidence": "documented",
       "from": "tarot-king-of-pentacles",
       "note": "King of Pentacles card",
       "rel": "unlocks",
       "source": "wiki:Elements",
       "to": "earth-factor-2"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "infinity-points",
+      "note": "IP",
+      "rel": "boosts",
+      "source": "wiki:Elements",
+      "to": "earth-factor-3"
     },
     {
       "confidence": "documented",
@@ -16085,6 +16117,14 @@
       "to": "earth-factor-3"
     },
     {
+      "confidence": "uncertain",
+      "from": "eternities",
+      "note": "Eternities",
+      "rel": "boosts",
+      "source": "wiki:Elements",
+      "to": "wind-factor-1"
+    },
+    {
       "confidence": "documented",
       "from": "tarot-king-of-swords",
       "note": "King of Swords card",
@@ -16093,12 +16133,36 @@
       "to": "wind-factor-2"
     },
     {
+      "confidence": "uncertain",
+      "from": "eternity-points",
+      "note": "EP",
+      "rel": "boosts",
+      "source": "wiki:Elements",
+      "to": "wind-factor-3"
+    },
+    {
       "confidence": "documented",
       "from": "wind-node-12",
       "note": "Wind Node 12",
       "rel": "unlocks",
       "source": "wiki:Elements",
       "to": "wind-factor-3"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "luck",
+      "note": "Luck",
+      "rel": "boosts",
+      "source": "wiki:Elements",
+      "to": "water-factor-1"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "quality",
+      "note": "Zodiac Quality",
+      "rel": "boosts",
+      "source": "wiki:Elements",
+      "to": "water-factor-2"
     },
     {
       "confidence": "documented",

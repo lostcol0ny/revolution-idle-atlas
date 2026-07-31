@@ -65,7 +65,7 @@ def _boosts(source_id: str, text: str, vocabulary: Vocabulary) -> list[Edge]:
     return edges
 
 
-def _parse_factors(raw: str) -> ExtractResult:
+def _parse_factors(raw: str, vocabulary: Vocabulary) -> ExtractResult:
     result = ExtractResult()
     table = _table(_section(raw, "=== Element Factors ===", "=== Element Upgrades ==="))
     element = ""
@@ -88,6 +88,28 @@ def _parse_factors(raw: str) -> ExtractResult:
         result.nodes.append(
             _node(node_id, f"{element} Factor {factor.group(1)}", "stat", description)
         )
+
+        # The Description cell names what the factor is computed from, so the
+        # edge runs into the factor. Direction is hardcoded rather than taken
+        # from endpoints(): the column means "based on" structurally, and a
+        # grammar cue inside the cell must not be able to flip that.
+        for reference in resolve(description, vocabulary):
+            if reference.target_id == node_id:
+                continue
+            result.edges.append(
+                Edge(
+                    **{
+                        "from": reference.target_id,
+                        "to": node_id,
+                        "rel": "boosts",
+                        "note": description,
+                        "source": SOURCE,
+                        "confidence": reference.confidence(
+                            EdgeConfidence.PROVISIONAL
+                        ),
+                    }
+                )
+            )
 
         if unlock.strip().lower() == NO_UNLOCK:
             continue
@@ -140,7 +162,7 @@ def _parse_upgrades(raw: str, vocabulary: Vocabulary) -> ExtractResult:
 
 
 def parse(raw: str, vocabulary: Vocabulary = Vocabulary.EMPTY) -> ExtractResult:
-    result = _parse_factors(raw)
+    result = _parse_factors(raw, vocabulary)
     result.extend(_parse_upgrades(raw, vocabulary))
     return result
 
