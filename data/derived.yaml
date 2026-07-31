@@ -2612,7 +2612,7 @@ nodes:
   wiki: Elements
   confidence: documented
   effects:
-  - text: 'Attack level past 3600 boosts Fire generation Formula is:'
+  - text: 'Attack level past 3600 boosts Fire generation Formula is: 1 + \frac {(AttackLevel-3600)^2}{100}'
 - id: fire-node-4
   name: Fire Node 4
   system: elements
@@ -8222,13 +8222,13 @@ edges:
 - from: fire-node-3
   to: attack-level
   rel: boosts
-  note: 'Attack level past 3600 boosts Fire generation Formula is:'
+  note: 'Attack level past 3600 boosts Fire generation Formula is: 1 + \frac {(AttackLevel-3600)^2}{100}'
   source: wiki:Elements
   confidence: uncertain
 - from: fire-node-3
   to: fire
   rel: boosts
-  note: 'Attack level past 3600 boosts Fire generation Formula is:'
+  note: 'Attack level past 3600 boosts Fire generation Formula is: 1 + \frac {(AttackLevel-3600)^2}{100}'
   source: wiki:Elements
   confidence: uncertain
 - from: fire-node-4
