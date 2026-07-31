@@ -64,7 +64,7 @@ export function GraphView({
           strokeDasharray: style.dash,
         },
         label: edge.rel === 'requires' ? undefined : edge.rel,
-        labelStyle: { fontSize: 10, fill: '#475569' },
+        labelStyle: { fontSize: 10, fill: '#94a3b8' },
       };
     });
 
@@ -95,6 +95,10 @@ export function GraphView({
         nodes={nodes}
         edges={edges}
         nodeTypes={nodeTypes}
+        // Themes the parts this file does not draw: the Controls buttons, the
+        // Background dots and the attribution link all ship their own light
+        // defaults and stay light without it.
+        colorMode="dark"
         fitView
         minZoom={0.2}
         nodesDraggable={false}

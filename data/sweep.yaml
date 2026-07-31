@@ -1,0 +1,337 @@
+# Pages swept generically. Adding a page here is a data edit: no page gets
+# bespoke Python. See README.md for the field reference.
+#
+# Everything read through this file is deliberately low-confidence — swept nodes
+# are `provisional` and swept edges are `uncertain` — because a column heading is
+# a guess about what a page means. Correct anything wrong in
+# data/relationships.yaml, which wins every merge.
+#
+# Pages surveyed and deliberately not listed:
+#
+#   Infinity_Challenges — a second copy of the Infinity page's challenge table,
+#     three columns instead of four. Both would mint `infinity-challenge-1`
+#     through `-9`, so one reading would lose to the other's first-wins dedup.
+#     Infinity is swept instead because its copy is the fuller one: challenge 9's
+#     reward there also names Break Infinity, which this copy omits.
+#
+#   Infinity_Upgrades — prose and two {{Stub}} markers, no table.
+#
+#   Generators — a #REDIRECT to Infinity#Generators. That section is prose, not
+#     a table, so the generator chain is curated in data/relationships.yaml.
+#     Refinement, Promotions, Ascension, Prestige and Promote are redirects too.
+#
+#   Stars — repeats the Infinity page's Stars section. Its Stardust Upgrades are
+#     a numbered list rather than a table, so no reader here can see them; they
+#     are curated in data/relationships.yaml.
+#
+#   Eternity_Challenges — the wikitable reads correctly, but its six difficulty
+#     rows share one challenge number through a rowspan, so ten challenges would
+#     arrive as sixty records and fifty of them would lose to the duplicate-id
+#     guard, one warning apiece. The ten are curated instead, which also lets the
+#     six difficulty values sit on one effect rather than on six near-copies.
+#
+#   Eternity_Milestones — three numbered prose lists (Eternities, Animals,
+#     Challenges). No table on the page at all.
+#
+#   Laboratory — bulleted and numbered prose for the three LP upgrades and the
+#     six RP upgrades. No table.
+#
+#   Supernova — a bulleted list of five bonuses. No table.
+#
+#   Animals — its 81 records sit behind {{AnimalGrid}}, a template the scrape
+#     does not follow, so the page as scraped holds no Animal data at all. They
+#     are transcribed in data/relationships.yaml with their AP costs.
+#
+#   Dilation — its Dilation Upgrades table is the same one the Eternity page
+#     carries, and Eternity is already swept for it; sweeping both would mint
+#     `dilation-upgrade-1` through `-9` twice. The page's Dilation penalties are
+#     a bulleted list, so no reader here can see those either.
+#
+#   Unity — the hub page. Prose and a {{Keyword}} glossary, no table. Its four
+#     Unity Bonuses, the Planet Shop donuts and the unlock ladder it states
+#     ("Attacks are unlocked after completing 15 trials") are curated.
+#
+#   Planet_Shop — prose for the four donuts and the four zodiac features, plus
+#     code blocks of formulae. No table.
+#
+# Tables surveyed but deliberately excluded from all nine swept pages:
+#
+#   Singularity — Atom Threshold|Base Value|Resource Affected|Modifiable?*|Modification Source (14 rows)
+#     The "Resource Affected" column names other graph nodes, but the table
+#     describes game-engine buffs and penalties that activate at atom thresholds,
+#     not upgrade effects. Each row is a threshold event, not a named entity that
+#     should become a node, so sweeping it would produce nodes with numeric
+#     threshold ids rather than meaningful ones.
+#
+#   Singularity — Modification Source|Modification Prerequisite (11 rows)
+#     A reference table listing what can boost Singularity Mult gain. Its rows
+#     are source names (e.g. "Relic 67 Effect"), not distinct entities — the
+#     actual nodes are modelled elsewhere. Sweeping it would duplicate existing
+#     nodes under different ids.
+#
+#   Plague — Stage|Name|Population|PlG Reward (61 rows)
+#     Per-stage numeric data (population, PlG reward). No effect prose; nothing
+#     to resolve against the vocabulary. Sweeping it would produce 61 nodes
+#     that describe populations, not effects on other nodes.
+#
+#   Plague — Level|Name|Immunity (6 rows)
+#     Immunity is a numeric stat, not an effect on another graph node.
+#
+#   Plague — Icon|Type|Notes (5 rows)
+#     ER type descriptions. The "Notes" column holds prose about spread/stealth
+#     tradeoffs, not the name of a resource or node being boosted.
+#
+#   Minerals — SMS Factor|Base Spawn Cost (11 rows)
+#     A lookup table of numeric thresholds, not entities with effects.
+#
+#   Minerals — Level|Sacrifice Dust Requirement (12 rows)
+#     A level-up cost ladder. Rows are levels (27–n), not named entities.
+#
+#   Minerals — {{Minerals/Common_Minerals}} (100 records)
+#     A record_template the reader could handle as-is, but its fields are an
+#     icon, a level, a flavour line ("Toilet paper? Is there anything better?")
+#     and a base VP number. A hundred nodes stating a quantity, none of them
+#     naming another node. The chain they feed is curated as one Minerals node.
+#
+#   Minerals — |Sword|Axe|Spear|Bow|Knuckles (5 rows)
+#     The Polish weapons, transposed: the entities are the columns and the rows
+#     are the tiers (Basic, Lv.10, Lv.25, Lv.50, Lv.100, the last four spanning
+#     two rows apiece). Any row reader mints five nodes named after the tiers and
+#     files each weapon's five effects under whichever tier it happened to read.
+#     The five weapons are curated instead, one node each.
+#
+#   Minerals — Upgrade|Effects|Cost Scaling ×2 (5 rows)
+#     Sun Runes and Moon Runes laid side by side under a two-deep banner, so all
+#     three headings appear twice and the duplicate-header guard rejects the
+#     table. Splitting it would still need the banner row to tell the halves
+#     apart, which is exactly the bespoke logic no page gets.
+#
+#   Minerals — Type|Effect 1|Effect 2 (10 rows)
+#     Real effects, and the only place they are written down — but Type reads
+#     "Red Gem", "Blue Gem" and so on, the same ten names the swept
+#     Minerals/Special_Minerals records already carry. Sweeping it mints a second
+#     node per gem, and the two halves of each gem's story then sit in different
+#     nodes. One gem is one node, so `Effect 2` is curated onto the ten records
+#     this manifest already produces. `Effect 1` restates the spawn effect those
+#     records carry and is not curated twice.
+#
+#   Zodiacs — Season|Zodiacs|Sun|Mercury|...|Chiron|Fortune Pars (5 rows)
+#     A placement chart showing which zodiac belongs to which celestial position.
+#     No effect column; the data is structural, not graph-edge material.
+#
+#   Zodiacs — Factor|Unlock Condition|Thresholds (15 rows)
+#     The "Thresholds" column holds numbers (e.g. 1.08e2466, "No threshold"),
+#     not effects. Sweeping it would produce twelve nodes stating a quantity.
+#
+#   Zodiacs — Rarity|Range Start|End (11 rows)
+#     Luck thresholds for rarity tiers. Numeric data with no effect prose.
+#
+#   Zodiacs — +Immortal|Min. luck needed (17 rows)
+#     Same: luck thresholds for extended rarity tiers.
+#
+#   Zodiacs — Rarity|Range Start|Range Start for +1000 rarity|... (5 rows)
+#     Same pattern extended to post-Immortal rarities (Ethereal, Amazing, etc.).
+#
+#   Planets — Season|Spring|Summer|Autumn|Winter (12 rows)
+#     Readable, but only by losing the thing that makes it meaningful. Each
+#     planet's four cells are one bonus per zodiac season, and the season is
+#     named in the column header, which the reader drops once it has used it to
+#     find the column. Swept, Sun would state four unattributed bonuses and
+#     nothing would record that "Zodiac Quality x1.5" is the Spring one. The
+#     twelve planets are curated instead, each effect labelled with its season.
+#
+#   Tarot — Upgrade|Effect|Effect scaling|Base Cost|Cost Scaling|Max Level (36 rows)
+#     Four suits each number their upgrades 1-9 inside a single wikitable, split
+#     only by colspan caption rows the reader skips. All four would mint
+#     `tarot-upgrade-1` through `-9`, so 27 of the 36 would lose to the
+#     duplicate-id guard. Nothing in a manifest entry can borrow the suit from
+#     the caption row above.
+#
+#   Tarot — Arcan Card|Effect 1|Effect 2 (19 rows)
+#     Passive effects belonging to Arcan cards the Tarot parser already mints as
+#     `tarot-the-fool` and so on. Swept under any other id prefix they would put
+#     a second node named "The Fool" in the graph; swept under the same one they
+#     would lose to the existing node in emit's first-wins dedup. Attaching a
+#     second effect to an already-extracted node is not something a manifest
+#     entry can express.
+#
+#   Tarot — Part #|Part Name|Effect|Part Name|Effect|... (Artifact Parts)
+#     Four artifacts laid side by side, so `Part Name` and `Effect` each appear
+#     four times. The duplicate-header guard skips the table rather than read
+#     the last quarter and silently drop the other three.
+pages:
+  - reader: record_template
+    page: Minerals
+    template: Minerals/Special_Minerals
+    system: minerals
+    kind: upgrade
+    id_prefix: special-mineral
+    name_field: mineral_name
+    effect_fields: [mineral_base_boost]
+
+  - reader: wikitable
+    page: Zodiacs
+    system: astrology
+    kind: upgrade
+    id_prefix: zodiac
+    name_columns: [Zodiac]
+    # Four independent bonuses, not one concatenated string. This is the same
+    # reason `effects` is a list on the model.
+    effect_columns: [Bonus 1, Bonus 2, Bonus 3, Bonus 4]
+
+  - reader: wikitable
+    page: Trials
+    system: trials
+    kind: upgrade
+    id_prefix: trial
+    name_columns: [Trial]
+    # `Handicap` is deliberately not swept. It describes a restriction the trial
+    # imposes, not something the trial boosts, and sweeping it would produce
+    # edges pointing the wrong way.
+    effect_columns: [Reward]
+
+  - reader: wikitable
+    page: Plague
+    system: plague
+    kind: upgrade
+    id_prefix: plague-er
+    name_columns: [Name]
+    effect_columns: [Effect]
+
+  # The Plague Statistics table. Six stats, each boosting a named resource, and
+  # the only thing wiring the Plague system into the rest of the graph.
+  - reader: wikitable
+    page: Plague
+    system: plague
+    kind: stat
+    id_prefix: plague-stat
+    name_columns: [Statistic]
+    effect_columns: [Boost]
+
+  # The Milestones tab has three sub-tabs, and the page lays them out as three
+  # tables with identical Name/Requirement/Reward columns -- so `caption` is the
+  # only thing separating them, and one entry without it swept all three into a
+  # single bucket. The ids stay on one prefix because a milestone's name is
+  # unique across all three tables and the ids are already deep-linked.
+  - reader: wikitable
+    page: Singularity
+    system: singularity-milestones-singularity
+    kind: upgrade
+    id_prefix: singularity-milestone
+    caption: Singularity Milestones
+    name_columns: [Name]
+    effect_columns: [Reward]
+
+  - reader: wikitable
+    page: Singularity
+    system: singularity-milestones-atoms
+    kind: upgrade
+    id_prefix: singularity-milestone
+    caption: Atom Milestones
+    name_columns: [Name]
+    effect_columns: [Reward]
+
+  # Progression's table adds a `Penalty` column the other two lack. It is not
+  # swept: it is what the milestone costs you, not what it boosts, the same call
+  # Trials and the Tarot upgrades make.
+  - reader: wikitable
+    page: Singularity
+    system: singularity-milestones-progression
+    kind: upgrade
+    id_prefix: singularity-milestone
+    caption: Progression Milestones
+    name_columns: [Name]
+    effect_columns: [Reward]
+
+  # Rows are numbered "1", "2", "3.1", so name_prefix supplies the noun.
+  - reader: wikitable
+    page: Singularity
+    system: singularity-tree
+    kind: tree-node
+    id_prefix: singularity-tree
+    name_prefix: Tree Node
+    name_columns: ['Tree Node #']
+    effect_columns: [Effect]
+    per_level_column: Initial Increase/lvl
+
+  # `Second Effect` is blank in all twelve rows today. It is read anyway:
+  # these gain a second and third effect at higher tiers, so `effects` is a
+  # list and reading the column now means no code change when the wiki
+  # documents them.
+  - reader: wikitable
+    page: Singularity
+    system: houses
+    kind: upgrade
+    id_prefix: singularity-zodiac
+    # `House` (I, II, III) is deliberately not part of the name: it is an
+    # ordinal. `Zodiac` alone is unique within this table but not in the graph —
+    # the Zodiacs page mints the same twelve names — and the sidebar matches and
+    # renders `name` with no system beside it. `name_prefix` separates the two
+    # sets, and it composes after the id is minted, so the ids the frontend
+    # deep-links to are unchanged.
+    name_prefix: Singular Zodiac
+    name_columns: [Zodiac]
+    effect_columns: [First effect, Second Effect]
+
+  - reader: wikitable
+    page: Dilation_Tree
+    system: dilation-tree
+    kind: tree-node
+    id_prefix: dilation-node
+    # Neither column identifies a row alone: every axis has an Index 1.
+    name_columns: [Axis, Index]
+    effect_columns: [Effect]
+    per_level_column: Increase per level
+
+  # Rows are numbered "1".."9", so name_prefix supplies the noun. Distinct from
+  # the Dilation Tree above: these are the nine flat Dilation Upgrades.
+  - reader: wikitable
+    page: Eternity
+    system: dilation
+    kind: upgrade
+    id_prefix: dilation-upgrade
+    name_prefix: Dilation Upgrade
+    name_columns: ['#']
+    effect_columns: [Effect]
+    per_level_column: Effect / level
+
+  # `Code` is part of the name because it is the only handle the wiki itself
+  # uses: the page cross-references these as "Infinity Upgrade 7;1" and
+  # "(1;1, 5;2, 6;2, 12;1, 16;1-2 and 17;1)", never by title. A node named only
+  # "Solid Exponent" cannot be found from the sentence that boosts it.
+  # `Icon` and `Cost (IP)` are not swept: one is an image, the other a price.
+  - reader: wikitable
+    page: Infinity
+    system: infinity-upgrades
+    kind: upgrade
+    id_prefix: infinity-upgrade
+    name_columns: [Code, Name]
+    effect_columns: [Effect]
+
+  # Five tables, one per suit, sharing three columns. Every row is named for the
+  # card that gates the challenge, so the 75 ids are distinct without a suit to
+  # disambiguate them, and they do not collide with the `tarot-<card>` nodes the
+  # Tarot parser mints. `Penalty` is swept even though it is a restriction: here
+  # it is also the only text naming what the challenge touches, and the
+  # completion requirement beside it names the resource that has to be reached.
+  - reader: wikitable
+    page: Tarot
+    system: tarot-challenges
+    kind: upgrade
+    id_prefix: tarot-challenge
+    name_prefix: Tarot Challenge
+    name_columns: [Challenge]
+    effect_columns: [Penalty, Completion Requirement]
+
+  # Rows are numbered "1".."9", so name_prefix supplies the noun. As on Trials,
+  # `Handicap` is deliberately not swept — it is the restriction the challenge
+  # imposes, not something it boosts, and sweeping it would point edges the wrong
+  # way. `Should be done` is ordering advice, not an effect.
+  - reader: wikitable
+    page: Infinity
+    system: infinity-challenges
+    kind: upgrade
+    id_prefix: infinity-challenge
+    name_prefix: Infinity Challenge
+    name_columns: [Challenge]
+    effect_columns: [Reward]

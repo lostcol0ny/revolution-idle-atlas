@@ -1,15 +1,48 @@
-export const SYSTEMS = [
+// The systems declared in data/relationships.yaml. This is a colour and
+// ordering hint, not a closed vocabulary: `system` is a free string in the
+// dataset, and graph.json may carry ids that are not listed here.
+//
+// Keep this list minimal — an id nobody declares is dead weight that the
+// sidebar tree orders on and TypeScript cannot flag, because
+// `Record<KnownSystem, string>` checks that the colour map covers the union,
+// not that the union is minimal.
+export const KNOWN_SYSTEMS = [
   'revolution',
   'infinity',
+  'infinity-upgrades',
+  'infinity-challenges',
+  'generators',
+  'stars',
   'eternity',
+  'eternity-milestones',
+  'animals',
+  'animals-milestones',
+  'eternity-challenges',
+  'laboratory',
+  'supernova',
+  'dilation',
+  'dilation-tree',
   'unity',
-  'zodiac',
-  'mineral',
   'tarot',
+  'tarot-challenges',
   'singularity',
+  'singularity-milestones',
+  'singularity-milestones-singularity',
+  'singularity-milestones-atoms',
+  'singularity-milestones-progression',
+  'singularity-tree',
   'plague',
+  'attacks',
+  'astrology',
+  'trials',
+  'relics',
+  'minerals',
+  'refine-tree',
+  'elements',
+  'houses',
 ] as const;
-export type System = (typeof SYSTEMS)[number];
+export type KnownSystem = (typeof KNOWN_SYSTEMS)[number];
+export type System = string;
 
 export const KINDS = [
   'relic',
@@ -31,6 +64,18 @@ export type Op = 'add' | 'mult' | 'exp';
 export type NodeConfidence = 'documented' | 'provisional' | 'unknown';
 export type EdgeConfidence = 'documented' | 'provisional' | 'uncertain';
 
+export interface GraphEffect {
+  text: string;
+  per_level?: string;
+  op?: Op;
+}
+
+export interface GraphSystem {
+  id: string;
+  name: string;
+  parent?: string;
+}
+
 export interface GraphNode {
   id: string;
   name: string;
@@ -38,6 +83,7 @@ export interface GraphNode {
   kind: Kind;
   wiki?: string;
   confidence?: NodeConfidence;
+  effects?: GraphEffect[];
 }
 
 export interface GraphEdge {
@@ -46,6 +92,7 @@ export interface GraphEdge {
   rel: Rel;
   op?: Op;
   note?: string;
+  targets_effect?: number;
   source: string;
   confidence?: EdgeConfidence;
 }
@@ -54,4 +101,5 @@ export interface GraphDocument {
   version: number;
   nodes: GraphNode[];
   edges: GraphEdge[];
+  systems?: GraphSystem[];
 }

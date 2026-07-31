@@ -16,7 +16,7 @@ jobs:
     # volunteer-run wiki over the network; cap it well below the 6-hour default.
     timeout-minutes: 15
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
 
       # Third-party actions are pinned to a full commit SHA: this job holds a
       # contents:write token and runs unattended, so a moved tag would execute
@@ -37,7 +37,7 @@ jobs:
         run: |
           {
             echo 'body<<PRBODY'
-            echo 'Automated wiki scrape. Raw wikitext only — `relationships.yaml` is untouched.'
+            echo 'Automated wiki scrape, with the generated artifacts rebuilt from it. `relationships.yaml` is untouched.'
             echo ''
             echo '### New pages'
             git ls-files --others --exclude-standard data/raw/ \
@@ -57,10 +57,26 @@ jobs:
             echo 'PRBODY'
           } >> "$GITHUB_OUTPUT"
 
+      # ci.yml regenerates these and fails on any diff, so a PR carrying raw
+      # wikitext alone is one that turns main red the moment it lands. Rebuilding
+      # here also makes the scrape reviewable: the artifact diff is where a wiki
+      # edit becomes a visible change to the graph.
+      #
+      # Runs after the summary so that step reads only what the scraper wrote,
+      # and before the PR so a build failure stops the PR from opening at all.
+      - name: Regenerate artifacts
+        run: |
+          uv run atlas extract
+          uv run atlas build
+
       - name: Open pull request
         uses: peter-evans/create-pull-request@22a9089034f40e5a961c8808d113e2c98fb63676 # v7.0.11
         with:
-          add-paths: data/raw
+          add-paths: |
+            data/raw
+            data/derived.yaml
+            public/graph.json
+            docs/coverage.md
           branch: wiki-scrape
           title: "chore: daily wiki scrape"
           body: "${{ steps.summary.outputs.body }}"
