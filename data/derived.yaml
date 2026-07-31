@@ -4419,6 +4419,775 @@ nodes:
   confidence: provisional
   effects:
   - text: Unlocks Stars
+- id: tarot-challenge-ace-of-swords
+  name: Tarot Challenge Ace of Swords
+  system: tarot
+  kind: upgrade
+  wiki: Tarot
+  confidence: provisional
+  effects:
+  - text: Resets Attack Levels. Attack and Damage mults are logarithmed. You cannot gain them during the
+      challenge.
+  - text: Attack Level 1500
+- id: tarot-challenge-two-of-swords
+  name: Tarot Challenge Two of Swords
+  system: tarot
+  kind: upgrade
+  wiki: Tarot
+  confidence: provisional
+  effects:
+  - text: Game Speed, Attack, and Damage mults are put to double Log10 of their values. You cannot gain
+      them during the challenge. (Double Log10 means Log10(Log10(X)).)
+  - text: Attack Level 400
+- id: tarot-challenge-three-of-swords
+  name: Tarot Challenge Three of Swords
+  system: tarot
+  kind: upgrade
+  wiki: Tarot
+  confidence: provisional
+  effects:
+  - text: Game Speed, Attack and Damage mults are logarithmed, raised to ^0.05, then divided by 10. You
+      cannot gain them during the challenge.
+  - text: Attack Level 200
+- id: tarot-challenge-four-of-swords
+  name: Tarot Challenge Four of Swords
+  system: tarot
+  kind: upgrade
+  wiki: Tarot
+  confidence: provisional
+  effects:
+  - text: Resets Attack Levels and attack mults are set to 1. Game speed and other mults are logarithmed.
+      Mult gain is put to double log10.
+  - text: Attack Level 2000
+- id: tarot-challenge-five-of-swords
+  name: Tarot Challenge Five of Swords
+  system: tarot
+  kind: upgrade
+  wiki: Tarot
+  confidence: provisional
+  effects:
+  - text: Resets Attack Levels and attack mults are set to 1. Game speed and other mults are logarithmed.
+      Mult gain is logarithmed and ^0.2.
+  - text: Attack Level 2026
+- id: tarot-challenge-six-of-swords
+  name: Tarot Challenge Six of Swords
+  system: tarot
+  kind: upgrade
+  wiki: Tarot
+  confidence: provisional
+  effects:
+  - text: Resets Attack Levels and gold and attack mults are set to 1. Game speed and other mults are
+      logarithmed. Ascension power is reduced to double Log10. Gold gain is logarithmed.
+  - text: Attack Level 2240
+- id: tarot-challenge-seven-of-swords
+  name: Tarot Challenge Seven of Swords
+  system: tarot
+  kind: upgrade
+  wiki: Tarot
+  confidence: provisional
+  effects:
+  - text: Resets Attack Levels and gold and attack mults are set to 1. Game speed and gold gain is logarithmed.
+      Other mults are reduced to double Log10. Ascension Power is heavily nerfed, but the penalty weakens
+      based on Attack Level.
+  - text: Attack Level 2525
+- id: tarot-challenge-eight-of-swords
+  name: Tarot Challenge Eight of Swords
+  system: tarot
+  kind: upgrade
+  wiki: Tarot
+  confidence: provisional
+  effects:
+  - text: Resets Attack Levels and attack mults are set to 1. Ascension Power and all other mults are
+      set to 1. Mult gain only comes from Attack Prestige.
+  - text: Attack Level 7350
+- id: tarot-challenge-nine-of-swords
+  name: Tarot Challenge Nine of Swords
+  system: tarot
+  kind: upgrade
+  wiki: Tarot
+  confidence: provisional
+  effects:
+  - text: Resets Attack levels and mults. Only attack mult from score is effective, and it is ^(1/1e10).
+      Game Speed is reduced to double Log10.
+  - text: Attack Level 850
+- id: tarot-challenge-ten-of-swords
+  name: Tarot Challenge Ten of Swords
+  system: tarot
+  kind: upgrade
+  wiki: Tarot
+  confidence: provisional
+  effects:
+  - text: Resets Attack Levels and sets Attack mults to 1. Game speed and other mults are logarithmed.
+      Mult gain is set to Sword's LOGPOW.
+  - text: Attack Level 3200
+- id: tarot-challenge-page-of-swords
+  name: Tarot Challenge Page of Swords
+  system: tarot
+  kind: upgrade
+  wiki: Tarot
+  confidence: provisional
+  effects:
+  - text: Resets Attack Levels and sets Attack mults to 1, Game speed and other multipliers are logarithmed.
+      Mult Gain is set to Sword's LOGPOW twice.
+  - text: Attack Level 2500
+- id: tarot-challenge-knight-of-swords
+  name: Tarot Challenge Knight of Swords
+  system: tarot
+  kind: upgrade
+  wiki: Tarot
+  confidence: provisional
+  effects:
+  - text: Resets Attack Levels and sets Attack mults to 1, Game speed and other multipliers are logarithmed.
+      Mult Gain is heavily nerfed, but this penalty becomes weaker based on the spread power of your equipped
+      Endoplasmic Reticulum.
+  - text: Attack Level 2560
+- id: tarot-challenge-queen-of-swords
+  name: Tarot Challenge Queen of Swords
+  system: tarot
+  kind: upgrade
+  wiki: Tarot
+  confidence: provisional
+  effects:
+  - text: Resets Attack Level and sets Attack mults to 1, Game speed and other multipliers are logarithmed.
+      Mult Gain is heavily nerfed, but this penalty becomes weaker based on your current Singularity Mult
+  - text: Attack Level 3250
+- id: tarot-challenge-king-of-swords
+  name: Tarot Challenge King of Swords
+  system: tarot
+  kind: upgrade
+  wiki: Tarot
+  confidence: provisional
+  effects:
+  - text: Requires 1.8e308 Atoms to enter. Resets Attack Level and sets Attack mults to 1, Game speed
+      and other multipliers are logarithmed, then raised to ^0.3, Mult gain is heavily nerfed, but this
+      penalty becomes weaker based on your current Atoms, Entering the challenge performs a Singularity
+      and resets Atoms to 1. Adds a dynamic penalty that heavily nerfs Atom gain, but this becomes weaker
+      based on your current attack level.
+  - text: Perform a Singularity at Attack Level 5005+
+- id: tarot-challenge-ace-of-wands
+  name: Tarot Challenge Ace of Wands
+  system: tarot
+  kind: upgrade
+  wiki: Tarot
+  confidence: provisional
+  effects:
+  - text: Reset all of your elements. First two element factors, Relic 36, and Global Element mult are
+      logarithmed.
+  - text: 1e20 Water
+- id: tarot-challenge-two-of-wands
+  name: Tarot Challenge Two of Wands
+  system: tarot
+  kind: upgrade
+  wiki: Tarot
+  confidence: provisional
+  effects:
+  - text: Reset all of your elements. First two element factors, Relic 36, and Global Element mult are
+      put to double Log10 of their values. Upgrades Fire-3 and Wind-4 are useless. The Magician is disabled.
+  - text: 1e9 of all elements
+- id: tarot-challenge-three-of-wands
+  name: Tarot Challenge Three of Wands
+  system: tarot
+  kind: upgrade
+  wiki: Tarot
+  confidence: provisional
+  effects:
+  - text: Reset all of your elements. First two element factors, Relic 36, and Global Element mult are
+      put to double Log10 of their values, and divided by 1000. Upgrades Fire-3 and Wind-4 are useless.
+      The Magician is disabled.
+  - text: 100 of all elements
+- id: tarot-challenge-four-of-wands
+  name: Tarot Challenge Four of Wands
+  system: tarot
+  kind: upgrade
+  wiki: Tarot
+  confidence: provisional
+  effects:
+  - text: Reset all of your elements except Earth and Water. Global Element Mult is divided by 1e10000.
+  - text: 1e4600 Fire
+- id: tarot-challenge-five-of-wands
+  name: Tarot Challenge Five of Wands
+  system: tarot
+  kind: upgrade
+  wiki: Tarot
+  confidence: provisional
+  effects:
+  - text: Resets all elements to 1. Global Element mult is nerfed a lot, but it increases the more elements
+      you have.
+  - text: 1e5000+ Wind
+- id: tarot-challenge-six-of-wands
+  name: Tarot Challenge Six of Wands
+  system: tarot
+  kind: upgrade
+  wiki: Tarot
+  confidence: provisional
+  effects:
+  - text: Resets all elements to 0. All factors are set to 1 and Global Element mult is set to 1/1e10
+      for the duration of the challenge. The Magician, Fire Node 3, Wind Node 4, and Relic 36 are useless.
+  - text: 100+ of all elements
+- id: tarot-challenge-seven-of-wands
+  name: Tarot Challenge Seven of Wands
+  system: tarot
+  kind: upgrade
+  wiki: Tarot
+  confidence: provisional
+  effects:
+  - text: Resets all elements to 1. All three factors, Relic 36, game speed and Global Element mult are
+      logarithmed. Nodes Fire-3 and Wind-4 are useless. The Magician is disabled.
+  - text: 2.5e10+ of all elements
+- id: tarot-challenge-eight-of-wands
+  name: Tarot Challenge Eight of Wands
+  system: tarot
+  kind: upgrade
+  wiki: Tarot
+  confidence: provisional
+  effects:
+  - text: Resets all elements to 1. Relic 36, game speed and Global Element mult are logarithmed. Nodes
+      Fire-3 and Wind-4 are useless. The Magician is disabled. Adds a heavy softcap for first 2 factors
+      after x10.
+  - text: 1e16+ of all elements
+- id: tarot-challenge-nine-of-wands
+  name: Tarot Challenge Nine of Wands
+  system: tarot
+  kind: upgrade
+  wiki: Tarot
+  confidence: provisional
+  effects:
+  - text: Resets all elements to 1. Relic 36, game speed and Global Element mult are logarithmed. Nodes
+      Fire-3 and Wind-4 are useless. The Magician is disabled. Elements Third factor is -1, then /10.
+  - text: 1e765+ multiplication of all elements
+- id: tarot-challenge-ten-of-wands
+  name: Tarot Challenge Ten of Wands
+  system: tarot
+  kind: upgrade
+  wiki: Tarot
+  confidence: provisional
+  effects:
+  - text: Resets all elements to 1. Relic 36, game speed, and Global element mult are put to Wand's LOGPOW.
+      Nodes Fire-3 and Wind-4 are useless. The Magician is disabled. Factor 1 and 2 are also put to Wand's
+      LOGPOW.
+  - text: 1e40+ multiplication of all elements
+- id: tarot-challenge-page-of-wands
+  name: Tarot Challenge Page of Wands
+  system: tarot
+  kind: upgrade
+  wiki: Tarot
+  confidence: provisional
+  effects:
+  - text: Reset your Elements to 1. The total gain of each Element is set to the Wand's LOGPOW.
+  - text: 1e2026+ multiplication of all elements
+- id: tarot-challenge-knight-of-wands
+  name: Tarot Challenge Knight of Wands
+  system: tarot
+  kind: upgrade
+  wiki: Tarot
+  confidence: provisional
+  effects:
+  - text: Reset your Elements to 1. Relic 36 game speed and Global Element mult are logarithmed. Nodes
+      Fire-3 and Wind-4 are useless. The Magician is disabled. All factors are nerfed, but this penalty
+      becomes weaker based on the Infectivity of your equipped Endoplasmic Reticulum.
+  - text: 1e268+ multiplication of all elements
+- id: tarot-challenge-queen-of-wands
+  name: Tarot Challenge Queen of Wands
+  system: tarot
+  kind: upgrade
+  wiki: Tarot
+  confidence: provisional
+  effects:
+  - text: Reset your Elements to 1. Element factors 1 and 2 are capped at 2 raised to your current Singularity
+      mult. Nodes Fire-3 and Wind-4 are useless. The Magician is disabled. Global Element mult is capped
+      at 1000 raised to your current Singularity Count. Local Element Speed is capped at 1.
+  - text: 1e3000+ multiplication of all elements
+- id: tarot-challenge-king-of-wands
+  name: Tarot Challenge King of Wands
+  system: tarot
+  kind: upgrade
+  wiki: Tarot
+  confidence: provisional
+  effects:
+  - text: Requires 1.8e308 Atoms to enter ,Element factors 1 and 2 are capped at your current Atoms. Nodes
+      Fire-3 and Wind-4 are useless. The Magician is disabled. Global Element mult is capped at your current
+      Singularity mult. Local Element Speed is capped at 1. King Tarot cards and other multipliers are
+      useless. Entering Performs a Singularity and resets atoms to 1. Adds a Dynamic Penalty that heavily
+      nerfs Atom Gain, but becomes weaker based on your current Fire
+  - text: Perform a Singularity with 1e2026+ Fire
+- id: tarot-challenge-ace-of-pentacles
+  name: Tarot Challenge Ace of Pentacles
+  system: tarot
+  kind: upgrade
+  wiki: Tarot
+  confidence: provisional
+  effects:
+  - text: Performs Refine Prestige. First Mineral upgrade cost scaling is much heavier.
+  - text: 640+ Max Mineral Level
+- id: tarot-challenge-two-of-pentacles
+  name: Tarot Challenge Two of Pentacles
+  system: tarot
+  kind: upgrade
+  wiki: Tarot
+  confidence: provisional
+  effects:
+  - text: Performs Refine Prestige. RN1, RN16, Red Gem, VP Gain Mult Magnet upgrade, Relic 23 effect,
+      and Polish Sword values are logarithmed. The Hierophant is disabled.
+  - text: 425+ Max Mineral Level
+- id: tarot-challenge-three-of-pentacles
+  name: Tarot Challenge Three of Pentacles
+  system: tarot
+  kind: upgrade
+  wiki: Tarot
+  confidence: provisional
+  effects:
+  - text: Performs Refine Prestige. Blue and Green Gems are useless. Mineral cost growth is much heavier.
+      Relic 14 and 31 are useless. Local game speed is capped at x777. The Hierophant is disabled.
+  - text: 1000+ Max Mineral Level
+- id: tarot-challenge-four-of-pentacles
+  name: Tarot Challenge Four of Pentacles
+  system: tarot
+  kind: upgrade
+  wiki: Tarot
+  confidence: provisional
+  effects:
+  - text: Performs Refine Prestige. Red Gem is useless, and you cannot obtain magnets.
+  - text: 1125+ Max Mineral Level
+- id: tarot-challenge-five-of-pentacles
+  name: Tarot Challenge Five of Pentacles
+  system: tarot
+  kind: upgrade
+  wiki: Tarot
+  confidence: provisional
+  effects:
+  - text: Performs Refine Prestige. VP Gain is logarithmed.
+  - text: 1e20+ VP
+- id: tarot-challenge-six-of-pentacles
+  name: Tarot Challenge Six of Pentacles
+  system: tarot
+  kind: upgrade
+  wiki: Tarot
+  confidence: provisional
+  effects:
+  - text: Performs Refine Prestige and resets Gold. Blue, Green, Yellow gems, along with Relic 14 and
+      31 are all useless. Gold Gain is logarithmed.
+  - text: 167+ Max Mineral Level
+- id: tarot-challenge-seven-of-pentacles
+  name: Tarot Challenge Seven of Pentacles
+  system: tarot
+  kind: upgrade
+  wiki: Tarot
+  confidence: provisional
+  effects:
+  - text: Performs Refine Prestige and resets Gold. Blue, Green, gems, along with Relic 14 and 31 are
+      all useless. Gold Gain is ^(1/1,000,000,000) and game speed is logarithmed.
+  - text: 105+ Max Mineral Level
+- id: tarot-challenge-eight-of-pentacles
+  name: Tarot Challenge Eight of Pentacles
+  system: tarot
+  kind: upgrade
+  wiki: Tarot
+  confidence: provisional
+  effects:
+  - text: Performs Refine Prestige and resets Gold. Blue, Green, gems, along with Relic 14 and 31 are
+      all useless. Gold is calculated based only off of Attack Level.
+  - text: 1640+ Max Mineral Level
+- id: tarot-challenge-nine-of-pentacles
+  name: Tarot Challenge Nine of Pentacles
+  system: tarot
+  kind: upgrade
+  wiki: Tarot
+  confidence: provisional
+  effects:
+  - text: Performs Refine Prestige. Mineral base is much worse; it's nerfed exponentially. (mineral base
+      is the number the VP gain is multiplied by per level increase)
+  - text: 270+ Max Mineral Level
+- id: tarot-challenge-ten-of-pentacles
+  name: Tarot Challenge Ten of Pentacles
+  system: tarot
+  kind: upgrade
+  wiki: Tarot
+  confidence: provisional
+  effects:
+  - text: Performs Refine Prestige. Red Gem is useless. You cant get magnets nor merge XP. RN1, Game speed,
+      Relic 22, and Polish Sword values are all set to Sword's LOGPOW
+  - text: 560+ Max Mineral Level
+- id: tarot-challenge-page-of-pentacles
+  name: Tarot Challenge Page of Pentacles
+  system: tarot
+  kind: upgrade
+  wiki: Tarot
+  confidence: provisional
+  effects:
+  - text: Performs Refine Prestige. Base Max level Upgrade Effect is multiplied by Pentacle's base LOGPOW.
+  - text: 420+ Max Mineral Level
+- id: tarot-challenge-knight-of-pentacles
+  name: Tarot Challenge Knight of Pentacles
+  system: tarot
+  kind: upgrade
+  wiki: Tarot
+  confidence: provisional
+  effects:
+  - text: Performs Refine Prestige. Red Gem is useless. You cant get magnets nor merge XP. RN1, Game Speed,
+      Relic 22, and Polish Sword values are heavily nerfed, but this penalty becomes weaker based on the
+      Stealth of your equipped Endoplasmic Reticulum.
+  - text: 1000+ Max Mineral Level
+- id: tarot-challenge-queen-of-pentacles
+  name: Tarot Challenge Queen of Pentacles
+  system: tarot
+  kind: upgrade
+  wiki: Tarot
+  confidence: provisional
+  effects:
+  - text: Performs Refine Prestige. Red Gem is useless. You cant get magnets nor merge XP. RN1's effect
+      is capped by your current Singularity mult. Local Mineral Speed is capped at 10x. Relic 22 and Polish
+      Sword are useless
+  - text: 700+ Max Mineral Level
+- id: tarot-challenge-king-of-pentacles
+  name: Tarot Challenge King of Pentacles
+  system: tarot
+  kind: upgrade
+  wiki: Tarot
+  confidence: provisional
+  effects:
+  - text: Requires 1.8e308 Atoms to enter. Performs Refine Prestige. Red Gem is useless. You cant get
+      magnets nor merge XP. RN1's effect is capped at Log10(atoms)+1. Local Mineral Speed is capped at
+      100x. The First Mineral upgrades effect is capped at the Square Root of your Singularity mult rounded
+      down. Relic 22 and Polish Sword are useless. Entering Performs a Singularity and resets atoms to
+      1. Adds a Dynamic Penalty that heavily nerfs Atom Gain, but becomes weaker based on your Max Mineral
+      Level
+  - text: Perform a Singularity at 1e200+ VP
+- id: tarot-challenge-ace-of-cups
+  name: Tarot Challenge Ace of Cups
+  system: tarot
+  kind: upgrade
+  wiki: Tarot
+  confidence: provisional
+  effects:
+  - text: Performs Unity Reset. All Zodiac EXP factors are logarithmed.
+  - text: Unite with a Level 90+ Zodiac
+- id: tarot-challenge-two-of-cups
+  name: Tarot Challenge Two of Cups
+  system: tarot
+  kind: upgrade
+  wiki: Tarot
+  confidence: provisional
+  effects:
+  - text: Performs Unity Reset. Luck is logarithmed, divided by 1000, then increased by 1.
+  - text: Unite with Epic+ rarity Zodiac
+- id: tarot-challenge-three-of-cups
+  name: Tarot Challenge Three of Cups
+  system: tarot
+  kind: upgrade
+  wiki: Tarot
+  confidence: provisional
+  effects:
+  - text: Performs Unity Reset. Luck is ^(1/999)
+  - text: Unite with an Immortal+ rarity Zodiac
+- id: tarot-challenge-four-of-cups
+  name: Tarot Challenge Four of Cups
+  system: tarot
+  kind: upgrade
+  wiki: Tarot
+  confidence: provisional
+  effects:
+  - text: Performs Unity Reset. Luck is heavily reduced, but the penalty weakens based off of the highest
+      rarity Zodiac obtained during the challenge.
+  - text: Unite with Amazing+ rarity Zodiac
+- id: tarot-challenge-five-of-cups
+  name: Tarot Challenge Five of Cups
+  system: tarot
+  kind: upgrade
+  wiki: Tarot
+  confidence: provisional
+  effects:
+  - text: Performs Unity Reset. All Zodiac EXP factors are reduced to double Log10 of their values.
+  - text: Unite with a Level 10+ Zodiac
+- id: tarot-challenge-six-of-cups
+  name: Tarot Challenge Six of Cups
+  system: tarot
+  kind: upgrade
+  wiki: Tarot
+  confidence: provisional
+  effects:
+  - text: Performs Unity Reset. Max VP factor is disabled.
+  - text: Unite with a Level 808+ Zodiac
+- id: tarot-challenge-seven-of-cups
+  name: Tarot Challenge Seven of Cups
+  system: tarot
+  kind: upgrade
+  wiki: Tarot
+  confidence: provisional
+  effects:
+  - text: Performs a Unity Reset. Your luck is heavily reduced, but the penalty weakens each time you
+      Unite during this challenge.
+  - text: Unite with a Prime+ rarity Zodiac
+- id: tarot-challenge-eight-of-cups
+  name: Tarot Challenge Eight of Cups
+  system: tarot
+  kind: upgrade
+  wiki: Tarot
+  confidence: provisional
+  effects:
+  - text: Performs a Unity Reset. Your luck and quality are heavily reduced, but the penalty weakens based
+      off of the highest quality Zodiac you unite with during this challenge.
+  - text: Unite with a Legendary+ rarity Zodiac
+- id: tarot-challenge-nine-of-cups
+  name: Tarot Challenge Nine of Cups
+  system: tarot
+  kind: upgrade
+  wiki: Tarot
+  confidence: provisional
+  effects:
+  - text: Performs Unity Reset. All Zodiac EXP factors are useless, besides the Relic 8 factor, which
+      is logarithmed.
+  - text: Unite with a Level 25+ Zodiac
+- id: tarot-challenge-ten-of-cups
+  name: Tarot Challenge Ten of Cups
+  system: tarot
+  kind: upgrade
+  wiki: Tarot
+  confidence: provisional
+  effects:
+  - text: Performs a Unity Reset. All Zodiac EXP factors are set to Cup's LOGPOW.
+  - text: Unite with a Level 65+ Zodiac
+- id: tarot-challenge-page-of-cups
+  name: Tarot Challenge Page of Cups
+  system: tarot
+  kind: upgrade
+  wiki: Tarot
+  confidence: provisional
+  effects:
+  - text: Performs a Unity Reset. Total Factors multiplication is set to Cup's LOGPOW.
+  - text: Unite with a Level 100+ Zodiac
+- id: tarot-challenge-knight-of-cups
+  name: Tarot Challenge Knight of Cups
+  system: tarot
+  kind: upgrade
+  wiki: Tarot
+  confidence: provisional
+  effects:
+  - text: Performs a Unity Reset. All Factors are heavily nerfed, but this penalty becomes weaker based
+      on your total infected population
+  - text: Unite with a Level 625+ Zodiac
+- id: tarot-challenge-queen-of-cups
+  name: Tarot Challenge Queen of Cups
+  system: tarot
+  kind: upgrade
+  wiki: Tarot
+  confidence: provisional
+  effects:
+  - text: Performs a Unity Reset. Current Zodiac EXP is capped at your next Singularity Mult raised to
+      the 5th power, plue 1
+  - text: Unite with a Level 6+ Zodiac
+- id: tarot-challenge-king-of-cups
+  name: Tarot Challenge King of Cups
+  system: tarot
+  kind: upgrade
+  wiki: Tarot
+  confidence: provisional
+  effects:
+  - text: Requires 1.8e308 Atoms to enter. Performs a Unity Reset. All Factors are set to Log2 of their
+      values and are heavily nerfed. This Penalty becomes weaker based on your current Atom Count. Entering
+      performs a Singularity and resets atoms to 1. Adds a Dynamic Penalty that heavily nerfs Atom Gain,
+      but becomes weaker based on the highest level Zodiac you've obtained during the Challenge.
+  - text: Perform a Singularity while the next expected Zodiac Level is 67+
+- id: tarot-challenge-the-fool
+  name: Tarot Challenge The Fool
+  system: tarot
+  kind: upgrade
+  wiki: Tarot
+  confidence: provisional
+  effects:
+  - text: All other arcans are disabled, and all special minerals are removed. You can only spawn Black
+      Gems via The Fool, but the bonus is reduced by 10 (pre-caps).
+  - text: Destroy a Level 20 Black Gem
+- id: tarot-challenge-the-magician
+  name: Tarot Challenge The Magician
+  system: tarot
+  kind: upgrade
+  wiki: Tarot
+  confidence: provisional
+  effects:
+  - text: Resets your Elements. You can only generate them using the Magician skill, but the Global Element
+      mult decreases with each use.
+  - text: 1e5000+ of all Elements
+- id: tarot-challenge-the-high-priestess
+  name: Tarot Challenge The High Priestess
+  system: tarot
+  kind: upgrade
+  wiki: Tarot
+  confidence: provisional
+  effects:
+  - text: Performs Refine Prestige. Red Gem, Relic 22, and Polish Sword are useless. You can no longer
+      obtain magnets or merge levels. RN1's effect is ^(1/10000) (pre-skill).
+  - text: 200+ Max Mineral Level
+- id: tarot-challenge-the-empress
+  name: Tarot Challenge The Empress
+  system: tarot
+  kind: upgrade
+  wiki: Tarot
+  confidence: provisional
+  effects:
+  - text: Base sell cost for Zodiacs is set to 1. Using The Empress will gradually increase this from
+      1 to 100. Auto-sell Zodiacs is disabled.
+  - text: Sell a Zodiac for exactly 67 Astrodust (lol)
+- id: tarot-challenge-the-emperor
+  name: Tarot Challenge The Emperor
+  system: tarot
+  kind: upgrade
+  wiki: Tarot
+  confidence: provisional
+  effects:
+  - text: Performs Refine Prestige. Blue and Green gems are useless. Mineral cost growth is much steeper
+      and increases over time. Relics 14 and 31 are useless. Use the card to decrease Mineral cost.
+  - text: 1333+ Max Mineral Level
+- id: tarot-challenge-the-hierophant
+  name: Tarot Challenge The Hierophant
+  system: tarot
+  kind: upgrade
+  wiki: Tarot
+  confidence: provisional
+  effects:
+  - text: Performs Refine Prestige. You can only spawn level 1 minerals no matter what. The Hierophant's
+      cooldown is 50x shorter.
+  - text: 1380+ Max Mineral Level
+- id: tarot-challenge-the-lovers
+  name: Tarot Challenge The Lovers
+  system: tarot
+  kind: upgrade
+  wiki: Tarot
+  confidence: provisional
+  effects:
+  - text: Performs Refine Prestige. Passive Merge EXP is disabled. Relic 28 effect is ^0.04 after all
+      bonuses. Max mineral spawn level is capped at Merge Level + 1.
+  - text: Merge Level 250+
+- id: tarot-challenge-the-chariot
+  name: Tarot Challenge The Chariot
+  system: tarot
+  kind: upgrade
+  wiki: Tarot
+  confidence: provisional
+  effects:
+  - text: None (yeah this challenge is just kind of a benchmark)
+  - text: Sacrifice Level 40 for all Gems
+- id: tarot-challenge-justice
+  name: Tarot Challenge Justice
+  system: tarot
+  kind: upgrade
+  wiki: Tarot
+  confidence: provisional
+  effects:
+  - text: Tarot Local Speed is capped at 1. Chariot Passive Effect is also capped at 1.
+  - text: 111,111+ SMS Factor
+- id: tarot-challenge-the-hermit
+  name: Tarot Challenge The Hermit
+  system: tarot
+  kind: upgrade
+  wiki: Tarot
+  confidence: provisional
+  effects:
+  - text: Resets Tarot resources. Tarot Local speed and both effects are heavily reduced (cooldowns are
+      greatly increased), but the penalty weakens with each use of The Hermit. The Hermit's duration is
+      also capped at one second.
+  - text: 1e1000+ of all Tarot Resources
+- id: tarot-challenge-wheel-of-fortune
+  name: Tarot Challenge Wheel of Fortune
+  system: tarot
+  kind: upgrade
+  wiki: Tarot
+  confidence: provisional
+  effects:
+  - text: Resets your Tarot draws to the sum of all Artifact levels. Draws cannot be gained in any way
+      except winning the wheel, but the chance of winning is heavily reduced. Losing the wheel will weaken
+      this penalty. Skill cooldown time is multiplied by 10, and Tarot local speed is capped at 1.
+  - text: Win the Wheel 10 times in a row
+- id: tarot-challenge-strength
+  name: Tarot Challenge Strength
+  system: tarot
+  kind: upgrade
+  wiki: Tarot
+  confidence: provisional
+  effects:
+  - text: Resets attack levels and attack mult is set to 1. Game Speed, other mults, mult gain are set
+      to Mean LOGPOW / 2 (Mean LOGPOW is the average LOGPOW across all suits). Attack Exponent base is
+      set to 0 and can only be increased via The Strength. The Strength's duration is set to 0.1 seconds
+      and the effect is heavily reduced, but the penalty weakens based on Attack Level.
+  - text: Attack Level 2000+
+- id: tarot-challenge-the-hanged-man
+  name: Tarot Challenge The Hanged Man
+  system: tarot
+  kind: upgrade
+  wiki: Tarot
+  confidence: provisional
+  effects:
+  - text: Performs a Refine Prestige and resets your Polish Upgrades and Polish Points. You cant gain
+      any polish points, Special Minerals and Special Minerals Sacrifice are useless.
+  - text: x5e9 Minerals Local Speed
+- id: tarot-challenge-death
+  name: Tarot Challenge Death
+  system: tarot
+  kind: upgrade
+  wiki: Tarot
+  confidence: provisional
+  effects:
+  - text: Activating the death tarot card secretly selects a random time between 0 and 60 seconds. You
+      must perform a refine prestige while Death is still active.
+  - text: Refine Prestige within 10 seconds of the selected time.
+- id: tarot-challenge-temperance
+  name: Tarot Challenge Temperance
+  system: tarot
+  kind: upgrade
+  wiki: Tarot
+  confidence: provisional
+  effects:
+  - text: At the start of the challenge, you receive a random low-stat Temperate Zodiac in your inventory.
+      It must be placed into your Fortune Pars slot immediately. Each time you use temperance you receive
+      a temperance zodiac based off the one in your Fortune Pars spot. 67% chance its the same zodiac,
+      20% chance you receive a different zodiac of the same element, 10% chance to receive an adjacent
+      zodiac, 3% chance to receive the opposite zodiac. Tarot local speed is capped at 1x and Tarot skill
+      cooldown timer is multiplied by x10
+  - text: Fill Every Planet slot with a temperate zodiac that matches one of that planet's ruling signs.
+- id: tarot-challenge-the-devil
+  name: Tarot Challenge The Devil
+  system: tarot
+  kind: upgrade
+  wiki: Tarot
+  confidence: provisional
+  effects:
+  - text: When you use this arcana card, it spawns 10 chads on the screen.
+  - text: Catch all 10 Chads by clicking on them
+- id: tarot-challenge-the-tower
+  name: Tarot Challenge The Tower
+  system: tarot
+  kind: upgrade
+  wiki: Tarot
+  confidence: provisional
+  effects:
+  - text: You need 20,000 infected in the universe stage to enter this challenge, While inside the challenge,
+      using the tower arcana has a chance to complete the challenge based off of the chance given by Relic
+      67, If it fails, reset Universe High Score, Plague points, and get rid of all of your Endoplasmic
+      Reticulums.
+  - text: Complete the challenge by the chance given to you by Relic 67
+- id: tarot-challenge-the-star
+  name: Tarot Challenge The Star
+  system: tarot
+  kind: upgrade
+  wiki: Tarot
+  confidence: provisional
+  effects:
+  - text: You need 1.8e308 atoms to enter this challenge, Performs a Singularity reset and a Unity reset,
+      Luck donut base is set and 1 and the first effect for the Pink Gem is useless, The star effect is
+      also applied to the luck donut instead.
+  - text: Perform a Singularity with an Uncommon+ Singular Zodiac
+- id: tarot-challenge-the-moon
+  name: Tarot Challenge The Moon
+  system: tarot
+  kind: upgrade
+  wiki: Tarot
+  confidence: provisional
+  effects:
+  - text: You need 1.8e308 atoms to enter this challenge, Performs a Singularity reset and a Unity reset,
+      Tarot Local speed is capped at 10x, sets the quality of the zodiac in the Moon slot to 1. You can
+      upgrade it by using The Moon, but everytime you change zodiacs, the zodiac in the Moon slot's quality
+      is set to 1. Adds a dynamic penalty that heavily nerfs Atom gain, but becomes weaker based on the
+      quality of the zodiac in the Moon Slot.
+  - text: Perform a Singularity with 1e1000+ Atoms
 - id: infinity-challenge-1
   name: Infinity Challenge 1
   system: infinity
@@ -4493,6 +5262,13 @@ nodes:
   - text: Double Infinites gain + Break Infinity
 edges:
 - from: relic-1
+  to: attacks
+  rel: boosts
+  op: add
+  note: A Simple (flat) Boost to (Attacks) Damage Mult
+  source: wiki:Relics
+  confidence: uncertain
+- from: relic-1
   to: damage-mult
   rel: boosts
   op: add
@@ -4504,6 +5280,13 @@ edges:
   rel: boosts
   op: add
   note: A Boost to Zodiac Quality
+  source: wiki:Relics
+  confidence: uncertain
+- from: relic-3
+  to: attacks
+  rel: boosts
+  op: add
+  note: Zodiacs Level Sum (ZLM) Boost (Attacks) Damage Mult
   source: wiki:Relics
   confidence: uncertain
 - from: relic-3
@@ -4528,6 +5311,13 @@ edges:
   source: wiki:Relics
   confidence: uncertain
 - from: relic-7
+  to: attacks
+  rel: boosts
+  op: add
+  note: (Boosts) Attacks Lap Speed Mult
+  source: wiki:Relics
+  confidence: uncertain
+- from: relic-7
   to: lap-speed
   rel: boosts
   op: add
@@ -4535,7 +5325,14 @@ edges:
   source: wiki:Relics
   confidence: uncertain
 - from: relic-9
-  to: gold
+  to: gold-gain
+  rel: boosts
+  op: add
+  note: (Boosts) Gold Gain (from Attacks)
+  source: wiki:Relics
+  confidence: uncertain
+- from: relic-9
+  to: attacks
   rel: boosts
   op: add
   note: (Boosts) Gold Gain (from Attacks)
@@ -4553,6 +5350,14 @@ edges:
   rel: boosts
   op: add
   note: Supernova Bonuses (are) Powered to X
+  source: wiki:Relics
+  confidence: uncertain
+- from: relic-13
+  to: attacks
+  rel: boosts
+  op: add
+  note: Increases Exponent in (Attacks) Base Damage Formula Increases the Exponent in the Formula shown
+    on the Relic tab, which improves Base Damage in Attacks
   source: wiki:Relics
   confidence: uncertain
 - from: relic-15
@@ -4594,6 +5399,13 @@ edges:
   note: Multiplies mult gain for attacks
   source: wiki:Relics
   confidence: uncertain
+- from: relic-16
+  to: attacks
+  rel: boosts
+  op: add
+  note: Multiplies mult gain for attacks
+  source: wiki:Relics
+  confidence: uncertain
 - from: relic-17
   to: relic-9
   rel: boosts
@@ -4602,7 +5414,7 @@ edges:
   source: wiki:Relics
   confidence: provisional
 - from: relic-17
-  to: gold
+  to: gold-gain
   rel: boosts
   op: mult
   note: Relic 9 is powered to X (Improves gold gain)
@@ -4613,6 +5425,21 @@ edges:
   rel: boosts
   op: add
   note: Increases Ascension Power of Attacks Revolutions
+  source: wiki:Relics
+  confidence: uncertain
+- from: relic-18
+  to: attacks
+  rel: boosts
+  op: add
+  note: Increases Ascension Power of Attacks Revolutions
+  source: wiki:Relics
+  confidence: uncertain
+- from: relic-19
+  to: attacks
+  rel: boosts
+  op: exp
+  note: Tetrates (Attacks) damage formula first divider Reduces the divider in the Formula shown on the
+    Relic tab, which improves Base Damage in Attacks
   source: wiki:Relics
   confidence: uncertain
 - from: relic-20
@@ -4637,7 +5464,7 @@ edges:
   source: wiki:Relics
   confidence: provisional
 - from: relic-21
-  to: gold
+  to: gold-gain
   rel: boosts
   op: add
   note: Empowers Relic 17 Raises Relic 17 effect to a power (^) Improves Gold Gain
@@ -4651,28 +5478,28 @@ edges:
   source: wiki:Relics
   confidence: provisional
 - from: relic-24
-  to: game-speed
+  to: donut-game-speed
   rel: boosts
   op: add
   note: Empowers Game Speed Donut Raises Game Speed Donut effect to a power (^)
   source: wiki:Relics
   confidence: uncertain
 - from: relic-25
-  to: luck
+  to: donut-luck
   rel: boosts
   op: add
   note: Empowers Luck Donut Raises Luck Donut effect to a power (^)
   source: wiki:Relics
   confidence: uncertain
 - from: relic-26
-  to: quality
+  to: donut-quality
   rel: boosts
   op: add
   note: Empowers Quality Donut Raises Quality Donut effect to a power (^)
   source: wiki:Relics
   confidence: uncertain
 - from: relic-27
-  to: zodiac-exp-factor
+  to: donut-zodiac-exp-factor
   rel: boosts
   op: add
   note: Empowers last Donut Raises Zodiac Exp. Factor Donut effect to a power (^)
@@ -4693,7 +5520,14 @@ edges:
   source: wiki:Relics
   confidence: provisional
 - from: relic-34
-  to: runes
+  to: planet-sun
+  rel: boosts
+  op: add
+  note: Sun and Moon runes gain speed
+  source: wiki:Relics
+  confidence: uncertain
+- from: relic-34
+  to: rune-moon
   rel: boosts
   op: add
   note: Sun and Moon runes gain speed
@@ -4706,6 +5540,13 @@ edges:
   note: Adds base to Refine Node 2 (Attacks bulk leveling)
   source: wiki:Relics
   confidence: provisional
+- from: relic-38
+  to: attacks
+  rel: boosts
+  op: add
+  note: Adds base to Refine Node 2 (Attacks bulk leveling)
+  source: wiki:Relics
+  confidence: uncertain
 - from: relic-40
   to: relic-30
   rel: boosts
@@ -4736,6 +5577,13 @@ edges:
   confidence: uncertain
 - from: relic-50
   to: relic-38
+  rel: boosts
+  op: add
+  note: Multiplies Relic 38's effect (Attacks bulk leveling)
+  source: wiki:Relics
+  confidence: uncertain
+- from: relic-50
+  to: attacks
   rel: boosts
   op: add
   note: Multiplies Relic 38's effect (Attacks bulk leveling)
@@ -4823,11 +5671,23 @@ edges:
   rel: requires
   source: wiki:Minerals/Refine_Tree
   confidence: documented
+- from: refine-node-2
+  to: attacks
+  rel: boosts
+  note: Now you can bulk attacks (x10.00)
+  source: wiki:Minerals/Refine_Tree
+  confidence: uncertain
 - from: refine-node-1
   to: refine-node-3
   rel: requires
   source: wiki:Minerals/Refine_Tree
   confidence: documented
+- from: refine-node-3
+  to: attacks
+  rel: boosts
+  note: Attacks Prestige is a bit stronger
+  source: wiki:Minerals/Refine_Tree
+  confidence: uncertain
 - from: refine-node-2
   to: refine-node-4
   rel: requires
@@ -4854,7 +5714,7 @@ edges:
   source: wiki:Minerals/Refine_Tree
   confidence: documented
 - from: refine-node-7
-  to: gold
+  to: gold-gain
   rel: boosts
   note: Gold Gain common mineral upgrade effect is powered to ^2.00
   source: wiki:Minerals/Refine_Tree
@@ -4979,6 +5839,18 @@ edges:
   source: wiki:Minerals/Refine_Tree
   confidence: uncertain
 - from: refine-node-21
+  to: unity
+  rel: boosts
+  note: Gold on Unity (in Attacks) is multiplied by seconds since last Unity
+  source: wiki:Minerals/Refine_Tree
+  confidence: uncertain
+- from: refine-node-21
+  to: attacks
+  rel: boosts
+  note: Gold on Unity (in Attacks) is multiplied by seconds since last Unity
+  source: wiki:Minerals/Refine_Tree
+  confidence: uncertain
+- from: refine-node-21
   to: refine-node-22
   rel: requires
   source: wiki:Minerals/Refine_Tree
@@ -5089,6 +5961,12 @@ edges:
   note: Get 100% of your Gold on Unity every second
   source: wiki:Minerals/Refine_Tree
   confidence: uncertain
+- from: refine-node-33
+  to: unity
+  rel: boosts
+  note: Get 100% of your Gold on Unity every second
+  source: wiki:Minerals/Refine_Tree
+  confidence: uncertain
 - from: refine-node-29
   to: refine-node-34
   rel: requires
@@ -5167,6 +6045,12 @@ edges:
   rel: requires
   source: wiki:Minerals/Refine_Tree
   confidence: documented
+- from: refine-node-45
+  to: trials
+  rel: boosts
+  note: PP Gain Bonus from Trials is much bigger now
+  source: wiki:Minerals/Refine_Tree
+  confidence: uncertain
 - from: refine-node-32
   to: refine-node-46
   rel: requires
@@ -5178,7 +6062,7 @@ edges:
   source: wiki:Minerals/Refine_Tree
   confidence: documented
 - from: refine-node-47
-  to: runes
+  to: rune-sun
   rel: boosts
   note: Sun runes generation is 1.2x faster
   source: wiki:Minerals/Refine_Tree
@@ -5189,7 +6073,7 @@ edges:
   source: wiki:Minerals/Refine_Tree
   confidence: documented
 - from: refine-node-48
-  to: runes
+  to: rune-moon
   rel: boosts
   note: Moon runes generation is 1.2x faster
   source: wiki:Minerals/Refine_Tree
@@ -5293,6 +6177,12 @@ edges:
   note: Keep Dilation Tree and DTP on Unity Reset
   source: wiki:Minerals/Refine_Tree
   confidence: uncertain
+- from: refine-node-63
+  to: unity
+  rel: boosts
+  note: Keep Dilation Tree and DTP on Unity Reset
+  source: wiki:Minerals/Refine_Tree
+  confidence: uncertain
 - from: refine-node-61
   to: refine-node-64
   rel: requires
@@ -5330,6 +6220,12 @@ edges:
   rel: requires
   source: wiki:Minerals/Refine_Tree
   confidence: documented
+- from: refine-node-68
+  to: attack-level
+  rel: boosts
+  note: For every 100,000 attack levels gained reduce your SM Spawned Factor by 1
+  source: wiki:Minerals/Refine_Tree
+  confidence: uncertain
 - from: refine-node-68
   to: refine-node-69
   rel: requires
@@ -5887,7 +6783,7 @@ edges:
   source: wiki:Minerals/Refine_Tree
   confidence: uncertain
 - from: tarot-ace-of-swords
-  to: mult-gain
+  to: attack-mult
   rel: boosts
   note: Attack Mult Gain from VP +^
   source: wiki:Tarot
@@ -5899,6 +6795,12 @@ edges:
   targets_effect: 0
   source: wiki:Tarot
   confidence: provisional
+- from: tarot-two-of-swords
+  to: attacks
+  rel: boosts
+  note: Attacks Ascend Power from VP +^
+  source: wiki:Tarot
+  confidence: uncertain
 - from: tarot-three-of-swords
   to: tarot-two-of-swords
   rel: boosts
@@ -5906,6 +6808,12 @@ edges:
   targets_effect: 0
   source: wiki:Tarot
   confidence: provisional
+- from: tarot-three-of-swords
+  to: attacks
+  rel: boosts
+  note: Attacks Prestige Power +^
+  source: wiki:Tarot
+  confidence: uncertain
 - from: tarot-four-of-swords
   to: tarot-three-of-swords
   rel: boosts
@@ -6117,7 +7025,7 @@ edges:
   source: wiki:Tarot
   confidence: provisional
 - from: tarot-ace-of-pentacles
-  to: gold
+  to: gold-gain
   rel: boosts
   note: Gold Gain +^
   source: wiki:Tarot
@@ -6156,7 +7064,7 @@ edges:
   source: wiki:Tarot
   confidence: provisional
 - from: tarot-four-of-pentacles
-  to: luck
+  to: donut-luck
   rel: boosts
   note: Luck Donut Power +^
   source: wiki:Tarot
@@ -6449,6 +7357,20 @@ edges:
   note: Makes Polish Knuckles +# (base 40.00) levels effective
   source: wiki:Tarot
   confidence: uncertain
+- from: tarot-temperance
+  to: planet-fortune-pars
+  rel: boosts
+  note: 'Add # (base 3.000) zodiacs of that type which is in your Fortune Pars slot, but with stats you''d
+    get on Unity'
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-temperance
+  to: unity
+  rel: boosts
+  note: 'Add # (base 3.000) zodiacs of that type which is in your Fortune Pars slot, but with stats you''d
+    get on Unity'
+  source: wiki:Tarot
+  confidence: uncertain
 - from: tarot-the-star
   to: luck
   rel: boosts
@@ -6459,6 +7381,13 @@ edges:
   to: tarot-the-star
   rel: boosts
   note: Multiplies Your Luck by amount of stars you have powered to ^# (base 0.400)
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-the-moon
+  to: planet-moon
+  rel: boosts
+  note: Upgrades zodiac on moon postiton (position) x# (base 1,000) quality. But it's weaker after e1,000
+    quality
   source: wiki:Tarot
   confidence: uncertain
 - from: tarot-the-moon
@@ -6528,6 +7457,12 @@ edges:
   note: Increase Ascension Power from VP based on you current fire
   source: wiki:Elements
   confidence: uncertain
+- from: fire-node-3
+  to: attack-level
+  rel: boosts
+  note: 'Attack level past 3600 boosts Fire generation Formula is:'
+  source: wiki:Elements
+  confidence: uncertain
 - from: fire-node-4
   to: relic-26
   rel: boosts
@@ -6535,7 +7470,7 @@ edges:
   source: wiki:Elements
   confidence: provisional
 - from: fire-node-4
-  to: quality
+  to: donut-quality
   rel: boosts
   note: Fire boosts Relic 26 effect (improves Quality donut)
   source: wiki:Elements
@@ -6571,7 +7506,7 @@ edges:
   source: wiki:Elements
   confidence: provisional
 - from: earth-node-3
-  to: gold
+  to: gold-gain
   rel: boosts
   note: Earth boosts Gold Gain
   source: wiki:Elements
@@ -6607,7 +7542,7 @@ edges:
   source: wiki:Elements
   confidence: provisional
 - from: wind-node-3
-  to: luck
+  to: donut-luck
   rel: boosts
   note: Wind boosts Relic 25 effect (Luck donut)
   source: wiki:Elements
@@ -6624,6 +7559,12 @@ edges:
   note: Relic 1 now also applies to Attacks Asc. Power
   source: wiki:Elements
   confidence: provisional
+- from: wind-node-6
+  to: attacks
+  rel: boosts
+  note: Relic 1 now also applies to Attacks Asc. Power
+  source: wiki:Elements
+  confidence: uncertain
 - from: wind-node-10
   to: relic-41
   rel: boosts
@@ -6661,7 +7602,7 @@ edges:
   source: wiki:Elements
   confidence: provisional
 - from: water-node-3
-  to: game-speed
+  to: donut-game-speed
   rel: boosts
   note: Water boosts Relic 24 effect (Game Speed Donut)
   source: wiki:Elements
@@ -6689,7 +7630,7 @@ edges:
   source: wiki:Minerals
   confidence: uncertain
 - from: special-mineral-yellow-gem
-  to: gold
+  to: gold-gain
   rel: boosts
   source: wiki:Minerals
   confidence: uncertain
@@ -6720,6 +7661,16 @@ edges:
   confidence: uncertain
 - from: zodiac-taurus
   to: infinity-points
+  rel: boosts
+  source: wiki:Zodiacs
+  confidence: uncertain
+- from: zodiac-taurus
+  to: infinities
+  rel: boosts
+  source: wiki:Zodiacs
+  confidence: uncertain
+- from: zodiac-gemini
+  to: eternities
   rel: boosts
   source: wiki:Zodiacs
   confidence: uncertain
@@ -6765,6 +7716,11 @@ edges:
   confidence: uncertain
 - from: zodiac-virgo
   to: star-base
+  rel: boosts
+  source: wiki:Zodiacs
+  confidence: uncertain
+- from: zodiac-virgo
+  to: infinities
   rel: boosts
   source: wiki:Zodiacs
   confidence: uncertain
@@ -6863,13 +7819,28 @@ edges:
   rel: boosts
   source: wiki:Trials
   confidence: uncertain
+- from: trial-easy-trial-2
+  to: trials
+  rel: boosts
+  source: wiki:Trials
+  confidence: uncertain
 - from: trial-easy-trial-3
   to: common-exponent
   rel: boosts
   source: wiki:Trials
   confidence: uncertain
+- from: trial-easy-trial-4
+  to: planet-mars
+  rel: boosts
+  source: wiki:Trials
+  confidence: uncertain
 - from: trial-easy-trial-5
   to: max-score
+  rel: boosts
+  source: wiki:Trials
+  confidence: uncertain
+- from: trial-easy-trial-6
+  to: planet-shop
   rel: boosts
   source: wiki:Trials
   confidence: uncertain
@@ -6885,6 +7856,11 @@ edges:
   confidence: uncertain
 - from: trial-medium-trial-3
   to: dilation-tree-points
+  rel: boosts
+  source: wiki:Trials
+  confidence: uncertain
+- from: trial-medium-trial-4
+  to: unity
   rel: boosts
   source: wiki:Trials
   confidence: uncertain
@@ -6918,8 +7894,23 @@ edges:
   rel: boosts
   source: wiki:Trials
   confidence: uncertain
+- from: trial-insane-trial-1
+  to: trials
+  rel: boosts
+  source: wiki:Trials
+  confidence: uncertain
 - from: trial-insane-trial-2
   to: eternity-challenges
+  rel: boosts
+  source: wiki:Trials
+  confidence: uncertain
+- from: trial-insane-trial-2
+  to: unity
+  rel: boosts
+  source: wiki:Trials
+  confidence: uncertain
+- from: trial-insane-trial-2
+  to: trials
   rel: boosts
   source: wiki:Trials
   confidence: uncertain
@@ -6948,13 +7939,23 @@ edges:
   rel: boosts
   source: wiki:Trials
   confidence: uncertain
+- from: trial-insane-trial-5
+  to: du-power
+  rel: boosts
+  source: wiki:Trials
+  confidence: uncertain
+- from: trial-insane-trial-6
+  to: unity
+  rel: boosts
+  source: wiki:Trials
+  confidence: uncertain
 - from: trial-insane-trial-6
   to: game-speed
   rel: boosts
   source: wiki:Trials
   confidence: uncertain
 - from: plague-stat-max-stage-completed
-  to: gold
+  to: gold-gain
   rel: boosts
   source: wiki:Plague
   confidence: uncertain
@@ -7034,7 +8035,7 @@ edges:
   source: wiki:Singularity
   confidence: uncertain
 - from: singularity-tree-2
-  to: gold
+  to: gold-gain
   rel: boosts
   source: wiki:Singularity
   confidence: uncertain
@@ -7058,8 +8059,18 @@ edges:
   rel: boosts
   source: wiki:Singularity
   confidence: uncertain
+- from: singularity-tree-7-1
+  to: zodiac-level
+  rel: boosts
+  source: wiki:Singularity
+  confidence: uncertain
 - from: singularity-tree-7-2
   to: singularity
+  rel: boosts
+  source: wiki:Singularity
+  confidence: uncertain
+- from: singularity-tree-7-2
+  to: zodiac-level
   rel: boosts
   source: wiki:Singularity
   confidence: uncertain
@@ -7467,6 +8478,766 @@ edges:
   to: stars
   rel: boosts
   source: wiki:Infinity
+  confidence: uncertain
+- from: tarot-challenge-ace-of-swords
+  to: attack-level
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-challenge-two-of-swords
+  to: game-speed
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-challenge-two-of-swords
+  to: attack-level
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-challenge-three-of-swords
+  to: game-speed
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-challenge-three-of-swords
+  to: attack-level
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-challenge-four-of-swords
+  to: attack-level
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-challenge-four-of-swords
+  to: attack-mult
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-challenge-four-of-swords
+  to: game-speed
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-challenge-four-of-swords
+  to: mult-gain
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-challenge-five-of-swords
+  to: attack-level
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-challenge-five-of-swords
+  to: attack-mult
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-challenge-five-of-swords
+  to: game-speed
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-challenge-five-of-swords
+  to: mult-gain
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-challenge-six-of-swords
+  to: attack-level
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-challenge-six-of-swords
+  to: gold
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-challenge-six-of-swords
+  to: attack-mult
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-challenge-six-of-swords
+  to: game-speed
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-challenge-six-of-swords
+  to: ascension-power
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-challenge-six-of-swords
+  to: gold-gain
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-challenge-seven-of-swords
+  to: attack-level
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-challenge-seven-of-swords
+  to: gold
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-challenge-seven-of-swords
+  to: attack-mult
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-challenge-seven-of-swords
+  to: game-speed
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-challenge-seven-of-swords
+  to: gold-gain
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-challenge-seven-of-swords
+  to: ascension-power
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: attack-level
+  to: tarot-challenge-seven-of-swords
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-challenge-eight-of-swords
+  to: attack-level
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-challenge-eight-of-swords
+  to: attack-mult
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-challenge-eight-of-swords
+  to: ascension-power
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-challenge-eight-of-swords
+  to: mult-gain
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-challenge-nine-of-swords
+  to: attack-level
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-challenge-nine-of-swords
+  to: attack-mult
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-challenge-nine-of-swords
+  to: score
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-challenge-nine-of-swords
+  to: game-speed
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-challenge-ten-of-swords
+  to: attack-level
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-challenge-ten-of-swords
+  to: attack-mult
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-challenge-ten-of-swords
+  to: game-speed
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-challenge-ten-of-swords
+  to: mult-gain
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-challenge-page-of-swords
+  to: attack-level
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-challenge-page-of-swords
+  to: attack-mult
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-challenge-page-of-swords
+  to: game-speed
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-challenge-page-of-swords
+  to: mult-gain
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-challenge-knight-of-swords
+  to: attack-level
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-challenge-knight-of-swords
+  to: attack-mult
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-challenge-knight-of-swords
+  to: game-speed
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-challenge-knight-of-swords
+  to: mult-gain
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-challenge-queen-of-swords
+  to: attack-level
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-challenge-queen-of-swords
+  to: attack-mult
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-challenge-queen-of-swords
+  to: game-speed
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-challenge-queen-of-swords
+  to: mult-gain
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: singularity
+  to: tarot-challenge-queen-of-swords
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-challenge-king-of-swords
+  to: attack-level
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-challenge-king-of-swords
+  to: attack-mult
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-challenge-king-of-swords
+  to: game-speed
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-challenge-king-of-swords
+  to: mult-gain
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: singularity
+  to: tarot-challenge-king-of-swords
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: attack-level
+  to: tarot-challenge-king-of-swords
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-challenge-king-of-swords
+  to: singularity
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-challenge-ace-of-wands
+  to: relic-36
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-challenge-two-of-wands
+  to: relic-36
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-challenge-three-of-wands
+  to: relic-36
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-challenge-six-of-wands
+  to: fire-node-3
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-challenge-six-of-wands
+  to: wind-node-4
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-challenge-six-of-wands
+  to: relic-36
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-challenge-seven-of-wands
+  to: relic-36
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-challenge-seven-of-wands
+  to: game-speed
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-challenge-eight-of-wands
+  to: relic-36
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-challenge-eight-of-wands
+  to: game-speed
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-challenge-nine-of-wands
+  to: relic-36
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-challenge-nine-of-wands
+  to: game-speed
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-challenge-ten-of-wands
+  to: relic-36
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-challenge-ten-of-wands
+  to: game-speed
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-challenge-knight-of-wands
+  to: relic-36
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-challenge-knight-of-wands
+  to: game-speed
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-challenge-queen-of-wands
+  to: singularity
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-challenge-king-of-wands
+  to: singularity
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-challenge-two-of-pentacles
+  to: relic-23
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-challenge-three-of-pentacles
+  to: relic-14
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-challenge-three-of-pentacles
+  to: relic-31
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-challenge-three-of-pentacles
+  to: game-speed
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-challenge-six-of-pentacles
+  to: gold
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-challenge-six-of-pentacles
+  to: relic-14
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-challenge-six-of-pentacles
+  to: relic-31
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-challenge-six-of-pentacles
+  to: gold-gain
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-challenge-seven-of-pentacles
+  to: gold
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-challenge-seven-of-pentacles
+  to: relic-14
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-challenge-seven-of-pentacles
+  to: relic-31
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-challenge-seven-of-pentacles
+  to: gold-gain
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-challenge-seven-of-pentacles
+  to: game-speed
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-challenge-eight-of-pentacles
+  to: gold
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-challenge-eight-of-pentacles
+  to: relic-14
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-challenge-eight-of-pentacles
+  to: relic-31
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-challenge-eight-of-pentacles
+  to: attack-level
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-challenge-ten-of-pentacles
+  to: game-speed
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-challenge-ten-of-pentacles
+  to: relic-22
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-challenge-knight-of-pentacles
+  to: game-speed
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-challenge-knight-of-pentacles
+  to: relic-22
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-challenge-queen-of-pentacles
+  to: singularity
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-challenge-queen-of-pentacles
+  to: relic-22
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-challenge-king-of-pentacles
+  to: singularity
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-challenge-king-of-pentacles
+  to: relic-22
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-challenge-ace-of-cups
+  to: unity
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-challenge-two-of-cups
+  to: unity
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-challenge-two-of-cups
+  to: luck
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-challenge-three-of-cups
+  to: unity
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-challenge-three-of-cups
+  to: luck
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-challenge-four-of-cups
+  to: unity
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-challenge-four-of-cups
+  to: luck
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-challenge-five-of-cups
+  to: unity
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-challenge-six-of-cups
+  to: unity
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-challenge-seven-of-cups
+  to: unity
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-challenge-seven-of-cups
+  to: luck
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-challenge-eight-of-cups
+  to: unity
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-challenge-eight-of-cups
+  to: luck
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-challenge-eight-of-cups
+  to: quality
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-challenge-nine-of-cups
+  to: unity
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-challenge-nine-of-cups
+  to: relic-8
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-challenge-ten-of-cups
+  to: unity
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-challenge-page-of-cups
+  to: unity
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-challenge-knight-of-cups
+  to: unity
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-challenge-queen-of-cups
+  to: unity
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-challenge-queen-of-cups
+  to: singularity
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-challenge-king-of-cups
+  to: unity
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: singularity
+  to: tarot-challenge-king-of-cups
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-challenge-king-of-cups
+  to: singularity
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-challenge-king-of-cups
+  to: zodiac-level
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-challenge-the-high-priestess
+  to: relic-22
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-challenge-the-empress
+  to: astrodust
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-challenge-the-emperor
+  to: relic-14
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-challenge-the-emperor
+  to: relic-31
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-challenge-the-lovers
+  to: relic-28
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-challenge-justice
+  to: sms-factor
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-challenge-wheel-of-fortune
+  to: tarot-draws
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-challenge-strength
+  to: attack-level
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-challenge-strength
+  to: attack-mult
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-challenge-strength
+  to: game-speed
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-challenge-strength
+  to: mult-gain
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-challenge-strength
+  to: attack-exponent
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: attack-level
+  to: tarot-challenge-strength
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-challenge-temperance
+  to: planet-fortune-pars
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-challenge-the-tower
+  to: relic-67
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-challenge-the-tower
+  to: score
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-challenge-the-tower
+  to: plague
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-challenge-the-star
+  to: singularity
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-challenge-the-star
+  to: unity
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-challenge-the-star
+  to: donut-luck
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-challenge-the-moon
+  to: singularity
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-challenge-the-moon
+  to: unity
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-challenge-the-moon
+  to: quality
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-challenge-the-moon
+  to: planet-moon
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: quality
+  to: tarot-challenge-the-moon
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: planet-moon
+  to: tarot-challenge-the-moon
+  rel: boosts
+  source: wiki:Tarot
   confidence: uncertain
 - from: infinity-challenge-2
   to: ascension-power

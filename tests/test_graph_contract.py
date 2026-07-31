@@ -180,15 +180,20 @@ def test_the_sweep_reached_the_graph(graph: dict):
 
 def test_the_plague_statistics_table_wires_plague_into_the_graph(graph: dict):
     # Its six rows are the only thing connecting the Plague system to anything
-    # else. "Max Stage Completed -> Gold Gain ^" is the clearest: `gold` is a
-    # curated node, so this edge must exist or the sweep read the table and
-    # resolved nothing out of it.
+    # else. "Max Stage Completed -> Gold Gain ^" is the clearest: this edge must
+    # exist or the sweep read the table and resolved nothing out of it.
+    #
+    # It lands on `gold-gain`, not on `gold`. Both are curated and both match
+    # that cell, but the vocabulary tries longer surface forms first and a match
+    # claims its span, so "Gold Gain" wins over the "Gold" inside it. Asserting
+    # the more specific target is what makes this test notice if that ordering
+    # ever stops holding.
     stat = next(
         n for n in graph["nodes"] if n["id"] == "plague-stat-max-stage-completed"
     )
     assert stat["kind"] == "stat"
     assert any(
-        e["from"] == "plague-stat-max-stage-completed" and e["to"] == "gold"
+        e["from"] == "plague-stat-max-stage-completed" and e["to"] == "gold-gain"
         for e in graph["edges"]
     )
 
@@ -242,7 +247,7 @@ def test_every_swept_edge_is_uncertain(graph: dict):
         for e in graph["edges"]
         if e["source"] in swept_sources and e["from"].startswith(swept_prefixes)
     ]
-    assert len(swept) == 99, f"expected 99 swept edges, got {len(swept)}"
+    assert len(swept) == 111, f"expected 111 swept edges, got {len(swept)}"
     assert all(e.get("confidence") == "uncertain" for e in swept)
 
 
@@ -314,3 +319,80 @@ def test_a_dilation_node_kept_its_rowspan_name(graph: dict):
     # "Top 2" only exists if the rowspan carry-forward works: that row's own
     # cells are ["2", effect, per_level] with no axis of its own.
     assert any(n["id"] == "dilation-node-top-2" for n in graph["nodes"])
+
+
+def test_attacks_hangs_off_unity(graph: dict):
+    # The wiki files Attacks under Unity, and the sidebar reads its nesting
+    # straight off this parent. Declared at the root it renders as a fifth
+    # prestige layer beside Revolution, Infinity, Eternity and Unity.
+    attacks = next(s for s in graph["systems"] if s["id"] == "attacks")
+    assert attacks["parent"] == "unity"
+
+
+def test_a_rune_claims_its_own_words_before_a_planet_can(graph: dict):
+    # "Sun runes generation is 1.2x faster" and "Moon runes ..." are about runes,
+    # but Sun and Moon are also Planets. The rune nodes exist so that the longer
+    # surface claims the span first. Relic 34 is the one sentence this cannot
+    # reach — it says "Sun and Moon runes", so "Sun runes" is never contiguous and
+    # a suppression carries that case instead.
+    pairs = {(e["from"], e["to"]) for e in graph["edges"]}
+    assert ("refine-node-47", "rune-sun") in pairs
+    assert ("refine-node-48", "rune-moon") in pairs
+    assert ("refine-node-47", "planet-sun") not in pairs
+    assert ("refine-node-48", "planet-moon") not in pairs
+    assert ("relic-34", "rune-sun") in pairs
+    assert ("relic-34", "planet-sun") not in pairs
+
+
+def test_a_planet_shop_feature_does_not_capture_the_bare_gerund(graph: dict):
+    # The shop's features are called Merging, Enhancing, Redistribution and
+    # Sacrificing on the wiki. Nodes named that way also match "merging special
+    # minerals" and "Sacrificing relics", which are unrelated mechanics, so each
+    # node carries the qualified name the surrounding page implies.
+    for node_id, name in (
+        ("feature-merging", "Zodiac Merging"),
+        ("feature-enhancing", "Zodiac Enhancing"),
+        ("feature-redistribution", "Zodiac Redistribution"),
+        ("feature-sacrificing", "Zodiac Sacrificing"),
+    ):
+        node = next(n for n in graph["nodes"] if n["id"] == node_id)
+        assert node["name"] == name
+    pairs = {(e["from"], e["to"]) for e in graph["edges"]}
+    assert ("relic-45", "feature-merging") not in pairs
+    assert ("refine-node-66", "feature-sacrificing") not in pairs
+
+
+def test_every_planet_bonus_names_the_season_that_grants_it(graph: dict):
+    # A Planet's four bonuses are one per Zodiac season, and the season lives only
+    # in the column heading of the wiki's table. Dropped, each Planet states four
+    # bonuses and nothing records which season earns which — so the season is
+    # written into the effect text itself.
+    seasons = ("(Spring)", "(Summer)", "(Autumn)", "(Winter)")
+    planets = [
+        n
+        for n in graph["nodes"]
+        if n["id"].startswith("planet-") and n["id"] != "planet-shop"
+    ]
+    assert len(planets) == 12
+    for planet in planets:
+        labelled = [
+            e["text"] for e in planet["effects"] if e["text"].endswith(seasons)
+        ]
+        # Fortune Pars grants one bonus in every season rather than four.
+        assert len(labelled) == 4 or planet["id"] == "planet-fortune-pars"
+
+
+def test_the_attack_damage_formula_converges_on_one_node(graph: dict):
+    # The Attacks page multiplies four separate stats into a single Total Attack
+    # Base Damage. Each is a node in its own right because relics and tarot cards
+    # boost them individually, so the convergence is the only place the graph
+    # records that they are factors of one product.
+    pairs = {(e["from"], e["to"]) for e in graph["edges"]}
+    for factor in (
+        "attack-mult",
+        "score-damage-mult",
+        "cumulative-mult",
+        "attack-exponent",
+    ):
+        assert (factor, "attack-base-damage") in pairs
+    assert ("attack-base-damage", "attack-level") in pairs

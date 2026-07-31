@@ -22,8 +22,12 @@ const doc = JSON.parse(
 ) as GraphDocument;
 const index = buildIndex(doc);
 
+// This sweeps every node in the shipped graph at all three depths, so its cost
+// grows with the corpus and it will drift past any default. The budget is
+// declared rather than left implicit: a timeout here reports as a bare failure
+// with no assertion message, which reads like a real defect and is not one.
 describe('ego -> breakCycles -> layout', () => {
-  it('positions every node of every ego graph at every selectable depth', () => {
+  it('positions every node of every ego graph at every selectable depth', { timeout: 120_000 }, () => {
     for (const rootId of index.order) {
       for (const depth of [1, 2, 3]) {
         const subgraph = ego(index, rootId, depth);

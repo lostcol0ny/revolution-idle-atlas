@@ -47,7 +47,14 @@
 #     `dilation-upgrade-1` through `-9` twice. The page's Dilation penalties are
 #     a bulleted list, so no reader here can see those either.
 #
-# Tables surveyed but deliberately excluded from all eight swept pages:
+#   Unity — the hub page. Prose and a {{Keyword}} glossary, no table. Its four
+#     Unity Bonuses, the Planet Shop donuts and the unlock ladder it states
+#     ("Attacks are unlocked after completing 15 trials") are curated.
+#
+#   Planet_Shop — prose for the four donuts and the four zodiac features, plus
+#     code blocks of formulae. No table.
+#
+# Tables surveyed but deliberately excluded from all nine swept pages:
 #
 #   Singularity — Atom Threshold|Base Value|Resource Affected|Modifiable?*|Modification Source (14 rows)
 #     The "Resource Affected" column names other graph nodes, but the table
@@ -96,6 +103,34 @@
 #
 #   Zodiacs — Rarity|Range Start|Range Start for +1000 rarity|... (5 rows)
 #     Same pattern extended to post-Immortal rarities (Ethereal, Amazing, etc.).
+#
+#   Planets — Season|Spring|Summer|Autumn|Winter (12 rows)
+#     Readable, but only by losing the thing that makes it meaningful. Each
+#     planet's four cells are one bonus per zodiac season, and the season is
+#     named in the column header, which the reader drops once it has used it to
+#     find the column. Swept, Sun would state four unattributed bonuses and
+#     nothing would record that "Zodiac Quality x1.5" is the Spring one. The
+#     twelve planets are curated instead, each effect labelled with its season.
+#
+#   Tarot — Upgrade|Effect|Effect scaling|Base Cost|Cost Scaling|Max Level (36 rows)
+#     Four suits each number their upgrades 1-9 inside a single wikitable, split
+#     only by colspan caption rows the reader skips. All four would mint
+#     `tarot-upgrade-1` through `-9`, so 27 of the 36 would lose to the
+#     duplicate-id guard. Nothing in a manifest entry can borrow the suit from
+#     the caption row above.
+#
+#   Tarot — Arcan Card|Effect 1|Effect 2 (19 rows)
+#     Passive effects belonging to Arcan cards the Tarot parser already mints as
+#     `tarot-the-fool` and so on. Swept under any other id prefix they would put
+#     a second node named "The Fool" in the graph; swept under the same one they
+#     would lose to the existing node in emit's first-wins dedup. Attaching a
+#     second effect to an already-extracted node is not something a manifest
+#     entry can express.
+#
+#   Tarot — Part #|Part Name|Effect|Part Name|Effect|... (Artifact Parts)
+#     Four artifacts laid side by side, so `Part Name` and `Effect` each appear
+#     four times. The duplicate-header guard skips the table rather than read
+#     the last quarter and silently drop the other three.
 pages:
   - reader: record_template
     page: Minerals
@@ -212,6 +247,21 @@ pages:
     id_prefix: infinity-upgrade
     name_columns: [Code, Name]
     effect_columns: [Effect]
+
+  # Five tables, one per suit, sharing three columns. Every row is named for the
+  # card that gates the challenge, so the 75 ids are distinct without a suit to
+  # disambiguate them, and they do not collide with the `tarot-<card>` nodes the
+  # Tarot parser mints. `Penalty` is swept even though it is a restriction: here
+  # it is also the only text naming what the challenge touches, and the
+  # completion requirement beside it names the resource that has to be reached.
+  - reader: wikitable
+    page: Tarot
+    system: tarot
+    kind: upgrade
+    id_prefix: tarot-challenge
+    name_prefix: Tarot Challenge
+    name_columns: [Challenge]
+    effect_columns: [Penalty, Completion Requirement]
 
   # Rows are numbered "1".."9", so name_prefix supplies the noun. As on Trials,
   # `Handicap` is deliberately not swept — it is the restriction the challenge

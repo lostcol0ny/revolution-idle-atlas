@@ -7145,6 +7145,1206 @@
       "confidence": "provisional",
       "effects": [
         {
+          "text": "Resets Attack Levels. Attack and Damage mults are logarithmed. You cannot gain them during the challenge."
+        },
+        {
+          "text": "Attack Level 1500"
+        }
+      ],
+      "id": "tarot-challenge-ace-of-swords",
+      "kind": "upgrade",
+      "name": "Tarot Challenge Ace of Swords",
+      "system": "tarot",
+      "wiki": "Tarot"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Game Speed, Attack, and Damage mults are put to double Log10 of their values. You cannot gain them during the challenge. (Double Log10 means Log10(Log10(X)).)"
+        },
+        {
+          "text": "Attack Level 400"
+        }
+      ],
+      "id": "tarot-challenge-two-of-swords",
+      "kind": "upgrade",
+      "name": "Tarot Challenge Two of Swords",
+      "system": "tarot",
+      "wiki": "Tarot"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Game Speed, Attack and Damage mults are logarithmed, raised to ^0.05, then divided by 10. You cannot gain them during the challenge."
+        },
+        {
+          "text": "Attack Level 200"
+        }
+      ],
+      "id": "tarot-challenge-three-of-swords",
+      "kind": "upgrade",
+      "name": "Tarot Challenge Three of Swords",
+      "system": "tarot",
+      "wiki": "Tarot"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Resets Attack Levels and attack mults are set to 1. Game speed and other mults are logarithmed. Mult gain is put to double log10."
+        },
+        {
+          "text": "Attack Level 2000"
+        }
+      ],
+      "id": "tarot-challenge-four-of-swords",
+      "kind": "upgrade",
+      "name": "Tarot Challenge Four of Swords",
+      "system": "tarot",
+      "wiki": "Tarot"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Resets Attack Levels and attack mults are set to 1. Game speed and other mults are logarithmed. Mult gain is logarithmed and ^0.2."
+        },
+        {
+          "text": "Attack Level 2026"
+        }
+      ],
+      "id": "tarot-challenge-five-of-swords",
+      "kind": "upgrade",
+      "name": "Tarot Challenge Five of Swords",
+      "system": "tarot",
+      "wiki": "Tarot"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Resets Attack Levels and gold and attack mults are set to 1. Game speed and other mults are logarithmed. Ascension power is reduced to double Log10. Gold gain is logarithmed."
+        },
+        {
+          "text": "Attack Level 2240"
+        }
+      ],
+      "id": "tarot-challenge-six-of-swords",
+      "kind": "upgrade",
+      "name": "Tarot Challenge Six of Swords",
+      "system": "tarot",
+      "wiki": "Tarot"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Resets Attack Levels and gold and attack mults are set to 1. Game speed and gold gain is logarithmed. Other mults are reduced to double Log10. Ascension Power is heavily nerfed, but the penalty weakens based on Attack Level."
+        },
+        {
+          "text": "Attack Level 2525"
+        }
+      ],
+      "id": "tarot-challenge-seven-of-swords",
+      "kind": "upgrade",
+      "name": "Tarot Challenge Seven of Swords",
+      "system": "tarot",
+      "wiki": "Tarot"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Resets Attack Levels and attack mults are set to 1. Ascension Power and all other mults are set to 1. Mult gain only comes from Attack Prestige."
+        },
+        {
+          "text": "Attack Level 7350"
+        }
+      ],
+      "id": "tarot-challenge-eight-of-swords",
+      "kind": "upgrade",
+      "name": "Tarot Challenge Eight of Swords",
+      "system": "tarot",
+      "wiki": "Tarot"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Resets Attack levels and mults. Only attack mult from score is effective, and it is ^(1/1e10). Game Speed is reduced to double Log10."
+        },
+        {
+          "text": "Attack Level 850"
+        }
+      ],
+      "id": "tarot-challenge-nine-of-swords",
+      "kind": "upgrade",
+      "name": "Tarot Challenge Nine of Swords",
+      "system": "tarot",
+      "wiki": "Tarot"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Resets Attack Levels and sets Attack mults to 1. Game speed and other mults are logarithmed. Mult gain is set to Sword's LOGPOW."
+        },
+        {
+          "text": "Attack Level 3200"
+        }
+      ],
+      "id": "tarot-challenge-ten-of-swords",
+      "kind": "upgrade",
+      "name": "Tarot Challenge Ten of Swords",
+      "system": "tarot",
+      "wiki": "Tarot"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Resets Attack Levels and sets Attack mults to 1, Game speed and other multipliers are logarithmed. Mult Gain is set to Sword's LOGPOW twice."
+        },
+        {
+          "text": "Attack Level 2500"
+        }
+      ],
+      "id": "tarot-challenge-page-of-swords",
+      "kind": "upgrade",
+      "name": "Tarot Challenge Page of Swords",
+      "system": "tarot",
+      "wiki": "Tarot"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Resets Attack Levels and sets Attack mults to 1, Game speed and other multipliers are logarithmed. Mult Gain is heavily nerfed, but this penalty becomes weaker based on the spread power of your equipped Endoplasmic Reticulum."
+        },
+        {
+          "text": "Attack Level 2560"
+        }
+      ],
+      "id": "tarot-challenge-knight-of-swords",
+      "kind": "upgrade",
+      "name": "Tarot Challenge Knight of Swords",
+      "system": "tarot",
+      "wiki": "Tarot"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Resets Attack Level and sets Attack mults to 1, Game speed and other multipliers are logarithmed. Mult Gain is heavily nerfed, but this penalty becomes weaker based on your current Singularity Mult"
+        },
+        {
+          "text": "Attack Level 3250"
+        }
+      ],
+      "id": "tarot-challenge-queen-of-swords",
+      "kind": "upgrade",
+      "name": "Tarot Challenge Queen of Swords",
+      "system": "tarot",
+      "wiki": "Tarot"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Requires 1.8e308 Atoms to enter. Resets Attack Level and sets Attack mults to 1, Game speed and other multipliers are logarithmed, then raised to ^0.3, Mult gain is heavily nerfed, but this penalty becomes weaker based on your current Atoms, Entering the challenge performs a Singularity and resets Atoms to 1. Adds a dynamic penalty that heavily nerfs Atom gain, but this becomes weaker based on your current attack level."
+        },
+        {
+          "text": "Perform a Singularity at Attack Level 5005+"
+        }
+      ],
+      "id": "tarot-challenge-king-of-swords",
+      "kind": "upgrade",
+      "name": "Tarot Challenge King of Swords",
+      "system": "tarot",
+      "wiki": "Tarot"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Reset all of your elements. First two element factors, Relic 36, and Global Element mult are logarithmed."
+        },
+        {
+          "text": "1e20 Water"
+        }
+      ],
+      "id": "tarot-challenge-ace-of-wands",
+      "kind": "upgrade",
+      "name": "Tarot Challenge Ace of Wands",
+      "system": "tarot",
+      "wiki": "Tarot"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Reset all of your elements. First two element factors, Relic 36, and Global Element mult are put to double Log10 of their values. Upgrades Fire-3 and Wind-4 are useless. The Magician is disabled."
+        },
+        {
+          "text": "1e9 of all elements"
+        }
+      ],
+      "id": "tarot-challenge-two-of-wands",
+      "kind": "upgrade",
+      "name": "Tarot Challenge Two of Wands",
+      "system": "tarot",
+      "wiki": "Tarot"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Reset all of your elements. First two element factors, Relic 36, and Global Element mult are put to double Log10 of their values, and divided by 1000. Upgrades Fire-3 and Wind-4 are useless. The Magician is disabled."
+        },
+        {
+          "text": "100 of all elements"
+        }
+      ],
+      "id": "tarot-challenge-three-of-wands",
+      "kind": "upgrade",
+      "name": "Tarot Challenge Three of Wands",
+      "system": "tarot",
+      "wiki": "Tarot"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Reset all of your elements except Earth and Water. Global Element Mult is divided by 1e10000."
+        },
+        {
+          "text": "1e4600 Fire"
+        }
+      ],
+      "id": "tarot-challenge-four-of-wands",
+      "kind": "upgrade",
+      "name": "Tarot Challenge Four of Wands",
+      "system": "tarot",
+      "wiki": "Tarot"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Resets all elements to 1. Global Element mult is nerfed a lot, but it increases the more elements you have."
+        },
+        {
+          "text": "1e5000+ Wind"
+        }
+      ],
+      "id": "tarot-challenge-five-of-wands",
+      "kind": "upgrade",
+      "name": "Tarot Challenge Five of Wands",
+      "system": "tarot",
+      "wiki": "Tarot"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Resets all elements to 0. All factors are set to 1 and Global Element mult is set to 1/1e10 for the duration of the challenge. The Magician, Fire Node 3, Wind Node 4, and Relic 36 are useless."
+        },
+        {
+          "text": "100+ of all elements"
+        }
+      ],
+      "id": "tarot-challenge-six-of-wands",
+      "kind": "upgrade",
+      "name": "Tarot Challenge Six of Wands",
+      "system": "tarot",
+      "wiki": "Tarot"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Resets all elements to 1. All three factors, Relic 36, game speed and Global Element mult are logarithmed. Nodes Fire-3 and Wind-4 are useless. The Magician is disabled."
+        },
+        {
+          "text": "2.5e10+ of all elements"
+        }
+      ],
+      "id": "tarot-challenge-seven-of-wands",
+      "kind": "upgrade",
+      "name": "Tarot Challenge Seven of Wands",
+      "system": "tarot",
+      "wiki": "Tarot"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Resets all elements to 1. Relic 36, game speed and Global Element mult are logarithmed. Nodes Fire-3 and Wind-4 are useless. The Magician is disabled. Adds a heavy softcap for first 2 factors after x10."
+        },
+        {
+          "text": "1e16+ of all elements"
+        }
+      ],
+      "id": "tarot-challenge-eight-of-wands",
+      "kind": "upgrade",
+      "name": "Tarot Challenge Eight of Wands",
+      "system": "tarot",
+      "wiki": "Tarot"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Resets all elements to 1. Relic 36, game speed and Global Element mult are logarithmed. Nodes Fire-3 and Wind-4 are useless. The Magician is disabled. Elements Third factor is -1, then /10."
+        },
+        {
+          "text": "1e765+ multiplication of all elements"
+        }
+      ],
+      "id": "tarot-challenge-nine-of-wands",
+      "kind": "upgrade",
+      "name": "Tarot Challenge Nine of Wands",
+      "system": "tarot",
+      "wiki": "Tarot"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Resets all elements to 1. Relic 36, game speed, and Global element mult are put to Wand's LOGPOW. Nodes Fire-3 and Wind-4 are useless. The Magician is disabled. Factor 1 and 2 are also put to Wand's LOGPOW."
+        },
+        {
+          "text": "1e40+ multiplication of all elements"
+        }
+      ],
+      "id": "tarot-challenge-ten-of-wands",
+      "kind": "upgrade",
+      "name": "Tarot Challenge Ten of Wands",
+      "system": "tarot",
+      "wiki": "Tarot"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Reset your Elements to 1. The total gain of each Element is set to the Wand's LOGPOW."
+        },
+        {
+          "text": "1e2026+ multiplication of all elements"
+        }
+      ],
+      "id": "tarot-challenge-page-of-wands",
+      "kind": "upgrade",
+      "name": "Tarot Challenge Page of Wands",
+      "system": "tarot",
+      "wiki": "Tarot"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Reset your Elements to 1. Relic 36 game speed and Global Element mult are logarithmed. Nodes Fire-3 and Wind-4 are useless. The Magician is disabled. All factors are nerfed, but this penalty becomes weaker based on the Infectivity of your equipped Endoplasmic Reticulum."
+        },
+        {
+          "text": "1e268+ multiplication of all elements"
+        }
+      ],
+      "id": "tarot-challenge-knight-of-wands",
+      "kind": "upgrade",
+      "name": "Tarot Challenge Knight of Wands",
+      "system": "tarot",
+      "wiki": "Tarot"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Reset your Elements to 1. Element factors 1 and 2 are capped at 2 raised to your current Singularity mult. Nodes Fire-3 and Wind-4 are useless. The Magician is disabled. Global Element mult is capped at 1000 raised to your current Singularity Count. Local Element Speed is capped at 1."
+        },
+        {
+          "text": "1e3000+ multiplication of all elements"
+        }
+      ],
+      "id": "tarot-challenge-queen-of-wands",
+      "kind": "upgrade",
+      "name": "Tarot Challenge Queen of Wands",
+      "system": "tarot",
+      "wiki": "Tarot"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Requires 1.8e308 Atoms to enter ,Element factors 1 and 2 are capped at your current Atoms. Nodes Fire-3 and Wind-4 are useless. The Magician is disabled. Global Element mult is capped at your current Singularity mult. Local Element Speed is capped at 1. King Tarot cards and other multipliers are useless. Entering Performs a Singularity and resets atoms to 1. Adds a Dynamic Penalty that heavily nerfs Atom Gain, but becomes weaker based on your current Fire"
+        },
+        {
+          "text": "Perform a Singularity with 1e2026+ Fire"
+        }
+      ],
+      "id": "tarot-challenge-king-of-wands",
+      "kind": "upgrade",
+      "name": "Tarot Challenge King of Wands",
+      "system": "tarot",
+      "wiki": "Tarot"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Performs Refine Prestige. First Mineral upgrade cost scaling is much heavier."
+        },
+        {
+          "text": "640+ Max Mineral Level"
+        }
+      ],
+      "id": "tarot-challenge-ace-of-pentacles",
+      "kind": "upgrade",
+      "name": "Tarot Challenge Ace of Pentacles",
+      "system": "tarot",
+      "wiki": "Tarot"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Performs Refine Prestige. RN1, RN16, Red Gem, VP Gain Mult Magnet upgrade, Relic 23 effect, and Polish Sword values are logarithmed. The Hierophant is disabled."
+        },
+        {
+          "text": "425+ Max Mineral Level"
+        }
+      ],
+      "id": "tarot-challenge-two-of-pentacles",
+      "kind": "upgrade",
+      "name": "Tarot Challenge Two of Pentacles",
+      "system": "tarot",
+      "wiki": "Tarot"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Performs Refine Prestige. Blue and Green Gems are useless. Mineral cost growth is much heavier. Relic 14 and 31 are useless. Local game speed is capped at x777. The Hierophant is disabled."
+        },
+        {
+          "text": "1000+ Max Mineral Level"
+        }
+      ],
+      "id": "tarot-challenge-three-of-pentacles",
+      "kind": "upgrade",
+      "name": "Tarot Challenge Three of Pentacles",
+      "system": "tarot",
+      "wiki": "Tarot"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Performs Refine Prestige. Red Gem is useless, and you cannot obtain magnets."
+        },
+        {
+          "text": "1125+ Max Mineral Level"
+        }
+      ],
+      "id": "tarot-challenge-four-of-pentacles",
+      "kind": "upgrade",
+      "name": "Tarot Challenge Four of Pentacles",
+      "system": "tarot",
+      "wiki": "Tarot"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Performs Refine Prestige. VP Gain is logarithmed."
+        },
+        {
+          "text": "1e20+ VP"
+        }
+      ],
+      "id": "tarot-challenge-five-of-pentacles",
+      "kind": "upgrade",
+      "name": "Tarot Challenge Five of Pentacles",
+      "system": "tarot",
+      "wiki": "Tarot"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Performs Refine Prestige and resets Gold. Blue, Green, Yellow gems, along with Relic 14 and 31 are all useless. Gold Gain is logarithmed."
+        },
+        {
+          "text": "167+ Max Mineral Level"
+        }
+      ],
+      "id": "tarot-challenge-six-of-pentacles",
+      "kind": "upgrade",
+      "name": "Tarot Challenge Six of Pentacles",
+      "system": "tarot",
+      "wiki": "Tarot"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Performs Refine Prestige and resets Gold. Blue, Green, gems, along with Relic 14 and 31 are all useless. Gold Gain is ^(1/1,000,000,000) and game speed is logarithmed."
+        },
+        {
+          "text": "105+ Max Mineral Level"
+        }
+      ],
+      "id": "tarot-challenge-seven-of-pentacles",
+      "kind": "upgrade",
+      "name": "Tarot Challenge Seven of Pentacles",
+      "system": "tarot",
+      "wiki": "Tarot"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Performs Refine Prestige and resets Gold. Blue, Green, gems, along with Relic 14 and 31 are all useless. Gold is calculated based only off of Attack Level."
+        },
+        {
+          "text": "1640+ Max Mineral Level"
+        }
+      ],
+      "id": "tarot-challenge-eight-of-pentacles",
+      "kind": "upgrade",
+      "name": "Tarot Challenge Eight of Pentacles",
+      "system": "tarot",
+      "wiki": "Tarot"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Performs Refine Prestige. Mineral base is much worse; it's nerfed exponentially. (mineral base is the number the VP gain is multiplied by per level increase)"
+        },
+        {
+          "text": "270+ Max Mineral Level"
+        }
+      ],
+      "id": "tarot-challenge-nine-of-pentacles",
+      "kind": "upgrade",
+      "name": "Tarot Challenge Nine of Pentacles",
+      "system": "tarot",
+      "wiki": "Tarot"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Performs Refine Prestige. Red Gem is useless. You cant get magnets nor merge XP. RN1, Game speed, Relic 22, and Polish Sword values are all set to Sword's LOGPOW"
+        },
+        {
+          "text": "560+ Max Mineral Level"
+        }
+      ],
+      "id": "tarot-challenge-ten-of-pentacles",
+      "kind": "upgrade",
+      "name": "Tarot Challenge Ten of Pentacles",
+      "system": "tarot",
+      "wiki": "Tarot"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Performs Refine Prestige. Base Max level Upgrade Effect is multiplied by Pentacle's base LOGPOW."
+        },
+        {
+          "text": "420+ Max Mineral Level"
+        }
+      ],
+      "id": "tarot-challenge-page-of-pentacles",
+      "kind": "upgrade",
+      "name": "Tarot Challenge Page of Pentacles",
+      "system": "tarot",
+      "wiki": "Tarot"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Performs Refine Prestige. Red Gem is useless. You cant get magnets nor merge XP. RN1, Game Speed, Relic 22, and Polish Sword values are heavily nerfed, but this penalty becomes weaker based on the Stealth of your equipped Endoplasmic Reticulum."
+        },
+        {
+          "text": "1000+ Max Mineral Level"
+        }
+      ],
+      "id": "tarot-challenge-knight-of-pentacles",
+      "kind": "upgrade",
+      "name": "Tarot Challenge Knight of Pentacles",
+      "system": "tarot",
+      "wiki": "Tarot"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Performs Refine Prestige. Red Gem is useless. You cant get magnets nor merge XP. RN1's effect is capped by your current Singularity mult. Local Mineral Speed is capped at 10x. Relic 22 and Polish Sword are useless"
+        },
+        {
+          "text": "700+ Max Mineral Level"
+        }
+      ],
+      "id": "tarot-challenge-queen-of-pentacles",
+      "kind": "upgrade",
+      "name": "Tarot Challenge Queen of Pentacles",
+      "system": "tarot",
+      "wiki": "Tarot"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Requires 1.8e308 Atoms to enter. Performs Refine Prestige. Red Gem is useless. You cant get magnets nor merge XP. RN1's effect is capped at Log10(atoms)+1. Local Mineral Speed is capped at 100x. The First Mineral upgrades effect is capped at the Square Root of your Singularity mult rounded down. Relic 22 and Polish Sword are useless. Entering Performs a Singularity and resets atoms to 1. Adds a Dynamic Penalty that heavily nerfs Atom Gain, but becomes weaker based on your Max Mineral Level"
+        },
+        {
+          "text": "Perform a Singularity at 1e200+ VP"
+        }
+      ],
+      "id": "tarot-challenge-king-of-pentacles",
+      "kind": "upgrade",
+      "name": "Tarot Challenge King of Pentacles",
+      "system": "tarot",
+      "wiki": "Tarot"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Performs Unity Reset. All Zodiac EXP factors are logarithmed."
+        },
+        {
+          "text": "Unite with a Level 90+ Zodiac"
+        }
+      ],
+      "id": "tarot-challenge-ace-of-cups",
+      "kind": "upgrade",
+      "name": "Tarot Challenge Ace of Cups",
+      "system": "tarot",
+      "wiki": "Tarot"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Performs Unity Reset. Luck is logarithmed, divided by 1000, then increased by 1."
+        },
+        {
+          "text": "Unite with Epic+ rarity Zodiac"
+        }
+      ],
+      "id": "tarot-challenge-two-of-cups",
+      "kind": "upgrade",
+      "name": "Tarot Challenge Two of Cups",
+      "system": "tarot",
+      "wiki": "Tarot"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Performs Unity Reset. Luck is ^(1/999)"
+        },
+        {
+          "text": "Unite with an Immortal+ rarity Zodiac"
+        }
+      ],
+      "id": "tarot-challenge-three-of-cups",
+      "kind": "upgrade",
+      "name": "Tarot Challenge Three of Cups",
+      "system": "tarot",
+      "wiki": "Tarot"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Performs Unity Reset. Luck is heavily reduced, but the penalty weakens based off of the highest rarity Zodiac obtained during the challenge."
+        },
+        {
+          "text": "Unite with Amazing+ rarity Zodiac"
+        }
+      ],
+      "id": "tarot-challenge-four-of-cups",
+      "kind": "upgrade",
+      "name": "Tarot Challenge Four of Cups",
+      "system": "tarot",
+      "wiki": "Tarot"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Performs Unity Reset. All Zodiac EXP factors are reduced to double Log10 of their values."
+        },
+        {
+          "text": "Unite with a Level 10+ Zodiac"
+        }
+      ],
+      "id": "tarot-challenge-five-of-cups",
+      "kind": "upgrade",
+      "name": "Tarot Challenge Five of Cups",
+      "system": "tarot",
+      "wiki": "Tarot"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Performs Unity Reset. Max VP factor is disabled."
+        },
+        {
+          "text": "Unite with a Level 808+ Zodiac"
+        }
+      ],
+      "id": "tarot-challenge-six-of-cups",
+      "kind": "upgrade",
+      "name": "Tarot Challenge Six of Cups",
+      "system": "tarot",
+      "wiki": "Tarot"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Performs a Unity Reset. Your luck is heavily reduced, but the penalty weakens each time you Unite during this challenge."
+        },
+        {
+          "text": "Unite with a Prime+ rarity Zodiac"
+        }
+      ],
+      "id": "tarot-challenge-seven-of-cups",
+      "kind": "upgrade",
+      "name": "Tarot Challenge Seven of Cups",
+      "system": "tarot",
+      "wiki": "Tarot"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Performs a Unity Reset. Your luck and quality are heavily reduced, but the penalty weakens based off of the highest quality Zodiac you unite with during this challenge."
+        },
+        {
+          "text": "Unite with a Legendary+ rarity Zodiac"
+        }
+      ],
+      "id": "tarot-challenge-eight-of-cups",
+      "kind": "upgrade",
+      "name": "Tarot Challenge Eight of Cups",
+      "system": "tarot",
+      "wiki": "Tarot"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Performs Unity Reset. All Zodiac EXP factors are useless, besides the Relic 8 factor, which is logarithmed."
+        },
+        {
+          "text": "Unite with a Level 25+ Zodiac"
+        }
+      ],
+      "id": "tarot-challenge-nine-of-cups",
+      "kind": "upgrade",
+      "name": "Tarot Challenge Nine of Cups",
+      "system": "tarot",
+      "wiki": "Tarot"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Performs a Unity Reset. All Zodiac EXP factors are set to Cup's LOGPOW."
+        },
+        {
+          "text": "Unite with a Level 65+ Zodiac"
+        }
+      ],
+      "id": "tarot-challenge-ten-of-cups",
+      "kind": "upgrade",
+      "name": "Tarot Challenge Ten of Cups",
+      "system": "tarot",
+      "wiki": "Tarot"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Performs a Unity Reset. Total Factors multiplication is set to Cup's LOGPOW."
+        },
+        {
+          "text": "Unite with a Level 100+ Zodiac"
+        }
+      ],
+      "id": "tarot-challenge-page-of-cups",
+      "kind": "upgrade",
+      "name": "Tarot Challenge Page of Cups",
+      "system": "tarot",
+      "wiki": "Tarot"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Performs a Unity Reset. All Factors are heavily nerfed, but this penalty becomes weaker based on your total infected population"
+        },
+        {
+          "text": "Unite with a Level 625+ Zodiac"
+        }
+      ],
+      "id": "tarot-challenge-knight-of-cups",
+      "kind": "upgrade",
+      "name": "Tarot Challenge Knight of Cups",
+      "system": "tarot",
+      "wiki": "Tarot"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Performs a Unity Reset. Current Zodiac EXP is capped at your next Singularity Mult raised to the 5th power, plue 1"
+        },
+        {
+          "text": "Unite with a Level 6+ Zodiac"
+        }
+      ],
+      "id": "tarot-challenge-queen-of-cups",
+      "kind": "upgrade",
+      "name": "Tarot Challenge Queen of Cups",
+      "system": "tarot",
+      "wiki": "Tarot"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Requires 1.8e308 Atoms to enter. Performs a Unity Reset. All Factors are set to Log2 of their values and are heavily nerfed. This Penalty becomes weaker based on your current Atom Count. Entering performs a Singularity and resets atoms to 1. Adds a Dynamic Penalty that heavily nerfs Atom Gain, but becomes weaker based on the highest level Zodiac you've obtained during the Challenge."
+        },
+        {
+          "text": "Perform a Singularity while the next expected Zodiac Level is 67+"
+        }
+      ],
+      "id": "tarot-challenge-king-of-cups",
+      "kind": "upgrade",
+      "name": "Tarot Challenge King of Cups",
+      "system": "tarot",
+      "wiki": "Tarot"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "All other arcans are disabled, and all special minerals are removed. You can only spawn Black Gems via The Fool, but the bonus is reduced by 10 (pre-caps)."
+        },
+        {
+          "text": "Destroy a Level 20 Black Gem"
+        }
+      ],
+      "id": "tarot-challenge-the-fool",
+      "kind": "upgrade",
+      "name": "Tarot Challenge The Fool",
+      "system": "tarot",
+      "wiki": "Tarot"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Resets your Elements. You can only generate them using the Magician skill, but the Global Element mult decreases with each use."
+        },
+        {
+          "text": "1e5000+ of all Elements"
+        }
+      ],
+      "id": "tarot-challenge-the-magician",
+      "kind": "upgrade",
+      "name": "Tarot Challenge The Magician",
+      "system": "tarot",
+      "wiki": "Tarot"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Performs Refine Prestige. Red Gem, Relic 22, and Polish Sword are useless. You can no longer obtain magnets or merge levels. RN1's effect is ^(1/10000) (pre-skill)."
+        },
+        {
+          "text": "200+ Max Mineral Level"
+        }
+      ],
+      "id": "tarot-challenge-the-high-priestess",
+      "kind": "upgrade",
+      "name": "Tarot Challenge The High Priestess",
+      "system": "tarot",
+      "wiki": "Tarot"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Base sell cost for Zodiacs is set to 1. Using The Empress will gradually increase this from 1 to 100. Auto-sell Zodiacs is disabled."
+        },
+        {
+          "text": "Sell a Zodiac for exactly 67 Astrodust (lol)"
+        }
+      ],
+      "id": "tarot-challenge-the-empress",
+      "kind": "upgrade",
+      "name": "Tarot Challenge The Empress",
+      "system": "tarot",
+      "wiki": "Tarot"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Performs Refine Prestige. Blue and Green gems are useless. Mineral cost growth is much steeper and increases over time. Relics 14 and 31 are useless. Use the card to decrease Mineral cost."
+        },
+        {
+          "text": "1333+ Max Mineral Level"
+        }
+      ],
+      "id": "tarot-challenge-the-emperor",
+      "kind": "upgrade",
+      "name": "Tarot Challenge The Emperor",
+      "system": "tarot",
+      "wiki": "Tarot"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Performs Refine Prestige. You can only spawn level 1 minerals no matter what. The Hierophant's cooldown is 50x shorter."
+        },
+        {
+          "text": "1380+ Max Mineral Level"
+        }
+      ],
+      "id": "tarot-challenge-the-hierophant",
+      "kind": "upgrade",
+      "name": "Tarot Challenge The Hierophant",
+      "system": "tarot",
+      "wiki": "Tarot"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Performs Refine Prestige. Passive Merge EXP is disabled. Relic 28 effect is ^0.04 after all bonuses. Max mineral spawn level is capped at Merge Level + 1."
+        },
+        {
+          "text": "Merge Level 250+"
+        }
+      ],
+      "id": "tarot-challenge-the-lovers",
+      "kind": "upgrade",
+      "name": "Tarot Challenge The Lovers",
+      "system": "tarot",
+      "wiki": "Tarot"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "None (yeah this challenge is just kind of a benchmark)"
+        },
+        {
+          "text": "Sacrifice Level 40 for all Gems"
+        }
+      ],
+      "id": "tarot-challenge-the-chariot",
+      "kind": "upgrade",
+      "name": "Tarot Challenge The Chariot",
+      "system": "tarot",
+      "wiki": "Tarot"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Tarot Local Speed is capped at 1. Chariot Passive Effect is also capped at 1."
+        },
+        {
+          "text": "111,111+ SMS Factor"
+        }
+      ],
+      "id": "tarot-challenge-justice",
+      "kind": "upgrade",
+      "name": "Tarot Challenge Justice",
+      "system": "tarot",
+      "wiki": "Tarot"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Resets Tarot resources. Tarot Local speed and both effects are heavily reduced (cooldowns are greatly increased), but the penalty weakens with each use of The Hermit. The Hermit's duration is also capped at one second."
+        },
+        {
+          "text": "1e1000+ of all Tarot Resources"
+        }
+      ],
+      "id": "tarot-challenge-the-hermit",
+      "kind": "upgrade",
+      "name": "Tarot Challenge The Hermit",
+      "system": "tarot",
+      "wiki": "Tarot"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Resets your Tarot draws to the sum of all Artifact levels. Draws cannot be gained in any way except winning the wheel, but the chance of winning is heavily reduced. Losing the wheel will weaken this penalty. Skill cooldown time is multiplied by 10, and Tarot local speed is capped at 1."
+        },
+        {
+          "text": "Win the Wheel 10 times in a row"
+        }
+      ],
+      "id": "tarot-challenge-wheel-of-fortune",
+      "kind": "upgrade",
+      "name": "Tarot Challenge Wheel of Fortune",
+      "system": "tarot",
+      "wiki": "Tarot"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Resets attack levels and attack mult is set to 1. Game Speed, other mults, mult gain are set to Mean LOGPOW / 2 (Mean LOGPOW is the average LOGPOW across all suits). Attack Exponent base is set to 0 and can only be increased via The Strength. The Strength's duration is set to 0.1 seconds and the effect is heavily reduced, but the penalty weakens based on Attack Level."
+        },
+        {
+          "text": "Attack Level 2000+"
+        }
+      ],
+      "id": "tarot-challenge-strength",
+      "kind": "upgrade",
+      "name": "Tarot Challenge Strength",
+      "system": "tarot",
+      "wiki": "Tarot"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Performs a Refine Prestige and resets your Polish Upgrades and Polish Points. You cant gain any polish points, Special Minerals and Special Minerals Sacrifice are useless."
+        },
+        {
+          "text": "x5e9 Minerals Local Speed"
+        }
+      ],
+      "id": "tarot-challenge-the-hanged-man",
+      "kind": "upgrade",
+      "name": "Tarot Challenge The Hanged Man",
+      "system": "tarot",
+      "wiki": "Tarot"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Activating the death tarot card secretly selects a random time between 0 and 60 seconds. You must perform a refine prestige while Death is still active."
+        },
+        {
+          "text": "Refine Prestige within 10 seconds of the selected time."
+        }
+      ],
+      "id": "tarot-challenge-death",
+      "kind": "upgrade",
+      "name": "Tarot Challenge Death",
+      "system": "tarot",
+      "wiki": "Tarot"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "At the start of the challenge, you receive a random low-stat Temperate Zodiac in your inventory. It must be placed into your Fortune Pars slot immediately. Each time you use temperance you receive a temperance zodiac based off the one in your Fortune Pars spot. 67% chance its the same zodiac, 20% chance you receive a different zodiac of the same element, 10% chance to receive an adjacent zodiac, 3% chance to receive the opposite zodiac. Tarot local speed is capped at 1x and Tarot skill cooldown timer is multiplied by x10"
+        },
+        {
+          "text": "Fill Every Planet slot with a temperate zodiac that matches one of that planet's ruling signs."
+        }
+      ],
+      "id": "tarot-challenge-temperance",
+      "kind": "upgrade",
+      "name": "Tarot Challenge Temperance",
+      "system": "tarot",
+      "wiki": "Tarot"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "When you use this arcana card, it spawns 10 chads on the screen."
+        },
+        {
+          "text": "Catch all 10 Chads by clicking on them"
+        }
+      ],
+      "id": "tarot-challenge-the-devil",
+      "kind": "upgrade",
+      "name": "Tarot Challenge The Devil",
+      "system": "tarot",
+      "wiki": "Tarot"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "You need 20,000 infected in the universe stage to enter this challenge, While inside the challenge, using the tower arcana has a chance to complete the challenge based off of the chance given by Relic 67, If it fails, reset Universe High Score, Plague points, and get rid of all of your Endoplasmic Reticulums."
+        },
+        {
+          "text": "Complete the challenge by the chance given to you by Relic 67"
+        }
+      ],
+      "id": "tarot-challenge-the-tower",
+      "kind": "upgrade",
+      "name": "Tarot Challenge The Tower",
+      "system": "tarot",
+      "wiki": "Tarot"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "You need 1.8e308 atoms to enter this challenge, Performs a Singularity reset and a Unity reset, Luck donut base is set and 1 and the first effect for the Pink Gem is useless, The star effect is also applied to the luck donut instead."
+        },
+        {
+          "text": "Perform a Singularity with an Uncommon+ Singular Zodiac"
+        }
+      ],
+      "id": "tarot-challenge-the-star",
+      "kind": "upgrade",
+      "name": "Tarot Challenge The Star",
+      "system": "tarot",
+      "wiki": "Tarot"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "You need 1.8e308 atoms to enter this challenge, Performs a Singularity reset and a Unity reset, Tarot Local speed is capped at 10x, sets the quality of the zodiac in the Moon slot to 1. You can upgrade it by using The Moon, but everytime you change zodiacs, the zodiac in the Moon slot's quality is set to 1. Adds a dynamic penalty that heavily nerfs Atom gain, but becomes weaker based on the quality of the zodiac in the Moon Slot."
+        },
+        {
+          "text": "Perform a Singularity with 1e1000+ Atoms"
+        }
+      ],
+      "id": "tarot-challenge-the-moon",
+      "kind": "upgrade",
+      "name": "Tarot Challenge The Moon",
+      "system": "tarot",
+      "wiki": "Tarot"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
           "text": "Promotions 2 and 4 are stronger"
         }
       ],
@@ -7299,6 +8499,9 @@
       "wiki": "Plague"
     },
     {
+      "aliases": [
+        "Infinity Gain"
+      ],
       "confidence": "documented",
       "effects": [
         {
@@ -7835,6 +9038,9 @@
       "wiki": "Zodiacs"
     },
     {
+      "aliases": [
+        "Zodiac Quality"
+      ],
       "confidence": "documented",
       "id": "quality",
       "kind": "stat",
@@ -7843,6 +9049,9 @@
       "wiki": "Zodiacs"
     },
     {
+      "aliases": [
+        "Luck Mult"
+      ],
       "confidence": "documented",
       "id": "luck",
       "kind": "stat",
@@ -8016,6 +9225,9 @@
       "wiki": "Stars"
     },
     {
+      "aliases": [
+        "Eternity Gain"
+      ],
       "confidence": "documented",
       "effects": [
         {
@@ -10042,6 +11254,9 @@
       "wiki": "Dilation"
     },
     {
+      "aliases": [
+        "DP Mult"
+      ],
       "confidence": "documented",
       "effects": [
         {
@@ -10067,9 +11282,912 @@
       "name": "Dilation Tree",
       "system": "eternity",
       "wiki": "Dilation_Tree"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "The third major prestige layer, reached at 1.08e2466 EP"
+        },
+        {
+          "text": "Uniting picks one Zodiac from each of Fire, Wind, Water and Earth"
+        }
+      ],
+      "id": "unity",
+      "kind": "group",
+      "name": "Unity",
+      "system": "unity",
+      "wiki": "Unity"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "Running count of Unity resets performed"
+        }
+      ],
+      "id": "unities",
+      "kind": "stat",
+      "name": "Unities",
+      "system": "unity",
+      "wiki": "Unity"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "IP Gain = [1 + Unities] ^ [2 + log(Unities)]"
+        },
+        {
+          "text": "EP Gain = [1 + Unities] ^ [1 + 0.25 * log(Unities)]"
+        },
+        {
+          "text": "Eternity Count Gain = [1 + Unities]"
+        },
+        {
+          "text": "DP Gain = [1 + Unities * 3] ^ [0.5 + 0.125 * log(Unities)]"
+        }
+      ],
+      "id": "unity-bonuses",
+      "kind": "group",
+      "name": "Unity Bonuses",
+      "system": "unity",
+      "wiki": "Unity"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "The Unity-layer reward multiplier that Planet bonuses raise to a power"
+        }
+      ],
+      "id": "unity-rewards",
+      "kind": "stat",
+      "name": "Unity Rewards",
+      "system": "unity",
+      "wiki": "Planets"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "Twenty-five trials: 6 Easy, 6 Medium, 6 Hard, 6 Insane and 1 Blind"
+        },
+        {
+          "text": "Each completed trial gives a permanent reward and +2 default EC completions"
+        }
+      ],
+      "id": "trials",
+      "kind": "group",
+      "name": "Trials",
+      "system": "trials",
+      "wiki": "Trials"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "Spends Astrodust on donuts and on the four Zodiac features"
+        }
+      ],
+      "id": "planet-shop",
+      "kind": "group",
+      "name": "Planet Shop",
+      "system": "astrology",
+      "wiki": "Planet_Shop"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "Gained by selling Zodiacs; spent on donuts and Planet Shop features"
+        }
+      ],
+      "id": "astrodust",
+      "kind": "currency",
+      "name": "Astrodust",
+      "system": "astrology",
+      "wiki": "Planet_Shop"
+    },
+    {
+      "aliases": [
+        "Zodiac Levels"
+      ],
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "Raises a Zodiac's bonuses, its sale price and its Zodiac Score"
+        }
+      ],
+      "id": "zodiac-level",
+      "kind": "stat",
+      "name": "Zodiac Level",
+      "system": "astrology",
+      "wiki": "Zodiacs"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "Rarity tier reached by Luck thresholds; raises sale price and Zodiac Score"
+        }
+      ],
+      "id": "zodiac-rarity",
+      "kind": "stat",
+      "name": "Zodiac Rarity",
+      "system": "astrology",
+      "wiki": "Zodiacs"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "= 1.125^Rarity * Quality * (9 + Level^2), before rarity and level bonuses"
+        },
+        {
+          "text": "Drives every Zodiac stat formula, from Mults Gain to Zodiac Quality Mult"
+        }
+      ],
+      "id": "zodiac-score",
+      "kind": "stat",
+      "name": "Zodiac Score",
+      "system": "astrology",
+      "wiki": "Planet_Shop"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "Bought with Astrodust; persists through Unities",
+          "per_level": "+0.01 Game Speed mult"
+        }
+      ],
+      "id": "donut-game-speed",
+      "kind": "upgrade",
+      "name": "Game Speed Donut",
+      "system": "astrology",
+      "wiki": "Planet_Shop"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "Bought with Astrodust; persists through Unities",
+          "per_level": "+0.02 Luck mult"
+        }
+      ],
+      "id": "donut-luck",
+      "kind": "upgrade",
+      "name": "Luck Donut",
+      "system": "astrology",
+      "wiki": "Planet_Shop"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "Bought with Astrodust; persists through Unities",
+          "per_level": "+0.03 Zodiac Quality mult"
+        }
+      ],
+      "id": "donut-quality",
+      "kind": "upgrade",
+      "name": "Quality Donut",
+      "system": "astrology",
+      "wiki": "Planet_Shop"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "Bought with Astrodust; persists through Unities",
+          "per_level": "+0.04 Factor mult"
+        }
+      ],
+      "id": "donut-zodiac-exp-factor",
+      "kind": "upgrade",
+      "name": "Zodiac Exp. Factor Donut",
+      "system": "astrology",
+      "wiki": "Planet_Shop"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "Merges 3 Zodiacs of one element and rarity into one of the next rarity tier"
+        },
+        {
+          "text": "Unlocked for 50 Astrodust"
+        }
+      ],
+      "id": "feature-merging",
+      "kind": "upgrade",
+      "name": "Zodiac Merging",
+      "system": "astrology",
+      "wiki": "Planet_Shop"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "Chance to raise a Zodiac's quality; the chance falls as quality rises"
+        },
+        {
+          "text": "Unlocked for 350 Astrodust"
+        }
+      ],
+      "id": "feature-enhancing",
+      "kind": "upgrade",
+      "name": "Zodiac Enhancing",
+      "system": "astrology",
+      "wiki": "Planet_Shop"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "Randomises the inserted Zodiac's sign, stats, stat count and stat order"
+        },
+        {
+          "text": "Unlocked for 500 Astrodust"
+        }
+      ],
+      "id": "feature-redistribution",
+      "kind": "upgrade",
+      "name": "Zodiac Redistribution",
+      "system": "astrology",
+      "wiki": "Planet_Shop"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "Destroys a Zodiac to permanently gain part of its first listed stat"
+        },
+        {
+          "text": "Unlocked for 10,000,000 Astrodust"
+        }
+      ],
+      "id": "feature-sacrificing",
+      "kind": "upgrade",
+      "name": "Zodiac Sacrificing",
+      "system": "astrology",
+      "wiki": "Planet_Shop"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "Slots that Zodiacs are assigned to; a Zodiac is inert until placed"
+        },
+        {
+          "text": "Each Planet holds one Zodiac and adds a bonus chosen by that Zodiac's season"
+        }
+      ],
+      "id": "planets",
+      "kind": "group",
+      "name": "Planets",
+      "system": "astrology",
+      "wiki": "Planets"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "Unlocked at the start"
+        },
+        {
+          "text": "Zodiac Quality x1.5 (Spring)"
+        },
+        {
+          "text": "Luck Mult x1.15 (Summer)"
+        },
+        {
+          "text": "Unity Rewards ^1.1 (Autumn)"
+        },
+        {
+          "text": "Eternity Rewards ^1.2 (Winter)"
+        }
+      ],
+      "id": "planet-sun",
+      "kind": "upgrade",
+      "name": "Sun",
+      "system": "astrology",
+      "wiki": "Planets"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "Unlocked by Ach 161 (put a Zodiac on Sun)"
+        },
+        {
+          "text": "Eternity Gain x2 (Spring)"
+        },
+        {
+          "text": "Infinity Gain x10 (Summer)"
+        },
+        {
+          "text": "DP Mult x2 (Autumn)"
+        },
+        {
+          "text": "Star Cost ^0.9 (Winter)"
+        }
+      ],
+      "id": "planet-mercury",
+      "kind": "upgrade",
+      "name": "Mercury",
+      "system": "astrology",
+      "wiki": "Planets"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "Unlocked by Ach 162 (have 2 Unities)"
+        },
+        {
+          "text": "Game Speed x2 (Spring)"
+        },
+        {
+          "text": "Lap Speed x3 (Summer)"
+        },
+        {
+          "text": "Supernova Rewards ^1.02 (Autumn)"
+        },
+        {
+          "text": "DU Power x1.05 (Winter)"
+        }
+      ],
+      "id": "planet-venus",
+      "kind": "upgrade",
+      "name": "Venus",
+      "system": "astrology",
+      "wiki": "Planets"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "Unlocked by Ach 166 (clear 1 Easy Trial)"
+        },
+        {
+          "text": "Luck Mult x1.2 (Spring)"
+        },
+        {
+          "text": "Unity Rewards ^1.15 (Summer)"
+        },
+        {
+          "text": "Eternity Rewards ^1.15 (Autumn)"
+        },
+        {
+          "text": "Zodiac Quality x1.3 (Winter)"
+        }
+      ],
+      "id": "planet-moon",
+      "kind": "upgrade",
+      "name": "Moon",
+      "system": "astrology",
+      "wiki": "Planets"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "Unlocked by clearing Easy Trial 4 (no Promo 2 and 4)"
+        },
+        {
+          "text": "Infinity Gain x5 (Spring)"
+        },
+        {
+          "text": "DP Mult x1.8 (Summer)"
+        },
+        {
+          "text": "Star Cost ^0.85 (Autumn)"
+        },
+        {
+          "text": "Eternity Gain x2 (Winter)"
+        }
+      ],
+      "id": "planet-mars",
+      "kind": "upgrade",
+      "name": "Mars",
+      "system": "astrology",
+      "wiki": "Planets"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "Unlocked by Ach 172 (level 5+ Zodiac)"
+        },
+        {
+          "text": "Lap Speed x2 (Spring)"
+        },
+        {
+          "text": "Supernova Rewards ^1.03 (Summer)"
+        },
+        {
+          "text": "DU Power x1.03 (Autumn)"
+        },
+        {
+          "text": "Game Speed x1.1 (Winter)"
+        }
+      ],
+      "id": "planet-jupiter",
+      "kind": "upgrade",
+      "name": "Jupiter",
+      "system": "astrology",
+      "wiki": "Planets"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "Unlocked by Ach 181 (level 10+ Zodiac)"
+        },
+        {
+          "text": "Unity Rewards ^1.1 (Spring)"
+        },
+        {
+          "text": "Eternity Rewards ^1.2 (Summer)"
+        },
+        {
+          "text": "Zodiac Quality x1.2 (Autumn)"
+        },
+        {
+          "text": "Luck Mult x1.1 (Winter)"
+        }
+      ],
+      "id": "planet-saturn",
+      "kind": "upgrade",
+      "name": "Saturn",
+      "system": "astrology",
+      "wiki": "Planets"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "Unlocked by Ach 184 (level 20+ Zodiac)"
+        },
+        {
+          "text": "DP Mult x5 (Spring)"
+        },
+        {
+          "text": "Star Cost ^0.93 (Summer)"
+        },
+        {
+          "text": "Eternity Gain x3 (Autumn)"
+        },
+        {
+          "text": "Infinity Gain x3 (Winter)"
+        }
+      ],
+      "id": "planet-uranus",
+      "kind": "upgrade",
+      "name": "Uranus",
+      "system": "astrology",
+      "wiki": "Planets"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "Unlocked by Ach 188 (level 30+ Zodiac)"
+        },
+        {
+          "text": "Supernova Rewards ^1.04 (Spring)"
+        },
+        {
+          "text": "DU Power x1.06 (Summer)"
+        },
+        {
+          "text": "Game Speed x1.4 (Autumn)"
+        },
+        {
+          "text": "Lap Speed x10 (Winter)"
+        }
+      ],
+      "id": "planet-neptune",
+      "kind": "upgrade",
+      "name": "Neptune",
+      "system": "astrology",
+      "wiki": "Planets"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "Unlocked by Ach 190 (level 40+ Zodiac)"
+        },
+        {
+          "text": "Eternity Rewards ^1.15 (Spring)"
+        },
+        {
+          "text": "Zodiac Quality x1.25 (Summer)"
+        },
+        {
+          "text": "Luck Mult x1.25 (Autumn)"
+        },
+        {
+          "text": "Unity Rewards ^1.5 (Winter)"
+        }
+      ],
+      "id": "planet-pluto",
+      "kind": "upgrade",
+      "name": "Pluto",
+      "system": "astrology",
+      "wiki": "Planets"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "Unlocked by Ach 205 (level 50+ Zodiac)"
+        },
+        {
+          "text": "Star Cost ^0.9 (Spring)"
+        },
+        {
+          "text": "Eternity Gain x2 (Summer)"
+        },
+        {
+          "text": "Infinity Gain x100 (Autumn)"
+        },
+        {
+          "text": "DP Mult x2.5 (Winter)"
+        }
+      ],
+      "id": "planet-chiron",
+      "kind": "upgrade",
+      "name": "Chiron",
+      "system": "astrology",
+      "wiki": "Planets"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "Unlocked by Ach 219 (level 100+ Zodiac)"
+        },
+        {
+          "text": "Luck Mult x1.5 (every season)"
+        }
+      ],
+      "id": "planet-fortune-pars",
+      "kind": "upgrade",
+      "name": "Fortune Pars",
+      "system": "astrology",
+      "wiki": "Planets"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "The Eternity-layer reward multiplier that Planet bonuses raise to a power"
+        }
+      ],
+      "id": "eternity-rewards",
+      "kind": "stat",
+      "name": "Eternity Rewards",
+      "system": "eternity",
+      "wiki": "Planets"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "The Supernova reward multiplier that Planet bonuses raise to a power"
+        }
+      ],
+      "id": "supernova-rewards",
+      "kind": "stat",
+      "name": "Supernova Rewards",
+      "system": "eternity",
+      "wiki": "Planets"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "The exponent Dilation applies when converting score into Dilation Upgrades"
+        }
+      ],
+      "id": "du-power",
+      "kind": "stat",
+      "name": "DU Power",
+      "system": "eternity",
+      "wiki": "Planets"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "Stardust price of the next Star; Planet bonuses raise it to a power below 1"
+        }
+      ],
+      "id": "star-cost",
+      "kind": "stat",
+      "name": "Star Cost",
+      "system": "infinity",
+      "wiki": "Planets"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "A second revolution type: five Attack Circles fighting one enemy per level"
+        },
+        {
+          "text": "Uniting resets Attack Level to 0 and pays out the displayed Gold"
+        }
+      ],
+      "id": "attacks",
+      "kind": "group",
+      "name": "Attacks",
+      "system": "attacks",
+      "wiki": "Attacks"
+    },
+    {
+      "aliases": [
+        "Attack Levels"
+      ],
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "Advances when the current enemy's HP bar is depleted"
+        }
+      ],
+      "id": "attack-level",
+      "kind": "stat",
+      "name": "Attack Level",
+      "system": "attacks",
+      "wiki": "Attacks"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "Damage that must be dealt to advance to the next Attack Level"
+        }
+      ],
+      "id": "enemy-hp",
+      "kind": "stat",
+      "name": "Enemy HP",
+      "system": "attacks",
+      "wiki": "Attacks"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "Gold paid out on Uniting; rises with every enemy defeated"
+        }
+      ],
+      "id": "gold-gain",
+      "kind": "stat",
+      "name": "Gold Gain",
+      "system": "attacks",
+      "wiki": "Attacks"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "Five circles; each revolution raises its Attack Mult and hits the enemy"
+        },
+        {
+          "text": "Each level costs 1.25 + (0.15 x Ascension Stage) more than the last"
+        },
+        {
+          "text": "Levelling adds 5% of base lap speed; at max level 20 the speed has doubled"
+        }
+      ],
+      "id": "attack-circles",
+      "kind": "group",
+      "name": "Attack Circles",
+      "system": "attacks",
+      "wiki": "Attacks"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "Ascending resets Circle Level to 1 and halves Lap Speed"
+        },
+        {
+          "text": "Multiplies Mult Gain and Damage Mult by Ascension Power"
+        }
+      ],
+      "id": "ascension-stage",
+      "kind": "stat",
+      "name": "Ascension Stage",
+      "system": "attacks",
+      "wiki": "Attacks"
+    },
+    {
+      "aliases": [
+        "Attack Multiplier",
+        "Attack Mults"
+      ],
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "One per circle; rises by that circle's Mult Gain on every revolution"
+        }
+      ],
+      "id": "attack-mult",
+      "kind": "stat",
+      "name": "Attack Mult",
+      "system": "attacks",
+      "wiki": "Attacks"
+    },
+    {
+      "aliases": [
+        "Score Damage Mult"
+      ],
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "Converts Revolution Score into attack damage"
+        }
+      ],
+      "id": "score-damage-mult",
+      "kind": "stat",
+      "name": "Score Damage Multiplier",
+      "system": "attacks",
+      "wiki": "Attacks"
+    },
+    {
+      "aliases": [
+        "Cumulative Mult"
+      ],
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "Product of Relics 1, 3 and 12 with the Achievement damage multiplier"
+        }
+      ],
+      "id": "cumulative-mult",
+      "kind": "stat",
+      "name": "Cumulative Multiplier",
+      "system": "attacks",
+      "wiki": "Attacks"
+    },
+    {
+      "aliases": [
+        "Attack Base Damage"
+      ],
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "Product of Score Damage, Attack Mults, Cumulative Mult and Attack Exponent"
+        }
+      ],
+      "id": "attack-base-damage",
+      "kind": "stat",
+      "name": "Total Attack Base Damage",
+      "system": "attacks",
+      "wiki": "Attacks"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "Electric Red; base lap speed 1/100s, base damage 1"
+        },
+        {
+          "text": "Base cost 10 Gold"
+        }
+      ],
+      "id": "attack-circle-1",
+      "kind": "upgrade",
+      "name": "Attack Circle 1",
+      "system": "attacks",
+      "wiki": "Attacks"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "Firebrick Red; base lap speed 1/200s, base damage 3"
+        },
+        {
+          "text": "Base cost 100 Gold"
+        }
+      ],
+      "id": "attack-circle-2",
+      "kind": "upgrade",
+      "name": "Attack Circle 2",
+      "system": "attacks",
+      "wiki": "Attacks"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "Burnt Umber; base lap speed 1/400s, base damage 10"
+        },
+        {
+          "text": "Base cost 1,000 Gold"
+        }
+      ],
+      "id": "attack-circle-3",
+      "kind": "upgrade",
+      "name": "Attack Circle 3",
+      "system": "attacks",
+      "wiki": "Attacks"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "Van Dyke Brown; base lap speed 1/1600s, base damage 150"
+        },
+        {
+          "text": "Base cost 1e6 Gold"
+        }
+      ],
+      "id": "attack-circle-4",
+      "kind": "upgrade",
+      "name": "Attack Circle 4",
+      "system": "attacks",
+      "wiki": "Attacks"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "Dark Lava; base lap speed 1/4000s, base damage 5000"
+        },
+        {
+          "text": "Base cost 1e9 Gold"
+        }
+      ],
+      "id": "attack-circle-5",
+      "kind": "upgrade",
+      "name": "Attack Circle 5",
+      "system": "attacks",
+      "wiki": "Attacks"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "Spent alongside Moon Runes to spawn a Special Mineral"
+        }
+      ],
+      "id": "rune-sun",
+      "kind": "currency",
+      "name": "Sun Runes",
+      "system": "relics",
+      "wiki": "Minerals"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "Spent alongside Sun Runes to spawn a Special Mineral"
+        }
+      ],
+      "id": "rune-moon",
+      "kind": "currency",
+      "name": "Moon Runes",
+      "system": "relics",
+      "wiki": "Minerals"
     }
   ],
   "edges": [
+    {
+      "confidence": "uncertain",
+      "from": "relic-1",
+      "note": "A Simple (flat) Boost to (Attacks) Damage Mult",
+      "op": "add",
+      "rel": "boosts",
+      "source": "wiki:Relics",
+      "to": "attacks"
+    },
     {
       "confidence": "uncertain",
       "from": "relic-1",
@@ -10087,6 +12205,15 @@
       "rel": "boosts",
       "source": "wiki:Relics",
       "to": "quality"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "relic-3",
+      "note": "Zodiacs Level Sum (ZLM) Boost (Attacks) Damage Mult",
+      "op": "add",
+      "rel": "boosts",
+      "source": "wiki:Relics",
+      "to": "attacks"
     },
     {
       "confidence": "uncertain",
@@ -10122,7 +12249,23 @@
       "op": "add",
       "rel": "boosts",
       "source": "wiki:Relics",
+      "to": "attacks"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "relic-7",
+      "note": "(Boosts) Attacks Lap Speed Mult",
+      "op": "add",
+      "rel": "boosts",
+      "source": "wiki:Relics",
       "to": "lap-speed"
+    },
+    {
+      "confidence": "documented",
+      "from": "relic-9",
+      "rel": "boosts",
+      "source": "wiki:Attacks",
+      "to": "gold-gain"
     },
     {
       "confidence": "uncertain",
@@ -10131,7 +12274,7 @@
       "op": "add",
       "rel": "boosts",
       "source": "wiki:Relics",
-      "to": "gold"
+      "to": "attacks"
     },
     {
       "confidence": "uncertain",
@@ -10150,6 +12293,15 @@
       "rel": "boosts",
       "source": "wiki:Relics",
       "to": "supernova"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "relic-13",
+      "note": "Increases Exponent in (Attacks) Base Damage Formula Increases the Exponent in the Formula shown on the Relic tab, which improves Base Damage in Attacks",
+      "op": "add",
+      "rel": "boosts",
+      "source": "wiki:Relics",
+      "to": "attacks"
     },
     {
       "confidence": "provisional",
@@ -10188,13 +12340,20 @@
       "to": "luck"
     },
     {
+      "confidence": "documented",
+      "from": "relic-16",
+      "rel": "boosts",
+      "source": "wiki:Attacks",
+      "to": "mult-gain"
+    },
+    {
       "confidence": "uncertain",
       "from": "relic-16",
       "note": "Multiplies mult gain for attacks",
       "op": "add",
       "rel": "boosts",
       "source": "wiki:Relics",
-      "to": "mult-gain"
+      "to": "attacks"
     },
     {
       "confidence": "provisional",
@@ -10206,13 +12365,11 @@
       "to": "relic-9"
     },
     {
-      "confidence": "uncertain",
+      "confidence": "documented",
       "from": "relic-17",
-      "note": "Relic 9 is powered to X (Improves gold gain)",
-      "op": "mult",
       "rel": "boosts",
-      "source": "wiki:Relics",
-      "to": "gold"
+      "source": "wiki:Attacks",
+      "to": "gold-gain"
     },
     {
       "confidence": "uncertain",
@@ -10222,6 +12379,24 @@
       "rel": "boosts",
       "source": "wiki:Relics",
       "to": "ascension-power"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "relic-18",
+      "note": "Increases Ascension Power of Attacks Revolutions",
+      "op": "add",
+      "rel": "boosts",
+      "source": "wiki:Relics",
+      "to": "attacks"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "relic-19",
+      "note": "Tetrates (Attacks) damage formula first divider Reduces the divider in the Formula shown on the Relic tab, which improves Base Damage in Attacks",
+      "op": "exp",
+      "rel": "boosts",
+      "source": "wiki:Relics",
+      "to": "attacks"
     },
     {
       "confidence": "provisional",
@@ -10249,13 +12424,11 @@
       "to": "relic-17"
     },
     {
-      "confidence": "uncertain",
+      "confidence": "documented",
       "from": "relic-21",
-      "note": "Empowers Relic 17 Raises Relic 17 effect to a power (^) Improves Gold Gain",
-      "op": "add",
       "rel": "boosts",
-      "source": "wiki:Relics",
-      "to": "gold"
+      "source": "wiki:Attacks",
+      "to": "gold-gain"
     },
     {
       "confidence": "provisional",
@@ -10273,7 +12446,7 @@
       "op": "add",
       "rel": "boosts",
       "source": "wiki:Relics",
-      "to": "game-speed"
+      "to": "donut-game-speed"
     },
     {
       "confidence": "uncertain",
@@ -10282,7 +12455,7 @@
       "op": "add",
       "rel": "boosts",
       "source": "wiki:Relics",
-      "to": "luck"
+      "to": "donut-luck"
     },
     {
       "confidence": "uncertain",
@@ -10291,7 +12464,7 @@
       "op": "add",
       "rel": "boosts",
       "source": "wiki:Relics",
-      "to": "quality"
+      "to": "donut-quality"
     },
     {
       "confidence": "uncertain",
@@ -10300,7 +12473,7 @@
       "op": "add",
       "rel": "boosts",
       "source": "wiki:Relics",
-      "to": "zodiac-exp-factor"
+      "to": "donut-zodiac-exp-factor"
     },
     {
       "confidence": "provisional",
@@ -10327,7 +12500,7 @@
       "op": "add",
       "rel": "boosts",
       "source": "wiki:Relics",
-      "to": "runes"
+      "to": "rune-moon"
     },
     {
       "confidence": "provisional",
@@ -10337,6 +12510,15 @@
       "rel": "boosts",
       "source": "wiki:Relics",
       "to": "refine-node-2"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "relic-38",
+      "note": "Adds base to Refine Node 2 (Attacks bulk leveling)",
+      "op": "add",
+      "rel": "boosts",
+      "source": "wiki:Relics",
+      "to": "attacks"
     },
     {
       "confidence": "provisional",
@@ -10382,6 +12564,15 @@
       "rel": "boosts",
       "source": "wiki:Relics",
       "to": "relic-38"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "relic-50",
+      "note": "Multiplies Relic 38's effect (Attacks bulk leveling)",
+      "op": "add",
+      "rel": "boosts",
+      "source": "wiki:Relics",
+      "to": "attacks"
     },
     {
       "confidence": "uncertain",
@@ -10481,11 +12672,27 @@
       "to": "refine-node-2"
     },
     {
+      "confidence": "uncertain",
+      "from": "refine-node-2",
+      "note": "Now you can bulk attacks (x10.00)",
+      "rel": "boosts",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "attacks"
+    },
+    {
       "confidence": "documented",
       "from": "refine-node-1",
       "rel": "requires",
       "source": "wiki:Minerals/Refine_Tree",
       "to": "refine-node-3"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "refine-node-3",
+      "note": "Attacks Prestige is a bit stronger",
+      "rel": "boosts",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "attacks"
     },
     {
       "confidence": "documented",
@@ -10528,7 +12735,7 @@
       "note": "Gold Gain common mineral upgrade effect is powered to ^2.00",
       "rel": "boosts",
       "source": "wiki:Minerals/Refine_Tree",
-      "to": "gold"
+      "to": "gold-gain"
     },
     {
       "confidence": "documented",
@@ -10696,6 +12903,22 @@
       "to": "gold"
     },
     {
+      "confidence": "uncertain",
+      "from": "refine-node-21",
+      "note": "Gold on Unity (in Attacks) is multiplied by seconds since last Unity",
+      "rel": "boosts",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "unity"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "refine-node-21",
+      "note": "Gold on Unity (in Attacks) is multiplied by seconds since last Unity",
+      "rel": "boosts",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "attacks"
+    },
+    {
       "confidence": "documented",
       "from": "refine-node-21",
       "rel": "requires",
@@ -10849,6 +13072,14 @@
       "to": "gold"
     },
     {
+      "confidence": "uncertain",
+      "from": "refine-node-33",
+      "note": "Get 100% of your Gold on Unity every second",
+      "rel": "boosts",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "unity"
+    },
+    {
       "confidence": "documented",
       "from": "refine-node-29",
       "rel": "requires",
@@ -10957,6 +13188,14 @@
       "to": "refine-node-45"
     },
     {
+      "confidence": "uncertain",
+      "from": "refine-node-45",
+      "note": "PP Gain Bonus from Trials is much bigger now",
+      "rel": "boosts",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "trials"
+    },
+    {
       "confidence": "documented",
       "from": "refine-node-32",
       "rel": "requires",
@@ -10976,7 +13215,7 @@
       "note": "Sun runes generation is 1.2x faster",
       "rel": "boosts",
       "source": "wiki:Minerals/Refine_Tree",
-      "to": "runes"
+      "to": "rune-sun"
     },
     {
       "confidence": "documented",
@@ -10991,7 +13230,7 @@
       "note": "Moon runes generation is 1.2x faster",
       "rel": "boosts",
       "source": "wiki:Minerals/Refine_Tree",
-      "to": "runes"
+      "to": "rune-moon"
     },
     {
       "confidence": "documented",
@@ -11131,6 +13370,14 @@
       "to": "dilation-tree-points"
     },
     {
+      "confidence": "uncertain",
+      "from": "refine-node-63",
+      "note": "Keep Dilation Tree and DTP on Unity Reset",
+      "rel": "boosts",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "unity"
+    },
+    {
       "confidence": "documented",
       "from": "refine-node-61",
       "rel": "requires",
@@ -11180,6 +13427,14 @@
       "rel": "requires",
       "source": "wiki:Minerals/Refine_Tree",
       "to": "refine-node-68"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "refine-node-68",
+      "note": "For every 100,000 attack levels gained reduce your SM Spawned Factor by 1",
+      "rel": "boosts",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "attack-level"
     },
     {
       "confidence": "documented",
@@ -11929,7 +14184,7 @@
       "note": "Attack Mult Gain from VP +^",
       "rel": "boosts",
       "source": "wiki:Tarot",
-      "to": "mult-gain"
+      "to": "attack-mult"
     },
     {
       "confidence": "provisional",
@@ -11941,6 +14196,14 @@
       "to": "tarot-ace-of-swords"
     },
     {
+      "confidence": "uncertain",
+      "from": "tarot-two-of-swords",
+      "note": "Attacks Ascend Power from VP +^",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "attacks"
+    },
+    {
       "confidence": "provisional",
       "from": "tarot-three-of-swords",
       "note": "Swords 2 first effect mult x",
@@ -11948,6 +14211,14 @@
       "source": "wiki:Tarot",
       "targets_effect": 0,
       "to": "tarot-two-of-swords"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-three-of-swords",
+      "note": "Attacks Prestige Power +^",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "attacks"
     },
     {
       "confidence": "provisional",
@@ -12227,7 +14498,7 @@
       "note": "Gold Gain +^",
       "rel": "boosts",
       "source": "wiki:Tarot",
-      "to": "gold"
+      "to": "gold-gain"
     },
     {
       "confidence": "provisional",
@@ -12278,7 +14549,7 @@
       "note": "Luck Donut Power +^",
       "rel": "boosts",
       "source": "wiki:Tarot",
-      "to": "luck"
+      "to": "donut-luck"
     },
     {
       "confidence": "provisional",
@@ -12657,6 +14928,22 @@
     },
     {
       "confidence": "uncertain",
+      "from": "tarot-temperance",
+      "note": "Add # (base 3.000) zodiacs of that type which is in your Fortune Pars slot, but with stats you'd get on Unity",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "planet-fortune-pars"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-temperance",
+      "note": "Add # (base 3.000) zodiacs of that type which is in your Fortune Pars slot, but with stats you'd get on Unity",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "unity"
+    },
+    {
+      "confidence": "uncertain",
       "from": "tarot-the-star",
       "note": "Multiplies Your Luck by amount of stars you have powered to ^# (base 0.400)",
       "rel": "boosts",
@@ -12670,6 +14957,14 @@
       "rel": "boosts",
       "source": "wiki:Tarot",
       "to": "tarot-the-star"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-the-moon",
+      "note": "Upgrades zodiac on moon postiton (position) x# (base 1,000) quality. But it's weaker after e1,000 quality",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "planet-moon"
     },
     {
       "confidence": "uncertain",
@@ -12760,6 +15055,14 @@
       "to": "ascension-power"
     },
     {
+      "confidence": "uncertain",
+      "from": "fire-node-3",
+      "note": "Attack level past 3600 boosts Fire generation Formula is:",
+      "rel": "boosts",
+      "source": "wiki:Elements",
+      "to": "attack-level"
+    },
+    {
       "confidence": "provisional",
       "from": "fire-node-4",
       "note": "Fire boosts Relic 26 effect (improves Quality donut)",
@@ -12773,7 +15076,7 @@
       "note": "Fire boosts Relic 26 effect (improves Quality donut)",
       "rel": "boosts",
       "source": "wiki:Elements",
-      "to": "quality"
+      "to": "donut-quality"
     },
     {
       "confidence": "provisional",
@@ -12821,7 +15124,7 @@
       "note": "Earth boosts Gold Gain",
       "rel": "boosts",
       "source": "wiki:Elements",
-      "to": "gold"
+      "to": "gold-gain"
     },
     {
       "confidence": "provisional",
@@ -12869,7 +15172,7 @@
       "note": "Wind boosts Relic 25 effect (Luck donut)",
       "rel": "boosts",
       "source": "wiki:Elements",
-      "to": "luck"
+      "to": "donut-luck"
     },
     {
       "confidence": "provisional",
@@ -12886,6 +15189,14 @@
       "rel": "boosts",
       "source": "wiki:Elements",
       "to": "relic-1"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "wind-node-6",
+      "note": "Relic 1 now also applies to Attacks Asc. Power",
+      "rel": "boosts",
+      "source": "wiki:Elements",
+      "to": "attacks"
     },
     {
       "confidence": "provisional",
@@ -12941,7 +15252,7 @@
       "note": "Water boosts Relic 24 effect (Game Speed Donut)",
       "rel": "boosts",
       "source": "wiki:Elements",
-      "to": "game-speed"
+      "to": "donut-game-speed"
     },
     {
       "confidence": "provisional",
@@ -12978,7 +15289,7 @@
       "from": "special-mineral-yellow-gem",
       "rel": "boosts",
       "source": "wiki:Minerals",
-      "to": "gold"
+      "to": "gold-gain"
     },
     {
       "confidence": "uncertain",
@@ -13021,6 +15332,20 @@
       "rel": "boosts",
       "source": "wiki:Zodiacs",
       "to": "infinity-points"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "zodiac-taurus",
+      "rel": "boosts",
+      "source": "wiki:Zodiacs",
+      "to": "infinities"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "zodiac-gemini",
+      "rel": "boosts",
+      "source": "wiki:Zodiacs",
+      "to": "eternities"
     },
     {
       "confidence": "uncertain",
@@ -13084,6 +15409,13 @@
       "rel": "boosts",
       "source": "wiki:Zodiacs",
       "to": "star-base"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "zodiac-virgo",
+      "rel": "boosts",
+      "source": "wiki:Zodiacs",
+      "to": "infinities"
     },
     {
       "confidence": "uncertain",
@@ -13220,6 +15552,13 @@
     },
     {
       "confidence": "uncertain",
+      "from": "trial-easy-trial-2",
+      "rel": "boosts",
+      "source": "wiki:Trials",
+      "to": "trials"
+    },
+    {
+      "confidence": "uncertain",
       "from": "trial-easy-trial-3",
       "rel": "boosts",
       "source": "wiki:Trials",
@@ -13227,10 +15566,24 @@
     },
     {
       "confidence": "uncertain",
+      "from": "trial-easy-trial-4",
+      "rel": "boosts",
+      "source": "wiki:Trials",
+      "to": "planet-mars"
+    },
+    {
+      "confidence": "uncertain",
       "from": "trial-easy-trial-5",
       "rel": "boosts",
       "source": "wiki:Trials",
       "to": "max-score"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "trial-easy-trial-6",
+      "rel": "boosts",
+      "source": "wiki:Trials",
+      "to": "planet-shop"
     },
     {
       "confidence": "uncertain",
@@ -13252,6 +15605,13 @@
       "rel": "boosts",
       "source": "wiki:Trials",
       "to": "dilation-tree-points"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "trial-medium-trial-4",
+      "rel": "boosts",
+      "source": "wiki:Trials",
+      "to": "unity"
     },
     {
       "confidence": "uncertain",
@@ -13297,10 +15657,31 @@
     },
     {
       "confidence": "uncertain",
+      "from": "trial-insane-trial-1",
+      "rel": "boosts",
+      "source": "wiki:Trials",
+      "to": "trials"
+    },
+    {
+      "confidence": "uncertain",
       "from": "trial-insane-trial-2",
       "rel": "boosts",
       "source": "wiki:Trials",
       "to": "eternity-challenges"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "trial-insane-trial-2",
+      "rel": "boosts",
+      "source": "wiki:Trials",
+      "to": "unity"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "trial-insane-trial-2",
+      "rel": "boosts",
+      "source": "wiki:Trials",
+      "to": "trials"
     },
     {
       "confidence": "uncertain",
@@ -13339,6 +15720,20 @@
     },
     {
       "confidence": "uncertain",
+      "from": "trial-insane-trial-5",
+      "rel": "boosts",
+      "source": "wiki:Trials",
+      "to": "du-power"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "trial-insane-trial-6",
+      "rel": "boosts",
+      "source": "wiki:Trials",
+      "to": "unity"
+    },
+    {
+      "confidence": "uncertain",
       "from": "trial-insane-trial-6",
       "rel": "boosts",
       "source": "wiki:Trials",
@@ -13349,7 +15744,7 @@
       "from": "plague-stat-max-stage-completed",
       "rel": "boosts",
       "source": "wiki:Plague",
-      "to": "gold"
+      "to": "gold-gain"
     },
     {
       "confidence": "uncertain",
@@ -13454,7 +15849,7 @@
       "from": "singularity-tree-2",
       "rel": "boosts",
       "source": "wiki:Singularity",
-      "to": "gold"
+      "to": "gold-gain"
     },
     {
       "confidence": "uncertain",
@@ -14036,6 +16431,1070 @@
       "rel": "boosts",
       "source": "wiki:Infinity",
       "to": "stars"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-ace-of-swords",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "attack-level"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-two-of-swords",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "game-speed"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-two-of-swords",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "attack-level"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-three-of-swords",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "game-speed"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-three-of-swords",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "attack-level"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-four-of-swords",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "attack-level"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-four-of-swords",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "attack-mult"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-four-of-swords",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "game-speed"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-four-of-swords",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "mult-gain"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-five-of-swords",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "attack-level"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-five-of-swords",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "attack-mult"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-five-of-swords",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "game-speed"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-five-of-swords",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "mult-gain"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-six-of-swords",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "attack-level"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-six-of-swords",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "gold"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-six-of-swords",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "attack-mult"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-six-of-swords",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "game-speed"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-six-of-swords",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "ascension-power"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-six-of-swords",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "gold-gain"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-seven-of-swords",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "attack-level"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-seven-of-swords",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "gold"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-seven-of-swords",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "attack-mult"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-seven-of-swords",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "game-speed"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-seven-of-swords",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "gold-gain"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-seven-of-swords",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "ascension-power"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "attack-level",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "tarot-challenge-seven-of-swords"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-eight-of-swords",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "attack-level"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-eight-of-swords",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "attack-mult"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-eight-of-swords",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "ascension-power"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-eight-of-swords",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "mult-gain"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-nine-of-swords",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "attack-level"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-nine-of-swords",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "attack-mult"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-nine-of-swords",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "score"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-nine-of-swords",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "game-speed"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-ten-of-swords",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "attack-level"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-ten-of-swords",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "attack-mult"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-ten-of-swords",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "game-speed"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-ten-of-swords",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "mult-gain"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-page-of-swords",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "attack-level"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-page-of-swords",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "attack-mult"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-page-of-swords",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "game-speed"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-page-of-swords",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "mult-gain"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-knight-of-swords",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "attack-level"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-knight-of-swords",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "attack-mult"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-knight-of-swords",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "game-speed"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-knight-of-swords",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "mult-gain"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-queen-of-swords",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "attack-level"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-queen-of-swords",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "attack-mult"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-queen-of-swords",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "game-speed"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-queen-of-swords",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "mult-gain"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "singularity",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "tarot-challenge-queen-of-swords"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-king-of-swords",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "attack-level"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-king-of-swords",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "attack-mult"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-king-of-swords",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "game-speed"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-king-of-swords",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "mult-gain"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "singularity",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "tarot-challenge-king-of-swords"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "attack-level",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "tarot-challenge-king-of-swords"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-king-of-swords",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "singularity"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-ace-of-wands",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "relic-36"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-two-of-wands",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "relic-36"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-three-of-wands",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "relic-36"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-six-of-wands",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "fire-node-3"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-six-of-wands",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "wind-node-4"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-six-of-wands",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "relic-36"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-seven-of-wands",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "relic-36"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-seven-of-wands",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "game-speed"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-eight-of-wands",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "relic-36"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-eight-of-wands",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "game-speed"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-nine-of-wands",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "relic-36"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-nine-of-wands",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "game-speed"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-ten-of-wands",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "relic-36"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-ten-of-wands",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "game-speed"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-knight-of-wands",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "relic-36"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-knight-of-wands",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "game-speed"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-queen-of-wands",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "singularity"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-king-of-wands",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "singularity"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-two-of-pentacles",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "relic-23"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-three-of-pentacles",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "relic-14"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-three-of-pentacles",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "relic-31"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-three-of-pentacles",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "game-speed"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-six-of-pentacles",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "gold"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-six-of-pentacles",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "relic-14"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-six-of-pentacles",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "relic-31"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-six-of-pentacles",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "gold-gain"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-seven-of-pentacles",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "gold"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-seven-of-pentacles",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "relic-14"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-seven-of-pentacles",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "relic-31"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-seven-of-pentacles",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "gold-gain"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-seven-of-pentacles",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "game-speed"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-eight-of-pentacles",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "gold"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-eight-of-pentacles",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "relic-14"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-eight-of-pentacles",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "relic-31"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-eight-of-pentacles",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "attack-level"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-ten-of-pentacles",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "game-speed"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-ten-of-pentacles",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "relic-22"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-knight-of-pentacles",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "game-speed"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-knight-of-pentacles",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "relic-22"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-queen-of-pentacles",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "singularity"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-queen-of-pentacles",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "relic-22"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-king-of-pentacles",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "singularity"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-king-of-pentacles",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "relic-22"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-ace-of-cups",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "unity"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-two-of-cups",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "unity"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-two-of-cups",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "luck"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-three-of-cups",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "unity"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-three-of-cups",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "luck"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-four-of-cups",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "unity"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-four-of-cups",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "luck"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-five-of-cups",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "unity"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-six-of-cups",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "unity"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-seven-of-cups",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "unity"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-seven-of-cups",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "luck"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-eight-of-cups",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "unity"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-eight-of-cups",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "luck"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-eight-of-cups",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "quality"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-nine-of-cups",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "unity"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-nine-of-cups",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "relic-8"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-ten-of-cups",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "unity"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-page-of-cups",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "unity"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-knight-of-cups",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "unity"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-queen-of-cups",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "unity"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-queen-of-cups",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "singularity"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-king-of-cups",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "unity"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "singularity",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "tarot-challenge-king-of-cups"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-king-of-cups",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "singularity"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-king-of-cups",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "zodiac-level"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-the-high-priestess",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "relic-22"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-the-empress",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "astrodust"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-the-emperor",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "relic-14"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-the-emperor",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "relic-31"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-the-lovers",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "relic-28"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-justice",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "sms-factor"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-wheel-of-fortune",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "tarot-draws"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-strength",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "attack-level"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-strength",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "attack-mult"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-strength",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "game-speed"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-strength",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "mult-gain"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-strength",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "attack-exponent"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "attack-level",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "tarot-challenge-strength"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-temperance",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "planet-fortune-pars"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-the-tower",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "relic-67"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-the-tower",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "score"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-the-tower",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "plague"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-the-star",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "singularity"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-the-star",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "unity"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-the-star",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "donut-luck"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-the-moon",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "singularity"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-the-moon",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "unity"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-the-moon",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "quality"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-the-moon",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "planet-moon"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "quality",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "tarot-challenge-the-moon"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "planet-moon",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "tarot-challenge-the-moon"
     },
     {
       "confidence": "uncertain",
@@ -15863,6 +19322,1063 @@
       "rel": "boosts",
       "source": "wiki:Dilation",
       "to": "dilation-upgrade-3"
+    },
+    {
+      "confidence": "documented",
+      "from": "eternity-points",
+      "rel": "unlocks",
+      "source": "wiki:Unity",
+      "to": "unity"
+    },
+    {
+      "confidence": "documented",
+      "from": "unity",
+      "rel": "boosts",
+      "source": "wiki:Unity",
+      "to": "unities"
+    },
+    {
+      "confidence": "documented",
+      "from": "unities",
+      "rel": "boosts",
+      "source": "wiki:Unity",
+      "to": "unity-bonuses"
+    },
+    {
+      "confidence": "documented",
+      "from": "unity-bonuses",
+      "rel": "boosts",
+      "source": "wiki:Unity",
+      "to": "infinity-points"
+    },
+    {
+      "confidence": "documented",
+      "from": "unity-bonuses",
+      "rel": "boosts",
+      "source": "wiki:Unity",
+      "to": "eternity-points"
+    },
+    {
+      "confidence": "documented",
+      "from": "unity-bonuses",
+      "rel": "boosts",
+      "source": "wiki:Unity",
+      "to": "eternities"
+    },
+    {
+      "confidence": "documented",
+      "from": "unity-bonuses",
+      "rel": "boosts",
+      "source": "wiki:Unity",
+      "to": "dilation-points"
+    },
+    {
+      "confidence": "documented",
+      "from": "unity",
+      "rel": "unlocks",
+      "source": "wiki:Unity",
+      "to": "trials"
+    },
+    {
+      "confidence": "documented",
+      "from": "planet-shop",
+      "rel": "unlocks",
+      "source": "wiki:Planet_Shop",
+      "to": "donut-game-speed"
+    },
+    {
+      "confidence": "documented",
+      "from": "astrodust",
+      "rel": "requires",
+      "source": "wiki:Planet_Shop",
+      "to": "donut-game-speed"
+    },
+    {
+      "confidence": "documented",
+      "from": "donut-game-speed",
+      "rel": "boosts",
+      "source": "wiki:Planet_Shop",
+      "to": "game-speed"
+    },
+    {
+      "confidence": "documented",
+      "from": "planet-shop",
+      "rel": "unlocks",
+      "source": "wiki:Planet_Shop",
+      "to": "donut-luck"
+    },
+    {
+      "confidence": "documented",
+      "from": "astrodust",
+      "rel": "requires",
+      "source": "wiki:Planet_Shop",
+      "to": "donut-luck"
+    },
+    {
+      "confidence": "documented",
+      "from": "donut-luck",
+      "rel": "boosts",
+      "source": "wiki:Planet_Shop",
+      "to": "luck"
+    },
+    {
+      "confidence": "documented",
+      "from": "planet-shop",
+      "rel": "unlocks",
+      "source": "wiki:Planet_Shop",
+      "to": "donut-quality"
+    },
+    {
+      "confidence": "documented",
+      "from": "astrodust",
+      "rel": "requires",
+      "source": "wiki:Planet_Shop",
+      "to": "donut-quality"
+    },
+    {
+      "confidence": "documented",
+      "from": "donut-quality",
+      "rel": "boosts",
+      "source": "wiki:Planet_Shop",
+      "to": "quality"
+    },
+    {
+      "confidence": "documented",
+      "from": "planet-shop",
+      "rel": "unlocks",
+      "source": "wiki:Planet_Shop",
+      "to": "donut-zodiac-exp-factor"
+    },
+    {
+      "confidence": "documented",
+      "from": "astrodust",
+      "rel": "requires",
+      "source": "wiki:Planet_Shop",
+      "to": "donut-zodiac-exp-factor"
+    },
+    {
+      "confidence": "documented",
+      "from": "donut-zodiac-exp-factor",
+      "rel": "boosts",
+      "source": "wiki:Planet_Shop",
+      "to": "zodiac-exp-factor"
+    },
+    {
+      "confidence": "documented",
+      "from": "planet-shop",
+      "rel": "unlocks",
+      "source": "wiki:Planet_Shop",
+      "to": "feature-merging"
+    },
+    {
+      "confidence": "documented",
+      "from": "astrodust",
+      "rel": "requires",
+      "source": "wiki:Planet_Shop",
+      "to": "feature-merging"
+    },
+    {
+      "confidence": "documented",
+      "from": "planet-shop",
+      "rel": "unlocks",
+      "source": "wiki:Planet_Shop",
+      "to": "feature-enhancing"
+    },
+    {
+      "confidence": "documented",
+      "from": "astrodust",
+      "rel": "requires",
+      "source": "wiki:Planet_Shop",
+      "to": "feature-enhancing"
+    },
+    {
+      "confidence": "documented",
+      "from": "planet-shop",
+      "rel": "unlocks",
+      "source": "wiki:Planet_Shop",
+      "to": "feature-redistribution"
+    },
+    {
+      "confidence": "documented",
+      "from": "astrodust",
+      "rel": "requires",
+      "source": "wiki:Planet_Shop",
+      "to": "feature-redistribution"
+    },
+    {
+      "confidence": "documented",
+      "from": "planet-shop",
+      "rel": "unlocks",
+      "source": "wiki:Planet_Shop",
+      "to": "feature-sacrificing"
+    },
+    {
+      "confidence": "documented",
+      "from": "astrodust",
+      "rel": "requires",
+      "source": "wiki:Planet_Shop",
+      "to": "feature-sacrificing"
+    },
+    {
+      "confidence": "documented",
+      "from": "trial-easy-trial-6",
+      "rel": "unlocks",
+      "source": "wiki:Planet_Shop",
+      "to": "planet-shop"
+    },
+    {
+      "confidence": "documented",
+      "from": "feature-merging",
+      "rel": "boosts",
+      "source": "wiki:Planet_Shop",
+      "to": "zodiac-rarity"
+    },
+    {
+      "confidence": "documented",
+      "from": "feature-enhancing",
+      "rel": "boosts",
+      "source": "wiki:Planet_Shop",
+      "to": "quality"
+    },
+    {
+      "confidence": "documented",
+      "from": "feature-sacrificing",
+      "rel": "boosts",
+      "source": "wiki:Attacks",
+      "to": "score"
+    },
+    {
+      "confidence": "documented",
+      "from": "luck",
+      "rel": "boosts",
+      "source": "wiki:Zodiacs",
+      "to": "zodiac-rarity"
+    },
+    {
+      "confidence": "documented",
+      "from": "zodiac-level",
+      "rel": "boosts",
+      "source": "wiki:Planet_Shop",
+      "to": "zodiac-score"
+    },
+    {
+      "confidence": "documented",
+      "from": "zodiac-level",
+      "rel": "boosts",
+      "source": "wiki:Planet_Shop",
+      "to": "zodiac-sell-cost"
+    },
+    {
+      "confidence": "documented",
+      "from": "zodiac-rarity",
+      "rel": "boosts",
+      "source": "wiki:Planet_Shop",
+      "to": "zodiac-score"
+    },
+    {
+      "confidence": "documented",
+      "from": "zodiac-rarity",
+      "rel": "boosts",
+      "source": "wiki:Planet_Shop",
+      "to": "zodiac-sell-cost"
+    },
+    {
+      "confidence": "documented",
+      "from": "quality",
+      "rel": "boosts",
+      "source": "wiki:Planet_Shop",
+      "to": "zodiac-score"
+    },
+    {
+      "confidence": "documented",
+      "from": "quality",
+      "rel": "boosts",
+      "source": "wiki:Planet_Shop",
+      "to": "zodiac-sell-cost"
+    },
+    {
+      "confidence": "documented",
+      "from": "zodiac-sell-cost",
+      "rel": "boosts",
+      "source": "wiki:Planet_Shop",
+      "to": "astrodust"
+    },
+    {
+      "confidence": "documented",
+      "from": "relic-5",
+      "rel": "boosts",
+      "source": "wiki:Planet_Shop",
+      "to": "zodiac-sell-cost"
+    },
+    {
+      "confidence": "documented",
+      "from": "unity",
+      "rel": "unlocks",
+      "source": "wiki:Unity",
+      "to": "planets"
+    },
+    {
+      "confidence": "documented",
+      "from": "planets",
+      "rel": "unlocks",
+      "source": "wiki:Planets",
+      "to": "planet-sun"
+    },
+    {
+      "confidence": "documented",
+      "from": "planet-sun",
+      "rel": "boosts",
+      "source": "wiki:Planets",
+      "to": "quality"
+    },
+    {
+      "confidence": "documented",
+      "from": "planet-sun",
+      "rel": "boosts",
+      "source": "wiki:Planets",
+      "to": "luck"
+    },
+    {
+      "confidence": "documented",
+      "from": "planet-sun",
+      "rel": "boosts",
+      "source": "wiki:Planets",
+      "to": "unity-rewards"
+    },
+    {
+      "confidence": "documented",
+      "from": "planet-sun",
+      "rel": "boosts",
+      "source": "wiki:Planets",
+      "to": "eternity-rewards"
+    },
+    {
+      "confidence": "documented",
+      "from": "planets",
+      "rel": "unlocks",
+      "source": "wiki:Planets",
+      "to": "planet-mercury"
+    },
+    {
+      "confidence": "documented",
+      "from": "planet-mercury",
+      "rel": "boosts",
+      "source": "wiki:Planets",
+      "to": "eternities"
+    },
+    {
+      "confidence": "documented",
+      "from": "planet-mercury",
+      "rel": "boosts",
+      "source": "wiki:Planets",
+      "to": "infinities"
+    },
+    {
+      "confidence": "documented",
+      "from": "planet-mercury",
+      "rel": "boosts",
+      "source": "wiki:Planets",
+      "to": "dp-income"
+    },
+    {
+      "confidence": "documented",
+      "from": "planet-mercury",
+      "rel": "boosts",
+      "source": "wiki:Planets",
+      "to": "star-cost"
+    },
+    {
+      "confidence": "documented",
+      "from": "planets",
+      "rel": "unlocks",
+      "source": "wiki:Planets",
+      "to": "planet-venus"
+    },
+    {
+      "confidence": "documented",
+      "from": "planet-venus",
+      "rel": "boosts",
+      "source": "wiki:Planets",
+      "to": "game-speed"
+    },
+    {
+      "confidence": "documented",
+      "from": "planet-venus",
+      "rel": "boosts",
+      "source": "wiki:Planets",
+      "to": "lap-speed"
+    },
+    {
+      "confidence": "documented",
+      "from": "planet-venus",
+      "rel": "boosts",
+      "source": "wiki:Planets",
+      "to": "supernova-rewards"
+    },
+    {
+      "confidence": "documented",
+      "from": "planet-venus",
+      "rel": "boosts",
+      "source": "wiki:Planets",
+      "to": "du-power"
+    },
+    {
+      "confidence": "documented",
+      "from": "planets",
+      "rel": "unlocks",
+      "source": "wiki:Planets",
+      "to": "planet-moon"
+    },
+    {
+      "confidence": "documented",
+      "from": "planet-moon",
+      "rel": "boosts",
+      "source": "wiki:Planets",
+      "to": "luck"
+    },
+    {
+      "confidence": "documented",
+      "from": "planet-moon",
+      "rel": "boosts",
+      "source": "wiki:Planets",
+      "to": "unity-rewards"
+    },
+    {
+      "confidence": "documented",
+      "from": "planet-moon",
+      "rel": "boosts",
+      "source": "wiki:Planets",
+      "to": "eternity-rewards"
+    },
+    {
+      "confidence": "documented",
+      "from": "planet-moon",
+      "rel": "boosts",
+      "source": "wiki:Planets",
+      "to": "quality"
+    },
+    {
+      "confidence": "documented",
+      "from": "planets",
+      "rel": "unlocks",
+      "source": "wiki:Planets",
+      "to": "planet-mars"
+    },
+    {
+      "confidence": "documented",
+      "from": "planet-mars",
+      "rel": "boosts",
+      "source": "wiki:Planets",
+      "to": "infinities"
+    },
+    {
+      "confidence": "documented",
+      "from": "planet-mars",
+      "rel": "boosts",
+      "source": "wiki:Planets",
+      "to": "dp-income"
+    },
+    {
+      "confidence": "documented",
+      "from": "planet-mars",
+      "rel": "boosts",
+      "source": "wiki:Planets",
+      "to": "star-cost"
+    },
+    {
+      "confidence": "documented",
+      "from": "planet-mars",
+      "rel": "boosts",
+      "source": "wiki:Planets",
+      "to": "eternities"
+    },
+    {
+      "confidence": "documented",
+      "from": "planets",
+      "rel": "unlocks",
+      "source": "wiki:Planets",
+      "to": "planet-jupiter"
+    },
+    {
+      "confidence": "documented",
+      "from": "planet-jupiter",
+      "rel": "boosts",
+      "source": "wiki:Planets",
+      "to": "lap-speed"
+    },
+    {
+      "confidence": "documented",
+      "from": "planet-jupiter",
+      "rel": "boosts",
+      "source": "wiki:Planets",
+      "to": "supernova-rewards"
+    },
+    {
+      "confidence": "documented",
+      "from": "planet-jupiter",
+      "rel": "boosts",
+      "source": "wiki:Planets",
+      "to": "du-power"
+    },
+    {
+      "confidence": "documented",
+      "from": "planet-jupiter",
+      "rel": "boosts",
+      "source": "wiki:Planets",
+      "to": "game-speed"
+    },
+    {
+      "confidence": "documented",
+      "from": "planets",
+      "rel": "unlocks",
+      "source": "wiki:Planets",
+      "to": "planet-saturn"
+    },
+    {
+      "confidence": "documented",
+      "from": "planet-saturn",
+      "rel": "boosts",
+      "source": "wiki:Planets",
+      "to": "unity-rewards"
+    },
+    {
+      "confidence": "documented",
+      "from": "planet-saturn",
+      "rel": "boosts",
+      "source": "wiki:Planets",
+      "to": "eternity-rewards"
+    },
+    {
+      "confidence": "documented",
+      "from": "planet-saturn",
+      "rel": "boosts",
+      "source": "wiki:Planets",
+      "to": "quality"
+    },
+    {
+      "confidence": "documented",
+      "from": "planet-saturn",
+      "rel": "boosts",
+      "source": "wiki:Planets",
+      "to": "luck"
+    },
+    {
+      "confidence": "documented",
+      "from": "planets",
+      "rel": "unlocks",
+      "source": "wiki:Planets",
+      "to": "planet-uranus"
+    },
+    {
+      "confidence": "documented",
+      "from": "planet-uranus",
+      "rel": "boosts",
+      "source": "wiki:Planets",
+      "to": "dp-income"
+    },
+    {
+      "confidence": "documented",
+      "from": "planet-uranus",
+      "rel": "boosts",
+      "source": "wiki:Planets",
+      "to": "star-cost"
+    },
+    {
+      "confidence": "documented",
+      "from": "planet-uranus",
+      "rel": "boosts",
+      "source": "wiki:Planets",
+      "to": "eternities"
+    },
+    {
+      "confidence": "documented",
+      "from": "planet-uranus",
+      "rel": "boosts",
+      "source": "wiki:Planets",
+      "to": "infinities"
+    },
+    {
+      "confidence": "documented",
+      "from": "planets",
+      "rel": "unlocks",
+      "source": "wiki:Planets",
+      "to": "planet-neptune"
+    },
+    {
+      "confidence": "documented",
+      "from": "planet-neptune",
+      "rel": "boosts",
+      "source": "wiki:Planets",
+      "to": "supernova-rewards"
+    },
+    {
+      "confidence": "documented",
+      "from": "planet-neptune",
+      "rel": "boosts",
+      "source": "wiki:Planets",
+      "to": "du-power"
+    },
+    {
+      "confidence": "documented",
+      "from": "planet-neptune",
+      "rel": "boosts",
+      "source": "wiki:Planets",
+      "to": "game-speed"
+    },
+    {
+      "confidence": "documented",
+      "from": "planet-neptune",
+      "rel": "boosts",
+      "source": "wiki:Planets",
+      "to": "lap-speed"
+    },
+    {
+      "confidence": "documented",
+      "from": "planets",
+      "rel": "unlocks",
+      "source": "wiki:Planets",
+      "to": "planet-pluto"
+    },
+    {
+      "confidence": "documented",
+      "from": "planet-pluto",
+      "rel": "boosts",
+      "source": "wiki:Planets",
+      "to": "eternity-rewards"
+    },
+    {
+      "confidence": "documented",
+      "from": "planet-pluto",
+      "rel": "boosts",
+      "source": "wiki:Planets",
+      "to": "quality"
+    },
+    {
+      "confidence": "documented",
+      "from": "planet-pluto",
+      "rel": "boosts",
+      "source": "wiki:Planets",
+      "to": "luck"
+    },
+    {
+      "confidence": "documented",
+      "from": "planet-pluto",
+      "rel": "boosts",
+      "source": "wiki:Planets",
+      "to": "unity-rewards"
+    },
+    {
+      "confidence": "documented",
+      "from": "planets",
+      "rel": "unlocks",
+      "source": "wiki:Planets",
+      "to": "planet-chiron"
+    },
+    {
+      "confidence": "documented",
+      "from": "planet-chiron",
+      "rel": "boosts",
+      "source": "wiki:Planets",
+      "to": "star-cost"
+    },
+    {
+      "confidence": "documented",
+      "from": "planet-chiron",
+      "rel": "boosts",
+      "source": "wiki:Planets",
+      "to": "eternities"
+    },
+    {
+      "confidence": "documented",
+      "from": "planet-chiron",
+      "rel": "boosts",
+      "source": "wiki:Planets",
+      "to": "infinities"
+    },
+    {
+      "confidence": "documented",
+      "from": "planet-chiron",
+      "rel": "boosts",
+      "source": "wiki:Planets",
+      "to": "dp-income"
+    },
+    {
+      "confidence": "documented",
+      "from": "planets",
+      "rel": "unlocks",
+      "source": "wiki:Planets",
+      "to": "planet-fortune-pars"
+    },
+    {
+      "confidence": "documented",
+      "from": "planet-fortune-pars",
+      "rel": "boosts",
+      "source": "wiki:Planets",
+      "to": "luck"
+    },
+    {
+      "confidence": "documented",
+      "from": "trial-easy-trial-4",
+      "rel": "unlocks",
+      "source": "wiki:Planets",
+      "to": "planet-mars"
+    },
+    {
+      "confidence": "documented",
+      "from": "eternity-rewards",
+      "rel": "boosts",
+      "source": "wiki:Planets",
+      "to": "eternity-points"
+    },
+    {
+      "confidence": "documented",
+      "from": "supernova-rewards",
+      "rel": "boosts",
+      "source": "wiki:Planets",
+      "to": "supernova"
+    },
+    {
+      "confidence": "documented",
+      "from": "star-cost",
+      "rel": "requires",
+      "source": "wiki:Planets",
+      "to": "stars"
+    },
+    {
+      "confidence": "documented",
+      "from": "attack-circles",
+      "rel": "unlocks",
+      "source": "wiki:Attacks",
+      "to": "attack-circle-1"
+    },
+    {
+      "confidence": "documented",
+      "from": "gold",
+      "rel": "requires",
+      "source": "wiki:Attacks",
+      "to": "attack-circle-1"
+    },
+    {
+      "confidence": "documented",
+      "from": "attack-circle-1",
+      "rel": "boosts",
+      "source": "wiki:Attacks",
+      "to": "attack-mult"
+    },
+    {
+      "confidence": "documented",
+      "from": "attack-circles",
+      "rel": "unlocks",
+      "source": "wiki:Attacks",
+      "to": "attack-circle-2"
+    },
+    {
+      "confidence": "documented",
+      "from": "gold",
+      "rel": "requires",
+      "source": "wiki:Attacks",
+      "to": "attack-circle-2"
+    },
+    {
+      "confidence": "documented",
+      "from": "attack-circle-2",
+      "rel": "boosts",
+      "source": "wiki:Attacks",
+      "to": "attack-mult"
+    },
+    {
+      "confidence": "documented",
+      "from": "attack-circles",
+      "rel": "unlocks",
+      "source": "wiki:Attacks",
+      "to": "attack-circle-3"
+    },
+    {
+      "confidence": "documented",
+      "from": "gold",
+      "rel": "requires",
+      "source": "wiki:Attacks",
+      "to": "attack-circle-3"
+    },
+    {
+      "confidence": "documented",
+      "from": "attack-circle-3",
+      "rel": "boosts",
+      "source": "wiki:Attacks",
+      "to": "attack-mult"
+    },
+    {
+      "confidence": "documented",
+      "from": "attack-circles",
+      "rel": "unlocks",
+      "source": "wiki:Attacks",
+      "to": "attack-circle-4"
+    },
+    {
+      "confidence": "documented",
+      "from": "gold",
+      "rel": "requires",
+      "source": "wiki:Attacks",
+      "to": "attack-circle-4"
+    },
+    {
+      "confidence": "documented",
+      "from": "attack-circle-4",
+      "rel": "boosts",
+      "source": "wiki:Attacks",
+      "to": "attack-mult"
+    },
+    {
+      "confidence": "documented",
+      "from": "attack-circles",
+      "rel": "unlocks",
+      "source": "wiki:Attacks",
+      "to": "attack-circle-5"
+    },
+    {
+      "confidence": "documented",
+      "from": "gold",
+      "rel": "requires",
+      "source": "wiki:Attacks",
+      "to": "attack-circle-5"
+    },
+    {
+      "confidence": "documented",
+      "from": "attack-circle-5",
+      "rel": "boosts",
+      "source": "wiki:Attacks",
+      "to": "attack-mult"
+    },
+    {
+      "confidence": "documented",
+      "from": "trials",
+      "rel": "unlocks",
+      "source": "wiki:Attacks",
+      "to": "attacks"
+    },
+    {
+      "confidence": "documented",
+      "from": "attacks",
+      "rel": "unlocks",
+      "source": "wiki:Attacks",
+      "to": "attack-level"
+    },
+    {
+      "confidence": "documented",
+      "from": "attacks",
+      "rel": "unlocks",
+      "source": "wiki:Attacks",
+      "to": "attack-circles"
+    },
+    {
+      "confidence": "documented",
+      "from": "attack-circles",
+      "rel": "boosts",
+      "source": "wiki:Attacks",
+      "to": "mult-gain"
+    },
+    {
+      "confidence": "documented",
+      "from": "mult-gain",
+      "rel": "boosts",
+      "source": "wiki:Attacks",
+      "to": "attack-mult"
+    },
+    {
+      "confidence": "documented",
+      "from": "game-speed",
+      "rel": "boosts",
+      "source": "wiki:Attacks",
+      "to": "attack-mult"
+    },
+    {
+      "confidence": "documented",
+      "from": "ascension-stage",
+      "rel": "boosts",
+      "source": "wiki:Attacks",
+      "to": "mult-gain"
+    },
+    {
+      "confidence": "documented",
+      "from": "ascension-stage",
+      "rel": "boosts",
+      "source": "wiki:Attacks",
+      "to": "damage-mult"
+    },
+    {
+      "confidence": "documented",
+      "from": "ascension-power",
+      "rel": "boosts",
+      "source": "wiki:Attacks",
+      "to": "mult-gain"
+    },
+    {
+      "confidence": "documented",
+      "from": "ascension-power",
+      "rel": "boosts",
+      "source": "wiki:Attacks",
+      "to": "damage-mult"
+    },
+    {
+      "confidence": "documented",
+      "from": "score",
+      "rel": "boosts",
+      "source": "wiki:Attacks",
+      "to": "score-damage-mult"
+    },
+    {
+      "confidence": "documented",
+      "from": "zodiac-level",
+      "rel": "boosts",
+      "source": "wiki:Attacks",
+      "to": "cumulative-mult"
+    },
+    {
+      "confidence": "documented",
+      "from": "attack-mult",
+      "rel": "boosts",
+      "source": "wiki:Attacks",
+      "to": "attack-base-damage"
+    },
+    {
+      "confidence": "documented",
+      "from": "score-damage-mult",
+      "rel": "boosts",
+      "source": "wiki:Attacks",
+      "to": "attack-base-damage"
+    },
+    {
+      "confidence": "documented",
+      "from": "cumulative-mult",
+      "rel": "boosts",
+      "source": "wiki:Attacks",
+      "to": "attack-base-damage"
+    },
+    {
+      "confidence": "documented",
+      "from": "attack-exponent",
+      "rel": "boosts",
+      "source": "wiki:Attacks",
+      "to": "attack-base-damage"
+    },
+    {
+      "confidence": "documented",
+      "from": "attack-base-damage",
+      "rel": "boosts",
+      "source": "wiki:Attacks",
+      "to": "attack-level"
+    },
+    {
+      "confidence": "documented",
+      "from": "damage-mult",
+      "rel": "boosts",
+      "source": "wiki:Attacks",
+      "to": "attack-level"
+    },
+    {
+      "confidence": "documented",
+      "from": "enemy-hp",
+      "rel": "requires",
+      "source": "wiki:Attacks",
+      "to": "attack-level"
+    },
+    {
+      "confidence": "documented",
+      "from": "attack-level",
+      "rel": "boosts",
+      "source": "wiki:Attacks",
+      "to": "enemy-hp"
+    },
+    {
+      "confidence": "documented",
+      "from": "attack-level",
+      "rel": "boosts",
+      "source": "wiki:Attacks",
+      "to": "gold-gain"
+    },
+    {
+      "confidence": "documented",
+      "from": "gold-gain",
+      "rel": "boosts",
+      "source": "wiki:Attacks",
+      "to": "gold"
+    },
+    {
+      "confidence": "documented",
+      "from": "relic-13",
+      "rel": "boosts",
+      "source": "wiki:Attacks",
+      "to": "score-damage-mult"
+    },
+    {
+      "confidence": "documented",
+      "from": "relic-19",
+      "rel": "boosts",
+      "source": "wiki:Attacks",
+      "to": "score-damage-mult"
+    },
+    {
+      "confidence": "documented",
+      "from": "relic-18",
+      "rel": "boosts",
+      "source": "wiki:Attacks",
+      "to": "mult-gain"
+    },
+    {
+      "confidence": "documented",
+      "from": "relic-20",
+      "rel": "boosts",
+      "source": "wiki:Attacks",
+      "to": "mult-gain"
+    },
+    {
+      "confidence": "documented",
+      "from": "relic-1",
+      "rel": "boosts",
+      "source": "wiki:Attacks",
+      "to": "cumulative-mult"
+    },
+    {
+      "confidence": "documented",
+      "from": "relic-3",
+      "rel": "boosts",
+      "source": "wiki:Attacks",
+      "to": "cumulative-mult"
+    },
+    {
+      "confidence": "documented",
+      "from": "relic-12",
+      "rel": "boosts",
+      "source": "wiki:Attacks",
+      "to": "cumulative-mult"
+    },
+    {
+      "confidence": "documented",
+      "from": "relic-7",
+      "rel": "boosts",
+      "source": "wiki:Attacks",
+      "to": "attack-circles"
+    },
+    {
+      "confidence": "documented",
+      "from": "runes",
+      "rel": "unlocks",
+      "source": "wiki:Minerals",
+      "to": "rune-sun"
+    },
+    {
+      "confidence": "documented",
+      "from": "runes",
+      "rel": "unlocks",
+      "source": "wiki:Minerals",
+      "to": "rune-moon"
+    },
+    {
+      "confidence": "documented",
+      "from": "relic-34",
+      "rel": "boosts",
+      "source": "wiki:Relics",
+      "to": "rune-sun"
     }
   ],
   "systems": [
@@ -15884,7 +20400,8 @@
     },
     {
       "id": "attacks",
-      "name": "Attacks"
+      "name": "Attacks",
+      "parent": "unity"
     },
     {
       "id": "astrology",

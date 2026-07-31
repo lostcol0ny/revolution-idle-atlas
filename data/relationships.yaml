@@ -20,6 +20,7 @@ systems:
     name: Unity
   - id: attacks
     name: Attacks
+    parent: unity
   - id: astrology
     name: Astrology
     parent: unity
@@ -231,6 +232,7 @@ nodes:
 
   - id: infinities
     name: Infinities
+    aliases: [Infinity Gain]
     system: infinity
     kind: stat
     wiki: Infinity
@@ -618,6 +620,7 @@ nodes:
 
   - id: quality
     name: Quality
+    aliases: [Zodiac Quality]
     system: astrology
     kind: stat
     wiki: Zodiacs
@@ -625,6 +628,7 @@ nodes:
 
   - id: luck
     name: Luck
+    aliases: [Luck Mult]
     system: unity
     kind: stat
     wiki: Unity
@@ -775,6 +779,7 @@ nodes:
 
   - id: eternities
     name: Eternities
+    aliases: [Eternity Gain]
     system: eternity
     kind: stat
     wiki: Eternity_Milestones
@@ -2186,6 +2191,7 @@ nodes:
 
   - id: dp-income
     name: DP Income
+    aliases: [DP Mult]
     system: eternity
     kind: stat
     wiki: Dilation
@@ -2202,6 +2208,565 @@ nodes:
     effects:
       - text: Thirteen upgrades bought with DTP
         per_level: Each holds up to 5 levels; 65 DTP maxes the tree
+
+  # The Unity layer itself, and the four passive bonuses that scale
+  # with the number of Unities rather than with any Zodiac.
+  - id: unity
+    name: Unity
+    system: unity
+    kind: group
+    wiki: Unity
+    confidence: documented
+    effects:
+      - text: The third major prestige layer, reached at 1.08e2466 EP
+      - text: Uniting picks one Zodiac from each of Fire, Wind, Water and Earth
+
+  - id: unities
+    name: Unities
+    system: unity
+    kind: stat
+    wiki: Unity
+    confidence: documented
+    effects:
+      - text: Running count of Unity resets performed
+
+  - id: unity-bonuses
+    name: Unity Bonuses
+    system: unity
+    kind: group
+    wiki: Unity
+    confidence: documented
+    effects:
+      - text: IP Gain = [1 + Unities] ^ [2 + log(Unities)]
+      - text: EP Gain = [1 + Unities] ^ [1 + 0.25 * log(Unities)]
+      - text: Eternity Count Gain = [1 + Unities]
+      - text: DP Gain = [1 + Unities * 3] ^ [0.5 + 0.125 * log(Unities)]
+
+  - id: unity-rewards
+    name: Unity Rewards
+    system: unity
+    kind: stat
+    wiki: Planets
+    confidence: documented
+    effects:
+      - text: The Unity-layer reward multiplier that Planet bonuses raise to a power
+
+  - id: trials
+    name: Trials
+    system: trials
+    kind: group
+    wiki: Trials
+    confidence: documented
+    effects:
+      - text: 'Twenty-five trials: 6 Easy, 6 Medium, 6 Hard, 6 Insane and 1 Blind'
+      - text: Each completed trial gives a permanent reward and +2 default EC completions
+
+  # The Planet Shop. Astrodust comes from selling Zodiacs, and buys
+  # both the four donuts and the four Zodiac-manipulation features.
+  # The features are named "Zodiac Merging" rather than the wiki's bare
+  # "Merging": the bare gerunds also describe merging minerals and
+  # sacrificing relics, and would resolve against those sentences.
+  - id: planet-shop
+    name: Planet Shop
+    system: astrology
+    kind: group
+    wiki: Planet_Shop
+    confidence: documented
+    effects:
+      - text: Spends Astrodust on donuts and on the four Zodiac features
+
+  - id: astrodust
+    name: Astrodust
+    system: astrology
+    kind: currency
+    wiki: Planet_Shop
+    confidence: documented
+    effects:
+      - text: Gained by selling Zodiacs; spent on donuts and Planet Shop features
+
+  - id: zodiac-level
+    name: Zodiac Level
+    aliases: [Zodiac Levels]
+    system: astrology
+    kind: stat
+    wiki: Zodiacs
+    confidence: documented
+    effects:
+      - text: Raises a Zodiac's bonuses, its sale price and its Zodiac Score
+
+  - id: zodiac-rarity
+    name: Zodiac Rarity
+    system: astrology
+    kind: stat
+    wiki: Zodiacs
+    confidence: documented
+    effects:
+      - text: Rarity tier reached by Luck thresholds; raises sale price and Zodiac Score
+
+  - id: zodiac-score
+    name: Zodiac Score
+    system: astrology
+    kind: stat
+    wiki: Planet_Shop
+    confidence: documented
+    effects:
+      - text: = 1.125^Rarity * Quality * (9 + Level^2), before rarity and level bonuses
+      - text: Drives every Zodiac stat formula, from Mults Gain to Zodiac Quality Mult
+
+  - id: donut-game-speed
+    name: Game Speed Donut
+    system: astrology
+    kind: upgrade
+    wiki: Planet_Shop
+    confidence: documented
+    effects:
+      - text: Bought with Astrodust; persists through Unities
+        per_level: +0.01 Game Speed mult
+
+  - id: donut-luck
+    name: Luck Donut
+    system: astrology
+    kind: upgrade
+    wiki: Planet_Shop
+    confidence: documented
+    effects:
+      - text: Bought with Astrodust; persists through Unities
+        per_level: +0.02 Luck mult
+
+  - id: donut-quality
+    name: Quality Donut
+    system: astrology
+    kind: upgrade
+    wiki: Planet_Shop
+    confidence: documented
+    effects:
+      - text: Bought with Astrodust; persists through Unities
+        per_level: +0.03 Zodiac Quality mult
+
+  - id: donut-zodiac-exp-factor
+    name: Zodiac Exp. Factor Donut
+    system: astrology
+    kind: upgrade
+    wiki: Planet_Shop
+    confidence: documented
+    effects:
+      - text: Bought with Astrodust; persists through Unities
+        per_level: +0.04 Factor mult
+
+  - id: feature-merging
+    name: Zodiac Merging
+    system: astrology
+    kind: upgrade
+    wiki: Planet_Shop
+    confidence: documented
+    effects:
+      - text: Merges 3 Zodiacs of one element and rarity into one of the next rarity tier
+      - text: Unlocked for 50 Astrodust
+
+  - id: feature-enhancing
+    name: Zodiac Enhancing
+    system: astrology
+    kind: upgrade
+    wiki: Planet_Shop
+    confidence: documented
+    effects:
+      - text: Chance to raise a Zodiac's quality; the chance falls as quality rises
+      - text: Unlocked for 350 Astrodust
+
+  - id: feature-redistribution
+    name: Zodiac Redistribution
+    system: astrology
+    kind: upgrade
+    wiki: Planet_Shop
+    confidence: documented
+    effects:
+      - text: Randomises the inserted Zodiac's sign, stats, stat count and stat order
+      - text: Unlocked for 500 Astrodust
+
+  - id: feature-sacrificing
+    name: Zodiac Sacrificing
+    system: astrology
+    kind: upgrade
+    wiki: Planet_Shop
+    confidence: documented
+    effects:
+      - text: Destroys a Zodiac to permanently gain part of its first listed stat
+      - text: Unlocked for 10,000,000 Astrodust
+
+  # The twelve Planet slots. Each cell of the wiki's Planet Bonuses table
+  # is one bonus per Zodiac season, and the season lives only in the column
+  # heading, so each effect below names its season explicitly.
+  - id: planets
+    name: Planets
+    system: astrology
+    kind: group
+    wiki: Planets
+    confidence: documented
+    effects:
+      - text: Slots that Zodiacs are assigned to; a Zodiac is inert until placed
+      - text: Each Planet holds one Zodiac and adds a bonus chosen by that Zodiac's season
+
+  - id: planet-sun
+    name: Sun
+    system: astrology
+    kind: upgrade
+    wiki: Planets
+    confidence: documented
+    effects:
+      - text: Unlocked at the start
+      - text: Zodiac Quality x1.5 (Spring)
+      - text: Luck Mult x1.15 (Summer)
+      - text: Unity Rewards ^1.1 (Autumn)
+      - text: Eternity Rewards ^1.2 (Winter)
+
+  - id: planet-mercury
+    name: Mercury
+    system: astrology
+    kind: upgrade
+    wiki: Planets
+    confidence: documented
+    effects:
+      - text: Unlocked by Ach 161 (put a Zodiac on Sun)
+      - text: Eternity Gain x2 (Spring)
+      - text: Infinity Gain x10 (Summer)
+      - text: DP Mult x2 (Autumn)
+      - text: Star Cost ^0.9 (Winter)
+
+  - id: planet-venus
+    name: Venus
+    system: astrology
+    kind: upgrade
+    wiki: Planets
+    confidence: documented
+    effects:
+      - text: Unlocked by Ach 162 (have 2 Unities)
+      - text: Game Speed x2 (Spring)
+      - text: Lap Speed x3 (Summer)
+      - text: Supernova Rewards ^1.02 (Autumn)
+      - text: DU Power x1.05 (Winter)
+
+  - id: planet-moon
+    name: Moon
+    system: astrology
+    kind: upgrade
+    wiki: Planets
+    confidence: documented
+    effects:
+      - text: Unlocked by Ach 166 (clear 1 Easy Trial)
+      - text: Luck Mult x1.2 (Spring)
+      - text: Unity Rewards ^1.15 (Summer)
+      - text: Eternity Rewards ^1.15 (Autumn)
+      - text: Zodiac Quality x1.3 (Winter)
+
+  - id: planet-mars
+    name: Mars
+    system: astrology
+    kind: upgrade
+    wiki: Planets
+    confidence: documented
+    effects:
+      - text: Unlocked by clearing Easy Trial 4 (no Promo 2 and 4)
+      - text: Infinity Gain x5 (Spring)
+      - text: DP Mult x1.8 (Summer)
+      - text: Star Cost ^0.85 (Autumn)
+      - text: Eternity Gain x2 (Winter)
+
+  - id: planet-jupiter
+    name: Jupiter
+    system: astrology
+    kind: upgrade
+    wiki: Planets
+    confidence: documented
+    effects:
+      - text: Unlocked by Ach 172 (level 5+ Zodiac)
+      - text: Lap Speed x2 (Spring)
+      - text: Supernova Rewards ^1.03 (Summer)
+      - text: DU Power x1.03 (Autumn)
+      - text: Game Speed x1.1 (Winter)
+
+  - id: planet-saturn
+    name: Saturn
+    system: astrology
+    kind: upgrade
+    wiki: Planets
+    confidence: documented
+    effects:
+      - text: Unlocked by Ach 181 (level 10+ Zodiac)
+      - text: Unity Rewards ^1.1 (Spring)
+      - text: Eternity Rewards ^1.2 (Summer)
+      - text: Zodiac Quality x1.2 (Autumn)
+      - text: Luck Mult x1.1 (Winter)
+
+  - id: planet-uranus
+    name: Uranus
+    system: astrology
+    kind: upgrade
+    wiki: Planets
+    confidence: documented
+    effects:
+      - text: Unlocked by Ach 184 (level 20+ Zodiac)
+      - text: DP Mult x5 (Spring)
+      - text: Star Cost ^0.93 (Summer)
+      - text: Eternity Gain x3 (Autumn)
+      - text: Infinity Gain x3 (Winter)
+
+  - id: planet-neptune
+    name: Neptune
+    system: astrology
+    kind: upgrade
+    wiki: Planets
+    confidence: documented
+    effects:
+      - text: Unlocked by Ach 188 (level 30+ Zodiac)
+      - text: Supernova Rewards ^1.04 (Spring)
+      - text: DU Power x1.06 (Summer)
+      - text: Game Speed x1.4 (Autumn)
+      - text: Lap Speed x10 (Winter)
+
+  - id: planet-pluto
+    name: Pluto
+    system: astrology
+    kind: upgrade
+    wiki: Planets
+    confidence: documented
+    effects:
+      - text: Unlocked by Ach 190 (level 40+ Zodiac)
+      - text: Eternity Rewards ^1.15 (Spring)
+      - text: Zodiac Quality x1.25 (Summer)
+      - text: Luck Mult x1.25 (Autumn)
+      - text: Unity Rewards ^1.5 (Winter)
+
+  - id: planet-chiron
+    name: Chiron
+    system: astrology
+    kind: upgrade
+    wiki: Planets
+    confidence: documented
+    effects:
+      - text: Unlocked by Ach 205 (level 50+ Zodiac)
+      - text: Star Cost ^0.9 (Spring)
+      - text: Eternity Gain x2 (Summer)
+      - text: Infinity Gain x100 (Autumn)
+      - text: DP Mult x2.5 (Winter)
+
+  - id: planet-fortune-pars
+    name: Fortune Pars
+    system: astrology
+    kind: upgrade
+    wiki: Planets
+    confidence: documented
+    effects:
+      - text: Unlocked by Ach 219 (level 100+ Zodiac)
+      - text: Luck Mult x1.5 (every season)
+
+  - id: eternity-rewards
+    name: Eternity Rewards
+    system: eternity
+    kind: stat
+    wiki: Planets
+    confidence: documented
+    effects:
+      - text: The Eternity-layer reward multiplier that Planet bonuses raise to a power
+
+  - id: supernova-rewards
+    name: Supernova Rewards
+    system: eternity
+    kind: stat
+    wiki: Planets
+    confidence: documented
+    effects:
+      - text: The Supernova reward multiplier that Planet bonuses raise to a power
+
+  - id: du-power
+    name: DU Power
+    system: eternity
+    kind: stat
+    wiki: Planets
+    confidence: documented
+    effects:
+      - text: The exponent Dilation applies when converting score into Dilation Upgrades
+
+  - id: star-cost
+    name: Star Cost
+    system: infinity
+    kind: stat
+    wiki: Planets
+    confidence: documented
+    effects:
+      - text: Stardust price of the next Star; Planet bonuses raise it to a power below 1
+
+  # Attacks. Five circles feed five Attack Mults; those, the Score Damage
+  # Mult, the Cumulative Mult and the Attack Exponent multiply into one
+  # Total Attack Base Damage, which each circle's Damage Mult then scales.
+  - id: attacks
+    name: Attacks
+    system: attacks
+    kind: group
+    wiki: Attacks
+    confidence: documented
+    effects:
+      - text: 'A second revolution type: five Attack Circles fighting one enemy per level'
+      - text: Uniting resets Attack Level to 0 and pays out the displayed Gold
+
+  - id: attack-level
+    name: Attack Level
+    aliases: [Attack Levels]
+    system: attacks
+    kind: stat
+    wiki: Attacks
+    confidence: documented
+    effects:
+      - text: Advances when the current enemy's HP bar is depleted
+
+  - id: enemy-hp
+    name: Enemy HP
+    system: attacks
+    kind: stat
+    wiki: Attacks
+    confidence: documented
+    effects:
+      - text: Damage that must be dealt to advance to the next Attack Level
+
+  - id: gold-gain
+    name: Gold Gain
+    system: attacks
+    kind: stat
+    wiki: Attacks
+    confidence: documented
+    effects:
+      - text: Gold paid out on Uniting; rises with every enemy defeated
+
+  - id: attack-circles
+    name: Attack Circles
+    system: attacks
+    kind: group
+    wiki: Attacks
+    confidence: documented
+    effects:
+      - text: Five circles; each revolution raises its Attack Mult and hits the enemy
+      - text: Each level costs 1.25 + (0.15 x Ascension Stage) more than the last
+      - text: Levelling adds 5% of base lap speed; at max level 20 the speed has doubled
+
+  - id: ascension-stage
+    name: Ascension Stage
+    system: attacks
+    kind: stat
+    wiki: Attacks
+    confidence: documented
+    effects:
+      - text: Ascending resets Circle Level to 1 and halves Lap Speed
+      - text: Multiplies Mult Gain and Damage Mult by Ascension Power
+
+  - id: attack-mult
+    name: Attack Mult
+    aliases: [Attack Multiplier, Attack Mults]
+    system: attacks
+    kind: stat
+    wiki: Attacks
+    confidence: documented
+    effects:
+      - text: One per circle; rises by that circle's Mult Gain on every revolution
+
+  - id: score-damage-mult
+    name: Score Damage Multiplier
+    aliases: [Score Damage Mult]
+    system: attacks
+    kind: stat
+    wiki: Attacks
+    confidence: documented
+    effects:
+      - text: Converts Revolution Score into attack damage
+
+  - id: cumulative-mult
+    name: Cumulative Multiplier
+    aliases: [Cumulative Mult]
+    system: attacks
+    kind: stat
+    wiki: Attacks
+    confidence: documented
+    effects:
+      - text: Product of Relics 1, 3 and 12 with the Achievement damage multiplier
+
+  - id: attack-base-damage
+    name: Total Attack Base Damage
+    aliases: [Attack Base Damage]
+    system: attacks
+    kind: stat
+    wiki: Attacks
+    confidence: documented
+    effects:
+      - text: Product of Score Damage, Attack Mults, Cumulative Mult and Attack Exponent
+
+  - id: attack-circle-1
+    name: Attack Circle 1
+    system: attacks
+    kind: upgrade
+    wiki: Attacks
+    confidence: documented
+    effects:
+      - text: Electric Red; base lap speed 1/100s, base damage 1
+      - text: Base cost 10 Gold
+
+  - id: attack-circle-2
+    name: Attack Circle 2
+    system: attacks
+    kind: upgrade
+    wiki: Attacks
+    confidence: documented
+    effects:
+      - text: Firebrick Red; base lap speed 1/200s, base damage 3
+      - text: Base cost 100 Gold
+
+  - id: attack-circle-3
+    name: Attack Circle 3
+    system: attacks
+    kind: upgrade
+    wiki: Attacks
+    confidence: documented
+    effects:
+      - text: Burnt Umber; base lap speed 1/400s, base damage 10
+      - text: Base cost 1,000 Gold
+
+  - id: attack-circle-4
+    name: Attack Circle 4
+    system: attacks
+    kind: upgrade
+    wiki: Attacks
+    confidence: documented
+    effects:
+      - text: Van Dyke Brown; base lap speed 1/1600s, base damage 150
+      - text: Base cost 1e6 Gold
+
+  - id: attack-circle-5
+    name: Attack Circle 5
+    system: attacks
+    kind: upgrade
+    wiki: Attacks
+    confidence: documented
+    effects:
+      - text: Dark Lava; base lap speed 1/4000s, base damage 5000
+      - text: Base cost 1e9 Gold
+
+  # The two rune types. They exist as their own nodes so that
+  # "Moon runes" and "Sun runes" claim those words before the Planet
+  # names "Moon" and "Sun" can resolve against them.
+  - id: rune-sun
+    name: Sun Runes
+    system: relics
+    kind: currency
+    wiki: Minerals
+    confidence: documented
+    effects:
+      - text: Spent alongside Moon Runes to spawn a Special Mineral
+
+  - id: rune-moon
+    name: Moon Runes
+    system: relics
+    kind: currency
+    wiki: Minerals
+    confidence: documented
+    effects:
+      - text: Spent alongside Sun Runes to spawn a Special Mineral
 
 edges:
   - from: relic-3
@@ -3801,7 +4366,961 @@ edges:
     source: wiki:Dilation
     confidence: documented
 
+  - from: eternity-points
+    to: unity
+    rel: unlocks
+    source: wiki:Unity
+    confidence: documented
+
+  - from: unity
+    to: unities
+    rel: boosts
+    source: wiki:Unity
+    confidence: documented
+
+  - from: unities
+    to: unity-bonuses
+    rel: boosts
+    source: wiki:Unity
+    confidence: documented
+
+  - from: unity-bonuses
+    to: infinity-points
+    rel: boosts
+    source: wiki:Unity
+    confidence: documented
+
+  - from: unity-bonuses
+    to: eternity-points
+    rel: boosts
+    source: wiki:Unity
+    confidence: documented
+
+  - from: unity-bonuses
+    to: eternities
+    rel: boosts
+    source: wiki:Unity
+    confidence: documented
+
+  - from: unity-bonuses
+    to: dilation-points
+    rel: boosts
+    source: wiki:Unity
+    confidence: documented
+
+  - from: unity
+    to: trials
+    rel: unlocks
+    source: wiki:Unity
+    confidence: documented
+
+  - from: planet-shop
+    to: donut-game-speed
+    rel: unlocks
+    source: wiki:Planet_Shop
+    confidence: documented
+
+  - from: astrodust
+    to: donut-game-speed
+    rel: requires
+    source: wiki:Planet_Shop
+    confidence: documented
+
+  - from: donut-game-speed
+    to: game-speed
+    rel: boosts
+    source: wiki:Planet_Shop
+    confidence: documented
+
+  - from: planet-shop
+    to: donut-luck
+    rel: unlocks
+    source: wiki:Planet_Shop
+    confidence: documented
+
+  - from: astrodust
+    to: donut-luck
+    rel: requires
+    source: wiki:Planet_Shop
+    confidence: documented
+
+  - from: donut-luck
+    to: luck
+    rel: boosts
+    source: wiki:Planet_Shop
+    confidence: documented
+
+  - from: planet-shop
+    to: donut-quality
+    rel: unlocks
+    source: wiki:Planet_Shop
+    confidence: documented
+
+  - from: astrodust
+    to: donut-quality
+    rel: requires
+    source: wiki:Planet_Shop
+    confidence: documented
+
+  - from: donut-quality
+    to: quality
+    rel: boosts
+    source: wiki:Planet_Shop
+    confidence: documented
+
+  - from: planet-shop
+    to: donut-zodiac-exp-factor
+    rel: unlocks
+    source: wiki:Planet_Shop
+    confidence: documented
+
+  - from: astrodust
+    to: donut-zodiac-exp-factor
+    rel: requires
+    source: wiki:Planet_Shop
+    confidence: documented
+
+  - from: donut-zodiac-exp-factor
+    to: zodiac-exp-factor
+    rel: boosts
+    source: wiki:Planet_Shop
+    confidence: documented
+
+  - from: planet-shop
+    to: feature-merging
+    rel: unlocks
+    source: wiki:Planet_Shop
+    confidence: documented
+
+  - from: astrodust
+    to: feature-merging
+    rel: requires
+    source: wiki:Planet_Shop
+    confidence: documented
+
+  - from: planet-shop
+    to: feature-enhancing
+    rel: unlocks
+    source: wiki:Planet_Shop
+    confidence: documented
+
+  - from: astrodust
+    to: feature-enhancing
+    rel: requires
+    source: wiki:Planet_Shop
+    confidence: documented
+
+  - from: planet-shop
+    to: feature-redistribution
+    rel: unlocks
+    source: wiki:Planet_Shop
+    confidence: documented
+
+  - from: astrodust
+    to: feature-redistribution
+    rel: requires
+    source: wiki:Planet_Shop
+    confidence: documented
+
+  - from: planet-shop
+    to: feature-sacrificing
+    rel: unlocks
+    source: wiki:Planet_Shop
+    confidence: documented
+
+  - from: astrodust
+    to: feature-sacrificing
+    rel: requires
+    source: wiki:Planet_Shop
+    confidence: documented
+
+  - from: trial-easy-trial-6
+    to: planet-shop
+    rel: unlocks
+    source: wiki:Planet_Shop
+    confidence: documented
+
+  - from: feature-merging
+    to: zodiac-rarity
+    rel: boosts
+    source: wiki:Planet_Shop
+    confidence: documented
+
+  - from: feature-enhancing
+    to: quality
+    rel: boosts
+    source: wiki:Planet_Shop
+    confidence: documented
+
+  - from: feature-sacrificing
+    to: score
+    rel: boosts
+    source: wiki:Attacks
+    confidence: documented
+
+  - from: luck
+    to: zodiac-rarity
+    rel: boosts
+    source: wiki:Zodiacs
+    confidence: documented
+
+  - from: zodiac-level
+    to: zodiac-score
+    rel: boosts
+    source: wiki:Planet_Shop
+    confidence: documented
+
+  - from: zodiac-level
+    to: zodiac-sell-cost
+    rel: boosts
+    source: wiki:Planet_Shop
+    confidence: documented
+
+  - from: zodiac-rarity
+    to: zodiac-score
+    rel: boosts
+    source: wiki:Planet_Shop
+    confidence: documented
+
+  - from: zodiac-rarity
+    to: zodiac-sell-cost
+    rel: boosts
+    source: wiki:Planet_Shop
+    confidence: documented
+
+  - from: quality
+    to: zodiac-score
+    rel: boosts
+    source: wiki:Planet_Shop
+    confidence: documented
+
+  - from: quality
+    to: zodiac-sell-cost
+    rel: boosts
+    source: wiki:Planet_Shop
+    confidence: documented
+
+  - from: zodiac-sell-cost
+    to: astrodust
+    rel: boosts
+    source: wiki:Planet_Shop
+    confidence: documented
+
+  - from: relic-5
+    to: zodiac-sell-cost
+    rel: boosts
+    source: wiki:Planet_Shop
+    confidence: documented
+
+  - from: unity
+    to: planets
+    rel: unlocks
+    source: wiki:Unity
+    confidence: documented
+
+  - from: planets
+    to: planet-sun
+    rel: unlocks
+    source: wiki:Planets
+    confidence: documented
+
+  - from: planet-sun
+    to: quality
+    rel: boosts
+    source: wiki:Planets
+    confidence: documented
+
+  - from: planet-sun
+    to: luck
+    rel: boosts
+    source: wiki:Planets
+    confidence: documented
+
+  - from: planet-sun
+    to: unity-rewards
+    rel: boosts
+    source: wiki:Planets
+    confidence: documented
+
+  - from: planet-sun
+    to: eternity-rewards
+    rel: boosts
+    source: wiki:Planets
+    confidence: documented
+
+  - from: planets
+    to: planet-mercury
+    rel: unlocks
+    source: wiki:Planets
+    confidence: documented
+
+  - from: planet-mercury
+    to: eternities
+    rel: boosts
+    source: wiki:Planets
+    confidence: documented
+
+  - from: planet-mercury
+    to: infinities
+    rel: boosts
+    source: wiki:Planets
+    confidence: documented
+
+  - from: planet-mercury
+    to: dp-income
+    rel: boosts
+    source: wiki:Planets
+    confidence: documented
+
+  - from: planet-mercury
+    to: star-cost
+    rel: boosts
+    source: wiki:Planets
+    confidence: documented
+
+  - from: planets
+    to: planet-venus
+    rel: unlocks
+    source: wiki:Planets
+    confidence: documented
+
+  - from: planet-venus
+    to: game-speed
+    rel: boosts
+    source: wiki:Planets
+    confidence: documented
+
+  - from: planet-venus
+    to: lap-speed
+    rel: boosts
+    source: wiki:Planets
+    confidence: documented
+
+  - from: planet-venus
+    to: supernova-rewards
+    rel: boosts
+    source: wiki:Planets
+    confidence: documented
+
+  - from: planet-venus
+    to: du-power
+    rel: boosts
+    source: wiki:Planets
+    confidence: documented
+
+  - from: planets
+    to: planet-moon
+    rel: unlocks
+    source: wiki:Planets
+    confidence: documented
+
+  - from: planet-moon
+    to: luck
+    rel: boosts
+    source: wiki:Planets
+    confidence: documented
+
+  - from: planet-moon
+    to: unity-rewards
+    rel: boosts
+    source: wiki:Planets
+    confidence: documented
+
+  - from: planet-moon
+    to: eternity-rewards
+    rel: boosts
+    source: wiki:Planets
+    confidence: documented
+
+  - from: planet-moon
+    to: quality
+    rel: boosts
+    source: wiki:Planets
+    confidence: documented
+
+  - from: planets
+    to: planet-mars
+    rel: unlocks
+    source: wiki:Planets
+    confidence: documented
+
+  - from: planet-mars
+    to: infinities
+    rel: boosts
+    source: wiki:Planets
+    confidence: documented
+
+  - from: planet-mars
+    to: dp-income
+    rel: boosts
+    source: wiki:Planets
+    confidence: documented
+
+  - from: planet-mars
+    to: star-cost
+    rel: boosts
+    source: wiki:Planets
+    confidence: documented
+
+  - from: planet-mars
+    to: eternities
+    rel: boosts
+    source: wiki:Planets
+    confidence: documented
+
+  - from: planets
+    to: planet-jupiter
+    rel: unlocks
+    source: wiki:Planets
+    confidence: documented
+
+  - from: planet-jupiter
+    to: lap-speed
+    rel: boosts
+    source: wiki:Planets
+    confidence: documented
+
+  - from: planet-jupiter
+    to: supernova-rewards
+    rel: boosts
+    source: wiki:Planets
+    confidence: documented
+
+  - from: planet-jupiter
+    to: du-power
+    rel: boosts
+    source: wiki:Planets
+    confidence: documented
+
+  - from: planet-jupiter
+    to: game-speed
+    rel: boosts
+    source: wiki:Planets
+    confidence: documented
+
+  - from: planets
+    to: planet-saturn
+    rel: unlocks
+    source: wiki:Planets
+    confidence: documented
+
+  - from: planet-saturn
+    to: unity-rewards
+    rel: boosts
+    source: wiki:Planets
+    confidence: documented
+
+  - from: planet-saturn
+    to: eternity-rewards
+    rel: boosts
+    source: wiki:Planets
+    confidence: documented
+
+  - from: planet-saturn
+    to: quality
+    rel: boosts
+    source: wiki:Planets
+    confidence: documented
+
+  - from: planet-saturn
+    to: luck
+    rel: boosts
+    source: wiki:Planets
+    confidence: documented
+
+  - from: planets
+    to: planet-uranus
+    rel: unlocks
+    source: wiki:Planets
+    confidence: documented
+
+  - from: planet-uranus
+    to: dp-income
+    rel: boosts
+    source: wiki:Planets
+    confidence: documented
+
+  - from: planet-uranus
+    to: star-cost
+    rel: boosts
+    source: wiki:Planets
+    confidence: documented
+
+  - from: planet-uranus
+    to: eternities
+    rel: boosts
+    source: wiki:Planets
+    confidence: documented
+
+  - from: planet-uranus
+    to: infinities
+    rel: boosts
+    source: wiki:Planets
+    confidence: documented
+
+  - from: planets
+    to: planet-neptune
+    rel: unlocks
+    source: wiki:Planets
+    confidence: documented
+
+  - from: planet-neptune
+    to: supernova-rewards
+    rel: boosts
+    source: wiki:Planets
+    confidence: documented
+
+  - from: planet-neptune
+    to: du-power
+    rel: boosts
+    source: wiki:Planets
+    confidence: documented
+
+  - from: planet-neptune
+    to: game-speed
+    rel: boosts
+    source: wiki:Planets
+    confidence: documented
+
+  - from: planet-neptune
+    to: lap-speed
+    rel: boosts
+    source: wiki:Planets
+    confidence: documented
+
+  - from: planets
+    to: planet-pluto
+    rel: unlocks
+    source: wiki:Planets
+    confidence: documented
+
+  - from: planet-pluto
+    to: eternity-rewards
+    rel: boosts
+    source: wiki:Planets
+    confidence: documented
+
+  - from: planet-pluto
+    to: quality
+    rel: boosts
+    source: wiki:Planets
+    confidence: documented
+
+  - from: planet-pluto
+    to: luck
+    rel: boosts
+    source: wiki:Planets
+    confidence: documented
+
+  - from: planet-pluto
+    to: unity-rewards
+    rel: boosts
+    source: wiki:Planets
+    confidence: documented
+
+  - from: planets
+    to: planet-chiron
+    rel: unlocks
+    source: wiki:Planets
+    confidence: documented
+
+  - from: planet-chiron
+    to: star-cost
+    rel: boosts
+    source: wiki:Planets
+    confidence: documented
+
+  - from: planet-chiron
+    to: eternities
+    rel: boosts
+    source: wiki:Planets
+    confidence: documented
+
+  - from: planet-chiron
+    to: infinities
+    rel: boosts
+    source: wiki:Planets
+    confidence: documented
+
+  - from: planet-chiron
+    to: dp-income
+    rel: boosts
+    source: wiki:Planets
+    confidence: documented
+
+  - from: planets
+    to: planet-fortune-pars
+    rel: unlocks
+    source: wiki:Planets
+    confidence: documented
+
+  - from: planet-fortune-pars
+    to: luck
+    rel: boosts
+    source: wiki:Planets
+    confidence: documented
+
+  - from: trial-easy-trial-4
+    to: planet-mars
+    rel: unlocks
+    source: wiki:Planets
+    confidence: documented
+
+  - from: eternity-rewards
+    to: eternity-points
+    rel: boosts
+    source: wiki:Planets
+    confidence: documented
+
+  - from: supernova-rewards
+    to: supernova
+    rel: boosts
+    source: wiki:Planets
+    confidence: documented
+
+  - from: star-cost
+    to: stars
+    rel: requires
+    source: wiki:Planets
+    confidence: documented
+
+  - from: attack-circles
+    to: attack-circle-1
+    rel: unlocks
+    source: wiki:Attacks
+    confidence: documented
+
+  - from: gold
+    to: attack-circle-1
+    rel: requires
+    source: wiki:Attacks
+    confidence: documented
+
+  - from: attack-circle-1
+    to: attack-mult
+    rel: boosts
+    source: wiki:Attacks
+    confidence: documented
+
+  - from: attack-circles
+    to: attack-circle-2
+    rel: unlocks
+    source: wiki:Attacks
+    confidence: documented
+
+  - from: gold
+    to: attack-circle-2
+    rel: requires
+    source: wiki:Attacks
+    confidence: documented
+
+  - from: attack-circle-2
+    to: attack-mult
+    rel: boosts
+    source: wiki:Attacks
+    confidence: documented
+
+  - from: attack-circles
+    to: attack-circle-3
+    rel: unlocks
+    source: wiki:Attacks
+    confidence: documented
+
+  - from: gold
+    to: attack-circle-3
+    rel: requires
+    source: wiki:Attacks
+    confidence: documented
+
+  - from: attack-circle-3
+    to: attack-mult
+    rel: boosts
+    source: wiki:Attacks
+    confidence: documented
+
+  - from: attack-circles
+    to: attack-circle-4
+    rel: unlocks
+    source: wiki:Attacks
+    confidence: documented
+
+  - from: gold
+    to: attack-circle-4
+    rel: requires
+    source: wiki:Attacks
+    confidence: documented
+
+  - from: attack-circle-4
+    to: attack-mult
+    rel: boosts
+    source: wiki:Attacks
+    confidence: documented
+
+  - from: attack-circles
+    to: attack-circle-5
+    rel: unlocks
+    source: wiki:Attacks
+    confidence: documented
+
+  - from: gold
+    to: attack-circle-5
+    rel: requires
+    source: wiki:Attacks
+    confidence: documented
+
+  - from: attack-circle-5
+    to: attack-mult
+    rel: boosts
+    source: wiki:Attacks
+    confidence: documented
+
+  - from: trials
+    to: attacks
+    rel: unlocks
+    source: wiki:Attacks
+    confidence: documented
+
+  - from: attacks
+    to: attack-level
+    rel: unlocks
+    source: wiki:Attacks
+    confidence: documented
+
+  - from: attacks
+    to: attack-circles
+    rel: unlocks
+    source: wiki:Attacks
+    confidence: documented
+
+  - from: attack-circles
+    to: mult-gain
+    rel: boosts
+    source: wiki:Attacks
+    confidence: documented
+
+  - from: mult-gain
+    to: attack-mult
+    rel: boosts
+    source: wiki:Attacks
+    confidence: documented
+
+  - from: game-speed
+    to: attack-mult
+    rel: boosts
+    source: wiki:Attacks
+    confidence: documented
+
+  - from: ascension-stage
+    to: mult-gain
+    rel: boosts
+    source: wiki:Attacks
+    confidence: documented
+
+  - from: ascension-stage
+    to: damage-mult
+    rel: boosts
+    source: wiki:Attacks
+    confidence: documented
+
+  - from: ascension-power
+    to: mult-gain
+    rel: boosts
+    source: wiki:Attacks
+    confidence: documented
+
+  - from: ascension-power
+    to: damage-mult
+    rel: boosts
+    source: wiki:Attacks
+    confidence: documented
+
+  - from: score
+    to: score-damage-mult
+    rel: boosts
+    source: wiki:Attacks
+    confidence: documented
+
+  - from: zodiac-level
+    to: cumulative-mult
+    rel: boosts
+    source: wiki:Attacks
+    confidence: documented
+
+  - from: attack-mult
+    to: attack-base-damage
+    rel: boosts
+    source: wiki:Attacks
+    confidence: documented
+
+  - from: score-damage-mult
+    to: attack-base-damage
+    rel: boosts
+    source: wiki:Attacks
+    confidence: documented
+
+  - from: cumulative-mult
+    to: attack-base-damage
+    rel: boosts
+    source: wiki:Attacks
+    confidence: documented
+
+  - from: attack-exponent
+    to: attack-base-damage
+    rel: boosts
+    source: wiki:Attacks
+    confidence: documented
+
+  - from: attack-base-damage
+    to: attack-level
+    rel: boosts
+    source: wiki:Attacks
+    confidence: documented
+
+  - from: damage-mult
+    to: attack-level
+    rel: boosts
+    source: wiki:Attacks
+    confidence: documented
+
+  - from: enemy-hp
+    to: attack-level
+    rel: requires
+    source: wiki:Attacks
+    confidence: documented
+
+  - from: attack-level
+    to: enemy-hp
+    rel: boosts
+    source: wiki:Attacks
+    confidence: documented
+
+  - from: attack-level
+    to: gold-gain
+    rel: boosts
+    source: wiki:Attacks
+    confidence: documented
+
+  - from: gold-gain
+    to: gold
+    rel: boosts
+    source: wiki:Attacks
+    confidence: documented
+
+  - from: relic-9
+    to: gold-gain
+    rel: boosts
+    source: wiki:Attacks
+    confidence: documented
+
+  - from: relic-17
+    to: gold-gain
+    rel: boosts
+    source: wiki:Attacks
+    confidence: documented
+
+  - from: relic-21
+    to: gold-gain
+    rel: boosts
+    source: wiki:Attacks
+    confidence: documented
+
+  - from: relic-13
+    to: score-damage-mult
+    rel: boosts
+    source: wiki:Attacks
+    confidence: documented
+
+  - from: relic-19
+    to: score-damage-mult
+    rel: boosts
+    source: wiki:Attacks
+    confidence: documented
+
+  - from: relic-16
+    to: mult-gain
+    rel: boosts
+    source: wiki:Attacks
+    confidence: documented
+
+  - from: relic-18
+    to: mult-gain
+    rel: boosts
+    source: wiki:Attacks
+    confidence: documented
+
+  - from: relic-20
+    to: mult-gain
+    rel: boosts
+    source: wiki:Attacks
+    confidence: documented
+
+  - from: relic-1
+    to: cumulative-mult
+    rel: boosts
+    source: wiki:Attacks
+    confidence: documented
+
+  - from: relic-3
+    to: cumulative-mult
+    rel: boosts
+    source: wiki:Attacks
+    confidence: documented
+
+  - from: relic-12
+    to: cumulative-mult
+    rel: boosts
+    source: wiki:Attacks
+    confidence: documented
+
+  - from: relic-7
+    to: attack-circles
+    rel: boosts
+    source: wiki:Attacks
+    confidence: documented
+
+  - from: runes
+    to: rune-sun
+    rel: unlocks
+    source: wiki:Minerals
+    confidence: documented
+
+  - from: runes
+    to: rune-moon
+    rel: unlocks
+    source: wiki:Minerals
+    confidence: documented
+
+  - from: relic-34
+    to: rune-sun
+    rel: boosts
+    source: wiki:Relics
+    confidence: documented
+
 suppress:
+  - from: relic-34
+    to: planet-sun
+    rel: boosts
+    reason: >-
+      The relic boosts "Sun and Moon runes". Moon Runes claims its own words, but
+      the elided "Sun runes" leaves a bare "Sun" that resolves to the Planet. The
+      relic's edge to Sun Runes is curated instead.
+
+  - from: singularity-tree-7-1
+    to: zodiac-level
+    rel: boosts
+    reason: >-
+      The tree node raises a Singularity Zodiac's level. The twelve Singularity
+      Zodiacs are their own entities with their own levels, so this is not the
+      Astrology stat whose name it contains.
+
+  - from: singularity-tree-7-2
+    to: zodiac-level
+    rel: boosts
+    reason: >-
+      The tree node raises a Singularity Zodiac's level. The twelve Singularity
+      Zodiacs are their own entities with their own levels, so this is not the
+      Astrology stat whose name it contains.
+
   - from: singularity-tree-1
     to: mult-gain
     rel: boosts
