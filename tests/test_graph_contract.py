@@ -432,6 +432,74 @@ def test_infinity_is_split_into_its_tabs_and_revolution_is_not(graph: dict):
     assert len([n for n in graph["nodes"] if n["system"] == "revolution"]) == 13
 
 
+def test_singularity_milestones_land_in_the_table_they_came_from(graph: dict):
+    # The three milestone sub-tabs are three tables on one page with identical
+    # Name/Requirement/Reward columns. Nothing but the `|+` caption tells them
+    # apart, so this is the test for the caption selector as much as for the
+    # hierarchy: drop `caption:` from the sweep entries and all 27 swept
+    # milestones pile into whichever system the last matching entry names, which
+    # is a graph that still builds, still validates and is silently wrong.
+    parents = {s["id"]: s.get("parent") for s in graph["systems"]}
+    assert {k for k, v in parents.items() if v == "singularity"} == {
+        "singularity-milestones",
+        "singularity-tree",
+    }
+    assert {k for k, v in parents.items() if v == "singularity-milestones"} == {
+        "singularity-milestones-singularity",
+        "singularity-milestones-atoms",
+        "singularity-milestones-progression",
+    }
+
+    by_system: dict[str, set[str]] = {}
+    for node in graph["nodes"]:
+        by_system.setdefault(node["system"], set()).add(node["name"])
+
+    # One name per table, chosen because the tables share a column layout: if the
+    # caption filter stops working these three collapse into one system and two
+    # of the three assertions fail.
+    assert "Loop Feeds Loop" in by_system["singularity-milestones-singularity"]
+    assert "Quantum Dust" in by_system["singularity-milestones-atoms"]
+    assert "Full Deck" in by_system["singularity-milestones-progression"]
+    assert len(by_system["singularity-milestones-singularity"]) == 10
+    assert len(by_system["singularity-milestones-progression"]) == 8
+
+    # `One Hundred` has an empty Reward cell, so the sweep skips it and it is
+    # curated in by hand. Pinned because a hand-written node covering a gap in
+    # the page is the kind of thing a later re-sweep quietly drops.
+    assert "One Hundred" in by_system["singularity-milestones-atoms"]
+
+    # What is left on the layer itself has to be layer-level, or the split only
+    # moved some of the content.
+    direct = {n["id"] for n in graph["nodes"] if n["system"] == "singularity"}
+    assert direct == {
+        "atoms-gain",
+        "singular-zodiacs",
+        "singularity",
+        "singularity-effects-tab",
+        "singularity-mult",
+    }
+
+
+def test_tarot_challenges_are_split_from_the_cards(graph: dict):
+    # 75 challenges and 78 cards were one flat list of 161. They are separate
+    # entities -- a card is drawn, its challenge is entered -- and the page gives
+    # the challenges their own section, so the sidebar gives them their own row.
+    parents = {s["id"]: s.get("parent") for s in graph["systems"]}
+    assert parents["tarot-challenges"] == "tarot"
+
+    challenges = [n for n in graph["nodes"] if n["system"] == "tarot-challenges"]
+    assert len(challenges) == 75
+    # Every one of them, and only them. A card that drifted into the challenge
+    # system would still leave the count at 75 if a challenge drifted the other
+    # way, so the count alone is not enough.
+    assert all(n["id"].startswith("tarot-challenge-") for n in challenges)
+    assert not any(
+        n["id"].startswith("tarot-challenge-")
+        for n in graph["nodes"]
+        if n["system"] == "tarot"
+    )
+
+
 def test_the_whole_eternity_zoo_is_present_and_priced(graph: dict):
     # The 81 Animals sit behind an unscraped {{AnimalGrid}} template, so they are
     # transcribed by hand and nothing regenerates them. 1,524 AP is the total the

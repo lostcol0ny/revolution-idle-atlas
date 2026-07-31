@@ -208,18 +208,45 @@ pages:
     name_columns: [Statistic]
     effect_columns: [Boost]
 
+  # The Milestones tab has three sub-tabs, and the page lays them out as three
+  # tables with identical Name/Requirement/Reward columns -- so `caption` is the
+  # only thing separating them, and one entry without it swept all three into a
+  # single bucket. The ids stay on one prefix because a milestone's name is
+  # unique across all three tables and the ids are already deep-linked.
   - reader: wikitable
     page: Singularity
-    system: singularity
+    system: singularity-milestones-singularity
     kind: upgrade
     id_prefix: singularity-milestone
+    caption: Singularity Milestones
+    name_columns: [Name]
+    effect_columns: [Reward]
+
+  - reader: wikitable
+    page: Singularity
+    system: singularity-milestones-atoms
+    kind: upgrade
+    id_prefix: singularity-milestone
+    caption: Atom Milestones
+    name_columns: [Name]
+    effect_columns: [Reward]
+
+  # Progression's table adds a `Penalty` column the other two lack. It is not
+  # swept: it is what the milestone costs you, not what it boosts, the same call
+  # Trials and the Tarot upgrades make.
+  - reader: wikitable
+    page: Singularity
+    system: singularity-milestones-progression
+    kind: upgrade
+    id_prefix: singularity-milestone
+    caption: Progression Milestones
     name_columns: [Name]
     effect_columns: [Reward]
 
   # Rows are numbered "1", "2", "3.1", so name_prefix supplies the noun.
   - reader: wikitable
     page: Singularity
-    system: singularity
+    system: singularity-tree
     kind: tree-node
     id_prefix: singularity-tree
     name_prefix: Tree Node
@@ -289,7 +316,7 @@ pages:
   # completion requirement beside it names the resource that has to be reached.
   - reader: wikitable
     page: Tarot
-    system: tarot
+    system: tarot-challenges
     kind: upgrade
     id_prefix: tarot-challenge
     name_prefix: Tarot Challenge

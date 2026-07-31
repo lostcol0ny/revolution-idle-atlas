@@ -125,6 +125,21 @@ def _groups(body: str) -> list[tuple[bool, list[str]]]:
     return groups
 
 
+def _caption(body: str) -> str:
+    """Return the table's `|+` caption, or "" when it has none.
+
+    Only the first is read. A second `|+` is malformed wikitext that MediaWiki
+    itself renders as a stray row, and picking the later one would let a
+    volunteer's stray line silently reassign a whole table's rows to another
+    system.
+    """
+    for line in body.split("\n"):
+        stripped = line.strip()
+        if stripped.startswith("|+"):
+            return normalise_space(plain_text(stripped[2:]))
+    return ""
+
+
 def _headers_and_rows(body: str) -> tuple[list[str], list[list[_Cell] | None]]:
     headers: list[str] = []
     rows: list[list[_Cell] | None] = []
@@ -194,6 +209,8 @@ def read_wikitable(raw: str, entry: WikitableEntry) -> list[SweptRecord]:
     """
     records: list[SweptRecord] = []
     for match in _TABLE_RE.finditer(raw):
+        if entry.caption is not None and _caption(match.group(1)) != entry.caption:
+            continue
         headers, rows = _headers_and_rows(match.group(1))
         if not headers:
             continue

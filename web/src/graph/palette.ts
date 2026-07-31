@@ -34,7 +34,20 @@ export const SYSTEM_COLOURS: Record<KnownSystem, string> = {
   'dilation-tree': '#2e5220',
   unity: '#7d4f77',
   tarot: '#a83c3e',
+  // Darker Tarot, the nested-tab convention again. Kept red rather than moved
+  // off the hue: the cards and their challenges are the same subject and the
+  // sidebar is what separates them.
+  'tarot-challenges': '#7d2e30',
   singularity: '#6d5343',
+  // The Milestones tab holds no nodes of its own, so this paints a sidebar row
+  // and nothing on the canvas. That is why it sits 11 from `singularity` when
+  // every other colour here clears 20: a grouping row should read as its layer,
+  // and there is no node for it to be confused with.
+  'singularity-milestones': '#73503a',
+  'singularity-milestones-singularity': '#8a5f38',
+  'singularity-milestones-atoms': '#5f5a35',
+  'singularity-milestones-progression': '#7d4a38',
+  'singularity-tree': '#4f3120',
   plague: '#a3505b',
   attacks: '#8c3f2a',
   astrology: '#4a4f8a',

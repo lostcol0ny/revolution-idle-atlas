@@ -359,6 +359,68 @@ def test_every_matching_table_on_the_page_is_swept():
     ]
 
 
+def _captioned(text: str, caption: str) -> str:
+    return text.replace('font-size: 1rem"', 'font-size: 1rem"\n|+' + caption, 1)
+
+
+def test_a_caption_selects_which_of_two_identical_tables_is_swept():
+    # Singularity's three milestone tables carry the same columns and differ only
+    # by caption. Without a selector one entry takes all three, which is exactly
+    # what the test above pins as correct -- so the two behaviours have to be
+    # chosen between per entry rather than globally.
+    page = (
+        _captioned(TRIALS, "Easy Trials")
+        + "\n\n"
+        + _captioned(TRIALS.replace("Easy Trial", "Hard Trial"), "Hard Trials")
+    )
+    records = read_wikitable(
+        page,
+        _entry(
+            page="Trials",
+            system="trials",
+            id_prefix="trial",
+            caption="Hard Trials",
+            name_columns=["Trial"],
+            effect_columns=["Reward"],
+        ),
+    )
+    assert [r.name for r in records] == ["Hard Trial 1", "Hard Trial 2", "Hard Trial 3"]
+
+
+def test_a_caption_matches_whole_and_not_by_prefix():
+    # "Atom Milestones" must not also claim a later "Atom Milestones II". A prefix
+    # match would fold the new table in silently, with the count as the only sign.
+    page = _captioned(TRIALS, "Hard Trials II")
+    records = read_wikitable(
+        page,
+        _entry(
+            page="Trials",
+            system="trials",
+            id_prefix="trial",
+            caption="Hard Trials",
+            name_columns=["Trial"],
+            effect_columns=["Reward"],
+        ),
+    )
+    assert records == []
+
+
+def test_an_entry_without_a_caption_still_reads_an_uncaptioned_table():
+    # `caption` is opt-in. Every other entry in the manifest omits it and must
+    # keep sweeping tables that carry no `|+` line at all.
+    records = read_wikitable(
+        TRIALS,
+        _entry(
+            page="Trials",
+            system="trials",
+            id_prefix="trial",
+            name_columns=["Trial"],
+            effect_columns=["Reward"],
+        ),
+    )
+    assert len(records) == 3
+
+
 def test_a_row_whose_effect_cells_are_all_blank_is_not_a_record():
     # A named row with nothing in any effect column produces no edges and no
     # effect text, so it would be a node asserting only that a name exists.

@@ -3435,7 +3435,7 @@ nodes:
   - text: PlP per PlG mult
 - id: singularity-milestone-first-collapse
   name: First Collapse
-  system: singularity
+  system: singularity-milestones-singularity
   kind: upgrade
   wiki: Singularity
   confidence: provisional
@@ -3443,7 +3443,7 @@ nodes:
   - text: Unlock Milestones Tab SMS Factor is locked at 0
 - id: singularity-milestone-accelerated-growth
   name: Accelerated Growth
-  system: singularity
+  system: singularity-milestones-singularity
   kind: upgrade
   wiki: Singularity
   confidence: provisional
@@ -3451,7 +3451,7 @@ nodes:
   - text: Unlock Effects Tab
 - id: singularity-milestone-event-horizon
   name: Event Horizon
-  system: singularity
+  system: singularity-milestones-singularity
   kind: upgrade
   wiki: Singularity
   confidence: provisional
@@ -3459,7 +3459,7 @@ nodes:
   - text: Keep Plague on Singularity Reset Plague Generator Awards no longer decrease
 - id: singularity-milestone-spaghettification
   name: Spaghettification
-  system: singularity
+  system: singularity-milestones-singularity
   kind: upgrade
   wiki: Singularity
   confidence: provisional
@@ -3467,7 +3467,7 @@ nodes:
   - text: Unlocks Tree Tab
 - id: singularity-milestone-beyond-time
   name: Beyond Time
-  system: singularity
+  system: singularity-milestones-singularity
   kind: upgrade
   wiki: Singularity
   confidence: provisional
@@ -3475,7 +3475,7 @@ nodes:
   - text: Keep Artifacts on Singularity Reset
 - id: singularity-milestone-event-horizon-tax
   name: Event Horizon Tax
-  system: singularity
+  system: singularity-milestones-singularity
   kind: upgrade
   wiki: Singularity
   confidence: provisional
@@ -3484,7 +3484,7 @@ nodes:
       at 1.8e308 Atoms to get Singularity Mult, but your Singularity Count will NOT increase.
 - id: singularity-milestone-the-unforgotten
   name: The Unforgotten
-  system: singularity
+  system: singularity-milestones-singularity
   kind: upgrade
   wiki: Singularity
   confidence: provisional
@@ -3492,7 +3492,7 @@ nodes:
   - text: Keep Elements, Minerals and Tarot on Singularity Reset
 - id: singularity-milestone-loop-feeds-loop
   name: Loop Feeds Loop
-  system: singularity
+  system: singularity-milestones-singularity
   kind: upgrade
   wiki: Singularity
   confidence: provisional
@@ -3500,7 +3500,7 @@ nodes:
   - text: Singularity Count acts as a factor for the next Singularity Mult
 - id: singularity-milestone-astral-property
   name: Astral Property
-  system: singularity
+  system: singularity-milestones-singularity
   kind: upgrade
   wiki: Singularity
   confidence: provisional
@@ -3508,7 +3508,7 @@ nodes:
   - text: Unlocks Houses Tab
 - id: singularity-milestone-self-synergism
   name: Self Synergism
-  system: singularity
+  system: singularity-milestones-singularity
   kind: upgrade
   wiki: Singularity
   confidence: provisional
@@ -3516,7 +3516,7 @@ nodes:
   - text: Singularity Mult acts as a factor for the next Singularity Mult
 - id: singularity-milestone-first-thousand
   name: First Thousand
-  system: singularity
+  system: singularity-milestones-atoms
   kind: upgrade
   wiki: Singularity
   confidence: provisional
@@ -3524,7 +3524,7 @@ nodes:
   - text: 'Sacrifice Dust Gain: ^1.1'
 - id: singularity-milestone-quantum-dust
   name: Quantum Dust
-  system: singularity
+  system: singularity-milestones-atoms
   kind: upgrade
   wiki: Singularity
   confidence: provisional
@@ -3532,7 +3532,7 @@ nodes:
   - text: 'Black Gem Efficiency: ^1.1'
 - id: singularity-milestone-atomic-flow
   name: Atomic Flow
-  system: singularity
+  system: singularity-milestones-atoms
   kind: upgrade
   wiki: Singularity
   confidence: provisional
@@ -3540,7 +3540,7 @@ nodes:
   - text: Element Factors 1 and 2 powers x3
 - id: singularity-milestone-nuclear-bloom
   name: Nuclear Bloom
-  system: singularity
+  system: singularity-milestones-atoms
   kind: upgrade
   wiki: Singularity
   confidence: provisional
@@ -3548,7 +3548,7 @@ nodes:
   - text: Divides last element nodes upgrades cost by 1e300
 - id: singularity-milestone-matter-collapse
   name: Matter Collapse
-  system: singularity
+  system: singularity-milestones-atoms
   kind: upgrade
   wiki: Singularity
   confidence: provisional
@@ -3556,7 +3556,7 @@ nodes:
   - text: Unlocks Auto-Highest Plague Stage
 - id: singularity-milestone-quantum-pressure
   name: Quantum Pressure
-  system: singularity
+  system: singularity-milestones-atoms
   kind: upgrade
   wiki: Singularity
   confidence: provisional
@@ -3564,7 +3564,7 @@ nodes:
   - text: 'SMP Exp Requirements: ^0.75'
 - id: singularity-milestone-atom-overflow
   name: Atom Overflow
-  system: singularity
+  system: singularity-milestones-atoms
   kind: upgrade
   wiki: Singularity
   confidence: provisional
@@ -3572,7 +3572,7 @@ nodes:
   - text: Atoms are now unlocked as a Singularity Mult Factor
 - id: singularity-milestone-horoscope-of-the-void
   name: Horoscope of the Void
-  system: singularity
+  system: singularity-milestones-atoms
   kind: upgrade
   wiki: Singularity
   confidence: provisional
@@ -3580,7 +3580,7 @@ nodes:
   - text: You can now obtain Singular Zodiacs if you have already unlocked houses
 - id: singularity-milestone-universe-under-pressure
   name: Universe Under Pressure
-  system: singularity
+  system: singularity-milestones-atoms
   kind: upgrade
   wiki: Singularity
   confidence: provisional
@@ -3588,7 +3588,7 @@ nodes:
   - text: Atoms past e1000 boost luck for a little (new effect)
 - id: singularity-milestone-special-sacrificer
   name: Special Sacrificer
-  system: singularity
+  system: singularity-milestones-progression
   kind: upgrade
   wiki: Singularity
   confidence: provisional
@@ -3596,7 +3596,7 @@ nodes:
   - text: SMP Gain ^1.1
 - id: singularity-milestone-elementary-master
   name: Elementary Master
-  system: singularity
+  system: singularity-milestones-progression
   kind: upgrade
   wiki: Singularity
   confidence: provisional
@@ -3604,7 +3604,7 @@ nodes:
   - text: Factor 2 power for water is multiplied by x10
 - id: singularity-milestone-full-deck
   name: Full Deck
-  system: singularity
+  system: singularity-milestones-progression
   kind: upgrade
   wiki: Singularity
   confidence: provisional
@@ -3612,7 +3612,7 @@ nodes:
   - text: Black Gem Effect ^1.05
 - id: singularity-milestone-dust-magician
   name: Dust Magician
-  system: singularity
+  system: singularity-milestones-progression
   kind: upgrade
   wiki: Singularity
   confidence: provisional
@@ -3620,7 +3620,7 @@ nodes:
   - text: Sacrifice Dust Gain ^1.05
 - id: singularity-milestone-artifact-theory
   name: Artifact Theory
-  system: singularity
+  system: singularity-milestones-progression
   kind: upgrade
   wiki: Singularity
   confidence: provisional
@@ -3628,7 +3628,7 @@ nodes:
   - text: Golden Resource Gain ^1.02
 - id: singularity-milestone-virusologist
   name: Virusologist
-  system: singularity
+  system: singularity-milestones-progression
   kind: upgrade
   wiki: Singularity
   confidence: provisional
@@ -3636,7 +3636,7 @@ nodes:
   - text: ViP per VE mult x1000
 - id: singularity-milestone-viral-ascension
   name: Viral Ascension
-  system: singularity
+  system: singularity-milestones-progression
   kind: upgrade
   wiki: Singularity
   confidence: provisional
@@ -3644,7 +3644,7 @@ nodes:
   - text: Atom Gain ^1.02
 - id: singularity-milestone-infinite-infection
   name: Infinite Infection
-  system: singularity
+  system: singularity-milestones-progression
   kind: upgrade
   wiki: Singularity
   confidence: provisional
@@ -3652,7 +3652,7 @@ nodes:
   - text: Keep all progression milestones on Singularity
 - id: singularity-tree-1
   name: Tree Node 1
-  system: singularity
+  system: singularity-tree
   kind: tree-node
   wiki: Singularity
   confidence: provisional
@@ -3661,7 +3661,7 @@ nodes:
     per_level: '.01'
 - id: singularity-tree-2
   name: Tree Node 2
-  system: singularity
+  system: singularity-tree
   kind: tree-node
   wiki: Singularity
   confidence: provisional
@@ -3670,7 +3670,7 @@ nodes:
     per_level: '.001'
 - id: singularity-tree-3-1
   name: Tree Node 3.1
-  system: singularity
+  system: singularity-tree
   kind: tree-node
   wiki: Singularity
   confidence: provisional
@@ -3679,7 +3679,7 @@ nodes:
     per_level: '.01'
 - id: singularity-tree-3-2
   name: Tree Node 3.2
-  system: singularity
+  system: singularity-tree
   kind: tree-node
   wiki: Singularity
   confidence: provisional
@@ -3688,7 +3688,7 @@ nodes:
     per_level: '.01'
 - id: singularity-tree-4-1
   name: Tree Node 4.1
-  system: singularity
+  system: singularity-tree
   kind: tree-node
   wiki: Singularity
   confidence: provisional
@@ -3697,7 +3697,7 @@ nodes:
     per_level: '.001'
 - id: singularity-tree-4-2
   name: Tree Node 4.2
-  system: singularity
+  system: singularity-tree
   kind: tree-node
   wiki: Singularity
   confidence: provisional
@@ -3706,7 +3706,7 @@ nodes:
     per_level: '.25'
 - id: singularity-tree-5-1
   name: Tree Node 5.1
-  system: singularity
+  system: singularity-tree
   kind: tree-node
   wiki: Singularity
   confidence: provisional
@@ -3715,7 +3715,7 @@ nodes:
     per_level: '.01'
 - id: singularity-tree-5-2
   name: Tree Node 5.2
-  system: singularity
+  system: singularity-tree
   kind: tree-node
   wiki: Singularity
   confidence: provisional
@@ -3724,7 +3724,7 @@ nodes:
     per_level: '.03'
 - id: singularity-tree-6-1
   name: Tree Node 6.1
-  system: singularity
+  system: singularity-tree
   kind: tree-node
   wiki: Singularity
   confidence: provisional
@@ -3733,7 +3733,7 @@ nodes:
     per_level: '.05'
 - id: singularity-tree-6-2
   name: Tree Node 6.2
-  system: singularity
+  system: singularity-tree
   kind: tree-node
   wiki: Singularity
   confidence: provisional
@@ -3742,7 +3742,7 @@ nodes:
     per_level: '.02'
 - id: singularity-tree-7-1
   name: Tree Node 7.1
-  system: singularity
+  system: singularity-tree
   kind: tree-node
   wiki: Singularity
   confidence: provisional
@@ -3751,7 +3751,7 @@ nodes:
     per_level: '.006'
 - id: singularity-tree-7-2
   name: Tree Node 7.2
-  system: singularity
+  system: singularity-tree
   kind: tree-node
   wiki: Singularity
   confidence: provisional
@@ -3760,7 +3760,7 @@ nodes:
     per_level: '.006'
 - id: singularity-tree-8
   name: Tree Node 8
-  system: singularity
+  system: singularity-tree
   kind: tree-node
   wiki: Singularity
   confidence: provisional
@@ -4421,7 +4421,7 @@ nodes:
   - text: Unlocks Stars
 - id: tarot-challenge-ace-of-swords
   name: Tarot Challenge Ace of Swords
-  system: tarot
+  system: tarot-challenges
   kind: upgrade
   wiki: Tarot
   confidence: provisional
@@ -4431,7 +4431,7 @@ nodes:
   - text: Attack Level 1500
 - id: tarot-challenge-two-of-swords
   name: Tarot Challenge Two of Swords
-  system: tarot
+  system: tarot-challenges
   kind: upgrade
   wiki: Tarot
   confidence: provisional
@@ -4441,7 +4441,7 @@ nodes:
   - text: Attack Level 400
 - id: tarot-challenge-three-of-swords
   name: Tarot Challenge Three of Swords
-  system: tarot
+  system: tarot-challenges
   kind: upgrade
   wiki: Tarot
   confidence: provisional
@@ -4451,7 +4451,7 @@ nodes:
   - text: Attack Level 200
 - id: tarot-challenge-four-of-swords
   name: Tarot Challenge Four of Swords
-  system: tarot
+  system: tarot-challenges
   kind: upgrade
   wiki: Tarot
   confidence: provisional
@@ -4461,7 +4461,7 @@ nodes:
   - text: Attack Level 2000
 - id: tarot-challenge-five-of-swords
   name: Tarot Challenge Five of Swords
-  system: tarot
+  system: tarot-challenges
   kind: upgrade
   wiki: Tarot
   confidence: provisional
@@ -4471,7 +4471,7 @@ nodes:
   - text: Attack Level 2026
 - id: tarot-challenge-six-of-swords
   name: Tarot Challenge Six of Swords
-  system: tarot
+  system: tarot-challenges
   kind: upgrade
   wiki: Tarot
   confidence: provisional
@@ -4481,7 +4481,7 @@ nodes:
   - text: Attack Level 2240
 - id: tarot-challenge-seven-of-swords
   name: Tarot Challenge Seven of Swords
-  system: tarot
+  system: tarot-challenges
   kind: upgrade
   wiki: Tarot
   confidence: provisional
@@ -4492,7 +4492,7 @@ nodes:
   - text: Attack Level 2525
 - id: tarot-challenge-eight-of-swords
   name: Tarot Challenge Eight of Swords
-  system: tarot
+  system: tarot-challenges
   kind: upgrade
   wiki: Tarot
   confidence: provisional
@@ -4502,7 +4502,7 @@ nodes:
   - text: Attack Level 7350
 - id: tarot-challenge-nine-of-swords
   name: Tarot Challenge Nine of Swords
-  system: tarot
+  system: tarot-challenges
   kind: upgrade
   wiki: Tarot
   confidence: provisional
@@ -4512,7 +4512,7 @@ nodes:
   - text: Attack Level 850
 - id: tarot-challenge-ten-of-swords
   name: Tarot Challenge Ten of Swords
-  system: tarot
+  system: tarot-challenges
   kind: upgrade
   wiki: Tarot
   confidence: provisional
@@ -4522,7 +4522,7 @@ nodes:
   - text: Attack Level 3200
 - id: tarot-challenge-page-of-swords
   name: Tarot Challenge Page of Swords
-  system: tarot
+  system: tarot-challenges
   kind: upgrade
   wiki: Tarot
   confidence: provisional
@@ -4532,7 +4532,7 @@ nodes:
   - text: Attack Level 2500
 - id: tarot-challenge-knight-of-swords
   name: Tarot Challenge Knight of Swords
-  system: tarot
+  system: tarot-challenges
   kind: upgrade
   wiki: Tarot
   confidence: provisional
@@ -4543,7 +4543,7 @@ nodes:
   - text: Attack Level 2560
 - id: tarot-challenge-queen-of-swords
   name: Tarot Challenge Queen of Swords
-  system: tarot
+  system: tarot-challenges
   kind: upgrade
   wiki: Tarot
   confidence: provisional
@@ -4553,7 +4553,7 @@ nodes:
   - text: Attack Level 3250
 - id: tarot-challenge-king-of-swords
   name: Tarot Challenge King of Swords
-  system: tarot
+  system: tarot-challenges
   kind: upgrade
   wiki: Tarot
   confidence: provisional
@@ -4566,7 +4566,7 @@ nodes:
   - text: Perform a Singularity at Attack Level 5005+
 - id: tarot-challenge-ace-of-wands
   name: Tarot Challenge Ace of Wands
-  system: tarot
+  system: tarot-challenges
   kind: upgrade
   wiki: Tarot
   confidence: provisional
@@ -4576,7 +4576,7 @@ nodes:
   - text: 1e20 Water
 - id: tarot-challenge-two-of-wands
   name: Tarot Challenge Two of Wands
-  system: tarot
+  system: tarot-challenges
   kind: upgrade
   wiki: Tarot
   confidence: provisional
@@ -4586,7 +4586,7 @@ nodes:
   - text: 1e9 of all elements
 - id: tarot-challenge-three-of-wands
   name: Tarot Challenge Three of Wands
-  system: tarot
+  system: tarot-challenges
   kind: upgrade
   wiki: Tarot
   confidence: provisional
@@ -4597,7 +4597,7 @@ nodes:
   - text: 100 of all elements
 - id: tarot-challenge-four-of-wands
   name: Tarot Challenge Four of Wands
-  system: tarot
+  system: tarot-challenges
   kind: upgrade
   wiki: Tarot
   confidence: provisional
@@ -4606,7 +4606,7 @@ nodes:
   - text: 1e4600 Fire
 - id: tarot-challenge-five-of-wands
   name: Tarot Challenge Five of Wands
-  system: tarot
+  system: tarot-challenges
   kind: upgrade
   wiki: Tarot
   confidence: provisional
@@ -4616,7 +4616,7 @@ nodes:
   - text: 1e5000+ Wind
 - id: tarot-challenge-six-of-wands
   name: Tarot Challenge Six of Wands
-  system: tarot
+  system: tarot-challenges
   kind: upgrade
   wiki: Tarot
   confidence: provisional
@@ -4626,7 +4626,7 @@ nodes:
   - text: 100+ of all elements
 - id: tarot-challenge-seven-of-wands
   name: Tarot Challenge Seven of Wands
-  system: tarot
+  system: tarot-challenges
   kind: upgrade
   wiki: Tarot
   confidence: provisional
@@ -4636,7 +4636,7 @@ nodes:
   - text: 2.5e10+ of all elements
 - id: tarot-challenge-eight-of-wands
   name: Tarot Challenge Eight of Wands
-  system: tarot
+  system: tarot-challenges
   kind: upgrade
   wiki: Tarot
   confidence: provisional
@@ -4647,7 +4647,7 @@ nodes:
   - text: 1e16+ of all elements
 - id: tarot-challenge-nine-of-wands
   name: Tarot Challenge Nine of Wands
-  system: tarot
+  system: tarot-challenges
   kind: upgrade
   wiki: Tarot
   confidence: provisional
@@ -4657,7 +4657,7 @@ nodes:
   - text: 1e765+ multiplication of all elements
 - id: tarot-challenge-ten-of-wands
   name: Tarot Challenge Ten of Wands
-  system: tarot
+  system: tarot-challenges
   kind: upgrade
   wiki: Tarot
   confidence: provisional
@@ -4668,7 +4668,7 @@ nodes:
   - text: 1e40+ multiplication of all elements
 - id: tarot-challenge-page-of-wands
   name: Tarot Challenge Page of Wands
-  system: tarot
+  system: tarot-challenges
   kind: upgrade
   wiki: Tarot
   confidence: provisional
@@ -4677,7 +4677,7 @@ nodes:
   - text: 1e2026+ multiplication of all elements
 - id: tarot-challenge-knight-of-wands
   name: Tarot Challenge Knight of Wands
-  system: tarot
+  system: tarot-challenges
   kind: upgrade
   wiki: Tarot
   confidence: provisional
@@ -4688,7 +4688,7 @@ nodes:
   - text: 1e268+ multiplication of all elements
 - id: tarot-challenge-queen-of-wands
   name: Tarot Challenge Queen of Wands
-  system: tarot
+  system: tarot-challenges
   kind: upgrade
   wiki: Tarot
   confidence: provisional
@@ -4699,7 +4699,7 @@ nodes:
   - text: 1e3000+ multiplication of all elements
 - id: tarot-challenge-king-of-wands
   name: Tarot Challenge King of Wands
-  system: tarot
+  system: tarot-challenges
   kind: upgrade
   wiki: Tarot
   confidence: provisional
@@ -4712,7 +4712,7 @@ nodes:
   - text: Perform a Singularity with 1e2026+ Fire
 - id: tarot-challenge-ace-of-pentacles
   name: Tarot Challenge Ace of Pentacles
-  system: tarot
+  system: tarot-challenges
   kind: upgrade
   wiki: Tarot
   confidence: provisional
@@ -4721,7 +4721,7 @@ nodes:
   - text: 640+ Max Mineral Level
 - id: tarot-challenge-two-of-pentacles
   name: Tarot Challenge Two of Pentacles
-  system: tarot
+  system: tarot-challenges
   kind: upgrade
   wiki: Tarot
   confidence: provisional
@@ -4731,7 +4731,7 @@ nodes:
   - text: 425+ Max Mineral Level
 - id: tarot-challenge-three-of-pentacles
   name: Tarot Challenge Three of Pentacles
-  system: tarot
+  system: tarot-challenges
   kind: upgrade
   wiki: Tarot
   confidence: provisional
@@ -4741,7 +4741,7 @@ nodes:
   - text: 1000+ Max Mineral Level
 - id: tarot-challenge-four-of-pentacles
   name: Tarot Challenge Four of Pentacles
-  system: tarot
+  system: tarot-challenges
   kind: upgrade
   wiki: Tarot
   confidence: provisional
@@ -4750,7 +4750,7 @@ nodes:
   - text: 1125+ Max Mineral Level
 - id: tarot-challenge-five-of-pentacles
   name: Tarot Challenge Five of Pentacles
-  system: tarot
+  system: tarot-challenges
   kind: upgrade
   wiki: Tarot
   confidence: provisional
@@ -4759,7 +4759,7 @@ nodes:
   - text: 1e20+ VP
 - id: tarot-challenge-six-of-pentacles
   name: Tarot Challenge Six of Pentacles
-  system: tarot
+  system: tarot-challenges
   kind: upgrade
   wiki: Tarot
   confidence: provisional
@@ -4769,7 +4769,7 @@ nodes:
   - text: 167+ Max Mineral Level
 - id: tarot-challenge-seven-of-pentacles
   name: Tarot Challenge Seven of Pentacles
-  system: tarot
+  system: tarot-challenges
   kind: upgrade
   wiki: Tarot
   confidence: provisional
@@ -4779,7 +4779,7 @@ nodes:
   - text: 105+ Max Mineral Level
 - id: tarot-challenge-eight-of-pentacles
   name: Tarot Challenge Eight of Pentacles
-  system: tarot
+  system: tarot-challenges
   kind: upgrade
   wiki: Tarot
   confidence: provisional
@@ -4789,7 +4789,7 @@ nodes:
   - text: 1640+ Max Mineral Level
 - id: tarot-challenge-nine-of-pentacles
   name: Tarot Challenge Nine of Pentacles
-  system: tarot
+  system: tarot-challenges
   kind: upgrade
   wiki: Tarot
   confidence: provisional
@@ -4799,7 +4799,7 @@ nodes:
   - text: 270+ Max Mineral Level
 - id: tarot-challenge-ten-of-pentacles
   name: Tarot Challenge Ten of Pentacles
-  system: tarot
+  system: tarot-challenges
   kind: upgrade
   wiki: Tarot
   confidence: provisional
@@ -4809,7 +4809,7 @@ nodes:
   - text: 560+ Max Mineral Level
 - id: tarot-challenge-page-of-pentacles
   name: Tarot Challenge Page of Pentacles
-  system: tarot
+  system: tarot-challenges
   kind: upgrade
   wiki: Tarot
   confidence: provisional
@@ -4818,7 +4818,7 @@ nodes:
   - text: 420+ Max Mineral Level
 - id: tarot-challenge-knight-of-pentacles
   name: Tarot Challenge Knight of Pentacles
-  system: tarot
+  system: tarot-challenges
   kind: upgrade
   wiki: Tarot
   confidence: provisional
@@ -4829,7 +4829,7 @@ nodes:
   - text: 1000+ Max Mineral Level
 - id: tarot-challenge-queen-of-pentacles
   name: Tarot Challenge Queen of Pentacles
-  system: tarot
+  system: tarot-challenges
   kind: upgrade
   wiki: Tarot
   confidence: provisional
@@ -4840,7 +4840,7 @@ nodes:
   - text: 700+ Max Mineral Level
 - id: tarot-challenge-king-of-pentacles
   name: Tarot Challenge King of Pentacles
-  system: tarot
+  system: tarot-challenges
   kind: upgrade
   wiki: Tarot
   confidence: provisional
@@ -4854,7 +4854,7 @@ nodes:
   - text: Perform a Singularity at 1e200+ VP
 - id: tarot-challenge-ace-of-cups
   name: Tarot Challenge Ace of Cups
-  system: tarot
+  system: tarot-challenges
   kind: upgrade
   wiki: Tarot
   confidence: provisional
@@ -4863,7 +4863,7 @@ nodes:
   - text: Unite with a Level 90+ Zodiac
 - id: tarot-challenge-two-of-cups
   name: Tarot Challenge Two of Cups
-  system: tarot
+  system: tarot-challenges
   kind: upgrade
   wiki: Tarot
   confidence: provisional
@@ -4872,7 +4872,7 @@ nodes:
   - text: Unite with Epic+ rarity Zodiac
 - id: tarot-challenge-three-of-cups
   name: Tarot Challenge Three of Cups
-  system: tarot
+  system: tarot-challenges
   kind: upgrade
   wiki: Tarot
   confidence: provisional
@@ -4881,7 +4881,7 @@ nodes:
   - text: Unite with an Immortal+ rarity Zodiac
 - id: tarot-challenge-four-of-cups
   name: Tarot Challenge Four of Cups
-  system: tarot
+  system: tarot-challenges
   kind: upgrade
   wiki: Tarot
   confidence: provisional
@@ -4891,7 +4891,7 @@ nodes:
   - text: Unite with Amazing+ rarity Zodiac
 - id: tarot-challenge-five-of-cups
   name: Tarot Challenge Five of Cups
-  system: tarot
+  system: tarot-challenges
   kind: upgrade
   wiki: Tarot
   confidence: provisional
@@ -4900,7 +4900,7 @@ nodes:
   - text: Unite with a Level 10+ Zodiac
 - id: tarot-challenge-six-of-cups
   name: Tarot Challenge Six of Cups
-  system: tarot
+  system: tarot-challenges
   kind: upgrade
   wiki: Tarot
   confidence: provisional
@@ -4909,7 +4909,7 @@ nodes:
   - text: Unite with a Level 808+ Zodiac
 - id: tarot-challenge-seven-of-cups
   name: Tarot Challenge Seven of Cups
-  system: tarot
+  system: tarot-challenges
   kind: upgrade
   wiki: Tarot
   confidence: provisional
@@ -4919,7 +4919,7 @@ nodes:
   - text: Unite with a Prime+ rarity Zodiac
 - id: tarot-challenge-eight-of-cups
   name: Tarot Challenge Eight of Cups
-  system: tarot
+  system: tarot-challenges
   kind: upgrade
   wiki: Tarot
   confidence: provisional
@@ -4929,7 +4929,7 @@ nodes:
   - text: Unite with a Legendary+ rarity Zodiac
 - id: tarot-challenge-nine-of-cups
   name: Tarot Challenge Nine of Cups
-  system: tarot
+  system: tarot-challenges
   kind: upgrade
   wiki: Tarot
   confidence: provisional
@@ -4939,7 +4939,7 @@ nodes:
   - text: Unite with a Level 25+ Zodiac
 - id: tarot-challenge-ten-of-cups
   name: Tarot Challenge Ten of Cups
-  system: tarot
+  system: tarot-challenges
   kind: upgrade
   wiki: Tarot
   confidence: provisional
@@ -4948,7 +4948,7 @@ nodes:
   - text: Unite with a Level 65+ Zodiac
 - id: tarot-challenge-page-of-cups
   name: Tarot Challenge Page of Cups
-  system: tarot
+  system: tarot-challenges
   kind: upgrade
   wiki: Tarot
   confidence: provisional
@@ -4957,7 +4957,7 @@ nodes:
   - text: Unite with a Level 100+ Zodiac
 - id: tarot-challenge-knight-of-cups
   name: Tarot Challenge Knight of Cups
-  system: tarot
+  system: tarot-challenges
   kind: upgrade
   wiki: Tarot
   confidence: provisional
@@ -4967,7 +4967,7 @@ nodes:
   - text: Unite with a Level 625+ Zodiac
 - id: tarot-challenge-queen-of-cups
   name: Tarot Challenge Queen of Cups
-  system: tarot
+  system: tarot-challenges
   kind: upgrade
   wiki: Tarot
   confidence: provisional
@@ -4977,7 +4977,7 @@ nodes:
   - text: Unite with a Level 6+ Zodiac
 - id: tarot-challenge-king-of-cups
   name: Tarot Challenge King of Cups
-  system: tarot
+  system: tarot-challenges
   kind: upgrade
   wiki: Tarot
   confidence: provisional
@@ -4989,7 +4989,7 @@ nodes:
   - text: Perform a Singularity while the next expected Zodiac Level is 67+
 - id: tarot-challenge-the-fool
   name: Tarot Challenge The Fool
-  system: tarot
+  system: tarot-challenges
   kind: upgrade
   wiki: Tarot
   confidence: provisional
@@ -4999,7 +4999,7 @@ nodes:
   - text: Destroy a Level 20 Black Gem
 - id: tarot-challenge-the-magician
   name: Tarot Challenge The Magician
-  system: tarot
+  system: tarot-challenges
   kind: upgrade
   wiki: Tarot
   confidence: provisional
@@ -5009,7 +5009,7 @@ nodes:
   - text: 1e5000+ of all Elements
 - id: tarot-challenge-the-high-priestess
   name: Tarot Challenge The High Priestess
-  system: tarot
+  system: tarot-challenges
   kind: upgrade
   wiki: Tarot
   confidence: provisional
@@ -5019,7 +5019,7 @@ nodes:
   - text: 200+ Max Mineral Level
 - id: tarot-challenge-the-empress
   name: Tarot Challenge The Empress
-  system: tarot
+  system: tarot-challenges
   kind: upgrade
   wiki: Tarot
   confidence: provisional
@@ -5029,7 +5029,7 @@ nodes:
   - text: Sell a Zodiac for exactly 67 Astrodust (lol)
 - id: tarot-challenge-the-emperor
   name: Tarot Challenge The Emperor
-  system: tarot
+  system: tarot-challenges
   kind: upgrade
   wiki: Tarot
   confidence: provisional
@@ -5039,7 +5039,7 @@ nodes:
   - text: 1333+ Max Mineral Level
 - id: tarot-challenge-the-hierophant
   name: Tarot Challenge The Hierophant
-  system: tarot
+  system: tarot-challenges
   kind: upgrade
   wiki: Tarot
   confidence: provisional
@@ -5049,7 +5049,7 @@ nodes:
   - text: 1380+ Max Mineral Level
 - id: tarot-challenge-the-lovers
   name: Tarot Challenge The Lovers
-  system: tarot
+  system: tarot-challenges
   kind: upgrade
   wiki: Tarot
   confidence: provisional
@@ -5059,7 +5059,7 @@ nodes:
   - text: Merge Level 250+
 - id: tarot-challenge-the-chariot
   name: Tarot Challenge The Chariot
-  system: tarot
+  system: tarot-challenges
   kind: upgrade
   wiki: Tarot
   confidence: provisional
@@ -5068,7 +5068,7 @@ nodes:
   - text: Sacrifice Level 40 for all Gems
 - id: tarot-challenge-justice
   name: Tarot Challenge Justice
-  system: tarot
+  system: tarot-challenges
   kind: upgrade
   wiki: Tarot
   confidence: provisional
@@ -5077,7 +5077,7 @@ nodes:
   - text: 111,111+ SMS Factor
 - id: tarot-challenge-the-hermit
   name: Tarot Challenge The Hermit
-  system: tarot
+  system: tarot-challenges
   kind: upgrade
   wiki: Tarot
   confidence: provisional
@@ -5088,7 +5088,7 @@ nodes:
   - text: 1e1000+ of all Tarot Resources
 - id: tarot-challenge-wheel-of-fortune
   name: Tarot Challenge Wheel of Fortune
-  system: tarot
+  system: tarot-challenges
   kind: upgrade
   wiki: Tarot
   confidence: provisional
@@ -5099,7 +5099,7 @@ nodes:
   - text: Win the Wheel 10 times in a row
 - id: tarot-challenge-strength
   name: Tarot Challenge Strength
-  system: tarot
+  system: tarot-challenges
   kind: upgrade
   wiki: Tarot
   confidence: provisional
@@ -5111,7 +5111,7 @@ nodes:
   - text: Attack Level 2000+
 - id: tarot-challenge-the-hanged-man
   name: Tarot Challenge The Hanged Man
-  system: tarot
+  system: tarot-challenges
   kind: upgrade
   wiki: Tarot
   confidence: provisional
@@ -5121,7 +5121,7 @@ nodes:
   - text: x5e9 Minerals Local Speed
 - id: tarot-challenge-death
   name: Tarot Challenge Death
-  system: tarot
+  system: tarot-challenges
   kind: upgrade
   wiki: Tarot
   confidence: provisional
@@ -5131,7 +5131,7 @@ nodes:
   - text: Refine Prestige within 10 seconds of the selected time.
 - id: tarot-challenge-temperance
   name: Tarot Challenge Temperance
-  system: tarot
+  system: tarot-challenges
   kind: upgrade
   wiki: Tarot
   confidence: provisional
@@ -5145,7 +5145,7 @@ nodes:
   - text: Fill Every Planet slot with a temperate zodiac that matches one of that planet's ruling signs.
 - id: tarot-challenge-the-devil
   name: Tarot Challenge The Devil
-  system: tarot
+  system: tarot-challenges
   kind: upgrade
   wiki: Tarot
   confidence: provisional
@@ -5154,7 +5154,7 @@ nodes:
   - text: Catch all 10 Chads by clicking on them
 - id: tarot-challenge-the-tower
   name: Tarot Challenge The Tower
-  system: tarot
+  system: tarot-challenges
   kind: upgrade
   wiki: Tarot
   confidence: provisional
@@ -5166,7 +5166,7 @@ nodes:
   - text: Complete the challenge by the chance given to you by Relic 67
 - id: tarot-challenge-the-star
   name: Tarot Challenge The Star
-  system: tarot
+  system: tarot-challenges
   kind: upgrade
   wiki: Tarot
   confidence: provisional
@@ -5177,7 +5177,7 @@ nodes:
   - text: Perform a Singularity with an Uncommon+ Singular Zodiac
 - id: tarot-challenge-the-moon
   name: Tarot Challenge The Moon
-  system: tarot
+  system: tarot-challenges
   kind: upgrade
   wiki: Tarot
   confidence: provisional

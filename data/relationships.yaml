@@ -93,12 +93,43 @@ systems:
   - id: tarot
     name: Tarot
     parent: unity
+  # The page gives the challenges their own `== Tarot Challenges ==` section and
+  # nothing else on it, which is the whole reason they are split out: 75 of
+  # Tarot's 161 nodes sat in one undifferentiated list beside the 78 cards, and
+  # a card and its challenge are separate things bought with separate currencies.
+  - id: tarot-challenges
+    name: Tarot Challenges
+    parent: tarot
   - id: plague
     name: Plague
     parent: unity
   - id: singularity
     name: Singularity
     parent: unity
+  # Two of Singularity's tabs, named by the milestones that grant them:
+  # Spaghettification "Unlocks Tree Tab", First Collapse "Unlock Milestones Tab".
+  # The Effects tab (Accelerated Growth) is left unsplit -- it holds one group
+  # node, so a system for it would be a row that reveals nothing.
+  - id: singularity-tree
+    name: Singularity Tree
+    parent: singularity
+  # Named for the tab rather than the layer, unlike `eternity-milestones`,
+  # because the three sub-tabs below take the qualified names: the wiki's own
+  # table captions are "Singularity Milestones", "Atom Milestones" and
+  # "Progression Milestones", and the first would collide with a parent called
+  # "Singularity Milestones".
+  - id: singularity-milestones
+    name: Milestones
+    parent: singularity
+  - id: singularity-milestones-singularity
+    name: Singularity Milestones
+    parent: singularity-milestones
+  - id: singularity-milestones-atoms
+    name: Atom Milestones
+    parent: singularity-milestones
+  - id: singularity-milestones-progression
+    name: Progression Milestones
+    parent: singularity-milestones
   # The Houses tab is an advanced Astrology unlocked at 32 Singularities. It
   # sits beside Singularity rather than under it: Singularity is the reset layer
   # that unlocks the tab, but the twelve zodiacs it holds are a feature in their
@@ -3342,10 +3373,26 @@ nodes:
 
   - id: singularity-tree-tab
     name: Tree Tab
-    system: singularity
+    system: singularity-tree
     kind: group
     wiki: Singularity#Tree
     confidence: provisional
+
+  # The sweep skips this row: its Reward cell is empty, and a row with no effect
+  # text yields no record. That is the right default -- an undocumented reward is
+  # nothing to assert -- but it makes the milestone list read as complete when it
+  # is one short, so the node is curated in and left effect-less until the wiki
+  # fills the cell.
+  #
+  # Filed under Atoms on the owner's reading of the live game. The wiki disagrees:
+  # it puts "One Hundred" in the Singularity Milestones table at "100 Singularity".
+  # Revisit if the page is ever updated -- one of the two is out of date.
+  - id: singularity-milestone-one-hundred
+    name: One Hundred
+    system: singularity-milestones-atoms
+    kind: upgrade
+    wiki: Singularity#Milestones
+    confidence: unknown
 
   - id: singularity-houses-tab
     name: Houses Tab

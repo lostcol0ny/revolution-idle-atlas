@@ -52,6 +52,14 @@ class WikitableEntry(_Entry):
     # Joined with a space when a page needs two columns to name a row uniquely
     # (Dilation_Tree's rows are identified by Axis + Index, neither alone).
     name_columns: list[str] = Field(min_length=1)
+    # Restricts the entry to the one table carrying this `|+` caption, so a page
+    # that repeats a column layout can still be swept into different systems.
+    # Singularity's three milestone tables are all Name/Requirement/Reward and
+    # are told apart only by their captions; without this the entry takes all
+    # three and every milestone lands in one bucket. Matched against the whole
+    # caption, not a prefix, so a later "Atom Milestones II" is a new table the
+    # entry ignores rather than a silent second source of rows.
+    caption: str | None = None
     # A list because one row can carry several effects: a Zodiac has four
     # bonus columns and each is a separate effect, not one concatenated blob.
     effect_columns: list[str] = Field(min_length=1)
