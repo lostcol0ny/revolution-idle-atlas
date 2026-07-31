@@ -6,7 +6,7 @@ from atlas.models import EdgeConfidence, Op
 
 _SLUG_RE = re.compile(r"[^a-z0-9]+")
 _COMMENT_RE = re.compile(r"<!--.*?-->", re.DOTALL)
-_MATH_RE = re.compile(r"<math>.*?</math>", re.DOTALL)
+_MATH_RE = re.compile(r"<math>(.*?)</math>", re.DOTALL)
 _FILE_LINK_RE = re.compile(r"\[\[File:[^\]]*\]\]", re.IGNORECASE)
 _TEMPLATE_RE = re.compile(r"\{\{([^{}]*)\}\}")
 _PIPED_LINK_RE = re.compile(r"\[\[[^\]|]*\|([^\]|]*)\]\]")
@@ -43,6 +43,15 @@ def _unwrap_template(match: re.Match[str]) -> str:
     return ""
 
 
+def _unwrap_math(match: re.Match[str]) -> str:
+    # Dropping the formula also broke the sentence around it: the wiki writes
+    # "(Only the <math>(x-308)^2</math> is divided by 100)", which came out as
+    # "(Only the is divided by 100)". Keeping the LaTeX verbatim is the honest
+    # option -- rendering it would put half a LaTeX translator in an extraction
+    # layer, and only two effect texts in the corpus carry math at all.
+    return normalise_space(match.group(1))
+
+
 def plain_text(raw: str) -> str:
     """Wiki markup in, readable plain text out.
 
@@ -51,7 +60,7 @@ def plain_text(raw: str) -> str:
     from rendering HTML and would otherwise show the braces to the reader.
     """
     text = _COMMENT_RE.sub("", raw)
-    text = _MATH_RE.sub("", text)
+    text = _MATH_RE.sub(_unwrap_math, text)
     text = _FILE_LINK_RE.sub("", text)
     # _TEMPLATE_RE only matches an innermost {{...}} pair, so nested templates
     # need repeated passes. Five is far beyond the observed depth of two, and

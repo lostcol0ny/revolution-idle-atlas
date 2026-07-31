@@ -40,11 +40,23 @@ def test_plain_text_unwraps_keyword_templates_including_named_arguments():
 
 def test_plain_text_drops_decoration_and_markup():
     assert plain_text("[[File:Relic 001.png|128px|link=]]A Boost") == "A Boost"
-    assert plain_text("Formula is: <math>1 + \\frac {x}{100}</math>") == "Formula is:"
     assert plain_text("1e5,200<!-- prior to ach.: 1e21,250 -->") == "1e5,200"
     assert plain_text("A Simple (''flat'') Boost") == "A Simple (flat) Boost"
     assert plain_text("takes your soul (''-1 {{keyword|soul|Soul}} {{Icon|soul_icon}}'')") == (
         "takes your soul (-1 Soul )"
+    )
+
+
+def test_plain_text_keeps_math_content_so_the_surrounding_sentence_survives():
+    # The second case is the one that matters: deleting the formula used to take
+    # the subject of the sentence with it and leave "(Only the is divided by
+    # 100)". LaTeX is passed through verbatim rather than rendered, so these
+    # assertions are also the record of what a reader is shown.
+    assert plain_text("Formula is: <math>1 + \\frac {x}{100}</math>") == (
+        "Formula is: 1 + \\frac {x}{100}"
+    )
+    assert plain_text("(Only the <math>(x-308)^2\n</math> is divided by 100)") == (
+        "(Only the (x-308)^2 is divided by 100)"
     )
 
 

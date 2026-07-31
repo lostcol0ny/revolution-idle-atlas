@@ -4197,7 +4197,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Attack level past 3600 boosts Fire generation Formula is:"
+          "text": "Attack level past 3600 boosts Fire generation Formula is: 1 + \\frac {(AttackLevel-3600)^2}{100}"
         }
       ],
       "id": "fire-node-3",
@@ -16694,7 +16694,7 @@
     {
       "confidence": "uncertain",
       "from": "fire-node-3",
-      "note": "Attack level past 3600 boosts Fire generation Formula is:",
+      "note": "Attack level past 3600 boosts Fire generation Formula is: 1 + \\frac {(AttackLevel-3600)^2}{100}",
       "rel": "boosts",
       "source": "wiki:Elements",
       "to": "attack-level"
@@ -16702,7 +16702,7 @@
     {
       "confidence": "uncertain",
       "from": "fire-node-3",
-      "note": "Attack level past 3600 boosts Fire generation Formula is:",
+      "note": "Attack level past 3600 boosts Fire generation Formula is: 1 + \\frac {(AttackLevel-3600)^2}{100}",
       "rel": "boosts",
       "source": "wiki:Elements",
       "to": "fire"
