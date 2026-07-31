@@ -275,7 +275,7 @@ pages:
   # `Icon` and `Cost (IP)` are not swept: one is an image, the other a price.
   - reader: wikitable
     page: Infinity
-    system: infinity
+    system: infinity-upgrades
     kind: upgrade
     id_prefix: infinity-upgrade
     name_columns: [Code, Name]
@@ -302,7 +302,7 @@ pages:
   # way. `Should be done` is ordering advice, not an effect.
   - reader: wikitable
     page: Infinity
-    system: infinity
+    system: infinity-challenges
     kind: upgrade
     id_prefix: infinity-challenge
     name_prefix: Infinity Challenge

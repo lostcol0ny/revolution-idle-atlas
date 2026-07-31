@@ -408,6 +408,30 @@ def test_eternity_is_split_into_the_tabs_the_game_has(graph: dict):
     assert direct == {"eternities", "eternity-points", "eternity-rewards"}
 
 
+def test_infinity_is_split_into_its_tabs_and_revolution_is_not(graph: dict):
+    # Infinity names two of its tabs in prose and the other two are the screens
+    # left over, so this one is read rather than transcribed. Generators is the
+    # entry worth pinning: it feeds Revolution's Mult Gain and could plausibly be
+    # filed there, but the wiki redirects its page to Infinity#Generators.
+    parents = {s["id"]: s.get("parent") for s in graph["systems"]}
+    assert {k for k, v in parents.items() if v == "infinity"} == {
+        "infinity-upgrades",
+        "infinity-challenges",
+        "generators",
+        "stars",
+    }
+    direct = {n["id"] for n in graph["nodes"] if n["system"] == "infinity"}
+    assert direct == {"infinities", "infinity-points"}
+
+    # Revolution stays flat on purpose. Its page has sections, but they are
+    # mechanics on one screen rather than tabs, and its thirteen nodes would
+    # split into buckets of two and three -- fragmentation with nothing to
+    # navigate. Asserted so that "Revolution is still flat" reads as a decision
+    # rather than as an oversight nobody got to.
+    assert [k for k, v in parents.items() if v == "revolution"] == []
+    assert len([n for n in graph["nodes"] if n["system"] == "revolution"]) == 13
+
+
 def test_the_whole_eternity_zoo_is_present_and_priced(graph: dict):
     # The 81 Animals sit behind an unscraped {{AnimalGrid}} template, so they are
     # transcribed by hand and nothing regenerates them. 1,524 AP is the total the

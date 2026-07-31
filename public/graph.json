@@ -6647,7 +6647,7 @@
       "id": "infinity-upgrade-1-1-infinity-generation-and-automation",
       "kind": "upgrade",
       "name": "1;1 Infinity Generation and Automation",
-      "system": "infinity",
+      "system": "infinity-upgrades",
       "wiki": "Infinity"
     },
     {
@@ -6660,7 +6660,7 @@
       "id": "infinity-upgrade-2-1-exponential-box",
       "kind": "upgrade",
       "name": "2;1 Exponential Box",
-      "system": "infinity",
+      "system": "infinity-upgrades",
       "wiki": "Infinity"
     },
     {
@@ -6673,7 +6673,7 @@
       "id": "infinity-upgrade-2-2-auto-ascend",
       "kind": "upgrade",
       "name": "2;2 Auto Ascend",
-      "system": "infinity",
+      "system": "infinity-upgrades",
       "wiki": "Infinity"
     },
     {
@@ -6686,7 +6686,7 @@
       "id": "infinity-upgrade-3-1-fast-laps",
       "kind": "upgrade",
       "name": "3;1 Fast Laps",
-      "system": "infinity",
+      "system": "infinity-upgrades",
       "wiki": "Infinity"
     },
     {
@@ -6699,7 +6699,7 @@
       "id": "infinity-upgrade-4-1-even-faster-laps",
       "kind": "upgrade",
       "name": "4;1 Even Faster Laps",
-      "system": "infinity",
+      "system": "infinity-upgrades",
       "wiki": "Infinity"
     },
     {
@@ -6712,7 +6712,7 @@
       "id": "infinity-upgrade-5-1-long-term-prestiging",
       "kind": "upgrade",
       "name": "5;1 Long-Term Prestiging",
-      "system": "infinity",
+      "system": "infinity-upgrades",
       "wiki": "Infinity"
     },
     {
@@ -6725,7 +6725,7 @@
       "id": "infinity-upgrade-5-2-solid-exponent",
       "kind": "upgrade",
       "name": "5;2 Solid Exponent",
-      "system": "infinity",
+      "system": "infinity-upgrades",
       "wiki": "Infinity"
     },
     {
@@ -6738,7 +6738,7 @@
       "id": "infinity-upgrade-5-3-auto-prestige",
       "kind": "upgrade",
       "name": "5;3 Auto Prestige",
-      "system": "infinity",
+      "system": "infinity-upgrades",
       "wiki": "Infinity"
     },
     {
@@ -6751,7 +6751,7 @@
       "id": "infinity-upgrade-6-1-mighty-ascend",
       "kind": "upgrade",
       "name": "6;1 Mighty Ascend",
-      "system": "infinity",
+      "system": "infinity-upgrades",
       "wiki": "Infinity"
     },
     {
@@ -6764,7 +6764,7 @@
       "id": "infinity-upgrade-6-2-ascend-to-ascend",
       "kind": "upgrade",
       "name": "6;2 Ascend to Ascend",
-      "system": "infinity",
+      "system": "infinity-upgrades",
       "wiki": "Infinity"
     },
     {
@@ -6777,7 +6777,7 @@
       "id": "infinity-upgrade-7-1-challenges",
       "kind": "upgrade",
       "name": "7;1 Challenges!",
-      "system": "infinity",
+      "system": "infinity-upgrades",
       "wiki": "Infinity"
     },
     {
@@ -6790,7 +6790,7 @@
       "id": "infinity-upgrade-8-1-generator-time",
       "kind": "upgrade",
       "name": "8;1 Generator & Time",
-      "system": "infinity",
+      "system": "infinity-upgrades",
       "wiki": "Infinity"
     },
     {
@@ -6803,7 +6803,7 @@
       "id": "infinity-upgrade-8-2-generator-power",
       "kind": "upgrade",
       "name": "8;2 Generator & Power",
-      "system": "infinity",
+      "system": "infinity-upgrades",
       "wiki": "Infinity"
     },
     {
@@ -6816,7 +6816,7 @@
       "id": "infinity-upgrade-8-3-generator-constant",
       "kind": "upgrade",
       "name": "8;3 Generator & Constant",
-      "system": "infinity",
+      "system": "infinity-upgrades",
       "wiki": "Infinity"
     },
     {
@@ -6829,7 +6829,7 @@
       "id": "infinity-upgrade-9-1-generator-2-time",
       "kind": "upgrade",
       "name": "9;1 Generator 2 & Time",
-      "system": "infinity",
+      "system": "infinity-upgrades",
       "wiki": "Infinity"
     },
     {
@@ -6842,7 +6842,7 @@
       "id": "infinity-upgrade-9-2-generator-2-constant",
       "kind": "upgrade",
       "name": "9;2 Generator 2 & Constant",
-      "system": "infinity",
+      "system": "infinity-upgrades",
       "wiki": "Infinity"
     },
     {
@@ -6855,7 +6855,7 @@
       "id": "infinity-upgrade-10-1-auto-work",
       "kind": "upgrade",
       "name": "10;1 Auto Work",
-      "system": "infinity",
+      "system": "infinity-upgrades",
       "wiki": "Infinity"
     },
     {
@@ -6868,7 +6868,7 @@
       "id": "infinity-upgrade-11-1-weak-generators",
       "kind": "upgrade",
       "name": "11;1 Weak Generators",
-      "system": "infinity",
+      "system": "infinity-upgrades",
       "wiki": "Infinity"
     },
     {
@@ -6881,7 +6881,7 @@
       "id": "infinity-upgrade-11-2-medium-generators",
       "kind": "upgrade",
       "name": "11;2 Medium Generators",
-      "system": "infinity",
+      "system": "infinity-upgrades",
       "wiki": "Infinity"
     },
     {
@@ -6894,7 +6894,7 @@
       "id": "infinity-upgrade-12-1-first-but-better",
       "kind": "upgrade",
       "name": "12;1 First, but better",
-      "system": "infinity",
+      "system": "infinity-upgrades",
       "wiki": "Infinity"
     },
     {
@@ -6907,7 +6907,7 @@
       "id": "infinity-upgrade-13-1-a-little-gift",
       "kind": "upgrade",
       "name": "13;1 A Little Gift",
-      "system": "infinity",
+      "system": "infinity-upgrades",
       "wiki": "Infinity"
     },
     {
@@ -6920,7 +6920,7 @@
       "id": "infinity-upgrade-14-1-first-for-the-first",
       "kind": "upgrade",
       "name": "14;1 First for the first",
-      "system": "infinity",
+      "system": "infinity-upgrades",
       "wiki": "Infinity"
     },
     {
@@ -6933,7 +6933,7 @@
       "id": "infinity-upgrade-14-2-efficiency-v",
       "kind": "upgrade",
       "name": "14;2 Efficiency V",
-      "system": "infinity",
+      "system": "infinity-upgrades",
       "wiki": "Infinity"
     },
     {
@@ -6946,7 +6946,7 @@
       "id": "infinity-upgrade-15-1-auto-infinity",
       "kind": "upgrade",
       "name": "15;1 Auto Infinity",
-      "system": "infinity",
+      "system": "infinity-upgrades",
       "wiki": "Infinity"
     },
     {
@@ -6959,7 +6959,7 @@
       "id": "infinity-upgrade-15-2-fast-ip-gain",
       "kind": "upgrade",
       "name": "15;2 Fast IP Gain",
-      "system": "infinity",
+      "system": "infinity-upgrades",
       "wiki": "Infinity"
     },
     {
@@ -6972,7 +6972,7 @@
       "id": "infinity-upgrade-15-3-first-generator-power",
       "kind": "upgrade",
       "name": "15;3 First Generator Power",
-      "system": "infinity",
+      "system": "infinity-upgrades",
       "wiki": "Infinity"
     },
     {
@@ -6985,7 +6985,7 @@
       "id": "infinity-upgrade-15-4-second-generator-power",
       "kind": "upgrade",
       "name": "15;4 Second Generator Power",
-      "system": "infinity",
+      "system": "infinity-upgrades",
       "wiki": "Infinity"
     },
     {
@@ -6998,7 +6998,7 @@
       "id": "infinity-upgrade-16-1-infinity-to-ip",
       "kind": "upgrade",
       "name": "16;1 Infinity to IP",
-      "system": "infinity",
+      "system": "infinity-upgrades",
       "wiki": "Infinity"
     },
     {
@@ -7011,7 +7011,7 @@
       "id": "infinity-upgrade-16-2-stronger-ascension-power",
       "kind": "upgrade",
       "name": "16;2 Stronger Ascension Power",
-      "system": "infinity",
+      "system": "infinity-upgrades",
       "wiki": "Infinity"
     },
     {
@@ -7024,7 +7024,7 @@
       "id": "infinity-upgrade-16-3-empowered-promotions",
       "kind": "upgrade",
       "name": "16;3 Empowered Promotions",
-      "system": "infinity",
+      "system": "infinity-upgrades",
       "wiki": "Infinity"
     },
     {
@@ -7037,7 +7037,7 @@
       "id": "infinity-upgrade-17-1-third-s-turn",
       "kind": "upgrade",
       "name": "17;1 Third's Turn",
-      "system": "infinity",
+      "system": "infinity-upgrades",
       "wiki": "Infinity"
     },
     {
@@ -7050,7 +7050,7 @@
       "id": "infinity-upgrade-17-2-faster-infinity-gain",
       "kind": "upgrade",
       "name": "17;2 Faster Infinity Gain",
-      "system": "infinity",
+      "system": "infinity-upgrades",
       "wiki": "Infinity"
     },
     {
@@ -7063,7 +7063,7 @@
       "id": "infinity-upgrade-17-3-boost-to-the-first",
       "kind": "upgrade",
       "name": "17;3 Boost to the first",
-      "system": "infinity",
+      "system": "infinity-upgrades",
       "wiki": "Infinity"
     },
     {
@@ -7076,7 +7076,7 @@
       "id": "infinity-upgrade-18-1-passive-infinities",
       "kind": "upgrade",
       "name": "18;1 Passive Infinities",
-      "system": "infinity",
+      "system": "infinity-upgrades",
       "wiki": "Infinity"
     },
     {
@@ -7089,7 +7089,7 @@
       "id": "infinity-upgrade-18-2-fourth-from-third",
       "kind": "upgrade",
       "name": "18;2 Fourth from Third",
-      "system": "infinity",
+      "system": "infinity-upgrades",
       "wiki": "Infinity"
     },
     {
@@ -7102,7 +7102,7 @@
       "id": "infinity-upgrade-18-3-third-from-second",
       "kind": "upgrade",
       "name": "18;3 Third from Second",
-      "system": "infinity",
+      "system": "infinity-upgrades",
       "wiki": "Infinity"
     },
     {
@@ -7115,7 +7115,7 @@
       "id": "infinity-upgrade-19-1-almost-one",
       "kind": "upgrade",
       "name": "19;1 Almost one",
-      "system": "infinity",
+      "system": "infinity-upgrades",
       "wiki": "Infinity"
     },
     {
@@ -7128,7 +7128,7 @@
       "id": "infinity-upgrade-19-2-age-of-inflation",
       "kind": "upgrade",
       "name": "19;2 Age of Inflation",
-      "system": "infinity",
+      "system": "infinity-upgrades",
       "wiki": "Infinity"
     },
     {
@@ -7141,7 +7141,7 @@
       "id": "infinity-upgrade-19-3-challenge-efficiency",
       "kind": "upgrade",
       "name": "19;3 Challenge Efficiency",
-      "system": "infinity",
+      "system": "infinity-upgrades",
       "wiki": "Infinity"
     },
     {
@@ -7154,7 +7154,7 @@
       "id": "infinity-upgrade-20-1-as-fast-as-strong",
       "kind": "upgrade",
       "name": "20;1 As fast as strong",
-      "system": "infinity",
+      "system": "infinity-upgrades",
       "wiki": "Infinity"
     },
     {
@@ -7167,7 +7167,7 @@
       "id": "infinity-upgrade-20-2-dynamic-generator-exponent",
       "kind": "upgrade",
       "name": "20;2 Dynamic Generator Exponent",
-      "system": "infinity",
+      "system": "infinity-upgrades",
       "wiki": "Infinity"
     },
     {
@@ -7180,7 +7180,7 @@
       "id": "infinity-upgrade-21-1-a-falling-star",
       "kind": "upgrade",
       "name": "21;1 A Falling Star",
-      "system": "infinity",
+      "system": "infinity-upgrades",
       "wiki": "Infinity"
     },
     {
@@ -8393,7 +8393,7 @@
       "id": "infinity-challenge-1",
       "kind": "upgrade",
       "name": "Infinity Challenge 1",
-      "system": "infinity",
+      "system": "infinity-challenges",
       "wiki": "Infinity"
     },
     {
@@ -8406,7 +8406,7 @@
       "id": "infinity-challenge-2",
       "kind": "upgrade",
       "name": "Infinity Challenge 2",
-      "system": "infinity",
+      "system": "infinity-challenges",
       "wiki": "Infinity"
     },
     {
@@ -8419,7 +8419,7 @@
       "id": "infinity-challenge-3",
       "kind": "upgrade",
       "name": "Infinity Challenge 3",
-      "system": "infinity",
+      "system": "infinity-challenges",
       "wiki": "Infinity"
     },
     {
@@ -8432,7 +8432,7 @@
       "id": "infinity-challenge-4",
       "kind": "upgrade",
       "name": "Infinity Challenge 4",
-      "system": "infinity",
+      "system": "infinity-challenges",
       "wiki": "Infinity"
     },
     {
@@ -8445,7 +8445,7 @@
       "id": "infinity-challenge-5",
       "kind": "upgrade",
       "name": "Infinity Challenge 5",
-      "system": "infinity",
+      "system": "infinity-challenges",
       "wiki": "Infinity"
     },
     {
@@ -8458,7 +8458,7 @@
       "id": "infinity-challenge-6",
       "kind": "upgrade",
       "name": "Infinity Challenge 6",
-      "system": "infinity",
+      "system": "infinity-challenges",
       "wiki": "Infinity"
     },
     {
@@ -8471,7 +8471,7 @@
       "id": "infinity-challenge-7",
       "kind": "upgrade",
       "name": "Infinity Challenge 7",
-      "system": "infinity",
+      "system": "infinity-challenges",
       "wiki": "Infinity"
     },
     {
@@ -8484,7 +8484,7 @@
       "id": "infinity-challenge-8",
       "kind": "upgrade",
       "name": "Infinity Challenge 8",
-      "system": "infinity",
+      "system": "infinity-challenges",
       "wiki": "Infinity"
     },
     {
@@ -8497,7 +8497,7 @@
       "id": "infinity-challenge-9",
       "kind": "upgrade",
       "name": "Infinity Challenge 9",
-      "system": "infinity",
+      "system": "infinity-challenges",
       "wiki": "Infinity"
     },
     {
@@ -8584,7 +8584,7 @@
       "id": "generator-1",
       "kind": "upgrade",
       "name": "Generator 1",
-      "system": "infinity",
+      "system": "generators",
       "wiki": "Infinity#Generators"
     },
     {
@@ -8602,7 +8602,7 @@
       "id": "generator-2",
       "kind": "upgrade",
       "name": "Generator 2",
-      "system": "infinity",
+      "system": "generators",
       "wiki": "Infinity#Generators"
     },
     {
@@ -8620,7 +8620,7 @@
       "id": "generator-3",
       "kind": "upgrade",
       "name": "Generator 3",
-      "system": "infinity",
+      "system": "generators",
       "wiki": "Infinity#Generators"
     },
     {
@@ -8638,7 +8638,7 @@
       "id": "generator-4",
       "kind": "upgrade",
       "name": "Generator 4",
-      "system": "infinity",
+      "system": "generators",
       "wiki": "Infinity#Generators"
     },
     {
@@ -8656,7 +8656,7 @@
       "id": "generator-5",
       "kind": "upgrade",
       "name": "Generator 5",
-      "system": "infinity",
+      "system": "generators",
       "wiki": "Infinity#Generators"
     },
     {
@@ -8674,7 +8674,7 @@
       "id": "generator-6",
       "kind": "upgrade",
       "name": "Generator 6",
-      "system": "infinity",
+      "system": "generators",
       "wiki": "Infinity#Generators"
     },
     {
@@ -8692,7 +8692,7 @@
       "id": "generator-7",
       "kind": "upgrade",
       "name": "Generator 7",
-      "system": "infinity",
+      "system": "generators",
       "wiki": "Infinity#Generators"
     },
     {
@@ -8710,7 +8710,7 @@
       "id": "generator-8",
       "kind": "upgrade",
       "name": "Generator 8",
-      "system": "infinity",
+      "system": "generators",
       "wiki": "Infinity#Generators"
     },
     {
@@ -8728,7 +8728,7 @@
       "id": "generator-9",
       "kind": "upgrade",
       "name": "Generator 9",
-      "system": "infinity",
+      "system": "generators",
       "wiki": "Infinity#Generators"
     },
     {
@@ -8746,7 +8746,7 @@
       "id": "generator-10",
       "kind": "upgrade",
       "name": "Generator 10",
-      "system": "infinity",
+      "system": "generators",
       "wiki": "Infinity#Generators"
     },
     {
@@ -8763,7 +8763,7 @@
       "id": "generator-power",
       "kind": "stat",
       "name": "Generator Power",
-      "system": "infinity",
+      "system": "generators",
       "wiki": "Infinity#Generators"
     },
     {
@@ -8780,7 +8780,7 @@
       "id": "generator-mult",
       "kind": "stat",
       "name": "Generator Mult",
-      "system": "infinity",
+      "system": "generators",
       "wiki": "Infinity#Generators"
     },
     {
@@ -8796,7 +8796,7 @@
       "id": "generator-exponent",
       "kind": "stat",
       "name": "Generator Exponent",
-      "system": "infinity",
+      "system": "generators",
       "wiki": "Infinity#Generators"
     },
     {
@@ -8810,7 +8810,7 @@
       "id": "stars",
       "kind": "upgrade",
       "name": "Stars",
-      "system": "infinity",
+      "system": "stars",
       "wiki": "Stars"
     },
     {
@@ -8823,7 +8823,7 @@
       "id": "stardust",
       "kind": "currency",
       "name": "Stardust",
-      "system": "infinity",
+      "system": "stars",
       "wiki": "Stars"
     },
     {
@@ -8837,7 +8837,7 @@
       "id": "star-base",
       "kind": "upgrade",
       "name": "Star Base",
-      "system": "infinity",
+      "system": "stars",
       "wiki": "Stars"
     },
     {
@@ -8851,7 +8851,7 @@
       "id": "star-exponent",
       "kind": "upgrade",
       "name": "Star Exponent",
-      "system": "infinity",
+      "system": "stars",
       "wiki": "Stars"
     },
     {
@@ -8865,7 +8865,7 @@
       "id": "stardust-upgrade-1",
       "kind": "upgrade",
       "name": "Stardust Upgrade 1",
-      "system": "infinity",
+      "system": "stars",
       "wiki": "Stars"
     },
     {
@@ -8879,7 +8879,7 @@
       "id": "stardust-upgrade-2",
       "kind": "upgrade",
       "name": "Stardust Upgrade 2",
-      "system": "infinity",
+      "system": "stars",
       "wiki": "Stars"
     },
     {
@@ -8893,7 +8893,7 @@
       "id": "stardust-upgrade-3",
       "kind": "upgrade",
       "name": "Stardust Upgrade 3",
-      "system": "infinity",
+      "system": "stars",
       "wiki": "Stars"
     },
     {
@@ -8907,7 +8907,7 @@
       "id": "stardust-upgrade-4",
       "kind": "upgrade",
       "name": "Stardust Upgrade 4",
-      "system": "infinity",
+      "system": "stars",
       "wiki": "Stars"
     },
     {
@@ -8920,7 +8920,7 @@
       "id": "challenge-times",
       "kind": "stat",
       "name": "Challenge Times",
-      "system": "infinity",
+      "system": "infinity-challenges",
       "wiki": "Infinity#Challenge_Times"
     },
     {
@@ -8933,7 +8933,7 @@
       "id": "break-infinity",
       "kind": "upgrade",
       "name": "Break Infinity",
-      "system": "infinity",
+      "system": "infinity-challenges",
       "wiki": "Infinity#Break_Infinity"
     },
     {
@@ -9274,7 +9274,7 @@
       "id": "stardust-exponent",
       "kind": "stat",
       "name": "Stardust Exponent",
-      "system": "infinity",
+      "system": "stars",
       "wiki": "Stars"
     },
     {
@@ -9282,7 +9282,7 @@
       "id": "stardust-base",
       "kind": "stat",
       "name": "Stardust Base",
-      "system": "infinity",
+      "system": "stars",
       "wiki": "Stars"
     },
     {
@@ -11971,7 +11971,7 @@
       "id": "star-cost",
       "kind": "stat",
       "name": "Star Cost",
-      "system": "infinity",
+      "system": "stars",
       "wiki": "Planets"
     },
     {
@@ -23799,6 +23799,26 @@
     {
       "id": "infinity",
       "name": "Infinity"
+    },
+    {
+      "id": "infinity-upgrades",
+      "name": "Infinity Upgrades",
+      "parent": "infinity"
+    },
+    {
+      "id": "infinity-challenges",
+      "name": "Infinity Challenges",
+      "parent": "infinity"
+    },
+    {
+      "id": "generators",
+      "name": "Generators",
+      "parent": "infinity"
+    },
+    {
+      "id": "stars",
+      "name": "Stars",
+      "parent": "infinity"
     },
     {
       "id": "eternity",

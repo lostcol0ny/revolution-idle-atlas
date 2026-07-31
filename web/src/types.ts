@@ -9,6 +9,10 @@
 export const KNOWN_SYSTEMS = [
   'revolution',
   'infinity',
+  'infinity-upgrades',
+  'infinity-challenges',
+  'generators',
+  'stars',
   'eternity',
   'eternity-milestones',
   'animals-milestones',

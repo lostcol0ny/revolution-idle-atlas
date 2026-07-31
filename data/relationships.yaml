@@ -14,6 +14,24 @@ systems:
     name: Revolution
   - id: infinity
     name: Infinity
+  # Infinity's tabs. The page names two outright -- Infinity is broken or fixed
+  # "in the Challenges tab", and Stars "are the last tab in this prestige layer"
+  # -- and the upgrade tree and generators are the two screens left. Generators
+  # sit here rather than under Revolution despite feeding Mult Gain: the wiki
+  # redirects the Generators page to Infinity#Generators and files it under
+  # Category:Infinity.
+  - id: infinity-upgrades
+    name: Infinity Upgrades
+    parent: infinity
+  - id: infinity-challenges
+    name: Infinity Challenges
+    parent: infinity
+  - id: generators
+    name: Generators
+    parent: infinity
+  - id: stars
+    name: Stars
+    parent: infinity
   - id: eternity
     name: Eternity
   # Eternity's seven tabs, in the order the game unlocks them -- the page numbers
@@ -300,7 +318,7 @@ nodes:
 
   - id: generator-1
     name: Generator 1
-    system: infinity
+    system: generators
     kind: upgrade
     aliases: [Gen 1]
     wiki: Infinity#Generators
@@ -311,7 +329,7 @@ nodes:
 
   - id: generator-2
     name: Generator 2
-    system: infinity
+    system: generators
     kind: upgrade
     aliases: [Gen 2, Gen 2s]
     wiki: Infinity#Generators
@@ -322,7 +340,7 @@ nodes:
 
   - id: generator-3
     name: Generator 3
-    system: infinity
+    system: generators
     kind: upgrade
     aliases: [Gen 3, Gen 3s]
     wiki: Infinity#Generators
@@ -333,7 +351,7 @@ nodes:
 
   - id: generator-4
     name: Generator 4
-    system: infinity
+    system: generators
     kind: upgrade
     aliases: [Gen 4, Gen 4s]
     wiki: Infinity#Generators
@@ -348,7 +366,7 @@ nodes:
 
   - id: generator-5
     name: Generator 5
-    system: infinity
+    system: generators
     kind: upgrade
     aliases: [Gen 5, Gen 5s]
     wiki: Infinity#Generators
@@ -359,7 +377,7 @@ nodes:
 
   - id: generator-6
     name: Generator 6
-    system: infinity
+    system: generators
     kind: upgrade
     aliases: [Gen 6, Gen 6s]
     wiki: Infinity#Generators
@@ -370,7 +388,7 @@ nodes:
 
   - id: generator-7
     name: Generator 7
-    system: infinity
+    system: generators
     kind: upgrade
     aliases: [Gen 7, Gen 7s]
     wiki: Infinity#Generators
@@ -381,7 +399,7 @@ nodes:
 
   - id: generator-8
     name: Generator 8
-    system: infinity
+    system: generators
     kind: upgrade
     aliases: [Gen 8, Gen 8s]
     wiki: Infinity#Generators
@@ -392,7 +410,7 @@ nodes:
 
   - id: generator-9
     name: Generator 9
-    system: infinity
+    system: generators
     kind: upgrade
     aliases: [Gen 9, Gen 9s]
     wiki: Infinity#Generators
@@ -403,7 +421,7 @@ nodes:
 
   - id: generator-10
     name: Generator 10
-    system: infinity
+    system: generators
     kind: upgrade
     aliases: [Gen 10, Gen 10s]
     wiki: Infinity#Generators
@@ -414,7 +432,7 @@ nodes:
 
   - id: generator-power
     name: Generator Power
-    system: infinity
+    system: generators
     kind: stat
     aliases: [GP, Gen Power]
     wiki: Infinity#Generators
@@ -424,7 +442,7 @@ nodes:
 
   - id: generator-mult
     name: Generator Mult
-    system: infinity
+    system: generators
     kind: stat
     aliases: [Gen Mult, Generator Multiplier]
     wiki: Infinity#Generators
@@ -434,7 +452,7 @@ nodes:
 
   - id: generator-exponent
     name: Generator Exponent
-    system: infinity
+    system: generators
     kind: stat
     aliases: [Gen Exponent]
     wiki: Infinity#Generators
@@ -444,7 +462,7 @@ nodes:
 
   - id: stars
     name: Stars
-    system: infinity
+    system: stars
     kind: upgrade
     wiki: Stars
     confidence: documented
@@ -454,7 +472,7 @@ nodes:
 
   - id: stardust
     name: Stardust
-    system: infinity
+    system: stars
     kind: currency
     wiki: Stars
     confidence: documented
@@ -463,7 +481,7 @@ nodes:
 
   - id: star-base
     name: Star Base
-    system: infinity
+    system: stars
     kind: upgrade
     wiki: Stars
     confidence: documented
@@ -473,7 +491,7 @@ nodes:
 
   - id: star-exponent
     name: Star Exponent
-    system: infinity
+    system: stars
     kind: upgrade
     wiki: Stars
     confidence: documented
@@ -486,7 +504,7 @@ nodes:
 
   - id: stardust-upgrade-1
     name: Stardust Upgrade 1
-    system: infinity
+    system: stars
     kind: upgrade
     wiki: Stars
     confidence: documented
@@ -496,7 +514,7 @@ nodes:
 
   - id: stardust-upgrade-2
     name: Stardust Upgrade 2
-    system: infinity
+    system: stars
     kind: upgrade
     wiki: Stars
     confidence: documented
@@ -506,7 +524,7 @@ nodes:
 
   - id: stardust-upgrade-3
     name: Stardust Upgrade 3
-    system: infinity
+    system: stars
     kind: upgrade
     wiki: Stars
     confidence: documented
@@ -516,7 +534,7 @@ nodes:
 
   - id: stardust-upgrade-4
     name: Stardust Upgrade 4
-    system: infinity
+    system: stars
     kind: upgrade
     wiki: Stars
     confidence: documented
@@ -526,7 +544,7 @@ nodes:
 
   - id: challenge-times
     name: Challenge Times
-    system: infinity
+    system: infinity-challenges
     kind: stat
     wiki: Infinity#Challenge_Times
     confidence: documented
@@ -536,7 +554,7 @@ nodes:
 
   - id: break-infinity
     name: Break Infinity
-    system: infinity
+    system: infinity-challenges
     kind: upgrade
     wiki: Infinity#Break_Infinity
     confidence: documented
@@ -825,14 +843,14 @@ nodes:
 
   - id: stardust-exponent
     name: Stardust Exponent
-    system: infinity
+    system: stars
     kind: stat
     wiki: Stars
     confidence: documented
 
   - id: stardust-base
     name: Stardust Base
-    system: infinity
+    system: stars
     kind: stat
     wiki: Stars
     confidence: documented
@@ -2648,7 +2666,7 @@ nodes:
 
   - id: star-cost
     name: Star Cost
-    system: infinity
+    system: stars
     kind: stat
     wiki: Planets
     confidence: documented

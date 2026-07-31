@@ -7,6 +7,15 @@ import type { Kind, KnownSystem, Rel } from '../types';
 export const SYSTEM_COLOURS: Record<KnownSystem, string> = {
   revolution: '#3d6a99',
   infinity: '#b0621c',
+  // Infinity's four tabs, kept in the layer's amber band for the same reason
+  // Eternity's are kept in a green one.
+  'infinity-upgrades': '#8a5a12',
+  'infinity-challenges': '#9c4a12',
+  generators: '#a06a35',
+  // Pulled off gold and onto tan deliberately: the obvious choice sat 18 apart
+  // from supernova, and two star-themed systems in the same yellow are the one
+  // pair a reader would actually try to tell apart.
+  stars: '#8a6f55',
   eternity: '#3f7a37',
   // Eternity's seven tabs. They stay inside a green/olive/teal band so the layer
   // reads as one block at a glance, which is the only cue the canvas gives —
