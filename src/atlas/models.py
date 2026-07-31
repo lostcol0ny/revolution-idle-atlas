@@ -72,6 +72,10 @@ class Node(BaseModel):
     system: str
     kind: Kind
     wiki: str | None = None
+    # The purchase price as the wiki writes it, unit included ("4 AP"). A string
+    # because the unit carries meaning a number would drop, and because costs
+    # elsewhere in the game are written in scientific notation.
+    cost: str | None = None
     confidence: NodeConfidence = NodeConfidence.DOCUMENTED
     effects: list[Effect] = Field(default_factory=list)
     # Other names the wiki uses for the same entity. Read by

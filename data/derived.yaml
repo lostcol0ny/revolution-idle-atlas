@@ -4548,6 +4548,13 @@ edges:
   note: Power (^) to DP Gain Raises DP Gain to a power (^)
   source: wiki:Relics
   confidence: uncertain
+- from: relic-11
+  to: supernova
+  rel: boosts
+  op: add
+  note: Supernova Bonuses (are) Powered to X
+  source: wiki:Relics
+  confidence: uncertain
 - from: relic-15
   to: relic-2
   rel: boosts
@@ -4774,6 +4781,13 @@ edges:
   rel: boosts
   op: exp
   note: Empowers Relic 59
+  source: wiki:Relics
+  confidence: uncertain
+- from: relic-61
+  to: animal-pig
+  rel: boosts
+  op: add
+  note: Multiplies PIP per PIG
   source: wiki:Relics
   confidence: uncertain
 - from: relic-66
@@ -5268,6 +5282,12 @@ edges:
   source: wiki:Minerals/Refine_Tree
   confidence: documented
 - from: refine-node-63
+  to: dilation-tree
+  rel: boosts
+  note: Keep Dilation Tree and DTP on Unity Reset
+  source: wiki:Minerals/Refine_Tree
+  confidence: uncertain
+- from: refine-node-63
   to: dilation-tree-points
   rel: boosts
   note: Keep Dilation Tree and DTP on Unity Reset
@@ -5605,6 +5625,12 @@ edges:
   rel: requires
   source: wiki:Minerals/Refine_Tree
   confidence: documented
+- from: refine-node-109
+  to: animal-pig
+  rel: boosts
+  note: Multiplies PIP per PIG by x10
+  source: wiki:Minerals/Refine_Tree
+  confidence: uncertain
 - from: refine-node-98
   to: refine-node-110
   rel: requires
@@ -5713,11 +5739,23 @@ edges:
   rel: requires
   source: wiki:Minerals/Refine_Tree
   confidence: documented
+- from: refine-node-123
+  to: animal-pig
+  rel: boosts
+  note: Multiplies PIG Rewards by x10
+  source: wiki:Minerals/Refine_Tree
+  confidence: uncertain
 - from: refine-node-114
   to: refine-node-124
   rel: requires
   source: wiki:Minerals/Refine_Tree
   confidence: documented
+- from: refine-node-124
+  to: animal-pig
+  rel: boosts
+  note: PIG Rewards are powered to ^1.05
+  source: wiki:Minerals/Refine_Tree
+  confidence: uncertain
 - from: refine-node-119
   to: refine-node-125
   rel: requires
@@ -6478,6 +6516,12 @@ edges:
   note: Water Node 11
   source: wiki:Elements
   confidence: documented
+- from: fire-node-1
+  to: score
+  rel: boosts
+  note: Increase power for factor 1 for fire by 0.25 Increases the power on the score multiplier for fire
+  source: wiki:Elements
+  confidence: uncertain
 - from: fire-node-2
   to: ascension-power
   rel: boosts
@@ -6550,6 +6594,12 @@ edges:
   note: Earth boosts Relic 37 (Global Element Mult.)
   source: wiki:Elements
   confidence: provisional
+- from: wind-node-1
+  to: eternities
+  rel: boosts
+  note: Increase power for factor 1 for wind by 3 Increases power for Eternities multiplier for Wind
+  source: wiki:Elements
+  confidence: uncertain
 - from: wind-node-3
   to: relic-25
   rel: boosts
@@ -6678,6 +6728,16 @@ edges:
   rel: boosts
   source: wiki:Zodiacs
   confidence: uncertain
+- from: zodiac-gemini
+  to: supernova
+  rel: boosts
+  source: wiki:Zodiacs
+  confidence: uncertain
+- from: zodiac-gemini
+  to: laboratory
+  rel: boosts
+  source: wiki:Zodiacs
+  confidence: uncertain
 - from: zodiac-cancer
   to: dilation-tree-points
   rel: boosts
@@ -6718,6 +6778,16 @@ edges:
   rel: boosts
   source: wiki:Zodiacs
   confidence: uncertain
+- from: zodiac-libra
+  to: supernova
+  rel: boosts
+  source: wiki:Zodiacs
+  confidence: uncertain
+- from: zodiac-libra
+  to: laboratory
+  rel: boosts
+  source: wiki:Zodiacs
+  confidence: uncertain
 - from: zodiac-scorpio
   to: luck
   rel: boosts
@@ -6730,6 +6800,11 @@ edges:
   confidence: uncertain
 - from: zodiac-sagittarius
   to: lap-speed
+  rel: boosts
+  source: wiki:Zodiacs
+  confidence: uncertain
+- from: zodiac-sagittarius
+  to: slowdown
   rel: boosts
   source: wiki:Zodiacs
   confidence: uncertain
@@ -6749,12 +6824,22 @@ edges:
   source: wiki:Zodiacs
   confidence: uncertain
 - from: zodiac-capricorn
-  to: stardust
+  to: stardust-exponent
   rel: boosts
   source: wiki:Zodiacs
   confidence: uncertain
 - from: zodiac-aquarius
   to: dilation-points
+  rel: boosts
+  source: wiki:Zodiacs
+  confidence: uncertain
+- from: zodiac-aquarius
+  to: laboratory
+  rel: boosts
+  source: wiki:Zodiacs
+  confidence: uncertain
+- from: zodiac-aquarius
+  to: supernova
   rel: boosts
   source: wiki:Zodiacs
   confidence: uncertain
@@ -6783,8 +6868,18 @@ edges:
   rel: boosts
   source: wiki:Trials
   confidence: uncertain
+- from: trial-easy-trial-5
+  to: max-score
+  rel: boosts
+  source: wiki:Trials
+  confidence: uncertain
 - from: trial-medium-trial-1
   to: luck
+  rel: boosts
+  source: wiki:Trials
+  confidence: uncertain
+- from: trial-medium-trial-3
+  to: supernova
   rel: boosts
   source: wiki:Trials
   confidence: uncertain
@@ -6803,6 +6898,11 @@ edges:
   rel: boosts
   source: wiki:Trials
   confidence: uncertain
+- from: trial-hard-trial-2
+  to: laboratory
+  rel: boosts
+  source: wiki:Trials
+  confidence: uncertain
 - from: trial-hard-trial-4
   to: animal-points
   rel: boosts
@@ -6813,6 +6913,16 @@ edges:
   rel: boosts
   source: wiki:Trials
   confidence: uncertain
+- from: trial-insane-trial-1
+  to: eternity-challenges
+  rel: boosts
+  source: wiki:Trials
+  confidence: uncertain
+- from: trial-insane-trial-2
+  to: eternity-challenges
+  rel: boosts
+  source: wiki:Trials
+  confidence: uncertain
 - from: trial-insane-trial-3
   to: infinity-points
   rel: boosts
@@ -6820,6 +6930,21 @@ edges:
   confidence: uncertain
 - from: trial-insane-trial-3
   to: eternity-points
+  rel: boosts
+  source: wiki:Trials
+  confidence: uncertain
+- from: trial-insane-trial-4
+  to: eternity-challenges
+  rel: boosts
+  source: wiki:Trials
+  confidence: uncertain
+- from: trial-insane-trial-5
+  to: dilation
+  rel: boosts
+  source: wiki:Trials
+  confidence: uncertain
+- from: trial-insane-trial-5
+  to: score
   rel: boosts
   source: wiki:Trials
   confidence: uncertain
@@ -6963,13 +7088,53 @@ edges:
   rel: boosts
   source: wiki:Dilation_Tree
   confidence: uncertain
+- from: dilation-node-top-1
+  to: dilation
+  rel: boosts
+  source: wiki:Dilation_Tree
+  confidence: uncertain
+- from: dilation-node-top-2
+  to: eternities
+  rel: boosts
+  source: wiki:Dilation_Tree
+  confidence: uncertain
 - from: dilation-node-top-2
   to: dilation-points
   rel: boosts
   source: wiki:Dilation_Tree
   confidence: uncertain
+- from: dilation-node-top-3
+  to: supernova
+  rel: boosts
+  source: wiki:Dilation_Tree
+  confidence: uncertain
+- from: dilation-node-top-3
+  to: score-exponent
+  rel: boosts
+  source: wiki:Dilation_Tree
+  confidence: uncertain
+- from: dilation-node-middle-1
+  to: dilation
+  rel: boosts
+  source: wiki:Dilation_Tree
+  confidence: uncertain
+- from: dilation-node-middle-2
+  to: eternities
+  rel: boosts
+  source: wiki:Dilation_Tree
+  confidence: uncertain
+- from: dilation-node-middle-3
+  to: supernova
+  rel: boosts
+  source: wiki:Dilation_Tree
+  confidence: uncertain
 - from: dilation-node-middle-3
   to: animal-points
+  rel: boosts
+  source: wiki:Dilation_Tree
+  confidence: uncertain
+- from: dilation-node-bottom-1
+  to: dilation
   rel: boosts
   source: wiki:Dilation_Tree
   confidence: uncertain
@@ -6988,8 +7153,13 @@ edges:
   rel: boosts
   source: wiki:Dilation_Tree
   confidence: uncertain
+- from: dilation-upgrade-1
+  to: dilation-penalties
+  rel: boosts
+  source: wiki:Eternity
+  confidence: uncertain
 - from: dilation-upgrade-2
-  to: dilation-points
+  to: dp-income
   rel: boosts
   source: wiki:Eternity
   confidence: uncertain
@@ -7003,6 +7173,11 @@ edges:
   rel: boosts
   source: wiki:Eternity
   confidence: uncertain
+- from: dilation-upgrade-5
+  to: supernova
+  rel: boosts
+  source: wiki:Eternity
+  confidence: uncertain
 - from: dilation-upgrade-6
   to: generator-exponent
   rel: boosts
@@ -7010,6 +7185,11 @@ edges:
   confidence: uncertain
 - from: dilation-upgrade-7
   to: eternity-points
+  rel: boosts
+  source: wiki:Eternity
+  confidence: uncertain
+- from: dilation-upgrade-9
+  to: lab-power
   rel: boosts
   source: wiki:Eternity
   confidence: uncertain

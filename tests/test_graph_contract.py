@@ -242,7 +242,7 @@ def test_every_swept_edge_is_uncertain(graph: dict):
         for e in graph["edges"]
         if e["source"] in swept_sources and e["from"].startswith(swept_prefixes)
     ]
-    assert len(swept) == 76, f"expected 76 swept edges, got {len(swept)}"
+    assert len(swept) == 99, f"expected 99 swept edges, got {len(swept)}"
     assert all(e.get("confidence") == "uncertain" for e in swept)
 
 
@@ -275,6 +275,39 @@ def test_an_upgrade_that_grants_a_thing_still_points_at_it(graph: dict):
     # keep running forwards.
     pairs = {(e["from"], e["to"]) for e in graph["edges"]}
     assert ("infinity-upgrade-21-1-a-falling-star", "stars") in pairs
+
+
+def test_the_whole_eternity_zoo_is_present_and_priced(graph: dict):
+    # The 81 Animals sit behind an unscraped {{AnimalGrid}} template, so they are
+    # transcribed by hand and nothing regenerates them. 1,524 AP is the total the
+    # Animals page states, which makes it the one arithmetic check that a dropped
+    # or mistyped row cannot survive.
+    animals = [
+        n
+        for n in graph["nodes"]
+        if n["system"] == "eternity" and n["id"].startswith("animal-")
+    ]
+    assert len(animals) == 81
+    assert sum(int(n["cost"].removesuffix(" AP")) for n in animals) == 1524
+
+
+def test_the_plague_currency_never_resolves_to_the_animal_named_pig(graph: dict):
+    # "PIG" is the Plague layer's currency and "Pig" is an animal, and the
+    # vocabulary matches mixed-case surfaces without regard to case. Four
+    # suppressions hold that line; without them the Eternity Zoo grows edges from
+    # relics and refine nodes that have nothing to do with it.
+    assert any(n["id"] == "animal-pig" for n in graph["nodes"])
+    assert [e["from"] for e in graph["edges"] if e["to"] == "animal-pig"] == []
+
+
+def test_a_tree_node_boosts_the_numbered_upgrade_it_names(graph: dict):
+    # The tree node's effect reads "Dilation Upgrade 1 is 30% stronger". That
+    # upgrade's name is derived, so it never enters the curated vocabulary and the
+    # resolver can only see the bare word "Dilation" — which is the wrong target.
+    pairs = {(e["from"], e["to"]) for e in graph["edges"]}
+    for tree_node, upgrade in (("top-1", 1), ("middle-1", 2), ("bottom-1", 3)):
+        assert (f"dilation-node-{tree_node}", f"dilation-upgrade-{upgrade}") in pairs
+        assert (f"dilation-node-{tree_node}", "dilation") not in pairs
 
 
 def test_a_dilation_node_kept_its_rowspan_name(graph: dict):

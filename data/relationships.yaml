@@ -366,7 +366,7 @@ nodes:
     name: Generator Mult
     system: infinity
     kind: stat
-    aliases: [Gen Mult]
+    aliases: [Gen Mult, Generator Multiplier]
     wiki: Infinity#Generators
     confidence: documented
     effects:
@@ -530,6 +530,7 @@ nodes:
     name: Promotion 1
     system: revolution
     kind: upgrade
+    aliases: [Promo 1]
     wiki: Revolution
     confidence: documented
 
@@ -537,6 +538,7 @@ nodes:
     name: Promotion 2
     system: revolution
     kind: upgrade
+    aliases: [Promo 2]
     wiki: Revolution
     confidence: documented
 
@@ -544,6 +546,7 @@ nodes:
     name: Promotion 3
     system: revolution
     kind: upgrade
+    aliases: [Promo 3]
     wiki: Revolution
     confidence: documented
 
@@ -551,6 +554,7 @@ nodes:
     name: Promotion 4
     system: revolution
     kind: upgrade
+    aliases: [Promo 4]
     wiki: Revolution
     confidence: documented
 
@@ -718,6 +722,1486 @@ nodes:
     aliases: [Tarot Draw]
     wiki: Tarot
     confidence: provisional
+
+  # --- Eternity. The wiki writes the Milestones, Bonuses, Laboratory,
+  # Supernova and Dilation penalties as numbered prose lists, and the 81 Animals
+  # live behind an unscraped {{AnimalGrid}} template, so nothing generated can
+  # see any of them. data/sweep.yaml records what was surveyed and left out.
+
+  # Stats these effects need something to resolve to.
+  - id: score
+    name: Score
+    system: revolution
+    kind: stat
+    wiki: Revolution
+    confidence: documented
+
+  - id: score-exponent
+    name: Score Exponent
+    system: revolution
+    kind: stat
+    wiki: Revolution
+    confidence: documented
+
+  - id: max-score
+    name: Max Score
+    system: revolution
+    kind: stat
+    wiki: Dilation
+    confidence: documented
+    effects:
+      - text: The highest Score reached inside Dilation, set when Dilation is exited
+
+  - id: prestige-bonus
+    name: Prestige Bonus
+    system: revolution
+    kind: stat
+    wiki: Revolution
+    confidence: documented
+
+  - id: stardust-exponent
+    name: Stardust Exponent
+    system: infinity
+    kind: stat
+    wiki: Stars
+    confidence: documented
+
+  - id: stardust-base
+    name: Stardust Base
+    system: infinity
+    kind: stat
+    wiki: Stars
+    confidence: documented
+
+  - id: eternities
+    name: Eternities
+    system: eternity
+    kind: stat
+    wiki: Eternity_Milestones
+    confidence: documented
+    effects:
+      - text: The number of Eternities performed, written on the wiki as a capital sigma
+
+  # Eternity Milestones: the first Eternity tab, keyed on Eternities held.
+  - id: eternity-milestones
+    name: Eternity Milestones
+    system: eternity
+    kind: group
+    aliases: [EM]
+    wiki: Eternity_Milestones
+    confidence: documented
+    effects:
+      - text: Unlocks automation and new mechanics as Eternities accumulate
+
+  - id: eternity-milestone-1
+    name: Eternity Milestone (1 Eternity)
+    system: eternity
+    kind: upgrade
+    wiki: Eternity_Milestones
+    confidence: documented
+    effects:
+      - text: Unlocks Eternity Milestones
+
+  - id: eternity-milestone-2
+    name: Eternity Milestone (2 Eternities)
+    system: eternity
+    kind: upgrade
+    wiki: Eternity_Milestones
+    confidence: documented
+    effects:
+      - text: Starting from this Eternity, keeps all Automations
+
+  - id: eternity-milestone-3
+    name: Eternity Milestone (3 Eternities)
+    system: eternity
+    kind: upgrade
+    wiki: Eternity_Milestones
+    confidence: documented
+    effects:
+      - text: Unlocks Eternity Zoo
+
+  - id: eternity-milestone-5
+    name: Eternity Milestone (5 Eternities)
+    system: eternity
+    kind: upgrade
+    wiki: Eternity_Milestones
+    confidence: documented
+    effects:
+      - text: Buying Revolutions (colors) no longer takes away Score
+
+  - id: eternity-milestone-7
+    name: Eternity Milestone (7 Eternities)
+    system: eternity
+    kind: upgrade
+    wiki: Eternity_Milestones
+    confidence: documented
+    effects:
+      - text: Unlocks Auto IP Adjuster
+
+  - id: eternity-milestone-8
+    name: Eternity Milestone (8 Eternities)
+    system: eternity
+    kind: upgrade
+    wiki: Eternity_Milestones
+    confidence: documented
+    effects:
+      - text: Unlocks Eternity Challenges
+
+  - id: eternity-milestone-12
+    name: Eternity Milestone (12 Eternities)
+    system: eternity
+    kind: upgrade
+    wiki: Eternity_Milestones
+    confidence: documented
+    effects:
+      - text: Unlocks Automation for Infinity Upgrades
+
+  - id: eternity-milestone-14
+    name: Eternity Milestone (14 Eternities)
+    system: eternity
+    kind: upgrade
+    wiki: Eternity_Milestones
+    confidence: documented
+    effects:
+      - text: Unlocks Automation for Generators
+
+  - id: eternity-milestone-16
+    name: Eternity Milestone (16 Eternities)
+    system: eternity
+    kind: upgrade
+    wiki: Eternity_Milestones
+    confidence: documented
+    effects:
+      - text: Unlocks Automation for Stars and Star/Stardust upgrades, and Auto Eternity
+
+  - id: eternity-milestone-32
+    name: Eternity Milestone (32 Eternities)
+    system: eternity
+    kind: upgrade
+    wiki: Eternity_Milestones
+    confidence: documented
+    effects:
+      - text: Breaks Eternity - IP is no longer limited to ~1.79e308 IP
+
+  - id: eternity-milestone-100
+    name: Eternity Milestone (100 Eternities)
+    system: eternity
+    kind: upgrade
+    wiki: Eternity_Milestones
+    confidence: documented
+    effects:
+      - text: x1.05 to IP gain for each Eternity, softcapped at 1,000
+
+  # Eternity Bonuses live on the Milestones tab and scale with Eternities.
+  - id: eternity-bonuses
+    name: Eternity Bonuses
+    system: eternity
+    kind: group
+    wiki: Eternity
+    confidence: documented
+    effects:
+      - text: Mult gain
+        per_level: Starts at x2 and improves with each Eternity
+      - text: Lap speed
+        per_level: Starts at x2 and improves with each Eternity
+      - text: Ascension Power
+        per_level: Starts at x1.1 and improves with each Eternity
+      - text: Infinity gain
+        per_level: Starts at x2 and improves with each Eternity
+      - text: Generators power
+        per_level: Starts at x2.14 and improves with each Eternity
+      - text: Stardust gain
+        per_level: Starts at x10 and improves with each Eternity
+
+  # Animals. Bought with AP in the Eternity Zoo; the bonuses persist.
+  - id: animals
+    name: Animals
+    system: eternity
+    kind: group
+    aliases: [Eternity Zoo]
+    wiki: Animals
+    confidence: documented
+    effects:
+      - text: 81 Animals whose bonuses persist through Eternities
+        per_level: 1,524 AP buys every Animal
+
+  - id: slowdown
+    name: Slowdown
+    system: eternity
+    kind: upgrade
+    wiki: Animals
+    confidence: documented
+    effects:
+      - text: Divides lap speed by 10 in exchange for +1 Ascension to all colors
+
+  - id: animals-milestones
+    name: Animals Milestones
+    system: eternity
+    kind: group
+    aliases: [AM]
+    wiki: Eternity_Milestones
+    confidence: documented
+    effects:
+      - text: Unlocks mechanics as Animals are bought
+
+  - id: animals-milestone-1
+    name: Animals Milestone (1 Animal)
+    system: eternity
+    kind: upgrade
+    wiki: Eternity_Milestones
+    confidence: documented
+    effects:
+      - text: Unlocks Slowdown
+
+  - id: animals-milestone-4
+    name: Animals Milestone (4 Animals)
+    system: eternity
+    kind: upgrade
+    wiki: Eternity_Milestones
+    confidence: documented
+    effects:
+      - text: Unlocks Auto Slowdown
+
+  - id: animals-milestone-7
+    name: Animals Milestone (7 Animals)
+    system: eternity
+    kind: upgrade
+    wiki: Eternity_Milestones
+    confidence: documented
+    effects:
+      - text: Unlocks Lab
+
+  - id: animals-milestone-10
+    name: Animals Milestone (10 Animals)
+    system: eternity
+    kind: upgrade
+    wiki: Eternity_Milestones
+    confidence: documented
+    effects:
+      - text: Promoting now resets nothing
+
+  - id: animals-milestone-20
+    name: Animals Milestone (20 Animals)
+    system: eternity
+    kind: upgrade
+    wiki: Eternity_Milestones
+    confidence: documented
+    effects:
+      - text: Gain 100% of the IP you would get on Infinity, every second
+
+  - id: animals-milestone-48
+    name: Animals Milestone (48 Animals)
+    system: eternity
+    kind: upgrade
+    wiki: Eternity_Milestones
+    confidence: documented
+    effects:
+      - text: +10 free levels to all RP upgrades
+
+  - id: animals-milestone-81
+    name: Animals Milestone (81 Animals)
+    system: eternity
+    kind: upgrade
+    wiki: Eternity_Milestones
+    confidence: documented
+    effects:
+      - text: Unlocks Dilation
+
+  # The Eternity Zoo itself. Cost is the AP price the wiki prints.
+  - id: animal-cat
+    name: Cat
+    system: eternity
+    kind: upgrade
+    wiki: Animals
+    cost: 1 AP
+    confidence: documented
+    effects:
+      - text: IP gain x Σ
+
+  - id: animal-mouse
+    name: Mouse
+    system: eternity
+    kind: upgrade
+    wiki: Animals
+    cost: 2 AP
+    confidence: documented
+    effects:
+      - text: Score Exponent + 0.02
+
+  - id: animal-chicken
+    name: Chicken
+    system: eternity
+    kind: upgrade
+    wiki: Animals
+    cost: 4 AP
+    confidence: documented
+    effects:
+      - text: IP gain × Completed EM
+
+  - id: animal-pig
+    name: Pig
+    system: eternity
+    kind: upgrade
+    wiki: Animals
+    cost: 4 AP
+    confidence: documented
+    effects:
+      - text: +1 Star Base
+
+  - id: animal-snake
+    name: Snake
+    system: eternity
+    kind: upgrade
+    wiki: Animals
+    cost: 10 AP
+    confidence: documented
+    effects:
+      - text: EP Gain × 2
+
+  - id: animal-zebra
+    name: Zebra
+    system: eternity
+    kind: upgrade
+    wiki: Animals
+    cost: 14 AP
+    confidence: documented
+    effects:
+      - text: Score Exponent x 1.01
+
+  - id: animal-bunny
+    name: Bunny
+    system: eternity
+    kind: upgrade
+    wiki: Animals
+    cost: 18 AP
+    confidence: documented
+    effects:
+      - text: Generator Exponent x 1.01
+
+  - id: animal-boar
+    name: Boar
+    system: eternity
+    kind: upgrade
+    wiki: Animals
+    cost: 22 AP
+    confidence: documented
+    effects:
+      - text: Score Exponent × 1.001
+
+  - id: animal-penguin
+    name: Penguin
+    system: eternity
+    kind: upgrade
+    wiki: Animals
+    cost: 26 AP
+    confidence: documented
+    effects:
+      - text: Star Base x 1.01
+
+  - id: animal-dog
+    name: Dog
+    system: eternity
+    kind: upgrade
+    wiki: Animals
+    cost: 2 AP
+    confidence: documented
+    effects:
+      - text: Score Exponent + 0.03
+
+  - id: animal-hamster
+    name: Hamster
+    system: eternity
+    kind: upgrade
+    wiki: Animals
+    cost: 3 AP
+    confidence: documented
+    effects:
+      - text: Lap Speed × 1.4
+
+  - id: animal-pigeon
+    name: Pigeon
+    system: eternity
+    kind: upgrade
+    wiki: Animals
+    cost: 4 AP
+    confidence: documented
+    effects:
+      - text: IP gain × Completed AM
+
+  - id: animal-goat
+    name: Goat
+    system: eternity
+    kind: upgrade
+    wiki: Animals
+    cost: 2 AP
+    confidence: documented
+    effects:
+      - text: Generator Multiplier × 3
+
+  - id: animal-frog
+    name: Frog
+    system: eternity
+    kind: upgrade
+    wiki: Animals
+    cost: 12 AP
+    confidence: documented
+    effects:
+      - text: Generator Exponent × 1.1
+
+  - id: animal-giraffe
+    name: Giraffe
+    system: eternity
+    kind: upgrade
+    wiki: Animals
+    cost: 16 AP
+    confidence: documented
+    effects:
+      - text: IP Gain × 10B (1e10)
+
+  - id: animal-fox
+    name: Fox
+    system: eternity
+    kind: upgrade
+    wiki: Animals
+    cost: 20 AP
+    confidence: documented
+    effects:
+      - text: Generator Exponent × 1.01
+
+  - id: animal-panther
+    name: Panther
+    system: eternity
+    kind: upgrade
+    wiki: Animals
+    cost: 24 AP
+    confidence: documented
+    effects:
+      - text: Score Exponent × 1.001
+
+  - id: animal-polar-bear
+    name: Polar Bear
+    system: eternity
+    kind: upgrade
+    wiki: Animals
+    cost: 28 AP
+    confidence: documented
+    effects:
+      - text: Star Base × 1.01
+
+  - id: animal-parrot
+    name: Parrot
+    system: eternity
+    kind: upgrade
+    wiki: Animals
+    cost: 2 AP
+    confidence: documented
+    effects:
+      - text: IP gain × Animals Bought
+
+  - id: animal-guinea-pig
+    name: Guinea Pig
+    system: eternity
+    kind: upgrade
+    wiki: Animals
+    cost: 3 AP
+    confidence: documented
+    effects:
+      - text: Lap Speed x 2
+
+  - id: animal-rooster
+    name: Rooster
+    system: eternity
+    kind: upgrade
+    wiki: Animals
+    cost: 2 AP
+    confidence: documented
+    effects:
+      - text: Promo 4 Power × 1.45
+
+  - id: animal-sheep
+    name: Sheep
+    system: eternity
+    kind: upgrade
+    wiki: Animals
+    cost: 3 AP
+    confidence: documented
+    effects:
+      - text: Promo 1 Power × 10
+
+  - id: animal-toad
+    name: Toad
+    system: eternity
+    kind: upgrade
+    wiki: Animals
+    cost: 14 AP
+    confidence: documented
+    effects:
+      - text: Score Exponent + 0.05
+
+  - id: animal-lion
+    name: Lion
+    system: eternity
+    kind: upgrade
+    wiki: Animals
+    cost: 18 AP
+    confidence: documented
+    effects:
+      - text: IP Gain × 10M (1e7)
+
+  - id: animal-wolf
+    name: Wolf
+    system: eternity
+    kind: upgrade
+    wiki: Animals
+    cost: 22 AP
+    confidence: documented
+    effects:
+      - text: Generator Exponent × 1.01
+
+  - id: animal-beaver
+    name: Beaver
+    system: eternity
+    kind: upgrade
+    wiki: Animals
+    cost: 26 AP
+    confidence: documented
+    effects:
+      - text: Score Exponent × 1.001
+
+  - id: animal-seal
+    name: Seal
+    system: eternity
+    kind: upgrade
+    wiki: Animals
+    cost: 30 AP
+    confidence: documented
+    effects:
+      - text: Star Base × 1.01
+
+  - id: animal-fish
+    name: Fish
+    system: eternity
+    kind: upgrade
+    wiki: Animals
+    cost: 2 AP
+    confidence: documented
+    effects:
+      - text: IP gain × ECs Finished
+
+  - id: animal-jerboa
+    name: Jerboa
+    system: eternity
+    kind: upgrade
+    wiki: Animals
+    cost: 2 AP
+    confidence: documented
+    effects:
+      - text: Lap Speed x 3
+
+  - id: animal-duck
+    name: Duck
+    system: eternity
+    kind: upgrade
+    wiki: Animals
+    cost: 3 AP
+    confidence: documented
+    effects:
+      - text: Promo 3 Power × 1.5
+
+  - id: animal-cow
+    name: Cow
+    system: eternity
+    kind: upgrade
+    wiki: Animals
+    cost: 4 AP
+    confidence: documented
+    effects:
+      - text: EP Gain × (1+(Σ^0.5))
+
+  - id: animal-turtle
+    name: Turtle
+    system: eternity
+    kind: upgrade
+    wiki: Animals
+    cost: 16 AP
+    confidence: documented
+    effects:
+      - text: Stardust Exponent + 0.1
+
+  - id: animal-hippo
+    name: Hippo
+    system: eternity
+    kind: upgrade
+    wiki: Animals
+    cost: 20 AP
+    confidence: documented
+    effects:
+      - text: IP Gain × 1M (1e6)
+
+  - id: animal-bear
+    name: Bear
+    system: eternity
+    kind: upgrade
+    wiki: Animals
+    cost: 24 AP
+    confidence: documented
+    effects:
+      - text: Generator Exponent × 1.01
+
+  - id: animal-yak
+    name: Yak
+    system: eternity
+    kind: upgrade
+    wiki: Animals
+    cost: 28 AP
+    confidence: documented
+    effects:
+      - text: Score Exponent × 1.001
+
+  - id: animal-walrus
+    name: Walrus
+    system: eternity
+    kind: upgrade
+    wiki: Animals
+    cost: 32 AP
+    confidence: documented
+    effects:
+      - text: Star Base × 1.01
+
+  - id: animal-ferret
+    name: Ferret
+    system: eternity
+    kind: upgrade
+    wiki: Animals
+    cost: 2 AP
+    confidence: documented
+    effects:
+      - text: IP gain × 100
+
+  - id: animal-chinchilla
+    name: Chinchilla
+    system: eternity
+    kind: upgrade
+    wiki: Animals
+    cost: 3 AP
+    confidence: documented
+    effects:
+      - text: Lap Speed × 5
+
+  - id: animal-goose
+    name: Goose
+    system: eternity
+    kind: upgrade
+    wiki: Animals
+    cost: 4 AP
+    confidence: documented
+    effects:
+      - text: Generator Exponent × 1.1
+
+  - id: animal-horse
+    name: Horse
+    system: eternity
+    kind: upgrade
+    wiki: Animals
+    cost: 4 AP
+    confidence: documented
+    effects:
+      - text: Star Base × 1.3
+
+  - id: animal-chameleon
+    name: Chameleon
+    system: eternity
+    kind: upgrade
+    wiki: Animals
+    cost: 18 AP
+    confidence: documented
+    effects:
+      - text: Star Base × 1.5
+
+  - id: animal-rhino
+    name: Rhino
+    system: eternity
+    kind: upgrade
+    wiki: Animals
+    cost: 22 AP
+    confidence: documented
+    effects:
+      - text: IP Gain × 1M (1e6)
+
+  - id: animal-raccoon
+    name: Raccoon
+    system: eternity
+    kind: upgrade
+    wiki: Animals
+    cost: 26 AP
+    confidence: documented
+    effects:
+      - text: Generator Exponent x 1.01
+
+  - id: animal-bobcat
+    name: Bobcat
+    system: eternity
+    kind: upgrade
+    wiki: Animals
+    cost: 30 AP
+    confidence: documented
+    effects:
+      - text: Score Exponent x 1.001
+
+  - id: animal-dolphin
+    name: Dolphin
+    system: eternity
+    kind: upgrade
+    wiki: Animals
+    cost: 34 AP
+    confidence: documented
+    effects:
+      - text: Star Base x 1.01
+
+  - id: animal-gopher
+    name: Gopher
+    system: eternity
+    kind: upgrade
+    wiki: Animals
+    cost: 12 AP
+    confidence: documented
+    effects:
+      - text: Score Exponent × 1.01
+
+  - id: animal-squirrel
+    name: Squirrel
+    system: eternity
+    kind: upgrade
+    wiki: Animals
+    cost: 12 AP
+    confidence: documented
+    effects:
+      - text: Generator Exponent × 1.05
+
+  - id: animal-pheasant
+    name: Pheasant
+    system: eternity
+    kind: upgrade
+    wiki: Animals
+    cost: 12 AP
+    confidence: documented
+    effects:
+      - text: Ascension Power × 2
+
+  - id: animal-bull
+    name: Bull
+    system: eternity
+    kind: upgrade
+    wiki: Animals
+    cost: 12 AP
+    confidence: documented
+    effects:
+      - text: Stardust Exponent + 0.05
+
+  - id: animal-sea-turtle
+    name: Sea Turtle
+    system: eternity
+    kind: upgrade
+    wiki: Animals
+    cost: 20 AP
+    confidence: documented
+    effects:
+      - text: Stardust Exponent × 1.05
+
+  - id: animal-elephant
+    name: Elephant
+    system: eternity
+    kind: upgrade
+    wiki: Animals
+    cost: 24 AP
+    confidence: documented
+    effects:
+      - text: IP Gain × 1M (1e6)
+
+  - id: animal-badger
+    name: Badger
+    system: eternity
+    kind: upgrade
+    wiki: Animals
+    cost: 28 AP
+    confidence: documented
+    effects:
+      - text: Generator Exponent x 1.01
+
+  - id: animal-tiger
+    name: Tiger
+    system: eternity
+    kind: upgrade
+    wiki: Animals
+    cost: 32 AP
+    confidence: documented
+    effects:
+      - text: Score Exponent x 1.001
+
+  - id: animal-orca
+    name: Orca
+    system: eternity
+    kind: upgrade
+    wiki: Animals
+    cost: 36 AP
+    confidence: documented
+    effects:
+      - text: Star Base x 1.01
+
+  - id: animal-rabbit
+    name: Rabbit
+    system: eternity
+    kind: upgrade
+    wiki: Animals
+    cost: 14 AP
+    confidence: documented
+    effects:
+      - text: Star Base × 1.3
+
+  - id: animal-rat
+    name: Rat
+    system: eternity
+    kind: upgrade
+    wiki: Animals
+    cost: 14 AP
+    confidence: documented
+    effects:
+      - text: Score Exponent x 1.005
+
+  - id: animal-peacock
+    name: Peacock
+    system: eternity
+    kind: upgrade
+    wiki: Animals
+    cost: 14 AP
+    confidence: documented
+    effects:
+      - text: Stardust Exponent × 1.03
+
+  - id: animal-llama
+    name: Llama
+    system: eternity
+    kind: upgrade
+    wiki: Animals
+    cost: 14 AP
+    confidence: documented
+    effects:
+      - text: Stardust Exponent × 1.02
+
+  - id: animal-lizard
+    name: Lizard
+    system: eternity
+    kind: upgrade
+    wiki: Animals
+    cost: 22 AP
+    confidence: documented
+    effects:
+      - text: Stardust Exponent × 1.01
+
+  - id: animal-anteater
+    name: Anteater
+    system: eternity
+    kind: upgrade
+    wiki: Animals
+    cost: 26 AP
+    confidence: documented
+    effects:
+      - text: IP Gain × 1M (1e6)
+
+  - id: animal-panda
+    name: Panda
+    system: eternity
+    kind: upgrade
+    wiki: Animals
+    cost: 30 AP
+    confidence: documented
+    effects:
+      - text: Generator Exponent x 1.01
+
+  - id: animal-hyena
+    name: Hyena
+    system: eternity
+    kind: upgrade
+    wiki: Animals
+    cost: 34 AP
+    confidence: documented
+    effects:
+      - text: Score Exponent x 1.001
+
+  - id: animal-bat
+    name: Bat
+    system: eternity
+    kind: upgrade
+    wiki: Animals
+    cost: 38 AP
+    confidence: documented
+    effects:
+      - text: Star Base x 1.01
+
+  - id: animal-hedgehog
+    name: Hedgehog
+    system: eternity
+    kind: upgrade
+    wiki: Animals
+    cost: 16 AP
+    confidence: documented
+    effects:
+      - text: Score Exponent + 0.01
+
+  - id: animal-mole
+    name: Mole
+    system: eternity
+    kind: upgrade
+    wiki: Animals
+    cost: 16 AP
+    confidence: documented
+    effects:
+      - text: Score Exponent + 0.01
+
+  - id: animal-owl
+    name: Owl
+    system: eternity
+    kind: upgrade
+    wiki: Animals
+    cost: 16 AP
+    confidence: documented
+    effects:
+      - text: Score Exponent + 0.01
+
+  - id: animal-alpaca
+    name: Alpaca
+    system: eternity
+    kind: upgrade
+    wiki: Animals
+    cost: 16 AP
+    confidence: documented
+    effects:
+      - text: Score Exponent + 0.01
+
+  - id: animal-crocodile
+    name: Crocodile
+    system: eternity
+    kind: upgrade
+    wiki: Animals
+    cost: 24 AP
+    confidence: documented
+    effects:
+      - text: Score Exponent + 0.01
+
+  - id: animal-koala
+    name: Koala
+    system: eternity
+    kind: upgrade
+    wiki: Animals
+    cost: 28 AP
+    confidence: documented
+    effects:
+      - text: IP Gain × 1M (1e6)
+
+  - id: animal-wombat
+    name: Wombat
+    system: eternity
+    kind: upgrade
+    wiki: Animals
+    cost: 32 AP
+    confidence: documented
+    effects:
+      - text: Generator Exponent x 1.01
+
+  - id: animal-monkey
+    name: Monkey
+    system: eternity
+    kind: upgrade
+    wiki: Animals
+    cost: 36 AP
+    confidence: documented
+    effects:
+      - text: Score Exponent x 1.001
+
+  - id: animal-eagle
+    name: Eagle
+    system: eternity
+    kind: upgrade
+    wiki: Animals
+    cost: 40 AP
+    confidence: documented
+    effects:
+      - text: Stardust Base x 1.01
+
+  - id: animal-meta-cat
+    name: Meta-Cat
+    system: eternity
+    kind: upgrade
+    wiki: Animals
+    cost: 18 AP
+    confidence: documented
+    effects:
+      - text: Stardust Exponent × 1.01
+
+  - id: animal-jackalope
+    name: Jackalope
+    system: eternity
+    kind: upgrade
+    wiki: Animals
+    cost: 18 AP
+    confidence: documented
+    effects:
+      - text: Stardust Exponent × 1.01
+
+  - id: animal-phoenix
+    name: Phoenix
+    system: eternity
+    kind: upgrade
+    wiki: Animals
+    cost: 18 AP
+    confidence: documented
+    effects:
+      - text: Stardust Exponent × 1.01
+
+  - id: animal-unicorn
+    name: Unicorn
+    system: eternity
+    kind: upgrade
+    wiki: Animals
+    cost: 18 AP
+    confidence: documented
+    effects:
+      - text: Stardust Exponent × 1.01
+
+  - id: animal-hydra
+    name: Hydra
+    system: eternity
+    kind: upgrade
+    wiki: Animals
+    cost: 26 AP
+    confidence: documented
+    effects:
+      - text: Stardust Exponent × 1.01
+
+  - id: animal-pegasus
+    name: Pegasus
+    system: eternity
+    kind: upgrade
+    wiki: Animals
+    cost: 30 AP
+    confidence: documented
+    effects:
+      - text: IP Gain × 1M (1e6)
+
+  - id: animal-hippogriff
+    name: Hippogriff
+    system: eternity
+    kind: upgrade
+    wiki: Animals
+    cost: 34 AP
+    confidence: documented
+    effects:
+      - text: Generator Exponent x1.01
+
+  - id: animal-dragon
+    name: Dragon
+    system: eternity
+    kind: upgrade
+    wiki: Animals
+    cost: 38 AP
+    confidence: documented
+    effects:
+      - text: Score Exponent x1.001
+
+  - id: animal-nu
+    name: Nu
+    system: eternity
+    kind: upgrade
+    wiki: Animals
+    cost: 100 AP
+    confidence: documented
+    effects:
+      - text: Score Exponent + 0.1
+
+  # Laboratory: EP buys three LP upgrades, LP levels award RP, RP buys six.
+  - id: laboratory
+    name: Laboratory
+    system: eternity
+    kind: group
+    aliases: [Lab]
+    wiki: Laboratory
+    confidence: documented
+    effects:
+      - text: Generates Laboratory Points
+        per_level: LP/s is (Base x Mult) ^ Power
+      - text: Filling the flask raises the Lab level and awards one Research Point
+
+  - id: laboratory-points
+    name: Laboratory Points
+    system: eternity
+    kind: currency
+    aliases: [LP]
+    wiki: Laboratory
+    confidence: documented
+
+  - id: lab-base
+    name: Lab Base
+    system: eternity
+    kind: upgrade
+    wiki: Laboratory
+    confidence: documented
+    effects:
+      - text: Raises the Laboratory Point base
+        per_level: +0.20 per level
+
+  - id: lab-mult
+    name: Lab Mult
+    system: eternity
+    kind: upgrade
+    wiki: Laboratory
+    confidence: documented
+    effects:
+      - text: Multiplies Laboratory Point gain
+        per_level: +0.50 per level
+
+  - id: lab-power
+    name: Lab Power
+    system: eternity
+    kind: upgrade
+    wiki: Laboratory
+    confidence: documented
+    effects:
+      - text: Raises the Laboratory Point formula to a power
+        per_level: +0.01 per level
+
+  - id: rp-upgrade-1
+    name: RP Upgrade 1 (IP Gain)
+    system: eternity
+    kind: upgrade
+    wiki: Laboratory
+    confidence: documented
+    effects:
+      - text: IP Gain
+        per_level: x4 per level
+
+  - id: rp-upgrade-2
+    name: RP Upgrade 2 (Ascend Power)
+    system: eternity
+    kind: upgrade
+    wiki: Laboratory
+    confidence: documented
+    effects:
+      - text: Ascend Power
+        per_level: "*(1 + n*0.25) where n is level"
+
+  - id: rp-upgrade-3
+    name: RP Upgrade 3 (Star Base Mult)
+    system: eternity
+    kind: upgrade
+    wiki: Laboratory
+    confidence: documented
+    effects:
+      - text: Star Base Mult
+        per_level: "*(1 + n*0.15)"
+
+  - id: rp-upgrade-4
+    name: RP Upgrade 4 (EP Gain)
+    system: eternity
+    kind: upgrade
+    wiki: Laboratory
+    confidence: documented
+    effects:
+      - text: EP Gain
+        per_level: "*(1 + n*0.5)"
+
+  - id: rp-upgrade-5
+    name: RP Upgrade 5 (Gen. Power Exponent)
+    system: eternity
+    kind: upgrade
+    wiki: Laboratory
+    confidence: documented
+    effects:
+      - text: Gen. Power Exponent
+        per_level: +0.02 per level
+
+  - id: rp-upgrade-6
+    name: RP Upgrade 6 (Common Exponent)
+    system: eternity
+    kind: upgrade
+    wiki: Laboratory
+    confidence: documented
+    effects:
+      - text: Common Exponent
+        per_level: +0.01 per level, softcapped at level 500
+
+  # Eternity Challenges. Each of the ten runs at six difficulties.
+  - id: eternity-challenges
+    name: Eternity Challenges
+    system: eternity
+    kind: group
+    aliases: [EC, ECs]
+    wiki: Eternity_Challenges
+    confidence: documented
+    effects:
+      - text: Ten challenges, each completable at six difficulties
+        per_level: Completing one difficulty awards one free AP
+
+  - id: eternity-challenge-1
+    name: Eternity Challenge 1
+    system: eternity
+    kind: upgrade
+    wiki: Eternity_Challenges
+    confidence: documented
+    effects:
+      - text: "Handicap: Lap Speed"
+      - text: "Reward: Lap Speed"
+        per_level: x2 at difficulty 1, x500 at difficulty 6
+
+  - id: eternity-challenge-2
+    name: Eternity Challenge 2
+    system: eternity
+    kind: upgrade
+    wiki: Eternity_Challenges
+    confidence: documented
+    effects:
+      - text: "Handicap: Common Exponent"
+      - text: "Reward: Common Exponent"
+        per_level: +0.03 at difficulty 1, +0.30 at difficulty 6
+
+  - id: eternity-challenge-3
+    name: Eternity Challenge 3
+    system: eternity
+    kind: upgrade
+    wiki: Eternity_Challenges
+    confidence: documented
+    effects:
+      - text: "Handicap: Stars"
+      - text: "Reward: Star Base"
+        per_level: +1 at difficulty 1, +50 at difficulty 6
+
+  - id: eternity-challenge-4
+    name: Eternity Challenge 4
+    system: eternity
+    kind: upgrade
+    wiki: Eternity_Challenges
+    confidence: documented
+    effects:
+      - text: "Handicap: Generator Exponent"
+      - text: "Reward: Generator Exponent"
+        per_level: x1.03 at difficulty 1, x1.25 at difficulty 6
+
+  - id: eternity-challenge-5
+    name: Eternity Challenge 5
+    system: eternity
+    kind: upgrade
+    wiki: Eternity_Challenges
+    confidence: documented
+    effects:
+      - text: "Handicap: Ascension Power"
+      - text: "Reward: Ascension Power"
+        per_level: x1.5 at difficulty 1, x75 at difficulty 6
+
+  - id: eternity-challenge-6
+    name: Eternity Challenge 6
+    system: eternity
+    kind: upgrade
+    wiki: Eternity_Challenges
+    confidence: documented
+    effects:
+      - text: "Handicap: Promotion and Prestige Bonus"
+      - text: "Reward: Prestige Bonus"
+        per_level: x1.05 at difficulty 1, x1.4 at difficulty 6
+
+  - id: eternity-challenge-7
+    name: Eternity Challenge 7
+    system: eternity
+    kind: upgrade
+    wiki: Eternity_Challenges
+    confidence: documented
+    effects:
+      - text: "Handicap: RP upgrades"
+      - text: "Reward: Free levels to all Lab upgrades"
+        per_level: +5 at difficulty 1, +100 at difficulty 6
+
+  - id: eternity-challenge-8
+    name: Eternity Challenge 8
+    system: eternity
+    kind: upgrade
+    wiki: Eternity_Challenges
+    confidence: documented
+    effects:
+      - text: "Handicap: IP gain"
+      - text: "Reward: IP gain"
+        per_level: ^1.02 at difficulty 1, ^1.30 at difficulty 6
+
+  - id: eternity-challenge-9
+    name: Eternity Challenge 9
+    system: eternity
+    kind: upgrade
+    wiki: Eternity_Challenges
+    confidence: documented
+    effects:
+      - text: "Handicap: Generators"
+      - text: "Reward: Generator Exponent"
+        per_level: x1.1 at difficulty 1, x1.7 at difficulty 6
+
+  - id: eternity-challenge-10
+    name: Eternity Challenge 10
+    system: eternity
+    kind: upgrade
+    wiki: Eternity_Challenges
+    confidence: documented
+    effects:
+      - text: "Handicap: Dilation debuffs"
+      - text: "Reward: DP gain"
+        per_level: x10 at difficulty 1, x1e7 at difficulty 6
+
+  - id: eternity-challenge-milestones
+    name: Eternity Challenge Milestones
+    system: eternity
+    kind: group
+    wiki: Eternity_Milestones
+    confidence: documented
+    effects:
+      - text: Unlocks mechanics as Eternity Challenge difficulties are completed
+
+  - id: eternity-challenge-milestone-3
+    name: Eternity Challenge Milestone (3 Completions)
+    system: eternity
+    kind: upgrade
+    wiki: Eternity_Milestones
+    confidence: documented
+    effects:
+      - text: Keep your Infinity Challenges on Eternity, including fastest completion times
+
+  - id: eternity-challenge-milestone-5
+    name: Eternity Challenge Milestone (5 Completions)
+    system: eternity
+    kind: upgrade
+    wiki: Eternity_Milestones
+    confidence: documented
+    effects:
+      - text: Prestiging now resets nothing
+
+  - id: eternity-challenge-milestone-8
+    name: Eternity Challenge Milestone (8 Completions)
+    system: eternity
+    kind: upgrade
+    wiki: Eternity_Milestones
+    confidence: documented
+    effects:
+      - text: Unlocks Supernova
+
+  - id: eternity-challenge-milestone-10
+    name: Eternity Challenge Milestone (10 Completions)
+    system: eternity
+    kind: upgrade
+    wiki: Eternity_Milestones
+    confidence: documented
+    effects:
+      - text: Keep fastest Infinity time on Eternity
+
+  - id: eternity-challenge-milestone-30
+    name: Eternity Challenge Milestone (30 Completions)
+    system: eternity
+    kind: upgrade
+    wiki: Eternity_Milestones
+    confidence: documented
+    effects:
+      - text: Every 4 Supernovae gives 1 free level to all RP upgrades
+
+  - id: eternity-challenge-milestone-32
+    name: Eternity Challenge Milestone (32 Completions)
+    system: eternity
+    kind: upgrade
+    wiki: Eternity_Milestones
+    confidence: documented
+    effects:
+      - text: Every 4 Supernovae gives another free level to all RP upgrades
+
+  - id: eternity-challenge-milestone-35
+    name: Eternity Challenge Milestone (35 Completions)
+    system: eternity
+    kind: upgrade
+    wiki: Eternity_Milestones
+    confidence: documented
+    effects:
+      - text: Every 2 Supernovae gives another free level on all RP upgrades
+
+  - id: eternity-challenge-milestone-50
+    name: Eternity Challenge Milestone (50 Completions)
+    system: eternity
+    kind: upgrade
+    wiki: Eternity_Milestones
+    confidence: documented
+    effects:
+      - text: Unlocks Dilation Tree
+
+  - id: eternity-challenge-milestone-60
+    name: Eternity Challenge Milestone (60 Completions)
+    system: eternity
+    kind: upgrade
+    wiki: Eternity_Milestones
+    confidence: documented
+    effects:
+      - text: 2x more Magnet Chance
+
+  # Supernova and Dilation.
+  - id: supernova
+    name: Supernova
+    system: eternity
+    kind: group
+    wiki: Supernova
+    confidence: documented
+    effects:
+      - text: Eternity reward Mult
+        per_level: +0.50x per Supernova
+      - text: Star Base Mult
+        per_level: +0.40x per Supernova
+      - text: Lab Base Mult
+        per_level: x2 per Supernova
+      - text: EP gain Mult
+        per_level: x3 per Supernova
+      - text: Free AP
+        per_level: +2 per Supernova
+
+  - id: dilation
+    name: Dilation
+    system: eternity
+    kind: group
+    wiki: Dilation
+    confidence: documented
+    effects:
+      - text: Entering Dilation starts a new Eternity with the Dilation penalties applied
+      - text: Exiting Dilation sets Max Score to the highest Score reached inside it
+
+  - id: dilation-penalties
+    name: Dilation Penalties
+    system: eternity
+    kind: stat
+    wiki: Dilation
+    confidence: documented
+    effects:
+      - text: Common Exponent / 25
+      - text: Gen Exp / 1,000
+      - text: Star Exp / 100
+      - text: Ascension Power ^0.10
+      - text: (Laps Speed ^0.10) / 10
+      - text: IP gain ^0.01
+
+  - id: dp-income
+    name: DP Income
+    system: eternity
+    kind: stat
+    wiki: Dilation
+    confidence: documented
+    effects:
+      - text: Dilation Points per second, based on Max Score
+
+  - id: dilation-tree
+    name: Dilation Tree
+    system: eternity
+    kind: group
+    wiki: Dilation_Tree
+    confidence: documented
+    effects:
+      - text: Thirteen upgrades bought with DTP
+        per_level: Each holds up to 5 levels; 65 DTP maxes the tree
 
 edges:
   - from: relic-3
@@ -947,6 +2431,1376 @@ edges:
     source: wiki:Infinity
     confidence: documented
 
+  # --- Eternity. Curated because every source for these is prose.
+
+  # Milestones are reached by holding a count, so the count feeds each one.
+  - from: eternities
+    to: eternity-milestone-1
+    rel: unlocks
+    note: Reached at 1 Eternities
+    source: wiki:Eternity_Milestones
+    confidence: documented
+
+  - from: eternities
+    to: eternity-milestone-2
+    rel: unlocks
+    note: Reached at 2 Eternities
+    source: wiki:Eternity_Milestones
+    confidence: documented
+
+  - from: eternities
+    to: eternity-milestone-3
+    rel: unlocks
+    note: Reached at 3 Eternities
+    source: wiki:Eternity_Milestones
+    confidence: documented
+
+  - from: eternities
+    to: eternity-milestone-5
+    rel: unlocks
+    note: Reached at 5 Eternities
+    source: wiki:Eternity_Milestones
+    confidence: documented
+
+  - from: eternities
+    to: eternity-milestone-7
+    rel: unlocks
+    note: Reached at 7 Eternities
+    source: wiki:Eternity_Milestones
+    confidence: documented
+
+  - from: eternities
+    to: eternity-milestone-8
+    rel: unlocks
+    note: Reached at 8 Eternities
+    source: wiki:Eternity_Milestones
+    confidence: documented
+
+  - from: eternities
+    to: eternity-milestone-12
+    rel: unlocks
+    note: Reached at 12 Eternities
+    source: wiki:Eternity_Milestones
+    confidence: documented
+
+  - from: eternities
+    to: eternity-milestone-14
+    rel: unlocks
+    note: Reached at 14 Eternities
+    source: wiki:Eternity_Milestones
+    confidence: documented
+
+  - from: eternities
+    to: eternity-milestone-16
+    rel: unlocks
+    note: Reached at 16 Eternities
+    source: wiki:Eternity_Milestones
+    confidence: documented
+
+  - from: eternities
+    to: eternity-milestone-32
+    rel: unlocks
+    note: Reached at 32 Eternities
+    source: wiki:Eternity_Milestones
+    confidence: documented
+
+  - from: eternities
+    to: eternity-milestone-100
+    rel: unlocks
+    note: Reached at 100 Eternities
+    source: wiki:Eternity_Milestones
+    confidence: documented
+
+  - from: eternity-milestone-1
+    to: eternity-milestones
+    rel: unlocks
+    source: wiki:Eternity_Milestones
+    confidence: documented
+
+  - from: eternity-milestone-3
+    to: animals
+    rel: unlocks
+    source: wiki:Eternity_Milestones
+    confidence: documented
+
+  - from: eternity-milestone-8
+    to: eternity-challenges
+    rel: unlocks
+    source: wiki:Eternity_Milestones
+    confidence: documented
+
+  - from: eternity-milestone-5
+    to: score
+    rel: boosts
+    note: Buying Revolutions no longer takes Score away
+    source: wiki:Eternity_Milestones
+    confidence: documented
+
+  - from: eternity-milestone-32
+    to: infinity-points
+    rel: boosts
+    note: Breaks Eternity, removing the ~1.79e308 IP limit
+    source: wiki:Eternity_Milestones
+    confidence: documented
+
+  - from: eternity-milestone-100
+    to: infinity-points
+    rel: boosts
+    op: mult
+    note: x1.05 IP gain for each Eternity
+    source: wiki:Eternity_Milestones
+    confidence: documented
+
+  # Eternity Bonuses scale with Eternities and feed six stats.
+  - from: eternities
+    to: eternity-bonuses
+    rel: boosts
+    note: The bonuses improve with each Eternity
+    source: wiki:Eternity
+    confidence: documented
+
+  - from: eternity-bonuses
+    to: mult-gain
+    rel: boosts
+    source: wiki:Eternity
+    confidence: documented
+
+  - from: eternity-bonuses
+    to: lap-speed
+    rel: boosts
+    source: wiki:Eternity
+    confidence: documented
+
+  - from: eternity-bonuses
+    to: ascension-power
+    rel: boosts
+    source: wiki:Eternity
+    confidence: documented
+
+  - from: eternity-bonuses
+    to: infinities
+    rel: boosts
+    source: wiki:Eternity
+    confidence: documented
+
+  - from: eternity-bonuses
+    to: generator-power
+    rel: boosts
+    source: wiki:Eternity
+    confidence: documented
+
+  - from: eternity-bonuses
+    to: stardust
+    rel: boosts
+    source: wiki:Eternity
+    confidence: documented
+
+  # Animals: AP buys them, and each one boosts one stat.
+  - from: eternity-points
+    to: animal-points
+    rel: boosts
+    note: AP is bought with EP
+    source: wiki:Animals
+    confidence: documented
+
+  - from: infinity-points
+    to: animal-points
+    rel: boosts
+    note: AP is bought with IP
+    source: wiki:Animals
+    confidence: documented
+
+  - from: score
+    to: animal-points
+    rel: boosts
+    note: AP is bought with Score
+    source: wiki:Animals
+    confidence: documented
+
+  - from: animal-points
+    to: animals
+    rel: boosts
+    note: Animals are bought with AP
+    source: wiki:Animals
+    confidence: documented
+
+  - from: animals
+    to: animals-milestones
+    rel: unlocks
+    source: wiki:Animals
+    confidence: documented
+
+  - from: animals
+    to: animals-milestone-1
+    rel: unlocks
+    note: Reached at 1 Animals owned
+    source: wiki:Eternity_Milestones
+    confidence: documented
+
+  - from: animals
+    to: animals-milestone-4
+    rel: unlocks
+    note: Reached at 4 Animals owned
+    source: wiki:Eternity_Milestones
+    confidence: documented
+
+  - from: animals
+    to: animals-milestone-7
+    rel: unlocks
+    note: Reached at 7 Animals owned
+    source: wiki:Eternity_Milestones
+    confidence: documented
+
+  - from: animals
+    to: animals-milestone-10
+    rel: unlocks
+    note: Reached at 10 Animals owned
+    source: wiki:Eternity_Milestones
+    confidence: documented
+
+  - from: animals
+    to: animals-milestone-20
+    rel: unlocks
+    note: Reached at 20 Animals owned
+    source: wiki:Eternity_Milestones
+    confidence: documented
+
+  - from: animals
+    to: animals-milestone-48
+    rel: unlocks
+    note: Reached at 48 Animals owned
+    source: wiki:Eternity_Milestones
+    confidence: documented
+
+  - from: animals
+    to: animals-milestone-81
+    rel: unlocks
+    note: Reached at 81 Animals owned
+    source: wiki:Eternity_Milestones
+    confidence: documented
+
+  - from: animals-milestone-1
+    to: slowdown
+    rel: unlocks
+    source: wiki:Eternity_Milestones
+    confidence: documented
+
+  - from: animals-milestone-7
+    to: laboratory
+    rel: unlocks
+    source: wiki:Eternity_Milestones
+    confidence: documented
+
+  - from: animals-milestone-81
+    to: dilation
+    rel: unlocks
+    source: wiki:Eternity_Milestones
+    confidence: documented
+
+  - from: slowdown
+    to: ascension-power
+    rel: boosts
+    note: +1 Ascension to all colors
+    source: wiki:Animals
+    confidence: documented
+
+  - from: slowdown
+    to: lap-speed
+    rel: boosts
+    note: Divides lap speed by 10
+    source: wiki:Animals
+    confidence: documented
+
+  # One edge per Animal, to the stat its bonus names.
+  - from: animal-cat
+    to: infinity-points
+    rel: boosts
+    note: IP gain x Σ
+    source: wiki:Animals
+    confidence: documented
+
+  - from: animal-mouse
+    to: score-exponent
+    rel: boosts
+    note: Score Exponent + 0.02
+    source: wiki:Animals
+    confidence: documented
+
+  - from: animal-chicken
+    to: infinity-points
+    rel: boosts
+    note: IP gain × Completed EM
+    source: wiki:Animals
+    confidence: documented
+
+  - from: animal-pig
+    to: star-base
+    rel: boosts
+    note: +1 Star Base
+    source: wiki:Animals
+    confidence: documented
+
+  - from: animal-snake
+    to: eternity-points
+    rel: boosts
+    note: EP Gain × 2
+    source: wiki:Animals
+    confidence: documented
+
+  - from: animal-zebra
+    to: score-exponent
+    rel: boosts
+    note: Score Exponent x 1.01
+    source: wiki:Animals
+    confidence: documented
+
+  - from: animal-bunny
+    to: generator-exponent
+    rel: boosts
+    note: Generator Exponent x 1.01
+    source: wiki:Animals
+    confidence: documented
+
+  - from: animal-boar
+    to: score-exponent
+    rel: boosts
+    note: Score Exponent × 1.001
+    source: wiki:Animals
+    confidence: documented
+
+  - from: animal-penguin
+    to: star-base
+    rel: boosts
+    note: Star Base x 1.01
+    source: wiki:Animals
+    confidence: documented
+
+  - from: animal-dog
+    to: score-exponent
+    rel: boosts
+    note: Score Exponent + 0.03
+    source: wiki:Animals
+    confidence: documented
+
+  - from: animal-hamster
+    to: lap-speed
+    rel: boosts
+    note: Lap Speed × 1.4
+    source: wiki:Animals
+    confidence: documented
+
+  - from: animal-pigeon
+    to: infinity-points
+    rel: boosts
+    note: IP gain × Completed AM
+    source: wiki:Animals
+    confidence: documented
+
+  - from: animal-goat
+    to: generator-mult
+    rel: boosts
+    note: Generator Multiplier × 3
+    source: wiki:Animals
+    confidence: documented
+
+  - from: animal-frog
+    to: generator-exponent
+    rel: boosts
+    note: Generator Exponent × 1.1
+    source: wiki:Animals
+    confidence: documented
+
+  - from: animal-giraffe
+    to: infinity-points
+    rel: boosts
+    note: IP Gain × 10B (1e10)
+    source: wiki:Animals
+    confidence: documented
+
+  - from: animal-fox
+    to: generator-exponent
+    rel: boosts
+    note: Generator Exponent × 1.01
+    source: wiki:Animals
+    confidence: documented
+
+  - from: animal-panther
+    to: score-exponent
+    rel: boosts
+    note: Score Exponent × 1.001
+    source: wiki:Animals
+    confidence: documented
+
+  - from: animal-polar-bear
+    to: star-base
+    rel: boosts
+    note: Star Base × 1.01
+    source: wiki:Animals
+    confidence: documented
+
+  - from: animal-parrot
+    to: infinity-points
+    rel: boosts
+    note: IP gain × Animals Bought
+    source: wiki:Animals
+    confidence: documented
+
+  - from: animal-guinea-pig
+    to: lap-speed
+    rel: boosts
+    note: Lap Speed x 2
+    source: wiki:Animals
+    confidence: documented
+
+  - from: animal-rooster
+    to: promotion-4
+    rel: boosts
+    note: Promo 4 Power × 1.45
+    source: wiki:Animals
+    confidence: documented
+
+  - from: animal-sheep
+    to: promotion-1
+    rel: boosts
+    note: Promo 1 Power × 10
+    source: wiki:Animals
+    confidence: documented
+
+  - from: animal-toad
+    to: score-exponent
+    rel: boosts
+    note: Score Exponent + 0.05
+    source: wiki:Animals
+    confidence: documented
+
+  - from: animal-lion
+    to: infinity-points
+    rel: boosts
+    note: IP Gain × 10M (1e7)
+    source: wiki:Animals
+    confidence: documented
+
+  - from: animal-wolf
+    to: generator-exponent
+    rel: boosts
+    note: Generator Exponent × 1.01
+    source: wiki:Animals
+    confidence: documented
+
+  - from: animal-beaver
+    to: score-exponent
+    rel: boosts
+    note: Score Exponent × 1.001
+    source: wiki:Animals
+    confidence: documented
+
+  - from: animal-seal
+    to: star-base
+    rel: boosts
+    note: Star Base × 1.01
+    source: wiki:Animals
+    confidence: documented
+
+  - from: animal-fish
+    to: infinity-points
+    rel: boosts
+    note: IP gain × ECs Finished
+    source: wiki:Animals
+    confidence: documented
+
+  - from: animal-jerboa
+    to: lap-speed
+    rel: boosts
+    note: Lap Speed x 3
+    source: wiki:Animals
+    confidence: documented
+
+  - from: animal-duck
+    to: promotion-3
+    rel: boosts
+    note: Promo 3 Power × 1.5
+    source: wiki:Animals
+    confidence: documented
+
+  - from: animal-cow
+    to: eternity-points
+    rel: boosts
+    note: EP Gain × (1+(Σ^0.5))
+    source: wiki:Animals
+    confidence: documented
+
+  - from: animal-turtle
+    to: stardust-exponent
+    rel: boosts
+    note: Stardust Exponent + 0.1
+    source: wiki:Animals
+    confidence: documented
+
+  - from: animal-hippo
+    to: infinity-points
+    rel: boosts
+    note: IP Gain × 1M (1e6)
+    source: wiki:Animals
+    confidence: documented
+
+  - from: animal-bear
+    to: generator-exponent
+    rel: boosts
+    note: Generator Exponent × 1.01
+    source: wiki:Animals
+    confidence: documented
+
+  - from: animal-yak
+    to: score-exponent
+    rel: boosts
+    note: Score Exponent × 1.001
+    source: wiki:Animals
+    confidence: documented
+
+  - from: animal-walrus
+    to: star-base
+    rel: boosts
+    note: Star Base × 1.01
+    source: wiki:Animals
+    confidence: documented
+
+  - from: animal-ferret
+    to: infinity-points
+    rel: boosts
+    note: IP gain × 100
+    source: wiki:Animals
+    confidence: documented
+
+  - from: animal-chinchilla
+    to: lap-speed
+    rel: boosts
+    note: Lap Speed × 5
+    source: wiki:Animals
+    confidence: documented
+
+  - from: animal-goose
+    to: generator-exponent
+    rel: boosts
+    note: Generator Exponent × 1.1
+    source: wiki:Animals
+    confidence: documented
+
+  - from: animal-horse
+    to: star-base
+    rel: boosts
+    note: Star Base × 1.3
+    source: wiki:Animals
+    confidence: documented
+
+  - from: animal-chameleon
+    to: star-base
+    rel: boosts
+    note: Star Base × 1.5
+    source: wiki:Animals
+    confidence: documented
+
+  - from: animal-rhino
+    to: infinity-points
+    rel: boosts
+    note: IP Gain × 1M (1e6)
+    source: wiki:Animals
+    confidence: documented
+
+  - from: animal-raccoon
+    to: generator-exponent
+    rel: boosts
+    note: Generator Exponent x 1.01
+    source: wiki:Animals
+    confidence: documented
+
+  - from: animal-bobcat
+    to: score-exponent
+    rel: boosts
+    note: Score Exponent x 1.001
+    source: wiki:Animals
+    confidence: documented
+
+  - from: animal-dolphin
+    to: star-base
+    rel: boosts
+    note: Star Base x 1.01
+    source: wiki:Animals
+    confidence: documented
+
+  - from: animal-gopher
+    to: score-exponent
+    rel: boosts
+    note: Score Exponent × 1.01
+    source: wiki:Animals
+    confidence: documented
+
+  - from: animal-squirrel
+    to: generator-exponent
+    rel: boosts
+    note: Generator Exponent × 1.05
+    source: wiki:Animals
+    confidence: documented
+
+  - from: animal-pheasant
+    to: ascension-power
+    rel: boosts
+    note: Ascension Power × 2
+    source: wiki:Animals
+    confidence: documented
+
+  - from: animal-bull
+    to: stardust-exponent
+    rel: boosts
+    note: Stardust Exponent + 0.05
+    source: wiki:Animals
+    confidence: documented
+
+  - from: animal-sea-turtle
+    to: stardust-exponent
+    rel: boosts
+    note: Stardust Exponent × 1.05
+    source: wiki:Animals
+    confidence: documented
+
+  - from: animal-elephant
+    to: infinity-points
+    rel: boosts
+    note: IP Gain × 1M (1e6)
+    source: wiki:Animals
+    confidence: documented
+
+  - from: animal-badger
+    to: generator-exponent
+    rel: boosts
+    note: Generator Exponent x 1.01
+    source: wiki:Animals
+    confidence: documented
+
+  - from: animal-tiger
+    to: score-exponent
+    rel: boosts
+    note: Score Exponent x 1.001
+    source: wiki:Animals
+    confidence: documented
+
+  - from: animal-orca
+    to: star-base
+    rel: boosts
+    note: Star Base x 1.01
+    source: wiki:Animals
+    confidence: documented
+
+  - from: animal-rabbit
+    to: star-base
+    rel: boosts
+    note: Star Base × 1.3
+    source: wiki:Animals
+    confidence: documented
+
+  - from: animal-rat
+    to: score-exponent
+    rel: boosts
+    note: Score Exponent x 1.005
+    source: wiki:Animals
+    confidence: documented
+
+  - from: animal-peacock
+    to: stardust-exponent
+    rel: boosts
+    note: Stardust Exponent × 1.03
+    source: wiki:Animals
+    confidence: documented
+
+  - from: animal-llama
+    to: stardust-exponent
+    rel: boosts
+    note: Stardust Exponent × 1.02
+    source: wiki:Animals
+    confidence: documented
+
+  - from: animal-lizard
+    to: stardust-exponent
+    rel: boosts
+    note: Stardust Exponent × 1.01
+    source: wiki:Animals
+    confidence: documented
+
+  - from: animal-anteater
+    to: infinity-points
+    rel: boosts
+    note: IP Gain × 1M (1e6)
+    source: wiki:Animals
+    confidence: documented
+
+  - from: animal-panda
+    to: generator-exponent
+    rel: boosts
+    note: Generator Exponent x 1.01
+    source: wiki:Animals
+    confidence: documented
+
+  - from: animal-hyena
+    to: score-exponent
+    rel: boosts
+    note: Score Exponent x 1.001
+    source: wiki:Animals
+    confidence: documented
+
+  - from: animal-bat
+    to: star-base
+    rel: boosts
+    note: Star Base x 1.01
+    source: wiki:Animals
+    confidence: documented
+
+  - from: animal-hedgehog
+    to: score-exponent
+    rel: boosts
+    note: Score Exponent + 0.01
+    source: wiki:Animals
+    confidence: documented
+
+  - from: animal-mole
+    to: score-exponent
+    rel: boosts
+    note: Score Exponent + 0.01
+    source: wiki:Animals
+    confidence: documented
+
+  - from: animal-owl
+    to: score-exponent
+    rel: boosts
+    note: Score Exponent + 0.01
+    source: wiki:Animals
+    confidence: documented
+
+  - from: animal-alpaca
+    to: score-exponent
+    rel: boosts
+    note: Score Exponent + 0.01
+    source: wiki:Animals
+    confidence: documented
+
+  - from: animal-crocodile
+    to: score-exponent
+    rel: boosts
+    note: Score Exponent + 0.01
+    source: wiki:Animals
+    confidence: documented
+
+  - from: animal-koala
+    to: infinity-points
+    rel: boosts
+    note: IP Gain × 1M (1e6)
+    source: wiki:Animals
+    confidence: documented
+
+  - from: animal-wombat
+    to: generator-exponent
+    rel: boosts
+    note: Generator Exponent x 1.01
+    source: wiki:Animals
+    confidence: documented
+
+  - from: animal-monkey
+    to: score-exponent
+    rel: boosts
+    note: Score Exponent x 1.001
+    source: wiki:Animals
+    confidence: documented
+
+  - from: animal-eagle
+    to: stardust-base
+    rel: boosts
+    note: Stardust Base x 1.01
+    source: wiki:Animals
+    confidence: documented
+
+  - from: animal-meta-cat
+    to: stardust-exponent
+    rel: boosts
+    note: Stardust Exponent × 1.01
+    source: wiki:Animals
+    confidence: documented
+
+  - from: animal-jackalope
+    to: stardust-exponent
+    rel: boosts
+    note: Stardust Exponent × 1.01
+    source: wiki:Animals
+    confidence: documented
+
+  - from: animal-phoenix
+    to: stardust-exponent
+    rel: boosts
+    note: Stardust Exponent × 1.01
+    source: wiki:Animals
+    confidence: documented
+
+  - from: animal-unicorn
+    to: stardust-exponent
+    rel: boosts
+    note: Stardust Exponent × 1.01
+    source: wiki:Animals
+    confidence: documented
+
+  - from: animal-hydra
+    to: stardust-exponent
+    rel: boosts
+    note: Stardust Exponent × 1.01
+    source: wiki:Animals
+    confidence: documented
+
+  - from: animal-pegasus
+    to: infinity-points
+    rel: boosts
+    note: IP Gain × 1M (1e6)
+    source: wiki:Animals
+    confidence: documented
+
+  - from: animal-hippogriff
+    to: generator-exponent
+    rel: boosts
+    note: Generator Exponent x1.01
+    source: wiki:Animals
+    confidence: documented
+
+  - from: animal-dragon
+    to: score-exponent
+    rel: boosts
+    note: Score Exponent x1.001
+    source: wiki:Animals
+    confidence: documented
+
+  - from: animal-nu
+    to: score-exponent
+    rel: boosts
+    note: Score Exponent + 0.1
+    source: wiki:Animals
+    confidence: documented
+
+  # The six Animals whose bonus reads a running total.
+  - from: eternities
+    to: animal-cat
+    rel: boosts
+    source: wiki:Animals
+    confidence: documented
+
+  - from: eternities
+    to: animal-cow
+    rel: boosts
+    source: wiki:Animals
+    confidence: documented
+
+  - from: eternity-milestones
+    to: animal-chicken
+    rel: boosts
+    source: wiki:Animals
+    confidence: documented
+
+  - from: animals-milestones
+    to: animal-pigeon
+    rel: boosts
+    source: wiki:Animals
+    confidence: documented
+
+  - from: eternity-challenges
+    to: animal-fish
+    rel: boosts
+    source: wiki:Animals
+    confidence: documented
+
+  - from: animals
+    to: animal-parrot
+    rel: boosts
+    source: wiki:Animals
+    confidence: documented
+
+  # Laboratory: EP buys LP upgrades, LP awards RP, RP buys six upgrades.
+  - from: eternity-points
+    to: lab-base
+    rel: boosts
+    note: Bought with EP
+    source: wiki:Laboratory
+    confidence: documented
+
+  - from: lab-base
+    to: laboratory-points
+    rel: boosts
+    source: wiki:Laboratory
+    confidence: documented
+
+  - from: eternity-points
+    to: lab-mult
+    rel: boosts
+    note: Bought with EP
+    source: wiki:Laboratory
+    confidence: documented
+
+  - from: lab-mult
+    to: laboratory-points
+    rel: boosts
+    source: wiki:Laboratory
+    confidence: documented
+
+  - from: eternity-points
+    to: lab-power
+    rel: boosts
+    note: Bought with EP
+    source: wiki:Laboratory
+    confidence: documented
+
+  - from: lab-power
+    to: laboratory-points
+    rel: boosts
+    source: wiki:Laboratory
+    confidence: documented
+
+  - from: laboratory-points
+    to: research-points
+    rel: boosts
+    note: Each Lab level awards one Research Point
+    source: wiki:Laboratory
+    confidence: documented
+
+  - from: research-points
+    to: rp-upgrade-1
+    rel: boosts
+    note: Each spent RP adds one level
+    source: wiki:Laboratory
+    confidence: documented
+
+  - from: rp-upgrade-1
+    to: infinity-points
+    rel: boosts
+    source: wiki:Laboratory
+    confidence: documented
+
+  - from: research-points
+    to: rp-upgrade-2
+    rel: boosts
+    note: Each spent RP adds one level
+    source: wiki:Laboratory
+    confidence: documented
+
+  - from: rp-upgrade-2
+    to: ascension-power
+    rel: boosts
+    source: wiki:Laboratory
+    confidence: documented
+
+  - from: research-points
+    to: rp-upgrade-3
+    rel: boosts
+    note: Each spent RP adds one level
+    source: wiki:Laboratory
+    confidence: documented
+
+  - from: rp-upgrade-3
+    to: star-base
+    rel: boosts
+    source: wiki:Laboratory
+    confidence: documented
+
+  - from: research-points
+    to: rp-upgrade-4
+    rel: boosts
+    note: Each spent RP adds one level
+    source: wiki:Laboratory
+    confidence: documented
+
+  - from: rp-upgrade-4
+    to: eternity-points
+    rel: boosts
+    source: wiki:Laboratory
+    confidence: documented
+
+  - from: research-points
+    to: rp-upgrade-5
+    rel: boosts
+    note: Each spent RP adds one level
+    source: wiki:Laboratory
+    confidence: documented
+
+  - from: rp-upgrade-5
+    to: generator-power
+    rel: boosts
+    source: wiki:Laboratory
+    confidence: documented
+
+  - from: research-points
+    to: rp-upgrade-6
+    rel: boosts
+    note: Each spent RP adds one level
+    source: wiki:Laboratory
+    confidence: documented
+
+  - from: rp-upgrade-6
+    to: common-exponent
+    rel: boosts
+    source: wiki:Laboratory
+    confidence: documented
+
+  # Eternity Challenges and their milestones.
+  - from: eternity-challenge-1
+    to: lap-speed
+    rel: boosts
+    source: wiki:Eternity_Challenges
+    confidence: documented
+
+  - from: eternity-challenge-2
+    to: common-exponent
+    rel: boosts
+    source: wiki:Eternity_Challenges
+    confidence: documented
+
+  - from: eternity-challenge-3
+    to: star-base
+    rel: boosts
+    source: wiki:Eternity_Challenges
+    confidence: documented
+
+  - from: eternity-challenge-4
+    to: generator-exponent
+    rel: boosts
+    source: wiki:Eternity_Challenges
+    confidence: documented
+
+  - from: eternity-challenge-5
+    to: ascension-power
+    rel: boosts
+    source: wiki:Eternity_Challenges
+    confidence: documented
+
+  - from: eternity-challenge-6
+    to: prestige-bonus
+    rel: boosts
+    source: wiki:Eternity_Challenges
+    confidence: documented
+
+  - from: eternity-challenge-7
+    to: laboratory
+    rel: boosts
+    source: wiki:Eternity_Challenges
+    confidence: documented
+
+  - from: eternity-challenge-8
+    to: infinity-points
+    rel: boosts
+    source: wiki:Eternity_Challenges
+    confidence: documented
+
+  - from: eternity-challenge-9
+    to: generator-exponent
+    rel: boosts
+    source: wiki:Eternity_Challenges
+    confidence: documented
+
+  - from: eternity-challenge-10
+    to: dilation-points
+    rel: boosts
+    source: wiki:Eternity_Challenges
+    confidence: documented
+
+  - from: eternity-challenges
+    to: animal-points
+    rel: boosts
+    note: Completing a difficulty awards one free AP
+    source: wiki:Eternity_Challenges
+    confidence: documented
+
+  - from: eternity-challenges
+    to: eternity-challenge-milestones
+    rel: unlocks
+    source: wiki:Eternity_Milestones
+    confidence: documented
+
+  - from: eternity-challenges
+    to: eternity-challenge-milestone-3
+    rel: unlocks
+    note: Reached at 3 difficulty completions
+    source: wiki:Eternity_Milestones
+    confidence: documented
+
+  - from: eternity-challenges
+    to: eternity-challenge-milestone-5
+    rel: unlocks
+    note: Reached at 5 difficulty completions
+    source: wiki:Eternity_Milestones
+    confidence: documented
+
+  - from: eternity-challenges
+    to: eternity-challenge-milestone-8
+    rel: unlocks
+    note: Reached at 8 difficulty completions
+    source: wiki:Eternity_Milestones
+    confidence: documented
+
+  - from: eternity-challenges
+    to: eternity-challenge-milestone-10
+    rel: unlocks
+    note: Reached at 10 difficulty completions
+    source: wiki:Eternity_Milestones
+    confidence: documented
+
+  - from: eternity-challenges
+    to: eternity-challenge-milestone-30
+    rel: unlocks
+    note: Reached at 30 difficulty completions
+    source: wiki:Eternity_Milestones
+    confidence: documented
+
+  - from: eternity-challenges
+    to: eternity-challenge-milestone-32
+    rel: unlocks
+    note: Reached at 32 difficulty completions
+    source: wiki:Eternity_Milestones
+    confidence: documented
+
+  - from: eternity-challenges
+    to: eternity-challenge-milestone-35
+    rel: unlocks
+    note: Reached at 35 difficulty completions
+    source: wiki:Eternity_Milestones
+    confidence: documented
+
+  - from: eternity-challenges
+    to: eternity-challenge-milestone-50
+    rel: unlocks
+    note: Reached at 50 difficulty completions
+    source: wiki:Eternity_Milestones
+    confidence: documented
+
+  - from: eternity-challenges
+    to: eternity-challenge-milestone-60
+    rel: unlocks
+    note: Reached at 60 difficulty completions
+    source: wiki:Eternity_Milestones
+    confidence: documented
+
+  - from: eternity-challenge-milestone-8
+    to: supernova
+    rel: unlocks
+    source: wiki:Eternity_Milestones
+    confidence: documented
+
+  - from: eternity-challenge-milestone-50
+    to: dilation-tree
+    rel: unlocks
+    source: wiki:Eternity_Milestones
+    confidence: documented
+
+  # Supernova.
+  - from: score
+    to: supernova
+    rel: boosts
+    note: A Supernova needs a certain Score
+    source: wiki:Supernova
+    confidence: documented
+
+  - from: supernova
+    to: eternity-bonuses
+    rel: boosts
+    source: wiki:Supernova
+    confidence: documented
+
+  - from: supernova
+    to: star-base
+    rel: boosts
+    source: wiki:Supernova
+    confidence: documented
+
+  - from: supernova
+    to: lab-base
+    rel: boosts
+    source: wiki:Supernova
+    confidence: documented
+
+  - from: supernova
+    to: eternity-points
+    rel: boosts
+    source: wiki:Supernova
+    confidence: documented
+
+  - from: supernova
+    to: animal-points
+    rel: boosts
+    source: wiki:Supernova
+    confidence: documented
+
+  # Dilation, its penalties, and the currency chain out of it.
+  - from: dilation
+    to: dilation-penalties
+    rel: unlocks
+    note: Entering Dilation applies the penalties
+    source: wiki:Dilation
+    confidence: documented
+
+  - from: dilation-penalties
+    to: common-exponent
+    rel: boosts
+    note: Common Exponent / 25
+    source: wiki:Dilation
+    confidence: documented
+
+  - from: dilation-penalties
+    to: generator-exponent
+    rel: boosts
+    note: Gen Exp / 1,000
+    source: wiki:Dilation
+    confidence: documented
+
+  - from: dilation-penalties
+    to: star-exponent
+    rel: boosts
+    note: Star Exp / 100
+    source: wiki:Dilation
+    confidence: documented
+
+  - from: dilation-penalties
+    to: ascension-power
+    rel: boosts
+    note: Ascension Power ^0.10
+    source: wiki:Dilation
+    confidence: documented
+
+  - from: dilation-penalties
+    to: lap-speed
+    rel: boosts
+    note: (Laps Speed ^0.10) / 10
+    source: wiki:Dilation
+    confidence: documented
+
+  - from: dilation-penalties
+    to: infinity-points
+    rel: boosts
+    note: IP gain ^0.01
+    source: wiki:Dilation
+    confidence: documented
+
+  - from: score
+    to: max-score
+    rel: boosts
+    source: wiki:Dilation
+    confidence: documented
+
+  - from: dilation
+    to: max-score
+    rel: boosts
+    note: Exiting sets Max Score to the highest Score reached inside Dilation
+    source: wiki:Dilation
+    confidence: documented
+
+  - from: max-score
+    to: dp-income
+    rel: boosts
+    source: wiki:Dilation
+    confidence: documented
+
+  - from: dp-income
+    to: dilation-points
+    rel: boosts
+    source: wiki:Dilation
+    confidence: documented
+
+  - from: dilation-points
+    to: dilation-upgrade-1
+    rel: boosts
+    note: DP buys Dilation Upgrade levels
+    source: wiki:Dilation
+    confidence: documented
+
+  - from: dilation-points
+    to: dilation-upgrade-2
+    rel: boosts
+    note: DP buys Dilation Upgrade levels
+    source: wiki:Dilation
+    confidence: documented
+
+  - from: dilation-points
+    to: dilation-upgrade-3
+    rel: boosts
+    note: DP buys Dilation Upgrade levels
+    source: wiki:Dilation
+    confidence: documented
+
+  - from: dilation-points
+    to: dilation-upgrade-4
+    rel: boosts
+    note: DP buys Dilation Upgrade levels
+    source: wiki:Dilation
+    confidence: documented
+
+  - from: dilation-points
+    to: dilation-upgrade-5
+    rel: boosts
+    note: DP buys Dilation Upgrade levels
+    source: wiki:Dilation
+    confidence: documented
+
+  - from: dilation-points
+    to: dilation-upgrade-6
+    rel: boosts
+    note: DP buys Dilation Upgrade levels
+    source: wiki:Dilation
+    confidence: documented
+
+  - from: dilation-points
+    to: dilation-upgrade-7
+    rel: boosts
+    note: DP buys Dilation Upgrade levels
+    source: wiki:Dilation
+    confidence: documented
+
+  - from: dilation-points
+    to: dilation-upgrade-8
+    rel: boosts
+    note: DP buys Dilation Upgrade levels
+    source: wiki:Dilation
+    confidence: documented
+
+  - from: dilation-points
+    to: dilation-upgrade-9
+    rel: boosts
+    note: DP buys Dilation Upgrade levels
+    source: wiki:Dilation
+    confidence: documented
+
+  - from: dilation-points
+    to: dilation-tree-points
+    rel: boosts
+    note: DTP is bought with DP
+    source: wiki:Dilation_Tree
+    confidence: documented
+
+  - from: dilation-tree-points
+    to: dilation-tree
+    rel: boosts
+    source: wiki:Dilation_Tree
+    confidence: documented
+
+  # The three Dilation Tree upgrades that strengthen a numbered Dilation Upgrade.
+  # Nothing generated can make this link: the tree node's effect text names
+  # "Dilation Upgrade 1" and that node's name is derived, so it never enters the
+  # curated vocabulary the resolver matches against.
+  - from: dilation-node-top-1
+    to: dilation-upgrade-1
+    rel: boosts
+    source: wiki:Dilation
+    confidence: documented
+
+  - from: dilation-node-middle-1
+    to: dilation-upgrade-2
+    rel: boosts
+    source: wiki:Dilation
+    confidence: documented
+
+  - from: dilation-node-bottom-1
+    to: dilation-upgrade-3
+    rel: boosts
+    source: wiki:Dilation
+    confidence: documented
+
 suppress:
   - from: singularity-tree-1
     to: mult-gain
@@ -955,160 +3809,56 @@ suppress:
       The tree node modifies a Singularity mult gain modifier, a different stat
       that only happens to contain the Revolution-layer stat's name.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  # PIG is the Plague layer's currency, written in capitals. The Eternity Zoo
+  # animal named Pig is a different thing entirely, and the vocabulary matches
+  # mixed-case surfaces without regard to case, so it claims all four.
+  - from: relic-61
+    to: animal-pig
+    rel: boosts
+    reason: >-
+      PIG is the Plague currency abbreviation, not the Eternity Zoo animal
+      that happens to share the name.
+
+  - from: refine-node-109
+    to: animal-pig
+    rel: boosts
+    reason: >-
+      PIG is the Plague currency abbreviation, not the Eternity Zoo animal
+      that happens to share the name.
+
+  - from: refine-node-123
+    to: animal-pig
+    rel: boosts
+    reason: >-
+      PIG is the Plague currency abbreviation, not the Eternity Zoo animal
+      that happens to share the name.
+
+  - from: refine-node-124
+    to: animal-pig
+    rel: boosts
+    reason: >-
+      PIG is the Plague currency abbreviation, not the Eternity Zoo animal
+      that happens to share the name.
+
+  # These three tree nodes strengthen one numbered Dilation Upgrade each, which
+  # the curated edges above record. They do not touch the Dilation mechanic.
+  - from: dilation-node-top-1
+    to: dilation
+    rel: boosts
+    reason: >-
+      The tree node strengthens one numbered Dilation Upgrade, not the
+      Dilation mechanic whose name its effect text spells out.
+
+  - from: dilation-node-middle-1
+    to: dilation
+    rel: boosts
+    reason: >-
+      The tree node strengthens one numbered Dilation Upgrade, not the
+      Dilation mechanic whose name its effect text spells out.
+
+  - from: dilation-node-bottom-1
+    to: dilation
+    rel: boosts
+    reason: >-
+      The tree node strengthens one numbered Dilation Upgrade, not the
+      Dilation mechanic whose name its effect text spells out.

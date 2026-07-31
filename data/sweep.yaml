@@ -24,6 +24,29 @@
 #     a numbered list rather than a table, so no reader here can see them; they
 #     are curated in data/relationships.yaml.
 #
+#   Eternity_Challenges — the wikitable reads correctly, but its six difficulty
+#     rows share one challenge number through a rowspan, so ten challenges would
+#     arrive as sixty records and fifty of them would lose to the duplicate-id
+#     guard, one warning apiece. The ten are curated instead, which also lets the
+#     six difficulty values sit on one effect rather than on six near-copies.
+#
+#   Eternity_Milestones — three numbered prose lists (Eternities, Animals,
+#     Challenges). No table on the page at all.
+#
+#   Laboratory — bulleted and numbered prose for the three LP upgrades and the
+#     six RP upgrades. No table.
+#
+#   Supernova — a bulleted list of five bonuses. No table.
+#
+#   Animals — its 81 records sit behind {{AnimalGrid}}, a template the scrape
+#     does not follow, so the page as scraped holds no Animal data at all. They
+#     are transcribed in data/relationships.yaml with their AP costs.
+#
+#   Dilation — its Dilation Upgrades table is the same one the Eternity page
+#     carries, and Eternity is already swept for it; sweeping both would mint
+#     `dilation-upgrade-1` through `-9` twice. The page's Dilation penalties are
+#     a bulleted list, so no reader here can see those either.
+#
 # Tables surveyed but deliberately excluded from all eight swept pages:
 #
 #   Singularity — Atom Threshold|Base Value|Resource Affected|Modifiable?*|Modification Source (14 rows)

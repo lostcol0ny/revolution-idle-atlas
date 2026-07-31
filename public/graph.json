@@ -7509,7 +7509,8 @@
     },
     {
       "aliases": [
-        "Gen Mult"
+        "Gen Mult",
+        "Generator Multiplier"
       ],
       "confidence": "documented",
       "effects": [
@@ -7720,6 +7721,9 @@
       "wiki": "Revolution"
     },
     {
+      "aliases": [
+        "Promo 1"
+      ],
       "confidence": "documented",
       "id": "promotion-1",
       "kind": "upgrade",
@@ -7728,6 +7732,9 @@
       "wiki": "Revolution"
     },
     {
+      "aliases": [
+        "Promo 2"
+      ],
       "confidence": "documented",
       "id": "promotion-2",
       "kind": "upgrade",
@@ -7736,6 +7743,9 @@
       "wiki": "Revolution"
     },
     {
+      "aliases": [
+        "Promo 3"
+      ],
       "confidence": "documented",
       "id": "promotion-3",
       "kind": "upgrade",
@@ -7744,6 +7754,9 @@
       "wiki": "Revolution"
     },
     {
+      "aliases": [
+        "Promo 4"
+      ],
       "confidence": "documented",
       "id": "promotion-4",
       "kind": "upgrade",
@@ -7948,6 +7961,2112 @@
       "name": "Tarot Draws",
       "system": "tarot",
       "wiki": "Tarot"
+    },
+    {
+      "confidence": "documented",
+      "id": "score",
+      "kind": "stat",
+      "name": "Score",
+      "system": "revolution",
+      "wiki": "Revolution"
+    },
+    {
+      "confidence": "documented",
+      "id": "score-exponent",
+      "kind": "stat",
+      "name": "Score Exponent",
+      "system": "revolution",
+      "wiki": "Revolution"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "The highest Score reached inside Dilation, set when Dilation is exited"
+        }
+      ],
+      "id": "max-score",
+      "kind": "stat",
+      "name": "Max Score",
+      "system": "revolution",
+      "wiki": "Dilation"
+    },
+    {
+      "confidence": "documented",
+      "id": "prestige-bonus",
+      "kind": "stat",
+      "name": "Prestige Bonus",
+      "system": "revolution",
+      "wiki": "Revolution"
+    },
+    {
+      "confidence": "documented",
+      "id": "stardust-exponent",
+      "kind": "stat",
+      "name": "Stardust Exponent",
+      "system": "infinity",
+      "wiki": "Stars"
+    },
+    {
+      "confidence": "documented",
+      "id": "stardust-base",
+      "kind": "stat",
+      "name": "Stardust Base",
+      "system": "infinity",
+      "wiki": "Stars"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "The number of Eternities performed, written on the wiki as a capital sigma"
+        }
+      ],
+      "id": "eternities",
+      "kind": "stat",
+      "name": "Eternities",
+      "system": "eternity",
+      "wiki": "Eternity_Milestones"
+    },
+    {
+      "aliases": [
+        "EM"
+      ],
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "Unlocks automation and new mechanics as Eternities accumulate"
+        }
+      ],
+      "id": "eternity-milestones",
+      "kind": "group",
+      "name": "Eternity Milestones",
+      "system": "eternity",
+      "wiki": "Eternity_Milestones"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "Unlocks Eternity Milestones"
+        }
+      ],
+      "id": "eternity-milestone-1",
+      "kind": "upgrade",
+      "name": "Eternity Milestone (1 Eternity)",
+      "system": "eternity",
+      "wiki": "Eternity_Milestones"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "Starting from this Eternity, keeps all Automations"
+        }
+      ],
+      "id": "eternity-milestone-2",
+      "kind": "upgrade",
+      "name": "Eternity Milestone (2 Eternities)",
+      "system": "eternity",
+      "wiki": "Eternity_Milestones"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "Unlocks Eternity Zoo"
+        }
+      ],
+      "id": "eternity-milestone-3",
+      "kind": "upgrade",
+      "name": "Eternity Milestone (3 Eternities)",
+      "system": "eternity",
+      "wiki": "Eternity_Milestones"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "Buying Revolutions (colors) no longer takes away Score"
+        }
+      ],
+      "id": "eternity-milestone-5",
+      "kind": "upgrade",
+      "name": "Eternity Milestone (5 Eternities)",
+      "system": "eternity",
+      "wiki": "Eternity_Milestones"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "Unlocks Auto IP Adjuster"
+        }
+      ],
+      "id": "eternity-milestone-7",
+      "kind": "upgrade",
+      "name": "Eternity Milestone (7 Eternities)",
+      "system": "eternity",
+      "wiki": "Eternity_Milestones"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "Unlocks Eternity Challenges"
+        }
+      ],
+      "id": "eternity-milestone-8",
+      "kind": "upgrade",
+      "name": "Eternity Milestone (8 Eternities)",
+      "system": "eternity",
+      "wiki": "Eternity_Milestones"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "Unlocks Automation for Infinity Upgrades"
+        }
+      ],
+      "id": "eternity-milestone-12",
+      "kind": "upgrade",
+      "name": "Eternity Milestone (12 Eternities)",
+      "system": "eternity",
+      "wiki": "Eternity_Milestones"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "Unlocks Automation for Generators"
+        }
+      ],
+      "id": "eternity-milestone-14",
+      "kind": "upgrade",
+      "name": "Eternity Milestone (14 Eternities)",
+      "system": "eternity",
+      "wiki": "Eternity_Milestones"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "Unlocks Automation for Stars and Star/Stardust upgrades, and Auto Eternity"
+        }
+      ],
+      "id": "eternity-milestone-16",
+      "kind": "upgrade",
+      "name": "Eternity Milestone (16 Eternities)",
+      "system": "eternity",
+      "wiki": "Eternity_Milestones"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "Breaks Eternity - IP is no longer limited to ~1.79e308 IP"
+        }
+      ],
+      "id": "eternity-milestone-32",
+      "kind": "upgrade",
+      "name": "Eternity Milestone (32 Eternities)",
+      "system": "eternity",
+      "wiki": "Eternity_Milestones"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "x1.05 to IP gain for each Eternity, softcapped at 1,000"
+        }
+      ],
+      "id": "eternity-milestone-100",
+      "kind": "upgrade",
+      "name": "Eternity Milestone (100 Eternities)",
+      "system": "eternity",
+      "wiki": "Eternity_Milestones"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "Mult gain",
+          "per_level": "Starts at x2 and improves with each Eternity"
+        },
+        {
+          "text": "Lap speed",
+          "per_level": "Starts at x2 and improves with each Eternity"
+        },
+        {
+          "text": "Ascension Power",
+          "per_level": "Starts at x1.1 and improves with each Eternity"
+        },
+        {
+          "text": "Infinity gain",
+          "per_level": "Starts at x2 and improves with each Eternity"
+        },
+        {
+          "text": "Generators power",
+          "per_level": "Starts at x2.14 and improves with each Eternity"
+        },
+        {
+          "text": "Stardust gain",
+          "per_level": "Starts at x10 and improves with each Eternity"
+        }
+      ],
+      "id": "eternity-bonuses",
+      "kind": "group",
+      "name": "Eternity Bonuses",
+      "system": "eternity",
+      "wiki": "Eternity"
+    },
+    {
+      "aliases": [
+        "Eternity Zoo"
+      ],
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "81 Animals whose bonuses persist through Eternities",
+          "per_level": "1,524 AP buys every Animal"
+        }
+      ],
+      "id": "animals",
+      "kind": "group",
+      "name": "Animals",
+      "system": "eternity",
+      "wiki": "Animals"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "Divides lap speed by 10 in exchange for +1 Ascension to all colors"
+        }
+      ],
+      "id": "slowdown",
+      "kind": "upgrade",
+      "name": "Slowdown",
+      "system": "eternity",
+      "wiki": "Animals"
+    },
+    {
+      "aliases": [
+        "AM"
+      ],
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "Unlocks mechanics as Animals are bought"
+        }
+      ],
+      "id": "animals-milestones",
+      "kind": "group",
+      "name": "Animals Milestones",
+      "system": "eternity",
+      "wiki": "Eternity_Milestones"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "Unlocks Slowdown"
+        }
+      ],
+      "id": "animals-milestone-1",
+      "kind": "upgrade",
+      "name": "Animals Milestone (1 Animal)",
+      "system": "eternity",
+      "wiki": "Eternity_Milestones"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "Unlocks Auto Slowdown"
+        }
+      ],
+      "id": "animals-milestone-4",
+      "kind": "upgrade",
+      "name": "Animals Milestone (4 Animals)",
+      "system": "eternity",
+      "wiki": "Eternity_Milestones"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "Unlocks Lab"
+        }
+      ],
+      "id": "animals-milestone-7",
+      "kind": "upgrade",
+      "name": "Animals Milestone (7 Animals)",
+      "system": "eternity",
+      "wiki": "Eternity_Milestones"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "Promoting now resets nothing"
+        }
+      ],
+      "id": "animals-milestone-10",
+      "kind": "upgrade",
+      "name": "Animals Milestone (10 Animals)",
+      "system": "eternity",
+      "wiki": "Eternity_Milestones"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "Gain 100% of the IP you would get on Infinity, every second"
+        }
+      ],
+      "id": "animals-milestone-20",
+      "kind": "upgrade",
+      "name": "Animals Milestone (20 Animals)",
+      "system": "eternity",
+      "wiki": "Eternity_Milestones"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "+10 free levels to all RP upgrades"
+        }
+      ],
+      "id": "animals-milestone-48",
+      "kind": "upgrade",
+      "name": "Animals Milestone (48 Animals)",
+      "system": "eternity",
+      "wiki": "Eternity_Milestones"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "Unlocks Dilation"
+        }
+      ],
+      "id": "animals-milestone-81",
+      "kind": "upgrade",
+      "name": "Animals Milestone (81 Animals)",
+      "system": "eternity",
+      "wiki": "Eternity_Milestones"
+    },
+    {
+      "confidence": "documented",
+      "cost": "1 AP",
+      "effects": [
+        {
+          "text": "IP gain x Σ"
+        }
+      ],
+      "id": "animal-cat",
+      "kind": "upgrade",
+      "name": "Cat",
+      "system": "eternity",
+      "wiki": "Animals"
+    },
+    {
+      "confidence": "documented",
+      "cost": "2 AP",
+      "effects": [
+        {
+          "text": "Score Exponent + 0.02"
+        }
+      ],
+      "id": "animal-mouse",
+      "kind": "upgrade",
+      "name": "Mouse",
+      "system": "eternity",
+      "wiki": "Animals"
+    },
+    {
+      "confidence": "documented",
+      "cost": "4 AP",
+      "effects": [
+        {
+          "text": "IP gain × Completed EM"
+        }
+      ],
+      "id": "animal-chicken",
+      "kind": "upgrade",
+      "name": "Chicken",
+      "system": "eternity",
+      "wiki": "Animals"
+    },
+    {
+      "confidence": "documented",
+      "cost": "4 AP",
+      "effects": [
+        {
+          "text": "+1 Star Base"
+        }
+      ],
+      "id": "animal-pig",
+      "kind": "upgrade",
+      "name": "Pig",
+      "system": "eternity",
+      "wiki": "Animals"
+    },
+    {
+      "confidence": "documented",
+      "cost": "10 AP",
+      "effects": [
+        {
+          "text": "EP Gain × 2"
+        }
+      ],
+      "id": "animal-snake",
+      "kind": "upgrade",
+      "name": "Snake",
+      "system": "eternity",
+      "wiki": "Animals"
+    },
+    {
+      "confidence": "documented",
+      "cost": "14 AP",
+      "effects": [
+        {
+          "text": "Score Exponent x 1.01"
+        }
+      ],
+      "id": "animal-zebra",
+      "kind": "upgrade",
+      "name": "Zebra",
+      "system": "eternity",
+      "wiki": "Animals"
+    },
+    {
+      "confidence": "documented",
+      "cost": "18 AP",
+      "effects": [
+        {
+          "text": "Generator Exponent x 1.01"
+        }
+      ],
+      "id": "animal-bunny",
+      "kind": "upgrade",
+      "name": "Bunny",
+      "system": "eternity",
+      "wiki": "Animals"
+    },
+    {
+      "confidence": "documented",
+      "cost": "22 AP",
+      "effects": [
+        {
+          "text": "Score Exponent × 1.001"
+        }
+      ],
+      "id": "animal-boar",
+      "kind": "upgrade",
+      "name": "Boar",
+      "system": "eternity",
+      "wiki": "Animals"
+    },
+    {
+      "confidence": "documented",
+      "cost": "26 AP",
+      "effects": [
+        {
+          "text": "Star Base x 1.01"
+        }
+      ],
+      "id": "animal-penguin",
+      "kind": "upgrade",
+      "name": "Penguin",
+      "system": "eternity",
+      "wiki": "Animals"
+    },
+    {
+      "confidence": "documented",
+      "cost": "2 AP",
+      "effects": [
+        {
+          "text": "Score Exponent + 0.03"
+        }
+      ],
+      "id": "animal-dog",
+      "kind": "upgrade",
+      "name": "Dog",
+      "system": "eternity",
+      "wiki": "Animals"
+    },
+    {
+      "confidence": "documented",
+      "cost": "3 AP",
+      "effects": [
+        {
+          "text": "Lap Speed × 1.4"
+        }
+      ],
+      "id": "animal-hamster",
+      "kind": "upgrade",
+      "name": "Hamster",
+      "system": "eternity",
+      "wiki": "Animals"
+    },
+    {
+      "confidence": "documented",
+      "cost": "4 AP",
+      "effects": [
+        {
+          "text": "IP gain × Completed AM"
+        }
+      ],
+      "id": "animal-pigeon",
+      "kind": "upgrade",
+      "name": "Pigeon",
+      "system": "eternity",
+      "wiki": "Animals"
+    },
+    {
+      "confidence": "documented",
+      "cost": "2 AP",
+      "effects": [
+        {
+          "text": "Generator Multiplier × 3"
+        }
+      ],
+      "id": "animal-goat",
+      "kind": "upgrade",
+      "name": "Goat",
+      "system": "eternity",
+      "wiki": "Animals"
+    },
+    {
+      "confidence": "documented",
+      "cost": "12 AP",
+      "effects": [
+        {
+          "text": "Generator Exponent × 1.1"
+        }
+      ],
+      "id": "animal-frog",
+      "kind": "upgrade",
+      "name": "Frog",
+      "system": "eternity",
+      "wiki": "Animals"
+    },
+    {
+      "confidence": "documented",
+      "cost": "16 AP",
+      "effects": [
+        {
+          "text": "IP Gain × 10B (1e10)"
+        }
+      ],
+      "id": "animal-giraffe",
+      "kind": "upgrade",
+      "name": "Giraffe",
+      "system": "eternity",
+      "wiki": "Animals"
+    },
+    {
+      "confidence": "documented",
+      "cost": "20 AP",
+      "effects": [
+        {
+          "text": "Generator Exponent × 1.01"
+        }
+      ],
+      "id": "animal-fox",
+      "kind": "upgrade",
+      "name": "Fox",
+      "system": "eternity",
+      "wiki": "Animals"
+    },
+    {
+      "confidence": "documented",
+      "cost": "24 AP",
+      "effects": [
+        {
+          "text": "Score Exponent × 1.001"
+        }
+      ],
+      "id": "animal-panther",
+      "kind": "upgrade",
+      "name": "Panther",
+      "system": "eternity",
+      "wiki": "Animals"
+    },
+    {
+      "confidence": "documented",
+      "cost": "28 AP",
+      "effects": [
+        {
+          "text": "Star Base × 1.01"
+        }
+      ],
+      "id": "animal-polar-bear",
+      "kind": "upgrade",
+      "name": "Polar Bear",
+      "system": "eternity",
+      "wiki": "Animals"
+    },
+    {
+      "confidence": "documented",
+      "cost": "2 AP",
+      "effects": [
+        {
+          "text": "IP gain × Animals Bought"
+        }
+      ],
+      "id": "animal-parrot",
+      "kind": "upgrade",
+      "name": "Parrot",
+      "system": "eternity",
+      "wiki": "Animals"
+    },
+    {
+      "confidence": "documented",
+      "cost": "3 AP",
+      "effects": [
+        {
+          "text": "Lap Speed x 2"
+        }
+      ],
+      "id": "animal-guinea-pig",
+      "kind": "upgrade",
+      "name": "Guinea Pig",
+      "system": "eternity",
+      "wiki": "Animals"
+    },
+    {
+      "confidence": "documented",
+      "cost": "2 AP",
+      "effects": [
+        {
+          "text": "Promo 4 Power × 1.45"
+        }
+      ],
+      "id": "animal-rooster",
+      "kind": "upgrade",
+      "name": "Rooster",
+      "system": "eternity",
+      "wiki": "Animals"
+    },
+    {
+      "confidence": "documented",
+      "cost": "3 AP",
+      "effects": [
+        {
+          "text": "Promo 1 Power × 10"
+        }
+      ],
+      "id": "animal-sheep",
+      "kind": "upgrade",
+      "name": "Sheep",
+      "system": "eternity",
+      "wiki": "Animals"
+    },
+    {
+      "confidence": "documented",
+      "cost": "14 AP",
+      "effects": [
+        {
+          "text": "Score Exponent + 0.05"
+        }
+      ],
+      "id": "animal-toad",
+      "kind": "upgrade",
+      "name": "Toad",
+      "system": "eternity",
+      "wiki": "Animals"
+    },
+    {
+      "confidence": "documented",
+      "cost": "18 AP",
+      "effects": [
+        {
+          "text": "IP Gain × 10M (1e7)"
+        }
+      ],
+      "id": "animal-lion",
+      "kind": "upgrade",
+      "name": "Lion",
+      "system": "eternity",
+      "wiki": "Animals"
+    },
+    {
+      "confidence": "documented",
+      "cost": "22 AP",
+      "effects": [
+        {
+          "text": "Generator Exponent × 1.01"
+        }
+      ],
+      "id": "animal-wolf",
+      "kind": "upgrade",
+      "name": "Wolf",
+      "system": "eternity",
+      "wiki": "Animals"
+    },
+    {
+      "confidence": "documented",
+      "cost": "26 AP",
+      "effects": [
+        {
+          "text": "Score Exponent × 1.001"
+        }
+      ],
+      "id": "animal-beaver",
+      "kind": "upgrade",
+      "name": "Beaver",
+      "system": "eternity",
+      "wiki": "Animals"
+    },
+    {
+      "confidence": "documented",
+      "cost": "30 AP",
+      "effects": [
+        {
+          "text": "Star Base × 1.01"
+        }
+      ],
+      "id": "animal-seal",
+      "kind": "upgrade",
+      "name": "Seal",
+      "system": "eternity",
+      "wiki": "Animals"
+    },
+    {
+      "confidence": "documented",
+      "cost": "2 AP",
+      "effects": [
+        {
+          "text": "IP gain × ECs Finished"
+        }
+      ],
+      "id": "animal-fish",
+      "kind": "upgrade",
+      "name": "Fish",
+      "system": "eternity",
+      "wiki": "Animals"
+    },
+    {
+      "confidence": "documented",
+      "cost": "2 AP",
+      "effects": [
+        {
+          "text": "Lap Speed x 3"
+        }
+      ],
+      "id": "animal-jerboa",
+      "kind": "upgrade",
+      "name": "Jerboa",
+      "system": "eternity",
+      "wiki": "Animals"
+    },
+    {
+      "confidence": "documented",
+      "cost": "3 AP",
+      "effects": [
+        {
+          "text": "Promo 3 Power × 1.5"
+        }
+      ],
+      "id": "animal-duck",
+      "kind": "upgrade",
+      "name": "Duck",
+      "system": "eternity",
+      "wiki": "Animals"
+    },
+    {
+      "confidence": "documented",
+      "cost": "4 AP",
+      "effects": [
+        {
+          "text": "EP Gain × (1+(Σ^0.5))"
+        }
+      ],
+      "id": "animal-cow",
+      "kind": "upgrade",
+      "name": "Cow",
+      "system": "eternity",
+      "wiki": "Animals"
+    },
+    {
+      "confidence": "documented",
+      "cost": "16 AP",
+      "effects": [
+        {
+          "text": "Stardust Exponent + 0.1"
+        }
+      ],
+      "id": "animal-turtle",
+      "kind": "upgrade",
+      "name": "Turtle",
+      "system": "eternity",
+      "wiki": "Animals"
+    },
+    {
+      "confidence": "documented",
+      "cost": "20 AP",
+      "effects": [
+        {
+          "text": "IP Gain × 1M (1e6)"
+        }
+      ],
+      "id": "animal-hippo",
+      "kind": "upgrade",
+      "name": "Hippo",
+      "system": "eternity",
+      "wiki": "Animals"
+    },
+    {
+      "confidence": "documented",
+      "cost": "24 AP",
+      "effects": [
+        {
+          "text": "Generator Exponent × 1.01"
+        }
+      ],
+      "id": "animal-bear",
+      "kind": "upgrade",
+      "name": "Bear",
+      "system": "eternity",
+      "wiki": "Animals"
+    },
+    {
+      "confidence": "documented",
+      "cost": "28 AP",
+      "effects": [
+        {
+          "text": "Score Exponent × 1.001"
+        }
+      ],
+      "id": "animal-yak",
+      "kind": "upgrade",
+      "name": "Yak",
+      "system": "eternity",
+      "wiki": "Animals"
+    },
+    {
+      "confidence": "documented",
+      "cost": "32 AP",
+      "effects": [
+        {
+          "text": "Star Base × 1.01"
+        }
+      ],
+      "id": "animal-walrus",
+      "kind": "upgrade",
+      "name": "Walrus",
+      "system": "eternity",
+      "wiki": "Animals"
+    },
+    {
+      "confidence": "documented",
+      "cost": "2 AP",
+      "effects": [
+        {
+          "text": "IP gain × 100"
+        }
+      ],
+      "id": "animal-ferret",
+      "kind": "upgrade",
+      "name": "Ferret",
+      "system": "eternity",
+      "wiki": "Animals"
+    },
+    {
+      "confidence": "documented",
+      "cost": "3 AP",
+      "effects": [
+        {
+          "text": "Lap Speed × 5"
+        }
+      ],
+      "id": "animal-chinchilla",
+      "kind": "upgrade",
+      "name": "Chinchilla",
+      "system": "eternity",
+      "wiki": "Animals"
+    },
+    {
+      "confidence": "documented",
+      "cost": "4 AP",
+      "effects": [
+        {
+          "text": "Generator Exponent × 1.1"
+        }
+      ],
+      "id": "animal-goose",
+      "kind": "upgrade",
+      "name": "Goose",
+      "system": "eternity",
+      "wiki": "Animals"
+    },
+    {
+      "confidence": "documented",
+      "cost": "4 AP",
+      "effects": [
+        {
+          "text": "Star Base × 1.3"
+        }
+      ],
+      "id": "animal-horse",
+      "kind": "upgrade",
+      "name": "Horse",
+      "system": "eternity",
+      "wiki": "Animals"
+    },
+    {
+      "confidence": "documented",
+      "cost": "18 AP",
+      "effects": [
+        {
+          "text": "Star Base × 1.5"
+        }
+      ],
+      "id": "animal-chameleon",
+      "kind": "upgrade",
+      "name": "Chameleon",
+      "system": "eternity",
+      "wiki": "Animals"
+    },
+    {
+      "confidence": "documented",
+      "cost": "22 AP",
+      "effects": [
+        {
+          "text": "IP Gain × 1M (1e6)"
+        }
+      ],
+      "id": "animal-rhino",
+      "kind": "upgrade",
+      "name": "Rhino",
+      "system": "eternity",
+      "wiki": "Animals"
+    },
+    {
+      "confidence": "documented",
+      "cost": "26 AP",
+      "effects": [
+        {
+          "text": "Generator Exponent x 1.01"
+        }
+      ],
+      "id": "animal-raccoon",
+      "kind": "upgrade",
+      "name": "Raccoon",
+      "system": "eternity",
+      "wiki": "Animals"
+    },
+    {
+      "confidence": "documented",
+      "cost": "30 AP",
+      "effects": [
+        {
+          "text": "Score Exponent x 1.001"
+        }
+      ],
+      "id": "animal-bobcat",
+      "kind": "upgrade",
+      "name": "Bobcat",
+      "system": "eternity",
+      "wiki": "Animals"
+    },
+    {
+      "confidence": "documented",
+      "cost": "34 AP",
+      "effects": [
+        {
+          "text": "Star Base x 1.01"
+        }
+      ],
+      "id": "animal-dolphin",
+      "kind": "upgrade",
+      "name": "Dolphin",
+      "system": "eternity",
+      "wiki": "Animals"
+    },
+    {
+      "confidence": "documented",
+      "cost": "12 AP",
+      "effects": [
+        {
+          "text": "Score Exponent × 1.01"
+        }
+      ],
+      "id": "animal-gopher",
+      "kind": "upgrade",
+      "name": "Gopher",
+      "system": "eternity",
+      "wiki": "Animals"
+    },
+    {
+      "confidence": "documented",
+      "cost": "12 AP",
+      "effects": [
+        {
+          "text": "Generator Exponent × 1.05"
+        }
+      ],
+      "id": "animal-squirrel",
+      "kind": "upgrade",
+      "name": "Squirrel",
+      "system": "eternity",
+      "wiki": "Animals"
+    },
+    {
+      "confidence": "documented",
+      "cost": "12 AP",
+      "effects": [
+        {
+          "text": "Ascension Power × 2"
+        }
+      ],
+      "id": "animal-pheasant",
+      "kind": "upgrade",
+      "name": "Pheasant",
+      "system": "eternity",
+      "wiki": "Animals"
+    },
+    {
+      "confidence": "documented",
+      "cost": "12 AP",
+      "effects": [
+        {
+          "text": "Stardust Exponent + 0.05"
+        }
+      ],
+      "id": "animal-bull",
+      "kind": "upgrade",
+      "name": "Bull",
+      "system": "eternity",
+      "wiki": "Animals"
+    },
+    {
+      "confidence": "documented",
+      "cost": "20 AP",
+      "effects": [
+        {
+          "text": "Stardust Exponent × 1.05"
+        }
+      ],
+      "id": "animal-sea-turtle",
+      "kind": "upgrade",
+      "name": "Sea Turtle",
+      "system": "eternity",
+      "wiki": "Animals"
+    },
+    {
+      "confidence": "documented",
+      "cost": "24 AP",
+      "effects": [
+        {
+          "text": "IP Gain × 1M (1e6)"
+        }
+      ],
+      "id": "animal-elephant",
+      "kind": "upgrade",
+      "name": "Elephant",
+      "system": "eternity",
+      "wiki": "Animals"
+    },
+    {
+      "confidence": "documented",
+      "cost": "28 AP",
+      "effects": [
+        {
+          "text": "Generator Exponent x 1.01"
+        }
+      ],
+      "id": "animal-badger",
+      "kind": "upgrade",
+      "name": "Badger",
+      "system": "eternity",
+      "wiki": "Animals"
+    },
+    {
+      "confidence": "documented",
+      "cost": "32 AP",
+      "effects": [
+        {
+          "text": "Score Exponent x 1.001"
+        }
+      ],
+      "id": "animal-tiger",
+      "kind": "upgrade",
+      "name": "Tiger",
+      "system": "eternity",
+      "wiki": "Animals"
+    },
+    {
+      "confidence": "documented",
+      "cost": "36 AP",
+      "effects": [
+        {
+          "text": "Star Base x 1.01"
+        }
+      ],
+      "id": "animal-orca",
+      "kind": "upgrade",
+      "name": "Orca",
+      "system": "eternity",
+      "wiki": "Animals"
+    },
+    {
+      "confidence": "documented",
+      "cost": "14 AP",
+      "effects": [
+        {
+          "text": "Star Base × 1.3"
+        }
+      ],
+      "id": "animal-rabbit",
+      "kind": "upgrade",
+      "name": "Rabbit",
+      "system": "eternity",
+      "wiki": "Animals"
+    },
+    {
+      "confidence": "documented",
+      "cost": "14 AP",
+      "effects": [
+        {
+          "text": "Score Exponent x 1.005"
+        }
+      ],
+      "id": "animal-rat",
+      "kind": "upgrade",
+      "name": "Rat",
+      "system": "eternity",
+      "wiki": "Animals"
+    },
+    {
+      "confidence": "documented",
+      "cost": "14 AP",
+      "effects": [
+        {
+          "text": "Stardust Exponent × 1.03"
+        }
+      ],
+      "id": "animal-peacock",
+      "kind": "upgrade",
+      "name": "Peacock",
+      "system": "eternity",
+      "wiki": "Animals"
+    },
+    {
+      "confidence": "documented",
+      "cost": "14 AP",
+      "effects": [
+        {
+          "text": "Stardust Exponent × 1.02"
+        }
+      ],
+      "id": "animal-llama",
+      "kind": "upgrade",
+      "name": "Llama",
+      "system": "eternity",
+      "wiki": "Animals"
+    },
+    {
+      "confidence": "documented",
+      "cost": "22 AP",
+      "effects": [
+        {
+          "text": "Stardust Exponent × 1.01"
+        }
+      ],
+      "id": "animal-lizard",
+      "kind": "upgrade",
+      "name": "Lizard",
+      "system": "eternity",
+      "wiki": "Animals"
+    },
+    {
+      "confidence": "documented",
+      "cost": "26 AP",
+      "effects": [
+        {
+          "text": "IP Gain × 1M (1e6)"
+        }
+      ],
+      "id": "animal-anteater",
+      "kind": "upgrade",
+      "name": "Anteater",
+      "system": "eternity",
+      "wiki": "Animals"
+    },
+    {
+      "confidence": "documented",
+      "cost": "30 AP",
+      "effects": [
+        {
+          "text": "Generator Exponent x 1.01"
+        }
+      ],
+      "id": "animal-panda",
+      "kind": "upgrade",
+      "name": "Panda",
+      "system": "eternity",
+      "wiki": "Animals"
+    },
+    {
+      "confidence": "documented",
+      "cost": "34 AP",
+      "effects": [
+        {
+          "text": "Score Exponent x 1.001"
+        }
+      ],
+      "id": "animal-hyena",
+      "kind": "upgrade",
+      "name": "Hyena",
+      "system": "eternity",
+      "wiki": "Animals"
+    },
+    {
+      "confidence": "documented",
+      "cost": "38 AP",
+      "effects": [
+        {
+          "text": "Star Base x 1.01"
+        }
+      ],
+      "id": "animal-bat",
+      "kind": "upgrade",
+      "name": "Bat",
+      "system": "eternity",
+      "wiki": "Animals"
+    },
+    {
+      "confidence": "documented",
+      "cost": "16 AP",
+      "effects": [
+        {
+          "text": "Score Exponent + 0.01"
+        }
+      ],
+      "id": "animal-hedgehog",
+      "kind": "upgrade",
+      "name": "Hedgehog",
+      "system": "eternity",
+      "wiki": "Animals"
+    },
+    {
+      "confidence": "documented",
+      "cost": "16 AP",
+      "effects": [
+        {
+          "text": "Score Exponent + 0.01"
+        }
+      ],
+      "id": "animal-mole",
+      "kind": "upgrade",
+      "name": "Mole",
+      "system": "eternity",
+      "wiki": "Animals"
+    },
+    {
+      "confidence": "documented",
+      "cost": "16 AP",
+      "effects": [
+        {
+          "text": "Score Exponent + 0.01"
+        }
+      ],
+      "id": "animal-owl",
+      "kind": "upgrade",
+      "name": "Owl",
+      "system": "eternity",
+      "wiki": "Animals"
+    },
+    {
+      "confidence": "documented",
+      "cost": "16 AP",
+      "effects": [
+        {
+          "text": "Score Exponent + 0.01"
+        }
+      ],
+      "id": "animal-alpaca",
+      "kind": "upgrade",
+      "name": "Alpaca",
+      "system": "eternity",
+      "wiki": "Animals"
+    },
+    {
+      "confidence": "documented",
+      "cost": "24 AP",
+      "effects": [
+        {
+          "text": "Score Exponent + 0.01"
+        }
+      ],
+      "id": "animal-crocodile",
+      "kind": "upgrade",
+      "name": "Crocodile",
+      "system": "eternity",
+      "wiki": "Animals"
+    },
+    {
+      "confidence": "documented",
+      "cost": "28 AP",
+      "effects": [
+        {
+          "text": "IP Gain × 1M (1e6)"
+        }
+      ],
+      "id": "animal-koala",
+      "kind": "upgrade",
+      "name": "Koala",
+      "system": "eternity",
+      "wiki": "Animals"
+    },
+    {
+      "confidence": "documented",
+      "cost": "32 AP",
+      "effects": [
+        {
+          "text": "Generator Exponent x 1.01"
+        }
+      ],
+      "id": "animal-wombat",
+      "kind": "upgrade",
+      "name": "Wombat",
+      "system": "eternity",
+      "wiki": "Animals"
+    },
+    {
+      "confidence": "documented",
+      "cost": "36 AP",
+      "effects": [
+        {
+          "text": "Score Exponent x 1.001"
+        }
+      ],
+      "id": "animal-monkey",
+      "kind": "upgrade",
+      "name": "Monkey",
+      "system": "eternity",
+      "wiki": "Animals"
+    },
+    {
+      "confidence": "documented",
+      "cost": "40 AP",
+      "effects": [
+        {
+          "text": "Stardust Base x 1.01"
+        }
+      ],
+      "id": "animal-eagle",
+      "kind": "upgrade",
+      "name": "Eagle",
+      "system": "eternity",
+      "wiki": "Animals"
+    },
+    {
+      "confidence": "documented",
+      "cost": "18 AP",
+      "effects": [
+        {
+          "text": "Stardust Exponent × 1.01"
+        }
+      ],
+      "id": "animal-meta-cat",
+      "kind": "upgrade",
+      "name": "Meta-Cat",
+      "system": "eternity",
+      "wiki": "Animals"
+    },
+    {
+      "confidence": "documented",
+      "cost": "18 AP",
+      "effects": [
+        {
+          "text": "Stardust Exponent × 1.01"
+        }
+      ],
+      "id": "animal-jackalope",
+      "kind": "upgrade",
+      "name": "Jackalope",
+      "system": "eternity",
+      "wiki": "Animals"
+    },
+    {
+      "confidence": "documented",
+      "cost": "18 AP",
+      "effects": [
+        {
+          "text": "Stardust Exponent × 1.01"
+        }
+      ],
+      "id": "animal-phoenix",
+      "kind": "upgrade",
+      "name": "Phoenix",
+      "system": "eternity",
+      "wiki": "Animals"
+    },
+    {
+      "confidence": "documented",
+      "cost": "18 AP",
+      "effects": [
+        {
+          "text": "Stardust Exponent × 1.01"
+        }
+      ],
+      "id": "animal-unicorn",
+      "kind": "upgrade",
+      "name": "Unicorn",
+      "system": "eternity",
+      "wiki": "Animals"
+    },
+    {
+      "confidence": "documented",
+      "cost": "26 AP",
+      "effects": [
+        {
+          "text": "Stardust Exponent × 1.01"
+        }
+      ],
+      "id": "animal-hydra",
+      "kind": "upgrade",
+      "name": "Hydra",
+      "system": "eternity",
+      "wiki": "Animals"
+    },
+    {
+      "confidence": "documented",
+      "cost": "30 AP",
+      "effects": [
+        {
+          "text": "IP Gain × 1M (1e6)"
+        }
+      ],
+      "id": "animal-pegasus",
+      "kind": "upgrade",
+      "name": "Pegasus",
+      "system": "eternity",
+      "wiki": "Animals"
+    },
+    {
+      "confidence": "documented",
+      "cost": "34 AP",
+      "effects": [
+        {
+          "text": "Generator Exponent x1.01"
+        }
+      ],
+      "id": "animal-hippogriff",
+      "kind": "upgrade",
+      "name": "Hippogriff",
+      "system": "eternity",
+      "wiki": "Animals"
+    },
+    {
+      "confidence": "documented",
+      "cost": "38 AP",
+      "effects": [
+        {
+          "text": "Score Exponent x1.001"
+        }
+      ],
+      "id": "animal-dragon",
+      "kind": "upgrade",
+      "name": "Dragon",
+      "system": "eternity",
+      "wiki": "Animals"
+    },
+    {
+      "confidence": "documented",
+      "cost": "100 AP",
+      "effects": [
+        {
+          "text": "Score Exponent + 0.1"
+        }
+      ],
+      "id": "animal-nu",
+      "kind": "upgrade",
+      "name": "Nu",
+      "system": "eternity",
+      "wiki": "Animals"
+    },
+    {
+      "aliases": [
+        "Lab"
+      ],
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "Generates Laboratory Points",
+          "per_level": "LP/s is (Base x Mult) ^ Power"
+        },
+        {
+          "text": "Filling the flask raises the Lab level and awards one Research Point"
+        }
+      ],
+      "id": "laboratory",
+      "kind": "group",
+      "name": "Laboratory",
+      "system": "eternity",
+      "wiki": "Laboratory"
+    },
+    {
+      "aliases": [
+        "LP"
+      ],
+      "confidence": "documented",
+      "id": "laboratory-points",
+      "kind": "currency",
+      "name": "Laboratory Points",
+      "system": "eternity",
+      "wiki": "Laboratory"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "Raises the Laboratory Point base",
+          "per_level": "+0.20 per level"
+        }
+      ],
+      "id": "lab-base",
+      "kind": "upgrade",
+      "name": "Lab Base",
+      "system": "eternity",
+      "wiki": "Laboratory"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "Multiplies Laboratory Point gain",
+          "per_level": "+0.50 per level"
+        }
+      ],
+      "id": "lab-mult",
+      "kind": "upgrade",
+      "name": "Lab Mult",
+      "system": "eternity",
+      "wiki": "Laboratory"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "Raises the Laboratory Point formula to a power",
+          "per_level": "+0.01 per level"
+        }
+      ],
+      "id": "lab-power",
+      "kind": "upgrade",
+      "name": "Lab Power",
+      "system": "eternity",
+      "wiki": "Laboratory"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "IP Gain",
+          "per_level": "x4 per level"
+        }
+      ],
+      "id": "rp-upgrade-1",
+      "kind": "upgrade",
+      "name": "RP Upgrade 1 (IP Gain)",
+      "system": "eternity",
+      "wiki": "Laboratory"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "Ascend Power",
+          "per_level": "*(1 + n*0.25) where n is level"
+        }
+      ],
+      "id": "rp-upgrade-2",
+      "kind": "upgrade",
+      "name": "RP Upgrade 2 (Ascend Power)",
+      "system": "eternity",
+      "wiki": "Laboratory"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "Star Base Mult",
+          "per_level": "*(1 + n*0.15)"
+        }
+      ],
+      "id": "rp-upgrade-3",
+      "kind": "upgrade",
+      "name": "RP Upgrade 3 (Star Base Mult)",
+      "system": "eternity",
+      "wiki": "Laboratory"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "EP Gain",
+          "per_level": "*(1 + n*0.5)"
+        }
+      ],
+      "id": "rp-upgrade-4",
+      "kind": "upgrade",
+      "name": "RP Upgrade 4 (EP Gain)",
+      "system": "eternity",
+      "wiki": "Laboratory"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "Gen. Power Exponent",
+          "per_level": "+0.02 per level"
+        }
+      ],
+      "id": "rp-upgrade-5",
+      "kind": "upgrade",
+      "name": "RP Upgrade 5 (Gen. Power Exponent)",
+      "system": "eternity",
+      "wiki": "Laboratory"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "Common Exponent",
+          "per_level": "+0.01 per level, softcapped at level 500"
+        }
+      ],
+      "id": "rp-upgrade-6",
+      "kind": "upgrade",
+      "name": "RP Upgrade 6 (Common Exponent)",
+      "system": "eternity",
+      "wiki": "Laboratory"
+    },
+    {
+      "aliases": [
+        "EC",
+        "ECs"
+      ],
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "Ten challenges, each completable at six difficulties",
+          "per_level": "Completing one difficulty awards one free AP"
+        }
+      ],
+      "id": "eternity-challenges",
+      "kind": "group",
+      "name": "Eternity Challenges",
+      "system": "eternity",
+      "wiki": "Eternity_Challenges"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "Handicap: Lap Speed"
+        },
+        {
+          "text": "Reward: Lap Speed",
+          "per_level": "x2 at difficulty 1, x500 at difficulty 6"
+        }
+      ],
+      "id": "eternity-challenge-1",
+      "kind": "upgrade",
+      "name": "Eternity Challenge 1",
+      "system": "eternity",
+      "wiki": "Eternity_Challenges"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "Handicap: Common Exponent"
+        },
+        {
+          "text": "Reward: Common Exponent",
+          "per_level": "+0.03 at difficulty 1, +0.30 at difficulty 6"
+        }
+      ],
+      "id": "eternity-challenge-2",
+      "kind": "upgrade",
+      "name": "Eternity Challenge 2",
+      "system": "eternity",
+      "wiki": "Eternity_Challenges"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "Handicap: Stars"
+        },
+        {
+          "text": "Reward: Star Base",
+          "per_level": "+1 at difficulty 1, +50 at difficulty 6"
+        }
+      ],
+      "id": "eternity-challenge-3",
+      "kind": "upgrade",
+      "name": "Eternity Challenge 3",
+      "system": "eternity",
+      "wiki": "Eternity_Challenges"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "Handicap: Generator Exponent"
+        },
+        {
+          "text": "Reward: Generator Exponent",
+          "per_level": "x1.03 at difficulty 1, x1.25 at difficulty 6"
+        }
+      ],
+      "id": "eternity-challenge-4",
+      "kind": "upgrade",
+      "name": "Eternity Challenge 4",
+      "system": "eternity",
+      "wiki": "Eternity_Challenges"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "Handicap: Ascension Power"
+        },
+        {
+          "text": "Reward: Ascension Power",
+          "per_level": "x1.5 at difficulty 1, x75 at difficulty 6"
+        }
+      ],
+      "id": "eternity-challenge-5",
+      "kind": "upgrade",
+      "name": "Eternity Challenge 5",
+      "system": "eternity",
+      "wiki": "Eternity_Challenges"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "Handicap: Promotion and Prestige Bonus"
+        },
+        {
+          "text": "Reward: Prestige Bonus",
+          "per_level": "x1.05 at difficulty 1, x1.4 at difficulty 6"
+        }
+      ],
+      "id": "eternity-challenge-6",
+      "kind": "upgrade",
+      "name": "Eternity Challenge 6",
+      "system": "eternity",
+      "wiki": "Eternity_Challenges"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "Handicap: RP upgrades"
+        },
+        {
+          "text": "Reward: Free levels to all Lab upgrades",
+          "per_level": "+5 at difficulty 1, +100 at difficulty 6"
+        }
+      ],
+      "id": "eternity-challenge-7",
+      "kind": "upgrade",
+      "name": "Eternity Challenge 7",
+      "system": "eternity",
+      "wiki": "Eternity_Challenges"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "Handicap: IP gain"
+        },
+        {
+          "text": "Reward: IP gain",
+          "per_level": "^1.02 at difficulty 1, ^1.30 at difficulty 6"
+        }
+      ],
+      "id": "eternity-challenge-8",
+      "kind": "upgrade",
+      "name": "Eternity Challenge 8",
+      "system": "eternity",
+      "wiki": "Eternity_Challenges"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "Handicap: Generators"
+        },
+        {
+          "text": "Reward: Generator Exponent",
+          "per_level": "x1.1 at difficulty 1, x1.7 at difficulty 6"
+        }
+      ],
+      "id": "eternity-challenge-9",
+      "kind": "upgrade",
+      "name": "Eternity Challenge 9",
+      "system": "eternity",
+      "wiki": "Eternity_Challenges"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "Handicap: Dilation debuffs"
+        },
+        {
+          "text": "Reward: DP gain",
+          "per_level": "x10 at difficulty 1, x1e7 at difficulty 6"
+        }
+      ],
+      "id": "eternity-challenge-10",
+      "kind": "upgrade",
+      "name": "Eternity Challenge 10",
+      "system": "eternity",
+      "wiki": "Eternity_Challenges"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "Unlocks mechanics as Eternity Challenge difficulties are completed"
+        }
+      ],
+      "id": "eternity-challenge-milestones",
+      "kind": "group",
+      "name": "Eternity Challenge Milestones",
+      "system": "eternity",
+      "wiki": "Eternity_Milestones"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "Keep your Infinity Challenges on Eternity, including fastest completion times"
+        }
+      ],
+      "id": "eternity-challenge-milestone-3",
+      "kind": "upgrade",
+      "name": "Eternity Challenge Milestone (3 Completions)",
+      "system": "eternity",
+      "wiki": "Eternity_Milestones"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "Prestiging now resets nothing"
+        }
+      ],
+      "id": "eternity-challenge-milestone-5",
+      "kind": "upgrade",
+      "name": "Eternity Challenge Milestone (5 Completions)",
+      "system": "eternity",
+      "wiki": "Eternity_Milestones"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "Unlocks Supernova"
+        }
+      ],
+      "id": "eternity-challenge-milestone-8",
+      "kind": "upgrade",
+      "name": "Eternity Challenge Milestone (8 Completions)",
+      "system": "eternity",
+      "wiki": "Eternity_Milestones"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "Keep fastest Infinity time on Eternity"
+        }
+      ],
+      "id": "eternity-challenge-milestone-10",
+      "kind": "upgrade",
+      "name": "Eternity Challenge Milestone (10 Completions)",
+      "system": "eternity",
+      "wiki": "Eternity_Milestones"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "Every 4 Supernovae gives 1 free level to all RP upgrades"
+        }
+      ],
+      "id": "eternity-challenge-milestone-30",
+      "kind": "upgrade",
+      "name": "Eternity Challenge Milestone (30 Completions)",
+      "system": "eternity",
+      "wiki": "Eternity_Milestones"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "Every 4 Supernovae gives another free level to all RP upgrades"
+        }
+      ],
+      "id": "eternity-challenge-milestone-32",
+      "kind": "upgrade",
+      "name": "Eternity Challenge Milestone (32 Completions)",
+      "system": "eternity",
+      "wiki": "Eternity_Milestones"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "Every 2 Supernovae gives another free level on all RP upgrades"
+        }
+      ],
+      "id": "eternity-challenge-milestone-35",
+      "kind": "upgrade",
+      "name": "Eternity Challenge Milestone (35 Completions)",
+      "system": "eternity",
+      "wiki": "Eternity_Milestones"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "Unlocks Dilation Tree"
+        }
+      ],
+      "id": "eternity-challenge-milestone-50",
+      "kind": "upgrade",
+      "name": "Eternity Challenge Milestone (50 Completions)",
+      "system": "eternity",
+      "wiki": "Eternity_Milestones"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "2x more Magnet Chance"
+        }
+      ],
+      "id": "eternity-challenge-milestone-60",
+      "kind": "upgrade",
+      "name": "Eternity Challenge Milestone (60 Completions)",
+      "system": "eternity",
+      "wiki": "Eternity_Milestones"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "Eternity reward Mult",
+          "per_level": "+0.50x per Supernova"
+        },
+        {
+          "text": "Star Base Mult",
+          "per_level": "+0.40x per Supernova"
+        },
+        {
+          "text": "Lab Base Mult",
+          "per_level": "x2 per Supernova"
+        },
+        {
+          "text": "EP gain Mult",
+          "per_level": "x3 per Supernova"
+        },
+        {
+          "text": "Free AP",
+          "per_level": "+2 per Supernova"
+        }
+      ],
+      "id": "supernova",
+      "kind": "group",
+      "name": "Supernova",
+      "system": "eternity",
+      "wiki": "Supernova"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "Entering Dilation starts a new Eternity with the Dilation penalties applied"
+        },
+        {
+          "text": "Exiting Dilation sets Max Score to the highest Score reached inside it"
+        }
+      ],
+      "id": "dilation",
+      "kind": "group",
+      "name": "Dilation",
+      "system": "eternity",
+      "wiki": "Dilation"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "Common Exponent / 25"
+        },
+        {
+          "text": "Gen Exp / 1,000"
+        },
+        {
+          "text": "Star Exp / 100"
+        },
+        {
+          "text": "Ascension Power ^0.10"
+        },
+        {
+          "text": "(Laps Speed ^0.10) / 10"
+        },
+        {
+          "text": "IP gain ^0.01"
+        }
+      ],
+      "id": "dilation-penalties",
+      "kind": "stat",
+      "name": "Dilation Penalties",
+      "system": "eternity",
+      "wiki": "Dilation"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "Dilation Points per second, based on Max Score"
+        }
+      ],
+      "id": "dp-income",
+      "kind": "stat",
+      "name": "DP Income",
+      "system": "eternity",
+      "wiki": "Dilation"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "Thirteen upgrades bought with DTP",
+          "per_level": "Each holds up to 5 levels; 65 DTP maxes the tree"
+        }
+      ],
+      "id": "dilation-tree",
+      "kind": "group",
+      "name": "Dilation Tree",
+      "system": "eternity",
+      "wiki": "Dilation_Tree"
     }
   ],
   "edges": [
@@ -8022,6 +10141,15 @@
       "rel": "boosts",
       "source": "wiki:Relics",
       "to": "dilation-points"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "relic-11",
+      "note": "Supernova Bonuses (are) Powered to X",
+      "op": "add",
+      "rel": "boosts",
+      "source": "wiki:Relics",
+      "to": "supernova"
     },
     {
       "confidence": "provisional",
@@ -8985,6 +11113,14 @@
       "rel": "requires",
       "source": "wiki:Minerals/Refine_Tree",
       "to": "refine-node-63"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "refine-node-63",
+      "note": "Keep Dilation Tree and DTP on Unity Reset",
+      "rel": "boosts",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "dilation-tree"
     },
     {
       "confidence": "uncertain",
@@ -10609,6 +12745,14 @@
     },
     {
       "confidence": "uncertain",
+      "from": "fire-node-1",
+      "note": "Increase power for factor 1 for fire by 0.25 Increases the power on the score multiplier for fire",
+      "rel": "boosts",
+      "source": "wiki:Elements",
+      "to": "score"
+    },
+    {
+      "confidence": "uncertain",
       "from": "fire-node-2",
       "note": "Increase Ascension Power from VP based on you current fire",
       "rel": "boosts",
@@ -10702,6 +12846,14 @@
       "rel": "boosts",
       "source": "wiki:Elements",
       "to": "relic-37"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "wind-node-1",
+      "note": "Increase power for factor 1 for wind by 3 Increases power for Eternities multiplier for Wind",
+      "rel": "boosts",
+      "source": "wiki:Elements",
+      "to": "eternities"
     },
     {
       "confidence": "provisional",
@@ -10879,6 +13031,20 @@
     },
     {
       "confidence": "uncertain",
+      "from": "zodiac-gemini",
+      "rel": "boosts",
+      "source": "wiki:Zodiacs",
+      "to": "supernova"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "zodiac-gemini",
+      "rel": "boosts",
+      "source": "wiki:Zodiacs",
+      "to": "laboratory"
+    },
+    {
+      "confidence": "uncertain",
       "from": "zodiac-cancer",
       "rel": "boosts",
       "source": "wiki:Zodiacs",
@@ -10935,6 +13101,20 @@
     },
     {
       "confidence": "uncertain",
+      "from": "zodiac-libra",
+      "rel": "boosts",
+      "source": "wiki:Zodiacs",
+      "to": "supernova"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "zodiac-libra",
+      "rel": "boosts",
+      "source": "wiki:Zodiacs",
+      "to": "laboratory"
+    },
+    {
+      "confidence": "uncertain",
       "from": "zodiac-scorpio",
       "rel": "boosts",
       "source": "wiki:Zodiacs",
@@ -10953,6 +13133,13 @@
       "rel": "boosts",
       "source": "wiki:Zodiacs",
       "to": "lap-speed"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "zodiac-sagittarius",
+      "rel": "boosts",
+      "source": "wiki:Zodiacs",
+      "to": "slowdown"
     },
     {
       "confidence": "uncertain",
@@ -10980,7 +13167,7 @@
       "from": "zodiac-capricorn",
       "rel": "boosts",
       "source": "wiki:Zodiacs",
-      "to": "stardust"
+      "to": "stardust-exponent"
     },
     {
       "confidence": "uncertain",
@@ -10988,6 +13175,20 @@
       "rel": "boosts",
       "source": "wiki:Zodiacs",
       "to": "dilation-points"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "zodiac-aquarius",
+      "rel": "boosts",
+      "source": "wiki:Zodiacs",
+      "to": "laboratory"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "zodiac-aquarius",
+      "rel": "boosts",
+      "source": "wiki:Zodiacs",
+      "to": "supernova"
     },
     {
       "confidence": "uncertain",
@@ -11026,10 +13227,24 @@
     },
     {
       "confidence": "uncertain",
+      "from": "trial-easy-trial-5",
+      "rel": "boosts",
+      "source": "wiki:Trials",
+      "to": "max-score"
+    },
+    {
+      "confidence": "uncertain",
       "from": "trial-medium-trial-1",
       "rel": "boosts",
       "source": "wiki:Trials",
       "to": "luck"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "trial-medium-trial-3",
+      "rel": "boosts",
+      "source": "wiki:Trials",
+      "to": "supernova"
     },
     {
       "confidence": "uncertain",
@@ -11054,6 +13269,13 @@
     },
     {
       "confidence": "uncertain",
+      "from": "trial-hard-trial-2",
+      "rel": "boosts",
+      "source": "wiki:Trials",
+      "to": "laboratory"
+    },
+    {
+      "confidence": "uncertain",
       "from": "trial-hard-trial-4",
       "rel": "boosts",
       "source": "wiki:Trials",
@@ -11068,6 +13290,20 @@
     },
     {
       "confidence": "uncertain",
+      "from": "trial-insane-trial-1",
+      "rel": "boosts",
+      "source": "wiki:Trials",
+      "to": "eternity-challenges"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "trial-insane-trial-2",
+      "rel": "boosts",
+      "source": "wiki:Trials",
+      "to": "eternity-challenges"
+    },
+    {
+      "confidence": "uncertain",
       "from": "trial-insane-trial-3",
       "rel": "boosts",
       "source": "wiki:Trials",
@@ -11079,6 +13315,27 @@
       "rel": "boosts",
       "source": "wiki:Trials",
       "to": "eternity-points"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "trial-insane-trial-4",
+      "rel": "boosts",
+      "source": "wiki:Trials",
+      "to": "eternity-challenges"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "trial-insane-trial-5",
+      "rel": "boosts",
+      "source": "wiki:Trials",
+      "to": "dilation"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "trial-insane-trial-5",
+      "rel": "boosts",
+      "source": "wiki:Trials",
+      "to": "score"
     },
     {
       "confidence": "uncertain",
@@ -11274,7 +13531,42 @@
       "from": "dilation-node-top-2",
       "rel": "boosts",
       "source": "wiki:Dilation_Tree",
+      "to": "eternities"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "dilation-node-top-2",
+      "rel": "boosts",
+      "source": "wiki:Dilation_Tree",
       "to": "dilation-points"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "dilation-node-top-3",
+      "rel": "boosts",
+      "source": "wiki:Dilation_Tree",
+      "to": "supernova"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "dilation-node-top-3",
+      "rel": "boosts",
+      "source": "wiki:Dilation_Tree",
+      "to": "score-exponent"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "dilation-node-middle-2",
+      "rel": "boosts",
+      "source": "wiki:Dilation_Tree",
+      "to": "eternities"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "dilation-node-middle-3",
+      "rel": "boosts",
+      "source": "wiki:Dilation_Tree",
+      "to": "supernova"
     },
     {
       "confidence": "uncertain",
@@ -11306,10 +13598,17 @@
     },
     {
       "confidence": "uncertain",
+      "from": "dilation-upgrade-1",
+      "rel": "boosts",
+      "source": "wiki:Eternity",
+      "to": "dilation-penalties"
+    },
+    {
+      "confidence": "uncertain",
       "from": "dilation-upgrade-2",
       "rel": "boosts",
       "source": "wiki:Eternity",
-      "to": "dilation-points"
+      "to": "dp-income"
     },
     {
       "confidence": "uncertain",
@@ -11327,6 +13626,13 @@
     },
     {
       "confidence": "uncertain",
+      "from": "dilation-upgrade-5",
+      "rel": "boosts",
+      "source": "wiki:Eternity",
+      "to": "supernova"
+    },
+    {
+      "confidence": "uncertain",
       "from": "dilation-upgrade-6",
       "rel": "boosts",
       "source": "wiki:Eternity",
@@ -11338,6 +13644,13 @@
       "rel": "boosts",
       "source": "wiki:Eternity",
       "to": "eternity-points"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "dilation-upgrade-9",
+      "rel": "boosts",
+      "source": "wiki:Eternity",
+      "to": "lab-power"
     },
     {
       "confidence": "uncertain",
@@ -11994,6 +14307,1562 @@
       "rel": "unlocks",
       "source": "wiki:Infinity",
       "to": "infinity-challenge-9"
+    },
+    {
+      "confidence": "documented",
+      "from": "eternities",
+      "note": "Reached at 1 Eternities",
+      "rel": "unlocks",
+      "source": "wiki:Eternity_Milestones",
+      "to": "eternity-milestone-1"
+    },
+    {
+      "confidence": "documented",
+      "from": "eternities",
+      "note": "Reached at 2 Eternities",
+      "rel": "unlocks",
+      "source": "wiki:Eternity_Milestones",
+      "to": "eternity-milestone-2"
+    },
+    {
+      "confidence": "documented",
+      "from": "eternities",
+      "note": "Reached at 3 Eternities",
+      "rel": "unlocks",
+      "source": "wiki:Eternity_Milestones",
+      "to": "eternity-milestone-3"
+    },
+    {
+      "confidence": "documented",
+      "from": "eternities",
+      "note": "Reached at 5 Eternities",
+      "rel": "unlocks",
+      "source": "wiki:Eternity_Milestones",
+      "to": "eternity-milestone-5"
+    },
+    {
+      "confidence": "documented",
+      "from": "eternities",
+      "note": "Reached at 7 Eternities",
+      "rel": "unlocks",
+      "source": "wiki:Eternity_Milestones",
+      "to": "eternity-milestone-7"
+    },
+    {
+      "confidence": "documented",
+      "from": "eternities",
+      "note": "Reached at 8 Eternities",
+      "rel": "unlocks",
+      "source": "wiki:Eternity_Milestones",
+      "to": "eternity-milestone-8"
+    },
+    {
+      "confidence": "documented",
+      "from": "eternities",
+      "note": "Reached at 12 Eternities",
+      "rel": "unlocks",
+      "source": "wiki:Eternity_Milestones",
+      "to": "eternity-milestone-12"
+    },
+    {
+      "confidence": "documented",
+      "from": "eternities",
+      "note": "Reached at 14 Eternities",
+      "rel": "unlocks",
+      "source": "wiki:Eternity_Milestones",
+      "to": "eternity-milestone-14"
+    },
+    {
+      "confidence": "documented",
+      "from": "eternities",
+      "note": "Reached at 16 Eternities",
+      "rel": "unlocks",
+      "source": "wiki:Eternity_Milestones",
+      "to": "eternity-milestone-16"
+    },
+    {
+      "confidence": "documented",
+      "from": "eternities",
+      "note": "Reached at 32 Eternities",
+      "rel": "unlocks",
+      "source": "wiki:Eternity_Milestones",
+      "to": "eternity-milestone-32"
+    },
+    {
+      "confidence": "documented",
+      "from": "eternities",
+      "note": "Reached at 100 Eternities",
+      "rel": "unlocks",
+      "source": "wiki:Eternity_Milestones",
+      "to": "eternity-milestone-100"
+    },
+    {
+      "confidence": "documented",
+      "from": "eternity-milestone-1",
+      "rel": "unlocks",
+      "source": "wiki:Eternity_Milestones",
+      "to": "eternity-milestones"
+    },
+    {
+      "confidence": "documented",
+      "from": "eternity-milestone-3",
+      "rel": "unlocks",
+      "source": "wiki:Eternity_Milestones",
+      "to": "animals"
+    },
+    {
+      "confidence": "documented",
+      "from": "eternity-milestone-8",
+      "rel": "unlocks",
+      "source": "wiki:Eternity_Milestones",
+      "to": "eternity-challenges"
+    },
+    {
+      "confidence": "documented",
+      "from": "eternity-milestone-5",
+      "note": "Buying Revolutions no longer takes Score away",
+      "rel": "boosts",
+      "source": "wiki:Eternity_Milestones",
+      "to": "score"
+    },
+    {
+      "confidence": "documented",
+      "from": "eternity-milestone-32",
+      "note": "Breaks Eternity, removing the ~1.79e308 IP limit",
+      "rel": "boosts",
+      "source": "wiki:Eternity_Milestones",
+      "to": "infinity-points"
+    },
+    {
+      "confidence": "documented",
+      "from": "eternity-milestone-100",
+      "note": "x1.05 IP gain for each Eternity",
+      "op": "mult",
+      "rel": "boosts",
+      "source": "wiki:Eternity_Milestones",
+      "to": "infinity-points"
+    },
+    {
+      "confidence": "documented",
+      "from": "eternities",
+      "note": "The bonuses improve with each Eternity",
+      "rel": "boosts",
+      "source": "wiki:Eternity",
+      "to": "eternity-bonuses"
+    },
+    {
+      "confidence": "documented",
+      "from": "eternity-bonuses",
+      "rel": "boosts",
+      "source": "wiki:Eternity",
+      "to": "mult-gain"
+    },
+    {
+      "confidence": "documented",
+      "from": "eternity-bonuses",
+      "rel": "boosts",
+      "source": "wiki:Eternity",
+      "to": "lap-speed"
+    },
+    {
+      "confidence": "documented",
+      "from": "eternity-bonuses",
+      "rel": "boosts",
+      "source": "wiki:Eternity",
+      "to": "ascension-power"
+    },
+    {
+      "confidence": "documented",
+      "from": "eternity-bonuses",
+      "rel": "boosts",
+      "source": "wiki:Eternity",
+      "to": "infinities"
+    },
+    {
+      "confidence": "documented",
+      "from": "eternity-bonuses",
+      "rel": "boosts",
+      "source": "wiki:Eternity",
+      "to": "generator-power"
+    },
+    {
+      "confidence": "documented",
+      "from": "eternity-bonuses",
+      "rel": "boosts",
+      "source": "wiki:Eternity",
+      "to": "stardust"
+    },
+    {
+      "confidence": "documented",
+      "from": "eternity-points",
+      "note": "AP is bought with EP",
+      "rel": "boosts",
+      "source": "wiki:Animals",
+      "to": "animal-points"
+    },
+    {
+      "confidence": "documented",
+      "from": "infinity-points",
+      "note": "AP is bought with IP",
+      "rel": "boosts",
+      "source": "wiki:Animals",
+      "to": "animal-points"
+    },
+    {
+      "confidence": "documented",
+      "from": "score",
+      "note": "AP is bought with Score",
+      "rel": "boosts",
+      "source": "wiki:Animals",
+      "to": "animal-points"
+    },
+    {
+      "confidence": "documented",
+      "from": "animal-points",
+      "note": "Animals are bought with AP",
+      "rel": "boosts",
+      "source": "wiki:Animals",
+      "to": "animals"
+    },
+    {
+      "confidence": "documented",
+      "from": "animals",
+      "rel": "unlocks",
+      "source": "wiki:Animals",
+      "to": "animals-milestones"
+    },
+    {
+      "confidence": "documented",
+      "from": "animals",
+      "note": "Reached at 1 Animals owned",
+      "rel": "unlocks",
+      "source": "wiki:Eternity_Milestones",
+      "to": "animals-milestone-1"
+    },
+    {
+      "confidence": "documented",
+      "from": "animals",
+      "note": "Reached at 4 Animals owned",
+      "rel": "unlocks",
+      "source": "wiki:Eternity_Milestones",
+      "to": "animals-milestone-4"
+    },
+    {
+      "confidence": "documented",
+      "from": "animals",
+      "note": "Reached at 7 Animals owned",
+      "rel": "unlocks",
+      "source": "wiki:Eternity_Milestones",
+      "to": "animals-milestone-7"
+    },
+    {
+      "confidence": "documented",
+      "from": "animals",
+      "note": "Reached at 10 Animals owned",
+      "rel": "unlocks",
+      "source": "wiki:Eternity_Milestones",
+      "to": "animals-milestone-10"
+    },
+    {
+      "confidence": "documented",
+      "from": "animals",
+      "note": "Reached at 20 Animals owned",
+      "rel": "unlocks",
+      "source": "wiki:Eternity_Milestones",
+      "to": "animals-milestone-20"
+    },
+    {
+      "confidence": "documented",
+      "from": "animals",
+      "note": "Reached at 48 Animals owned",
+      "rel": "unlocks",
+      "source": "wiki:Eternity_Milestones",
+      "to": "animals-milestone-48"
+    },
+    {
+      "confidence": "documented",
+      "from": "animals",
+      "note": "Reached at 81 Animals owned",
+      "rel": "unlocks",
+      "source": "wiki:Eternity_Milestones",
+      "to": "animals-milestone-81"
+    },
+    {
+      "confidence": "documented",
+      "from": "animals-milestone-1",
+      "rel": "unlocks",
+      "source": "wiki:Eternity_Milestones",
+      "to": "slowdown"
+    },
+    {
+      "confidence": "documented",
+      "from": "animals-milestone-7",
+      "rel": "unlocks",
+      "source": "wiki:Eternity_Milestones",
+      "to": "laboratory"
+    },
+    {
+      "confidence": "documented",
+      "from": "animals-milestone-81",
+      "rel": "unlocks",
+      "source": "wiki:Eternity_Milestones",
+      "to": "dilation"
+    },
+    {
+      "confidence": "documented",
+      "from": "slowdown",
+      "note": "+1 Ascension to all colors",
+      "rel": "boosts",
+      "source": "wiki:Animals",
+      "to": "ascension-power"
+    },
+    {
+      "confidence": "documented",
+      "from": "slowdown",
+      "note": "Divides lap speed by 10",
+      "rel": "boosts",
+      "source": "wiki:Animals",
+      "to": "lap-speed"
+    },
+    {
+      "confidence": "documented",
+      "from": "animal-cat",
+      "note": "IP gain x Σ",
+      "rel": "boosts",
+      "source": "wiki:Animals",
+      "to": "infinity-points"
+    },
+    {
+      "confidence": "documented",
+      "from": "animal-mouse",
+      "note": "Score Exponent + 0.02",
+      "rel": "boosts",
+      "source": "wiki:Animals",
+      "to": "score-exponent"
+    },
+    {
+      "confidence": "documented",
+      "from": "animal-chicken",
+      "note": "IP gain × Completed EM",
+      "rel": "boosts",
+      "source": "wiki:Animals",
+      "to": "infinity-points"
+    },
+    {
+      "confidence": "documented",
+      "from": "animal-pig",
+      "note": "+1 Star Base",
+      "rel": "boosts",
+      "source": "wiki:Animals",
+      "to": "star-base"
+    },
+    {
+      "confidence": "documented",
+      "from": "animal-snake",
+      "note": "EP Gain × 2",
+      "rel": "boosts",
+      "source": "wiki:Animals",
+      "to": "eternity-points"
+    },
+    {
+      "confidence": "documented",
+      "from": "animal-zebra",
+      "note": "Score Exponent x 1.01",
+      "rel": "boosts",
+      "source": "wiki:Animals",
+      "to": "score-exponent"
+    },
+    {
+      "confidence": "documented",
+      "from": "animal-bunny",
+      "note": "Generator Exponent x 1.01",
+      "rel": "boosts",
+      "source": "wiki:Animals",
+      "to": "generator-exponent"
+    },
+    {
+      "confidence": "documented",
+      "from": "animal-boar",
+      "note": "Score Exponent × 1.001",
+      "rel": "boosts",
+      "source": "wiki:Animals",
+      "to": "score-exponent"
+    },
+    {
+      "confidence": "documented",
+      "from": "animal-penguin",
+      "note": "Star Base x 1.01",
+      "rel": "boosts",
+      "source": "wiki:Animals",
+      "to": "star-base"
+    },
+    {
+      "confidence": "documented",
+      "from": "animal-dog",
+      "note": "Score Exponent + 0.03",
+      "rel": "boosts",
+      "source": "wiki:Animals",
+      "to": "score-exponent"
+    },
+    {
+      "confidence": "documented",
+      "from": "animal-hamster",
+      "note": "Lap Speed × 1.4",
+      "rel": "boosts",
+      "source": "wiki:Animals",
+      "to": "lap-speed"
+    },
+    {
+      "confidence": "documented",
+      "from": "animal-pigeon",
+      "note": "IP gain × Completed AM",
+      "rel": "boosts",
+      "source": "wiki:Animals",
+      "to": "infinity-points"
+    },
+    {
+      "confidence": "documented",
+      "from": "animal-goat",
+      "note": "Generator Multiplier × 3",
+      "rel": "boosts",
+      "source": "wiki:Animals",
+      "to": "generator-mult"
+    },
+    {
+      "confidence": "documented",
+      "from": "animal-frog",
+      "note": "Generator Exponent × 1.1",
+      "rel": "boosts",
+      "source": "wiki:Animals",
+      "to": "generator-exponent"
+    },
+    {
+      "confidence": "documented",
+      "from": "animal-giraffe",
+      "note": "IP Gain × 10B (1e10)",
+      "rel": "boosts",
+      "source": "wiki:Animals",
+      "to": "infinity-points"
+    },
+    {
+      "confidence": "documented",
+      "from": "animal-fox",
+      "note": "Generator Exponent × 1.01",
+      "rel": "boosts",
+      "source": "wiki:Animals",
+      "to": "generator-exponent"
+    },
+    {
+      "confidence": "documented",
+      "from": "animal-panther",
+      "note": "Score Exponent × 1.001",
+      "rel": "boosts",
+      "source": "wiki:Animals",
+      "to": "score-exponent"
+    },
+    {
+      "confidence": "documented",
+      "from": "animal-polar-bear",
+      "note": "Star Base × 1.01",
+      "rel": "boosts",
+      "source": "wiki:Animals",
+      "to": "star-base"
+    },
+    {
+      "confidence": "documented",
+      "from": "animal-parrot",
+      "note": "IP gain × Animals Bought",
+      "rel": "boosts",
+      "source": "wiki:Animals",
+      "to": "infinity-points"
+    },
+    {
+      "confidence": "documented",
+      "from": "animal-guinea-pig",
+      "note": "Lap Speed x 2",
+      "rel": "boosts",
+      "source": "wiki:Animals",
+      "to": "lap-speed"
+    },
+    {
+      "confidence": "documented",
+      "from": "animal-rooster",
+      "note": "Promo 4 Power × 1.45",
+      "rel": "boosts",
+      "source": "wiki:Animals",
+      "to": "promotion-4"
+    },
+    {
+      "confidence": "documented",
+      "from": "animal-sheep",
+      "note": "Promo 1 Power × 10",
+      "rel": "boosts",
+      "source": "wiki:Animals",
+      "to": "promotion-1"
+    },
+    {
+      "confidence": "documented",
+      "from": "animal-toad",
+      "note": "Score Exponent + 0.05",
+      "rel": "boosts",
+      "source": "wiki:Animals",
+      "to": "score-exponent"
+    },
+    {
+      "confidence": "documented",
+      "from": "animal-lion",
+      "note": "IP Gain × 10M (1e7)",
+      "rel": "boosts",
+      "source": "wiki:Animals",
+      "to": "infinity-points"
+    },
+    {
+      "confidence": "documented",
+      "from": "animal-wolf",
+      "note": "Generator Exponent × 1.01",
+      "rel": "boosts",
+      "source": "wiki:Animals",
+      "to": "generator-exponent"
+    },
+    {
+      "confidence": "documented",
+      "from": "animal-beaver",
+      "note": "Score Exponent × 1.001",
+      "rel": "boosts",
+      "source": "wiki:Animals",
+      "to": "score-exponent"
+    },
+    {
+      "confidence": "documented",
+      "from": "animal-seal",
+      "note": "Star Base × 1.01",
+      "rel": "boosts",
+      "source": "wiki:Animals",
+      "to": "star-base"
+    },
+    {
+      "confidence": "documented",
+      "from": "animal-fish",
+      "note": "IP gain × ECs Finished",
+      "rel": "boosts",
+      "source": "wiki:Animals",
+      "to": "infinity-points"
+    },
+    {
+      "confidence": "documented",
+      "from": "animal-jerboa",
+      "note": "Lap Speed x 3",
+      "rel": "boosts",
+      "source": "wiki:Animals",
+      "to": "lap-speed"
+    },
+    {
+      "confidence": "documented",
+      "from": "animal-duck",
+      "note": "Promo 3 Power × 1.5",
+      "rel": "boosts",
+      "source": "wiki:Animals",
+      "to": "promotion-3"
+    },
+    {
+      "confidence": "documented",
+      "from": "animal-cow",
+      "note": "EP Gain × (1+(Σ^0.5))",
+      "rel": "boosts",
+      "source": "wiki:Animals",
+      "to": "eternity-points"
+    },
+    {
+      "confidence": "documented",
+      "from": "animal-turtle",
+      "note": "Stardust Exponent + 0.1",
+      "rel": "boosts",
+      "source": "wiki:Animals",
+      "to": "stardust-exponent"
+    },
+    {
+      "confidence": "documented",
+      "from": "animal-hippo",
+      "note": "IP Gain × 1M (1e6)",
+      "rel": "boosts",
+      "source": "wiki:Animals",
+      "to": "infinity-points"
+    },
+    {
+      "confidence": "documented",
+      "from": "animal-bear",
+      "note": "Generator Exponent × 1.01",
+      "rel": "boosts",
+      "source": "wiki:Animals",
+      "to": "generator-exponent"
+    },
+    {
+      "confidence": "documented",
+      "from": "animal-yak",
+      "note": "Score Exponent × 1.001",
+      "rel": "boosts",
+      "source": "wiki:Animals",
+      "to": "score-exponent"
+    },
+    {
+      "confidence": "documented",
+      "from": "animal-walrus",
+      "note": "Star Base × 1.01",
+      "rel": "boosts",
+      "source": "wiki:Animals",
+      "to": "star-base"
+    },
+    {
+      "confidence": "documented",
+      "from": "animal-ferret",
+      "note": "IP gain × 100",
+      "rel": "boosts",
+      "source": "wiki:Animals",
+      "to": "infinity-points"
+    },
+    {
+      "confidence": "documented",
+      "from": "animal-chinchilla",
+      "note": "Lap Speed × 5",
+      "rel": "boosts",
+      "source": "wiki:Animals",
+      "to": "lap-speed"
+    },
+    {
+      "confidence": "documented",
+      "from": "animal-goose",
+      "note": "Generator Exponent × 1.1",
+      "rel": "boosts",
+      "source": "wiki:Animals",
+      "to": "generator-exponent"
+    },
+    {
+      "confidence": "documented",
+      "from": "animal-horse",
+      "note": "Star Base × 1.3",
+      "rel": "boosts",
+      "source": "wiki:Animals",
+      "to": "star-base"
+    },
+    {
+      "confidence": "documented",
+      "from": "animal-chameleon",
+      "note": "Star Base × 1.5",
+      "rel": "boosts",
+      "source": "wiki:Animals",
+      "to": "star-base"
+    },
+    {
+      "confidence": "documented",
+      "from": "animal-rhino",
+      "note": "IP Gain × 1M (1e6)",
+      "rel": "boosts",
+      "source": "wiki:Animals",
+      "to": "infinity-points"
+    },
+    {
+      "confidence": "documented",
+      "from": "animal-raccoon",
+      "note": "Generator Exponent x 1.01",
+      "rel": "boosts",
+      "source": "wiki:Animals",
+      "to": "generator-exponent"
+    },
+    {
+      "confidence": "documented",
+      "from": "animal-bobcat",
+      "note": "Score Exponent x 1.001",
+      "rel": "boosts",
+      "source": "wiki:Animals",
+      "to": "score-exponent"
+    },
+    {
+      "confidence": "documented",
+      "from": "animal-dolphin",
+      "note": "Star Base x 1.01",
+      "rel": "boosts",
+      "source": "wiki:Animals",
+      "to": "star-base"
+    },
+    {
+      "confidence": "documented",
+      "from": "animal-gopher",
+      "note": "Score Exponent × 1.01",
+      "rel": "boosts",
+      "source": "wiki:Animals",
+      "to": "score-exponent"
+    },
+    {
+      "confidence": "documented",
+      "from": "animal-squirrel",
+      "note": "Generator Exponent × 1.05",
+      "rel": "boosts",
+      "source": "wiki:Animals",
+      "to": "generator-exponent"
+    },
+    {
+      "confidence": "documented",
+      "from": "animal-pheasant",
+      "note": "Ascension Power × 2",
+      "rel": "boosts",
+      "source": "wiki:Animals",
+      "to": "ascension-power"
+    },
+    {
+      "confidence": "documented",
+      "from": "animal-bull",
+      "note": "Stardust Exponent + 0.05",
+      "rel": "boosts",
+      "source": "wiki:Animals",
+      "to": "stardust-exponent"
+    },
+    {
+      "confidence": "documented",
+      "from": "animal-sea-turtle",
+      "note": "Stardust Exponent × 1.05",
+      "rel": "boosts",
+      "source": "wiki:Animals",
+      "to": "stardust-exponent"
+    },
+    {
+      "confidence": "documented",
+      "from": "animal-elephant",
+      "note": "IP Gain × 1M (1e6)",
+      "rel": "boosts",
+      "source": "wiki:Animals",
+      "to": "infinity-points"
+    },
+    {
+      "confidence": "documented",
+      "from": "animal-badger",
+      "note": "Generator Exponent x 1.01",
+      "rel": "boosts",
+      "source": "wiki:Animals",
+      "to": "generator-exponent"
+    },
+    {
+      "confidence": "documented",
+      "from": "animal-tiger",
+      "note": "Score Exponent x 1.001",
+      "rel": "boosts",
+      "source": "wiki:Animals",
+      "to": "score-exponent"
+    },
+    {
+      "confidence": "documented",
+      "from": "animal-orca",
+      "note": "Star Base x 1.01",
+      "rel": "boosts",
+      "source": "wiki:Animals",
+      "to": "star-base"
+    },
+    {
+      "confidence": "documented",
+      "from": "animal-rabbit",
+      "note": "Star Base × 1.3",
+      "rel": "boosts",
+      "source": "wiki:Animals",
+      "to": "star-base"
+    },
+    {
+      "confidence": "documented",
+      "from": "animal-rat",
+      "note": "Score Exponent x 1.005",
+      "rel": "boosts",
+      "source": "wiki:Animals",
+      "to": "score-exponent"
+    },
+    {
+      "confidence": "documented",
+      "from": "animal-peacock",
+      "note": "Stardust Exponent × 1.03",
+      "rel": "boosts",
+      "source": "wiki:Animals",
+      "to": "stardust-exponent"
+    },
+    {
+      "confidence": "documented",
+      "from": "animal-llama",
+      "note": "Stardust Exponent × 1.02",
+      "rel": "boosts",
+      "source": "wiki:Animals",
+      "to": "stardust-exponent"
+    },
+    {
+      "confidence": "documented",
+      "from": "animal-lizard",
+      "note": "Stardust Exponent × 1.01",
+      "rel": "boosts",
+      "source": "wiki:Animals",
+      "to": "stardust-exponent"
+    },
+    {
+      "confidence": "documented",
+      "from": "animal-anteater",
+      "note": "IP Gain × 1M (1e6)",
+      "rel": "boosts",
+      "source": "wiki:Animals",
+      "to": "infinity-points"
+    },
+    {
+      "confidence": "documented",
+      "from": "animal-panda",
+      "note": "Generator Exponent x 1.01",
+      "rel": "boosts",
+      "source": "wiki:Animals",
+      "to": "generator-exponent"
+    },
+    {
+      "confidence": "documented",
+      "from": "animal-hyena",
+      "note": "Score Exponent x 1.001",
+      "rel": "boosts",
+      "source": "wiki:Animals",
+      "to": "score-exponent"
+    },
+    {
+      "confidence": "documented",
+      "from": "animal-bat",
+      "note": "Star Base x 1.01",
+      "rel": "boosts",
+      "source": "wiki:Animals",
+      "to": "star-base"
+    },
+    {
+      "confidence": "documented",
+      "from": "animal-hedgehog",
+      "note": "Score Exponent + 0.01",
+      "rel": "boosts",
+      "source": "wiki:Animals",
+      "to": "score-exponent"
+    },
+    {
+      "confidence": "documented",
+      "from": "animal-mole",
+      "note": "Score Exponent + 0.01",
+      "rel": "boosts",
+      "source": "wiki:Animals",
+      "to": "score-exponent"
+    },
+    {
+      "confidence": "documented",
+      "from": "animal-owl",
+      "note": "Score Exponent + 0.01",
+      "rel": "boosts",
+      "source": "wiki:Animals",
+      "to": "score-exponent"
+    },
+    {
+      "confidence": "documented",
+      "from": "animal-alpaca",
+      "note": "Score Exponent + 0.01",
+      "rel": "boosts",
+      "source": "wiki:Animals",
+      "to": "score-exponent"
+    },
+    {
+      "confidence": "documented",
+      "from": "animal-crocodile",
+      "note": "Score Exponent + 0.01",
+      "rel": "boosts",
+      "source": "wiki:Animals",
+      "to": "score-exponent"
+    },
+    {
+      "confidence": "documented",
+      "from": "animal-koala",
+      "note": "IP Gain × 1M (1e6)",
+      "rel": "boosts",
+      "source": "wiki:Animals",
+      "to": "infinity-points"
+    },
+    {
+      "confidence": "documented",
+      "from": "animal-wombat",
+      "note": "Generator Exponent x 1.01",
+      "rel": "boosts",
+      "source": "wiki:Animals",
+      "to": "generator-exponent"
+    },
+    {
+      "confidence": "documented",
+      "from": "animal-monkey",
+      "note": "Score Exponent x 1.001",
+      "rel": "boosts",
+      "source": "wiki:Animals",
+      "to": "score-exponent"
+    },
+    {
+      "confidence": "documented",
+      "from": "animal-eagle",
+      "note": "Stardust Base x 1.01",
+      "rel": "boosts",
+      "source": "wiki:Animals",
+      "to": "stardust-base"
+    },
+    {
+      "confidence": "documented",
+      "from": "animal-meta-cat",
+      "note": "Stardust Exponent × 1.01",
+      "rel": "boosts",
+      "source": "wiki:Animals",
+      "to": "stardust-exponent"
+    },
+    {
+      "confidence": "documented",
+      "from": "animal-jackalope",
+      "note": "Stardust Exponent × 1.01",
+      "rel": "boosts",
+      "source": "wiki:Animals",
+      "to": "stardust-exponent"
+    },
+    {
+      "confidence": "documented",
+      "from": "animal-phoenix",
+      "note": "Stardust Exponent × 1.01",
+      "rel": "boosts",
+      "source": "wiki:Animals",
+      "to": "stardust-exponent"
+    },
+    {
+      "confidence": "documented",
+      "from": "animal-unicorn",
+      "note": "Stardust Exponent × 1.01",
+      "rel": "boosts",
+      "source": "wiki:Animals",
+      "to": "stardust-exponent"
+    },
+    {
+      "confidence": "documented",
+      "from": "animal-hydra",
+      "note": "Stardust Exponent × 1.01",
+      "rel": "boosts",
+      "source": "wiki:Animals",
+      "to": "stardust-exponent"
+    },
+    {
+      "confidence": "documented",
+      "from": "animal-pegasus",
+      "note": "IP Gain × 1M (1e6)",
+      "rel": "boosts",
+      "source": "wiki:Animals",
+      "to": "infinity-points"
+    },
+    {
+      "confidence": "documented",
+      "from": "animal-hippogriff",
+      "note": "Generator Exponent x1.01",
+      "rel": "boosts",
+      "source": "wiki:Animals",
+      "to": "generator-exponent"
+    },
+    {
+      "confidence": "documented",
+      "from": "animal-dragon",
+      "note": "Score Exponent x1.001",
+      "rel": "boosts",
+      "source": "wiki:Animals",
+      "to": "score-exponent"
+    },
+    {
+      "confidence": "documented",
+      "from": "animal-nu",
+      "note": "Score Exponent + 0.1",
+      "rel": "boosts",
+      "source": "wiki:Animals",
+      "to": "score-exponent"
+    },
+    {
+      "confidence": "documented",
+      "from": "eternities",
+      "rel": "boosts",
+      "source": "wiki:Animals",
+      "to": "animal-cat"
+    },
+    {
+      "confidence": "documented",
+      "from": "eternities",
+      "rel": "boosts",
+      "source": "wiki:Animals",
+      "to": "animal-cow"
+    },
+    {
+      "confidence": "documented",
+      "from": "eternity-milestones",
+      "rel": "boosts",
+      "source": "wiki:Animals",
+      "to": "animal-chicken"
+    },
+    {
+      "confidence": "documented",
+      "from": "animals-milestones",
+      "rel": "boosts",
+      "source": "wiki:Animals",
+      "to": "animal-pigeon"
+    },
+    {
+      "confidence": "documented",
+      "from": "eternity-challenges",
+      "rel": "boosts",
+      "source": "wiki:Animals",
+      "to": "animal-fish"
+    },
+    {
+      "confidence": "documented",
+      "from": "animals",
+      "rel": "boosts",
+      "source": "wiki:Animals",
+      "to": "animal-parrot"
+    },
+    {
+      "confidence": "documented",
+      "from": "eternity-points",
+      "note": "Bought with EP",
+      "rel": "boosts",
+      "source": "wiki:Laboratory",
+      "to": "lab-base"
+    },
+    {
+      "confidence": "documented",
+      "from": "lab-base",
+      "rel": "boosts",
+      "source": "wiki:Laboratory",
+      "to": "laboratory-points"
+    },
+    {
+      "confidence": "documented",
+      "from": "eternity-points",
+      "note": "Bought with EP",
+      "rel": "boosts",
+      "source": "wiki:Laboratory",
+      "to": "lab-mult"
+    },
+    {
+      "confidence": "documented",
+      "from": "lab-mult",
+      "rel": "boosts",
+      "source": "wiki:Laboratory",
+      "to": "laboratory-points"
+    },
+    {
+      "confidence": "documented",
+      "from": "eternity-points",
+      "note": "Bought with EP",
+      "rel": "boosts",
+      "source": "wiki:Laboratory",
+      "to": "lab-power"
+    },
+    {
+      "confidence": "documented",
+      "from": "lab-power",
+      "rel": "boosts",
+      "source": "wiki:Laboratory",
+      "to": "laboratory-points"
+    },
+    {
+      "confidence": "documented",
+      "from": "laboratory-points",
+      "note": "Each Lab level awards one Research Point",
+      "rel": "boosts",
+      "source": "wiki:Laboratory",
+      "to": "research-points"
+    },
+    {
+      "confidence": "documented",
+      "from": "research-points",
+      "note": "Each spent RP adds one level",
+      "rel": "boosts",
+      "source": "wiki:Laboratory",
+      "to": "rp-upgrade-1"
+    },
+    {
+      "confidence": "documented",
+      "from": "rp-upgrade-1",
+      "rel": "boosts",
+      "source": "wiki:Laboratory",
+      "to": "infinity-points"
+    },
+    {
+      "confidence": "documented",
+      "from": "research-points",
+      "note": "Each spent RP adds one level",
+      "rel": "boosts",
+      "source": "wiki:Laboratory",
+      "to": "rp-upgrade-2"
+    },
+    {
+      "confidence": "documented",
+      "from": "rp-upgrade-2",
+      "rel": "boosts",
+      "source": "wiki:Laboratory",
+      "to": "ascension-power"
+    },
+    {
+      "confidence": "documented",
+      "from": "research-points",
+      "note": "Each spent RP adds one level",
+      "rel": "boosts",
+      "source": "wiki:Laboratory",
+      "to": "rp-upgrade-3"
+    },
+    {
+      "confidence": "documented",
+      "from": "rp-upgrade-3",
+      "rel": "boosts",
+      "source": "wiki:Laboratory",
+      "to": "star-base"
+    },
+    {
+      "confidence": "documented",
+      "from": "research-points",
+      "note": "Each spent RP adds one level",
+      "rel": "boosts",
+      "source": "wiki:Laboratory",
+      "to": "rp-upgrade-4"
+    },
+    {
+      "confidence": "documented",
+      "from": "rp-upgrade-4",
+      "rel": "boosts",
+      "source": "wiki:Laboratory",
+      "to": "eternity-points"
+    },
+    {
+      "confidence": "documented",
+      "from": "research-points",
+      "note": "Each spent RP adds one level",
+      "rel": "boosts",
+      "source": "wiki:Laboratory",
+      "to": "rp-upgrade-5"
+    },
+    {
+      "confidence": "documented",
+      "from": "rp-upgrade-5",
+      "rel": "boosts",
+      "source": "wiki:Laboratory",
+      "to": "generator-power"
+    },
+    {
+      "confidence": "documented",
+      "from": "research-points",
+      "note": "Each spent RP adds one level",
+      "rel": "boosts",
+      "source": "wiki:Laboratory",
+      "to": "rp-upgrade-6"
+    },
+    {
+      "confidence": "documented",
+      "from": "rp-upgrade-6",
+      "rel": "boosts",
+      "source": "wiki:Laboratory",
+      "to": "common-exponent"
+    },
+    {
+      "confidence": "documented",
+      "from": "eternity-challenge-1",
+      "rel": "boosts",
+      "source": "wiki:Eternity_Challenges",
+      "to": "lap-speed"
+    },
+    {
+      "confidence": "documented",
+      "from": "eternity-challenge-2",
+      "rel": "boosts",
+      "source": "wiki:Eternity_Challenges",
+      "to": "common-exponent"
+    },
+    {
+      "confidence": "documented",
+      "from": "eternity-challenge-3",
+      "rel": "boosts",
+      "source": "wiki:Eternity_Challenges",
+      "to": "star-base"
+    },
+    {
+      "confidence": "documented",
+      "from": "eternity-challenge-4",
+      "rel": "boosts",
+      "source": "wiki:Eternity_Challenges",
+      "to": "generator-exponent"
+    },
+    {
+      "confidence": "documented",
+      "from": "eternity-challenge-5",
+      "rel": "boosts",
+      "source": "wiki:Eternity_Challenges",
+      "to": "ascension-power"
+    },
+    {
+      "confidence": "documented",
+      "from": "eternity-challenge-6",
+      "rel": "boosts",
+      "source": "wiki:Eternity_Challenges",
+      "to": "prestige-bonus"
+    },
+    {
+      "confidence": "documented",
+      "from": "eternity-challenge-7",
+      "rel": "boosts",
+      "source": "wiki:Eternity_Challenges",
+      "to": "laboratory"
+    },
+    {
+      "confidence": "documented",
+      "from": "eternity-challenge-8",
+      "rel": "boosts",
+      "source": "wiki:Eternity_Challenges",
+      "to": "infinity-points"
+    },
+    {
+      "confidence": "documented",
+      "from": "eternity-challenge-9",
+      "rel": "boosts",
+      "source": "wiki:Eternity_Challenges",
+      "to": "generator-exponent"
+    },
+    {
+      "confidence": "documented",
+      "from": "eternity-challenge-10",
+      "rel": "boosts",
+      "source": "wiki:Eternity_Challenges",
+      "to": "dilation-points"
+    },
+    {
+      "confidence": "documented",
+      "from": "eternity-challenges",
+      "note": "Completing a difficulty awards one free AP",
+      "rel": "boosts",
+      "source": "wiki:Eternity_Challenges",
+      "to": "animal-points"
+    },
+    {
+      "confidence": "documented",
+      "from": "eternity-challenges",
+      "rel": "unlocks",
+      "source": "wiki:Eternity_Milestones",
+      "to": "eternity-challenge-milestones"
+    },
+    {
+      "confidence": "documented",
+      "from": "eternity-challenges",
+      "note": "Reached at 3 difficulty completions",
+      "rel": "unlocks",
+      "source": "wiki:Eternity_Milestones",
+      "to": "eternity-challenge-milestone-3"
+    },
+    {
+      "confidence": "documented",
+      "from": "eternity-challenges",
+      "note": "Reached at 5 difficulty completions",
+      "rel": "unlocks",
+      "source": "wiki:Eternity_Milestones",
+      "to": "eternity-challenge-milestone-5"
+    },
+    {
+      "confidence": "documented",
+      "from": "eternity-challenges",
+      "note": "Reached at 8 difficulty completions",
+      "rel": "unlocks",
+      "source": "wiki:Eternity_Milestones",
+      "to": "eternity-challenge-milestone-8"
+    },
+    {
+      "confidence": "documented",
+      "from": "eternity-challenges",
+      "note": "Reached at 10 difficulty completions",
+      "rel": "unlocks",
+      "source": "wiki:Eternity_Milestones",
+      "to": "eternity-challenge-milestone-10"
+    },
+    {
+      "confidence": "documented",
+      "from": "eternity-challenges",
+      "note": "Reached at 30 difficulty completions",
+      "rel": "unlocks",
+      "source": "wiki:Eternity_Milestones",
+      "to": "eternity-challenge-milestone-30"
+    },
+    {
+      "confidence": "documented",
+      "from": "eternity-challenges",
+      "note": "Reached at 32 difficulty completions",
+      "rel": "unlocks",
+      "source": "wiki:Eternity_Milestones",
+      "to": "eternity-challenge-milestone-32"
+    },
+    {
+      "confidence": "documented",
+      "from": "eternity-challenges",
+      "note": "Reached at 35 difficulty completions",
+      "rel": "unlocks",
+      "source": "wiki:Eternity_Milestones",
+      "to": "eternity-challenge-milestone-35"
+    },
+    {
+      "confidence": "documented",
+      "from": "eternity-challenges",
+      "note": "Reached at 50 difficulty completions",
+      "rel": "unlocks",
+      "source": "wiki:Eternity_Milestones",
+      "to": "eternity-challenge-milestone-50"
+    },
+    {
+      "confidence": "documented",
+      "from": "eternity-challenges",
+      "note": "Reached at 60 difficulty completions",
+      "rel": "unlocks",
+      "source": "wiki:Eternity_Milestones",
+      "to": "eternity-challenge-milestone-60"
+    },
+    {
+      "confidence": "documented",
+      "from": "eternity-challenge-milestone-8",
+      "rel": "unlocks",
+      "source": "wiki:Eternity_Milestones",
+      "to": "supernova"
+    },
+    {
+      "confidence": "documented",
+      "from": "eternity-challenge-milestone-50",
+      "rel": "unlocks",
+      "source": "wiki:Eternity_Milestones",
+      "to": "dilation-tree"
+    },
+    {
+      "confidence": "documented",
+      "from": "score",
+      "note": "A Supernova needs a certain Score",
+      "rel": "boosts",
+      "source": "wiki:Supernova",
+      "to": "supernova"
+    },
+    {
+      "confidence": "documented",
+      "from": "supernova",
+      "rel": "boosts",
+      "source": "wiki:Supernova",
+      "to": "eternity-bonuses"
+    },
+    {
+      "confidence": "documented",
+      "from": "supernova",
+      "rel": "boosts",
+      "source": "wiki:Supernova",
+      "to": "star-base"
+    },
+    {
+      "confidence": "documented",
+      "from": "supernova",
+      "rel": "boosts",
+      "source": "wiki:Supernova",
+      "to": "lab-base"
+    },
+    {
+      "confidence": "documented",
+      "from": "supernova",
+      "rel": "boosts",
+      "source": "wiki:Supernova",
+      "to": "eternity-points"
+    },
+    {
+      "confidence": "documented",
+      "from": "supernova",
+      "rel": "boosts",
+      "source": "wiki:Supernova",
+      "to": "animal-points"
+    },
+    {
+      "confidence": "documented",
+      "from": "dilation",
+      "note": "Entering Dilation applies the penalties",
+      "rel": "unlocks",
+      "source": "wiki:Dilation",
+      "to": "dilation-penalties"
+    },
+    {
+      "confidence": "documented",
+      "from": "dilation-penalties",
+      "note": "Common Exponent / 25",
+      "rel": "boosts",
+      "source": "wiki:Dilation",
+      "to": "common-exponent"
+    },
+    {
+      "confidence": "documented",
+      "from": "dilation-penalties",
+      "note": "Gen Exp / 1,000",
+      "rel": "boosts",
+      "source": "wiki:Dilation",
+      "to": "generator-exponent"
+    },
+    {
+      "confidence": "documented",
+      "from": "dilation-penalties",
+      "note": "Star Exp / 100",
+      "rel": "boosts",
+      "source": "wiki:Dilation",
+      "to": "star-exponent"
+    },
+    {
+      "confidence": "documented",
+      "from": "dilation-penalties",
+      "note": "Ascension Power ^0.10",
+      "rel": "boosts",
+      "source": "wiki:Dilation",
+      "to": "ascension-power"
+    },
+    {
+      "confidence": "documented",
+      "from": "dilation-penalties",
+      "note": "(Laps Speed ^0.10) / 10",
+      "rel": "boosts",
+      "source": "wiki:Dilation",
+      "to": "lap-speed"
+    },
+    {
+      "confidence": "documented",
+      "from": "dilation-penalties",
+      "note": "IP gain ^0.01",
+      "rel": "boosts",
+      "source": "wiki:Dilation",
+      "to": "infinity-points"
+    },
+    {
+      "confidence": "documented",
+      "from": "score",
+      "rel": "boosts",
+      "source": "wiki:Dilation",
+      "to": "max-score"
+    },
+    {
+      "confidence": "documented",
+      "from": "dilation",
+      "note": "Exiting sets Max Score to the highest Score reached inside Dilation",
+      "rel": "boosts",
+      "source": "wiki:Dilation",
+      "to": "max-score"
+    },
+    {
+      "confidence": "documented",
+      "from": "max-score",
+      "rel": "boosts",
+      "source": "wiki:Dilation",
+      "to": "dp-income"
+    },
+    {
+      "confidence": "documented",
+      "from": "dp-income",
+      "rel": "boosts",
+      "source": "wiki:Dilation",
+      "to": "dilation-points"
+    },
+    {
+      "confidence": "documented",
+      "from": "dilation-points",
+      "note": "DP buys Dilation Upgrade levels",
+      "rel": "boosts",
+      "source": "wiki:Dilation",
+      "to": "dilation-upgrade-1"
+    },
+    {
+      "confidence": "documented",
+      "from": "dilation-points",
+      "note": "DP buys Dilation Upgrade levels",
+      "rel": "boosts",
+      "source": "wiki:Dilation",
+      "to": "dilation-upgrade-2"
+    },
+    {
+      "confidence": "documented",
+      "from": "dilation-points",
+      "note": "DP buys Dilation Upgrade levels",
+      "rel": "boosts",
+      "source": "wiki:Dilation",
+      "to": "dilation-upgrade-3"
+    },
+    {
+      "confidence": "documented",
+      "from": "dilation-points",
+      "note": "DP buys Dilation Upgrade levels",
+      "rel": "boosts",
+      "source": "wiki:Dilation",
+      "to": "dilation-upgrade-4"
+    },
+    {
+      "confidence": "documented",
+      "from": "dilation-points",
+      "note": "DP buys Dilation Upgrade levels",
+      "rel": "boosts",
+      "source": "wiki:Dilation",
+      "to": "dilation-upgrade-5"
+    },
+    {
+      "confidence": "documented",
+      "from": "dilation-points",
+      "note": "DP buys Dilation Upgrade levels",
+      "rel": "boosts",
+      "source": "wiki:Dilation",
+      "to": "dilation-upgrade-6"
+    },
+    {
+      "confidence": "documented",
+      "from": "dilation-points",
+      "note": "DP buys Dilation Upgrade levels",
+      "rel": "boosts",
+      "source": "wiki:Dilation",
+      "to": "dilation-upgrade-7"
+    },
+    {
+      "confidence": "documented",
+      "from": "dilation-points",
+      "note": "DP buys Dilation Upgrade levels",
+      "rel": "boosts",
+      "source": "wiki:Dilation",
+      "to": "dilation-upgrade-8"
+    },
+    {
+      "confidence": "documented",
+      "from": "dilation-points",
+      "note": "DP buys Dilation Upgrade levels",
+      "rel": "boosts",
+      "source": "wiki:Dilation",
+      "to": "dilation-upgrade-9"
+    },
+    {
+      "confidence": "documented",
+      "from": "dilation-points",
+      "note": "DTP is bought with DP",
+      "rel": "boosts",
+      "source": "wiki:Dilation_Tree",
+      "to": "dilation-tree-points"
+    },
+    {
+      "confidence": "documented",
+      "from": "dilation-tree-points",
+      "rel": "boosts",
+      "source": "wiki:Dilation_Tree",
+      "to": "dilation-tree"
+    },
+    {
+      "confidence": "documented",
+      "from": "dilation-node-top-1",
+      "rel": "boosts",
+      "source": "wiki:Dilation",
+      "to": "dilation-upgrade-1"
+    },
+    {
+      "confidence": "documented",
+      "from": "dilation-node-middle-1",
+      "rel": "boosts",
+      "source": "wiki:Dilation",
+      "to": "dilation-upgrade-2"
+    },
+    {
+      "confidence": "documented",
+      "from": "dilation-node-bottom-1",
+      "rel": "boosts",
+      "source": "wiki:Dilation",
+      "to": "dilation-upgrade-3"
     }
   ],
   "systems": [
