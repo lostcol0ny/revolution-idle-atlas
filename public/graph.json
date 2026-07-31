@@ -8526,6 +8526,17 @@
     },
     {
       "aliases": [
+        "Singularity Multiplier"
+      ],
+      "confidence": "provisional",
+      "id": "singularity-mult",
+      "kind": "stat",
+      "name": "Singularity Mult",
+      "system": "singularity",
+      "wiki": "Singularity#Singularity Mult Gain Modifiers"
+    },
+    {
+      "aliases": [
         "Atom Gain"
       ],
       "confidence": "provisional",
@@ -15327,7 +15338,7 @@
       "note": "Adds Refine Node 125 as a Singularity Mult Factor",
       "rel": "boosts",
       "source": "wiki:Minerals/Refine_Tree",
-      "to": "singularity"
+      "to": "singularity-mult"
     },
     {
       "confidence": "documented",
@@ -15401,7 +15412,7 @@
       "note": "Adds Refine Points to Singularity Mult Effects",
       "rel": "boosts",
       "source": "wiki:Minerals/Refine_Tree",
-      "to": "singularity"
+      "to": "singularity-mult"
     },
     {
       "confidence": "documented",
@@ -15515,7 +15526,7 @@
       "note": "Adds a Singularity Mult effect that slightly boosts Luck",
       "rel": "boosts",
       "source": "wiki:Minerals/Refine_Tree",
-      "to": "singularity"
+      "to": "singularity-mult"
     },
     {
       "confidence": "uncertain",
@@ -17588,7 +17599,7 @@
       "from": "plague-stat-max-plg",
       "rel": "boosts",
       "source": "wiki:Plague",
-      "to": "singularity"
+      "to": "singularity-mult"
     },
     {
       "confidence": "uncertain",
@@ -17634,6 +17645,13 @@
     },
     {
       "confidence": "uncertain",
+      "from": "singularity-milestone-event-horizon-tax",
+      "rel": "boosts",
+      "source": "wiki:Singularity",
+      "to": "singularity-mult"
+    },
+    {
+      "confidence": "uncertain",
       "from": "singularity-milestone-the-unforgotten",
       "rel": "boosts",
       "source": "wiki:Singularity",
@@ -17669,10 +17687,17 @@
     },
     {
       "confidence": "uncertain",
+      "from": "singularity-milestone-loop-feeds-loop",
+      "rel": "boosts",
+      "source": "wiki:Singularity",
+      "to": "singularity-mult"
+    },
+    {
+      "confidence": "uncertain",
       "from": "singularity-milestone-self-synergism",
       "rel": "boosts",
       "source": "wiki:Singularity",
-      "to": "singularity"
+      "to": "singularity-mult"
     },
     {
       "confidence": "uncertain",
@@ -17707,7 +17732,7 @@
       "from": "singularity-milestone-atom-overflow",
       "rel": "boosts",
       "source": "wiki:Singularity",
-      "to": "singularity"
+      "to": "singularity-mult"
     },
     {
       "confidence": "uncertain",
@@ -17770,7 +17795,7 @@
       "from": "singularity-tree-1",
       "rel": "boosts",
       "source": "wiki:Singularity",
-      "to": "singularity"
+      "to": "singularity-mult"
     },
     {
       "confidence": "uncertain",
@@ -17917,7 +17942,7 @@
       "from": "singularity-zodiac-pisces",
       "rel": "boosts",
       "source": "wiki:Singularity",
-      "to": "singularity"
+      "to": "singularity-mult"
     },
     {
       "confidence": "uncertain",
@@ -18803,7 +18828,7 @@
     },
     {
       "confidence": "uncertain",
-      "from": "singularity",
+      "from": "singularity-mult",
       "rel": "boosts",
       "source": "wiki:Tarot",
       "to": "tarot-challenge-queen-of-swords"
@@ -19149,7 +19174,7 @@
       "from": "tarot-challenge-queen-of-wands",
       "rel": "boosts",
       "source": "wiki:Tarot",
-      "to": "singularity"
+      "to": "singularity-mult"
     },
     {
       "confidence": "uncertain",
@@ -19160,6 +19185,13 @@
     },
     {
       "confidence": "uncertain",
+      "from": "tarot-challenge-queen-of-wands",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "singularity"
+    },
+    {
+      "confidence": "uncertain",
       "from": "tarot-challenge-king-of-wands",
       "rel": "boosts",
       "source": "wiki:Tarot",
@@ -19170,7 +19202,7 @@
       "from": "tarot-challenge-king-of-wands",
       "rel": "boosts",
       "source": "wiki:Tarot",
-      "to": "singularity"
+      "to": "singularity-mult"
     },
     {
       "confidence": "uncertain",
@@ -19178,6 +19210,13 @@
       "rel": "boosts",
       "source": "wiki:Tarot",
       "to": "tarot"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-king-of-wands",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "singularity"
     },
     {
       "confidence": "uncertain",
@@ -19541,7 +19580,7 @@
       "from": "tarot-challenge-queen-of-pentacles",
       "rel": "boosts",
       "source": "wiki:Tarot",
-      "to": "singularity"
+      "to": "singularity-mult"
     },
     {
       "confidence": "uncertain",
@@ -19590,7 +19629,7 @@
       "from": "tarot-challenge-king-of-pentacles",
       "rel": "boosts",
       "source": "wiki:Tarot",
-      "to": "singularity"
+      "to": "singularity-mult"
     },
     {
       "confidence": "uncertain",
@@ -19605,6 +19644,13 @@
       "rel": "boosts",
       "source": "wiki:Tarot",
       "to": "polish-sword"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-king-of-pentacles",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "singularity"
     },
     {
       "confidence": "uncertain",
@@ -19772,7 +19818,7 @@
       "from": "tarot-challenge-queen-of-cups",
       "rel": "boosts",
       "source": "wiki:Tarot",
-      "to": "singularity"
+      "to": "singularity-mult"
     },
     {
       "confidence": "uncertain",

@@ -7187,7 +7187,7 @@ edges:
   source: wiki:Minerals/Refine_Tree
   confidence: documented
 - from: refine-node-125
-  to: singularity
+  to: singularity-mult
   rel: boosts
   note: Adds Refine Node 125 as a Singularity Mult Factor
   source: wiki:Minerals/Refine_Tree
@@ -7241,7 +7241,7 @@ edges:
   source: wiki:Minerals/Refine_Tree
   confidence: uncertain
 - from: refine-node-129
-  to: singularity
+  to: singularity-mult
   rel: boosts
   note: Adds Refine Points to Singularity Mult Effects
   source: wiki:Minerals/Refine_Tree
@@ -7325,7 +7325,7 @@ edges:
   source: wiki:Minerals/Refine_Tree
   confidence: documented
 - from: refine-node-135
-  to: singularity
+  to: singularity-mult
   rel: boosts
   note: Adds a Singularity Mult effect that slightly boosts Luck
   source: wiki:Minerals/Refine_Tree
@@ -8916,7 +8916,7 @@ edges:
   source: wiki:Plague
   confidence: uncertain
 - from: plague-stat-max-plg
-  to: singularity
+  to: singularity-mult
   rel: boosts
   source: wiki:Plague
   confidence: uncertain
@@ -8960,6 +8960,11 @@ edges:
   rel: boosts
   source: wiki:Singularity
   confidence: uncertain
+- from: singularity-milestone-event-horizon-tax
+  to: singularity-mult
+  rel: boosts
+  source: wiki:Singularity
+  confidence: uncertain
 - from: singularity-milestone-the-unforgotten
   to: elements
   rel: boosts
@@ -8985,13 +8990,18 @@ edges:
   rel: boosts
   source: wiki:Singularity
   confidence: uncertain
+- from: singularity-milestone-loop-feeds-loop
+  to: singularity-mult
+  rel: boosts
+  source: wiki:Singularity
+  confidence: uncertain
 - from: singularity-milestone-astral-property
   to: singularity-houses-tab
   rel: boosts
   source: wiki:Singularity
   confidence: uncertain
 - from: singularity-milestone-self-synergism
-  to: singularity
+  to: singularity-mult
   rel: boosts
   source: wiki:Singularity
   confidence: uncertain
@@ -9016,7 +9026,7 @@ edges:
   source: wiki:Singularity
   confidence: uncertain
 - from: singularity-milestone-atom-overflow
-  to: singularity
+  to: singularity-mult
   rel: boosts
   source: wiki:Singularity
   confidence: uncertain
@@ -9071,12 +9081,7 @@ edges:
   source: wiki:Singularity
   confidence: uncertain
 - from: singularity-tree-1
-  to: singularity
-  rel: boosts
-  source: wiki:Singularity
-  confidence: uncertain
-- from: singularity-tree-1
-  to: mult-gain
+  to: singularity-mult
   rel: boosts
   source: wiki:Singularity
   confidence: uncertain
@@ -9191,7 +9196,7 @@ edges:
   source: wiki:Singularity
   confidence: uncertain
 - from: singularity-zodiac-pisces
-  to: singularity
+  to: singularity-mult
   rel: boosts
   source: wiki:Singularity
   confidence: uncertain
@@ -9840,7 +9845,7 @@ edges:
   rel: boosts
   source: wiki:Tarot
   confidence: uncertain
-- from: singularity
+- from: singularity-mult
   to: tarot-challenge-queen-of-swords
   rel: boosts
   source: wiki:Tarot
@@ -10091,7 +10096,7 @@ edges:
   source: wiki:Tarot
   confidence: uncertain
 - from: tarot-challenge-queen-of-wands
-  to: singularity
+  to: singularity-mult
   rel: boosts
   source: wiki:Tarot
   confidence: uncertain
@@ -10100,18 +10105,28 @@ edges:
   rel: boosts
   source: wiki:Tarot
   confidence: uncertain
+- from: tarot-challenge-queen-of-wands
+  to: singularity
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
 - from: tarot-challenge-king-of-wands
   to: global-element-mult
   rel: boosts
   source: wiki:Tarot
   confidence: uncertain
 - from: tarot-challenge-king-of-wands
-  to: singularity
+  to: singularity-mult
   rel: boosts
   source: wiki:Tarot
   confidence: uncertain
 - from: tarot-challenge-king-of-wands
   to: tarot
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-challenge-king-of-wands
+  to: singularity
   rel: boosts
   source: wiki:Tarot
   confidence: uncertain
@@ -10376,7 +10391,7 @@ edges:
   source: wiki:Tarot
   confidence: uncertain
 - from: tarot-challenge-queen-of-pentacles
-  to: singularity
+  to: singularity-mult
   rel: boosts
   source: wiki:Tarot
   confidence: uncertain
@@ -10411,7 +10426,7 @@ edges:
   source: wiki:Tarot
   confidence: uncertain
 - from: tarot-challenge-king-of-pentacles
-  to: singularity
+  to: singularity-mult
   rel: boosts
   source: wiki:Tarot
   confidence: uncertain
@@ -10422,6 +10437,11 @@ edges:
   confidence: uncertain
 - from: tarot-challenge-king-of-pentacles
   to: polish-sword
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-challenge-king-of-pentacles
+  to: singularity
   rel: boosts
   source: wiki:Tarot
   confidence: uncertain
@@ -10546,7 +10566,7 @@ edges:
   source: wiki:Tarot
   confidence: uncertain
 - from: tarot-challenge-queen-of-cups
-  to: singularity
+  to: singularity-mult
   rel: boosts
   source: wiki:Tarot
   confidence: uncertain

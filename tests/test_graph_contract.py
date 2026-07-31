@@ -249,6 +249,37 @@ def test_the_misspelled_zodiac_overlay_still_has_a_row_to_correct(graph: dict):
     assert names["singularity-zodiac-saggitarius"] == "Singular Zodiac Sagittarius"
 
 
+def test_singularity_mult_is_not_the_singularity_count(graph: dict):
+    # Two different things the wiki names similarly: `singularity` is the reset
+    # count, `singularity-mult` is the multiplier a reset grants, and the page
+    # gives the latter its own table of gain modifiers.
+    #
+    # Deleting the mult node is not an error the schema can see. The prose that
+    # named it simply falls through to the shorter surface, and every edge below
+    # silently re-points at the count -- still a valid id, still a rendered edge,
+    # just describing a relationship the wiki never stated. So the assertion is
+    # on the count's *absence* from these sources rather than on the mult's
+    # presence: an edge list that has quietly collapsed satisfies the second and
+    # fails the first.
+    boosts = {(e["from"], e["to"]) for e in graph["edges"] if e["rel"] == "boosts"}
+
+    # Sources whose effect text names only the mult. None may reach the count.
+    mult_only = {
+        "singularity-zodiac-pisces",  # "Singularity Mult Boost"
+        "singularity-tree-1",  # "Adds/increases a Singularity mult gain modifier"
+        "singularity-milestone-self-synergism",
+        "plague-stat-max-plg",
+    }
+    for source in mult_only:
+        assert (source, "singularity-mult") in boosts, source
+        assert (source, "singularity") not in boosts, source
+
+    # And one that names both, to show the split is per-mention rather than a
+    # blanket rewrite of everything pointing at the count.
+    assert ("singularity-milestone-event-horizon-tax", "singularity-mult") in boosts
+    assert ("singularity-milestone-event-horizon-tax", "singularity") in boosts
+
+
 def test_a_numbered_row_got_a_readable_name(graph: dict):
     # Singularity's tree rows are named "1", "2", "3.1" on the page. Without
     # name_prefix the node is called "1" and nothing says what it is.
@@ -293,7 +324,7 @@ def test_every_swept_edge_is_uncertain(graph: dict):
     swept -= {key(e) for e in curated.get("edges") or []}
     swept -= {key(s) for s in curated.get("suppress") or []}
 
-    assert len(swept) == 425, f"expected 425 swept edges, got {len(swept)}"
+    assert len(swept) == 430, f"expected 430 swept edges, got {len(swept)}"
     shipped = {key(e): e for e in graph["edges"]}
     for edge in swept:
         assert edge in shipped, f"{edge} never reached the artifact"

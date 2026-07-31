@@ -78,6 +78,23 @@ nodes:
     wiki: Singularity
     confidence: provisional
 
+  # Distinct from the currency above: `singularity` is the reset count, this is
+  # the multiplier that reset grants, and the wiki gives it its own table of
+  # gain modifiers. Without it every "Singularity Mult" in prose fell back to
+  # the shorter surface and landed on the count -- eleven edges pointing at a
+  # node the text never named.
+  #
+  # `Singularity Multiplier` is spelled out once, on a Tarot card. Both surfaces
+  # are longer than `Singularity`, and the vocabulary claims spans longest-first,
+  # so neither can be stolen by the currency.
+  - id: singularity-mult
+    name: Singularity Mult
+    aliases: [Singularity Multiplier]
+    system: singularity
+    kind: stat
+    wiki: Singularity#Singularity Mult Gain Modifiers
+    confidence: provisional
+
   - id: atoms-gain
     name: Atoms Gain
     aliases: [Atom Gain]
@@ -6585,13 +6602,6 @@ suppress:
       The tree node raises a Singularity Zodiac's level. The twelve Singularity
       Zodiacs are their own entities with their own levels, so this is not the
       Astrology stat whose name it contains.
-
-  - from: singularity-tree-1
-    to: mult-gain
-    rel: boosts
-    reason: >-
-      The tree node modifies a Singularity mult gain modifier, a different stat
-      that only happens to contain the Revolution-layer stat's name.
 
   # PIG is the Plague layer's currency, written in capitals. The Eternity Zoo
   # animal named Pig is a different thing entirely, and the vocabulary matches
