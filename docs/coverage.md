@@ -289,7 +289,7 @@ The tail is redirect stubs of a few dozen bytes. They sort to the bottom on thei
 | `Skins` | 4010 |
 | `Statistics` | 2473 |
 | `Walkthrough_Rewrite` | 2257 |
-| `Daily_Rewards` | 1862 |
+| `Daily_Rewards` | 1879 |
 | `Revolution_Idle_Wiki` | 1636 |
 | `Infinity_Challenges` | 1352 |
 | `Leaderboard` | 1319 |

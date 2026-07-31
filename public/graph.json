@@ -4483,7 +4483,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "PP after 1.79e308 boosts Wind generation"
+          "text": "PP after 1.79e308 boosts Wind generation The Formula is: 1.01+(x-308)^2/100 (Only the (x-308)^2 is divided by 100)"
         }
       ],
       "id": "wind-node-4",
@@ -16870,7 +16870,7 @@
     {
       "confidence": "uncertain",
       "from": "wind-node-4",
-      "note": "PP after 1.79e308 boosts Wind generation",
+      "note": "PP after 1.79e308 boosts Wind generation The Formula is: 1.01+(x-308)^2/100 (Only the (x-308)^2 is divided by 100)",
       "rel": "boosts",
       "source": "wiki:Elements",
       "to": "polish-points"
@@ -16878,7 +16878,7 @@
     {
       "confidence": "uncertain",
       "from": "wind-node-4",
-      "note": "PP after 1.79e308 boosts Wind generation",
+      "note": "PP after 1.79e308 boosts Wind generation The Formula is: 1.01+(x-308)^2/100 (Only the (x-308)^2 is divided by 100)",
       "rel": "boosts",
       "source": "wiki:Elements",
       "to": "wind"
