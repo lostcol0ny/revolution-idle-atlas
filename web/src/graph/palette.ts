@@ -23,10 +23,11 @@ export const SYSTEM_COLOURS: Record<KnownSystem, string> = {
   // is tighter than across the wheel but no tighter than pairs the palette
   // already carries.
   'eternity-milestones': '#2f6b2a',
-  // Darker parent shade, the convention refine-tree follows under minerals:
-  // a nested tab reads as its parent rather than as an eighth sibling.
-  'animals-milestones': '#1d451a',
   animals: '#6b7a2b',
+  // Darker parent shade, the convention refine-tree follows under minerals:
+  // a nested tab reads as its parent rather than as an eighth sibling. Olive
+  // rather than the green it was, because the parent it shades changed.
+  'animals-milestones': '#4a5520',
   'eternity-challenges': '#2c5e4e',
   laboratory: '#3d7a63',
   supernova: '#7a6a1f',

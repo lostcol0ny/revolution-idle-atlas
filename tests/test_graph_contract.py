@@ -387,8 +387,9 @@ def test_an_upgrade_that_grants_a_thing_still_points_at_it(graph: dict):
 def test_eternity_is_split_into_the_tabs_the_game_has(graph: dict):
     # The Eternity page numbers its own tabs -- "the 1st/2nd/.../seventh and final
     # Eternity tab" -- so the hierarchy below is transcribed rather than invented,
-    # and Animals Milestones is called "a new sub-tab in the Milestones tab",
-    # which is why it hangs off eternity-milestones instead of off eternity.
+    # and Animals Milestones is a level-3 heading inside `== Animals ==`, which
+    # is why it hangs off animals rather than off eternity or off the Milestones
+    # tab an aside on the page files it under.
     parents = {s["id"]: s.get("parent") for s in graph["systems"]}
     assert {k for k, v in parents.items() if v == "eternity"} == {
         "eternity-milestones",
@@ -399,7 +400,11 @@ def test_eternity_is_split_into_the_tabs_the_game_has(graph: dict):
         "dilation",
         "dilation-tree",
     }
-    assert parents["animals-milestones"] == "eternity-milestones"
+    assert parents["animals-milestones"] == "animals"
+    # Nothing nests under the Milestones tab. Asserted rather than left implied:
+    # the aside on the page is a standing invitation to move it back, and this is
+    # the line that turns that into a failing test rather than a silent redraw.
+    assert [k for k, v in parents.items() if v == "eternity-milestones"] == []
 
     # The split is only real if the layer stopped holding tab content. Everything
     # left directly on `eternity` must be layer-level: the currencies it grants

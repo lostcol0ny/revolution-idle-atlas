@@ -54,9 +54,9 @@ Node counts rolled up through each system's parent.
   - **Generators** — 13 nodes, 13 connected
   - **Stars** — 11 nodes, 11 connected
 - **Eternity** — 172 nodes, 169 connected (3 directly)
-  - **Eternity Milestones** — 21 nodes, 21 connected (13 directly)
+  - **Eternity Milestones** — 13 nodes, 13 connected
+  - **Animals** — 92 nodes, 92 connected (84 directly)
     - **Animals Milestones** — 8 nodes, 8 connected
-  - **Animals** — 84 nodes, 84 connected
   - **Eternity Challenges** — 21 nodes, 21 connected
   - **Laboratory** — 12 nodes, 12 connected
   - **Supernova** — 2 nodes, 2 connected

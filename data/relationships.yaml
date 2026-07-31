@@ -41,14 +41,19 @@ systems:
   - id: eternity-milestones
     name: Eternity Milestones
     parent: eternity
-  # A sub-tab of the Milestones tab, not a tab of its own, so it nests one level
-  # deeper -- the same relationship Refine Tree has to Minerals.
-  - id: animals-milestones
-    name: Animals Milestones
-    parent: eternity-milestones
   - id: animals
     name: Animals
     parent: eternity
+  # Filed under Animals, which is where the page's own section nesting puts it:
+  # `=== Animals Milestones ===` is a level-3 heading inside `== Animals ==`, and
+  # Eternity Challenges Milestones sits inside Eternity Challenges the same way.
+  # The page also calls it "a new sub-tab in the Milestones tab" in an aside,
+  # which is what it was nested under first; the milestones measure how many
+  # Animals you own, so they travel with the feature rather than with the screen
+  # that happens to list them.
+  - id: animals-milestones
+    name: Animals Milestones
+    parent: animals
   - id: eternity-challenges
     name: Eternity Challenges
     parent: eternity

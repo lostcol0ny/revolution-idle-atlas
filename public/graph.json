@@ -23838,14 +23838,14 @@
       "parent": "eternity"
     },
     {
-      "id": "animals-milestones",
-      "name": "Animals Milestones",
-      "parent": "eternity-milestones"
-    },
-    {
       "id": "animals",
       "name": "Animals",
       "parent": "eternity"
+    },
+    {
+      "id": "animals-milestones",
+      "name": "Animals Milestones",
+      "parent": "animals"
     },
     {
       "id": "eternity-challenges",
