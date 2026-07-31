@@ -73,6 +73,7 @@ nodes:
 
   - id: atoms-gain
     name: Atoms Gain
+    aliases: [Atom Gain]
     system: singularity
     kind: stat
     wiki: Singularity
@@ -2806,7 +2807,7 @@ nodes:
 
   - id: refinement-points
     name: Refinement Points
-    aliases: [RfP]
+    aliases: [RfP, Refine Points]
     system: minerals
     kind: currency
     wiki: Minerals
@@ -3209,6 +3210,84 @@ nodes:
     kind: currency
     wiki: Tarot
     confidence: documented
+
+  # The Houses table calls these "<Element> Element Factor 3"; the Elements page
+  # calls the same node "<Element> Factor 3". Only the alias closes the gap, and
+  # these four entries set no wiki or confidence so the derived values stand.
+  - id: fire-factor-3
+    name: Fire Factor 3
+    aliases: [Fire Element Factor 3]
+    system: elements
+    kind: stat
+
+  - id: earth-factor-3
+    name: Earth Factor 3
+    aliases: [Earth Element Factor 3]
+    system: elements
+    kind: stat
+
+  - id: wind-factor-3
+    name: Wind Factor 3
+    aliases: [Wind Element Factor 3]
+    system: elements
+    kind: stat
+
+  - id: water-factor-3
+    name: Water Factor 3
+    aliases: [Water Element Factor 3]
+    system: elements
+    kind: stat
+
+  - id: smp
+    name: Special Minerals Progression
+    aliases: [SMP]
+    system: minerals
+    kind: group
+    wiki: Minerals#Special_Minerals_Progression_(Refine_Node_46)
+    confidence: documented
+
+  # "Base Spread" is the alias the Houses table uses ("Base Spread Multi"). The
+  # bare word "Spread Power" is deliberately not an alias: the plague-type
+  # descriptions use it qualitatively ("Excellent Spread Power") and would
+  # resolve into edges that assert a boost the wiki never states.
+  - id: base-spread-power
+    name: Base Spread Power
+    aliases: [Base Spread]
+    system: plague
+    kind: upgrade
+    wiki: Plague
+    confidence: provisional
+
+  - id: singularity-effects-tab
+    name: Effects Tab
+    system: singularity
+    kind: group
+    wiki: Singularity#Effects
+    confidence: provisional
+
+  - id: singularity-tree-tab
+    name: Tree Tab
+    system: singularity
+    kind: group
+    wiki: Singularity#Tree
+    confidence: provisional
+
+  - id: singularity-houses-tab
+    name: Houses Tab
+    system: singularity
+    kind: group
+    wiki: Singularity#Houses
+    confidence: provisional
+
+  # Named `singular-` rather than `singularity-` so the id does not nest under
+  # the `singularity-zodiac` mint prefix that the sweep manifest uses.
+  - id: singular-zodiacs
+    name: Singular Zodiacs
+    aliases: [Singular Zodiac]
+    system: singularity
+    kind: group
+    wiki: Singularity#Houses
+    confidence: provisional
 
 edges:
   - from: relic-3
@@ -6191,7 +6270,260 @@ edges:
     source: wiki:Plague
     confidence: documented
 
+  # The Buff & Penalties table is deliberately absent from data/sweep.yaml
+  # because each row is an atom threshold rather than a named entity. The three
+  # tree nodes that weaken those penalties still act on the resource the table's
+  # "Resource Affected" column names, so the edge runs to that resource and no
+  # node-per-threshold is invented.
+  - from: singularity-tree-3-1
+    to: atoms-gain
+    rel: boosts
+    note: Weakens the ^0.125 Atoms Gain penalty that applies from 1.8e308 atoms
+    source: wiki:Singularity
+    confidence: documented
+
+  - from: singularity-tree-3-2
+    to: atoms-gain
+    rel: boosts
+    note: Weakens the ^0.05 Atoms Gain penalty that applies from 1e500 atoms
+    source: wiki:Singularity
+    confidence: documented
+
+  - from: singularity-tree-6-2
+    to: atoms-gain
+    rel: boosts
+    note: Weakens the ^0.014 Atoms Gain penalty that applies from 1e1000 atoms
+    source: wiki:Singularity
+    confidence: documented
+
+  # "Element Factors 1 and 2" names eight nodes without naming any of them, so
+  # the vocabulary cannot resolve it and the eight edges are written out.
+  - from: singularity-milestone-atomic-flow
+    to: fire-factor-1
+    rel: boosts
+    note: Element Factors 1 and 2 powers x3
+    source: wiki:Singularity
+    confidence: documented
+
+  - from: singularity-milestone-atomic-flow
+    to: fire-factor-2
+    rel: boosts
+    note: Element Factors 1 and 2 powers x3
+    source: wiki:Singularity
+    confidence: documented
+
+  - from: singularity-milestone-atomic-flow
+    to: earth-factor-1
+    rel: boosts
+    note: Element Factors 1 and 2 powers x3
+    source: wiki:Singularity
+    confidence: documented
+
+  - from: singularity-milestone-atomic-flow
+    to: earth-factor-2
+    rel: boosts
+    note: Element Factors 1 and 2 powers x3
+    source: wiki:Singularity
+    confidence: documented
+
+  - from: singularity-milestone-atomic-flow
+    to: wind-factor-1
+    rel: boosts
+    note: Element Factors 1 and 2 powers x3
+    source: wiki:Singularity
+    confidence: documented
+
+  - from: singularity-milestone-atomic-flow
+    to: wind-factor-2
+    rel: boosts
+    note: Element Factors 1 and 2 powers x3
+    source: wiki:Singularity
+    confidence: documented
+
+  - from: singularity-milestone-atomic-flow
+    to: water-factor-1
+    rel: boosts
+    note: Element Factors 1 and 2 powers x3
+    source: wiki:Singularity
+    confidence: documented
+
+  - from: singularity-milestone-atomic-flow
+    to: water-factor-2
+    rel: boosts
+    note: Element Factors 1 and 2 powers x3
+    source: wiki:Singularity
+    confidence: documented
+
+  - from: singularity-milestone-elementary-master
+    to: water-factor-2
+    rel: boosts
+    note: Factor 2 power for water is multiplied by x10
+    source: wiki:Singularity
+    confidence: documented
+
+  # "the last element nodes" is the highest-numbered upgrade node of each
+  # element, and the four counts differ, so the targets are named explicitly.
+  - from: singularity-milestone-nuclear-bloom
+    to: fire-node-11
+    rel: boosts
+    note: Divides last element nodes upgrades cost by 1e300
+    source: wiki:Singularity
+    confidence: documented
+
+  - from: singularity-milestone-nuclear-bloom
+    to: earth-node-10
+    rel: boosts
+    note: Divides last element nodes upgrades cost by 1e300
+    source: wiki:Singularity
+    confidence: documented
+
+  - from: singularity-milestone-nuclear-bloom
+    to: wind-node-12
+    rel: boosts
+    note: Divides last element nodes upgrades cost by 1e300
+    source: wiki:Singularity
+    confidence: documented
+
+  - from: singularity-milestone-nuclear-bloom
+    to: water-node-11
+    rel: boosts
+    note: Divides last element nodes upgrades cost by 1e300
+    source: wiki:Singularity
+    confidence: documented
+
+  # The vocabulary path has no unlock detection, so every one of these arrived
+  # as `boosts`. Unlocking is the whole reason the three tab nodes exist, so the
+  # generated edge is suppressed below and the relationship restated here.
+  - from: singularity-milestone-accelerated-growth
+    to: singularity-effects-tab
+    rel: unlocks
+    note: Unlock Effects Tab
+    source: wiki:Singularity
+    confidence: documented
+
+  - from: singularity-milestone-spaghettification
+    to: singularity-tree-tab
+    rel: unlocks
+    note: Unlocks Tree Tab
+    source: wiki:Singularity
+    confidence: documented
+
+  - from: singularity-milestone-astral-property
+    to: singularity-houses-tab
+    rel: unlocks
+    note: Unlocks Houses Tab
+    source: wiki:Singularity
+    confidence: documented
+
+  - from: singularity-milestone-horoscope-of-the-void
+    to: singular-zodiacs
+    rel: unlocks
+    note: You can now obtain Singular Zodiacs if you have already unlocked houses
+    source: wiki:Singularity
+    confidence: documented
+
+  - from: refine-node-46
+    to: smp
+    rel: unlocks
+    note: Unlocks special minerals progression
+    source: wiki:Minerals
+    confidence: documented
+
+  - from: tarot-challenge-the-star
+    to: singular-zodiacs
+    rel: requires
+    note: Perform a Singularity with an Uncommon+ Singular Zodiac
+    source: wiki:Tarot
+    confidence: documented
+
 suppress:
+  # The three Atom-threshold challenges state a penalty, and `rel` has no value
+  # for one. Emitting `boosts` asserts the opposite of what the page says, so
+  # the edge is dropped rather than kept under `uncertain`.
+  - from: tarot-challenge-king-of-wands
+    to: atoms-gain
+    rel: boosts
+    reason: >-
+      "Adds a Dynamic Penalty that heavily nerfs Atom Gain". The challenge
+      suppresses the stat; it does not boost it.
+
+  - from: tarot-challenge-king-of-pentacles
+    to: atoms-gain
+    rel: boosts
+    reason: >-
+      "Adds a Dynamic Penalty that heavily nerfs Atom Gain". The challenge
+      suppresses the stat; it does not boost it.
+
+  - from: tarot-challenge-the-moon
+    to: atoms-gain
+    rel: boosts
+    reason: >-
+      "Adds a dynamic penalty that heavily nerfs Atom gain". The challenge
+      suppresses the stat; it does not boost it.
+
+  # The same nerf on two more challenges, arriving reversed rather than
+  # forwards. An input marker governs everything to the end of its string unless
+  # brackets close it (extract/refs._clause_end), so "becomes weaker based on
+  # your current Atom Count" earlier in the blob claims the "Atom Gain" three
+  # sentences later and swaps the edge's ends. Wrong direction and wrong sense.
+  - from: atoms-gain
+    to: tarot-challenge-king-of-cups
+    rel: boosts
+    reason: >-
+      "Adds a Dynamic Penalty that heavily nerfs Atom Gain". The challenge acts
+      on the stat, not the stat on the challenge, and it nerfs rather than
+      boosts.
+
+  - from: atoms-gain
+    to: tarot-challenge-king-of-swords
+    rel: boosts
+    reason: >-
+      "Adds a dynamic penalty that heavily nerfs Atom gain". The challenge acts
+      on the stat, not the stat on the challenge, and it nerfs rather than
+      boosts.
+
+  # Six edges whose relationship is real but whose `rel` is wrong, because the
+  # vocabulary path cannot tell an unlock from a boost. Each is restated above
+  # with the right `rel`.
+  - from: singularity-milestone-accelerated-growth
+    to: singularity-effects-tab
+    rel: boosts
+    reason: >-
+      "Unlock Effects Tab" is an unlock, and the curated edge says so.
+
+  - from: singularity-milestone-spaghettification
+    to: singularity-tree-tab
+    rel: boosts
+    reason: >-
+      "Unlocks Tree Tab" is an unlock, and the curated edge says so.
+
+  - from: singularity-milestone-astral-property
+    to: singularity-houses-tab
+    rel: boosts
+    reason: >-
+      "Unlocks Houses Tab" is an unlock, and the curated edge says so.
+
+  - from: singularity-milestone-horoscope-of-the-void
+    to: singular-zodiacs
+    rel: boosts
+    reason: >-
+      "You can now obtain Singular Zodiacs" is an unlock, and the curated edge
+      says so.
+
+  - from: refine-node-46
+    to: smp
+    rel: boosts
+    reason: >-
+      "Unlocks special minerals progression" is an unlock, and the curated edge
+      says so.
+
+  - from: tarot-challenge-the-star
+    to: singular-zodiacs
+    rel: boosts
+    reason: >-
+      The Singular Zodiac is the challenge's entry condition, not something the
+      challenge boosts. Curated as `requires` instead.
+
   - from: special-mineral-black-gem
     to: wind-node-10
     rel: boosts
@@ -6324,3 +6656,13 @@ suppress:
     reason: >-
       "ViP per VE mult x1000" -- same per-unit basis as Essence Density. The
       milestone multiplies ViP output, not the VE it is measured against.
+
+  # A parenthetical gloss read as an input. "(SMP Exp)" says what Relic 45
+  # grants, not what Fire Node 10 consumes, and the outbound edge to relic-45
+  # already carries the relationship the sentence states.
+  - from: smp
+    to: fire-node-10
+    rel: boosts
+    reason: >-
+      "Relic 45 effect is multiplied based on your fire (SMP Exp)" -- the node
+      reads fire, not SMP. The edge to Relic 45 is the real one.

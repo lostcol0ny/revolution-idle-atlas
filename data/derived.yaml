@@ -5631,6 +5631,13 @@ edges:
   source: wiki:Relics
   confidence: uncertain
 - from: relic-45
+  to: smp
+  rel: boosts
+  op: add
+  note: Increase SMP Exp you get on merging special minerals
+  source: wiki:Relics
+  confidence: uncertain
+- from: relic-45
   to: special-minerals
   rel: boosts
   op: add
@@ -5639,6 +5646,13 @@ edges:
   confidence: uncertain
 - from: relic-46
   to: relic-45
+  rel: boosts
+  op: add
+  note: Empowers Relic 45 (SMP EXP)
+  source: wiki:Relics
+  confidence: uncertain
+- from: relic-46
+  to: smp
   rel: boosts
   op: add
   note: Empowers Relic 45 (SMP EXP)
@@ -5768,6 +5782,13 @@ edges:
   rel: boosts
   op: add
   note: Multiplies PIP per PIG
+  source: wiki:Relics
+  confidence: uncertain
+- from: relic-62
+  to: base-spread-power
+  rel: boosts
+  op: add
+  note: Multiplies Base Spread Power on Endoplasmic reticulum craft
   source: wiki:Relics
   confidence: uncertain
 - from: relic-62
@@ -6230,6 +6251,12 @@ edges:
   rel: requires
   source: wiki:Minerals/Refine_Tree
   confidence: documented
+- from: refine-node-38
+  to: refinement-points
+  rel: boosts
+  note: 'You get more refine points based on your knuckles level: RfP^(1.01*lvl)'
+  source: wiki:Minerals/Refine_Tree
+  confidence: uncertain
 - from: refinement-points
   to: refine-node-38
   rel: boosts
@@ -6313,7 +6340,7 @@ edges:
   source: wiki:Minerals/Refine_Tree
   confidence: documented
 - from: refine-node-46
-  to: special-minerals
+  to: smp
   rel: boosts
   note: Unlocks special minerals progression
   source: wiki:Minerals/Refine_Tree
@@ -6713,6 +6740,13 @@ edges:
   source: wiki:Minerals/Refine_Tree
   confidence: documented
 - from: refine-node-86
+  to: smp
+  rel: boosts
+  note: Grants SMP EXP to all Special Minerals every second based on Relic 45, The Tower, and average
+    SMP level (???/sec). Affected by Tarot Local Speed.
+  source: wiki:Minerals/Refine_Tree
+  confidence: uncertain
+- from: refine-node-86
   to: special-minerals
   rel: boosts
   note: Grants SMP EXP to all Special Minerals every second based on Relic 45, The Tower, and average
@@ -6726,6 +6760,13 @@ edges:
     SMP level (???/sec). Affected by Tarot Local Speed.
   source: wiki:Minerals/Refine_Tree
   confidence: provisional
+- from: smp
+  to: refine-node-86
+  rel: boosts
+  note: Grants SMP EXP to all Special Minerals every second based on Relic 45, The Tower, and average
+    SMP level (???/sec). Affected by Tarot Local Speed.
+  source: wiki:Minerals/Refine_Tree
+  confidence: uncertain
 - from: tarot
   to: refine-node-86
   rel: boosts
@@ -6832,6 +6873,12 @@ edges:
   rel: requires
   source: wiki:Minerals/Refine_Tree
   confidence: documented
+- from: refine-node-93
+  to: smp
+  rel: boosts
+  note: SMP Gem Efficiency also boosts the second Special Mineral sacrifce effect at a reduced rate
+  source: wiki:Minerals/Refine_Tree
+  confidence: uncertain
 - from: refine-node-83
   to: refine-node-94
   rel: requires
@@ -7026,6 +7073,12 @@ edges:
   rel: requires
   source: wiki:Minerals/Refine_Tree
   confidence: documented
+- from: refine-node-114
+  to: base-spread-power
+  rel: boosts
+  note: Multiplies Base Spread Power (on ER craft) by x1.25
+  source: wiki:Minerals/Refine_Tree
+  confidence: uncertain
 - from: refine-node-113
   to: refine-node-115
   rel: requires
@@ -7144,11 +7197,23 @@ edges:
   rel: requires
   source: wiki:Minerals/Refine_Tree
   confidence: documented
+- from: refine-node-126
+  to: atoms-gain
+  rel: boosts
+  note: No longer applies an Atom gain penalty at 1e50
+  source: wiki:Minerals/Refine_Tree
+  confidence: uncertain
 - from: refine-node-125
   to: refine-node-127
   rel: requires
   source: wiki:Minerals/Refine_Tree
   confidence: documented
+- from: refine-node-127
+  to: atoms-gain
+  rel: boosts
+  note: No longer applies an Atom gain penalty at 14e153
+  source: wiki:Minerals/Refine_Tree
+  confidence: uncertain
 - from: refine-node-112
   to: refine-node-128
   rel: requires
@@ -7169,6 +7234,12 @@ edges:
   rel: requires
   source: wiki:Minerals/Refine_Tree
   confidence: documented
+- from: refine-node-129
+  to: refinement-points
+  rel: boosts
+  note: Adds Refine Points to Singularity Mult Effects
+  source: wiki:Minerals/Refine_Tree
+  confidence: uncertain
 - from: refine-node-129
   to: singularity
   rel: boosts
@@ -7191,6 +7262,12 @@ edges:
   rel: requires
   source: wiki:Minerals/Refine_Tree
   confidence: documented
+- from: refine-node-131
+  to: atoms-gain
+  rel: boosts
+  note: Adds Atom Gain to Singularity Count effects
+  source: wiki:Minerals/Refine_Tree
+  confidence: uncertain
 - from: refine-node-131
   to: singularity
   rel: boosts
@@ -7230,6 +7307,12 @@ edges:
   rel: requires
   source: wiki:Minerals/Refine_Tree
   confidence: documented
+- from: refine-node-134
+  to: refinement-points
+  rel: boosts
+  note: Adds Refine Points to Singularity Count Effects
+  source: wiki:Minerals/Refine_Tree
+  confidence: uncertain
 - from: refine-node-134
   to: singularity
   rel: boosts
@@ -7984,6 +8067,12 @@ edges:
     )
   source: wiki:Tarot
   confidence: uncertain
+- from: tarot-the-tower
+  to: smp
+  rel: boosts
+  note: 'Will destroy random special gem granting #^[Gem Lv] (base 1.800) SMP to this gem'
+  source: wiki:Tarot
+  confidence: uncertain
 - from: tarot-the-star
   to: luck
   rel: boosts
@@ -8184,6 +8273,12 @@ edges:
   note: Relic 45 effect is multiplied based on your fire (SMP Exp)
   source: wiki:Elements
   confidence: provisional
+- from: smp
+  to: fire-node-10
+  rel: boosts
+  note: Relic 45 effect is multiplied based on your fire (SMP Exp)
+  source: wiki:Elements
+  confidence: uncertain
 - from: earth-node-1
   to: infinities
   rel: boosts
@@ -8835,6 +8930,11 @@ edges:
   rel: boosts
   source: wiki:Singularity
   confidence: uncertain
+- from: singularity-milestone-accelerated-growth
+  to: singularity-effects-tab
+  rel: boosts
+  source: wiki:Singularity
+  confidence: uncertain
 - from: singularity-milestone-event-horizon
   to: plague
   rel: boosts
@@ -8842,6 +8942,11 @@ edges:
   confidence: uncertain
 - from: singularity-milestone-event-horizon
   to: singularity
+  rel: boosts
+  source: wiki:Singularity
+  confidence: uncertain
+- from: singularity-milestone-spaghettification
+  to: singularity-tree-tab
   rel: boosts
   source: wiki:Singularity
   confidence: uncertain
@@ -8880,6 +8985,11 @@ edges:
   rel: boosts
   source: wiki:Singularity
   confidence: uncertain
+- from: singularity-milestone-astral-property
+  to: singularity-houses-tab
+  rel: boosts
+  source: wiki:Singularity
+  confidence: uncertain
 - from: singularity-milestone-self-synergism
   to: singularity
   rel: boosts
@@ -8900,13 +9010,28 @@ edges:
   rel: boosts
   source: wiki:Singularity
   confidence: uncertain
+- from: singularity-milestone-quantum-pressure
+  to: smp
+  rel: boosts
+  source: wiki:Singularity
+  confidence: uncertain
 - from: singularity-milestone-atom-overflow
   to: singularity
   rel: boosts
   source: wiki:Singularity
   confidence: uncertain
+- from: singularity-milestone-horoscope-of-the-void
+  to: singular-zodiacs
+  rel: boosts
+  source: wiki:Singularity
+  confidence: uncertain
 - from: singularity-milestone-universe-under-pressure
   to: luck
+  rel: boosts
+  source: wiki:Singularity
+  confidence: uncertain
+- from: singularity-milestone-special-sacrificer
+  to: smp
   rel: boosts
   source: wiki:Singularity
   confidence: uncertain
@@ -8935,6 +9060,11 @@ edges:
   rel: boosts
   source: wiki:Singularity
   confidence: uncertain
+- from: singularity-milestone-viral-ascension
+  to: atoms-gain
+  rel: boosts
+  source: wiki:Singularity
+  confidence: uncertain
 - from: singularity-milestone-infinite-infection
   to: singularity
   rel: boosts
@@ -8952,6 +9082,11 @@ edges:
   confidence: uncertain
 - from: singularity-tree-2
   to: gold-gain
+  rel: boosts
+  source: wiki:Singularity
+  confidence: uncertain
+- from: singularity-tree-4-1
+  to: refinement-points
   rel: boosts
   source: wiki:Singularity
   confidence: uncertain
@@ -9000,6 +9135,26 @@ edges:
   rel: boosts
   source: wiki:Singularity
   confidence: uncertain
+- from: singularity-zodiac-aries
+  to: fire-factor-3
+  rel: boosts
+  source: wiki:Singularity
+  confidence: uncertain
+- from: singularity-zodiac-taurus
+  to: earth-factor-3
+  rel: boosts
+  source: wiki:Singularity
+  confidence: uncertain
+- from: singularity-zodiac-gemini
+  to: wind-factor-3
+  rel: boosts
+  source: wiki:Singularity
+  confidence: uncertain
+- from: singularity-zodiac-cancer
+  to: water-factor-3
+  rel: boosts
+  source: wiki:Singularity
+  confidence: uncertain
 - from: singularity-zodiac-leo
   to: sacrifice-dust
   rel: boosts
@@ -9012,6 +9167,11 @@ edges:
   confidence: uncertain
 - from: singularity-zodiac-libra
   to: virus-essence
+  rel: boosts
+  source: wiki:Singularity
+  confidence: uncertain
+- from: singularity-zodiac-scorpio
+  to: base-spread-power
   rel: boosts
   source: wiki:Singularity
   confidence: uncertain
@@ -9710,6 +9870,11 @@ edges:
   rel: boosts
   source: wiki:Tarot
   confidence: uncertain
+- from: atoms-gain
+  to: tarot-challenge-king-of-swords
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
 - from: attack-level
   to: tarot-challenge-king-of-swords
   rel: boosts
@@ -9947,6 +10112,11 @@ edges:
   confidence: uncertain
 - from: tarot-challenge-king-of-wands
   to: tarot
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-challenge-king-of-wands
+  to: atoms-gain
   rel: boosts
   source: wiki:Tarot
   confidence: uncertain
@@ -10255,6 +10425,11 @@ edges:
   rel: boosts
   source: wiki:Tarot
   confidence: uncertain
+- from: tarot-challenge-king-of-pentacles
+  to: atoms-gain
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
 - from: mineral-level
   to: tarot-challenge-king-of-pentacles
   rel: boosts
@@ -10381,6 +10556,11 @@ edges:
   source: wiki:Tarot
   confidence: uncertain
 - from: singularity
+  to: tarot-challenge-king-of-cups
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: atoms-gain
   to: tarot-challenge-king-of-cups
   rel: boosts
   source: wiki:Tarot
@@ -10615,6 +10795,11 @@ edges:
   rel: boosts
   source: wiki:Tarot
   confidence: uncertain
+- from: tarot-challenge-the-star
+  to: singular-zodiacs
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
 - from: tarot-challenge-the-moon
   to: singularity
   rel: boosts
@@ -10637,6 +10822,11 @@ edges:
   confidence: uncertain
 - from: tarot-challenge-the-moon
   to: planet-moon
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-challenge-the-moon
+  to: atoms-gain
   rel: boosts
   source: wiki:Tarot
   confidence: uncertain

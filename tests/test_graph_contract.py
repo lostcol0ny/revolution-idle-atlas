@@ -163,10 +163,12 @@ def test_the_sweep_reached_the_graph(graph: dict):
     # Counts are pinned to the committed snapshot in data/raw/. A mismatch after
     # a scrape PR lands is the most useful thing the suite can say at that point.
     #
-    # Each prefix is tested against provisional nodes only, so curated nodes
-    # sharing a prefix (e.g. zodiac-sell-cost) are not counted. No prefix below
-    # is a prefix of another — the manifest schema rejects that — so a plain
-    # startswith attributes every node to exactly one entry.
+    # Counted against `derived.yaml`, which holds extraction output only, so a
+    # curated node sharing a prefix cannot inflate an entry's total no matter
+    # what confidence it carries. The test below pins prefix membership there to
+    # the swept set exactly. No prefix here is a prefix of another — the manifest
+    # schema rejects that — so a plain startswith attributes every node to
+    # exactly one entry.
     expected = {
         "special-mineral-": 10,
         "zodiac-": 12,
@@ -179,10 +181,13 @@ def test_the_sweep_reached_the_graph(graph: dict):
         "dilation-node-": 13,
         "dilation-upgrade-": 9,
     }
-    swept = [n for n in graph["nodes"] if n.get("confidence") == "provisional"]
+    derived = _load_yaml("derived.yaml")
+    shipped = {n["id"] for n in graph["nodes"]}
     for prefix, count in expected.items():
-        owned = [n for n in swept if n["id"].startswith(prefix)]
+        owned = [n["id"] for n in derived["nodes"] if n["id"].startswith(prefix)]
         assert len(owned) == count, (prefix, len(owned))
+        for node_id in owned:
+            assert node_id in shipped, f"{node_id} never reached the artifact"
 
 
 def test_the_plague_statistics_table_wires_plague_into_the_graph(graph: dict):
@@ -249,7 +254,7 @@ def test_every_swept_edge_is_uncertain(graph: dict):
     swept -= {key(e) for e in curated.get("edges") or []}
     swept -= {key(s) for s in curated.get("suppress") or []}
 
-    assert len(swept) == 416, f"expected 416 swept edges, got {len(swept)}"
+    assert len(swept) == 425, f"expected 425 swept edges, got {len(swept)}"
     shipped = {key(e): e for e in graph["edges"]}
     for edge in swept:
         assert edge in shipped, f"{edge} never reached the artifact"

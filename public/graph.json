@@ -4026,6 +4026,9 @@
       "wiki": "Elements"
     },
     {
+      "aliases": [
+        "Fire Element Factor 3"
+      ],
       "confidence": "documented",
       "effects": [
         {
@@ -4065,6 +4068,9 @@
       "wiki": "Elements"
     },
     {
+      "aliases": [
+        "Earth Element Factor 3"
+      ],
       "confidence": "documented",
       "effects": [
         {
@@ -4104,6 +4110,9 @@
       "wiki": "Elements"
     },
     {
+      "aliases": [
+        "Wind Element Factor 3"
+      ],
       "confidence": "documented",
       "effects": [
         {
@@ -4143,6 +4152,9 @@
       "wiki": "Elements"
     },
     {
+      "aliases": [
+        "Water Element Factor 3"
+      ],
       "confidence": "documented",
       "effects": [
         {
@@ -8513,6 +8525,9 @@
       "wiki": "Singularity"
     },
     {
+      "aliases": [
+        "Atom Gain"
+      ],
       "confidence": "provisional",
       "id": "atoms-gain",
       "kind": "stat",
@@ -12274,7 +12289,8 @@
     },
     {
       "aliases": [
-        "RfP"
+        "RfP",
+        "Refine Points"
       ],
       "confidence": "documented",
       "effects": [
@@ -12745,6 +12761,63 @@
       "name": "Golden Resources",
       "system": "tarot",
       "wiki": "Tarot"
+    },
+    {
+      "aliases": [
+        "SMP"
+      ],
+      "confidence": "documented",
+      "id": "smp",
+      "kind": "group",
+      "name": "Special Minerals Progression",
+      "system": "minerals",
+      "wiki": "Minerals#Special_Minerals_Progression_(Refine_Node_46)"
+    },
+    {
+      "aliases": [
+        "Base Spread"
+      ],
+      "confidence": "provisional",
+      "id": "base-spread-power",
+      "kind": "upgrade",
+      "name": "Base Spread Power",
+      "system": "plague",
+      "wiki": "Plague"
+    },
+    {
+      "confidence": "provisional",
+      "id": "singularity-effects-tab",
+      "kind": "group",
+      "name": "Effects Tab",
+      "system": "singularity",
+      "wiki": "Singularity#Effects"
+    },
+    {
+      "confidence": "provisional",
+      "id": "singularity-tree-tab",
+      "kind": "group",
+      "name": "Tree Tab",
+      "system": "singularity",
+      "wiki": "Singularity#Tree"
+    },
+    {
+      "confidence": "provisional",
+      "id": "singularity-houses-tab",
+      "kind": "group",
+      "name": "Houses Tab",
+      "system": "singularity",
+      "wiki": "Singularity#Houses"
+    },
+    {
+      "aliases": [
+        "Singular Zodiac"
+      ],
+      "confidence": "provisional",
+      "id": "singular-zodiacs",
+      "kind": "group",
+      "name": "Singular Zodiacs",
+      "system": "singularity",
+      "wiki": "Singularity#Houses"
     }
   ],
   "edges": [
@@ -13203,6 +13276,15 @@
       "op": "add",
       "rel": "boosts",
       "source": "wiki:Relics",
+      "to": "smp"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "relic-45",
+      "note": "Increase SMP Exp you get on merging special minerals",
+      "op": "add",
+      "rel": "boosts",
+      "source": "wiki:Relics",
       "to": "special-minerals"
     },
     {
@@ -13213,6 +13295,15 @@
       "rel": "boosts",
       "source": "wiki:Relics",
       "to": "relic-45"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "relic-46",
+      "note": "Empowers Relic 45 (SMP EXP)",
+      "op": "add",
+      "rel": "boosts",
+      "source": "wiki:Relics",
+      "to": "smp"
     },
     {
       "confidence": "uncertain",
@@ -13366,6 +13457,15 @@
       "rel": "boosts",
       "source": "wiki:Relics",
       "to": "relic-59"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "relic-62",
+      "note": "Multiplies Base Spread Power on Endoplasmic reticulum craft",
+      "op": "add",
+      "rel": "boosts",
+      "source": "wiki:Relics",
+      "to": "base-spread-power"
     },
     {
       "confidence": "uncertain",
@@ -13994,6 +14094,14 @@
     },
     {
       "confidence": "uncertain",
+      "from": "refine-node-38",
+      "note": "You get more refine points based on your knuckles level: RfP^(1.01*lvl)",
+      "rel": "boosts",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refinement-points"
+    },
+    {
+      "confidence": "uncertain",
       "from": "refinement-points",
       "note": "You get more refine points based on your knuckles level: RfP^(1.01*lvl)",
       "rel": "boosts",
@@ -14103,14 +14211,6 @@
       "rel": "requires",
       "source": "wiki:Minerals/Refine_Tree",
       "to": "refine-node-46"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "refine-node-46",
-      "note": "Unlocks special minerals progression",
-      "rel": "boosts",
-      "source": "wiki:Minerals/Refine_Tree",
-      "to": "special-minerals"
     },
     {
       "confidence": "documented",
@@ -14650,11 +14750,27 @@
       "note": "Grants SMP EXP to all Special Minerals every second based on Relic 45, The Tower, and average SMP level (???/sec). Affected by Tarot Local Speed.",
       "rel": "boosts",
       "source": "wiki:Minerals/Refine_Tree",
+      "to": "smp"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "refine-node-86",
+      "note": "Grants SMP EXP to all Special Minerals every second based on Relic 45, The Tower, and average SMP level (???/sec). Affected by Tarot Local Speed.",
+      "rel": "boosts",
+      "source": "wiki:Minerals/Refine_Tree",
       "to": "special-minerals"
     },
     {
       "confidence": "provisional",
       "from": "relic-45",
+      "note": "Grants SMP EXP to all Special Minerals every second based on Relic 45, The Tower, and average SMP level (???/sec). Affected by Tarot Local Speed.",
+      "rel": "boosts",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-86"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "smp",
       "note": "Grants SMP EXP to all Special Minerals every second based on Relic 45, The Tower, and average SMP level (???/sec). Affected by Tarot Local Speed.",
       "rel": "boosts",
       "source": "wiki:Minerals/Refine_Tree",
@@ -14801,6 +14917,14 @@
       "rel": "requires",
       "source": "wiki:Minerals/Refine_Tree",
       "to": "refine-node-93"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "refine-node-93",
+      "note": "SMP Gem Efficiency also boosts the second Special Mineral sacrifce effect at a reduced rate",
+      "rel": "boosts",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "smp"
     },
     {
       "confidence": "documented",
@@ -15059,6 +15183,14 @@
       "to": "refine-node-114"
     },
     {
+      "confidence": "uncertain",
+      "from": "refine-node-114",
+      "note": "Multiplies Base Spread Power (on ER craft) by x1.25",
+      "rel": "boosts",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "base-spread-power"
+    },
+    {
       "confidence": "documented",
       "from": "refine-node-113",
       "rel": "requires",
@@ -15205,11 +15337,27 @@
       "to": "refine-node-126"
     },
     {
+      "confidence": "uncertain",
+      "from": "refine-node-126",
+      "note": "No longer applies an Atom gain penalty at 1e50",
+      "rel": "boosts",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "atoms-gain"
+    },
+    {
       "confidence": "documented",
       "from": "refine-node-125",
       "rel": "requires",
       "source": "wiki:Minerals/Refine_Tree",
       "to": "refine-node-127"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "refine-node-127",
+      "note": "No longer applies an Atom gain penalty at 14e153",
+      "rel": "boosts",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "atoms-gain"
     },
     {
       "confidence": "documented",
@@ -15245,6 +15393,14 @@
       "note": "Adds Refine Points to Singularity Mult Effects",
       "rel": "boosts",
       "source": "wiki:Minerals/Refine_Tree",
+      "to": "refinement-points"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "refine-node-129",
+      "note": "Adds Refine Points to Singularity Mult Effects",
+      "rel": "boosts",
+      "source": "wiki:Minerals/Refine_Tree",
       "to": "singularity"
     },
     {
@@ -15268,6 +15424,14 @@
       "rel": "requires",
       "source": "wiki:Minerals/Refine_Tree",
       "to": "refine-node-131"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "refine-node-131",
+      "note": "Adds Atom Gain to Singularity Count effects",
+      "rel": "boosts",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "atoms-gain"
     },
     {
       "confidence": "uncertain",
@@ -15321,6 +15485,14 @@
       "rel": "requires",
       "source": "wiki:Minerals/Refine_Tree",
       "to": "refine-node-134"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "refine-node-134",
+      "note": "Adds Refine Points to Singularity Count Effects",
+      "rel": "boosts",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refinement-points"
     },
     {
       "confidence": "uncertain",
@@ -16299,6 +16471,14 @@
       "rel": "boosts",
       "source": "wiki:Tarot",
       "to": "tarot"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-the-tower",
+      "note": "Will destroy random special gem granting #^[Gem Lv] (base 1.800) SMP to this gem",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "smp"
     },
     {
       "confidence": "uncertain",
@@ -17517,6 +17697,13 @@
     },
     {
       "confidence": "uncertain",
+      "from": "singularity-milestone-quantum-pressure",
+      "rel": "boosts",
+      "source": "wiki:Singularity",
+      "to": "smp"
+    },
+    {
+      "confidence": "uncertain",
       "from": "singularity-milestone-atom-overflow",
       "rel": "boosts",
       "source": "wiki:Singularity",
@@ -17528,6 +17715,13 @@
       "rel": "boosts",
       "source": "wiki:Singularity",
       "to": "luck"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "singularity-milestone-special-sacrificer",
+      "rel": "boosts",
+      "source": "wiki:Singularity",
+      "to": "smp"
     },
     {
       "confidence": "uncertain",
@@ -17559,6 +17753,13 @@
     },
     {
       "confidence": "uncertain",
+      "from": "singularity-milestone-viral-ascension",
+      "rel": "boosts",
+      "source": "wiki:Singularity",
+      "to": "atoms-gain"
+    },
+    {
+      "confidence": "uncertain",
       "from": "singularity-milestone-infinite-infection",
       "rel": "boosts",
       "source": "wiki:Singularity",
@@ -17577,6 +17778,13 @@
       "rel": "boosts",
       "source": "wiki:Singularity",
       "to": "gold-gain"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "singularity-tree-4-1",
+      "rel": "boosts",
+      "source": "wiki:Singularity",
+      "to": "refinement-points"
     },
     {
       "confidence": "uncertain",
@@ -17629,6 +17837,34 @@
     },
     {
       "confidence": "uncertain",
+      "from": "singularity-zodiac-aries",
+      "rel": "boosts",
+      "source": "wiki:Singularity",
+      "to": "fire-factor-3"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "singularity-zodiac-taurus",
+      "rel": "boosts",
+      "source": "wiki:Singularity",
+      "to": "earth-factor-3"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "singularity-zodiac-gemini",
+      "rel": "boosts",
+      "source": "wiki:Singularity",
+      "to": "wind-factor-3"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "singularity-zodiac-cancer",
+      "rel": "boosts",
+      "source": "wiki:Singularity",
+      "to": "water-factor-3"
+    },
+    {
+      "confidence": "uncertain",
       "from": "singularity-zodiac-leo",
       "rel": "boosts",
       "source": "wiki:Singularity",
@@ -17647,6 +17883,13 @@
       "rel": "boosts",
       "source": "wiki:Singularity",
       "to": "virus-essence"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "singularity-zodiac-scorpio",
+      "rel": "boosts",
+      "source": "wiki:Singularity",
+      "to": "base-spread-power"
     },
     {
       "confidence": "uncertain",
@@ -23324,6 +23567,182 @@
       "rel": "requires",
       "source": "wiki:Plague",
       "to": "plague-er-essence-density"
+    },
+    {
+      "confidence": "documented",
+      "from": "singularity-tree-3-1",
+      "note": "Weakens the ^0.125 Atoms Gain penalty that applies from 1.8e308 atoms",
+      "rel": "boosts",
+      "source": "wiki:Singularity",
+      "to": "atoms-gain"
+    },
+    {
+      "confidence": "documented",
+      "from": "singularity-tree-3-2",
+      "note": "Weakens the ^0.05 Atoms Gain penalty that applies from 1e500 atoms",
+      "rel": "boosts",
+      "source": "wiki:Singularity",
+      "to": "atoms-gain"
+    },
+    {
+      "confidence": "documented",
+      "from": "singularity-tree-6-2",
+      "note": "Weakens the ^0.014 Atoms Gain penalty that applies from 1e1000 atoms",
+      "rel": "boosts",
+      "source": "wiki:Singularity",
+      "to": "atoms-gain"
+    },
+    {
+      "confidence": "documented",
+      "from": "singularity-milestone-atomic-flow",
+      "note": "Element Factors 1 and 2 powers x3",
+      "rel": "boosts",
+      "source": "wiki:Singularity",
+      "to": "fire-factor-1"
+    },
+    {
+      "confidence": "documented",
+      "from": "singularity-milestone-atomic-flow",
+      "note": "Element Factors 1 and 2 powers x3",
+      "rel": "boosts",
+      "source": "wiki:Singularity",
+      "to": "fire-factor-2"
+    },
+    {
+      "confidence": "documented",
+      "from": "singularity-milestone-atomic-flow",
+      "note": "Element Factors 1 and 2 powers x3",
+      "rel": "boosts",
+      "source": "wiki:Singularity",
+      "to": "earth-factor-1"
+    },
+    {
+      "confidence": "documented",
+      "from": "singularity-milestone-atomic-flow",
+      "note": "Element Factors 1 and 2 powers x3",
+      "rel": "boosts",
+      "source": "wiki:Singularity",
+      "to": "earth-factor-2"
+    },
+    {
+      "confidence": "documented",
+      "from": "singularity-milestone-atomic-flow",
+      "note": "Element Factors 1 and 2 powers x3",
+      "rel": "boosts",
+      "source": "wiki:Singularity",
+      "to": "wind-factor-1"
+    },
+    {
+      "confidence": "documented",
+      "from": "singularity-milestone-atomic-flow",
+      "note": "Element Factors 1 and 2 powers x3",
+      "rel": "boosts",
+      "source": "wiki:Singularity",
+      "to": "wind-factor-2"
+    },
+    {
+      "confidence": "documented",
+      "from": "singularity-milestone-atomic-flow",
+      "note": "Element Factors 1 and 2 powers x3",
+      "rel": "boosts",
+      "source": "wiki:Singularity",
+      "to": "water-factor-1"
+    },
+    {
+      "confidence": "documented",
+      "from": "singularity-milestone-atomic-flow",
+      "note": "Element Factors 1 and 2 powers x3",
+      "rel": "boosts",
+      "source": "wiki:Singularity",
+      "to": "water-factor-2"
+    },
+    {
+      "confidence": "documented",
+      "from": "singularity-milestone-elementary-master",
+      "note": "Factor 2 power for water is multiplied by x10",
+      "rel": "boosts",
+      "source": "wiki:Singularity",
+      "to": "water-factor-2"
+    },
+    {
+      "confidence": "documented",
+      "from": "singularity-milestone-nuclear-bloom",
+      "note": "Divides last element nodes upgrades cost by 1e300",
+      "rel": "boosts",
+      "source": "wiki:Singularity",
+      "to": "fire-node-11"
+    },
+    {
+      "confidence": "documented",
+      "from": "singularity-milestone-nuclear-bloom",
+      "note": "Divides last element nodes upgrades cost by 1e300",
+      "rel": "boosts",
+      "source": "wiki:Singularity",
+      "to": "earth-node-10"
+    },
+    {
+      "confidence": "documented",
+      "from": "singularity-milestone-nuclear-bloom",
+      "note": "Divides last element nodes upgrades cost by 1e300",
+      "rel": "boosts",
+      "source": "wiki:Singularity",
+      "to": "wind-node-12"
+    },
+    {
+      "confidence": "documented",
+      "from": "singularity-milestone-nuclear-bloom",
+      "note": "Divides last element nodes upgrades cost by 1e300",
+      "rel": "boosts",
+      "source": "wiki:Singularity",
+      "to": "water-node-11"
+    },
+    {
+      "confidence": "documented",
+      "from": "singularity-milestone-accelerated-growth",
+      "note": "Unlock Effects Tab",
+      "rel": "unlocks",
+      "source": "wiki:Singularity",
+      "to": "singularity-effects-tab"
+    },
+    {
+      "confidence": "documented",
+      "from": "singularity-milestone-spaghettification",
+      "note": "Unlocks Tree Tab",
+      "rel": "unlocks",
+      "source": "wiki:Singularity",
+      "to": "singularity-tree-tab"
+    },
+    {
+      "confidence": "documented",
+      "from": "singularity-milestone-astral-property",
+      "note": "Unlocks Houses Tab",
+      "rel": "unlocks",
+      "source": "wiki:Singularity",
+      "to": "singularity-houses-tab"
+    },
+    {
+      "confidence": "documented",
+      "from": "singularity-milestone-horoscope-of-the-void",
+      "note": "You can now obtain Singular Zodiacs if you have already unlocked houses",
+      "rel": "unlocks",
+      "source": "wiki:Singularity",
+      "to": "singular-zodiacs"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-46",
+      "note": "Unlocks special minerals progression",
+      "rel": "unlocks",
+      "source": "wiki:Minerals",
+      "to": "smp"
+    },
+    {
+      "confidence": "documented",
+      "from": "tarot-challenge-the-star",
+      "note": "Perform a Singularity with an Uncommon+ Singular Zodiac",
+      "rel": "requires",
+      "source": "wiki:Tarot",
+      "to": "singular-zodiacs"
     }
   ],
   "systems": [
