@@ -4732,6 +4732,9 @@
       "effects": [
         {
           "text": "3.00x VP Gain"
+        },
+        {
+          "text": "Sacrificed: Attacks HP is powered to ^(1/X)"
         }
       ],
       "id": "special-mineral-red-gem",
@@ -4745,6 +4748,9 @@
       "effects": [
         {
           "text": "Cost Increase is powered to ^0.99"
+        },
+        {
+          "text": "Sacrificed: Global Element Mult is powered to ^X (1.1 + ((level - 26)^2) x 0.01, not confirmed)"
         }
       ],
       "id": "special-mineral-blue-gem",
@@ -4758,6 +4764,9 @@
       "effects": [
         {
           "text": "Cost fall is powered to ^1.01"
+        },
+        {
+          "text": "Sacrificed: multiplies the first effect (Resource Generation) of Common Tarot Cards"
         }
       ],
       "id": "special-mineral-green-gem",
@@ -4771,6 +4780,9 @@
       "effects": [
         {
           "text": "Luck and Quality Bonus +0.05"
+        },
+        {
+          "text": "Sacrificed: Luck is powered to ^X (base 1.03 at level 27, +0.03 per level, not confirmed)"
         }
       ],
       "id": "special-mineral-pink-gem",
@@ -4784,6 +4796,9 @@
       "effects": [
         {
           "text": "Gold gain is multiplied by 10"
+        },
+        {
+          "text": "Sacrificed: Relic 14's effect is powered to ^X (1000 + ((level - 27)^2) x 100, not confirmed)"
         }
       ],
       "id": "special-mineral-yellow-gem",
@@ -4797,6 +4812,9 @@
       "effects": [
         {
           "text": "1.01x Magnet Chance"
+        },
+        {
+          "text": "Sacrificed: multiplies Local Elements Speed Power by X (base 1.1 at level 27, +0.04 per level, not confirmed)"
         }
       ],
       "id": "special-mineral-orange-gem",
@@ -4810,6 +4828,9 @@
       "effects": [
         {
           "text": "1.50x PP gain"
+        },
+        {
+          "text": "Sacrificed: multiplies The Devil's effect by X (10 + (level - 26)^2, not confirmed)"
         }
       ],
       "id": "special-mineral-dark-purple-gem",
@@ -4823,6 +4844,9 @@
       "effects": [
         {
           "text": "+x0.05 RfP Gain"
+        },
+        {
+          "text": "Sacrificed: RfP Gain is powered to ^X (base 1.02 at level 27, +0.02 per level)"
         }
       ],
       "id": "special-mineral-light-blue-gem",
@@ -4836,6 +4860,9 @@
       "effects": [
         {
           "text": "Make the game speed +0.05x faster"
+        },
+        {
+          "text": "Sacrificed: divides the Mineral Local Speed softcaps by X (base 1.01 at level 27, +0.01 per level, not confirmed)"
         }
       ],
       "id": "special-mineral-white-gem",
@@ -4849,6 +4876,9 @@
       "effects": [
         {
           "text": "Tarot Draws +0.10 (draws are granted when deleted)"
+        },
+        {
+          "text": "Sacrificed: boosts Refine Node 79's effect (base 2 at level 27, +1 per level, not confirmed)"
         }
       ],
       "id": "special-mineral-black-gem",
@@ -12508,6 +12538,34 @@
       "name": "Attack Ascension Power",
       "system": "attacks",
       "wiki": "Attacks"
+    },
+    {
+      "aliases": [
+        "Global Element Multiplier"
+      ],
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "Multiplies or divides all element generation; the base divides every element by 1e10"
+        }
+      ],
+      "id": "global-element-mult",
+      "kind": "stat",
+      "name": "Global Element Mult",
+      "system": "elements",
+      "wiki": "Elements"
+    },
+    {
+      "aliases": [
+        "Element Local Speed",
+        "Local Elements Speed"
+      ],
+      "confidence": "documented",
+      "id": "element-local-speed",
+      "kind": "stat",
+      "name": "Elements Local Speed",
+      "system": "elements",
+      "wiki": "Elements"
     }
   ],
   "edges": [
@@ -12888,6 +12946,15 @@
       "to": "special-minerals"
     },
     {
+      "confidence": "uncertain",
+      "from": "relic-37",
+      "note": "Multiplies Global Element Mult",
+      "op": "add",
+      "rel": "boosts",
+      "source": "wiki:Relics",
+      "to": "global-element-mult"
+    },
+    {
       "confidence": "provisional",
       "from": "relic-38",
       "note": "Adds base to Refine Node 2 (Attacks bulk leveling)",
@@ -12913,6 +12980,24 @@
       "rel": "boosts",
       "source": "wiki:Relics",
       "to": "relic-30"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "relic-41",
+      "note": "Multiplies Black Gem Eff.",
+      "op": "add",
+      "rel": "boosts",
+      "source": "wiki:Relics",
+      "to": "special-mineral-black-gem"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "relic-42",
+      "note": "Multiplies Black Gem Chance",
+      "op": "add",
+      "rel": "boosts",
+      "source": "wiki:Relics",
+      "to": "special-mineral-black-gem"
     },
     {
       "confidence": "uncertain",
@@ -13937,6 +14022,14 @@
       "to": "refine-node-57"
     },
     {
+      "confidence": "uncertain",
+      "from": "refine-node-57",
+      "note": "Multiplies Global Element Mult by x10.00",
+      "rel": "boosts",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "global-element-mult"
+    },
+    {
       "confidence": "documented",
       "from": "refine-node-36",
       "rel": "requires",
@@ -13956,6 +14049,14 @@
       "rel": "requires",
       "source": "wiki:Minerals/Refine_Tree",
       "to": "refine-node-60"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "refine-node-60",
+      "note": "Multiplies Global Element Mult (x2.00 per level, maxes at x1.07e9)",
+      "rel": "boosts",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "global-element-mult"
     },
     {
       "confidence": "documented",
@@ -14606,6 +14707,14 @@
       "rel": "requires",
       "source": "wiki:Minerals/Refine_Tree",
       "to": "refine-node-106"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "refine-node-106",
+      "note": "Spread Power of your currently equipped Endoplasmic Reticulum also boosts Black Gem base effect (x???)",
+      "rel": "boosts",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "special-mineral-black-gem"
     },
     {
       "confidence": "documented",
@@ -15285,7 +15394,7 @@
       "note": "Elements Local Speed +^",
       "rel": "boosts",
       "source": "wiki:Tarot",
-      "to": "elements"
+      "to": "element-local-speed"
     },
     {
       "confidence": "provisional",
@@ -15776,6 +15885,14 @@
       "to": "elements"
     },
     {
+      "confidence": "uncertain",
+      "from": "tarot-the-fool",
+      "note": "Instantly spawns a black gem with Lv.# (base lvl + 1)",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "special-mineral-black-gem"
+    },
+    {
       "confidence": "provisional",
       "from": "tarot-the-high-priestess",
       "note": "Increases Refine Node 1 effect by x# (base 2.000) during some times",
@@ -16129,6 +16246,14 @@
     },
     {
       "confidence": "uncertain",
+      "from": "earth-node-6",
+      "note": "Earth boosts Relic 37 (Global Element Mult.)",
+      "rel": "boosts",
+      "source": "wiki:Elements",
+      "to": "global-element-mult"
+    },
+    {
+      "confidence": "uncertain",
       "from": "wind-node-1",
       "note": "Increase power for factor 1 for wind by 3 Increases power for Eternities multiplier for Wind",
       "rel": "boosts",
@@ -16198,14 +16323,6 @@
       "rel": "boosts",
       "source": "wiki:Elements",
       "to": "relic-41"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-draws",
-      "note": "Relic 41 effect is multiplied based on your wind (Black Gem Effect, for Tarot Draws)",
-      "rel": "boosts",
-      "source": "wiki:Elements",
-      "to": "wind-node-10"
     },
     {
       "confidence": "provisional",
@@ -16278,6 +16395,14 @@
       "rel": "boosts",
       "source": "wiki:Elements",
       "to": "refine-node-60"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "water-node-10",
+      "note": "Water boosts Global Element Mult",
+      "rel": "boosts",
+      "source": "wiki:Elements",
+      "to": "global-element-mult"
     },
     {
       "confidence": "uncertain",
@@ -16806,6 +16931,13 @@
     },
     {
       "confidence": "uncertain",
+      "from": "plague-stat-total-infected",
+      "rel": "boosts",
+      "source": "wiki:Plague",
+      "to": "special-mineral-black-gem"
+    },
+    {
+      "confidence": "uncertain",
       "from": "plague-stat-max-plg",
       "rel": "boosts",
       "source": "wiki:Plague",
@@ -16897,6 +17029,13 @@
     },
     {
       "confidence": "uncertain",
+      "from": "singularity-milestone-quantum-dust",
+      "rel": "boosts",
+      "source": "wiki:Singularity",
+      "to": "special-mineral-black-gem"
+    },
+    {
+      "confidence": "uncertain",
       "from": "singularity-milestone-matter-collapse",
       "rel": "boosts",
       "source": "wiki:Singularity",
@@ -16915,6 +17054,13 @@
       "rel": "boosts",
       "source": "wiki:Singularity",
       "to": "luck"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "singularity-milestone-full-deck",
+      "rel": "boosts",
+      "source": "wiki:Singularity",
+      "to": "special-mineral-black-gem"
     },
     {
       "confidence": "uncertain",
@@ -16999,6 +17145,13 @@
       "rel": "boosts",
       "source": "wiki:Singularity",
       "to": "attack-exponent"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "singularity-zodiac-aquarius",
+      "rel": "boosts",
+      "source": "wiki:Singularity",
+      "to": "special-mineral-black-gem"
     },
     {
       "confidence": "uncertain",
@@ -17954,6 +18107,13 @@
     },
     {
       "confidence": "uncertain",
+      "from": "tarot-challenge-ace-of-wands",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "global-element-mult"
+    },
+    {
+      "confidence": "uncertain",
       "from": "tarot-challenge-two-of-wands",
       "rel": "boosts",
       "source": "wiki:Tarot",
@@ -17968,6 +18128,13 @@
     },
     {
       "confidence": "uncertain",
+      "from": "tarot-challenge-two-of-wands",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "global-element-mult"
+    },
+    {
+      "confidence": "uncertain",
       "from": "tarot-challenge-three-of-wands",
       "rel": "boosts",
       "source": "wiki:Tarot",
@@ -17979,6 +18146,13 @@
       "rel": "boosts",
       "source": "wiki:Tarot",
       "to": "relic-36"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-three-of-wands",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "global-element-mult"
     },
     {
       "confidence": "uncertain",
@@ -17989,7 +18163,28 @@
     },
     {
       "confidence": "uncertain",
+      "from": "tarot-challenge-four-of-wands",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "global-element-mult"
+    },
+    {
+      "confidence": "uncertain",
       "from": "tarot-challenge-five-of-wands",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "elements"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-five-of-wands",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "global-element-mult"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-six-of-wands",
       "rel": "boosts",
       "source": "wiki:Tarot",
       "to": "elements"
@@ -17999,7 +18194,7 @@
       "from": "tarot-challenge-six-of-wands",
       "rel": "boosts",
       "source": "wiki:Tarot",
-      "to": "elements"
+      "to": "global-element-mult"
     },
     {
       "confidence": "uncertain",
@@ -18045,6 +18240,13 @@
     },
     {
       "confidence": "uncertain",
+      "from": "tarot-challenge-seven-of-wands",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "global-element-mult"
+    },
+    {
+      "confidence": "uncertain",
       "from": "tarot-challenge-eight-of-wands",
       "rel": "boosts",
       "source": "wiki:Tarot",
@@ -18063,6 +18265,13 @@
       "rel": "boosts",
       "source": "wiki:Tarot",
       "to": "game-speed"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-eight-of-wands",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "global-element-mult"
     },
     {
       "confidence": "uncertain",
@@ -18087,6 +18296,13 @@
     },
     {
       "confidence": "uncertain",
+      "from": "tarot-challenge-nine-of-wands",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "global-element-mult"
+    },
+    {
+      "confidence": "uncertain",
       "from": "tarot-challenge-ten-of-wands",
       "rel": "boosts",
       "source": "wiki:Tarot",
@@ -18105,6 +18321,13 @@
       "rel": "boosts",
       "source": "wiki:Tarot",
       "to": "game-speed"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-ten-of-wands",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "global-element-mult"
     },
     {
       "confidence": "uncertain",
@@ -18136,6 +18359,13 @@
     },
     {
       "confidence": "uncertain",
+      "from": "tarot-challenge-knight-of-wands",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "global-element-mult"
+    },
+    {
+      "confidence": "uncertain",
       "from": "tarot-challenge-queen-of-wands",
       "rel": "boosts",
       "source": "wiki:Tarot",
@@ -18147,6 +18377,20 @@
       "rel": "boosts",
       "source": "wiki:Tarot",
       "to": "singularity"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-queen-of-wands",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "global-element-mult"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-king-of-wands",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "global-element-mult"
     },
     {
       "confidence": "uncertain",
@@ -18168,6 +18412,13 @@
       "rel": "boosts",
       "source": "wiki:Tarot",
       "to": "mineral-level"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-two-of-pentacles",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "special-mineral-red-gem"
     },
     {
       "confidence": "uncertain",
@@ -18224,6 +18475,13 @@
       "rel": "boosts",
       "source": "wiki:Tarot",
       "to": "mineral-level"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-four-of-pentacles",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "special-mineral-red-gem"
     },
     {
       "confidence": "uncertain",
@@ -18377,6 +18635,13 @@
       "from": "tarot-challenge-ten-of-pentacles",
       "rel": "boosts",
       "source": "wiki:Tarot",
+      "to": "special-mineral-red-gem"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-ten-of-pentacles",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
       "to": "magnets"
     },
     {
@@ -18426,6 +18691,13 @@
       "from": "tarot-challenge-knight-of-pentacles",
       "rel": "boosts",
       "source": "wiki:Tarot",
+      "to": "special-mineral-red-gem"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-knight-of-pentacles",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
       "to": "magnets"
     },
     {
@@ -18468,6 +18740,13 @@
       "from": "tarot-challenge-queen-of-pentacles",
       "rel": "boosts",
       "source": "wiki:Tarot",
+      "to": "special-mineral-red-gem"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-queen-of-pentacles",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
       "to": "magnets"
     },
     {
@@ -18504,6 +18783,13 @@
       "rel": "boosts",
       "source": "wiki:Tarot",
       "to": "mineral-level"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-king-of-pentacles",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "special-mineral-red-gem"
     },
     {
       "confidence": "uncertain",
@@ -18745,10 +19031,31 @@
     },
     {
       "confidence": "uncertain",
+      "from": "tarot-challenge-the-fool",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "special-mineral-black-gem"
+    },
+    {
+      "confidence": "uncertain",
       "from": "tarot-challenge-the-magician",
       "rel": "boosts",
       "source": "wiki:Tarot",
       "to": "elements"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-the-magician",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "global-element-mult"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-the-high-priestess",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "special-mineral-red-gem"
     },
     {
       "confidence": "uncertain",
@@ -19001,6 +19308,13 @@
       "rel": "boosts",
       "source": "wiki:Tarot",
       "to": "donut-luck"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-the-star",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "special-mineral-pink-gem"
     },
     {
       "confidence": "uncertain",
@@ -22221,6 +22535,76 @@
       "rel": "boosts",
       "source": "wiki:Minerals",
       "to": "mineral-local-speed"
+    },
+    {
+      "confidence": "documented",
+      "from": "special-mineral-red-gem",
+      "rel": "boosts",
+      "source": "wiki:Minerals",
+      "to": "enemy-hp"
+    },
+    {
+      "confidence": "documented",
+      "from": "special-mineral-blue-gem",
+      "rel": "boosts",
+      "source": "wiki:Minerals",
+      "to": "mineral-cost-exp"
+    },
+    {
+      "confidence": "documented",
+      "from": "special-mineral-blue-gem",
+      "rel": "boosts",
+      "source": "wiki:Minerals",
+      "to": "global-element-mult"
+    },
+    {
+      "confidence": "documented",
+      "from": "special-mineral-green-gem",
+      "rel": "boosts",
+      "source": "wiki:Minerals",
+      "to": "mineral-cost-exp"
+    },
+    {
+      "confidence": "documented",
+      "from": "special-mineral-green-gem",
+      "rel": "boosts",
+      "source": "wiki:Minerals",
+      "to": "tarot"
+    },
+    {
+      "confidence": "documented",
+      "from": "special-mineral-yellow-gem",
+      "rel": "boosts",
+      "source": "wiki:Minerals",
+      "to": "relic-14"
+    },
+    {
+      "confidence": "documented",
+      "from": "special-mineral-orange-gem",
+      "rel": "boosts",
+      "source": "wiki:Minerals",
+      "to": "element-local-speed"
+    },
+    {
+      "confidence": "documented",
+      "from": "special-mineral-dark-purple-gem",
+      "rel": "boosts",
+      "source": "wiki:Minerals",
+      "to": "tarot-the-devil"
+    },
+    {
+      "confidence": "documented",
+      "from": "special-mineral-white-gem",
+      "rel": "boosts",
+      "source": "wiki:Minerals",
+      "to": "mineral-local-speed"
+    },
+    {
+      "confidence": "documented",
+      "from": "special-mineral-black-gem",
+      "rel": "boosts",
+      "source": "wiki:Minerals",
+      "to": "refine-node-79"
     }
   ],
   "systems": [

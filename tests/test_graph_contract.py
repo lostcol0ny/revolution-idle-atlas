@@ -3,8 +3,15 @@ import re
 from pathlib import Path
 
 import pytest
+import yaml
 
-GRAPH_PATH = Path(__file__).resolve().parents[1] / "public" / "graph.json"
+ROOT = Path(__file__).resolve().parents[1]
+GRAPH_PATH = ROOT / "public" / "graph.json"
+DATA = ROOT / "data"
+
+
+def _load_yaml(name: str) -> dict:
+    return yaml.safe_load((DATA / name).read_text(encoding="utf-8"))
 
 
 @pytest.fixture(scope="module")
@@ -205,50 +212,70 @@ def test_a_numbered_row_got_a_readable_name(graph: dict):
     assert node["name"] == "Tree Node 1"
 
 
+def test_the_sweep_prefixes_identify_swept_nodes_exactly():
+    # `derived.yaml` records no provenance per node, so the test below infers it
+    # from the manifest's id prefixes. That inference is only sound while the
+    # prefixes and the `provisional` nodes are the same set — a parser minting an
+    # id under a swept prefix, or a reader shipping a node at some other
+    # confidence, would silently widen or narrow the assertion it feeds.
+    manifest = _load_yaml("sweep.yaml")
+    prefixes = tuple(page["id_prefix"] + "-" for page in manifest["pages"])
+    derived = _load_yaml("derived.yaml")
+    by_prefix = {n["id"] for n in derived["nodes"] if n["id"].startswith(prefixes)}
+    provisional = {n["id"] for n in derived["nodes"] if n.get("confidence") == "provisional"}
+    assert by_prefix == provisional
+
+
 def test_every_swept_edge_is_uncertain(graph: dict):
     # The precision guard, asserted against the shipped artifact rather than
     # against the reader. Swept edges must carry `uncertain` confidence because
     # a generic column-heading reader has no structural basis for claiming more.
     #
-    # Two curated edges in relationships.yaml cite wiki:Singularity as their
-    # source (relic-69 -> atoms-gain and refine-node-121 -> singularity). They
-    # originate from parser-minted nodes, not swept ones. Filtering by the
-    # `from` id prefix rather than by `confidence` discriminates on something
-    # independent of the property under assertion, so a sweep emitting the
-    # wrong confidence cannot satisfy this test by shrinking its own input.
-    #
-    # Infinity is absent from both sets on purpose. Its curated edges cite
-    # wiki:Infinity and start with `infinity-upgrade-`, exactly like its swept
-    # ones, so no id-prefix filter separates the two and the discrimination this
-    # test depends on is unavailable for that page.
-    swept_sources = {
-        "wiki:Zodiacs",
-        "wiki:Trials",
-        "wiki:Plague",
-        "wiki:Singularity",
-        "wiki:Dilation_Tree",
-        "wiki:Minerals",
-        "wiki:Eternity",
+    # The input is taken from `derived.yaml`, which holds extraction output only:
+    # an edge out of a swept node there is swept by construction, with no appeal
+    # to the property under assertion, so a reader emitting the wrong confidence
+    # cannot satisfy this test by shrinking its own input. Curated overrides and
+    # suppressions are removed by key because the merge replaces or deletes those
+    # edges before they reach the artifact.
+    manifest = _load_yaml("sweep.yaml")
+    prefixes = tuple(page["id_prefix"] + "-" for page in manifest["pages"])
+    derived = _load_yaml("derived.yaml")
+    curated = _load_yaml("relationships.yaml")
+
+    def key(edge: dict) -> tuple[str, str, str]:
+        return edge["from"], edge["to"], edge["rel"]
+
+    swept = {key(e) for e in derived["edges"] if e["from"].startswith(prefixes)}
+    swept -= {key(e) for e in curated.get("edges") or []}
+    swept -= {key(s) for s in curated.get("suppress") or []}
+
+    assert len(swept) == 402, f"expected 402 swept edges, got {len(swept)}"
+    shipped = {key(e): e for e in graph["edges"]}
+    for edge in swept:
+        assert edge in shipped, f"{edge} never reached the artifact"
+        assert shipped[edge].get("confidence") == "uncertain", edge
+
+
+def test_each_gem_keeps_the_spawn_effect_the_sweep_read_for_it(graph: dict):
+    # The gems are the one place a curated node restates text the sweep already
+    # produced. It has to: the sacrificed effects are documented in a table the
+    # readers cannot reach, and a curated `effects` list replaces the derived one
+    # wholesale rather than extending it. That makes the copy a masking risk of
+    # exactly the kind the relic-name tests exist for — a wiki edit to a spawn
+    # number would be silently overwritten by the stale curated line. Pinning the
+    # two together turns that into a failure naming the gem to update.
+    derived = {
+        n["id"]: n
+        for n in _load_yaml("derived.yaml")["nodes"]
+        if n["id"].startswith("special-mineral-")
     }
-    swept_prefixes = (
-        "special-mineral-",
-        "zodiac-",
-        "trial-",
-        "plague-er-",
-        "plague-stat-",
-        "singularity-milestone-",
-        "singularity-tree-",
-        "singularity-zodiac-",
-        "dilation-node-",
-        "dilation-upgrade-",
-    )
-    swept = [
-        e
-        for e in graph["edges"]
-        if e["source"] in swept_sources and e["from"].startswith(swept_prefixes)
-    ]
-    assert len(swept) == 124, f"expected 124 swept edges, got {len(swept)}"
-    assert all(e.get("confidence") == "uncertain" for e in swept)
+    assert len(derived) == 10
+    shipped = {n["id"]: n for n in graph["nodes"]}
+    for gem_id, swept in derived.items():
+        effects = [e["text"] for e in shipped[gem_id]["effects"]]
+        assert effects[0] == swept["effects"][0]["text"], gem_id
+        assert effects[1].startswith("Sacrificed: "), gem_id
+        assert len(effects) == 2, gem_id
 
 
 def test_a_zodiac_carries_all_four_of_its_bonuses(graph: dict):

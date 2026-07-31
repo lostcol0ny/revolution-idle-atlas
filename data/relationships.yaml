@@ -2975,6 +2975,104 @@ nodes:
     effects:
       - text: Gained from Value Points
 
+  - id: global-element-mult
+    name: Global Element Mult
+    aliases: [Global Element Multiplier]
+    system: elements
+    kind: stat
+    wiki: Elements
+    confidence: documented
+    effects:
+      - text: Multiplies or divides all element generation; the base divides every element by 1e10
+
+  - id: element-local-speed
+    name: Elements Local Speed
+    aliases: [Element Local Speed, Local Elements Speed]
+    system: elements
+    kind: stat
+    wiki: Elements
+    confidence: documented
+
+  - id: special-mineral-red-gem
+    name: Red Gem
+    system: minerals
+    kind: upgrade
+    effects:
+      - text: 3.00x VP Gain
+      - text: 'Sacrificed: Attacks HP is powered to ^(1/X)'
+
+  - id: special-mineral-blue-gem
+    name: Blue Gem
+    system: minerals
+    kind: upgrade
+    effects:
+      - text: Cost Increase is powered to ^0.99
+      - text: 'Sacrificed: Global Element Mult is powered to ^X (1.1 + ((level - 26)^2) x 0.01, not confirmed)'
+
+  - id: special-mineral-green-gem
+    name: Green Gem
+    system: minerals
+    kind: upgrade
+    effects:
+      - text: Cost fall is powered to ^1.01
+      - text: 'Sacrificed: multiplies the first effect (Resource Generation) of Common Tarot Cards'
+
+  - id: special-mineral-pink-gem
+    name: Pink Gem
+    system: minerals
+    kind: upgrade
+    effects:
+      - text: Luck and Quality Bonus +0.05
+      - text: 'Sacrificed: Luck is powered to ^X (base 1.03 at level 27, +0.03 per level, not confirmed)'
+
+  - id: special-mineral-yellow-gem
+    name: Yellow Gem
+    system: minerals
+    kind: upgrade
+    effects:
+      - text: Gold gain is multiplied by 10
+      - text: 'Sacrificed: Relic 14''s effect is powered to ^X (1000 + ((level - 27)^2) x 100, not confirmed)'
+
+  - id: special-mineral-orange-gem
+    name: Orange Gem
+    system: minerals
+    kind: upgrade
+    effects:
+      - text: 1.01x Magnet Chance
+      - text: 'Sacrificed: multiplies Local Elements Speed Power by X (base 1.1 at level 27, +0.04 per level, not confirmed)'
+
+  - id: special-mineral-dark-purple-gem
+    name: Dark Purple Gem
+    system: minerals
+    kind: upgrade
+    effects:
+      - text: 1.50x PP gain
+      - text: 'Sacrificed: multiplies The Devil''s effect by X (10 + (level - 26)^2, not confirmed)'
+
+  - id: special-mineral-light-blue-gem
+    name: Light Blue Gem
+    system: minerals
+    kind: upgrade
+    effects:
+      - text: +x0.05 RfP Gain
+      - text: 'Sacrificed: RfP Gain is powered to ^X (base 1.02 at level 27, +0.02 per level)'
+
+  - id: special-mineral-white-gem
+    name: White Gem
+    system: minerals
+    kind: upgrade
+    effects:
+      - text: Make the game speed +0.05x faster
+      - text: 'Sacrificed: divides the Mineral Local Speed softcaps by X (base 1.01 at level 27, +0.01 per level, not confirmed)'
+
+  - id: special-mineral-black-gem
+    name: Black Gem
+    system: minerals
+    kind: upgrade
+    effects:
+      - text: Tarot Draws +0.10 (draws are granted when deleted)
+      - text: 'Sacrificed: boosts Refine Node 79''s effect (base 2 at level 27, +1 per level, not confirmed)'
+
 edges:
   - from: relic-3
     to: attack-power
@@ -5749,7 +5847,83 @@ edges:
     source: wiki:Minerals
     confidence: documented
 
+  - from: special-mineral-red-gem
+    to: enemy-hp
+    rel: boosts
+    source: wiki:Minerals
+    confidence: documented
+
+  - from: special-mineral-blue-gem
+    to: mineral-cost-exp
+    rel: boosts
+    source: wiki:Minerals
+    confidence: documented
+
+  - from: special-mineral-blue-gem
+    to: global-element-mult
+    rel: boosts
+    source: wiki:Minerals
+    confidence: documented
+
+  - from: special-mineral-green-gem
+    to: mineral-cost-exp
+    rel: boosts
+    source: wiki:Minerals
+    confidence: documented
+
+  - from: special-mineral-green-gem
+    to: tarot
+    rel: boosts
+    source: wiki:Minerals
+    confidence: documented
+
+  - from: special-mineral-yellow-gem
+    to: relic-14
+    rel: boosts
+    source: wiki:Minerals
+    confidence: documented
+
+  - from: special-mineral-orange-gem
+    to: element-local-speed
+    rel: boosts
+    source: wiki:Minerals
+    confidence: documented
+
+  - from: special-mineral-dark-purple-gem
+    to: tarot-the-devil
+    rel: boosts
+    source: wiki:Minerals
+    confidence: documented
+
+  - from: special-mineral-white-gem
+    to: mineral-local-speed
+    rel: boosts
+    source: wiki:Minerals
+    confidence: documented
+
+  - from: special-mineral-black-gem
+    to: refine-node-79
+    rel: boosts
+    source: wiki:Minerals
+    confidence: documented
+
 suppress:
+  - from: special-mineral-black-gem
+    to: wind-node-10
+    rel: boosts
+    reason: >-
+      Wind Node 10 boosts Relic 41; "(Black Gem Effect, for Tarot Draws)" is a
+      gloss naming what Relic 41 does, not a second thing the node is boosted
+      by. The chain the sentence describes is already carried by the node's edge
+      to Relic 41 and Relic 41's own edge to the gem.
+
+  - from: tarot-draws
+    to: wind-node-10
+    rel: boosts
+    reason: >-
+      The other half of the same parenthetical. Tarot Draws is what Relic 41's
+      effect ultimately feeds, not an input to the Wind node.
+
   - from: relic-34
     to: planet-sun
     rel: boosts

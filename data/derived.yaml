@@ -5574,6 +5574,13 @@ edges:
   note: Special Minerals Cost Fall
   source: wiki:Relics
   confidence: uncertain
+- from: relic-37
+  to: global-element-mult
+  rel: boosts
+  op: add
+  note: Multiplies Global Element Mult
+  source: wiki:Relics
+  confidence: uncertain
 - from: relic-38
   to: refine-node-2
   rel: boosts
@@ -5595,6 +5602,20 @@ edges:
   note: Multiplies Relic 30 effect (RN1 Effect)
   source: wiki:Relics
   confidence: provisional
+- from: relic-41
+  to: special-mineral-black-gem
+  rel: boosts
+  op: add
+  note: Multiplies Black Gem Eff.
+  source: wiki:Relics
+  confidence: uncertain
+- from: relic-42
+  to: special-mineral-black-gem
+  rel: boosts
+  op: add
+  note: Multiplies Black Gem Chance
+  source: wiki:Relics
+  confidence: uncertain
 - from: relic-43
   to: tarot
   rel: boosts
@@ -6360,6 +6381,12 @@ edges:
   rel: requires
   source: wiki:Minerals/Refine_Tree
   confidence: documented
+- from: refine-node-57
+  to: global-element-mult
+  rel: boosts
+  note: Multiplies Global Element Mult by x10.00
+  source: wiki:Minerals/Refine_Tree
+  confidence: uncertain
 - from: refine-node-36
   to: refine-node-58
   rel: requires
@@ -6375,6 +6402,12 @@ edges:
   rel: requires
   source: wiki:Minerals/Refine_Tree
   confidence: documented
+- from: refine-node-60
+  to: global-element-mult
+  rel: boosts
+  note: Multiplies Global Element Mult (x2.00 per level, maxes at x1.07e9)
+  source: wiki:Minerals/Refine_Tree
+  confidence: uncertain
 - from: refine-node-58
   to: refine-node-61
   rel: requires
@@ -6858,6 +6891,13 @@ edges:
   rel: requires
   source: wiki:Minerals/Refine_Tree
   confidence: documented
+- from: refine-node-106
+  to: special-mineral-black-gem
+  rel: boosts
+  note: Spread Power of your currently equipped Endoplasmic Reticulum also boosts Black Gem base effect
+    (x???)
+  source: wiki:Minerals/Refine_Tree
+  confidence: uncertain
 - from: refine-node-105
   to: refine-node-107
   rel: requires
@@ -7377,7 +7417,7 @@ edges:
   source: wiki:Tarot
   confidence: provisional
 - from: tarot-eight-of-wands
-  to: elements
+  to: element-local-speed
   rel: boosts
   note: Elements Local Speed +^
   source: wiki:Tarot
@@ -7757,6 +7797,12 @@ edges:
   note: Unlocks 2nd water factor and multiply 1st factor for all elements by x (aft. e308 softcap)
   source: wiki:Tarot
   confidence: uncertain
+- from: tarot-the-fool
+  to: special-mineral-black-gem
+  rel: boosts
+  note: Instantly spawns a black gem with Lv.# (base lvl + 1)
+  source: wiki:Tarot
+  confidence: uncertain
 - from: tarot-the-high-priestess
   to: refine-node-1
   rel: boosts
@@ -8030,6 +8076,12 @@ edges:
   note: Earth boosts Relic 37 (Global Element Mult.)
   source: wiki:Elements
   confidence: provisional
+- from: earth-node-6
+  to: global-element-mult
+  rel: boosts
+  note: Earth boosts Relic 37 (Global Element Mult.)
+  source: wiki:Elements
+  confidence: uncertain
 - from: wind-node-1
   to: eternities
   rel: boosts
@@ -8084,6 +8136,12 @@ edges:
   note: Relic 41 effect is multiplied based on your wind (Black Gem Effect, for Tarot Draws)
   source: wiki:Elements
   confidence: provisional
+- from: special-mineral-black-gem
+  to: wind-node-10
+  rel: boosts
+  note: Relic 41 effect is multiplied based on your wind (Black Gem Effect, for Tarot Draws)
+  source: wiki:Elements
+  confidence: uncertain
 - from: tarot-draws
   to: wind-node-10
   rel: boosts
@@ -8144,6 +8202,12 @@ edges:
   note: Multiplies Refine Node 60 base by x2
   source: wiki:Elements
   confidence: provisional
+- from: water-node-10
+  to: global-element-mult
+  rel: boosts
+  note: Water boosts Global Element Mult
+  source: wiki:Elements
+  confidence: uncertain
 - from: special-mineral-red-gem
   to: value-points
   rel: boosts
@@ -8519,6 +8583,11 @@ edges:
   rel: boosts
   source: wiki:Plague
   confidence: uncertain
+- from: plague-stat-total-infected
+  to: special-mineral-black-gem
+  rel: boosts
+  source: wiki:Plague
+  confidence: uncertain
 - from: plague-stat-max-plg
   to: singularity
   rel: boosts
@@ -8584,6 +8653,11 @@ edges:
   rel: boosts
   source: wiki:Singularity
   confidence: uncertain
+- from: singularity-milestone-quantum-dust
+  to: special-mineral-black-gem
+  rel: boosts
+  source: wiki:Singularity
+  confidence: uncertain
 - from: singularity-milestone-matter-collapse
   to: plague
   rel: boosts
@@ -8596,6 +8670,11 @@ edges:
   confidence: uncertain
 - from: singularity-milestone-universe-under-pressure
   to: luck
+  rel: boosts
+  source: wiki:Singularity
+  confidence: uncertain
+- from: singularity-milestone-full-deck
+  to: special-mineral-black-gem
   rel: boosts
   source: wiki:Singularity
   confidence: uncertain
@@ -8671,6 +8750,11 @@ edges:
   confidence: uncertain
 - from: singularity-zodiac-saggitarius
   to: attack-exponent
+  rel: boosts
+  source: wiki:Singularity
+  confidence: uncertain
+- from: singularity-zodiac-aquarius
+  to: special-mineral-black-gem
   rel: boosts
   source: wiki:Singularity
   confidence: uncertain
@@ -9369,6 +9453,11 @@ edges:
   rel: boosts
   source: wiki:Tarot
   confidence: uncertain
+- from: tarot-challenge-ace-of-wands
+  to: global-element-mult
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
 - from: tarot-challenge-two-of-wands
   to: elements
   rel: boosts
@@ -9379,6 +9468,11 @@ edges:
   rel: boosts
   source: wiki:Tarot
   confidence: uncertain
+- from: tarot-challenge-two-of-wands
+  to: global-element-mult
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
 - from: tarot-challenge-three-of-wands
   to: elements
   rel: boosts
@@ -9386,6 +9480,11 @@ edges:
   confidence: uncertain
 - from: tarot-challenge-three-of-wands
   to: relic-36
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-challenge-three-of-wands
+  to: global-element-mult
   rel: boosts
   source: wiki:Tarot
   confidence: uncertain
@@ -9394,13 +9493,28 @@ edges:
   rel: boosts
   source: wiki:Tarot
   confidence: uncertain
+- from: tarot-challenge-four-of-wands
+  to: global-element-mult
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
 - from: tarot-challenge-five-of-wands
   to: elements
   rel: boosts
   source: wiki:Tarot
   confidence: uncertain
+- from: tarot-challenge-five-of-wands
+  to: global-element-mult
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
 - from: tarot-challenge-six-of-wands
   to: elements
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-challenge-six-of-wands
+  to: global-element-mult
   rel: boosts
   source: wiki:Tarot
   confidence: uncertain
@@ -9434,6 +9548,11 @@ edges:
   rel: boosts
   source: wiki:Tarot
   confidence: uncertain
+- from: tarot-challenge-seven-of-wands
+  to: global-element-mult
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
 - from: tarot-challenge-eight-of-wands
   to: elements
   rel: boosts
@@ -9446,6 +9565,11 @@ edges:
   confidence: uncertain
 - from: tarot-challenge-eight-of-wands
   to: game-speed
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-challenge-eight-of-wands
+  to: global-element-mult
   rel: boosts
   source: wiki:Tarot
   confidence: uncertain
@@ -9464,6 +9588,11 @@ edges:
   rel: boosts
   source: wiki:Tarot
   confidence: uncertain
+- from: tarot-challenge-nine-of-wands
+  to: global-element-mult
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
 - from: tarot-challenge-ten-of-wands
   to: elements
   rel: boosts
@@ -9476,6 +9605,11 @@ edges:
   confidence: uncertain
 - from: tarot-challenge-ten-of-wands
   to: game-speed
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-challenge-ten-of-wands
+  to: global-element-mult
   rel: boosts
   source: wiki:Tarot
   confidence: uncertain
@@ -9499,6 +9633,11 @@ edges:
   rel: boosts
   source: wiki:Tarot
   confidence: uncertain
+- from: tarot-challenge-knight-of-wands
+  to: global-element-mult
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
 - from: tarot-challenge-queen-of-wands
   to: elements
   rel: boosts
@@ -9506,6 +9645,16 @@ edges:
   confidence: uncertain
 - from: tarot-challenge-queen-of-wands
   to: singularity
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-challenge-queen-of-wands
+  to: global-element-mult
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-challenge-king-of-wands
+  to: global-element-mult
   rel: boosts
   source: wiki:Tarot
   confidence: uncertain
@@ -9521,6 +9670,11 @@ edges:
   confidence: uncertain
 - from: tarot-challenge-ace-of-pentacles
   to: mineral-level
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-challenge-two-of-pentacles
+  to: special-mineral-red-gem
   rel: boosts
   source: wiki:Tarot
   confidence: uncertain
@@ -9561,6 +9715,11 @@ edges:
   confidence: uncertain
 - from: tarot-challenge-three-of-pentacles
   to: mineral-level
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-challenge-four-of-pentacles
+  to: special-mineral-red-gem
   rel: boosts
   source: wiki:Tarot
   confidence: uncertain
@@ -9670,6 +9829,11 @@ edges:
   source: wiki:Tarot
   confidence: uncertain
 - from: tarot-challenge-ten-of-pentacles
+  to: special-mineral-red-gem
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-challenge-ten-of-pentacles
   to: magnets
   rel: boosts
   source: wiki:Tarot
@@ -9705,6 +9869,11 @@ edges:
   source: wiki:Tarot
   confidence: uncertain
 - from: tarot-challenge-knight-of-pentacles
+  to: special-mineral-red-gem
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-challenge-knight-of-pentacles
   to: magnets
   rel: boosts
   source: wiki:Tarot
@@ -9735,6 +9904,11 @@ edges:
   source: wiki:Tarot
   confidence: uncertain
 - from: tarot-challenge-queen-of-pentacles
+  to: special-mineral-red-gem
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-challenge-queen-of-pentacles
   to: magnets
   rel: boosts
   source: wiki:Tarot
@@ -9761,6 +9935,11 @@ edges:
   confidence: uncertain
 - from: tarot-challenge-queen-of-pentacles
   to: mineral-level
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-challenge-king-of-pentacles
+  to: special-mineral-red-gem
   rel: boosts
   source: wiki:Tarot
   confidence: uncertain
@@ -9934,8 +10113,23 @@ edges:
   rel: boosts
   source: wiki:Tarot
   confidence: uncertain
+- from: tarot-challenge-the-fool
+  to: special-mineral-black-gem
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
 - from: tarot-challenge-the-magician
   to: elements
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-challenge-the-magician
+  to: global-element-mult
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-challenge-the-high-priestess
+  to: special-mineral-red-gem
   rel: boosts
   source: wiki:Tarot
   confidence: uncertain
@@ -10116,6 +10310,11 @@ edges:
   confidence: uncertain
 - from: tarot-challenge-the-star
   to: donut-luck
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-challenge-the-star
+  to: special-mineral-pink-gem
   rel: boosts
   source: wiki:Tarot
   confidence: uncertain

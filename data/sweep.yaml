@@ -111,7 +111,9 @@
 #     "Red Gem", "Blue Gem" and so on, the same ten names the swept
 #     Minerals/Special_Minerals records already carry. Sweeping it mints a second
 #     node per gem, and the two halves of each gem's story then sit in different
-#     nodes. One gem is one node, so these belong on the records that exist.
+#     nodes. One gem is one node, so `Effect 2` is curated onto the ten records
+#     this manifest already produces. `Effect 1` restates the spawn effect those
+#     records carry and is not curated twice.
 #
 #   Zodiacs — Season|Zodiacs|Sun|Mercury|...|Chiron|Fortune Pars (5 rows)
 #     A placement chart showing which zodiac belongs to which celestial position.
