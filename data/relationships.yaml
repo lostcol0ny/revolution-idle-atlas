@@ -105,6 +105,12 @@ systems:
   - id: tarot-challenges
     name: Tarot Challenges
     parent: tarot
+  # Artifact parts are bought per artifact and levelled individually, so they are
+  # neither cards nor challenges. The short name is deliberate: the row already
+  # sits under Tarot, and "Tarot Artifacts" would say it twice.
+  - id: tarot-artifacts
+    name: Artifacts
+    parent: tarot
   - id: plague
     name: Plague
     parent: unity

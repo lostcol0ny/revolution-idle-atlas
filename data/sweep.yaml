@@ -155,10 +155,6 @@
 #     second effect to an already-extracted node is not something a manifest
 #     entry can express.
 #
-#   Tarot — Part #|Part Name|Effect|Part Name|Effect|... (Artifact Parts)
-#     Four artifacts laid side by side, so `Part Name` and `Effect` each appear
-#     four times. The duplicate-header guard skips the table rather than read
-#     the last quarter and silently drop the other three.
 pages:
   - reader: record_template
     page: Minerals
@@ -322,6 +318,19 @@ pages:
     name_prefix: Tarot Challenge
     name_columns: [Challenge]
     effect_columns: [Penalty, Completion Requirement]
+
+  # The four artifacts are stacked in one table behind colspan divider rows the
+  # reader skips, which is survivable only because part names are distinct across
+  # all four -- unlike the Tarot upgrades above, which restart their numbering per
+  # suit. `Unlock Req.` is the gate, not the payoff, so it stays out.
+  - reader: wikitable
+    page: Tarot
+    system: tarot-artifacts
+    kind: upgrade
+    id_prefix: tarot-artifact
+    name_columns: [Part Name]
+    effect_columns: [Effect]
+    per_level_column: Effect Scaling
 
   # Rows are numbered "1".."9", so name_prefix supplies the noun. As on Trials,
   # `Handicap` is deliberately not swept — it is the restriction the challenge

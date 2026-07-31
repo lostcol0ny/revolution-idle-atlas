@@ -25,6 +25,7 @@ export const KNOWN_SYSTEMS = [
   'unity',
   'tarot',
   'tarot-challenges',
+  'tarot-artifacts',
   'singularity',
   'singularity-milestones',
   'singularity-milestones-singularity',

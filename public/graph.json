@@ -8387,6 +8387,571 @@
       "confidence": "provisional",
       "effects": [
         {
+          "text": "Sacrifice Dust Gain",
+          "per_level": "x10000/level",
+          "op": "mult"
+        }
+      ],
+      "id": "tarot-artifact-glass-surface",
+      "kind": "upgrade",
+      "name": "Glass Surface",
+      "system": "tarot-artifacts",
+      "wiki": "Tarot"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Relic 24 Effect",
+          "per_level": "+0.01x/level",
+          "op": "add"
+        }
+      ],
+      "id": "tarot-artifact-silver-backing",
+      "kind": "upgrade",
+      "name": "Silver Backing",
+      "system": "tarot-artifacts",
+      "wiki": "Tarot"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Relic 56 Effect",
+          "per_level": "+0.01x/level",
+          "op": "add"
+        }
+      ],
+      "id": "tarot-artifact-obsidian-frame",
+      "kind": "upgrade",
+      "name": "Obsidian Frame",
+      "system": "tarot-artifacts",
+      "wiki": "Tarot"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Relic 13 Effect",
+          "per_level": "+0.2x/level",
+          "op": "add"
+        }
+      ],
+      "id": "tarot-artifact-focal-point",
+      "kind": "upgrade",
+      "name": "Focal Point",
+      "system": "tarot-artifacts",
+      "wiki": "Tarot"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Relic 2 Effect",
+          "per_level": "+^0.25/level",
+          "op": "exp"
+        }
+      ],
+      "id": "tarot-artifact-light-refractors",
+      "kind": "upgrade",
+      "name": "Light Refractors",
+      "system": "tarot-artifacts",
+      "wiki": "Tarot"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Relic 21 Effect",
+          "per_level": "+0.01x/level",
+          "op": "add"
+        }
+      ],
+      "id": "tarot-artifact-truth-facets",
+      "kind": "upgrade",
+      "name": "Truth Facets",
+      "system": "tarot-artifacts",
+      "wiki": "Tarot"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Sword LOGPOW base",
+          "per_level": "0.09+0.01*level"
+        }
+      ],
+      "id": "tarot-artifact-memory-crystal",
+      "kind": "upgrade",
+      "name": "Memory Crystal",
+      "system": "tarot-artifacts",
+      "wiki": "Tarot"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Base Spread Power on ER Craft (see Plague",
+          "per_level": "+0.25x/level",
+          "op": "add"
+        }
+      ],
+      "id": "tarot-artifact-perception-lens",
+      "kind": "upgrade",
+      "name": "Perception Lens",
+      "system": "tarot-artifacts",
+      "wiki": "Tarot"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Sacrifice Dust Gain",
+          "per_level": "x10000/level",
+          "op": "mult"
+        }
+      ],
+      "id": "tarot-artifact-ramus",
+      "kind": "upgrade",
+      "name": "Ramus",
+      "system": "tarot-artifacts",
+      "wiki": "Tarot"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Relic 25 Effect",
+          "per_level": "+0.01x/level",
+          "op": "add"
+        }
+      ],
+      "id": "tarot-artifact-mandible",
+      "kind": "upgrade",
+      "name": "Mandible",
+      "system": "tarot-artifacts",
+      "wiki": "Tarot"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Relic 8 Effect",
+          "per_level": "+^1000/level",
+          "op": "exp"
+        }
+      ],
+      "id": "tarot-artifact-teeth",
+      "kind": "upgrade",
+      "name": "Teeth",
+      "system": "tarot-artifacts",
+      "wiki": "Tarot"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Relic 14 Effect",
+          "per_level": "+0.1x/level",
+          "op": "add"
+        }
+      ],
+      "id": "tarot-artifact-maxilla",
+      "kind": "upgrade",
+      "name": "Maxilla",
+      "system": "tarot-artifacts",
+      "wiki": "Tarot"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Relic 2 Effect",
+          "per_level": "+^0.25/level",
+          "op": "exp"
+        }
+      ],
+      "id": "tarot-artifact-nasal-bone",
+      "kind": "upgrade",
+      "name": "Nasal Bone",
+      "system": "tarot-artifacts",
+      "wiki": "Tarot"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Refine Node 7 Effect",
+          "per_level": "+0.01/level",
+          "op": "add"
+        }
+      ],
+      "id": "tarot-artifact-infraorbitals",
+      "kind": "upgrade",
+      "name": "Infraorbitals",
+      "system": "tarot-artifacts",
+      "wiki": "Tarot"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Wands LOGPOW base",
+          "per_level": "0.09+0.01*level"
+        }
+      ],
+      "id": "tarot-artifact-zygomatics",
+      "kind": "upgrade",
+      "name": "Zygomatics",
+      "system": "tarot-artifacts",
+      "wiki": "Tarot"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Relic 52 Effect",
+          "per_level": "+0.02/level",
+          "op": "add"
+        }
+      ],
+      "id": "tarot-artifact-frontal-bone",
+      "kind": "upgrade",
+      "name": "Frontal Bone",
+      "system": "tarot-artifacts",
+      "wiki": "Tarot"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "The Hermit base effect",
+          "per_level": "+0.05x/level",
+          "op": "add"
+        }
+      ],
+      "id": "tarot-artifact-parietal-bone",
+      "kind": "upgrade",
+      "name": "Parietal Bone",
+      "system": "tarot-artifacts",
+      "wiki": "Tarot"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Water Quality factor",
+          "per_level": "+^0.5/level",
+          "op": "exp"
+        }
+      ],
+      "id": "tarot-artifact-temporal-bone",
+      "kind": "upgrade",
+      "name": "Temporal Bone",
+      "system": "tarot-artifacts",
+      "wiki": "Tarot"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "PlP per PlG mult (see Plague)",
+          "per_level": "+1x/level",
+          "op": "add"
+        }
+      ],
+      "id": "tarot-artifact-occipital-bone",
+      "kind": "upgrade",
+      "name": "Occipital Bone",
+      "system": "tarot-artifacts",
+      "wiki": "Tarot"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Sacrifice Dust Gain",
+          "per_level": "x10000/level",
+          "op": "mult"
+        }
+      ],
+      "id": "tarot-artifact-abundance-gears",
+      "kind": "upgrade",
+      "name": "Abundance Gears",
+      "system": "tarot-artifacts",
+      "wiki": "Tarot"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Relic 26 Effect",
+          "per_level": "+0.01x/level",
+          "op": "add"
+        }
+      ],
+      "id": "tarot-artifact-manifestation-pistons",
+      "kind": "upgrade",
+      "name": "Manifestation Pistons",
+      "system": "tarot-artifacts",
+      "wiki": "Tarot"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Polish Sword effect",
+          "per_level": "+^0.02/level",
+          "op": "exp"
+        }
+      ],
+      "id": "tarot-artifact-fortune-cogs",
+      "kind": "upgrade",
+      "name": "Fortune Cogs",
+      "system": "tarot-artifacts",
+      "wiki": "Tarot"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "The Hierophant effect",
+          "per_level": "+0.01x/level",
+          "op": "add"
+        }
+      ],
+      "id": "tarot-artifact-stability-foundation",
+      "kind": "upgrade",
+      "name": "Stability Foundation",
+      "system": "tarot-artifacts",
+      "wiki": "Tarot"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Relic 2 Effect",
+          "per_level": "+^0.25/level",
+          "op": "exp"
+        }
+      ],
+      "id": "tarot-artifact-growth-chambers",
+      "kind": "upgrade",
+      "name": "Growth Chambers",
+      "system": "tarot-artifacts",
+      "wiki": "Tarot"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Yellow Gem base effect",
+          "per_level": "+0.01x/level",
+          "op": "add"
+        }
+      ],
+      "id": "tarot-artifact-wealth-circulation-system",
+      "kind": "upgrade",
+      "name": "Wealth Circulation System",
+      "system": "tarot-artifacts",
+      "wiki": "Tarot"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Pentacles LOGPOW base",
+          "per_level": "0.09+0.01*level"
+        }
+      ],
+      "id": "tarot-artifact-value-assessors",
+      "kind": "upgrade",
+      "name": "Value Assessors",
+      "system": "tarot-artifacts",
+      "wiki": "Tarot"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Earth Node 2 effect",
+          "per_level": "+^4/level",
+          "op": "exp"
+        }
+      ],
+      "id": "tarot-artifact-legacy-encoders",
+      "kind": "upgrade",
+      "name": "Legacy Encoders",
+      "system": "tarot-artifacts",
+      "wiki": "Tarot"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Base VE from dissolving ERs (see Plague)",
+          "per_level": "+0.5x/level",
+          "op": "add"
+        }
+      ],
+      "id": "tarot-artifact-reality-anchors",
+      "kind": "upgrade",
+      "name": "Reality Anchors",
+      "system": "tarot-artifacts",
+      "wiki": "Tarot"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Sacrifice Dust Gain",
+          "per_level": "x10000/level",
+          "op": "mult"
+        }
+      ],
+      "id": "tarot-artifact-heart-chamber",
+      "kind": "upgrade",
+      "name": "Heart Chamber",
+      "system": "tarot-artifacts",
+      "wiki": "Tarot"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Relic 27 Effect",
+          "per_level": "+0.01x/level",
+          "op": "add"
+        }
+      ],
+      "id": "tarot-artifact-empathy-valves",
+      "kind": "upgrade",
+      "name": "Empathy Valves",
+      "system": "tarot-artifacts",
+      "wiki": "Tarot"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "All Elements Factor 3",
+          "per_level": "+^0.02/level",
+          "op": "exp"
+        }
+      ],
+      "id": "tarot-artifact-sorrow-filters",
+      "kind": "upgrade",
+      "name": "Sorrow Filters",
+      "system": "tarot-artifacts",
+      "wiki": "Tarot"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Relic 2 Effect",
+          "per_level": "???"
+        }
+      ],
+      "id": "tarot-artifact-joy-reservoir",
+      "kind": "upgrade",
+      "name": "Joy Reservoir",
+      "system": "tarot-artifacts",
+      "wiki": "Tarot"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Relic 2 Effect",
+          "per_level": "+^0.25/level",
+          "op": "exp"
+        }
+      ],
+      "id": "tarot-artifact-memory-liquid",
+      "kind": "upgrade",
+      "name": "Memory Liquid",
+      "system": "tarot-artifacts",
+      "wiki": "Tarot"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Polish Spear effect",
+          "per_level": "+0.01x/level",
+          "op": "add"
+        }
+      ],
+      "id": "tarot-artifact-connection-handles",
+      "kind": "upgrade",
+      "name": "Connection Handles",
+      "system": "tarot-artifacts",
+      "wiki": "Tarot"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Cups LOGPOW base",
+          "per_level": "0.09+0.01*level"
+        }
+      ],
+      "id": "tarot-artifact-authenticity-glaze",
+      "kind": "upgrade",
+      "name": "Authenticity Glaze",
+      "system": "tarot-artifacts",
+      "wiki": "Tarot"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Polish Enhance effects",
+          "per_level": "+0.25x/level",
+          "op": "add"
+        }
+      ],
+      "id": "tarot-artifact-inner-reflection-surface",
+      "kind": "upgrade",
+      "name": "Inner Reflection Surface",
+      "system": "tarot-artifacts",
+      "wiki": "Tarot"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Relic 32 Effect",
+          "per_level": "+0.02x/level",
+          "op": "add"
+        }
+      ],
+      "id": "tarot-artifact-vulnerability-aperture",
+      "kind": "upgrade",
+      "name": "Vulnerability Aperture",
+      "system": "tarot-artifacts",
+      "wiki": "Tarot"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Singularity Multiplier (see Singularity)",
+          "per_level": "+0.001x/level",
+          "op": "add"
+        }
+      ],
+      "id": "tarot-artifact-trauma-alchemizer",
+      "kind": "upgrade",
+      "name": "Trauma Alchemizer",
+      "system": "tarot-artifacts",
+      "wiki": "Tarot"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
           "text": "Promotions 2 and 4 are stronger"
         }
       ],
@@ -20215,6 +20780,265 @@
     },
     {
       "confidence": "uncertain",
+      "from": "tarot-artifact-glass-surface",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "sacrifice-dust"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-artifact-silver-backing",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "relic-24"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-artifact-obsidian-frame",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "relic-56"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-artifact-focal-point",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "relic-13"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-artifact-light-refractors",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "relic-2"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-artifact-truth-facets",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "relic-21"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-artifact-perception-lens",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "base-spread-power"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-artifact-perception-lens",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "plague"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-artifact-ramus",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "sacrifice-dust"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-artifact-mandible",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "relic-25"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-artifact-teeth",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "relic-8"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-artifact-maxilla",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "relic-14"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-artifact-nasal-bone",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "relic-2"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-artifact-infraorbitals",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "refine-node-7"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-artifact-frontal-bone",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "relic-52"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-artifact-temporal-bone",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "quality"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-artifact-occipital-bone",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "plp-per-plg"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-artifact-occipital-bone",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "plague"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-artifact-abundance-gears",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "sacrifice-dust"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-artifact-manifestation-pistons",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "relic-26"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-artifact-fortune-cogs",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "polish-sword"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-artifact-growth-chambers",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "relic-2"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-artifact-wealth-circulation-system",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "special-mineral-yellow-gem"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-artifact-legacy-encoders",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "earth-node-2"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-artifact-reality-anchors",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "virus-essence"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-artifact-reality-anchors",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "endoplasmic-reticula"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-artifact-reality-anchors",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "plague"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-artifact-heart-chamber",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "sacrifice-dust"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-artifact-empathy-valves",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "relic-27"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-artifact-sorrow-filters",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "elements"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-artifact-joy-reservoir",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "relic-2"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-artifact-memory-liquid",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "relic-2"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-artifact-connection-handles",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "polish-spear"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-artifact-inner-reflection-surface",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "polish-enhance"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-artifact-vulnerability-aperture",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "relic-32"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-artifact-trauma-alchemizer",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "singularity-mult"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-artifact-trauma-alchemizer",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "singularity"
+    },
+    {
+      "confidence": "uncertain",
       "from": "infinity-challenge-2",
       "rel": "boosts",
       "source": "wiki:Infinity",
@@ -23919,6 +24743,11 @@
     {
       "id": "tarot-challenges",
       "name": "Tarot Challenges",
+      "parent": "tarot"
+    },
+    {
+      "id": "tarot-artifacts",
+      "name": "Artifacts",
       "parent": "tarot"
     },
     {
