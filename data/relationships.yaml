@@ -3381,8 +3381,12 @@ nodes:
   # The sweep skips this row: its Reward cell is empty, and a row with no effect
   # text yields no record. That is the right default -- an undocumented reward is
   # nothing to assert -- but it makes the milestone list read as complete when it
-  # is one short, so the node is curated in and left effect-less until the wiki
-  # fills the cell.
+  # is one short, so the node is curated in.
+  #
+  # Effect-less on purpose, and not a gap to chase: the milestone is reachable but
+  # its reward is unimplemented, so the empty cell is the wiki being accurate
+  # rather than incomplete. The two rows below it are still literal "COMING SOON"
+  # and get no node at all, having no name to give one.
   #
   # Filed under Atoms on the owner's reading of the live game. The wiki disagrees:
   # it puts "One Hundred" in the Singularity Milestones table at "100 Singularity".
