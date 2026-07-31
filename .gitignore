@@ -8,4 +8,4 @@ out/
 docs/superpowers/
 .claude/worktrees/
 dist/
-.vercel/
+.vercel
