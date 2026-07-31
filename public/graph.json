@@ -6319,7 +6319,7 @@
       "id": "dilation-node-center-1",
       "kind": "tree-node",
       "name": "Center 1",
-      "system": "eternity",
+      "system": "dilation-tree",
       "wiki": "Dilation_Tree"
     },
     {
@@ -6334,7 +6334,7 @@
       "id": "dilation-node-top-1",
       "kind": "tree-node",
       "name": "Top 1",
-      "system": "eternity",
+      "system": "dilation-tree",
       "wiki": "Dilation_Tree"
     },
     {
@@ -6349,7 +6349,7 @@
       "id": "dilation-node-top-2",
       "kind": "tree-node",
       "name": "Top 2",
-      "system": "eternity",
+      "system": "dilation-tree",
       "wiki": "Dilation_Tree"
     },
     {
@@ -6364,7 +6364,7 @@
       "id": "dilation-node-top-3",
       "kind": "tree-node",
       "name": "Top 3",
-      "system": "eternity",
+      "system": "dilation-tree",
       "wiki": "Dilation_Tree"
     },
     {
@@ -6379,7 +6379,7 @@
       "id": "dilation-node-top-4",
       "kind": "tree-node",
       "name": "Top 4",
-      "system": "eternity",
+      "system": "dilation-tree",
       "wiki": "Dilation_Tree"
     },
     {
@@ -6394,7 +6394,7 @@
       "id": "dilation-node-middle-1",
       "kind": "tree-node",
       "name": "Middle 1",
-      "system": "eternity",
+      "system": "dilation-tree",
       "wiki": "Dilation_Tree"
     },
     {
@@ -6409,7 +6409,7 @@
       "id": "dilation-node-middle-2",
       "kind": "tree-node",
       "name": "Middle 2",
-      "system": "eternity",
+      "system": "dilation-tree",
       "wiki": "Dilation_Tree"
     },
     {
@@ -6424,7 +6424,7 @@
       "id": "dilation-node-middle-3",
       "kind": "tree-node",
       "name": "Middle 3",
-      "system": "eternity",
+      "system": "dilation-tree",
       "wiki": "Dilation_Tree"
     },
     {
@@ -6439,7 +6439,7 @@
       "id": "dilation-node-middle-4",
       "kind": "tree-node",
       "name": "Middle 4",
-      "system": "eternity",
+      "system": "dilation-tree",
       "wiki": "Dilation_Tree"
     },
     {
@@ -6454,7 +6454,7 @@
       "id": "dilation-node-bottom-1",
       "kind": "tree-node",
       "name": "Bottom 1",
-      "system": "eternity",
+      "system": "dilation-tree",
       "wiki": "Dilation_Tree"
     },
     {
@@ -6469,7 +6469,7 @@
       "id": "dilation-node-bottom-2",
       "kind": "tree-node",
       "name": "Bottom 2",
-      "system": "eternity",
+      "system": "dilation-tree",
       "wiki": "Dilation_Tree"
     },
     {
@@ -6484,7 +6484,7 @@
       "id": "dilation-node-bottom-3",
       "kind": "tree-node",
       "name": "Bottom 3",
-      "system": "eternity",
+      "system": "dilation-tree",
       "wiki": "Dilation_Tree"
     },
     {
@@ -6499,7 +6499,7 @@
       "id": "dilation-node-bottom-4",
       "kind": "tree-node",
       "name": "Bottom 4",
-      "system": "eternity",
+      "system": "dilation-tree",
       "wiki": "Dilation_Tree"
     },
     {
@@ -6514,7 +6514,7 @@
       "id": "dilation-upgrade-1",
       "kind": "upgrade",
       "name": "Dilation Upgrade 1",
-      "system": "eternity",
+      "system": "dilation",
       "wiki": "Eternity"
     },
     {
@@ -6529,7 +6529,7 @@
       "id": "dilation-upgrade-2",
       "kind": "upgrade",
       "name": "Dilation Upgrade 2",
-      "system": "eternity",
+      "system": "dilation",
       "wiki": "Eternity"
     },
     {
@@ -6544,7 +6544,7 @@
       "id": "dilation-upgrade-3",
       "kind": "upgrade",
       "name": "Dilation Upgrade 3",
-      "system": "eternity",
+      "system": "dilation",
       "wiki": "Eternity"
     },
     {
@@ -6559,7 +6559,7 @@
       "id": "dilation-upgrade-4",
       "kind": "upgrade",
       "name": "Dilation Upgrade 4",
-      "system": "eternity",
+      "system": "dilation",
       "wiki": "Eternity"
     },
     {
@@ -6574,7 +6574,7 @@
       "id": "dilation-upgrade-5",
       "kind": "upgrade",
       "name": "Dilation Upgrade 5",
-      "system": "eternity",
+      "system": "dilation",
       "wiki": "Eternity"
     },
     {
@@ -6589,7 +6589,7 @@
       "id": "dilation-upgrade-6",
       "kind": "upgrade",
       "name": "Dilation Upgrade 6",
-      "system": "eternity",
+      "system": "dilation",
       "wiki": "Eternity"
     },
     {
@@ -6604,7 +6604,7 @@
       "id": "dilation-upgrade-7",
       "kind": "upgrade",
       "name": "Dilation Upgrade 7",
-      "system": "eternity",
+      "system": "dilation",
       "wiki": "Eternity"
     },
     {
@@ -6619,7 +6619,7 @@
       "id": "dilation-upgrade-8",
       "kind": "upgrade",
       "name": "Dilation Upgrade 8",
-      "system": "eternity",
+      "system": "dilation",
       "wiki": "Eternity"
     },
     {
@@ -6634,7 +6634,7 @@
       "id": "dilation-upgrade-9",
       "kind": "upgrade",
       "name": "Dilation Upgrade 9",
-      "system": "eternity",
+      "system": "dilation",
       "wiki": "Eternity"
     },
     {
@@ -9158,7 +9158,7 @@
       "id": "animal-points",
       "kind": "currency",
       "name": "Animal Points",
-      "system": "revolution",
+      "system": "animals",
       "wiki": "Animals"
     },
     {
@@ -9169,7 +9169,7 @@
       "id": "dilation-points",
       "kind": "currency",
       "name": "Dilation Points",
-      "system": "eternity",
+      "system": "dilation",
       "wiki": "Dilation_Tree"
     },
     {
@@ -9180,7 +9180,7 @@
       "id": "dilation-tree-points",
       "kind": "currency",
       "name": "Dilation Tree Points",
-      "system": "eternity",
+      "system": "dilation-tree",
       "wiki": "Dilation_Tree"
     },
     {
@@ -9191,7 +9191,7 @@
       "id": "research-points",
       "kind": "currency",
       "name": "Research Points",
-      "system": "eternity",
+      "system": "laboratory",
       "wiki": "Laboratory"
     },
     {
@@ -9314,7 +9314,7 @@
       "id": "eternity-milestones",
       "kind": "group",
       "name": "Eternity Milestones",
-      "system": "eternity",
+      "system": "eternity-milestones",
       "wiki": "Eternity_Milestones"
     },
     {
@@ -9327,7 +9327,7 @@
       "id": "eternity-milestone-1",
       "kind": "upgrade",
       "name": "Eternity Milestone (1 Eternity)",
-      "system": "eternity",
+      "system": "eternity-milestones",
       "wiki": "Eternity_Milestones"
     },
     {
@@ -9340,7 +9340,7 @@
       "id": "eternity-milestone-2",
       "kind": "upgrade",
       "name": "Eternity Milestone (2 Eternities)",
-      "system": "eternity",
+      "system": "eternity-milestones",
       "wiki": "Eternity_Milestones"
     },
     {
@@ -9353,7 +9353,7 @@
       "id": "eternity-milestone-3",
       "kind": "upgrade",
       "name": "Eternity Milestone (3 Eternities)",
-      "system": "eternity",
+      "system": "eternity-milestones",
       "wiki": "Eternity_Milestones"
     },
     {
@@ -9366,7 +9366,7 @@
       "id": "eternity-milestone-5",
       "kind": "upgrade",
       "name": "Eternity Milestone (5 Eternities)",
-      "system": "eternity",
+      "system": "eternity-milestones",
       "wiki": "Eternity_Milestones"
     },
     {
@@ -9379,7 +9379,7 @@
       "id": "eternity-milestone-7",
       "kind": "upgrade",
       "name": "Eternity Milestone (7 Eternities)",
-      "system": "eternity",
+      "system": "eternity-milestones",
       "wiki": "Eternity_Milestones"
     },
     {
@@ -9392,7 +9392,7 @@
       "id": "eternity-milestone-8",
       "kind": "upgrade",
       "name": "Eternity Milestone (8 Eternities)",
-      "system": "eternity",
+      "system": "eternity-milestones",
       "wiki": "Eternity_Milestones"
     },
     {
@@ -9405,7 +9405,7 @@
       "id": "eternity-milestone-12",
       "kind": "upgrade",
       "name": "Eternity Milestone (12 Eternities)",
-      "system": "eternity",
+      "system": "eternity-milestones",
       "wiki": "Eternity_Milestones"
     },
     {
@@ -9418,7 +9418,7 @@
       "id": "eternity-milestone-14",
       "kind": "upgrade",
       "name": "Eternity Milestone (14 Eternities)",
-      "system": "eternity",
+      "system": "eternity-milestones",
       "wiki": "Eternity_Milestones"
     },
     {
@@ -9431,7 +9431,7 @@
       "id": "eternity-milestone-16",
       "kind": "upgrade",
       "name": "Eternity Milestone (16 Eternities)",
-      "system": "eternity",
+      "system": "eternity-milestones",
       "wiki": "Eternity_Milestones"
     },
     {
@@ -9444,7 +9444,7 @@
       "id": "eternity-milestone-32",
       "kind": "upgrade",
       "name": "Eternity Milestone (32 Eternities)",
-      "system": "eternity",
+      "system": "eternity-milestones",
       "wiki": "Eternity_Milestones"
     },
     {
@@ -9457,7 +9457,7 @@
       "id": "eternity-milestone-100",
       "kind": "upgrade",
       "name": "Eternity Milestone (100 Eternities)",
-      "system": "eternity",
+      "system": "eternity-milestones",
       "wiki": "Eternity_Milestones"
     },
     {
@@ -9491,7 +9491,7 @@
       "id": "eternity-bonuses",
       "kind": "group",
       "name": "Eternity Bonuses",
-      "system": "eternity",
+      "system": "eternity-milestones",
       "wiki": "Eternity"
     },
     {
@@ -9508,7 +9508,7 @@
       "id": "animals",
       "kind": "group",
       "name": "Animals",
-      "system": "eternity",
+      "system": "animals",
       "wiki": "Animals"
     },
     {
@@ -9521,7 +9521,7 @@
       "id": "slowdown",
       "kind": "upgrade",
       "name": "Slowdown",
-      "system": "eternity",
+      "system": "animals",
       "wiki": "Animals"
     },
     {
@@ -9537,7 +9537,7 @@
       "id": "animals-milestones",
       "kind": "group",
       "name": "Animals Milestones",
-      "system": "eternity",
+      "system": "animals-milestones",
       "wiki": "Eternity_Milestones"
     },
     {
@@ -9550,7 +9550,7 @@
       "id": "animals-milestone-1",
       "kind": "upgrade",
       "name": "Animals Milestone (1 Animal)",
-      "system": "eternity",
+      "system": "animals-milestones",
       "wiki": "Eternity_Milestones"
     },
     {
@@ -9563,7 +9563,7 @@
       "id": "animals-milestone-4",
       "kind": "upgrade",
       "name": "Animals Milestone (4 Animals)",
-      "system": "eternity",
+      "system": "animals-milestones",
       "wiki": "Eternity_Milestones"
     },
     {
@@ -9576,7 +9576,7 @@
       "id": "animals-milestone-7",
       "kind": "upgrade",
       "name": "Animals Milestone (7 Animals)",
-      "system": "eternity",
+      "system": "animals-milestones",
       "wiki": "Eternity_Milestones"
     },
     {
@@ -9589,7 +9589,7 @@
       "id": "animals-milestone-10",
       "kind": "upgrade",
       "name": "Animals Milestone (10 Animals)",
-      "system": "eternity",
+      "system": "animals-milestones",
       "wiki": "Eternity_Milestones"
     },
     {
@@ -9602,7 +9602,7 @@
       "id": "animals-milestone-20",
       "kind": "upgrade",
       "name": "Animals Milestone (20 Animals)",
-      "system": "eternity",
+      "system": "animals-milestones",
       "wiki": "Eternity_Milestones"
     },
     {
@@ -9615,7 +9615,7 @@
       "id": "animals-milestone-48",
       "kind": "upgrade",
       "name": "Animals Milestone (48 Animals)",
-      "system": "eternity",
+      "system": "animals-milestones",
       "wiki": "Eternity_Milestones"
     },
     {
@@ -9628,7 +9628,7 @@
       "id": "animals-milestone-81",
       "kind": "upgrade",
       "name": "Animals Milestone (81 Animals)",
-      "system": "eternity",
+      "system": "animals-milestones",
       "wiki": "Eternity_Milestones"
     },
     {
@@ -9642,7 +9642,7 @@
       "id": "animal-cat",
       "kind": "upgrade",
       "name": "Cat",
-      "system": "eternity",
+      "system": "animals",
       "wiki": "Animals"
     },
     {
@@ -9656,7 +9656,7 @@
       "id": "animal-mouse",
       "kind": "upgrade",
       "name": "Mouse",
-      "system": "eternity",
+      "system": "animals",
       "wiki": "Animals"
     },
     {
@@ -9670,7 +9670,7 @@
       "id": "animal-chicken",
       "kind": "upgrade",
       "name": "Chicken",
-      "system": "eternity",
+      "system": "animals",
       "wiki": "Animals"
     },
     {
@@ -9684,7 +9684,7 @@
       "id": "animal-pig",
       "kind": "upgrade",
       "name": "Pig",
-      "system": "eternity",
+      "system": "animals",
       "wiki": "Animals"
     },
     {
@@ -9698,7 +9698,7 @@
       "id": "animal-snake",
       "kind": "upgrade",
       "name": "Snake",
-      "system": "eternity",
+      "system": "animals",
       "wiki": "Animals"
     },
     {
@@ -9712,7 +9712,7 @@
       "id": "animal-zebra",
       "kind": "upgrade",
       "name": "Zebra",
-      "system": "eternity",
+      "system": "animals",
       "wiki": "Animals"
     },
     {
@@ -9726,7 +9726,7 @@
       "id": "animal-bunny",
       "kind": "upgrade",
       "name": "Bunny",
-      "system": "eternity",
+      "system": "animals",
       "wiki": "Animals"
     },
     {
@@ -9740,7 +9740,7 @@
       "id": "animal-boar",
       "kind": "upgrade",
       "name": "Boar",
-      "system": "eternity",
+      "system": "animals",
       "wiki": "Animals"
     },
     {
@@ -9754,7 +9754,7 @@
       "id": "animal-penguin",
       "kind": "upgrade",
       "name": "Penguin",
-      "system": "eternity",
+      "system": "animals",
       "wiki": "Animals"
     },
     {
@@ -9768,7 +9768,7 @@
       "id": "animal-dog",
       "kind": "upgrade",
       "name": "Dog",
-      "system": "eternity",
+      "system": "animals",
       "wiki": "Animals"
     },
     {
@@ -9782,7 +9782,7 @@
       "id": "animal-hamster",
       "kind": "upgrade",
       "name": "Hamster",
-      "system": "eternity",
+      "system": "animals",
       "wiki": "Animals"
     },
     {
@@ -9796,7 +9796,7 @@
       "id": "animal-pigeon",
       "kind": "upgrade",
       "name": "Pigeon",
-      "system": "eternity",
+      "system": "animals",
       "wiki": "Animals"
     },
     {
@@ -9810,7 +9810,7 @@
       "id": "animal-goat",
       "kind": "upgrade",
       "name": "Goat",
-      "system": "eternity",
+      "system": "animals",
       "wiki": "Animals"
     },
     {
@@ -9824,7 +9824,7 @@
       "id": "animal-frog",
       "kind": "upgrade",
       "name": "Frog",
-      "system": "eternity",
+      "system": "animals",
       "wiki": "Animals"
     },
     {
@@ -9838,7 +9838,7 @@
       "id": "animal-giraffe",
       "kind": "upgrade",
       "name": "Giraffe",
-      "system": "eternity",
+      "system": "animals",
       "wiki": "Animals"
     },
     {
@@ -9852,7 +9852,7 @@
       "id": "animal-fox",
       "kind": "upgrade",
       "name": "Fox",
-      "system": "eternity",
+      "system": "animals",
       "wiki": "Animals"
     },
     {
@@ -9866,7 +9866,7 @@
       "id": "animal-panther",
       "kind": "upgrade",
       "name": "Panther",
-      "system": "eternity",
+      "system": "animals",
       "wiki": "Animals"
     },
     {
@@ -9880,7 +9880,7 @@
       "id": "animal-polar-bear",
       "kind": "upgrade",
       "name": "Polar Bear",
-      "system": "eternity",
+      "system": "animals",
       "wiki": "Animals"
     },
     {
@@ -9894,7 +9894,7 @@
       "id": "animal-parrot",
       "kind": "upgrade",
       "name": "Parrot",
-      "system": "eternity",
+      "system": "animals",
       "wiki": "Animals"
     },
     {
@@ -9908,7 +9908,7 @@
       "id": "animal-guinea-pig",
       "kind": "upgrade",
       "name": "Guinea Pig",
-      "system": "eternity",
+      "system": "animals",
       "wiki": "Animals"
     },
     {
@@ -9922,7 +9922,7 @@
       "id": "animal-rooster",
       "kind": "upgrade",
       "name": "Rooster",
-      "system": "eternity",
+      "system": "animals",
       "wiki": "Animals"
     },
     {
@@ -9936,7 +9936,7 @@
       "id": "animal-sheep",
       "kind": "upgrade",
       "name": "Sheep",
-      "system": "eternity",
+      "system": "animals",
       "wiki": "Animals"
     },
     {
@@ -9950,7 +9950,7 @@
       "id": "animal-toad",
       "kind": "upgrade",
       "name": "Toad",
-      "system": "eternity",
+      "system": "animals",
       "wiki": "Animals"
     },
     {
@@ -9964,7 +9964,7 @@
       "id": "animal-lion",
       "kind": "upgrade",
       "name": "Lion",
-      "system": "eternity",
+      "system": "animals",
       "wiki": "Animals"
     },
     {
@@ -9978,7 +9978,7 @@
       "id": "animal-wolf",
       "kind": "upgrade",
       "name": "Wolf",
-      "system": "eternity",
+      "system": "animals",
       "wiki": "Animals"
     },
     {
@@ -9992,7 +9992,7 @@
       "id": "animal-beaver",
       "kind": "upgrade",
       "name": "Beaver",
-      "system": "eternity",
+      "system": "animals",
       "wiki": "Animals"
     },
     {
@@ -10006,7 +10006,7 @@
       "id": "animal-seal",
       "kind": "upgrade",
       "name": "Seal",
-      "system": "eternity",
+      "system": "animals",
       "wiki": "Animals"
     },
     {
@@ -10020,7 +10020,7 @@
       "id": "animal-fish",
       "kind": "upgrade",
       "name": "Fish",
-      "system": "eternity",
+      "system": "animals",
       "wiki": "Animals"
     },
     {
@@ -10034,7 +10034,7 @@
       "id": "animal-jerboa",
       "kind": "upgrade",
       "name": "Jerboa",
-      "system": "eternity",
+      "system": "animals",
       "wiki": "Animals"
     },
     {
@@ -10048,7 +10048,7 @@
       "id": "animal-duck",
       "kind": "upgrade",
       "name": "Duck",
-      "system": "eternity",
+      "system": "animals",
       "wiki": "Animals"
     },
     {
@@ -10062,7 +10062,7 @@
       "id": "animal-cow",
       "kind": "upgrade",
       "name": "Cow",
-      "system": "eternity",
+      "system": "animals",
       "wiki": "Animals"
     },
     {
@@ -10076,7 +10076,7 @@
       "id": "animal-turtle",
       "kind": "upgrade",
       "name": "Turtle",
-      "system": "eternity",
+      "system": "animals",
       "wiki": "Animals"
     },
     {
@@ -10090,7 +10090,7 @@
       "id": "animal-hippo",
       "kind": "upgrade",
       "name": "Hippo",
-      "system": "eternity",
+      "system": "animals",
       "wiki": "Animals"
     },
     {
@@ -10104,7 +10104,7 @@
       "id": "animal-bear",
       "kind": "upgrade",
       "name": "Bear",
-      "system": "eternity",
+      "system": "animals",
       "wiki": "Animals"
     },
     {
@@ -10118,7 +10118,7 @@
       "id": "animal-yak",
       "kind": "upgrade",
       "name": "Yak",
-      "system": "eternity",
+      "system": "animals",
       "wiki": "Animals"
     },
     {
@@ -10132,7 +10132,7 @@
       "id": "animal-walrus",
       "kind": "upgrade",
       "name": "Walrus",
-      "system": "eternity",
+      "system": "animals",
       "wiki": "Animals"
     },
     {
@@ -10146,7 +10146,7 @@
       "id": "animal-ferret",
       "kind": "upgrade",
       "name": "Ferret",
-      "system": "eternity",
+      "system": "animals",
       "wiki": "Animals"
     },
     {
@@ -10160,7 +10160,7 @@
       "id": "animal-chinchilla",
       "kind": "upgrade",
       "name": "Chinchilla",
-      "system": "eternity",
+      "system": "animals",
       "wiki": "Animals"
     },
     {
@@ -10174,7 +10174,7 @@
       "id": "animal-goose",
       "kind": "upgrade",
       "name": "Goose",
-      "system": "eternity",
+      "system": "animals",
       "wiki": "Animals"
     },
     {
@@ -10188,7 +10188,7 @@
       "id": "animal-horse",
       "kind": "upgrade",
       "name": "Horse",
-      "system": "eternity",
+      "system": "animals",
       "wiki": "Animals"
     },
     {
@@ -10202,7 +10202,7 @@
       "id": "animal-chameleon",
       "kind": "upgrade",
       "name": "Chameleon",
-      "system": "eternity",
+      "system": "animals",
       "wiki": "Animals"
     },
     {
@@ -10216,7 +10216,7 @@
       "id": "animal-rhino",
       "kind": "upgrade",
       "name": "Rhino",
-      "system": "eternity",
+      "system": "animals",
       "wiki": "Animals"
     },
     {
@@ -10230,7 +10230,7 @@
       "id": "animal-raccoon",
       "kind": "upgrade",
       "name": "Raccoon",
-      "system": "eternity",
+      "system": "animals",
       "wiki": "Animals"
     },
     {
@@ -10244,7 +10244,7 @@
       "id": "animal-bobcat",
       "kind": "upgrade",
       "name": "Bobcat",
-      "system": "eternity",
+      "system": "animals",
       "wiki": "Animals"
     },
     {
@@ -10258,7 +10258,7 @@
       "id": "animal-dolphin",
       "kind": "upgrade",
       "name": "Dolphin",
-      "system": "eternity",
+      "system": "animals",
       "wiki": "Animals"
     },
     {
@@ -10272,7 +10272,7 @@
       "id": "animal-gopher",
       "kind": "upgrade",
       "name": "Gopher",
-      "system": "eternity",
+      "system": "animals",
       "wiki": "Animals"
     },
     {
@@ -10286,7 +10286,7 @@
       "id": "animal-squirrel",
       "kind": "upgrade",
       "name": "Squirrel",
-      "system": "eternity",
+      "system": "animals",
       "wiki": "Animals"
     },
     {
@@ -10300,7 +10300,7 @@
       "id": "animal-pheasant",
       "kind": "upgrade",
       "name": "Pheasant",
-      "system": "eternity",
+      "system": "animals",
       "wiki": "Animals"
     },
     {
@@ -10314,7 +10314,7 @@
       "id": "animal-bull",
       "kind": "upgrade",
       "name": "Bull",
-      "system": "eternity",
+      "system": "animals",
       "wiki": "Animals"
     },
     {
@@ -10328,7 +10328,7 @@
       "id": "animal-sea-turtle",
       "kind": "upgrade",
       "name": "Sea Turtle",
-      "system": "eternity",
+      "system": "animals",
       "wiki": "Animals"
     },
     {
@@ -10342,7 +10342,7 @@
       "id": "animal-elephant",
       "kind": "upgrade",
       "name": "Elephant",
-      "system": "eternity",
+      "system": "animals",
       "wiki": "Animals"
     },
     {
@@ -10356,7 +10356,7 @@
       "id": "animal-badger",
       "kind": "upgrade",
       "name": "Badger",
-      "system": "eternity",
+      "system": "animals",
       "wiki": "Animals"
     },
     {
@@ -10370,7 +10370,7 @@
       "id": "animal-tiger",
       "kind": "upgrade",
       "name": "Tiger",
-      "system": "eternity",
+      "system": "animals",
       "wiki": "Animals"
     },
     {
@@ -10384,7 +10384,7 @@
       "id": "animal-orca",
       "kind": "upgrade",
       "name": "Orca",
-      "system": "eternity",
+      "system": "animals",
       "wiki": "Animals"
     },
     {
@@ -10398,7 +10398,7 @@
       "id": "animal-rabbit",
       "kind": "upgrade",
       "name": "Rabbit",
-      "system": "eternity",
+      "system": "animals",
       "wiki": "Animals"
     },
     {
@@ -10412,7 +10412,7 @@
       "id": "animal-rat",
       "kind": "upgrade",
       "name": "Rat",
-      "system": "eternity",
+      "system": "animals",
       "wiki": "Animals"
     },
     {
@@ -10426,7 +10426,7 @@
       "id": "animal-peacock",
       "kind": "upgrade",
       "name": "Peacock",
-      "system": "eternity",
+      "system": "animals",
       "wiki": "Animals"
     },
     {
@@ -10440,7 +10440,7 @@
       "id": "animal-llama",
       "kind": "upgrade",
       "name": "Llama",
-      "system": "eternity",
+      "system": "animals",
       "wiki": "Animals"
     },
     {
@@ -10454,7 +10454,7 @@
       "id": "animal-lizard",
       "kind": "upgrade",
       "name": "Lizard",
-      "system": "eternity",
+      "system": "animals",
       "wiki": "Animals"
     },
     {
@@ -10468,7 +10468,7 @@
       "id": "animal-anteater",
       "kind": "upgrade",
       "name": "Anteater",
-      "system": "eternity",
+      "system": "animals",
       "wiki": "Animals"
     },
     {
@@ -10482,7 +10482,7 @@
       "id": "animal-panda",
       "kind": "upgrade",
       "name": "Panda",
-      "system": "eternity",
+      "system": "animals",
       "wiki": "Animals"
     },
     {
@@ -10496,7 +10496,7 @@
       "id": "animal-hyena",
       "kind": "upgrade",
       "name": "Hyena",
-      "system": "eternity",
+      "system": "animals",
       "wiki": "Animals"
     },
     {
@@ -10510,7 +10510,7 @@
       "id": "animal-bat",
       "kind": "upgrade",
       "name": "Bat",
-      "system": "eternity",
+      "system": "animals",
       "wiki": "Animals"
     },
     {
@@ -10524,7 +10524,7 @@
       "id": "animal-hedgehog",
       "kind": "upgrade",
       "name": "Hedgehog",
-      "system": "eternity",
+      "system": "animals",
       "wiki": "Animals"
     },
     {
@@ -10538,7 +10538,7 @@
       "id": "animal-mole",
       "kind": "upgrade",
       "name": "Mole",
-      "system": "eternity",
+      "system": "animals",
       "wiki": "Animals"
     },
     {
@@ -10552,7 +10552,7 @@
       "id": "animal-owl",
       "kind": "upgrade",
       "name": "Owl",
-      "system": "eternity",
+      "system": "animals",
       "wiki": "Animals"
     },
     {
@@ -10566,7 +10566,7 @@
       "id": "animal-alpaca",
       "kind": "upgrade",
       "name": "Alpaca",
-      "system": "eternity",
+      "system": "animals",
       "wiki": "Animals"
     },
     {
@@ -10580,7 +10580,7 @@
       "id": "animal-crocodile",
       "kind": "upgrade",
       "name": "Crocodile",
-      "system": "eternity",
+      "system": "animals",
       "wiki": "Animals"
     },
     {
@@ -10594,7 +10594,7 @@
       "id": "animal-koala",
       "kind": "upgrade",
       "name": "Koala",
-      "system": "eternity",
+      "system": "animals",
       "wiki": "Animals"
     },
     {
@@ -10608,7 +10608,7 @@
       "id": "animal-wombat",
       "kind": "upgrade",
       "name": "Wombat",
-      "system": "eternity",
+      "system": "animals",
       "wiki": "Animals"
     },
     {
@@ -10622,7 +10622,7 @@
       "id": "animal-monkey",
       "kind": "upgrade",
       "name": "Monkey",
-      "system": "eternity",
+      "system": "animals",
       "wiki": "Animals"
     },
     {
@@ -10636,7 +10636,7 @@
       "id": "animal-eagle",
       "kind": "upgrade",
       "name": "Eagle",
-      "system": "eternity",
+      "system": "animals",
       "wiki": "Animals"
     },
     {
@@ -10650,7 +10650,7 @@
       "id": "animal-meta-cat",
       "kind": "upgrade",
       "name": "Meta-Cat",
-      "system": "eternity",
+      "system": "animals",
       "wiki": "Animals"
     },
     {
@@ -10664,7 +10664,7 @@
       "id": "animal-jackalope",
       "kind": "upgrade",
       "name": "Jackalope",
-      "system": "eternity",
+      "system": "animals",
       "wiki": "Animals"
     },
     {
@@ -10678,7 +10678,7 @@
       "id": "animal-phoenix",
       "kind": "upgrade",
       "name": "Phoenix",
-      "system": "eternity",
+      "system": "animals",
       "wiki": "Animals"
     },
     {
@@ -10692,7 +10692,7 @@
       "id": "animal-unicorn",
       "kind": "upgrade",
       "name": "Unicorn",
-      "system": "eternity",
+      "system": "animals",
       "wiki": "Animals"
     },
     {
@@ -10706,7 +10706,7 @@
       "id": "animal-hydra",
       "kind": "upgrade",
       "name": "Hydra",
-      "system": "eternity",
+      "system": "animals",
       "wiki": "Animals"
     },
     {
@@ -10720,7 +10720,7 @@
       "id": "animal-pegasus",
       "kind": "upgrade",
       "name": "Pegasus",
-      "system": "eternity",
+      "system": "animals",
       "wiki": "Animals"
     },
     {
@@ -10734,7 +10734,7 @@
       "id": "animal-hippogriff",
       "kind": "upgrade",
       "name": "Hippogriff",
-      "system": "eternity",
+      "system": "animals",
       "wiki": "Animals"
     },
     {
@@ -10748,7 +10748,7 @@
       "id": "animal-dragon",
       "kind": "upgrade",
       "name": "Dragon",
-      "system": "eternity",
+      "system": "animals",
       "wiki": "Animals"
     },
     {
@@ -10762,7 +10762,7 @@
       "id": "animal-nu",
       "kind": "upgrade",
       "name": "Nu",
-      "system": "eternity",
+      "system": "animals",
       "wiki": "Animals"
     },
     {
@@ -10782,7 +10782,7 @@
       "id": "laboratory",
       "kind": "group",
       "name": "Laboratory",
-      "system": "eternity",
+      "system": "laboratory",
       "wiki": "Laboratory"
     },
     {
@@ -10793,7 +10793,7 @@
       "id": "laboratory-points",
       "kind": "currency",
       "name": "Laboratory Points",
-      "system": "eternity",
+      "system": "laboratory",
       "wiki": "Laboratory"
     },
     {
@@ -10807,7 +10807,7 @@
       "id": "lab-base",
       "kind": "upgrade",
       "name": "Lab Base",
-      "system": "eternity",
+      "system": "laboratory",
       "wiki": "Laboratory"
     },
     {
@@ -10821,7 +10821,7 @@
       "id": "lab-mult",
       "kind": "upgrade",
       "name": "Lab Mult",
-      "system": "eternity",
+      "system": "laboratory",
       "wiki": "Laboratory"
     },
     {
@@ -10835,7 +10835,7 @@
       "id": "lab-power",
       "kind": "upgrade",
       "name": "Lab Power",
-      "system": "eternity",
+      "system": "laboratory",
       "wiki": "Laboratory"
     },
     {
@@ -10849,7 +10849,7 @@
       "id": "rp-upgrade-1",
       "kind": "upgrade",
       "name": "RP Upgrade 1 (IP Gain)",
-      "system": "eternity",
+      "system": "laboratory",
       "wiki": "Laboratory"
     },
     {
@@ -10863,7 +10863,7 @@
       "id": "rp-upgrade-2",
       "kind": "upgrade",
       "name": "RP Upgrade 2 (Ascend Power)",
-      "system": "eternity",
+      "system": "laboratory",
       "wiki": "Laboratory"
     },
     {
@@ -10877,7 +10877,7 @@
       "id": "rp-upgrade-3",
       "kind": "upgrade",
       "name": "RP Upgrade 3 (Star Base Mult)",
-      "system": "eternity",
+      "system": "laboratory",
       "wiki": "Laboratory"
     },
     {
@@ -10891,7 +10891,7 @@
       "id": "rp-upgrade-4",
       "kind": "upgrade",
       "name": "RP Upgrade 4 (EP Gain)",
-      "system": "eternity",
+      "system": "laboratory",
       "wiki": "Laboratory"
     },
     {
@@ -10905,7 +10905,7 @@
       "id": "rp-upgrade-5",
       "kind": "upgrade",
       "name": "RP Upgrade 5 (Gen. Power Exponent)",
-      "system": "eternity",
+      "system": "laboratory",
       "wiki": "Laboratory"
     },
     {
@@ -10919,7 +10919,7 @@
       "id": "rp-upgrade-6",
       "kind": "upgrade",
       "name": "RP Upgrade 6 (Common Exponent)",
-      "system": "eternity",
+      "system": "laboratory",
       "wiki": "Laboratory"
     },
     {
@@ -10937,7 +10937,7 @@
       "id": "eternity-challenges",
       "kind": "group",
       "name": "Eternity Challenges",
-      "system": "eternity",
+      "system": "eternity-challenges",
       "wiki": "Eternity_Challenges"
     },
     {
@@ -10954,7 +10954,7 @@
       "id": "eternity-challenge-1",
       "kind": "upgrade",
       "name": "Eternity Challenge 1",
-      "system": "eternity",
+      "system": "eternity-challenges",
       "wiki": "Eternity_Challenges"
     },
     {
@@ -10971,7 +10971,7 @@
       "id": "eternity-challenge-2",
       "kind": "upgrade",
       "name": "Eternity Challenge 2",
-      "system": "eternity",
+      "system": "eternity-challenges",
       "wiki": "Eternity_Challenges"
     },
     {
@@ -10988,7 +10988,7 @@
       "id": "eternity-challenge-3",
       "kind": "upgrade",
       "name": "Eternity Challenge 3",
-      "system": "eternity",
+      "system": "eternity-challenges",
       "wiki": "Eternity_Challenges"
     },
     {
@@ -11005,7 +11005,7 @@
       "id": "eternity-challenge-4",
       "kind": "upgrade",
       "name": "Eternity Challenge 4",
-      "system": "eternity",
+      "system": "eternity-challenges",
       "wiki": "Eternity_Challenges"
     },
     {
@@ -11022,7 +11022,7 @@
       "id": "eternity-challenge-5",
       "kind": "upgrade",
       "name": "Eternity Challenge 5",
-      "system": "eternity",
+      "system": "eternity-challenges",
       "wiki": "Eternity_Challenges"
     },
     {
@@ -11039,7 +11039,7 @@
       "id": "eternity-challenge-6",
       "kind": "upgrade",
       "name": "Eternity Challenge 6",
-      "system": "eternity",
+      "system": "eternity-challenges",
       "wiki": "Eternity_Challenges"
     },
     {
@@ -11056,7 +11056,7 @@
       "id": "eternity-challenge-7",
       "kind": "upgrade",
       "name": "Eternity Challenge 7",
-      "system": "eternity",
+      "system": "eternity-challenges",
       "wiki": "Eternity_Challenges"
     },
     {
@@ -11073,7 +11073,7 @@
       "id": "eternity-challenge-8",
       "kind": "upgrade",
       "name": "Eternity Challenge 8",
-      "system": "eternity",
+      "system": "eternity-challenges",
       "wiki": "Eternity_Challenges"
     },
     {
@@ -11090,7 +11090,7 @@
       "id": "eternity-challenge-9",
       "kind": "upgrade",
       "name": "Eternity Challenge 9",
-      "system": "eternity",
+      "system": "eternity-challenges",
       "wiki": "Eternity_Challenges"
     },
     {
@@ -11107,7 +11107,7 @@
       "id": "eternity-challenge-10",
       "kind": "upgrade",
       "name": "Eternity Challenge 10",
-      "system": "eternity",
+      "system": "eternity-challenges",
       "wiki": "Eternity_Challenges"
     },
     {
@@ -11120,7 +11120,7 @@
       "id": "eternity-challenge-milestones",
       "kind": "group",
       "name": "Eternity Challenge Milestones",
-      "system": "eternity",
+      "system": "eternity-challenges",
       "wiki": "Eternity_Milestones"
     },
     {
@@ -11133,7 +11133,7 @@
       "id": "eternity-challenge-milestone-3",
       "kind": "upgrade",
       "name": "Eternity Challenge Milestone (3 Completions)",
-      "system": "eternity",
+      "system": "eternity-challenges",
       "wiki": "Eternity_Milestones"
     },
     {
@@ -11146,7 +11146,7 @@
       "id": "eternity-challenge-milestone-5",
       "kind": "upgrade",
       "name": "Eternity Challenge Milestone (5 Completions)",
-      "system": "eternity",
+      "system": "eternity-challenges",
       "wiki": "Eternity_Milestones"
     },
     {
@@ -11159,7 +11159,7 @@
       "id": "eternity-challenge-milestone-8",
       "kind": "upgrade",
       "name": "Eternity Challenge Milestone (8 Completions)",
-      "system": "eternity",
+      "system": "eternity-challenges",
       "wiki": "Eternity_Milestones"
     },
     {
@@ -11172,7 +11172,7 @@
       "id": "eternity-challenge-milestone-10",
       "kind": "upgrade",
       "name": "Eternity Challenge Milestone (10 Completions)",
-      "system": "eternity",
+      "system": "eternity-challenges",
       "wiki": "Eternity_Milestones"
     },
     {
@@ -11185,7 +11185,7 @@
       "id": "eternity-challenge-milestone-30",
       "kind": "upgrade",
       "name": "Eternity Challenge Milestone (30 Completions)",
-      "system": "eternity",
+      "system": "eternity-challenges",
       "wiki": "Eternity_Milestones"
     },
     {
@@ -11198,7 +11198,7 @@
       "id": "eternity-challenge-milestone-32",
       "kind": "upgrade",
       "name": "Eternity Challenge Milestone (32 Completions)",
-      "system": "eternity",
+      "system": "eternity-challenges",
       "wiki": "Eternity_Milestones"
     },
     {
@@ -11211,7 +11211,7 @@
       "id": "eternity-challenge-milestone-35",
       "kind": "upgrade",
       "name": "Eternity Challenge Milestone (35 Completions)",
-      "system": "eternity",
+      "system": "eternity-challenges",
       "wiki": "Eternity_Milestones"
     },
     {
@@ -11224,7 +11224,7 @@
       "id": "eternity-challenge-milestone-50",
       "kind": "upgrade",
       "name": "Eternity Challenge Milestone (50 Completions)",
-      "system": "eternity",
+      "system": "eternity-challenges",
       "wiki": "Eternity_Milestones"
     },
     {
@@ -11237,7 +11237,7 @@
       "id": "eternity-challenge-milestone-60",
       "kind": "upgrade",
       "name": "Eternity Challenge Milestone (60 Completions)",
-      "system": "eternity",
+      "system": "eternity-challenges",
       "wiki": "Eternity_Milestones"
     },
     {
@@ -11267,7 +11267,7 @@
       "id": "supernova",
       "kind": "group",
       "name": "Supernova",
-      "system": "eternity",
+      "system": "supernova",
       "wiki": "Supernova"
     },
     {
@@ -11283,7 +11283,7 @@
       "id": "dilation",
       "kind": "group",
       "name": "Dilation",
-      "system": "eternity",
+      "system": "dilation",
       "wiki": "Dilation"
     },
     {
@@ -11311,7 +11311,7 @@
       "id": "dilation-penalties",
       "kind": "stat",
       "name": "Dilation Penalties",
-      "system": "eternity",
+      "system": "dilation",
       "wiki": "Dilation"
     },
     {
@@ -11327,7 +11327,7 @@
       "id": "dp-income",
       "kind": "stat",
       "name": "DP Income",
-      "system": "eternity",
+      "system": "dilation",
       "wiki": "Dilation"
     },
     {
@@ -11341,7 +11341,7 @@
       "id": "dilation-tree",
       "kind": "group",
       "name": "Dilation Tree",
-      "system": "eternity",
+      "system": "dilation-tree",
       "wiki": "Dilation_Tree"
     },
     {
@@ -11945,7 +11945,7 @@
       "id": "supernova-rewards",
       "kind": "stat",
       "name": "Supernova Rewards",
-      "system": "eternity",
+      "system": "supernova",
       "wiki": "Planets"
     },
     {
@@ -11958,7 +11958,7 @@
       "id": "du-power",
       "kind": "stat",
       "name": "DU Power",
-      "system": "eternity",
+      "system": "dilation",
       "wiki": "Planets"
     },
     {
@@ -23803,6 +23803,46 @@
     {
       "id": "eternity",
       "name": "Eternity"
+    },
+    {
+      "id": "eternity-milestones",
+      "name": "Eternity Milestones",
+      "parent": "eternity"
+    },
+    {
+      "id": "animals-milestones",
+      "name": "Animals Milestones",
+      "parent": "eternity-milestones"
+    },
+    {
+      "id": "animals",
+      "name": "Animals",
+      "parent": "eternity"
+    },
+    {
+      "id": "eternity-challenges",
+      "name": "Eternity Challenges",
+      "parent": "eternity"
+    },
+    {
+      "id": "laboratory",
+      "name": "Laboratory",
+      "parent": "eternity"
+    },
+    {
+      "id": "supernova",
+      "name": "Supernova",
+      "parent": "eternity"
+    },
+    {
+      "id": "dilation",
+      "name": "Dilation",
+      "parent": "eternity"
+    },
+    {
+      "id": "dilation-tree",
+      "name": "Dilation Tree",
+      "parent": "eternity"
     },
     {
       "id": "unity",

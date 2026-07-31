@@ -248,7 +248,7 @@ pages:
 
   - reader: wikitable
     page: Dilation_Tree
-    system: eternity
+    system: dilation-tree
     kind: tree-node
     id_prefix: dilation-node
     # Neither column identifies a row alone: every axis has an Index 1.
@@ -260,7 +260,7 @@ pages:
   # the Dilation Tree above: these are the nine flat Dilation Upgrades.
   - reader: wikitable
     page: Eternity
-    system: eternity
+    system: dilation
     kind: upgrade
     id_prefix: dilation-upgrade
     name_prefix: Dilation Upgrade

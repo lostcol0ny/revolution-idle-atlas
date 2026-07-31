@@ -16,6 +16,39 @@ systems:
     name: Infinity
   - id: eternity
     name: Eternity
+  # Eternity's seven tabs, in the order the game unlocks them -- the page numbers
+  # them "the 1st/2nd/.../seventh and final Eternity tab", so this is the game's
+  # own menu rather than a reading of it. `eternity` keeps only what belongs to
+  # no tab: the layer's currencies and its reset rewards.
+  - id: eternity-milestones
+    name: Eternity Milestones
+    parent: eternity
+  # A sub-tab of the Milestones tab, not a tab of its own, so it nests one level
+  # deeper -- the same relationship Refine Tree has to Minerals.
+  - id: animals-milestones
+    name: Animals Milestones
+    parent: eternity-milestones
+  - id: animals
+    name: Animals
+    parent: eternity
+  - id: eternity-challenges
+    name: Eternity Challenges
+    parent: eternity
+  - id: laboratory
+    name: Laboratory
+    parent: eternity
+  - id: supernova
+    name: Supernova
+    parent: eternity
+  - id: dilation
+    name: Dilation
+    parent: eternity
+  # The seventh tab, so a sibling of Dilation rather than a child of it, even
+  # though it spends a currency Dilation produces. Dilation Upgrades (DU) are the
+  # Dilation tab's own; the Dilation Tree's are DTU and live here.
+  - id: dilation-tree
+    name: Dilation Tree
+    parent: eternity
   - id: unity
     name: Unity
   - id: attacks
@@ -694,7 +727,7 @@ nodes:
 
   - id: animal-points
     name: Animal Points
-    system: revolution
+    system: animals
     kind: currency
     aliases: [AP]
     wiki: Animals
@@ -702,7 +735,7 @@ nodes:
 
   - id: dilation-points
     name: Dilation Points
-    system: eternity
+    system: dilation
     kind: currency
     aliases: [DP]
     wiki: Dilation_Tree
@@ -710,7 +743,7 @@ nodes:
 
   - id: dilation-tree-points
     name: Dilation Tree Points
-    system: eternity
+    system: dilation-tree
     kind: currency
     aliases: [DTP]
     wiki: Dilation_Tree
@@ -718,7 +751,7 @@ nodes:
 
   - id: research-points
     name: Research Points
-    system: eternity
+    system: laboratory
     kind: currency
     aliases: [RP]
     wiki: Laboratory
@@ -817,7 +850,7 @@ nodes:
   # Eternity Milestones: the first Eternity tab, keyed on Eternities held.
   - id: eternity-milestones
     name: Eternity Milestones
-    system: eternity
+    system: eternity-milestones
     kind: group
     aliases: [EM]
     wiki: Eternity_Milestones
@@ -827,7 +860,7 @@ nodes:
 
   - id: eternity-milestone-1
     name: Eternity Milestone (1 Eternity)
-    system: eternity
+    system: eternity-milestones
     kind: upgrade
     wiki: Eternity_Milestones
     confidence: documented
@@ -836,7 +869,7 @@ nodes:
 
   - id: eternity-milestone-2
     name: Eternity Milestone (2 Eternities)
-    system: eternity
+    system: eternity-milestones
     kind: upgrade
     wiki: Eternity_Milestones
     confidence: documented
@@ -845,7 +878,7 @@ nodes:
 
   - id: eternity-milestone-3
     name: Eternity Milestone (3 Eternities)
-    system: eternity
+    system: eternity-milestones
     kind: upgrade
     wiki: Eternity_Milestones
     confidence: documented
@@ -854,7 +887,7 @@ nodes:
 
   - id: eternity-milestone-5
     name: Eternity Milestone (5 Eternities)
-    system: eternity
+    system: eternity-milestones
     kind: upgrade
     wiki: Eternity_Milestones
     confidence: documented
@@ -863,7 +896,7 @@ nodes:
 
   - id: eternity-milestone-7
     name: Eternity Milestone (7 Eternities)
-    system: eternity
+    system: eternity-milestones
     kind: upgrade
     wiki: Eternity_Milestones
     confidence: documented
@@ -872,7 +905,7 @@ nodes:
 
   - id: eternity-milestone-8
     name: Eternity Milestone (8 Eternities)
-    system: eternity
+    system: eternity-milestones
     kind: upgrade
     wiki: Eternity_Milestones
     confidence: documented
@@ -881,7 +914,7 @@ nodes:
 
   - id: eternity-milestone-12
     name: Eternity Milestone (12 Eternities)
-    system: eternity
+    system: eternity-milestones
     kind: upgrade
     wiki: Eternity_Milestones
     confidence: documented
@@ -890,7 +923,7 @@ nodes:
 
   - id: eternity-milestone-14
     name: Eternity Milestone (14 Eternities)
-    system: eternity
+    system: eternity-milestones
     kind: upgrade
     wiki: Eternity_Milestones
     confidence: documented
@@ -899,7 +932,7 @@ nodes:
 
   - id: eternity-milestone-16
     name: Eternity Milestone (16 Eternities)
-    system: eternity
+    system: eternity-milestones
     kind: upgrade
     wiki: Eternity_Milestones
     confidence: documented
@@ -908,7 +941,7 @@ nodes:
 
   - id: eternity-milestone-32
     name: Eternity Milestone (32 Eternities)
-    system: eternity
+    system: eternity-milestones
     kind: upgrade
     wiki: Eternity_Milestones
     confidence: documented
@@ -917,7 +950,7 @@ nodes:
 
   - id: eternity-milestone-100
     name: Eternity Milestone (100 Eternities)
-    system: eternity
+    system: eternity-milestones
     kind: upgrade
     wiki: Eternity_Milestones
     confidence: documented
@@ -927,7 +960,7 @@ nodes:
   # Eternity Bonuses live on the Milestones tab and scale with Eternities.
   - id: eternity-bonuses
     name: Eternity Bonuses
-    system: eternity
+    system: eternity-milestones
     kind: group
     wiki: Eternity
     confidence: documented
@@ -948,7 +981,7 @@ nodes:
   # Animals. Bought with AP in the Eternity Zoo; the bonuses persist.
   - id: animals
     name: Animals
-    system: eternity
+    system: animals
     kind: group
     aliases: [Eternity Zoo]
     wiki: Animals
@@ -959,7 +992,7 @@ nodes:
 
   - id: slowdown
     name: Slowdown
-    system: eternity
+    system: animals
     kind: upgrade
     wiki: Animals
     confidence: documented
@@ -968,7 +1001,7 @@ nodes:
 
   - id: animals-milestones
     name: Animals Milestones
-    system: eternity
+    system: animals-milestones
     kind: group
     aliases: [AM]
     wiki: Eternity_Milestones
@@ -978,7 +1011,7 @@ nodes:
 
   - id: animals-milestone-1
     name: Animals Milestone (1 Animal)
-    system: eternity
+    system: animals-milestones
     kind: upgrade
     wiki: Eternity_Milestones
     confidence: documented
@@ -987,7 +1020,7 @@ nodes:
 
   - id: animals-milestone-4
     name: Animals Milestone (4 Animals)
-    system: eternity
+    system: animals-milestones
     kind: upgrade
     wiki: Eternity_Milestones
     confidence: documented
@@ -996,7 +1029,7 @@ nodes:
 
   - id: animals-milestone-7
     name: Animals Milestone (7 Animals)
-    system: eternity
+    system: animals-milestones
     kind: upgrade
     wiki: Eternity_Milestones
     confidence: documented
@@ -1005,7 +1038,7 @@ nodes:
 
   - id: animals-milestone-10
     name: Animals Milestone (10 Animals)
-    system: eternity
+    system: animals-milestones
     kind: upgrade
     wiki: Eternity_Milestones
     confidence: documented
@@ -1014,7 +1047,7 @@ nodes:
 
   - id: animals-milestone-20
     name: Animals Milestone (20 Animals)
-    system: eternity
+    system: animals-milestones
     kind: upgrade
     wiki: Eternity_Milestones
     confidence: documented
@@ -1023,7 +1056,7 @@ nodes:
 
   - id: animals-milestone-48
     name: Animals Milestone (48 Animals)
-    system: eternity
+    system: animals-milestones
     kind: upgrade
     wiki: Eternity_Milestones
     confidence: documented
@@ -1032,7 +1065,7 @@ nodes:
 
   - id: animals-milestone-81
     name: Animals Milestone (81 Animals)
-    system: eternity
+    system: animals-milestones
     kind: upgrade
     wiki: Eternity_Milestones
     confidence: documented
@@ -1042,7 +1075,7 @@ nodes:
   # The Eternity Zoo itself. Cost is the AP price the wiki prints.
   - id: animal-cat
     name: Cat
-    system: eternity
+    system: animals
     kind: upgrade
     wiki: Animals
     cost: 1 AP
@@ -1052,7 +1085,7 @@ nodes:
 
   - id: animal-mouse
     name: Mouse
-    system: eternity
+    system: animals
     kind: upgrade
     wiki: Animals
     cost: 2 AP
@@ -1062,7 +1095,7 @@ nodes:
 
   - id: animal-chicken
     name: Chicken
-    system: eternity
+    system: animals
     kind: upgrade
     wiki: Animals
     cost: 4 AP
@@ -1072,7 +1105,7 @@ nodes:
 
   - id: animal-pig
     name: Pig
-    system: eternity
+    system: animals
     kind: upgrade
     wiki: Animals
     cost: 4 AP
@@ -1082,7 +1115,7 @@ nodes:
 
   - id: animal-snake
     name: Snake
-    system: eternity
+    system: animals
     kind: upgrade
     wiki: Animals
     cost: 10 AP
@@ -1092,7 +1125,7 @@ nodes:
 
   - id: animal-zebra
     name: Zebra
-    system: eternity
+    system: animals
     kind: upgrade
     wiki: Animals
     cost: 14 AP
@@ -1102,7 +1135,7 @@ nodes:
 
   - id: animal-bunny
     name: Bunny
-    system: eternity
+    system: animals
     kind: upgrade
     wiki: Animals
     cost: 18 AP
@@ -1112,7 +1145,7 @@ nodes:
 
   - id: animal-boar
     name: Boar
-    system: eternity
+    system: animals
     kind: upgrade
     wiki: Animals
     cost: 22 AP
@@ -1122,7 +1155,7 @@ nodes:
 
   - id: animal-penguin
     name: Penguin
-    system: eternity
+    system: animals
     kind: upgrade
     wiki: Animals
     cost: 26 AP
@@ -1132,7 +1165,7 @@ nodes:
 
   - id: animal-dog
     name: Dog
-    system: eternity
+    system: animals
     kind: upgrade
     wiki: Animals
     cost: 2 AP
@@ -1142,7 +1175,7 @@ nodes:
 
   - id: animal-hamster
     name: Hamster
-    system: eternity
+    system: animals
     kind: upgrade
     wiki: Animals
     cost: 3 AP
@@ -1152,7 +1185,7 @@ nodes:
 
   - id: animal-pigeon
     name: Pigeon
-    system: eternity
+    system: animals
     kind: upgrade
     wiki: Animals
     cost: 4 AP
@@ -1162,7 +1195,7 @@ nodes:
 
   - id: animal-goat
     name: Goat
-    system: eternity
+    system: animals
     kind: upgrade
     wiki: Animals
     cost: 2 AP
@@ -1172,7 +1205,7 @@ nodes:
 
   - id: animal-frog
     name: Frog
-    system: eternity
+    system: animals
     kind: upgrade
     wiki: Animals
     cost: 12 AP
@@ -1182,7 +1215,7 @@ nodes:
 
   - id: animal-giraffe
     name: Giraffe
-    system: eternity
+    system: animals
     kind: upgrade
     wiki: Animals
     cost: 16 AP
@@ -1192,7 +1225,7 @@ nodes:
 
   - id: animal-fox
     name: Fox
-    system: eternity
+    system: animals
     kind: upgrade
     wiki: Animals
     cost: 20 AP
@@ -1202,7 +1235,7 @@ nodes:
 
   - id: animal-panther
     name: Panther
-    system: eternity
+    system: animals
     kind: upgrade
     wiki: Animals
     cost: 24 AP
@@ -1212,7 +1245,7 @@ nodes:
 
   - id: animal-polar-bear
     name: Polar Bear
-    system: eternity
+    system: animals
     kind: upgrade
     wiki: Animals
     cost: 28 AP
@@ -1222,7 +1255,7 @@ nodes:
 
   - id: animal-parrot
     name: Parrot
-    system: eternity
+    system: animals
     kind: upgrade
     wiki: Animals
     cost: 2 AP
@@ -1232,7 +1265,7 @@ nodes:
 
   - id: animal-guinea-pig
     name: Guinea Pig
-    system: eternity
+    system: animals
     kind: upgrade
     wiki: Animals
     cost: 3 AP
@@ -1242,7 +1275,7 @@ nodes:
 
   - id: animal-rooster
     name: Rooster
-    system: eternity
+    system: animals
     kind: upgrade
     wiki: Animals
     cost: 2 AP
@@ -1252,7 +1285,7 @@ nodes:
 
   - id: animal-sheep
     name: Sheep
-    system: eternity
+    system: animals
     kind: upgrade
     wiki: Animals
     cost: 3 AP
@@ -1262,7 +1295,7 @@ nodes:
 
   - id: animal-toad
     name: Toad
-    system: eternity
+    system: animals
     kind: upgrade
     wiki: Animals
     cost: 14 AP
@@ -1272,7 +1305,7 @@ nodes:
 
   - id: animal-lion
     name: Lion
-    system: eternity
+    system: animals
     kind: upgrade
     wiki: Animals
     cost: 18 AP
@@ -1282,7 +1315,7 @@ nodes:
 
   - id: animal-wolf
     name: Wolf
-    system: eternity
+    system: animals
     kind: upgrade
     wiki: Animals
     cost: 22 AP
@@ -1292,7 +1325,7 @@ nodes:
 
   - id: animal-beaver
     name: Beaver
-    system: eternity
+    system: animals
     kind: upgrade
     wiki: Animals
     cost: 26 AP
@@ -1302,7 +1335,7 @@ nodes:
 
   - id: animal-seal
     name: Seal
-    system: eternity
+    system: animals
     kind: upgrade
     wiki: Animals
     cost: 30 AP
@@ -1312,7 +1345,7 @@ nodes:
 
   - id: animal-fish
     name: Fish
-    system: eternity
+    system: animals
     kind: upgrade
     wiki: Animals
     cost: 2 AP
@@ -1322,7 +1355,7 @@ nodes:
 
   - id: animal-jerboa
     name: Jerboa
-    system: eternity
+    system: animals
     kind: upgrade
     wiki: Animals
     cost: 2 AP
@@ -1332,7 +1365,7 @@ nodes:
 
   - id: animal-duck
     name: Duck
-    system: eternity
+    system: animals
     kind: upgrade
     wiki: Animals
     cost: 3 AP
@@ -1342,7 +1375,7 @@ nodes:
 
   - id: animal-cow
     name: Cow
-    system: eternity
+    system: animals
     kind: upgrade
     wiki: Animals
     cost: 4 AP
@@ -1352,7 +1385,7 @@ nodes:
 
   - id: animal-turtle
     name: Turtle
-    system: eternity
+    system: animals
     kind: upgrade
     wiki: Animals
     cost: 16 AP
@@ -1362,7 +1395,7 @@ nodes:
 
   - id: animal-hippo
     name: Hippo
-    system: eternity
+    system: animals
     kind: upgrade
     wiki: Animals
     cost: 20 AP
@@ -1372,7 +1405,7 @@ nodes:
 
   - id: animal-bear
     name: Bear
-    system: eternity
+    system: animals
     kind: upgrade
     wiki: Animals
     cost: 24 AP
@@ -1382,7 +1415,7 @@ nodes:
 
   - id: animal-yak
     name: Yak
-    system: eternity
+    system: animals
     kind: upgrade
     wiki: Animals
     cost: 28 AP
@@ -1392,7 +1425,7 @@ nodes:
 
   - id: animal-walrus
     name: Walrus
-    system: eternity
+    system: animals
     kind: upgrade
     wiki: Animals
     cost: 32 AP
@@ -1402,7 +1435,7 @@ nodes:
 
   - id: animal-ferret
     name: Ferret
-    system: eternity
+    system: animals
     kind: upgrade
     wiki: Animals
     cost: 2 AP
@@ -1412,7 +1445,7 @@ nodes:
 
   - id: animal-chinchilla
     name: Chinchilla
-    system: eternity
+    system: animals
     kind: upgrade
     wiki: Animals
     cost: 3 AP
@@ -1422,7 +1455,7 @@ nodes:
 
   - id: animal-goose
     name: Goose
-    system: eternity
+    system: animals
     kind: upgrade
     wiki: Animals
     cost: 4 AP
@@ -1432,7 +1465,7 @@ nodes:
 
   - id: animal-horse
     name: Horse
-    system: eternity
+    system: animals
     kind: upgrade
     wiki: Animals
     cost: 4 AP
@@ -1442,7 +1475,7 @@ nodes:
 
   - id: animal-chameleon
     name: Chameleon
-    system: eternity
+    system: animals
     kind: upgrade
     wiki: Animals
     cost: 18 AP
@@ -1452,7 +1485,7 @@ nodes:
 
   - id: animal-rhino
     name: Rhino
-    system: eternity
+    system: animals
     kind: upgrade
     wiki: Animals
     cost: 22 AP
@@ -1462,7 +1495,7 @@ nodes:
 
   - id: animal-raccoon
     name: Raccoon
-    system: eternity
+    system: animals
     kind: upgrade
     wiki: Animals
     cost: 26 AP
@@ -1472,7 +1505,7 @@ nodes:
 
   - id: animal-bobcat
     name: Bobcat
-    system: eternity
+    system: animals
     kind: upgrade
     wiki: Animals
     cost: 30 AP
@@ -1482,7 +1515,7 @@ nodes:
 
   - id: animal-dolphin
     name: Dolphin
-    system: eternity
+    system: animals
     kind: upgrade
     wiki: Animals
     cost: 34 AP
@@ -1492,7 +1525,7 @@ nodes:
 
   - id: animal-gopher
     name: Gopher
-    system: eternity
+    system: animals
     kind: upgrade
     wiki: Animals
     cost: 12 AP
@@ -1502,7 +1535,7 @@ nodes:
 
   - id: animal-squirrel
     name: Squirrel
-    system: eternity
+    system: animals
     kind: upgrade
     wiki: Animals
     cost: 12 AP
@@ -1512,7 +1545,7 @@ nodes:
 
   - id: animal-pheasant
     name: Pheasant
-    system: eternity
+    system: animals
     kind: upgrade
     wiki: Animals
     cost: 12 AP
@@ -1522,7 +1555,7 @@ nodes:
 
   - id: animal-bull
     name: Bull
-    system: eternity
+    system: animals
     kind: upgrade
     wiki: Animals
     cost: 12 AP
@@ -1532,7 +1565,7 @@ nodes:
 
   - id: animal-sea-turtle
     name: Sea Turtle
-    system: eternity
+    system: animals
     kind: upgrade
     wiki: Animals
     cost: 20 AP
@@ -1542,7 +1575,7 @@ nodes:
 
   - id: animal-elephant
     name: Elephant
-    system: eternity
+    system: animals
     kind: upgrade
     wiki: Animals
     cost: 24 AP
@@ -1552,7 +1585,7 @@ nodes:
 
   - id: animal-badger
     name: Badger
-    system: eternity
+    system: animals
     kind: upgrade
     wiki: Animals
     cost: 28 AP
@@ -1562,7 +1595,7 @@ nodes:
 
   - id: animal-tiger
     name: Tiger
-    system: eternity
+    system: animals
     kind: upgrade
     wiki: Animals
     cost: 32 AP
@@ -1572,7 +1605,7 @@ nodes:
 
   - id: animal-orca
     name: Orca
-    system: eternity
+    system: animals
     kind: upgrade
     wiki: Animals
     cost: 36 AP
@@ -1582,7 +1615,7 @@ nodes:
 
   - id: animal-rabbit
     name: Rabbit
-    system: eternity
+    system: animals
     kind: upgrade
     wiki: Animals
     cost: 14 AP
@@ -1592,7 +1625,7 @@ nodes:
 
   - id: animal-rat
     name: Rat
-    system: eternity
+    system: animals
     kind: upgrade
     wiki: Animals
     cost: 14 AP
@@ -1602,7 +1635,7 @@ nodes:
 
   - id: animal-peacock
     name: Peacock
-    system: eternity
+    system: animals
     kind: upgrade
     wiki: Animals
     cost: 14 AP
@@ -1612,7 +1645,7 @@ nodes:
 
   - id: animal-llama
     name: Llama
-    system: eternity
+    system: animals
     kind: upgrade
     wiki: Animals
     cost: 14 AP
@@ -1622,7 +1655,7 @@ nodes:
 
   - id: animal-lizard
     name: Lizard
-    system: eternity
+    system: animals
     kind: upgrade
     wiki: Animals
     cost: 22 AP
@@ -1632,7 +1665,7 @@ nodes:
 
   - id: animal-anteater
     name: Anteater
-    system: eternity
+    system: animals
     kind: upgrade
     wiki: Animals
     cost: 26 AP
@@ -1642,7 +1675,7 @@ nodes:
 
   - id: animal-panda
     name: Panda
-    system: eternity
+    system: animals
     kind: upgrade
     wiki: Animals
     cost: 30 AP
@@ -1652,7 +1685,7 @@ nodes:
 
   - id: animal-hyena
     name: Hyena
-    system: eternity
+    system: animals
     kind: upgrade
     wiki: Animals
     cost: 34 AP
@@ -1662,7 +1695,7 @@ nodes:
 
   - id: animal-bat
     name: Bat
-    system: eternity
+    system: animals
     kind: upgrade
     wiki: Animals
     cost: 38 AP
@@ -1672,7 +1705,7 @@ nodes:
 
   - id: animal-hedgehog
     name: Hedgehog
-    system: eternity
+    system: animals
     kind: upgrade
     wiki: Animals
     cost: 16 AP
@@ -1682,7 +1715,7 @@ nodes:
 
   - id: animal-mole
     name: Mole
-    system: eternity
+    system: animals
     kind: upgrade
     wiki: Animals
     cost: 16 AP
@@ -1692,7 +1725,7 @@ nodes:
 
   - id: animal-owl
     name: Owl
-    system: eternity
+    system: animals
     kind: upgrade
     wiki: Animals
     cost: 16 AP
@@ -1702,7 +1735,7 @@ nodes:
 
   - id: animal-alpaca
     name: Alpaca
-    system: eternity
+    system: animals
     kind: upgrade
     wiki: Animals
     cost: 16 AP
@@ -1712,7 +1745,7 @@ nodes:
 
   - id: animal-crocodile
     name: Crocodile
-    system: eternity
+    system: animals
     kind: upgrade
     wiki: Animals
     cost: 24 AP
@@ -1722,7 +1755,7 @@ nodes:
 
   - id: animal-koala
     name: Koala
-    system: eternity
+    system: animals
     kind: upgrade
     wiki: Animals
     cost: 28 AP
@@ -1732,7 +1765,7 @@ nodes:
 
   - id: animal-wombat
     name: Wombat
-    system: eternity
+    system: animals
     kind: upgrade
     wiki: Animals
     cost: 32 AP
@@ -1742,7 +1775,7 @@ nodes:
 
   - id: animal-monkey
     name: Monkey
-    system: eternity
+    system: animals
     kind: upgrade
     wiki: Animals
     cost: 36 AP
@@ -1752,7 +1785,7 @@ nodes:
 
   - id: animal-eagle
     name: Eagle
-    system: eternity
+    system: animals
     kind: upgrade
     wiki: Animals
     cost: 40 AP
@@ -1762,7 +1795,7 @@ nodes:
 
   - id: animal-meta-cat
     name: Meta-Cat
-    system: eternity
+    system: animals
     kind: upgrade
     wiki: Animals
     cost: 18 AP
@@ -1772,7 +1805,7 @@ nodes:
 
   - id: animal-jackalope
     name: Jackalope
-    system: eternity
+    system: animals
     kind: upgrade
     wiki: Animals
     cost: 18 AP
@@ -1782,7 +1815,7 @@ nodes:
 
   - id: animal-phoenix
     name: Phoenix
-    system: eternity
+    system: animals
     kind: upgrade
     wiki: Animals
     cost: 18 AP
@@ -1792,7 +1825,7 @@ nodes:
 
   - id: animal-unicorn
     name: Unicorn
-    system: eternity
+    system: animals
     kind: upgrade
     wiki: Animals
     cost: 18 AP
@@ -1802,7 +1835,7 @@ nodes:
 
   - id: animal-hydra
     name: Hydra
-    system: eternity
+    system: animals
     kind: upgrade
     wiki: Animals
     cost: 26 AP
@@ -1812,7 +1845,7 @@ nodes:
 
   - id: animal-pegasus
     name: Pegasus
-    system: eternity
+    system: animals
     kind: upgrade
     wiki: Animals
     cost: 30 AP
@@ -1822,7 +1855,7 @@ nodes:
 
   - id: animal-hippogriff
     name: Hippogriff
-    system: eternity
+    system: animals
     kind: upgrade
     wiki: Animals
     cost: 34 AP
@@ -1832,7 +1865,7 @@ nodes:
 
   - id: animal-dragon
     name: Dragon
-    system: eternity
+    system: animals
     kind: upgrade
     wiki: Animals
     cost: 38 AP
@@ -1842,7 +1875,7 @@ nodes:
 
   - id: animal-nu
     name: Nu
-    system: eternity
+    system: animals
     kind: upgrade
     wiki: Animals
     cost: 100 AP
@@ -1853,7 +1886,7 @@ nodes:
   # Laboratory: EP buys three LP upgrades, LP levels award RP, RP buys six.
   - id: laboratory
     name: Laboratory
-    system: eternity
+    system: laboratory
     kind: group
     aliases: [Lab]
     wiki: Laboratory
@@ -1865,7 +1898,7 @@ nodes:
 
   - id: laboratory-points
     name: Laboratory Points
-    system: eternity
+    system: laboratory
     kind: currency
     aliases: [LP]
     wiki: Laboratory
@@ -1873,7 +1906,7 @@ nodes:
 
   - id: lab-base
     name: Lab Base
-    system: eternity
+    system: laboratory
     kind: upgrade
     wiki: Laboratory
     confidence: documented
@@ -1883,7 +1916,7 @@ nodes:
 
   - id: lab-mult
     name: Lab Mult
-    system: eternity
+    system: laboratory
     kind: upgrade
     wiki: Laboratory
     confidence: documented
@@ -1893,7 +1926,7 @@ nodes:
 
   - id: lab-power
     name: Lab Power
-    system: eternity
+    system: laboratory
     kind: upgrade
     wiki: Laboratory
     confidence: documented
@@ -1903,7 +1936,7 @@ nodes:
 
   - id: rp-upgrade-1
     name: RP Upgrade 1 (IP Gain)
-    system: eternity
+    system: laboratory
     kind: upgrade
     wiki: Laboratory
     confidence: documented
@@ -1913,7 +1946,7 @@ nodes:
 
   - id: rp-upgrade-2
     name: RP Upgrade 2 (Ascend Power)
-    system: eternity
+    system: laboratory
     kind: upgrade
     wiki: Laboratory
     confidence: documented
@@ -1923,7 +1956,7 @@ nodes:
 
   - id: rp-upgrade-3
     name: RP Upgrade 3 (Star Base Mult)
-    system: eternity
+    system: laboratory
     kind: upgrade
     wiki: Laboratory
     confidence: documented
@@ -1933,7 +1966,7 @@ nodes:
 
   - id: rp-upgrade-4
     name: RP Upgrade 4 (EP Gain)
-    system: eternity
+    system: laboratory
     kind: upgrade
     wiki: Laboratory
     confidence: documented
@@ -1943,7 +1976,7 @@ nodes:
 
   - id: rp-upgrade-5
     name: RP Upgrade 5 (Gen. Power Exponent)
-    system: eternity
+    system: laboratory
     kind: upgrade
     wiki: Laboratory
     confidence: documented
@@ -1953,7 +1986,7 @@ nodes:
 
   - id: rp-upgrade-6
     name: RP Upgrade 6 (Common Exponent)
-    system: eternity
+    system: laboratory
     kind: upgrade
     wiki: Laboratory
     confidence: documented
@@ -1964,7 +1997,7 @@ nodes:
   # Eternity Challenges. Each of the ten runs at six difficulties.
   - id: eternity-challenges
     name: Eternity Challenges
-    system: eternity
+    system: eternity-challenges
     kind: group
     aliases: [EC, ECs]
     wiki: Eternity_Challenges
@@ -1975,7 +2008,7 @@ nodes:
 
   - id: eternity-challenge-1
     name: Eternity Challenge 1
-    system: eternity
+    system: eternity-challenges
     kind: upgrade
     wiki: Eternity_Challenges
     confidence: documented
@@ -1986,7 +2019,7 @@ nodes:
 
   - id: eternity-challenge-2
     name: Eternity Challenge 2
-    system: eternity
+    system: eternity-challenges
     kind: upgrade
     wiki: Eternity_Challenges
     confidence: documented
@@ -1997,7 +2030,7 @@ nodes:
 
   - id: eternity-challenge-3
     name: Eternity Challenge 3
-    system: eternity
+    system: eternity-challenges
     kind: upgrade
     wiki: Eternity_Challenges
     confidence: documented
@@ -2008,7 +2041,7 @@ nodes:
 
   - id: eternity-challenge-4
     name: Eternity Challenge 4
-    system: eternity
+    system: eternity-challenges
     kind: upgrade
     wiki: Eternity_Challenges
     confidence: documented
@@ -2019,7 +2052,7 @@ nodes:
 
   - id: eternity-challenge-5
     name: Eternity Challenge 5
-    system: eternity
+    system: eternity-challenges
     kind: upgrade
     wiki: Eternity_Challenges
     confidence: documented
@@ -2030,7 +2063,7 @@ nodes:
 
   - id: eternity-challenge-6
     name: Eternity Challenge 6
-    system: eternity
+    system: eternity-challenges
     kind: upgrade
     wiki: Eternity_Challenges
     confidence: documented
@@ -2041,7 +2074,7 @@ nodes:
 
   - id: eternity-challenge-7
     name: Eternity Challenge 7
-    system: eternity
+    system: eternity-challenges
     kind: upgrade
     wiki: Eternity_Challenges
     confidence: documented
@@ -2052,7 +2085,7 @@ nodes:
 
   - id: eternity-challenge-8
     name: Eternity Challenge 8
-    system: eternity
+    system: eternity-challenges
     kind: upgrade
     wiki: Eternity_Challenges
     confidence: documented
@@ -2063,7 +2096,7 @@ nodes:
 
   - id: eternity-challenge-9
     name: Eternity Challenge 9
-    system: eternity
+    system: eternity-challenges
     kind: upgrade
     wiki: Eternity_Challenges
     confidence: documented
@@ -2074,7 +2107,7 @@ nodes:
 
   - id: eternity-challenge-10
     name: Eternity Challenge 10
-    system: eternity
+    system: eternity-challenges
     kind: upgrade
     wiki: Eternity_Challenges
     confidence: documented
@@ -2085,7 +2118,7 @@ nodes:
 
   - id: eternity-challenge-milestones
     name: Eternity Challenge Milestones
-    system: eternity
+    system: eternity-challenges
     kind: group
     wiki: Eternity_Milestones
     confidence: documented
@@ -2094,7 +2127,7 @@ nodes:
 
   - id: eternity-challenge-milestone-3
     name: Eternity Challenge Milestone (3 Completions)
-    system: eternity
+    system: eternity-challenges
     kind: upgrade
     wiki: Eternity_Milestones
     confidence: documented
@@ -2103,7 +2136,7 @@ nodes:
 
   - id: eternity-challenge-milestone-5
     name: Eternity Challenge Milestone (5 Completions)
-    system: eternity
+    system: eternity-challenges
     kind: upgrade
     wiki: Eternity_Milestones
     confidence: documented
@@ -2112,7 +2145,7 @@ nodes:
 
   - id: eternity-challenge-milestone-8
     name: Eternity Challenge Milestone (8 Completions)
-    system: eternity
+    system: eternity-challenges
     kind: upgrade
     wiki: Eternity_Milestones
     confidence: documented
@@ -2121,7 +2154,7 @@ nodes:
 
   - id: eternity-challenge-milestone-10
     name: Eternity Challenge Milestone (10 Completions)
-    system: eternity
+    system: eternity-challenges
     kind: upgrade
     wiki: Eternity_Milestones
     confidence: documented
@@ -2130,7 +2163,7 @@ nodes:
 
   - id: eternity-challenge-milestone-30
     name: Eternity Challenge Milestone (30 Completions)
-    system: eternity
+    system: eternity-challenges
     kind: upgrade
     wiki: Eternity_Milestones
     confidence: documented
@@ -2139,7 +2172,7 @@ nodes:
 
   - id: eternity-challenge-milestone-32
     name: Eternity Challenge Milestone (32 Completions)
-    system: eternity
+    system: eternity-challenges
     kind: upgrade
     wiki: Eternity_Milestones
     confidence: documented
@@ -2148,7 +2181,7 @@ nodes:
 
   - id: eternity-challenge-milestone-35
     name: Eternity Challenge Milestone (35 Completions)
-    system: eternity
+    system: eternity-challenges
     kind: upgrade
     wiki: Eternity_Milestones
     confidence: documented
@@ -2157,7 +2190,7 @@ nodes:
 
   - id: eternity-challenge-milestone-50
     name: Eternity Challenge Milestone (50 Completions)
-    system: eternity
+    system: eternity-challenges
     kind: upgrade
     wiki: Eternity_Milestones
     confidence: documented
@@ -2166,7 +2199,7 @@ nodes:
 
   - id: eternity-challenge-milestone-60
     name: Eternity Challenge Milestone (60 Completions)
-    system: eternity
+    system: eternity-challenges
     kind: upgrade
     wiki: Eternity_Milestones
     confidence: documented
@@ -2176,7 +2209,7 @@ nodes:
   # Supernova and Dilation.
   - id: supernova
     name: Supernova
-    system: eternity
+    system: supernova
     kind: group
     wiki: Supernova
     confidence: documented
@@ -2194,7 +2227,7 @@ nodes:
 
   - id: dilation
     name: Dilation
-    system: eternity
+    system: dilation
     kind: group
     wiki: Dilation
     confidence: documented
@@ -2204,7 +2237,7 @@ nodes:
 
   - id: dilation-penalties
     name: Dilation Penalties
-    system: eternity
+    system: dilation
     kind: stat
     wiki: Dilation
     confidence: documented
@@ -2219,7 +2252,7 @@ nodes:
   - id: dp-income
     name: DP Income
     aliases: [DP Mult]
-    system: eternity
+    system: dilation
     kind: stat
     wiki: Dilation
     confidence: documented
@@ -2228,7 +2261,7 @@ nodes:
 
   - id: dilation-tree
     name: Dilation Tree
-    system: eternity
+    system: dilation-tree
     kind: group
     wiki: Dilation_Tree
     confidence: documented
@@ -2597,7 +2630,7 @@ nodes:
 
   - id: supernova-rewards
     name: Supernova Rewards
-    system: eternity
+    system: supernova
     kind: stat
     wiki: Planets
     confidence: documented
@@ -2606,7 +2639,7 @@ nodes:
 
   - id: du-power
     name: DU Power
-    system: eternity
+    system: dilation
     kind: stat
     wiki: Planets
     confidence: documented

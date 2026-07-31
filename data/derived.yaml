@@ -3865,7 +3865,7 @@ nodes:
   - text: Singularity Mult Boost
 - id: dilation-node-center-1
   name: Center 1
-  system: eternity
+  system: dilation-tree
   kind: tree-node
   wiki: Dilation_Tree
   confidence: provisional
@@ -3875,7 +3875,7 @@ nodes:
     op: add
 - id: dilation-node-top-1
   name: Top 1
-  system: eternity
+  system: dilation-tree
   kind: tree-node
   wiki: Dilation_Tree
   confidence: provisional
@@ -3885,7 +3885,7 @@ nodes:
     op: add
 - id: dilation-node-top-2
   name: Top 2
-  system: eternity
+  system: dilation-tree
   kind: tree-node
   wiki: Dilation_Tree
   confidence: provisional
@@ -3895,7 +3895,7 @@ nodes:
     op: exp
 - id: dilation-node-top-3
   name: Top 3
-  system: eternity
+  system: dilation-tree
   kind: tree-node
   wiki: Dilation_Tree
   confidence: provisional
@@ -3905,7 +3905,7 @@ nodes:
     op: mult
 - id: dilation-node-top-4
   name: Top 4
-  system: eternity
+  system: dilation-tree
   kind: tree-node
   wiki: Dilation_Tree
   confidence: provisional
@@ -3915,7 +3915,7 @@ nodes:
     op: add
 - id: dilation-node-middle-1
   name: Middle 1
-  system: eternity
+  system: dilation-tree
   kind: tree-node
   wiki: Dilation_Tree
   confidence: provisional
@@ -3925,7 +3925,7 @@ nodes:
     op: add
 - id: dilation-node-middle-2
   name: Middle 2
-  system: eternity
+  system: dilation-tree
   kind: tree-node
   wiki: Dilation_Tree
   confidence: provisional
@@ -3935,7 +3935,7 @@ nodes:
     op: mult
 - id: dilation-node-middle-3
   name: Middle 3
-  system: eternity
+  system: dilation-tree
   kind: tree-node
   wiki: Dilation_Tree
   confidence: provisional
@@ -3945,7 +3945,7 @@ nodes:
     op: exp
 - id: dilation-node-middle-4
   name: Middle 4
-  system: eternity
+  system: dilation-tree
   kind: tree-node
   wiki: Dilation_Tree
   confidence: provisional
@@ -3955,7 +3955,7 @@ nodes:
     op: add
 - id: dilation-node-bottom-1
   name: Bottom 1
-  system: eternity
+  system: dilation-tree
   kind: tree-node
   wiki: Dilation_Tree
   confidence: provisional
@@ -3965,7 +3965,7 @@ nodes:
     op: add
 - id: dilation-node-bottom-2
   name: Bottom 2
-  system: eternity
+  system: dilation-tree
   kind: tree-node
   wiki: Dilation_Tree
   confidence: provisional
@@ -3975,7 +3975,7 @@ nodes:
     op: add
 - id: dilation-node-bottom-3
   name: Bottom 3
-  system: eternity
+  system: dilation-tree
   kind: tree-node
   wiki: Dilation_Tree
   confidence: provisional
@@ -3985,7 +3985,7 @@ nodes:
     op: add
 - id: dilation-node-bottom-4
   name: Bottom 4
-  system: eternity
+  system: dilation-tree
   kind: tree-node
   wiki: Dilation_Tree
   confidence: provisional
@@ -3995,7 +3995,7 @@ nodes:
     op: add
 - id: dilation-upgrade-1
   name: Dilation Upgrade 1
-  system: eternity
+  system: dilation
   kind: upgrade
   wiki: Eternity
   confidence: provisional
@@ -4005,7 +4005,7 @@ nodes:
     op: add
 - id: dilation-upgrade-2
   name: Dilation Upgrade 2
-  system: eternity
+  system: dilation
   kind: upgrade
   wiki: Eternity
   confidence: provisional
@@ -4015,7 +4015,7 @@ nodes:
     op: mult
 - id: dilation-upgrade-3
   name: Dilation Upgrade 3
-  system: eternity
+  system: dilation
   kind: upgrade
   wiki: Eternity
   confidence: provisional
@@ -4025,7 +4025,7 @@ nodes:
     op: add
 - id: dilation-upgrade-4
   name: Dilation Upgrade 4
-  system: eternity
+  system: dilation
   kind: upgrade
   wiki: Eternity
   confidence: provisional
@@ -4035,7 +4035,7 @@ nodes:
     op: mult
 - id: dilation-upgrade-5
   name: Dilation Upgrade 5
-  system: eternity
+  system: dilation
   kind: upgrade
   wiki: Eternity
   confidence: provisional
@@ -4045,7 +4045,7 @@ nodes:
     op: exp
 - id: dilation-upgrade-6
   name: Dilation Upgrade 6
-  system: eternity
+  system: dilation
   kind: upgrade
   wiki: Eternity
   confidence: provisional
@@ -4055,7 +4055,7 @@ nodes:
     op: add
 - id: dilation-upgrade-7
   name: Dilation Upgrade 7
-  system: eternity
+  system: dilation
   kind: upgrade
   wiki: Eternity
   confidence: provisional
@@ -4065,7 +4065,7 @@ nodes:
     op: mult
 - id: dilation-upgrade-8
   name: Dilation Upgrade 8
-  system: eternity
+  system: dilation
   kind: upgrade
   wiki: Eternity
   confidence: provisional
@@ -4075,7 +4075,7 @@ nodes:
     op: add
 - id: dilation-upgrade-9
   name: Dilation Upgrade 9
-  system: eternity
+  system: dilation
   kind: upgrade
   wiki: Eternity
   confidence: provisional

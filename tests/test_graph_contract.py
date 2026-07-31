@@ -384,15 +384,44 @@ def test_an_upgrade_that_grants_a_thing_still_points_at_it(graph: dict):
     assert ("infinity-upgrade-21-1-a-falling-star", "stars") in pairs
 
 
+def test_eternity_is_split_into_the_tabs_the_game_has(graph: dict):
+    # The Eternity page numbers its own tabs -- "the 1st/2nd/.../seventh and final
+    # Eternity tab" -- so the hierarchy below is transcribed rather than invented,
+    # and Animals Milestones is called "a new sub-tab in the Milestones tab",
+    # which is why it hangs off eternity-milestones instead of off eternity.
+    parents = {s["id"]: s.get("parent") for s in graph["systems"]}
+    assert {k for k, v in parents.items() if v == "eternity"} == {
+        "eternity-milestones",
+        "animals",
+        "eternity-challenges",
+        "laboratory",
+        "supernova",
+        "dilation",
+        "dilation-tree",
+    }
+    assert parents["animals-milestones"] == "eternity-milestones"
+
+    # The split is only real if the layer stopped holding tab content. Everything
+    # left directly on `eternity` must be layer-level: the currencies it grants
+    # and the rewards for reaching it, none of which live on a tab of their own.
+    direct = {n["id"] for n in graph["nodes"] if n["system"] == "eternity"}
+    assert direct == {"eternities", "eternity-points", "eternity-rewards"}
+
+
 def test_the_whole_eternity_zoo_is_present_and_priced(graph: dict):
     # The 81 Animals sit behind an unscraped {{AnimalGrid}} template, so they are
     # transcribed by hand and nothing regenerates them. 1,524 AP is the total the
     # Animals page states, which makes it the one arithmetic check that a dropped
     # or mistyped row cannot survive.
+    # `kind` carries the filter that the old `system == "eternity"` one used to,
+    # by accident: `animal-points` is the AP currency, not an animal, and it only
+    # failed the prefix test before because it was filed under the wrong system.
     animals = [
         n
         for n in graph["nodes"]
-        if n["system"] == "eternity" and n["id"].startswith("animal-")
+        if n["system"] == "animals"
+        and n["kind"] == "upgrade"
+        and n["id"].startswith("animal-")
     ]
     assert len(animals) == 81
     assert sum(int(n["cost"].removesuffix(" AP")) for n in animals) == 1524
