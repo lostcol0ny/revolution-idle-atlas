@@ -12642,6 +12642,109 @@
       "name": "Cups Cards",
       "system": "tarot",
       "wiki": "Tarot"
+    },
+    {
+      "aliases": [
+        "PlG"
+      ],
+      "confidence": "provisional",
+      "id": "plague-generators",
+      "kind": "currency",
+      "name": "Plague Generators",
+      "system": "plague",
+      "wiki": "Plague"
+    },
+    {
+      "aliases": [
+        "PlP"
+      ],
+      "confidence": "provisional",
+      "id": "plague-points",
+      "kind": "currency",
+      "name": "Plague Points",
+      "system": "plague",
+      "wiki": "Plague"
+    },
+    {
+      "confidence": "provisional",
+      "id": "plp-per-plg",
+      "kind": "stat",
+      "name": "PlP per PlG",
+      "system": "plague",
+      "wiki": "Plague"
+    },
+    {
+      "aliases": [
+        "ERP"
+      ],
+      "confidence": "provisional",
+      "id": "erp",
+      "kind": "currency",
+      "name": "Endoplasmic Reticulum Points",
+      "system": "plague",
+      "wiki": "Plague#Endoplasmic Reticulum"
+    },
+    {
+      "aliases": [
+        "ERs",
+        "Endoplasmic Reticulum",
+        "Endoplasmic Reticulums"
+      ],
+      "confidence": "provisional",
+      "id": "endoplasmic-reticula",
+      "kind": "currency",
+      "name": "Endoplasmic Reticula",
+      "system": "plague",
+      "wiki": "Plague#Endoplasmic Reticulum"
+    },
+    {
+      "aliases": [
+        "VE"
+      ],
+      "confidence": "provisional",
+      "id": "virus-essence",
+      "kind": "currency",
+      "name": "Virus Essence",
+      "system": "plague",
+      "wiki": "Plague#Endoplasmic Reticulum"
+    },
+    {
+      "aliases": [
+        "ViP"
+      ],
+      "confidence": "provisional",
+      "id": "virus-points",
+      "kind": "currency",
+      "name": "Virus Points",
+      "system": "plague",
+      "wiki": "Plague#Endoplasmic Reticulum"
+    },
+    {
+      "confidence": "provisional",
+      "id": "spread-speed",
+      "kind": "stat",
+      "name": "Spread Speed",
+      "system": "plague",
+      "wiki": "Plague"
+    },
+    {
+      "confidence": "documented",
+      "id": "tarot-resources",
+      "kind": "currency",
+      "name": "Tarot Resources",
+      "system": "tarot",
+      "wiki": "Tarot"
+    },
+    {
+      "aliases": [
+        "Golden Resource"
+      ],
+      "confidence": "documented",
+      "id": "golden-resources",
+      "kind": "currency",
+      "name": "Golden Resources",
+      "system": "tarot",
+      "wiki": "Tarot"
     }
   ],
   "edges": [
@@ -13248,12 +13351,48 @@
     },
     {
       "confidence": "uncertain",
+      "from": "relic-59",
+      "note": "Multiplies Golden Resource gain when flushing to artifacts",
+      "op": "add",
+      "rel": "boosts",
+      "source": "wiki:Relics",
+      "to": "golden-resources"
+    },
+    {
+      "confidence": "uncertain",
       "from": "relic-60",
       "note": "Empowers Relic 59",
       "op": "exp",
       "rel": "boosts",
       "source": "wiki:Relics",
       "to": "relic-59"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "relic-62",
+      "note": "Multiplies Base Spread Power on Endoplasmic reticulum craft",
+      "op": "add",
+      "rel": "boosts",
+      "source": "wiki:Relics",
+      "to": "endoplasmic-reticula"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "relic-63",
+      "note": "Multiplies the effect of Endoplasmic Reticulum Upgrade 4 (PIP to ERP conversion Rate)",
+      "op": "add",
+      "rel": "boosts",
+      "source": "wiki:Relics",
+      "to": "endoplasmic-reticula"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "relic-63",
+      "note": "Multiplies the effect of Endoplasmic Reticulum Upgrade 4 (PIP to ERP conversion Rate)",
+      "op": "add",
+      "rel": "boosts",
+      "source": "wiki:Relics",
+      "to": "erp"
     },
     {
       "confidence": "uncertain",
@@ -14780,6 +14919,14 @@
       "to": "refine-node-104"
     },
     {
+      "confidence": "uncertain",
+      "from": "refine-node-104",
+      "note": "Unlocks Endoplasmic Reticulum",
+      "rel": "boosts",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "endoplasmic-reticula"
+    },
+    {
       "confidence": "documented",
       "from": "refine-node-96",
       "rel": "requires",
@@ -14787,11 +14934,27 @@
       "to": "refine-node-105"
     },
     {
+      "confidence": "uncertain",
+      "from": "refine-node-105",
+      "note": "The Hierophant Passive Bonus is now boosted by the level of your equipped Endoplasmic Reticulum",
+      "rel": "boosts",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "endoplasmic-reticula"
+    },
+    {
       "confidence": "documented",
       "from": "refine-node-105",
       "rel": "requires",
       "source": "wiki:Minerals/Refine_Tree",
       "to": "refine-node-106"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "refine-node-106",
+      "note": "Spread Power of your currently equipped Endoplasmic Reticulum also boosts Black Gem base effect (x???)",
+      "rel": "boosts",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "endoplasmic-reticula"
     },
     {
       "confidence": "uncertain",
@@ -14859,6 +15022,22 @@
       "to": "refine-node-111"
     },
     {
+      "confidence": "uncertain",
+      "from": "refine-node-111",
+      "note": "Divides the ERP needed to craft an Endoplasmic Reticulum by x1.5^level",
+      "rel": "boosts",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "erp"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "refine-node-111",
+      "note": "Divides the ERP needed to craft an Endoplasmic Reticulum by x1.5^level",
+      "rel": "boosts",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "endoplasmic-reticula"
+    },
+    {
       "confidence": "documented",
       "from": "refine-node-110",
       "rel": "requires",
@@ -14899,6 +15078,14 @@
       "rel": "requires",
       "source": "wiki:Minerals/Refine_Tree",
       "to": "refine-node-117"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "refine-node-117",
+      "note": "Gives +10 effective levels to all Endoplasmic Reticulum upgrades",
+      "rel": "boosts",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "endoplasmic-reticula"
     },
     {
       "confidence": "documented",
@@ -14965,6 +15152,14 @@
       "rel": "boosts",
       "source": "wiki:Minerals/Refine_Tree",
       "to": "singularity"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "refine-node-122",
+      "note": "Adds a Singularity Effect (Based on Singularities) that boosts Spread Speed",
+      "rel": "boosts",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "spread-speed"
     },
     {
       "confidence": "documented",
@@ -15088,6 +15283,14 @@
       "rel": "requires",
       "source": "wiki:Minerals/Refine_Tree",
       "to": "refine-node-132"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "refine-node-132",
+      "note": "Adds Golden Resource Gain to Singularity Count Effect",
+      "rel": "boosts",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "golden-resources"
     },
     {
       "confidence": "uncertain",
@@ -16135,7 +16338,7 @@
       "note": "Makes your tarot resources be equal and increase their values by ^# (base 0.800) of they value",
       "rel": "boosts",
       "source": "wiki:Tarot",
-      "to": "tarot"
+      "to": "tarot-resources"
     },
     {
       "confidence": "uncertain",
@@ -17146,6 +17349,34 @@
     },
     {
       "confidence": "uncertain",
+      "from": "plague-er-conversion-rate",
+      "rel": "boosts",
+      "source": "wiki:Plague",
+      "to": "erp"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "plague-er-dissolve-efficiency",
+      "rel": "boosts",
+      "source": "wiki:Plague",
+      "to": "virus-essence"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "plague-er-crafting-mastery",
+      "rel": "boosts",
+      "source": "wiki:Plague",
+      "to": "endoplasmic-reticula"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "plague-er-essence-density",
+      "rel": "boosts",
+      "source": "wiki:Plague",
+      "to": "virus-points"
+    },
+    {
+      "confidence": "uncertain",
       "from": "plague-stat-max-stage-completed",
       "rel": "boosts",
       "source": "wiki:Plague",
@@ -17156,7 +17387,7 @@
       "from": "plague-stat-max-infected",
       "rel": "boosts",
       "source": "wiki:Plague",
-      "to": "tarot"
+      "to": "tarot-resources"
     },
     {
       "confidence": "uncertain",
@@ -17167,10 +17398,24 @@
     },
     {
       "confidence": "uncertain",
+      "from": "plague-stat-max-plp",
+      "rel": "boosts",
+      "source": "wiki:Plague",
+      "to": "golden-resources"
+    },
+    {
+      "confidence": "uncertain",
       "from": "plague-stat-max-plg",
       "rel": "boosts",
       "source": "wiki:Plague",
       "to": "singularity"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "plague-stat-max-infected-in-universe",
+      "rel": "boosts",
+      "source": "wiki:Plague",
+      "to": "plp-per-plg"
     },
     {
       "confidence": "uncertain",
@@ -17300,6 +17545,20 @@
     },
     {
       "confidence": "uncertain",
+      "from": "singularity-milestone-artifact-theory",
+      "rel": "boosts",
+      "source": "wiki:Singularity",
+      "to": "golden-resources"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "singularity-milestone-virusologist",
+      "rel": "boosts",
+      "source": "wiki:Singularity",
+      "to": "virus-points"
+    },
+    {
+      "confidence": "uncertain",
       "from": "singularity-milestone-infinite-infection",
       "rel": "boosts",
       "source": "wiki:Singularity",
@@ -17321,6 +17580,13 @@
     },
     {
       "confidence": "uncertain",
+      "from": "singularity-tree-4-2",
+      "rel": "boosts",
+      "source": "wiki:Singularity",
+      "to": "golden-resources"
+    },
+    {
+      "confidence": "uncertain",
       "from": "singularity-tree-5-1",
       "rel": "boosts",
       "source": "wiki:Singularity",
@@ -17331,7 +17597,7 @@
       "from": "singularity-tree-5-2",
       "rel": "boosts",
       "source": "wiki:Singularity",
-      "to": "plague"
+      "to": "plague-generators"
     },
     {
       "confidence": "uncertain",
@@ -17370,10 +17636,31 @@
     },
     {
       "confidence": "uncertain",
+      "from": "singularity-zodiac-virgo",
+      "rel": "boosts",
+      "source": "wiki:Singularity",
+      "to": "plp-per-plg"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "singularity-zodiac-libra",
+      "rel": "boosts",
+      "source": "wiki:Singularity",
+      "to": "virus-essence"
+    },
+    {
+      "confidence": "uncertain",
       "from": "singularity-zodiac-saggitarius",
       "rel": "boosts",
       "source": "wiki:Singularity",
       "to": "attack-exponent"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "singularity-zodiac-capricorn",
+      "rel": "boosts",
+      "source": "wiki:Singularity",
+      "to": "golden-resources"
     },
     {
       "confidence": "uncertain",
@@ -18238,6 +18525,13 @@
     },
     {
       "confidence": "uncertain",
+      "from": "endoplasmic-reticula",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "tarot-challenge-knight-of-swords"
+    },
+    {
+      "confidence": "uncertain",
       "from": "tarot-challenge-queen-of-swords",
       "rel": "boosts",
       "source": "wiki:Tarot",
@@ -18592,6 +18886,13 @@
       "rel": "boosts",
       "source": "wiki:Tarot",
       "to": "global-element-mult"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "endoplasmic-reticula",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "tarot-challenge-knight-of-wands"
     },
     {
       "confidence": "uncertain",
@@ -18956,6 +19257,13 @@
       "rel": "boosts",
       "source": "wiki:Tarot",
       "to": "polish-sword"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "endoplasmic-reticula",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "tarot-challenge-knight-of-pentacles"
     },
     {
       "confidence": "uncertain",
@@ -19396,6 +19704,13 @@
       "from": "tarot-challenge-the-hermit",
       "rel": "boosts",
       "source": "wiki:Tarot",
+      "to": "tarot-resources"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-the-hermit",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
       "to": "tarot"
     },
     {
@@ -19515,7 +19830,14 @@
       "from": "tarot-challenge-the-tower",
       "rel": "boosts",
       "source": "wiki:Tarot",
-      "to": "plague"
+      "to": "plague-points"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-the-tower",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "endoplasmic-reticula"
     },
     {
       "confidence": "uncertain",
@@ -22898,6 +23220,110 @@
       "rel": "boosts",
       "source": "wiki:Elements",
       "to": "water-factor-1"
+    },
+    {
+      "confidence": "documented",
+      "from": "plague",
+      "note": "Completing a stage rewards Plague Generators",
+      "rel": "boosts",
+      "source": "wiki:Plague",
+      "to": "plague-generators"
+    },
+    {
+      "confidence": "documented",
+      "from": "plague-generators",
+      "note": "Each PlG produces a certain amount of PlP per second",
+      "rel": "boosts",
+      "source": "wiki:Plague",
+      "to": "plague-points"
+    },
+    {
+      "confidence": "documented",
+      "from": "plp-per-plg",
+      "note": "The stat that sets how much PlP each PlG produces",
+      "rel": "boosts",
+      "source": "wiki:Plague",
+      "to": "plague-points"
+    },
+    {
+      "confidence": "documented",
+      "from": "spread-speed",
+      "note": "The infection spreads based on the spread speed number",
+      "rel": "boosts",
+      "source": "wiki:Plague",
+      "to": "plague"
+    },
+    {
+      "confidence": "documented",
+      "from": "plague-points",
+      "note": "ERP generation per second is a percentage of flushed PlP",
+      "rel": "boosts",
+      "source": "wiki:Plague",
+      "to": "erp"
+    },
+    {
+      "confidence": "documented",
+      "from": "erp",
+      "note": "A new ER costs ERP once the requirement is satisfied",
+      "rel": "requires",
+      "source": "wiki:Plague",
+      "to": "endoplasmic-reticula"
+    },
+    {
+      "confidence": "documented",
+      "from": "plague-points",
+      "note": "A new ER also costs the flushed PlP",
+      "rel": "requires",
+      "source": "wiki:Plague",
+      "to": "endoplasmic-reticula"
+    },
+    {
+      "confidence": "documented",
+      "from": "endoplasmic-reticula",
+      "note": "Unwanted ERs are dissolved for Virus Essence",
+      "rel": "boosts",
+      "source": "wiki:Plague",
+      "to": "virus-essence"
+    },
+    {
+      "confidence": "documented",
+      "from": "virus-essence",
+      "note": "VE generates ViP the same way PlG generates PlP",
+      "rel": "boosts",
+      "source": "wiki:Plague",
+      "to": "virus-points"
+    },
+    {
+      "confidence": "documented",
+      "from": "virus-points",
+      "note": "ViP is what ER upgrades are spent on",
+      "rel": "requires",
+      "source": "wiki:Plague",
+      "to": "plague-er-conversion-rate"
+    },
+    {
+      "confidence": "documented",
+      "from": "virus-points",
+      "note": "ViP is what ER upgrades are spent on",
+      "rel": "requires",
+      "source": "wiki:Plague",
+      "to": "plague-er-dissolve-efficiency"
+    },
+    {
+      "confidence": "documented",
+      "from": "virus-points",
+      "note": "ViP is what ER upgrades are spent on",
+      "rel": "requires",
+      "source": "wiki:Plague",
+      "to": "plague-er-crafting-mastery"
+    },
+    {
+      "confidence": "documented",
+      "from": "virus-points",
+      "note": "ViP is what ER upgrades are spent on",
+      "rel": "requires",
+      "source": "wiki:Plague",
+      "to": "plague-er-essence-density"
     }
   ],
   "systems": [

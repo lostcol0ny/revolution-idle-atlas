@@ -249,7 +249,7 @@ def test_every_swept_edge_is_uncertain(graph: dict):
     swept -= {key(e) for e in curated.get("edges") or []}
     swept -= {key(s) for s in curated.get("suppress") or []}
 
-    assert len(swept) == 402, f"expected 402 swept edges, got {len(swept)}"
+    assert len(swept) == 416, f"expected 416 swept edges, got {len(swept)}"
     shipped = {key(e): e for e in graph["edges"]}
     for edge in swept:
         assert edge in shipped, f"{edge} never reached the artifact"
@@ -538,3 +538,36 @@ def test_each_tarot_suit_feeds_its_own_element_factor_1(graph: dict):
         assert (f"tarot-suit-{suit}", f"{element}-factor-1") in pairs
         # Direction guard: the factor is never the source.
         assert (f"{element}-factor-1", f"tarot-suit-{suit}") not in pairs
+
+
+def test_the_plague_resource_chain_runs_end_to_end(graph: dict):
+    # The Plague page states its economy entirely in prose, so no table backs
+    # this chain up -- every link is curated, and a dropped link would silently
+    # orphan everything downstream of it again.
+    pairs = {(e["from"], e["to"]) for e in graph["edges"]}
+    chain = ("plague", "plague-generators", "plague-points", "erp",
+             "endoplasmic-reticula", "virus-essence", "virus-points")
+    for source, target in zip(chain, chain[1:]):
+        assert (source, target) in pairs, f"broken link: {source} -> {target}"
+
+
+def test_every_er_upgrade_requires_virus_points(graph: dict):
+    upgrades = {n["id"] for n in graph["nodes"]
+                if n["id"].startswith("plague-er-")}
+    assert len(upgrades) == 4
+    spends = {e["to"] for e in graph["edges"]
+              if e["from"] == "virus-points" and e["rel"] == "requires"}
+    assert upgrades <= spends
+
+
+def test_no_er_upgrade_boosts_the_resource_it_consumes(graph: dict):
+    # A conversion sentence names its input and its output, and the matcher
+    # resolves both. The input edges are suppressed; this pins that they stay
+    # suppressed, because re-minting them would reverse four real flows.
+    backwards = {
+        ("plague-er-conversion-rate", "plague-points"),
+        ("plague-er-dissolve-efficiency", "endoplasmic-reticula"),
+        ("plague-er-essence-density", "virus-essence"),
+        ("singularity-milestone-virusologist", "virus-essence"),
+    }
+    assert backwards & {(e["from"], e["to"]) for e in graph["edges"]} == set()

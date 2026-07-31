@@ -5749,6 +5749,13 @@ edges:
   note: Increases Refine Node 100 efficiency by
   source: wiki:Relics
   confidence: uncertain
+- from: relic-59
+  to: golden-resources
+  rel: boosts
+  op: add
+  note: Multiplies Golden Resource gain when flushing to artifacts
+  source: wiki:Relics
+  confidence: uncertain
 - from: relic-60
   to: relic-59
   rel: boosts
@@ -5761,6 +5768,27 @@ edges:
   rel: boosts
   op: add
   note: Multiplies PIP per PIG
+  source: wiki:Relics
+  confidence: uncertain
+- from: relic-62
+  to: endoplasmic-reticula
+  rel: boosts
+  op: add
+  note: Multiplies Base Spread Power on Endoplasmic reticulum craft
+  source: wiki:Relics
+  confidence: uncertain
+- from: relic-63
+  to: endoplasmic-reticula
+  rel: boosts
+  op: add
+  note: Multiplies the effect of Endoplasmic Reticulum Upgrade 4 (PIP to ERP conversion Rate)
+  source: wiki:Relics
+  confidence: uncertain
+- from: relic-63
+  to: erp
+  rel: boosts
+  op: add
+  note: Multiplies the effect of Endoplasmic Reticulum Upgrade 4 (PIP to ERP conversion Rate)
   source: wiki:Relics
   confidence: uncertain
 - from: relic-66
@@ -6888,16 +6916,35 @@ edges:
   rel: requires
   source: wiki:Minerals/Refine_Tree
   confidence: documented
+- from: refine-node-104
+  to: endoplasmic-reticula
+  rel: boosts
+  note: Unlocks Endoplasmic Reticulum
+  source: wiki:Minerals/Refine_Tree
+  confidence: uncertain
 - from: refine-node-96
   to: refine-node-105
   rel: requires
   source: wiki:Minerals/Refine_Tree
   confidence: documented
 - from: refine-node-105
+  to: endoplasmic-reticula
+  rel: boosts
+  note: The Hierophant Passive Bonus is now boosted by the level of your equipped Endoplasmic Reticulum
+  source: wiki:Minerals/Refine_Tree
+  confidence: uncertain
+- from: refine-node-105
   to: refine-node-106
   rel: requires
   source: wiki:Minerals/Refine_Tree
   confidence: documented
+- from: refine-node-106
+  to: endoplasmic-reticula
+  rel: boosts
+  note: Spread Power of your currently equipped Endoplasmic Reticulum also boosts Black Gem base effect
+    (x???)
+  source: wiki:Minerals/Refine_Tree
+  confidence: uncertain
 - from: refine-node-106
   to: special-mineral-black-gem
   rel: boosts
@@ -6952,6 +6999,18 @@ edges:
   rel: requires
   source: wiki:Minerals/Refine_Tree
   confidence: documented
+- from: refine-node-111
+  to: erp
+  rel: boosts
+  note: Divides the ERP needed to craft an Endoplasmic Reticulum by x1.5^level
+  source: wiki:Minerals/Refine_Tree
+  confidence: uncertain
+- from: refine-node-111
+  to: endoplasmic-reticula
+  rel: boosts
+  note: Divides the ERP needed to craft an Endoplasmic Reticulum by x1.5^level
+  source: wiki:Minerals/Refine_Tree
+  confidence: uncertain
 - from: refine-node-110
   to: refine-node-112
   rel: requires
@@ -6982,6 +7041,12 @@ edges:
   rel: requires
   source: wiki:Minerals/Refine_Tree
   confidence: documented
+- from: refine-node-117
+  to: endoplasmic-reticula
+  rel: boosts
+  note: Gives +10 effective levels to all Endoplasmic Reticulum upgrades
+  source: wiki:Minerals/Refine_Tree
+  confidence: uncertain
 - from: refine-node-116
   to: refine-node-118
   rel: requires
@@ -7026,6 +7091,12 @@ edges:
   confidence: documented
 - from: refine-node-122
   to: singularity
+  rel: boosts
+  note: Adds a Singularity Effect (Based on Singularities) that boosts Spread Speed
+  source: wiki:Minerals/Refine_Tree
+  confidence: uncertain
+- from: refine-node-122
+  to: spread-speed
   rel: boosts
   note: Adds a Singularity Effect (Based on Singularities) that boosts Spread Speed
   source: wiki:Minerals/Refine_Tree
@@ -7131,6 +7202,12 @@ edges:
   rel: requires
   source: wiki:Minerals/Refine_Tree
   confidence: documented
+- from: refine-node-132
+  to: golden-resources
+  rel: boosts
+  note: Adds Golden Resource Gain to Singularity Count Effect
+  source: wiki:Minerals/Refine_Tree
+  confidence: uncertain
 - from: refine-node-132
   to: singularity
   rel: boosts
@@ -7934,7 +8011,7 @@ edges:
   source: wiki:Tarot
   confidence: uncertain
 - from: tarot-judgement
-  to: tarot
+  to: tarot-resources
   rel: boosts
   note: Makes your tarot resources be equal and increase their values by ^# (base 0.800) of they value
   source: wiki:Tarot
@@ -8688,13 +8765,48 @@ edges:
   rel: boosts
   source: wiki:Trials
   confidence: uncertain
+- from: plague-er-conversion-rate
+  to: plague-points
+  rel: boosts
+  source: wiki:Plague
+  confidence: uncertain
+- from: plague-er-conversion-rate
+  to: erp
+  rel: boosts
+  source: wiki:Plague
+  confidence: uncertain
+- from: plague-er-dissolve-efficiency
+  to: virus-essence
+  rel: boosts
+  source: wiki:Plague
+  confidence: uncertain
+- from: plague-er-dissolve-efficiency
+  to: endoplasmic-reticula
+  rel: boosts
+  source: wiki:Plague
+  confidence: uncertain
+- from: plague-er-crafting-mastery
+  to: endoplasmic-reticula
+  rel: boosts
+  source: wiki:Plague
+  confidence: uncertain
+- from: plague-er-essence-density
+  to: virus-points
+  rel: boosts
+  source: wiki:Plague
+  confidence: uncertain
+- from: plague-er-essence-density
+  to: virus-essence
+  rel: boosts
+  source: wiki:Plague
+  confidence: uncertain
 - from: plague-stat-max-stage-completed
   to: gold-gain
   rel: boosts
   source: wiki:Plague
   confidence: uncertain
 - from: plague-stat-max-infected
-  to: tarot
+  to: tarot-resources
   rel: boosts
   source: wiki:Plague
   confidence: uncertain
@@ -8703,8 +8815,18 @@ edges:
   rel: boosts
   source: wiki:Plague
   confidence: uncertain
+- from: plague-stat-max-plp
+  to: golden-resources
+  rel: boosts
+  source: wiki:Plague
+  confidence: uncertain
 - from: plague-stat-max-plg
   to: singularity
+  rel: boosts
+  source: wiki:Plague
+  confidence: uncertain
+- from: plague-stat-max-infected-in-universe
+  to: plp-per-plg
   rel: boosts
   source: wiki:Plague
   confidence: uncertain
@@ -8798,6 +8920,21 @@ edges:
   rel: boosts
   source: wiki:Singularity
   confidence: uncertain
+- from: singularity-milestone-artifact-theory
+  to: golden-resources
+  rel: boosts
+  source: wiki:Singularity
+  confidence: uncertain
+- from: singularity-milestone-virusologist
+  to: virus-points
+  rel: boosts
+  source: wiki:Singularity
+  confidence: uncertain
+- from: singularity-milestone-virusologist
+  to: virus-essence
+  rel: boosts
+  source: wiki:Singularity
+  confidence: uncertain
 - from: singularity-milestone-infinite-infection
   to: singularity
   rel: boosts
@@ -8818,13 +8955,18 @@ edges:
   rel: boosts
   source: wiki:Singularity
   confidence: uncertain
+- from: singularity-tree-4-2
+  to: golden-resources
+  rel: boosts
+  source: wiki:Singularity
+  confidence: uncertain
 - from: singularity-tree-5-1
   to: plague
   rel: boosts
   source: wiki:Singularity
   confidence: uncertain
 - from: singularity-tree-5-2
-  to: plague
+  to: plague-generators
   rel: boosts
   source: wiki:Singularity
   confidence: uncertain
@@ -8863,8 +9005,23 @@ edges:
   rel: boosts
   source: wiki:Singularity
   confidence: uncertain
+- from: singularity-zodiac-virgo
+  to: plp-per-plg
+  rel: boosts
+  source: wiki:Singularity
+  confidence: uncertain
+- from: singularity-zodiac-libra
+  to: virus-essence
+  rel: boosts
+  source: wiki:Singularity
+  confidence: uncertain
 - from: singularity-zodiac-saggitarius
   to: attack-exponent
+  rel: boosts
+  source: wiki:Singularity
+  confidence: uncertain
+- from: singularity-zodiac-capricorn
+  to: golden-resources
   rel: boosts
   source: wiki:Singularity
   confidence: uncertain
@@ -9498,6 +9655,11 @@ edges:
   rel: boosts
   source: wiki:Tarot
   confidence: uncertain
+- from: endoplasmic-reticula
+  to: tarot-challenge-knight-of-swords
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
 - from: tarot-challenge-queen-of-swords
   to: attack-level
   rel: boosts
@@ -9750,6 +9912,11 @@ edges:
   confidence: uncertain
 - from: tarot-challenge-knight-of-wands
   to: global-element-mult
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: endoplasmic-reticula
+  to: tarot-challenge-knight-of-wands
   rel: boosts
   source: wiki:Tarot
   confidence: uncertain
@@ -10010,6 +10177,11 @@ edges:
   confidence: uncertain
 - from: tarot-challenge-knight-of-pentacles
   to: polish-sword
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: endoplasmic-reticula
+  to: tarot-challenge-knight-of-pentacles
   rel: boosts
   source: wiki:Tarot
   confidence: uncertain
@@ -10324,6 +10496,11 @@ edges:
   source: wiki:Tarot
   confidence: uncertain
 - from: tarot-challenge-the-hermit
+  to: tarot-resources
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-challenge-the-hermit
   to: tarot
   rel: boosts
   source: wiki:Tarot
@@ -10409,7 +10586,12 @@ edges:
   source: wiki:Tarot
   confidence: uncertain
 - from: tarot-challenge-the-tower
-  to: plague
+  to: plague-points
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-challenge-the-tower
+  to: endoplasmic-reticula
   rel: boosts
   source: wiki:Tarot
   confidence: uncertain

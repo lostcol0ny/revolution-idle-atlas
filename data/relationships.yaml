@@ -3133,6 +3133,83 @@ nodes:
     wiki: Tarot
     confidence: documented
 
+  - id: plague-generators
+    name: Plague Generators
+    aliases: [PlG]
+    system: plague
+    kind: currency
+    wiki: Plague
+    confidence: provisional
+
+  - id: plague-points
+    name: Plague Points
+    aliases: [PlP]
+    system: plague
+    kind: currency
+    wiki: Plague
+    confidence: provisional
+
+  - id: plp-per-plg
+    name: PlP per PlG
+    system: plague
+    kind: stat
+    wiki: Plague
+    confidence: provisional
+
+  - id: erp
+    name: Endoplasmic Reticulum Points
+    aliases: [ERP]
+    system: plague
+    kind: currency
+    wiki: Plague#Endoplasmic Reticulum
+    confidence: provisional
+
+  - id: endoplasmic-reticula
+    name: Endoplasmic Reticula
+    aliases: [ERs, Endoplasmic Reticulum, Endoplasmic Reticulums]
+    system: plague
+    kind: currency
+    wiki: Plague#Endoplasmic Reticulum
+    confidence: provisional
+
+  - id: virus-essence
+    name: Virus Essence
+    aliases: [VE]
+    system: plague
+    kind: currency
+    wiki: Plague#Endoplasmic Reticulum
+    confidence: provisional
+
+  - id: virus-points
+    name: Virus Points
+    aliases: [ViP]
+    system: plague
+    kind: currency
+    wiki: Plague#Endoplasmic Reticulum
+    confidence: provisional
+
+  - id: spread-speed
+    name: Spread Speed
+    system: plague
+    kind: stat
+    wiki: Plague
+    confidence: provisional
+
+  - id: tarot-resources
+    name: Tarot Resources
+    system: tarot
+    kind: currency
+    wiki: Tarot
+    confidence: documented
+
+  - id: golden-resources
+    name: Golden Resources
+    aliases: [Golden Resource]
+    system: tarot
+    kind: currency
+    wiki: Tarot
+    confidence: documented
+
 edges:
   - from: relic-3
     to: attack-power
@@ -6023,6 +6100,97 @@ edges:
     source: wiki:Elements
     confidence: uncertain
 
+  - from: plague
+    to: plague-generators
+    rel: boosts
+    note: Completing a stage rewards Plague Generators
+    source: wiki:Plague
+    confidence: documented
+
+  - from: plague-generators
+    to: plague-points
+    rel: boosts
+    note: Each PlG produces a certain amount of PlP per second
+    source: wiki:Plague
+    confidence: documented
+
+  - from: plp-per-plg
+    to: plague-points
+    rel: boosts
+    note: The stat that sets how much PlP each PlG produces
+    source: wiki:Plague
+    confidence: documented
+
+  - from: spread-speed
+    to: plague
+    rel: boosts
+    note: The infection spreads based on the spread speed number
+    source: wiki:Plague
+    confidence: documented
+
+  - from: plague-points
+    to: erp
+    rel: boosts
+    note: ERP generation per second is a percentage of flushed PlP
+    source: wiki:Plague
+    confidence: documented
+
+  - from: erp
+    to: endoplasmic-reticula
+    rel: requires
+    note: A new ER costs ERP once the requirement is satisfied
+    source: wiki:Plague
+    confidence: documented
+
+  - from: plague-points
+    to: endoplasmic-reticula
+    rel: requires
+    note: A new ER also costs the flushed PlP
+    source: wiki:Plague
+    confidence: documented
+
+  - from: endoplasmic-reticula
+    to: virus-essence
+    rel: boosts
+    note: Unwanted ERs are dissolved for Virus Essence
+    source: wiki:Plague
+    confidence: documented
+
+  - from: virus-essence
+    to: virus-points
+    rel: boosts
+    note: VE generates ViP the same way PlG generates PlP
+    source: wiki:Plague
+    confidence: documented
+
+  - from: virus-points
+    to: plague-er-conversion-rate
+    rel: requires
+    note: ViP is what ER upgrades are spent on
+    source: wiki:Plague
+    confidence: documented
+
+  - from: virus-points
+    to: plague-er-dissolve-efficiency
+    rel: requires
+    note: ViP is what ER upgrades are spent on
+    source: wiki:Plague
+    confidence: documented
+
+  - from: virus-points
+    to: plague-er-crafting-mastery
+    rel: requires
+    note: ViP is what ER upgrades are spent on
+    source: wiki:Plague
+    confidence: documented
+
+  - from: virus-points
+    to: plague-er-essence-density
+    rel: requires
+    note: ViP is what ER upgrades are spent on
+    source: wiki:Plague
+    confidence: documented
+
 suppress:
   - from: special-mineral-black-gem
     to: wind-node-10
@@ -6124,3 +6292,35 @@ suppress:
     reason: >-
       The tree node strengthens one numbered Dilation Upgrade, not the
       Dilation mechanic whose name its effect text spells out.
+
+  # A conversion sentence names two resources, and the matcher cannot tell the
+  # numerator from the denominator. In every case below the output edge is kept
+  # and the input edge is dropped: raising a rate does not raise the resource
+  # the rate is charged against.
+  - from: plague-er-conversion-rate
+    to: plague-points
+    rel: boosts
+    reason: >-
+      "Increases PlP to ERP conversion rate" -- PlP is what the upgrade spends,
+      ERP is what it yields. The edge to ERP carries the relationship.
+
+  - from: plague-er-dissolve-efficiency
+    to: endoplasmic-reticula
+    rel: boosts
+    reason: >-
+      "Increases base VE from dissolving ERs" -- an ER is consumed by the
+      dissolve, not produced by it. The edge to Virus Essence is the real one.
+
+  - from: plague-er-essence-density
+    to: virus-essence
+    rel: boosts
+    reason: >-
+      "Increases ViP/s per VE" -- VE is the per-unit basis of the rate. The
+      upgrade grows ViP, and the edge to Virus Points says so.
+
+  - from: singularity-milestone-virusologist
+    to: virus-essence
+    rel: boosts
+    reason: >-
+      "ViP per VE mult x1000" -- same per-unit basis as Essence Density. The
+      milestone multiplies ViP output, not the VE it is measured against.
