@@ -6156,6 +6156,12 @@
       "effects": [
         {
           "text": "Fire Element Factor 3"
+        },
+        {
+          "text": "Sacrifice Dust Gain (Divine+)"
+        },
+        {
+          "text": "Attack Exponent Multi (Rainbow+)"
         }
       ],
       "id": "singularity-zodiac-aries",
@@ -6169,6 +6175,12 @@
       "effects": [
         {
           "text": "Earth Element Factor 3"
+        },
+        {
+          "text": "PlP per PlG Multi (Divine+)"
+        },
+        {
+          "text": "Golden Resources Gain (Rainbow+)"
         }
       ],
       "id": "singularity-zodiac-taurus",
@@ -6182,6 +6194,12 @@
       "effects": [
         {
           "text": "Wind Element Factor 3"
+        },
+        {
+          "text": "VE on Disolve Multi (Divine+)"
+        },
+        {
+          "text": "Black Gem Effect (Rainbow+)"
         }
       ],
       "id": "singularity-zodiac-gemini",
@@ -6195,6 +6213,12 @@
       "effects": [
         {
           "text": "Water Element Factor 3"
+        },
+        {
+          "text": "Base Spread Multi (Divine+)"
+        },
+        {
+          "text": "Singularity Mult Boost (Rainbow+)"
         }
       ],
       "id": "singularity-zodiac-cancer",
@@ -6208,6 +6232,12 @@
       "effects": [
         {
           "text": "Sacrifice Dust Gain"
+        },
+        {
+          "text": "Attack Exponent Multi (Divine+)"
+        },
+        {
+          "text": "Fire Element Factor 3 (Rainbow+)"
         }
       ],
       "id": "singularity-zodiac-leo",
@@ -6221,6 +6251,12 @@
       "effects": [
         {
           "text": "PlP per PlG Multi"
+        },
+        {
+          "text": "Golden Resources Gain (Divine+)"
+        },
+        {
+          "text": "Earth Element Factor 3 (Rainbow+)"
         }
       ],
       "id": "singularity-zodiac-virgo",
@@ -6234,6 +6270,12 @@
       "effects": [
         {
           "text": "VE on Disolve Multi"
+        },
+        {
+          "text": "Black Gem Effect (Divine+)"
+        },
+        {
+          "text": "Wind Element Factor 3 (Rainbow+)"
         }
       ],
       "id": "singularity-zodiac-libra",
@@ -6247,6 +6289,12 @@
       "effects": [
         {
           "text": "Base Spread Multi"
+        },
+        {
+          "text": "Singularity Mult Boost (Divine+)"
+        },
+        {
+          "text": "Water Element Factor 3 (Rainbow+)"
         }
       ],
       "id": "singularity-zodiac-scorpio",
@@ -6260,6 +6308,12 @@
       "effects": [
         {
           "text": "Attack Exponent Multi"
+        },
+        {
+          "text": "Fire Element Factor 3 (Divine+)"
+        },
+        {
+          "text": "Sacrifice Dust Gain (Rainbow+)"
         }
       ],
       "id": "singularity-zodiac-saggitarius",
@@ -6273,6 +6327,12 @@
       "effects": [
         {
           "text": "Golden Resources Gain"
+        },
+        {
+          "text": "Earth Element Factor 3 (Divine+)"
+        },
+        {
+          "text": "PlP per PlG Multi (Rainbow+)"
         }
       ],
       "id": "singularity-zodiac-capricorn",
@@ -6286,6 +6346,12 @@
       "effects": [
         {
           "text": "Black Gem Effect"
+        },
+        {
+          "text": "Wind Element Factor 3 (Divine+)"
+        },
+        {
+          "text": "VE on Disolve Multi (Rainbow+)"
         }
       ],
       "id": "singularity-zodiac-aquarius",
@@ -6299,6 +6365,12 @@
       "effects": [
         {
           "text": "Singularity Mult Boost"
+        },
+        {
+          "text": "Water Element Factor 3 (Divine+)"
+        },
+        {
+          "text": "Base Spread Multi (Rainbow+)"
         }
       ],
       "id": "singularity-zodiac-pisces",
@@ -24621,6 +24693,222 @@
       "rel": "requires",
       "source": "wiki:Tarot",
       "to": "singular-zodiacs"
+    },
+    {
+      "confidence": "documented",
+      "from": "singularity-zodiac-aries",
+      "note": "Second effect, unlocked at Divine",
+      "op": "exp",
+      "rel": "boosts",
+      "source": "observed",
+      "to": "sacrifice-dust"
+    },
+    {
+      "confidence": "documented",
+      "from": "singularity-zodiac-aries",
+      "note": "Third effect, unlocked at Rainbow",
+      "op": "mult",
+      "rel": "boosts",
+      "source": "observed",
+      "to": "attack-exponent"
+    },
+    {
+      "confidence": "documented",
+      "from": "singularity-zodiac-taurus",
+      "note": "Second effect, unlocked at Divine",
+      "op": "mult",
+      "rel": "boosts",
+      "source": "observed",
+      "to": "plp-per-plg"
+    },
+    {
+      "confidence": "documented",
+      "from": "singularity-zodiac-taurus",
+      "note": "Third effect, unlocked at Rainbow",
+      "op": "mult",
+      "rel": "boosts",
+      "source": "observed",
+      "to": "golden-resources"
+    },
+    {
+      "confidence": "documented",
+      "from": "singularity-zodiac-gemini",
+      "note": "Second effect, unlocked at Divine",
+      "op": "mult",
+      "rel": "boosts",
+      "source": "observed",
+      "to": "virus-essence"
+    },
+    {
+      "confidence": "documented",
+      "from": "singularity-zodiac-gemini",
+      "note": "Third effect, unlocked at Rainbow",
+      "op": "exp",
+      "rel": "boosts",
+      "source": "observed",
+      "to": "special-mineral-black-gem"
+    },
+    {
+      "confidence": "documented",
+      "from": "singularity-zodiac-cancer",
+      "note": "Second effect, unlocked at Divine",
+      "op": "mult",
+      "rel": "boosts",
+      "source": "observed",
+      "to": "base-spread-power"
+    },
+    {
+      "confidence": "documented",
+      "from": "singularity-zodiac-cancer",
+      "note": "Third effect, unlocked at Rainbow",
+      "op": "mult",
+      "rel": "boosts",
+      "source": "observed",
+      "to": "singularity-mult"
+    },
+    {
+      "confidence": "documented",
+      "from": "singularity-zodiac-leo",
+      "note": "Second effect, unlocked at Divine",
+      "op": "mult",
+      "rel": "boosts",
+      "source": "observed",
+      "to": "attack-exponent"
+    },
+    {
+      "confidence": "documented",
+      "from": "singularity-zodiac-leo",
+      "note": "Third effect, unlocked at Rainbow",
+      "op": "mult",
+      "rel": "boosts",
+      "source": "observed",
+      "to": "fire-factor-3"
+    },
+    {
+      "confidence": "documented",
+      "from": "singularity-zodiac-virgo",
+      "note": "Second effect, unlocked at Divine",
+      "op": "mult",
+      "rel": "boosts",
+      "source": "observed",
+      "to": "golden-resources"
+    },
+    {
+      "confidence": "documented",
+      "from": "singularity-zodiac-virgo",
+      "note": "Third effect, unlocked at Rainbow",
+      "op": "mult",
+      "rel": "boosts",
+      "source": "observed",
+      "to": "earth-factor-3"
+    },
+    {
+      "confidence": "documented",
+      "from": "singularity-zodiac-libra",
+      "note": "Second effect, unlocked at Divine",
+      "op": "exp",
+      "rel": "boosts",
+      "source": "observed",
+      "to": "special-mineral-black-gem"
+    },
+    {
+      "confidence": "documented",
+      "from": "singularity-zodiac-libra",
+      "note": "Third effect, unlocked at Rainbow",
+      "op": "mult",
+      "rel": "boosts",
+      "source": "observed",
+      "to": "wind-factor-3"
+    },
+    {
+      "confidence": "documented",
+      "from": "singularity-zodiac-scorpio",
+      "note": "Second effect, unlocked at Divine",
+      "op": "mult",
+      "rel": "boosts",
+      "source": "observed",
+      "to": "singularity-mult"
+    },
+    {
+      "confidence": "documented",
+      "from": "singularity-zodiac-scorpio",
+      "note": "Third effect, unlocked at Rainbow",
+      "op": "mult",
+      "rel": "boosts",
+      "source": "observed",
+      "to": "water-factor-3"
+    },
+    {
+      "confidence": "documented",
+      "from": "singularity-zodiac-saggitarius",
+      "note": "Second effect, unlocked at Divine",
+      "op": "mult",
+      "rel": "boosts",
+      "source": "observed",
+      "to": "fire-factor-3"
+    },
+    {
+      "confidence": "documented",
+      "from": "singularity-zodiac-saggitarius",
+      "note": "Third effect, unlocked at Rainbow",
+      "op": "exp",
+      "rel": "boosts",
+      "source": "observed",
+      "to": "sacrifice-dust"
+    },
+    {
+      "confidence": "documented",
+      "from": "singularity-zodiac-capricorn",
+      "note": "Second effect, unlocked at Divine",
+      "op": "mult",
+      "rel": "boosts",
+      "source": "observed",
+      "to": "earth-factor-3"
+    },
+    {
+      "confidence": "documented",
+      "from": "singularity-zodiac-capricorn",
+      "note": "Third effect, unlocked at Rainbow",
+      "op": "mult",
+      "rel": "boosts",
+      "source": "observed",
+      "to": "plp-per-plg"
+    },
+    {
+      "confidence": "documented",
+      "from": "singularity-zodiac-aquarius",
+      "note": "Second effect, unlocked at Divine",
+      "op": "mult",
+      "rel": "boosts",
+      "source": "observed",
+      "to": "wind-factor-3"
+    },
+    {
+      "confidence": "documented",
+      "from": "singularity-zodiac-aquarius",
+      "note": "Third effect, unlocked at Rainbow",
+      "op": "mult",
+      "rel": "boosts",
+      "source": "observed",
+      "to": "virus-essence"
+    },
+    {
+      "confidence": "documented",
+      "from": "singularity-zodiac-pisces",
+      "note": "Second effect, unlocked at Divine",
+      "op": "mult",
+      "rel": "boosts",
+      "source": "observed",
+      "to": "water-factor-3"
+    },
+    {
+      "confidence": "documented",
+      "from": "singularity-zodiac-pisces",
+      "note": "Third effect, unlocked at Rainbow",
+      "op": "mult",
+      "rel": "boosts",
+      "source": "observed",
+      "to": "base-spread-power"
     }
   ],
   "systems": [

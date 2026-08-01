@@ -3416,6 +3416,106 @@ nodes:
     wiki: Singularity#Houses
     confidence: provisional
 
+  # The wiki's "Singular zodiac effects" table fills in only its `First effect`
+  # column: `Second Effect` is blank in all twelve rows and there is no third
+  # column at all. The sweep reproduces that table faithfully, so the gap is
+  # upstream, and the twelve entries below restate `effects` in full from a
+  # screenshot of a maxed-out set in the owner's game.
+  #
+  # The second effect unlocks at the Divine rarity and the third at Rainbow.
+  # That gate lives in `text` because `Effect` forbids extra fields and has
+  # nowhere else to put it.
+  #
+  # The wording is still the wiki's own. Every one of the twelve effects appears
+  # as some house's `First effect`, so this invents no vocabulary -- the
+  # screenshot supplies only which effects a house gets, not what they are
+  # called. Two of those spellings look like mistakes and are not to be
+  # corrected: "Disolve" is how the wiki writes it, and "PlP per PlG" is a
+  # lowercase L for Plague, which a sans-serif screenshot renders identically to
+  # a capital I. Rewriting either one stops it naming the node it names.
+  #
+  # The assignment is a rotation, which is the cheapest way to check this block
+  # against the game: number the effects in house order and house n gets n, n+4
+  # and n+8 modulo 12, so each effect appears three times, once per tier. A
+  # single transposition breaks the pattern visibly.
+  #
+  # `effects` replaces the derived list wholesale rather than extending it, so
+  # these will hide `Second Effect` if the wiki ever fills it in. That is the
+  # cost of curating the whole list, and the reason every entry restates a first
+  # effect that is already correct.
+
+  - id: singularity-zodiac-aries
+    name: Singular Zodiac Aries
+    system: houses
+    kind: upgrade
+    effects:
+      - text: Fire Element Factor 3
+      - text: Sacrifice Dust Gain (Divine+)
+      - text: Attack Exponent Multi (Rainbow+)
+
+  - id: singularity-zodiac-taurus
+    name: Singular Zodiac Taurus
+    system: houses
+    kind: upgrade
+    effects:
+      - text: Earth Element Factor 3
+      - text: PlP per PlG Multi (Divine+)
+      - text: Golden Resources Gain (Rainbow+)
+
+  - id: singularity-zodiac-gemini
+    name: Singular Zodiac Gemini
+    system: houses
+    kind: upgrade
+    effects:
+      - text: Wind Element Factor 3
+      - text: VE on Disolve Multi (Divine+)
+      - text: Black Gem Effect (Rainbow+)
+
+  - id: singularity-zodiac-cancer
+    name: Singular Zodiac Cancer
+    system: houses
+    kind: upgrade
+    effects:
+      - text: Water Element Factor 3
+      - text: Base Spread Multi (Divine+)
+      - text: Singularity Mult Boost (Rainbow+)
+
+  - id: singularity-zodiac-leo
+    name: Singular Zodiac Leo
+    system: houses
+    kind: upgrade
+    effects:
+      - text: Sacrifice Dust Gain
+      - text: Attack Exponent Multi (Divine+)
+      - text: Fire Element Factor 3 (Rainbow+)
+
+  - id: singularity-zodiac-virgo
+    name: Singular Zodiac Virgo
+    system: houses
+    kind: upgrade
+    effects:
+      - text: PlP per PlG Multi
+      - text: Golden Resources Gain (Divine+)
+      - text: Earth Element Factor 3 (Rainbow+)
+
+  - id: singularity-zodiac-libra
+    name: Singular Zodiac Libra
+    system: houses
+    kind: upgrade
+    effects:
+      - text: VE on Disolve Multi
+      - text: Black Gem Effect (Divine+)
+      - text: Wind Element Factor 3 (Rainbow+)
+
+  - id: singularity-zodiac-scorpio
+    name: Singular Zodiac Scorpio
+    system: houses
+    kind: upgrade
+    effects:
+      - text: Base Spread Multi
+      - text: Singularity Mult Boost (Divine+)
+      - text: Water Element Factor 3 (Rainbow+)
+
   # The wiki writes "Saggitarius" in this one table cell and spells it correctly
   # in all five other places it appears, so the sweep mints a misspelled name
   # off a typo. The id keeps the misspelling because it is minted from the same
@@ -3430,6 +3530,37 @@ nodes:
     name: Singular Zodiac Sagittarius
     system: houses
     kind: upgrade
+    effects:
+      - text: Attack Exponent Multi
+      - text: Fire Element Factor 3 (Divine+)
+      - text: Sacrifice Dust Gain (Rainbow+)
+
+  - id: singularity-zodiac-capricorn
+    name: Singular Zodiac Capricorn
+    system: houses
+    kind: upgrade
+    effects:
+      - text: Golden Resources Gain
+      - text: Earth Element Factor 3 (Divine+)
+      - text: PlP per PlG Multi (Rainbow+)
+
+  - id: singularity-zodiac-aquarius
+    name: Singular Zodiac Aquarius
+    system: houses
+    kind: upgrade
+    effects:
+      - text: Black Gem Effect
+      - text: Wind Element Factor 3 (Divine+)
+      - text: VE on Disolve Multi (Rainbow+)
+
+  - id: singularity-zodiac-pisces
+    name: Singular Zodiac Pisces
+    system: houses
+    kind: upgrade
+    effects:
+      - text: Singularity Mult Boost
+      - text: Water Element Factor 3 (Divine+)
+      - text: Base Spread Multi (Rainbow+)
 
   # Named `singular-` rather than `singularity-` so the id does not nest under
   # the `singularity-zodiac` mint prefix that the sweep manifest uses.
@@ -6586,6 +6717,213 @@ edges:
     rel: requires
     note: Perform a Singularity with an Uncommon+ Singular Zodiac
     source: wiki:Tarot
+    confidence: documented
+
+  # The Divine and Rainbow effects the twelve Singular Zodiacs gained above.
+  # Written out because `merge` does not resolve curated effect text -- edges
+  # come from extraction or from this file, and extraction cannot see a
+  # screenshot. The first effect of each zodiac already has its edge, generated
+  # off the one column the wiki does populate, so only two per zodiac are here.
+  #
+  # `op` carries the x / ^ the screenshot shows, which is what `Edge.op` is for.
+  # It is deliberately not on the effects themselves: an `Effect.op` never
+  # appears without a `per_level` and means the operator of the *scaling*, so
+  # setting it here would give one field two meanings.
+  #
+  # `observed` over `wiki:Singularity` because that page does not say this.
+  # These are `documented` even so -- the source states the relationship
+  # outright, where the generated first-effect edges are `uncertain` for having
+  # been resolved out of prose.
+  - from: singularity-zodiac-aries
+    to: sacrifice-dust
+    rel: boosts
+    op: exp
+    note: Second effect, unlocked at Divine
+    source: observed
+    confidence: documented
+
+  - from: singularity-zodiac-aries
+    to: attack-exponent
+    rel: boosts
+    op: mult
+    note: Third effect, unlocked at Rainbow
+    source: observed
+    confidence: documented
+
+  - from: singularity-zodiac-taurus
+    to: plp-per-plg
+    rel: boosts
+    op: mult
+    note: Second effect, unlocked at Divine
+    source: observed
+    confidence: documented
+
+  - from: singularity-zodiac-taurus
+    to: golden-resources
+    rel: boosts
+    op: mult
+    note: Third effect, unlocked at Rainbow
+    source: observed
+    confidence: documented
+
+  - from: singularity-zodiac-gemini
+    to: virus-essence
+    rel: boosts
+    op: mult
+    note: Second effect, unlocked at Divine
+    source: observed
+    confidence: documented
+
+  - from: singularity-zodiac-gemini
+    to: special-mineral-black-gem
+    rel: boosts
+    op: exp
+    note: Third effect, unlocked at Rainbow
+    source: observed
+    confidence: documented
+
+  - from: singularity-zodiac-cancer
+    to: base-spread-power
+    rel: boosts
+    op: mult
+    note: Second effect, unlocked at Divine
+    source: observed
+    confidence: documented
+
+  - from: singularity-zodiac-cancer
+    to: singularity-mult
+    rel: boosts
+    op: mult
+    note: Third effect, unlocked at Rainbow
+    source: observed
+    confidence: documented
+
+  - from: singularity-zodiac-leo
+    to: attack-exponent
+    rel: boosts
+    op: mult
+    note: Second effect, unlocked at Divine
+    source: observed
+    confidence: documented
+
+  - from: singularity-zodiac-leo
+    to: fire-factor-3
+    rel: boosts
+    op: mult
+    note: Third effect, unlocked at Rainbow
+    source: observed
+    confidence: documented
+
+  - from: singularity-zodiac-virgo
+    to: golden-resources
+    rel: boosts
+    op: mult
+    note: Second effect, unlocked at Divine
+    source: observed
+    confidence: documented
+
+  - from: singularity-zodiac-virgo
+    to: earth-factor-3
+    rel: boosts
+    op: mult
+    note: Third effect, unlocked at Rainbow
+    source: observed
+    confidence: documented
+
+  - from: singularity-zodiac-libra
+    to: special-mineral-black-gem
+    rel: boosts
+    op: exp
+    note: Second effect, unlocked at Divine
+    source: observed
+    confidence: documented
+
+  - from: singularity-zodiac-libra
+    to: wind-factor-3
+    rel: boosts
+    op: mult
+    note: Third effect, unlocked at Rainbow
+    source: observed
+    confidence: documented
+
+  - from: singularity-zodiac-scorpio
+    to: singularity-mult
+    rel: boosts
+    op: mult
+    note: Second effect, unlocked at Divine
+    source: observed
+    confidence: documented
+
+  - from: singularity-zodiac-scorpio
+    to: water-factor-3
+    rel: boosts
+    op: mult
+    note: Third effect, unlocked at Rainbow
+    source: observed
+    confidence: documented
+
+  - from: singularity-zodiac-saggitarius
+    to: fire-factor-3
+    rel: boosts
+    op: mult
+    note: Second effect, unlocked at Divine
+    source: observed
+    confidence: documented
+
+  - from: singularity-zodiac-saggitarius
+    to: sacrifice-dust
+    rel: boosts
+    op: exp
+    note: Third effect, unlocked at Rainbow
+    source: observed
+    confidence: documented
+
+  - from: singularity-zodiac-capricorn
+    to: earth-factor-3
+    rel: boosts
+    op: mult
+    note: Second effect, unlocked at Divine
+    source: observed
+    confidence: documented
+
+  - from: singularity-zodiac-capricorn
+    to: plp-per-plg
+    rel: boosts
+    op: mult
+    note: Third effect, unlocked at Rainbow
+    source: observed
+    confidence: documented
+
+  - from: singularity-zodiac-aquarius
+    to: wind-factor-3
+    rel: boosts
+    op: mult
+    note: Second effect, unlocked at Divine
+    source: observed
+    confidence: documented
+
+  - from: singularity-zodiac-aquarius
+    to: virus-essence
+    rel: boosts
+    op: mult
+    note: Third effect, unlocked at Rainbow
+    source: observed
+    confidence: documented
+
+  - from: singularity-zodiac-pisces
+    to: water-factor-3
+    rel: boosts
+    op: mult
+    note: Second effect, unlocked at Divine
+    source: observed
+    confidence: documented
+
+  - from: singularity-zodiac-pisces
+    to: base-spread-power
+    rel: boosts
+    op: mult
+    note: Third effect, unlocked at Rainbow
+    source: observed
     confidence: documented
 
 suppress:
