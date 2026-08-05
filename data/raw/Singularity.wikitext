@@ -1,7 +1,7 @@
 {{New Content}}
 Singularity is an end-game mechanic unlocked by Refine Node 121.
 
-== Buff & Penalties ==
+== Buffs & Penalties ==
 At various atom thresholds you will gain a buff or penalty. These buffs/penalties are only applied if your current atom count is at or above the threshold. Many of these buffs/penalties can be modified via the Mineral and Singularity refine tree nodes, as well as Relic 69. You can view your current buffs/penalties in the lower, right-hand corner of the main Singularity tab.
 {| class="wikitable"
 |+
@@ -100,32 +100,37 @@ At various atom thresholds you will gain a buff or penalty. These buffs/penaltie
 |Atoms Gain
 |No
 |
+|-
+|1.00e5000
+|^0.2
+|Atoms Gain
+|No
+|
 |}*Values stated to be unmodifiable may be modifiable later in progression
 
-== Singularity Mult Gain Modifiers ==
+== Singularity Mult Gain Factors ==
 Whenever you Singularize you will gain a bonus to Singularity Mult which determines the speed at which you gain atoms. Various factors increase the amount of Singularity Mult gained when you Singularize and you will unlock more as you progress.
 {| class="wikitable"
 |+
-!Modification Source
-!Modification Prerequisite
+!Factor
+!Unlock Condition
 |-
 |Last Part of Vessel
 |Emotional Vessel Part 10
 |-
 |Plague Multi.
-|
+|Unlocked with Plague
 |-
 |Relic 38 Effect
-|
+| rowspan="2" |Unlocked with Singularity 
 |-
 |Relic 67 Effect
-|
 |-
 |Atoms
 |1.8e308 Atom Milestone
 |-
 |Singularity Tree Node 1
-|5 Singularity
+|<==
 |-
 |Singularity Count
 |20 Singularity
@@ -140,8 +145,14 @@ Whenever you Singularize you will gain a bonus to Singularity Mult which determi
 |Singularity Mult 
 |64 Singularity
 |-
-|Each King Tarot Challenges
-|
+|Completed Swords Tarot Challenges
+| rowspan="4" |Respective King Tarot Challenge completion
+|-
+|Completed Wands Tarot Challenges
+|-
+|Completed Pentacles Challenges
+|-
+|Completed Cups Challenges
 |}
 
 == Milestones ==
@@ -300,6 +311,73 @@ The Milestones tab automatically unlocks with your first Singularity.
 == Effects ==
 Unlocked at 2 Singularities. 
 
+Singularities, Atom amount, and your Singularity Multiplier will begin providing boosts to other areas of your progression. 
+
+You start with 4 total effects, but you can unlock more through various means. 
+{| class="wikitable"
+|+Effects List
+! colspan="3" |Singularity Count Effects
+|-
+!Effect
+!Unlock Condition 
+!Effect Scaling
+|-
+|Gold Gain ^
+|Have Effects unlocked
+| +^0.02/Singularity
+|-
+|Base Spread Speed mult
+|RN122
+|?
+|-
+|Atom Gain ^
+|RN131
+| +^0.005/Singularity
+|-
+|Second Singular Zodiac Level Multiplier
+|Unlocked with Houses
+|?
+|-
+|Golden Resources Gain
+|RN132
+|
+|-
+|RfP Gain
+|RN134
+|
+|-
+! colspan="3" |Atom Effects
+|-
+|Golden Resources Gain
+| rowspan="2" |Unlocked with Effects
+|?
+|-
+|Black Gem mult
+|?
+|-
+|Luck
+|1e2700 Atom Milestone
+|?
+|-
+! colspan="3" |Singularity Multiplier Effects
+|-
+|Base Spread Speed
+|Unlocked with Effects
+|
+|-
+|RfP Base Gain
+|RN129
+|
+|-
+|First Singular Zodiac Level Multiplier
+|Unlocked with Houses
+|
+|-
+|Luck
+|RN135
+|
+|}
+
 == Tree ==
 Unlocked at 5 Singularities. Each individual tree node can be levelled up multiple times, up to level 10, and you must purchase at least one level in the previous node in order to unlock and buy the next node. Once a node reaches level 10 you can choose to "Ascend" it which resets its level but keeps the effect bonus and resets the initial level upgrade cost. After ascending, the upgrade costs increase at a higher rate for each level and give less bonus per level. Unlike buying RfP nodes, when purchasing a Singularity tree node upgrade it divides your atom count rather than subtracting from it. 
 {| class="wikitable"
@@ -376,7 +454,7 @@ Unlocked at 5 Singularities. Each individual tree node can be levelled up multip
 |}
 
 == Houses ==
-Unlocked at 32 Singularities. An advanced version of Astrology, grants a Zodiac after reaching 1e1,000 atoms and Singularizing<!-- i dont think theres a word for this lol-->. Zodiacs must be placed in their matching House on the circle. Each spot is numbered with roman numerals, starting with I at the west, and moving counter-clockwise.
+Unlocked at 32 Singularities. An advanced version of Astrology; you get a Singular Zodiac when Singularizing with 1e1000 Atoms or more. Zodiacs must be placed in their matching House on the circle. Each spot is numbered with roman numerals, starting with I at the west, and moving counter-clockwise.
 {| class="wikitable"
 |+Singular zodiac effects
 !House
@@ -402,7 +480,7 @@ Unlocked at 32 Singularities. An advanced version of Astrology, grants a Zodiac 
 |IV
 |Cancer
 |Water Element Factor 3
-|
+|Base  Spread Mult
 |-
 |V
 |Leo
@@ -442,7 +520,7 @@ Unlocked at 32 Singularities. An advanced version of Astrology, grants a Zodiac 
 |XII
 |Pisces
 |Singularity Mult Boost
-|
+|Water Element Factor 3 
 |}
 [[Category:Unity]]
 {{Main navbox}}

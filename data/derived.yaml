@@ -3800,6 +3800,7 @@ nodes:
   confidence: provisional
   effects:
   - text: Water Element Factor 3
+  - text: Base Spread Mult
 - id: singularity-zodiac-leo
   name: Singular Zodiac Leo
   system: houses
@@ -3864,6 +3865,7 @@ nodes:
   confidence: provisional
   effects:
   - text: Singularity Mult Boost
+  - text: Water Element Factor 3
 - id: dilation-node-center-1
   name: Center 1
   system: dilation-tree
@@ -9538,6 +9540,11 @@ edges:
   rel: boosts
   source: wiki:Singularity
   confidence: uncertain
+- from: singularity-zodiac-cancer
+  to: base-spread-power
+  rel: boosts
+  source: wiki:Singularity
+  confidence: uncertain
 - from: singularity-zodiac-leo
   to: sacrifice-dust
   rel: boosts
@@ -9575,6 +9582,11 @@ edges:
   confidence: uncertain
 - from: singularity-zodiac-pisces
   to: singularity-mult
+  rel: boosts
+  source: wiki:Singularity
+  confidence: uncertain
+- from: singularity-zodiac-pisces
+  to: water-factor-3
   rel: boosts
   source: wiki:Singularity
   confidence: uncertain

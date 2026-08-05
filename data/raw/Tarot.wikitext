@@ -1369,7 +1369,7 @@ Here is a list of all the Artifact parts:
 | +0.01x/level
 |
 |
-|
+|20 Golden Swords
 |-
 |4
 |Focal Point
@@ -1377,7 +1377,7 @@ Here is a list of all the Artifact parts:
 | +0.2x/level
 |
 |
-|
+|100 Golden Swords
 |-
 |5
 |Light Refractors
@@ -1385,7 +1385,7 @@ Here is a list of all the Artifact parts:
 | +^0.25/level
 |
 |
-|
+|500 Golden Swords
 |-
 |6
 |Truth Facets
@@ -1393,7 +1393,7 @@ Here is a list of all the Artifact parts:
 | +0.01x/level
 |
 |
-|
+|2500 Golden Swords
 |-
 |7
 |Memory Crystal
@@ -1401,7 +1401,7 @@ Here is a list of all the Artifact parts:
 |0.09+0.01*level
 |
 |
-|
+|50000 Golden Swords
 |-
 |8
 |Perception Lens
@@ -1409,7 +1409,7 @@ Here is a list of all the Artifact parts:
 | +0.25x/level
 |
 |
-|
+|1000000 Golden Swords
 |-
 ! colspan="7" |Magic Skull
 |-
@@ -1467,7 +1467,7 @@ Here is a list of all the Artifact parts:
 |0.09+0.01*level
 |
 |
-|
+|18000 Golden Wands
 |-
 |8
 |Frontal Bone
@@ -1475,7 +1475,7 @@ Here is a list of all the Artifact parts:
 | +0.02/level
 |
 |
-|
+|45000 Golden Wands
 |-
 |9
 |Parietal Bone
@@ -1483,7 +1483,7 @@ Here is a list of all the Artifact parts:
 | +0.05x/level
 |
 |
-|
+|120000 Golden Wands
 |-
 |10
 |Temporal Bone
@@ -1491,7 +1491,7 @@ Here is a list of all the Artifact parts:
 | +^0.5/level
 |
 |
-|
+|600000 Golden Wands
 |-
 |11
 |Occipital Bone
@@ -1499,7 +1499,7 @@ Here is a list of all the Artifact parts:
 | +1x/level
 |
 |
-|
+|1800000 Golden Wands
 |-
 ! colspan="7" |Prosperity Engine
 |-
@@ -1557,7 +1557,7 @@ Here is a list of all the Artifact parts:
 |0.09+0.01*level
 |
 |
-|
+|30000 Golden Pentacles
 |-
 |8
 |Legacy Encoders
@@ -1565,7 +1565,7 @@ Here is a list of all the Artifact parts:
 | +^4/level
 |
 |
-|
+|200000 Golden Pentacles
 |-
 |9
 |Reality Anchors
@@ -1573,7 +1573,7 @@ Here is a list of all the Artifact parts:
 | +0.5x/level
 |
 |
-|
+|1250000 Golden Pentacles
 |-
 ! colspan="7" |Emotional Vessel
 |-
@@ -1631,7 +1631,7 @@ Here is a list of all the Artifact parts:
 |0.09+0.01*level
 |
 |
-|
+|25000 Golden Cups
 |-
 |8
 |Inner Reflection Surface
@@ -1639,7 +1639,7 @@ Here is a list of all the Artifact parts:
 | +0.25x/level
 |
 |
-|
+|90000 Golden Cups
 |-
 |9
 |Vulnerability Aperture
@@ -1647,7 +1647,7 @@ Here is a list of all the Artifact parts:
 | +0.02x/level
 |
 |
-|
+|400000 Golden Cups
 |-
 |10
 |Trauma Alchemizer
@@ -1655,7 +1655,7 @@ Here is a list of all the Artifact parts:
 | +0.001x/level
 |
 |
-|
+|1500000 Golden Cups
 |}
 
 === LOGPOW ===

@@ -223,6 +223,26 @@ Main Page: [[Macro Builder]]
 
 Unlocked upon first [[Eternity]].
 
-<noinclude>{{#titleicon_file:icon_tab_revo.png}}</noinclude>
+== Statistics for nerds ==
+
+=== '''Prestige formulae''' ===
+<big><math>P.mult = 2.56^{\frac{\log\left(\frac{\mathrm{score}}{10^3}\right)}{2.25}}</math></big> 
+
+<big><math>P.exp = 1+\frac{\log\left(\frac{\mathrm{score}}{10^5}\right)}{225}</math></big>
+
+=== '''Promotion formulae''' ===
+<big><math>Promotion.xp
+=
+\left\lfloor
+\left(\frac{P.mult}{1000}\right)^{0.75}
+\right\rfloor</math></big>
+
+<big><math>P1=P4{\left(\left\lfloor L^{1.5}\right\rfloor+1\right)}</math></big>
+
+<big><math>P2=P4(1+\frac{\surd L}{2})</math></big>
+
+<big><math>P3=P4(10+\frac{L^{0.8}}{2})</math></big>
+
+<big><math>P4=1+0.05L^{0.48}</math></big> <noinclude>{{#titleicon_file:icon_tab_revo.png}}</noinclude>
 [[Category:Revolution]]
 {{Main navbox}}

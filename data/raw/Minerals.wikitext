@@ -8,8 +8,8 @@ Minerals generate VP and you can merge two identical minerals to create a higher
 == Mineral Upgrades ==
 Spend VP (and later on, Magnets) to level upgrades to help boost your Minerals, Zodiacs, and Gold Gain.
 * Max Level
-* Grid Height (caps at 9, Refine Node ??? and ??? increase the cap by 1 each to max of 11)
-* Grid Width (caps at 9, Refine Node ??? and ??? increase the cap by 1 each to max of 11)
+* Grid Height (caps at 9, Refine Node 72 and 80 increase the cap by 1 each to max of 11)
+* Grid Width (caps at 9, Refine Node 72 and 80 increase the cap by 1 each to max of 11)
 * Fall Speed
 * Luck Bonus
 * Quality Bonus 
@@ -1146,6 +1146,13 @@ You can also boost VP by buying relics 22 and 23 and polishing sword:
 * Mineral upgrade 8 effect: <math>1+{UpgradeLevel}/100</math>
 * Mineral upgrade 9 effect: <math>1+ {UpgradeLevel}/100</math>
 * Mineral upgrade 10 effect: <math>({UpgradeLevel}/10)%</math>
+* Magnet upgrade 1 effect:<math>1+\text{upgradeLevel}/100</math>
+* Magnet upgrade 2 effect:<math>(\text{upgradeLevel}/1000)%</math>
+* Magnet upgrade 3 effect:<math>4^\text{upgradeLevel}</math>
+* Magnet upgrade 4 effect:(?)
+* Magnet upgrade 5 effect:<math>(\text{upgradeLevel}/1000)%</math>
+* Magnet upgrade 6 effect:<math>(\text{upgradeLevel}/1000)%</math>
+* Magnet upgrade 7 effect:<math>1+\text{UpgradeLevel}</math>
 
 === Special Mineral Base Spawn Cost ===
 

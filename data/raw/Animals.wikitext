@@ -11,7 +11,7 @@ You can "respec" your Animals at any time by using the button (two arrows, formi
 * Return all of your spent {{Keyword|ap|AP}} to you
 * Reset your ''current'' {{Keyword|eternity|Eternity}}
 
-There are 81 different Animals and a total of {{Keyword|ap|1,524 AP}} is required to buy them all.
+There are 81 different Animals. A total of {{Keyword|ap|1,524 AP}} is required to buy them all.
 
 For details on individual Animal costs and bonuses, see the table below:{{AnimalGrid||true}}
 
@@ -42,7 +42,7 @@ After the player owns 4 Animals, they will reach Animals Milestone 2 and unlock 
 When the player reaches both Animals Milestone 4 (own 10 Animals) and [[Eternity#Eternity Challenges Milestones|Eternity Challenges Milestone]] 2 (5 {{Keyword|eternity|EC}} completions), having too many Slowdowns is no longer a problem, since they no longer reset anything when they [[Revolution#Promote|Promote]] and [[Revolution#Prestige|Prestige]] (respectively). As such, [[Automations#Auto Slowdown|{{Keyword|auto|Auto Slowdown}}]] can be set to 10 from now on, in order to achieve the maximum possible Slowdown.
 
 == '''Animal Automation''' ==
-After reaching 5 Unity, you will be able to autobuy animal
+After reaching 5 Unities, you will be able to autobuy animals.
 [[File:Animal Automation Guide.png|thumb|Animal Automation Guide]]
 [[Category:Eternity]]
 {{Main navbox}}
