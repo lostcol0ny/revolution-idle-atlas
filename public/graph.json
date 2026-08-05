@@ -18534,6 +18534,15 @@
       "to": "water-factor-3"
     },
     {
+      "confidence": "documented",
+      "from": "singularity-zodiac-cancer",
+      "note": "Second effect, unlocked at Divine",
+      "op": "mult",
+      "rel": "boosts",
+      "source": "observed",
+      "to": "base-spread-power"
+    },
+    {
       "confidence": "uncertain",
       "from": "singularity-zodiac-leo",
       "rel": "boosts",
@@ -18588,6 +18597,15 @@
       "rel": "boosts",
       "source": "wiki:Singularity",
       "to": "singularity-mult"
+    },
+    {
+      "confidence": "documented",
+      "from": "singularity-zodiac-pisces",
+      "note": "Second effect, unlocked at Divine",
+      "op": "mult",
+      "rel": "boosts",
+      "source": "observed",
+      "to": "water-factor-3"
     },
     {
       "confidence": "uncertain",
@@ -24751,15 +24769,6 @@
     {
       "confidence": "documented",
       "from": "singularity-zodiac-cancer",
-      "note": "Second effect, unlocked at Divine",
-      "op": "mult",
-      "rel": "boosts",
-      "source": "observed",
-      "to": "base-spread-power"
-    },
-    {
-      "confidence": "documented",
-      "from": "singularity-zodiac-cancer",
       "note": "Third effect, unlocked at Rainbow",
       "op": "mult",
       "rel": "boosts",
@@ -24891,15 +24900,6 @@
       "rel": "boosts",
       "source": "observed",
       "to": "virus-essence"
-    },
-    {
-      "confidence": "documented",
-      "from": "singularity-zodiac-pisces",
-      "note": "Second effect, unlocked at Divine",
-      "op": "mult",
-      "rel": "boosts",
-      "source": "observed",
-      "to": "water-factor-3"
     },
     {
       "confidence": "documented",

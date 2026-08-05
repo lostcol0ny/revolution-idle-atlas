@@ -1,5 +1,9 @@
 Trials are unlocked when you have 3 zodiacs equipped. There are currently 25 trials as of v1.068.
 
+These work similarly to Infinity and Eternity Challenges; you must reach a certain goal with a handicap applied. To start some trials, you must first lock it, then click the blue reset button in the top right. 
+
+There are 5 difficulties of trials: Easy, Medium, Hard, Insane, and the Bonus Trial.
+
 ==='''Easy Trials'''===
 {| class="wikitable" style="text-align:center;  font-size: 1rem"
 !Trial
@@ -133,10 +137,8 @@ Trials are unlocked when you have 3 zodiacs equipped. There are currently 25 tri
 |Beat all Hard Trials
 |Breaks Unity
 |}
-
-
 ==='''Insane Trials'''===
-These trials work a bit differently than prior trials, as they must be completed in order. To unlock a trial, you must get the respective level to unlock it on weapons in Polish Prestige (under Unity → Minerals, must get a level 30 mineral to unlock).
+These trials work a bit differently than prior trials, as they must be completed in order. To unlock a trial, you must get the respective level to unlock it on weapons in Polish Prestige (see [[Minerals]]).
 {| class="wikitable" style="text-align:center; font-size: 1rem"
 !Trial
 !Unlock
@@ -193,6 +195,7 @@ These trials work a bit differently than prior trials, as they must be completed
 |}
 
 === Bonus Trial ===
+Warning: Spoilers for Plague!
 {| class="wikitable"
 !Trial
 !Unlock
@@ -201,7 +204,7 @@ These trials work a bit differently than prior trials, as they must be completed
 !Reward
 |-
 |Bonus Trial
-|Complete Earth Plague Stage (5-5) after unlocking Relic 67 (May need to complete multiple times)
+|Achievement 600
 |Complete Earth Plague Stage (5-5)
 |You may only equip a Decay ER with a level no higher than 50% of the max level
 |Divides all refine nodes costs past 120 by /1e6750

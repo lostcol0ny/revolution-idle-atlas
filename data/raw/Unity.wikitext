@@ -40,7 +40,7 @@ The combined effects of all Zodiacs placed on Planets are displayed under Zodiac
 Each Planet can only hold one Zodiac at a time. The cumulative effects of all Planet placements are listed in the Extra bonuses panel in the Astrology tab.
 
 == Trials ==
-Main page: ''[[Trials]]'' <br>Trials are the Unity version of eternity challenges. Each completed trial will give you a unique permanent reward and +2 default EC completions. when you complete all 6 trials of a certain difficulty, you will get another reward. There are 25 trials (as of V1.068) with 6ETs, 6MTs, 6HTs, 6ITs and 1BT. When you want to attempt a trial you should hit the lock and then reset your unity. Remember to unlock the trial after you complete it!
+Main page: ''[[Trials]]'' <br>Trials are the Unity version of eternity challenges. Each completed trial will give you a unique permanent reward and +2 default EC completions. when you complete all 6 trials of a certain difficulty, you will get another reward. There are 25 trials (as of V1.068) with 6ETs, 6MTs, 6HTs, 6ITs and 1BT. When you want to attempt a trial, you should hit the lock and then reset your unity, forgetting to lock may lead to you accidentally breaking a trials condition. Remember to unlock the trial after you complete it!
 [[File:Trial tab.png|none|thumb|296x296px|The Trial tab]]
 
 
@@ -81,8 +81,8 @@ Special Minerals are unlocked through {{Keyword|unknown|Refine Tree Node 41}}, u
 == Elements (WIP) ==
 [[File:Elements tree.png|thumb|Element Trees]]
 Main page: ''[[Elements]]'' <br>
-Elements are unlocked after completing {{Keyword|ach|Achievement 321}}, which adds a new subtab to the Unity tab.    
- 
+Elements are unlocked after completing {{Keyword|ach|Achievement 321}}, which adds a new subtab to the Unity tab.  
+
 == Tarot (WIP) ==
 Main page: ''[[Tarot]]'' <br>
 Tarot is unlocked after purchasing {{Keyword|node|Refine Tree Node 70}}, which adds a new subtab to the Unity tab.
@@ -90,6 +90,11 @@ Tarot is unlocked after purchasing {{Keyword|node|Refine Tree Node 70}}, which a
 == Plague (WIP) ==
 Main page ''[[Plague]]'' <br>
 Plague is unlocked after purchasing {{Keyword|node|Refine Tree Node 103}}, which adds a new subtab to the Unity tab.
+
+== Singularity (WIP) ==
+Main page ''[[Singularity]]'' <br>
+Singularity is unlocked after purchasing {{Keyword|node|Refine Tree Node 121}}, which adds a new subtab to the Unity tab.
+
 
 == Trivia ==
 
