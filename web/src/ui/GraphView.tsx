@@ -100,7 +100,7 @@ export function GraphView({
         // defaults and stay light without it.
         colorMode="dark"
         fitView
-        minZoom={0.2}
+        minZoom={0.05}
         nodesDraggable={false}
         nodesConnectable={false}
         edgesFocusable={false}
