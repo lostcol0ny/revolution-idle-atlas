@@ -156,7 +156,7 @@ Whenever you Singularize you will gain a bonus to Singularity Mult which determi
 |}
 
 == Milestones ==
-The Milestones tab automatically unlocks with your first Singularity. 
+The Milestones tab automatically unlocks with your first Singularity. There are 3 types of milestones: Singularity milestones, Atom milestones, and Progression milestones. 
 {| class="wikitable"
 |+Singularity Milestones
 !Name
@@ -261,6 +261,7 @@ The Milestones tab automatically unlocks with your first Singularity.
 |1e10000 Atoms
 |
 |}
+Progression Milestones work differently than other milestones, and instead have a requirement that must be satisfied for them to give a reward. Otherwise, these milestones will apply harsh penalties.
 {| class="wikitable"
 |+Progression Milestones
 !Name 

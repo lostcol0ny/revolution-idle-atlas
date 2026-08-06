@@ -40,7 +40,7 @@ The combined effects of all Zodiacs placed on Planets are displayed under Zodiac
 Each Planet can only hold one Zodiac at a time. The cumulative effects of all Planet placements are listed in the Extra bonuses panel in the Astrology tab.
 
 == Trials ==
-Main page: ''[[Trials]]'' <br>Trials are the Unity version of eternity challenges. Each completed trial will give you a unique permanent reward and +2 default EC completions. when you complete all 6 trials of a certain difficulty, you will get another reward. There are 25 trials (as of V1.068) with 6ETs, 6MTs, 6HTs, 6ITs and 1BT. When you want to attempt a trial, you should hit the lock and then reset your unity, forgetting to lock may lead to you accidentally breaking a trials condition. Remember to unlock the trial after you complete it!
+Main page: ''[[Trials]]'' <br>Trials are the Unity version of eternity challenges. Each completed trial will give you a unique permanent reward and +2 default EC completions. when you complete all 6 trials of a certain difficulty, you will get another reward. There are 25 trials (as of V1.068) with 6 Easy Trials, 6 Medium trials, 6 Hard Trials, 6 Insane Trials and 1 Bonus Trial. When you want to attempt a trial, you should hit the lock and then reset your unity, forgetting to lock may lead to you accidentally breaking a trials condition. Remember to unlock the trial after you complete it!
 [[File:Trial tab.png|none|thumb|296x296px|The Trial tab]]
 
 
@@ -57,10 +57,9 @@ There are a total 5 Attack Circles and they work similarly to the base game's ci
 
 When you do a proper Unity by selecting a Zodiac, the Attack Level gets reset to 0 and you will be rewarded with the amount of Gold that is shown at the bottom of the screen. Your Circle Attack Multipliers will NOT be reset upon Uniting and performing a Soft Unity Reset (by e.g. swapping Zodiacs) will not reset Attack Level.
 
-== Minerals (WIP) ==
+== Minerals ==
 [[File:Mineral Footage.png|thumb|The Mineral tab]]
-Main page: ''[[Minerals]]'' <br>
-Minerals are unlocked after completing {{Keyword|ach|Achievement 240}} (reach attacks level 1337), which adds a new subtab to the Unity tab. There are total of 100 minerals in the game, and each mineral generates a resource called '''Value Points (VP)'''. These can be used to buy VP upgrades. 
+Main page: ''[[Minerals]]'' <br>Minerals are unlocked after completing {{Keyword|ach|Achievement 240}} (reach attacks level 1337), which adds a new subtab to the Unity tab. There are total of 100 minerals in the game, and each mineral generates a resource called '''Value Points (VP)'''. These can be used to buy VP upgrades. 
 
 The base formula for VP gain is: <math> 0.01 \cdot 3 ^ {(Mineral Level - 1)} </math>
 
@@ -72,29 +71,67 @@ Upon reaching Mineral level 70, you can perform Refinement Prestige. Doing this,
 
 Magnets are unlocked through {{Keyword|node|Refine Tree Node 18}}, giving a base 1% chance to obtain a magnet upon merging common minerals. Magnets also unlock Magnet Upgrades, giving buffs to minerals.
 
+==== Runes ====
+Runes are unlocked with {{Keyword|node|Refine Tree Node 35}} There are 2 types of runes: Sun and Moon runes. Both of these are generated over time, albeit very slowly. Their generation speed can be boosted with RfP, and each rune can be spent on 3 decent upgrades.
+
 '''Special Minerals'''
 
 Special Minerals are unlocked through {{Keyword|unknown|Refine Tree Node 41}}, unlocking a new grid of minerals. 1 special mineral can be spawned at a time at the cost of Sun and Moon Runes. There are 10 special minerals, Red boosts VP gain, Blue decreases cost increase, Green increases Cost Fall, Pink boost Luck & Quality, Yellow boost Gold Gain, Orange boosts Magnet Chance, Dark Purple boosts PP Gain, Light Blue boosts RfP Gain, White boosts Game Speed, and Black grants tarot draws when destroyed. Special Mineral Progression can also be unlocked through {{Keyword|unknown|Refine Tree Node 46}} where you can spend RfP to boost the effect of the other Gems.
 
-'''Runes'''
+==== Special Minerals Progression (SMP) ====
+SMP is unlocked with {{Keyword|node|Refine Tree Node 46}}. Here, you can gain SMP EXP through merging Special Minerals, with each Special Mineral having its own SMP EXP counter. Once you have enough, your spawn level for that special mineral increases. Additionally, the efficiency of these minerals’ effects can be upgraded with RfP.
 
-== Elements (WIP) ==
+==== Special Mineral Sacrifice ====
+Special Mineral Sacrifice is unlocked via {{Keyword|node|Refine Tree Node 85}}. After unlocking, you can ''sacrifice'' a special mineral by destroying 100 level 20 minerals of that type. Once sacrificed, you can no longer spawn that mineral, and you will instead be granted a level 27 version within the Sacrifice tab (equal to 128 level 20 minerals, more than a max grid). Once all special minerals have been sacrificed, spawning a special mineral will grant ''sacrifice dust'' instead, which can be used to level up sacrificed minerals.
+
+== Elements ==
 [[File:Elements tree.png|thumb|Element Trees]]
-Main page: ''[[Elements]]'' <br>
-Elements are unlocked after completing {{Keyword|ach|Achievement 321}}, which adds a new subtab to the Unity tab.  
+Main page: ''[[Elements]]'' <br>Elements are unlocked after completing {{Keyword|ach|Achievement 321}}, which adds a new sub-tab to the Unity tab. Here, you can generate 4 different Elements: '''{{Keyword|red|Fire}}''', '''{{Keyword|green|Earth}}''', '''{{Keyword|cyan|Wind}}''', and {{Keyword|blue|Water}}. '''You can only generate one element at a time.''' Each element’s generation is boosted by specific Factors, and your Global Element Multiplier. Each of these factors usually comes from the effects of Zodiacs of that element, like how Earth generation is boosted by your Infinity count. Additionally, each element can be spent on their respective Element Tree for powerful upgrades.  
 
-== Tarot (WIP) ==
-Main page: ''[[Tarot]]'' <br>
-Tarot is unlocked after purchasing {{Keyword|node|Refine Tree Node 70}}, which adds a new subtab to the Unity tab.
+== Tarot ==
+Main page: ''[[Tarot]]'' <br>Tarot is unlocked after purchasing {{Keyword|node|Refine Tree Node 70}}, which adds a new subtab to the Unity tab. Unlocked along with Tarot are Black Gems, the 10th Special Mineral type. Destroying these will grant Tarot Draws, which can be used to draw Tarot Cards. These cards come in 5 suits: Swords, Wands, Pentacles, Cups, and a special Arcana suit. For the 4 regular suits, each card boosts a specific stat, and this boost gets better the more copies, or levels, of that card you have. The arcana cards can be used as a sort-of power up, each one providing a boost when activated, and requiring a long cooldown before it can be used again. In total, there are 78 unique cards; 14 for the regular suits, and 22 Arcan cards.
 
-== Plague (WIP) ==
+==== Upgrades ====
+Each of these 4 regular suits has their respective resource, generated by the Ace card and boosted by the other cards in that suit. With 1,000,000 of each, you unlock Tarot Upgrades where you can spend these resources on many powerful upgrades.
+
+==== Challenges ====
+Unlocked with Refine Tree Node 89, these are very similar to the other challenge systems from before. Each Tarot card has its own respective challenge, and you start with the first card of every suit. More challenges are unlocked with each completion of a new challenge, and each one gives a boost to the respective card’s effect.
+
+==== Artifacts ====
+Artifacts are unlocked through {{Keyword|node|Refine Tree Node 99}}. Here, you can convert regular Tarot Resources into their golden version with the flush button. Doing so will instantly grant the golden resources, though a ^0.001 resource generation penalty will be incurred that gradually weakens over time. Each golden resource has its own Artifact, which comes in multiple parts. These parts must be unlocked by having enough of a specific Golden Resource. Each part provides powerful boosts, and can be further leveled up with Golden Resources. (Note: you do not spend any of the resources, you just need to have enough to get the upgrade.)
+
+== Plague ==
 Main page ''[[Plague]]'' <br>
-Plague is unlocked after purchasing {{Keyword|node|Refine Tree Node 103}}, which adds a new subtab to the Unity tab.
+Plague is unlocked after purchasing {{Keyword|node|Refine Tree Node 103}}, which adds a new sub-tab to the Unity tab. Here, you can infect many populations inside certain locations, or Plague Stage. Successfully completing a Plague Stage will reward Plague Generators, or PlG. These generate Plague Points, or PlP. These resources and other statistics like your highest stage cleared, total infected, etc. boost many aspects of the game.
 
-== Singularity (WIP) ==
+==== Endoplasmic Reticulum ====
+Unlocked through Refine Tree Node 104, you can craft Endoplasmic Reticulums (ERs) using your PlP. These are basically different plague strains, and have 3 different stats: Spread Power, Infectivity, and Stealth. Spread Power determines overall speed, Infectivity allows for faster spreading during the middle stage of infection, and stealth decreases the slowdown caused by the remaining healthy population.
+
+Unwanted ERs can be dissolved for Virus Essence, which generates Virus Points, or ViP that can be spent on upgrades that boost your ERs.
+
+== Singularity ==
 Main page ''[[Singularity]]'' <br>
-Singularity is unlocked after purchasing {{Keyword|node|Refine Tree Node 121}}, which adds a new subtab to the Unity tab.
+Singularity is unlocked after purchasing {{Keyword|node|Refine Tree Node 121}}, which adds a new subtab to the Unity tab. Singularity is centered around Atoms, which multiply themselves every second based on your Singularity Multiplier. This multiplier can be increased by performing a Singularity, which resets the following:
 
+* Minerals (except the Refine Tree)
+* Elements
+* Tarot (except Tarot Upgrades and Challenges)
+* Plague
+* Your current Atom Count
+
+After your first singularity, you will need 1.8e308 Atoms to perform a Singularity again.
+
+==== Milestones ====
+Unlocked with your first Singularity, you can collect Milestone rewards by achieving a certain amount of Singularities or Atoms. Additionally, there are Progression milestones, which inflict penalties until a specific requirement is satisfied, in which the penalty disappears and is replaced with a buff.
+
+==== Effects ====
+Unlocked with your second Singularity, each of your Singularity Count, Atoms amount, and Singularity Multiplier will provide powerful boosts. More effects can be unlocked the more you progress.
+
+==== Tree ====
+Unlocked at 5 Singularities, the Tree allows you to purchase upgrades out of an upgrade tree consisting of 13 nodes using Atoms. Unlike many other upgrades, a purchase will divide your atom count instead of subtracting. Each upgrade can be purchased up to level 10, in which it can be Ascended. Doing so will reset the level but not the effect, though the effect scales slower after and the cost increases faster.
+
+==== Houses ====
+Houses are unlocked at 32 Singularities, and it functions like an advanced version of Astrology. However, each Zodiac can only be placed in its matching House, and they can only be obtained by performing a Singularity with more than 1e1000 Atoms. Each of these zodiacs provide unique buffs to many aspects of your progression.
 
 == Trivia ==
 
