@@ -5,9 +5,10 @@ on:
     - cron: "0 6 * * *"
   workflow_dispatch:
 
+# The app token below does every write, so the job's own GITHUB_TOKEN only ever
+# needs to read the repository for the checkout.
 permissions:
-  contents: write
-  pull-requests: write
+  contents: read
 
 jobs:
   scrape:
@@ -16,6 +17,17 @@ jobs:
     # volunteer-run wiki over the network; cap it well below the 6-hour default.
     timeout-minutes: 15
     steps:
+      # GitHub refuses to raise workflow events for anything the default
+      # GITHUB_TOKEN did, so a PR opened with it arrives with no checks attached
+      # and nothing for auto-merge to wait on. Opening it as the app instead
+      # makes ci.yml fire on the PR the way it does for a human's.
+      - name: Mint an app token
+        id: app-token
+        uses: actions/create-github-app-token@bcd2ba49218906704ab6c1aa796996da409d3eb1 # v3.2.0
+        with:
+          app-id: ${{ vars.SCRAPE_APP_ID }}
+          private-key: ${{ secrets.SCRAPE_APP_PRIVATE_KEY }}
+
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
 
       # Third-party actions are pinned to a full commit SHA: this job holds a
@@ -70,8 +82,10 @@ jobs:
           uv run atlas build
 
       - name: Open pull request
+        id: pr
         uses: peter-evans/create-pull-request@22a9089034f40e5a961c8808d113e2c98fb63676 # v7.0.11
         with:
+          token: ${{ steps.app-token.outputs.token }}
           add-paths: |
             data/raw
             data/derived.yaml
@@ -82,3 +96,17 @@ jobs:
           body: "${{ steps.summary.outputs.body }}"
           commit-message: "chore: daily wiki scrape"
           delete-branch: true
+
+      # Queues the PR rather than merging it: auto-merge waits on whatever the
+      # ruleset on main marks as required, so the required status checks are the
+      # only thing standing between a wiki edit and production. Loosen them and
+      # this becomes an unattended push to main.
+      #
+      # Skipped when the scrape found nothing, in which case no PR was opened
+      # and the step output is empty.
+      - name: Queue the pull request for merge
+        if: steps.pr.outputs.pull-request-number
+        env:
+          GH_TOKEN: ${{ steps.app-token.outputs.token }}
+          PR: ${{ steps.pr.outputs.pull-request-number }}
+        run: gh pr merge "$PR" --squash --auto
