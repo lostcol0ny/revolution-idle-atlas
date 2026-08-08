@@ -1149,7 +1149,7 @@ You can also boost VP by buying relics 22 and 23 and polishing sword:
 * Magnet upgrade 1 effect:<math>1+\text{upgradeLevel}/100</math>
 * Magnet upgrade 2 effect:<math>(\text{upgradeLevel}/1000)%</math>
 * Magnet upgrade 3 effect:<math>4^\text{upgradeLevel}</math>
-* Magnet upgrade 4 effect:(?)
+* Magnet upgrade 4 effect:<math>1.2^{upgradeLevel}</math>
 * Magnet upgrade 5 effect:<math>(\text{upgradeLevel}/1000)%</math>
 * Magnet upgrade 6 effect:<math>(\text{upgradeLevel}/1000)%</math>
 * Magnet upgrade 7 effect:<math>1+\text{UpgradeLevel}</math>
