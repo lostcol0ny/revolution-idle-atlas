@@ -1,106 +1,138 @@
 {{New Content}}
-Singularity is an end-game mechanic unlocked by Refine Node 121.
+Singularity is an end-game mechanic unlocked by Refine Node 121. 
+
+=== Overview ===
+Upon unlocking, you may perform your first Singularity, which will reset the following:
+
+* Minerals (except the Refine Tree)
+* Elements
+* Tarot (except Tarot Challenges)
+* Artifacts
+* Plague
+* Your current Atom count
+
+After your first Singularity, you will need 1.8e308 Atoms to perform a Singularity again.
+
+==== Atoms ====
+Singularity is centered around Atoms, which multiply themselves every second based on your Singularity Multiplier. This multiplier is increased when performing a Singularity, based on all of your Singularity Mult factors.
 
 == Buffs & Penalties ==
 At various atom thresholds you will gain a buff or penalty. These buffs/penalties are only applied if your current atom count is at or above the threshold. Many of these buffs/penalties can be modified via the Mineral and Singularity refine tree nodes, as well as Relic 69. You can view your current buffs/penalties in the lower, right-hand corner of the main Singularity tab.
 {| class="wikitable"
 |+
+!Type
 !Atom Threshold
 !Base Value
 !Resource Affected
 !Modifiable?*
-!Modification Source
+!Notes
 |-
+|BUFF
 |1,000,000
 |^1
 |Atoms Gain
 |Yes
-|Relic 69
+|Unlocked and improved with Relic 69
 |-
+|PENALTY
 |1e10
 |^0.5
 |Atoms Gain
 |Yes
-|Minerals Refine Tree Node 128
+|Reduced (and eventually removed) with levels in RN128
 |-
+|BUFF
 |1e32
 |^1.05
 |Sacrifice Dust Gain
 |No
 |
 |-
+|PENALTY
 |1e50
 |^0.833
 |Atoms Gain
 |Yes
-|Minerals Refine Tree Node 126
+|Removed with RN126
 |-
+|BUFF
 |1e128
 |^1.01
 |Sacrifice Dust Gain
 |No
 |
 |-
+|PENALTY
 |1.40e154
 |^0.847
 |Atoms Gain
 |Yes
-|Minerals Refine Tree Node 127
+|Removed with RN127
 |-
+|BUFF
 |1e200
 |x10
 |Spread Power
 |No
 |
 |-
+|PENALTY
 |1.6e256
 |^0.714
 |Atoms Gain
 |No
 |
 |-
+|PENALTY
 |1.8e308
 |^0.125
 |Atoms Gain
 |Yes
-|Singularity Tree Node 3.1
+|Weakened with Singularity Tree Node 3.1
 |-
+|BUFF
 |1e400
 |^1.03
 |Sacrifice Dust Gain
 |No
 |
 |-
+|PENALTY
 |1e500
 |^0.05
 |Atoms Gain
 |Yes
-|Singularity Tree Node 3.2
+|Weakened with Singularity Tree Node 3.2
 |-
+|BUFF
 |1.00e600
 |^1.01
 |Spread Power
 |No
 |
 |-
+|PENALTY
 |1.00e1000
 |^0.014
 |Atoms Gain
 |Yes
-|Singularity Tree Node 6.2
+|Weakened with Singularity Tree Node 6.2
 |-
+|PENALTY
 |1.00e2000
 |^0.5
 |Atoms Gain
 |No
 |
 |-
+|PENALTY
 |1.00e3000
 |^0.333
 |Atoms Gain
 |No
 |
 |-
+|PENALTY
 |1.00e5000
 |^0.2
 |Atoms Gain
@@ -387,75 +419,99 @@ Unlocked at 5 Singularities. Each individual tree node can be levelled up multip
 !Effect
 !Modifier Type
 !Initial Increase/lvl
+!Base Cost
+!Base Cost Scaling
 |-
 |1
 |Tree Factor (Adds/increases a Singularity mult gain modifier) 
 |Multiplier
 |.01
+|1e300
+|
 |-
 |2
 |Increases Gold gain
 |Exponential
 |.001
+|
+|
 |-
 |3.1
 |Weaken e308 penalty
 |Division
 |.01
+|
+|
 |-
 |3.2
 |Weaken e500 penalty
 |Division
 |.01
+|
+|
 |-
 |4.1
 |Increase Refine Points gain
 |Exponential
 |.001
+|
+|
 |-
 |4.2
 |Increase Golden Resource gain
 |Multiplier
 |.25
+|
+|
 |-
 |5.1
 |Increase Plague Stats Rewards
 |Multiplier
 |.01
+|
+|
 |-
 |5.2
 |Increase Plague Generators Reward
 |Exponential
 |.03
+|
+|
 |-
 |6.1
 |Weaken next Singularity nerf
 |Division
 |.05
+|1e600
+| rowspan="5" |x1e10
 |-
 |6.2
 |Weaken e1,000 Atom Penalty
 |Division
 |.02
+|1e600
 |-
 |7.1
 |Increase First Singularity Zodiac Level Mult
 |Multiplier
 |.006
+|1e800
 |-
 |7.2
 |Second Singularity Zodiac Level Mult
 |Multiplier
 |.006
+|1e800
 |-
 |8
 |All Singularity Tree Upgrade Efficiency
 |Multiplier
 |.001
+|1e1000
 |}
 
 == Houses ==
-Unlocked at 32 Singularities. An advanced version of Astrology; you get a Singular Zodiac when Singularizing with 1e1000 Atoms or more. Zodiacs must be placed in their matching House on the circle. Each spot is numbered with roman numerals, starting with I at the west, and moving counter-clockwise.
+Unlocked at 32 Singularities. An advanced version of Astrology; you get a Singular Zodiac when Singularizing with 1e1000 Atoms or more. Zodiacs must be placed in their matching House on the circle. Each spot is numbered with roman numerals, starting with I at the west, and moving counter-clockwise. A second effect is unlocked at the Godly rarity, and a third is unlocked at Rainbow rarity (unaccessible as of writing).
 {| class="wikitable"
 |+Singular zodiac effects
 !House

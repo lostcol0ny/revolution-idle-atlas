@@ -296,57 +296,67 @@ Each completed challenge:
 * Grants a challenge-specific bonus
 * Adds +1 to IP gain multiplier
 {| class="wikitable mw-collapsible" style="text-align:center; width: 80%; font-size: 1rem"
-|colspan="4"|'''Infinity Challenges'''
+|colspan="5"|'''Infinity Challenges'''
 |-
 !Challenge
 !Handicap
 !Reward
 !Should be done
+!Name
 |-
 |1
 |Promotions 2 and 4 are disabled
 |Promotions 2 and 4 are stronger
 |Right after unlock
+|Ionized Speed
 |-
 |2
 |Ascension Power is divided by 4
 |Ascension Power is multiplied by 1.2
 |Right after Challenge 1
+|Descent
 |-
 |3
 |Common Exp. is reduced by 0.4
 |Common Exp. is increased by +0.03
 |All IU up to and including Column 8
+|The First Root
 |-
 |4
 |Prestige and Promote gains powered to ^0.4
 | +1 level to all promotions after Infinity
 |When G2 is bought; all IU up to Column 9 (optional)
+|Steep Climbs
 |-
 |5
 |All Promotions are a lot weaker
 |All promotions are a bit stronger now
 |Right after Challenge 4
+|Fired From Work
 |-
 |6
 |Multipliers decay over time (limited to 1 minimum)
 |All generators are twice as strong
 |Right after Challenge 5
+|The Drain
 |-
 |7
 |All Mults are divided by (time in Infinity)^2
 |All mults are mult. by (time in Infinity)^0.2
 |All IU up to and including Column 13
+|Quadratic Division
 |-
 |8
 |Ascensions are disabled
 |Base Ascension Power is increased by 2
 |All IU up to and including Column 14
+|Noscensions
 |-
 |9
 |You have only four colors
 |Double Infinites gain + '''Break Infinity'''
 |Right after Challenge 8
+|Isolationism
 |}
 Challenges 4 and 9 may take several hours. Others normally take under 1 hour.
 
