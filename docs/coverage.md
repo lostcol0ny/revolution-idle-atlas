@@ -309,7 +309,7 @@ The tail is redirect stubs of a few dozen bytes. They sort to the bottom on thei
 | `Leaderboard` | 1319 |
 | `Revolution_Idle_Wiki/Links` | 1094 |
 | `Revolution_Idle_Wiki/Index` | 929 |
-| `Infinity_Upgrades` | 705 |
+| `Infinity_Upgrades` | 839 |
 | `Credits` | 527 |
 | `Revolution_Idle_Wiki/contribute` | 496 |
 | `Revolution_Idle_Wiki/welcome` | 463 |
