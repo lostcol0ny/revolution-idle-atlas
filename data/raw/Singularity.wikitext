@@ -1,4 +1,5 @@
 {{New Content}}
+[[File:Screenshot 2026-08-11 103049.png|thumb|The Singularity tab]]
 Singularity is an end-game mechanic unlocked by Refine Node 121. 
 
 === Overview ===
@@ -188,6 +189,7 @@ Whenever you Singularize you will gain a bonus to Singularity Mult which determi
 |}
 
 == Milestones ==
+[[File:Screenshot 2026-08-11 103100.png|thumb|Singularity Milestones]]
 The Milestones tab automatically unlocks with your first Singularity. There are 3 types of milestones: Singularity milestones, Atom milestones, and Progression milestones. 
 {| class="wikitable"
 |+Singularity Milestones
@@ -343,7 +345,7 @@ Progression Milestones work differently than other milestones, and instead have 
 |}
 == Effects ==
 Unlocked at 2 Singularities. 
-
+[[File:Screenshot 2026-08-11 103107.png|thumb|The Effects tab]]
 Singularities, Atom amount, and your Singularity Multiplier will begin providing boosts to other areas of your progression. 
 
 You start with 4 total effects, but you can unlock more through various means. 
@@ -412,6 +414,7 @@ You start with 4 total effects, but you can unlock more through various means.
 |}
 
 == Tree ==
+[[File:Screenshot 2026-08-11 103117.png|thumb|The Singularity Tree]]
 Unlocked at 5 Singularities. Each individual tree node can be levelled up multiple times, up to level 10, and you must purchase at least one level in the previous node in order to unlock and buy the next node. Once a node reaches level 10 you can choose to "Ascend" it which resets its level but keeps the effect bonus and resets the initial level upgrade cost. After ascending, the upgrade costs increase at a higher rate for each level and give less bonus per level. Unlike buying RfP nodes, when purchasing a Singularity tree node upgrade it divides your atom count rather than subtracting from it. 
 {| class="wikitable"
 |+
@@ -511,6 +514,7 @@ Unlocked at 5 Singularities. Each individual tree node can be levelled up multip
 |}
 
 == Houses ==
+[[File:Screenshot 2026-08-11 103128.png|thumb|The Houses tab]]
 Unlocked at 32 Singularities. An advanced version of Astrology; you get a Singular Zodiac when Singularizing with 1e1000 Atoms or more. Zodiacs must be placed in their matching House on the circle. Each spot is numbered with roman numerals, starting with I at the west, and moving counter-clockwise. A second effect is unlocked at the Godly rarity, and a third is unlocked at Rainbow rarity (unaccessible as of writing).
 {| class="wikitable"
 |+Singular zodiac effects
