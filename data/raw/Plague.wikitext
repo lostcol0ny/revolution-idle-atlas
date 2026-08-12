@@ -1,4 +1,5 @@
 {{New Content}}
+[[File:Screenshot 2026-08-11 103231.png|thumb|The Plague tab]]
 Plague is the 7th subtab in {{Keyword|unity|Unity}}, and can be unlocked through {{Keyword|unknown|Refine Tree Node 103}}. 
 
 __toc__
@@ -402,6 +403,7 @@ There are 6 different statistics, and each provide significant boosts.
 In the top left, where the animated viruses are, the player has an option to name their plague, and doing so will grant {{Keyword|ach|Achievement 529}}.
 
 == Endoplasmic Reticulum ==
+[[File:Screenshot 2026-08-11 103236.png|thumb|Endoplasmic Reticulum section]]
 Endoplasmic Reticula (ERs) are unlocked through {{Keyword|node|Refine Tree Node 104}}. Here, you can craft ERs by flushing an amount of your current PlP, anywhere from 1% to 100% at a time.
 
 === Crafting ===
