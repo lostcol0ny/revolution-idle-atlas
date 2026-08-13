@@ -308,8 +308,8 @@ The tail is redirect stubs of a few dozen bytes. They sort to the bottom on thei
 | `Infinity_Challenges` | 1352 |
 | `Leaderboard` | 1319 |
 | `Revolution_Idle_Wiki/Links` | 1094 |
+| `Infinity_Upgrades` | 946 |
 | `Revolution_Idle_Wiki/Index` | 929 |
-| `Infinity_Upgrades` | 894 |
 | `Credits` | 527 |
 | `Revolution_Idle_Wiki/contribute` | 496 |
 | `Revolution_Idle_Wiki/welcome` | 463 |
