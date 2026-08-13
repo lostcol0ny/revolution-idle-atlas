@@ -415,15 +415,15 @@
 | rfp increase = 
 | effect = Unlocks Automation for upgrading Artifact Parts
 | req = 100 }}
-{{RN|103| max = 1 | rfp = 
+{{RN|103| max = 1 | rfp = 1e2,425
 | rfp increase = 
 | effect = Unlocks Plague Tab
 | req = 96 }}
-{{RN|104| max = 1 | rfp = 
+{{RN|104| max = 1 | rfp = 1e2,500
 | rfp increase = 
 | effect = Unlocks Endoplasmic Reticulum
 | req = 96 }}
-{{RN|105| max = 1 | rfp = 
+{{RN|105| max = 1 | rfp = 1e2,560
 | rfp increase = 
 | effect = The Hierophant Passive Bonus is now boosted by the level of your equipped Endoplasmic Reticulum
 | req = 96 }}

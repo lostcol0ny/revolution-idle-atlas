@@ -1,8 +1,8 @@
-{{Stub|notes=Information about every Infinity Upgrade after Column 2}}
+{{Stub|notes=Information about every Infinity Upgrade after Column 4}}
 
 After your first Infinity, you will unlock a new tab named '''Infinity'''. Here, a tree will be shown. These are the Infinity Upgrades ('''IU'''), the first of 4 core mechanics. The upgrades cost Infinity Points (IP) in return for some essential bonuses.
 
 == Buying First Upgrades ==
-Buy your first IU [1;1]. It will multiply the first Generator, which makes '''GP''' (Generator Points) by the number of Infinities. It will also unlock a new tab, called '''Automations''', where you can automate many things, even though only 1 is available in the beginning (''Automate Purchases (Colors))''. Then it splits in two, [2;1], which increases the Common Exponent by 0.01 and [2;2], which unlocks a new automation (Automate Ascensions). Then with [3;1], it multiplies the lap speed by 1.1.
+Buy your first IU [1;1]. It will multiply the first Generator, which makes '''GP''' (Generator Points) by the number of Infinities. It will also unlock a new tab, called '''Automations''', where you can automate many things, even though only 1 is available in the beginning (''Automate Purchases (Colors))''. Then it splits in two, [2;1], which increases the Common Exponent by 0.01 and [2;2], which unlocks a new automation (Automate Ascensions). Then with [3;1], it multiplies the lap speed by 1.1, and with [4;1], it multiplies the lap speed by 1.2.
 [[Category:Infinity]]
 {{Main navbox}}
