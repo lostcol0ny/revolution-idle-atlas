@@ -294,7 +294,7 @@ Zodiac Rarity will affect the base strength of the stat roll that you can have, 
 
 * Garbage - Epic: 2 boosts
 * Legendary - Godly: 3 boosts
-* Divine - +Immortal: 4 boosts
+* Divine - Immortal+: 4 boosts
 
 The luck range for each rarities from Garbage to Immortal are:
 {| class="wikitable"
@@ -389,7 +389,7 @@ All Zodiac rarities here on out will use the +x system, and progressing to the n
 |Prime
 |1.57e1472
 |7.9e2671235
-|Achievement 670 =?> Rainbow Zodiacs
+|Achievement 670 ==> Rainbow Zodiacs
 |-
 |Rainbow
 |?
