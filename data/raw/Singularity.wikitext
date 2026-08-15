@@ -561,7 +561,7 @@ Unlocked at 32 Singularities. An advanced version of Astrology; you get a Singul
 |VIII
 |Scorpio
 |Base Spread Multi
-|
+|Singularity Mult Boost
 |-
 |IX
 |Saggitarius
@@ -576,7 +576,7 @@ Unlocked at 32 Singularities. An advanced version of Astrology; you get a Singul
 |XI
 |Aquarius
 |Black Gem Effect 
-|
+|Wind Element Factor 3
 |-
 |XII
 |Pisces

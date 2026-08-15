@@ -3833,6 +3833,7 @@ nodes:
   confidence: provisional
   effects:
   - text: Base Spread Multi
+  - text: Singularity Mult Boost
 - id: singularity-zodiac-saggitarius
   name: Singular Zodiac Saggitarius
   system: houses
@@ -3857,6 +3858,7 @@ nodes:
   confidence: provisional
   effects:
   - text: Black Gem Effect
+  - text: Wind Element Factor 3
 - id: singularity-zodiac-pisces
   name: Singular Zodiac Pisces
   system: houses
@@ -9565,6 +9567,11 @@ edges:
   rel: boosts
   source: wiki:Singularity
   confidence: uncertain
+- from: singularity-zodiac-scorpio
+  to: singularity-mult
+  rel: boosts
+  source: wiki:Singularity
+  confidence: uncertain
 - from: singularity-zodiac-saggitarius
   to: attack-exponent
   rel: boosts
@@ -9577,6 +9584,11 @@ edges:
   confidence: uncertain
 - from: singularity-zodiac-aquarius
   to: special-mineral-black-gem
+  rel: boosts
+  source: wiki:Singularity
+  confidence: uncertain
+- from: singularity-zodiac-aquarius
+  to: wind-factor-3
   rel: boosts
   source: wiki:Singularity
   confidence: uncertain

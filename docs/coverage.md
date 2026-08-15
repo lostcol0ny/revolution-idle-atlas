@@ -293,7 +293,7 @@ The tail is redirect stubs of a few dozen bytes. They sort to the bottom on thei
 |---|---|
 | `Achievements` | 101707 |
 | `Suicons_playroom` | 21509 |
-| `Secret_Achievements` | 18203 |
+| `Secret_Achievements` | 18255 |
 | `Attacks_Strategy` | 17849 |
 | `Automations` | 11625 |
 | `Macro_Builder` | 11610 |

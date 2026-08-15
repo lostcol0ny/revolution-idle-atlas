@@ -18571,6 +18571,15 @@
       "to": "base-spread-power"
     },
     {
+      "confidence": "documented",
+      "from": "singularity-zodiac-scorpio",
+      "note": "Second effect, unlocked at Divine",
+      "op": "mult",
+      "rel": "boosts",
+      "source": "observed",
+      "to": "singularity-mult"
+    },
+    {
       "confidence": "uncertain",
       "from": "singularity-zodiac-saggitarius",
       "rel": "boosts",
@@ -18590,6 +18599,15 @@
       "rel": "boosts",
       "source": "wiki:Singularity",
       "to": "special-mineral-black-gem"
+    },
+    {
+      "confidence": "documented",
+      "from": "singularity-zodiac-aquarius",
+      "note": "Second effect, unlocked at Divine",
+      "op": "mult",
+      "rel": "boosts",
+      "source": "observed",
+      "to": "wind-factor-3"
     },
     {
       "confidence": "uncertain",
@@ -24832,15 +24850,6 @@
     {
       "confidence": "documented",
       "from": "singularity-zodiac-scorpio",
-      "note": "Second effect, unlocked at Divine",
-      "op": "mult",
-      "rel": "boosts",
-      "source": "observed",
-      "to": "singularity-mult"
-    },
-    {
-      "confidence": "documented",
-      "from": "singularity-zodiac-scorpio",
       "note": "Third effect, unlocked at Rainbow",
       "op": "mult",
       "rel": "boosts",
@@ -24882,15 +24891,6 @@
       "rel": "boosts",
       "source": "observed",
       "to": "plp-per-plg"
-    },
-    {
-      "confidence": "documented",
-      "from": "singularity-zodiac-aquarius",
-      "note": "Second effect, unlocked at Divine",
-      "op": "mult",
-      "rel": "boosts",
-      "source": "observed",
-      "to": "wind-factor-3"
     },
     {
       "confidence": "documented",
