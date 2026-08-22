@@ -707,11 +707,8 @@ When the player wishes to allocate their {{Keyword|dtp|DTP}} in a different way,
 * Reset your current {{Keyword|eternity|Eternity}}
 * Reset (zero) your {{Keyword|dp|Dilation Points}} ({{Keyword|dp|DP}})
 * Reset your maximum Dilation Score (to zero)
-* Reduce the levels of the first 3 Dilation Upgrades (DU1, DU2 & DU3) by 5%
 
-''Note: The cost to re-buy lost DU1, DU2 and DU3 levels will also reduce, in accordance with their reduced levels. It is recommended to re-buy these levels when you are next in a {{Keyword|dp|DP}}-Income-focused tree setup.''
-
-''Note 2: The respec penalties may seem harsh, but with limited {{Keyword|dtp|DTP}} it will be necessary to respec often in order to progress through Dilation Tree, using different setups for different purposes. More details on when and why to respec can be found in the [[Walkthrough]].
+''Note: The respec penalties may seem harsh, but with limited {{Keyword|dtp|DTP}} it will be necessary to respec often in order to progress through Dilation Tree, using different setups for different purposes. More details on when and why to respec can be found in the [[Walkthrough]].''
 
 ==='''Dilation Tree Loadouts'''===
 Dilation Tree setups can be saved as "loadouts" by using the button (a dot followed by a line, stacked three high) within the tab. By default, 3 Loadouts can be saved, and 5 additional Loadouts can be purchased for {{Keyword|soul|Souls}} {{Icon|souls}} (starting at {{Keyword|soul|1,000 Souls}} and increasing in cost with each purchase).
@@ -725,7 +722,7 @@ Players can Export their loadouts to their device's clipboard from within the lo
 =='''Statistics for nerds'''==
 ==='''Eternity Bonuses & Milestones formulae'''===
 
-==== <big>
+<nowiki>====</nowiki> <big>
 <math>
 \text{Eternity Mult Gain Bonus} = \left\{ \begin{array}{cl}
  \text{Eternities} < 20 : & \ 1 + \text{Eternities} \\
@@ -799,6 +796,7 @@ Players can Export their loadouts to their device's clipboard from within the lo
 \end{array} \right.
 </math>
 </big>
+
 
 
 
