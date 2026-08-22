@@ -247,7 +247,7 @@ Each {{Keyword|ach|completed achievement}} grants a multiplier bonus and some ac
 | name = Backwards
 | description = Make White mult > Pink mult > Purple mult, etc...
 | reward = A fading sense of accomplishment<br>
-Dilation Tree TOP-4, MID-4 and BOT-4<br> upgrades are 30% stronger
+Dilation Tree TOP-4, MID-4 and BOT-4<br> upgrades are 30% stronger <ref>Achievement 29 Clarification: The boost to Dilation Tree is only applied after obtaining {{Keyword|ach|Achievement 140}}</ref>
 | reward_type = achievement
 }}
 {{Achievement/NormalRowItem
@@ -3996,8 +3996,1258 @@ Dilation Tree TOP-4, MID-4 and BOT-4<br> upgrades are 30% stronger
 | reward_type =achievement 
 | reward_icon = 
 }}
+{{Achievement/NormalRowItem
+| icon = Screenshot_2026-08-16_154027.png
+| name = Rock Bottom Deluxe
+| description = Have all sacrificed Special Minerals at Level 63+ 
+| reward = +200
+| reward_type =souls 
+| reward_icon = y
+}}
+{{Achievement/NormalRowItem
+| icon = Screenshot 2026-08-16 154034.png
+| name = Some Assembly Required
+| description = Get all parts for all artifacts
+| reward = +100
+| reward_type =souls 
+| reward_icon = y
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Screenshot 2026-08-16 154040.png
+| name = Bonk Overflow
+| description =Reach Attack Level 33333+ 
+| reward =+200
+| reward_type =souls 
+| reward_icon = y
+}}
+{{Achievement/NormalRowItem
+| icon = Screenshot 2026-08-16 154048.png
+| name = Patient Zero
+| description = Unlock Plague Tab
+| reward =+10:00 TF
+| reward_type =time flux
+| reward_icon = 
+}}
+{{Achievement/NormalRowItem
+| icon = Screenshot 2026-08-16 154054.png
+| name =It Started in a Shack
+| description =Complete Plague Stage 1-2 (Shack)
+| reward =+150
+| reward_type =souls 
+| reward_icon = y
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Screenshot 2026-08-16 154101.png
+| name = Factory of Bad Decisions
+| description = Have 10 Plague Generators 
+| reward =+100 
+| reward_type =souls 
+| reward_icon = y
+}}
+{{Achievement/NormalRowItem
+| icon = Screenshot 2026-08-16 154107.png
+| name =100 People Know
+| description =Infect 100+ Total Population
+| reward =+150 
+| reward_type =souls 
+| reward_icon = y
+}}
+{{Achievement/NormalRowItem
+| icon = Screenshot 2026-08-16 154111.png
+| name =Tactical Retreat
+| description = Abandon, win, or lose infection 50+ times
+| reward =+200
+| reward_type =souls 
+| reward_icon = y
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Screenshot 2026-08-16 154117.png
+| name =Naming Things Is Hard
+| description =Name your Virus somehow
+| reward =+100
+| reward_type =souls 
+| reward_icon = y
+}}
+{{Achievement/NormalRowItem
+| icon = Screenshot 2026-08-16 154221.png
+| name =Inside Job
+| description =Craft Level 5+ Endoplasmic Reticulum 
+| reward =+10:00
+| reward_type =time flux 
+| reward_icon = 
+}}
+{{Achievement/NormalRowItem
+| icon = Screenshot 2026-08-16 154226.png
+| name =Forbidden Soup
+| description = Have 100+ Virus Essence 
+| reward = +150 
+| reward_type =souls 
+| reward_icon = y
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Screenshot 2026-08-16 154232.png
+| name = Biology Major Moment 
+| description = Buy any ER Upgrade
+| reward =+100
+| reward_type =souls 
+| reward_icon = y
+}}
+{{Achievement/NormalRowItem
+| icon = Screenshot 2026-08-16 154238.png
+| name = House Party Gone Wrong
+| description = Complete all houses plague stages 1-12
+| reward =+250 
+| reward_type =souls 
+| reward_icon = y
+}}
+{{Achievement/NormalRowItem
+| icon = Screenshot 2026-08-16 154243.png
+| name = B Stands for Biohazard
+| description = Craft and ER with B rarity or better
+| reward =Unlocks Autocraft Endoplasmic Reticulum
+| reward_type =achievement 
+| reward_icon = 
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Screenshot 2026-08-16 154248.png
+| name =Goldmaxxing
+| description =Reach 5,000,000+ of all golden Tarot resources 
+| reward = +200
+| reward_type =souls 
+| reward_icon = y
+}}
+{{Achievement/NormalRowItem
+| icon = Screenshot 2026-08-16 154254.png
+| name = Six Seven
+| description = Have 6.70e67+ total card levels
+| reward =+150
+| reward_type =souls 
+| reward_icon = y
+}}
+{{Achievement/NormalRowItem
+| icon = Screenshot 2026-08-16 154300.png
+| name = Local News Disaster 
+| description =Complete all Towns Plague Stages 2-12
+| reward =Unlocks the option to repeat Plague stages
+| reward_type =achievement 
+| reward_icon = 
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Screenshot 2026-08-16 154311.png
+| name = ER Maxxer
+| description = Craft Lv.20+ Endoplasmic Reticulum 
+| reward =+10:00 TF
+| reward_type =time flux
+| reward_icon = 
+}}
+{{Achievement/NormalRowItem
+| icon = Screenshot 2026-08-16 154315.png
+| name = Infectivity Is A Law
+| description = Reach 70+/s Spread Speed on Islands+
+| reward =Unlocks Enter/Exit Tarot Challenge macro blocks 
+| reward_type =achievement 
+| reward_icon = 
+}}
+{{Achievement/NormalRowItem
+| icon = Screenshot_2026-08-16_154321.png
+| name = No Man is an Island
+| description =Complete all Islands Plague Stages 3-12
+| reward = +100
+| reward_type =souls 
+| reward_icon = y
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Screenshot_2026-08-16_161036.png
+| name = Swan Flu
+| description = Buy Relic 61 
+| reward =+250 
+| reward_type =souls 
+| reward_icon = y
+}}
+{{Achievement/NormalRowItem
+| icon = Screenshot_2026-08-16_161041.png
+| name = Mirror Mirror On The Wall
+| description = Have Lv.90+ Crystal Mirror
+| reward =+100 
+| reward_type =souls 
+| reward_icon = y
+}}
+{{Achievement/NormalRowItem
+| icon = Screenshot_2026-08-16_161048.png
+| name = Iceolated Case
+| description = Complete Iceland Plague Stage 4-3
+| reward =+200
+| reward_type =souls 
+| reward_icon = y
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Screenshot_2026-08-16_161055.png
+| name = Tbilisi Transmission
+| description = Complete Georgia plague stage 4-4 
+| reward =+15:00
+| reward_type =time flux 
+| reward_icon = y
+}}
+{{Achievement/NormalRowItem
+| icon = Screenshot_2026-08-16_161100.png
+| name =Major Oopsie
+| description = Lose a stage
+| reward =+100 
+| reward_type =souls 
+| reward_icon = y
+}}
+{{Achievement/NormalRowItem
+| icon = Screenshot_2026-08-16_161105.png
+| name = Coconutto Peloso
+| description = Buy Relic 62
+| reward =1200
+| reward_type =souls 
+| reward_icon = y
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Screenshot_2026-08-16_161126.png
+| name = One Point Per Problem
+| description = Reach 1+ Plp/s per PlG
+| reward =+200 
+| reward_type =souls 
+| reward_icon = y
+}}
+{{Achievement/NormalRowItem
+| icon = Screenshot_2026-08-16_161131.png
+| name = Very Important Pathogen
+| description =Reach 1e10+ ViP
+| reward = Unlock Auto Dissolve Endoplastic Reticulum
+| reward_type = achievement
+| reward_icon = 
+}}
+{{Achievement/NormalRowItem
+| icon = Screenshot_2026-08-16_161136.png
+| name = Artifact Centurion
+| description = Reach Lv.100+ for all artifacts
+| reward =+250
+| reward_type =souls 
+| reward_icon = y
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Screenshot_2026-08-16_161145.png
+| name = Vacation Gone Viral
+| description = Complete Dominican Republic stage 4-5 
+| reward = Unlocks Enter Plague Stage and Exit Plague Stage macro blocks
+| reward_type = achievement 
+| reward_icon = 
+}}
+{{Achievement/NormalRowItem
+| icon = Screenshot_2026-08-16_161154.png
+| name = Plagueillionaire
+| description = Have over 1.00e9 PlG
+| reward =+250 
+| reward_type =souls 
+| reward_icon = y
+}}
+{{Achievement/NormalRowItem
+| icon = Screenshot_2026-08-16_161158.png
+| name = Sigma Reticulum
+| description = Craft S rarity Endoplasmic Reticulum
+| reward =+15:00 TF
+| reward_type =time flux
+| reward_icon = 
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Screenshot_2026-08-16_161204.png
+| name = R0 Enjoyer
+| description = Have Base Spread Power ER Upgrade at Lv.25+ 
+| reward =+250 
+| reward_type =souls 
+| reward_icon = y
+}}
+{{Achievement/NormalRowItem
+| icon = Screenshot_2026-08-16_161211.png
+| name = Cellular Cashout
+| description = Dissolve an ER for 1,000,000+ VE
+| reward =+15:00
+| reward_type =time flux
+| reward_icon =
+}}
+{{Achievement/NormalRowItem
+| icon = Screenshot_2026-08-16_161215.png
+| name = Windmills & Infected Tulips
+| description = Complete Netherlands stage 4-6
+| reward =+100
+| reward_type =souls 
+| reward_icon = y
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Screenshot_2026-08-16_161220.png
+| name = Speedrun The Symptoms
+| description = Reach 2000+ spread speed in countries+ 
+| reward =+15:00 TF 
+| reward_type = time flux
+| reward_icon = 
+}}
+{{Achievement/NormalRowItem
+| icon = Screenshot_2026-08-16_161223.png
+| name =Tarot Midas
+| description =Reach 100,000,000+ of all golden tarot resources
+| reward =+100 
+| reward_type =souls 
+| reward_icon = y
+}}
+{{Achievement/NormalRowItem
+| icon = Screenshot_2026-08-16_161227.png
+| name = Artifacts Go Brrr
+| description = Reach x10+ Artifacts Local Speed (shop boost does not apply)
+| reward =+150
+| reward_type =souls 
+| reward_icon = y
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Screenshot_2026-08-16_161231.png
+| name = Page Turner
+| description = Complete all Page Challenges 
+| reward =+300 
+| reward_type =souls 
+| reward_icon = y
+}}
+{{Achievement/NormalRowItem
+| icon = Screenshot_2026-08-16_161236.png
+| name =100 Million Subscribers
+| description =Infect 100,000,000+ Total Population
+| reward =+200 
+| reward_type =souls 
+| reward_icon = y
+}}
+{{Achievement/NormalRowItem
+| icon = Screenshot_2026-08-16_161242.png
+| name = Thai Screaming Birdkid Incident
+| description = Buy Relic 63
+| reward =+250
+| reward_type =souls 
+| reward_icon = y
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Screenshot_2026-08-16_161248.png
+| name = Fine, I'll Refine
+| description = Buy Refine Node 110 
+| reward =+10:00 TF 
+| reward_type =time flux
+| reward_icon = 
+}}
+{{Achievement/NormalRowItem
+| icon = Screenshot_2026-08-16_161253.png
+| name = Thirty Reticulums Later
+| description = Craft Lv.30+ ER
+| reward = Unlocks Craft ER macro block
+| reward_type =achievement
+| reward_icon = 
+}}
+{{Achievement/NormalRowItem
+| icon = Screenshot_2026-08-16_161259.png
+| name = Sorry, It's Contagious
+| description = Complete Canada stage 4-7
+| reward =+15:00 TF
+| reward_type = time flux 
+| reward_icon = y
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Screenshot_2026-08-16_161304.png
+| name = Firemaxxing
+| description = Reach e1,000,000+ Fire
+| reward =+200 
+| reward_type =souls 
+| reward_icon = y
+}}
+{{Achievement/NormalRowItem
+| icon = Screenshot_2026-08-16_161309.png
+| name = Upside-Down Grind
+| description = Complete the Hanged Man Tarot Challenge
+| reward =+100 
+| reward_type =souls 
+| reward_icon = y
+}}
+{{Achievement/NormalRowItem
+| icon = Screenshot_2026-08-16_161313.png
+| name = Funni Sacrifice
+| description = All sacrificed Special Minerals Lv.67+
+| reward =+300
+| reward_type =souls 
+| reward_icon = y
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Screenshot_2026-08-16_161318.png
+| name = Strategic Funeral
+| description = Refine 10-50 sec after using the Death Card during the Death Challenge 
+| reward =+15:00 
+| reward_type =time flux 
+| reward_icon = 
+}}
+{{Achievement/NormalRowItem
+| icon = Screenshot_2026-08-16_161325.png
+| name = Ultimate Six One
+| description = Reach Lv.61+ for Relic 61
+| reward =+200 
+| reward_type =souls 
+| reward_icon = y
+}}
+{{Achievement/NormalRowItem
+| icon = Screenshot_2026-08-16_161330.png
+| name = Cure? I Hardly Know Her
+| description = Defeat a stage after the cure is ready (or complete all 60 basic plague challenges)
+| reward =+150
+| reward_type =souls 
+| reward_icon = y
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Screenshot_2026-08-16_161336.png
+| name = Emergency Refine
+| description = Buy Refine Node 112
+| reward =+300 
+| reward_type =souls 
+| reward_icon = y
+}}
+{{Achievement/NormalRowItem
+| icon = Screenshot_2026-08-16_161344.png
+| name = Unavailable Under Legacy Management
+| description = Complete Russia stage 4-10
+| reward =+15:00 
+| reward_type =time flux
+| reward_icon = 
+}}
+{{Achievement/NormalRowItem
+| icon = Screenshot_2026-08-16_161349.png
+| name = Midas Multiverse
+| description = Reach 1e9+ of all golden tarot resources
+| reward =+15:00
+| reward_type =time flux
+| reward_icon = y
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Screenshot_2026-08-16_161356.png
+| name = Organelle Boss Room
+| description = Buy Relic 64
+| reward =+250 
+| reward_type =souls 
+| reward_icon = y
+}}
+{{Achievement/NormalRowItem
+| icon = Screenshot_2026-08-16_161401.png
+| name = United Stages of Infection
+| description = Complete USA stage 4-11
+| reward =+350 
+| reward_type =souls 
+| reward_icon = y
+}}
+{{Achievement/NormalRowItem
+| icon = Screenshot_2026-08-16_161406.png
+| name = Random Zodiac Therapy
+| description = Complete the Temperance Tarot Challenge
+| reward = Multiplies Empress Effect by x100
+| reward_type = achievement
+| reward_icon = 
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Screenshot_2026-08-16_161410.png
+| name = Fortune Goes Vertical
+| description = Have 1e10000 of all tarot resources
+| reward =+300 
+| reward_type =souls 
+| reward_icon = y
+}}
+{{Achievement/NormalRowItem
+| icon = Screenshot_2026-08-16_161414.png
+| name = Triple One, Triple Done
+| description = Upgrade Refine Node 111 to max Lv.25
+| reward =+250 
+| reward_type =souls 
+| reward_icon = y
+}}
+{{Achievement/NormalRowItem
+| icon = Screenshot_2026-08-16_161417.png
+| name =Cellular PhD
+| description = Craft ER Lv.40+
+| reward =+350
+| reward_type =souls 
+| reward_icon = y
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Screenshot_2026-08-16_161422.png
+| name = The Dragon Falls
+| description = Complete China stage 4-12
+| reward =+15:00 
+| reward_type =time flux 
+| reward_icon = 
+}}
+{{Achievement/NormalRowItem
+| icon = Screenshot_2026-08-16_161426.png
+| name = Four Knights Of The Apocalypse
+| description = Complete all Knight challenges
+| reward =+350 
+| reward_type =souls 
+| reward_icon = y
+}}
+{{Achievement/NormalRowItem
+| icon = Screenshot_2026-08-16_161438.png
+| name = Golden Sum Game
+| description = Reach a combined total of 1e10+ golden tarot resources
+| reward =+15:00
+| reward_type =time flux 
+| reward_icon =
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Screenshot_2026-08-16_161444.png
+| name = Crocodilo Primavera
+| description = Buy Relic 66 
+| reward =+350 
+| reward_type =souls 
+| reward_icon = y
+}}
+{{Achievement/NormalRowItem
+| icon = Screenshot_2026-08-16_161507.png
+| name = Calnyth Contagion
+| description = Complete Calnyth planet stage 5-3
+| reward =+150 
+| reward_type =souls 
+| reward_icon = y
+}}
+{{Achievement/NormalRowItem
+| icon = Screenshot_2026-08-16_161514.png
+| name = Global Subscriber Count
+| description = Infect 1e9+ on Earth stage 5-5
+| reward =+150
+| reward_type =souls 
+| reward_icon = y
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Screenshot_2026-08-16_161518.png
+| name = Gains In The Cards
+| description = Buy Tarot Upgrade Pentacle-10
+| reward =+200 
+| reward_type =souls 
+| reward_icon = y
+}}
+{{Achievement/NormalRowItem
+| icon = Screenshot_2026-08-16_161523.png
+| name = Billion Was Tutorial
+| description = Reach 1e10+ of all golden tarot resources
+| reward =+150 
+| reward_type =souls 
+| reward_icon = y
+}}
+{{Achievement/NormalRowItem
+| icon = Screenshot_2026-08-16_161528.png
+| name = Refine Patch Notes
+| description = Buy Refine Node 116
+| reward =+250
+| reward_type =souls 
+| reward_icon = y
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Screenshot_2026-08-16_161531.png
+| name = Osteogenesis Overdrive
+| description = Reach Lv.200+ Magical Skull 
+| reward =+300 
+| reward_type =souls 
+| reward_icon = y
+}}
+{{Achievement/NormalRowItem
+| icon = Screenshot_2026-08-16_161535.png
+| name = Earth Got Cooked
+| description = Complete Earth stage 5-5
+| reward =+15:00 
+| reward_type = time flux
+| reward_icon =
+}}
+{{Achievement/NormalRowItem
+| icon = Screenshot_2026-08-16_210632.png
+| name = Population Overflow
+| description = Infect 1e11 Total Population
+| reward =+300
+| reward_type = souls
+| reward_icon =y
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Screenshot_2026-08-16_210641.png
+| name = Nice, but not as funny as two numbers before
+| description = Have all sacrificed Special Minerals at Level 69+
+| reward =+150 
+| reward_type =souls 
+| reward_icon = y
+}}
+{{Achievement/NormalRowItem
+| icon = Screenshot_2026-08-16_210657.png
+| name = Too Dark For An Incremental Game
+| description = Sacrifice Relic 58
+| reward =+350 
+| reward_type =souls 
+| reward_icon = y
+}}
+{{Achievement/NormalRowItem
+| icon = Screenshot_2026-08-16_210704.png
+| name = The Devil Went Down To Dilation
+| description = Complete the Devil Tarot Challenge
+| reward =+15:00 TF
+| reward_type =time flux 
+| reward_icon = 
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Screenshot_2026-08-16_210710.png
+| name = Plague Generator Industrial Complex
+| description = Have 1e14+ PlG
+| reward =+300 
+| reward_type =souls 
+| reward_icon = y
+}}
+{{Achievement/NormalRowItem
+| icon = Screenshot_2026-08-16_210715.png
+| name = Another World, Same Symptoms
+| description = Complete Brundar planet stage 5-8
+| reward =+150 
+| reward_type =souls 
+| reward_icon = y
+}}
+{{Achievement/NormalRowItem
+| icon = Screenshot_2026-08-16_210721.png
+| name = Profit Motive
+| description = Upgrade Pentacle-10 to Lv.4+
+| reward =+15:00
+| reward_type =time flux 
+| reward_icon = 
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Screenshot_2026-08-16_210726.png
+| name = Valdecrum Verdict
+| description = Complete Valdecrum planet stage 5-11
+| reward =+300 
+| reward_type =souls 
+| reward_icon = y
+}}
+{{Achievement/NormalRowItem
+| icon = Screenshot_2026-08-16_210731.png
+| name = Gold Economy Collapse
+| description = Reach 1e12+ of all golden tarot resources
+| reward =+150 
+| reward_type =souls 
+| reward_icon = y
+}}
+{{Achievement/NormalRowItem
+| icon = Screenshot_2026-08-16_210816.png
+| name = Literally Impossible, you have no chance to achieve this one
+| description = This achievement is unobtainable <ref>Obtaining Achievement 600: This achievement has a chance to be granted,based on the chance given to you by Relic 67.</ref>
+| reward = Unlocks Bonus Trial
+| reward_type =achievement
+| reward_icon = 
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Screenshot_2026-08-16_210820.png
+| name = Master of the Regular Stages (5-12)
+| description = Complete all Regular Stages (5-12)
+| reward =+300 
+| reward_type =souls 
+| reward_icon = y
+}}
+{{Achievement/NormalRowItem
+| icon = Screenshot_2026-08-16_210824.png
+| name = Have e1,000,000+ of all Elements (including Water)
+| description = Reach 1e10+ of all golden tarot resources
+| reward =+30:00 TF
+| reward_type =time flux
+| reward_icon = 
+}}
+{{Achievement/NormalRowItem
+| icon = Screenshot_2026-08-16_210828.png
+| name = Bonus Callenger
+| description = Complete the Bonus Trial
+| reward =+250
+| reward_type =souls 
+| reward_icon = y
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Screenshot_2026-08-16_210833.png
+| name = Safecracker
+| description = Reach 1e13+ of all golden Tarot resources
+| reward =+15:00 TF
+| reward_type =time flux 
+| reward_icon = 
+}}
+{{Achievement/NormalRowItem
+| icon = Screenshot_2026-08-16_210838.png
+| name = Pentacle Collector
+| description = Purchase Pentacle-11
+| reward = Divides the cost of Refine Nodes 121 and above by 1e5000 
+| reward_type =achievement
+| reward_icon = 
+}}
+{{Achievement/NormalRowItem
+| icon = Screenshot_2026-08-16_210843.png
+| name = The Tower Falls
+| description = Complete the Tower Challenge
+| reward =Divides the cost of Refine Nodes 121 and above by 1e4350
+| reward_type =achievement 
+| reward_icon = 
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Screenshot_2026-08-16_210848.png
+| name = Advanced Biology
+| description = Craft a Level 50+ ER
+| reward =+300 
+| reward_type =souls 
+| reward_icon = y
+}}
+{{Achievement/NormalRowItem
+| icon = Screenshot_2026-08-16_210855.png
+| name = All that Glitters
+| description = Reach 1e16+ of all golden tarot resources
+| reward =+30:00 TF
+| reward_type = time flux
+| reward_icon =
+}}
+{{Achievement/NormalRowItem
+| icon = Screenshot_2026-08-16_210900.png
+| name = Ancient Sacrifice
+| description = Sacrifice Relic 9
+| reward =+250
+| reward_type =souls 
+| reward_icon = y
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Screenshot_2026-08-16_210904.png
+| name = First Singularity
+| description = Perform a Singularity
+| reward =+30:00
+| reward_type =time flux 
+| reward_icon = 
+}}
+{{Achievement/NormalRowItem
+| icon = Screenshot_2026-08-16_210908.png
+| name = Card Master
+| description = Reach 1e100+ total tarot card levels
+| reward =+250 
+| reward_type =souls 
+| reward_icon = y
+}}
+{{Achievement/NormalRowItem
+| icon = Screenshot_2026-08-16_210927.png
+| name = Maximum Potential
+| description = Max out Pentacle-10
+| reward =+250
+| reward_type =souls 
+| reward_icon = y
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Screenshot_2026-08-16_210932.png
+| name = Growing Influence
+| description = Upgrade Pentacle-11 to Level 2+
+| reward =+250 
+| reward_type =souls 
+| reward_icon = y
+}}
+{{Achievement/NormalRowItem
+| icon = Screenshot_2026-08-16_210936.png
+| name = Special Sacrificer
+| description = Complete the Special Sacrificer Progression Milestone
+| reward =+300 
+| reward_type =souls 
+| reward_icon = y
+}}
+{{Achievement/NormalRowItem
+| icon = Screenshot_2026-08-16_210941.png
+| name = Elemental Master
+| description = Complete the Elementary Master Progression Milestone
+| reward =+150
+| reward_type =souls 
+| reward_icon = y
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Screenshot_2026-08-16_210947.png
+| name = Full Set
+| description = Complete all Progression Milestones
+| reward =+15:00 TF
+| reward_type = time flux 
+| reward_icon = 
+}}
+{{Achievement/NormalRowItem
+| icon = Screenshot_2026-08-16_210951.png
+| name = Viral Ascension
+| description = Complete the Viral Ascension Progression Milestone
+| reward =+350 
+| reward_type =souls 
+| reward_icon = y
+}}
+{{Achievement/NormalRowItem
+| icon = Screenshot_2026-08-16_210956.png
+| name = Atomic Growth
+| description = Reach 1.4e154 Atoms
+| reward =+10:00 TF
+| reward_type =time flux 
+| reward_icon = 
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Screenshot_2026-08-16_211002.png
+| name = Mineral Hoarder
+| description = Have all sacrificed Special Minerals at Level 77+
+| reward =+30:00 TF
+| reward_type =time flux
+| reward_icon = 
+}}
+{{Achievement/NormalRowItem
+| icon = Screenshot_2026-08-16_211008.png
+| name = Double Singularity
+| description = Have 2+ Singularities
+| reward =+300
+| reward_type =souls 
+| reward_icon = y
+}}
+{{Achievement/NormalRowItem
+| icon = Screenshot_2026-08-16_211012.png
+| name = Pandemic
+| description = Reach 8.00e9 Infected in the Universe
+| reward =+300
+| reward_type =souls 
+| reward_icon = y
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Screenshot_2026-08-16_211016.png
+| name = Pentacle Master
+| description = Upgrade Pentacle-11 to Level 3+
+| reward =+15:00 TF
+| reward_type = time flux 
+| reward_icon = 
+}}
+{{Achievement/NormalRowItem
+| icon = Screenshot_2026-08-16_211024.png
+| name = Plague Industry
+| description = Reach 1e18 PlG
+| reward =+250 
+| reward_type =souls 
+| reward_icon = y
+}}
+{{Achievement/NormalRowItem
+| icon = Screenshot_2026-08-16_211029.png
+| name = Prime Destiny
+| description = Obtain a Prime+67 Zodiac or better
+| reward =+30:00 TF
+| reward_type = time flux 
+| reward_icon = 
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Screenshot_2026-08-16_211035.png
+| name = Infinite Infection
+| description = Complete the Infinite Infection Progression Milestone
+| reward =+350
+| reward_type =souls 
+| reward_icon = y
+}}
+{{Achievement/NormalRowItem
+| icon = Screenshot_2026-08-16_211041.png
+| name = Burning World
+| description = Reach e2,000,000 Fire
+| reward =+150 
+| reward_type =souls 
+| reward_icon = y
+}}
+{{Achievement/NormalRowItem
+| icon = Screenshot_2026-08-16_211045.png
+| name = Singularity Explorer
+| description = Have 5+ Singularities
+| reward =+250
+| reward_type =souls 
+| reward_icon = y
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Screenshot_2026-08-16_211052.png
+| name = Overflowing Vault
+| description = Reach e1e15 Gold
+| reward =+150 
+| reward_type =souls 
+| reward_icon = y
+}}
+{{Achievement/NormalRowItem
+| icon = Screenshot_2026-08-16_211057.png
+| name = First Branch
+| description = Upgrade Singularity Tree Node 1 to Level 3+
+| reward =+250 
+| reward_type =souls 
+| reward_icon = y
+}}
+{{Achievement/NormalRowItem
+| icon = Screenshot_2026-08-16_211105.png
+| name = Ten Singularities
+| description = Have 10+ Singularities
+| reward =+15:00 TF
+| reward_type = time flux 
+| reward_icon = 
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Screenshot_2026-08-16_211109.png
+| name = Bamboo Ascension
+| description = Ascend Singularity Tree Node 1 to Ascension 1+
+| reward =+300 
+| reward_type =souls 
+| reward_icon = y
+}}
+{{Achievement/NormalRowItem
+| icon = Screenshot_2026-08-16_211114.png
+| name = Singular Strength
+| description = Reach a Singularty Mult of x2+
+| reward =+150 
+| reward_type =souls 
+| reward_icon = y
+}}
+{{Achievement/NormalRowItem
+| icon = Screenshot_2026-08-16_211120.png
+| name = Emotional Vessel
+| description = Reach Level 300+ Emotional Vessel
+| reward =+300
+| reward_type =souls 
+| reward_icon = y
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Screenshot_2026-08-16_211141.png
+| name = Second Branch
+| description = Upgrade Singularty Tree Node 2 to Level 1+
+| reward =+350
+| reward_type =souls 
+| reward_icon = y
+}}
+{{Achievement/NormalRowItem
+| icon = Screenshot_2026-08-16_211145.png
+| name = True Chad
+| description = Sacrifice Relic 60
+| reward =+300
+| reward_type =souls 
+| reward_icon = y
+}}
+{{Achievement/NormalRowItem
+| icon = Screenshot_2026-08-16_211149.png
+| name = Singular Synergism
+| description = Have 20+ Singularities
+| reward =+15:00 TF
+| reward_type = time flux 
+| reward_icon = 
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Screenshot_2026-08-16_211153.png
+| name = Mineral Fanatic
+| description = Have all sacrificed Special Minerals at Level 80+
+| reward =+350 
+| reward_type =souls 
+| reward_icon = y
+}}
+{{Achievement/NormalRowItem
+| icon = Screenshot_2026-08-16_211158.png
+| name = Fort Knox? Cute.
+| description = Reach 1e20+ of all golden tarot resources
+| reward =+30:00 TF
+| reward_type =time flux 
+| reward_icon = 
+}}
+{{Achievement/NormalRowItem
+| icon = Screenshot_2026-08-16_211202.png
+| name = A Rather Useful Gadget
+| description = Buy Relic 69
+| reward =+350
+| reward_type =souls 
+| reward_icon = y
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Screenshot_2026-08-16_211207.png
+| name = Greater Strength
+| description = Reach a Singularity Mult of x5+
+| reward = Unlocks Singularize macro block
+| reward_type = achievement
+| reward_icon = 
+}}
+{{Achievement/NormalRowItem
+| icon = Screenshot_2026-08-16_211212.png
+| name = Twin Branches
+| description = Upgrade Singulaty Tree Nodes 3.1 and 3.2 to Level 1+
+| reward =+350 
+| reward_type =souls 
+| reward_icon = y
+}}
+{{Achievement/NormalRowItem
+| icon = Screenshot_2026-08-16_211218.png
+| name = Singular Power
+| description = Reach a Singularty Mult of x10+
+| reward =+30:00 TF
+| reward_type = time flux 
+| reward_icon = 
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Screenshot_2026-08-16_211222.png
+| name = Cell Engineer
+| description = Craft a Level 60+ ER
+| reward =+400 
+| reward_type =souls 
+| reward_icon = y
+}}
+{{Achievement/NormalRowItem
+| icon = Screenshot_2026-08-16_211225.png
+| name = Refinement Master
+| description = Purchase Refine Node 125 and upgrade it to Level 3+
+| reward =+300 
+| reward_type =souls 
+| reward_icon = y
+}}
+{{Achievement/NormalRowItem
+| icon = Screenshot_2026-08-16_211230.png
+| name = Refinement Overflow
+| description = Reach 1e5000+ RfP
+| reward =+350
+| reward_type =souls 
+| reward_icon = y
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Screenshot_2026-08-16_211236.png
+| name = Spread Specialist
+| description = Reach Level 100+ Base Spread Power (ER Upgrade 1)
+| reward = Unlocks Buy Singularity Tree Node macro block
+| reward_type = achievement
+| reward_icon = 
+}}
+{{Achievement/NormalRowItem
+| icon = Screenshot_2026-08-16_211240.png
+| name = Mineral Obsession
+| description = Have all sacrificed Special Minerals at Level 82+
+| reward =+350 
+| reward_type =souls 
+| reward_icon = y
+}}
+{{Achievement/NormalRowItem
+| icon = Screenshot_2026-08-16_211245.png
+| name = Global Infection
+| description = Reach 1e18+ Infected in the Universe
+| reward =+30:00 TF
+| reward_type = time flux 
+| reward_icon = y
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Screenshot_2026-08-16_211252.png
+| name = Tarot Completionist
+| description = Max out all Tarot Upgrades
+| reward =+450 
+| reward_type =souls 
+| reward_icon = y
+}}
+{{Achievement/NormalRowItem
+| icon = Screenshot_2026-08-16_211259.png
+| name = Queen of Tarot
+| description = Complete all Tarot Queens Challenges
+| reward = Divides the cost of Refine Nodes 121 and above by 1e150
+| reward_type = achievement
+| reward_icon = 
+}}
+{{Achievement/NormalRowItem
+| icon = Screenshot_2026-08-16_211304.png
+| name = Future Potential
+| description = Reach a Next Singularity Multiplier of x2+ <ref>Achievement 651 Clarification: Despite the description, this achievement refers to the "Next Singularity Award" and not the "Total" from all Singularity Mult gain factors.</ref>
+| reward =+350
+| reward_type =souls 
+| reward_icon = y
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Screenshot_2026-08-16_211309.png
+| name = Atomic Power
+| description = Reach 1e1000+ Atoms
+| reward =+15:00 TF
+| reward_type = time flux 
+| reward_icon = 
+}}
+{{Achievement/NormalRowItem
+| icon = Screenshot_2026-08-16_211314.png
+| name = Singular Houses
+| description = Unlock Singular Houses (Singularity 32)
+| reward =+350 
+| reward_type =souls 
+| reward_icon = y
+}}
+{{Achievement/NormalRowItem
+| icon = Screenshot_2026-08-16_211318.png
+| name = First Destiny
+| description = Obtain your first Singular Zodiac
+| reward =+30:00 TF
+| reward_type =time flux 
+| reward_icon = 
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Screenshot_2026-08-16_211322.png
+| name = Collection Begins
+| description = Have 3+ Singular Zodiacs in your inventory
+| reward =+350 
+| reward_type =souls 
+| reward_icon = y
+}}
+{{Achievement/NormalRowItem
+| icon = Screenshot_2026-08-16_211331.png
+| name = Singular Veteran
+| description = Reach Singularity 50+
+| reward =+400
+| reward_type =souls 
+| reward_icon = y
+}}
+{{Achievement/NormalRowItem
+| icon = Screenshot_2026-08-16_211335.png
+| name = Complete Constellation
+| description = Buy Refine Node 116
+| reward =+250
+| reward_type =souls 
+| reward_icon = y
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Screenshot_2026-08-16_211339.png
+| name = Rare Destiny
+| description = Obtain a Rare+ Singular Zodiac
+| reward =+10:00 TF
+| reward_type =time flux 
+| reward_icon = 
+}}
+{{Achievement/NormalRowItem
+| icon = Screenshot_2026-08-16_211342.png
+| name = Singular Ascension
+| description = Reach a Singularity Mult of x100+
+| reward = Unlocks Auto Singularity
+| reward_type = achievement
+| reward_icon = 
+}}
+{{Achievement/NormalRowItem
+| icon = Screenshot_2026-08-16_211346.png
+| name = Advanced Biology II
+| description = Craft a Level 67+ ER
+| reward =+15:00 TF
+| reward_type = time flux 
+| reward_icon = 
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Screenshot_2026-08-16_211350.png
+| name = Legendary Destiny
+| description = Obtain a Legendary+ Singular Zodiac
+| reward =+350 
+| reward_type =souls 
+| reward_icon = y
+}}
+{{Achievement/NormalRowItem
+| icon = Screenshot_2026-08-16_211355.png
+| name = Tree Master
+| description = Upgrade Singularity Tree Node 8 to Level 5+
+| reward =+300 
+| reward_type =souls 
+| reward_icon = y
+}}
+{{Achievement/NormalRowItem
+| icon = Screenshot_2026-08-16_211400.png
+| name = Beyond Limits
+| description = Reach Singularity 67+
+| reward =+450
+| reward_type =souls 
+| reward_icon = y
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Screenshot_2026-08-16_211404.png
+| name = Mineral Emperor
+| description = Have a Level 3000+ Mineral
+| reward =+400 
+| reward_type =souls 
+| reward_icon = y
+}}
+{{Achievement/NormalRowItem
+| icon = Screenshot_2026-08-16_211409.png
+| name = Unstoppable Force
+| description = Reach a Singularity Mult of x1000+
+| reward =+400 
+| reward_type =souls 
+| reward_icon = y
+}}
+{{Achievement/NormalRowItem
+| icon = Screenshot 2026-08-16 211837.png
+| name = The Devil
+| description = Reach 1e256+ Levels on The Devil Tarot Card
+| reward =+30:00 TF
+| reward_type = time flux 
+| reward_icon = y
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Screenshot 2026-08-16 211843.png
+| name = King of Tarot
+| description = Complete all Tarot Kings Challenges
+| reward =+400 
+| reward_type =souls 
+| reward_icon = y
+}}
+{{Achievement/NormalRowItem
+| icon = Screenshot 2026-08-16 211650.png
+| name = Singular Phenomenon
+| description = Buy Relic 70
+| reward =+30:00 TF 
+| reward_type =time flux 
+| reward_icon = 
+}}
+{{Achievement/NormalRowItem
+| icon = Screenshot 2026-08-16 211547.png
+| name = Ultimate Refinement
+| description = Buy Refine Node 136
+| reward =+400
+| reward_type =souls 
+| reward_icon = y
+}}
+|-
+{{Achievement/NormalRowItem
+| icon = Screenshot_ach_670.png
+| name = Rainbow Destiny
+| description = Obtain a Rainbow+ Common Zodiac or a Godly+ Singular Zodiac
+| reward = You can now get Rainbow+ Common Zodiacs through Unity
+| reward_type = achievement
+| reward_icon =
+}}
 |}
-Todo: Add achievements up to 670 
+<references />
 
 == History ==
 
@@ -4036,8 +5286,6 @@ Todo: Add achievements up to 670
 
 * 1.068
 ** Add 150 new achievements (#521 to 670)
-
 <noinclude>{{#titleicon_file:icon_tab_ach.png}}</noinclude>
-
 [[Category:General Gameplay]][[Category:Achievements]]
 {{Main navbox}}

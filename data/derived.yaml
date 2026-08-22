@@ -1634,7 +1634,7 @@ nodes:
   wiki: Minerals/Refine_Tree
   confidence: documented
   effects:
-  - text: Multiples Max Cure Progress by 1.2^level
+  - text: Multiples Max Cure Progress by 1.2 per level
 - id: refine-node-116
   name: Refine Node 116
   system: refine-tree
@@ -3515,6 +3515,14 @@ nodes:
   confidence: provisional
   effects:
   - text: Singularity Mult acts as a factor for the next Singularity Mult
+- id: singularity-milestone-one-hundred
+  name: One Hundred
+  system: singularity-milestones-singularity
+  kind: upgrade
+  wiki: Singularity
+  confidence: provisional
+  effects:
+  - text: Not added yet...
 - id: singularity-milestone-first-thousand
   name: First Thousand
   system: singularity-milestones-atoms
@@ -3667,7 +3675,7 @@ nodes:
   wiki: Singularity
   confidence: provisional
   effects:
-  - text: Increases Gold gain
+  - text: Gold Gain ^
     per_level: '.001'
 - id: singularity-tree-3-1
   name: Tree Node 3.1
@@ -3676,7 +3684,7 @@ nodes:
   wiki: Singularity
   confidence: provisional
   effects:
-  - text: Weaken e308 penalty
+  - text: e308 Atom penalty /X
     per_level: '.01'
 - id: singularity-tree-3-2
   name: Tree Node 3.2
@@ -3685,7 +3693,7 @@ nodes:
   wiki: Singularity
   confidence: provisional
   effects:
-  - text: Weaken e500 penalty
+  - text: e500 Atom penalty /X
     per_level: '.01'
 - id: singularity-tree-4-1
   name: Tree Node 4.1
@@ -3694,7 +3702,7 @@ nodes:
   wiki: Singularity
   confidence: provisional
   effects:
-  - text: Increase Refine Points gain
+  - text: RfP Gain ^
     per_level: '.001'
 - id: singularity-tree-4-2
   name: Tree Node 4.2
@@ -3703,7 +3711,7 @@ nodes:
   wiki: Singularity
   confidence: provisional
   effects:
-  - text: Increase Golden Resource gain
+  - text: Golden Resource gain mult
     per_level: '.25'
 - id: singularity-tree-5-1
   name: Tree Node 5.1
@@ -3712,7 +3720,7 @@ nodes:
   wiki: Singularity
   confidence: provisional
   effects:
-  - text: Increase Plague Stats Rewards
+  - text: Plague Stats Rewards mult
     per_level: '.01'
 - id: singularity-tree-5-2
   name: Tree Node 5.2
@@ -3721,7 +3729,7 @@ nodes:
   wiki: Singularity
   confidence: provisional
   effects:
-  - text: Increase Plague Generators Reward
+  - text: PlG Rewards ^
     per_level: '.03'
 - id: singularity-tree-6-1
   name: Tree Node 6.1
@@ -3730,7 +3738,7 @@ nodes:
   wiki: Singularity
   confidence: provisional
   effects:
-  - text: Weaken next Singularity nerf
+  - text: Next Singularity nerf /X
     per_level: '.05'
 - id: singularity-tree-6-2
   name: Tree Node 6.2
@@ -3739,7 +3747,7 @@ nodes:
   wiki: Singularity
   confidence: provisional
   effects:
-  - text: Weaken e1,000 Atom Penalty
+  - text: e1000 Atom Penalty /X
     per_level: '.02'
 - id: singularity-tree-7-1
   name: Tree Node 7.1
@@ -3748,7 +3756,7 @@ nodes:
   wiki: Singularity
   confidence: provisional
   effects:
-  - text: Increase First Singularity Zodiac Level Mult
+  - text: First Singularity Zodiac Level Mult
     per_level: '.006'
 - id: singularity-tree-7-2
   name: Tree Node 7.2
@@ -3768,106 +3776,6 @@ nodes:
   effects:
   - text: All Singularity Tree Upgrade Efficiency
     per_level: '.001'
-- id: singularity-zodiac-aries
-  name: Singular Zodiac Aries
-  system: houses
-  kind: upgrade
-  wiki: Singularity
-  confidence: provisional
-  effects:
-  - text: Fire Element Factor 3
-- id: singularity-zodiac-taurus
-  name: Singular Zodiac Taurus
-  system: houses
-  kind: upgrade
-  wiki: Singularity
-  confidence: provisional
-  effects:
-  - text: Earth Element Factor 3
-- id: singularity-zodiac-gemini
-  name: Singular Zodiac Gemini
-  system: houses
-  kind: upgrade
-  wiki: Singularity
-  confidence: provisional
-  effects:
-  - text: Wind Element Factor 3
-- id: singularity-zodiac-cancer
-  name: Singular Zodiac Cancer
-  system: houses
-  kind: upgrade
-  wiki: Singularity
-  confidence: provisional
-  effects:
-  - text: Water Element Factor 3
-  - text: Base Spread Mult
-- id: singularity-zodiac-leo
-  name: Singular Zodiac Leo
-  system: houses
-  kind: upgrade
-  wiki: Singularity
-  confidence: provisional
-  effects:
-  - text: Sacrifice Dust Gain
-- id: singularity-zodiac-virgo
-  name: Singular Zodiac Virgo
-  system: houses
-  kind: upgrade
-  wiki: Singularity
-  confidence: provisional
-  effects:
-  - text: PlP per PlG Multi
-- id: singularity-zodiac-libra
-  name: Singular Zodiac Libra
-  system: houses
-  kind: upgrade
-  wiki: Singularity
-  confidence: provisional
-  effects:
-  - text: VE on Disolve Multi
-- id: singularity-zodiac-scorpio
-  name: Singular Zodiac Scorpio
-  system: houses
-  kind: upgrade
-  wiki: Singularity
-  confidence: provisional
-  effects:
-  - text: Base Spread Multi
-  - text: Singularity Mult Boost
-- id: singularity-zodiac-saggitarius
-  name: Singular Zodiac Saggitarius
-  system: houses
-  kind: upgrade
-  wiki: Singularity
-  confidence: provisional
-  effects:
-  - text: Attack Exponent Multi
-- id: singularity-zodiac-capricorn
-  name: Singular Zodiac Capricorn
-  system: houses
-  kind: upgrade
-  wiki: Singularity
-  confidence: provisional
-  effects:
-  - text: Golden Resources Gain
-- id: singularity-zodiac-aquarius
-  name: Singular Zodiac Aquarius
-  system: houses
-  kind: upgrade
-  wiki: Singularity
-  confidence: provisional
-  effects:
-  - text: Black Gem Effect
-  - text: Wind Element Factor 3
-- id: singularity-zodiac-pisces
-  name: Singular Zodiac Pisces
-  system: houses
-  kind: upgrade
-  wiki: Singularity
-  confidence: provisional
-  effects:
-  - text: Singularity Mult Boost
-  - text: Water Element Factor 3
 - id: dilation-node-center-1
   name: Center 1
   system: dilation-tree
@@ -9519,86 +9427,6 @@ edges:
   confidence: uncertain
 - from: singularity-tree-8
   to: singularity
-  rel: boosts
-  source: wiki:Singularity
-  confidence: uncertain
-- from: singularity-zodiac-aries
-  to: fire-factor-3
-  rel: boosts
-  source: wiki:Singularity
-  confidence: uncertain
-- from: singularity-zodiac-taurus
-  to: earth-factor-3
-  rel: boosts
-  source: wiki:Singularity
-  confidence: uncertain
-- from: singularity-zodiac-gemini
-  to: wind-factor-3
-  rel: boosts
-  source: wiki:Singularity
-  confidence: uncertain
-- from: singularity-zodiac-cancer
-  to: water-factor-3
-  rel: boosts
-  source: wiki:Singularity
-  confidence: uncertain
-- from: singularity-zodiac-cancer
-  to: base-spread-power
-  rel: boosts
-  source: wiki:Singularity
-  confidence: uncertain
-- from: singularity-zodiac-leo
-  to: sacrifice-dust
-  rel: boosts
-  source: wiki:Singularity
-  confidence: uncertain
-- from: singularity-zodiac-virgo
-  to: plp-per-plg
-  rel: boosts
-  source: wiki:Singularity
-  confidence: uncertain
-- from: singularity-zodiac-libra
-  to: virus-essence
-  rel: boosts
-  source: wiki:Singularity
-  confidence: uncertain
-- from: singularity-zodiac-scorpio
-  to: base-spread-power
-  rel: boosts
-  source: wiki:Singularity
-  confidence: uncertain
-- from: singularity-zodiac-scorpio
-  to: singularity-mult
-  rel: boosts
-  source: wiki:Singularity
-  confidence: uncertain
-- from: singularity-zodiac-saggitarius
-  to: attack-exponent
-  rel: boosts
-  source: wiki:Singularity
-  confidence: uncertain
-- from: singularity-zodiac-capricorn
-  to: golden-resources
-  rel: boosts
-  source: wiki:Singularity
-  confidence: uncertain
-- from: singularity-zodiac-aquarius
-  to: special-mineral-black-gem
-  rel: boosts
-  source: wiki:Singularity
-  confidence: uncertain
-- from: singularity-zodiac-aquarius
-  to: wind-factor-3
-  rel: boosts
-  source: wiki:Singularity
-  confidence: uncertain
-- from: singularity-zodiac-pisces
-  to: singularity-mult
-  rel: boosts
-  source: wiki:Singularity
-  confidence: uncertain
-- from: singularity-zodiac-pisces
-  to: water-factor-3
   rel: boosts
   source: wiki:Singularity
   confidence: uncertain

@@ -614,7 +614,7 @@ Each Card suit has its own set of upgrades, and these cost the respective Tarot 
 |Increase Max Level of first 4 Swords upgrades by 1 per level
 |<==
 |1e15
-|''uses pre-set values''
+|''1e15^(1+2*level)''
 |1, capped at 49
 |U-3 Lv.1+
 |-
@@ -637,7 +637,7 @@ Each Card suit has its own set of upgrades, and these cost the respective Tarot 
 |7
 |Challenge Suit Reward for Swords: ^#
 |2 for level 1, +1 per level after
-|
+|1e500
 |
 |2
 |U-6 Lv.2+
@@ -645,7 +645,7 @@ Each Card suit has its own set of upgrades, and these cost the respective Tarot 
 |8
 |Artifacts Local Speed Power: +#
 | +0.01 for Level 1, +0.001/level after
-|
+|1e1200
 |
 |1
 |U-7 Lv.2+
@@ -653,7 +653,7 @@ Each Card suit has its own set of upgrades, and these cost the respective Tarot 
 |9
 |Increase max level of Swords upgrades 5-8 by 2 per level
 |<==
-|
+|1e2000
 |''uses pre-set values''
 |3
 |U-8 Lv.1+
@@ -703,7 +703,7 @@ Each Card suit has its own set of upgrades, and these cost the respective Tarot 
 |6
 |Relic 41 is ^#
 |^1.5 for Level 1, +0.5 to this number per level afterwards
-|
+|1e320
 |
 |2
 |U-5 Lv.2+
@@ -711,7 +711,7 @@ Each Card suit has its own set of upgrades, and these cost the respective Tarot 
 |7
 |Challenge Suit Reward for Wands: ^#
 |2 for level 1, +1 per level after
-|
+|1e500
 |
 |2
 |U-6 Lv.2+
@@ -719,7 +719,7 @@ Each Card suit has its own set of upgrades, and these cost the respective Tarot 
 |8
 |Artifacts Local Speed Power: +#
 | +0.01 for Level 1, +0.001/level after
-|
+|1e1300
 |
 |1
 |U-7 Lv.2+
@@ -727,7 +727,7 @@ Each Card suit has its own set of upgrades, and these cost the respective Tarot 
 |9
 |Increase max level of Wands upgrades 5-8 by 2 per level
 |<==
-|
+|1e2000
 |''uses pre-set values''
 |3
 |U-8 Lv.1+
@@ -777,7 +777,7 @@ Each Card suit has its own set of upgrades, and these cost the respective Tarot 
 |6
 |Multiplies Sacrifice Dust gain by #
 |x20 per level, multiplicative
-|
+|1e333
 |
 |2
 |U-5 Lv.2+
@@ -785,7 +785,7 @@ Each Card suit has its own set of upgrades, and these cost the respective Tarot 
 |7
 |Challenge Suit Reward for Pentacles: ^#
 |2 for level 1, +1 per level after
-|
+|1e500
 |
 |2
 |U-6 Lv.2+
@@ -793,7 +793,7 @@ Each Card suit has its own set of upgrades, and these cost the respective Tarot 
 |8
 |Artifacts Local Speed Power: +#
 | +0.01 for Level 1, +0.001/level after
-|
+|1e1400
 |
 |1
 |U-7 Lv.2+
@@ -801,7 +801,7 @@ Each Card suit has its own set of upgrades, and these cost the respective Tarot 
 |9
 |Increase max level of Pentacles upgrades 5-8 by 2 per level
 |<==
-|
+|1e2000
 |''uses pre-set values''
 |3
 |U-8 Lv.1+
@@ -818,7 +818,7 @@ Each Card suit has its own set of upgrades, and these cost the respective Tarot 
 |Generates Golden Resources passively based on your per second gain (value and cooldown). This passive income is affected by Local Artifacts Speed and multiplied by x
 |200 for level 1, x4/level after (?)
 |1e16500
-|
+|x1e500/level
 |5
 |U-10 Lv.5+
 |-
@@ -867,7 +867,7 @@ Each Card suit has its own set of upgrades, and these cost the respective Tarot 
 |6
 |Multiplies Sacrifice Dust gain by #
 |x100 per level, multiplicative
-|
+|1e360
 |
 |2
 |U-5 Lv.2+
@@ -875,7 +875,7 @@ Each Card suit has its own set of upgrades, and these cost the respective Tarot 
 |7
 |Challenge Suit Reward for Cups: ^#
 |2 for level 1, +1 per level after
-|
+|1e500
 |
 |3
 |U-6 Lv.2+
@@ -883,7 +883,7 @@ Each Card suit has its own set of upgrades, and these cost the respective Tarot 
 |8
 |Artifacts Local Speed Power: +#
 | +0.01 for Level 1, +0.001/level after
-|
+|1e1500
 |
 |1
 |U-7 Lv.2+
@@ -891,7 +891,7 @@ Each Card suit has its own set of upgrades, and these cost the respective Tarot 
 |9
 |Increase max level of Cups upgrades 5-8 by 2 per level
 |<==
-|
+|1e2000
 |''uses pre-set values''
 |3
 |U-8 Lv.1+
@@ -1344,328 +1344,251 @@ Each Artifact has many parts, each obtained by getting a certain amount of Golde
 
 Here is a list of all the Artifact parts:
 {| class="wikitable mw-collapsible mw-collapsed"
-! colspan="7" |Artifact Parts and their Effects
+! colspan="5" |Artifact Parts and their Effects
 |-
 !Part #
 !Part Name
 !Effect
 !Effect Scaling
-!Base Cost
-!Cost Scaling
 !Unlock Req.
 |-
-! colspan="7" |Crystal Mirror
+! colspan="5" |Crystal Mirror
 |-
 |1
 |Glass Surface
 |Sacrifice Dust Gain
 |x10000/level
-|
-|
 |N/A
 |-
 |2
 |Silver Backing
 |Relic 24 Effect
 | +0.01x/level
-|
-|
 |8 Golden Swords
 |-
 |3
 |Obsidian Frame
 |Relic 56 Effect
 | +0.01x/level
-|
-|
-|20 Golden Swords
+|20
 |-
 |4
 |Focal Point
 |Relic 13 Effect
 | +0.2x/level
-|
-|
-|100 Golden Swords
+|100
 |-
 |5
 |Light Refractors
 |Relic 2 Effect
 | +^0.25/level
-|
-|
-|500 Golden Swords
+|500
 |-
 |6
 |Truth Facets
 |Relic 21 Effect
 | +0.01x/level
-|
-|
-|2500 Golden Swords
+|2500
 |-
 |7
 |Memory Crystal
 |Sword LOGPOW base
 |0.09+0.01*level
-|
-|
-|50000 Golden Swords
+|50000
 |-
 |8
 |Perception Lens
 |Base Spread Power on ER Craft (see [[Plague]]
 | +0.25x/level
-|
-|
-|1000000 Golden Swords
+|1000000
 |-
-! colspan="7" |Magic Skull
+! colspan="5" |Magic Skull
 |-
 |1
 |Ramus
 |Sacrifice Dust Gain
 |x10000/level
-|
-|
-|
+|N/A
 |-
 |2
 |Mandible
 |Relic 25 Effect
 | +0.01x/level
-|
-|
-|
+|8 Golden Wands
 |-
 |3
 |Teeth
 |Relic 8 Effect
 | +^1000/level
-|
-|
-|
+|20
 |-
 |4
 |Maxilla
 |Relic 14 Effect
 | +0.1x/level
-|
-|
-|
+|100
 |-
 |5
 |Nasal Bone
 |Relic 2 Effect
 | +^0.25/level
-|
-|
-|
+|500
 |-
 |6
 |Infraorbitals
 |Refine Node 7 Effect
 | +0.01/level
-|
-|
-|
+|2500
 |-
 |7
 |Zygomatics
 |Wands LOGPOW base
 |0.09+0.01*level
-|
-|
-|18000 Golden Wands
+|18000
 |-
 |8
 |Frontal Bone
 |Relic 52 Effect
 | +0.02/level
-|
-|
-|45000 Golden Wands
+|45000
 |-
 |9
 |Parietal Bone
 |The Hermit base effect
 | +0.05x/level
-|
-|
-|120000 Golden Wands
+|120000
 |-
 |10
 |Temporal Bone
 |Water Quality factor
 | +^0.5/level
-|
-|
-|600000 Golden Wands
+|600000 
 |-
 |11
 |Occipital Bone
 |PlP per PlG mult (see [[Plague]])
 | +1x/level
-|
-|
-|1800000 Golden Wands
+|1800000
 |-
-! colspan="7" |Prosperity Engine
+! colspan="5" |Prosperity Engine
 |-
 |1
 |Abundance Gears
 |Sacrifice Dust Gain
 |x10000/level
-|
-|
-|
+|N/A
 |-
 |2
 |Manifestation Pistons
 |Relic 26 Effect
 | +0.01x/level
-|
-|
-|
+|8 Golden Pentacles
 |-
 |3
 |Fortune Cogs
 |Polish Sword effect
 | +^0.02/level
-|
-|
-|
+|20
 |-
 |4
 |Stability Foundation
 |The Hierophant effect
 | +0.01x/level
-|
-|
-|
+|100
 |-
 |5
 |Growth Chambers
 |Relic 2 Effect
 | +^0.25/level
-|
-|
-|
+|500
 |-
 |6
 |Wealth Circulation System
 |Yellow Gem base effect
 | +0.01x/level
-|
-|
-|
+|2500
 |-
 |7
 |Value Assessors
 |Pentacles LOGPOW base
 |0.09+0.01*level
-|
-|
-|30000 Golden Pentacles
+|30000
 |-
 |8
 |Legacy Encoders
 |Earth Node 2 effect
 | +^4/level
-|
-|
-|200000 Golden Pentacles
+|200000
 |-
 |9
 |Reality Anchors
 |Base VE from dissolving ERs (see [[Plague]])
 | +0.5x/level
-|
-|
-|1250000 Golden Pentacles
+|1250000
 |-
-! colspan="7" |Emotional Vessel
+! colspan="5" |Emotional Vessel
 |-
 |1
 |Heart Chamber
 |Sacrifice Dust Gain
 |x10000/level
-|
-|
-|
+|N/A
 |-
 |2
 |Empathy Valves
 |Relic 27 Effect
 | +0.01x/level
-|
-|
-|
+|8 Golden Cups
 |-
 |3
 |Sorrow Filters
 |All Elements Factor 3
 | +^0.02/level
-|
-|
-|
+|20
 |-
 |4
 |Joy Reservoir
 |Relic 2 Effect
 |???
-|
-|
-|
+|100
 |-
 |5
 |Memory Liquid
 |Relic 2 Effect
 | +^0.25/level
-|
-|
-|
+|500
 |-
 |6
 |Connection Handles
 |Polish Spear effect
 | +0.01x/level
-|
-|
-|
+|2500
 |-
 |7
 |Authenticity Glaze
 |Cups LOGPOW base
 |0.09+0.01*level
-|
-|
-|25000 Golden Cups
+|25000
 |-
 |8
 |Inner Reflection Surface
 |Polish Enhance effects
 | +0.25x/level
-|
-|
-|90000 Golden Cups
+|90000
 |-
 |9
 |Vulnerability Aperture
 |Relic 32 Effect
 | +0.02x/level
-|
-|
-|400000 Golden Cups
+|400000
 |-
 |10
 |Trauma Alchemizer
 |Singularity Multiplier (see [[Singularity]])
 | +0.001x/level
-|
-|
-|1500000 Golden Cups
+|1500000
 |}
+''The cost scaling for these parts doesnt seem to follow any simple formula, so it is not listed here.''
 
 === LOGPOW ===
 Part 7 for each Artifact unlocks the LOGPOW stat for the respective suit, which, in effect, raises the ''exponent'' of the amount of resource you have to a certain power instead of affecting the entire value.

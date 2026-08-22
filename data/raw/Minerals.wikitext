@@ -5,107 +5,6 @@ The core mechanic allows you to spawn minerals. Each mineral costs Gold and ever
 
 Minerals generate VP and you can merge two identical minerals to create a higher-level one, which produces even more VP. To merge a mineral, simply drag it on top of a matching mineral (like a level 5 mineral on another level 5 mineral). VP can be spent on various upgrades, such as increasing the base mineral level, expanding the grid size, boosting luck and gold generation, and more!
 
-== Mineral Upgrades ==
-Spend VP (and later on, Magnets) to level upgrades to help boost your Minerals, Zodiacs, and Gold Gain.
-* Max Level
-* Grid Height (caps at 9, Refine Node 72 and 80 increase the cap by 1 each to max of 11)
-* Grid Width (caps at 9, Refine Node 72 and 80 increase the cap by 1 each to max of 11)
-* Fall Speed
-* Luck Bonus
-* Quality Bonus 
-* Gold Gain
-* Common Exponent Mult
-The below upgrades are unlocked after purchasing node 18 on the Refine Tree and cost magnets to upgrade. (Excluding first 2, which cost VP)
-* Magnet Chance Mult
-* Chance to get x2 magnets on merge 
-* VP Gain Mult
-* PP Gain Mult
-* Chance to spawn a mineral with Lv+1
-* Chance to get a mineral with Lv+2 on merge
-* More Magnets
-
-== Polish ==
-Once you obtain a mineral of level 30 or higher, you can perform a Polish Prestige. Polish resets your VP, normal Minerals, All Mineral Upgrades, Magnets, and Merge Level. In exchange, you earn PP to upgrade the five weapons that grant vastly different buffs to assist not only your minerals, but also [[Attacks]] and Gold Gain.
-[[File:Polish tab.png|thumb|The Polish tab]]
-{| class="wikitable"
-! !! Sword !! Axe !! Spear !! Bow !! Knuckles
-|-
-! Basic
-| Boosts VP gain
-| Empowers Mineral cost fall
-| Boosts gold gain
-| Boosts attacks asc. power
-| Boosts minerals' local speed exponent
-|-
-! rowspan="2" | Lv.10
-| Unlocks autospawn
-| Start Unity with 1000 eternities
-| Relic 1 effect is powered to your max mineral level reached
-| First Mineral Upgrade scales a bit slower
-| Sword Polish is 20% more effective
-|-
-|2.36 PP
-|7.04 PP
-|15.48 PP
-|29.80 PP
-|103 PP
-|-
-! rowspan="2" | Lv.25
-| Unlocks VP factor
-| Luck Mult: x2
-| Relic 9 is powered to ^(1 + (spear lvl)/100)
-| Relic 13 effect is multiplied by (1 + (bow level)/10)
-| Unlocks First Insane Trial
-|-
-|13.57 PP
-|101 PP
-|513 PP
-|2,177 PP
-|62,358 PP
-|-
-! rowspan="2" | Lv.50
-| Zodiac Enhance is better
-| VP Gain: x5
-| Unlock Second Insane Trial if First is complete
-| You don't spend any EP for animals, lab upgrades
-| Unlock Third Insane Trial if Second is complete
-|-
-|6,107 PP
-|1,298,494 PP
-|135,723,805 PP
-|9.71e9 PP
-|4.68e14 PP
-|-
-! rowspan="2" | Lv.100
-| Relics' effects: x1.03
-| Unlock Fourth Insane Trial if Third is complete
-| Relic 17 is x1.05 stronger
-| Unlock Fifth Insane Trial if Fourth is complete
-| Unlock Sixth Insane Trial if Fifth is complete
-|-
-| 3.02e35 PP
-| 3.93e54 PP
-| 8.76e71 PP
-| 1.60e88 PP
-| 1.57e131 PP
-|}
-
-== Refinement ==
-After obtaining a level 70 mineral, you can perform a Refine Prestige. Refine resets your VP, normal Minerals, normal & magnet mineral upgrades, magnets, merge level, and all polish upgrades. In exchange you earn RfP which can be spent on the Refine Tree.
-[[File:Refine tree new.png|thumb|Refine Tree]]
-
-=== Refine Tree ===
-Refine Points (RfP) can be spent in a large upgrade tree. Circle nodes offer one-time upgrades while Squares like Refine Node 1 can be leveled multiple times. These upgrades grant bonuses, QoL improvements, and unlock new features.
-
-[[Minerals/Refine Tree|View the full Refine Tree here.]]
-
-Noteable upgrades:
-* '''Magnets''': unlock node 18 to gain a chance to get 1 or more magnets when merging common minerals, which can be spent on a new set of upgrades in the main mineral window.
-* '''Merge Level''': unlock node 5 to earn Merge Experience every time you merge two minerals. Earn enough to increase your Merge Level, which doubles VP gain earned every level.
-* '''Polishing Enhance''': spend RfP to enhance the bonuses of your Polish weapons
-* '''Runes''': earn Sun and Moon Runes that can be spent on powerful upgrades or used to spawn special minerals.
-* '''Special Minerals''': there are 10 different special minerals, each providing bonuses when spawned (only 9 are available at the beginning)
-
 == Common Minerals ==
 These are the common minerals which are spawned in the first time of mineral section. Every 100 thresholds, the icons will loop. 
 
@@ -841,16 +740,119 @@ Here are the list of Common Minerals (click [expand] to see the list):
 }}
 |}
 
+
+== Mineral Upgrades ==
+Spend VP (and later on, Magnets) to level upgrades to help boost your Minerals, Zodiacs, and Gold Gain.
+* Max Level
+* Grid Height (caps at 9, Refine Node 72 and 80 increase the cap by 1 each to max of 11)
+* Grid Width (caps at 9, Refine Node 72 and 80 increase the cap by 1 each to max of 11)
+* Fall Speed
+* Luck Bonus
+* Quality Bonus 
+* Gold Gain
+* Common Exponent Mult
+The below upgrades are unlocked after purchasing node 18 on the Refine Tree and cost magnets to upgrade. (Excluding first 2, which cost VP)
+* Magnet Chance Mult
+* Chance to get x2 magnets on merge 
+* VP Gain Mult
+* PP Gain Mult
+* Chance to spawn a mineral with Lv+1
+* Chance to get a mineral with Lv+2 on merge
+* More Magnets
+
+== Polish ==
+Once you obtain a mineral of level 30 or higher, you can perform a Polish Prestige. Polish resets your VP, normal Minerals, All Mineral Upgrades, Magnets, and Merge Level. In exchange, you earn PP to upgrade the five weapons that grant vastly different buffs to assist not only your minerals, but also [[Attacks]] and Gold Gain.
+[[File:Polish tab.png|thumb|The Polish tab]]
+{| class="wikitable"
+! !! Sword !! Axe !! Spear !! Bow !! Knuckles
+|-
+! Basic
+| Boosts VP gain
+| Empowers Mineral cost fall
+| Boosts gold gain
+| Boosts attacks asc. power
+| Boosts minerals' local speed exponent
+|-
+! rowspan="2" | Lv.10
+| Unlocks autospawn
+| Start Unity with 1000 eternities
+| Relic 1 effect is powered to your max mineral level reached
+| First Mineral Upgrade scales a bit slower
+| Sword Polish is 20% more effective
+|-
+|2.36 PP
+|7.04 PP
+|15.48 PP
+|29.80 PP
+|103 PP
+|-
+! rowspan="2" | Lv.25
+| Unlocks VP factor
+| Luck Mult: x2
+| Relic 9 is powered to ^(1 + (spear lvl)/100)
+| Relic 13 effect is multiplied by (1 + (bow level)/10)
+| Unlocks First Insane Trial
+|-
+|13.57 PP
+|101 PP
+|513 PP
+|2,177 PP
+|62,358 PP
+|-
+! rowspan="2" | Lv.50
+| Zodiac Enhance is better
+| VP Gain: x5
+| Unlock Second Insane Trial if First is complete
+| You don't spend any EP for animals, lab upgrades
+| Unlock Third Insane Trial if Second is complete
+|-
+|6,107 PP
+|1,298,494 PP
+|135,723,805 PP
+|9.71e9 PP
+|4.68e14 PP
+|-
+! rowspan="2" | Lv.100
+| Relics' effects: x1.03
+| Unlock Fourth Insane Trial if Third is complete
+| Relic 17 is x1.05 stronger
+| Unlock Fifth Insane Trial if Fourth is complete
+| Unlock Sixth Insane Trial if Fifth is complete
+|-
+| 3.02e35 PP
+| 3.93e54 PP
+| 8.76e71 PP
+| 1.60e88 PP
+| 1.57e131 PP
+|}
+
+== Refinement ==
+After obtaining a level 70 mineral, you can perform a Refine Prestige. Refine resets your VP, normal Minerals, normal & magnet mineral upgrades, magnets, merge level, and all polish upgrades. In exchange you earn RfP which can be spent on the Refine Tree.
+[[File:Refine tree new.png|thumb|Refine Tree]]
+
+=== Refine Tree ===
+Refine Points (RfP) can be spent in a large upgrade tree. Circle nodes offer one-time upgrades while Squares like Refine Node 1 can be leveled multiple times. These upgrades grant bonuses, QoL improvements, and unlock new features.
+
+[[Minerals/Refine Tree|View the full Refine Tree here.]]
+
+Noteable upgrades:
+* '''Merge Level''': Unlocked with Node 5; merge common minerals to earn Merge Experience. Earn enough to increase your Merge Level, increases VP gain earned every level.
+* '''Magnets''': Unlocked with Node 18, which gives a chance to obtain Magnets when merging minerals. These can be spent on powerful upgrades.
+* '''Polishing Enhance (Node 28)''': spend RfP to enhance the bonuses of your Polish weapons
+* '''Runes''': earn Sun and Moon Runes that can be spent on powerful upgrades or used to spawn special minerals.
+* '''Special Minerals''': there are 10 different special minerals, each providing bonuses when spawned (only 9 are available at the beginning)
+* '''Special Mineral Sacrifice (Node 85):''' You can now sacrifice your special minerals, and start generating ''sacrifice dust'' after all minerals have been sacrificed. This dust can be used to level up sacrificed minerals past level 20, further enhancing their effects.
+Many other major progression layers within {{Keyword|unity|Unity}} are unlocked through the Refine Tree, such as Elements being unlocked through Refine Node 55, or Tarot being unlocked though Refine Node 70.
+
 == Polish Enhance (Refine Node 28) ==
 [[File:Screenshot 2026-04-25 191027.png|thumb|Polishing Enhance tab]]
-Polish Enhance is a mostly minor mechanic unlocked through Refine Node 28. There are five upgrades, one for each polish weapon, and each level increases the respective polish upgrade's efficiency by 1%.
+Polish Enhance is a mostly minor mechanic unlocked through Refine Node 28. There are five upgrades, one for each polish weapon, and each level increases the respective polish weapon's effective level by 1%. ''(Effective level is the level that the effects are calculated based on, and the cost is based on the original level.)''
 
 However, the cost for each upgrade scales exponentially, so it is only viable in the late game.
 
 == Runes (Node 35) ==
-{{Stub|notes=table formula for price scaling and generation rate1 decrease}}
 [[File:Screenshot 2026-04-25 191022.png|thumb|The Runes tab]]
-Runes are a game mechanic vital to late-game progression. Runes are divided into 2 separate categories: Sun Runes and Moon Runes, each having 2 unique upgrades and 2 similar upgrades (see table below (TBA)). Moon generates faster than Sun but this is because Moon GRA upgrade (Generation Rate Amount, not to be confused with Generation Rate) is more expensive. Runes is a huge time wall between the refinement stage and the elements stage, often taking close to 2 weeks (from runes unlock to achievement 320) with minimal gameplay all throughout. They both generate at a rate of 1 every 10 days by default but are affected by local gamespeed and TF. Runes can be obtained faster by some nodes (eg. node 48), relic 34, upgrading their respective GRA (this costs runes) or by reducing the time it takes to generate Runes (by buying their respective first upgrades with RfP).
+Runes are a game mechanic vital to late-game progression. Runes are divided into 2 separate categories: Sun Runes and Moon Runes, each having 2 unique upgrades and 2 similar upgrades (see table below). Moon generates faster than Sun but this is because Moon GRA upgrade (Generation Rate Amount, not to be confused with Generation Rate) is more expensive. Runes is a huge time wall between the refinement stage and the elements stage, often taking close to 2 weeks (from runes unlock to achievement 320) with minimal gameplay all throughout. They both generate at a rate of 1 every 10 days by default but are affected by local gamespeed and TF. Runes can be obtained faster by some nodes (eg. node 48), relic 34, upgrading their respective GRA (this costs runes) or by reducing the time it takes to generate Runes (by buying their respective first upgrades with RfP).
 {| class="wikitable mw-collapsible"
 ! colspan="6" |Runes Upgrades
 |-
@@ -865,10 +867,10 @@ Runes are a game mechanic vital to late-game progression. Runes are divided into
 !Cost Scaling
 |-
 |Generation Rate
-| -5% to Sun Runes generation duration (multiplicative, need confirmation)
+| Sun Runes generation duration x0.95/level
 |x10/level
 |Generation Rate
-| -10% to Moon Runes generation duration (multiplicative, also need confirmation)
+| Moon Runes generation duration x0.9/level
 |x100/level
 |-
 |Refine Node 1 efffect
@@ -1072,7 +1074,7 @@ Sacrificed minerals, in addition to having the effect of the original Special Mi
 |-
 !Type
 !Effect 1
-!Effect 2
+!Effect 2 (pre-softcaps)
 |-
 |Red Gem
 |VP Gain mult
@@ -1088,7 +1090,7 @@ Sacrificed minerals, in addition to having the effect of the original Special Mi
 |-
 |Pink Gem
 |Luck & Quality Bonus
-|Luck: ^X (base 1.03 at level 27, +0.03/lvl, not confirmed)
+|Luck: ^X (base 1.03 at level 27, +0.03/lvl)
 |-
 |Yellow Gem
 |Gold Gain mult
@@ -1108,7 +1110,7 @@ Sacrificed minerals, in addition to having the effect of the original Special Mi
 |-
 |White Gem
 |Game Speed mult
-|Mineral Local Speed softcaps: /X (base 1.01 at Level 27, +0.01/lvl, not confirmed)
+|Mineral Local Speed softcaps: /X (base 1.01 at Level 27, +0.01/lvl)
 |-
 |Black Gem
 |Tarot Draws/sec
@@ -1233,5 +1235,10 @@ For the formulae below:
  \text{Amount} > 1000 : & \ x_6 = x_5^{1.01^{\text{Amount}-1000}} \\
 \end{array} \right.
 </math></big>
+
+=== Special Mineral Sacrifice ===
+
+==== Dust Requirement (unconfirmed) ====
+<math>1000000*(Level-27)^{2*(Level-28)}</math>
 [[Category:Unity]]
 {{Main navbox}}

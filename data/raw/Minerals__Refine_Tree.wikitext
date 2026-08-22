@@ -407,11 +407,11 @@
 | rfp increase = x1e16
 | effect = Decrease the base cooldown of all artifacts for flushing by X hours (+1/level)
 | req = 93,96 }}
-{{RN|101| max = 1 | rfp = 
+{{RN|101| max = 1 | rfp = 1e2,250
 | rfp increase = 
 | effect = Achievement 443 reward is powered to ^2
 | req = 100 }}
-{{RN|102| max = 1 | rfp = 
+{{RN|102| max = 1 | rfp = 1e2,350
 | rfp increase = 
 | effect = Unlocks Automation for upgrading Artifact Parts
 | req = 100 }}
@@ -427,28 +427,28 @@
 | rfp increase = 
 | effect = The Hierophant Passive Bonus is now boosted by the level of your equipped Endoplasmic Reticulum
 | req = 96 }}
-{{RN|106| max = 1 | rfp = 
+{{RN|106| max = 1 | rfp = 1e2,650
 | rfp increase = 
 | effect = Spread Power of your currently equipped Endoplasmic Reticulum also boosts Black Gem base effect (x???)
 | req = 105 }}
-{{RN|107| max = 1 | rfp = 
+{{RN|107| max = 1 | rfp = 1e2,800
 | rfp increase = 
 | effect = Divides cooldown of all artifacts by 2
 | req = 105 }}
-{{RN|108| max = 1 | rfp = 
+{{RN|108| max = 1 | rfp = 1e2,870
 | rfp increase = 
 | effect = Max PIP now boosts sacrifice dust gain (x???)
 | req = 107 }}
-{{RN|109| max = 1 | rfp = 
+{{RN|109| max = 1 | rfp = 1e2,940
 | rfp increase = 
 | effect = Multiplies PIP per PIG by x10
 | req = 107 }}
-{{RN|110| max = 1 | rfp = 
+{{RN|110| max = 1 | rfp = 1e3,010
 | rfp increase = 
 | effect = Multiplies Crafting Mastery by x1.1
 | req = 98 }}
-{{RN|111| max = 25 | rfp = 
-| rfp increase = 
+{{RN|111| max = 25 | rfp = 1e3,050
+| rfp increase = x1e10
 | effect = Divides the ERP needed to craft an Endoplasmic Reticulum by x1.5^level
 | req = 95,96,105 }}
 {{RN|112| max = 1 | rfp = 5.9e3,141 
@@ -463,9 +463,9 @@
 | rfp increase = 
 | effect = Multiplies Base Spread Power (on ER craft) by x1.25
 | req = 99 }}
-{{RN|115| max = 20 | rfp = 
-| rfp increase = 
-| effect = Multiples Max Cure Progress by 1.2^level
+{{RN|115| max = 20 | rfp = 1e3,300
+| rfp increase = ~x4.6e16
+| effect = Multiples Max Cure Progress by 1.2 per level
 | req = 113 }}
 {{RN|116| max = 1 | rfp = 1e3,450
 | rfp increase = 
@@ -488,7 +488,7 @@
 | effect = Multiplies Attack Exponent by x1
 | req = 112,113 }}
 | colspan=6 style="text-align:center;background-color:red"| '''Note: Ach. 605 & 606 and Bonus Trial #1 lower the costs of the following nodes to the listed values.'''
-{{RN|121| max = 1 | rfp = 
+{{RN|121| max = 1 | rfp = 1e3,900
 | rfp increase = 
 | effect = Unlocks Singularity
 | req = 120 }}
@@ -528,7 +528,7 @@
 | rfp increase = x1e35(?)
 | effect = Multiples Refine Node 125 Effect by x?
 | req = 114 }}
-{{RN|131| max = 1 | rfp = 
+{{RN|131| max = 1 | rfp = 1e5,550
 | rfp increase = 
 | effect = Adds Atom Gain to Singularity Count effects
 | req = 130 }}
