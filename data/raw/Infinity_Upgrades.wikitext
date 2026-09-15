@@ -1,8 +1,236 @@
-{{Stub|notes=Information about every Infinity Upgrade after Column 4}}
+{{Stub|notes=Information about every Infinity Upgrade after Column 17}}
+
+(WIP)
 
 After your first Infinity, you will unlock a new tab named '''Infinity'''. Here, a tree will be shown. These are the Infinity Upgrades ('''IU'''), the first of 4 core mechanics. The upgrades cost Infinity Points (IP) in return for some essential bonuses.
 
 == Buying First Upgrades ==
-Buy your first IU [1;1]. It will multiply the first Generator, which makes '''GP''' (Generator Points) by the number of Infinities. It will also unlock a new tab, called '''Automations''', where you can automate many things, even though only 1 is available in the beginning (''Automate Purchases (Colors))''. Then it splits in two, [2;1], which increases the Common Exponent by 0.01 and [2;2], which unlocks a new automation (Automate Ascensions). Then with [3;1], it multiplies the lap speed by 1.1, and with [4;1], it multiplies the lap speed by 1.2.
+Buy your first IU [1;1]. It will multiply the first Generator, which makes '''GP''' (Generator Power) by the number of Infinities. It will also unlock a new tab, called '''Automations''', where you can automate many things, even though only 1 is available in the beginning (''Automate Purchases (Colors))''. Then it splits in two, [2;1], which increases the Common Exponent by 0.01 and [2;2], which unlocks a new automation (Automate Ascensions). Then with [3;1], it multiplies the lap speed by 1.1, and with [4;1], it multiplies the lap speed by 1.2. This table shows the rest of the upgrades.
+
+== Infinity Upgrades ==
+{| class="wikitable" style="text-align:center;  font-size: 1rem"
+!Number and Name
+!Icon
+!Icon before change
+!Cost (IP)
+!Upgrade
+|-
+|1;1 Infinity Generation and Automation
+|
+|
+|1
+|Generator g1 multiplier is multiplied by infinities and automation and autobuy is unlocked. (There is a star upgrade that allows g2, g3, g4, g5, g6, g7, g8, g9, g10 to be multiplied as well)
+|-
+|2;1 Exponential Box
+|
+|
+|1
+|Adds 0.01 to common exponent (There is a star upgrade that multiplies this)
+|-
+|2;2 Auto Ascend
+|
+|
+|1
+|Unlocks auto-ascension
+|-
+|3;1 Fast Laps
+|
+|
+|1
+|1.1x to Lap Speed
+|-
+|4;1 Even Faster Laps
+|
+|
+|3
+|1.2x to Lap Speed
+|-
+|5;1 Long Term Prestiging
+|
+|
+|3
+|Prestige Mult gain is increased based on time spent in infinity
+|-
+|5;2 Solid Exponent
+|
+|
+|3
+|Common Exponent gain is multiplied based on infinities (before softcaps)
+|-
+|5;3 Auto Prestige
+|
+|
+|3
+|Unlocks auto prestige
+|-
+|6;1 Mighty Ascension
+|
+|
+|3
+|Ascension power base is increased by 2
+|-
+|6;2 Ascend to Ascend
+|
+|
+|3
+|Ascension power is multiplied based on your infinities
+|-
+|7;1 Challenges!
+|
+|
+|5
+|Unlocks Infinity Challenges
+|-
+|8;1 Generator and Time
+|
+|
+|16
+|Generator 1 is stronger based on time spent in infinity
+|-
+|8;2 Generator and Power
+|
+|
+|32
+|Generator 1 is stronger based on current Generator Power
+|-
+|8;3 Generator and Constant
+|
+|
+|16
+|Generator 1 is 5x stronger
+|-
+|9;1 Generator 2 and time
+|
+|
+|128
+|Generator 2 is stronger based on time spent in current infinity
+|-
+|9;2 Generator 2 and Constant
+|
+|
+|128
+|Generator 2 is 3x stronger
+|-
+|10;1 Auto Work
+|
+|
+|256
+|Unlocks promotion automation
+|-
+|11;1 Weak Generators
+|
+|
+|300
+|Generator 1 is stronger based on your IP
+|-
+|11;2 Medium Generators
+|
+|
+|400
+|Generator 2 is stronger based on your IP
+|-
+|12;1 First, But Better
+|
+|
+|512
+|Infinities boost Generator 2 at a reduced rate
+|-
+|13;1 A Little Gift
+|
+|
+|600
+|Base ascension power is increased by 1
+|-
+|14;1 First for the First
+|
+|
+|1,024
+|Promotion 1 is stronger based on its level
+|-
+|14;2 Efficiency V
+|
+|
+|1,024
+|Generator exponent is increased to 0.75
+|-
+|15;1 Auto Infinity
+|
+|
+|2,048
+|Unlocks auto infinity
+|-
+|15;2 Fast IP Gain
+|
+|
+|2,048
+|IP is multiplied based on total challenge time
+|-
+|15;3 First Generator Power
+|
+|
+|2,048
+|Generator 1 is multiplied based on total challenge time
+|-
+|15;4 Second Generator Power
+|
+|
+|2,048
+|Generator 2 is multiplied based on total challenge time
+|-
+|16;1 Infinities to IP
+|
+|
+|5,000
+|IP is multiplied based on infinities
+|-
+|16;2 Stronger Ascension Power
+|
+|
+|5,000
+|Ascension power is multiplied based on your infinities
+|-
+|16;3 Empowered Promotions
+|
+|
+|5,000
+|Promotion 4 is stronger based on 9th challenge time
+|-
+|17;1 Third’s Turn
+|
+|
+|1,000,000 (e6)
+|Generator 3 is stronger based on your infinities
+|-
+|17;2 Faster Infinity Gain
+|
+|
+|2,000,000 (2e6)
+|Infinities are multiplied based on total challenge time
+|-
+|17;3 Boost for the First
+|
+|
+|1,000,000 (1e6)
+|Generator 1 is 10x stronger
+|-
+|18;1 Passive Infinities
+|
+|
+|200 B (2e11)
+|Gain infinities passively based on your fastest infinity time, multiplied by 2
+|-
+|18;2 Fourth from Third
+|
+|
+|100 B (1e11)
+|Generator 4 is stronger based on bought Generator 3
+|-
+|18;3 Third from Second
+|
+|
+|100 B (1e11)
+|Generator 3 is stronger based on bought Generator 2
+|}
+To do: add all the infinity upgrades to stars and add icons
 [[Category:Infinity]]
 {{Main navbox}}
