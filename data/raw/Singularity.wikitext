@@ -25,119 +25,108 @@ At various atom thresholds you will gain a buff or penalty. These buffs/penaltie
 !Atom Threshold
 !Base Value
 !Resource Affected
-!Modifiable?*
 !Notes
 |-
 |BUFF
 |1,000,000
 |^1
 |Atoms Gain
-|Yes
 |Unlocked and improved with Relic 69
 |-
 |PENALTY
 |1e10
 |^0.5
 |Atoms Gain
-|Yes
 |Reduced (and eventually removed) with levels in RN128
 |-
 |BUFF
 |1e32
 |^1.05
 |Sacrifice Dust Gain
-|No
 |
 |-
 |PENALTY
 |1e50
 |^0.833
 |Atoms Gain
-|Yes
 |Removed with RN126
 |-
 |BUFF
 |1e128
 |^1.01
 |Sacrifice Dust Gain
-|No
 |
 |-
 |PENALTY
 |1.40e154
 |^0.847
 |Atoms Gain
-|Yes
 |Removed with RN127
 |-
 |BUFF
 |1e200
 |x10
 |Spread Power
-|No
 |
 |-
 |PENALTY
 |1.6e256
 |^0.714
 |Atoms Gain
-|No
 |
 |-
 |PENALTY
 |1.8e308
 |^0.125
 |Atoms Gain
-|Yes
 |Weakened with Singularity Tree Node 3.1
 |-
 |BUFF
 |1e400
 |^1.03
 |Sacrifice Dust Gain
-|No
 |
 |-
 |PENALTY
 |1e500
 |^0.05
 |Atoms Gain
-|Yes
 |Weakened with Singularity Tree Node 3.2
 |-
 |BUFF
 |1.00e600
 |^1.01
 |Spread Power
-|No
 |
 |-
 |PENALTY
 |1.00e1000
 |^0.014
 |Atoms Gain
-|Yes
 |Weakened with Singularity Tree Node 6.2
 |-
 |PENALTY
 |1.00e2000
 |^0.5
 |Atoms Gain
-|No
 |
 |-
 |PENALTY
 |1.00e3000
 |^0.333
 |Atoms Gain
-|No
 |
 |-
 |PENALTY
 |1.00e5000
 |^0.2
 |Atoms Gain
-|No
+|
+|-
+|PENALTY
+|1.00e10000
+|^0.1
+|Atoms Gain
 |
 |}*Values stated to be unmodifiable may be modifiable later in progression
 
@@ -190,16 +179,19 @@ Whenever you Singularize you will gain a bonus to Singularity Mult which determi
 
 == Milestones ==
 [[File:Screenshot 2026-08-11 103100.png|thumb|Singularity Milestones]]
-The Milestones tab automatically unlocks with your first Singularity. There are 3 types of milestones: Singularity milestones, Atom milestones, and Progression milestones. 
+The Milestones tab automatically unlocks with your first Singularity. There are 3 types of milestones: Singularity milestones, Atom milestones, and Progression milestones. The first two types are obviously for Singularity Count and Atom Count respectively, but Progression milestones work a bit differently. Each Singularity, these will reset. If their respective requirement is not met, they apply harsh penalties that make progressing through early Singularity difficult. However, after completing, they give decent boosts to your progression.  
+ 
 {| class="wikitable"
 |+Singularity Milestones
 !Name
-! width=120px| Requirement
+! width="120px" | Requirement
 !Reward
+!Atom Requirement (Last Singularity)
 |-
 |First Collapse
 |1 Singularity
-|Unlock Milestones Tab<br/>SMS Factor is locked at 0
+|Unlock Milestones Tab<br />SMS Factor is locked at 0
+| rowspan="6" |1.79e308
 |-
 |Accelerated Growth
 |2 Singularity
@@ -207,7 +199,7 @@ The Milestones tab automatically unlocks with your first Singularity. There are 
 |-
 |Event Horizon
 |3 Singularity
-|Keep Plague on Singularity Reset<br/>Plague Generator Awards no longer decrease
+|Keep Plague on Singularity Reset<br />Plague Generator Awards no longer decrease
 |-
 |Spaghettification
 |5 Singularity
@@ -224,26 +216,37 @@ The Milestones tab automatically unlocks with your first Singularity. There are 
 |The Unforgotten
 |16 Singularity
 |Keep Elements, Minerals and Tarot on Singularity Reset
+|1e420
 |-
 |Loop Feeds Loop
 |20 Singularity
 |Singularity Count acts as a factor for the next Singularity Mult
+|1e500
 |-
 |Astral Property
 |32 Singularity
 |Unlocks Houses Tab
+|1e696
 |-
 |Self Synergism
 |64 Singularity
 |Singularity Mult acts as a factor for the next Singularity Mult
+|1e1130
 |-
 |One Hundred
 |100 Singularity
-|
+|''Not added yet...''
+|1e4071
 |-
 |COMING SOON
 |128 Singularity
 |
+|9.45e55061
+|-
+|COMING SOON
+|160 Singularity
+|
+|1.81e1162566
 |}
 {| class="wikitable"
 |+Atom Milestones
@@ -351,67 +354,54 @@ Singularities, Atom amount, and your Singularity Multiplier will begin providing
 You start with 4 total effects, but you can unlock more through various means. 
 {| class="wikitable"
 |+Effects List
-! colspan="3" |Singularity Count Effects
+! colspan="2" |Singularity Count Effects
 |-
 !Effect
 !Unlock Condition 
-!Effect Scaling
 |-
 |Gold Gain ^
 |Have Effects unlocked
-| +^0.02/Singularity
 |-
 |Base Spread Speed mult
 |RN122
-|?
 |-
 |Atom Gain ^
 |RN131
-| +^0.005/Singularity
 |-
 |Second Singular Zodiac Level Multiplier
 |Unlocked with Houses
-|?
 |-
 |Golden Resources Gain
 |RN132
-|
 |-
 |RfP Gain
 |RN134
-|
 |-
-! colspan="3" |Atom Effects
+! colspan="2" |Atom Effects
 |-
 |Golden Resources Gain
 | rowspan="2" |Unlocked with Effects
-|?
 |-
 |Black Gem mult
-|?
 |-
 |Luck
 |1e2700 Atom Milestone
-|?
 |-
-! colspan="3" |Singularity Multiplier Effects
+! colspan="2" |Singularity Multiplier Effects
 |-
 |Base Spread Speed
 |Unlocked with Effects
-|
 |-
 |RfP Base Gain
 |RN129
-|
 |-
 |First Singular Zodiac Level Multiplier
 |Unlocked with Houses
-|
 |-
 |Luck
 |RN135
-|
 |}
+''For effect scaling formulas, see below.''
 
 == Tree ==
 [[File:Screenshot 2026-08-11 103117.png|thumb|The Singularity Tree]]
@@ -420,168 +410,328 @@ Unlocked at 5 Singularities. Each individual tree node can be levelled up multip
 |+
 !Tree Node #
 !Effect
-!Modifier Type
 !Initial Increase/lvl
 !Base Cost
 !Base Cost Scaling
 |-
 |1
 |Tree Factor (Adds/increases a Singularity mult gain modifier) 
-|Multiplier
 |.01
 |1e300
-|
+|x100000 (1e5)
 |-
 |2
-|Increases Gold gain
-|Exponential
+|Gold Gain ^
 |.001
-|
-|
+|1e400
+|x1000000 (1e6)
 |-
 |3.1
-|Weaken e308 penalty
-|Division
+|e308 Atom penalty /X
 |.01
-|
-|
+| rowspan="2" |1e420
+| rowspan="2" |x100000 (1e5)
 |-
 |3.2
-|Weaken e500 penalty
-|Division
+|e500 Atom penalty /X
 |.01
-|
-|
 |-
 |4.1
-|Increase Refine Points gain
-|Exponential
+|RfP Gain ^
 |.001
-|
-|
+| rowspan="2" |1e480
+| rowspan="2" |x10000 (1e4)
 |-
 |4.2
-|Increase Golden Resource gain
-|Multiplier
+|Golden Resource gain mult
 |.25
-|
-|
 |-
 |5.1
-|Increase Plague Stats Rewards
-|Multiplier
+|Plague Stats Rewards mult
 |.01
-|
-|
+| rowspan="2" |1e520
+| rowspan="7" |x1e10
 |-
 |5.2
-|Increase Plague Generators Reward
-|Exponential
+|PlG Rewards ^
 |.03
-|
-|
 |-
 |6.1
-|Weaken next Singularity nerf
-|Division
+|Next Singularity nerf /X
 |.05
-|1e600
-| rowspan="5" |x1e10
+| rowspan="2" |1e600
 |-
 |6.2
-|Weaken e1,000 Atom Penalty
-|Division
+|e1000 Atom Penalty /X
 |.02
-|1e600
 |-
 |7.1
-|Increase First Singularity Zodiac Level Mult
-|Multiplier
+|First Singularity Zodiac Level Mult
 |.006
-|1e800
+| rowspan="2" |1e800
 |-
 |7.2
 |Second Singularity Zodiac Level Mult
-|Multiplier
 |.006
-|1e800
 |-
 |8
 |All Singularity Tree Upgrade Efficiency
-|Multiplier
 |.001
 |1e1000
 |}
 
 == Houses ==
 [[File:Screenshot 2026-08-11 103128.png|thumb|The Houses tab]]
-Unlocked at 32 Singularities. An advanced version of Astrology; you get a Singular Zodiac when Singularizing with 1e1000 Atoms or more. Zodiacs must be placed in their matching House on the circle. Each spot is numbered with roman numerals, starting with I at the west, and moving counter-clockwise. A second effect is unlocked at the Godly rarity, and a third is unlocked at Rainbow rarity (unaccessible as of writing).
+Unlocked at 32 Singularities. An advanced version of Astrology; you get a Singular Zodiac when Singularizing with 1e1000 Atoms or more. Zodiacs must be placed in their matching House on the circle. Each spot is numbered with roman numerals, starting with I at the west, and moving counter-clockwise. A second effect is unlocked at the Divine rarity, and a third is unlocked at Rainbow rarity (inaccessible as of writing). Each Singular Zodiac also has a level just like Common Zodiacs, and this level is based on the two Singular Zodiac Level multipliers from Singularity Mult and Count, which multiplied together gives your expected level.
 {| class="wikitable"
 |+Singular zodiac effects
 !House
 !Zodiac
-!First effect
-!Second Effect
+!First Effect
+!Second Effect (Divine+)
+!Third Effect (Rainbow+)
 |-
 |I
 |Aries
 |Fire Element Factor 3
-|
+|Sacrifice Dust Gain ^
+|Attack Exponent Mult
 |-
 |II
 |Taurus
 |Earth Element Factor 3
-|
+|PlP per PlG mult
+|Golden Resources Gain
 |-
 |III
 |Gemini
 |Wind Element Factor 3
-|
+|VE on Dissolve mult
+|Black Gem Effect ^
 |-
 |IV
 |Cancer
 |Water Element Factor 3
 |Base  Spread Mult
+|Singularity Mult Boost
 |-
 |V
 |Leo
 |Sacrifice Dust Gain
-|
+|Attack Exponent Mult
+|Fire Element Factor 3
 |-
 |VI
 |Virgo
 |PlP per PlG Multi
-|
+|Golden Resource Gain
+|Earth Element Factor 3
 |-
 |VII
 |Libra
 |VE on Disolve Multi
-|
+|Black Gem Effect ^
+|Wind Element Factor 3
 |-
 |VIII
 |Scorpio
 |Base Spread Multi
 |Singularity Mult Boost
+|Water Element Factor 3
 |-
 |IX
 |Saggitarius
 |Attack Exponent Multi
-|
+|Fire Element Factor 3
+|Sacrifice Dust Gain
 |-
 |X
 |Capricorn
 |Golden Resources Gain
-|
+|Earth Element Factor 3
+|PlP per PlG Multi
 |-
 |XI
 |Aquarius
 |Black Gem Effect 
 |Wind Element Factor 3
+|VE on Disolve Multi
 |-
 |XII
 |Pisces
 |Singularity Mult Boost
 |Water Element Factor 3 
+|Base Spread Multi
 |}
+''Zodiacs of the same element provide the same 3 boosts.''
+
+== Nerd zone ==
+
+=== Singularity Mult Gain formula (unconfirmed) ===
+<math>\frac{T}{Mult^{\frac{0.5}{STN6.1}}}</math>
+
+where T = Total multiplier from all factors
+
+STN6.1 = Singularity Tree Node 6.1's effect
+
+Mult = Singularity Mult
+
+=== Singularity Atom Requirement ===
+1.79e308
+
+if S > 10:
+
+<math>1e320*1e20^{S-11}</math>
+
+if S > 21:
+
+<math>1e520*1e16^{S-21}</math>
+
+if S > 51:
+
+<math>1e1000*1e10^{S-51}</math>
+
+if S > 71:
+
+<math>10^{(S-36)^2-25}</math>
+
+If S > 103:
+
+<math>10^{(5082\cdot1.1^{(S-102)})}</math>
+
+=== Singularity Effect formulas (data needed!!!1!1!1111!) ===
+
+==== Singularity Count Effects ====
+''S cooresponds to Singularity Count''
+
+===== Gold Gain ^ =====
+<math>1+0.02*S</math>
+
+===== Atom Gain ^ =====
+<math>1 + 0.005*S</math>
+
+===== Base Spread Speed =====
+<math>1 + \frac{(S+1)^2}{5}</math>
+
+if >1000: also apply:
+
+<math>1000 * (\frac{x}{1000})^{0.1}</math>
+
+===== RfP Base Gain: =====
+<math>10^S</math>
+
+if >1e100, apply:
+
+<math>10^{(100\cdot(\frac{log(x)}{100})^{0.5})}</math>
+
+if previous result >1e250, also apply:
+
+<math>10^{(250\cdot(\frac{log(x)}{250})^{0.25})}</math>
+
+===== Golden Resource Gain =====
+<math>(1+S\cdot 0.2)^{1.6}</math>
+
+===== 2nd Singular Zodiac Level Multiplier =====
+<math>\sqrt{1+0.1\cdot max(1,S-30)}</math>
+
+==== Atom Count Effects ====
+
+===== Golden Resource Gain =====
+<math>1+\frac{log(A+1)^2}{10000}</math>
+
+===== Black Gem Effect Mult =====
+''A is Atom Count''
+
+<math>A^{0.025}</math>
+
+if >1e50, apply
+
+<math>10^{(50\cdot\frac{log(x)}{50})^{0.4}}</math>
+
+===== Luck ^ =====
+<math>1+(\frac{log(A)-1000}{10000})</math>
+
+==== Singularity Multiplier Effects ====
+
+===== Base Spread Speed mult =====
+''M is Singularity Mult''
+
+<math>M^2</math>
+
+if >1000:
+
+<math>1000\cdot(\frac{x}{1000})^{0.1}</math>
+
+===== RfP Base Gain =====
+<math>10^{(2*log(M+1))^3}</math>
+
+if > 1e100:
+
+<math>10^{\sqrt{100\cdot\frac{log(x)}{100}}}</math>
+
+if >1e250:
+
+<math>10^{(250\cdot(\frac{log(x)}{250})^{0.25})}</math>
+
+===== Luck ^ =====
+<math>1+(\frac{log(M+1)}{25})</math>
+
+===== First Singular Zodiac Level Multiplier =====
+<math>max(1,(\frac{M+1}{25})^{0.4})</math>
+
+=== Singularity Tree effect formulas ===
+where<math>A_{x}</math>= Ascension level for STNx (internally, i.e. node 3.2 is considered node 4)
+
+and <math>L_{x}</math> = level of STNx
+
+and <math>n_{8}</math>= the effect of STN8
+
+==== STN1 ====
+<math>\left(1+\left(0.1\cdot A_{1}^{0.6}\right)+\frac{\left(0.01\cdot L_{1}\right)}{A_{1}+1}\right)\cdot n_{8}</math>
+
+==== STN2 ====
+<math>\left(1+\left(0.01\cdot A_{2}^{0.7}\right)+\frac{\left(0.001\cdot L_{2}\right)}{A_{2}+1}\right)\cdot n_{8}</math>
+
+==== STN3.1 ====
+<math>\left(1+\left(0.1\cdot A_{3}^{0.6}\right)+\frac{\left(0.01\cdot L_{3}\right)}{A_{3}+1}\right)\cdot n_{8}</math>
+
+==== STN3.2 ====
+<math>\left(1+\left(0.1\cdot A_{4}^{0.7}\right)+\frac{\left(0.01\cdot L_{4}\right)}{A_{4}+1}\right)\cdot n_{8}</math>
+
+==== STN4.1 ====
+<math>\left(1+\left(0.01\cdot A_{5}^{0.8}\right)+\frac{\left(0.01\cdot L_{5}\right)}{A_{5}+1}\right)\cdot n_{8}</math>
+
+==== STN4.2 ====
+<math>\left(1+\left(2.5\cdot A_{6}^{0.75}\right)+\frac{\left(0.01\cdot L_{6}\right)}{A_{6}+1}\right)\cdot n_{8}</math>
+
+==== STN5.1 ====
+<math>\left(1+\left(0.1\cdot A_{7}^{0.64}\right)+\frac{\left(0.01\cdot L_{7}\right)}{A_{7}+1}\right)\cdot n_{8}</math>
+
+==== STN5.2 ====
+<math>\left(1+\left(0.3\cdot A_{8}^{0.666}\right)+\frac{\left(0.03\cdot L_{8}\right)}{A_{8}+1}\right)\cdot n_{8}</math>
+
+==== STN6.1 ====
+<math>\left(1+\left(0.5\cdot A_{9}^{0.6}\right)+\frac{\left(0.05\cdot L_{9}\right)}{A_{9}+1}\right)\cdot n_{8}</math>
+
+==== STN6.2 ====
+<math>\left(1+\left(0.2\cdot A_{10}^{0.65}\right)+\frac{\left(0.02\cdot L_{10}\right)}{A_{10}+1}\right)\cdot n_{8}</math>
+
+==== STN7.1 ====
+<math>\left(1+\left(0.06\cdot A_{11}^{0.6}\right)+\frac{\left(0.006\cdot L_{11}\right)}{A_{11}+1}\right)\cdot n_{8}</math>
+
+==== STN7.2 ====
+<math>\left(1+\left(0.06\cdot A_{12}^{0.6}\right)+\frac{\left(0.006\cdot L_{12}\right)}{A_{12}+1}\right)\cdot n_{8}</math>
+
+==== STN8 ====
+<math>\left(1+\left(0.01\cdot A_{13}^{0.6}\right)+\frac{\left(0.001\cdot L_{13}\right)}{A_{13}+1}\right)</math>
+
+''Formulas from Mix's STN Calculator:'' https://www.desmos.com/calculator/j2pnm4fdgv
+
+=== STN Costs ===
+pretty simple:
+
+<math>BaseCost * CostIncrease^{Level*Ascensions}</math>
+
+todo: finish effects formulas and zodiac effects
 [[Category:Unity]]
 {{Main navbox}}
