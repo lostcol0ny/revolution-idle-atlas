@@ -1,7 +1,7 @@
 The {{Keyword|shop|Soul Shop|}} is unlocked after reaching 5 minutes of unscaled playtime. In here, you can buy:
 *[[Soul Shop#Boosts|Boosts]] for various game mechanics
 *Hours of {{Icon|time flux|link=Time Flux}} {{Keyword|tf|Time Flux|link=Time Flux}}
-*Quality of Life (QoL) features, such as more [[Zodiacs|Zodiac]] Slots
+*Quality of Life (QoL) features.
 *[[skins|Skins]] to customize your [[revolution|Revolution]] tab
 *More {{Icon|soul_icon}} {{Keyword|soul|Souls}} for real money, in the form of [[Soul Shop#Soul Packs|Soul Packs]]
 *[[Soul Shop#Ascension Packs|Ascension Packs]] for real money, which contain Boosts, Skins and {{Icon|soul_icon}} {{Keyword|soul|Souls}} 
