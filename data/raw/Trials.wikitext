@@ -45,7 +45,7 @@ There are 5 difficulties of trials: Easy, Medium, Hard, Insane, and the Bonus Tr
 !Reward
 |-
 |Beat all Easy Trials
-|Keep revolutions don't take away score, Prestige & Promotions reset nothing, Unlocks Medium Trials.
+|Revolutions don't take score, promote and Prestige don't reset anything, unlocks medium trials. 
 |}
 
 ==='''Medium Trials'''===

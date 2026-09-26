@@ -216,7 +216,7 @@ mult x1.3
 === Zodiac Level ===
 Each Zodiac has a level, which increases based on Zodiac Exp. Zodiac Exp is influenced by multiple factors and determines how strong the Zodiac’s bonuses become.
 
-Below is a list of the contributing factors to Zodiac Exp.
+Below is a list of the contributing factors to Zodiac Exp. Some factors have a threshold that must be passed before they start increasing Exp.
 {| class="wikitable"
 |-
 !Factor
@@ -268,7 +268,7 @@ Below is a list of the contributing factors to Zodiac Exp.
 |20,000
 |-
 |Relic 8
-|Attack lv 80
+|Relic 8 Level 1
 |no threshold 
 |-
 |<span class="ap">AP</span>
@@ -389,10 +389,10 @@ All Zodiac rarities here on out will use the +x system, and progressing to the n
 |Prime
 |1.57e1472
 |7.9e2671235
-|Achievement 670 ==> Rainbow Zodiacs
+|Achievement 675 ==> Rainbow Zodiacs
 |-
 |Rainbow
-|?
+|e2.67e6
 |?
 |N/A
 |}
@@ -552,7 +552,10 @@ Immortal weight:
 
 === Rarity Chance ===
 The chance that a given rarity is chosen is the fraction that its weight makes of all weights combined.
- Chance(this Rarity) = Weight(this Rarity) / Sum(all rarity weights)
+Chance(this Rarity) = Weight(this Rarity) / Sum(all rarity weights)
+
+=== Trivia ===
+- In v1.073, a bug made the rainbow zodiacs available at e2.8e6 luck instead of the intended e2.67e6
 
 == See Also ==
 * [[Zodiac Loadouts]]
