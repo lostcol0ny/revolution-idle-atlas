@@ -1,4 +1,3 @@
-{{Stub}}
 Supernova is the fifth {{Keyword|eternity|Eternity}} tab, unlocked by reaching [[Eternity#Eternity Challenges Milestones|Eternity Challenges Milestone]] 3 (8 {{Keyword|eternity|EC}} completions).
 [[File:Supernova.png|thumb|The Supernova tab]]
 Supernovae are obtained by reaching a certain [[Revolution#Score|Score]] and using the "Go Supernova" button within the tab. Going Supernova will start a new {{Keyword|eternity|Eternity}} and provide Supernova bonuses to the player, as follows:
@@ -10,5 +9,9 @@ Supernovae are obtained by reaching a certain [[Revolution#Score|Score]] and usi
 * + [[Eternity#Animals|{{Keyword|ap|AP}}]] (+2 / supernova)
 
 In general, Supernovae should be performed as soon as possible, for the bonuses they reward. However, in some cases the player may want to delay going Supernova (for example, in the later part of [[Eternity#Dilation & Dilation Tree|{{Keyword|dilation|Dilation Tree}}]], in order to first gain more [[Eternity#Animals|{{Keyword|ap|AP}}]]).
+
+Supernova requirement can be lowered with {{Keyword|unity|Wind Zodiacs}} which tetrate (^^) the requirement and {{Keyword|eternity|Dilation Tree Upgrade}} Top-3 - which can be boosted with {{Keyword|eternity|Dilation Tree Upgrade}} Bottom-4, then boosted again by {{Keyword|eternity|Dilation Tree Upgrade}} Top-4.
+
+Supernova power can be boosted by {{Keyword|dilation|DU5}}, {{Keyword|unity|relic 11}} and {{Keyword|eternity|Dilation Tree Upgrade}} Middle-3 - which can be boosted by {{Keyword|eternity|Dilation Tree Upgrade}} Middle-4
 [[Category:Eternity]]
 {{Main navbox}}

@@ -403,9 +403,9 @@ The tables below show the Time Flux {{Icon|time flux}} cost and effect of Time F
 TF gain formula:
  TFGain = TFGBase × (shop TF mult + secret Ach TF mult)
 if Offline flux production is OFF:
- TFGBase = 3600 × (TFG Upgrade level + 1)/(TFG Upgrade level + 10)
+ TFGBase = 3600 × (0.1 + (TFG Upgrade level + 1)/(TFG Upgrade level + 10))
 if Offline flux production is ON:
- TFGBase = 3600 × (TFG Upgrade level + 1)/(TFG Upgrade level + 10) + (OF conversion × min(1800, 3600 × (TFG Upgrade level + 1)/(TFG Upgrade level + 10)))
+ TFGBase = 3600 × (TFG Upgrade level + 1)/(TFG Upgrade level + 10) - (OF conversion × min(1800, 3600 × (TFG Upgrade level + 1)/(TFG Upgrade level + 10)))
 OF gain formula: <br>
 if Offline flux production is OFF:
  OFGain = 0
