@@ -1,6 +1,6 @@
 The Planet Shop is unlocked by completing Easy [[Trials|Trial]] #6.
 ==Astrodust==
-Astrodust is a resource which can be used to buy donuts, unlock Planet Shop features and spent to use some of those features.
+Astrodust is a resource which can be used to buy donuts, unlock Planet Shop features and spent to use some of those features. 
 
 Astrodust is obtained by selling zodiacs: to sell a zodiac, place it in the slot next to where "Sell for -" is displayed, then press "Sell for X", where X is the amount of astrodust you will receive.
 

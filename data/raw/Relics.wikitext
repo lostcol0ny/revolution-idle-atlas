@@ -504,7 +504,7 @@ Statue
 |67
 |Galactic Mind
 | [[File:Relic 067.png|128px|link=]]
-|Increases the chance of obtaining Achievement 600 after completing Earth Plague Stage (5-5)
+|Increases the chance of obtaining Achievement 600 after completing Earth Plague Stage (5-5) (Useless after getting Achievement #600)
 | +2.55% (?)
 | Attack level 40,067
 |-

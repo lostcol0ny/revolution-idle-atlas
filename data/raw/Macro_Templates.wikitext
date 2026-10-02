@@ -5,7 +5,7 @@ You can import macros by copying a macro code into your clipboard and then click
 |}
 
 == Auto Infinity Challenge Macro ==
-This macro is attended to automate Infinity Challenges.
+This macro is intended to automate Infinity Challenges.
 
 === Prerequisites ===
 
