@@ -16,58 +16,71 @@ The factors are what multiply your element generation rates, and they are based 
 ! colspan=2|
 ! Description
 ! Unlock Condition
+!Formula
 |-
 ! rowspan="3" style="background-color:rgba(111, 54, 26, 0.5)"| Fire
 ! Factor 1
 | Score
 | None
+|<math>\frac{\log\left(Score\right)^{2}}{1e27}</math>
 |-
 ! Factor 2
 | Score Exponent
 | King of Wands card
+|
 |-
 ! Factor 3
 | Asc. Power
 | Fire Node 11
+|
 |-
 ! rowspan="3" style="background-color:rgba(56, 65, 42, 0.5)"| Earth
 ! Factor 1
 | Infinities
 | None
+|<math>\frac{\log\left(Inf\right)^{3}}{1000}</math>
 |-
 ! Factor 2
 | Gen Exp.
 | King of Pentacles card
+|
 |-
 ! Factor 3
 | IP
 | Earth Node 10
+|
 |-
 ! rowspan="3" style="background-color:rgba(111, 111, 111, 0.5)"| Wind
 ! Factor 1
 | Eternities
 | None
+|<math>\frac{\log\left(Etn\right)^{5}}{2e9}</math>
 |-
 ! Factor 2
 | Supernovae
 | King of Swords card
+|
 |-
 ! Factor 3
 | EP
 | Wind Node 12
+|
 |-
 ! rowspan="3" style="background-color:rgba(33, 68, 112, 0.5)"| Water
 ! Factor 1
 | Luck
 | None
+|<math>\frac{Luck^{2}}{1e30}</math>
 |-
 ! Factor 2
 | Zodiac Quality
 | King of Cups card
+|
 |-
 ! Factor 3
 | Ach 29 Reward
 | Water Node 11
+|
 |-
 |}
 

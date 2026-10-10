@@ -216,7 +216,7 @@ mult x1.3
 === Zodiac Level ===
 Each Zodiac has a level, which increases based on Zodiac Exp. Zodiac Exp is influenced by multiple factors and determines how strong the Zodiac’s bonuses become.
 
-Below is a list of the contributing factors to Zodiac Exp.
+Below is a list of the contributing factors to Zodiac Exp. Some factors have a threshold that must be passed before they start increasing Exp.
 {| class="wikitable"
 |-
 !Factor
@@ -268,7 +268,7 @@ Below is a list of the contributing factors to Zodiac Exp.
 |20,000
 |-
 |Relic 8
-|Attack lv 80
+|Relic 8 Level 1
 |no threshold 
 |-
 |<span class="ap">AP</span>
@@ -287,7 +287,7 @@ Below is a list of the contributing factors to Zodiac Exp.
 === Zodiac Quality === 
 Zodiac quality will buff the strength of your zodiac bonuses by a ^1.25
 
-buff(edit in the exact amount). Zodiac quality is very hard to buff early game, but becomes the main way to buff your zodiacs later on in attacks.
+buff(edit in the exact amount). Zodiac quality is very hard to buff early game, but becomes the main way to buff your zodiacs later on in attacks and even in elements.
 
 === Zodiac Rarity ===
 Zodiac Rarity will affect the base strength of the stat roll that you can have, it will also affect how many boosts your zodiac will give.
@@ -363,6 +363,8 @@ needed
 |}After about 1e32 luck and {{Keyword|ach|Achievement #342}} (merge 3 zodiacs of Immortal+1000 rarity), you can obtain Ethereal Zodiacs and +x Ethereal rarities.
 
 All Zodiac rarities here on out will use the +x system, and progressing to the next category (as in completely new color, new everything) will require merging 3 +1000 zodiacs of the previous rarity, granting the respective achievement, which allows for obtaining the next rarity and all +x rarities up to +1000.
+
+It's recommended to get the next rarity by merging 3 +1000 zodiacs before you start gaining it by uniting since the next rarity gives a much higher boost.(especially for ethereal,that's how you progress at a certain point in elements,after immo+1000 and before ethereal)
 {| class="wikitable"
 ! colspan="4" |Additional Zodiac Rarities
 |-
@@ -389,10 +391,10 @@ All Zodiac rarities here on out will use the +x system, and progressing to the n
 |Prime
 |1.57e1472
 |7.9e2671235
-|Achievement 670 ==> Rainbow Zodiacs
+|Achievement 675 ==> Rainbow Zodiacs
 |-
 |Rainbow
-|?
+|e2.67e6
 |?
 |N/A
 |}
@@ -552,7 +554,10 @@ Immortal weight:
 
 === Rarity Chance ===
 The chance that a given rarity is chosen is the fraction that its weight makes of all weights combined.
- Chance(this Rarity) = Weight(this Rarity) / Sum(all rarity weights)
+Chance(this Rarity) = Weight(this Rarity) / Sum(all rarity weights)
+
+=== Trivia ===
+- In v1.073, a bug made the rainbow zodiacs available at e2.8e6 luck instead of the intended e2.67e6
 
 == See Also ==
 * [[Zodiac Loadouts]]
