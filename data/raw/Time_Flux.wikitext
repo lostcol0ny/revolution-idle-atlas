@@ -152,7 +152,7 @@ In the mobile version of the app, you can get TF6 minutes by pressing the [Watch
 After you get TF6 minutes, you can wait 5 minutes in real time to watch an ad again. You can watch up to 30 videos in 12 hours.
 If you purchase the Remove Ads product, you can receive rewards directly without watching ads.
 
-Even if you purchase a product that removes ads in another medium, it will not be available in the Steam version.
+If you purchase a product that removes ads in another medium, the ad button will appear on the Steam edition allowing you to claim Ad TF.
 
 ==TIPS: Idle vs. TF Saving ==
 Is it better to leave the game on or to close the game and save up TF?
@@ -403,9 +403,9 @@ The tables below show the Time Flux {{Icon|time flux}} cost and effect of Time F
 TF gain formula:
  TFGain = TFGBase × (shop TF mult + secret Ach TF mult)
 if Offline flux production is OFF:
- TFGBase = 3600 × (TFG Upgrade level + 1)/(TFG Upgrade level + 10)
+ TFGBase = 3600 × (0.1 + (TFG Upgrade level + 1)/(TFG Upgrade level + 10))
 if Offline flux production is ON:
- TFGBase = 3600 × (TFG Upgrade level + 1)/(TFG Upgrade level + 10) + (OF conversion × min(1800, 3600 × (TFG Upgrade level + 1)/(TFG Upgrade level + 10)))
+ TFGBase = 3600 × (TFG Upgrade level + 1)/(TFG Upgrade level + 10) - (OF conversion × min(1800, 3600 × (TFG Upgrade level + 1)/(TFG Upgrade level + 10)))
 OF gain formula: <br>
 if Offline flux production is OFF:
  OFGain = 0

@@ -18,12 +18,12 @@ Completing an EC will award the player 1 free AP, and an extra magnet chance mul
 !Reward Value
 !Expected Completion
 |-
-| rowspan="6" |1
-| rowspan="6" |Lap Speed
+| rowspan="7" |1
+| rowspan="7" |Lap Speed
 |1
 |x1/20
 | rowspan="5" |e30,000
-| rowspan="6" |Lap Speed
+| rowspan="7" |Lap Speed
 |x2
 |[01/50] 14Σ, 8 AP
 |-
@@ -51,14 +51,17 @@ Completing an EC will award the player 1 free AP, and an extra magnet chance mul
 |x1/1e236
 |e1e15
 |x500
-|
+|After IT4 (lap speed build)
 |-
-| rowspan="6" |2
-| rowspan="6" |Common Exponent
+| colspan="3" |During IT4
+| colspan="2" |/1e50
+|-
+| rowspan="7" |2
+| rowspan="7" |Common Exponent
 |1
 |x0.5
 |e150 
-| rowspan="6" |Common Exponent
+| rowspan="7" |Common Exponent
 | +0.03
 |[03/50] 34Σ, 14 AP
 |-
@@ -90,14 +93,17 @@ Completing an EC will award the player 1 free AP, and an extra magnet chance mul
 |x0.001
 |e5e10
 | +0.30
-|
+|After IT4 (score build)
 |-
-| rowspan="6" |3
-| rowspan="6" |Stars
+| colspan="3" |During IT4
+| colspan="2" |/5,000
+|-
+| rowspan="7" |3
+| rowspan="7" |Stars
 |1
 | rowspan="6" |Disabled (x0)
 |e12,000
-| rowspan="6" |Star Base
+| rowspan="7" |Star Base
 | +1
 |[06/50] 21 AP, 15 RP
 |-
@@ -124,14 +130,17 @@ Completing an EC will award the player 1 free AP, and an extra magnet chance mul
 |6
 |e1.5e13
 | +50
-|
+|After IT4 (score build)
 |-
-| rowspan="6" |4
-| rowspan="6" |Generator Exponent
+| colspan="3" |During IT4
+| colspan="2" |/1e16 (10Qa)
+|-
+| rowspan="7" |4
+| rowspan="7" |Generator Exponent
 |1
 |/10
 |e15,000
-| rowspan="6" |Generator Exponent
+| rowspan="7" |Generator Exponent
 |x1.03
 |[12/50] 56 AP, 57 RP, SN 2
 |-
@@ -163,14 +172,17 @@ Completing an EC will award the player 1 free AP, and an extra magnet chance mul
 |/1e10
 |e1.5e13
 |x1.25
-|
+|After IT4 (score build)
 |-
-| rowspan="6" |5
-| rowspan="6" |Ascension Power
+| colspan="3" |During IT4
+| colspan="2" |/1e6 (1M)
+|-
+| rowspan="7" |5
+| rowspan="7" |Ascension Power
 |1
 |^0.10
 |e60,000
-| rowspan="6" |Ascension Power
+| rowspan="7" |Ascension Power
 |x1.5
 |[16/50] 116 AP, 130 RP, SN 5
 |-
@@ -202,14 +214,17 @@ Completing an EC will award the player 1 free AP, and an extra magnet chance mul
 |^0.001
 |e8.7e13
 |x75
-|
+|After IT4 (score build)
 |-
-| rowspan="6" |6
-| rowspan="6" |Promotion and Prestige Bonus
+| colspan="3" |During IT4
+| colspan="2" |^0.001
+|-
+| rowspan="7" |6
+| rowspan="7" |Promotion and Prestige Bonus
 |1
 | rowspan="6" |Disabled (x0)
 |e80,000
-| rowspan="6" |Prestige Bonus
+| rowspan="7" |Prestige Bonus
 |x1.05
 |[22/50] 158 AP, 190 RP, SN 9
 |-
@@ -236,10 +251,13 @@ Completing an EC will award the player 1 free AP, and an extra magnet chance mul
 |6
 |e3.33e15
 |x1.4
-|
+|After IT4 (score build)
 |-
-| rowspan="6" |7
-| rowspan="6" |RP upgrades
+| colspan="3" |During IT4
+| colspan="2" |/5
+|-
+| rowspan="7" |7
+| rowspan="7" |RP Upgrade strength
 |1
 | rowspan="6" |Disabled (x0)
 |e100,000
@@ -270,14 +288,18 @@ Completing an EC will award the player 1 free AP, and an extra magnet chance mul
 |6
 |e2.66e14
 | +100
-|
+|After IT4 (score build)
 |-
-| rowspan="6" |8
-| rowspan="6" |IP gain
+| colspan="3" |During IT4
+|Divider to other free lab level sources
+| colspan="2" |/100,000
+|-
+| rowspan="7" |8
+| rowspan="7" |IP gain
 |1
 |^0.05
 |e160,000
-| rowspan="6" |IP gain
+| rowspan="7" |IP gain
 |^1.02
 |[32/50] 650 AP, 539 RP, SN 26
 |-
@@ -308,14 +330,17 @@ Completing an EC will award the player 1 free AP, and an extra magnet chance mul
 |^0.001
 |e6.2e15
 |^1.30
-|
+|After IT4 (score build)
 |-
-| rowspan="6" |9
-| rowspan="6" |Generators
+| colspan="3" |During IT4
+| colspan="2" |^0.001
+|-
+| rowspan="7" |9
+| rowspan="7" |Generator Multipliers
 |1
 | rowspan="6" |Disabled (x0)
 |e210,000
-| rowspan="6" |Generator Exponent
+| rowspan="7" |Generator Exponent
 |x1.1
 |[35/50] 716 AP, 550 RP, SN 27
 |-
@@ -342,14 +367,17 @@ Completing an EC will award the player 1 free AP, and an extra magnet chance mul
 |6
 |e5.8e15
 |x1.7
-|
+|After IT4 (score build)
 |-
-| rowspan="6" |10
-| rowspan="6" |Dilation Debuffs
+| colspan="3" |During IT4
+| colspan="2" |/1,000
+|-
+| rowspan="7" |10
+| rowspan="7" |Dilation Debuffs
 |1
 | rowspan="6" |^3
 |1,000,000
-| rowspan="6" |DP gain
+| rowspan="7" |DP gain
 |x10
 |
 |-
@@ -376,7 +404,10 @@ Completing an EC will award the player 1 free AP, and an extra magnet chance mul
 |6
 |e5.6e15
 |x1e7 (10M)
-|
+|After IT4 (score build)
+|-
+| colspan="3" |During IT4
+| colspan="2" |^0.001
 |}
 
 ==='''Eternity Challenges Milestones'''===

@@ -331,7 +331,7 @@ There are 6 main levels, with the first 5 having 12 stages each, and the last on
 |-
 |6-1
 |Universe
-|?
+|∞
 |N/A
 |}
 
@@ -427,23 +427,23 @@ Each ER also falls into one of 5 types:
 !Type
 !Notes
 |-
-|
+|[[File:Outbreak (Plague).png]]
 |Outbreak
 |Excellent Spread Power, but weaker Infectivity and Stealth.
 |-
-|
+|[[File:Latent (Plague).png]]
 |Latent
 |Average Spread Power with exceptional Stealth
 |-
-|
+|[[File:Virulent (Plague).png]]
 |Virulent
 |Average Spread Power with very high Infectivity
 |-
-|
+|[[File:Strain (Plague).png]]
 |Strain
 |Strong Spread Power with only slightly weaker secondary stats
 |-
-|
+|[[File:Decay (Plague).png]]
 |Decay
 |Weak overall stats, but yields a high amount of VE when dissolved.
 |}
