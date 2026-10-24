@@ -34,7 +34,7 @@ When you assign a Zodiac to a planet, a confirmation pops up saying that assigni
 | Star Cost ^0.9 
 |-
 ! Venus
-| Game Speed x2 
+| Game Speed x1.2 
 | Lap Speed x3 
 | Supernova Rewards ^1.02 
 | DU Power x1.05 
