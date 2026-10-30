@@ -9,6 +9,8 @@ In order to release your plague, you must click the “INITIATE INFECTION” but
 
 === Stages ===
 There are 6 main levels, with the first 5 having 12 stages each, and the last one having one. Each stage has a certain number of people that must all be infected by your plague in order to complete that stage. Completing a stage will reward you Plague Generators, or PlG. Each PlG will produce a certain amount of Plague Points, or PlP, per second, which is shown by your PlP per PlG stat. 
+
+Stages can be beaten more than once. Completions after the first give (PlG reward / (times completed + 1)) generators. 
 {| class="wikitable mw-collapsible"
 ! colspan="4" |Plague Stages
 |-
@@ -331,7 +333,7 @@ There are 6 main levels, with the first 5 having 12 stages each, and the last on
 |-
 |6-1
 |Universe
-|?
+|∞
 |N/A
 |}
 
@@ -427,23 +429,23 @@ Each ER also falls into one of 5 types:
 !Type
 !Notes
 |-
-|
+|[[File:Outbreak (Plague).png]]
 |Outbreak
 |Excellent Spread Power, but weaker Infectivity and Stealth.
 |-
-|
+|[[File:Latent (Plague).png]]
 |Latent
 |Average Spread Power with exceptional Stealth
 |-
-|
+|[[File:Virulent (Plague).png]]
 |Virulent
 |Average Spread Power with very high Infectivity
 |-
-|
+|[[File:Strain (Plague).png]]
 |Strain
 |Strong Spread Power with only slightly weaker secondary stats
 |-
-|
+|[[File:Decay (Plague).png]]
 |Decay
 |Weak overall stats, but yields a high amount of VE when dissolved.
 |}
@@ -464,21 +466,21 @@ There are 7 ER upgrades.
 |-
 |1
 |Base Spread Power
-|<==
+|Increases base Spread Power on ER
 | + 0.025/level
 |1000
 |x2/level
 |-
 |2
 |Base Infectivity
-|<==
+|Increases base Infectivity on ER
 | + 0.02/level
 |1000
 |X2/level
 |-
 |3
 |Base Stealth
-|<==
+|Increases base Stealth on ER
 | + 0.02/level
 |1000
 |x2/level
@@ -486,30 +488,30 @@ There are 7 ER upgrades.
 |4
 |Conversion Rate
 |Increases PlP to ERP conversion rate
-|
-|
-|
+| + 0.25%/level
+|10000
+|x3/level
 |-
 |5
 |Dissolve Efficiency
 |Increases base VE from dissolving ERs
-|
-|
-|
+| + 0.2/level
+|10000
+|x3/level
 |-
 |6
 |Crafting Mastery
 |Increases chances of crafting better ERs
-|
-|
-|
+| + 0.01/level
+|10000
+|x3/level
 |-
 |7
 |Essence Density
 |Increases ViP/s per VE
-|
-|
-|
+| + 0.05/level
+|1,000,000
+|x10/level
 |}
 [[Category:Unity]]
 {{Main navbox}}

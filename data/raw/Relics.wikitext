@@ -504,7 +504,7 @@ Statue
 |67
 |Galactic Mind
 | [[File:Relic 067.png|128px|link=]]
-|Increases the chance of obtaining Achievement 600 after completing Earth Plague Stage (5-5)
+|Increases the chance of obtaining Achievement 600 after completing Earth Plague Stage (5-5) (Useless after getting Achievement #600)
 | +2.55% (?)
 | Attack level 40,067
 |-
@@ -531,7 +531,7 @@ Statue
 |}
 
 == (?)Sacrificing ==
-After reaching 301 levels of any relic, it can be sacrificed. This will make a purple level counter appear below the regular level counter, and this will be set to the amount of relics you already had before you sacrificed it. After this, the level requirement is set to one above the previous sacrificed amount. The price will NOT be reset, but levels can be regained through spawning [[Minerals]]. The sacrifice level will boost the respective relic's bonus a decent amount, so relics should always be sacrificed, especially when late into minerals progression.
+After reaching 301 levels of any relic, it can be sacrificed. This will make a purple level counter appear below the regular level counter, and this will be set to the level of the relic on sacrifice. Sacrificing a relic will reset its level to 1. The price will NOT be reset, but levels can be regained through spawning [[Minerals]] until the level the relic had on sacrifice is reached. The sacrifice level will boost the respective relic's bonus a decent amount, so relics should always be sacrificed, especially when late into minerals progression.
 
 = Notes =
 
