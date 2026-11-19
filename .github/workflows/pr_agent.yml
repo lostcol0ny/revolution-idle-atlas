@@ -1,0 +1,42 @@
+name: PR Agent
+
+on:
+  pull_request:
+    types: [opened, reopened, ready_for_review]
+  issue_comment:
+
+permissions:
+  contents: read
+
+jobs:
+  pr_agent:
+    # Bot senders (Dependabot, scheduled scrape PRs) get no Actions secrets and
+    # would loop on the agent's own comments.
+    if: ${{ github.event.sender.type != 'Bot' }}
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      issues: write
+      pull-requests: write
+    steps:
+      - name: PR Agent
+        uses: docker://pragent/pr-agent@sha256:548e894a88071180832b2f4233f734d0acd0db1a879e2fcbaa70bac8b8372ebe # 0.50.0-github_action
+        env:
+          OPENAI_KEY: ${{ secrets.OPENAI_KEY }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          config.model: "gpt-6.2-sol"
+          config.fallback_models: '["gpt-6.1-sol"]'
+          # gpt-6.2-sol is not in this release's token-limit table, so a limit is
+          # required. 1050000 is the documented GPT-6 family window; the repo-wide
+          # config.max_model_tokens (32000) still caps what is sent.
+          config.custom_model_max_tokens: "1050000"
+          github_action_config.auto_review: "true"
+          github_action_config.auto_describe: "true"
+          github_action_config.auto_improve: "true"
+          pr_reviewer.extra_instructions: >-
+            Prioritise, in order: (1) correctness - does the change actually do
+            what it claims, including edge cases and error paths; (2) efficiency -
+            needless work, allocations, I/O or algorithmic cost; (3) clarity -
+            naming, structure and code that is harder to follow than it needs to
+            be. Also flag security problems such as injection, unsafe handling
+            of untrusted input, and leaked secrets.
