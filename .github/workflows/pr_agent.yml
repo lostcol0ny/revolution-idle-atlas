@@ -24,8 +24,11 @@ jobs:
         env:
           OPENAI_KEY: ${{ secrets.OPENAI_KEY }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          config.model: "gpt-6.2-sol"
-          config.fallback_models: '["gpt-6.1-sol"]'
+          # The openai/ prefix is required: LiteLLM does not recognise bare
+          # gpt-6.2-sol ("LLM Provider NOT provided"). PR-Agent strips it when
+          # looking up token limits.
+          config.model: "openai/gpt-6.2-sol"
+          config.fallback_models: '["openai/gpt-6.1-sol"]'
           # gpt-6.2-sol is not in this release's token-limit table, so a limit is
           # required. 1050000 is the documented GPT-6 family window; the repo-wide
           # config.max_model_tokens (32000) still caps what is sent.
