@@ -133,6 +133,20 @@ Unlocked at 5 Singularities, the Tree allows you to purchase upgrades out of an 
 ==== Houses ====
 Houses are unlocked at 32 Singularities, and it functions like an advanced version of Astrology. However, each Zodiac can only be placed in its matching House, and they can only be obtained by performing a Singularity with more than 1e1000 Atoms. Each of these zodiacs provide unique buffs to many aspects of your progression.
 
+== Particles ==
+The particles are a Unity tab added in 1.80 (or 1.080 as the game calls it).
+
+==== Resources ====
+There are five new resources: Alpha, Beta, Gamma, Delta, and Epsilon all in which can be in four different grades.
+
+==== Sparks ====
+Spend Epsilon to create Sparks in 10 colors and 14 rarities, from F to Star.
+
+Equip Sparks to increase Epsilon production and benefit from their unique color effects.
+
+==== Epsilon Tree ====
+like the dilation tree, you can use Epsilon to buy Epsilon Tree points (ETp) and put them in 31 different nodes to make your particles stronger
+
 == Trivia ==
 
 * On your first {{Keyword|unity|Unity}}, you will be guaranteed the option of a Lv3 Rare <span class="zodiacfire">Aries</span> with 2 buffs: common exponent and mult gain

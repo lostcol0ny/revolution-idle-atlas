@@ -993,7 +993,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Increases the chance of obtaining Achievement 600 after completing Earth Plague Stage (5-5)",
+          "text": "Increases the chance of obtaining Achievement 600 after completing Earth Plague Stage (5-5) (Useless after getting Achievement #600)",
           "per_level": "+2.55% (?)",
           "op": "add"
         }
@@ -1046,6 +1046,81 @@
       "id": "relic-70",
       "kind": "relic",
       "name": "Relic 70 (Singular Spectrogram)",
+      "system": "relics",
+      "wiki": "Relics"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "Divides the cost exponent of all Singularity Tree upgrades by /",
+          "per_level": "+^0.003(?)",
+          "op": "exp"
+        }
+      ],
+      "id": "relic-71",
+      "kind": "relic",
+      "name": "Relic 71 (Dangerous Owl)",
+      "system": "relics",
+      "wiki": "Relics"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "Multiplies the base of Alpha and Beta Generators",
+          "per_level": "+22(?)",
+          "op": "add"
+        }
+      ],
+      "id": "relic-72",
+      "kind": "relic",
+      "name": "Relic 72 (Cheremsha)",
+      "system": "relics",
+      "wiki": "Relics"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "Divides the exponent of the rank requirement",
+          "per_level": "+/0.003 (?)",
+          "op": "add"
+        }
+      ],
+      "id": "relic-73",
+      "kind": "relic",
+      "name": "Relic 73 (Stalking Statue)",
+      "system": "relics",
+      "wiki": "Relics"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "Multiplies Delta Prestige Effect",
+          "per_level": "+x0.003(?)",
+          "op": "add"
+        }
+      ],
+      "id": "relic-74",
+      "kind": "relic",
+      "name": "Relic 74 (Pocket Blackjack)",
+      "system": "relics",
+      "wiki": "Relics"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "Multiplies Mastery Gain (Spawning & Destroying sparks)",
+          "per_level": "+0.03(?)",
+          "op": "add"
+        }
+      ],
+      "id": "relic-75",
+      "kind": "relic",
+      "name": "Relic 75 (Boro-Boro)",
       "system": "relics",
       "wiki": "Relics"
     },
@@ -2535,7 +2610,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Multiples Max Cure Progress by 1.2^level"
+          "text": "Multiples Max Cure Progress by 1.2 per level"
         }
       ],
       "id": "refine-node-115",
@@ -2814,6 +2889,838 @@
       "id": "refine-node-136",
       "kind": "tree-node",
       "name": "Refine Node 136",
+      "system": "refine-tree",
+      "wiki": "Minerals/Refine_Tree"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "Unlock Particles"
+        }
+      ],
+      "id": "refine-node-137",
+      "kind": "tree-node",
+      "name": "Refine Node 137",
+      "system": "refine-tree",
+      "wiki": "Minerals/Refine_Tree"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "Particle Rank boosts Refine Point gain (^X / +0.001 per rank)"
+        }
+      ],
+      "id": "refine-node-138",
+      "kind": "tree-node",
+      "name": "Refine Node 138",
+      "system": "refine-tree",
+      "wiki": "Minerals/Refine_Tree"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "Multiplies Alpha Generator Base by x2"
+        }
+      ],
+      "id": "refine-node-139",
+      "kind": "tree-node",
+      "name": "Refine Node 139",
+      "system": "refine-tree",
+      "wiki": "Minerals/Refine_Tree"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "Multiplies Alpha Multiplier Base by x1 + level"
+        }
+      ],
+      "id": "refine-node-140",
+      "kind": "tree-node",
+      "name": "Refine Node 140",
+      "system": "refine-tree",
+      "wiki": "Minerals/Refine_Tree"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "Rank 5 Reward is x3 more effective"
+        }
+      ],
+      "id": "refine-node-141",
+      "kind": "tree-node",
+      "name": "Refine Node 141",
+      "system": "refine-tree",
+      "wiki": "Minerals/Refine_Tree"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "The base of all particle generators is multiplied by x1.25 every 10 levels"
+        }
+      ],
+      "id": "refine-node-142",
+      "kind": "tree-node",
+      "name": "Refine Node 142",
+      "system": "refine-tree",
+      "wiki": "Minerals/Refine_Tree"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "The base of all particle multipliers is multiplied by x2 every 7 levels"
+        }
+      ],
+      "id": "refine-node-143",
+      "kind": "tree-node",
+      "name": "Refine Node 143",
+      "system": "refine-tree",
+      "wiki": "Minerals/Refine_Tree"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "Particle Rank boosts gold: ^X (+0.01 per rank)"
+        }
+      ],
+      "id": "refine-node-144",
+      "kind": "tree-node",
+      "name": "Refine Node 144",
+      "system": "refine-tree",
+      "wiki": "Minerals/Refine_Tree"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "Every 100 levels, the base of all particle generators is multiplied by x10"
+        }
+      ],
+      "id": "refine-node-145",
+      "kind": "tree-node",
+      "name": "Refine Node 145",
+      "system": "refine-tree",
+      "wiki": "Minerals/Refine_Tree"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "Unlocks the Singularity Mult effect on the base of Alpha & Beta generators"
+        }
+      ],
+      "id": "refine-node-146",
+      "kind": "tree-node",
+      "name": "Refine Node 146",
+      "system": "refine-tree",
+      "wiki": "Minerals/Refine_Tree"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "Beta Particles boost Alpha Generator Base a bit better (0.2 -> 0.3)"
+        }
+      ],
+      "id": "refine-node-147",
+      "kind": "tree-node",
+      "name": "Refine Node 147",
+      "system": "refine-tree",
+      "wiki": "Minerals/Refine_Tree"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "Empowerer base is increased by 0.001 every 20 levels for all particles"
+        }
+      ],
+      "id": "refine-node-148",
+      "kind": "tree-node",
+      "name": "Refine Node 148",
+      "system": "refine-tree",
+      "wiki": "Minerals/Refine_Tree"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "Multiplies Alpha Generator Base by x100"
+        }
+      ],
+      "id": "refine-node-149",
+      "kind": "tree-node",
+      "name": "Refine Node 149",
+      "system": "refine-tree",
+      "wiki": "Minerals/Refine_Tree"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "Multiplies Beta Multiplier Base by x1 + 0.5 * level"
+        }
+      ],
+      "id": "refine-node-150",
+      "kind": "tree-node",
+      "name": "Refine Node 150",
+      "system": "refine-tree",
+      "wiki": "Minerals/Refine_Tree"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "You passively gain Singularity Multiplier every second (also affected by local singularity speed)"
+        }
+      ],
+      "id": "refine-node-151",
+      "kind": "tree-node",
+      "name": "Refine Node 151",
+      "system": "refine-tree",
+      "wiki": "Minerals/Refine_Tree"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "Decreases base requirement for Tier, Tetr and Pent by 1"
+        }
+      ],
+      "id": "refine-node-152",
+      "kind": "tree-node",
+      "name": "Refine Node 152",
+      "system": "refine-tree",
+      "wiki": "Minerals/Refine_Tree"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "Rank Up resets nothing now"
+        }
+      ],
+      "id": "refine-node-153",
+      "kind": "tree-node",
+      "name": "Refine Node 153",
+      "system": "refine-tree",
+      "wiki": "Minerals/Refine_Tree"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "The PlG to PlP bonus is raised to ^1.5"
+        }
+      ],
+      "id": "refine-node-154",
+      "kind": "tree-node",
+      "name": "Refine Node 154",
+      "system": "refine-tree",
+      "wiki": "Minerals/Refine_Tree"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "Unlocks the Singularity Mult effect on the base of all generators"
+        }
+      ],
+      "id": "refine-node-155",
+      "kind": "tree-node",
+      "name": "Refine Node 155",
+      "system": "refine-tree",
+      "wiki": "Minerals/Refine_Tree"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "Atom Penalty at 1e5,000 is x1.1 weaker now"
+        }
+      ],
+      "id": "refine-node-156",
+      "kind": "tree-node",
+      "name": "Refine Node 156",
+      "system": "refine-tree",
+      "wiki": "Minerals/Refine_Tree"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "Atom Penalty at 1e10,000 is x1.2 weaker now"
+        }
+      ],
+      "id": "refine-node-157",
+      "kind": "tree-node",
+      "name": "Refine Node 157",
+      "system": "refine-tree",
+      "wiki": "Minerals/Refine_Tree"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "Alpha particle upgrades do not spend alpha points"
+        }
+      ],
+      "id": "refine-node-158",
+      "kind": "tree-node",
+      "name": "Refine Node 158",
+      "system": "refine-tree",
+      "wiki": "Minerals/Refine_Tree"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "Tier Up resets nothing now"
+        }
+      ],
+      "id": "refine-node-159",
+      "kind": "tree-node",
+      "name": "Refine Node 159",
+      "system": "refine-tree",
+      "wiki": "Minerals/Refine_Tree"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "Divides Tier Up requirement by x1 + 0.02 * level (rounded up)"
+        }
+      ],
+      "id": "refine-node-160",
+      "kind": "tree-node",
+      "name": "Refine Node 160",
+      "system": "refine-tree",
+      "wiki": "Minerals/Refine_Tree"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "Every 1,000 levels, the base of all particle generators is multiplied by x1e10"
+        }
+      ],
+      "id": "refine-node-161",
+      "kind": "tree-node",
+      "name": "Refine Node 161",
+      "system": "refine-tree",
+      "wiki": "Minerals/Refine_Tree"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "Luck is raised to ^1.1"
+        }
+      ],
+      "id": "refine-node-162",
+      "kind": "tree-node",
+      "name": "Refine Node 162",
+      "system": "refine-tree",
+      "wiki": "Minerals/Refine_Tree"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "Singularity Tree levels now go 0 -> 2 -> 4 -> 6 -> 8 -> 10"
+        }
+      ],
+      "id": "refine-node-163",
+      "kind": "tree-node",
+      "name": "Refine Node 163",
+      "system": "refine-tree",
+      "wiki": "Minerals/Refine_Tree"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "Beta particle upgrades do not spend beta points"
+        }
+      ],
+      "id": "refine-node-164",
+      "kind": "tree-node",
+      "name": "Refine Node 164",
+      "system": "refine-tree",
+      "wiki": "Minerals/Refine_Tree"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "Gamma particle upgrades do not spend gemma points"
+        }
+      ],
+      "id": "refine-node-165",
+      "kind": "tree-node",
+      "name": "Refine Node 165",
+      "system": "refine-tree",
+      "wiki": "Minerals/Refine_Tree"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "Local Particles Speed is boosted by ^0.1 of Local Singularity Speed"
+        }
+      ],
+      "id": "refine-node-166",
+      "kind": "tree-node",
+      "name": "Refine Node 166",
+      "system": "refine-tree",
+      "wiki": "Minerals/Refine_Tree"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "Singularity Tree levels now go 0 -> 4 -> 8 -> 10"
+        }
+      ],
+      "id": "refine-node-167",
+      "kind": "tree-node",
+      "name": "Refine Node 167",
+      "system": "refine-tree",
+      "wiki": "Minerals/Refine_Tree"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "Tarot Challenges Singularity factors are x3 stronger (before softcap)"
+        }
+      ],
+      "id": "refine-node-168",
+      "kind": "tree-node",
+      "name": "Refine Node 168",
+      "system": "refine-tree",
+      "wiki": "Minerals/Refine_Tree"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "Singularity Tree nodes cannot exceed the price at Level 5"
+        }
+      ],
+      "id": "refine-node-169",
+      "kind": "tree-node",
+      "name": "Refine Node 169",
+      "system": "refine-tree",
+      "wiki": "Minerals/Refine_Tree"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "Alpha Prestige resets nothing and is performed every frame"
+        }
+      ],
+      "id": "refine-node-170",
+      "kind": "tree-node",
+      "name": "Refine Node 170",
+      "system": "refine-tree",
+      "wiki": "Minerals/Refine_Tree"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "Multiplies the base of Delta Generators and Multipliers by x100"
+        }
+      ],
+      "id": "refine-node-171",
+      "kind": "tree-node",
+      "name": "Refine Node 171",
+      "system": "refine-tree",
+      "wiki": "Minerals/Refine_Tree"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "Singularity Tree levels now go 0 -> 5 -> 10"
+        }
+      ],
+      "id": "refine-node-172",
+      "kind": "tree-node",
+      "name": "Refine Node 172",
+      "system": "refine-tree",
+      "wiki": "Minerals/Refine_Tree"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "Every 100 levels, the base of all particle multipliers is multiplied by x10"
+        }
+      ],
+      "id": "refine-node-173",
+      "kind": "tree-node",
+      "name": "Refine Node 173",
+      "system": "refine-tree",
+      "wiki": "Minerals/Refine_Tree"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "Sacrifice dust spent after Lv.100 slightly increases the base of Special Minerals effect 2 (+0.01 per e1,000 to the effect 2 base)"
+        }
+      ],
+      "id": "refine-node-174",
+      "kind": "tree-node",
+      "name": "Refine Node 174",
+      "system": "refine-tree",
+      "wiki": "Minerals/Refine_Tree"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "Equipped Endoplasmatic Reticulum Level empowers luck (^X) (^1.001 per ER level)"
+        }
+      ],
+      "id": "refine-node-175",
+      "kind": "tree-node",
+      "name": "Refine Node 175",
+      "system": "refine-tree",
+      "wiki": "Minerals/Refine_Tree"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "Beta Particle Prestige resets nothing and is automatically performed every frame"
+        }
+      ],
+      "id": "refine-node-176",
+      "kind": "tree-node",
+      "name": "Refine Node 176",
+      "system": "refine-tree",
+      "wiki": "Minerals/Refine_Tree"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "Each time you perform a Singularity after e25,000 atoms, spark cost decreases as if you had spawned 1 fewer spark in total"
+        }
+      ],
+      "id": "refine-node-177",
+      "kind": "tree-node",
+      "name": "Refine Node 177",
+      "system": "refine-tree",
+      "wiki": "Minerals/Refine_Tree"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "Mastery Gain is multiplied by xX (1 + pent / 10)"
+        }
+      ],
+      "id": "refine-node-178",
+      "kind": "tree-node",
+      "name": "Refine Node 178",
+      "system": "refine-tree",
+      "wiki": "Minerals/Refine_Tree"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "Gamma Particle Prestige resets nothing and is automatically performed every frame"
+        }
+      ],
+      "id": "refine-node-179",
+      "kind": "tree-node",
+      "name": "Refine Node 179",
+      "system": "refine-tree",
+      "wiki": "Minerals/Refine_Tree"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "Increase the total number of sparks you can equip by 1"
+        }
+      ],
+      "id": "refine-node-180",
+      "kind": "tree-node",
+      "name": "Refine Node 180",
+      "system": "refine-tree",
+      "wiki": "Minerals/Refine_Tree"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "Unlocks Spark Mastery Factor for Singularity"
+        }
+      ],
+      "id": "refine-node-181",
+      "kind": "tree-node",
+      "name": "Refine Node 181",
+      "system": "refine-tree",
+      "wiki": "Minerals/Refine_Tree"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "Each spark spawned after buying this node decreases ETP cost by 5 Epsilon (total reduction is softcapped after 100,000)"
+        }
+      ],
+      "id": "refine-node-182",
+      "kind": "tree-node",
+      "name": "Refine Node 182",
+      "system": "refine-tree",
+      "wiki": "Minerals/Refine_Tree"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "Decreases base requirement for Tier, Tetr and Pent by 1 again"
+        }
+      ],
+      "id": "refine-node-183",
+      "kind": "tree-node",
+      "name": "Refine Node 183",
+      "system": "refine-tree",
+      "wiki": "Minerals/Refine_Tree"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "Equipped Endoplasmatic Reticulum Level boosts Spark Mastery gain (xX) (x1.01 per ER level)"
+        }
+      ],
+      "id": "refine-node-184",
+      "kind": "tree-node",
+      "name": "Refine Node 184",
+      "system": "refine-tree",
+      "wiki": "Minerals/Refine_Tree"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "Destroying a spark now also grants mastery (^0.5 of this spark mastery)"
+        }
+      ],
+      "id": "refine-node-185",
+      "kind": "tree-node",
+      "name": "Refine Node 185",
+      "system": "refine-tree",
+      "wiki": "Minerals/Refine_Tree"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "Epsilon Capacity gain is multiplied by x2"
+        }
+      ],
+      "id": "refine-node-186",
+      "kind": "tree-node",
+      "name": "Refine Node 186",
+      "system": "refine-tree",
+      "wiki": "Minerals/Refine_Tree"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "Delta Prestige bonus is stronger based on your Pent (X1.01 per Pent)"
+        }
+      ],
+      "id": "refine-node-187",
+      "kind": "tree-node",
+      "name": "Refine Node 187",
+      "system": "refine-tree",
+      "wiki": "Minerals/Refine_Tree"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "Attack exponent is multiplied by 1 + 0.1 * Log10(mastery) (softcap at x10)"
+        }
+      ],
+      "id": "refine-node-188",
+      "kind": "tree-node",
+      "name": "Refine Node 188",
+      "system": "refine-tree",
+      "wiki": "Minerals/Refine_Tree"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "Destroying Ultima Singular Zodiacs now also decreases Epsilon Tree Points cost (Total reduction is softcapped after 100,000)"
+        }
+      ],
+      "id": "refine-node-189",
+      "kind": "tree-node",
+      "name": "Refine Node 189",
+      "system": "refine-tree",
+      "wiki": "Minerals/Refine_Tree"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "Improves the effect of Refine Node 185 (destroying a spark grants mastery) based on the spark's rarity (+0.025 to the power per rarity tier from F)"
+        }
+      ],
+      "id": "refine-node-190",
+      "kind": "tree-node",
+      "name": "Refine Node 190",
+      "system": "refine-tree",
+      "wiki": "Minerals/Refine_Tree"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "Delta particle upgrades do not spend delta points"
+        }
+      ],
+      "id": "refine-node-191",
+      "kind": "tree-node",
+      "name": "Refine Node 191",
+      "system": "refine-tree",
+      "wiki": "Minerals/Refine_Tree"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "Epsilon Points generation is stronger based on your current Epsilon Points x1 (+0.01 per 10K Epsilon Points, capped at x10)"
+        }
+      ],
+      "id": "refine-node-192",
+      "kind": "tree-node",
+      "name": "Refine Node 192",
+      "system": "refine-tree",
+      "wiki": "Minerals/Refine_Tree"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "???"
+        }
+      ],
+      "id": "refine-node-193",
+      "kind": "tree-node",
+      "name": "Refine Node 193",
+      "system": "refine-tree",
+      "wiki": "Minerals/Refine_Tree"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "???"
+        }
+      ],
+      "id": "refine-node-194",
+      "kind": "tree-node",
+      "name": "Refine Node 194",
+      "system": "refine-tree",
+      "wiki": "Minerals/Refine_Tree"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "???"
+        }
+      ],
+      "id": "refine-node-195",
+      "kind": "tree-node",
+      "name": "Refine Node 195",
+      "system": "refine-tree",
+      "wiki": "Minerals/Refine_Tree"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "Multiplies Spark Mastery Gain on Spark Spawn by xX"
+        }
+      ],
+      "id": "refine-node-196",
+      "kind": "tree-node",
+      "name": "Refine Node 196",
+      "system": "refine-tree",
+      "wiki": "Minerals/Refine_Tree"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "???"
+        }
+      ],
+      "id": "refine-node-197",
+      "kind": "tree-node",
+      "name": "Refine Node 197",
+      "system": "refine-tree",
+      "wiki": "Minerals/Refine_Tree"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "???"
+        }
+      ],
+      "id": "refine-node-198",
+      "kind": "tree-node",
+      "name": "Refine Node 198",
+      "system": "refine-tree",
+      "wiki": "Minerals/Refine_Tree"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "???"
+        }
+      ],
+      "id": "refine-node-199",
+      "kind": "tree-node",
+      "name": "Refine Node 199",
+      "system": "refine-tree",
+      "wiki": "Minerals/Refine_Tree"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "Multiplies Mastery Gain on Spark Destroy by xX"
+        }
+      ],
+      "id": "refine-node-200",
+      "kind": "tree-node",
+      "name": "Refine Node 200",
       "system": "refine-tree",
       "wiki": "Minerals/Refine_Tree"
     },
@@ -4016,7 +4923,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Score Exponent"
+          "text": "Common Exponent"
         }
       ],
       "id": "fire-factor-2",
@@ -5492,6 +6399,45 @@
       "confidence": "provisional",
       "effects": [
         {
+          "text": "Increases base Spread Power on ER"
+        }
+      ],
+      "id": "plague-er-base-spread-power",
+      "kind": "upgrade",
+      "name": "Base Spread Power",
+      "system": "plague",
+      "wiki": "Plague"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Increases base Infectivity on ER"
+        }
+      ],
+      "id": "plague-er-base-infectivity",
+      "kind": "upgrade",
+      "name": "Base Infectivity",
+      "system": "plague",
+      "wiki": "Plague"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Increases base Stealth on ER"
+        }
+      ],
+      "id": "plague-er-base-stealth",
+      "kind": "upgrade",
+      "name": "Base Stealth",
+      "system": "plague",
+      "wiki": "Plague"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
           "text": "Increases PlP to ERP conversion rate"
         }
       ],
@@ -5749,6 +6695,32 @@
       "wiki": "Singularity"
     },
     {
+      "confidence": "unknown",
+      "effects": [
+        {
+          "text": "Multiplies the base of all particle generators and multipliers by 1 + singularity / 100"
+        }
+      ],
+      "id": "singularity-milestone-one-hundred",
+      "kind": "upgrade",
+      "name": "One Hundred",
+      "system": "singularity-milestones-atoms",
+      "wiki": "Singularity#Milestones"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Each singularity multipliers mastery gain by x1.01"
+        }
+      ],
+      "id": "singularity-milestone-singular-master",
+      "kind": "upgrade",
+      "name": "Singular Master",
+      "system": "singularity-milestones-singularity",
+      "wiki": "Singularity"
+    },
+    {
       "confidence": "provisional",
       "effects": [
         {
@@ -5862,6 +6834,32 @@
       "id": "singularity-milestone-universe-under-pressure",
       "kind": "upgrade",
       "name": "Universe Under Pressure",
+      "system": "singularity-milestones-atoms",
+      "wiki": "Singularity"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Max Atoms boost the base of all particle generators (+0.1 per e1,000 atoms)"
+        }
+      ],
+      "id": "singularity-milestone-atom-particle-synergy",
+      "kind": "upgrade",
+      "name": "Atom-Particle Synergy",
+      "system": "singularity-milestones-atoms",
+      "wiki": "Singularity"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Max Atoms (after 1e10,000) slightly boost Refine Points"
+        }
+      ],
+      "id": "singularity-milestone-ten-thousand-dimensions",
+      "kind": "upgrade",
+      "name": "Ten Thousand Dimensions",
       "system": "singularity-milestones-atoms",
       "wiki": "Singularity"
     },
@@ -5987,7 +6985,7 @@
       "confidence": "provisional",
       "effects": [
         {
-          "text": "Increases Gold gain",
+          "text": "Gold Gain ^",
           "per_level": ".001"
         }
       ],
@@ -6001,7 +6999,7 @@
       "confidence": "provisional",
       "effects": [
         {
-          "text": "Weaken e308 penalty",
+          "text": "e308 Atom penalty /X",
           "per_level": ".01"
         }
       ],
@@ -6015,7 +7013,7 @@
       "confidence": "provisional",
       "effects": [
         {
-          "text": "Weaken e500 penalty",
+          "text": "e500 Atom penalty /X",
           "per_level": ".01"
         }
       ],
@@ -6029,7 +7027,7 @@
       "confidence": "provisional",
       "effects": [
         {
-          "text": "Increase Refine Points gain",
+          "text": "RfP Gain ^",
           "per_level": ".001"
         }
       ],
@@ -6043,7 +7041,7 @@
       "confidence": "provisional",
       "effects": [
         {
-          "text": "Increase Golden Resource gain",
+          "text": "Golden Resource gain mult",
           "per_level": ".25"
         }
       ],
@@ -6057,7 +7055,7 @@
       "confidence": "provisional",
       "effects": [
         {
-          "text": "Increase Plague Stats Rewards",
+          "text": "Plague Stats Rewards mult",
           "per_level": ".01"
         }
       ],
@@ -6071,7 +7069,7 @@
       "confidence": "provisional",
       "effects": [
         {
-          "text": "Increase Plague Generators Reward",
+          "text": "PlG Rewards ^",
           "per_level": ".03"
         }
       ],
@@ -6085,7 +7083,7 @@
       "confidence": "provisional",
       "effects": [
         {
-          "text": "Weaken next Singularity nerf",
+          "text": "Next Singularity nerf /X",
           "per_level": ".05"
         }
       ],
@@ -6099,7 +7097,7 @@
       "confidence": "provisional",
       "effects": [
         {
-          "text": "Weaken e1,000 Atom Penalty",
+          "text": "e1000 Atom Penalty /X",
           "per_level": ".02"
         }
       ],
@@ -6113,7 +7111,7 @@
       "confidence": "provisional",
       "effects": [
         {
-          "text": "Increase First Singularity Zodiac Level Mult",
+          "text": "First Singularity Zodiac Level Mult",
           "per_level": ".006"
         }
       ],
@@ -6149,234 +7147,6 @@
       "kind": "tree-node",
       "name": "Tree Node 8",
       "system": "singularity-tree",
-      "wiki": "Singularity"
-    },
-    {
-      "confidence": "provisional",
-      "effects": [
-        {
-          "text": "Fire Element Factor 3"
-        },
-        {
-          "text": "Sacrifice Dust Gain (Divine+)"
-        },
-        {
-          "text": "Attack Exponent Multi (Rainbow+)"
-        }
-      ],
-      "id": "singularity-zodiac-aries",
-      "kind": "upgrade",
-      "name": "Singular Zodiac Aries",
-      "system": "houses",
-      "wiki": "Singularity"
-    },
-    {
-      "confidence": "provisional",
-      "effects": [
-        {
-          "text": "Earth Element Factor 3"
-        },
-        {
-          "text": "PlP per PlG Multi (Divine+)"
-        },
-        {
-          "text": "Golden Resources Gain (Rainbow+)"
-        }
-      ],
-      "id": "singularity-zodiac-taurus",
-      "kind": "upgrade",
-      "name": "Singular Zodiac Taurus",
-      "system": "houses",
-      "wiki": "Singularity"
-    },
-    {
-      "confidence": "provisional",
-      "effects": [
-        {
-          "text": "Wind Element Factor 3"
-        },
-        {
-          "text": "VE on Disolve Multi (Divine+)"
-        },
-        {
-          "text": "Black Gem Effect (Rainbow+)"
-        }
-      ],
-      "id": "singularity-zodiac-gemini",
-      "kind": "upgrade",
-      "name": "Singular Zodiac Gemini",
-      "system": "houses",
-      "wiki": "Singularity"
-    },
-    {
-      "confidence": "provisional",
-      "effects": [
-        {
-          "text": "Water Element Factor 3"
-        },
-        {
-          "text": "Base Spread Multi (Divine+)"
-        },
-        {
-          "text": "Singularity Mult Boost (Rainbow+)"
-        }
-      ],
-      "id": "singularity-zodiac-cancer",
-      "kind": "upgrade",
-      "name": "Singular Zodiac Cancer",
-      "system": "houses",
-      "wiki": "Singularity"
-    },
-    {
-      "confidence": "provisional",
-      "effects": [
-        {
-          "text": "Sacrifice Dust Gain"
-        },
-        {
-          "text": "Attack Exponent Multi (Divine+)"
-        },
-        {
-          "text": "Fire Element Factor 3 (Rainbow+)"
-        }
-      ],
-      "id": "singularity-zodiac-leo",
-      "kind": "upgrade",
-      "name": "Singular Zodiac Leo",
-      "system": "houses",
-      "wiki": "Singularity"
-    },
-    {
-      "confidence": "provisional",
-      "effects": [
-        {
-          "text": "PlP per PlG Multi"
-        },
-        {
-          "text": "Golden Resources Gain (Divine+)"
-        },
-        {
-          "text": "Earth Element Factor 3 (Rainbow+)"
-        }
-      ],
-      "id": "singularity-zodiac-virgo",
-      "kind": "upgrade",
-      "name": "Singular Zodiac Virgo",
-      "system": "houses",
-      "wiki": "Singularity"
-    },
-    {
-      "confidence": "provisional",
-      "effects": [
-        {
-          "text": "VE on Disolve Multi"
-        },
-        {
-          "text": "Black Gem Effect (Divine+)"
-        },
-        {
-          "text": "Wind Element Factor 3 (Rainbow+)"
-        }
-      ],
-      "id": "singularity-zodiac-libra",
-      "kind": "upgrade",
-      "name": "Singular Zodiac Libra",
-      "system": "houses",
-      "wiki": "Singularity"
-    },
-    {
-      "confidence": "provisional",
-      "effects": [
-        {
-          "text": "Base Spread Multi"
-        },
-        {
-          "text": "Singularity Mult Boost (Divine+)"
-        },
-        {
-          "text": "Water Element Factor 3 (Rainbow+)"
-        }
-      ],
-      "id": "singularity-zodiac-scorpio",
-      "kind": "upgrade",
-      "name": "Singular Zodiac Scorpio",
-      "system": "houses",
-      "wiki": "Singularity"
-    },
-    {
-      "confidence": "provisional",
-      "effects": [
-        {
-          "text": "Attack Exponent Multi"
-        },
-        {
-          "text": "Fire Element Factor 3 (Divine+)"
-        },
-        {
-          "text": "Sacrifice Dust Gain (Rainbow+)"
-        }
-      ],
-      "id": "singularity-zodiac-saggitarius",
-      "kind": "upgrade",
-      "name": "Singular Zodiac Sagittarius",
-      "system": "houses",
-      "wiki": "Singularity"
-    },
-    {
-      "confidence": "provisional",
-      "effects": [
-        {
-          "text": "Golden Resources Gain"
-        },
-        {
-          "text": "Earth Element Factor 3 (Divine+)"
-        },
-        {
-          "text": "PlP per PlG Multi (Rainbow+)"
-        }
-      ],
-      "id": "singularity-zodiac-capricorn",
-      "kind": "upgrade",
-      "name": "Singular Zodiac Capricorn",
-      "system": "houses",
-      "wiki": "Singularity"
-    },
-    {
-      "confidence": "provisional",
-      "effects": [
-        {
-          "text": "Black Gem Effect"
-        },
-        {
-          "text": "Wind Element Factor 3 (Divine+)"
-        },
-        {
-          "text": "VE on Disolve Multi (Rainbow+)"
-        }
-      ],
-      "id": "singularity-zodiac-aquarius",
-      "kind": "upgrade",
-      "name": "Singular Zodiac Aquarius",
-      "system": "houses",
-      "wiki": "Singularity"
-    },
-    {
-      "confidence": "provisional",
-      "effects": [
-        {
-          "text": "Singularity Mult Boost"
-        },
-        {
-          "text": "Water Element Factor 3 (Divine+)"
-        },
-        {
-          "text": "Base Spread Multi (Rainbow+)"
-        }
-      ],
-      "id": "singularity-zodiac-pisces",
-      "kind": "upgrade",
-      "name": "Singular Zodiac Pisces",
-      "system": "houses",
       "wiki": "Singularity"
     },
     {
@@ -8452,6 +9222,22 @@
       "id": "tarot-challenge-the-moon",
       "kind": "upgrade",
       "name": "Tarot Challenge The Moon",
+      "system": "tarot-challenges",
+      "wiki": "Tarot"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "You need Refine Node 195 to start the challenge. You can spawn special minerals in this challenge. Every time you use The Sun card, you will get random special minerals in colors corresponding to your currently equipped sparks. The amount of minerals is amount of your currently equipped sparks. The Sun card cooldown is 5 seconds but it decrease only when you spawn a spark by 1 second. Your mastery gain is based on amount of merged special minerals during the challenge with the formula (Red / (Red + 5)) x (Orange / (Orange + 5)) x (Yellow / (Yellow + 5)) ... etc. x Base. Singularity will reset the challenge"
+        },
+        {
+          "text": "Spawn a spark with 1e9 mastery to complete the challenge"
+        }
+      ],
+      "id": "tarot-challenge-the-sun",
+      "kind": "upgrade",
+      "name": "Tarot Challenge The Sun",
       "system": "tarot-challenges",
       "wiki": "Tarot"
     },
@@ -13449,20 +14235,228 @@
       "wiki": "Singularity#Tree"
     },
     {
-      "confidence": "unknown",
-      "id": "singularity-milestone-one-hundred",
-      "kind": "upgrade",
-      "name": "One Hundred",
-      "system": "singularity-milestones-atoms",
-      "wiki": "Singularity#Milestones"
-    },
-    {
       "confidence": "provisional",
       "id": "singularity-houses-tab",
       "kind": "group",
       "name": "Houses Tab",
       "system": "houses",
       "wiki": "Singularity#Houses"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "Fire Element Factor 3"
+        },
+        {
+          "text": "Sacrifice Dust Gain (Divine+)"
+        },
+        {
+          "text": "Attack Exponent Multi (Rainbow+)"
+        }
+      ],
+      "id": "singularity-zodiac-aries",
+      "kind": "upgrade",
+      "name": "Singular Zodiac Aries",
+      "system": "houses"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "Earth Element Factor 3"
+        },
+        {
+          "text": "PlP per PlG Multi (Divine+)"
+        },
+        {
+          "text": "Golden Resources Gain (Rainbow+)"
+        }
+      ],
+      "id": "singularity-zodiac-taurus",
+      "kind": "upgrade",
+      "name": "Singular Zodiac Taurus",
+      "system": "houses"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "Wind Element Factor 3"
+        },
+        {
+          "text": "VE on Disolve Multi (Divine+)"
+        },
+        {
+          "text": "Black Gem Effect (Rainbow+)"
+        }
+      ],
+      "id": "singularity-zodiac-gemini",
+      "kind": "upgrade",
+      "name": "Singular Zodiac Gemini",
+      "system": "houses"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "Water Element Factor 3"
+        },
+        {
+          "text": "Base Spread Multi (Divine+)"
+        },
+        {
+          "text": "Singularity Mult Boost (Rainbow+)"
+        }
+      ],
+      "id": "singularity-zodiac-cancer",
+      "kind": "upgrade",
+      "name": "Singular Zodiac Cancer",
+      "system": "houses"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "Sacrifice Dust Gain"
+        },
+        {
+          "text": "Attack Exponent Multi (Divine+)"
+        },
+        {
+          "text": "Fire Element Factor 3 (Rainbow+)"
+        }
+      ],
+      "id": "singularity-zodiac-leo",
+      "kind": "upgrade",
+      "name": "Singular Zodiac Leo",
+      "system": "houses"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "PlP per PlG Multi"
+        },
+        {
+          "text": "Golden Resources Gain (Divine+)"
+        },
+        {
+          "text": "Earth Element Factor 3 (Rainbow+)"
+        }
+      ],
+      "id": "singularity-zodiac-virgo",
+      "kind": "upgrade",
+      "name": "Singular Zodiac Virgo",
+      "system": "houses"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "VE on Disolve Multi"
+        },
+        {
+          "text": "Black Gem Effect (Divine+)"
+        },
+        {
+          "text": "Wind Element Factor 3 (Rainbow+)"
+        }
+      ],
+      "id": "singularity-zodiac-libra",
+      "kind": "upgrade",
+      "name": "Singular Zodiac Libra",
+      "system": "houses"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "Base Spread Multi"
+        },
+        {
+          "text": "Singularity Mult Boost (Divine+)"
+        },
+        {
+          "text": "Water Element Factor 3 (Rainbow+)"
+        }
+      ],
+      "id": "singularity-zodiac-scorpio",
+      "kind": "upgrade",
+      "name": "Singular Zodiac Scorpio",
+      "system": "houses"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "Attack Exponent Multi"
+        },
+        {
+          "text": "Fire Element Factor 3 (Divine+)"
+        },
+        {
+          "text": "Sacrifice Dust Gain (Rainbow+)"
+        }
+      ],
+      "id": "singularity-zodiac-saggitarius",
+      "kind": "upgrade",
+      "name": "Singular Zodiac Sagittarius",
+      "system": "houses"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "Golden Resources Gain"
+        },
+        {
+          "text": "Earth Element Factor 3 (Divine+)"
+        },
+        {
+          "text": "PlP per PlG Multi (Rainbow+)"
+        }
+      ],
+      "id": "singularity-zodiac-capricorn",
+      "kind": "upgrade",
+      "name": "Singular Zodiac Capricorn",
+      "system": "houses"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "Black Gem Effect"
+        },
+        {
+          "text": "Wind Element Factor 3 (Divine+)"
+        },
+        {
+          "text": "VE on Disolve Multi (Rainbow+)"
+        }
+      ],
+      "id": "singularity-zodiac-aquarius",
+      "kind": "upgrade",
+      "name": "Singular Zodiac Aquarius",
+      "system": "houses"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "Singularity Mult Boost"
+        },
+        {
+          "text": "Water Element Factor 3 (Divine+)"
+        },
+        {
+          "text": "Base Spread Multi (Rainbow+)"
+        }
+      ],
+      "id": "singularity-zodiac-pisces",
+      "kind": "upgrade",
+      "name": "Singular Zodiac Pisces",
+      "system": "houses"
     },
     {
       "aliases": [
@@ -14162,7 +15156,7 @@
     {
       "confidence": "uncertain",
       "from": "relic-67",
-      "note": "Increases the chance of obtaining Achievement 600 after completing Earth Plague Stage (5-5)",
+      "note": "Increases the chance of obtaining Achievement 600 after completing Earth Plague Stage (5-5) (Useless after getting Achievement #600)",
       "op": "add",
       "rel": "boosts",
       "source": "wiki:Relics",
@@ -14185,6 +15179,15 @@
       "rel": "boosts",
       "source": "wiki:Relics",
       "to": "luck"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "relic-71",
+      "note": "Divides the cost exponent of all Singularity Tree upgrades by /",
+      "op": "exp",
+      "rel": "boosts",
+      "source": "wiki:Relics",
+      "to": "singularity"
     },
     {
       "confidence": "documented",
@@ -16197,6 +17200,618 @@
       "to": "singularity"
     },
     {
+      "confidence": "documented",
+      "from": "refine-node-16",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-137"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-14",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-138"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-15",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-139"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-139",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-140"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-14",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-141"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-138",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-141"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-10",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-142"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-13",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-142"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-10",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-143"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-143",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-144"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "refine-node-144",
+      "note": "Particle Rank boosts gold: ^X (+0.01 per rank)",
+      "rel": "boosts",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "gold"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-13",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-145"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-145",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-146"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "refine-node-146",
+      "note": "Unlocks the Singularity Mult effect on the base of Alpha & Beta generators",
+      "rel": "boosts",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "singularity-mult"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-10",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-147"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-143",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-148"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-148",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-149"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-145",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-150"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-145",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-151"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "refine-node-151",
+      "note": "You passively gain Singularity Multiplier every second (also affected by local singularity speed)",
+      "rel": "boosts",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "singularity-mult"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "refine-node-151",
+      "note": "You passively gain Singularity Multiplier every second (also affected by local singularity speed)",
+      "rel": "boosts",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "singularity"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-151",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-152"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-151",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-153"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-151",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-154"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "refine-node-154",
+      "note": "The PlG to PlP bonus is raised to ^1.5",
+      "rel": "boosts",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "plague-generators"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "refine-node-154",
+      "note": "The PlG to PlP bonus is raised to ^1.5",
+      "rel": "boosts",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "plague-points"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-154",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-155"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "refine-node-155",
+      "note": "Unlocks the Singularity Mult effect on the base of all generators",
+      "rel": "boosts",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "singularity-mult"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-154",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-156"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-144",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-157"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-144",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-158"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-144",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-159"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-154",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-160"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-160",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-161"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-160",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-162"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "refine-node-162",
+      "note": "Luck is raised to ^1.1",
+      "rel": "boosts",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "luck"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-162",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-163"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "refine-node-163",
+      "note": "Singularity Tree levels now go 0 -> 2 -> 4 -> 6 -> 8 -> 10",
+      "rel": "boosts",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "singularity"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-162",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-164"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-161",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-165"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-140",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-166"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "refine-node-166",
+      "note": "Local Particles Speed is boosted by ^0.1 of Local Singularity Speed",
+      "rel": "boosts",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "singularity"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-166",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-167"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "refine-node-167",
+      "note": "Singularity Tree levels now go 0 -> 4 -> 8 -> 10",
+      "rel": "boosts",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "singularity"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-167",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-168"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "refine-node-168",
+      "note": "Tarot Challenges Singularity factors are x3 stronger (before softcap)",
+      "rel": "boosts",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "tarot"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "refine-node-168",
+      "note": "Tarot Challenges Singularity factors are x3 stronger (before softcap)",
+      "rel": "boosts",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "singularity"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-167",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-169"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "refine-node-169",
+      "note": "Singularity Tree nodes cannot exceed the price at Level 5",
+      "rel": "boosts",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "singularity"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-167",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-170"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-170",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-171"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-170",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-172"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "refine-node-172",
+      "note": "Singularity Tree levels now go 0 -> 5 -> 10",
+      "rel": "boosts",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "singularity"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-140",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-173"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-173",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-174"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "refine-node-174",
+      "note": "Sacrifice dust spent after Lv.100 slightly increases the base of Special Minerals effect 2 (+0.01 per e1,000 to the effect 2 base)",
+      "rel": "boosts",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "sacrifice-dust"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "refine-node-174",
+      "note": "Sacrifice dust spent after Lv.100 slightly increases the base of Special Minerals effect 2 (+0.01 per e1,000 to the effect 2 base)",
+      "rel": "boosts",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "special-minerals"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-173",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-175"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "refine-node-175",
+      "note": "Equipped Endoplasmatic Reticulum Level empowers luck (^X) (^1.001 per ER level)",
+      "rel": "boosts",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "luck"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-174",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-176"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-176",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-177"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "refine-node-177",
+      "note": "Each time you perform a Singularity after e25,000 atoms, spark cost decreases as if you had spawned 1 fewer spark in total",
+      "rel": "boosts",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "singularity"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-177",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-178"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-177",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-179"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-137",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-180"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-180",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-181"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "refine-node-181",
+      "note": "Unlocks Spark Mastery Factor for Singularity",
+      "rel": "boosts",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "singularity"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-181",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-182"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-182",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-183"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-182",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-184"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-181",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-185"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-185",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-186"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-183",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-187"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "refine-node-187",
+      "note": "Delta Prestige bonus is stronger based on your Pent (X1.01 per Pent)",
+      "rel": "boosts",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "prestige-bonus"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-183",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-188"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "refine-node-188",
+      "note": "Attack exponent is multiplied by 1 + 0.1 * Log10(mastery) (softcap at x10)",
+      "rel": "boosts",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "attack-exponent"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-187",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-189"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "refine-node-189",
+      "note": "Destroying Ultima Singular Zodiacs now also decreases Epsilon Tree Points cost (Total reduction is softcapped after 100,000)",
+      "rel": "boosts",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "singular-zodiacs"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-187",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-190"
+    },
+    {
+      "confidence": "provisional",
+      "from": "refine-node-190",
+      "note": "Improves the effect of Refine Node 185 (destroying a spark grants mastery) based on the spark's rarity (+0.025 to the power per rarity tier from F)",
+      "rel": "boosts",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-185"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-180",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-191"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-137",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-192"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-185",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-196"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-184",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-200"
+    },
+    {
       "confidence": "uncertain",
       "from": "tarot-ace-of-swords",
       "note": "Attack Mult Gain from VP +^",
@@ -17186,8 +18801,8 @@
     },
     {
       "confidence": "uncertain",
-      "from": "score-exponent",
-      "note": "Score Exponent",
+      "from": "common-exponent",
+      "note": "Common Exponent",
       "rel": "boosts",
       "source": "wiki:Elements",
       "to": "fire-factor-2"
@@ -18185,6 +19800,13 @@
     },
     {
       "confidence": "uncertain",
+      "from": "plague-er-base-spread-power",
+      "rel": "boosts",
+      "source": "wiki:Plague",
+      "to": "base-spread-power"
+    },
+    {
+      "confidence": "uncertain",
       "from": "plague-er-conversion-rate",
       "rel": "boosts",
       "source": "wiki:Plague",
@@ -18346,6 +19968,20 @@
     },
     {
       "confidence": "uncertain",
+      "from": "singularity-milestone-one-hundred",
+      "rel": "boosts",
+      "source": "wiki:Singularity",
+      "to": "singularity"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "singularity-milestone-singular-master",
+      "rel": "boosts",
+      "source": "wiki:Singularity",
+      "to": "singularity"
+    },
+    {
+      "confidence": "uncertain",
       "from": "singularity-milestone-first-thousand",
       "rel": "boosts",
       "source": "wiki:Singularity",
@@ -18385,6 +20021,13 @@
       "rel": "boosts",
       "source": "wiki:Singularity",
       "to": "luck"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "singularity-milestone-ten-thousand-dimensions",
+      "rel": "boosts",
+      "source": "wiki:Singularity",
+      "to": "refinement-points"
     },
     {
       "confidence": "uncertain",
@@ -18504,126 +20147,6 @@
       "rel": "boosts",
       "source": "wiki:Singularity",
       "to": "singularity"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "singularity-zodiac-aries",
-      "rel": "boosts",
-      "source": "wiki:Singularity",
-      "to": "fire-factor-3"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "singularity-zodiac-taurus",
-      "rel": "boosts",
-      "source": "wiki:Singularity",
-      "to": "earth-factor-3"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "singularity-zodiac-gemini",
-      "rel": "boosts",
-      "source": "wiki:Singularity",
-      "to": "wind-factor-3"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "singularity-zodiac-cancer",
-      "rel": "boosts",
-      "source": "wiki:Singularity",
-      "to": "water-factor-3"
-    },
-    {
-      "confidence": "documented",
-      "from": "singularity-zodiac-cancer",
-      "note": "Second effect, unlocked at Divine",
-      "op": "mult",
-      "rel": "boosts",
-      "source": "observed",
-      "to": "base-spread-power"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "singularity-zodiac-leo",
-      "rel": "boosts",
-      "source": "wiki:Singularity",
-      "to": "sacrifice-dust"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "singularity-zodiac-virgo",
-      "rel": "boosts",
-      "source": "wiki:Singularity",
-      "to": "plp-per-plg"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "singularity-zodiac-libra",
-      "rel": "boosts",
-      "source": "wiki:Singularity",
-      "to": "virus-essence"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "singularity-zodiac-scorpio",
-      "rel": "boosts",
-      "source": "wiki:Singularity",
-      "to": "base-spread-power"
-    },
-    {
-      "confidence": "documented",
-      "from": "singularity-zodiac-scorpio",
-      "note": "Second effect, unlocked at Divine",
-      "op": "mult",
-      "rel": "boosts",
-      "source": "observed",
-      "to": "singularity-mult"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "singularity-zodiac-saggitarius",
-      "rel": "boosts",
-      "source": "wiki:Singularity",
-      "to": "attack-exponent"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "singularity-zodiac-capricorn",
-      "rel": "boosts",
-      "source": "wiki:Singularity",
-      "to": "golden-resources"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "singularity-zodiac-aquarius",
-      "rel": "boosts",
-      "source": "wiki:Singularity",
-      "to": "special-mineral-black-gem"
-    },
-    {
-      "confidence": "documented",
-      "from": "singularity-zodiac-aquarius",
-      "note": "Second effect, unlocked at Divine",
-      "op": "mult",
-      "rel": "boosts",
-      "source": "observed",
-      "to": "wind-factor-3"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "singularity-zodiac-pisces",
-      "rel": "boosts",
-      "source": "wiki:Singularity",
-      "to": "singularity-mult"
-    },
-    {
-      "confidence": "documented",
-      "from": "singularity-zodiac-pisces",
-      "note": "Second effect, unlocked at Divine",
-      "op": "mult",
-      "rel": "boosts",
-      "source": "observed",
-      "to": "water-factor-3"
     },
     {
       "confidence": "uncertain",
@@ -20885,6 +22408,48 @@
       "rel": "boosts",
       "source": "wiki:Tarot",
       "to": "tarot-challenge-the-moon"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-the-sun",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "refine-node-195"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-the-sun",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "special-minerals"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-the-sun",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "planet-sun"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-the-sun",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "minerals"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "special-minerals",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "tarot-challenge-the-sun"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "singularity",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "tarot-challenge-the-sun"
     },
     {
       "confidence": "uncertain",
@@ -24787,6 +26352,15 @@
     {
       "confidence": "documented",
       "from": "singularity-zodiac-cancer",
+      "note": "Second effect, unlocked at Divine",
+      "op": "mult",
+      "rel": "boosts",
+      "source": "observed",
+      "to": "base-spread-power"
+    },
+    {
+      "confidence": "documented",
+      "from": "singularity-zodiac-cancer",
       "note": "Third effect, unlocked at Rainbow",
       "op": "mult",
       "rel": "boosts",
@@ -24850,6 +26424,15 @@
     {
       "confidence": "documented",
       "from": "singularity-zodiac-scorpio",
+      "note": "Second effect, unlocked at Divine",
+      "op": "mult",
+      "rel": "boosts",
+      "source": "observed",
+      "to": "singularity-mult"
+    },
+    {
+      "confidence": "documented",
+      "from": "singularity-zodiac-scorpio",
       "note": "Third effect, unlocked at Rainbow",
       "op": "mult",
       "rel": "boosts",
@@ -24895,11 +26478,29 @@
     {
       "confidence": "documented",
       "from": "singularity-zodiac-aquarius",
+      "note": "Second effect, unlocked at Divine",
+      "op": "mult",
+      "rel": "boosts",
+      "source": "observed",
+      "to": "wind-factor-3"
+    },
+    {
+      "confidence": "documented",
+      "from": "singularity-zodiac-aquarius",
       "note": "Third effect, unlocked at Rainbow",
       "op": "mult",
       "rel": "boosts",
       "source": "observed",
       "to": "virus-essence"
+    },
+    {
+      "confidence": "documented",
+      "from": "singularity-zodiac-pisces",
+      "note": "Second effect, unlocked at Divine",
+      "op": "mult",
+      "rel": "boosts",
+      "source": "observed",
+      "to": "water-factor-3"
     },
     {
       "confidence": "documented",
