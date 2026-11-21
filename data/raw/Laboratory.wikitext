@@ -1,12 +1,13 @@
-{{Stub}}
 [[File:Screenshot 2026-02-08 182409.png|thumb|Laboratory Tab]]
 The Laboratory (Lab) is the fourth {{Keyword|eternity|Eternity}} tab, unlocked by reaching [[Eternity#Animals Milestones|Animals Milestone]] 3 (own 7 [[Eternity#Animals|Animals]]).
 
 The Lab allows the player to get Laboratory Points (LP), by purchasing 3 different upgrades which cost {{Keyword|ep|EP}}:
 
 * Base (+0.20 per level)
-* Mult (+0.50 per level)
+* Mult (+0.50 per level) 
 * Power (+0.01 per level)
+
+(Some of these can be multiplied by other things eg. Base can be multiplied by supernovae, Mult can be powered by Wind {{Keyword|unity|Zodiacs}}, and Power can be multiplied by {{Keyword|dilation|DU9}}.)
 
 The formula for LP/s is:  (Base x Mult) ^ Power
 
@@ -21,6 +22,8 @@ When enough LP has been generated to fill the flask on the center of the Laborat
 # [[Infinity#Generators|Gen. Power Exponent]] (+0.02 per level)
 # Common Exponent (+0.01 per level, softcapped at level 500)
 
-Each spent {{Keyword|rp|RP}} will increase a Lab upgrade by one level. Lab upgrades can be respecced at any time, removing all levels and refunding all {{Keyword|rp|RP}} to the player, at the cost of starting a new {{Keyword|eternity|Eternity}}.
+Each spent {{Keyword|rp|RP}} will increase a Lab upgrade by one level. Lab upgrades can be respecced at any time, removing all levels and refunding all {{Keyword|rp|RP}} to the player, at the cost of starting a new {{Keyword|eternity|Eternity}}. The most useful upgrades are #5 and #6, though later in the game, only use #6.
+
+There are upgrades, {{Keyword|unity|zodiacs}}, and {{Keyword|eternity|milestones}} that give you free research levels for EVERY upgrade: {{Keyword|eternity|Animal Milestone}} 6 (get 48 animals), {{Keyword|eternity|Eternity Challenge Milestone}} 5, 6, and 7 (complete 30, 32 and 35 Eternity Challenges), {{Keyword|dilation|DU3}}, Eternity Challenge 7 reward, Dilation Tree Bottom-1 (makes {{Keyword|dilation|DU3}} stronger) and Bottom-2, and Aquarius.
 [[Category:Eternity]]
 {{Main navbox}}
