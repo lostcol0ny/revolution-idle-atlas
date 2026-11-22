@@ -503,7 +503,7 @@ semicolon, " / " or a wiki `<br>` (which prose text shows as " / ") ends one.
 | `op` | enum | no | How the effect combines, when known. |
 | `note` | string | no | Free text. |
 | `targets_effect` | integer | no | 0-based index into the **target** node's `effects` array. See below. |
-| `source` | string | yes | Where the claim came from. A free string; the convention is `wiki:<PageName>`, `game` (derived from `data/game.yaml`), `game:<STRING_KEY>` (a curated edge citing one game string), `observed`, `il2cpp`, or `discord`. |
+| `source` | string | yes | Where the claim came from. A free string; the convention is `wiki:<PageName>`, `game` (derived from `data/game.yaml`), `game:<STRING_KEY>` (a curated edge citing one game string), `game-code:<Class.Method>` (a curated edge checked against the game's code; see below), `observed`, or `discord`. |
 | `confidence` | enum | no | Defaults to `documented`. |
 
 `rel`: `boosts`, `unlocks`, `requires`. Edges point upstream → downstream:
@@ -514,6 +514,15 @@ target rather than the target as a whole — "Relic 66 multiplies Relic 62's
 *effect*" is second-order, and the two endpoint ids alone cannot say which
 effect it lands on. It indexes the `effects` array of the node named by `to`,
 and the build rejects an index that array does not have.
+
+`game-code:<Class.Method>` names the method in the game's own code that
+computes the effect, for example `game-code:AttacksController.AttacksUpdate`.
+The class and method names come from the IL2CPP metadata of the Steam build
+named by `buildid` in `data/game.yaml` (recovered with Il2CppDumper, method
+bodies read in Ghidra). Only the derived fact goes into this repository: which
+stat the effect changes and how, in `op` and `note`. No decompiled code, dump or
+binary is committed. An edge with this source is `documented`, and its `op` is
+the one the code applies, which can differ from the wiki's wording.
 
 `op`: `add`, `mult`, `exp`.
 

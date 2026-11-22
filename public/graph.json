@@ -13838,6 +13838,19 @@
     },
     {
       "confidence": "documented",
+      "effects": [
+        {
+          "text": "Kept by an attack prestige; its log10 sets the Attack Exponent"
+        }
+      ],
+      "id": "attack-prestige-mult",
+      "kind": "stat",
+      "name": "Attack Prestige Mult",
+      "system": "attacks",
+      "wiki": "Attacks"
+    },
+    {
+      "confidence": "documented",
       "id": "attack-exponent",
       "kind": "stat",
       "name": "Attack Exponent",
@@ -18243,10 +18256,10 @@
     {
       "confidence": "documented",
       "from": "relic-6",
-      "note": "(Boosts) Common Exponent Mult",
-      "op": "add",
+      "note": "Common Exponent × Relic 6 effect², the effect read twice in the product (effect 1 + 0.005 per level)",
+      "op": "mult",
       "rel": "boosts",
-      "source": "wiki:Relics",
+      "source": "game-code:GameController.Update",
       "to": "common-exponent"
     },
     {
@@ -18266,19 +18279,19 @@
     {
       "confidence": "documented",
       "from": "relic-10",
-      "note": "Power (^) to DP Gain Raises DP Gain to a power (^)",
-      "op": "add",
+      "note": "DP gain = base ^ (exponent × Relic 10 effect); effect 1 + 0.01 per level",
+      "op": "exp",
       "rel": "boosts",
-      "source": "wiki:Relics",
+      "source": "game-code:EternityController.UpdateDilation",
       "to": "dilation-points"
     },
     {
-      "confidence": "uncertain",
+      "confidence": "documented",
       "from": "relic-11",
-      "note": "Supernova Bonuses (are) Powered to X",
-      "op": "add",
+      "note": "Supernova rewards = (0.5 × Supernovas + 1) ^ (… × Relic 11 effect); effect 1 + 0.002 per level, softcapped above 1.4",
+      "op": "exp",
       "rel": "boosts",
-      "source": "wiki:Relics",
+      "source": "game-code:EternityController.UpdateSupernova",
       "to": "supernova-rewards"
     },
     {
@@ -18316,15 +18329,6 @@
       "to": "relic-9"
     },
     {
-      "confidence": "uncertain",
-      "from": "relic-18",
-      "note": "Increases Ascension Power of Attacks Revolutions",
-      "op": "add",
-      "rel": "boosts",
-      "source": "wiki:Relics",
-      "to": "ascension-power"
-    },
-    {
       "confidence": "provisional",
       "from": "relic-20",
       "note": "Relic 16 effect is powered and Relic 18 effect multiplied to X & Y X and Y increase different amounts per relic level",
@@ -18333,20 +18337,21 @@
       "to": "relic-16"
     },
     {
-      "confidence": "provisional",
+      "confidence": "documented",
       "from": "relic-20",
-      "note": "Relic 16 effect is powered and Relic 18 effect multiplied to X & Y X and Y increase different amounts per relic level",
+      "note": "Relic 18's per-level gain × Relic 20 effect²",
+      "op": "mult",
       "rel": "boosts",
-      "source": "wiki:Relics",
+      "source": "game-code:Relic.GetEffect",
       "to": "relic-18"
     },
     {
-      "confidence": "provisional",
+      "confidence": "documented",
       "from": "relic-21",
-      "note": "Empowers Relic 17 Raises Relic 17 effect to a power (^) Improves Gold Gain",
-      "op": "add",
+      "note": "Relic 17 effect = (1 + 0.02 per level) ^ Relic 21 effect",
+      "op": "exp",
       "rel": "boosts",
-      "source": "wiki:Relics",
+      "source": "game-code:Relic.GetEffect",
       "to": "relic-17"
     },
     {
@@ -18359,55 +18364,55 @@
     {
       "confidence": "documented",
       "from": "relic-22",
-      "note": "Mult to VP gain Multiplies VP gain by X",
-      "op": "add",
+      "note": "Common mineral income × Relic 22 effect (1 + level, raised to Relic 23's effect)",
+      "op": "mult",
       "rel": "boosts",
-      "source": "wiki:Relics",
+      "source": "game-code:CommonMineral.GetIncome",
       "to": "value-points"
     },
     {
-      "confidence": "provisional",
+      "confidence": "documented",
       "from": "relic-23",
-      "note": "Empowers Relic 22 Raises Relic 22 effect to a power (^)",
+      "note": "Relic 22 effect ^ Relic 23 effect",
       "op": "exp",
       "rel": "boosts",
-      "source": "wiki:Relics",
+      "source": "game-code:Relic.GetEffect",
       "to": "relic-22"
     },
     {
       "confidence": "documented",
       "from": "relic-24",
-      "note": "Empowers Game Speed Donut Raises Game Speed Donut effect to a power (^)",
-      "op": "add",
+      "note": "Game Speed Donut = (1 + level × base) ^ Relic 24 effect (1 + 0.01 per level)",
+      "op": "exp",
       "rel": "boosts",
-      "source": "wiki:Relics",
+      "source": "game-code:UnityPlanetShopDonut.UpdateEffect",
       "to": "donut-game-speed"
     },
     {
       "confidence": "documented",
       "from": "relic-25",
-      "note": "Empowers Luck Donut Raises Luck Donut effect to a power (^)",
-      "op": "add",
+      "note": "Luck Donut = (1 + level × base) ^ Relic 25 effect (1 + 0.02 per level)",
+      "op": "exp",
       "rel": "boosts",
-      "source": "wiki:Relics",
+      "source": "game-code:UnityPlanetShopDonut.UpdateEffect",
       "to": "donut-luck"
     },
     {
       "confidence": "documented",
       "from": "relic-26",
-      "note": "Empowers Quality Donut Raises Quality Donut effect to a power (^)",
-      "op": "add",
+      "note": "Quality Donut = (1 + level × base) ^ Relic 26 effect (1 + 0.03 per level)",
+      "op": "exp",
       "rel": "boosts",
-      "source": "wiki:Relics",
+      "source": "game-code:UnityPlanetShopDonut.UpdateEffect",
       "to": "donut-quality"
     },
     {
       "confidence": "documented",
       "from": "relic-27",
-      "note": "Empowers last Donut Raises Zodiac Exp. Factor Donut effect to a power (^)",
-      "op": "add",
+      "note": "Zodiac Exp. Factor Donut = (1 + level × base) ^ Relic 27 effect (1 + 0.25 per level)",
+      "op": "exp",
       "rel": "boosts",
-      "source": "wiki:Relics",
+      "source": "game-code:UnityPlanetShopDonut.UpdateEffect",
       "to": "donut-zodiac-exp-factor"
     },
     {
@@ -18428,12 +18433,12 @@
       "to": "relic-28"
     },
     {
-      "confidence": "provisional",
+      "confidence": "documented",
       "from": "relic-29",
-      "note": "Refine Node 18 eff:",
-      "op": "add",
+      "note": "Refine Node 18 effect (base magnet chance) × Relic 29 effect",
+      "op": "mult",
       "rel": "boosts",
-      "source": "wiki:Relics",
+      "source": "game-code:RefineNode.Update",
       "to": "refine-node-18"
     },
     {
@@ -18448,19 +18453,19 @@
     {
       "confidence": "documented",
       "from": "relic-32",
-      "note": "PP Gain powered to",
-      "op": "add",
+      "note": "PP gain ^ Relic 32 effect (1 + 0.01 per level)",
+      "op": "exp",
       "rel": "boosts",
-      "source": "wiki:Relics",
+      "source": "game-code:MineralsController.MineralsUpdateStats",
       "to": "polish-points"
     },
     {
       "confidence": "documented",
       "from": "relic-33",
-      "note": "RfP Gain multiplied by",
-      "op": "add",
+      "note": "RfP gain × Relic 33 effect (1 + 0.1 per level)",
+      "op": "mult",
       "rel": "boosts",
-      "source": "wiki:Relics",
+      "source": "game-code:MineralsController.MineralsUpdateStats",
       "to": "refinement-points"
     },
     {
@@ -18493,10 +18498,10 @@
     {
       "confidence": "documented",
       "from": "relic-37",
-      "note": "Multiplies Global Element Mult",
-      "op": "add",
+      "note": "Global element generation mult × Relic 37 effect",
+      "op": "mult",
       "rel": "boosts",
-      "source": "wiki:Relics",
+      "source": "game-code:ElementsController.ElementsUpdateStats",
       "to": "global-element-mult"
     },
     {
@@ -18509,39 +18514,39 @@
       "to": "refine-node-2"
     },
     {
-      "confidence": "provisional",
+      "confidence": "documented",
       "from": "relic-40",
-      "note": "Multiplies Relic 30 effect (RN1 Effect)",
-      "op": "add",
+      "note": "Relic 30 effect × Relic 40 effect (1 + 0.01 per level)",
+      "op": "mult",
       "rel": "boosts",
-      "source": "wiki:Relics",
+      "source": "game-code:Relic.GetEffect",
       "to": "relic-30"
     },
     {
       "confidence": "documented",
       "from": "relic-41",
-      "note": "Multiplies Black Gem Eff.",
-      "op": "add",
+      "note": "Black Gem effect × Relic 41 effect (1 + 0.003 per level)",
+      "op": "mult",
       "rel": "boosts",
-      "source": "wiki:Relics",
+      "source": "game-code:SpecialMineral.GetEffect",
       "to": "special-mineral-black-gem"
     },
     {
-      "confidence": "uncertain",
+      "confidence": "documented",
       "from": "relic-42",
-      "note": "Multiplies Black Gem Chance",
-      "op": "add",
+      "note": "Weights the Black Gem spawn roll: chance = E / (E + 99), 1% at E = 1; only after Refine Node 70",
+      "op": "mult",
       "rel": "boosts",
-      "source": "wiki:Relics",
+      "source": "game-code:MineralsData.SpawnSpecialMineral",
       "to": "special-mineral-black-gem"
     },
     {
-      "confidence": "uncertain",
+      "confidence": "documented",
       "from": "relic-43",
-      "note": "Chance to get additional tarot card of the same type",
+      "note": "Chance per draw for a second copy of the drawn card (+1 card level); not an extra draw",
       "op": "add",
       "rel": "boosts",
-      "source": "wiki:Relics",
+      "source": "game-code:TarotData.DrawCards",
       "to": "tarot"
     },
     {
@@ -18554,12 +18559,12 @@
       "to": "smp"
     },
     {
-      "confidence": "uncertain",
+      "confidence": "documented",
       "from": "relic-46",
-      "note": "Empowers Relic 45 (SMP EXP)",
-      "op": "add",
+      "note": "Relic 45 effect ^ Relic 46 effect",
+      "op": "exp",
       "rel": "boosts",
-      "source": "wiki:Relics",
+      "source": "game-code:Relic.GetEffect",
       "to": "relic-45"
     },
     {
@@ -18572,48 +18577,48 @@
       "to": "relic-33"
     },
     {
-      "confidence": "uncertain",
+      "confidence": "documented",
       "from": "relic-49",
-      "note": "Multiplies Sacrifice Dust gain",
-      "op": "add",
+      "note": "Sacrifice Dust gain × Relic 49 effect, 1.01^level",
+      "op": "mult",
       "rel": "boosts",
-      "source": "wiki:Relics",
+      "source": "game-code:MineralsController.MineralsUpdateStats",
       "to": "sacrifice-dust"
     },
     {
-      "confidence": "uncertain",
+      "confidence": "documented",
       "from": "relic-50",
-      "note": "Multiplies Relic 38's effect (Attacks bulk leveling)",
-      "op": "add",
+      "note": "Relic 38 effect × Relic 50 effect (1 + 0.01 per level)",
+      "op": "mult",
       "rel": "boosts",
-      "source": "wiki:Relics",
+      "source": "game-code:Relic.GetEffect",
       "to": "relic-38"
     },
     {
-      "confidence": "uncertain",
+      "confidence": "documented",
       "from": "relic-51",
-      "note": "Multiplies Refine Node 7's effect",
-      "op": "add",
+      "note": "Refine Node 7 effect × Relic 51 effect (1 + 2 per level)",
+      "op": "mult",
       "rel": "boosts",
-      "source": "wiki:Relics",
+      "source": "game-code:RefineNode.Update",
       "to": "refine-node-7"
     },
     {
-      "confidence": "uncertain",
+      "confidence": "documented",
       "from": "relic-52",
-      "note": "Empowers Attack Ascension Power from VP",
+      "note": "Raises the VP Ascension Power bonus to Relic 52's effect",
       "op": "exp",
       "rel": "boosts",
-      "source": "wiki:Relics",
+      "source": "game-code:MineralsController.MineralsUpdateStats",
       "to": "attack-ascension-power"
     },
     {
-      "confidence": "uncertain",
+      "confidence": "documented",
       "from": "relic-54",
-      "note": "Multiplies the base of Refine Node 90",
-      "op": "add",
+      "note": "Multiplies Refine Node 90's base 2: effect = (2 × Relic 54 effect)^level",
+      "op": "mult",
       "rel": "boosts",
-      "source": "wiki:Relics",
+      "source": "game-code:RefineNode.Update",
       "to": "refine-node-90"
     },
     {
@@ -18635,12 +18640,12 @@
       "to": "refine-node-100"
     },
     {
-      "confidence": "uncertain",
+      "confidence": "documented",
       "from": "relic-59",
-      "note": "Multiplies Golden Resource gain when flushing to artifacts",
-      "op": "add",
+      "note": "Tarot artifact gold per flush × Relic 59 effect",
+      "op": "mult",
       "rel": "boosts",
-      "source": "wiki:Relics",
+      "source": "game-code:TarotArtifact.UpdateData",
       "to": "golden-resources"
     },
     {
@@ -18653,21 +18658,21 @@
       "to": "relic-59"
     },
     {
-      "confidence": "uncertain",
+      "confidence": "documented",
       "from": "relic-62",
-      "note": "Multiplies Base Spread Power on Endoplasmic reticulum craft",
-      "op": "add",
+      "note": "Spread power × Relic 62 effect (1 + 0.1 per level, × Relic 66)",
+      "op": "mult",
       "rel": "boosts",
-      "source": "wiki:Relics",
+      "source": "game-code:PlagueData.GetSpreadPower",
       "to": "base-spread-power"
     },
     {
-      "confidence": "uncertain",
+      "confidence": "documented",
       "from": "relic-66",
-      "note": "Multiplies Relic 62 effect",
-      "op": "add",
+      "note": "Relic 62 effect × Relic 66 effect (1 + 0.6 per level)",
+      "op": "mult",
       "rel": "boosts",
-      "source": "wiki:Relics",
+      "source": "game-code:Relic.GetEffect",
       "to": "relic-62"
     },
     {
@@ -18689,30 +18694,30 @@
       "to": "luck"
     },
     {
-      "confidence": "uncertain",
+      "confidence": "documented",
       "from": "relic-71",
-      "note": "Divides the cost exponent of all Singularity Tree upgrades by /",
+      "note": "Singularity Tree costs, paid in Atoms, become cost^(1 / Relic 71 effect)",
       "op": "exp",
       "rel": "boosts",
-      "source": "wiki:Relics",
+      "source": "game-code:SingularityTreeNode.Update",
       "to": "singularity-tree-tab"
     },
     {
-      "confidence": "uncertain",
+      "confidence": "documented",
       "from": "relic-72",
-      "note": "Multiplies the base of Alpha and Beta Generators",
-      "op": "add",
+      "note": "Alpha and Beta generator per-level base × Relic 72 effect",
+      "op": "mult",
       "rel": "boosts",
-      "source": "wiki:Relics",
+      "source": "game-code:ParticleUpgrade.CalculateEffect",
       "to": "particle-generators"
     },
     {
-      "confidence": "uncertain",
+      "confidence": "documented",
       "from": "relic-75",
-      "note": "Multiplies Mastery Gain (Spawning & Destroying sparks)",
-      "op": "add",
+      "note": "Spark mastery gain on spawn and on delete × Relic 75 effect (1 + 0.02 per level)",
+      "op": "mult",
       "rel": "boosts",
-      "source": "wiki:Relics",
+      "source": "game-code:ParticlesData.UpdateSparkStats",
       "to": "spark-mastery"
     },
     {
@@ -19186,11 +19191,12 @@
       "to": "refine-node-39"
     },
     {
-      "confidence": "provisional",
+      "confidence": "documented",
       "from": "refine-node-39",
-      "note": "Relic 18 effect is cubed now (e.g. 2e6 -> 8e18)",
+      "note": "Relic 18 effect ^3",
+      "op": "exp",
       "rel": "boosts",
-      "source": "wiki:Minerals/Refine_Tree",
+      "source": "game-code:Relic.GetEffect",
       "to": "relic-18"
     },
     {
@@ -20041,11 +20047,12 @@
       "to": "refine-node-108"
     },
     {
-      "confidence": "uncertain",
+      "confidence": "documented",
       "from": "refine-node-108",
-      "note": "Max PIP now boosts sacrifice dust gain (x???)",
+      "note": "Sacrifice Dust gain × (Max PlP + 1), once Endoplasmic Reticulum is unlocked",
+      "op": "mult",
       "rel": "boosts",
-      "source": "wiki:Minerals/Refine_Tree",
+      "source": "game-code:MineralsController.MineralsUpdateStats",
       "to": "sacrifice-dust"
     },
     {
@@ -20707,14 +20714,6 @@
       "to": "refine-node-154"
     },
     {
-      "confidence": "uncertain",
-      "from": "refine-node-154",
-      "note": "The PlG to PlP bonus is raised to ^1.5",
-      "rel": "boosts",
-      "source": "wiki:Minerals/Refine_Tree",
-      "to": "plague-points"
-    },
-    {
       "confidence": "documented",
       "from": "refine-node-154",
       "rel": "requires",
@@ -21220,12 +21219,12 @@
       "to": "attack-ascension-power"
     },
     {
-      "confidence": "provisional",
+      "confidence": "documented",
       "from": "tarot-three-of-swords",
-      "note": "Swords 2 first effect mult x",
+      "note": "Two of Swords' first effect × Three of Swords' first effect",
+      "op": "mult",
       "rel": "boosts",
-      "source": "wiki:Tarot",
-      "targets_effect": 0,
+      "source": "game-code:TarotCard.CalculateEffect",
       "to": "tarot-two-of-swords"
     },
     {
@@ -22359,19 +22358,11 @@
       "to": "relic-33"
     },
     {
-      "confidence": "provisional",
+      "confidence": "documented",
       "from": "wind-node-6",
-      "note": "Relic 1 now also applies to Attacks Asc. Power",
+      "note": "Switch: once bought, Relic 1's effect also multiplies Attack Ascension Power",
       "rel": "boosts",
-      "source": "wiki:Elements",
-      "to": "relic-1"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "wind-node-6",
-      "note": "Relic 1 now also applies to Attacks Asc. Power",
-      "rel": "boosts",
-      "source": "wiki:Elements",
+      "source": "game-code:AttacksController.AttacksUpdate",
       "to": "attack-ascension-power"
     },
     {
@@ -22415,11 +22406,12 @@
       "to": "luck"
     },
     {
-      "confidence": "provisional",
+      "confidence": "documented",
       "from": "water-node-2",
-      "note": "Water boosts Refine Node 18 effect (Magnet Chance)",
+      "note": "Refine Node 18 effect (base magnet chance) × Water Node 2 effect",
+      "op": "mult",
       "rel": "boosts",
-      "source": "wiki:Elements",
+      "source": "game-code:RefineNode.Update",
       "to": "refine-node-18"
     },
     {
@@ -22480,15 +22472,19 @@
     {
       "confidence": "documented",
       "from": "special-mineral-pink-gem",
+      "note": "Luck × the Pink Gem effect, after the Luck donut and Relic 4; sacrificing it adds Luck ^ the sacrifice effect",
+      "op": "mult",
       "rel": "boosts",
-      "source": "wiki:Minerals",
+      "source": "game-code:UnityController.UnityUpdate",
       "to": "luck"
     },
     {
-      "confidence": "uncertain",
+      "confidence": "documented",
       "from": "special-mineral-pink-gem",
+      "note": "Base Quality × the Pink Gem effect",
+      "op": "mult",
       "rel": "boosts",
-      "source": "wiki:Minerals",
+      "source": "game-code:UnityController.UnityUpdate",
       "to": "quality"
     },
     {
@@ -22548,10 +22544,12 @@
       "to": "ascension-power"
     },
     {
-      "confidence": "uncertain",
+      "confidence": "documented",
       "from": "zodiac-aries",
+      "note": "Common Exponent stat, 1 + 0.016 × log10 zodiac score, multiplies the summed Common Exponent",
+      "op": "mult",
       "rel": "boosts",
-      "source": "wiki:Zodiacs",
+      "source": "game-code:GameController.Update",
       "to": "common-exponent"
     },
     {
@@ -22583,18 +22581,12 @@
       "to": "eternity-points"
     },
     {
-      "confidence": "uncertain",
+      "confidence": "documented",
       "from": "zodiac-gemini",
+      "note": "Supernova Req stat, 1 / (1 + 0.02 × log10 zodiac score), multiplies P in the requirement 10^(E^P)",
       "rel": "boosts",
-      "source": "wiki:Zodiacs",
+      "source": "game-code:EternityController.CalculateSupenovaReq",
       "to": "supernova"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "zodiac-gemini",
-      "rel": "boosts",
-      "source": "wiki:Zodiacs",
-      "to": "lab-mult"
     },
     {
       "confidence": "uncertain",
@@ -22625,10 +22617,12 @@
       "to": "ascension-power"
     },
     {
-      "confidence": "uncertain",
+      "confidence": "documented",
       "from": "zodiac-leo",
+      "note": "Common Exponent stat, 1 + 0.016 × log10 zodiac score, multiplies the summed Common Exponent",
+      "op": "mult",
       "rel": "boosts",
-      "source": "wiki:Zodiacs",
+      "source": "game-code:GameController.Update",
       "to": "common-exponent"
     },
     {
@@ -22660,18 +22654,12 @@
       "to": "eternity-points"
     },
     {
-      "confidence": "uncertain",
+      "confidence": "documented",
       "from": "zodiac-libra",
+      "note": "Supernova Req stat, 1 / (1 + 0.02 × log10 zodiac score), multiplies P in the requirement 10^(E^P)",
       "rel": "boosts",
-      "source": "wiki:Zodiacs",
+      "source": "game-code:EternityController.CalculateSupenovaReq",
       "to": "supernova"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "zodiac-libra",
-      "rel": "boosts",
-      "source": "wiki:Zodiacs",
-      "to": "lab-mult"
     },
     {
       "confidence": "documented",
@@ -22709,10 +22697,12 @@
       "to": "ascension-power"
     },
     {
-      "confidence": "uncertain",
+      "confidence": "documented",
       "from": "zodiac-sagittarius",
+      "note": "Common Exponent stat, 1 + 0.016 × log10 zodiac score, multiplies the summed Common Exponent",
+      "op": "mult",
       "rel": "boosts",
-      "source": "wiki:Zodiacs",
+      "source": "game-code:GameController.Update",
       "to": "common-exponent"
     },
     {
@@ -22739,23 +22729,10 @@
     {
       "confidence": "documented",
       "from": "zodiac-aquarius",
+      "note": "Supernova Req stat, 1 / (1 + 0.02 × log10 zodiac score), multiplies P in the requirement 10^(E^P)",
       "rel": "boosts",
-      "source": "wiki:Zodiacs",
-      "to": "laboratory"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "zodiac-aquarius",
-      "rel": "boosts",
-      "source": "wiki:Zodiacs",
+      "source": "game-code:EternityController.CalculateSupenovaReq",
       "to": "supernova"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "zodiac-aquarius",
-      "rel": "boosts",
-      "source": "wiki:Zodiacs",
-      "to": "lab-mult"
     },
     {
       "confidence": "documented",
@@ -22955,10 +22932,11 @@
       "to": "singularity-effects-tab"
     },
     {
-      "confidence": "uncertain",
+      "confidence": "documented",
       "from": "singularity-milestone-event-horizon",
+      "note": "Re-cleared Plague stages keep their full PlG reward instead of ÷(1 + times beaten); also needs Refine Node 121",
       "rel": "boosts",
-      "source": "wiki:Singularity",
+      "source": "game-code:PlagueStage.GetReward",
       "to": "plague-generators"
     },
     {
@@ -22999,10 +22977,12 @@
       "to": "particle-generators"
     },
     {
-      "confidence": "uncertain",
+      "confidence": "documented",
       "from": "singularity-milestone-singular-master",
+      "note": "Spark mastery gain × 1.01^Singularities",
+      "op": "mult",
       "rel": "boosts",
-      "source": "wiki:Singularity",
+      "source": "game-code:ParticlesData.UpdateSparkStats",
       "to": "spark-mastery"
     },
     {
@@ -23156,17 +23136,21 @@
       "to": "atoms-gain"
     },
     {
-      "confidence": "uncertain",
+      "confidence": "documented",
       "from": "singularity-tree-7-1",
+      "note": "Multiplies the Singularity Mult part of the level given to newly obtained Singular Zodiacs; every stat scales with it",
+      "op": "mult",
       "rel": "boosts",
-      "source": "wiki:Singularity",
+      "source": "game-code:SingularityData.GetZodiacLevelSingMult",
       "to": "singular-zodiacs"
     },
     {
-      "confidence": "uncertain",
+      "confidence": "documented",
       "from": "singularity-tree-7-2",
+      "note": "Multiplies the Singularity count part of the level given to newly obtained Singular Zodiacs; every stat scales with it",
+      "op": "mult",
       "rel": "boosts",
-      "source": "wiki:Singularity",
+      "source": "game-code:SingularityData.GetZodiacLevelSingularities",
       "to": "singular-zodiacs"
     },
     {
@@ -23505,10 +23489,11 @@
       "to": "dilation-points"
     },
     {
-      "confidence": "uncertain",
+      "confidence": "documented",
       "from": "dilation-node-top-3",
+      "note": "Lowers the Supernova requirement 10^(E^P): P × Top 3 effect (0.9 at level 1, × 0.95 per further level); the score exponent is unchanged",
       "rel": "boosts",
-      "source": "wiki:Dilation_Tree",
+      "source": "game-code:EternityController.CalculateSupenovaReq",
       "to": "supernova"
     },
     {
@@ -24443,10 +24428,12 @@
       "to": "relic-27"
     },
     {
-      "confidence": "uncertain",
+      "confidence": "documented",
       "from": "tarot-artifact-joy-reservoir",
+      "note": "Relic 2 effect ^ part effect: 100 at level 1, 100^x with x = √(2·level) past level 2, softcapped above 100",
+      "op": "exp",
       "rel": "boosts",
-      "source": "wiki:Tarot",
+      "source": "game-code:Relic.GetEffect",
       "to": "relic-2"
     },
     {
@@ -25744,10 +25731,12 @@
       "to": "epsilon-tree-a2"
     },
     {
-      "confidence": "uncertain",
+      "confidence": "documented",
       "from": "epsilon-tree-a2",
+      "note": "Weakens the Atoms gain penalty from 1e25000: gain^(1 / (1 + 9 / A2 effect)) instead of ^0.1",
+      "op": "exp",
       "rel": "boosts",
-      "source": "game",
+      "source": "game-code:SingularityController.AddAtomPenalties",
       "to": "atoms-gain"
     },
     {
@@ -26553,51 +26542,111 @@
       "to": "sacrifice-dust"
     },
     {
-      "confidence": "uncertain",
-      "from": "dilation-node-bottom-2",
+      "confidence": "documented",
+      "from": "zodiac-aquarius",
+      "note": "Free Lab. Levels go to RP Upgrades 1-6, not to Lab Base, Mult or Power",
       "op": "add",
       "rel": "boosts",
-      "source": "wiki:Dilation_Tree",
+      "source": "game-code:EternityController.UpdateLaboratory",
       "to": "rp-upgrade-1"
     },
     {
-      "confidence": "uncertain",
-      "from": "dilation-node-bottom-2",
+      "confidence": "documented",
+      "from": "zodiac-aquarius",
+      "note": "Free Lab. Levels go to RP Upgrades 1-6, not to Lab Base, Mult or Power",
       "op": "add",
       "rel": "boosts",
-      "source": "wiki:Dilation_Tree",
+      "source": "game-code:EternityController.UpdateLaboratory",
       "to": "rp-upgrade-2"
     },
     {
-      "confidence": "uncertain",
-      "from": "dilation-node-bottom-2",
+      "confidence": "documented",
+      "from": "zodiac-aquarius",
+      "note": "Free Lab. Levels go to RP Upgrades 1-6, not to Lab Base, Mult or Power",
       "op": "add",
       "rel": "boosts",
-      "source": "wiki:Dilation_Tree",
+      "source": "game-code:EternityController.UpdateLaboratory",
       "to": "rp-upgrade-3"
     },
     {
-      "confidence": "uncertain",
-      "from": "dilation-node-bottom-2",
+      "confidence": "documented",
+      "from": "zodiac-aquarius",
+      "note": "Free Lab. Levels go to RP Upgrades 1-6, not to Lab Base, Mult or Power",
       "op": "add",
       "rel": "boosts",
-      "source": "wiki:Dilation_Tree",
+      "source": "game-code:EternityController.UpdateLaboratory",
       "to": "rp-upgrade-4"
     },
     {
-      "confidence": "uncertain",
-      "from": "dilation-node-bottom-2",
+      "confidence": "documented",
+      "from": "zodiac-aquarius",
+      "note": "Free Lab. Levels go to RP Upgrades 1-6, not to Lab Base, Mult or Power",
       "op": "add",
       "rel": "boosts",
-      "source": "wiki:Dilation_Tree",
+      "source": "game-code:EternityController.UpdateLaboratory",
       "to": "rp-upgrade-5"
     },
     {
-      "confidence": "uncertain",
-      "from": "dilation-node-bottom-2",
+      "confidence": "documented",
+      "from": "zodiac-aquarius",
+      "note": "Free Lab. Levels go to RP Upgrades 1-6, not to Lab Base, Mult or Power",
       "op": "add",
       "rel": "boosts",
-      "source": "wiki:Dilation_Tree",
+      "source": "game-code:EternityController.UpdateLaboratory",
+      "to": "rp-upgrade-6"
+    },
+    {
+      "confidence": "documented",
+      "from": "dilation-node-bottom-2",
+      "note": "Free levels = 0.01 × unspent AP (softcapped) × Top 4 effect × level; RP Upgrades 1-6 only",
+      "op": "add",
+      "rel": "boosts",
+      "source": "game-code:EternityController.UpdateLaboratory",
+      "to": "rp-upgrade-1"
+    },
+    {
+      "confidence": "documented",
+      "from": "dilation-node-bottom-2",
+      "note": "Free levels = 0.01 × unspent AP (softcapped) × Top 4 effect × level; RP Upgrades 1-6 only",
+      "op": "add",
+      "rel": "boosts",
+      "source": "game-code:EternityController.UpdateLaboratory",
+      "to": "rp-upgrade-2"
+    },
+    {
+      "confidence": "documented",
+      "from": "dilation-node-bottom-2",
+      "note": "Free levels = 0.01 × unspent AP (softcapped) × Top 4 effect × level; RP Upgrades 1-6 only",
+      "op": "add",
+      "rel": "boosts",
+      "source": "game-code:EternityController.UpdateLaboratory",
+      "to": "rp-upgrade-3"
+    },
+    {
+      "confidence": "documented",
+      "from": "dilation-node-bottom-2",
+      "note": "Free levels = 0.01 × unspent AP (softcapped) × Top 4 effect × level; RP Upgrades 1-6 only",
+      "op": "add",
+      "rel": "boosts",
+      "source": "game-code:EternityController.UpdateLaboratory",
+      "to": "rp-upgrade-4"
+    },
+    {
+      "confidence": "documented",
+      "from": "dilation-node-bottom-2",
+      "note": "Free levels = 0.01 × unspent AP (softcapped) × Top 4 effect × level; RP Upgrades 1-6 only",
+      "op": "add",
+      "rel": "boosts",
+      "source": "game-code:EternityController.UpdateLaboratory",
+      "to": "rp-upgrade-5"
+    },
+    {
+      "confidence": "documented",
+      "from": "dilation-node-bottom-2",
+      "note": "Free levels = 0.01 × unspent AP (softcapped) × Top 4 effect × level; RP Upgrades 1-6 only",
+      "op": "add",
+      "rel": "boosts",
+      "source": "game-code:EternityController.UpdateLaboratory",
       "to": "rp-upgrade-6"
     },
     {
@@ -26608,51 +26657,57 @@
       "to": "dilation-node-bottom-2"
     },
     {
-      "confidence": "uncertain",
+      "confidence": "documented",
       "from": "dilation-upgrade-3",
+      "note": "Free levels, 3 per level (× Bottom 1); RP Upgrades 1-6 only, not Lab Base, Mult or Power",
       "op": "add",
       "rel": "boosts",
-      "source": "wiki:Eternity",
+      "source": "game-code:EternityController.UpdateLaboratory",
       "to": "rp-upgrade-1"
     },
     {
-      "confidence": "uncertain",
+      "confidence": "documented",
       "from": "dilation-upgrade-3",
+      "note": "Free levels, 3 per level (× Bottom 1); RP Upgrades 1-6 only, not Lab Base, Mult or Power",
       "op": "add",
       "rel": "boosts",
-      "source": "wiki:Eternity",
+      "source": "game-code:EternityController.UpdateLaboratory",
       "to": "rp-upgrade-2"
     },
     {
-      "confidence": "uncertain",
+      "confidence": "documented",
       "from": "dilation-upgrade-3",
+      "note": "Free levels, 3 per level (× Bottom 1); RP Upgrades 1-6 only, not Lab Base, Mult or Power",
       "op": "add",
       "rel": "boosts",
-      "source": "wiki:Eternity",
+      "source": "game-code:EternityController.UpdateLaboratory",
       "to": "rp-upgrade-3"
     },
     {
-      "confidence": "uncertain",
+      "confidence": "documented",
       "from": "dilation-upgrade-3",
+      "note": "Free levels, 3 per level (× Bottom 1); RP Upgrades 1-6 only, not Lab Base, Mult or Power",
       "op": "add",
       "rel": "boosts",
-      "source": "wiki:Eternity",
+      "source": "game-code:EternityController.UpdateLaboratory",
       "to": "rp-upgrade-4"
     },
     {
-      "confidence": "uncertain",
+      "confidence": "documented",
       "from": "dilation-upgrade-3",
+      "note": "Free levels, 3 per level (× Bottom 1); RP Upgrades 1-6 only, not Lab Base, Mult or Power",
       "op": "add",
       "rel": "boosts",
-      "source": "wiki:Eternity",
+      "source": "game-code:EternityController.UpdateLaboratory",
       "to": "rp-upgrade-5"
     },
     {
-      "confidence": "uncertain",
+      "confidence": "documented",
       "from": "dilation-upgrade-3",
+      "note": "Free levels, 3 per level (× Bottom 1); RP Upgrades 1-6 only, not Lab Base, Mult or Power",
       "op": "add",
       "rel": "boosts",
-      "source": "wiki:Eternity",
+      "source": "game-code:EternityController.UpdateLaboratory",
       "to": "rp-upgrade-6"
     },
     {
@@ -26663,10 +26718,11 @@
       "to": "infinity-upgrade-1-1-infinity-generation-and-automation"
     },
     {
-      "confidence": "uncertain",
+      "confidence": "documented",
       "from": "infinity-challenge-9",
+      "note": "Break Infinity needs all 9 Infinity Challenges complete, not IC9 alone",
       "rel": "unlocks",
-      "source": "wiki:Infinity",
+      "source": "game-code:InfinityController.SwitchBreakInfinity",
       "to": "break-infinity"
     },
     {
@@ -26695,27 +26751,29 @@
       "to": "fire-factor-1"
     },
     {
-      "confidence": "uncertain",
+      "confidence": "documented",
       "from": "fire-node-2",
-      "note": "Increase Ascension Power from VP based on you current fire",
+      "note": "Raises the VP Ascension Power bonus to Fire Node 2's effect (1 + log10(Fire + 1)/50, softcapped); Revolution Ascension Power does not use it",
+      "op": "exp",
       "rel": "boosts",
-      "source": "wiki:Elements",
+      "source": "game-code:MineralsController.MineralsUpdateStats",
       "to": "attack-ascension-power"
     },
     {
-      "confidence": "uncertain",
+      "confidence": "documented",
       "from": "fire",
-      "note": "Increase Ascension Power from VP based on you current fire",
+      "note": "Fire Node 2 effect = 1 + log10(Fire + 1)/50, softcapped above 10, 25 and 100",
       "rel": "boosts",
-      "source": "wiki:Elements",
+      "source": "game-code:ElementNode.Update",
       "to": "fire-node-2"
     },
     {
-      "confidence": "provisional",
+      "confidence": "documented",
       "from": "value-points",
-      "note": "Increase Ascension Power from VP based on you current fire",
+      "note": "Attack Ascension Power × (1 + (((max total VP + 1000)/1000)^0.25 − 1)/100)",
+      "op": "mult",
       "rel": "boosts",
-      "source": "wiki:Elements",
+      "source": "game-code:MineralsController.MineralsUpdateStats",
       "to": "attack-ascension-power"
     },
     {
@@ -26737,52 +26795,57 @@
       "to": "wind-factor-1"
     },
     {
-      "confidence": "uncertain",
+      "confidence": "documented",
       "from": "water-node-5",
-      "note": "Water boosts first node for all elements (at different rates)",
+      "note": "Fire Node 1 effect + 0.06 × Water Node 5 effect (0.25 with Refine Node 59)",
+      "op": "add",
       "rel": "boosts",
-      "source": "wiki:Elements",
+      "source": "game-code:ElementNode.Update",
       "to": "fire-node-1"
     },
     {
-      "confidence": "uncertain",
+      "confidence": "documented",
       "from": "water-node-5",
-      "note": "Water boosts first node for all elements (at different rates)",
+      "note": "Earth Node 1 effect + 0.5 × Water Node 5 effect (1.5 with Refine Node 59)",
+      "op": "add",
       "rel": "boosts",
-      "source": "wiki:Elements",
+      "source": "game-code:ElementNode.Update",
       "to": "earth-node-1"
     },
     {
-      "confidence": "uncertain",
+      "confidence": "documented",
       "from": "water-node-5",
-      "note": "Water boosts first node for all elements (at different rates)",
+      "note": "Wind Node 1 effect + 0.3 × Water Node 5 effect (1.2 with Refine Node 59)",
+      "op": "add",
       "rel": "boosts",
-      "source": "wiki:Elements",
+      "source": "game-code:ElementNode.Update",
       "to": "wind-node-1"
     },
     {
-      "confidence": "uncertain",
+      "confidence": "documented",
       "from": "water-node-5",
-      "note": "Water boosts first node for all elements (at different rates)",
+      "note": "Water Node 1 effect + 0.01 × Water Node 5 effect",
+      "op": "add",
       "rel": "boosts",
-      "source": "wiki:Elements",
+      "source": "game-code:ElementNode.Update",
       "to": "water-node-1"
     },
     {
-      "confidence": "uncertain",
+      "confidence": "documented",
       "from": "refine-node-3",
-      "note": "Attacks Prestige is a bit stronger",
+      "note": "Attacks prestige mult ^1.5",
+      "op": "exp",
       "rel": "boosts",
-      "source": "wiki:Minerals/Refine_Tree",
-      "to": "attack-exponent"
+      "source": "game-code:AttacksController.AttacksUpdate",
+      "to": "attack-prestige-mult"
     },
     {
-      "confidence": "uncertain",
+      "confidence": "documented",
       "from": "refine-node-18",
-      "note": "Unlock magnets and new mineral upgrades! Magnet base chance at the start is 1% on merge.",
+      "note": "Sets the base magnet chance to 1% (× the shop magnet boost); the chance is 0 until it is bought",
       "op": "add",
       "rel": "boosts",
-      "source": "wiki:Minerals/Refine_Tree",
+      "source": "game-code:MineralsController.MineralsUpdateStats",
       "to": "magnet-chance"
     },
     {
@@ -26810,11 +26873,11 @@
       "to": "refine-node-68"
     },
     {
-      "confidence": "provisional",
+      "confidence": "documented",
       "from": "refine-node-70",
-      "note": "Now you can spawn black special gems (1% chance). Unlocks Tarot. Resets SMS Factor to 5,000 if it's >6,000 or decrease it by 1,000",
+      "note": "Black Gems can spawn only after this node: 1% of special-mineral spawns, before Relic 42",
       "rel": "unlocks",
-      "source": "wiki:Minerals/Refine_Tree",
+      "source": "game-code:MineralsData.SpawnSpecialMineral",
       "to": "special-mineral-black-gem"
     },
     {
@@ -26966,12 +27029,12 @@
       "to": "refine-node-146"
     },
     {
-      "confidence": "uncertain",
+      "confidence": "documented",
       "from": "refine-node-154",
-      "note": "The PlG to PlP bonus is raised to ^1.5",
+      "note": "PlP per PlG ^1.5, after its multipliers",
       "op": "exp",
       "rel": "boosts",
-      "source": "wiki:Minerals/Refine_Tree",
+      "source": "game-code:PlagueController.Update",
       "to": "plp-per-plg"
     },
     {
@@ -26991,12 +27054,12 @@
       "to": "particle-generators"
     },
     {
-      "confidence": "uncertain",
+      "confidence": "documented",
       "from": "refine-node-168",
-      "note": "Tarot Challenges Singularity factors are x3 stronger (before softcap)",
+      "note": "Triples the per-completion term of the four suit Tarot Challenge Singularity factors, before their softcaps",
       "op": "mult",
       "rel": "boosts",
-      "source": "wiki:Minerals/Refine_Tree",
+      "source": "game-code:SingFactor.Calculate",
       "to": "singularity-mult"
     },
     {
@@ -27032,12 +27095,12 @@
       "to": "singularity-mult"
     },
     {
-      "confidence": "uncertain",
+      "confidence": "documented",
       "from": "refine-node-187",
-      "note": "Delta Prestige bonus is stronger based on your Pent (X1.01 per Pent)",
+      "note": "Delta's prestige bonus to Epsilon × 1.01^Pent",
       "op": "mult",
       "rel": "boosts",
-      "source": "wiki:Minerals/Refine_Tree",
+      "source": "game-code:ParticlesData.GetPrestigeBonus",
       "to": "particles-epsilon"
     },
     {
@@ -27057,12 +27120,12 @@
       "to": "refine-node-189"
     },
     {
-      "confidence": "provisional",
+      "confidence": "documented",
       "from": "relic-48",
-      "note": "Multiplies power for Luck boost to Water",
-      "op": "mult",
+      "note": "Multiplies the exponent of Water Factor 1 (Luck); effect 1 + 1 per level",
+      "op": "exp",
       "rel": "boosts",
-      "source": "wiki:Relics",
+      "source": "game-code:Element.CheckFactors",
       "to": "water-factor-1"
     },
     {
@@ -27098,21 +27161,21 @@
       "to": "tarot-suit-cups"
     },
     {
-      "confidence": "provisional",
+      "confidence": "documented",
       "from": "relic-63",
-      "note": "Multiplies the effect of Endoplasmic Reticulum Upgrade 4 (PIP to ERP conversion Rate)",
+      "note": "Endoplasmic Reticulum Upgrade 4 (PlP to ERP conversion rate) effect × Relic 63 effect",
       "op": "mult",
       "rel": "boosts",
-      "source": "wiki:Relics",
+      "source": "game-code:EndoplasmicReticulumUpgrade.Update",
       "to": "plague-er-conversion-rate"
     },
     {
-      "confidence": "uncertain",
+      "confidence": "documented",
       "from": "relic-74",
-      "note": "Multiplies Delta Prestige Effect",
+      "note": "Delta's prestige bonus to Epsilon × Relic 74 effect (1 + 0.002 per level)",
       "op": "mult",
       "rel": "boosts",
-      "source": "wiki:Relics",
+      "source": "game-code:ParticlesData.GetPrestigeBonus",
       "to": "particles-epsilon"
     },
     {
@@ -27185,19 +27248,22 @@
       "to": "plague-stat-max-infected-in-universe"
     },
     {
-      "confidence": "uncertain",
+      "confidence": "documented",
       "from": "singularity-tree-6-1",
+      "note": "Projected Singularity Mult gain = (next − 1) / Mult^(0.5 / this effect); the count and the atom requirement are unchanged",
+      "op": "exp",
       "rel": "boosts",
-      "source": "wiki:Singularity",
+      "source": "game-code:SingularityData.get_SingMultGainNext",
       "to": "singularity-mult"
     },
     {
-      "confidence": "uncertain",
+      "confidence": "documented",
       "from": "particles-pent-bonus-1",
+      "note": "Tarot artifact gold per flush = (g × 100)^(1 + 0.1·Pent + 0.04·Tetr + 0.01·Tier) / 100; Attacks Gold Gain is not read",
       "op": "exp",
       "rel": "boosts",
-      "source": "game",
-      "to": "gold-gain"
+      "source": "game-code:TarotArtifact.UpdateData",
+      "to": "golden-resources"
     },
     {
       "confidence": "uncertain",
@@ -27216,13 +27282,13 @@
       "to": "tarot-ace-of-swords"
     },
     {
-      "confidence": "uncertain",
+      "confidence": "documented",
       "from": "tarot-three-of-swords",
-      "note": "Attacks Prestige Power +^",
+      "note": "Attacks prestige mult ^(1 + its second effect)",
       "op": "exp",
       "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "attack-exponent"
+      "source": "game-code:AttacksController.AttacksUpdate",
+      "to": "attack-prestige-mult"
     },
     {
       "confidence": "provisional",
@@ -27405,28 +27471,30 @@
       "to": "water-factor-1"
     },
     {
-      "confidence": "uncertain",
+      "confidence": "documented",
       "from": "tarot-the-hierophant",
-      "note": "Levels Up all of your common minerals by # (base 1.000) (but can't be bigger than max spawn level + 50)",
+      "note": "Raises every common mineral on the grid by round(effect), up to max mineral level + 50; the max and spawn levels are unchanged",
       "op": "add",
       "rel": "boosts",
-      "source": "wiki:Tarot",
+      "source": "game-code:TarotCard.ActivateArcan",
       "to": "mineral-level"
     },
     {
-      "confidence": "uncertain",
+      "confidence": "documented",
       "from": "tarot-temperance",
-      "note": "Add # (base 3.000) zodiacs of that type which is in your Fortune Pars slot, but with stats you'd get on Unity",
+      "note": "Passive only (its Tarot Challenge completed): Luck ^ effect. The active card only adds zodiacs to the inventory",
+      "op": "exp",
       "rel": "boosts",
-      "source": "wiki:Tarot",
+      "source": "game-code:UnityController.UnityUpdate",
       "to": "luck"
     },
     {
-      "confidence": "uncertain",
+      "confidence": "documented",
       "from": "tarot-temperance",
-      "note": "Add # (base 3.000) zodiacs of that type which is in your Fortune Pars slot, but with stats you'd get on Unity",
+      "note": "Passive only (its Tarot Challenge completed): base Quality ^ effect",
+      "op": "exp",
       "rel": "boosts",
-      "source": "wiki:Tarot",
+      "source": "game-code:UnityController.UnityUpdate",
       "to": "quality"
     },
     {
@@ -27578,26 +27646,29 @@
       "to": "trial-insane-trial-5"
     },
     {
-      "confidence": "provisional",
+      "confidence": "documented",
       "from": "trial-insane-trial-6",
+      "note": "1 Unity per second of Minerals local time",
       "op": "add",
       "rel": "boosts",
-      "source": "wiki:Trials",
+      "source": "game-code:UnityController.UnityUpdate",
       "to": "unities"
     },
     {
-      "confidence": "uncertain",
+      "confidence": "documented",
       "from": "mineral-local-speed",
+      "note": "Passive Unities accrue at Minerals local speed alone; global game speed is not applied",
+      "op": "mult",
       "rel": "boosts",
-      "source": "wiki:Trials",
+      "source": "game-code:UnityController.UnityUpdate",
       "to": "trial-insane-trial-6"
     },
     {
-      "confidence": "uncertain",
+      "confidence": "documented",
       "from": "tarot-artifact-temporal-bone",
-      "op": "exp",
+      "note": "Unlocking it applies Parietal Bone's effect to the Water Factor 2 exponent; Temporal Bone's own level is never read",
       "rel": "boosts",
-      "source": "wiki:Tarot",
+      "source": "game-code:Element.CheckFactors",
       "to": "water-factor-2"
     },
     {
@@ -32350,6 +32421,141 @@
       "rel": "requires",
       "source": "game:ACH_DESC_737",
       "to": "achievement-738"
+    },
+    {
+      "confidence": "documented",
+      "from": "relic-18",
+      "note": "Sets the base Attack Ascension Power to Relic 18's effect, 2 + 0.05 per level × Relic 20 effect², in place of the default 2",
+      "op": "add",
+      "rel": "boosts",
+      "source": "game-code:AttacksController.AttacksUpdate",
+      "to": "attack-ascension-power"
+    },
+    {
+      "confidence": "documented",
+      "from": "relic-1",
+      "note": "Attack Ascension Power × Relic 1 effect, once Wind Node 6 is bought",
+      "op": "mult",
+      "rel": "boosts",
+      "source": "game-code:AttacksController.AttacksUpdate",
+      "to": "attack-ascension-power"
+    },
+    {
+      "confidence": "documented",
+      "from": "infinity-challenge-1",
+      "note": "Break Infinity needs all 9 Infinity Challenges complete",
+      "rel": "unlocks",
+      "source": "game-code:InfinityController.SwitchBreakInfinity",
+      "to": "break-infinity"
+    },
+    {
+      "confidence": "documented",
+      "from": "infinity-challenge-2",
+      "note": "Break Infinity needs all 9 Infinity Challenges complete",
+      "rel": "unlocks",
+      "source": "game-code:InfinityController.SwitchBreakInfinity",
+      "to": "break-infinity"
+    },
+    {
+      "confidence": "documented",
+      "from": "infinity-challenge-3",
+      "note": "Break Infinity needs all 9 Infinity Challenges complete",
+      "rel": "unlocks",
+      "source": "game-code:InfinityController.SwitchBreakInfinity",
+      "to": "break-infinity"
+    },
+    {
+      "confidence": "documented",
+      "from": "infinity-challenge-4",
+      "note": "Break Infinity needs all 9 Infinity Challenges complete",
+      "rel": "unlocks",
+      "source": "game-code:InfinityController.SwitchBreakInfinity",
+      "to": "break-infinity"
+    },
+    {
+      "confidence": "documented",
+      "from": "infinity-challenge-5",
+      "note": "Break Infinity needs all 9 Infinity Challenges complete",
+      "rel": "unlocks",
+      "source": "game-code:InfinityController.SwitchBreakInfinity",
+      "to": "break-infinity"
+    },
+    {
+      "confidence": "documented",
+      "from": "infinity-challenge-6",
+      "note": "Break Infinity needs all 9 Infinity Challenges complete",
+      "rel": "unlocks",
+      "source": "game-code:InfinityController.SwitchBreakInfinity",
+      "to": "break-infinity"
+    },
+    {
+      "confidence": "documented",
+      "from": "infinity-challenge-7",
+      "note": "Break Infinity needs all 9 Infinity Challenges complete",
+      "rel": "unlocks",
+      "source": "game-code:InfinityController.SwitchBreakInfinity",
+      "to": "break-infinity"
+    },
+    {
+      "confidence": "documented",
+      "from": "infinity-challenge-8",
+      "note": "Break Infinity needs all 9 Infinity Challenges complete",
+      "rel": "unlocks",
+      "source": "game-code:InfinityController.SwitchBreakInfinity",
+      "to": "break-infinity"
+    },
+    {
+      "confidence": "documented",
+      "from": "zodiac-gemini",
+      "note": "Lab. Mult Power multiplies Lab Power's per-level value",
+      "op": "mult",
+      "rel": "boosts",
+      "source": "game-code:EternityController.UpdateLaboratory",
+      "to": "lab-power"
+    },
+    {
+      "confidence": "documented",
+      "from": "zodiac-libra",
+      "note": "Lab. Mult Power multiplies Lab Power's per-level value",
+      "op": "mult",
+      "rel": "boosts",
+      "source": "game-code:EternityController.UpdateLaboratory",
+      "to": "lab-power"
+    },
+    {
+      "confidence": "documented",
+      "from": "zodiac-aquarius",
+      "note": "Lab. Mult Power multiplies Lab Power's per-level value",
+      "op": "mult",
+      "rel": "boosts",
+      "source": "game-code:EternityController.UpdateLaboratory",
+      "to": "lab-power"
+    },
+    {
+      "confidence": "documented",
+      "from": "plague-stat-max-plp",
+      "note": "Refine Node 108 effect = Max PlP + 1",
+      "rel": "boosts",
+      "source": "game-code:RefineNode.Update",
+      "to": "refine-node-108"
+    },
+    {
+      "confidence": "documented",
+      "from": "tarot-artifact-parietal-bone",
+      "note": "Once Temporal Bone is unlocked, the Water Factor 2 exponent × Parietal Bone effect (1 + 0.05 per level)",
+      "op": "exp",
+      "rel": "boosts",
+      "source": "game-code:Element.CheckFactors",
+      "to": "water-factor-2"
+    },
+    {
+      "confidence": "documented",
+      "from": "attack-prestige-mult",
+      "note": "Attack Exponent = 1 + 0.01 × log10(prestige mult) / 2000, softcapped above 2, plus The Strength",
+      "op": "add",
+      "rel": "boosts",
+      "source": "game-code:AttacksController.AttacksUpdate",
+      "to": "attack-exponent"
     }
   ],
   "systems": [
