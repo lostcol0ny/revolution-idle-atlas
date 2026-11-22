@@ -254,7 +254,7 @@ come out, all with `source: game`:
   `particles-sparks` group.
   The game's help text states each; the prefixes live in
   `particles.MEMBER_LINKS`.
-- **Description matches**, `uncertain` and always `boosts`. The description of
+- **Description matches**, `uncertain`. The description of
   a node only the game describes — one `atlas game` created, carrying `system`
   — goes through the same resolver as wiki effect prose (see [How prose is
   read](#how-prose-is-read)). A node a wiki page already describes is matched

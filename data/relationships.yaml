@@ -8941,9 +8941,23 @@ edges:
     confidence: provisional
 
   # Achievements. The bonus completed achievements grant, then what the game's
-  # achievement text states and the vocabulary cannot read: rewards that
-  # unlock, cite another achievement by number, or name their target in a way
-  # no alias covers.
+  # achievement text states: rewards that unlock (restated here as documented
+  # with a note and source), cite another achievement by number, or name their
+  # target in a way no alias covers.
+  - from: max-score
+    to: achievement-218
+    rel: boosts
+    note: "Dilation score past e5e10 boosts DP gain more"
+    source: game:ACH_REWD_217
+    confidence: documented
+
+  - from: achievement-218
+    to: dp-income
+    rel: boosts
+    note: "Dilation score past e5e10 boosts DP gain more"
+    source: game:ACH_REWD_217
+    confidence: documented
+
   - from: achievement-bonus
     to: mult-gain
     rel: boosts
@@ -9600,6 +9614,25 @@ suppress:
       particles-rank-bonus-4 carries it.
 
   # Achievement rewards the vocabulary misreads.
+  - from: dilation
+    to: achievement-218
+    rel: boosts
+    reason: >-
+      "Dilation score past e5e10 boosts DP gain more" -- "Dilation score" is
+      Max Score, curated above; Dilation itself is not read.
+
+  - from: score
+    to: achievement-218
+    rel: boosts
+    reason: >-
+      "Dilation score" is Max Score, curated above, not the Revolution Score.
+
+  - from: achievement-218
+    to: dilation-points
+    rel: boosts
+    reason: >-
+      The reward boosts DP gain, curated above as dp-income.
+
   - from: achievement-29
     to: dilation-tree
     rel: boosts
