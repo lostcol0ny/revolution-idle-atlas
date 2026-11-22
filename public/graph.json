@@ -15453,7 +15453,8 @@
     {
       "aliases": [
         "Atoms Nerf",
-        "Atom Nerf"
+        "Atom Nerf",
+        "Atom Gain Penalty"
       ],
       "confidence": "provisional",
       "effects": [
@@ -15464,6 +15465,22 @@
       "id": "atom-penalty",
       "kind": "stat",
       "name": "Atom Penalty",
+      "system": "singularity",
+      "wiki": "Singularity"
+    },
+    {
+      "aliases": [
+        "Local Singularity Speed"
+      ],
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "How fast the Singularity layer runs"
+        }
+      ],
+      "id": "singularity-local-speed",
+      "kind": "stat",
+      "name": "Singularity Local Speed",
       "system": "singularity",
       "wiki": "Singularity"
     }
@@ -18044,7 +18061,7 @@
       "note": "No longer applies an Atom gain penalty at 1e50",
       "rel": "boosts",
       "source": "wiki:Minerals/Refine_Tree",
-      "to": "atoms-gain"
+      "to": "atom-penalty"
     },
     {
       "confidence": "documented",
@@ -18059,7 +18076,7 @@
       "note": "No longer applies an Atom gain penalty at 14e153",
       "rel": "boosts",
       "source": "wiki:Minerals/Refine_Tree",
-      "to": "atoms-gain"
+      "to": "atom-penalty"
     },
     {
       "confidence": "documented",
@@ -18248,7 +18265,7 @@
       "note": "Increases Local Singularity Speed Power by 0.02",
       "rel": "boosts",
       "source": "wiki:Minerals/Refine_Tree",
-      "to": "singularity"
+      "to": "singularity-local-speed"
     },
     {
       "confidence": "documented",
@@ -18490,14 +18507,6 @@
       "to": "singularity-mult"
     },
     {
-      "confidence": "uncertain",
-      "from": "refine-node-151",
-      "note": "You passively gain Singularity Multiplier every second (also affected by local singularity speed)",
-      "rel": "boosts",
-      "source": "wiki:Minerals/Refine_Tree",
-      "to": "singularity"
-    },
-    {
       "confidence": "documented",
       "from": "refine-node-151",
       "rel": "requires",
@@ -18689,14 +18698,6 @@
       "rel": "requires",
       "source": "wiki:Minerals/Refine_Tree",
       "to": "refine-node-166"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "refine-node-166",
-      "note": "Local Particles Speed is boosted by ^0.1 of Local Singularity Speed",
-      "rel": "boosts",
-      "source": "wiki:Minerals/Refine_Tree",
-      "to": "singularity"
     },
     {
       "confidence": "documented",
@@ -24447,7 +24448,7 @@
       "from": "particles-spark-white",
       "rel": "boosts",
       "source": "wiki:Particles",
-      "to": "singularity"
+      "to": "singularity-local-speed"
     },
     {
       "confidence": "uncertain",
@@ -24573,7 +24574,7 @@
       "from": "particles-rank-bonus-5",
       "rel": "boosts",
       "source": "game",
-      "to": "singularity"
+      "to": "singularity-local-speed"
     },
     {
       "confidence": "documented",
@@ -24678,7 +24679,7 @@
       "from": "particles-rank-bonus-12",
       "rel": "boosts",
       "source": "game",
-      "to": "atoms-gain"
+      "to": "atom-penalty"
     },
     {
       "confidence": "documented",
@@ -29308,6 +29309,22 @@
       "rel": "boosts",
       "source": "wiki:Minerals/Refine_Tree",
       "to": "refine-node-147"
+    },
+    {
+      "confidence": "provisional",
+      "from": "singularity-local-speed",
+      "note": "You passively gain Singularity Multiplier every second (also affected by local singularity speed)",
+      "rel": "boosts",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-151"
+    },
+    {
+      "confidence": "provisional",
+      "from": "singularity-local-speed",
+      "note": "Local Particles Speed is boosted by ^0.1 of Local Singularity Speed",
+      "rel": "boosts",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-166"
     }
   ],
   "systems": [

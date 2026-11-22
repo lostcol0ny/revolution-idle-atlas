@@ -8361,7 +8361,7 @@ edges:
   source: wiki:Minerals/Refine_Tree
   confidence: documented
 - from: refine-node-126
-  to: atoms-gain
+  to: atom-penalty
   rel: boosts
   note: No longer applies an Atom gain penalty at 1e50
   source: wiki:Minerals/Refine_Tree
@@ -8372,7 +8372,7 @@ edges:
   source: wiki:Minerals/Refine_Tree
   confidence: documented
 - from: refine-node-127
-  to: atoms-gain
+  to: atom-penalty
   rel: boosts
   note: No longer applies an Atom gain penalty at 14e153
   source: wiki:Minerals/Refine_Tree
@@ -8511,7 +8511,7 @@ edges:
   source: wiki:Minerals/Refine_Tree
   confidence: documented
 - from: refine-node-136
-  to: singularity
+  to: singularity-local-speed
   rel: boosts
   note: Increases Local Singularity Speed Power by 0.02
   source: wiki:Minerals/Refine_Tree
@@ -8710,7 +8710,7 @@ edges:
   source: wiki:Minerals/Refine_Tree
   confidence: uncertain
 - from: refine-node-151
-  to: singularity
+  to: singularity-local-speed
   rel: boosts
   note: You passively gain Singularity Multiplier every second (also affected by local singularity speed)
   source: wiki:Minerals/Refine_Tree
@@ -8857,7 +8857,7 @@ edges:
   source: wiki:Minerals/Refine_Tree
   confidence: documented
 - from: refine-node-166
-  to: singularity
+  to: singularity-local-speed
   rel: boosts
   note: Local Particles Speed is boosted by ^0.1 of Local Singularity Speed
   source: wiki:Minerals/Refine_Tree
@@ -13152,7 +13152,7 @@ edges:
   source: wiki:Particles
   confidence: uncertain
 - from: particles-spark-white
-  to: singularity
+  to: singularity-local-speed
   rel: boosts
   source: wiki:Particles
   confidence: uncertain
@@ -13247,7 +13247,7 @@ edges:
   source: game
   confidence: documented
 - from: particles-rank-bonus-5
-  to: singularity
+  to: singularity-local-speed
   rel: boosts
   source: game
   confidence: uncertain
@@ -13322,7 +13322,7 @@ edges:
   source: game
   confidence: documented
 - from: particles-rank-bonus-12
-  to: atoms-gain
+  to: atom-penalty
   rel: boosts
   source: game
   confidence: uncertain

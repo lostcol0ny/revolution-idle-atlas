@@ -3786,13 +3786,26 @@ nodes:
   # would split a handful of edges across seven nodes.
   - id: atom-penalty
     name: Atom Penalty
-    aliases: [Atoms Nerf, Atom Nerf]
+    aliases: [Atoms Nerf, Atom Nerf, Atom Gain Penalty]
     system: singularity
     kind: stat
     wiki: Singularity
     confidence: provisional
     effects:
       - text: Divides Atom gain past each threshold
+
+  # Singularity's own Local Speed, which the wiki and the game write both ways
+  # round. Without it every mention fell back to the shorter "Singularity" and
+  # landed on the reset count.
+  - id: singularity-local-speed
+    name: Singularity Local Speed
+    aliases: [Local Singularity Speed]
+    system: singularity
+    kind: stat
+    wiki: Singularity
+    confidence: provisional
+    effects:
+      - text: How fast the Singularity layer runs
 
 edges:
   - from: gold
@@ -7538,6 +7551,21 @@ edges:
     source: wiki:Minerals/Refine_Tree
     confidence: provisional
 
+  # Singularity Local Speed is what these two nodes read, not what they change.
+  - from: singularity-local-speed
+    to: refine-node-151
+    rel: boosts
+    note: "You passively gain Singularity Multiplier every second (also affected by local singularity speed)"
+    source: wiki:Minerals/Refine_Tree
+    confidence: provisional
+
+  - from: singularity-local-speed
+    to: refine-node-166
+    rel: boosts
+    note: "Local Particles Speed is boosted by ^0.1 of Local Singularity Speed"
+    source: wiki:Minerals/Refine_Tree
+    confidence: provisional
+
 suppress:
   # The three Atom-threshold challenges state a penalty, and `rel` has no value
   # for one. Emitting `boosts` asserts the opposite of what the page says, so
@@ -7824,3 +7852,17 @@ suppress:
     reason: >-
       "Beta Particles boost Alpha Generator Base a bit better" -- the node
       strengthens how Beta boosts the Alpha generator; it does not produce Beta.
+
+  - from: refine-node-151
+    to: singularity-local-speed
+    rel: boosts
+    reason: >-
+      "(also affected by local singularity speed)" -- the node's passive gain
+      reads the speed; it does not raise it.
+
+  - from: refine-node-166
+    to: singularity-local-speed
+    rel: boosts
+    reason: >-
+      "Local Particles Speed is boosted by ^0.1 of Local Singularity Speed" --
+      the node reads the speed to boost Particles; it does not raise it.

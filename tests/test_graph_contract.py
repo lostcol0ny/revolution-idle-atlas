@@ -479,14 +479,16 @@ def test_singularity_milestones_land_in_the_table_they_came_from(graph: dict):
     # What is left on the layer itself has to be layer-level, or the split only
     # moved some of the content.
     direct = {n["id"] for n in graph["nodes"] if n["system"] == "singularity"}
-    # atom-penalty is one node for every Atom penalty threshold, so it belongs
-    # to the layer rather than to any one milestone table.
+    # atom-penalty stands for every Atom penalty threshold and
+    # singularity-local-speed for the whole layer's speed, so both belong to the
+    # layer rather than to any one milestone table.
     assert direct == {
         "atom-penalty",
         "atoms-gain",
         "singular-zodiacs",
         "singularity",
         "singularity-effects-tab",
+        "singularity-local-speed",
         "singularity-mult",
     }
 
