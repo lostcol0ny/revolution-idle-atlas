@@ -534,7 +534,7 @@ nodes:
     confidence: documented
     effects:
       - text: Boosts Stars
-        per_level: "+0.275, starting at 2.75 (2.75 + 0.275n)"
+        per_level: '+0.275, starting at 2.75 ($2.75 + 0.275n$)'
 
   - id: star-exponent
     name: Star Exponent
@@ -544,7 +544,7 @@ nodes:
     confidence: documented
     effects:
       - text: Boosts Stars
-        per_level: "+0.05, starting at 0.4 (0.4 + 0.05n)"
+        per_level: '+0.05, starting at 0.4 ($0.4 + 0.05n$)'
 
   # The four Stardust Upgrades. The wiki gives them no titles, only positions in
   # a numbered list, so the number is the whole name.
@@ -1446,7 +1446,7 @@ nodes:
     cost: 4 AP
     confidence: documented
     effects:
-      - text: EP Gain × (1+(Σ^0.5))
+      - text: 'EP Gain $\times (1 + (\Sigma^{0.5}))$'
 
   - id: animal-turtle
     name: Turtle
@@ -1958,7 +1958,7 @@ nodes:
     confidence: documented
     effects:
       - text: Generates Laboratory Points
-        per_level: LP/s is (Base x Mult) ^ Power
+        per_level: 'LP/s is $(\text{Base} \times \text{Mult})^{\text{Power}}$'
       - text: Filling the flask raises the Lab level and awards one Research Point
 
   - id: laboratory-points
@@ -2017,7 +2017,7 @@ nodes:
     confidence: documented
     effects:
       - text: Ascend Power
-        per_level: "*(1 + n*0.25) where n is level"
+        per_level: '$\times (1 + n \times 0.25)$ where $n$ is level'
 
   - id: rp-upgrade-3
     name: RP Upgrade 3 (Star Base Mult)
@@ -2027,7 +2027,7 @@ nodes:
     confidence: documented
     effects:
       - text: Star Base Mult
-        per_level: "*(1 + n*0.15)"
+        per_level: '$\times (1 + n \times 0.15)$'
 
   - id: rp-upgrade-4
     name: RP Upgrade 4 (EP Gain)
@@ -2037,7 +2037,7 @@ nodes:
     confidence: documented
     effects:
       - text: EP Gain
-        per_level: "*(1 + n*0.5)"
+        per_level: '$\times (1 + n \times 0.5)$'
 
   - id: rp-upgrade-5
     name: RP Upgrade 5 (Gen. Power Exponent)
@@ -2311,7 +2311,7 @@ nodes:
       - text: Gen Exp / 1,000
       - text: Star Exp / 100
       - text: Ascension Power ^0.10
-      - text: (Laps Speed ^0.10) / 10
+      - text: '$(\text{Laps Speed}^{0.10}) / 10$'
       - text: IP gain ^0.01
 
   - id: dp-income
@@ -2362,10 +2362,10 @@ nodes:
     wiki: Unity
     confidence: documented
     effects:
-      - text: IP Gain = [1 + Unities] ^ [2 + log(Unities)]
-      - text: EP Gain = [1 + Unities] ^ [1 + 0.25 * log(Unities)]
-      - text: Eternity Count Gain = [1 + Unities]
-      - text: DP Gain = [1 + Unities * 3] ^ [0.5 + 0.125 * log(Unities)]
+      - text: 'IP Gain = $[1 + \text{Unities}]^{2 + \log(\text{Unities})}$'
+      - text: 'EP Gain = $[1 + \text{Unities}]^{1 + 0.25 \times \log(\text{Unities})}$'
+      - text: 'Eternity Count Gain = $[1 + \text{Unities}]$'
+      - text: 'DP Gain = $[1 + \text{Unities} \times 3]^{0.5 + 0.125 \times \log(\text{Unities})}$'
 
   - id: unity-rewards
     name: Unity Rewards
@@ -2435,7 +2435,7 @@ nodes:
     wiki: Planet_Shop
     confidence: documented
     effects:
-      - text: = 1.125^Rarity * Quality * (9 + Level^2), before rarity and level bonuses
+      - text: '$= 1.125^{\text{Rarity}} \times \text{Quality} \times (9 + \text{Level}^2)$, before rarity and level bonuses'
       - text: Drives every Zodiac stat formula, from Mults Gain to Zodiac Quality Mult
 
   - id: donut-game-speed
@@ -2769,7 +2769,7 @@ nodes:
     confidence: documented
     effects:
       - text: Five circles; each revolution raises its Attack Mult and hits the enemy
-      - text: Each level costs 1.25 + (0.15 x Ascension Stage) more than the last
+      - text: 'Each level costs $1.25 + (0.15 \times \text{Ascension Stage})$ more than the last'
       - text: Levelling adds 5% of base lap speed; at max level 20 the speed has doubled
 
   - id: ascension-stage
@@ -2913,7 +2913,7 @@ nodes:
     wiki: Minerals
     confidence: documented
     effects:
-      - text: A mineral generates 0.01 x 3^(Mineral Level - 1) per second before bonuses
+      - text: 'A mineral generates $0.01 \times 3^{\text{Mineral Level} - 1}$ per second before bonuses'
       - text: Spent on the ten Mineral Upgrades
 
   - id: polish-points
@@ -2989,7 +2989,7 @@ nodes:
     confidence: documented
     effects:
       - text: Each level doubles Value Point gain
-      - text: The cap to the next level is 10 x (Merge Level + 1)^2
+      - text: 'The cap to the next level is $10 \times (\text{Merge Level} + 1)^2$'
 
   - id: merge-experience
     name: Merge Experience
@@ -3124,7 +3124,7 @@ nodes:
     kind: upgrade
     effects:
       - text: 3.00x VP Gain
-      - text: 'Sacrificed: Attacks HP is powered to ^(1/X) ((1 + (level / 26) x 0.25), not confirmed)'
+      - text: 'Sacrificed: Attacks HP is powered to $^{1/X}$ ($(1 + (\text{level} / 26) \times 0.25)$, not confirmed)'
 
   - id: special-mineral-blue-gem
     name: Blue Gem
@@ -3132,7 +3132,7 @@ nodes:
     kind: upgrade
     effects:
       - text: Cost Increase is powered to ^0.99. ^(1/(1+0.01))
-      - text: 'Sacrificed: Global Element Mult is powered to ^X (1.1 + ((level - 26)^2) x 0.01, not confirmed)'
+      - text: 'Sacrificed: Global Element Mult is powered to ^X ($1.1 + ((\text{level} - 26)^2) \times 0.01$, not confirmed)'
 
   - id: special-mineral-green-gem
     name: Green Gem
@@ -3156,7 +3156,7 @@ nodes:
     kind: upgrade
     effects:
       - text: 10.00x Gold gain
-      - text: 'Sacrificed: Relic 14''s effect is powered to ^X (1000 + ((level - 27)^2) x 100, not confirmed)'
+      - text: 'Sacrificed: Relic 14''s effect is powered to ^X ($1000 + ((\text{level} - 27)^2) \times 100$, not confirmed)'
 
   - id: special-mineral-orange-gem
     name: Orange Gem
@@ -3172,7 +3172,7 @@ nodes:
     kind: upgrade
     effects:
       - text: 1.50x PP gain
-      - text: 'Sacrificed: multiplies The Devil''s effect by X (10 + (level - 26)^2, not confirmed)'
+      - text: 'Sacrificed: multiplies The Devil''s effect by X ($10 + (\text{level} - 26)^2$, not confirmed)'
 
   - id: special-mineral-light-blue-gem
     name: Light Blue Gem
@@ -3409,6 +3409,8 @@ nodes:
     kind: upgrade
     wiki: Singularity#Milestones
     confidence: provisional
+    effects:
+      - text: 'Multiplies the base of all particle generators and multipliers by $1 + \text{singularity} / 100$'
 
   - id: singularity-houses-tab
     name: Houses Tab
@@ -3806,6 +3808,174 @@ nodes:
     confidence: provisional
     effects:
       - text: How fast the Singularity layer runs
+
+  # Wiki effects restated with their formulas typeset as inline math. Each
+  # `effects` list replaces the derived one wholesale, and a `description` the
+  # game's, so a wiki or game edit to any of these is masked here.
+  # tests/test_graph_contract.py pins the source text each one was converted
+  # from, which turns that edit into a failure naming the node to re-curate.
+  # A generated edge note that quotes one of these effects follows the
+  # rewording at merge. Restating a node here also makes its name a surface
+  # form for `atlas extract`, which is why The Tower's `#^[Gem Lv]` stays as
+  # the wiki writes it: its name would start matching prose about the card.
+  - id: infinity-challenge-7
+    name: Infinity Challenge 7 (Quadratic Division)
+    system: infinity-challenges
+    kind: upgrade
+    effects:
+      - text: 'All mults are mult. by $(\text{time in Infinity})^{0.2}$'
+    description: 'All Multipliers are divided by $(\text{time spent in Infinity})^2$'
+
+  - id: refine-node-10
+    name: Refine Node 10
+    system: refine-tree
+    kind: tree-node
+    effects:
+      - text: 'PP gain is powered to $^{1 + 0.1 \times \text{lvl}}$ (+0.1, maxes at ^2)'
+
+  - id: refine-node-16
+    name: Refine Node 16
+    system: refine-tree
+    kind: tree-node
+    effects:
+      - text: 'Merge Level Bonus Eff. $\times (1.0 + 0.5 \times \text{lvl})$ (maxes at x50)'
+
+  - id: refine-node-24
+    name: Refine Node 24
+    system: refine-tree
+    kind: tree-node
+    effects:
+      - text: 'Relic 23 is $\times (1 + 0.1 \times \text{lvl})$ stronger (maxes at x3)'
+
+  - id: refine-node-29
+    name: Refine Node 29
+    system: refine-tree
+    kind: tree-node
+    effects:
+      - text: 'Relic 23 is stronger based on your Axe Level: $\times (1 + 0.01 \times \text{lvl})$'
+
+  - id: refine-node-36
+    name: Refine Node 36
+    system: refine-tree
+    kind: tree-node
+    effects:
+      - text: 'RN27 effect: $\times (1 - 0.01 \times \text{lvl})$ (maxes at x0.8)'
+
+  - id: refine-node-38
+    name: Refine Node 38
+    system: refine-tree
+    kind: tree-node
+    effects:
+      - text: 'You get more refine points based on your knuckles level: $\text{RfP}^{1.01 \times \text{lvl}}$'
+
+  - id: refine-node-40
+    name: Refine Node 40
+    system: refine-tree
+    kind: tree-node
+    effects:
+      - text: 'Magnet upgrades for VP gain and PP gain mults are powered to $^{1.1 \times \text{lvl}}$ (maxes at ^3)'
+
+  - id: refine-node-50
+    name: Refine Node 50
+    system: refine-tree
+    kind: tree-node
+    effects:
+      - text: 'RfP gain $\times (2^{\text{lvl}})$ (maxes at x1,024)'
+
+  - id: refine-node-111
+    name: Refine Node 111
+    system: refine-tree
+    kind: tree-node
+    effects:
+      - text: 'Divides the ERP needed to craft an Endoplasmic Reticulum by $\times 1.5^{\text{level}}$'
+
+  - id: refine-node-178
+    name: Refine Node 178
+    system: refine-tree
+    kind: tree-node
+    effects:
+      - text: 'Mastery Gain is multiplied by xX ($1 + \text{pent} / 10$)'
+
+  - id: refine-node-188
+    name: Refine Node 188
+    system: refine-tree
+    kind: tree-node
+    effects:
+      - text: 'Attack exponent is multiplied by $1 + 0.1 \times \log_{10}(\text{mastery})$ (softcap at x10)'
+
+  - id: relic-28
+    name: Two Souls
+    system: relics
+    kind: relic
+    effects:
+      - text: 'You get more merge exp based on $X^{\text{mineral level}}$'
+        per_level: '+0.001 to X'
+        op: add
+    description: 'Gain more merge EXP based on $X^{\text{mineral level}}$, X ='
+
+  - id: tarot-challenge-nine-of-swords
+    name: Tarot Challenge Nine of Swords
+    system: tarot-challenges
+    kind: upgrade
+    effects:
+      - text: 'Resets Attack levels and mults. Only attack mult from score is effective, and it is $^{1/10^{10}}$. Game Speed is reduced to double Log10.'
+      - text: Attack Level 850
+
+  - id: tarot-challenge-seven-of-pentacles
+    name: Tarot Challenge Seven of Pentacles
+    system: tarot-challenges
+    kind: upgrade
+    effects:
+      - text: 'Performs Refine Prestige and resets Gold. Blue, Green, gems, along with Relic 14 and 31 are all useless. Gold Gain is $^{1/1{,}000{,}000{,}000}$ and game speed is logarithmed.'
+      - text: 105+ Max Mineral Level
+
+  - id: tarot-challenge-three-of-cups
+    name: Tarot Challenge Three of Cups
+    system: tarot-challenges
+    kind: upgrade
+    effects:
+      - text: 'Performs Unity Reset. Luck is $^{1/999}$'
+      - text: Unite with an Immortal+ rarity Zodiac
+
+  - id: tarot-challenge-the-high-priestess
+    name: Tarot Challenge The High Priestess
+    system: tarot-challenges
+    kind: upgrade
+    effects:
+      - text: 'Performs Refine Prestige. Red Gem, Relic 22, and Polish Sword are useless. You can no longer obtain magnets or merge levels. RN1''s effect is $^{1/10000}$ (pre-skill).'
+      - text: 200+ Max Mineral Level
+
+  - id: tarot-challenge-the-sun
+    name: Tarot Challenge The Sun
+    system: tarot-challenges
+    kind: upgrade
+    effects:
+      - text: 'You need Refine Node 195 to start the challenge. You can spawn special minerals in this challenge. Every time you use The Sun card, you will get random special minerals in colors corresponding to your currently equipped sparks. The amount of minerals is amount of your currently equipped sparks. The Sun card cooldown is 5 seconds but it decrease only when you spawn a spark by 1 second. Your mastery gain is based on amount of merged special minerals during the challenge with the formula $(\text{Red} / (\text{Red} + 5)) \times (\text{Orange} / (\text{Orange} + 5)) \times (\text{Yellow} / (\text{Yellow} + 5)) \times \cdots \times \text{Base}$. Singularity will reset the challenge'
+      - text: Spawn a spark with 1e9 mastery to complete the challenge
+
+  - id: tarot-challenge-two-of-swords
+    name: Tarot Challenge Two of Swords
+    system: tarot-challenges
+    kind: upgrade
+    effects:
+      - text: 'Game Speed, Attack, and Damage mults are put to double Log10 of their values. You cannot gain them during the challenge. (Double Log10 means $\log_{10}(\log_{10}(X))$.)'
+      - text: Attack Level 400
+
+  - id: tarot-challenge-king-of-pentacles
+    name: Tarot Challenge King of Pentacles
+    system: tarot-challenges
+    kind: upgrade
+    effects:
+      - text: 'Requires 1.8e308 Atoms to enter. Performs Refine Prestige. Red Gem is useless. You cant get magnets nor merge XP. RN1''s effect is capped at $\log_{10}(\text{atoms}) + 1$. Local Mineral Speed is capped at 100x. The First Mineral upgrades effect is capped at the Square Root of your Singularity mult rounded down. Relic 22 and Polish Sword are useless. Entering Performs a Singularity and resets atoms to 1. Adds a Dynamic Penalty that heavily nerfs Atom Gain, but becomes weaker based on your Max Mineral Level'
+      - text: Perform a Singularity at 1e200+ VP
+
+  - id: tarot-artifact-memory-crystal
+    name: Memory Crystal
+    system: tarot-artifacts
+    kind: upgrade
+    effects:
+      - text: Sword LOGPOW base
+        per_level: '$0.09 + 0.01 \times \text{level}$'
 
 edges:
   - from: gold

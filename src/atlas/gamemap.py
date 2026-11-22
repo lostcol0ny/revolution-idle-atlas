@@ -117,17 +117,192 @@ def clean(text: str) -> str:
     return " ".join(_TAG.sub("", _LINE_BREAK.sub(" ", text)).split())
 
 
-def readable(text: str) -> str:
+def readable(text: str, *, formulas: bool = False) -> str:
     """Clean a description and word its runtime placeholders.
 
     The game fills `{0}` in at runtime, so a bare token tells a reader
-    nothing; the symbol beside it says what sort of number it is.
+    nothing; the symbol beside it says what sort of number it is. `formulas`
+    typesets the arithmetic a description spells out in plain text (see
+    `typeset`); without it the whole text stays prose.
     """
     text = _RUNNING_TOTAL.sub("", clean(text))
     for pattern, phrase in _PHRASES:
         text = pattern.sub(phrase, text)
     # Same text format as wiki prose: `$` would otherwise open inline math.
-    return escape_prose(text)
+    return typeset(text) if formulas else escape_prose(text)
+
+
+# The grade bonuses write their formulas in plain text: "×(1 + 0.05 × rank)",
+# "(gain × 100)^(1 + 0.1 × pent) / 100". A grade is an operand anywhere. The
+# other words are operands only inside parentheses, because outside them they
+# are the prose a formula sits in: "Attack gold gain ^(1 + 0.01 × tetr)".
+_FORMULA_TOKEN = re.compile(
+    r"\s*(?:"
+    r"(?P<func>(?i:sqrt))(?=\()"
+    r"|(?<![\w.])(?P<grade>(?i:rank|tier|tetr|pent))(?!\w)"
+    r"|(?<![\w.])(?P<word>equipped ER level|generator level|multiplier level|gain|[αβγδ])(?!\w)"
+    r"|(?<![\w.])(?P<num>\d+(?:\.\d+)?)(?!\w)"
+    r"|(?P<op>[×+\-/^]|(?<=\s)x(?=\s))"
+    r"|(?P<open>\()|(?P<close>\))"
+    r")"
+)
+_OPERAND_START = frozenset({"func", "grade", "word", "num", "open"})
+_OPERAND_END = frozenset({"grade", "word", "num", "close"})
+# Operators that may open a formula: "×(1 + 0.1 × tier)", "^(1 + 0.2 × tetr)",
+# "speed + 0.01 x Sqrt(rank)". The formula is what the prose before it gets.
+_LEADING_OPS = frozenset("×^+")
+
+
+@dataclass(frozen=True)
+class _Token:
+    kind: str
+    text: str
+    start: int
+    end: int
+
+
+def _formula_runs(text: str) -> list[list[_Token]]:
+    """Maximal runs of formula tokens, split where two operands meet."""
+    runs: list[list[_Token]] = []
+    run: list[_Token] = []
+    depth = 0
+    pos = 0
+    while pos < len(text):
+        match = _FORMULA_TOKEN.match(text, pos)
+        kind = match.lastgroup if match else None
+        if kind == "word" and depth == 0:
+            kind = None
+        # "x" is a letter unless it stands between two operands.
+        if kind == "op" and match and match["op"] == "x" and (
+            not run or run[-1].kind not in _OPERAND_END
+        ):
+            kind = None
+        if kind is None or match is None:
+            if run:
+                runs.append(run)
+            run, depth = [], 0
+            pos += 1
+            continue
+        if kind in _OPERAND_START and run and run[-1].kind in _OPERAND_END:
+            # "tetr 10", "^0.2 (improved by ...)": no operator, so two runs.
+            runs.append(run)
+            run, depth = [], 0
+            continue
+        depth += {"open": 1, "close": -1}.get(kind, 0)
+        run.append(_Token(kind, match[kind], match.start(kind), match.end(kind)))
+        pos = match.end()
+    if run:
+        runs.append(run)
+    return runs
+
+
+def _trim(run: list[_Token]) -> list[_Token]:
+    """Drop the edges of a run that cannot belong to its formula."""
+    run = list(run)
+    while run:
+        opens = sum(t.kind == "open" for t in run)
+        closes = sum(t.kind == "close" for t in run)
+        first, last = run[0], run[-1]
+        if (
+            first.kind == "close"
+            or (first.kind == "op" and first.text not in _LEADING_OPS)
+            or (first.kind == "open" and opens > closes)
+        ):
+            run.pop(0)
+        elif last.kind in ("open", "op", "func") or (last.kind == "close" and closes > opens):
+            run.pop()
+        else:
+            break
+    return run
+
+
+def _is_formula(run: list[_Token]) -> bool:
+    """True for well-formed arithmetic with at least one binary operator.
+
+    A lone leading operator is the game's shorthand ("^1.1", "×tier",
+    "+0.01 per rank") and stays prose.
+    """
+    depth = 0
+    binary = False
+    for i, token in enumerate(run):
+        depth += {"open": 1, "close": -1}.get(token.kind, 0)
+        if depth < 0:
+            return False
+        following = run[i + 1].kind if i + 1 < len(run) else None
+        if token.kind == "func":
+            if following != "open":
+                return False
+            binary = True
+        elif token.kind == "op":
+            if following not in _OPERAND_START:
+                return False
+            if i > 0:
+                if run[i - 1].kind not in _OPERAND_END:
+                    return False
+                binary = True
+    return depth == 0 and binary
+
+
+def _operand_end(run: list[_Token], start: int) -> int:
+    """The index just past the operand that begins at `start`."""
+    end = start + 1 if run[start].kind == "func" else start
+    if run[end].kind != "open":
+        return end + 1
+    depth = 0
+    for i in range(end, len(run)):
+        depth += {"open": 1, "close": -1}.get(run[i].kind, 0)
+        if depth == 0:
+            return i + 1
+    raise AssertionError("unbalanced run passed _is_formula")
+
+
+def _latex(run: list[_Token]) -> str:
+    parts: list[str] = []
+    i = 0
+    while i < len(run):
+        token = run[i]
+        if token.kind == "func":
+            end = _operand_end(run, i)
+            parts.append(rf"\sqrt{{{_latex(run[i + 2 : end - 1])}}}")
+            i = end
+            continue
+        if token.text == "^":
+            end = _operand_end(run, i + 1)
+            operand = run[i + 1 : end]
+            # The braces group the exponent, so its parentheses are redundant.
+            if operand[0].kind == "open":
+                operand = operand[1:-1]
+            parts.append(f"^{{{_latex(operand)}}}")
+            i = end
+            continue
+        if token.kind in ("grade", "word") and token.text.isascii():
+            parts.append(rf"\text{{{token.text}}}")
+        elif token.text in ("×", "x"):
+            parts.append(r"\times")
+        else:
+            parts.append(token.text)
+        i += 1
+    return " ".join(parts).replace("( ", "(").replace(" )", ")").replace(" ^{", "^{")
+
+
+def typeset(text: str) -> str:
+    """Escape prose, and turn the formulas in it into `$LaTeX$`.
+
+    Conservative on purpose: only a balanced run of numbers, grades, a few
+    known operand words and operators, with a binary operator in it, becomes
+    math. Anything else stays prose exactly as the game wrote it.
+    """
+    out: list[str] = []
+    pos = 0
+    for raw in _formula_runs(text):
+        run = _trim(raw)
+        if not _is_formula(run):
+            continue
+        start, end = run[0].start, run[-1].end
+        out += [escape_prose(text[pos:start]), f"${_latex(run)}$"]
+        pos = end
+    out.append(escape_prose(text[pos:]))
+    return "".join(out)
 
 
 def _norm(name: str) -> str:
@@ -316,7 +491,7 @@ def map_particles(
             mapped.append(_place(
                 f"{grade_bonus_prefix(grade)}{index + 1}",
                 name,
-                readable(text),
+                readable(text, formulas=True),
                 GRADE_SYSTEM,
                 Kind.UPGRADE,
                 by_id,

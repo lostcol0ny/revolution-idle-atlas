@@ -17,9 +17,11 @@ survive**, not who or what is allowed to write them:
 
 `atlas build` loads both and merges them. A curated node overlays the generated
 one **field by field**, so correcting one relic's name does not mean restating
-its kind, wiki page and effects. A curated edge replaces the generated one
-wholesale. A `suppress:` entry deletes a generated edge outright — the one
-correction an overlay cannot express.
+its kind, wiki page and effects. A curated `effects` list replaces the generated
+one, and a generated edge `note` that quotes a reworded effect takes the curated
+wording with it. A curated edge replaces the generated one wholesale. A
+`suppress:` entry deletes a generated edge outright — the one correction an
+overlay cannot express.
 
 A third input, `data/game.yaml`, sits **between** them: precedence is
 `derived.yaml` < `game.yaml` < `relationships.yaml`. It holds the game's own name
@@ -173,7 +175,7 @@ reads three more families straight from the strings:
 
 | Keys | Onto | Named |
 |---|---|---|
-| `PARTICLES_BONUS_<GRADE>_<n>` (Rank, Tier, Tetr, Pent) | `particles-<grade>-bonus-<n+1>` in `particles-grades` | By the wiki's Grade Bonuses threshold (`Rank 5 Bonus`), read from `data/raw/Particles.wikitext`, when the wiki lists exactly as many bonuses for that grade as the game has; otherwise by position (`Tetr Bonus #7`). The string is the description. |
+| `PARTICLES_BONUS_<GRADE>_<n>` (Rank, Tier, Tetr, Pent) | `particles-<grade>-bonus-<n+1>` in `particles-grades` | By the wiki's Grade Bonuses threshold (`Rank 5 Bonus`), read from `data/raw/Particles.wikitext`, when the wiki lists exactly as many bonuses for that grade as the game has; otherwise by position (`Tetr Bonus #7`). The string is the description, with the formulas it spells out in plain text (`×(1 + 0.05 × rank)`) typeset as `$LaTeX$`; shorthand such as `^1.1` or `×tier` stays prose. |
 | `EPSILON_EFFECT_<n>` | `epsilon-tree-node-<n+1>` in `epsilon-tree` | `Epsilon Tree Node <n+1> (<effect>)`; the effect is also the description. Only the 16 outer nodes (15–30) have one: the 15 inner nodes share the template "Boosts {0} efficiency", which names no node. |
 | `ENUM_SPARKTYPE_<COLOUR>`, `ENUM_SPARKTYPE_EFFECT_<COLOUR>` | `particles-spark-<colour>` | `UNI_PARTICLES_SPARK_NAME` (`Blue Spark`); the effect is the description. |
 

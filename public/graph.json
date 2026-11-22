@@ -434,10 +434,10 @@
     },
     {
       "confidence": "documented",
-      "description": "Gain more merge EXP based on X^[mineral level], X =",
+      "description": "Gain more merge EXP based on $X^{\\text{mineral level}}$, X =",
       "effects": [
         {
-          "text": "You get more merge exp based on X^[mineral level]",
+          "text": "You get more merge exp based on $X^{\\text{mineral level}}$",
           "per_level": "+0.001 to X",
           "op": "add"
         }
@@ -1320,7 +1320,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "PP gain is powered to ^(1 + 0.1*lvl) (+0.1, maxes at ^2)"
+          "text": "PP gain is powered to $^{1 + 0.1 \\times \\text{lvl}}$ (+0.1, maxes at ^2)"
         }
       ],
       "id": "refine-node-10",
@@ -1398,7 +1398,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Merge Level Bonus Eff. x(1.0 + 0.5*lvl) (maxes at x50)"
+          "text": "Merge Level Bonus Eff. $\\times (1.0 + 0.5 \\times \\text{lvl})$ (maxes at x50)"
         }
       ],
       "id": "refine-node-16",
@@ -1502,7 +1502,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Relic 23 is x(1 + 0.1*lvl) stronger (maxes at x3)"
+          "text": "Relic 23 is $\\times (1 + 0.1 \\times \\text{lvl})$ stronger (maxes at x3)"
         }
       ],
       "id": "refine-node-24",
@@ -1567,7 +1567,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Relic 23 is stronger based on your Axe Level: x(1 + 0.01*lvl)"
+          "text": "Relic 23 is stronger based on your Axe Level: $\\times (1 + 0.01 \\times \\text{lvl})$"
         }
       ],
       "id": "refine-node-29",
@@ -1658,7 +1658,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "RN27 effect: x(1 - 0.01*lvl) (maxes at x0.8)"
+          "text": "RN27 effect: $\\times (1 - 0.01 \\times \\text{lvl})$ (maxes at x0.8)"
         }
       ],
       "id": "refine-node-36",
@@ -1684,7 +1684,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "You get more refine points based on your knuckles level: RfP^(1.01*lvl)"
+          "text": "You get more refine points based on your knuckles level: $\\text{RfP}^{1.01 \\times \\text{lvl}}$"
         }
       ],
       "id": "refine-node-38",
@@ -1710,7 +1710,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Magnet upgrades for VP gain and PP gain mults are powered to ^(1.1*lvl) (maxes at ^3)"
+          "text": "Magnet upgrades for VP gain and PP gain mults are powered to $^{1.1 \\times \\text{lvl}}$ (maxes at ^3)"
         }
       ],
       "id": "refine-node-40",
@@ -1840,7 +1840,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "RfP gain x(2^lvl) (maxes at x1,024)"
+          "text": "RfP gain $\\times (2^{\\text{lvl}})$ (maxes at x1,024)"
         }
       ],
       "id": "refine-node-50",
@@ -2633,7 +2633,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Divides the ERP needed to craft an Endoplasmic Reticulum by x1.5^level"
+          "text": "Divides the ERP needed to craft an Endoplasmic Reticulum by $\\times 1.5^{\\text{level}}$"
         }
       ],
       "id": "refine-node-111",
@@ -3504,7 +3504,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Mastery Gain is multiplied by xX (1 + pent / 10)"
+          "text": "Mastery Gain is multiplied by xX ($1 + \\text{pent} / 10$)"
         }
       ],
       "id": "refine-node-178",
@@ -3634,7 +3634,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Attack exponent is multiplied by 1 + 0.1 * Log10(mastery) (softcap at x10)"
+          "text": "Attack exponent is multiplied by $1 + 0.1 \\times \\log_{10}(\\text{mastery})$ (softcap at x10)"
         }
       ],
       "id": "refine-node-188",
@@ -5728,7 +5728,7 @@
           "text": "3.00x VP Gain"
         },
         {
-          "text": "Sacrificed: Attacks HP is powered to ^(1/X) ((1 + (level / 26) x 0.25), not confirmed)"
+          "text": "Sacrificed: Attacks HP is powered to $^{1/X}$ ($(1 + (\\text{level} / 26) \\times 0.25)$, not confirmed)"
         }
       ],
       "id": "special-mineral-red-gem",
@@ -5744,7 +5744,7 @@
           "text": "Cost Increase is powered to ^0.99. ^(1/(1+0.01))"
         },
         {
-          "text": "Sacrificed: Global Element Mult is powered to ^X (1.1 + ((level - 26)^2) x 0.01, not confirmed)"
+          "text": "Sacrificed: Global Element Mult is powered to ^X ($1.1 + ((\\text{level} - 26)^2) \\times 0.01$, not confirmed)"
         }
       ],
       "id": "special-mineral-blue-gem",
@@ -5792,7 +5792,7 @@
           "text": "10.00x Gold gain"
         },
         {
-          "text": "Sacrificed: Relic 14's effect is powered to ^X (1000 + ((level - 27)^2) x 100, not confirmed)"
+          "text": "Sacrificed: Relic 14's effect is powered to ^X ($1000 + ((\\text{level} - 27)^2) \\times 100$, not confirmed)"
         }
       ],
       "id": "special-mineral-yellow-gem",
@@ -5824,7 +5824,7 @@
           "text": "1.50x PP gain"
         },
         {
-          "text": "Sacrificed: multiplies The Devil's effect by X (10 + (level - 26)^2, not confirmed)"
+          "text": "Sacrificed: multiplies The Devil's effect by X ($10 + (\\text{level} - 26)^2$, not confirmed)"
         }
       ],
       "id": "special-mineral-dark-purple-gem",
@@ -6780,7 +6780,7 @@
       "confidence": "provisional",
       "effects": [
         {
-          "text": "Multiplies the base of all particle generators and multipliers by 1 + singularity / 100"
+          "text": "Multiplies the base of all particle generators and multipliers by $1 + \\text{singularity} / 100$"
         }
       ],
       "id": "singularity-milestone-one-hundred",
@@ -8355,7 +8355,7 @@
       "confidence": "provisional",
       "effects": [
         {
-          "text": "Game Speed, Attack, and Damage mults are put to double Log10 of their values. You cannot gain them during the challenge. (Double Log10 means Log10(Log10(X)).)"
+          "text": "Game Speed, Attack, and Damage mults are put to double Log10 of their values. You cannot gain them during the challenge. (Double Log10 means $\\log_{10}(\\log_{10}(X))$.)"
         },
         {
           "text": "Attack Level 400"
@@ -8467,7 +8467,7 @@
       "confidence": "provisional",
       "effects": [
         {
-          "text": "Resets Attack levels and mults. Only attack mult from score is effective, and it is ^(1/1e10). Game Speed is reduced to double Log10."
+          "text": "Resets Attack levels and mults. Only attack mult from score is effective, and it is $^{1/10^{10}}$. Game Speed is reduced to double Log10."
         },
         {
           "text": "Attack Level 850"
@@ -8883,7 +8883,7 @@
       "confidence": "provisional",
       "effects": [
         {
-          "text": "Performs Refine Prestige and resets Gold. Blue, Green, gems, along with Relic 14 and 31 are all useless. Gold Gain is ^(1/1,000,000,000) and game speed is logarithmed."
+          "text": "Performs Refine Prestige and resets Gold. Blue, Green, gems, along with Relic 14 and 31 are all useless. Gold Gain is $^{1/1{,}000{,}000{,}000}$ and game speed is logarithmed."
         },
         {
           "text": "105+ Max Mineral Level"
@@ -8995,7 +8995,7 @@
       "confidence": "provisional",
       "effects": [
         {
-          "text": "Requires 1.8e308 Atoms to enter. Performs Refine Prestige. Red Gem is useless. You cant get magnets nor merge XP. RN1's effect is capped at Log10(atoms)+1. Local Mineral Speed is capped at 100x. The First Mineral upgrades effect is capped at the Square Root of your Singularity mult rounded down. Relic 22 and Polish Sword are useless. Entering Performs a Singularity and resets atoms to 1. Adds a Dynamic Penalty that heavily nerfs Atom Gain, but becomes weaker based on your Max Mineral Level"
+          "text": "Requires 1.8e308 Atoms to enter. Performs Refine Prestige. Red Gem is useless. You cant get magnets nor merge XP. RN1's effect is capped at $\\log_{10}(\\text{atoms}) + 1$. Local Mineral Speed is capped at 100x. The First Mineral upgrades effect is capped at the Square Root of your Singularity mult rounded down. Relic 22 and Polish Sword are useless. Entering Performs a Singularity and resets atoms to 1. Adds a Dynamic Penalty that heavily nerfs Atom Gain, but becomes weaker based on your Max Mineral Level"
         },
         {
           "text": "Perform a Singularity at 1e200+ VP"
@@ -9043,7 +9043,7 @@
       "confidence": "provisional",
       "effects": [
         {
-          "text": "Performs Unity Reset. Luck is ^(1/999)"
+          "text": "Performs Unity Reset. Luck is $^{1/999}$"
         },
         {
           "text": "Unite with an Immortal+ rarity Zodiac"
@@ -9267,7 +9267,7 @@
       "confidence": "provisional",
       "effects": [
         {
-          "text": "Performs Refine Prestige. Red Gem, Relic 22, and Polish Sword are useless. You can no longer obtain magnets or merge levels. RN1's effect is ^(1/10000) (pre-skill)."
+          "text": "Performs Refine Prestige. Red Gem, Relic 22, and Polish Sword are useless. You can no longer obtain magnets or merge levels. RN1's effect is $^{1/10000}$ (pre-skill)."
         },
         {
           "text": "200+ Max Mineral Level"
@@ -9539,7 +9539,7 @@
       "confidence": "provisional",
       "effects": [
         {
-          "text": "You need Refine Node 195 to start the challenge. You can spawn special minerals in this challenge. Every time you use The Sun card, you will get random special minerals in colors corresponding to your currently equipped sparks. The amount of minerals is amount of your currently equipped sparks. The Sun card cooldown is 5 seconds but it decrease only when you spawn a spark by 1 second. Your mastery gain is based on amount of merged special minerals during the challenge with the formula (Red / (Red + 5)) x (Orange / (Orange + 5)) x (Yellow / (Yellow + 5)) ... etc. x Base. Singularity will reset the challenge"
+          "text": "You need Refine Node 195 to start the challenge. You can spawn special minerals in this challenge. Every time you use The Sun card, you will get random special minerals in colors corresponding to your currently equipped sparks. The amount of minerals is amount of your currently equipped sparks. The Sun card cooldown is 5 seconds but it decrease only when you spawn a spark by 1 second. Your mastery gain is based on amount of merged special minerals during the challenge with the formula $(\\text{Red} / (\\text{Red} + 5)) \\times (\\text{Orange} / (\\text{Orange} + 5)) \\times (\\text{Yellow} / (\\text{Yellow} + 5)) \\times \\cdots \\times \\text{Base}$. Singularity will reset the challenge"
         },
         {
           "text": "Spawn a spark with 1e9 mastery to complete the challenge"
@@ -9646,7 +9646,7 @@
       "effects": [
         {
           "text": "Sword LOGPOW base",
-          "per_level": "0.09+0.01*level"
+          "per_level": "$0.09 + 0.01 \\times \\text{level}$"
         }
       ],
       "id": "tarot-artifact-memory-crystal",
@@ -10202,10 +10202,10 @@
     },
     {
       "confidence": "provisional",
-      "description": "All Multipliers are divided by (time spent in Infinity)^2",
+      "description": "All Multipliers are divided by $(\\text{time spent in Infinity})^2$",
       "effects": [
         {
-          "text": "All mults are mult. by (time in Infinity)^0.2"
+          "text": "All mults are mult. by $(\\text{time in Infinity})^{0.2}$"
         }
       ],
       "id": "infinity-challenge-7",
@@ -10400,7 +10400,7 @@
     },
     {
       "confidence": "documented",
-      "description": "α generator base ×(1 + 0.1 × generator level). Refinement node 141 improves this bonus.",
+      "description": "α generator base $\\times (1 + 0.1 \\times \\text{generator level})$. Refinement node 141 improves this bonus.",
       "id": "particles-rank-bonus-3",
       "kind": "upgrade",
       "name": "Rank 5 Bonus",
@@ -10408,7 +10408,7 @@
     },
     {
       "confidence": "documented",
-      "description": "Attack exponent multiplied ×(1 + 0.05 × rank).",
+      "description": "Attack exponent multiplied $\\times (1 + 0.05 \\times \\text{rank})$.",
       "id": "particles-rank-bonus-4",
       "kind": "upgrade",
       "name": "Rank 8 Bonus",
@@ -10416,7 +10416,7 @@
     },
     {
       "confidence": "documented",
-      "description": "Rank boosts local singularity speed + 0.01 x Sqrt(rank). Softcap at 0.10",
+      "description": "Rank boosts local singularity speed $+ 0.01 \\times \\sqrt{\\text{rank}}$. Softcap at 0.10",
       "id": "particles-rank-bonus-5",
       "kind": "upgrade",
       "name": "Rank 10 Bonus",
@@ -10424,7 +10424,7 @@
     },
     {
       "confidence": "documented",
-      "description": "The base effects of Singularity Tree nodes 3.1 and 3.2 are multiplied by 1 + rank x 0.1",
+      "description": "The base effects of Singularity Tree nodes 3.1 and 3.2 are multiplied by $1 + \\text{rank} \\times 0.1$",
       "id": "particles-rank-bonus-6",
       "kind": "upgrade",
       "name": "Rank 11 Bonus",
@@ -10432,7 +10432,7 @@
     },
     {
       "confidence": "documented",
-      "description": "β generator base ×(1 + 0.25 × generator level).",
+      "description": "β generator base $\\times (1 + 0.25 \\times \\text{generator level})$.",
       "id": "particles-rank-bonus-7",
       "kind": "upgrade",
       "name": "Rank 12 Bonus",
@@ -10448,7 +10448,7 @@
     },
     {
       "confidence": "documented",
-      "description": "The base effect of Singularity Tree node 6.2 is multiplied by 1 + rank x 0.05",
+      "description": "The base effect of Singularity Tree node 6.2 is multiplied by $1 + \\text{rank} \\times 0.05$",
       "id": "particles-rank-bonus-9",
       "kind": "upgrade",
       "name": "Rank 17 Bonus",
@@ -10464,7 +10464,7 @@
     },
     {
       "confidence": "documented",
-      "description": "Golden Resource gain is multiplied by a multiplier (10 x (Rank + 1) x (Tier + 1))",
+      "description": "Golden Resource gain is multiplied by a multiplier $(10 \\times (\\text{Rank} + 1) \\times (\\text{Tier} + 1))$",
       "id": "particles-rank-bonus-11",
       "kind": "upgrade",
       "name": "Rank 20 Bonus",
@@ -10488,7 +10488,7 @@
     },
     {
       "confidence": "documented",
-      "description": "Relic 71 base effect is multiplied by 1 + Rank x 0.01",
+      "description": "Relic 71 base effect is multiplied by $1 + \\text{Rank} \\times 0.01$",
       "id": "particles-rank-bonus-14",
       "kind": "upgrade",
       "name": "Rank 35 Bonus",
@@ -10504,7 +10504,7 @@
     },
     {
       "confidence": "documented",
-      "description": "All particle generator bases ×(1.01 ^ equipped ER level).",
+      "description": "All particle generator bases $\\times (1.01^{\\text{equipped ER level}})$.",
       "id": "particles-rank-bonus-16",
       "kind": "upgrade",
       "name": "Rank 80 Bonus",
@@ -10528,7 +10528,7 @@
     },
     {
       "confidence": "documented",
-      "description": "Unlock a free first β generator level. β generator base ×tier. α generator base ×(β + 1)^0.2 (improved by refinement node 147).",
+      "description": "Unlock a free first β generator level. β generator base ×tier. α generator base $\\times (β + 1)^{0.2}$ (improved by refinement node 147).",
       "id": "particles-tier-bonus-1",
       "kind": "upgrade",
       "name": "Tier 1 Bonus",
@@ -10536,7 +10536,7 @@
     },
     {
       "confidence": "documented",
-      "description": "α generator and multiplier bases ×tier. α multiplier base also ×(1 + 0.5 × multiplier level).",
+      "description": "α generator and multiplier bases ×tier. α multiplier base also $\\times (1 + 0.5 \\times \\text{multiplier level})$.",
       "id": "particles-tier-bonus-2",
       "kind": "upgrade",
       "name": "Tier 2 Bonus",
@@ -10544,7 +10544,7 @@
     },
     {
       "confidence": "documented",
-      "description": "Refinement point gain ^(1 + 0.001 × rank + 0.01 × tier).",
+      "description": "Refinement point gain $^{1 + 0.001 \\times \\text{rank} + 0.01 \\times \\text{tier}}$.",
       "id": "particles-tier-bonus-3",
       "kind": "upgrade",
       "name": "Tier 3 Bonus",
@@ -10560,7 +10560,7 @@
     },
     {
       "confidence": "documented",
-      "description": "Relic 73 base effect ×(1 + 0.01 × tier).",
+      "description": "Relic 73 base effect $\\times (1 + 0.01 \\times \\text{tier})$.",
       "id": "particles-tier-bonus-5",
       "kind": "upgrade",
       "name": "Tier 10 Bonus",
@@ -10568,7 +10568,7 @@
     },
     {
       "confidence": "documented",
-      "description": "Relic 60 effect ×(1 + 0.1 × tier).",
+      "description": "Relic 60 effect $\\times (1 + 0.1 \\times \\text{tier})$.",
       "id": "particles-tier-bonus-6",
       "kind": "upgrade",
       "name": "Tier 20 Bonus",
@@ -10584,7 +10584,7 @@
     },
     {
       "confidence": "documented",
-      "description": "Unlock a free first γ generator level. β generator base ×(γ + 1)^0.25. Luck ^(1 + tier / 100 + tetr / 10).",
+      "description": "Unlock a free first γ generator level. β generator base $\\times (γ + 1)^{0.25}$. Luck $^{1 + \\text{tier} / 100 + \\text{tetr} / 10}$.",
       "id": "particles-tetr-bonus-1",
       "kind": "upgrade",
       "name": "Tetr Bonus #1",
@@ -10592,7 +10592,7 @@
     },
     {
       "confidence": "documented",
-      "description": "Attack gold gain ^(1 + 0.01 × tetr).",
+      "description": "Attack gold gain $^{1 + 0.01 \\times \\text{tetr}}$.",
       "id": "particles-tetr-bonus-2",
       "kind": "upgrade",
       "name": "Tetr Bonus #2",
@@ -10600,7 +10600,7 @@
     },
     {
       "confidence": "documented",
-      "description": "Relic 72 effect ^(1 + 0.2 × tetr). Above tetr 10, this bonus uses 10 ×(tetr / 10)^0.32.",
+      "description": "Relic 72 effect $^{1 + 0.2 \\times \\text{tetr}}$. Above tetr 10, this bonus uses $10 \\times (\\text{tetr} / 10)^{0.32}$.",
       "id": "particles-tetr-bonus-3",
       "kind": "upgrade",
       "name": "Tetr Bonus #3",
@@ -10616,7 +10616,7 @@
     },
     {
       "confidence": "documented",
-      "description": "All particle generator bases ×(1.2 ^ tetr).",
+      "description": "All particle generator bases $\\times (1.2^{\\text{tetr}})$.",
       "id": "particles-tetr-bonus-5",
       "kind": "upgrade",
       "name": "Tetr Bonus #5",
@@ -10640,7 +10640,7 @@
     },
     {
       "confidence": "documented",
-      "description": "Unlock a free first δ generator level. γ generator base ×(δ + 1)^0.25. Tarot gold: (gain × 100)^(1 + 0.1 × pent + 0.04 × tetr + 0.01 × tier) / 100.",
+      "description": "Unlock a free first δ generator level. γ generator base $\\times (δ + 1)^{0.25}$. Tarot gold: $(\\text{gain} \\times 100)^{1 + 0.1 \\times \\text{pent} + 0.04 \\times \\text{tetr} + 0.01 \\times \\text{tier}} / 100$.",
       "id": "particles-pent-bonus-1",
       "kind": "upgrade",
       "name": "Pent 1 Bonus",
@@ -10648,7 +10648,7 @@
     },
     {
       "confidence": "documented",
-      "description": "Relics 70 and 73 base effects ×(1 + 0.01 × pent).",
+      "description": "Relics 70 and 73 base effects $\\times (1 + 0.01 \\times \\text{pent})$.",
       "id": "particles-pent-bonus-2",
       "kind": "upgrade",
       "name": "Pent 2 Bonus",
@@ -10656,7 +10656,7 @@
     },
     {
       "confidence": "documented",
-      "description": "All particle generator bases ×(2 ^ pent).",
+      "description": "All particle generator bases $\\times (2^{\\text{pent}})$.",
       "id": "particles-pent-bonus-3",
       "kind": "upgrade",
       "name": "Pent 3 Bonus",
@@ -11145,7 +11145,7 @@
       "effects": [
         {
           "text": "Boosts Stars",
-          "per_level": "+0.275, starting at 2.75 (2.75 + 0.275n)"
+          "per_level": "+0.275, starting at 2.75 ($2.75 + 0.275n$)"
         }
       ],
       "id": "star-base",
@@ -11159,7 +11159,7 @@
       "effects": [
         {
           "text": "Boosts Stars",
-          "per_level": "+0.05, starting at 0.4 (0.4 + 0.05n)"
+          "per_level": "+0.05, starting at 0.4 ($0.4 + 0.05n$)"
         }
       ],
       "id": "star-exponent",
@@ -12370,7 +12370,7 @@
       "cost": "4 AP",
       "effects": [
         {
-          "text": "EP Gain × (1+(Σ^0.5))"
+          "text": "EP Gain $\\times (1 + (\\Sigma^{0.5}))$"
         }
       ],
       "id": "animal-cow",
@@ -13087,7 +13087,7 @@
       "effects": [
         {
           "text": "Generates Laboratory Points",
-          "per_level": "LP/s is (Base x Mult) ^ Power"
+          "per_level": "LP/s is $(\\text{Base} \\times \\text{Mult})^{\\text{Power}}$"
         },
         {
           "text": "Filling the flask raises the Lab level and awards one Research Point"
@@ -13173,7 +13173,7 @@
       "effects": [
         {
           "text": "Ascend Power",
-          "per_level": "*(1 + n*0.25) where n is level"
+          "per_level": "$\\times (1 + n \\times 0.25)$ where $n$ is level"
         }
       ],
       "id": "rp-upgrade-2",
@@ -13188,7 +13188,7 @@
       "effects": [
         {
           "text": "Star Base Mult",
-          "per_level": "*(1 + n*0.15)"
+          "per_level": "$\\times (1 + n \\times 0.15)$"
         }
       ],
       "id": "rp-upgrade-3",
@@ -13203,7 +13203,7 @@
       "effects": [
         {
           "text": "EP Gain",
-          "per_level": "*(1 + n*0.5)"
+          "per_level": "$\\times (1 + n \\times 0.5)$"
         }
       ],
       "id": "rp-upgrade-4",
@@ -13622,7 +13622,7 @@
           "text": "Ascension Power ^0.10"
         },
         {
-          "text": "(Laps Speed ^0.10) / 10"
+          "text": "$(\\text{Laps Speed}^{0.10}) / 10$"
         },
         {
           "text": "IP gain ^0.01"
@@ -13697,16 +13697,16 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "IP Gain = [1 + Unities] ^ [2 + log(Unities)]"
+          "text": "IP Gain = $[1 + \\text{Unities}]^{2 + \\log(\\text{Unities})}$"
         },
         {
-          "text": "EP Gain = [1 + Unities] ^ [1 + 0.25 * log(Unities)]"
+          "text": "EP Gain = $[1 + \\text{Unities}]^{1 + 0.25 \\times \\log(\\text{Unities})}$"
         },
         {
-          "text": "Eternity Count Gain = [1 + Unities]"
+          "text": "Eternity Count Gain = $[1 + \\text{Unities}]$"
         },
         {
-          "text": "DP Gain = [1 + Unities * 3] ^ [0.5 + 0.125 * log(Unities)]"
+          "text": "DP Gain = $[1 + \\text{Unities} \\times 3]^{0.5 + 0.125 \\times \\log(\\text{Unities})}$"
         }
       ],
       "id": "unity-bonuses",
@@ -13803,7 +13803,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "= 1.125^Rarity * Quality * (9 + Level^2), before rarity and level bonuses"
+          "text": "$= 1.125^{\\text{Rarity}} \\times \\text{Quality} \\times (9 + \\text{Level}^2)$, before rarity and level bonuses"
         },
         {
           "text": "Drives every Zodiac stat formula, from Mults Gain to Zodiac Quality Mult"
@@ -14359,7 +14359,7 @@
           "text": "Five circles; each revolution raises its Attack Mult and hits the enemy"
         },
         {
-          "text": "Each level costs 1.25 + (0.15 x Ascension Stage) more than the last"
+          "text": "Each level costs $1.25 + (0.15 \\times \\text{Ascension Stage})$ more than the last"
         },
         {
           "text": "Levelling adds 5% of base lap speed; at max level 20 the speed has doubled"
@@ -14587,7 +14587,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "A mineral generates 0.01 x 3^(Mineral Level - 1) per second before bonuses"
+          "text": "A mineral generates $0.01 \\times 3^{\\text{Mineral Level} - 1}$ per second before bonuses"
         },
         {
           "text": "Spent on the ten Mineral Upgrades"
@@ -14714,7 +14714,7 @@
           "text": "Each level doubles Value Point gain"
         },
         {
-          "text": "The cap to the next level is 10 x (Merge Level + 1)^2"
+          "text": "The cap to the next level is $10 \\times (\\text{Merge Level} + 1)^2$"
         }
       ],
       "id": "merge-level",
@@ -15794,7 +15794,7 @@
     {
       "confidence": "uncertain",
       "from": "relic-28",
-      "note": "You get more merge exp based on X^[mineral level]",
+      "note": "You get more merge exp based on $X^{\\text{mineral level}}$",
       "op": "add",
       "rel": "boosts",
       "source": "wiki:Relics",
@@ -15803,7 +15803,7 @@
     {
       "confidence": "uncertain",
       "from": "mineral-level",
-      "note": "You get more merge exp based on X^[mineral level]",
+      "note": "You get more merge exp based on $X^{\\text{mineral level}}$",
       "rel": "boosts",
       "source": "wiki:Relics",
       "to": "relic-28"
@@ -16378,7 +16378,7 @@
     {
       "confidence": "uncertain",
       "from": "refine-node-10",
-      "note": "PP gain is powered to ^(1 + 0.1*lvl) (+0.1, maxes at ^2)",
+      "note": "PP gain is powered to $^{1 + 0.1 \\times \\text{lvl}}$ (+0.1, maxes at ^2)",
       "rel": "boosts",
       "source": "wiki:Minerals/Refine_Tree",
       "to": "polish-points"
@@ -16465,7 +16465,7 @@
     {
       "confidence": "uncertain",
       "from": "refine-node-16",
-      "note": "Merge Level Bonus Eff. x(1.0 + 0.5*lvl) (maxes at x50)",
+      "note": "Merge Level Bonus Eff. $\\times (1.0 + 0.5 \\times \\text{lvl})$ (maxes at x50)",
       "rel": "boosts",
       "source": "wiki:Minerals/Refine_Tree",
       "to": "merge-level"
@@ -16614,7 +16614,7 @@
     {
       "confidence": "provisional",
       "from": "refine-node-24",
-      "note": "Relic 23 is x(1 + 0.1*lvl) stronger (maxes at x3)",
+      "note": "Relic 23 is $\\times (1 + 0.1 \\times \\text{lvl})$ stronger (maxes at x3)",
       "rel": "boosts",
       "source": "wiki:Minerals/Refine_Tree",
       "to": "relic-23"
@@ -16664,7 +16664,7 @@
     {
       "confidence": "provisional",
       "from": "refine-node-29",
-      "note": "Relic 23 is stronger based on your Axe Level: x(1 + 0.01*lvl)",
+      "note": "Relic 23 is stronger based on your Axe Level: $\\times (1 + 0.01 \\times \\text{lvl})$",
       "rel": "boosts",
       "source": "wiki:Minerals/Refine_Tree",
       "to": "relic-23"
@@ -16814,7 +16814,7 @@
     {
       "confidence": "uncertain",
       "from": "refine-node-38",
-      "note": "You get more refine points based on your knuckles level: RfP^(1.01*lvl)",
+      "note": "You get more refine points based on your knuckles level: $\\text{RfP}^{1.01 \\times \\text{lvl}}$",
       "rel": "boosts",
       "source": "wiki:Minerals/Refine_Tree",
       "to": "refinement-points"
@@ -16822,7 +16822,7 @@
     {
       "confidence": "uncertain",
       "from": "refinement-points",
-      "note": "You get more refine points based on your knuckles level: RfP^(1.01*lvl)",
+      "note": "You get more refine points based on your knuckles level: $\\text{RfP}^{1.01 \\times \\text{lvl}}$",
       "rel": "boosts",
       "source": "wiki:Minerals/Refine_Tree",
       "to": "refine-node-38"
@@ -16852,7 +16852,7 @@
     {
       "confidence": "uncertain",
       "from": "refine-node-40",
-      "note": "Magnet upgrades for VP gain and PP gain mults are powered to ^(1.1*lvl) (maxes at ^3)",
+      "note": "Magnet upgrades for VP gain and PP gain mults are powered to $^{1.1 \\times \\text{lvl}}$ (maxes at ^3)",
       "rel": "boosts",
       "source": "wiki:Minerals/Refine_Tree",
       "to": "value-points"
@@ -16860,7 +16860,7 @@
     {
       "confidence": "uncertain",
       "from": "refine-node-40",
-      "note": "Magnet upgrades for VP gain and PP gain mults are powered to ^(1.1*lvl) (maxes at ^3)",
+      "note": "Magnet upgrades for VP gain and PP gain mults are powered to $^{1.1 \\times \\text{lvl}}$ (maxes at ^3)",
       "rel": "boosts",
       "source": "wiki:Minerals/Refine_Tree",
       "to": "polish-points"
@@ -16978,7 +16978,7 @@
     {
       "confidence": "uncertain",
       "from": "refine-node-50",
-      "note": "RfP gain x(2^lvl) (maxes at x1,024)",
+      "note": "RfP gain $\\times (2^{\\text{lvl}})$ (maxes at x1,024)",
       "rel": "boosts",
       "source": "wiki:Minerals/Refine_Tree",
       "to": "refinement-points"
@@ -17867,7 +17867,7 @@
     {
       "confidence": "uncertain",
       "from": "refine-node-111",
-      "note": "Divides the ERP needed to craft an Endoplasmic Reticulum by x1.5^level",
+      "note": "Divides the ERP needed to craft an Endoplasmic Reticulum by $\\times 1.5^{\\text{level}}$",
       "rel": "boosts",
       "source": "wiki:Minerals/Refine_Tree",
       "to": "erp"
@@ -17875,7 +17875,7 @@
     {
       "confidence": "uncertain",
       "from": "refine-node-111",
-      "note": "Divides the ERP needed to craft an Endoplasmic Reticulum by x1.5^level",
+      "note": "Divides the ERP needed to craft an Endoplasmic Reticulum by $\\times 1.5^{\\text{level}}$",
       "rel": "boosts",
       "source": "wiki:Minerals/Refine_Tree",
       "to": "endoplasmic-reticula"
@@ -18890,7 +18890,7 @@
     {
       "confidence": "uncertain",
       "from": "refine-node-178",
-      "note": "Mastery Gain is multiplied by xX (1 + pent / 10)",
+      "note": "Mastery Gain is multiplied by xX ($1 + \\text{pent} / 10$)",
       "rel": "boosts",
       "source": "wiki:Minerals/Refine_Tree",
       "to": "spark-mastery"
@@ -19048,7 +19048,7 @@
     {
       "confidence": "uncertain",
       "from": "refine-node-188",
-      "note": "Attack exponent is multiplied by 1 + 0.1 * Log10(mastery) (softcap at x10)",
+      "note": "Attack exponent is multiplied by $1 + 0.1 \\times \\log_{10}(\\text{mastery})$ (softcap at x10)",
       "rel": "boosts",
       "source": "wiki:Minerals/Refine_Tree",
       "to": "attack-exponent"

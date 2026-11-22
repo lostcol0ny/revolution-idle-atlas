@@ -150,9 +150,17 @@ def merge(
             game, fields, curated.node_ids(), game_path
         )
         problems += game_problems
+    derived_effects = {node.id: node.effects for node in derived.nodes}
+    reworded: dict[str, dict[str, str]] = {}
     for node in curated.nodes:
         data = fields.setdefault(node.id, under_curated.pop(node.id, {}))
         data.update({name: getattr(node, name) for name in node.model_fields_set})
+        if "effects" in node.model_fields_set:
+            reworded[node.id] = {
+                old.text: new.text
+                for old, new in zip(derived_effects.get(node.id, []), node.effects)
+                if old.text != new.text
+            }
     nodes = [Node.model_validate(data) for data in fields.values()]
 
     edges: dict[EdgeKey, Edge] = {}
@@ -172,7 +180,14 @@ def merge(
                 ),
                 path=derived_path,
             ))
-        edges[key] = edge.model_copy(update={"line": None})
+        # A parser copies the effect an edge was read from into its `note`, so
+        # a curated rewording of that effect reaches the copy too; otherwise a
+        # node card shows one effect in two wordings.
+        update: dict[str, Any] = {"line": None}
+        for end in (edge.from_, edge.to):
+            if edge.note in reworded.get(end, {}):
+                update["note"] = reworded[end][edge.note]
+        edges[key] = edge.model_copy(update=update)
     for edge in curated.edges:
         edges[_edge_key(edge)] = edge
 

@@ -306,27 +306,27 @@ nodes:
   kind: upgrade
 - id: particles-rank-bonus-3
   name: Rank 5 Bonus
-  description: α generator base ×(1 + 0.1 × generator level). Refinement node 141 improves this bonus.
+  description: α generator base $\times (1 + 0.1 \times \text{generator level})$. Refinement node 141 improves this bonus.
   system: particles-grades
   kind: upgrade
 - id: particles-rank-bonus-4
   name: Rank 8 Bonus
-  description: Attack exponent multiplied ×(1 + 0.05 × rank).
+  description: Attack exponent multiplied $\times (1 + 0.05 \times \text{rank})$.
   system: particles-grades
   kind: upgrade
 - id: particles-rank-bonus-5
   name: Rank 10 Bonus
-  description: Rank boosts local singularity speed + 0.01 x Sqrt(rank). Softcap at 0.10
+  description: Rank boosts local singularity speed $+ 0.01 \times \sqrt{\text{rank}}$. Softcap at 0.10
   system: particles-grades
   kind: upgrade
 - id: particles-rank-bonus-6
   name: Rank 11 Bonus
-  description: The base effects of Singularity Tree nodes 3.1 and 3.2 are multiplied by 1 + rank x 0.1
+  description: The base effects of Singularity Tree nodes 3.1 and 3.2 are multiplied by $1 + \text{rank} \times 0.1$
   system: particles-grades
   kind: upgrade
 - id: particles-rank-bonus-7
   name: Rank 12 Bonus
-  description: β generator base ×(1 + 0.25 × generator level).
+  description: β generator base $\times (1 + 0.25 \times \text{generator level})$.
   system: particles-grades
   kind: upgrade
 - id: particles-rank-bonus-8
@@ -336,7 +336,7 @@ nodes:
   kind: upgrade
 - id: particles-rank-bonus-9
   name: Rank 17 Bonus
-  description: The base effect of Singularity Tree node 6.2 is multiplied by 1 + rank x 0.05
+  description: The base effect of Singularity Tree node 6.2 is multiplied by $1 + \text{rank} \times 0.05$
   system: particles-grades
   kind: upgrade
 - id: particles-rank-bonus-10
@@ -346,7 +346,7 @@ nodes:
   kind: upgrade
 - id: particles-rank-bonus-11
   name: Rank 20 Bonus
-  description: Golden Resource gain is multiplied by a multiplier (10 x (Rank + 1) x (Tier + 1))
+  description: Golden Resource gain is multiplied by a multiplier $(10 \times (\text{Rank} + 1) \times (\text{Tier} + 1))$
   system: particles-grades
   kind: upgrade
 - id: particles-rank-bonus-12
@@ -361,7 +361,7 @@ nodes:
   kind: upgrade
 - id: particles-rank-bonus-14
   name: Rank 35 Bonus
-  description: Relic 71 base effect is multiplied by 1 + Rank x 0.01
+  description: Relic 71 base effect is multiplied by $1 + \text{Rank} \times 0.01$
   system: particles-grades
   kind: upgrade
 - id: particles-rank-bonus-15
@@ -371,7 +371,7 @@ nodes:
   kind: upgrade
 - id: particles-rank-bonus-16
   name: Rank 80 Bonus
-  description: All particle generator bases ×(1.01 ^ equipped ER level).
+  description: All particle generator bases $\times (1.01^{\text{equipped ER level}})$.
   system: particles-grades
   kind: upgrade
 - id: particles-rank-bonus-17
@@ -386,17 +386,17 @@ nodes:
   kind: upgrade
 - id: particles-tier-bonus-1
   name: Tier 1 Bonus
-  description: Unlock a free first β generator level. β generator base ×tier. α generator base ×(β + 1)^0.2 (improved by refinement node 147).
+  description: Unlock a free first β generator level. β generator base ×tier. α generator base $\times (β + 1)^{0.2}$ (improved by refinement node 147).
   system: particles-grades
   kind: upgrade
 - id: particles-tier-bonus-2
   name: Tier 2 Bonus
-  description: α generator and multiplier bases ×tier. α multiplier base also ×(1 + 0.5 × multiplier level).
+  description: α generator and multiplier bases ×tier. α multiplier base also $\times (1 + 0.5 \times \text{multiplier level})$.
   system: particles-grades
   kind: upgrade
 - id: particles-tier-bonus-3
   name: Tier 3 Bonus
-  description: Refinement point gain ^(1 + 0.001 × rank + 0.01 × tier).
+  description: Refinement point gain $^{1 + 0.001 \times \text{rank} + 0.01 \times \text{tier}}$.
   system: particles-grades
   kind: upgrade
 - id: particles-tier-bonus-4
@@ -406,12 +406,12 @@ nodes:
   kind: upgrade
 - id: particles-tier-bonus-5
   name: Tier 10 Bonus
-  description: Relic 73 base effect ×(1 + 0.01 × tier).
+  description: Relic 73 base effect $\times (1 + 0.01 \times \text{tier})$.
   system: particles-grades
   kind: upgrade
 - id: particles-tier-bonus-6
   name: Tier 20 Bonus
-  description: Relic 60 effect ×(1 + 0.1 × tier).
+  description: Relic 60 effect $\times (1 + 0.1 \times \text{tier})$.
   system: particles-grades
   kind: upgrade
 - id: particles-tier-bonus-7
@@ -421,17 +421,17 @@ nodes:
   kind: upgrade
 - id: particles-tetr-bonus-1
   name: 'Tetr Bonus #1'
-  description: Unlock a free first γ generator level. β generator base ×(γ + 1)^0.25. Luck ^(1 + tier / 100 + tetr / 10).
+  description: Unlock a free first γ generator level. β generator base $\times (γ + 1)^{0.25}$. Luck $^{1 + \text{tier} / 100 + \text{tetr} / 10}$.
   system: particles-grades
   kind: upgrade
 - id: particles-tetr-bonus-2
   name: 'Tetr Bonus #2'
-  description: Attack gold gain ^(1 + 0.01 × tetr).
+  description: Attack gold gain $^{1 + 0.01 \times \text{tetr}}$.
   system: particles-grades
   kind: upgrade
 - id: particles-tetr-bonus-3
   name: 'Tetr Bonus #3'
-  description: Relic 72 effect ^(1 + 0.2 × tetr). Above tetr 10, this bonus uses 10 ×(tetr / 10)^0.32.
+  description: Relic 72 effect $^{1 + 0.2 \times \text{tetr}}$. Above tetr 10, this bonus uses $10 \times (\text{tetr} / 10)^{0.32}$.
   system: particles-grades
   kind: upgrade
 - id: particles-tetr-bonus-4
@@ -441,7 +441,7 @@ nodes:
   kind: upgrade
 - id: particles-tetr-bonus-5
   name: 'Tetr Bonus #5'
-  description: All particle generator bases ×(1.2 ^ tetr).
+  description: All particle generator bases $\times (1.2^{\text{tetr}})$.
   system: particles-grades
   kind: upgrade
 - id: particles-tetr-bonus-6
@@ -456,17 +456,17 @@ nodes:
   kind: upgrade
 - id: particles-pent-bonus-1
   name: Pent 1 Bonus
-  description: 'Unlock a free first δ generator level. γ generator base ×(δ + 1)^0.25. Tarot gold: (gain × 100)^(1 + 0.1 × pent + 0.04 × tetr + 0.01 × tier) / 100.'
+  description: 'Unlock a free first δ generator level. γ generator base $\times (δ + 1)^{0.25}$. Tarot gold: $(\text{gain} \times 100)^{1 + 0.1 \times \text{pent} + 0.04 \times \text{tetr} + 0.01 \times \text{tier}} / 100$.'
   system: particles-grades
   kind: upgrade
 - id: particles-pent-bonus-2
   name: Pent 2 Bonus
-  description: Relics 70 and 73 base effects ×(1 + 0.01 × pent).
+  description: Relics 70 and 73 base effects $\times (1 + 0.01 \times \text{pent})$.
   system: particles-grades
   kind: upgrade
 - id: particles-pent-bonus-3
   name: Pent 3 Bonus
-  description: All particle generator bases ×(2 ^ pent).
+  description: All particle generator bases $\times (2^{\text{pent}})$.
   system: particles-grades
   kind: upgrade
 - id: particles-pent-bonus-4

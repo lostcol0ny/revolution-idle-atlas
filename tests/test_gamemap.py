@@ -127,6 +127,75 @@ def test_readable_escapes_dollars_so_they_cannot_open_inline_math():
     assert readable("$ {0}") == "\\$ a value"
 
 
+@pytest.mark.parametrize(
+    ("raw", "expected"),
+    [
+        (
+            "Attack exponent multiplied ×(1 + 0.05 × rank).",
+            r"Attack exponent multiplied $\times (1 + 0.05 \times \text{rank})$.",
+        ),
+        (
+            "Golden Resource gain is multiplied by x{0} (10 x (Rank + 1) x (Tier + 1))",
+            r"Golden Resource gain is multiplied by a multiplier "
+            r"$(10 \times (\text{Rank} + 1) \times (\text{Tier} + 1))$",
+        ),
+        # The exponent's braces replace its parentheses.
+        (
+            "Tarot gold: (gain × 100)^(1 + 0.1 × pent) / 100.",
+            r"Tarot gold: $(\text{gain} \times 100)^{1 + 0.1 \times \text{pent}} / 100$.",
+        ),
+        (
+            "speed + 0.01 x Sqrt(rank). Softcap at 0.10",
+            r"speed $+ 0.01 \times \sqrt{\text{rank}}$. Softcap at 0.10",
+        ),
+        # Two formulas, and a trailing parenthetical that is prose.
+        (
+            "base ×(β + 1)^0.2 (improved by refinement node 147). Luck ^(1 + tier / 100).",
+            r"base $\times (β + 1)^{0.2}$ (improved by refinement node 147). "
+            r"Luck $^{1 + \text{tier} / 100}$.",
+        ),
+        # Two operands with no operator between them are two runs, not one.
+        (
+            "Above tetr 10, this bonus uses 10 ×(tetr / 10)^0.32.",
+            r"Above tetr 10, this bonus uses $10 \times (\text{tetr} / 10)^{0.32}$.",
+        ),
+        # A word other than a grade is an operand only inside parentheses, so
+        # the noun before the exponent stays prose.
+        (
+            "Attack gold gain ^(1 + 0.01 × tetr).",
+            r"Attack gold gain $^{1 + 0.01 \times \text{tetr}}$.",
+        ),
+    ],
+)
+def test_formulas_are_typeset(raw, expected):
+    assert readable(raw, formulas=True) == expected
+
+
+@pytest.mark.parametrize(
+    "raw",
+    [
+        # Shorthand: a lone leading operator is not a formula.
+        "Sacrifice dust gain increased by ^1.1.",
+        "β generator base ×tier.",
+        "Particle Rank boosts Luck by {0} (+0.01 per rank)",
+        "The rank 8 bonus is 10 times stronger: +0.5 attack multiplier power per rank.",
+        "Remove the atom gain penalty at 1.6e256 atoms.",
+        # Unbalanced inside, so not read as arithmetic.
+        "Boosts (1 + (rank by 2",
+        # "x" is a letter unless it sits between two operands.
+        "Gen x 3 bonus",
+    ],
+)
+def test_formula_shorthand_stays_prose(raw):
+    assert readable(raw, formulas=True) == readable(raw)
+
+
+def test_formulas_escape_the_prose_around_them():
+    assert readable("$5 for ×(1 + rank)", formulas=True) == (
+        r"\$5 for $\times (1 + \text{rank})$"
+    )
+
+
 def test_named_families_match_by_normalised_name():
     nodes = [
         _node("plague-er-base-stealth", "Base Stealth", "plague"),
@@ -292,14 +361,14 @@ def test_particles_map_grade_bonuses_tree_effects_and_sparks():
         (
             "particles-tetr-bonus-1",
             "Tetr Bonus #1",
-            "Luck ^(1 + tetr / 10).",
+            r"Luck $^{1 + \text{tetr} / 10}$.",
             "particles-grades",
             Kind.UPGRADE,
         ),
         (
             "particles-tetr-bonus-2",
             "Tetr Bonus #2",
-            "Attack gold gain ^(1 + 0.01 × tetr).",
+            r"Attack gold gain $^{1 + 0.01 \times \text{tetr}}$.",
             "particles-grades",
             Kind.UPGRADE,
         ),
