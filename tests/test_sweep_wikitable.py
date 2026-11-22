@@ -530,11 +530,11 @@ Pre-1.053 = [[File:InfinityUpgrade 2 1.png|frameless|center|64px]]
     assert records[1].effects == ["+0.01 to Common Exponent"]
 
 
-def test_a_line_break_inside_a_cell_becomes_a_space():
-    # Verbatim from data/raw/Singularity.wikitext. plain_text strips <br/> to
-    # nothing, which welds the two sentences into "Unlock Milestones TabSMS
-    # Factor is locked at 0" — a word that exists in no game and matches no
-    # vocabulary term.
+def test_a_line_break_inside_a_cell_becomes_a_clause_separator():
+    # Verbatim from data/raw/Singularity.wikitext. Stripping <br/> to nothing
+    # welds the two sentences into "Unlock Milestones TabSMS Factor is locked
+    # at 0"; a space reads them as one clause, so the unlock rule swallows the
+    # second statement.
     page = """{| class="wikitable"
 |+Singularity Milestones
 !Name
@@ -556,7 +556,7 @@ def test_a_line_break_inside_a_cell_becomes_a_space():
         ),
     )
     assert records[0].effects == [
-        "Unlock Milestones Tab SMS Factor is locked at 0"
+        "Unlock Milestones Tab / SMS Factor is locked at 0"
     ]
 
 

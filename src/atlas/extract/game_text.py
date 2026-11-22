@@ -57,7 +57,7 @@ def _threshold(goal: str) -> str | None:
 
 
 def _as_input(reference: Reference) -> Reference:
-    return replace(reference, is_input=True, targets_effect=None)
+    return replace(reference, is_input=True, is_unlock=False, targets_effect=None)
 
 
 def _references(text: str, vocabulary: Vocabulary) -> list[Reference]:
@@ -110,10 +110,9 @@ def extract(game: GameData, vocabulary: Vocabulary) -> ExtractResult:
                 Edge(
                     from_=origin,
                     to=target,
-                    # Always `boosts` and `uncertain`, as for swept wiki prose:
-                    # a name spotted in a sentence says a relationship exists,
-                    # not what kind.
-                    rel=Rel.BOOSTS,
+                    # `uncertain`, as for swept wiki prose: a name spotted in a
+                    # sentence says a relationship exists, not how strong.
+                    rel=reference.rel,
                     targets_effect=reference.targets_effect,
                     source=SOURCE,
                     confidence=EdgeConfidence.UNCERTAIN,

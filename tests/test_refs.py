@@ -167,7 +167,7 @@ def test_resolve_reads_an_ordinal_effect_pointer():
 
 
 def test_resolve_returns_references_in_order_of_appearance_without_duplicates():
-    text = "Refine Node 5 boosts Relic 9, and Relic 9 boosts Refine Node 5"
+    text = "Raises Refine Node 5 and Relic 9, then Relic 9 and Refine Node 5"
     assert resolve(text) == [Reference("refine-node-5"), Reference("relic-9")]
 
 
@@ -443,6 +443,88 @@ def test_is_input_defaults_to_false_so_existing_construction_is_unchanged():
     assert Reference("relic-38").is_input is False
 
 
+def test_a_passive_by_marks_an_input():
+    vocab = Vocabulary([("Local Particles Speed", "particles"), ("Singularity Local Speed", "sls")])
+    refs = resolve("Local Particles Speed is boosted by ^0.1 of Singularity Local Speed", vocab)
+    assert [(r.target_id, r.is_input) for r in refs] == [("particles", False), ("sls", True)]
+
+
+def test_the_subject_of_boosts_is_an_input():
+    # "Eternities ^2.00 boost DP gain": the effect reads Eternities and raises
+    # DP. The full stop inside "^2.00" does not start a new subject.
+    vocab = Vocabulary([("Eternities", "eternities"), ("DP", "dilation-points")])
+    refs = resolve("Eternities ^2.00 boost DP gain", vocab)
+    assert [(r.target_id, r.is_input) for r in refs] == [
+        ("eternities", True),
+        ("dilation-points", False),
+    ]
+
+
+def test_the_noun_boost_names_no_subject():
+    vocab = Vocabulary([("Luck", "luck"), ("Singularity Mult", "singularity-mult")])
+    assert [r.is_input for r in resolve("Multiplies power for Luck boost to Water", vocab)] == [False]
+    assert [r.is_input for r in resolve("Singularity Mult Boost", vocab)] == [False]
+
+
+@pytest.mark.parametrize(
+    "text",
+    [
+        "Keep Elements and Tarot on Singularity Reset",
+        "Buying Relics does not spend gold",
+        "Spawning common minerals doesn't decrease your gold",
+    ],
+)
+def test_a_kept_or_waived_clause_names_no_target(text):
+    vocab = Vocabulary(
+        [("Elements", "elements"), ("Tarot", "tarot"), ("gold", "gold"), ("minerals", "minerals")]
+    )
+    assert resolve(text, vocab) == []
+
+
+def test_a_keep_without_a_reset_still_names_its_target():
+    vocab = Vocabulary([("Special Minerals", "special-minerals")])
+    refs = resolve("Keep the lowest cost for spawning next Special Minerals", vocab)
+    assert [r.target_id for r in refs] == ["special-minerals"]
+
+
+def test_a_name_beside_reset_names_the_reset():
+    vocab = Vocabulary([("Unity", "unity"), ("Supernova", "supernova"), ("PP", "pp")])
+    assert resolve("Gold on Unity Reset", vocab) == []
+    assert resolve("Supernova resets nothing", vocab) == []
+    assert [r.target_id for r in resolve("Get 0.01% of your PP gain on reset", vocab)] == ["pp"]
+
+
+def test_an_opening_unlock_of_a_whole_name_is_an_unlock():
+    vocab = Vocabulary([("Singularity", "singularity"), ("runes", "runes")])
+    assert [(r.target_id, r.rel) for r in resolve("Unlocks Singularity", vocab)] == [
+        ("singularity", "unlocks")
+    ]
+    assert [r.rel for r in resolve("Unlock runes and rune upgrades", vocab)] == ["unlocks"]
+
+
+def test_an_unlocked_part_or_mode_names_no_target():
+    vocab = Vocabulary([("Unity", "unity"), ("Singularity", "singularity"), ("Spark Mastery", "sm")])
+    assert resolve("Unlocks Auto Unity", vocab) == []
+    assert resolve("Unlocks Spark Mastery Factor for Singularity", vocab) == []
+
+
+def test_what_an_unlocked_effect_acts_on_is_still_a_target():
+    vocab = Vocabulary([("Singularity Mult", "singularity-mult"), ("generators", "gens")])
+    refs = resolve("Unlocks the Singularity Mult effect on the base of all generators", vocab)
+    assert [(r.target_id, r.rel) for r in refs] == [("gens", "boosts")]
+
+
+def test_a_bracketed_gloss_is_not_a_second_target():
+    vocab = Vocabulary([("Attacks", "attacks"), ("Damage Mult", "damage-mult"), ("Plague", "plague")])
+    assert [r.target_id for r in resolve("A Boost to (Attacks) Damage Mult", vocab)] == ["damage-mult"]
+    assert [r.target_id for r in resolve("Relic 5 effect (see Plague)", vocab)] == ["relic-5"]
+
+
+def test_a_bracketed_name_is_a_target_when_nothing_outside_is_named():
+    vocab = Vocabulary([("Plague", "plague")])
+    assert [r.target_id for r in resolve("x2 (Plague)", vocab)] == ["plague"]
+
+
 def test_with_terms_returns_a_new_vocabulary_over_the_union():
     base = Vocabulary([("Luck", "luck")])
     extended = base.with_terms([("The Devil", "tarot-the-devil")])
@@ -552,9 +634,36 @@ def test_an_unlisted_template_is_still_decoration():
     assert plain_text("Gold {{Icon|gold}} gain") == "Gold gain"
 
 
-def test_a_line_break_becomes_a_space_not_nothing():
+def test_a_line_break_becomes_a_clause_separator_in_prose_and_a_space_in_a_label():
     # A <br/> is a sentence boundary. Stripped to nothing it joins the last word
     # of one sentence to the first word of the next.
-    assert plain_text("Unlock Tab<br/>SMS Factor is 0") == "Unlock Tab SMS Factor is 0"
-    assert plain_text("a<br>b") == "a b"
-    assert plain_text("a<BR />b") == "a b"
+    assert plain_text("Unlock Tab<br/>SMS Factor is 0") == "Unlock Tab / SMS Factor is 0"
+    assert plain_text("a<br>b") == "a / b"
+    assert plain_text("a<BR />b") == "a / b"
+    assert label_text("a<br>b") == "a b"
+
+
+def test_a_line_break_ends_an_unlock_clause():
+    # "Unlock Milestones Tab<br />SMS Factor is locked at 0" is two statements;
+    # read as one, the unlock rule swallowed the second.
+    vocab = Vocabulary([("SMS Factor", "sms-factor")])
+    text = plain_text("Unlock Milestones Tab<br />SMS Factor is locked at 0")
+    assert [(r.target_id, r.rel) for r in resolve(text, vocab)] == [("sms-factor", "boosts")]
+
+
+def test_a_slash_ends_an_unlocked_object():
+    vocab = Vocabulary([("Stars", "stars"), ("Luck", "luck")])
+    refs = resolve("Unlocks Stars / Boosts Luck", vocab)
+    assert [(r.target_id, r.rel) for r in refs] == [("stars", "unlocks"), ("luck", "boosts")]
+
+
+def test_a_slash_starts_a_new_subject():
+    vocab = Vocabulary(
+        [("Gold", "gold"), ("Eternities", "eternities"), ("DP", "dilation-points")]
+    )
+    refs = resolve("Doubles Gold / Eternities boost DP gain", vocab)
+    assert [(r.target_id, r.is_input) for r in refs] == [
+        ("gold", False),
+        ("eternities", True),
+        ("dilation-points", False),
+    ]

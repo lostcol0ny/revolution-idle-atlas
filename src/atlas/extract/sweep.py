@@ -424,12 +424,11 @@ def _build(
                 Edge(
                     from_=origin,
                     to=target,
-                    # Always `boosts`. The sweep's job is finding that a
-                    # relationship exists; deciding it is really an unlock is
-                    # curation, and guessing from prose is how a wrong edge gets
-                    # made. `op` is left unset for the same reason — the effect
-                    # carries it, the edge does not claim it.
-                    rel=Rel.BOOSTS,
+                    # `boosts`, or `unlocks` for the one shape prose cannot mean
+                    # otherwise ("Unlocks Singularity"; see refs.resolve). `op`
+                    # is left unset — the effect carries it, the edge does not
+                    # claim it.
+                    rel=reference.rel,
                     targets_effect=reference.targets_effect,
                     source=f"wiki:{entry.page}",
                     # Prose matching is weaker evidence than a structural table

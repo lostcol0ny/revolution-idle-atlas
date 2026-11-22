@@ -266,12 +266,13 @@ def _fixture() -> str:
 
 
 def test_a_vocabulary_hit_in_an_element_upgrade_becomes_an_uncertain_edge():
-    # "improves Quality donut" appears in fire-node-4's upgrade effect. "Quality"
-    # is the surface form; this test checks that the vocabulary path stamps
-    # confidence: uncertain rather than the structural baseline of provisional.
-    result = parse(_fixture(), Vocabulary([("Quality", "quality")]))
-    edges = [e for e in result.edges if e.to == "quality"]
-    assert edges, "the fixture's upgrade text must name Quality for this test to bite"
+    # "Fire adds base to Refine Tree Node 60" is fire-node-6's upgrade effect.
+    # "base" is the surface form; this test checks that the vocabulary path
+    # stamps confidence: uncertain rather than the structural baseline of
+    # provisional.
+    result = parse(_fixture(), Vocabulary([("base", "element-base")]))
+    edges = [e for e in result.edges if e.to == "element-base"]
+    assert edges, "the fixture's upgrade text must name base for this test to bite"
     assert all(e.confidence is EdgeConfidence.UNCERTAIN for e in edges)
 
 

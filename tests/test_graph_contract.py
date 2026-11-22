@@ -276,9 +276,11 @@ def test_singularity_mult_is_not_the_singularity_count(graph: dict):
         assert (source, "singularity") not in boosts, source
 
     # And one that names both, to show the split is per-mention rather than a
-    # blanket rewrite of everything pointing at the count.
-    assert ("singularity-milestone-event-horizon-tax", "singularity-mult") in boosts
-    assert ("singularity-milestone-event-horizon-tax", "singularity") in boosts
+    # blanket rewrite of everything pointing at the count: "Singularity Count
+    # acts as a factor for the next Singularity Mult" reads the count and
+    # raises the mult.
+    assert ("singularity-milestone-loop-feeds-loop", "singularity-mult") in boosts
+    assert ("singularity", "singularity-milestone-loop-feeds-loop") in boosts
 
 
 def test_a_numbered_row_got_a_readable_name(graph: dict):
@@ -333,13 +335,10 @@ def test_every_swept_edge_is_uncertain(graph: dict):
         if e["from"].startswith("tarot-challenge-") and e["to"] in cards
     }
 
-    # 251: the 239 `boosts` the Tarot challenges read out of their Penalty and
-    # Completion Requirement cells are gone from the old 490, since neither is a
-    # reward. Plain threshold goals return as `requires` into the challenge, but
-    # none of those starts under a swept prefix: the two that did ("Destroy a
-    # Level 20 Black Gem", "...while the next expected Zodiac Level is 67+") are
-    # action goals, kept as text only.
-    assert len(swept) == 251, f"expected 251 swept edges, got {len(swept)}"
+    # 34: of the 251 the sweep makes, the audit of the generated edges
+    # restated most at `documented` or replaced them; what is left is what no
+    # sentence settles.
+    assert len(swept) == 34, f"expected 34 swept edges, got {len(swept)}"
     shipped = {key(e): e for e in graph["edges"]}
     for edge in swept:
         assert edge in shipped, f"{edge} never reached the artifact"
@@ -347,24 +346,24 @@ def test_every_swept_edge_is_uncertain(graph: dict):
 
 
 def test_tarot_challenges_require_their_goals_and_boost_their_cards(graph: dict):
-    # The swept goals are prose read through a column heading, so they ship as
-    # `uncertain`; only plain thresholds ("Attack Level 3250") make one. The
-    # reward is stated once in the page's prose and lands on each challenge's
-    # own card as `documented`.
+    # The swept goals are prose read through a column heading, so the reader
+    # emits them as `uncertain`; only plain thresholds ("Attack Level 3250")
+    # make one. A goal the cell states outright is restated at `documented` in
+    # the curated file, so the reader's confidence is checked in derived.yaml.
+    # The reward is stated once in the page's prose and lands on each
+    # challenge's own card as `documented`.
     derived = _load_yaml("derived.yaml")
-    curated = _load_yaml("relationships.yaml")
-    curated_keys = {(e["from"], e["to"], e["rel"]) for e in curated.get("edges") or []}
     shipped = {(e["from"], e["to"], e["rel"]): e for e in graph["edges"]}
 
     requires = [
-        (e["from"], e["to"], e["rel"])
+        e
         for e in derived["edges"]
         if e["rel"] == "requires" and e["to"].startswith("tarot-challenge-")
     ]
     assert len(requires) == 45, f"expected 45 goal edges, got {len(requires)}"
     for edge in requires:
-        assert edge not in curated_keys, edge
-        assert shipped[edge].get("confidence") == "uncertain", edge
+        assert edge.get("confidence") == "uncertain", edge
+        assert (edge["from"], edge["to"], edge["rel"]) in shipped, edge
 
     rewards = [
         e
@@ -525,11 +524,9 @@ def test_singularity_milestones_land_in_the_table_they_came_from(graph: dict):
     # What is left on the layer itself has to be layer-level, or the split only
     # moved some of the content.
     direct = {n["id"] for n in graph["nodes"] if n["system"] == "singularity"}
-    # atom-penalty stands for every Atom penalty threshold and
-    # singularity-local-speed for the whole layer's speed, so both belong to the
-    # layer rather than to any one milestone table.
+    # singularity-local-speed stands for the whole layer's speed, so it belongs
+    # to the layer rather than to any one milestone table.
     assert direct == {
-        "atom-penalty",
         "atoms-gain",
         "singular-zodiacs",
         "singularity",
