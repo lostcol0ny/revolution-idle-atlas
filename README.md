@@ -121,8 +121,10 @@ same ids to English text. It writes two files:
   `<PREFIX>_DESC_<n>` keys (relics are `UNI_RELIC`), as `{index, name, desc}`
   lists. A missing half is null, so a gap is visible.
 
-**No game numbers are in either file.** Descriptions are templates: the game
-fills `{0}` at runtime, and its formulas are compiled code, not data.
+**The text is not value-free, and not a complete source of values either.**
+Many descriptions are templates whose numbers the game fills in at runtime
+(`{0}`), and its formulas are compiled code, not data. Others contain literal
+numbers, such as achievement thresholds.
 
 **`resources.assets` is never read.** Its TextAssets include developer test
 saves, some named after real players.

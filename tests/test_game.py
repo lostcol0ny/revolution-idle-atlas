@@ -1,4 +1,5 @@
 import json
+from pathlib import Path
 
 import pytest
 import yaml
@@ -9,6 +10,7 @@ from atlas.game import (
     CATALOG_REL_PATH,
     DEFAULT_INSTALL,
     ENGLISH_BUNDLE,
+    SHARED_BUNDLE,
     STRINGS_REL_PATH,
     GameError,
     find_families,
@@ -124,6 +126,16 @@ def test_read_buildid_from_steam_manifest(tmp_path):
     assert read_buildid(install) == "123"
 
 
+def test_read_buildid_from_relative_install(tmp_path, monkeypatch):
+    install = tmp_path / "steamapps" / "common" / "Revolution Idle"
+    install.mkdir(parents=True)
+    (tmp_path / "steamapps" / "appmanifest_2763740.acf").write_text(
+        '"buildid"\t\t"456"\n', encoding="utf-8"
+    )
+    monkeypatch.chdir(install)
+    assert read_buildid(Path(".")) == "456"
+
+
 def test_read_install_rejects_missing_install(tmp_path):
     with pytest.raises(GameError, match="game install not found"):
         read_install(tmp_path / "nope")
@@ -138,6 +150,21 @@ def test_cli_reports_missing_install(tmp_path, capsys):
     code = main(["game", "--root", str(tmp_path), "--install", str(tmp_path / "x")])
     assert code == 1
     assert "game install not found" in capsys.readouterr().err
+    assert not (tmp_path / "data").exists()
+
+
+def test_cli_reports_corrupt_bundle(tmp_path, capsys):
+    pytest.importorskip("UnityPy")
+    install = tmp_path / "install"
+    bundle_dir = install / BUNDLE_DIR
+    bundle_dir.mkdir(parents=True)
+    # A UnityFS signature with nothing valid after it: UnityPy recognises the
+    # file as a bundle and then fails inside its own parser.
+    for name in (SHARED_BUNDLE, ENGLISH_BUNDLE):
+        (bundle_dir / name).write_bytes(b"UnityFS\x00" + b"\x00" * 200)
+    code = main(["game", "--root", str(tmp_path), "--install", str(install)])
+    assert code == 1
+    assert "game failed: could not read localization bundles" in capsys.readouterr().err
     assert not (tmp_path / "data").exists()
 
 
