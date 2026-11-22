@@ -12,6 +12,15 @@ from atlas.extract.emit import to_yaml
 from atlas.extract.manifest import load_manifest
 from atlas.extract.refs import SurfaceFormCollision
 from atlas.extract.vocab import build_vocabulary
+from atlas.game import (
+    CATALOG_REL_PATH,
+    DEFAULT_INSTALL,
+    STRINGS_REL_PATH,
+    GameError,
+    find_families,
+    read_install,
+    write_outputs,
+)
 from atlas.loader import SchemaError, load_dataset
 from atlas.merge import merge
 from atlas.models import Dataset
@@ -211,6 +220,24 @@ def _scrape(root: Path) -> int:
     return 0
 
 
+def _game(root: Path, install: Path) -> int:
+    try:
+        dump = read_install(install)
+    except GameError as exc:
+        print(f"game failed: {exc}", file=sys.stderr)
+        return 1
+    families = find_families(dump["strings"])
+    write_outputs(root, dump, families)
+    print(
+        f"ok: {len(dump['strings'])} strings (buildid {dump['buildid']}, "
+        f"Unity {dump['unity']}) to {STRINGS_REL_PATH.as_posix()}"
+    )
+    print(f"ok: {len(families)} families to {CATALOG_REL_PATH.as_posix()}")
+    for prefix, entries in families.items():
+        print(f"  {prefix}: {len(entries)}")
+    return 0
+
+
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(prog="atlas")
     sub = parser.add_subparsers(dest="command", required=True)
@@ -229,6 +256,12 @@ def main(argv: list[str] | None = None) -> int:
     scrape = sub.add_parser("scrape", help="fetch raw wikitext into data/raw/")
     scrape.add_argument("--root", type=Path, default=Path.cwd())
 
+    game = sub.add_parser(
+        "game", help="read English strings from a local game install into data/game/"
+    )
+    game.add_argument("--root", type=Path, default=Path.cwd())
+    game.add_argument("--install", type=Path, default=DEFAULT_INSTALL)
+
     args = parser.parse_args(argv)
     if args.command == "build":
         return _build(args.root, args.check)
@@ -236,6 +269,8 @@ def main(argv: list[str] | None = None) -> int:
         return _extract(args.root)
     if args.command == "scrape":
         return _scrape(args.root)
+    if args.command == "game":
+        return _game(args.root, args.install)
     return 1
 
 
