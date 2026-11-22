@@ -1,7 +1,14 @@
 import re
 from pathlib import Path
 
-from atlas.extract.refs import Vocabulary, derive_op, is_uncertain, plain_text, resolve
+from atlas.extract.refs import (
+    Vocabulary,
+    derive_op,
+    is_uncertain,
+    label_text,
+    plain_text,
+    resolve,
+)
 from atlas.extract.result import ExtractResult
 from atlas.models import Edge, EdgeConfidence, Effect, Node
 
@@ -47,7 +54,7 @@ def parse(raw: str, vocabulary: Vocabulary = Vocabulary.EMPTY) -> ExtractResult:
         result.nodes.append(
             Node(
                 id=node_id,
-                name=plain_text(name),
+                name=label_text(name),
                 system=SYSTEM,
                 kind="relic",
                 wiki=PAGE,

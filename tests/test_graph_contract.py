@@ -325,7 +325,9 @@ def test_every_swept_edge_is_uncertain(graph: dict):
     swept -= {key(e) for e in curated.get("edges") or []}
     swept -= {key(s) for s in curated.get("suppress") or []}
 
-    assert len(swept) == 480, f"expected 480 swept edges, got {len(swept)}"
+    # 490: the Particles vocabulary added 11 swept edges over the old 480, and
+    # The Sun challenge's edge to the Sparks group is suppressed as an input.
+    assert len(swept) == 490, f"expected 490 swept edges, got {len(swept)}"
     shipped = {key(e): e for e in graph["edges"]}
     for edge in swept:
         assert edge in shipped, f"{edge} never reached the artifact"
@@ -479,11 +481,16 @@ def test_singularity_milestones_land_in_the_table_they_came_from(graph: dict):
     # What is left on the layer itself has to be layer-level, or the split only
     # moved some of the content.
     direct = {n["id"] for n in graph["nodes"] if n["system"] == "singularity"}
+    # atom-penalty stands for every Atom penalty threshold and
+    # singularity-local-speed for the whole layer's speed, so both belong to the
+    # layer rather than to any one milestone table.
     assert direct == {
+        "atom-penalty",
         "atoms-gain",
         "singular-zodiacs",
         "singularity",
         "singularity-effects-tab",
+        "singularity-local-speed",
         "singularity-mult",
     }
 
@@ -782,6 +789,7 @@ def test_game_file_names_and_describes_its_nodes(graph: dict):
     # reach the artifact under the game's own name, which is how the wiki's
     # "Magestic Halberd" becomes the game's "Majestic Halberd".
     game = _load_yaml("game.yaml")
+    curated = {n["id"]: n for n in _load_yaml("relationships.yaml")["nodes"]}
     by_id = {n["id"]: n for n in graph["nodes"]}
     relics = [n for n in game["nodes"] if n["id"].startswith("relic-")]
     assert len(relics) == 75
@@ -789,5 +797,239 @@ def test_game_file_names_and_describes_its_nodes(graph: dict):
         node = by_id[entry["id"]]
         number = entry["id"].removeprefix("relic-")
         assert node["name"] == f"Relic {number} ({entry['name']})"
-        assert node["description"] == entry["description"]
+        # A curated description (relic-28 typesets its formula) still wins.
+        override = curated.get(entry["id"], {}).get("description")
+        assert node["description"] == (override or entry["description"])
     assert by_id["relic-20"]["name"] == "Relic 20 (Majestic Halberd)"
+
+
+# The source text of every derived node data/relationships.yaml restates to
+# typeset its formulas. A curated `effects` list replaces the derived one
+# wholesale and a curated `description` replaces the game's, so an edit to the
+# wiki or the game would be masked by the stale curated copy. Pinning the source
+# turns that edit into a failure naming the node to re-curate.
+TYPESET_SOURCES: dict[str, dict] = {
+    "infinity-challenge-7": {
+        "effects": [
+            {"text": "All mults are mult. by (time in Infinity)^0.2"},
+        ],
+        "name": "Infinity Challenge 7 (Quadratic Division)",
+        "description": "All Multipliers are divided by (time spent in Infinity)^2",
+    },
+    "refine-node-10": {
+        "effects": [
+            {"text": "PP gain is powered to ^(1 + 0.1*lvl) (+0.1, maxes at ^2)"},
+        ],
+    },
+    "refine-node-16": {
+        "effects": [
+            {"text": "Merge Level Bonus Eff. x(1.0 + 0.5*lvl) (maxes at x50)"},
+        ],
+    },
+    "refine-node-24": {
+        "effects": [
+            {"text": "Relic 23 is x(1 + 0.1*lvl) stronger (maxes at x3)"},
+        ],
+    },
+    "refine-node-29": {
+        "effects": [
+            {
+                "text": 'Relic 23 is stronger based on your Axe Level: x(1 + 0.01*lvl)',
+            },
+        ],
+    },
+    "refine-node-36": {
+        "effects": [
+            {"text": "RN27 effect: x(1 - 0.01*lvl) (maxes at x0.8)"},
+        ],
+    },
+    "refine-node-38": {
+        "effects": [
+            {
+                "text": 'You get more refine points based on your knuckles level: RfP^(1.01*lvl)',
+            },
+        ],
+    },
+    "refine-node-40": {
+        "effects": [
+            {
+                "text": (
+                    "Magnet upgrades for VP gain and PP gain mults are "
+                    "powered to ^(1.1*lvl) (maxes at ^3)"
+                ),
+            },
+        ],
+    },
+    "refine-node-50": {
+        "effects": [
+            {"text": "RfP gain x(2^lvl) (maxes at x1,024)"},
+        ],
+    },
+    "refine-node-111": {
+        "effects": [
+            {
+                "text": 'Divides the ERP needed to craft an Endoplasmic Reticulum by x1.5^level',
+            },
+        ],
+    },
+    "refine-node-178": {
+        "effects": [
+            {"text": "Mastery Gain is multiplied by xX (1 + pent / 10)"},
+        ],
+    },
+    "refine-node-188": {
+        "effects": [
+            {
+                "text": (
+                    "Attack exponent is multiplied by 1 + 0.1 * "
+                    "Log10(mastery) (softcap at x10)"
+                ),
+            },
+        ],
+    },
+    "singularity-milestone-one-hundred": {
+        "effects": [
+            {
+                "text": (
+                    "Multiplies the base of all particle generators and "
+                    "multipliers by 1 + singularity / 100"
+                ),
+            },
+        ],
+    },
+    "relic-28": {
+        "effects": [
+            {
+                "text": "You get more merge exp based on X^[mineral level]",
+                "per_level": "+0.001 to X",
+                "op": "add",
+            },
+        ],
+        "name": "Two Souls",
+        "description": "Gain more merge EXP based on X^[mineral level], X =",
+    },
+    "tarot-challenge-nine-of-swords": {
+        "effects": [
+            {
+                "text": (
+                    "Resets Attack levels and mults. Only attack mult from "
+                    "score is effective, and it is ^(1/1e10). Game Speed is "
+                    "reduced to double Log10."
+                ),
+            },
+            {"text": "Attack Level 850"},
+        ],
+    },
+    "tarot-challenge-seven-of-pentacles": {
+        "effects": [
+            {
+                "text": (
+                    "Performs Refine Prestige and resets Gold. Blue, Green, "
+                    "gems, along with Relic 14 and 31 are all useless. Gold "
+                    "Gain is ^(1/1,000,000,000) and game speed is "
+                    "logarithmed."
+                ),
+            },
+            {"text": "105+ Max Mineral Level"},
+        ],
+    },
+    "tarot-challenge-three-of-cups": {
+        "effects": [
+            {"text": "Performs Unity Reset. Luck is ^(1/999)"},
+            {"text": "Unite with an Immortal+ rarity Zodiac"},
+        ],
+    },
+    "tarot-challenge-the-high-priestess": {
+        "effects": [
+            {
+                "text": (
+                    "Performs Refine Prestige. Red Gem, Relic 22, and Polish "
+                    "Sword are useless. You can no longer obtain magnets or "
+                    "merge levels. RN1's effect is ^(1/10000) (pre-skill)."
+                ),
+            },
+            {"text": "200+ Max Mineral Level"},
+        ],
+    },
+    "tarot-challenge-the-sun": {
+        "effects": [
+            {
+                "text": (
+                    "You need Refine Node 195 to start the challenge. You can"
+                    " spawn special minerals in this challenge. Every time "
+                    "you use The Sun card, you will get random special "
+                    "minerals in colors corresponding to your currently "
+                    "equipped sparks. The amount of minerals is amount of "
+                    "your currently equipped sparks. The Sun card cooldown is"
+                    " 5 seconds but it decrease only when you spawn a spark "
+                    "by 1 second. Your mastery gain is based on amount of "
+                    "merged special minerals during the challenge with the "
+                    "formula (Red / (Red + 5)) x (Orange / (Orange + 5)) x "
+                    "(Yellow / (Yellow + 5)) ... etc. x Base. Singularity "
+                    "will reset the challenge"
+                ),
+            },
+            {"text": "Spawn a spark with 1e9 mastery to complete the challenge"},
+        ],
+    },
+    "tarot-challenge-two-of-swords": {
+        "effects": [
+            {
+                "text": (
+                    "Game Speed, Attack, and Damage mults are put to double "
+                    "Log10 of their values. You cannot gain them during the "
+                    "challenge. (Double Log10 means Log10(Log10(X)).)"
+                ),
+            },
+            {"text": "Attack Level 400"},
+        ],
+    },
+    "tarot-challenge-king-of-pentacles": {
+        "effects": [
+            {
+                "text": (
+                    "Requires 1.8e308 Atoms to enter. Performs Refine "
+                    "Prestige. Red Gem is useless. You cant get magnets nor "
+                    "merge XP. RN1's effect is capped at Log10(atoms)+1. "
+                    "Local Mineral Speed is capped at 100x. The First Mineral"
+                    " upgrades effect is capped at the Square Root of your "
+                    "Singularity mult rounded down. Relic 22 and Polish Sword"
+                    " are useless. Entering Performs a Singularity and resets"
+                    " atoms to 1. Adds a Dynamic Penalty that heavily nerfs "
+                    "Atom Gain, but becomes weaker based on your Max Mineral "
+                    "Level"
+                ),
+            },
+            {"text": "Perform a Singularity at 1e200+ VP"},
+        ],
+    },
+    "tarot-artifact-memory-crystal": {
+        "effects": [
+            {
+                "text": "Sword LOGPOW base",
+                "per_level": "0.09+0.01*level",
+            },
+        ],
+    },
+}
+
+
+def test_typeset_overlays_restate_the_current_source_text():
+    derived = {n["id"]: n for n in _load_yaml("derived.yaml")["nodes"]}
+    game = {n["id"]: n for n in _load_yaml("game.yaml")["nodes"]}
+    curated = {n["id"]: n for n in _load_yaml("relationships.yaml")["nodes"]}
+    for node_id, source in TYPESET_SOURCES.items():
+        assert derived[node_id]["effects"] == source["effects"], node_id
+        assert len(curated[node_id]["effects"]) == len(source["effects"]), node_id
+        if "description" in source:
+            assert game[node_id]["name"] == source["name"], node_id
+            assert game[node_id]["description"] == source["description"], node_id
+
+
+def test_a_note_quoting_a_typeset_effect_is_typeset_too(graph: dict):
+    node = next(n for n in graph["nodes"] if n["id"] == "refine-node-10")
+    effect = node["effects"][0]["text"]
+    assert "$" in effect
+    notes = [e["note"] for e in graph["edges"] if e["from"] == "refine-node-10" and "note" in e]
+    assert notes == [effect]
+

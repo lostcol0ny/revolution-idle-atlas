@@ -7,6 +7,7 @@ from atlas.extract.refs import (
     SUITS,
     SurfaceFormCollision,
     Vocabulary,
+    label_text,
     plain_text,
     resolve,
     slugify,
@@ -138,7 +139,7 @@ def _card_terms(raw: str) -> list[tuple[str, str]]:
     """
     terms: list[tuple[str, str]] = []
     for match in _TEMPLATE_RE.finditer(raw):
-        name = plain_text(template_fields("|" + match.group(2)).get("card_name", ""))
+        name = label_text(template_fields("|" + match.group(2)).get("card_name", ""))
         if name:
             terms.append((name, f"{SYSTEM}-{slugify(name)}"))
     return terms
@@ -196,7 +197,7 @@ def parse(raw: str, vocabulary: Vocabulary = Vocabulary.EMPTY) -> ExtractResult:
     result = ExtractResult(warnings=warnings)
     for match in _TEMPLATE_RE.finditer(raw):
         fields = template_fields("|" + match.group(2))
-        name = plain_text(fields.get("card_name", ""))
+        name = label_text(fields.get("card_name", ""))
         if not name:
             continue
 

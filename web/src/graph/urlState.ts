@@ -1,11 +1,17 @@
 export const DEPTHS = [1, 2, 3] as const;
 export type Depth = (typeof DEPTHS)[number];
-export const DEFAULT_DEPTH: Depth = 2;
 
 export interface UrlState {
   nodeId: string | null;
-  depth: Depth;
+  systemId: string | null;
+  /** `null` means auto: the graph view picks a depth for the node. */
+  depth: Depth | null;
 }
+
+export type View =
+  | { kind: 'item'; nodeId: string }
+  | { kind: 'system'; systemId: string }
+  | { kind: 'overview' };
 
 function isDepth(value: number): value is Depth {
   return (DEPTHS as readonly number[]).includes(value);
@@ -13,21 +19,29 @@ function isDepth(value: number): value is Depth {
 
 export function parseUrlState(search: string): UrlState {
   const params = new URLSearchParams(search);
-
-  const rawNode = params.get('node');
-  const nodeId = rawNode !== null && rawNode.length > 0 ? rawNode : null;
-
-  const rawDepth = Number(params.get('depth'));
-  const depth = isDepth(rawDepth) ? rawDepth : DEFAULT_DEPTH;
-
-  return { nodeId, depth };
+  const node = params.get('node');
+  const system = params.get('system');
+  // A missing param reads as 0, which is not a depth, so it lands on auto too.
+  const depth = Number(params.get('depth'));
+  return {
+    nodeId: node !== null && node.length > 0 ? node : null,
+    systemId: system !== null && system.length > 0 ? system : null,
+    depth: isDepth(depth) ? depth : null,
+  };
 }
 
 export function toSearch(state: UrlState): string {
   const params = new URLSearchParams();
-  if (state.nodeId !== null) {
-    params.set('node', state.nodeId);
-  }
-  params.set('depth', String(state.depth));
-  return `?${params.toString()}`;
+  if (state.nodeId !== null) params.set('node', state.nodeId);
+  if (state.systemId !== null) params.set('system', state.systemId);
+  if (state.depth !== null) params.set('depth', String(state.depth));
+  const query = params.toString();
+  return query.length > 0 ? `?${query}` : '';
+}
+
+/** A node wins over a system, which wins over the overview. */
+export function viewOf(state: UrlState): View {
+  if (state.nodeId !== null) return { kind: 'item', nodeId: state.nodeId };
+  if (state.systemId !== null) return { kind: 'system', systemId: state.systemId };
+  return { kind: 'overview' };
 }

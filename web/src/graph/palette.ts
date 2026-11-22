@@ -65,6 +65,10 @@ export const SYSTEM_COLOURS: Record<KnownSystem, string> = {
   // reads as its parent's shade rather than competing with it.
   houses: '#574235',
   particles: '#5a3fa0',
+  // Particles' two tabs, the Tarot convention: the first child is the darker
+  // parent shade, the second rotates toward magenta instead of darkening again.
+  'particles-grades': '#45307d',
+  'epsilon-tree': '#6a3590',
 };
 
 const KIND_BADGES: Record<Kind, string> = {
@@ -89,6 +93,50 @@ export function systemColour(system: string): string {
 
 export function kindBadge(kind: Kind): string {
   return KIND_BADGES[kind];
+}
+
+// One glyph per layer and per tab with an identity of its own. Sub-tabs named
+// `<parent>-<suffix>` (`tarot-challenges`, `singularity-milestones-atoms`) are
+// left out on purpose: `systemIcon` walks up the id, so they read as their
+// parent. The glyph sits next to a visible system name, never in place of one.
+const SYSTEM_ICONS: Partial<Record<KnownSystem, string>> = {
+  revolution: '🔄',
+  infinity: '♾️',
+  generators: '⚙️',
+  stars: '⭐',
+  eternity: '⏳',
+  animals: '🐾',
+  laboratory: '🧪',
+  supernova: '💥',
+  dilation: '🌀',
+  unity: '☯️',
+  tarot: '🃏',
+  relics: '🏺',
+  minerals: '💎',
+  // Not `refine`-prefixed, so the id walk cannot find Minerals for it.
+  'refine-tree': '💎',
+  plague: '☣️',
+  singularity: '🕳️',
+  particles: '⚛️',
+  // Not `particles`-prefixed, so the id walk cannot find Particles for it.
+  'epsilon-tree': '⚛️',
+  attacks: '⚔️',
+  astrology: '🔮',
+  trials: '🏆',
+  elements: '🔥',
+  houses: '🏠',
+};
+
+const UNKNOWN_SYSTEM_ICON = '◆';
+
+export function systemIcon(system: string): string {
+  // Trimming one `-segment` at a time reaches the nearest ancestor with a glyph
+  // for every `<parent>-<suffix>` id, declared or not.
+  for (let id = system; id.length > 0; id = id.slice(0, Math.max(0, id.lastIndexOf('-')))) {
+    const icon = SYSTEM_ICONS[id as KnownSystem];
+    if (icon !== undefined) return icon;
+  }
+  return UNKNOWN_SYSTEM_ICON;
 }
 
 // `rel` gets two channels — line style and lightness. Style separates the

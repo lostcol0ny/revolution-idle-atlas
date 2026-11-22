@@ -1,0 +1,344 @@
+/* Cards switch on the table's own width: the sidebar takes a varying share of the screen. */
+.stable {
+  container-type: inline-size;
+  padding: 16px 20px 32px;
+  color: var(--fg);
+}
+
+.stable__header {
+  border-left: 4px solid;
+  padding: 4px 0 4px 12px;
+  margin-bottom: 16px;
+}
+
+.stable__title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0 0 4px;
+  font-size: 1.6rem;
+}
+
+.stable__muted {
+  color: var(--muted);
+  font-size: 0.8667rem;
+}
+
+.stable__header > .stable__muted {
+  margin: 0;
+}
+
+.stable__chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  list-style: none;
+  margin: 10px 0 0;
+  padding: 0;
+}
+
+.stable__chip {
+  padding: 4px 10px;
+  border: 1px solid var(--border);
+  border-left-width: 4px;
+  border-radius: 4px;
+  background: var(--surface);
+  color: var(--fg);
+  font: inherit;
+  font-size: 0.8667rem;
+  cursor: pointer;
+}
+
+.stable__chip:hover {
+  background: var(--surface-2);
+}
+
+.stable__toolbar {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px 12px;
+  margin-bottom: 6px;
+}
+
+.stable__label {
+  font-size: 0.8667rem;
+  font-weight: 600;
+}
+
+.stable__key {
+  margin: 0 0 8px;
+}
+
+.stable__filter {
+  flex: 0 1 360px;
+  min-width: 0;
+  padding: 6px 8px;
+  border: 1px solid var(--control-border);
+  border-radius: 4px;
+  background: var(--surface);
+  color: var(--fg);
+  font: inherit;
+  /* iOS zooms into inputs under 16px; the 15px root rules out max(1rem, 1em). */
+  font-size: max(16px, 1em);
+}
+
+.stable__table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.8667rem;
+  line-height: 1.4;
+}
+
+.stable__table thead th {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background: var(--surface-2);
+  text-align: left;
+  white-space: nowrap;
+}
+
+.stable__table th,
+.stable__table td {
+  padding: 6px 8px;
+  border-bottom: 1px solid var(--border);
+  vertical-align: top;
+  text-align: left;
+}
+
+.stable__table tbody th {
+  font-weight: normal;
+  min-width: 140px;
+}
+
+.stable__table tbody tr:nth-child(even) {
+  background: var(--surface);
+}
+
+/* Description and effects carry the prose; the link columns shrink first. */
+.stable__table td:nth-child(3),
+.stable__table td:nth-child(4) {
+  min-width: 180px;
+}
+
+/* The button fills its header cell so the whole cell is the target. */
+.stable__table thead th:has(.stable__sort) {
+  padding: 0;
+}
+
+.stable__sort {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  inline-size: 100%;
+  min-block-size: 24px;
+  padding: 6px 8px;
+  border: none;
+  background: none;
+  color: inherit;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.stable__arrow {
+  color: var(--muted);
+  font-size: 0.6667rem;
+}
+
+.stable__link,
+.stable__more {
+  padding: 0;
+  border: none;
+  background: none;
+  color: var(--accent);
+  font: inherit;
+  text-align: left;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.stable__name {
+  font-weight: 600;
+}
+
+/* Two channels besides colour: a dashed underline and a question mark, so the
+   distinction survives a colour-blind reader and a monochrome print. */
+.stable__link--uncertain {
+  text-decoration-style: dashed;
+  text-decoration-color: var(--edge-uncertain);
+}
+
+.stable__uncertain {
+  margin-left: 1px;
+  color: var(--edge-uncertain);
+  font-size: 0.7333rem;
+  font-weight: 700;
+  vertical-align: super;
+}
+
+.stable__meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  margin-top: 2px;
+}
+
+.stable__sub {
+  font-size: 0.8rem;
+}
+
+.stable__badge {
+  padding: 0 5px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: var(--muted);
+  font-size: 0.7333rem;
+}
+
+.stable__badge--provisional,
+.stable__badge--unknown {
+  border-color: var(--edge-uncertain);
+  color: var(--fg);
+}
+
+.stable__effects,
+.stable__linklist {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.stable__effects li + li {
+  margin-top: 2px;
+}
+
+.stable__per-level {
+  color: var(--muted);
+  font-size: 0.8rem;
+}
+
+.stable__linklist {
+  display: inline;
+}
+
+.stable__linklist li {
+  display: inline;
+}
+
+.stable__linklist li + li::before {
+  content: ', ';
+  color: var(--muted);
+}
+
+.stable__links > div + div {
+  margin-top: 4px;
+}
+
+.stable__rel {
+  color: var(--muted);
+  font-size: 0.8rem;
+}
+
+.stable__more {
+  min-block-size: 24px;
+  margin-top: 4px;
+  font-size: 0.8rem;
+}
+
+@media (pointer: coarse) {
+  .stable__sort,
+  .stable__more {
+    min-block-size: 44px;
+  }
+}
+
+.stable__chip:focus-visible,
+.stable__filter:focus-visible,
+.stable__sort:focus-visible,
+.stable__link:focus-visible,
+.stable__more:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* The button fills its cell, so an outside ring would be cut off by the cell edges. */
+.stable__sort:focus-visible {
+  outline-offset: -2px;
+}
+
+.stable__sr {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+/* Six columns do not fit a phone. Each row becomes a card, labelled by the
+   header it would have sat under, and the header row shrinks to a strip of
+   its sort buttons. */
+@media (max-width: 760px) {
+  .stable {
+    padding: 12px;
+  }
+}
+
+/* The widest table (Unity) needs 51.9rem at the default font and 44.6rem at
+   20px; containment makes any overflow unscrollable, so switch with headroom. */
+@container (width < 55rem) {
+  .stable__table,
+  .stable__table thead,
+  .stable__table tbody,
+  .stable__table tr,
+  .stable__table th,
+  .stable__table td {
+    display: block;
+  }
+
+  .stable__table thead tr {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 8px;
+  }
+
+  .stable__table thead th {
+    position: static;
+    border-bottom: none;
+  }
+
+  /* Visually hidden, not display: none, so the explicit table roles keep a
+     header for every cell. */
+  .stable__table thead .stable__unsortable {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+  }
+
+  .stable__table tbody tr {
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    margin-bottom: 8px;
+  }
+
+  .stable__table td,
+  .stable__table tbody th {
+    border-bottom: none;
+    min-width: 0;
+  }
+
+  .stable__table td::before {
+    content: attr(data-label);
+    display: block;
+    color: var(--muted);
+    font-size: 0.7333rem;
+    text-transform: uppercase;
+  }
+}

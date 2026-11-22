@@ -6,6 +6,7 @@ from atlas.extract.manifest import Manifest, RecordTemplateEntry, SweepEntry, Wi
 from atlas.extract.refs import (
     Vocabulary,
     derive_op,
+    label_text,
     normalise_space,
     plain_text,
     resolve,
@@ -136,7 +137,7 @@ def _caption(body: str) -> str:
     for line in body.split("\n"):
         stripped = line.strip()
         if stripped.startswith("|+"):
-            return normalise_space(plain_text(stripped[2:]))
+            return label_text(stripped[2:])
     return ""
 
 
@@ -233,7 +234,7 @@ def read_wikitable(raw: str, entry: WikitableEntry) -> list[SweptRecord]:
             continue
         for row in _aligned_rows(rows, len(headers)):
             name = normalise_space(
-                " ".join(plain_text(row[column_of[c]]) for c in entry.name_columns)
+                " ".join(label_text(row[column_of[c]]) for c in entry.name_columns)
             )
             effects = effect_texts([row[column_of[c]] for c in present])
             if not name or not effects:
@@ -303,7 +304,7 @@ def read_record_template(
     records: list[SweptRecord] = []
     for body in _instances(raw, entry.template):
         fields = template_fields(body)
-        name = plain_text(fields.get(entry.name_field.lower(), ""))
+        name = label_text(fields.get(entry.name_field.lower(), ""))
         effects = effect_texts(
             [fields[f.lower()] for f in entry.effect_fields if f.lower() in fields]
         )

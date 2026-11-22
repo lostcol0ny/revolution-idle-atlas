@@ -1,68 +1,89 @@
 import { describe, expect, it } from 'vitest';
-import { DEFAULT_DEPTH, parseUrlState, toSearch } from './urlState';
+import { parseUrlState, toSearch, viewOf, type UrlState } from './urlState';
+
+const EMPTY: UrlState = { nodeId: null, systemId: null, depth: null };
 
 describe('parseUrlState', () => {
-  it('reads a node and depth', () => {
-    expect(parseUrlState('?node=attack-power&depth=3')).toEqual({
+  it('reads a node, a system and a depth', () => {
+    expect(parseUrlState('?node=attack-power&system=unity&depth=3')).toEqual({
       nodeId: 'attack-power',
+      systemId: 'unity',
       depth: 3,
     });
   });
 
-  it('defaults depth when absent', () => {
-    expect(parseUrlState('?node=gold')).toEqual({
-      nodeId: 'gold',
-      depth: DEFAULT_DEPTH,
+  it('reads an absent depth as auto', () => {
+    expect(parseUrlState('?node=gold').depth).toBeNull();
+  });
+
+  it('reads an out-of-range or non-numeric depth as auto', () => {
+    expect(parseUrlState('?depth=99').depth).toBeNull();
+    expect(parseUrlState('?depth=0').depth).toBeNull();
+    expect(parseUrlState('?depth=').depth).toBeNull();
+    expect(parseUrlState('?depth=banana').depth).toBeNull();
+  });
+
+  it('reads empty values as unset', () => {
+    expect(parseUrlState('')).toEqual(EMPTY);
+    expect(parseUrlState('?node=&system=')).toEqual(EMPTY);
+  });
+
+  it('decodes percent-encoded ids', () => {
+    expect(parseUrlState('?node=refine%20node&system=tarot%2Dchallenges')).toMatchObject({
+      nodeId: 'refine node',
+      systemId: 'tarot-challenges',
     });
   });
 
-  it('defaults depth when out of range or not a number', () => {
-    expect(parseUrlState('?depth=99').depth).toBe(DEFAULT_DEPTH);
-    expect(parseUrlState('?depth=0').depth).toBe(DEFAULT_DEPTH);
-    expect(parseUrlState('?depth=banana').depth).toBe(DEFAULT_DEPTH);
-  });
-
-  it('returns a null node for an empty search string', () => {
-    expect(parseUrlState('')).toEqual({ nodeId: null, depth: DEFAULT_DEPTH });
-    expect(parseUrlState('?node=')).toEqual({ nodeId: null, depth: DEFAULT_DEPTH });
-  });
-
-  it('decodes a percent-encoded node id', () => {
-    expect(parseUrlState('?node=refine%20node').nodeId).toBe('refine node');
-  });
-});
-
-describe('toSearch', () => {
-  it('serialises node and depth', () => {
-    expect(toSearch({ nodeId: 'attack-power', depth: 2 })).toBe(
-      '?node=attack-power&depth=2',
-    );
-  });
-
-  it('omits the node when there is no selection', () => {
-    expect(toSearch({ nodeId: null, depth: 1 })).toBe('?depth=1');
-  });
-
-  it('round-trips', () => {
-    const state = { nodeId: 'relic-3', depth: 3 } as const;
-    expect(parseUrlState(toSearch(state))).toEqual(state);
-  });
-
-  it('round-trips an id containing characters the query string uses', () => {
-    // Every id in today's graph.json is kebab-case ASCII, but ids come from a
-    // hand-maintained YAML and nothing enforces that. Pin the property, not the
-    // current data.
-    const state = { nodeId: 'a b&c=d#e+f%g', depth: 2 } as const;
-    expect(parseUrlState(toSearch(state))).toEqual(state);
-  });
-});
-
-describe('parseUrlState with a repeated key', () => {
-  it('takes the first value', () => {
+  it('takes the first value of a repeated key', () => {
     // The app only ever writes these via toSearch, so a repeat can arrive only
     // from a hand-edited URL. First-wins is what URLSearchParams does; assert it
     // so a later rewrite cannot quietly make a trailing ?depth=999 the winner.
     expect(parseUrlState('?depth=2&depth=999').depth).toBe(2);
     expect(parseUrlState('?node=a&node=b').nodeId).toBe('a');
+  });
+});
+
+describe('toSearch', () => {
+  it('omits every unset param', () => {
+    expect(toSearch(EMPTY)).toBe('');
+    expect(toSearch({ ...EMPTY, systemId: 'unity' })).toBe('?system=unity');
+    expect(toSearch({ ...EMPTY, nodeId: 'gold' })).toBe('?node=gold');
+  });
+
+  it('writes an explicit depth and leaves auto out', () => {
+    expect(toSearch({ ...EMPTY, nodeId: 'gold', depth: 3 })).toBe('?node=gold&depth=3');
+    expect(toSearch({ ...EMPTY, nodeId: 'gold', depth: null })).not.toContain('depth');
+  });
+
+  it.each<UrlState>([
+    EMPTY,
+    { nodeId: 'relic-3', systemId: null, depth: 3 },
+    { nodeId: null, systemId: 'tarot', depth: null },
+    { nodeId: 'gold', systemId: 'revolution', depth: 1 },
+    // Every id in today's graph.json is kebab-case ASCII, but ids come from a
+    // hand-maintained YAML and nothing enforces that. Pin the property, not the
+    // current data.
+    { nodeId: 'a b&c=d#e+f%g', systemId: 'x?y/z', depth: null },
+  ])('round-trips %o', (state) => {
+    expect(parseUrlState(toSearch(state))).toEqual(state);
+  });
+});
+
+describe('viewOf', () => {
+  it('shows the overview when nothing is selected', () => {
+    expect(viewOf(EMPTY)).toEqual({ kind: 'overview' });
+  });
+
+  it('shows a system table when only a system is selected', () => {
+    expect(viewOf({ ...EMPTY, systemId: 'tarot' })).toEqual({ kind: 'system', systemId: 'tarot' });
+  });
+
+  it('shows the item graph when a node is selected, even alongside a system', () => {
+    expect(viewOf({ ...EMPTY, nodeId: 'gold' })).toEqual({ kind: 'item', nodeId: 'gold' });
+    expect(viewOf({ nodeId: 'gold', systemId: 'tarot', depth: 2 })).toEqual({
+      kind: 'item',
+      nodeId: 'gold',
+    });
   });
 });

@@ -3181,7 +3181,7 @@ nodes:
   wiki: Elements
   confidence: documented
   effects:
-  - text: 'Attack level past 3600 boosts Fire generation Formula is: 1 + \frac {(AttackLevel-3600)^2}{100}'
+  - text: 'Attack level past 3600 boosts Fire generation Formula is: $1 + \frac {(AttackLevel-3600)^2}{100}$'
 - id: fire-node-4
   name: Fire Node 4
   system: elements
@@ -3357,7 +3357,7 @@ nodes:
   wiki: Elements
   confidence: documented
   effects:
-  - text: 'PP after 1.79e308 boosts Wind generation The Formula is: 1.01+(x-308)^2/100 (Only the (x-308)^2
+  - text: 'PP after 1.79e308 boosts Wind generation The Formula is: $1.01+(x-308)^2/100$ (Only the $(x-308)^2$
       is divided by 100)'
 - id: wind-node-5
   name: Wind Node 5
@@ -6968,6 +6968,41 @@ edges:
   note: Divides the cost exponent of all Singularity Tree upgrades by /
   source: wiki:Relics
   confidence: uncertain
+- from: relic-72
+  to: particles-alpha
+  rel: boosts
+  op: add
+  note: Multiplies the base of Alpha and Beta Generators
+  source: wiki:Relics
+  confidence: uncertain
+- from: relic-72
+  to: particle-generators
+  rel: boosts
+  op: add
+  note: Multiplies the base of Alpha and Beta Generators
+  source: wiki:Relics
+  confidence: uncertain
+- from: relic-74
+  to: particles-delta
+  rel: boosts
+  op: add
+  note: Multiplies Delta Prestige Effect
+  source: wiki:Relics
+  confidence: uncertain
+- from: relic-75
+  to: spark-mastery
+  rel: boosts
+  op: add
+  note: Multiplies Mastery Gain (Spawning & Destroying sparks)
+  source: wiki:Relics
+  confidence: uncertain
+- from: relic-75
+  to: particles-sparks
+  rel: boosts
+  op: add
+  note: Multiplies Mastery Gain (Spawning & Destroying sparks)
+  source: wiki:Relics
+  confidence: uncertain
 - from: refine-node-1
   to: refine-node-2
   rel: requires
@@ -8326,7 +8361,7 @@ edges:
   source: wiki:Minerals/Refine_Tree
   confidence: documented
 - from: refine-node-126
-  to: atoms-gain
+  to: atom-penalty
   rel: boosts
   note: No longer applies an Atom gain penalty at 1e50
   source: wiki:Minerals/Refine_Tree
@@ -8337,7 +8372,7 @@ edges:
   source: wiki:Minerals/Refine_Tree
   confidence: documented
 - from: refine-node-127
-  to: atoms-gain
+  to: atom-penalty
   rel: boosts
   note: No longer applies an Atom gain penalty at 14e153
   source: wiki:Minerals/Refine_Tree
@@ -8352,6 +8387,12 @@ edges:
   rel: requires
   source: wiki:Minerals/Refine_Tree
   confidence: documented
+- from: refine-node-128
+  to: atom-penalty
+  rel: boosts
+  note: Makes the first Atom penalty weaker by 10% [per level]. At max level, removes it completely.
+  source: wiki:Minerals/Refine_Tree
+  confidence: uncertain
 - from: refine-node-126
   to: refine-node-129
   rel: requires
@@ -8470,7 +8511,7 @@ edges:
   source: wiki:Minerals/Refine_Tree
   confidence: documented
 - from: refine-node-136
-  to: singularity
+  to: singularity-local-speed
   rel: boosts
   note: Increases Local Singularity Speed Power by 0.02
   source: wiki:Minerals/Refine_Tree
@@ -8485,16 +8526,40 @@ edges:
   rel: requires
   source: wiki:Minerals/Refine_Tree
   confidence: documented
+- from: refine-node-138
+  to: particles-rank
+  rel: boosts
+  note: Particle Rank boosts Refine Point gain (^X / +0.001 per rank)
+  source: wiki:Minerals/Refine_Tree
+  confidence: uncertain
+- from: refine-node-138
+  to: refinement-points
+  rel: boosts
+  note: Particle Rank boosts Refine Point gain (^X / +0.001 per rank)
+  source: wiki:Minerals/Refine_Tree
+  confidence: uncertain
 - from: refine-node-15
   to: refine-node-139
   rel: requires
   source: wiki:Minerals/Refine_Tree
   confidence: documented
 - from: refine-node-139
+  to: particle-generators
+  rel: boosts
+  note: Multiplies Alpha Generator Base by x2
+  source: wiki:Minerals/Refine_Tree
+  confidence: uncertain
+- from: refine-node-139
   to: refine-node-140
   rel: requires
   source: wiki:Minerals/Refine_Tree
   confidence: documented
+- from: refine-node-140
+  to: particle-multipliers
+  rel: boosts
+  note: Multiplies Alpha Multiplier Base by x1 + level
+  source: wiki:Minerals/Refine_Tree
+  confidence: uncertain
 - from: refine-node-14
   to: refine-node-141
   rel: requires
@@ -8515,16 +8580,34 @@ edges:
   rel: requires
   source: wiki:Minerals/Refine_Tree
   confidence: documented
+- from: refine-node-142
+  to: particle-generators
+  rel: boosts
+  note: The base of all particle generators is multiplied by x1.25 every 10 levels
+  source: wiki:Minerals/Refine_Tree
+  confidence: uncertain
 - from: refine-node-10
   to: refine-node-143
   rel: requires
   source: wiki:Minerals/Refine_Tree
   confidence: documented
 - from: refine-node-143
+  to: particle-multipliers
+  rel: boosts
+  note: The base of all particle multipliers is multiplied by x2 every 7 levels
+  source: wiki:Minerals/Refine_Tree
+  confidence: uncertain
+- from: refine-node-143
   to: refine-node-144
   rel: requires
   source: wiki:Minerals/Refine_Tree
   confidence: documented
+- from: refine-node-144
+  to: particles-rank
+  rel: boosts
+  note: 'Particle Rank boosts gold: ^X (+0.01 per rank)'
+  source: wiki:Minerals/Refine_Tree
+  confidence: uncertain
 - from: refine-node-144
   to: gold
   rel: boosts
@@ -8537,6 +8620,12 @@ edges:
   source: wiki:Minerals/Refine_Tree
   confidence: documented
 - from: refine-node-145
+  to: particle-generators
+  rel: boosts
+  note: Every 100 levels, the base of all particle generators is multiplied by x10
+  source: wiki:Minerals/Refine_Tree
+  confidence: uncertain
+- from: refine-node-145
   to: refine-node-146
   rel: requires
   source: wiki:Minerals/Refine_Tree
@@ -8547,26 +8636,68 @@ edges:
   note: Unlocks the Singularity Mult effect on the base of Alpha & Beta generators
   source: wiki:Minerals/Refine_Tree
   confidence: uncertain
+- from: refine-node-146
+  to: particles-alpha
+  rel: boosts
+  note: Unlocks the Singularity Mult effect on the base of Alpha & Beta generators
+  source: wiki:Minerals/Refine_Tree
+  confidence: uncertain
+- from: refine-node-146
+  to: particle-generators
+  rel: boosts
+  note: Unlocks the Singularity Mult effect on the base of Alpha & Beta generators
+  source: wiki:Minerals/Refine_Tree
+  confidence: uncertain
 - from: refine-node-10
   to: refine-node-147
   rel: requires
   source: wiki:Minerals/Refine_Tree
   confidence: documented
+- from: refine-node-147
+  to: particles-beta
+  rel: boosts
+  note: Beta Particles boost Alpha Generator Base a bit better (0.2 -> 0.3)
+  source: wiki:Minerals/Refine_Tree
+  confidence: uncertain
+- from: refine-node-147
+  to: particle-generators
+  rel: boosts
+  note: Beta Particles boost Alpha Generator Base a bit better (0.2 -> 0.3)
+  source: wiki:Minerals/Refine_Tree
+  confidence: uncertain
 - from: refine-node-143
   to: refine-node-148
   rel: requires
   source: wiki:Minerals/Refine_Tree
   confidence: documented
 - from: refine-node-148
+  to: particle-empowerers
+  rel: boosts
+  note: Empowerer base is increased by 0.001 every 20 levels for all particles
+  source: wiki:Minerals/Refine_Tree
+  confidence: uncertain
+- from: refine-node-148
   to: refine-node-149
   rel: requires
   source: wiki:Minerals/Refine_Tree
   confidence: documented
+- from: refine-node-149
+  to: particle-generators
+  rel: boosts
+  note: Multiplies Alpha Generator Base by x100
+  source: wiki:Minerals/Refine_Tree
+  confidence: uncertain
 - from: refine-node-145
   to: refine-node-150
   rel: requires
   source: wiki:Minerals/Refine_Tree
   confidence: documented
+- from: refine-node-150
+  to: particle-multipliers
+  rel: boosts
+  note: Multiplies Beta Multiplier Base by x1 + 0.5 * level
+  source: wiki:Minerals/Refine_Tree
+  confidence: uncertain
 - from: refine-node-145
   to: refine-node-151
   rel: requires
@@ -8579,7 +8710,7 @@ edges:
   source: wiki:Minerals/Refine_Tree
   confidence: uncertain
 - from: refine-node-151
-  to: singularity
+  to: singularity-local-speed
   rel: boosts
   note: You passively gain Singularity Multiplier every second (also affected by local singularity speed)
   source: wiki:Minerals/Refine_Tree
@@ -8627,16 +8758,34 @@ edges:
   rel: requires
   source: wiki:Minerals/Refine_Tree
   confidence: documented
+- from: refine-node-156
+  to: atom-penalty
+  rel: boosts
+  note: Atom Penalty at 1e5,000 is x1.1 weaker now
+  source: wiki:Minerals/Refine_Tree
+  confidence: uncertain
 - from: refine-node-144
   to: refine-node-157
   rel: requires
   source: wiki:Minerals/Refine_Tree
   confidence: documented
+- from: refine-node-157
+  to: atom-penalty
+  rel: boosts
+  note: Atom Penalty at 1e10,000 is x1.2 weaker now
+  source: wiki:Minerals/Refine_Tree
+  confidence: uncertain
 - from: refine-node-144
   to: refine-node-158
   rel: requires
   source: wiki:Minerals/Refine_Tree
   confidence: documented
+- from: refine-node-158
+  to: particles-alpha
+  rel: boosts
+  note: Alpha particle upgrades do not spend alpha points
+  source: wiki:Minerals/Refine_Tree
+  confidence: uncertain
 - from: refine-node-144
   to: refine-node-159
   rel: requires
@@ -8652,6 +8801,12 @@ edges:
   rel: requires
   source: wiki:Minerals/Refine_Tree
   confidence: documented
+- from: refine-node-161
+  to: particle-generators
+  rel: boosts
+  note: Every 1,000 levels, the base of all particle generators is multiplied by x1e10
+  source: wiki:Minerals/Refine_Tree
+  confidence: uncertain
 - from: refine-node-160
   to: refine-node-162
   rel: requires
@@ -8679,18 +8834,30 @@ edges:
   rel: requires
   source: wiki:Minerals/Refine_Tree
   confidence: documented
+- from: refine-node-164
+  to: particles-beta
+  rel: boosts
+  note: Beta particle upgrades do not spend beta points
+  source: wiki:Minerals/Refine_Tree
+  confidence: uncertain
 - from: refine-node-161
   to: refine-node-165
   rel: requires
   source: wiki:Minerals/Refine_Tree
   confidence: documented
+- from: refine-node-165
+  to: particles-gamma
+  rel: boosts
+  note: Gamma particle upgrades do not spend gemma points
+  source: wiki:Minerals/Refine_Tree
+  confidence: uncertain
 - from: refine-node-140
   to: refine-node-166
   rel: requires
   source: wiki:Minerals/Refine_Tree
   confidence: documented
 - from: refine-node-166
-  to: singularity
+  to: singularity-local-speed
   rel: boosts
   note: Local Particles Speed is boosted by ^0.1 of Local Singularity Speed
   source: wiki:Minerals/Refine_Tree
@@ -8740,10 +8907,22 @@ edges:
   source: wiki:Minerals/Refine_Tree
   confidence: documented
 - from: refine-node-170
+  to: particles-alpha
+  rel: boosts
+  note: Alpha Prestige resets nothing and is performed every frame
+  source: wiki:Minerals/Refine_Tree
+  confidence: uncertain
+- from: refine-node-170
   to: refine-node-171
   rel: requires
   source: wiki:Minerals/Refine_Tree
   confidence: documented
+- from: refine-node-171
+  to: particle-generators
+  rel: boosts
+  note: Multiplies the base of Delta Generators and Multipliers by x100
+  source: wiki:Minerals/Refine_Tree
+  confidence: uncertain
 - from: refine-node-170
   to: refine-node-172
   rel: requires
@@ -8760,6 +8939,12 @@ edges:
   rel: requires
   source: wiki:Minerals/Refine_Tree
   confidence: documented
+- from: refine-node-173
+  to: particle-multipliers
+  rel: boosts
+  note: Every 100 levels, the base of all particle multipliers is multiplied by x10
+  source: wiki:Minerals/Refine_Tree
+  confidence: uncertain
 - from: refine-node-173
   to: refine-node-174
   rel: requires
@@ -8796,6 +8981,12 @@ edges:
   source: wiki:Minerals/Refine_Tree
   confidence: documented
 - from: refine-node-176
+  to: particles-beta
+  rel: boosts
+  note: Beta Particle Prestige resets nothing and is automatically performed every frame
+  source: wiki:Minerals/Refine_Tree
+  confidence: uncertain
+- from: refine-node-176
   to: refine-node-177
   rel: requires
   source: wiki:Minerals/Refine_Tree
@@ -8812,21 +9003,45 @@ edges:
   rel: requires
   source: wiki:Minerals/Refine_Tree
   confidence: documented
+- from: refine-node-178
+  to: spark-mastery
+  rel: boosts
+  note: Mastery Gain is multiplied by xX (1 + pent / 10)
+  source: wiki:Minerals/Refine_Tree
+  confidence: uncertain
 - from: refine-node-177
   to: refine-node-179
   rel: requires
   source: wiki:Minerals/Refine_Tree
   confidence: documented
+- from: refine-node-179
+  to: particles-gamma
+  rel: boosts
+  note: Gamma Particle Prestige resets nothing and is automatically performed every frame
+  source: wiki:Minerals/Refine_Tree
+  confidence: uncertain
 - from: refine-node-137
   to: refine-node-180
   rel: requires
   source: wiki:Minerals/Refine_Tree
   confidence: documented
 - from: refine-node-180
+  to: particles-sparks
+  rel: boosts
+  note: Increase the total number of sparks you can equip by 1
+  source: wiki:Minerals/Refine_Tree
+  confidence: uncertain
+- from: refine-node-180
   to: refine-node-181
   rel: requires
   source: wiki:Minerals/Refine_Tree
   confidence: documented
+- from: refine-node-181
+  to: spark-mastery
+  rel: boosts
+  note: Unlocks Spark Mastery Factor for Singularity
+  source: wiki:Minerals/Refine_Tree
+  confidence: uncertain
 - from: refine-node-181
   to: singularity
   rel: boosts
@@ -8839,6 +9054,20 @@ edges:
   source: wiki:Minerals/Refine_Tree
   confidence: documented
 - from: refine-node-182
+  to: epsilon-tree-points
+  rel: boosts
+  note: Each spark spawned after buying this node decreases ETP cost by 5 Epsilon (total reduction is
+    softcapped after 100,000)
+  source: wiki:Minerals/Refine_Tree
+  confidence: uncertain
+- from: refine-node-182
+  to: particles-epsilon
+  rel: boosts
+  note: Each spark spawned after buying this node decreases ETP cost by 5 Epsilon (total reduction is
+    softcapped after 100,000)
+  source: wiki:Minerals/Refine_Tree
+  confidence: uncertain
+- from: refine-node-182
   to: refine-node-183
   rel: requires
   source: wiki:Minerals/Refine_Tree
@@ -8848,21 +9077,45 @@ edges:
   rel: requires
   source: wiki:Minerals/Refine_Tree
   confidence: documented
+- from: refine-node-184
+  to: spark-mastery
+  rel: boosts
+  note: Equipped Endoplasmatic Reticulum Level boosts Spark Mastery gain (xX) (x1.01 per ER level)
+  source: wiki:Minerals/Refine_Tree
+  confidence: uncertain
 - from: refine-node-181
   to: refine-node-185
   rel: requires
   source: wiki:Minerals/Refine_Tree
   confidence: documented
 - from: refine-node-185
+  to: spark-mastery
+  rel: boosts
+  note: Destroying a spark now also grants mastery (^0.5 of this spark mastery)
+  source: wiki:Minerals/Refine_Tree
+  confidence: uncertain
+- from: refine-node-185
   to: refine-node-186
   rel: requires
   source: wiki:Minerals/Refine_Tree
   confidence: documented
+- from: refine-node-186
+  to: particles-epsilon
+  rel: boosts
+  note: Epsilon Capacity gain is multiplied by x2
+  source: wiki:Minerals/Refine_Tree
+  confidence: uncertain
 - from: refine-node-183
   to: refine-node-187
   rel: requires
   source: wiki:Minerals/Refine_Tree
   confidence: documented
+- from: refine-node-187
+  to: particles-delta
+  rel: boosts
+  note: Delta Prestige bonus is stronger based on your Pent (X1.01 per Pent)
+  source: wiki:Minerals/Refine_Tree
+  confidence: uncertain
 - from: refine-node-187
   to: prestige-bonus
   rel: boosts
@@ -8892,6 +9145,13 @@ edges:
     is softcapped after 100,000)
   source: wiki:Minerals/Refine_Tree
   confidence: uncertain
+- from: refine-node-189
+  to: epsilon-tree-points
+  rel: boosts
+  note: Destroying Ultima Singular Zodiacs now also decreases Epsilon Tree Points cost (Total reduction
+    is softcapped after 100,000)
+  source: wiki:Minerals/Refine_Tree
+  confidence: uncertain
 - from: refine-node-187
   to: refine-node-190
   rel: requires
@@ -8909,21 +9169,53 @@ edges:
   rel: requires
   source: wiki:Minerals/Refine_Tree
   confidence: documented
+- from: refine-node-191
+  to: particles-delta
+  rel: boosts
+  note: Delta particle upgrades do not spend delta points
+  source: wiki:Minerals/Refine_Tree
+  confidence: uncertain
 - from: refine-node-137
   to: refine-node-192
   rel: requires
   source: wiki:Minerals/Refine_Tree
   confidence: documented
+- from: refine-node-192
+  to: particles-epsilon
+  rel: boosts
+  note: Epsilon Points generation is stronger based on your current Epsilon Points x1 (+0.01 per 10K Epsilon
+    Points, capped at x10)
+  source: wiki:Minerals/Refine_Tree
+  confidence: uncertain
+- from: particles-epsilon
+  to: refine-node-192
+  rel: boosts
+  note: Epsilon Points generation is stronger based on your current Epsilon Points x1 (+0.01 per 10K Epsilon
+    Points, capped at x10)
+  source: wiki:Minerals/Refine_Tree
+  confidence: uncertain
 - from: refine-node-185
   to: refine-node-196
   rel: requires
   source: wiki:Minerals/Refine_Tree
   confidence: documented
+- from: refine-node-196
+  to: spark-mastery
+  rel: boosts
+  note: Multiplies Spark Mastery Gain on Spark Spawn by xX
+  source: wiki:Minerals/Refine_Tree
+  confidence: uncertain
 - from: refine-node-184
   to: refine-node-200
   rel: requires
   source: wiki:Minerals/Refine_Tree
   confidence: documented
+- from: refine-node-200
+  to: spark-mastery
+  rel: boosts
+  note: Multiplies Mastery Gain on Spark Destroy by xX
+  source: wiki:Minerals/Refine_Tree
+  confidence: uncertain
 - from: tarot-ace-of-swords
   to: attack-mult
   rel: boosts
@@ -9799,13 +10091,13 @@ edges:
 - from: fire-node-3
   to: attack-level
   rel: boosts
-  note: 'Attack level past 3600 boosts Fire generation Formula is: 1 + \frac {(AttackLevel-3600)^2}{100}'
+  note: 'Attack level past 3600 boosts Fire generation Formula is: $1 + \frac {(AttackLevel-3600)^2}{100}$'
   source: wiki:Elements
   confidence: uncertain
 - from: fire-node-3
   to: fire
   rel: boosts
-  note: 'Attack level past 3600 boosts Fire generation Formula is: 1 + \frac {(AttackLevel-3600)^2}{100}'
+  note: 'Attack level past 3600 boosts Fire generation Formula is: $1 + \frac {(AttackLevel-3600)^2}{100}$'
   source: wiki:Elements
   confidence: uncertain
 - from: fire-node-4
@@ -9937,14 +10229,14 @@ edges:
 - from: wind-node-4
   to: polish-points
   rel: boosts
-  note: 'PP after 1.79e308 boosts Wind generation The Formula is: 1.01+(x-308)^2/100 (Only the (x-308)^2
+  note: 'PP after 1.79e308 boosts Wind generation The Formula is: $1.01+(x-308)^2/100$ (Only the $(x-308)^2$
     is divided by 100)'
   source: wiki:Elements
   confidence: uncertain
 - from: wind-node-4
   to: wind
   rel: boosts
-  note: 'PP after 1.79e308 boosts Wind generation The Formula is: 1.01+(x-308)^2/100 (Only the (x-308)^2
+  note: 'PP after 1.79e308 boosts Wind generation The Formula is: $1.01+(x-308)^2/100$ (Only the $(x-308)^2$
     is divided by 100)'
   source: wiki:Elements
   confidence: uncertain
@@ -10590,12 +10882,22 @@ edges:
   source: wiki:Singularity
   confidence: uncertain
 - from: singularity-milestone-one-hundred
+  to: particle-generators
+  rel: boosts
+  source: wiki:Singularity
+  confidence: uncertain
+- from: singularity-milestone-one-hundred
   to: singularity
   rel: boosts
   source: wiki:Singularity
   confidence: uncertain
 - from: singularity-milestone-singular-master
   to: singularity
+  rel: boosts
+  source: wiki:Singularity
+  confidence: uncertain
+- from: singularity-milestone-singular-master
+  to: spark-mastery
   rel: boosts
   source: wiki:Singularity
   confidence: uncertain
@@ -10631,6 +10933,11 @@ edges:
   confidence: uncertain
 - from: singularity-milestone-universe-under-pressure
   to: luck
+  rel: boosts
+  source: wiki:Singularity
+  confidence: uncertain
+- from: singularity-milestone-atom-particle-synergy
+  to: particle-generators
   rel: boosts
   source: wiki:Singularity
   confidence: uncertain
@@ -10689,6 +10996,16 @@ edges:
   rel: boosts
   source: wiki:Singularity
   confidence: uncertain
+- from: singularity-tree-3-1
+  to: atom-penalty
+  rel: boosts
+  source: wiki:Singularity
+  confidence: uncertain
+- from: singularity-tree-3-2
+  to: atom-penalty
+  rel: boosts
+  source: wiki:Singularity
+  confidence: uncertain
 - from: singularity-tree-4-1
   to: refinement-points
   rel: boosts
@@ -10711,6 +11028,11 @@ edges:
   confidence: uncertain
 - from: singularity-tree-6-1
   to: singularity
+  rel: boosts
+  source: wiki:Singularity
+  confidence: uncertain
+- from: singularity-tree-6-2
+  to: atom-penalty
   rel: boosts
   source: wiki:Singularity
   confidence: uncertain
@@ -12595,7 +12917,17 @@ edges:
   source: wiki:Tarot
   confidence: uncertain
 - from: tarot-challenge-the-sun
+  to: particles-sparks
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-challenge-the-sun
   to: minerals
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-challenge-the-sun
+  to: spark-mastery
   rel: boosts
   source: wiki:Tarot
   confidence: uncertain
@@ -12820,7 +13152,7 @@ edges:
   source: wiki:Particles
   confidence: uncertain
 - from: particles-spark-white
-  to: singularity
+  to: singularity-local-speed
   rel: boosts
   source: wiki:Particles
   confidence: uncertain
@@ -12844,8 +13176,623 @@ edges:
   rel: boosts
   source: wiki:Particles
   confidence: uncertain
+- from: particles-spark-cyan
+  to: particle-empowerers
+  rel: boosts
+  source: wiki:Particles
+  confidence: uncertain
+- from: particles-spark-blue
+  to: atom-penalty
+  rel: boosts
+  source: wiki:Particles
+  confidence: uncertain
+- from: particles-spark-pink
+  to: spark-mastery
+  rel: boosts
+  source: wiki:Particles
+  confidence: uncertain
 - from: particles-spark-purple
   to: plague-generators
   rel: boosts
   source: wiki:Particles
   confidence: uncertain
+- from: particles-rank
+  to: particles-rank-bonus-1
+  rel: requires
+  source: game
+  confidence: documented
+- from: particles-rank-bonus-1
+  to: particle-generators
+  rel: boosts
+  source: game
+  confidence: uncertain
+- from: particles-rank
+  to: particles-rank-bonus-2
+  rel: requires
+  source: game
+  confidence: documented
+- from: particles-rank-bonus-2
+  to: singularity
+  rel: boosts
+  source: game
+  confidence: uncertain
+- from: particles-rank
+  to: particles-rank-bonus-3
+  rel: requires
+  source: game
+  confidence: documented
+- from: particles-rank-bonus-3
+  to: particle-generators
+  rel: boosts
+  source: game
+  confidence: uncertain
+- from: refine-node-141
+  to: particles-rank-bonus-3
+  rel: boosts
+  source: game
+  confidence: uncertain
+- from: particles-rank
+  to: particles-rank-bonus-4
+  rel: requires
+  source: game
+  confidence: documented
+- from: particles-rank-bonus-4
+  to: attack-exponent
+  rel: boosts
+  source: game
+  confidence: uncertain
+- from: particles-rank
+  to: particles-rank-bonus-5
+  rel: requires
+  source: game
+  confidence: documented
+- from: particles-rank-bonus-5
+  to: singularity-local-speed
+  rel: boosts
+  source: game
+  confidence: uncertain
+- from: particles-rank
+  to: particles-rank-bonus-6
+  rel: requires
+  source: game
+  confidence: documented
+- from: particles-rank-bonus-6
+  to: singularity-tree-3-1
+  rel: boosts
+  source: game
+  confidence: uncertain
+- from: particles-rank-bonus-6
+  to: singularity-tree-3-2
+  rel: boosts
+  source: game
+  confidence: uncertain
+- from: particles-rank
+  to: particles-rank-bonus-7
+  rel: requires
+  source: game
+  confidence: documented
+- from: particles-rank-bonus-7
+  to: particle-generators
+  rel: boosts
+  source: game
+  confidence: uncertain
+- from: particles-rank
+  to: particles-rank-bonus-8
+  rel: requires
+  source: game
+  confidence: documented
+- from: particles-rank-bonus-8
+  to: luck
+  rel: boosts
+  source: game
+  confidence: uncertain
+- from: particles-rank
+  to: particles-rank-bonus-9
+  rel: requires
+  source: game
+  confidence: documented
+- from: particles-rank-bonus-9
+  to: singularity-tree-6-2
+  rel: boosts
+  source: game
+  confidence: uncertain
+- from: particles-rank
+  to: particles-rank-bonus-10
+  rel: requires
+  source: game
+  confidence: documented
+- from: particles-rank-bonus-10
+  to: refine-node-142
+  rel: boosts
+  source: game
+  confidence: uncertain
+- from: particles-rank
+  to: particles-rank-bonus-11
+  rel: requires
+  source: game
+  confidence: documented
+- from: particles-rank-bonus-11
+  to: golden-resources
+  rel: boosts
+  source: game
+  confidence: uncertain
+- from: particles-rank
+  to: particles-rank-bonus-12
+  rel: requires
+  source: game
+  confidence: documented
+- from: particles-rank-bonus-12
+  to: atom-penalty
+  rel: boosts
+  source: game
+  confidence: uncertain
+- from: particles-rank
+  to: particles-rank-bonus-13
+  rel: requires
+  source: game
+  confidence: documented
+- from: particles-rank-bonus-13
+  to: sacrifice-dust
+  rel: boosts
+  source: game
+  confidence: uncertain
+- from: particles-rank
+  to: particles-rank-bonus-14
+  rel: requires
+  source: game
+  confidence: documented
+- from: particles-rank-bonus-14
+  to: relic-71
+  rel: boosts
+  source: game
+  confidence: uncertain
+- from: particles-rank
+  to: particles-rank-bonus-15
+  rel: requires
+  source: game
+  confidence: documented
+- from: particles-rank-bonus-15
+  to: attack-mult
+  rel: boosts
+  source: game
+  confidence: uncertain
+- from: particles-rank
+  to: particles-rank-bonus-16
+  rel: requires
+  source: game
+  confidence: documented
+- from: particles-rank-bonus-16
+  to: particle-generators
+  rel: boosts
+  source: game
+  confidence: uncertain
+- from: particles-rank
+  to: particles-rank-bonus-17
+  rel: requires
+  source: game
+  confidence: documented
+- from: particles-rank-bonus-17
+  to: spark-mastery
+  rel: boosts
+  source: game
+  confidence: uncertain
+- from: particles-rank
+  to: particles-rank-bonus-18
+  rel: requires
+  source: game
+  confidence: documented
+- from: particles-rank-bonus-18
+  to: epsilon-tree
+  rel: boosts
+  source: game
+  confidence: uncertain
+- from: particles-tier
+  to: particles-tier-bonus-1
+  rel: requires
+  source: game
+  confidence: documented
+- from: particles-tier-bonus-1
+  to: particle-generators
+  rel: boosts
+  source: game
+  confidence: uncertain
+- from: refine-node-147
+  to: particles-tier-bonus-1
+  rel: boosts
+  source: game
+  confidence: uncertain
+- from: particles-tier
+  to: particles-tier-bonus-2
+  rel: requires
+  source: game
+  confidence: documented
+- from: particles-tier-bonus-2
+  to: particle-generators
+  rel: boosts
+  source: game
+  confidence: uncertain
+- from: particles-tier-bonus-2
+  to: particle-multipliers
+  rel: boosts
+  source: game
+  confidence: uncertain
+- from: particles-tier
+  to: particles-tier-bonus-3
+  rel: requires
+  source: game
+  confidence: documented
+- from: particles-tier-bonus-3
+  to: refinement-points
+  rel: boosts
+  source: game
+  confidence: uncertain
+- from: particles-tier
+  to: particles-tier-bonus-4
+  rel: requires
+  source: game
+  confidence: documented
+- from: particles-tier-bonus-4
+  to: singularity
+  rel: boosts
+  source: game
+  confidence: uncertain
+- from: particles-tier
+  to: particles-tier-bonus-5
+  rel: requires
+  source: game
+  confidence: documented
+- from: particles-tier-bonus-5
+  to: relic-73
+  rel: boosts
+  source: game
+  confidence: uncertain
+- from: particles-tier
+  to: particles-tier-bonus-6
+  rel: requires
+  source: game
+  confidence: documented
+- from: particles-tier-bonus-6
+  to: relic-60
+  rel: boosts
+  source: game
+  confidence: uncertain
+- from: particles-tier
+  to: particles-tier-bonus-7
+  rel: requires
+  source: game
+  confidence: documented
+- from: particles-tier-bonus-7
+  to: epsilon-tree
+  rel: boosts
+  source: game
+  confidence: uncertain
+- from: particles-tetr
+  to: particles-tetr-bonus-1
+  rel: requires
+  source: game
+  confidence: documented
+- from: particles-tetr-bonus-1
+  to: particle-generators
+  rel: boosts
+  source: game
+  confidence: uncertain
+- from: particles-tetr-bonus-1
+  to: luck
+  rel: boosts
+  source: game
+  confidence: uncertain
+- from: particles-tetr
+  to: particles-tetr-bonus-2
+  rel: requires
+  source: game
+  confidence: documented
+- from: particles-tetr-bonus-2
+  to: gold-gain
+  rel: boosts
+  source: game
+  confidence: uncertain
+- from: particles-tetr
+  to: particles-tetr-bonus-3
+  rel: requires
+  source: game
+  confidence: documented
+- from: particles-tetr-bonus-3
+  to: relic-72
+  rel: boosts
+  source: game
+  confidence: uncertain
+- from: particles-tetr
+  to: particles-tetr-bonus-4
+  rel: requires
+  source: game
+  confidence: documented
+- from: particles-tetr-bonus-4
+  to: singularity
+  rel: boosts
+  source: game
+  confidence: uncertain
+- from: particles-tetr
+  to: particles-tetr-bonus-5
+  rel: requires
+  source: game
+  confidence: documented
+- from: particles-tetr-bonus-5
+  to: particle-generators
+  rel: boosts
+  source: game
+  confidence: uncertain
+- from: particles-tetr
+  to: particles-tetr-bonus-6
+  rel: requires
+  source: game
+  confidence: documented
+- from: particles-tetr-bonus-6
+  to: singularity-tree-4-2
+  rel: boosts
+  source: game
+  confidence: uncertain
+- from: particles-tetr
+  to: particles-tetr-bonus-7
+  rel: requires
+  source: game
+  confidence: documented
+- from: particles-tetr-bonus-7
+  to: epsilon-tree
+  rel: boosts
+  source: game
+  confidence: uncertain
+- from: particles-pent
+  to: particles-pent-bonus-1
+  rel: requires
+  source: game
+  confidence: documented
+- from: particles-pent-bonus-1
+  to: particle-generators
+  rel: boosts
+  source: game
+  confidence: uncertain
+- from: particles-pent-bonus-1
+  to: tarot
+  rel: boosts
+  source: game
+  confidence: uncertain
+- from: particles-pent-bonus-1
+  to: gold
+  rel: boosts
+  source: game
+  confidence: uncertain
+- from: particles-pent
+  to: particles-pent-bonus-2
+  rel: requires
+  source: game
+  confidence: documented
+- from: particles-pent-bonus-2
+  to: relic-70
+  rel: boosts
+  source: game
+  confidence: uncertain
+- from: particles-pent-bonus-2
+  to: relic-73
+  rel: boosts
+  source: game
+  confidence: uncertain
+- from: particles-pent
+  to: particles-pent-bonus-3
+  rel: requires
+  source: game
+  confidence: documented
+- from: particles-pent-bonus-3
+  to: particle-generators
+  rel: boosts
+  source: game
+  confidence: uncertain
+- from: particles-pent
+  to: particles-pent-bonus-4
+  rel: requires
+  source: game
+  confidence: documented
+- from: particles-pent-bonus-4
+  to: singularity
+  rel: boosts
+  source: game
+  confidence: uncertain
+- from: particles-pent
+  to: particles-pent-bonus-5
+  rel: requires
+  source: game
+  confidence: documented
+- from: particles-pent
+  to: particles-pent-bonus-6
+  rel: requires
+  source: game
+  confidence: documented
+- from: particles-pent-bonus-6
+  to: epsilon-tree
+  rel: boosts
+  source: game
+  confidence: uncertain
+- from: particles-pent
+  to: particles-pent-bonus-7
+  rel: requires
+  source: game
+  confidence: documented
+- from: particles-pent-bonus-7
+  to: refinement-points
+  rel: boosts
+  source: game
+  confidence: uncertain
+- from: epsilon-tree
+  to: epsilon-tree-node-16
+  rel: unlocks
+  source: game
+  confidence: documented
+- from: epsilon-tree
+  to: epsilon-tree-node-17
+  rel: unlocks
+  source: game
+  confidence: documented
+- from: epsilon-tree-node-17
+  to: atom-penalty
+  rel: boosts
+  source: game
+  confidence: uncertain
+- from: epsilon-tree
+  to: epsilon-tree-node-18
+  rel: unlocks
+  source: game
+  confidence: documented
+- from: epsilon-tree
+  to: epsilon-tree-node-19
+  rel: unlocks
+  source: game
+  confidence: documented
+- from: epsilon-tree
+  to: epsilon-tree-node-20
+  rel: unlocks
+  source: game
+  confidence: documented
+- from: epsilon-tree
+  to: epsilon-tree-node-21
+  rel: unlocks
+  source: game
+  confidence: documented
+- from: epsilon-tree-node-21
+  to: sacrifice-dust
+  rel: boosts
+  source: game
+  confidence: uncertain
+- from: epsilon-tree
+  to: epsilon-tree-node-22
+  rel: unlocks
+  source: game
+  confidence: documented
+- from: epsilon-tree
+  to: epsilon-tree-node-23
+  rel: unlocks
+  source: game
+  confidence: documented
+- from: epsilon-tree-node-23
+  to: tarot
+  rel: boosts
+  source: game
+  confidence: uncertain
+- from: epsilon-tree-node-23
+  to: golden-resources
+  rel: boosts
+  source: game
+  confidence: uncertain
+- from: epsilon-tree
+  to: epsilon-tree-node-24
+  rel: unlocks
+  source: game
+  confidence: documented
+- from: epsilon-tree
+  to: epsilon-tree-node-25
+  rel: unlocks
+  source: game
+  confidence: documented
+- from: epsilon-tree-node-25
+  to: particle-generators
+  rel: boosts
+  source: game
+  confidence: uncertain
+- from: epsilon-tree
+  to: epsilon-tree-node-26
+  rel: unlocks
+  source: game
+  confidence: documented
+- from: epsilon-tree
+  to: epsilon-tree-node-27
+  rel: unlocks
+  source: game
+  confidence: documented
+- from: epsilon-tree-node-27
+  to: endoplasmic-reticula
+  rel: boosts
+  source: game
+  confidence: uncertain
+- from: epsilon-tree
+  to: epsilon-tree-node-28
+  rel: unlocks
+  source: game
+  confidence: documented
+- from: epsilon-tree
+  to: epsilon-tree-node-29
+  rel: unlocks
+  source: game
+  confidence: documented
+- from: epsilon-tree-node-29
+  to: spark-luck
+  rel: boosts
+  source: game
+  confidence: uncertain
+- from: epsilon-tree
+  to: epsilon-tree-node-30
+  rel: unlocks
+  source: game
+  confidence: documented
+- from: epsilon-tree
+  to: epsilon-tree-node-31
+  rel: unlocks
+  source: game
+  confidence: documented
+- from: epsilon-tree-node-31
+  to: particles-sparks
+  rel: boosts
+  source: game
+  confidence: uncertain
+- from: epsilon-tree-node-31
+  to: particles-epsilon
+  rel: boosts
+  source: game
+  confidence: uncertain
+- from: particles-sparks
+  to: particles-spark-black
+  rel: unlocks
+  source: game
+  confidence: documented
+- from: particles-sparks
+  to: particles-spark-blue
+  rel: unlocks
+  source: game
+  confidence: documented
+- from: particles-sparks
+  to: particles-spark-cyan
+  rel: unlocks
+  source: game
+  confidence: documented
+- from: particles-sparks
+  to: particles-spark-green
+  rel: unlocks
+  source: game
+  confidence: documented
+- from: particles-sparks
+  to: particles-spark-orange
+  rel: unlocks
+  source: game
+  confidence: documented
+- from: particles-sparks
+  to: particles-spark-pink
+  rel: unlocks
+  source: game
+  confidence: documented
+- from: particles-sparks
+  to: particles-spark-purple
+  rel: unlocks
+  source: game
+  confidence: documented
+- from: particles-sparks
+  to: particles-spark-red
+  rel: unlocks
+  source: game
+  confidence: documented
+- from: particles-sparks
+  to: particles-spark-white
+  rel: unlocks
+  source: game
+  confidence: documented
+- from: particles-sparks
+  to: particles-spark-yellow
+  rel: unlocks
+  source: game
+  confidence: documented

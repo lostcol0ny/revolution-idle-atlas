@@ -1,0 +1,204 @@
+.overview {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.5rem 1rem 3rem;
+  color: var(--fg);
+}
+
+.overview-intro p {
+  max-width: 70ch;
+  line-height: 1.55;
+}
+
+.overview h2 {
+  font-size: 1.15rem;
+  margin: 1.75rem 0 0.5rem;
+}
+
+.overview-legend {
+  color: var(--muted);
+  margin: 0 0 0.75rem;
+}
+
+.overview-legend-faint {
+  color: var(--edge-uncertain);
+}
+
+.overview-scroll {
+  overflow: auto;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+.overview-scroll svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overview-toggle {
+  display: inline-block;
+  margin: 0 0 0.75rem;
+  color: var(--muted);
+  cursor: pointer;
+}
+
+
+.ov-edge path {
+  fill: none;
+  stroke: var(--edge-documented);
+}
+
+.ov-edge text {
+  fill: var(--fg);
+  font-size: 16px;
+  paint-order: stroke;
+  stroke: var(--surface);
+  stroke-width: 3px;
+}
+
+.ov-edge-faint path {
+  stroke: var(--edge-uncertain);
+  stroke-dasharray: 4 3;
+  opacity: 0.55;
+}
+
+.ov-edge-faint text {
+  fill: var(--muted);
+}
+
+.ov-node {
+  cursor: pointer;
+}
+
+.ov-node rect {
+  fill: var(--surface-2);
+  stroke-width: 2;
+}
+
+.ov-node:hover rect,
+.ov-node:focus-visible rect {
+  fill: var(--surface);
+  stroke-width: 3;
+}
+
+.ov-node:focus-visible {
+  outline: none;
+}
+
+.ov-node:focus-visible rect {
+  stroke: var(--accent) !important;
+}
+
+.ov-node-name {
+  fill: var(--fg);
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.ov-node-count {
+  fill: var(--muted);
+  font-size: 14px;
+}
+
+.overview-cards {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 0.5rem;
+}
+
+.overview-card {
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: auto auto;
+  column-gap: 0.5rem;
+  align-items: center;
+  text-align: left;
+  padding: 0.6rem 0.75rem;
+  font: inherit;
+  color: var(--fg);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--border);
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.overview-card:hover {
+  background: var(--surface-2);
+}
+
+.overview-card:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.overview-card-icon {
+  grid-row: span 2;
+  font-size: 1.4rem;
+}
+
+.overview-card-name {
+  font-weight: 600;
+}
+
+.overview-card-count {
+  color: var(--muted);
+  font-size: 0.875rem;
+}
+
+.ov-edge path,
+.ov-edge text {
+  transition: opacity 120ms;
+}
+
+.ov-edge-dim path,
+.ov-edge-dim text {
+  opacity: 0.1;
+}
+
+.ov-edge-faint.ov-edge-on path {
+  opacity: 0.9;
+}
+
+/* Keeps labels legible on phones; the scroll box pans instead of shrinking the map. */
+.overview-scroll svg {
+  min-inline-size: 720px;
+}
+
+.overview-links {
+  margin-top: 0.75rem;
+}
+
+.overview-links summary {
+  cursor: pointer;
+  color: var(--muted);
+}
+
+.overview-links table {
+  margin-top: 0.5rem;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+}
+
+.overview-links caption {
+  text-align: left;
+  color: var(--muted);
+  padding-bottom: 0.25rem;
+}
+
+.overview-links th,
+.overview-links td {
+  padding: 0.2rem 0.75rem 0.2rem 0;
+  border-bottom: 1px solid var(--border);
+  text-align: left;
+}
+
+.overview-links td:nth-child(n + 3),
+.overview-links th:nth-child(n + 3) {
+  text-align: right;
+}

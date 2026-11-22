@@ -98,6 +98,60 @@ def test_curated_node_that_is_new_is_appended_after_the_derived_ones():
     assert [n.id for n in merged.nodes] == ["relic-38", "relic-39", "singularity"]
 
 
+def test_a_generated_note_follows_a_curated_rewording_of_its_effect():
+    # Parsers copy the effect an edge was read from into its note, from the
+    # source's effects or the target's.
+    derived = Dataset(
+        nodes=[
+            Node(
+                id="refine-node-10",
+                name="Refine Node 10",
+                system="refine",
+                kind=Kind.TREE_NODE,
+                effects=[Effect(text="PP gain ^(1 + 0.1*lvl)")],
+            )
+        ],
+        edges=[
+            Edge(
+                from_="refine-node-10",
+                to="polish-points",
+                rel=Rel.BOOSTS,
+                source="wiki:Refine",
+                note="PP gain ^(1 + 0.1*lvl)",
+            ),
+            Edge(
+                from_="refinement-points",
+                to="refine-node-10",
+                rel=Rel.BOOSTS,
+                source="wiki:Refine",
+                note="PP gain ^(1 + 0.1*lvl)",
+            ),
+            Edge(
+                from_="refine-node-10",
+                to="gold",
+                rel=Rel.BOOSTS,
+                source="wiki:Refine",
+                note="Some other wording",
+            ),
+        ],
+    )
+    typeset = r"PP gain $^{1 + 0.1 \times \text{lvl}}$"
+    curated = Dataset(
+        nodes=[
+            Node(
+                id="refine-node-10",
+                name="Refine Node 10",
+                system="refine",
+                kind=Kind.TREE_NODE,
+                effects=[Effect(text=typeset)],
+            )
+        ]
+    )
+    merged, _ = merge(derived, curated)
+
+    assert [e.note for e in merged.edges] == [typeset, typeset, "Some other wording"]
+
+
 def test_curated_edge_replaces_the_derived_one_wholesale():
     curated = Dataset(
         edges=[

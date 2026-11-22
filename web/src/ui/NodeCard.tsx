@@ -1,6 +1,9 @@
 import type { GraphIndex } from '../graph/adjacency';
+import { edgeConfidence } from '../graph/ego';
 import type { GraphEdge, GraphNode } from '../types';
 import { sourceLabel, wikiUrl } from '../graph/wiki';
+import { RichText } from './RichText';
+import './graph.css';
 
 function EdgeRow({
   edge,
@@ -15,7 +18,7 @@ function EdgeRow({
 }) {
   const other = index.nodes.get(otherId);
   const source = sourceLabel(edge.source);
-  const confidence = edge.confidence ?? 'documented';
+  const confidence = edgeConfidence(edge);
 
   return (
     <li className="edgerow">
@@ -34,9 +37,22 @@ function EdgeRow({
           <span className="muted">{source.text}</span>
         )}
         <span className="sep">·</span>
-        <span className="muted">{confidence}</span>
+        {confidence === 'uncertain' ? (
+          <span
+            className="edgerow__guessed"
+            title="Believed to exist, but how it works is not established."
+          >
+            guessed
+          </span>
+        ) : (
+          <span className="muted">{confidence}</span>
+        )}
       </div>
-      {edge.note !== undefined && <div className="edgerow__note">{edge.note}</div>}
+      {edge.note !== undefined && (
+        <div className="edgerow__note">
+          <RichText text={edge.note} />
+        </div>
+      )}
     </li>
   );
 }
@@ -61,9 +77,29 @@ export function NodeCard({
 
   return (
     <div className="nodecard">
-      <h2 className="nodecard__name">{node.name}</h2>
+      <h1 className="nodecard__name">{node.name}</h1>
       {node.description !== undefined && (
-        <p className="nodecard__description">{node.description}</p>
+        <p className="nodecard__description">
+          <RichText text={node.description} />
+        </p>
+      )}
+      {node.effects !== undefined && node.effects.length > 0 && (
+        <>
+          <h3 className="nodecard__heading">Effects</h3>
+          <ul className="nodecard__effects">
+            {node.effects.map((effect, position) => (
+              <li key={position}>
+                <RichText text={effect.text} />
+                {effect.per_level !== undefined && (
+                  <span className="nodecard__per-level">
+                    {' ('}
+                    <RichText text={effect.per_level} />)
+                  </span>
+                )}
+              </li>
+            ))}
+          </ul>
+        </>
       )}
       <dl className="nodecard__facts">
         <dt>id</dt>
@@ -86,11 +122,18 @@ export function NodeCard({
         </p>
       )}
 
+      {incoming.length + outgoing.length > 0 && (
+        <p className="nodecard__key">
+          <span className="edgerow__guessed">guessed</span> means the link is believed to exist, but how it works
+          is not established.
+        </p>
+      )}
+
       <h3 className="nodecard__heading">Feeds this ({incoming.length})</h3>
       {incoming.length === 0 ? (
         <p className="muted">Nothing documented feeds this node.</p>
       ) : (
-        <ul className="edgelist">
+        <ul className="edgelist" role="list">
           {incoming.map((edge, position) => (
             <EdgeRow
               key={`in-${position}`}
@@ -107,7 +150,7 @@ export function NodeCard({
       {outgoing.length === 0 ? (
         <p className="muted">This node feeds nothing documented.</p>
       ) : (
-        <ul className="edgelist">
+        <ul className="edgelist" role="list">
           {outgoing.map((edge, position) => (
             <EdgeRow
               key={`out-${position}`}

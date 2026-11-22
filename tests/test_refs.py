@@ -5,6 +5,7 @@ from atlas.extract.refs import (
     Vocabulary,
     derive_op,
     is_uncertain,
+    label_text,
     normalise_space,
     plain_text,
     resolve,
@@ -47,17 +48,46 @@ def test_plain_text_drops_decoration_and_markup():
     )
 
 
-def test_plain_text_keeps_math_content_so_the_surrounding_sentence_survives():
+def test_plain_text_keeps_math_as_inline_dollar_segments():
     # The second case is the one that matters: deleting the formula used to take
     # the subject of the sentence with it and leave "(Only the is divided by
-    # 100)". LaTeX is passed through verbatim rather than rendered, so these
-    # assertions are also the record of what a reader is shown.
+    # 100)". The frontend typesets each `$…$` segment with KaTeX.
     assert plain_text("Formula is: <math>1 + \\frac {x}{100}</math>") == (
-        "Formula is: 1 + \\frac {x}{100}"
+        "Formula is: $1 + \\frac {x}{100}$"
     )
     assert plain_text("(Only the <math>(x-308)^2\n</math> is divided by 100)") == (
-        "(Only the (x-308)^2 is divided by 100)"
+        "(Only the $(x-308)^2$ is divided by 100)"
     )
+    assert plain_text("Empty <math> </math>formula") == "Empty formula"
+
+
+def test_plain_text_leaves_latex_alone_inside_math():
+    # "{{", "|" and "''" mean markup in wikitext but are ordinary LaTeX.
+    assert plain_text("''Formula:'' <math>\\left|x^{{2}}\\right|''</math>") == (
+        "Formula: $\\left|x^{{2}}\\right|''$"
+    )
+
+
+def test_plain_text_escapes_prose_so_only_math_is_delimited():
+    assert plain_text("Costs $5 and <math>x</math> more") == "Costs \\$5 and $x$ more"
+    # A bare dollar inside the formula is escaped, so it cannot close the
+    # segment; one LaTeX already escaped is left alone.
+    assert plain_text("<math>a $ b \\$ c \\\\$ d</math>") == "$a \\$ b \\$ c \\\\\\$ d$"
+    # A prose backslash is escaped too, or "C:\" would swallow the opening $.
+    assert plain_text("C:\\<math>x</math>") == "C:\\\\$x$"
+
+
+def test_plain_text_never_lets_a_trailing_backslash_escape_the_closing_dollar():
+    assert plain_text("<math>x \\</math> y") == "$x$ y"
+    assert plain_text("<math>x\\\\\\</math>") == "$x\\\\$"
+    # An even run is LaTeX's own line break and stays.
+    assert plain_text("<math>x\\\\</math>") == "$x\\\\$"
+    assert plain_text("<math>\\</math>") == ""
+
+
+def test_label_text_is_plain_with_no_escapes_or_math_delimiters():
+    assert label_text("[[Relics|Relic]] $5 C:\\ <math>x^2</math>") == "Relic $5 C:\\ x^2"
+    assert label_text("''Gold'' {{Icon|gold}}") == "Gold"
 
 
 def test_split_fields_ignores_pipes_inside_templates_and_links():

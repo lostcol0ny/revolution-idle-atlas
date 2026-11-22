@@ -1,8 +1,9 @@
 import { readFileSync } from 'node:fs';
 import { describe, expect, it } from 'vitest';
+import type { GraphDocument } from '../types';
 import { buildIndex } from './adjacency';
 import { breakCycles } from './cycles';
-import { ego } from './ego';
+import { ego, fold } from './ego';
 import { chainDoc, cycleDoc, diamondDoc } from './fixtures';
 import { NODE_HEIGHT, layout } from './layout';
 import { parseGraph } from './load';
@@ -59,6 +60,32 @@ describe('layout', () => {
     const positions = layout(dag);
     expect(positions.size).toBe(1);
     expect(Number.isFinite(positions.get('lonely')?.x)).toBe(true);
+  });
+
+  it('positions every node of a folded graph, group stand-ins included', () => {
+    // Five upstream nodes of one system fold into a single stand-in.
+    const doc: GraphDocument = {
+      version: 1,
+      nodes: [
+        { id: 'r', name: 'r', system: 'unity', kind: 'stat' },
+        ...[1, 2, 3, 4, 5].map((i) => ({
+          id: `u${i}`,
+          name: `u${i}`,
+          system: 'relics',
+          kind: 'relic' as const,
+        })),
+      ],
+      edges: [1, 2, 3, 4, 5].map((i) => ({
+        from: `u${i}`,
+        to: 'r',
+        rel: 'boosts' as const,
+        source: 'observed',
+      })),
+    };
+    const folded = fold(ego(buildIndex(doc), 'r', 1), new Set());
+    const positions = layout(breakCycles(folded).dag);
+    expect([...positions.keys()].sort()).toEqual(folded.nodes.map((n) => n.node.id).sort());
+    expect(positions.size).toBe(2);
   });
 
   // Sweeps the shipped graph the way pipeline.test.ts does, so it takes that
