@@ -72,7 +72,6 @@ describe('sourceLabel', () => {
 
   it('labels non-wiki sources without a link', () => {
     expect(sourceLabel('observed')).toEqual({ text: 'observed in game', href: null });
-    expect(sourceLabel('il2cpp')).toEqual({ text: 'game binary', href: null });
     expect(sourceLabel('discord')).toEqual({ text: 'community report', href: null });
   });
 

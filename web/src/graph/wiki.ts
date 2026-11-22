@@ -53,8 +53,6 @@ export function sourceLabel(source: string): SourceLabel {
   switch (source) {
     case 'observed':
       return { text: 'observed in game', href: null };
-    case 'il2cpp':
-      return { text: 'game binary', href: null };
     case 'discord':
       return { text: 'community report', href: null };
     default:

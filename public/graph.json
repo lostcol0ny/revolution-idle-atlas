@@ -18278,15 +18278,6 @@
     },
     {
       "confidence": "documented",
-      "from": "relic-10",
-      "note": "DP gain = base ^ (exponent × Relic 10 effect); effect 1 + 0.01 per level",
-      "op": "exp",
-      "rel": "boosts",
-      "source": "game-code:EternityController.UpdateDilation",
-      "to": "dilation-points"
-    },
-    {
-      "confidence": "documented",
       "from": "relic-11",
       "note": "Supernova rewards = (0.5 × Supernovas + 1) ^ (… × Relic 11 effect); effect 1 + 0.002 per level, softcapped above 1.4",
       "op": "exp",
@@ -21225,6 +21216,7 @@
       "op": "mult",
       "rel": "boosts",
       "source": "game-code:TarotCard.CalculateEffect",
+      "targets_effect": 0,
       "to": "tarot-two-of-swords"
     },
     {
@@ -26531,6 +26523,15 @@
       "rel": "requires",
       "source": "game",
       "to": "achievement-752"
+    },
+    {
+      "confidence": "documented",
+      "from": "relic-10",
+      "note": "DP income = base ^ (exponent × Relic 10 effect); effect 1 + 0.01 per level",
+      "op": "exp",
+      "rel": "boosts",
+      "source": "game-code:EternityController.UpdateDilation",
+      "to": "dp-income"
     },
     {
       "confidence": "uncertain",

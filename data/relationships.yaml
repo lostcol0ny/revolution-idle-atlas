@@ -4328,7 +4328,7 @@ edges:
   - {from: relic-2, to: quality, rel: boosts, op: add, note: "A Boost to Zodiac Quality", source: "wiki:Relics", confidence: documented}
   - {from: relic-4, to: luck, rel: boosts, op: add, note: "A Boost to (Zodiac) Luck", source: "wiki:Relics", confidence: documented}
   - {from: relic-6, to: common-exponent, rel: boosts, op: mult, note: "Common Exponent × Relic 6 effect², the effect read twice in the product (effect 1 + 0.005 per level)", source: "game-code:GameController.Update", confidence: documented}
-  - {from: relic-10, to: dilation-points, rel: boosts, op: exp, note: "DP gain = base ^ (exponent × Relic 10 effect); effect 1 + 0.01 per level", source: "game-code:EternityController.UpdateDilation", confidence: documented}
+  - {from: relic-10, to: dp-income, rel: boosts, op: exp, note: "DP income = base ^ (exponent × Relic 10 effect); effect 1 + 0.01 per level", source: "game-code:EternityController.UpdateDilation", confidence: documented}
   - {from: relic-22, to: value-points, rel: boosts, op: mult, note: "Common mineral income × Relic 22 effect (1 + level, raised to Relic 23's effect)", source: "game-code:CommonMineral.GetIncome", confidence: documented}
   - {from: relic-24, to: donut-game-speed, rel: boosts, op: exp, note: "Game Speed Donut = (1 + level × base) ^ Relic 24 effect (1 + 0.01 per level)", source: "game-code:UnityPlanetShopDonut.UpdateEffect", confidence: documented}
   - {from: relic-25, to: donut-luck, rel: boosts, op: exp, note: "Luck Donut = (1 + level × base) ^ Relic 25 effect (1 + 0.02 per level)", source: "game-code:UnityPlanetShopDonut.UpdateEffect", confidence: documented}
@@ -9358,7 +9358,7 @@ edges:
   - {from: tarot-artifact-parietal-bone, to: water-factor-2, rel: boosts, op: exp, note: "Once Temporal Bone is unlocked, the Water Factor 2 exponent × Parietal Bone effect (1 + 0.05 per level)", source: "game-code:Element.CheckFactors", confidence: documented}
   - {from: special-mineral-pink-gem, to: quality, rel: boosts, op: mult, note: "Base Quality × the Pink Gem effect", source: "game-code:UnityController.UnityUpdate", confidence: documented}
   - {from: attack-prestige-mult, to: attack-exponent, rel: boosts, op: add, note: "Attack Exponent = 1 + 0.01 × log10(prestige mult) / 2000, softcapped above 2, plus The Strength", source: "game-code:AttacksController.AttacksUpdate", confidence: documented}
-  - {from: tarot-three-of-swords, to: tarot-two-of-swords, rel: boosts, op: mult, note: "Two of Swords' first effect × Three of Swords' first effect", source: "game-code:TarotCard.CalculateEffect", confidence: documented}
+  - {from: tarot-three-of-swords, to: tarot-two-of-swords, rel: boosts, op: mult, targets_effect: 0, note: "Two of Swords' first effect × Three of Swords' first effect", source: "game-code:TarotCard.CalculateEffect", confidence: documented}
 
 suppress:
   # Audit of the generated `uncertain` edges: a wrong target, a backwards
@@ -9679,3 +9679,4 @@ suppress:
   - {from: zodiac-libra, to: lab-mult, rel: boosts, reason: "Lab. Mult Power multiplies Lab Power, not Lab Mult (EternityController.UpdateLaboratory)"}
   - {from: zodiac-aquarius, to: lab-mult, rel: boosts, reason: "Lab. Mult Power multiplies Lab Power, not Lab Mult (EternityController.UpdateLaboratory)"}
   - {from: refine-node-154, to: plague-points, rel: boosts, reason: "Acts on PlP per PlG, covered by refine-node-154 -> plp-per-plg (PlagueController.Update)"}
+  - {from: relic-10, to: dilation-points, rel: boosts, reason: "Relic 10 powers DP income, which UpdateDilation writes (EternityController.UpdateDilation)"}
