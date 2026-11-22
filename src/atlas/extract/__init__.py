@@ -49,6 +49,10 @@ def run_all(
     must not block every build. Running last also means the four parsers' ids
     win `to_yaml`'s first-wins dedup wherever a swept name collides with one.
 
+    The Tarot challenges are swept, but their reward is stated in Tarot's prose
+    and lands on Tarot's cards, so `tarot.extract_challenge_rewards` runs once
+    both the cards and the swept challenges exist.
+
     `game` is data/game.yaml. Its edges come after every wiki edge (see
     extract/game_text.py), and the nodes it creates — entries carrying a system
     and kind — count as known when pruning, since `atlas build` creates them
@@ -63,6 +67,7 @@ def run_all(
             raise ExtractError(f"{name} produced no nodes — its source page changed shape")
         combined.extend(result)
     combined.extend(sweep.extract(raw_dir, manifest or Manifest(), vocabulary))
+    combined.extend(tarot.extract_challenge_rewards(raw_dir, combined.nodes))
     if game is not None:
         combined.extend(game_text.extract(game, vocabulary))
         external_ids = external_ids | {

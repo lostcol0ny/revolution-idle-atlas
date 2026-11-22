@@ -12111,6 +12111,462 @@ edges:
   rel: boosts
   source: wiki:Particles
   confidence: uncertain
+- from: tarot-challenge-ace-of-swords
+  to: tarot-ace-of-swords
+  rel: boosts
+  note: Each Challenge provides a boost to the respective cards effect
+  source: wiki:Tarot
+  confidence: documented
+- from: tarot-challenge-two-of-swords
+  to: tarot-two-of-swords
+  rel: boosts
+  note: Each Challenge provides a boost to the respective cards effect
+  source: wiki:Tarot
+  confidence: documented
+- from: tarot-challenge-three-of-swords
+  to: tarot-three-of-swords
+  rel: boosts
+  note: Each Challenge provides a boost to the respective cards effect
+  source: wiki:Tarot
+  confidence: documented
+- from: tarot-challenge-four-of-swords
+  to: tarot-four-of-swords
+  rel: boosts
+  note: Each Challenge provides a boost to the respective cards effect
+  source: wiki:Tarot
+  confidence: documented
+- from: tarot-challenge-five-of-swords
+  to: tarot-five-of-swords
+  rel: boosts
+  note: Each Challenge provides a boost to the respective cards effect
+  source: wiki:Tarot
+  confidence: documented
+- from: tarot-challenge-six-of-swords
+  to: tarot-six-of-swords
+  rel: boosts
+  note: Each Challenge provides a boost to the respective cards effect
+  source: wiki:Tarot
+  confidence: documented
+- from: tarot-challenge-seven-of-swords
+  to: tarot-seven-of-swords
+  rel: boosts
+  note: Each Challenge provides a boost to the respective cards effect
+  source: wiki:Tarot
+  confidence: documented
+- from: tarot-challenge-eight-of-swords
+  to: tarot-eight-of-swords
+  rel: boosts
+  note: Each Challenge provides a boost to the respective cards effect
+  source: wiki:Tarot
+  confidence: documented
+- from: tarot-challenge-nine-of-swords
+  to: tarot-nine-of-swords
+  rel: boosts
+  note: Each Challenge provides a boost to the respective cards effect
+  source: wiki:Tarot
+  confidence: documented
+- from: tarot-challenge-ten-of-swords
+  to: tarot-ten-of-swords
+  rel: boosts
+  note: Each Challenge provides a boost to the respective cards effect
+  source: wiki:Tarot
+  confidence: documented
+- from: tarot-challenge-page-of-swords
+  to: tarot-page-of-swords
+  rel: boosts
+  note: Each Challenge provides a boost to the respective cards effect
+  source: wiki:Tarot
+  confidence: documented
+- from: tarot-challenge-knight-of-swords
+  to: tarot-knight-of-swords
+  rel: boosts
+  note: Each Challenge provides a boost to the respective cards effect
+  source: wiki:Tarot
+  confidence: documented
+- from: tarot-challenge-queen-of-swords
+  to: tarot-queen-of-swords
+  rel: boosts
+  note: Each Challenge provides a boost to the respective cards effect
+  source: wiki:Tarot
+  confidence: documented
+- from: tarot-challenge-king-of-swords
+  to: tarot-king-of-swords
+  rel: boosts
+  note: Each Challenge provides a boost to the respective cards effect
+  source: wiki:Tarot
+  confidence: documented
+- from: tarot-challenge-ace-of-wands
+  to: tarot-ace-of-wands
+  rel: boosts
+  note: Each Challenge provides a boost to the respective cards effect
+  source: wiki:Tarot
+  confidence: documented
+- from: tarot-challenge-two-of-wands
+  to: tarot-two-of-wands
+  rel: boosts
+  note: Each Challenge provides a boost to the respective cards effect
+  source: wiki:Tarot
+  confidence: documented
+- from: tarot-challenge-three-of-wands
+  to: tarot-three-of-wands
+  rel: boosts
+  note: Each Challenge provides a boost to the respective cards effect
+  source: wiki:Tarot
+  confidence: documented
+- from: tarot-challenge-four-of-wands
+  to: tarot-four-of-wands
+  rel: boosts
+  note: Each Challenge provides a boost to the respective cards effect
+  source: wiki:Tarot
+  confidence: documented
+- from: tarot-challenge-five-of-wands
+  to: tarot-five-of-wands
+  rel: boosts
+  note: Each Challenge provides a boost to the respective cards effect
+  source: wiki:Tarot
+  confidence: documented
+- from: tarot-challenge-six-of-wands
+  to: tarot-six-of-wands
+  rel: boosts
+  note: Each Challenge provides a boost to the respective cards effect
+  source: wiki:Tarot
+  confidence: documented
+- from: tarot-challenge-seven-of-wands
+  to: tarot-seven-of-wands
+  rel: boosts
+  note: Each Challenge provides a boost to the respective cards effect
+  source: wiki:Tarot
+  confidence: documented
+- from: tarot-challenge-eight-of-wands
+  to: tarot-eight-of-wands
+  rel: boosts
+  note: Each Challenge provides a boost to the respective cards effect
+  source: wiki:Tarot
+  confidence: documented
+- from: tarot-challenge-nine-of-wands
+  to: tarot-nine-of-wands
+  rel: boosts
+  note: Each Challenge provides a boost to the respective cards effect
+  source: wiki:Tarot
+  confidence: documented
+- from: tarot-challenge-ten-of-wands
+  to: tarot-ten-of-wands
+  rel: boosts
+  note: Each Challenge provides a boost to the respective cards effect
+  source: wiki:Tarot
+  confidence: documented
+- from: tarot-challenge-page-of-wands
+  to: tarot-page-of-wands
+  rel: boosts
+  note: Each Challenge provides a boost to the respective cards effect
+  source: wiki:Tarot
+  confidence: documented
+- from: tarot-challenge-knight-of-wands
+  to: tarot-knight-of-wands
+  rel: boosts
+  note: Each Challenge provides a boost to the respective cards effect
+  source: wiki:Tarot
+  confidence: documented
+- from: tarot-challenge-queen-of-wands
+  to: tarot-queen-of-wands
+  rel: boosts
+  note: Each Challenge provides a boost to the respective cards effect
+  source: wiki:Tarot
+  confidence: documented
+- from: tarot-challenge-king-of-wands
+  to: tarot-king-of-wands
+  rel: boosts
+  note: Each Challenge provides a boost to the respective cards effect
+  source: wiki:Tarot
+  confidence: documented
+- from: tarot-challenge-ace-of-pentacles
+  to: tarot-ace-of-pentacles
+  rel: boosts
+  note: Each Challenge provides a boost to the respective cards effect
+  source: wiki:Tarot
+  confidence: documented
+- from: tarot-challenge-two-of-pentacles
+  to: tarot-two-of-pentacles
+  rel: boosts
+  note: Each Challenge provides a boost to the respective cards effect
+  source: wiki:Tarot
+  confidence: documented
+- from: tarot-challenge-three-of-pentacles
+  to: tarot-three-of-pentacles
+  rel: boosts
+  note: Each Challenge provides a boost to the respective cards effect
+  source: wiki:Tarot
+  confidence: documented
+- from: tarot-challenge-four-of-pentacles
+  to: tarot-four-of-pentacles
+  rel: boosts
+  note: Each Challenge provides a boost to the respective cards effect
+  source: wiki:Tarot
+  confidence: documented
+- from: tarot-challenge-five-of-pentacles
+  to: tarot-five-of-pentacles
+  rel: boosts
+  note: Each Challenge provides a boost to the respective cards effect
+  source: wiki:Tarot
+  confidence: documented
+- from: tarot-challenge-six-of-pentacles
+  to: tarot-six-of-pentacles
+  rel: boosts
+  note: Each Challenge provides a boost to the respective cards effect
+  source: wiki:Tarot
+  confidence: documented
+- from: tarot-challenge-seven-of-pentacles
+  to: tarot-seven-of-pentacles
+  rel: boosts
+  note: Each Challenge provides a boost to the respective cards effect
+  source: wiki:Tarot
+  confidence: documented
+- from: tarot-challenge-eight-of-pentacles
+  to: tarot-eight-of-pentacles
+  rel: boosts
+  note: Each Challenge provides a boost to the respective cards effect
+  source: wiki:Tarot
+  confidence: documented
+- from: tarot-challenge-nine-of-pentacles
+  to: tarot-nine-of-pentacles
+  rel: boosts
+  note: Each Challenge provides a boost to the respective cards effect
+  source: wiki:Tarot
+  confidence: documented
+- from: tarot-challenge-ten-of-pentacles
+  to: tarot-ten-of-pentacles
+  rel: boosts
+  note: Each Challenge provides a boost to the respective cards effect
+  source: wiki:Tarot
+  confidence: documented
+- from: tarot-challenge-page-of-pentacles
+  to: tarot-page-of-pentacles
+  rel: boosts
+  note: Each Challenge provides a boost to the respective cards effect
+  source: wiki:Tarot
+  confidence: documented
+- from: tarot-challenge-knight-of-pentacles
+  to: tarot-knight-of-pentacles
+  rel: boosts
+  note: Each Challenge provides a boost to the respective cards effect
+  source: wiki:Tarot
+  confidence: documented
+- from: tarot-challenge-queen-of-pentacles
+  to: tarot-queen-of-pentacles
+  rel: boosts
+  note: Each Challenge provides a boost to the respective cards effect
+  source: wiki:Tarot
+  confidence: documented
+- from: tarot-challenge-king-of-pentacles
+  to: tarot-king-of-pentacles
+  rel: boosts
+  note: Each Challenge provides a boost to the respective cards effect
+  source: wiki:Tarot
+  confidence: documented
+- from: tarot-challenge-ace-of-cups
+  to: tarot-ace-of-cups
+  rel: boosts
+  note: Each Challenge provides a boost to the respective cards effect
+  source: wiki:Tarot
+  confidence: documented
+- from: tarot-challenge-two-of-cups
+  to: tarot-two-of-cups
+  rel: boosts
+  note: Each Challenge provides a boost to the respective cards effect
+  source: wiki:Tarot
+  confidence: documented
+- from: tarot-challenge-three-of-cups
+  to: tarot-three-of-cups
+  rel: boosts
+  note: Each Challenge provides a boost to the respective cards effect
+  source: wiki:Tarot
+  confidence: documented
+- from: tarot-challenge-four-of-cups
+  to: tarot-four-of-cups
+  rel: boosts
+  note: Each Challenge provides a boost to the respective cards effect
+  source: wiki:Tarot
+  confidence: documented
+- from: tarot-challenge-five-of-cups
+  to: tarot-five-of-cups
+  rel: boosts
+  note: Each Challenge provides a boost to the respective cards effect
+  source: wiki:Tarot
+  confidence: documented
+- from: tarot-challenge-six-of-cups
+  to: tarot-six-of-cups
+  rel: boosts
+  note: Each Challenge provides a boost to the respective cards effect
+  source: wiki:Tarot
+  confidence: documented
+- from: tarot-challenge-seven-of-cups
+  to: tarot-seven-of-cups
+  rel: boosts
+  note: Each Challenge provides a boost to the respective cards effect
+  source: wiki:Tarot
+  confidence: documented
+- from: tarot-challenge-eight-of-cups
+  to: tarot-eight-of-cups
+  rel: boosts
+  note: Each Challenge provides a boost to the respective cards effect
+  source: wiki:Tarot
+  confidence: documented
+- from: tarot-challenge-nine-of-cups
+  to: tarot-nine-of-cups
+  rel: boosts
+  note: Each Challenge provides a boost to the respective cards effect
+  source: wiki:Tarot
+  confidence: documented
+- from: tarot-challenge-ten-of-cups
+  to: tarot-ten-of-cups
+  rel: boosts
+  note: Each Challenge provides a boost to the respective cards effect
+  source: wiki:Tarot
+  confidence: documented
+- from: tarot-challenge-page-of-cups
+  to: tarot-page-of-cups
+  rel: boosts
+  note: Each Challenge provides a boost to the respective cards effect
+  source: wiki:Tarot
+  confidence: documented
+- from: tarot-challenge-knight-of-cups
+  to: tarot-knight-of-cups
+  rel: boosts
+  note: Each Challenge provides a boost to the respective cards effect
+  source: wiki:Tarot
+  confidence: documented
+- from: tarot-challenge-queen-of-cups
+  to: tarot-queen-of-cups
+  rel: boosts
+  note: Each Challenge provides a boost to the respective cards effect
+  source: wiki:Tarot
+  confidence: documented
+- from: tarot-challenge-king-of-cups
+  to: tarot-king-of-cups
+  rel: boosts
+  note: Each Challenge provides a boost to the respective cards effect
+  source: wiki:Tarot
+  confidence: documented
+- from: tarot-challenge-the-fool
+  to: tarot-the-fool
+  rel: boosts
+  note: Each Challenge provides a boost to the respective cards effect
+  source: wiki:Tarot
+  confidence: documented
+- from: tarot-challenge-the-magician
+  to: tarot-the-magician
+  rel: boosts
+  note: Each Challenge provides a boost to the respective cards effect
+  source: wiki:Tarot
+  confidence: documented
+- from: tarot-challenge-the-high-priestess
+  to: tarot-the-high-priestess
+  rel: boosts
+  note: Each Challenge provides a boost to the respective cards effect
+  source: wiki:Tarot
+  confidence: documented
+- from: tarot-challenge-the-empress
+  to: tarot-the-empress
+  rel: boosts
+  note: Each Challenge provides a boost to the respective cards effect
+  source: wiki:Tarot
+  confidence: documented
+- from: tarot-challenge-the-emperor
+  to: tarot-the-emperor
+  rel: boosts
+  note: Each Challenge provides a boost to the respective cards effect
+  source: wiki:Tarot
+  confidence: documented
+- from: tarot-challenge-the-hierophant
+  to: tarot-the-hierophant
+  rel: boosts
+  note: Each Challenge provides a boost to the respective cards effect
+  source: wiki:Tarot
+  confidence: documented
+- from: tarot-challenge-the-lovers
+  to: tarot-the-lovers
+  rel: boosts
+  note: Each Challenge provides a boost to the respective cards effect
+  source: wiki:Tarot
+  confidence: documented
+- from: tarot-challenge-the-chariot
+  to: tarot-the-chariot
+  rel: boosts
+  note: Each Challenge provides a boost to the respective cards effect
+  source: wiki:Tarot
+  confidence: documented
+- from: tarot-challenge-justice
+  to: tarot-justice
+  rel: boosts
+  note: Each Challenge provides a boost to the respective cards effect
+  source: wiki:Tarot
+  confidence: documented
+- from: tarot-challenge-the-hermit
+  to: tarot-the-hermit
+  rel: boosts
+  note: Each Challenge provides a boost to the respective cards effect
+  source: wiki:Tarot
+  confidence: documented
+- from: tarot-challenge-wheel-of-fortune
+  to: tarot-wheel-of-fortune
+  rel: boosts
+  note: Each Challenge provides a boost to the respective cards effect
+  source: wiki:Tarot
+  confidence: documented
+- from: tarot-challenge-strength
+  to: tarot-the-strength
+  rel: boosts
+  note: Each Challenge provides a boost to the respective cards effect
+  source: wiki:Tarot
+  confidence: documented
+- from: tarot-challenge-the-hanged-man
+  to: tarot-the-hanged-man
+  rel: boosts
+  note: Each Challenge provides a boost to the respective cards effect
+  source: wiki:Tarot
+  confidence: documented
+- from: tarot-challenge-death
+  to: tarot-death
+  rel: boosts
+  note: Each Challenge provides a boost to the respective cards effect
+  source: wiki:Tarot
+  confidence: documented
+- from: tarot-challenge-temperance
+  to: tarot-temperance
+  rel: boosts
+  note: Each Challenge provides a boost to the respective cards effect
+  source: wiki:Tarot
+  confidence: documented
+- from: tarot-challenge-the-devil
+  to: tarot-the-devil
+  rel: boosts
+  note: Each Challenge provides a boost to the respective cards effect
+  source: wiki:Tarot
+  confidence: documented
+- from: tarot-challenge-the-tower
+  to: tarot-the-tower
+  rel: boosts
+  note: Each Challenge provides a boost to the respective cards effect
+  source: wiki:Tarot
+  confidence: documented
+- from: tarot-challenge-the-star
+  to: tarot-the-star
+  rel: boosts
+  note: Each Challenge provides a boost to the respective cards effect
+  source: wiki:Tarot
+  confidence: documented
+- from: tarot-challenge-the-moon
+  to: tarot-the-moon
+  rel: boosts
+  note: Each Challenge provides a boost to the respective cards effect
+  source: wiki:Tarot
+  confidence: documented
+- from: tarot-challenge-the-sun
+  to: tarot-the-sun
+  rel: boosts
+  note: Each Challenge provides a boost to the respective cards effect
+  source: wiki:Tarot
+  confidence: documented
 - from: particles-rank
   to: particles-rank-bonus-1
   rel: requires

@@ -69,9 +69,11 @@ class WikitableEntry(_Entry):
     # edge. For a restriction such as a challenge's penalty: "Resets Attack
     # Level" names a stat the row nerfs, and only `boosts` would come out of it.
     text_columns: list[str] = []
-    # Kept on the node as effects, after `text_columns`. Each reference becomes
-    # `reference -> node` `requires`, prerequisite first: "Attack Level 3250"
-    # is what finishing a challenge takes, not something the challenge raises.
+    # Kept on the node as effects, after `text_columns`. A plain threshold cell
+    # ("Attack Level 3250", see `sweep.is_plain_threshold`) makes each reference
+    # `reference -> node` `requires`, prerequisite first: it is what finishing a
+    # challenge takes, not something the challenge raises. Any other cell, an
+    # action goal such as "Perform a Singularity at ...", makes no edge.
     requirement_columns: list[str] = []
     per_level_column: str | None = None
 

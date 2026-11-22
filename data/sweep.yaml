@@ -322,7 +322,8 @@ pages:
   # card that gates the challenge, so the 76 ids are distinct without a suit to
   # disambiguate them, and they do not collide with the `tarot-<card>` nodes the
   # Tarot parser mints. No column is a reward: the page states the payoff once,
-  # in prose above the tables, so nothing here may produce `boosts`.
+  # in prose above the tables, so nothing here may produce `boosts`;
+  # `tarot.challenge_rewards` turns that prose into one challenge -> card edge.
   # `Penalty` is text only. It names what the challenge resets and nerfs, and
   # its "penalty becomes weaker based on X" clauses run on to the end of the
   # cell, so reversing them as inputs would also pull in every reset after them.

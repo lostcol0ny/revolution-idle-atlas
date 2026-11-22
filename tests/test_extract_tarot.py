@@ -1,8 +1,16 @@
 from pathlib import Path
 
+from atlas.extract import sweep
+from atlas.extract.manifest import load_manifest
 from atlas.extract.refs import RANKS, Vocabulary
-from atlas.extract.tarot import _NAMED_RANKS, _NUMBER_TO_RANK, extract, parse
-from atlas.models import EdgeConfidence
+from atlas.extract.tarot import (
+    _NAMED_RANKS,
+    _NUMBER_TO_RANK,
+    challenge_rewards,
+    extract,
+    parse,
+)
+from atlas.models import EdgeConfidence, Node
 
 RAW_DIR = Path(__file__).resolve().parents[1] / "data" / "raw"
 
@@ -85,6 +93,60 @@ def test_the_real_page_yields_seventy_eight_cards():
     # "The Devil" and will resolve against this id once relic effects are wired,
     # so the spelling is a cross-parser contract and not merely an internal detail.
     assert "tarot-the-devil" in {n.id for n in result.nodes}
+
+
+def test_every_challenge_on_the_real_page_boosts_its_own_card():
+    cards = extract(RAW_DIR).nodes
+    manifest = load_manifest(RAW_DIR.parent / "sweep.yaml")
+    challenges = [
+        node
+        for node in sweep.extract(RAW_DIR, manifest, Vocabulary.EMPTY).nodes
+        if node.system == "tarot-challenges"
+    ]
+    raw = (RAW_DIR / "Tarot.wikitext").read_text(encoding="utf-8")
+
+    result = challenge_rewards(raw, cards + challenges)
+
+    assert result.warnings == []
+    pairs = {(e.from_, e.to) for e in result.edges}
+    assert len(pairs) == len(challenges) == 76
+    assert ("tarot-challenge-queen-of-swords", "tarot-queen-of-swords") in pairs
+    # The table names the challenge "Strength"; the card is "The Strength".
+    assert ("tarot-challenge-strength", "tarot-the-strength") in pairs
+    assert {(e.rel.value, e.confidence) for e in result.edges} == {
+        ("boosts", EdgeConfidence.DOCUMENTED)
+    }
+
+
+def _node(node_id: str, system: str, kind: str) -> Node:
+    return Node(id=node_id, name=node_id, system=system, kind=kind)
+
+
+REWARD = "Each Challenge provides a boost to the respective cards effect."
+
+
+def test_a_challenge_without_a_card_is_a_warning_not_an_edge():
+    nodes = [
+        _node("tarot-the-fool", "tarot", "tarot-card"),
+        _node("tarot-challenge-the-fool", "tarot-challenges", "upgrade"),
+        _node("tarot-challenge-the-jester", "tarot-challenges", "upgrade"),
+    ]
+    result = challenge_rewards(REWARD, nodes)
+    assert [(e.from_, e.to) for e in result.edges] == [
+        ("tarot-challenge-the-fool", "tarot-the-fool")
+    ]
+    assert len(result.warnings) == 1
+    assert "tarot-challenge-the-jester" in result.warnings[0]
+
+
+def test_no_challenge_edges_once_the_page_stops_stating_the_reward():
+    nodes = [
+        _node("tarot-the-fool", "tarot", "tarot-card"),
+        _node("tarot-challenge-the-fool", "tarot-challenges", "upgrade"),
+    ]
+    result = challenge_rewards("Challenges are hard.", nodes)
+    assert result.edges == []
+    assert len(result.warnings) == 1
 
 
 def test_numeric_suit_ref_produces_an_edge():

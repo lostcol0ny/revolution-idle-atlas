@@ -136,6 +136,38 @@ def test_text_and_requirement_columns_never_produce_boosts(tmp_path: Path):
     ]
 
 
+def test_a_requirement_names_each_prerequisite_once_and_never_itself(tmp_path: Path):
+    # Two goal cells naming one stat make one edge, not two; a goal naming the
+    # row's own node would be a self-edge, which the build rejects as an error.
+    table = """{| class="wikitable"
+!Challenge
+!Goal
+!Bonus Goal
+|-
+|Queen of Swords
+|Attack Power 3250
+|500+ Attack Power and Queen Trial
+|}"""
+    manifest = _manifest(
+        page="Tarot",
+        id_prefix="tarot-challenge",
+        name_columns=["Challenge"],
+        effect_columns=[],
+        requirement_columns=["Goal", "Bonus Goal"],
+    )
+    vocabulary = Vocabulary(
+        [
+            ("Attack Power", "attack-power"),
+            ("Queen Trial", "tarot-challenge-queen-of-swords"),
+        ]
+    )
+    result = extract(_raw(tmp_path, "Tarot.wikitext", table), manifest, vocabulary)
+
+    assert [(e.from_, e.to, e.rel.value) for e in result.edges] == [
+        ("attack-power", "tarot-challenge-queen-of-swords", "requires"),
+    ]
+
+
 @pytest.mark.parametrize(
     "text",
     [

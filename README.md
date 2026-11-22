@@ -91,12 +91,14 @@ matches no edge, or a generated edge colliding with an earlier one on
 
 Some warnings belong to `atlas extract` and appear only on an extraction run: a
 manifest page that yields no records, a page named in the manifest with no file
-in `data/raw/`, two manifest entries minting the same node id, or a Tarot card
-whose name another node already claims. Looking for them after `atlas build`
-finds nothing, because that command reads neither `data/sweep.yaml` nor
-`data/raw/`. Each one names its own subject rather than a file to open, because
-the fix can lie in the manifest, in `data/relationships.yaml`, or nowhere at all
-when the wiki has simply been re-worded.
+in `data/raw/`, two manifest entries minting the same node id, a Tarot card
+whose name another node already claims, a Tarot challenge with no card of its
+name, or a Tarot page that no longer states the challenge reward (below).
+Looking for them after `atlas build` finds nothing, because that command reads
+neither `data/sweep.yaml` nor `data/raw/`. Each one names its own subject rather
+than a file to open, because the fix can lie in the manifest, in
+`data/relationships.yaml`, or nowhere at all when the wiki has simply been
+re-worded.
 
 A manifest page yielding no records is a **warning and not an error**, unlike one
 of the four hand-written parsers producing no nodes, which is fatal. Those four
@@ -108,6 +110,16 @@ A colliding Tarot card name is warned about for the same reason. Card names are
 read off a page volunteers edit, so a rename can put a card in contest with a
 curated node; the card loses its place in the page vocabulary and the edges it
 would have produced, and everything else extracts as usual.
+
+The Tarot challenge tables have no reward column; the page states the reward
+once, in prose above them: "Each Challenge provides a boost to the respective
+cards effect". While that sentence is on the page, `atlas extract` gives every
+swept challenge one `documented` `boosts` edge to its card, matched by name with
+a leading "The" ignored (the challenge "Strength" is the card "The Strength").
+The rest of that paragraph makes no edges: "a boost to the first effect of every
+card in that suit" would be fourteen per challenge, and "All of your Tarot
+Challenges combined boost Sacrifice Dust gain" is a boost from the set, not
+from one challenge.
 
 `atlas scrape` talks to a live, volunteer-run wiki. Do not run it in a loop. A
 scheduled GitHub Actions workflow runs it daily and opens a pull request when the
