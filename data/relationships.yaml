@@ -154,13 +154,6 @@ systems:
     parent: unity
 
 nodes:
-  - id: attack-power
-    name: Attack Power
-    system: attacks
-    kind: stat
-    wiki: Unity#Attacks
-    confidence: documented
-
   - id: gold
     name: Gold
     system: attacks
@@ -3569,12 +3562,6 @@ nodes:
     confidence: provisional
 
 edges:
-  - from: relic-3
-    to: attack-power
-    rel: boosts
-    source: wiki:Relics
-    confidence: documented
-
   - from: gold
     to: relic-3
     rel: boosts

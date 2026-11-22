@@ -19,7 +19,7 @@ type LoadState =
   | { status: 'fetch-error'; message: string }
   | { status: 'format-error'; message: string };
 
-const SUGGESTED_IDS = ['attack-power', 'gold'];
+const SUGGESTED_IDS = ['damage-mult', 'gold'];
 
 export default function App() {
   const [load, setLoad] = useState<LoadState>({ status: 'loading' });

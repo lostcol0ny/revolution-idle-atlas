@@ -10374,14 +10374,6 @@
     },
     {
       "confidence": "documented",
-      "id": "attack-power",
-      "kind": "stat",
-      "name": "Attack Power",
-      "system": "attacks",
-      "wiki": "Unity#Attacks"
-    },
-    {
-      "confidence": "documented",
       "id": "gold",
       "kind": "currency",
       "name": "Gold",
@@ -23312,13 +23304,6 @@
       "rel": "boosts",
       "source": "wiki:Particles",
       "to": "plague-generators"
-    },
-    {
-      "confidence": "documented",
-      "from": "relic-3",
-      "rel": "boosts",
-      "source": "wiki:Relics",
-      "to": "attack-power"
     },
     {
       "confidence": "uncertain",

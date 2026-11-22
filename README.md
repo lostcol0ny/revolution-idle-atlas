@@ -421,7 +421,7 @@ renders them identically to `documented` edges will present guesses as facts.
 ### Deployment
 
 Deployed to Vercel as static files. There is no `vercel.json` and no rewrite
-rules are needed — deep links use query parameters (`/?node=attack-power`),
+rules are needed — deep links use query parameters (`/?node=damage-mult`),
 not path segments, so every request already hits `/`.
 
 | Setting | Value |

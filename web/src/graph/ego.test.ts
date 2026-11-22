@@ -91,8 +91,8 @@ describe('ego against the real committed artifact', () => {
   const url = new URL('../../../public/graph.json', import.meta.url);
   const doc = parseGraph(JSON.parse(readFileSync(url, 'utf-8')));
 
-  it('produces a non-empty ego graph for attack-power at depth 2', () => {
-    const graph = ego(buildIndex(doc), 'attack-power', 2);
+  it('produces a non-empty ego graph for damage-mult at depth 2', () => {
+    const graph = ego(buildIndex(doc), 'damage-mult', 2);
     expect(graph.nodes.length).toBeGreaterThan(1);
     expect(graph.edges.length).toBeGreaterThan(0);
     expect(graph.nodes.some((n) => n.column < 0)).toBe(true);
