@@ -607,6 +607,14 @@ def _filled(template: str, wiki: str | None) -> str:
     return readable(text)
 
 
+def _wiki_row(title: str, wiki: Mapping[str, Mapping[str, str]]) -> Mapping[str, str]:
+    exact = wiki.get(_norm(title))
+    if exact is not None:
+        return exact
+    near = [row for key, row in wiki.items() if _same_name(key, title)]
+    return near[0] if len(near) == 1 else {}
+
+
 def map_achievements(
     strings: Mapping[str, str],
     nodes: Iterable[Node],
@@ -618,7 +626,9 @@ def map_achievements(
     reward for Ach. 29" is `ACH_REWD_28_NEW`); secrets are
     `achievement-secret-<n>`. The requirement is the description and the
     reward the effect. `wiki` is `wiki_achievements` of the Achievements page,
-    read only for the thresholds the game leaves to runtime.
+    read only for the thresholds the game leaves to runtime. A row is paired
+    by name, or by a near spelling when exactly one row has one ("Generators
+    Power" / "Generator Power"); `_filled` still checks every other word.
     """
     by_id = {n.id: n for n in nodes}
     report = FamilyReport()
@@ -638,7 +648,7 @@ def map_achievements(
         if index < _SECRET_BASE:
             number = index + 1
             node_id, name = f"achievement-{number}", f"Achievement {number} ({title})"
-            row = wiki.get(_norm(title), {})
+            row = _wiki_row(title, wiki)
         else:
             number = index - _SECRET_BASE + 1
             node_id = f"achievement-secret-{number}"

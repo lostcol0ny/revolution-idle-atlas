@@ -13202,6 +13202,11 @@ edges:
   rel: requires
   source: game
   confidence: uncertain
+- from: generator-power
+  to: achievement-37
+  rel: requires
+  source: game
+  confidence: uncertain
 - from: achievement-39
   to: promotion-4
   rel: boosts

@@ -1119,7 +1119,7 @@ def test_no_achievement_boosts_anything_from_its_goal_alone():
     from atlas.loader import load_dataset, load_game
 
     game = load_game(DATA / "game.yaml")
-    achievements = [n for n in game.nodes if n.system == "achievements"]
+    achievements = [n for n in game.nodes if n.id.startswith("achievement-")]
     assert len(achievements) == 149
     goals_only = game.model_copy(
         update={"nodes": [n.model_copy(update={"effects": []}) for n in achievements]}

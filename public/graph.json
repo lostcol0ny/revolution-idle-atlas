@@ -11347,7 +11347,7 @@
     },
     {
       "confidence": "documented",
-      "description": "Reach a value score in Dilation",
+      "description": "Reach e2.00e10 score in Dilation",
       "effects": [
         {
           "text": "Faster Auto-Ascend optimization"
@@ -26606,6 +26606,14 @@
       "to": "achievement-36"
     },
     {
+      "confidence": "documented",
+      "from": "generator-power",
+      "note": "Reach 1,000 GP",
+      "rel": "requires",
+      "source": "wiki:Achievements",
+      "to": "achievement-37"
+    },
+    {
       "confidence": "uncertain",
       "from": "achievement-39",
       "rel": "boosts",
@@ -26654,20 +26662,6 @@
       "rel": "boosts",
       "source": "game",
       "to": "dilation"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "dilation-tree",
-      "rel": "requires",
-      "source": "game",
-      "to": "achievement-140"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "achievement-161",
-      "rel": "boosts",
-      "source": "game",
-      "to": "unity"
     },
     {
       "confidence": "uncertain",
@@ -27096,13 +27090,6 @@
       "rel": "boosts",
       "source": "game",
       "to": "particles-alpha"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "achievement-705",
-      "rel": "boosts",
-      "source": "game",
-      "to": "singularity"
     },
     {
       "confidence": "uncertain",
@@ -31838,17 +31825,17 @@
     {
       "confidence": "documented",
       "from": "achievement-completion",
-      "note": "+350 souls; Secret Achievements pay one-off Souls the same way",
+      "note": "reward = +200, reward_type = souls; Secret Achievements pay Souls the same way",
       "rel": "boosts",
-      "source": "observed",
+      "source": "wiki:Achievements",
       "to": "souls"
     },
     {
       "confidence": "documented",
       "from": "achievement-completion",
-      "note": "+30:00 TF",
+      "note": "reward = +15:00 TF, reward_type = time_flux",
       "rel": "boosts",
-      "source": "observed",
+      "source": "wiki:Achievements",
       "to": "time-flux"
     },
     {
@@ -31862,11 +31849,27 @@
     },
     {
       "confidence": "documented",
-      "from": "generator-power",
-      "note": "Reach 1,000 GP",
+      "from": "dilation-node-top-4",
+      "note": "Have at least 1 TOP-4, 1 MID-4, and 1 BOT-4 Dilation Tree upgrade",
       "rel": "requires",
-      "source": "observed",
-      "to": "achievement-37"
+      "source": "game:ACH_DESC_139",
+      "to": "achievement-140"
+    },
+    {
+      "confidence": "documented",
+      "from": "dilation-node-middle-4",
+      "note": "Have at least 1 TOP-4, 1 MID-4, and 1 BOT-4 Dilation Tree upgrade",
+      "rel": "requires",
+      "source": "game:ACH_DESC_139",
+      "to": "achievement-140"
+    },
+    {
+      "confidence": "documented",
+      "from": "dilation-node-bottom-4",
+      "note": "Have at least 1 TOP-4, 1 MID-4, and 1 BOT-4 Dilation Tree upgrade",
+      "rel": "requires",
+      "source": "game:ACH_DESC_139",
+      "to": "achievement-140"
     },
     {
       "confidence": "documented",

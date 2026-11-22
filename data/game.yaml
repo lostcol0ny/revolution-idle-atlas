@@ -679,7 +679,7 @@ nodes:
   kind: achievement
 - id: achievement-37
   name: Achievement 37 (Generator Power)
-  description: Reach a value GP
+  description: Reach 1,000 GP
   effects:
   - x1.1 to the 1st Generator
   system: achievements
@@ -882,7 +882,7 @@ nodes:
   kind: achievement
 - id: achievement-189
   name: Achievement 189 (I Don't Feel a Difference)
-  description: Reach a value score in Dilation
+  description: Reach e2.00e10 score in Dilation
   effects:
   - Faster Auto-Ascend optimization
   system: achievements

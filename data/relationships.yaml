@@ -4144,14 +4144,6 @@ nodes:
     confidence: documented
     description: Each achievement, secrets included, pays a one-off Souls or Time Flux reward on completion.
 
-  # The game fills this threshold in at runtime and the wiki has no row for it;
-  # the number was read from the achievement in the game.
-  - id: achievement-37
-    name: Achievement 37 (Generator Power)
-    system: achievements
-    kind: achievement
-    description: Reach 1,000 GP
-
 edges:
   - from: gold
     to: relic-3
@@ -8495,15 +8487,15 @@ edges:
   - from: achievement-completion
     to: souls
     rel: boosts
-    note: "+350 souls; Secret Achievements pay one-off Souls the same way"
-    source: observed
+    note: "reward = +200, reward_type = souls; Secret Achievements pay Souls the same way"
+    source: wiki:Achievements
     confidence: documented
 
   - from: achievement-completion
     to: time-flux
     rel: boosts
-    note: "+30:00 TF"
-    source: observed
+    note: "reward = +15:00 TF, reward_type = time_flux"
+    source: wiki:Achievements
     confidence: documented
 
   - from: achievement-21
@@ -8518,7 +8510,28 @@ edges:
     to: achievement-37
     rel: requires
     note: "Reach 1,000 GP"
-    source: observed
+    source: wiki:Achievements
+    confidence: documented
+
+  - from: dilation-node-top-4
+    to: achievement-140
+    rel: requires
+    note: "Have at least 1 TOP-4, 1 MID-4, and 1 BOT-4 Dilation Tree upgrade"
+    source: game:ACH_DESC_139
+    confidence: documented
+
+  - from: dilation-node-middle-4
+    to: achievement-140
+    rel: requires
+    note: "Have at least 1 TOP-4, 1 MID-4, and 1 BOT-4 Dilation Tree upgrade"
+    source: game:ACH_DESC_139
+    confidence: documented
+
+  - from: dilation-node-bottom-4
+    to: achievement-140
+    rel: requires
+    note: "Have at least 1 TOP-4, 1 MID-4, and 1 BOT-4 Dilation Tree upgrade"
+    source: game:ACH_DESC_139
     confidence: documented
 
   - from: achievement-51
@@ -9212,3 +9225,24 @@ suppress:
     reason: >-
       "The Tarot Upgrades guy won't bother you anymore." silences a character;
       it changes nothing in Tarot.
+
+  - from: achievement-705
+    to: singularity
+    rel: boosts
+    reason: >-
+      "Unlocks automation for Singularity Tree" -- "Singularity" matched inside
+      the tree's name; the Singularity count is not changed.
+
+  - from: achievement-161
+    to: unity
+    rel: boosts
+    reason: >-
+      "Keep pre-Unity automation unlocked" -- "Unity" matched inside
+      "pre-Unity"; Unity itself is not changed.
+
+  - from: dilation-tree
+    to: achievement-140
+    rel: requires
+    reason: >-
+      "1 TOP-4, 1 MID-4, and 1 BOT-4 Dilation Tree upgrade" names three nodes,
+      restated above.
