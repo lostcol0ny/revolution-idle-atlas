@@ -12210,7 +12210,7 @@
     },
     {
       "confidence": "documented",
-      "description": "Reach 1.08e308+ Gold",
+      "description": "Reach 1.8e308+ Gold",
       "effects": [
         {
           "text": "Empowers Relic 17 by ^1.01"
@@ -12340,7 +12340,7 @@
     },
     {
       "confidence": "documented",
-      "description": "Reach 1.08e308+ Polish Points",
+      "description": "Reach 1.8e308+ Polish Points",
       "effects": [
         {
           "text": "Unlocks auto-spawn Special Minerals automation"
@@ -18259,6 +18259,18 @@
       "name": "Relic Sacrifice Level",
       "system": "relics",
       "wiki": "Relics"
+    },
+    {
+      "aliases": [
+        "Unlocked Relics"
+      ],
+      "confidence": "documented",
+      "description": "Consecutive relics from Relic 1 with a level or sacrifice level above 0",
+      "id": "unlocked-relic-count",
+      "kind": "stat",
+      "name": "Unlocked Relic Count",
+      "system": "relics",
+      "wiki": "Relics"
     }
   ],
   "edges": [
@@ -18314,8 +18326,8 @@
     },
     {
       "confidence": "documented",
-      "from": "relics",
-      "note": "Relic 12's attack bonus = its effect ^ the number of unlocked relics",
+      "from": "unlocked-relic-count",
+      "note": "Attack bonus × Relic 12 effect ^ unlocked relic count",
       "op": "exp",
       "rel": "boosts",
       "source": "game-code:AttacksController.AttacksUpdate",
@@ -19506,7 +19518,7 @@
     {
       "confidence": "documented",
       "from": "mineral-level",
-      "note": "Refine Node 61 effect = Relic 28 effect ^ max mineral level",
+      "note": "Refine Node 61 effect = 10 × Relic 28 effect ^ max mineral level",
       "rel": "boosts",
       "source": "game-code:RefineNode.Update",
       "to": "refine-node-61"
@@ -21065,7 +21077,7 @@
       "from": "refine-node-182",
       "note": "Each spark spawned lowers the Epsilon Tree Point cost (softcapped total)",
       "rel": "boosts",
-      "source": "game-code:ParticlesData.UpdateEpsilonStats",
+      "source": "game-code:ParticlesData.SpawnSpark",
       "to": "epsilon-tree-points"
     },
     {
@@ -26325,11 +26337,28 @@
     },
     {
       "confidence": "documented",
+      "from": "luck",
+      "note": "Luck raises the chance of the rarities above 8 that this needs",
+      "rel": "boosts",
+      "source": "game-code:UnityController.CalculateRarityValues",
+      "to": "achievement-220"
+    },
+    {
+      "confidence": "documented",
       "from": "attack-level",
       "note": "Attack Level ≥ 420",
       "rel": "requires",
       "source": "game-code:GameController.UpdateAchievement",
       "to": "achievement-226"
+    },
+    {
+      "confidence": "documented",
+      "from": "achievement-230",
+      "note": "Every relic's cost ÷ 5",
+      "op": "mult",
+      "rel": "boosts",
+      "source": "game-code:Relic.GetCost",
+      "to": "relics"
     },
     {
       "confidence": "documented",
@@ -26343,6 +26372,15 @@
     {
       "confidence": "documented",
       "from": "achievement-231",
+      "note": "Every relic's cost ÷ 5",
+      "op": "mult",
+      "rel": "boosts",
+      "source": "game-code:Relic.GetCost",
+      "to": "relics"
+    },
+    {
+      "confidence": "documented",
+      "from": "achievement-231",
       "note": "Raises Earth Zodiacs' total Quality to a power",
       "op": "exp",
       "rel": "boosts",
@@ -26352,11 +26390,29 @@
     {
       "confidence": "documented",
       "from": "achievement-232",
+      "note": "Every relic's cost ÷ 5",
+      "op": "mult",
+      "rel": "boosts",
+      "source": "game-code:Relic.GetCost",
+      "to": "relics"
+    },
+    {
+      "confidence": "documented",
+      "from": "achievement-232",
       "note": "Raises Wind Zodiacs' total Quality to a power",
       "op": "exp",
       "rel": "boosts",
       "source": "game-code:UnityController.UnityUpdate",
       "to": "quality"
+    },
+    {
+      "confidence": "documented",
+      "from": "achievement-233",
+      "note": "Every relic's cost ÷ 5",
+      "op": "mult",
+      "rel": "boosts",
+      "source": "game-code:Relic.GetCost",
+      "to": "relics"
     },
     {
       "confidence": "documented",
@@ -26379,10 +26435,19 @@
     {
       "confidence": "documented",
       "from": "luck",
-      "note": "Luck ≥ 2025",
+      "note": "Luck ≥ 2024.6",
       "rel": "requires",
       "source": "game-code:GameController.UpdateAchievement",
       "to": "achievement-236"
+    },
+    {
+      "confidence": "documented",
+      "from": "achievement-237",
+      "note": "Every relic's cost ÷ 10",
+      "op": "mult",
+      "rel": "boosts",
+      "source": "game-code:Relic.GetCost",
+      "to": "relics"
     },
     {
       "confidence": "documented",
@@ -26470,7 +26535,7 @@
     {
       "confidence": "documented",
       "from": "polish-points",
-      "note": "Polish Points threshold",
+      "note": "Polish Points ≥ 1.8e308",
       "rel": "requires",
       "source": "game-code:GameController.UpdateAchievement",
       "to": "achievement-326"
@@ -32605,7 +32670,7 @@
       "note": "Total Tarot Challenge reward ^ Relic 53 effect, which multiplies Sacrifice Dust gain",
       "op": "exp",
       "rel": "boosts",
-      "source": "game-code:MineralsController.MineralsUpdateStats",
+      "source": "game-code:TarotChallenges.Update",
       "to": "sacrifice-dust"
     },
     {
@@ -32651,8 +32716,9 @@
     {
       "confidence": "documented",
       "from": "refine-node-181",
-      "note": "Unlocks the Spark Mastery factor of Singularity Mult",
-      "rel": "unlocks",
+      "note": "Unlocks the Spark Mastery factor, which multiplies Singularity Mult",
+      "op": "mult",
+      "rel": "boosts",
       "source": "game-code:SingFactor.get_Unlocked",
       "to": "singularity-mult"
     },
@@ -32685,17 +32751,9 @@
       "confidence": "documented",
       "from": "achievement-426",
       "note": "Zodiacs from Unity can roll Amazing rarity",
-      "rel": "unlocks",
+      "rel": "boosts",
       "source": "game-code:UnityZodiac..ctor",
-      "to": "unity"
-    },
-    {
-      "confidence": "documented",
-      "from": "achievement-427",
-      "note": "Auto-ascend switches to fast ascends for Attacks",
-      "rel": "unlocks",
-      "source": "game-code:AutomationController.Update",
-      "to": "attacks"
+      "to": "zodiac-rarity"
     },
     {
       "confidence": "documented",
@@ -32709,33 +32767,25 @@
       "confidence": "documented",
       "from": "achievement-482",
       "note": "Zodiacs from Unity can roll Prime rarity",
-      "rel": "unlocks",
+      "rel": "boosts",
       "source": "game-code:UnityZodiac..ctor",
-      "to": "unity"
-    },
-    {
-      "confidence": "documented",
-      "from": "achievement-537",
-      "note": "Shows the repeat-stage option",
-      "rel": "unlocks",
-      "source": "game-code:DisplayPlague.UpdateStage",
-      "to": "plague"
+      "to": "zodiac-rarity"
     },
     {
       "confidence": "documented",
       "from": "achievement-675",
       "note": "Common Zodiacs can roll Rainbow+",
-      "rel": "unlocks",
+      "rel": "boosts",
       "source": "game-code:UnityZodiac..ctor",
-      "to": "unity"
+      "to": "zodiac-rarity"
     },
     {
       "confidence": "documented",
       "from": "achievement-750",
       "note": "Common Zodiacs can roll Galactic+",
-      "rel": "unlocks",
+      "rel": "boosts",
       "source": "game-code:UnityZodiac..ctor",
-      "to": "unity"
+      "to": "zodiac-rarity"
     },
     {
       "confidence": "documented",
@@ -32767,7 +32817,7 @@
     {
       "confidence": "documented",
       "from": "achievement-230",
-      "note": "× (1 + its reward, 0.01 × King of Wands)",
+      "note": "× (1 + its reward, 0.01 × Queen of Wands)",
       "op": "mult",
       "rel": "boosts",
       "source": "game-code:Relic.GetEffect",
@@ -32776,7 +32826,7 @@
     {
       "confidence": "documented",
       "from": "achievement-231",
-      "note": "× (1 + its reward, 0.01 × King of Pentacles)",
+      "note": "× (1 + its reward, 0.01 × Queen of Pentacles)",
       "op": "mult",
       "rel": "boosts",
       "source": "game-code:Relic.GetEffect",
@@ -32785,7 +32835,7 @@
     {
       "confidence": "documented",
       "from": "achievement-232",
-      "note": "× (1 + its reward, 0.01 × King of Swords)",
+      "note": "× (1 + its reward, 0.01 × Queen of Swords)",
       "op": "mult",
       "rel": "boosts",
       "source": "game-code:Relic.GetEffect",
@@ -32794,7 +32844,7 @@
     {
       "confidence": "documented",
       "from": "achievement-233",
-      "note": "× (1 + its reward, 0.01 × King of Cups)",
+      "note": "× (1 + its reward, 0.01 × Queen of Cups)",
       "op": "mult",
       "rel": "boosts",
       "source": "game-code:Relic.GetEffect",
@@ -32838,7 +32888,7 @@
     {
       "confidence": "documented",
       "from": "polish-sword",
-      "note": "× 1.03 from its third milestone",
+      "note": "× 1.03 from its fourth milestone (Lv.100)",
       "op": "mult",
       "rel": "boosts",
       "source": "game-code:Relic.GetEffect",
@@ -32855,7 +32905,7 @@
     },
     {
       "confidence": "documented",
-      "from": "tarot-king-of-wands",
+      "from": "tarot-queen-of-wands",
       "note": "Achievement 230's reward × (1 + its second effect)",
       "op": "mult",
       "rel": "boosts",
@@ -32864,7 +32914,7 @@
     },
     {
       "confidence": "documented",
-      "from": "tarot-king-of-pentacles",
+      "from": "tarot-queen-of-pentacles",
       "note": "Achievement 231's reward × (1 + its second effect)",
       "op": "mult",
       "rel": "boosts",
@@ -32873,7 +32923,7 @@
     },
     {
       "confidence": "documented",
-      "from": "tarot-king-of-swords",
+      "from": "tarot-queen-of-swords",
       "note": "Achievement 232's reward × (1 + its second effect)",
       "op": "mult",
       "rel": "boosts",
@@ -32882,7 +32932,7 @@
     },
     {
       "confidence": "documented",
-      "from": "tarot-king-of-cups",
+      "from": "tarot-queen-of-cups",
       "note": "Achievement 233's reward × (1 + its second effect)",
       "op": "mult",
       "rel": "boosts",

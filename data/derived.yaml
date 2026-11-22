@@ -6444,7 +6444,7 @@ edges:
   note: Supernova Bonuses (are) Powered to X
   source: wiki:Relics
   confidence: uncertain
-- from: relics
+- from: unlocked-relic-count
   to: relic-12
   rel: boosts
   note: Amount of unlocked relics boost attack
