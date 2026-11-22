@@ -325,7 +325,7 @@ def test_every_swept_edge_is_uncertain(graph: dict):
     swept -= {key(e) for e in curated.get("edges") or []}
     swept -= {key(s) for s in curated.get("suppress") or []}
 
-    assert len(swept) == 480, f"expected 480 swept edges, got {len(swept)}"
+    assert len(swept) == 491, f"expected 491 swept edges, got {len(swept)}"
     shipped = {key(e): e for e in graph["edges"]}
     for edge in swept:
         assert edge in shipped, f"{edge} never reached the artifact"
@@ -479,7 +479,10 @@ def test_singularity_milestones_land_in_the_table_they_came_from(graph: dict):
     # What is left on the layer itself has to be layer-level, or the split only
     # moved some of the content.
     direct = {n["id"] for n in graph["nodes"] if n["system"] == "singularity"}
+    # atom-penalty is one node for every Atom penalty threshold, so it belongs
+    # to the layer rather than to any one milestone table.
     assert direct == {
+        "atom-penalty",
         "atoms-gain",
         "singular-zodiacs",
         "singularity",

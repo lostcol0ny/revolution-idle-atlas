@@ -294,3 +294,308 @@ nodes:
 - id: plague-er-essence-density
   name: Essence Density
   description: Increases ViP/s gained per VE
+- id: particles-rank-bonus-1
+  name: Rank 0 Bonus
+  description: 'α generator base: +0.01 per rank.'
+  system: particles-grades
+  kind: upgrade
+- id: particles-rank-bonus-2
+  name: Rank 3 Bonus
+  description: Unlocks Rank Factor for singularity
+  system: particles-grades
+  kind: upgrade
+- id: particles-rank-bonus-3
+  name: Rank 5 Bonus
+  description: α generator base ×(1 + 0.1 × generator level). Refinement node 141 improves this bonus.
+  system: particles-grades
+  kind: upgrade
+- id: particles-rank-bonus-4
+  name: Rank 8 Bonus
+  description: Attack exponent multiplied ×(1 + 0.05 × rank).
+  system: particles-grades
+  kind: upgrade
+- id: particles-rank-bonus-5
+  name: Rank 10 Bonus
+  description: Rank boosts local singularity speed + 0.01 x Sqrt(rank). Softcap at 0.10
+  system: particles-grades
+  kind: upgrade
+- id: particles-rank-bonus-6
+  name: Rank 11 Bonus
+  description: The base effects of Singularity Tree nodes 3.1 and 3.2 are multiplied by 1 + rank x 0.1
+  system: particles-grades
+  kind: upgrade
+- id: particles-rank-bonus-7
+  name: Rank 12 Bonus
+  description: β generator base ×(1 + 0.25 × generator level).
+  system: particles-grades
+  kind: upgrade
+- id: particles-rank-bonus-8
+  name: Rank 14 Bonus
+  description: Particle Rank boosts Luck by a value (+0.01 per rank)
+  system: particles-grades
+  kind: upgrade
+- id: particles-rank-bonus-9
+  name: Rank 17 Bonus
+  description: The base effect of Singularity Tree node 6.2 is multiplied by 1 + rank x 0.05
+  system: particles-grades
+  kind: upgrade
+- id: particles-rank-bonus-10
+  name: Rank 18 Bonus
+  description: Refine Node 142 effect improves by +0.005 per rank
+  system: particles-grades
+  kind: upgrade
+- id: particles-rank-bonus-11
+  name: Rank 20 Bonus
+  description: Golden Resource gain is multiplied by a multiplier (10 x (Rank + 1) x (Tier + 1))
+  system: particles-grades
+  kind: upgrade
+- id: particles-rank-bonus-12
+  name: Rank 30 Bonus
+  description: Remove the atom gain penalty at 1.6e256 atoms.
+  system: particles-grades
+  kind: upgrade
+- id: particles-rank-bonus-13
+  name: Rank 32 Bonus
+  description: Sacrifice dust gain increased by ^1.1.
+  system: particles-grades
+  kind: upgrade
+- id: particles-rank-bonus-14
+  name: Rank 35 Bonus
+  description: Relic 71 base effect is multiplied by 1 + Rank x 0.01
+  system: particles-grades
+  kind: upgrade
+- id: particles-rank-bonus-15
+  name: Rank 50 Bonus
+  description: 'The rank 8 bonus is 10 times stronger: +0.5 attack multiplier power per rank.'
+  system: particles-grades
+  kind: upgrade
+- id: particles-rank-bonus-16
+  name: Rank 80 Bonus
+  description: All particle generator bases ×(1.01 ^ equipped ER level).
+  system: particles-grades
+  kind: upgrade
+- id: particles-rank-bonus-17
+  name: Rank 150 Bonus
+  description: Each Rank multiplies mastery gain on spark spawn by x1.01
+  system: particles-grades
+  kind: upgrade
+- id: particles-rank-bonus-18
+  name: Rank 500 Bonus
+  description: 'Multiplies the efficiency of all Epsilon Tree nodes based on your rank (+0.01 per 100 ranks): a multiplier'
+  system: particles-grades
+  kind: upgrade
+- id: particles-tier-bonus-1
+  name: Tier 1 Bonus
+  description: Unlock a free first β generator level. β generator base ×tier. α generator base ×(β + 1)^0.2 (improved by refinement node 147).
+  system: particles-grades
+  kind: upgrade
+- id: particles-tier-bonus-2
+  name: Tier 2 Bonus
+  description: α generator and multiplier bases ×tier. α multiplier base also ×(1 + 0.5 × multiplier level).
+  system: particles-grades
+  kind: upgrade
+- id: particles-tier-bonus-3
+  name: Tier 3 Bonus
+  description: Refinement point gain ^(1 + 0.001 × rank + 0.01 × tier).
+  system: particles-grades
+  kind: upgrade
+- id: particles-tier-bonus-4
+  name: Tier 5 Bonus
+  description: Unlocks Tier Factor for singularity
+  system: particles-grades
+  kind: upgrade
+- id: particles-tier-bonus-5
+  name: Tier 10 Bonus
+  description: Relic 73 base effect ×(1 + 0.01 × tier).
+  system: particles-grades
+  kind: upgrade
+- id: particles-tier-bonus-6
+  name: Tier 20 Bonus
+  description: Relic 60 effect ×(1 + 0.1 × tier).
+  system: particles-grades
+  kind: upgrade
+- id: particles-tier-bonus-7
+  name: Tier 200 Bonus
+  description: 'Multiplies the efficiency of all Epsilon Tree nodes based on your tier (+0.01 per 50 tiers): a multiplier'
+  system: particles-grades
+  kind: upgrade
+- id: particles-tetr-bonus-1
+  name: 'Tetr Bonus #1'
+  description: Unlock a free first γ generator level. β generator base ×(γ + 1)^0.25. Luck ^(1 + tier / 100 + tetr / 10).
+  system: particles-grades
+  kind: upgrade
+- id: particles-tetr-bonus-2
+  name: 'Tetr Bonus #2'
+  description: Attack gold gain ^(1 + 0.01 × tetr).
+  system: particles-grades
+  kind: upgrade
+- id: particles-tetr-bonus-3
+  name: 'Tetr Bonus #3'
+  description: Relic 72 effect ^(1 + 0.2 × tetr). Above tetr 10, this bonus uses 10 ×(tetr / 10)^0.32.
+  system: particles-grades
+  kind: upgrade
+- id: particles-tetr-bonus-4
+  name: 'Tetr Bonus #4'
+  description: Unlocks Tetr Factor for singularity
+  system: particles-grades
+  kind: upgrade
+- id: particles-tetr-bonus-5
+  name: 'Tetr Bonus #5'
+  description: All particle generator bases ×(1.2 ^ tetr).
+  system: particles-grades
+  kind: upgrade
+- id: particles-tetr-bonus-6
+  name: 'Tetr Bonus #6'
+  description: Singularity Tree Node 4.2 effect is multiplied by a multiplier per Ascension
+  system: particles-grades
+  kind: upgrade
+- id: particles-tetr-bonus-7
+  name: 'Tetr Bonus #7'
+  description: 'Multiplies the efficiency of all Epsilon Tree nodes based on your tetr (+0.01 per 20 tetrs): a multiplier'
+  system: particles-grades
+  kind: upgrade
+- id: particles-pent-bonus-1
+  name: Pent 1 Bonus
+  description: 'Unlock a free first δ generator level. γ generator base ×(δ + 1)^0.25. Tarot gold: (gain × 100)^(1 + 0.1 × pent + 0.04 × tetr + 0.01 × tier) / 100.'
+  system: particles-grades
+  kind: upgrade
+- id: particles-pent-bonus-2
+  name: Pent 2 Bonus
+  description: Relics 70 and 73 base effects ×(1 + 0.01 × pent).
+  system: particles-grades
+  kind: upgrade
+- id: particles-pent-bonus-3
+  name: Pent 3 Bonus
+  description: All particle generator bases ×(2 ^ pent).
+  system: particles-grades
+  kind: upgrade
+- id: particles-pent-bonus-4
+  name: Pent 5 Bonus
+  description: Unlocks Pent Factor for singularity
+  system: particles-grades
+  kind: upgrade
+- id: particles-pent-bonus-5
+  name: Pent 8 Bonus
+  description: Tetr 20 Milestone base effect is increased by 0.01 per Pent
+  system: particles-grades
+  kind: upgrade
+- id: particles-pent-bonus-6
+  name: Pent 10 Bonus
+  description: 'Multiplies the efficiency of all Epsilon Tree nodes based on your pent (+0.01 per pent): a multiplier'
+  system: particles-grades
+  kind: upgrade
+- id: particles-pent-bonus-7
+  name: Pent 25 Bonus
+  description: 'Refine Points Gain is boosted by your pent (+0.01 per pent): an exponent'
+  system: particles-grades
+  kind: upgrade
+- id: epsilon-tree-node-16
+  name: Epsilon Tree Node 16 (Red & Blue spark base mastery)
+  description: Red & Blue spark base mastery
+  system: epsilon-tree
+  kind: tree-node
+- id: epsilon-tree-node-17
+  name: Epsilon Tree Node 17 (Atoms Nerf e25K)
+  description: Atoms Nerf e25K
+  system: epsilon-tree
+  kind: tree-node
+- id: epsilon-tree-node-18
+  name: Epsilon Tree Node 18 (Orange spark base mastery)
+  description: Orange spark base mastery
+  system: epsilon-tree
+  kind: tree-node
+- id: epsilon-tree-node-19
+  name: Epsilon Tree Node 19 (Attack HP Requirement)
+  description: Attack HP Requirement
+  system: epsilon-tree
+  kind: tree-node
+- id: epsilon-tree-node-20
+  name: Epsilon Tree Node 20 (Yellow spark base mastery)
+  description: Yellow spark base mastery
+  system: epsilon-tree
+  kind: tree-node
+- id: epsilon-tree-node-21
+  name: Epsilon Tree Node 21 (Sacrifice Dust Gain)
+  description: Sacrifice Dust Gain
+  system: epsilon-tree
+  kind: tree-node
+- id: epsilon-tree-node-22
+  name: Epsilon Tree Node 22 (Green spark base mastery)
+  description: Green spark base mastery
+  system: epsilon-tree
+  kind: tree-node
+- id: epsilon-tree-node-23
+  name: Epsilon Tree Node 23 (Tarot Golden Resource base gain)
+  description: Tarot Golden Resource base gain
+  system: epsilon-tree
+  kind: tree-node
+- id: epsilon-tree-node-24
+  name: Epsilon Tree Node 24 (Cyan spark base mastery)
+  description: Cyan spark base mastery
+  system: epsilon-tree
+  kind: tree-node
+- id: epsilon-tree-node-25
+  name: Epsilon Tree Node 25 (Particle Generator base multiplier per 67 levels)
+  description: Particle Generator base multiplier per 67 levels
+  system: epsilon-tree
+  kind: tree-node
+- id: epsilon-tree-node-26
+  name: Epsilon Tree Node 26 (Purple spark base mastery)
+  description: Purple spark base mastery
+  system: epsilon-tree
+  kind: tree-node
+- id: epsilon-tree-node-27
+  name: Epsilon Tree Node 27 (Endoplasmic Reticulum craft requirement)
+  description: Endoplasmic Reticulum craft requirement
+  system: epsilon-tree
+  kind: tree-node
+- id: epsilon-tree-node-28
+  name: Epsilon Tree Node 28 (Pink spark base mastery)
+  description: Pink spark base mastery
+  system: epsilon-tree
+  kind: tree-node
+- id: epsilon-tree-node-29
+  name: Epsilon Tree Node 29 (Spark Luck)
+  description: Spark Luck
+  system: epsilon-tree
+  kind: tree-node
+- id: epsilon-tree-node-30
+  name: Epsilon Tree Node 30 (Black & White spark base mastery)
+  description: Black & White spark base mastery
+  system: epsilon-tree
+  kind: tree-node
+- id: epsilon-tree-node-31
+  name: Epsilon Tree Node 31 (Sparks Epsilon Gain Effect)
+  description: Sparks Epsilon Gain Effect
+  system: epsilon-tree
+  kind: tree-node
+- id: particles-spark-black
+  name: Black Spark
+  description: 'Refine Points Gain: an exponent'
+- id: particles-spark-blue
+  name: Blue Spark
+  description: 'Atoms Nerf at e10K: a divisor'
+- id: particles-spark-cyan
+  name: Cyan Spark
+  description: 'Particle Empowerers Mult: a multiplier'
+- id: particles-spark-green
+  name: Green Spark
+  description: 'Luck: an exponent'
+- id: particles-spark-orange
+  name: Orange Spark
+  description: 'Attack Exponent: a multiplier'
+- id: particles-spark-pink
+  name: Pink Spark
+  description: 'Spark Mastery Gain: a multiplier'
+- id: particles-spark-purple
+  name: Purple Spark
+  description: 'Plague Generators Gain: an exponent'
+- id: particles-spark-red
+  name: Red Spark
+  description: 'Singularity Mult Factor: a multiplier'
+- id: particles-spark-white
+  name: White Spark
+  description: 'Local Singularity Speed Mult: a multiplier'
+- id: particles-spark-yellow
+  name: Yellow Spark
+  description: 'Gold Gain: an exponent'

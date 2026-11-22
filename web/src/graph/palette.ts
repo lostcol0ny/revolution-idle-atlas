@@ -65,6 +65,10 @@ export const SYSTEM_COLOURS: Record<KnownSystem, string> = {
   // reads as its parent's shade rather than competing with it.
   houses: '#574235',
   particles: '#5a3fa0',
+  // Particles' two tabs, the Tarot convention: the first child is the darker
+  // parent shade, the second rotates toward magenta instead of darkening again.
+  'particles-grades': '#45307d',
+  'epsilon-tree': '#6a3590',
 };
 
 const KIND_BADGES: Record<Kind, string> = {

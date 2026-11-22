@@ -16,7 +16,7 @@ from typing import Any
 import yaml
 
 from atlas.extract.refs import slugify
-from atlas.models import GameData, GameNode, Kind, Node
+from atlas.models import GameData, GameNode, Kind, Node, Rel
 
 GAME_FILE_REL_PATH = Path("data", "game.yaml")
 
@@ -38,6 +38,7 @@ _RUNNING_TOTAL = re.compile(rf"\s*\((?:[^():]*:\s*)?[x+^-]?{_PLACEHOLDER}%?\)")
 _PHRASES = (
     (re.compile(rf"(?<![A-Za-z])x{_PLACEHOLDER}%?"), "a multiplier"),
     (re.compile(rf"\^{_PLACEHOLDER}"), "an exponent"),
+    (re.compile(rf"/{_PLACEHOLDER}"), "a divisor"),
     (re.compile(rf"[+-]?{_PLACEHOLDER}%"), "a percentage"),
     (re.compile(rf"[+-]{_PLACEHOLDER}"), "an amount"),
     (re.compile(_PLACEHOLDER), "a value"),
@@ -85,6 +86,43 @@ FAMILIES: dict[str, Family] = {
     # matched, never created.
     "UNI_MIN_COMMON": Family("minerals", "mineral", by_index=False, add_as=None),
 }
+
+# Particles keeps its text outside the _NAME_/_DESC_ pairs: one key per grade
+# bonus, per Epsilon Tree effect and per spark colour.
+GRADES = ("rank", "tier", "tetr", "pent")
+GRADE_SYSTEM = "particles-grades"
+_GRADE_BONUS_KEY = re.compile(r"PARTICLES_BONUS_(?P<grade>RANK|TIER|TETR|PENT)_(?P<index>\d+)")
+# Only the 16 outer nodes have effect text (indices 15-30). The 15 inner nodes
+# share one template, "Boosts {0} efficiency", filled with the outer nodes they
+# feed, which no string says.
+EPSILON_TREE_SYSTEM = "epsilon-tree"
+_EPSILON_EFFECT_KEY = re.compile(r"EPSILON_EFFECT_(?P<index>\d+)")
+SPARK_SYSTEM = "particles"
+_SPARK_EFFECT_KEY = re.compile(r"ENUM_SPARKTYPE_EFFECT_(?P<colour>[A-Z]+)")
+_SPARK_NAME = "UNI_PARTICLES_SPARK_NAME"
+_GRADE_HEADER = re.compile(r"!.*\|\s*(?P<grade>Rank|Tier|Tetr|Pent) Bonuses")
+
+
+def grade_node(grade: str) -> str:
+    return f"particles-{grade}"
+
+
+def _grade_bonus_prefix(grade: str) -> str:
+    return f"particles-{grade}-bonus-"
+
+
+# The node every member of a Particles family hangs off, and how. Grades unlock
+# their bonuses (HELP_UNI_PARTICLES_GRADES_DESC_1). Tree nodes and spark
+# colours belong to curated group nodes, the way attack-circles holds its
+# circles: the game buys tree nodes with ETP (HELP_UNI_PARTICLES_TREE_DESC_1)
+# and creates sparks from Epsilon (HELP_UNI_PARTICLES_SPARKS_DESC_1), and those
+# edges attach once, to the group. `atlas extract` turns these into edges from
+# data/game.yaml, so CI needs no game to rebuild them.
+MEMBER_LINKS: tuple[tuple[str, str, Rel], ...] = (
+    *((_grade_bonus_prefix(g), grade_node(g), Rel.REQUIRES) for g in GRADES),
+    ("epsilon-tree-node-", "epsilon-tree", Rel.UNLOCKS),
+    ("particles-spark-", "particles-sparks", Rel.UNLOCKS),
+)
 
 
 @dataclass
@@ -219,6 +257,132 @@ def map_catalog(
         game.nodes.extend(mapped)
     skipped = [prefix for prefix in families if prefix not in FAMILIES]
     return game, reports, skipped
+
+
+def grade_thresholds(wikitext: str) -> dict[str, list[str]]:
+    """The wiki's Grade Bonuses thresholds, per grade, in table order."""
+    start = wikitext.find("=== Grade Bonuses ===")
+    if start < 0:
+        return {}
+    end = wikitext.find("\n===", start + 1)
+    thresholds: dict[str, list[str]] = {}
+    grade: str | None = None
+    for row in wikitext[start : end if end >= 0 else None].split("|-"):
+        first = next((line.strip() for line in row.splitlines() if line.strip()), "")
+        header = _GRADE_HEADER.fullmatch(first)
+        if header is not None:
+            grade = header["grade"].lower()
+            thresholds[grade] = []
+        elif grade is not None and first[1:].strip().isdigit():
+            thresholds[grade].append(first[1:].strip())
+    return thresholds
+
+
+def _place(
+    node_id: str,
+    name: str,
+    description: str | None,
+    system: str,
+    kind: Kind,
+    nodes: Mapping[str, Node],
+    report: FamilyReport,
+) -> GameNode:
+    existing = nodes.get(node_id)
+    if existing is None:
+        report.added += 1
+    else:
+        report.matched += 1
+    return GameNode(
+        id=node_id,
+        name=name,
+        description=description,
+        system=system if existing is None else None,
+        kind=kind if existing is None else None,
+    )
+
+
+def map_particles(
+    strings: Mapping[str, str],
+    nodes: Iterable[Node],
+    thresholds: Mapping[str, list[str]],
+) -> tuple[list[GameNode], dict[str, FamilyReport]]:
+    """Map grade bonuses, Epsilon Tree effects and spark colours onto node ids.
+
+    A grade bonus is named by its wiki threshold ("Rank 5 Bonus") only when the
+    wiki lists exactly as many bonuses for that grade as the game has; a count
+    that differs means the two lists cannot be paired by position, and the
+    bonus is numbered instead ("Tetr Bonus #7").
+    """
+    by_id = {n.id: n for n in nodes}
+    mapped: list[GameNode] = []
+    reports: dict[str, FamilyReport] = {}
+
+    bonuses: dict[str, dict[int, str]] = {}
+    for key, text in strings.items():
+        match = _GRADE_BONUS_KEY.fullmatch(key)
+        if match is not None:
+            bonuses.setdefault(match["grade"].lower(), {})[int(match["index"])] = text
+    for grade in GRADES:
+        if grade not in bonuses:
+            continue
+        report = reports[f"PARTICLES_BONUS_{grade.upper()}"] = FamilyReport()
+        entries = sorted(bonuses[grade].items())
+        wiki = thresholds.get(grade, [])
+        aligned = len(wiki) == len(entries)
+        for position, (index, text) in enumerate(entries):
+            label = grade.capitalize()
+            name = (
+                f"{label} {wiki[position]} Bonus" if aligned else f"{label} Bonus #{index + 1}"
+            )
+            mapped.append(_place(
+                f"{_grade_bonus_prefix(grade)}{index + 1}",
+                name,
+                readable(text),
+                GRADE_SYSTEM,
+                Kind.UPGRADE,
+                by_id,
+                report,
+            ))
+
+    effects = sorted(
+        (int(m["index"]), text)
+        for key, text in strings.items()
+        if (m := _EPSILON_EFFECT_KEY.fullmatch(key)) is not None
+    )
+    if effects:
+        report = reports["EPSILON_EFFECT"] = FamilyReport()
+        for index, text in effects:
+            effect = clean(text)
+            mapped.append(_place(
+                f"epsilon-tree-node-{index + 1}",
+                f"Epsilon Tree Node {index + 1} ({effect})",
+                effect,
+                EPSILON_TREE_SYSTEM,
+                Kind.TREE_NODE,
+                by_id,
+                report,
+            ))
+
+    colours = sorted(
+        (m["colour"], text)
+        for key, text in strings.items()
+        if (m := _SPARK_EFFECT_KEY.fullmatch(key)) is not None
+    )
+    if colours:
+        report = reports["ENUM_SPARKTYPE"] = FamilyReport()
+        for colour, text in colours:
+            title = clean(strings.get(f"ENUM_SPARKTYPE_{colour}", colour.capitalize()))
+            name_template = strings.get(_SPARK_NAME)
+            mapped.append(_place(
+                f"particles-spark-{colour.lower()}",
+                name_template.replace("{0}", title) if name_template else title,
+                readable(text),
+                SPARK_SYSTEM,
+                Kind.UPGRADE,
+                by_id,
+                report,
+            ))
+    return mapped, reports
 
 
 def to_yaml(game: GameData) -> str:

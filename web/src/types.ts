@@ -42,6 +42,8 @@ export const KNOWN_SYSTEMS = [
   'elements',
   'houses',
   'particles',
+  'particles-grades',
+  'epsilon-tree',
 ] as const;
 export type KnownSystem = (typeof KNOWN_SYSTEMS)[number];
 export type System = string;

@@ -24,10 +24,12 @@ correction an overlay cannot express.
 A third input, `data/game.yaml`, sits **between** them: precedence is
 `derived.yaml` < `game.yaml` < `relationships.yaml`. It holds the game's own name
 and description for the nodes it maps, so it corrects a wiki spelling, but a
-curated field still wins. It carries no edges. It is written only by
-`atlas game` on a machine with the game installed, never by `atlas extract` or
-`atlas build`, so CI rebuilds from the committed copy; when it is absent the
-build is exactly the two-file merge. See [Game files](#game-files).
+curated field still wins. It carries no edges itself; `atlas extract` derives
+edges from it (see [Edges from game text](#edges-from-game-text)). It is
+written only by `atlas game` on a machine with the game installed, never by
+`atlas extract` or `atlas build`, so CI rebuilds from the committed copy; when
+it is absent the build is exactly the two-file merge. See
+[Game files](#game-files).
 
 One more file, `data/sweep.yaml`, is neither half of that pair. It is not data
 about the game; it is a description of where in `data/raw/` to find data about
@@ -56,11 +58,12 @@ result differs. If a CI run goes red on the artifact step, run
 running only `atlas build` will leave `data/derived.yaml` stale and the step
 stays red.
 
-`atlas extract` reads `data/relationships.yaml` as well as `data/raw/`, because
-the curated stats and their aliases are the vocabulary it matches effect prose
-against. Adding a stat node or an alias therefore changes `data/derived.yaml`,
-and a run of `atlas build` alone will not pick it up. It still makes no network
-request, which is what keeps it safe to run in CI.
+`atlas extract` reads `data/relationships.yaml` and `data/game.yaml` as well as
+`data/raw/`, because the curated stats and their aliases are the vocabulary it
+matches effect prose against, and the game's descriptions are prose too. Adding
+a stat node or an alias therefore changes `data/derived.yaml`, and a run of
+`atlas build` alone will not pick it up. It still makes no network request,
+which is what keeps it safe to run in CI.
 
 ## Commands
 
@@ -149,11 +152,11 @@ git-ignored.
 `name`, and its `description`, under the Steam `buildid` it was read from.
 Unity rich-text tags are stripped. The numbers the game fills in at runtime are
 worded by the sign beside them: `x{0}` becomes "a multiplier", `^{0}` "an
-exponent", `{0}%` "a percentage", `+{0}` "an amount", and a bare `{0}` "a
-value"; a running total such as `(total: x{1})` is dropped, since it is the
-player's state rather than the entity's. `atlas build` overlays the name and
-description field by field on the generated node, and a curated field still
-wins.
+exponent", `/{0}` "a divisor", `{0}%` "a percentage", `+{0}` "an amount", and a
+bare `{0}` "a value"; a running total such as `(total: x{1})` is dropped, since
+it is the player's state rather than the entity's. `atlas build` overlays the
+name and description field by field on the generated node, and a curated field
+still wins.
 
 Only families with a clear home in the graph are mapped:
 
@@ -165,8 +168,19 @@ Only families with a clear home in the graph are mapped:
 | `PLAGUE_ENDO_UPGRADE` | `plague-er-*` nodes in `plague` | Normalised name. |
 | `UNI_MIN_COMMON` | `mineral-*` nodes in `minerals` | Normalised name. No node models a single common-mineral tier, so today all 100 are unmatched. |
 
+Particles keeps its text outside the `_NAME_`/`_DESC_` pairs, so `atlas game`
+reads three more families straight from the strings:
+
+| Keys | Onto | Named |
+|---|---|---|
+| `PARTICLES_BONUS_<GRADE>_<n>` (Rank, Tier, Tetr, Pent) | `particles-<grade>-bonus-<n+1>` in `particles-grades` | By the wiki's Grade Bonuses threshold (`Rank 5 Bonus`), read from `data/raw/Particles.wikitext`, when the wiki lists exactly as many bonuses for that grade as the game has; otherwise by position (`Tetr Bonus #7`). The string is the description. |
+| `EPSILON_EFFECT_<n>` | `epsilon-tree-node-<n+1>` in `epsilon-tree` | `Epsilon Tree Node <n+1> (<effect>)`; the effect is also the description. Only the 16 outer nodes (15–30) have one: the 15 inner nodes share the template "Boosts {0} efficiency", which names no node. |
+| `ENUM_SPARKTYPE_<COLOUR>`, `ENUM_SPARKTYPE_EFFECT_<COLOUR>` | `particles-spark-<colour>` | `UNI_PARTICLES_SPARK_NAME` (`Blue Spark`); the effect is the description. |
+
+Each id is created when no node has it and overlaid when one does.
+
 Every other family (achievements, `ACH`, among them) has no system to map onto
-and is listed as skipped. An entity in the first four families that no node
+and is listed as skipped. An entity in the first four catalog families that no node
 matches becomes a **new node** in the family's system, at confidence
 `documented`, carrying `system` and `kind` in its entry; common minerals are
 never created. Anything that cannot be placed — a name that disagrees with its
@@ -176,6 +190,31 @@ counts per family.
 
 A game entry whose node has since disappeared (an extraction renamed its id) and
 that names no system is a build **warning**; rerun `atlas game`.
+
+### Edges from game text
+
+`atlas extract`, not `atlas game`, turns `data/game.yaml` into edges, so they
+follow the current vocabulary and CI rebuilds them without a game. Two kinds
+come out, both with `source: game`:
+
+- **Member links**, `documented`. Every grade bonus `requires` its grade
+  (`particles-rank` and so on), every Epsilon Tree node is `unlocks`ed by the
+  `epsilon-tree` group, and every spark colour by the `particles-sparks` group.
+  The game's help text states each; the prefixes live in
+  `gamemap.MEMBER_LINKS`.
+- **Description matches**, `uncertain` and always `boosts`. The description of
+  a node only the game describes — one `atlas game` created, carrying `system`
+  — goes through the same resolver as wiki effect prose. A node a wiki page
+  already describes is matched on the wiki's effects alone, so one entity is
+  never matched twice in two wordings. On top of the resolver's "based on"
+  rule, the game marks an improver as an input: "Refinement node 141 improves
+  this bonus" and "(improved by refinement node 147)" give an edge *into* the
+  bonus. A grade the text names ("+0.01 per rank", "Particle Rank boosts
+  Luck") produces no edge: a bonus reads its grade, and the member link already
+  says so.
+
+Correct a wrong one the usual way: a curated edge plus a `suppress` entry in
+`data/relationships.yaml`.
 
 ## The sweep manifest
 
@@ -350,7 +389,7 @@ evidence than a structural table cell.
 | `op` | enum | no | How the effect combines, when known. |
 | `note` | string | no | Free text. |
 | `targets_effect` | integer | no | 0-based index into the **target** node's `effects` array. See below. |
-| `source` | string | yes | Where the claim came from. A free string; the convention is `wiki:<PageName>`, `observed`, `il2cpp`, or `discord`. |
+| `source` | string | yes | Where the claim came from. A free string; the convention is `wiki:<PageName>`, `game` (derived from `data/game.yaml`), `game:<STRING_KEY>` (a curated edge citing one game string), `observed`, `il2cpp`, or `discord`. |
 | `confidence` | enum | no | Defaults to `documented`. |
 
 `rel`: `boosts`, `unlocks`, `requires`. Edges point upstream → downstream:

@@ -152,6 +152,14 @@ systems:
   - id: particles
     name: Particles
     parent: unity
+  # Rank, Tier, Tetr and Pent, and the bonuses each unlocks. The bonuses come
+  # from the game's strings through data/game.yaml.
+  - id: particles-grades
+    name: Grades
+    parent: particles
+  - id: epsilon-tree
+    name: Epsilon Tree
+    parent: particles
 
 nodes:
   - id: gold
@@ -2921,7 +2929,9 @@ nodes:
 
   - id: refinement-points
     name: Refinement Points
-    aliases: [RfP, Refine Points]
+    # The singular spellings are the game's ("Refinement point gain") and the
+    # Refine Tree's ("Refine Point gain").
+    aliases: [RfP, Refine Points, Refine Point, Refinement Point]
     system: minerals
     kind: currency
     wiki: Minerals
@@ -3560,6 +3570,229 @@ nodes:
     kind: group
     wiki: Singularity#Houses
     confidence: provisional
+
+  # Particles. Alpha through Delta each have their own production with the
+  # same four upgrades, which cost particles of that type; Epsilon has neither
+  # (HELP_UNI_PARTICLES_PRODUCTION_DESC_1, wiki Particles#Epsilon).
+  - id: particles-alpha
+    name: Alpha
+    aliases: [Alpha Particles]
+    system: particles
+    kind: currency
+    wiki: Particles
+    confidence: provisional
+    effects:
+      - text: The first particle, unlocked with the tab; Prestige boosts Beta production
+
+  - id: particles-beta
+    name: Beta
+    aliases: [Beta Particles]
+    system: particles
+    kind: currency
+    wiki: Particles
+    confidence: provisional
+    effects:
+      - text: Unlocked at Tier 1; Prestige boosts Gamma production
+
+  - id: particles-gamma
+    name: Gamma
+    aliases: [Gamma Particles]
+    system: particles
+    kind: currency
+    wiki: Particles
+    confidence: provisional
+    effects:
+      - text: Unlocked at Tetr 1; Prestige boosts Delta production
+
+  - id: particles-delta
+    name: Delta
+    aliases: [Delta Particles]
+    system: particles
+    kind: currency
+    wiki: Particles
+    confidence: provisional
+    effects:
+      - text: Unlocked at Pent 1; Prestige boosts Epsilon production
+
+  - id: particles-epsilon
+    name: Epsilon
+    aliases: [Epsilon Points]
+    system: particles
+    kind: currency
+    wiki: Particles#Epsilon
+    confidence: provisional
+    effects:
+      - text: Production is boosted by Delta Prestige and equipped sparks
+      - text: Spent to create sparks, buy Epsilon Tree Points, or raise its own capacity
+
+  # The four production upgrades, one stat each across Alpha through Delta.
+  # The per-particle spellings are aliases so "Alpha Generator Base" lands here
+  # rather than on Alpha.
+  - id: particle-generators
+    name: Particle Generators
+    aliases:
+      - Particle Generator
+      - Alpha Generator
+      - Alpha Generators
+      - Beta Generator
+      - Beta Generators
+      - Gamma Generator
+      - Gamma Generators
+      - Delta Generator
+      - Delta Generators
+      - α generator
+      - β generator
+      - γ generator
+      - δ generator
+    system: particles
+    kind: stat
+    wiki: Particles#Particle_Upgrades
+    confidence: provisional
+    effects:
+      - text: Provides base production
+
+  - id: particle-multipliers
+    name: Particle Multipliers
+    aliases:
+      - Particle Multiplier
+      - Alpha Multiplier
+      - Beta Multiplier
+      - Gamma Multiplier
+      - Delta Multiplier
+      - α multiplier
+      - β multiplier
+      - γ multiplier
+      - δ multiplier
+    system: particles
+    kind: stat
+    wiki: Particles#Particle_Upgrades
+    confidence: provisional
+    effects:
+      - text: Multiplies production
+        op: mult
+
+  - id: particle-empowerers
+    name: Particle Empowerers
+    aliases: [Particle Empowerer, Empowerer, Empowerers]
+    system: particles
+    kind: stat
+    wiki: Particles#Particle_Upgrades
+    confidence: provisional
+    effects:
+      - text: Raises production to a power
+        op: exp
+
+  - id: particle-tetrators
+    name: Particle Tetrators
+    aliases: [Particle Tetrator, Tetrator, Tetrators]
+    system: particles
+    kind: stat
+    wiki: Particles#Particle_Upgrades
+    confidence: provisional
+    effects:
+      - text: Further increases the growth of production
+
+  # The four grades. Named "Particle <grade>" as the game's singularity factor
+  # list names them: a bare "Rank" or "Pent" would fire on unrelated prose.
+  - id: particles-rank
+    name: Particle Rank
+    system: particles-grades
+    kind: stat
+    wiki: Particles#Grades
+    confidence: provisional
+    effects:
+      - text: Requires Alpha; resets Alpha production
+
+  - id: particles-tier
+    name: Particle Tier
+    system: particles-grades
+    kind: stat
+    wiki: Particles#Grades
+    confidence: provisional
+    effects:
+      - text: Requires Rank; resets Rank and Alpha and Beta production
+
+  - id: particles-tetr
+    name: Particle Tetr
+    system: particles-grades
+    kind: stat
+    wiki: Particles#Grades
+    confidence: provisional
+    effects:
+      - text: Requires Tier; resets Rank, Tier, and Alpha through Gamma production
+
+  - id: particles-pent
+    name: Particle Pent
+    system: particles-grades
+    kind: stat
+    wiki: Particles#Grades
+    confidence: provisional
+    effects:
+      - text: Requires Tetr; resets all three lower grades and Alpha through Delta production
+
+  # The ten colours hang off this group (gamemap.MEMBER_LINKS), the way the
+  # attack circles hang off attack-circles.
+  - id: particles-sparks
+    name: Sparks
+    system: particles
+    kind: group
+    wiki: Particles#Sparks
+    confidence: provisional
+    effects:
+      - text: Created with Epsilon in a random colour and rarity; one of each colour can be equipped
+
+  - id: spark-mastery
+    name: Spark Mastery
+    aliases: [Mastery Gain]
+    system: particles
+    kind: stat
+    wiki: Particles#Sparks
+    confidence: provisional
+    effects:
+      - text: Strengthens newly created sparks
+
+  - id: spark-luck
+    name: Spark Luck
+    system: particles
+    kind: stat
+    wiki: Particles#Sparks
+    confidence: provisional
+    effects:
+      - text: Raises the chance of a spark of higher rarity
+
+  - id: epsilon-tree-points
+    name: Epsilon Tree Points
+    aliases: [ETP, ETp]
+    system: epsilon-tree
+    kind: currency
+    wiki: Particles#Epsilon_Tree
+    confidence: provisional
+    effects:
+      - text: Bought with Epsilon and spent on Epsilon Tree nodes
+
+  # The sixteen outer nodes hang off this group (gamemap.MEMBER_LINKS). Named
+  # so that "all Epsilon Tree nodes" claims its span before "Epsilon" does.
+  - id: epsilon-tree
+    name: Epsilon Tree
+    system: epsilon-tree
+    kind: group
+    wiki: Particles#Epsilon_Tree
+    confidence: provisional
+    effects:
+      - text: Thirty-one nodes upgraded with ETP from the outside in; inner nodes raise the efficiency of the outer nodes they connect
+
+  # One node for every Atom penalty threshold (e308, e10K, e25K, 1.6e256...):
+  # the wiki and the game name each by its threshold, and a node per threshold
+  # would split a handful of edges across seven nodes.
+  - id: atom-penalty
+    name: Atom Penalty
+    aliases: [Atoms Nerf, Atom Nerf]
+    system: singularity
+    kind: stat
+    wiki: Singularity
+    confidence: provisional
+    effects:
+      - text: Divides Atom gain past each threshold
 
 edges:
   - from: gold
@@ -6939,6 +7172,372 @@ edges:
     source: observed
     confidence: documented
 
+  # Particles: the production chain, grades and Epsilon's sinks.
+  - from: refine-node-137
+    to: particles-alpha
+    rel: unlocks
+    note: "The Particles tab unlocks after purchasing Refine Node 137"
+    source: game:HELP_UNI_PARTICLES_DESC_1
+    confidence: documented
+
+  - from: particles-alpha
+    to: particles-rank
+    rel: requires
+    note: "Alpha's grade requires a certain number of Alpha to rank up"
+    source: wiki:Particles
+    confidence: documented
+
+  - from: particles-rank
+    to: particles-tier
+    rel: requires
+    source: game:PARTICLES_TIER_REQUIREMENT
+    confidence: documented
+
+  - from: particles-tier
+    to: particles-tetr
+    rel: requires
+    source: game:PARTICLES_TETR_REQUIREMENT
+    confidence: documented
+
+  - from: particles-tetr
+    to: particles-pent
+    rel: requires
+    source: game:PARTICLES_PENT_REQUIREMENT
+    confidence: documented
+
+  - from: particles-tier
+    to: particles-beta
+    rel: unlocks
+    source: wiki:Particles
+    confidence: documented
+
+  - from: particles-tetr
+    to: particles-gamma
+    rel: unlocks
+    source: wiki:Particles
+    confidence: documented
+
+  - from: particles-pent
+    to: particles-delta
+    rel: unlocks
+    source: wiki:Particles
+    confidence: documented
+
+  - from: particles-alpha
+    to: particles-beta
+    rel: boosts
+    note: "Prestige uses accumulated particles to boost production of the next type"
+    source: game:HELP_UNI_PARTICLES_PRESTIGE_DESC_1
+    confidence: documented
+
+  - from: particles-beta
+    to: particles-gamma
+    rel: boosts
+    note: "Prestige uses accumulated particles to boost production of the next type"
+    source: game:HELP_UNI_PARTICLES_PRESTIGE_DESC_1
+    confidence: documented
+
+  - from: particles-gamma
+    to: particles-delta
+    rel: boosts
+    note: "Prestige uses accumulated particles to boost production of the next type"
+    source: game:HELP_UNI_PARTICLES_PRESTIGE_DESC_1
+    confidence: documented
+
+  - from: particles-delta
+    to: particles-epsilon
+    rel: boosts
+    note: "Prestige uses accumulated particles to boost production of the next type"
+    source: game:HELP_UNI_PARTICLES_PRESTIGE_DESC_1
+    confidence: documented
+
+  - from: particle-generators
+    to: particles-alpha
+    rel: boosts
+    source: game:HELP_UNI_PARTICLES_PRODUCTION_DESC_2
+    confidence: documented
+
+  - from: particle-generators
+    to: particles-beta
+    rel: boosts
+    source: game:HELP_UNI_PARTICLES_PRODUCTION_DESC_2
+    confidence: documented
+
+  - from: particle-generators
+    to: particles-gamma
+    rel: boosts
+    source: game:HELP_UNI_PARTICLES_PRODUCTION_DESC_2
+    confidence: documented
+
+  - from: particle-generators
+    to: particles-delta
+    rel: boosts
+    source: game:HELP_UNI_PARTICLES_PRODUCTION_DESC_2
+    confidence: documented
+
+  - from: particle-multipliers
+    to: particles-alpha
+    rel: boosts
+    op: mult
+    source: game:HELP_UNI_PARTICLES_PRODUCTION_DESC_2
+    confidence: documented
+
+  - from: particle-multipliers
+    to: particles-beta
+    rel: boosts
+    op: mult
+    source: game:HELP_UNI_PARTICLES_PRODUCTION_DESC_2
+    confidence: documented
+
+  - from: particle-multipliers
+    to: particles-gamma
+    rel: boosts
+    op: mult
+    source: game:HELP_UNI_PARTICLES_PRODUCTION_DESC_2
+    confidence: documented
+
+  - from: particle-multipliers
+    to: particles-delta
+    rel: boosts
+    op: mult
+    source: game:HELP_UNI_PARTICLES_PRODUCTION_DESC_2
+    confidence: documented
+
+  - from: particle-empowerers
+    to: particles-alpha
+    rel: boosts
+    op: exp
+    source: game:HELP_UNI_PARTICLES_PRODUCTION_DESC_2
+    confidence: documented
+
+  - from: particle-empowerers
+    to: particles-beta
+    rel: boosts
+    op: exp
+    source: game:HELP_UNI_PARTICLES_PRODUCTION_DESC_2
+    confidence: documented
+
+  - from: particle-empowerers
+    to: particles-gamma
+    rel: boosts
+    op: exp
+    source: game:HELP_UNI_PARTICLES_PRODUCTION_DESC_2
+    confidence: documented
+
+  - from: particle-empowerers
+    to: particles-delta
+    rel: boosts
+    op: exp
+    source: game:HELP_UNI_PARTICLES_PRODUCTION_DESC_2
+    confidence: documented
+
+  - from: particle-tetrators
+    to: particles-alpha
+    rel: boosts
+    source: game:HELP_UNI_PARTICLES_PRODUCTION_DESC_2
+    confidence: documented
+
+  - from: particle-tetrators
+    to: particles-beta
+    rel: boosts
+    source: game:HELP_UNI_PARTICLES_PRODUCTION_DESC_2
+    confidence: documented
+
+  - from: particle-tetrators
+    to: particles-gamma
+    rel: boosts
+    source: game:HELP_UNI_PARTICLES_PRODUCTION_DESC_2
+    confidence: documented
+
+  - from: particle-tetrators
+    to: particles-delta
+    rel: boosts
+    source: game:HELP_UNI_PARTICLES_PRODUCTION_DESC_2
+    confidence: documented
+
+  - from: particles-epsilon
+    to: particles-sparks
+    rel: requires
+    note: "Spend Epsilon to create a spark with a random color and rarity"
+    source: game:HELP_UNI_PARTICLES_SPARKS_DESC_1
+    confidence: documented
+
+  - from: particles-sparks
+    to: particles-epsilon
+    rel: boosts
+    note: "Equip sparks to increase Epsilon production"
+    source: game:HELP_UNI_PARTICLES_SPARKS_DESC_2
+    confidence: documented
+
+  - from: spark-mastery
+    to: particles-sparks
+    rel: boosts
+    note: "Mastery strengthens newly created sparks"
+    source: game:HELP_UNI_PARTICLES_SPARKS_DESC_3
+    confidence: documented
+
+  - from: spark-luck
+    to: particles-sparks
+    rel: boosts
+    note: "Luck increases the chance of obtaining sparks of higher rarity"
+    source: game:HELP_UNI_PARTICLES_SPARKS_DESC_3
+    confidence: documented
+
+  - from: particles-epsilon
+    to: epsilon-tree-points
+    rel: requires
+    note: "Purchase Epsilon Tree Points (ETP) with Epsilon"
+    source: game:HELP_UNI_PARTICLES_TREE_DESC_1
+    confidence: documented
+
+  - from: epsilon-tree-points
+    to: epsilon-tree
+    rel: requires
+    note: "Spend them to upgrade nodes"
+    source: game:HELP_UNI_PARTICLES_TREE_DESC_1
+    confidence: documented
+
+  # "Unlocks <grade> Factor for singularity": the factor is one of Singularity
+  # Mult's, as the wiki writes it ("Unlock Pent as a Singularity Mult Factor").
+  - from: particles-rank-bonus-2
+    to: singularity-mult
+    rel: boosts
+    note: "Unlocks Rank Factor for singularity"
+    source: game:PARTICLES_BONUS_RANK_1
+    confidence: documented
+
+  - from: particles-tier-bonus-4
+    to: singularity-mult
+    rel: boosts
+    note: "Unlocks Tier Factor for singularity"
+    source: game:PARTICLES_BONUS_TIER_3
+    confidence: documented
+
+  - from: particles-tetr-bonus-4
+    to: singularity-mult
+    rel: boosts
+    note: "Unlocks Tetr Factor for singularity"
+    source: game:PARTICLES_BONUS_TETR_3
+    confidence: documented
+
+  - from: particles-pent-bonus-4
+    to: singularity-mult
+    rel: boosts
+    note: "Unlocks Pent Factor for singularity"
+    source: game:PARTICLES_BONUS_PENT_3
+    confidence: documented
+
+  # Bonuses that strengthen another bonus, which the game names by grade and
+  # threshold rather than by anything the matcher can read.
+  - from: particles-rank-bonus-15
+    to: particles-rank-bonus-4
+    rel: boosts
+    note: "The rank 8 bonus is 10 times stronger"
+    source: game:PARTICLES_BONUS_RANK_14
+    confidence: documented
+
+  - from: particles-pent-bonus-5
+    to: particles-tetr-bonus-6
+    rel: boosts
+    note: "Tetr 20 Milestone base effect is increased by 0.01 per Pent"
+    source: game:PARTICLES_BONUS_PENT_4
+    confidence: documented
+
+  # The Epsilon Tree's spark mastery nodes, each naming its colours.
+  - from: epsilon-tree-node-16
+    to: particles-spark-red
+    rel: boosts
+    note: "Red & Blue spark base mastery"
+    source: game:EPSILON_EFFECT_15
+    confidence: documented
+
+  - from: epsilon-tree-node-16
+    to: particles-spark-blue
+    rel: boosts
+    note: "Red & Blue spark base mastery"
+    source: game:EPSILON_EFFECT_15
+    confidence: documented
+
+  - from: epsilon-tree-node-18
+    to: particles-spark-orange
+    rel: boosts
+    note: "Orange spark base mastery"
+    source: game:EPSILON_EFFECT_17
+    confidence: documented
+
+  - from: epsilon-tree-node-20
+    to: particles-spark-yellow
+    rel: boosts
+    note: "Yellow spark base mastery"
+    source: game:EPSILON_EFFECT_19
+    confidence: documented
+
+  - from: epsilon-tree-node-22
+    to: particles-spark-green
+    rel: boosts
+    note: "Green spark base mastery"
+    source: game:EPSILON_EFFECT_21
+    confidence: documented
+
+  - from: epsilon-tree-node-24
+    to: particles-spark-cyan
+    rel: boosts
+    note: "Cyan spark base mastery"
+    source: game:EPSILON_EFFECT_23
+    confidence: documented
+
+  - from: epsilon-tree-node-26
+    to: particles-spark-purple
+    rel: boosts
+    note: "Purple spark base mastery"
+    source: game:EPSILON_EFFECT_25
+    confidence: documented
+
+  - from: epsilon-tree-node-28
+    to: particles-spark-pink
+    rel: boosts
+    note: "Pink spark base mastery"
+    source: game:EPSILON_EFFECT_27
+    confidence: documented
+
+  - from: epsilon-tree-node-30
+    to: particles-spark-black
+    rel: boosts
+    note: "Black & White spark base mastery"
+    source: game:EPSILON_EFFECT_29
+    confidence: documented
+
+  - from: epsilon-tree-node-30
+    to: particles-spark-white
+    rel: boosts
+    note: "Black & White spark base mastery"
+    source: game:EPSILON_EFFECT_29
+    confidence: documented
+
+  # "Particle Rank boosts ..." on the Refine Tree: the rank is what the node
+  # reads, so it is upstream. The generated edges point the other way and are
+  # suppressed below.
+  - from: particles-rank
+    to: refine-node-138
+    rel: boosts
+    note: "Particle Rank boosts Refine Point gain (^X / +0.001 per rank)"
+    source: wiki:Minerals/Refine_Tree
+    confidence: provisional
+
+  - from: particles-rank
+    to: refine-node-144
+    rel: boosts
+    note: "Particle Rank boosts gold: ^X (+0.01 per rank)"
+    source: wiki:Minerals/Refine_Tree
+    confidence: provisional
+
+  - from: particles-beta
+    to: refine-node-147
+    rel: boosts
+    note: "Beta Particles boost Alpha Generator Base a bit better (0.2 -> 0.3)"
+    source: wiki:Minerals/Refine_Tree
+    confidence: provisional
+
 suppress:
   # The three Atom-threshold challenges state a penalty, and `rel` has no value
   # for one. Emitting `boosts` asserts the opposite of what the page says, so
@@ -7177,3 +7776,51 @@ suppress:
     reason: >-
       "Relic 45 effect is multiplied based on your fire (SMP Exp)" -- the node
       reads fire, not SMP. The edge to Relic 45 is the real one.
+
+  # "Unlocks <grade> Factor for singularity" names Singularity Mult's factor,
+  # not the Singularity count; the curated edges to singularity-mult replace
+  # these.
+  - from: particles-rank-bonus-2
+    to: singularity
+    rel: boosts
+    reason: >-
+      "Unlocks Rank Factor for singularity" -- a factor of Singularity Mult.
+
+  - from: particles-tier-bonus-4
+    to: singularity
+    rel: boosts
+    reason: >-
+      "Unlocks Tier Factor for singularity" -- a factor of Singularity Mult.
+
+  - from: particles-tetr-bonus-4
+    to: singularity
+    rel: boosts
+    reason: >-
+      "Unlocks Tetr Factor for singularity" -- a factor of Singularity Mult.
+
+  - from: particles-pent-bonus-4
+    to: singularity
+    rel: boosts
+    reason: >-
+      "Unlocks Pent Factor for singularity" -- a factor of Singularity Mult.
+
+  # Inputs read as targets on the Refine Tree; the curated reversals replace
+  # them.
+  - from: refine-node-138
+    to: particles-rank
+    rel: boosts
+    reason: >-
+      "Particle Rank boosts Refine Point gain" -- the node reads rank.
+
+  - from: refine-node-144
+    to: particles-rank
+    rel: boosts
+    reason: >-
+      "Particle Rank boosts gold" -- the node reads rank.
+
+  - from: refine-node-147
+    to: particles-beta
+    rel: boosts
+    reason: >-
+      "Beta Particles boost Alpha Generator Base a bit better" -- the node
+      strengthens how Beta boosts the Alpha generator; it does not produce Beta.
