@@ -325,9 +325,12 @@ def test_every_swept_edge_is_uncertain(graph: dict):
     swept -= {key(e) for e in curated.get("edges") or []}
     swept -= {key(s) for s in curated.get("suppress") or []}
 
-    # 490: the Particles vocabulary added 11 swept edges over the old 480, and
-    # The Sun challenge's edge to the Sparks group is suppressed as an input.
-    assert len(swept) == 490, f"expected 490 swept edges, got {len(swept)}"
+    # 253: the 239 `boosts` the Tarot challenges read out of their Penalty and
+    # Completion Requirement cells are gone from the old 490, since neither is a
+    # reward. The requirements return as `requires` into the challenge, and two
+    # of those start under a swept prefix: special-mineral-black-gem, and the
+    # curated zodiac-level, which `zodiac-` happens to cover.
+    assert len(swept) == 253, f"expected 253 swept edges, got {len(swept)}"
     shipped = {key(e): e for e in graph["edges"]}
     for edge in swept:
         assert edge in shipped, f"{edge} never reached the artifact"

@@ -8393,52 +8393,7 @@ edges:
     confidence: provisional
 
 suppress:
-  # The three Atom-threshold challenges state a penalty, and `rel` has no value
-  # for one. Emitting `boosts` asserts the opposite of what the page says, so
-  # the edge is dropped rather than kept under `uncertain`.
-  - from: tarot-challenge-king-of-wands
-    to: atoms-gain
-    rel: boosts
-    reason: >-
-      "Adds a Dynamic Penalty that heavily nerfs Atom Gain". The challenge
-      suppresses the stat; it does not boost it.
-
-  - from: tarot-challenge-king-of-pentacles
-    to: atoms-gain
-    rel: boosts
-    reason: >-
-      "Adds a Dynamic Penalty that heavily nerfs Atom Gain". The challenge
-      suppresses the stat; it does not boost it.
-
-  - from: tarot-challenge-the-moon
-    to: atoms-gain
-    rel: boosts
-    reason: >-
-      "Adds a dynamic penalty that heavily nerfs Atom gain". The challenge
-      suppresses the stat; it does not boost it.
-
-  # The same nerf on two more challenges, arriving reversed rather than
-  # forwards. An input marker governs everything to the end of its string unless
-  # brackets close it (extract/refs._clause_end), so "becomes weaker based on
-  # your current Atom Count" earlier in the blob claims the "Atom Gain" three
-  # sentences later and swaps the edge's ends. Wrong direction and wrong sense.
-  - from: atoms-gain
-    to: tarot-challenge-king-of-cups
-    rel: boosts
-    reason: >-
-      "Adds a Dynamic Penalty that heavily nerfs Atom Gain". The challenge acts
-      on the stat, not the stat on the challenge, and it nerfs rather than
-      boosts.
-
-  - from: atoms-gain
-    to: tarot-challenge-king-of-swords
-    rel: boosts
-    reason: >-
-      "Adds a dynamic penalty that heavily nerfs Atom gain". The challenge acts
-      on the stat, not the stat on the challenge, and it nerfs rather than
-      boosts.
-
-  # Six edges whose relationship is real but whose `rel` is wrong, because the
+  # Five edges whose relationship is real but whose `rel` is wrong, because the
   # vocabulary path cannot tell an unlock from a boost. Each is restated above
   # with the right `rel`.
   - from: singularity-milestone-accelerated-growth
@@ -8473,20 +8428,6 @@ suppress:
       "Unlocks special minerals progression" is an unlock, and the curated edge
       says so.
 
-  - from: tarot-challenge-the-star
-    to: singular-zodiacs
-    rel: boosts
-    reason: >-
-      The Singular Zodiac is the challenge's entry condition, not something the
-      challenge boosts. Curated as `requires` instead.
-
-  - from: tarot-challenge-the-sun
-    to: refine-node-195
-    rel: boosts
-    reason: >-
-      "You need Refine Node 195 to start the challenge" -- the node gates the
-      challenge, the challenge does not boost it. Curated as `requires` instead.
-
   - from: special-mineral-black-gem
     to: wind-node-10
     rel: boosts
@@ -8510,14 +8451,6 @@ suppress:
       The relic boosts "Sun and Moon runes". Moon Runes claims its own words, but
       the elided "Sun runes" leaves a bare "Sun" that resolves to the Planet. The
       relic's edge to Sun Runes is curated instead.
-
-  - from: tarot-challenge-the-sun
-    to: planet-sun
-    rel: boosts
-    reason: >-
-      "Every time you use The Sun card" -- the Tarot card, which the
-      challenge is named for, not the Planet. The bare "Sun" left after
-      "The" resolves to the Planet.
 
   - from: singularity-tree-7-1
     to: zodiac-level
@@ -8664,13 +8597,6 @@ suppress:
     reason: >-
       "Unlocks Spark Mastery Factor for Singularity" -- Spark Mastery feeds the
       factor; the node does not raise it.
-
-  - from: tarot-challenge-the-sun
-    to: particles-sparks
-    rel: boosts
-    reason: >-
-      "Minerals in colors corresponding to your currently equipped sparks" --
-      the challenge reads the equipped sparks; it does not create them.
 
   # "The rank 8 bonus is 10 times stronger: +0.5 attack multiplier power per
   # rank" strengthens the Rank 8 bonus, which the curated edge to

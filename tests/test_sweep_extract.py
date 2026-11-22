@@ -86,6 +86,48 @@ def test_a_swept_edge_runs_from_the_swept_node_to_what_it_boosts(tmp_path: Path)
     ]
 
 
+CHALLENGES = """{| class="wikitable"
+!Challenge
+!Penalty
+!Completion Requirement
+|-
+|Queen of Swords
+|Gold is reset, but this penalty becomes weaker based on your Attack Power
+|Attack Power 3250 and Attack Power again
+|}"""
+
+
+def test_text_and_requirement_columns_never_produce_boosts(tmp_path: Path):
+    # A penalty names what the challenge nerfs, and a completion requirement
+    # what it takes to finish. Neither is something the challenge raises.
+    manifest = _manifest(
+        page="Tarot",
+        id_prefix="tarot-challenge",
+        name_columns=["Challenge"],
+        effect_columns=[],
+        text_columns=["Penalty"],
+        requirement_columns=["Completion Requirement"],
+    )
+    result = extract(
+        _raw(tmp_path, "Tarot.wikitext", CHALLENGES), manifest, VOCABULARY
+    )
+
+    node = result.nodes[0]
+    assert [e.text for e in node.effects] == [
+        "Gold is reset, but this penalty becomes weaker based on your Attack Power",
+        "Attack Power 3250 and Attack Power again",
+    ]
+    # One edge however often the goal names its prerequisite, prerequisite first.
+    assert [(e.from_, e.to, e.rel.value, e.confidence) for e in result.edges] == [
+        (
+            "attack-power",
+            "tarot-challenge-queen-of-swords",
+            "requires",
+            EdgeConfidence.UNCERTAIN,
+        ),
+    ]
+
+
 def test_an_ordinal_reference_reaches_the_edges_targets_effect(tmp_path: Path):
     # `targets_effect` is the one edge field that degrades into a build ERROR
     # rather than a wrong-looking edge: validate rejects an index past the end

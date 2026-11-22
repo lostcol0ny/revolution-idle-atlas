@@ -226,7 +226,8 @@ entry names a page and says which of its columns or template fields carry an
 entity's name and its effects.
 
 Everything read through the manifest is deliberately low-confidence: swept nodes
-are `provisional` and swept edges are `uncertain` and always `boosts`. A column
+are `provisional` and swept edges are `uncertain`, and `boosts` unless the column
+is declared a requirement (below). A column
 heading is a guess about what a page means, and a wrong edge is worse than a
 missing one — a missing one shows up in `docs/coverage.md`, a wrong one just
 looks true. Correct anything wrong in `data/relationships.yaml`, which wins every
@@ -250,8 +251,13 @@ Fields common to both:
 | Field | Required | Notes |
 |---|---|---|
 | `name_columns` | yes | One or more header names, joined by a space. Two are needed when neither identifies a row alone — `Dilation_Tree` rows are an `Axis` plus an `Index`. |
-| `effect_columns` | yes | One or more header names. **Each becomes a separate effect**, because a Zodiac really does have four independent bonuses. |
+| `effect_columns` | one of these three | Header names. **Each becomes a separate effect**, because a Zodiac really does have four independent bonuses. What an effect names becomes `node → named` `boosts`. |
+| `text_columns` | one of these three | Header names kept on the node as effects, after `effect_columns`, and matched into no edge. For a restriction: a Tarot challenge's `Penalty` names the stats it resets and nerfs, and the matcher could only call that a boost. |
+| `requirement_columns` | one of these three | Header names kept on the node as effects, after `text_columns`. What they name becomes `named → node` `requires`: a Tarot challenge's `Completion Requirement` ("Attack Level 3250") is a goal to reach, not something the challenge raises. |
 | `per_level_column` | no | Only valid alongside exactly one `effect_columns` entry; with two there would be no way to say which effect it scales. |
+
+An entry needs at least one column among the three column lists, and a column
+may appear in only one of them.
 
 `reader: record_template`:
 

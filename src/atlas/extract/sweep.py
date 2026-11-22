@@ -1,5 +1,5 @@
 import re
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from pathlib import Path
 
 from atlas.extract.manifest import Manifest, RecordTemplateEntry, SweepEntry, WikitableEntry
@@ -24,18 +24,23 @@ _ROWSPAN_RE = re.compile(r'rowspan\s*=\s*"?(\d+)"?', re.IGNORECASE)
 
 @dataclass(frozen=True)
 class SweptRecord:
-    """One row or template instance, reduced to the three things a node needs.
+    """One row or template instance, reduced to the strings a node needs.
 
     Deliberately not a Node. Minting ids, resolving references and stamping
     confidence are identical for both readers, so they happen once in
     `sweep.extract` rather than twice here. It also means a reader's tests
     assert on strings, which is what actually changes when a wiki page is
     restructured.
+
+    `texts` and `requirements` come from `text_columns` and
+    `requirement_columns`; only the wikitable reader has those.
     """
 
     name: str
     effects: list[str]
     per_level: str | None
+    texts: list[str] = field(default_factory=list)
+    requirements: list[str] = field(default_factory=list)
 
 
 @dataclass(frozen=True)
@@ -216,7 +221,8 @@ def read_wikitable(raw: str, entry: WikitableEntry) -> list[SweptRecord]:
         if not headers:
             continue
         column_of = {name: index for index, name in enumerate(headers)}
-        wanted = [*entry.name_columns, *entry.effect_columns]
+        roles = (entry.effect_columns, entry.text_columns, entry.requirement_columns)
+        wanted = [*entry.name_columns, *(name for role in roles for name in role)]
         if entry.per_level_column is not None:
             wanted.append(entry.per_level_column)
         if any(headers.count(name) > 1 for name in wanted):
@@ -229,21 +235,34 @@ def read_wikitable(raw: str, entry: WikitableEntry) -> list[SweptRecord]:
             continue
         if any(name not in column_of for name in entry.name_columns):
             continue
-        present = [name for name in entry.effect_columns if name in column_of]
-        if not present:
+        effect_cols, text_cols, requirement_cols = (
+            [name for name in role if name in column_of] for role in roles
+        )
+        if not (effect_cols or text_cols or requirement_cols):
             continue
         for row in _aligned_rows(rows, len(headers)):
             name = normalise_space(
                 " ".join(label_text(row[column_of[c]]) for c in entry.name_columns)
             )
-            effects = effect_texts([row[column_of[c]] for c in present])
-            if not name or not effects:
+            effects, texts, requirements = (
+                effect_texts([row[column_of[c]] for c in columns])
+                for columns in (effect_cols, text_cols, requirement_cols)
+            )
+            if not name or not (effects or texts or requirements):
                 continue
             per_level = None
             scaling = entry.per_level_column
             if scaling is not None and scaling in column_of:
                 per_level = plain_text(row[column_of[scaling]]) or None
-            records.append(SweptRecord(name=name, effects=effects, per_level=per_level))
+            records.append(
+                SweptRecord(
+                    name=name,
+                    effects=effects,
+                    per_level=per_level,
+                    texts=texts,
+                    requirements=requirements,
+                )
+            )
     return records
 
 
@@ -346,6 +365,7 @@ def _build(
         )
         for index, text in enumerate(record.effects)
     ]
+    effects += [Effect(text=text) for text in (*record.texts, *record.requirements)]
     node = Node(
         id=node_id,
         name=name,
@@ -359,9 +379,12 @@ def _build(
         effects=effects,
     )
 
+    # Text cells are on `effects` above and nowhere below: they name what the
+    # row restricts, and the only edge the matcher could make of that is a
+    # `boosts` saying the opposite.
     edges: list[Edge] = []
-    for effect in effects:
-        for reference in resolve(effect.text, vocabulary):
+    for text in record.effects:
+        for reference in resolve(text, vocabulary):
             if reference.target_id == node_id:
                 # "Red Gem gain is doubled" is how the wiki writes a
                 # self-scaling effect. validate_dataset rejects a self-edge as
@@ -374,10 +397,10 @@ def _build(
                     from_=origin,
                     to=target,
                     # Always `boosts`. The sweep's job is finding that a
-                    # relationship exists; deciding it is really an unlock or a
-                    # requirement is curation, and guessing from prose is how a
-                    # wrong edge gets made. `op` is left unset for the same
-                    # reason — the effect carries it, the edge does not claim it.
+                    # relationship exists; deciding it is really an unlock is
+                    # curation, and guessing from prose is how a wrong edge gets
+                    # made. `op` is left unset for the same reason — the effect
+                    # carries it, the edge does not claim it.
                     rel=Rel.BOOSTS,
                     targets_effect=reference.targets_effect,
                     source=f"wiki:{entry.page}",
@@ -387,6 +410,27 @@ def _build(
                     confidence=EdgeConfidence.UNCERTAIN,
                 )
             )
+    # `requires` because the manifest says the column is a requirement, and
+    # prerequisite first whatever the grammar: "based on" cannot turn a goal the
+    # player must reach into something the row raises. Keyed on the target
+    # alone, since an ordinal or input marker that tells two `boosts` apart
+    # leaves one requirement.
+    prerequisites = dict.fromkeys(
+        reference.target_id
+        for text in record.requirements
+        for reference in resolve(text, vocabulary)
+    )
+    prerequisites.pop(node_id, None)
+    edges += [
+        Edge(
+            from_=prerequisite,
+            to=node_id,
+            rel=Rel.REQUIRES,
+            source=f"wiki:{entry.page}",
+            confidence=EdgeConfidence.UNCERTAIN,
+        )
+        for prerequisite in prerequisites
+    ]
     return ExtractResult(nodes=[node], edges=edges)
 
 
