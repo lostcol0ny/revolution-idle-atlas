@@ -342,6 +342,34 @@ def _read(raw: str, entry: SweepEntry) -> list[SweptRecord]:
     return read_record_template(raw, entry)
 
 
+# A threshold amount: "3250", "105+", "1e20+", "111,111+", "x5e9".
+_AMOUNT = r"x?\d[\d,.]*(?:e\d+)?\+?"
+_LEADING_AMOUNT_RE = re.compile(rf"^{_AMOUNT}(?=\s)", re.IGNORECASE)
+_TRAILING_AMOUNT_RE = re.compile(rf"(?<=\s){_AMOUNT}$", re.IGNORECASE)
+_CONDITION_RE = re.compile(
+    r"\b(?:with|while|at|when|during|by|after|before|until|within)\b", re.IGNORECASE
+)
+
+
+def is_plain_threshold(text: str) -> bool:
+    """True when a requirement cell is an amount of something and nothing else.
+
+    "Attack Level 3250" and "105+ Max Mineral Level" say the named stat has to
+    reach a number, which is a prerequisite. An action goal is not: in "Sell a
+    Zodiac for exactly 67 Astrodust" the Astrodust is what the sale pays, and in
+    "Perform a Singularity at Attack Level 5005+" `singularity` is the reset
+    count, which the goal never asks to grow. Recognising every verb is
+    open-ended, and "Merge Level 250+" starts with one, so the shape decides
+    instead: the amount sits at the start or the end of the cell, and no
+    condition word ("with", "while", "at", ...) hangs a second clause on it. An
+    action goal puts its number mid-sentence or behind such a word.
+    """
+    text = text.strip()
+    if _CONDITION_RE.search(text):
+        return False
+    return bool(_LEADING_AMOUNT_RE.search(text) or _TRAILING_AMOUNT_RE.search(text))
+
+
 def _build(
     record: SweptRecord, entry: SweepEntry, vocabulary: Vocabulary
 ) -> ExtractResult:
@@ -418,6 +446,7 @@ def _build(
     prerequisites = dict.fromkeys(
         reference.target_id
         for text in record.requirements
+        if is_plain_threshold(text)
         for reference in resolve(text, vocabulary)
     )
     prerequisites.pop(node_id, None)

@@ -5,7 +5,7 @@ import pytest
 from atlas.extract import ExtractError, run_all
 from atlas.extract.manifest import Manifest
 from atlas.extract.refs import Vocabulary
-from atlas.extract.sweep import extract
+from atlas.extract.sweep import extract, is_plain_threshold
 from atlas.models import EdgeConfidence, Kind, NodeConfidence
 
 REAL_RAW = Path(__file__).resolve().parents[1] / "data" / "raw"
@@ -93,7 +93,11 @@ CHALLENGES = """{| class="wikitable"
 |-
 |Queen of Swords
 |Gold is reset, but this penalty becomes weaker based on your Attack Power
-|Attack Power 3250 and Attack Power again
+|Attack Power 3250
+|-
+|King of Swords
+|Gold is reset
+|Perform a Gold reset at Attack Power 5005+
 |}"""
 
 
@@ -112,12 +116,16 @@ def test_text_and_requirement_columns_never_produce_boosts(tmp_path: Path):
         _raw(tmp_path, "Tarot.wikitext", CHALLENGES), manifest, VOCABULARY
     )
 
-    node = result.nodes[0]
-    assert [e.text for e in node.effects] == [
+    assert [e.text for e in result.nodes[0].effects] == [
         "Gold is reset, but this penalty becomes weaker based on your Attack Power",
-        "Attack Power 3250 and Attack Power again",
+        "Attack Power 3250",
     ]
-    # One edge however often the goal names its prerequisite, prerequisite first.
+    # The action goal stays on its node as text and yields no edge: "Gold" there
+    # is a reset to perform, not an amount to reach.
+    assert [e.text for e in result.nodes[1].effects] == [
+        "Gold is reset",
+        "Perform a Gold reset at Attack Power 5005+",
+    ]
     assert [(e.from_, e.to, e.rel.value, e.confidence) for e in result.edges] == [
         (
             "attack-power",
@@ -126,6 +134,40 @@ def test_text_and_requirement_columns_never_produce_boosts(tmp_path: Path):
             EdgeConfidence.UNCERTAIN,
         ),
     ]
+
+
+@pytest.mark.parametrize(
+    "text",
+    [
+        "Attack Level 3250",
+        "105+ Max Mineral Level",
+        "1e20+ VP",
+        "Merge Level 250+",
+        "111,111+ SMS Factor",
+        "x5e9 Minerals Local Speed",
+        "1e765+ multiplication of all elements",
+    ],
+)
+def test_a_plain_threshold_goal_is_a_prerequisite(text: str):
+    assert is_plain_threshold(text)
+
+
+@pytest.mark.parametrize(
+    "text",
+    [
+        "Perform a Singularity at Attack Level 5005+",
+        "Perform a Singularity with 1e2026+ Fire",
+        "Perform a Singularity while the next expected Zodiac Level is 67+",
+        "Sell a Zodiac for exactly 67 Astrodust (lol)",
+        "Destroy a Level 20 Black Gem",
+        "Unite with a Level 6+ Zodiac",
+        "Complete the challenge by the chance given to you by Relic 67",
+        "Spawn a spark with 1e9 mastery to complete the challenge",
+        "None (yeah this challenge is just kind of a benchmark)",
+    ],
+)
+def test_an_action_goal_is_not_a_prerequisite(text: str):
+    assert not is_plain_threshold(text)
 
 
 def test_an_ordinal_reference_reaches_the_edges_targets_effect(tmp_path: Path):

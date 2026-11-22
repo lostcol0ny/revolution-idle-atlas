@@ -253,11 +253,22 @@ Fields common to both:
 | `name_columns` | yes | One or more header names, joined by a space. Two are needed when neither identifies a row alone — `Dilation_Tree` rows are an `Axis` plus an `Index`. |
 | `effect_columns` | one of these three | Header names. **Each becomes a separate effect**, because a Zodiac really does have four independent bonuses. What an effect names becomes `node → named` `boosts`. |
 | `text_columns` | one of these three | Header names kept on the node as effects, after `effect_columns`, and matched into no edge. For a restriction: a Tarot challenge's `Penalty` names the stats it resets and nerfs, and the matcher could only call that a boost. |
-| `requirement_columns` | one of these three | Header names kept on the node as effects, after `text_columns`. What they name becomes `named → node` `requires`: a Tarot challenge's `Completion Requirement` ("Attack Level 3250") is a goal to reach, not something the challenge raises. |
+| `requirement_columns` | one of these three | Header names kept on the node as effects, after `text_columns`. A **plain threshold** cell turns what it names into `named → node` `requires`: a Tarot challenge's `Completion Requirement` ("Attack Level 3250") is a goal to reach, not something the challenge raises. Any other cell is text only (see below). |
 | `per_level_column` | no | Only valid alongside exactly one `effect_columns` entry; with two there would be no way to say which effect it scales. |
 
 An entry needs at least one column among the three column lists, and a column
 may appear in only one of them.
+
+A requirement cell is a plain threshold when its amount (`3250`, `105+`, `1e20+`,
+`111,111+`, `x5e9`) sits at its start or its end and it holds no condition word
+(`with`, `while`, `at`, `when`, `during`, `by`, `after`, `before`, `until`,
+`within`): "Attack Level 3250", "105+ Max Mineral Level", "Merge Level 250+". An
+action goal puts its number mid-sentence or behind a condition, and what it names
+is not a stat to raise: in "Sell a Zodiac for exactly 67 Astrodust" the Astrodust
+is the sale's proceeds, and in "Perform a Singularity at Attack Level 5005+" the
+Singularity is a reset to perform. Such a cell stays on the node and makes no
+edge. The rule reads the shape rather than a list of verbs, because "Merge Level
+250+" opens with one.
 
 `reader: record_template`:
 
