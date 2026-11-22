@@ -1,7 +1,7 @@
 from collections.abc import Sequence
 from typing import Any
 
-from atlas.models import Dataset, Edge, GameData, GameNode, Node, Suppression
+from atlas.models import Dataset, Edge, Effect, GameData, GameNode, Node, Suppression
 from atlas.problems import Problem
 
 EdgeKey = tuple[str, str, str]
@@ -57,6 +57,25 @@ def _duplicate_node_problems(
             )
         seen.add(node.id)
     return problems
+
+
+def _reworded_effect(derived: Sequence[Effect], curated: Sequence[Effect]) -> dict[str, str]:
+    """The one effect a curated list rewords, as {derived text: curated text}.
+
+    Only an unambiguous rewording counts: both lists the same length, exactly
+    one position whose text differs, and the derived text gone from the
+    curated list. A list that adds, drops or reorders effects pairs nothing,
+    because position no longer says which curated effect a derived one became.
+    """
+    if len(derived) != len(curated):
+        return {}
+    changed = [(old.text, new.text) for old, new in zip(derived, curated) if old.text != new.text]
+    if len(changed) != 1:
+        return {}
+    old, new = changed[0]
+    if any(effect.text == old for effect in curated):
+        return {}
+    return {old: new}
 
 
 def _game_layer(
@@ -156,11 +175,9 @@ def merge(
         data = fields.setdefault(node.id, under_curated.pop(node.id, {}))
         data.update({name: getattr(node, name) for name in node.model_fields_set})
         if "effects" in node.model_fields_set:
-            reworded[node.id] = {
-                old.text: new.text
-                for old, new in zip(derived_effects.get(node.id, []), node.effects)
-                if old.text != new.text
-            }
+            reworded[node.id] = _reworded_effect(
+                derived_effects.get(node.id, []), node.effects
+            )
     nodes = [Node.model_validate(data) for data in fields.values()]
 
     edges: dict[EdgeKey, Edge] = {}

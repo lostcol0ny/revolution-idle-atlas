@@ -18,8 +18,10 @@ survive**, not who or what is allowed to write them:
 `atlas build` loads both and merges them. A curated node overlays the generated
 one **field by field**, so correcting one relic's name does not mean restating
 its kind, wiki page and effects. A curated `effects` list replaces the generated
-one, and a generated edge `note` that quotes a reworded effect takes the curated
-wording with it. A curated edge replaces the generated one wholesale. A
+one. When it rewords exactly one effect and keeps the rest as they were, a
+generated edge `note` that quotes the old wording takes the new one; a list that
+adds, drops or reorders effects leaves notes alone. A curated edge replaces the
+generated one wholesale. A
 `suppress:` entry deletes a generated edge outright — the one correction an
 overlay cannot express.
 

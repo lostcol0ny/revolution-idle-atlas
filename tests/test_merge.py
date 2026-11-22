@@ -152,6 +152,48 @@ def test_a_generated_note_follows_a_curated_rewording_of_its_effect():
     assert [e.note for e in merged.edges] == [typeset, typeset, "Some other wording"]
 
 
+def _refine_node_40(*effects: str) -> Node:
+    return Node(
+        id="refine-node-40",
+        name="Refine Node 40",
+        system="refine",
+        kind=Kind.TREE_NODE,
+        effects=[Effect(text=text) for text in effects],
+    )
+
+
+def _magnet_notes(curated_effects: tuple[str, ...], derived_effects: tuple[str, ...]) -> list:
+    derived = Dataset(
+        nodes=[_refine_node_40(*derived_effects)],
+        edges=[
+            Edge(
+                from_="refine-node-40",
+                to=target,
+                rel=Rel.BOOSTS,
+                source="wiki:Refine",
+                note=note,
+            )
+            for target, note in zip(("value-points", "polish-points"), derived_effects)
+        ],
+    )
+    merged, _ = merge(derived, Dataset(nodes=[_refine_node_40(*curated_effects)]))
+    return [e.note for e in merged.edges]
+
+
+def test_a_curated_list_that_prepends_an_effect_rewrites_no_note():
+    # Pairing by position would read every derived effect as reworded into the
+    # one now ahead of it, and stamp the wrong text on each note.
+    derived = ("Magnet upgrades are powered to ^(1.1*lvl)", "VP gain ^2")
+    curated = ("A new leading effect", *derived)
+    assert _magnet_notes(curated, derived) == list(derived)
+
+
+def test_a_curated_list_that_rewords_two_effects_rewrites_no_note():
+    derived = ("Magnet upgrades are powered to ^(1.1*lvl)", "VP gain ^2")
+    curated = (r"Magnet upgrades are powered to $^{1.1 \times \text{lvl}}$", "VP gain $^2$")
+    assert _magnet_notes(curated, derived) == list(derived)
+
+
 def test_curated_edge_replaces_the_derived_one_wholesale():
     curated = Dataset(
         edges=[

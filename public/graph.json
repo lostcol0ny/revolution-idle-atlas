@@ -26091,7 +26091,7 @@
     {
       "confidence": "documented",
       "from": "animal-cow",
-      "note": "EP Gain × (1+(Σ^0.5))",
+      "note": "EP Gain $\\times (1 + (\\Sigma^{0.5}))$",
       "rel": "boosts",
       "source": "wiki:Animals",
       "to": "eternity-points"
@@ -26938,7 +26938,7 @@
     {
       "confidence": "documented",
       "from": "dilation-penalties",
-      "note": "(Laps Speed ^0.10) / 10",
+      "note": "$(\\text{Laps Speed}^{0.10}) / 10$",
       "rel": "boosts",
       "source": "wiki:Dilation",
       "to": "lap-speed"
