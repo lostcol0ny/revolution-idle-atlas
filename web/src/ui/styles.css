@@ -598,11 +598,12 @@ summary:focus-visible,
 }
 
 /* Windows High Contrast drops backgrounds and box-shadows, which is all that
-   marks a selected row or a pressed chip otherwise. */
+   marks a selected row or a pressed chip otherwise. A focused one keeps the
+   focus ring instead, which this would otherwise override. */
 @media (forced-colors: active) {
   .group-header.selected,
-  .node-row.selected,
-  .chip--on {
+  .node-row.selected:not(:focus-visible),
+  .chip--on:not(:focus-visible) {
     outline: 2px solid Highlight;
     outline-offset: -2px;
   }

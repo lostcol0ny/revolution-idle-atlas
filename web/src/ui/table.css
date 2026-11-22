@@ -264,6 +264,11 @@
   outline-offset: 2px;
 }
 
+/* The button fills its cell, so an outside ring would be cut off by the cell edges. */
+.stable__sort:focus-visible {
+  outline-offset: -2px;
+}
+
 .stable__sr {
   position: absolute;
   width: 1px;
@@ -282,7 +287,9 @@
   }
 }
 
-@container (width < 720px) {
+/* The widest table (Unity) needs 51.9rem at the default font and 44.6rem at
+   20px; containment makes any overflow unscrollable, so switch with headroom. */
+@container (width < 55rem) {
   .stable__table,
   .stable__table thead,
   .stable__table tbody,
@@ -303,8 +310,16 @@
     border-bottom: none;
   }
 
+  /* Visually hidden, not display: none, so the explicit table roles keep a
+     header for every cell. */
   .stable__table thead .stable__unsortable {
-    display: none;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
   }
 
   .stable__table tbody tr {

@@ -117,6 +117,15 @@ export default function App() {
   const sidebarRef = useRef<HTMLElement>(null);
   useViewArrival(viewKey, fromHistory, main, detailRef, sidebarRef);
 
+  const browseToggleRef = useRef<HTMLButtonElement>(null);
+  // Picking the current view again opens no new view, so no heading takes
+  // focus; without this it would stay on a button that just folded away.
+  // On desktop the toggle is not rendered and focus() does nothing.
+  const foldSidebar = (sameView: boolean) => {
+    setBrowseOpen(false);
+    if (sameView) browseToggleRef.current?.focus();
+  };
+
   const pageName = node?.name ?? trail.at(-1)?.name;
   useEffect(() => {
     document.title = pageName === undefined ? SITE_TITLE : `${pageName} · ${SITE_TITLE}`;
@@ -186,6 +195,7 @@ export default function App() {
         {/* Phones only (see styles.css): the sidebar folds away so the
             content leads instead of starting halfway down the screen. */}
         <button
+          ref={browseToggleRef}
           type="button"
           className="browse-toggle"
           aria-expanded={browseOpen}
@@ -207,11 +217,11 @@ export default function App() {
             selectedId={view.kind === 'item' ? view.nodeId : null}
             selectedSystemId={view.kind === 'system' ? view.systemId : null}
             onSelect={(nodeId) => {
-              setBrowseOpen(false);
+              foldSidebar(view.kind === 'item' && view.nodeId === nodeId);
               selectNode(nodeId);
             }}
             onSelectSystem={(systemId) => {
-              setBrowseOpen(false);
+              foldSidebar(view.kind === 'system' && view.systemId === systemId);
               selectSystem(systemId);
             }}
           />
