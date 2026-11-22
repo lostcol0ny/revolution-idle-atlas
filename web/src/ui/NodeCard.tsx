@@ -84,7 +84,7 @@ export function NodeCard({
               <li key={position}>
                 {effect.text}
                 {effect.per_level !== undefined && (
-                  <span className="nodecard__per-level"> ({effect.per_level} per level)</span>
+                  <span className="nodecard__per-level"> ({effect.per_level})</span>
                 )}
               </li>
             ))}
