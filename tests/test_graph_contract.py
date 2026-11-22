@@ -775,3 +775,19 @@ def test_no_er_upgrade_boosts_the_resource_it_consumes(graph: dict):
         ("singularity-milestone-virusologist", "virus-essence"),
     }
     assert backwards & {(e["from"], e["to"]) for e in graph["edges"]} == set()
+
+
+def test_game_file_names_and_describes_its_nodes(graph: dict):
+    # data/game.yaml sits between derived and curated: every relic it maps must
+    # reach the artifact under the game's own name, which is how the wiki's
+    # "Magestic Halberd" becomes the game's "Majestic Halberd".
+    game = _load_yaml("game.yaml")
+    by_id = {n["id"]: n for n in graph["nodes"]}
+    relics = [n for n in game["nodes"] if n["id"].startswith("relic-")]
+    assert len(relics) == 75
+    for entry in relics:
+        node = by_id[entry["id"]]
+        number = entry["id"].removeprefix("relic-")
+        assert node["name"] == f"Relic {number} ({entry['name']})"
+        assert node["description"] == entry["description"]
+    assert by_id["relic-20"]["name"] == "Relic 20 (Majestic Halberd)"

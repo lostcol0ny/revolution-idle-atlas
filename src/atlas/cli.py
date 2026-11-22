@@ -2,6 +2,7 @@ import argparse
 import json
 import os
 import sys
+from collections.abc import Callable
 from pathlib import Path
 
 import yaml
@@ -21,9 +22,11 @@ from atlas.game import (
     read_install,
     write_outputs,
 )
-from atlas.loader import SchemaError, load_dataset
+from atlas.gamemap import GAME_FILE_REL_PATH, map_catalog
+from atlas.gamemap import to_yaml as game_to_yaml
+from atlas.loader import SchemaError, load_dataset, load_game
 from atlas.merge import merge
-from atlas.models import Dataset
+from atlas.models import Dataset, GameData
 from atlas.problems import Problem
 from atlas.rawcheck import check_against_raw
 from atlas.render import to_graph
@@ -39,6 +42,8 @@ MERGED_LABEL = "dataset"
 # reads empty, a tarot card whose name another node claims — and no single file
 # is the one to open for all of them, so each message names its own subject.
 EXTRACT_LABEL = "extract"
+# `atlas game` lists this many unmatched entities per family, then a count.
+UNMATCHED_SHOWN = 10
 
 
 def _report(problems: list[Problem], curated_path: str) -> None:
@@ -58,10 +63,10 @@ def _report(problems: list[Problem], curated_path: str) -> None:
         print(problem.render(fallback), file=sys.stderr)
 
 
-def _load(path: Path, display_path: str) -> Dataset | None:
-    """Load one dataset file, printing any failure. None means "do not build"."""
+def _load[T](path: Path, display_path: str, loader: Callable[[Path], T]) -> T | None:
+    """Load one input file, printing any failure. None means "do not build"."""
     try:
-        return load_dataset(path)
+        return loader(path)
     except SchemaError as exc:
         for problem in exc.problems:
             print(f"{display_path}  error  {problem}", file=sys.stderr)
@@ -72,17 +77,16 @@ def _load(path: Path, display_path: str) -> Dataset | None:
     return None
 
 
-def _build(root: Path, check_only: bool) -> int:
+def _load_inputs(root: Path) -> tuple[Dataset, Dataset] | None:
+    """Load the derived and curated datasets, printing any failure."""
     dataset_path = root / DATASET_REL_PATH
-    display_path = str(DATASET_REL_PATH)
-
     if not dataset_path.is_file():
-        print(f"{display_path}: not found", file=sys.stderr)
-        return 1
+        print(f"{DATASET_REL_PATH}: not found", file=sys.stderr)
+        return None
 
-    curated = _load(dataset_path, display_path)
+    curated = _load(dataset_path, str(DATASET_REL_PATH), load_dataset)
     if curated is None:
-        return 1
+        return None
 
     # A missing generated file degrades to an empty one rather than skipping the
     # merge: `suppress` and the duplicate-id check are merge's job, and a branch
@@ -90,16 +94,36 @@ def _build(root: Path, check_only: bool) -> int:
     derived_path = root / DERIVED_REL_PATH
     derived = Dataset()
     if derived_path.is_file():
-        loaded = _load(derived_path, str(DERIVED_REL_PATH))
+        loaded = _load(derived_path, str(DERIVED_REL_PATH), load_dataset)
         if loaded is None:
-            return 1
+            return None
         derived = loaded
+    return derived, curated
+
+
+def _build(root: Path, check_only: bool) -> int:
+    display_path = str(DATASET_REL_PATH)
+    inputs = _load_inputs(root)
+    if inputs is None:
+        return 1
+    derived, curated = inputs
+
+    # Absent on a checkout that has never run `atlas game`; the build is then
+    # exactly the two-file merge.
+    game_path = root / GAME_FILE_REL_PATH
+    game: GameData | None = None
+    if game_path.is_file():
+        game = _load(game_path, str(GAME_FILE_REL_PATH), load_game)
+        if game is None:
+            return 1
 
     dataset, merge_problems = merge(
         derived,
         curated,
         derived_path=str(DERIVED_REL_PATH),
         curated_path=display_path,
+        game=game,
+        game_path=str(GAME_FILE_REL_PATH),
     )
 
     raw_dir = root / "data" / "raw"
@@ -162,7 +186,7 @@ def _extract(root: Path) -> int:
     curated_path = root / DATASET_REL_PATH
     curated = Dataset()
     if curated_path.is_file():
-        loaded = _load(curated_path, str(DATASET_REL_PATH))
+        loaded = _load(curated_path, str(DATASET_REL_PATH), load_dataset)
         if loaded is None:
             return 1
         curated = loaded
@@ -235,6 +259,31 @@ def _game(root: Path, install: Path) -> int:
     print(f"ok: {len(families)} families to {CATALOG_REL_PATH.as_posix()}")
     for prefix, entries in families.items():
         print(f"  {prefix}: {len(entries)}")
+
+    inputs = _load_inputs(root)
+    if inputs is None:
+        return 1
+    # Mapped against wiki ids only: the previous game file must not vouch for
+    # the nodes it added itself.
+    dataset, _ = merge(*inputs)
+    game, reports, skipped = map_catalog(families, dataset.nodes, dump["buildid"])
+    (root / GAME_FILE_REL_PATH).write_text(
+        game_to_yaml(game), encoding="utf-8", newline="\n"
+    )
+    print(f"ok: {len(game.nodes)} nodes to {GAME_FILE_REL_PATH.as_posix()}")
+    for prefix, report in reports.items():
+        print(
+            f"  {prefix}: {report.matched} matched, {report.added} added, "
+            f"{len(report.unmatched)} unmatched"
+        )
+        for line in report.renamed:
+            print(f"    renamed {line}")
+        for line in report.unmatched[:UNMATCHED_SHOWN]:
+            print(f"    unmatched {line}")
+        if len(report.unmatched) > UNMATCHED_SHOWN:
+            print(f"    ... {len(report.unmatched) - UNMATCHED_SHOWN} more unmatched")
+    if skipped:
+        print(f"  skipped, no system to map onto: {', '.join(skipped)}")
     return 0
 
 
@@ -257,7 +306,9 @@ def main(argv: list[str] | None = None) -> int:
     scrape.add_argument("--root", type=Path, default=Path.cwd())
 
     game = sub.add_parser(
-        "game", help="read English strings from a local game install into data/game/"
+        "game",
+        help="read English strings from a local game install into data/game/, "
+        "and map them onto graph nodes in data/game.yaml",
     )
     game.add_argument("--root", type=Path, default=Path.cwd())
     game.add_argument("--install", type=Path, default=DEFAULT_INSTALL)

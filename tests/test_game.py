@@ -1,4 +1,5 @@
 import json
+import shutil
 from pathlib import Path
 
 import pytest
@@ -19,6 +20,10 @@ from atlas.game import (
     read_install,
     write_outputs,
 )
+from atlas.gamemap import GAME_FILE_REL_PATH
+from atlas.loader import load_game
+
+ROOT = Path(__file__).resolve().parents[1]
 
 SHARED = {
     11: {
@@ -205,6 +210,9 @@ def test_write_outputs_is_stable_and_lf(tmp_path):
 )
 def test_real_install(tmp_path):
     pytest.importorskip("UnityPy")
+    (tmp_path / "data").mkdir()
+    for name in ("relationships.yaml", "derived.yaml"):
+        shutil.copy(ROOT / "data" / name, tmp_path / "data" / name)
     assert main(["game", "--root", str(tmp_path)]) == 0
     strings = json.loads((tmp_path / STRINGS_REL_PATH).read_text(encoding="utf-8"))
     assert strings["strings"]["UNI_RELIC_NAME_0"] == "Silver Coin"
@@ -215,3 +223,7 @@ def test_real_install(tmp_path):
         "name": "Silver Coin",
         "desc": strings["strings"]["UNI_RELIC_DESC_0"],
     }
+    game = load_game(tmp_path / GAME_FILE_REL_PATH)
+    relics = {n.id: n.name for n in game.nodes if n.id.startswith("relic-")}
+    assert len(relics) == 75
+    assert relics["relic-1"] == "Silver Coin"

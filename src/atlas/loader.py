@@ -1,10 +1,12 @@
 from pathlib import Path
-from typing import Any
+from typing import Any, TypeVar
 
 import yaml
-from pydantic import ValidationError
+from pydantic import BaseModel, ValidationError
 
-from atlas.models import Dataset
+from atlas.models import Dataset, GameData
+
+_Model = TypeVar("_Model", bound=BaseModel)
 
 LINE_KEY = "__line__"
 
@@ -53,6 +55,24 @@ def _strip_nested_lines(value: Any) -> None:
 
 
 def load_dataset(path: Path) -> Dataset:
+    return _load_sectioned(
+        path,
+        Dataset,
+        ("systems", "nodes", "edges", "suppress"),
+        "top level must be a mapping with 'nodes' and 'edges' keys",
+    )
+
+
+def load_game(path: Path) -> GameData:
+    return _load_sectioned(
+        path, GameData, ("nodes",), "top level must be a mapping with a 'nodes' key"
+    )
+
+
+def _load_sectioned(
+    path: Path, model: type[_Model], sections: tuple[str, ...], shape: str
+) -> _Model:
+    """Validate a YAML file whose top-level lists are `sections` of line-tracked items."""
     # Equivalent to yaml.load(..., Loader=_LineLoader), spelled out so the
     # SafeLoader lineage is the only thing a reader has to verify.
     loader = _LineLoader(path.read_text(encoding="utf-8"))
@@ -63,12 +83,9 @@ def load_dataset(path: Path) -> Dataset:
     if raw is None:
         raw = {}
     if not isinstance(raw, dict):
-        raise SchemaError(
-            ["top level must be a mapping with 'nodes' and 'edges' keys"]
-        )
+        raise SchemaError([shape])
     raw.pop(LINE_KEY, None)
 
-    sections = ("systems", "nodes", "edges", "suppress")
     lines: dict[str, list[int | None]] = {}
     for section in sections:
         items = raw.get(section) or []
@@ -83,7 +100,7 @@ def load_dataset(path: Path) -> Dataset:
         lines[section] = section_lines
 
     try:
-        dataset = Dataset.model_validate(raw)
+        loaded = model.model_validate(raw)
     except ValidationError as exc:
         problems = [
             f"{'.'.join(str(p) for p in err['loc'])}: {err['msg']}"
@@ -92,7 +109,7 @@ def load_dataset(path: Path) -> Dataset:
         raise SchemaError(problems) from exc
 
     for section in sections:
-        for item, line in zip(getattr(dataset, section), lines[section], strict=True):
+        for item, line in zip(getattr(loaded, section), lines[section], strict=True):
             item.line = line
 
-    return dataset
+    return loaded

@@ -62,6 +62,9 @@ export function NodeCard({
   return (
     <div className="nodecard">
       <h2 className="nodecard__name">{node.name}</h2>
+      {node.description !== undefined && (
+        <p className="nodecard__description">{node.description}</p>
+      )}
       <dl className="nodecard__facts">
         <dt>id</dt>
         <dd>

@@ -86,6 +86,8 @@ export interface GraphNode {
   wiki?: string;
   confidence?: NodeConfidence;
   effects?: GraphEffect[];
+  // The game's own text; `{0}` placeholders are runtime values, kept verbatim.
+  description?: string;
 }
 
 export interface GraphEdge {
