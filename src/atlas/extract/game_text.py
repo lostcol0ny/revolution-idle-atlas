@@ -19,7 +19,7 @@ from dataclasses import replace
 
 from atlas.extract.refs import Reference, Vocabulary, resolve
 from atlas.extract.result import ExtractResult
-from atlas.models import Edge, EdgeConfidence, GameData, Rel
+from atlas.models import Edge, EdgeConfidence, GameData
 from atlas.particles import GRADES, MEMBER_LINKS, grade_node
 
 SOURCE = "game"
@@ -37,7 +37,7 @@ _GRADE_IDS = frozenset(grade_node(grade) for grade in GRADES)
 
 
 def _as_input(reference: Reference) -> Reference:
-    return replace(reference, is_input=True, targets_effect=None)
+    return replace(reference, is_input=True, is_unlock=False, targets_effect=None)
 
 
 def _references(text: str, vocabulary: Vocabulary) -> list[Reference]:
@@ -78,10 +78,9 @@ def extract(game: GameData, vocabulary: Vocabulary) -> ExtractResult:
                 Edge(
                     from_=origin,
                     to=target,
-                    # Always `boosts` and `uncertain`, as for swept wiki prose:
-                    # a name spotted in a sentence says a relationship exists,
-                    # not what kind.
-                    rel=Rel.BOOSTS,
+                    # `uncertain`, as for swept wiki prose: a name spotted in a
+                    # sentence says a relationship exists, not how strong.
+                    rel=reference.rel,
                     targets_effect=reference.targets_effect,
                     source=SOURCE,
                     confidence=EdgeConfidence.UNCERTAIN,

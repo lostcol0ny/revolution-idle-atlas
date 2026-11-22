@@ -52,7 +52,7 @@ def _boosts(source_id: str, text: str, vocabulary: Vocabulary) -> list[Edge]:
                 **{
                     "from": origin,
                     "to": target,
-                    "rel": "boosts",
+                    "rel": reference.rel,
                     "note": text,
                     "targets_effect": reference.targets_effect,
                     "source": SOURCE,

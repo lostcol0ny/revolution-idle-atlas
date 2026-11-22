@@ -193,9 +193,12 @@ nodes:
     wiki: Singularity#Singularity Mult Gain Modifiers
     confidence: provisional
 
+  # Every Atom penalty the wiki and the game name (e308, e10K, e25K, 1.6e256...)
+  # is named only to be weakened or removed, which raises Atom gain; a node for
+  # the penalty itself turned each of those into "boosts the penalty".
   - id: atoms-gain
     name: Atoms Gain
-    aliases: [Atom Gain]
+    aliases: [Atom Gain, Atom Penalty, Atoms Nerf, Atom Nerf, Atom Gain Penalty]
     system: singularity
     kind: stat
     wiki: Singularity
@@ -1981,6 +1984,7 @@ nodes:
 
   - id: lab-mult
     name: Lab Mult
+    aliases: [Lab. Mult]
     system: laboratory
     kind: upgrade
     wiki: Laboratory
@@ -2695,6 +2699,7 @@ nodes:
 
   - id: supernova-rewards
     name: Supernova Rewards
+    aliases: [Supernova Bonuses]
     system: supernova
     kind: stat
     wiki: Planets
@@ -2763,6 +2768,7 @@ nodes:
 
   - id: attack-circles
     name: Attack Circles
+    aliases: [Attacks Lap Speed]
     system: attacks
     kind: group
     wiki: Attacks
@@ -3012,7 +3018,7 @@ nodes:
 
   - id: mineral-local-speed
     name: Mineral Local Speed
-    aliases: [Minerals Local Speed]
+    aliases: [Minerals Local Speed, Local Minerals Speed]
     system: minerals
     kind: stat
     wiki: Minerals
@@ -3092,7 +3098,7 @@ nodes:
 
   - id: attack-ascension-power
     name: Attack Ascension Power
-    aliases: [Attacks Ascension Power, Attack Ascend Power, Attacks Ascend Power]
+    aliases: [Attacks Ascension Power, Attack Ascend Power, Attacks Ascend Power, Attacks Asc. Power]
     system: attacks
     kind: stat
     wiki: Attacks
@@ -3398,6 +3404,7 @@ nodes:
 
   - id: singularity-tree-tab
     name: Tree Tab
+    aliases: [Singularity Tree]
     system: singularity-tree
     kind: group
     wiki: Singularity#Tree
@@ -3567,7 +3574,7 @@ nodes:
   # the `singularity-zodiac` mint prefix that the sweep manifest uses.
   - id: singular-zodiacs
     name: Singular Zodiacs
-    aliases: [Singular Zodiac]
+    aliases: [Singular Zodiac, Singularity Zodiac, Singularity Zodiacs]
     system: singularity
     kind: group
     wiki: Singularity#Houses
@@ -3908,19 +3915,6 @@ nodes:
     confidence: provisional
     description: Boosts D1 and D2 efficiency
 
-  # One node for every Atom penalty threshold (e308, e10K, e25K, 1.6e256...):
-  # the wiki and the game name each by its threshold, and a node per threshold
-  # would split a handful of edges across seven nodes.
-  - id: atom-penalty
-    name: Atom Penalty
-    aliases: [Atoms Nerf, Atom Nerf, Atom Gain Penalty]
-    system: singularity
-    kind: stat
-    wiki: Singularity
-    confidence: provisional
-    effects:
-      - text: Divides Atom gain past each threshold
-
   # Singularity's own Local Speed, which the wiki and the game write both ways
   # round. Without it every mention fell back to the shorter "Singularity" and
   # landed on the reset count.
@@ -4103,12 +4097,522 @@ nodes:
         per_level: '$0.09 + 0.01 \times \text{level}$'
 
 edges:
-  - from: gold
-    to: relic-3
-    rel: boosts
-    note: "Relic upgrade level scales with lifetime gold"
-    source: wiki:Relics
-    confidence: uncertain
+  # Audit of the generated `uncertain` edges, one line per edge for the
+  # volume. These restate a generated edge at `documented`, because its
+  # sentence or table cell states the relationship outright.
+  - {from: score, to: fire-factor-1, rel: boosts, note: "Score", source: "wiki:Elements", confidence: documented}
+  - {from: infinities, to: earth-factor-1, rel: boosts, note: "Infinities", source: "wiki:Elements", confidence: documented}
+  - {from: eternities, to: wind-factor-1, rel: boosts, note: "Eternities", source: "wiki:Elements", confidence: documented}
+  - {from: luck, to: water-factor-1, rel: boosts, note: "Luck", source: "wiki:Elements", confidence: documented}
+  - {from: dilation-node-center-1, to: dilation-points, rel: boosts, source: "wiki:Dilation_Tree", confidence: documented}
+  - {from: dilation-node-top-2, to: dilation-points, rel: boosts, source: "wiki:Dilation_Tree", confidence: documented}
+  - {from: dilation-node-middle-2, to: eternities, rel: boosts, source: "wiki:Dilation_Tree", confidence: documented}
+  - {from: dilation-node-middle-3, to: animal-points, rel: boosts, source: "wiki:Dilation_Tree", confidence: documented}
+  - {from: dilation-node-bottom-3, to: dilation-points, rel: boosts, source: "wiki:Dilation_Tree", confidence: documented}
+  - {from: dilation-upgrade-2, to: dp-income, rel: boosts, source: "wiki:Eternity", confidence: documented}
+  - {from: dilation-upgrade-4, to: common-exponent, rel: boosts, source: "wiki:Eternity", confidence: documented}
+  - {from: dilation-upgrade-6, to: generator-exponent, rel: boosts, source: "wiki:Eternity", confidence: documented}
+  - {from: dilation-upgrade-7, to: eternity-points, rel: boosts, source: "wiki:Eternity", confidence: documented}
+  - {from: dilation-upgrade-9, to: lab-power, rel: boosts, source: "wiki:Eternity", confidence: documented}
+  - {from: infinity-upgrade-1-1-infinity-generation-and-automation, to: generator-mult, rel: boosts, source: "wiki:Infinity", confidence: documented}
+  - {from: infinity-upgrade-2-1-exponential-box, to: common-exponent, rel: boosts, source: "wiki:Infinity", confidence: documented}
+  - {from: infinity-upgrade-3-1-fast-laps, to: lap-speed, rel: boosts, source: "wiki:Infinity", confidence: documented}
+  - {from: infinity-upgrade-4-1-even-faster-laps, to: lap-speed, rel: boosts, source: "wiki:Infinity", confidence: documented}
+  - {from: infinity-upgrade-5-1-long-term-prestiging, to: prestige-mult, rel: boosts, source: "wiki:Infinity", confidence: documented}
+  - {from: infinity-upgrade-5-2-solid-exponent, to: common-exponent, rel: boosts, source: "wiki:Infinity", confidence: documented}
+  - {from: infinities, to: infinity-upgrade-5-2-solid-exponent, rel: boosts, source: "wiki:Infinity", confidence: documented}
+  - {from: infinity-upgrade-6-1-mighty-ascend, to: ascension-power, rel: boosts, source: "wiki:Infinity", confidence: documented}
+  - {from: infinity-upgrade-6-2-ascend-to-ascend, to: ascension-power, rel: boosts, source: "wiki:Infinity", confidence: documented}
+  - {from: infinities, to: infinity-upgrade-6-2-ascend-to-ascend, rel: boosts, source: "wiki:Infinity", confidence: documented}
+  - {from: infinity-upgrade-8-1-generator-time, to: generator-1, rel: boosts, source: "wiki:Infinity", confidence: documented}
+  - {from: infinity-upgrade-8-2-generator-power, to: generator-1, rel: boosts, source: "wiki:Infinity", confidence: documented}
+  - {from: generator-power, to: infinity-upgrade-8-2-generator-power, rel: boosts, source: "wiki:Infinity", confidence: documented}
+  - {from: infinity-upgrade-8-3-generator-constant, to: generator-1, rel: boosts, source: "wiki:Infinity", confidence: documented}
+  - {from: infinity-upgrade-9-1-generator-2-time, to: generator-2, rel: boosts, source: "wiki:Infinity", confidence: documented}
+  - {from: infinity-upgrade-9-2-generator-2-constant, to: generator-2, rel: boosts, source: "wiki:Infinity", confidence: documented}
+  - {from: infinity-upgrade-11-1-weak-generators, to: generator-1, rel: boosts, source: "wiki:Infinity", confidence: documented}
+  - {from: infinity-points, to: infinity-upgrade-11-1-weak-generators, rel: boosts, source: "wiki:Infinity", confidence: documented}
+  - {from: infinity-upgrade-11-2-medium-generators, to: generator-2, rel: boosts, source: "wiki:Infinity", confidence: documented}
+  - {from: infinity-points, to: infinity-upgrade-11-2-medium-generators, rel: boosts, source: "wiki:Infinity", confidence: documented}
+  - {from: infinity-upgrade-12-1-first-but-better, to: generator-2, rel: boosts, source: "wiki:Infinity", confidence: documented}
+  - {from: infinity-upgrade-13-1-a-little-gift, to: ascension-power, rel: boosts, source: "wiki:Infinity", confidence: documented}
+  - {from: infinity-upgrade-14-1-first-for-the-first, to: promotion-1, rel: boosts, source: "wiki:Infinity", confidence: documented}
+  - {from: infinity-upgrade-14-2-efficiency-v, to: generator-exponent, rel: boosts, source: "wiki:Infinity", confidence: documented}
+  - {from: infinity-upgrade-15-2-fast-ip-gain, to: infinity-points, rel: boosts, source: "wiki:Infinity", confidence: documented}
+  - {from: challenge-times, to: infinity-upgrade-15-2-fast-ip-gain, rel: boosts, source: "wiki:Infinity", confidence: documented}
+  - {from: infinity-upgrade-15-3-first-generator-power, to: generator-1, rel: boosts, source: "wiki:Infinity", confidence: documented}
+  - {from: challenge-times, to: infinity-upgrade-15-3-first-generator-power, rel: boosts, source: "wiki:Infinity", confidence: documented}
+  - {from: infinity-upgrade-15-4-second-generator-power, to: generator-2, rel: boosts, source: "wiki:Infinity", confidence: documented}
+  - {from: challenge-times, to: infinity-upgrade-15-4-second-generator-power, rel: boosts, source: "wiki:Infinity", confidence: documented}
+  - {from: infinity-upgrade-16-1-infinity-to-ip, to: infinity-points, rel: boosts, source: "wiki:Infinity", confidence: documented}
+  - {from: infinities, to: infinity-upgrade-16-1-infinity-to-ip, rel: boosts, source: "wiki:Infinity", confidence: documented}
+  - {from: infinity-upgrade-16-2-stronger-ascension-power, to: ascension-power, rel: boosts, source: "wiki:Infinity", confidence: documented}
+  - {from: infinities, to: infinity-upgrade-16-2-stronger-ascension-power, rel: boosts, source: "wiki:Infinity", confidence: documented}
+  - {from: infinity-upgrade-16-3-empowered-promotions, to: promotion-4, rel: boosts, source: "wiki:Infinity", confidence: documented}
+  - {from: infinity-upgrade-17-1-third-s-turn, to: generator-3, rel: boosts, source: "wiki:Infinity", confidence: documented}
+  - {from: infinities, to: infinity-upgrade-17-1-third-s-turn, rel: boosts, source: "wiki:Infinity", confidence: documented}
+  - {from: infinity-upgrade-17-2-faster-infinity-gain, to: infinities, rel: boosts, source: "wiki:Infinity", confidence: documented}
+  - {from: challenge-times, to: infinity-upgrade-17-2-faster-infinity-gain, rel: boosts, source: "wiki:Infinity", confidence: documented}
+  - {from: infinity-upgrade-17-3-boost-to-the-first, to: generator-1, rel: boosts, source: "wiki:Infinity", confidence: documented}
+  - {from: infinity-upgrade-18-1-passive-infinities, to: infinities, rel: boosts, source: "wiki:Infinity", confidence: documented}
+  - {from: infinity-upgrade-18-2-fourth-from-third, to: generator-4, rel: boosts, source: "wiki:Infinity", confidence: documented}
+  - {from: generator-3, to: infinity-upgrade-18-2-fourth-from-third, rel: boosts, source: "wiki:Infinity", confidence: documented}
+  - {from: infinity-upgrade-18-3-third-from-second, to: generator-3, rel: boosts, source: "wiki:Infinity", confidence: documented}
+  - {from: generator-2, to: infinity-upgrade-18-3-third-from-second, rel: boosts, source: "wiki:Infinity", confidence: documented}
+  - {from: infinity-upgrade-19-1-almost-one, to: generator-exponent, rel: boosts, source: "wiki:Infinity", confidence: documented}
+  - {from: infinity-upgrade-19-2-age-of-inflation, to: promotion-3, rel: boosts, source: "wiki:Infinity", confidence: documented}
+  - {from: generator-mult, to: infinity-upgrade-19-2-age-of-inflation, rel: boosts, source: "wiki:Infinity", confidence: documented}
+  - {from: infinity-upgrade-19-3-challenge-efficiency, to: lap-speed, rel: boosts, source: "wiki:Infinity", confidence: documented}
+  - {from: infinity-upgrade-20-2-dynamic-generator-exponent, to: generator-exponent, rel: boosts, source: "wiki:Infinity", confidence: documented}
+  - {from: generator-power, to: infinity-upgrade-20-2-dynamic-generator-exponent, rel: boosts, source: "wiki:Infinity", confidence: documented}
+  - {from: infinity-challenge-2, to: ascension-power, rel: boosts, source: "wiki:Infinity", confidence: documented}
+  - {from: infinity-challenge-3, to: common-exponent, rel: boosts, source: "wiki:Infinity", confidence: documented}
+  - {from: infinity-challenge-8, to: ascension-power, rel: boosts, source: "wiki:Infinity", confidence: documented}
+  - {from: fire-node-3, to: fire, rel: boosts, note: "Attack level past 3600 boosts Fire generation Formula is: $1 + \\frac {(AttackLevel-3600)^2}{100}$", source: "wiki:Elements", confidence: documented}
+  - {from: fire-node-8, to: fire, rel: boosts, note: "Wands boost Fire generation (factor 1)", source: "wiki:Elements", confidence: documented}
+  - {from: fire-node-9, to: tarot-suit-wands, rel: boosts, note: "Fire boosts first card bonuses for all wands cards", source: "wiki:Elements", confidence: documented}
+  - {from: earth-node-3, to: gold-gain, rel: boosts, note: "Earth boosts Gold Gain", source: "wiki:Elements", confidence: documented}
+  - {from: earth-node-8, to: earth, rel: boosts, note: "Pentacles boost Earth Generation (factor 1)", source: "wiki:Elements", confidence: documented}
+  - {from: earth-node-9, to: tarot-suit-pentacles, rel: boosts, note: "Earth boosts first card bonuses for all pentacles cards", source: "wiki:Elements", confidence: documented}
+  - {from: wind-node-4, to: wind, rel: boosts, note: "PP after 1.79e308 boosts Wind generation The Formula is: $1.01+(x-308)^2/100$ (Only the $(x-308)^2$ is divided by 100)", source: "wiki:Elements", confidence: documented}
+  - {from: wind-node-8, to: wind, rel: boosts, note: "Swords boost Wind Generation (factor 1)", source: "wiki:Elements", confidence: documented}
+  - {from: wind-node-9, to: tarot-suit-swords, rel: boosts, note: "Wind boosts first card bonuses for all swords cards", source: "wiki:Elements", confidence: documented}
+  - {from: water-node-1, to: luck, rel: boosts, note: "Each Water Zodiac multiplies your luck by x1.1", source: "wiki:Elements", confidence: documented}
+  - {from: water-node-8, to: water, rel: boosts, note: "Cups boost Water generation", source: "wiki:Elements", confidence: documented}
+  - {from: water-node-9, to: tarot-suit-cups, rel: boosts, note: "Water boosts first card bonuses for all cups cards", source: "wiki:Elements", confidence: documented}
+  - {from: water-node-10, to: global-element-mult, rel: boosts, note: "Water boosts Global Element Mult", source: "wiki:Elements", confidence: documented}
+  - {from: special-mineral-red-gem, to: value-points, rel: boosts, source: "wiki:Minerals", confidence: documented}
+  - {from: special-mineral-pink-gem, to: luck, rel: boosts, source: "wiki:Minerals", confidence: documented}
+  - {from: special-mineral-yellow-gem, to: gold-gain, rel: boosts, source: "wiki:Minerals", confidence: documented}
+  - {from: special-mineral-orange-gem, to: magnet-chance, rel: boosts, source: "wiki:Minerals", confidence: documented}
+  - {from: special-mineral-dark-purple-gem, to: polish-points, rel: boosts, source: "wiki:Minerals", confidence: documented}
+  - {from: special-mineral-light-blue-gem, to: refinement-points, rel: boosts, source: "wiki:Minerals", confidence: documented}
+  - {from: special-mineral-white-gem, to: game-speed, rel: boosts, source: "wiki:Minerals", confidence: documented}
+  - {from: special-mineral-black-gem, to: tarot-draws, rel: boosts, source: "wiki:Minerals", confidence: documented}
+  - {from: elements, to: tarot-challenge-two-of-wands, rel: requires, source: "wiki:Tarot", confidence: documented}
+  - {from: elements, to: tarot-challenge-three-of-wands, rel: requires, source: "wiki:Tarot", confidence: documented}
+  - {from: elements, to: tarot-challenge-six-of-wands, rel: requires, source: "wiki:Tarot", confidence: documented}
+  - {from: elements, to: tarot-challenge-seven-of-wands, rel: requires, source: "wiki:Tarot", confidence: documented}
+  - {from: elements, to: tarot-challenge-eight-of-wands, rel: requires, source: "wiki:Tarot", confidence: documented}
+  - {from: elements, to: tarot-challenge-nine-of-wands, rel: requires, source: "wiki:Tarot", confidence: documented}
+  - {from: elements, to: tarot-challenge-ten-of-wands, rel: requires, source: "wiki:Tarot", confidence: documented}
+  - {from: elements, to: tarot-challenge-page-of-wands, rel: requires, source: "wiki:Tarot", confidence: documented}
+  - {from: elements, to: tarot-challenge-knight-of-wands, rel: requires, source: "wiki:Tarot", confidence: documented}
+  - {from: elements, to: tarot-challenge-queen-of-wands, rel: requires, source: "wiki:Tarot", confidence: documented}
+  - {from: mineral-level, to: tarot-challenge-ace-of-pentacles, rel: requires, source: "wiki:Tarot", confidence: documented}
+  - {from: mineral-level, to: tarot-challenge-two-of-pentacles, rel: requires, source: "wiki:Tarot", confidence: documented}
+  - {from: mineral-level, to: tarot-challenge-three-of-pentacles, rel: requires, source: "wiki:Tarot", confidence: documented}
+  - {from: mineral-level, to: tarot-challenge-four-of-pentacles, rel: requires, source: "wiki:Tarot", confidence: documented}
+  - {from: value-points, to: tarot-challenge-five-of-pentacles, rel: requires, source: "wiki:Tarot", confidence: documented}
+  - {from: mineral-level, to: tarot-challenge-six-of-pentacles, rel: requires, source: "wiki:Tarot", confidence: documented}
+  - {from: mineral-level, to: tarot-challenge-seven-of-pentacles, rel: requires, source: "wiki:Tarot", confidence: documented}
+  - {from: mineral-level, to: tarot-challenge-eight-of-pentacles, rel: requires, source: "wiki:Tarot", confidence: documented}
+  - {from: mineral-level, to: tarot-challenge-nine-of-pentacles, rel: requires, source: "wiki:Tarot", confidence: documented}
+  - {from: mineral-level, to: tarot-challenge-ten-of-pentacles, rel: requires, source: "wiki:Tarot", confidence: documented}
+  - {from: mineral-level, to: tarot-challenge-page-of-pentacles, rel: requires, source: "wiki:Tarot", confidence: documented}
+  - {from: mineral-level, to: tarot-challenge-knight-of-pentacles, rel: requires, source: "wiki:Tarot", confidence: documented}
+  - {from: mineral-level, to: tarot-challenge-queen-of-pentacles, rel: requires, source: "wiki:Tarot", confidence: documented}
+  - {from: elements, to: tarot-challenge-the-magician, rel: requires, source: "wiki:Tarot", confidence: documented}
+  - {from: mineral-level, to: tarot-challenge-the-high-priestess, rel: requires, source: "wiki:Tarot", confidence: documented}
+  - {from: mineral-level, to: tarot-challenge-the-emperor, rel: requires, source: "wiki:Tarot", confidence: documented}
+  - {from: mineral-level, to: tarot-challenge-the-hierophant, rel: requires, source: "wiki:Tarot", confidence: documented}
+  - {from: merge-level, to: tarot-challenge-the-lovers, rel: requires, source: "wiki:Tarot", confidence: documented}
+  - {from: sms-factor, to: tarot-challenge-justice, rel: requires, source: "wiki:Tarot", confidence: documented}
+  - {from: mineral-local-speed, to: tarot-challenge-the-hanged-man, rel: requires, source: "wiki:Tarot", confidence: documented}
+  - {from: refine-node-4, to: polish-sword, rel: boosts, note: "Polish sword eff. x1.1 (maxes at x2)", source: "wiki:Minerals/Refine_Tree", confidence: documented}
+  - {from: refine-node-9, to: polish-axe, rel: boosts, note: "Polish Axe is 1.5x stronger", source: "wiki:Minerals/Refine_Tree", confidence: documented}
+  - {from: refine-node-10, to: polish-points, rel: boosts, note: "PP gain is powered to $^{1 + 0.1 \\times \\text{lvl}}$ (+0.1, maxes at ^2)", source: "wiki:Minerals/Refine_Tree", confidence: documented}
+  - {from: refine-node-16, to: merge-level, rel: boosts, note: "Merge Level Bonus Eff. $\\times (1.0 + 0.5 \\times \\text{lvl})$ (maxes at x50)", source: "wiki:Minerals/Refine_Tree", confidence: documented}
+  - {from: refine-node-21, to: gold, rel: boosts, note: "Gold on Unity (in Attacks) is multiplied by seconds since last Unity", source: "wiki:Minerals/Refine_Tree", confidence: documented}
+  - {from: refine-node-33, to: gold, rel: boosts, note: "Get 100% of your Gold on Unity every second", source: "wiki:Minerals/Refine_Tree", confidence: documented}
+  - {from: refine-node-37, to: polish-knuckles, rel: boosts, note: "Polish Knuckles are 20% more effective", source: "wiki:Minerals/Refine_Tree", confidence: documented}
+  - {from: refine-node-38, to: refinement-points, rel: boosts, note: "You get more refine points based on your knuckles level: $\\text{RfP}^{1.01 \\times \\text{lvl}}$", source: "wiki:Minerals/Refine_Tree", confidence: documented}
+  - {from: refine-node-47, to: rune-sun, rel: boosts, note: "Sun runes generation is 1.2x faster", source: "wiki:Minerals/Refine_Tree", confidence: documented}
+  - {from: refine-node-48, to: rune-moon, rel: boosts, note: "Moon runes generation is 1.2x faster", source: "wiki:Minerals/Refine_Tree", confidence: documented}
+  - {from: refine-node-50, to: refinement-points, rel: boosts, note: "RfP gain $\\times (2^{\\text{lvl}})$ (maxes at x1,024)", source: "wiki:Minerals/Refine_Tree", confidence: documented}
+  - {from: refine-node-52, to: polish-enhance, rel: boosts, note: "Multiplies all polish enhance effects by x1.02", source: "wiki:Minerals/Refine_Tree", confidence: documented}
+  - {from: refine-node-57, to: global-element-mult, rel: boosts, note: "Multiplies Global Element Mult by x10.00", source: "wiki:Minerals/Refine_Tree", confidence: documented}
+  - {from: refine-node-60, to: global-element-mult, rel: boosts, note: "Multiplies Global Element Mult (x2.00 per level, maxes at x1.07e9)", source: "wiki:Minerals/Refine_Tree", confidence: documented}
+  - {from: refine-node-71, to: polish-points, rel: boosts, note: "Get 0.01% of your PP gain on reset every second (affected by local minerals speed)", source: "wiki:Minerals/Refine_Tree", confidence: documented}
+  - {from: refine-node-86, to: smp, rel: boosts, note: "Grants SMP EXP to all Special Minerals every second based on Relic 45, The Tower, and average SMP level (???/sec). Affected by Tarot Local Speed.", source: "wiki:Minerals/Refine_Tree", confidence: documented}
+  - {from: refine-node-90, to: sacrifice-dust, rel: boosts, note: "Multiplies Sacrifice Dust gain and Relic 45 base (x2/level, max 4.29e9)", source: "wiki:Minerals/Refine_Tree", confidence: documented}
+  - {from: refine-node-95, to: polish-spear, rel: boosts, note: "Polish Spear effect ^5000", source: "wiki:Minerals/Refine_Tree", confidence: documented}
+  - {from: refine-node-98, to: polish-sword, rel: boosts, note: "Polish Sword Effect is ^1000", source: "wiki:Minerals/Refine_Tree", confidence: documented}
+  - {from: refine-node-106, to: special-mineral-black-gem, rel: boosts, note: "Spread Power of your currently equipped Endoplasmic Reticulum also boosts Black Gem base effect (x???)", source: "wiki:Minerals/Refine_Tree", confidence: documented}
+  - {from: refine-node-114, to: base-spread-power, rel: boosts, note: "Multiplies Base Spread Power (on ER craft) by x1.25", source: "wiki:Minerals/Refine_Tree", confidence: documented}
+  - {from: refine-node-122, to: spread-speed, rel: boosts, note: "Adds a Singularity Effect (Based on Singularities) that boosts Spread Speed", source: "wiki:Minerals/Refine_Tree", confidence: documented}
+  - {from: refine-node-125, to: singularity-mult, rel: boosts, note: "Adds Refine Node 125 as a Singularity Mult Factor", source: "wiki:Minerals/Refine_Tree", confidence: documented}
+  - {from: refine-node-133, to: luck, rel: boosts, note: "Empowers your current luck: ^1 + level/100", source: "wiki:Minerals/Refine_Tree", confidence: documented}
+  - {from: refine-node-135, to: luck, rel: boosts, note: "Adds a Singularity Mult effect that slightly boosts Luck", source: "wiki:Minerals/Refine_Tree", confidence: documented}
+  - {from: refine-node-136, to: singularity-local-speed, rel: boosts, note: "Increases Local Singularity Speed Power by 0.02", source: "wiki:Minerals/Refine_Tree", confidence: documented}
+  - {from: refine-node-138, to: refinement-points, rel: boosts, note: "Particle Rank boosts Refine Point gain (^X / +0.001 per rank)", source: "wiki:Minerals/Refine_Tree", confidence: documented}
+  - {from: refine-node-139, to: particle-generators, rel: boosts, note: "Multiplies Alpha Generator Base by x2", source: "wiki:Minerals/Refine_Tree", confidence: documented}
+  - {from: refine-node-140, to: particle-multipliers, rel: boosts, note: "Multiplies Alpha Multiplier Base by x1 + level", source: "wiki:Minerals/Refine_Tree", confidence: documented}
+  - {from: refine-node-142, to: particle-generators, rel: boosts, note: "The base of all particle generators is multiplied by x1.25 every 10 levels", source: "wiki:Minerals/Refine_Tree", confidence: documented}
+  - {from: refine-node-143, to: particle-multipliers, rel: boosts, note: "The base of all particle multipliers is multiplied by x2 every 7 levels", source: "wiki:Minerals/Refine_Tree", confidence: documented}
+  - {from: refine-node-144, to: gold, rel: boosts, note: "Particle Rank boosts gold: ^X (+0.01 per rank)", source: "wiki:Minerals/Refine_Tree", confidence: documented}
+  - {from: refine-node-145, to: particle-generators, rel: boosts, note: "Every 100 levels, the base of all particle generators is multiplied by x10", source: "wiki:Minerals/Refine_Tree", confidence: documented}
+  - {from: refine-node-148, to: particle-empowerers, rel: boosts, note: "Empowerer base is increased by 0.001 every 20 levels for all particles", source: "wiki:Minerals/Refine_Tree", confidence: documented}
+  - {from: refine-node-149, to: particle-generators, rel: boosts, note: "Multiplies Alpha Generator Base by x100", source: "wiki:Minerals/Refine_Tree", confidence: documented}
+  - {from: refine-node-150, to: particle-multipliers, rel: boosts, note: "Multiplies Beta Multiplier Base by x1 + 0.5 * level", source: "wiki:Minerals/Refine_Tree", confidence: documented}
+  - {from: refine-node-151, to: singularity-mult, rel: boosts, note: "You passively gain Singularity Multiplier every second (also affected by local singularity speed)", source: "wiki:Minerals/Refine_Tree", confidence: documented}
+  - {from: refine-node-161, to: particle-generators, rel: boosts, note: "Every 1,000 levels, the base of all particle generators is multiplied by x1e10", source: "wiki:Minerals/Refine_Tree", confidence: documented}
+  - {from: refine-node-162, to: luck, rel: boosts, note: "Luck is raised to ^1.1", source: "wiki:Minerals/Refine_Tree", confidence: documented}
+  - {from: refine-node-171, to: particle-generators, rel: boosts, note: "Multiplies the base of Delta Generators and Multipliers by x100", source: "wiki:Minerals/Refine_Tree", confidence: documented}
+  - {from: refine-node-173, to: particle-multipliers, rel: boosts, note: "Every 100 levels, the base of all particle multipliers is multiplied by x10", source: "wiki:Minerals/Refine_Tree", confidence: documented}
+  - {from: refine-node-175, to: luck, rel: boosts, note: "Equipped Endoplasmatic Reticulum Level empowers luck (^X) (^1.001 per ER level)", source: "wiki:Minerals/Refine_Tree", confidence: documented}
+  - {from: refine-node-178, to: spark-mastery, rel: boosts, note: "Mastery Gain is multiplied by xX ($1 + \\text{pent} / 10$)", source: "wiki:Minerals/Refine_Tree", confidence: documented}
+  - {from: refine-node-180, to: particles-sparks, rel: boosts, note: "Increase the total number of sparks you can equip by 1", source: "wiki:Minerals/Refine_Tree", confidence: documented}
+  - {from: refine-node-184, to: spark-mastery, rel: boosts, note: "Equipped Endoplasmatic Reticulum Level boosts Spark Mastery gain (xX) (x1.01 per ER level)", source: "wiki:Minerals/Refine_Tree", confidence: documented}
+  - {from: refine-node-185, to: spark-mastery, rel: boosts, note: "Destroying a spark now also grants mastery (^0.5 of this spark mastery)", source: "wiki:Minerals/Refine_Tree", confidence: documented}
+  - {from: refine-node-188, to: attack-exponent, rel: boosts, note: "Attack exponent is multiplied by $1 + 0.1 \\times \\log_{10}(\\text{mastery})$ (softcap at x10)", source: "wiki:Minerals/Refine_Tree", confidence: documented}
+  - {from: refine-node-192, to: particles-epsilon, rel: boosts, note: "Epsilon Points generation is stronger based on your current Epsilon Points x1 (+0.01 per 10K Epsilon Points, capped at x10)", source: "wiki:Minerals/Refine_Tree", confidence: documented}
+  - {from: refine-node-196, to: spark-mastery, rel: boosts, note: "Multiplies Spark Mastery Gain on Spark Spawn by xX", source: "wiki:Minerals/Refine_Tree", confidence: documented}
+  - {from: refine-node-200, to: spark-mastery, rel: boosts, note: "Multiplies Mastery Gain on Spark Destroy by xX", source: "wiki:Minerals/Refine_Tree", confidence: documented}
+  - {from: refine-node-141, to: particles-rank-bonus-3, rel: boosts, source: "game", confidence: documented}
+  - {from: refine-node-147, to: particles-tier-bonus-1, rel: boosts, source: "game", confidence: documented}
+  - {from: relic-2, to: quality, rel: boosts, op: add, note: "A Boost to Zodiac Quality", source: "wiki:Relics", confidence: documented}
+  - {from: relic-4, to: luck, rel: boosts, op: add, note: "A Boost to (Zodiac) Luck", source: "wiki:Relics", confidence: documented}
+  - {from: relic-6, to: common-exponent, rel: boosts, op: add, note: "(Boosts) Common Exponent Mult", source: "wiki:Relics", confidence: documented}
+  - {from: relic-10, to: dilation-points, rel: boosts, op: add, note: "Power (^) to DP Gain Raises DP Gain to a power (^)", source: "wiki:Relics", confidence: documented}
+  - {from: relic-22, to: value-points, rel: boosts, op: add, note: "Mult to VP gain Multiplies VP gain by X", source: "wiki:Relics", confidence: documented}
+  - {from: relic-24, to: donut-game-speed, rel: boosts, op: add, note: "Empowers Game Speed Donut Raises Game Speed Donut effect to a power (^)", source: "wiki:Relics", confidence: documented}
+  - {from: relic-25, to: donut-luck, rel: boosts, op: add, note: "Empowers Luck Donut Raises Luck Donut effect to a power (^)", source: "wiki:Relics", confidence: documented}
+  - {from: relic-26, to: donut-quality, rel: boosts, op: add, note: "Empowers Quality Donut Raises Quality Donut effect to a power (^)", source: "wiki:Relics", confidence: documented}
+  - {from: relic-27, to: donut-zodiac-exp-factor, rel: boosts, op: add, note: "Empowers last Donut Raises Zodiac Exp. Factor Donut effect to a power (^)", source: "wiki:Relics", confidence: documented}
+  - {from: relic-28, to: merge-experience, rel: boosts, op: add, note: "You get more merge exp based on $X^{\\text{mineral level}}$", source: "wiki:Relics", confidence: documented}
+  - {from: relic-32, to: polish-points, rel: boosts, op: add, note: "PP Gain powered to", source: "wiki:Relics", confidence: documented}
+  - {from: relic-33, to: refinement-points, rel: boosts, op: add, note: "RfP Gain multiplied by", source: "wiki:Relics", confidence: documented}
+  - {from: relic-34, to: rune-moon, rel: boosts, op: add, note: "Sun and Moon runes gain speed", source: "wiki:Relics", confidence: documented}
+  - {from: relic-36, to: earth, rel: boosts, op: add, note: "Boosts Earth Generation", source: "wiki:Relics", confidence: documented}
+  - {from: relic-37, to: global-element-mult, rel: boosts, op: add, note: "Multiplies Global Element Mult", source: "wiki:Relics", confidence: documented}
+  - {from: relic-41, to: special-mineral-black-gem, rel: boosts, op: add, note: "Multiplies Black Gem Eff.", source: "wiki:Relics", confidence: documented}
+  - {from: relic-45, to: smp, rel: boosts, op: add, note: "Increase SMP Exp you get on merging special minerals", source: "wiki:Relics", confidence: documented}
+  - {from: relic-46, to: relic-45, rel: boosts, op: add, note: "Empowers Relic 45 (SMP EXP)", source: "wiki:Relics", confidence: documented}
+  - {from: relic-47, to: relic-33, rel: boosts, op: exp, note: "Empowers Relic 33 (RfP Gain)", source: "wiki:Relics", confidence: documented}
+  - {from: relic-49, to: sacrifice-dust, rel: boosts, op: add, note: "Multiplies Sacrifice Dust gain", source: "wiki:Relics", confidence: documented}
+  - {from: relic-50, to: relic-38, rel: boosts, op: add, note: "Multiplies Relic 38's effect (Attacks bulk leveling)", source: "wiki:Relics", confidence: documented}
+  - {from: relic-51, to: refine-node-7, rel: boosts, op: add, note: "Multiplies Refine Node 7's effect", source: "wiki:Relics", confidence: documented}
+  - {from: relic-52, to: attack-ascension-power, rel: boosts, op: exp, note: "Empowers Attack Ascension Power from VP", source: "wiki:Relics", confidence: documented}
+  - {from: relic-53, to: sacrifice-dust, rel: boosts, op: exp, note: "Empowers total Tarot Challenge reward (Sacrifice Dust gain)", source: "wiki:Relics", confidence: documented}
+  - {from: relic-54, to: refine-node-90, rel: boosts, op: add, note: "Multiplies the base of Refine Node 90", source: "wiki:Relics", confidence: documented}
+  - {from: relic-56, to: relic-41, rel: boosts, op: mult, note: "Empowers Relic 41", source: "wiki:Relics", confidence: documented}
+  - {from: relic-58, to: refine-node-100, rel: boosts, op: add, note: "Increases Refine Node 100 efficiency by", source: "wiki:Relics", confidence: documented}
+  - {from: relic-59, to: golden-resources, rel: boosts, op: add, note: "Multiplies Golden Resource gain when flushing to artifacts", source: "wiki:Relics", confidence: documented}
+  - {from: relic-60, to: relic-59, rel: boosts, op: exp, note: "Empowers Relic 59", source: "wiki:Relics", confidence: documented}
+  - {from: relic-62, to: base-spread-power, rel: boosts, op: add, note: "Multiplies Base Spread Power on Endoplasmic reticulum craft", source: "wiki:Relics", confidence: documented}
+  - {from: relic-66, to: relic-62, rel: boosts, op: add, note: "Multiplies Relic 62 effect", source: "wiki:Relics", confidence: documented}
+  - {from: relic-70, to: luck, rel: boosts, op: exp, note: "Empowers your luck", source: "wiki:Relics", confidence: documented}
+  - {from: relic-72, to: particle-generators, rel: boosts, op: add, note: "Multiplies the base of Alpha and Beta Generators", source: "wiki:Relics", confidence: documented}
+  - {from: relic-75, to: spark-mastery, rel: boosts, op: add, note: "Multiplies Mastery Gain (Spawning & Destroying sparks)", source: "wiki:Relics", confidence: documented}
+  - {from: quality, to: water-factor-2, rel: boosts, note: "Zodiac Quality", source: "wiki:Elements", confidence: documented}
+  - {from: zodiac-aries, to: mult-gain, rel: boosts, source: "wiki:Zodiacs", confidence: documented}
+  - {from: zodiac-aries, to: ascension-power, rel: boosts, source: "wiki:Zodiacs", confidence: documented}
+  - {from: zodiac-taurus, to: infinity-points, rel: boosts, source: "wiki:Zodiacs", confidence: documented}
+  - {from: zodiac-taurus, to: infinities, rel: boosts, source: "wiki:Zodiacs", confidence: documented}
+  - {from: zodiac-gemini, to: eternities, rel: boosts, source: "wiki:Zodiacs", confidence: documented}
+  - {from: zodiac-gemini, to: eternity-points, rel: boosts, source: "wiki:Zodiacs", confidence: documented}
+  - {from: zodiac-cancer, to: game-speed, rel: boosts, source: "wiki:Zodiacs", confidence: documented}
+  - {from: zodiac-leo, to: lap-speed, rel: boosts, source: "wiki:Zodiacs", confidence: documented}
+  - {from: zodiac-leo, to: ascension-power, rel: boosts, source: "wiki:Zodiacs", confidence: documented}
+  - {from: zodiac-virgo, to: star-base, rel: boosts, source: "wiki:Zodiacs", confidence: documented}
+  - {from: zodiac-virgo, to: infinities, rel: boosts, source: "wiki:Zodiacs", confidence: documented}
+  - {from: zodiac-libra, to: dilation-points, rel: boosts, source: "wiki:Zodiacs", confidence: documented}
+  - {from: zodiac-libra, to: eternity-points, rel: boosts, source: "wiki:Zodiacs", confidence: documented}
+  - {from: zodiac-scorpio, to: luck, rel: boosts, source: "wiki:Zodiacs", confidence: documented}
+  - {from: zodiac-scorpio, to: game-speed, rel: boosts, source: "wiki:Zodiacs", confidence: documented}
+  - {from: zodiac-sagittarius, to: lap-speed, rel: boosts, source: "wiki:Zodiacs", confidence: documented}
+  - {from: zodiac-sagittarius, to: slowdown, rel: boosts, source: "wiki:Zodiacs", confidence: documented}
+  - {from: zodiac-sagittarius, to: ascension-power, rel: boosts, source: "wiki:Zodiacs", confidence: documented}
+  - {from: zodiac-capricorn, to: star-base, rel: boosts, source: "wiki:Zodiacs", confidence: documented}
+  - {from: zodiac-capricorn, to: stardust-exponent, rel: boosts, source: "wiki:Zodiacs", confidence: documented}
+  - {from: zodiac-aquarius, to: dilation-points, rel: boosts, source: "wiki:Zodiacs", confidence: documented}
+  - {from: zodiac-aquarius, to: laboratory, rel: boosts, source: "wiki:Zodiacs", confidence: documented}
+  - {from: zodiac-pisces, to: luck, rel: boosts, source: "wiki:Zodiacs", confidence: documented}
+  - {from: zodiac-pisces, to: quality, rel: boosts, source: "wiki:Zodiacs", confidence: documented}
+  - {from: zodiac-pisces, to: game-speed, rel: boosts, source: "wiki:Zodiacs", confidence: documented}
+  - {from: singularity-zodiac-aries, to: fire-factor-3, rel: boosts, source: "wiki:Singularity", confidence: documented}
+  - {from: singularity-zodiac-taurus, to: earth-factor-3, rel: boosts, source: "wiki:Singularity", confidence: documented}
+  - {from: singularity-zodiac-gemini, to: wind-factor-3, rel: boosts, source: "wiki:Singularity", confidence: documented}
+  - {from: singularity-zodiac-cancer, to: water-factor-3, rel: boosts, source: "wiki:Singularity", confidence: documented}
+  - {from: singularity-zodiac-leo, to: sacrifice-dust, rel: boosts, source: "wiki:Singularity", confidence: documented}
+  - {from: singularity-zodiac-virgo, to: plp-per-plg, rel: boosts, source: "wiki:Singularity", confidence: documented}
+  - {from: singularity-zodiac-libra, to: virus-essence, rel: boosts, source: "wiki:Singularity", confidence: documented}
+  - {from: singularity-zodiac-scorpio, to: base-spread-power, rel: boosts, source: "wiki:Singularity", confidence: documented}
+  - {from: singularity-zodiac-saggitarius, to: attack-exponent, rel: boosts, source: "wiki:Singularity", confidence: documented}
+  - {from: singularity-zodiac-capricorn, to: golden-resources, rel: boosts, source: "wiki:Singularity", confidence: documented}
+  - {from: singularity-zodiac-aquarius, to: special-mineral-black-gem, rel: boosts, source: "wiki:Singularity", confidence: documented}
+  - {from: singularity-zodiac-pisces, to: singularity-mult, rel: boosts, source: "wiki:Singularity", confidence: documented}
+  - {from: attack-level, to: tarot-challenge-ace-of-swords, rel: requires, source: "wiki:Tarot", confidence: documented}
+  - {from: attack-level, to: tarot-challenge-two-of-swords, rel: requires, source: "wiki:Tarot", confidence: documented}
+  - {from: attack-level, to: tarot-challenge-three-of-swords, rel: requires, source: "wiki:Tarot", confidence: documented}
+  - {from: attack-level, to: tarot-challenge-four-of-swords, rel: requires, source: "wiki:Tarot", confidence: documented}
+  - {from: attack-level, to: tarot-challenge-five-of-swords, rel: requires, source: "wiki:Tarot", confidence: documented}
+  - {from: attack-level, to: tarot-challenge-six-of-swords, rel: requires, source: "wiki:Tarot", confidence: documented}
+  - {from: attack-level, to: tarot-challenge-seven-of-swords, rel: requires, source: "wiki:Tarot", confidence: documented}
+  - {from: attack-level, to: tarot-challenge-eight-of-swords, rel: requires, source: "wiki:Tarot", confidence: documented}
+  - {from: attack-level, to: tarot-challenge-nine-of-swords, rel: requires, source: "wiki:Tarot", confidence: documented}
+  - {from: attack-level, to: tarot-challenge-ten-of-swords, rel: requires, source: "wiki:Tarot", confidence: documented}
+  - {from: attack-level, to: tarot-challenge-page-of-swords, rel: requires, source: "wiki:Tarot", confidence: documented}
+  - {from: attack-level, to: tarot-challenge-knight-of-swords, rel: requires, source: "wiki:Tarot", confidence: documented}
+  - {from: attack-level, to: tarot-challenge-queen-of-swords, rel: requires, source: "wiki:Tarot", confidence: documented}
+  - {from: attack-level, to: tarot-challenge-strength, rel: requires, source: "wiki:Tarot", confidence: documented}
+  - {from: plague-er-base-spread-power, to: base-spread-power, rel: boosts, source: "wiki:Plague", confidence: documented}
+  - {from: plague-er-conversion-rate, to: erp, rel: boosts, source: "wiki:Plague", confidence: documented}
+  - {from: plague-er-dissolve-efficiency, to: virus-essence, rel: boosts, source: "wiki:Plague", confidence: documented}
+  - {from: plague-er-essence-density, to: virus-points, rel: boosts, source: "wiki:Plague", confidence: documented}
+  - {from: plague-stat-max-stage-completed, to: gold-gain, rel: boosts, source: "wiki:Plague", confidence: documented}
+  - {from: plague-stat-max-infected, to: tarot-resources, rel: boosts, source: "wiki:Plague", confidence: documented}
+  - {from: plague-stat-total-infected, to: special-mineral-black-gem, rel: boosts, source: "wiki:Plague", confidence: documented}
+  - {from: plague-stat-max-plp, to: golden-resources, rel: boosts, source: "wiki:Plague", confidence: documented}
+  - {from: plague-stat-max-plg, to: singularity-mult, rel: boosts, source: "wiki:Plague", confidence: documented}
+  - {from: plague-stat-max-infected-in-universe, to: plp-per-plg, rel: boosts, source: "wiki:Plague", confidence: documented}
+  - {from: singularity-milestone-one-hundred, to: particle-generators, rel: boosts, source: "wiki:Singularity", confidence: documented}
+  - {from: singularity-milestone-first-thousand, to: sacrifice-dust, rel: boosts, source: "wiki:Singularity", confidence: documented}
+  - {from: singularity-milestone-quantum-dust, to: special-mineral-black-gem, rel: boosts, source: "wiki:Singularity", confidence: documented}
+  - {from: singularity-milestone-universe-under-pressure, to: luck, rel: boosts, source: "wiki:Singularity", confidence: documented}
+  - {from: singularity-milestone-atom-particle-synergy, to: particle-generators, rel: boosts, source: "wiki:Singularity", confidence: documented}
+  - {from: singularity-milestone-ten-thousand-dimensions, to: refinement-points, rel: boosts, source: "wiki:Singularity", confidence: documented}
+  - {from: singularity-milestone-special-sacrificer, to: smp, rel: boosts, source: "wiki:Singularity", confidence: documented}
+  - {from: singularity-milestone-full-deck, to: special-mineral-black-gem, rel: boosts, source: "wiki:Singularity", confidence: documented}
+  - {from: singularity-milestone-dust-magician, to: sacrifice-dust, rel: boosts, source: "wiki:Singularity", confidence: documented}
+  - {from: singularity-milestone-artifact-theory, to: golden-resources, rel: boosts, source: "wiki:Singularity", confidence: documented}
+  - {from: singularity-milestone-virusologist, to: virus-points, rel: boosts, source: "wiki:Singularity", confidence: documented}
+  - {from: singularity-milestone-viral-ascension, to: atoms-gain, rel: boosts, source: "wiki:Singularity", confidence: documented}
+  - {from: singularity-tree-1, to: singularity-mult, rel: boosts, source: "wiki:Singularity", confidence: documented}
+  - {from: singularity-tree-2, to: gold-gain, rel: boosts, source: "wiki:Singularity", confidence: documented}
+  - {from: singularity-tree-4-1, to: refinement-points, rel: boosts, source: "wiki:Singularity", confidence: documented}
+  - {from: singularity-tree-4-2, to: golden-resources, rel: boosts, source: "wiki:Singularity", confidence: documented}
+  - {from: particles-spark-black, to: refinement-points, rel: boosts, source: "wiki:Particles", confidence: documented}
+  - {from: particles-spark-white, to: singularity-local-speed, rel: boosts, source: "wiki:Particles", confidence: documented}
+  - {from: particles-spark-red, to: singularity-mult, rel: boosts, source: "wiki:Particles", confidence: documented}
+  - {from: particles-spark-orange, to: attack-exponent, rel: boosts, source: "wiki:Particles", confidence: documented}
+  - {from: particles-spark-yellow, to: gold-gain, rel: boosts, source: "wiki:Particles", confidence: documented}
+  - {from: particles-spark-green, to: luck, rel: boosts, source: "wiki:Particles", confidence: documented}
+  - {from: particles-spark-cyan, to: particle-empowerers, rel: boosts, source: "wiki:Particles", confidence: documented}
+  - {from: particles-spark-pink, to: spark-mastery, rel: boosts, source: "wiki:Particles", confidence: documented}
+  - {from: particles-spark-purple, to: plague-generators, rel: boosts, source: "wiki:Particles", confidence: documented}
+  - {from: particles-rank-bonus-1, to: particle-generators, rel: boosts, source: "game", confidence: documented}
+  - {from: particles-rank-bonus-3, to: particle-generators, rel: boosts, source: "game", confidence: documented}
+  - {from: particles-rank-bonus-4, to: attack-exponent, rel: boosts, source: "game", confidence: documented}
+  - {from: particles-rank-bonus-5, to: singularity-local-speed, rel: boosts, source: "game", confidence: documented}
+  - {from: particles-rank-bonus-6, to: singularity-tree-3-1, rel: boosts, source: "game", confidence: documented}
+  - {from: particles-rank-bonus-6, to: singularity-tree-3-2, rel: boosts, source: "game", confidence: documented}
+  - {from: particles-rank-bonus-7, to: particle-generators, rel: boosts, source: "game", confidence: documented}
+  - {from: particles-rank-bonus-8, to: luck, rel: boosts, source: "game", confidence: documented}
+  - {from: particles-rank-bonus-9, to: singularity-tree-6-2, rel: boosts, source: "game", confidence: documented}
+  - {from: particles-rank-bonus-10, to: refine-node-142, rel: boosts, source: "game", confidence: documented}
+  - {from: particles-rank-bonus-11, to: golden-resources, rel: boosts, source: "game", confidence: documented}
+  - {from: particles-rank-bonus-13, to: sacrifice-dust, rel: boosts, source: "game", confidence: documented}
+  - {from: particles-rank-bonus-14, to: relic-71, rel: boosts, source: "game", confidence: documented}
+  - {from: particles-rank-bonus-16, to: particle-generators, rel: boosts, source: "game", confidence: documented}
+  - {from: particles-rank-bonus-17, to: spark-mastery, rel: boosts, source: "game", confidence: documented}
+  - {from: particles-rank-bonus-18, to: epsilon-tree, rel: boosts, source: "game", confidence: documented}
+  - {from: particles-tier-bonus-1, to: particle-generators, rel: boosts, source: "game", confidence: documented}
+  - {from: particles-tier-bonus-2, to: particle-generators, rel: boosts, source: "game", confidence: documented}
+  - {from: particles-tier-bonus-2, to: particle-multipliers, rel: boosts, source: "game", confidence: documented}
+  - {from: particles-tier-bonus-3, to: refinement-points, rel: boosts, source: "game", confidence: documented}
+  - {from: particles-tier-bonus-5, to: relic-73, rel: boosts, source: "game", confidence: documented}
+  - {from: particles-tier-bonus-6, to: relic-60, rel: boosts, source: "game", confidence: documented}
+  - {from: particles-tier-bonus-7, to: epsilon-tree, rel: boosts, source: "game", confidence: documented}
+  - {from: particles-tetr-bonus-1, to: particle-generators, rel: boosts, source: "game", confidence: documented}
+  - {from: particles-tetr-bonus-1, to: luck, rel: boosts, source: "game", confidence: documented}
+  - {from: particles-tetr-bonus-2, to: gold-gain, rel: boosts, source: "game", confidence: documented}
+  - {from: particles-tetr-bonus-3, to: relic-72, rel: boosts, source: "game", confidence: documented}
+  - {from: particles-tetr-bonus-5, to: particle-generators, rel: boosts, source: "game", confidence: documented}
+  - {from: particles-tetr-bonus-6, to: singularity-tree-4-2, rel: boosts, source: "game", confidence: documented}
+  - {from: particles-tetr-bonus-7, to: epsilon-tree, rel: boosts, source: "game", confidence: documented}
+  - {from: particles-pent-bonus-1, to: particle-generators, rel: boosts, source: "game", confidence: documented}
+  - {from: particles-pent-bonus-2, to: relic-70, rel: boosts, source: "game", confidence: documented}
+  - {from: particles-pent-bonus-2, to: relic-73, rel: boosts, source: "game", confidence: documented}
+  - {from: particles-pent-bonus-3, to: particle-generators, rel: boosts, source: "game", confidence: documented}
+  - {from: particles-pent-bonus-6, to: epsilon-tree, rel: boosts, source: "game", confidence: documented}
+  - {from: particles-pent-bonus-7, to: refinement-points, rel: boosts, source: "game", confidence: documented}
+  - {from: tarot-eight-of-swords, to: polish-sword, rel: boosts, note: "Polish Sword Effect +^", source: "wiki:Tarot", confidence: documented}
+  - {from: tarot-eight-of-wands, to: element-local-speed, rel: boosts, note: "Elements Local Speed +^", source: "wiki:Tarot", confidence: documented}
+  - {from: tarot-ace-of-pentacles, to: gold-gain, rel: boosts, note: "Gold Gain +^", source: "wiki:Tarot", confidence: documented}
+  - {from: tarot-two-of-pentacles, to: zodiac-sell-cost, rel: boosts, note: "Zodiac Sell Cost x", source: "wiki:Tarot", confidence: documented}
+  - {from: tarot-four-of-pentacles, to: donut-luck, rel: boosts, note: "Luck Donut Power +^", source: "wiki:Tarot", confidence: documented}
+  - {from: tarot-ace-of-cups, to: quality, rel: boosts, note: "Zodiac Quality +^", source: "wiki:Tarot", confidence: documented}
+  - {from: tarot-six-of-cups, to: polish-spear, rel: boosts, note: "Polish Spear Effect +^", source: "wiki:Tarot", confidence: documented}
+  - {from: tarot-eight-of-cups, to: runes, rel: boosts, note: "Runes Generation +x (Rounded Total)", source: "wiki:Tarot", confidence: documented}
+  - {from: tarot-knight-of-cups, to: special-minerals-merge-factor, rel: boosts, note: "Special Minerals Merge Factor (SMMF) +", source: "wiki:Tarot", confidence: documented}
+  - {from: tarot-the-hanged-man, to: polish-knuckles, rel: boosts, note: "Makes Polish Knuckles +# (base 40.00) levels effective", source: "wiki:Tarot", confidence: documented}
+  - {from: tarot-death, to: refinement-points, rel: boosts, note: "During this skill is active will randomly perform refine prestige, granting x# (base 10.00) more RfP", source: "wiki:Tarot", confidence: documented}
+  - {from: tarot-the-star, to: luck, rel: boosts, note: "Multiplies Your Luck by amount of stars you have powered to ^# (base 0.400)", source: "wiki:Tarot", confidence: documented}
+  - {from: trial-easy-trial-1, to: quality, rel: boosts, source: "wiki:Trials", confidence: documented}
+  - {from: trial-easy-trial-3, to: common-exponent, rel: boosts, source: "wiki:Trials", confidence: documented}
+  - {from: trial-medium-trial-1, to: luck, rel: boosts, source: "wiki:Trials", confidence: documented}
+  - {from: trial-insane-trial-3, to: infinity-points, rel: boosts, source: "wiki:Trials", confidence: documented}
+  - {from: trial-insane-trial-3, to: eternity-points, rel: boosts, source: "wiki:Trials", confidence: documented}
+  - {from: tarot-artifact-glass-surface, to: sacrifice-dust, rel: boosts, source: "wiki:Tarot", confidence: documented}
+  - {from: tarot-artifact-silver-backing, to: relic-24, rel: boosts, source: "wiki:Tarot", confidence: documented}
+  - {from: tarot-artifact-obsidian-frame, to: relic-56, rel: boosts, source: "wiki:Tarot", confidence: documented}
+  - {from: tarot-artifact-focal-point, to: relic-13, rel: boosts, source: "wiki:Tarot", confidence: documented}
+  - {from: tarot-artifact-light-refractors, to: relic-2, rel: boosts, source: "wiki:Tarot", confidence: documented}
+  - {from: tarot-artifact-truth-facets, to: relic-21, rel: boosts, source: "wiki:Tarot", confidence: documented}
+  - {from: tarot-artifact-perception-lens, to: base-spread-power, rel: boosts, source: "wiki:Tarot", confidence: documented}
+  - {from: tarot-artifact-ramus, to: sacrifice-dust, rel: boosts, source: "wiki:Tarot", confidence: documented}
+  - {from: tarot-artifact-mandible, to: relic-25, rel: boosts, source: "wiki:Tarot", confidence: documented}
+  - {from: tarot-artifact-teeth, to: relic-8, rel: boosts, source: "wiki:Tarot", confidence: documented}
+  - {from: tarot-artifact-maxilla, to: relic-14, rel: boosts, source: "wiki:Tarot", confidence: documented}
+  - {from: tarot-artifact-nasal-bone, to: relic-2, rel: boosts, source: "wiki:Tarot", confidence: documented}
+  - {from: tarot-artifact-infraorbitals, to: refine-node-7, rel: boosts, source: "wiki:Tarot", confidence: documented}
+  - {from: tarot-artifact-frontal-bone, to: relic-52, rel: boosts, source: "wiki:Tarot", confidence: documented}
+  - {from: tarot-artifact-occipital-bone, to: plp-per-plg, rel: boosts, source: "wiki:Tarot", confidence: documented}
+  - {from: tarot-artifact-abundance-gears, to: sacrifice-dust, rel: boosts, source: "wiki:Tarot", confidence: documented}
+  - {from: tarot-artifact-manifestation-pistons, to: relic-26, rel: boosts, source: "wiki:Tarot", confidence: documented}
+  - {from: tarot-artifact-fortune-cogs, to: polish-sword, rel: boosts, source: "wiki:Tarot", confidence: documented}
+  - {from: tarot-artifact-growth-chambers, to: relic-2, rel: boosts, source: "wiki:Tarot", confidence: documented}
+  - {from: tarot-artifact-wealth-circulation-system, to: special-mineral-yellow-gem, rel: boosts, source: "wiki:Tarot", confidence: documented}
+  - {from: tarot-artifact-legacy-encoders, to: earth-node-2, rel: boosts, source: "wiki:Tarot", confidence: documented}
+  - {from: tarot-artifact-reality-anchors, to: virus-essence, rel: boosts, source: "wiki:Tarot", confidence: documented}
+  - {from: tarot-artifact-heart-chamber, to: sacrifice-dust, rel: boosts, source: "wiki:Tarot", confidence: documented}
+  - {from: tarot-artifact-empathy-valves, to: relic-27, rel: boosts, source: "wiki:Tarot", confidence: documented}
+  - {from: tarot-artifact-memory-liquid, to: relic-2, rel: boosts, source: "wiki:Tarot", confidence: documented}
+  - {from: tarot-artifact-connection-handles, to: polish-spear, rel: boosts, source: "wiki:Tarot", confidence: documented}
+  - {from: tarot-artifact-inner-reflection-surface, to: polish-enhance, rel: boosts, source: "wiki:Tarot", confidence: documented}
+  - {from: tarot-artifact-vulnerability-aperture, to: relic-32, rel: boosts, source: "wiki:Tarot", confidence: documented}
+  - {from: tarot-artifact-trauma-alchemizer, to: singularity-mult, rel: boosts, source: "wiki:Tarot", confidence: documented}
+
+  # Audit corrections: what the sentences behind the audit's suppressions
+  # actually say. `provisional` where the sentence says it outright,
+  # `uncertain` where only the game can confirm it.
+  - {from: dilation-node-bottom-2, to: rp-upgrade-1, rel: boosts, op: add, source: "wiki:Dilation_Tree", confidence: uncertain}
+  - {from: dilation-node-bottom-2, to: rp-upgrade-2, rel: boosts, op: add, source: "wiki:Dilation_Tree", confidence: uncertain}
+  - {from: dilation-node-bottom-2, to: rp-upgrade-3, rel: boosts, op: add, source: "wiki:Dilation_Tree", confidence: uncertain}
+  - {from: dilation-node-bottom-2, to: rp-upgrade-4, rel: boosts, op: add, source: "wiki:Dilation_Tree", confidence: uncertain}
+  - {from: dilation-node-bottom-2, to: rp-upgrade-5, rel: boosts, op: add, source: "wiki:Dilation_Tree", confidence: uncertain}
+  - {from: dilation-node-bottom-2, to: rp-upgrade-6, rel: boosts, op: add, source: "wiki:Dilation_Tree", confidence: uncertain}
+  - {from: animal-points, to: dilation-node-bottom-2, rel: boosts, source: "wiki:Dilation_Tree", confidence: provisional}
+  - {from: dilation-upgrade-3, to: rp-upgrade-1, rel: boosts, op: add, source: "wiki:Eternity", confidence: uncertain}
+  - {from: dilation-upgrade-3, to: rp-upgrade-2, rel: boosts, op: add, source: "wiki:Eternity", confidence: uncertain}
+  - {from: dilation-upgrade-3, to: rp-upgrade-3, rel: boosts, op: add, source: "wiki:Eternity", confidence: uncertain}
+  - {from: dilation-upgrade-3, to: rp-upgrade-4, rel: boosts, op: add, source: "wiki:Eternity", confidence: uncertain}
+  - {from: dilation-upgrade-3, to: rp-upgrade-5, rel: boosts, op: add, source: "wiki:Eternity", confidence: uncertain}
+  - {from: dilation-upgrade-3, to: rp-upgrade-6, rel: boosts, op: add, source: "wiki:Eternity", confidence: uncertain}
+  - {from: infinities, to: infinity-upgrade-1-1-infinity-generation-and-automation, rel: boosts, source: "wiki:Infinity", confidence: provisional}
+  - {from: infinity-challenge-9, to: break-infinity, rel: unlocks, source: "wiki:Infinity", confidence: uncertain}
+  - {from: infinity-challenge-9, to: infinities, rel: boosts, op: mult, source: "wiki:Infinity", confidence: uncertain}
+  - {from: polish-knuckles, to: refine-node-38, rel: boosts, note: "You get more refine points based on your knuckles level: $\\text{RfP}^{1.01 \\times \\text{lvl}}$", source: "wiki:Minerals/Refine_Tree", confidence: provisional}
+  - {from: fire-node-1, to: fire-factor-1, rel: boosts, op: exp, note: "Increase power for factor 1 for fire by 0.25 Increases the power on the score multiplier for fire", source: "wiki:Elements", confidence: provisional}
+  - {from: fire-node-2, to: attack-ascension-power, rel: boosts, note: "Increase Ascension Power from VP based on you current fire", source: "wiki:Elements", confidence: uncertain}
+  - {from: fire, to: fire-node-2, rel: boosts, note: "Increase Ascension Power from VP based on you current fire", source: "wiki:Elements", confidence: uncertain}
+  - {from: value-points, to: attack-ascension-power, rel: boosts, note: "Increase Ascension Power from VP based on you current fire", source: "wiki:Elements", confidence: provisional}
+  - {from: earth-node-1, to: earth-factor-1, rel: boosts, op: exp, note: "Increase power for factor 1 for earth by 2 Increases power for Infinities multipliter for Earth", source: "wiki:Elements", confidence: provisional}
+  - {from: wind-node-1, to: wind-factor-1, rel: boosts, op: exp, note: "Increase power for factor 1 for wind by 3 Increases power for Eternities multiplier for Wind", source: "wiki:Elements", confidence: provisional}
+  - {from: water-node-5, to: fire-node-1, rel: boosts, note: "Water boosts first node for all elements (at different rates)", source: "wiki:Elements", confidence: uncertain}
+  - {from: water-node-5, to: earth-node-1, rel: boosts, note: "Water boosts first node for all elements (at different rates)", source: "wiki:Elements", confidence: uncertain}
+  - {from: water-node-5, to: wind-node-1, rel: boosts, note: "Water boosts first node for all elements (at different rates)", source: "wiki:Elements", confidence: uncertain}
+  - {from: water-node-5, to: water-node-1, rel: boosts, note: "Water boosts first node for all elements (at different rates)", source: "wiki:Elements", confidence: uncertain}
+  - {from: refine-node-3, to: attack-exponent, rel: boosts, note: "Attacks Prestige is a bit stronger", source: "wiki:Minerals/Refine_Tree", confidence: uncertain}
+  - {from: refine-node-18, to: magnet-chance, rel: boosts, op: add, note: "Unlock magnets and new mineral upgrades! Magnet base chance at the start is 1% on merge.", source: "wiki:Minerals/Refine_Tree", confidence: uncertain}
+  - {from: merge-level, to: refine-node-30, rel: boosts, note: "Relic 3 effect is powered to your current merge level + 1", source: "wiki:Minerals/Refine_Tree", confidence: provisional}
+  - {from: trials, to: refine-node-45, rel: boosts, note: "PP Gain Bonus from Trials is much bigger now", source: "wiki:Minerals/Refine_Tree", confidence: provisional}
+  - {from: attack-level, to: refine-node-68, rel: boosts, note: "For every 100,000 attack levels gained reduce your SM Spawned Factor by 1", source: "wiki:Minerals/Refine_Tree", confidence: provisional}
+  - {from: refine-node-70, to: special-mineral-black-gem, rel: unlocks, note: "Now you can spawn black special gems (1% chance). Unlocks Tarot. Resets SMS Factor to 5,000 if it's >6,000 or decrease it by 1,000", source: "wiki:Minerals/Refine_Tree", confidence: provisional}
+  - {from: refine-node-75, to: fire-factor-2, rel: boosts, op: add, note: "Increase all elements base factor 2 by (+?/level)", source: "wiki:Minerals/Refine_Tree", confidence: provisional}
+  - {from: refine-node-75, to: earth-factor-2, rel: boosts, op: add, note: "Increase all elements base factor 2 by (+?/level)", source: "wiki:Minerals/Refine_Tree", confidence: provisional}
+  - {from: refine-node-75, to: wind-factor-2, rel: boosts, op: add, note: "Increase all elements base factor 2 by (+?/level)", source: "wiki:Minerals/Refine_Tree", confidence: provisional}
+  - {from: refine-node-75, to: water-factor-2, rel: boosts, op: add, note: "Increase all elements base factor 2 by (+?/level)", source: "wiki:Minerals/Refine_Tree", confidence: provisional}
+  - {from: refine-node-87, to: fire, rel: boosts, note: "Relic 36's effect is ^3 and applied to all elements", source: "wiki:Minerals/Refine_Tree", confidence: provisional}
+  - {from: refine-node-87, to: wind, rel: boosts, note: "Relic 36's effect is ^3 and applied to all elements", source: "wiki:Minerals/Refine_Tree", confidence: provisional}
+  - {from: refine-node-87, to: water, rel: boosts, note: "Relic 36's effect is ^3 and applied to all elements", source: "wiki:Minerals/Refine_Tree", confidence: provisional}
+  - {from: refine-node-92, to: tarot-the-empress, rel: boosts, note: "The Empress, The Emperor, The Lovers, and The Strength Tarot Cards are now set to their maximum strength values.", source: "wiki:Minerals/Refine_Tree", confidence: provisional}
+  - {from: refine-node-92, to: tarot-the-emperor, rel: boosts, note: "The Empress, The Emperor, The Lovers, and The Strength Tarot Cards are now set to their maximum strength values.", source: "wiki:Minerals/Refine_Tree", confidence: provisional}
+  - {from: refine-node-92, to: tarot-the-lovers, rel: boosts, note: "The Empress, The Emperor, The Lovers, and The Strength Tarot Cards are now set to their maximum strength values.", source: "wiki:Minerals/Refine_Tree", confidence: provisional}
+  - {from: refine-node-92, to: tarot-the-strength, rel: boosts, note: "The Empress, The Emperor, The Lovers, and The Strength Tarot Cards are now set to their maximum strength values.", source: "wiki:Minerals/Refine_Tree", confidence: provisional}
+  - {from: refine-node-105, to: tarot-the-hierophant, rel: boosts, note: "The Hierophant Passive Bonus is now boosted by the level of your equipped Endoplasmic Reticulum", source: "wiki:Minerals/Refine_Tree", confidence: provisional}
+  - {from: singularity, to: refine-node-122, rel: boosts, note: "Adds a Singularity Effect (Based on Singularities) that boosts Spread Speed", source: "wiki:Minerals/Refine_Tree", confidence: provisional}
+  - {from: singularity-mult, to: refine-node-129, rel: boosts, note: "Adds Refine Points to Singularity Mult Effects", source: "wiki:Minerals/Refine_Tree", confidence: provisional}
+  - {from: singularity, to: refine-node-131, rel: boosts, note: "Adds Atom Gain to Singularity Count effects", source: "wiki:Minerals/Refine_Tree", confidence: provisional}
+  - {from: singularity, to: refine-node-132, rel: boosts, note: "Adds Golden Resource Gain to Singularity Count Effect", source: "wiki:Minerals/Refine_Tree", confidence: provisional}
+  - {from: singularity, to: refine-node-134, rel: boosts, note: "Adds Refine Points to Singularity Count Effects", source: "wiki:Minerals/Refine_Tree", confidence: provisional}
+  - {from: singularity-mult, to: refine-node-146, rel: boosts, note: "Unlocks the Singularity Mult effect on the base of Alpha & Beta generators", source: "wiki:Minerals/Refine_Tree", confidence: provisional}
+  - {from: refine-node-154, to: plp-per-plg, rel: boosts, op: exp, note: "The PlG to PlP bonus is raised to ^1.5", source: "wiki:Minerals/Refine_Tree", confidence: uncertain}
+  - {from: singularity-mult, to: refine-node-155, rel: boosts, note: "Unlocks the Singularity Mult effect on the base of all generators", source: "wiki:Minerals/Refine_Tree", confidence: uncertain}
+  - {from: refine-node-155, to: particle-generators, rel: boosts, note: "Unlocks the Singularity Mult effect on the base of all generators", source: "wiki:Minerals/Refine_Tree", confidence: uncertain}
+  - {from: refine-node-168, to: singularity-mult, rel: boosts, op: mult, note: "Tarot Challenges Singularity factors are x3 stronger (before softcap)", source: "wiki:Minerals/Refine_Tree", confidence: uncertain}
+  - {from: sacrifice-dust, to: refine-node-174, rel: boosts, note: "Sacrifice dust spent after Lv.100 slightly increases the base of Special Minerals effect 2 (+0.01 per e1,000 to the effect 2 base)", source: "wiki:Minerals/Refine_Tree", confidence: provisional}
+  - {from: singularity, to: refine-node-177, rel: boosts, note: "Each time you perform a Singularity after e25,000 atoms, spark cost decreases as if you had spawned 1 fewer spark in total", source: "wiki:Minerals/Refine_Tree", confidence: provisional}
+  - {from: refine-node-177, to: particles-sparks, rel: boosts, note: "Each time you perform a Singularity after e25,000 atoms, spark cost decreases as if you had spawned 1 fewer spark in total", source: "wiki:Minerals/Refine_Tree", confidence: provisional}
+  - {from: refine-node-181, to: singularity-mult, rel: boosts, note: "Unlocks Spark Mastery Factor for Singularity", source: "wiki:Minerals/Refine_Tree", confidence: uncertain}
+  - {from: refine-node-187, to: particles-epsilon, rel: boosts, op: mult, note: "Delta Prestige bonus is stronger based on your Pent (X1.01 per Pent)", source: "wiki:Minerals/Refine_Tree", confidence: uncertain}
+  - {from: particles-pent, to: refine-node-187, rel: boosts, note: "Delta Prestige bonus is stronger based on your Pent (X1.01 per Pent)", source: "wiki:Minerals/Refine_Tree", confidence: provisional}
+  - {from: singular-zodiacs, to: refine-node-189, rel: boosts, note: "Destroying Ultima Singular Zodiacs now also decreases Epsilon Tree Points cost (Total reduction is softcapped after 100,000)", source: "wiki:Minerals/Refine_Tree", confidence: provisional}
+  - {from: relic-48, to: water-factor-1, rel: boosts, op: mult, note: "Multiplies power for Luck boost to Water", source: "wiki:Relics", confidence: provisional}
+  - {from: relic-57, to: tarot-suit-swords, rel: boosts, note: "Boosts the first effect of common suit Tarot cards", source: "wiki:Relics", confidence: provisional}
+  - {from: relic-57, to: tarot-suit-wands, rel: boosts, note: "Boosts the first effect of common suit Tarot cards", source: "wiki:Relics", confidence: provisional}
+  - {from: relic-57, to: tarot-suit-pentacles, rel: boosts, note: "Boosts the first effect of common suit Tarot cards", source: "wiki:Relics", confidence: provisional}
+  - {from: relic-57, to: tarot-suit-cups, rel: boosts, note: "Boosts the first effect of common suit Tarot cards", source: "wiki:Relics", confidence: provisional}
+  - {from: relic-63, to: plague-er-conversion-rate, rel: boosts, op: mult, note: "Multiplies the effect of Endoplasmic Reticulum Upgrade 4 (PIP to ERP conversion Rate)", source: "wiki:Relics", confidence: provisional}
+  - {from: relic-74, to: particles-epsilon, rel: boosts, op: mult, note: "Multiplies Delta Prestige Effect", source: "wiki:Relics", confidence: uncertain}
+  - {from: singularity-milestone-event-horizon, to: plague-generators, rel: boosts, source: "wiki:Singularity", confidence: uncertain}
+  - {from: singularity, to: singularity-milestone-loop-feeds-loop, rel: boosts, source: "wiki:Singularity", confidence: provisional}
+  - {from: singularity, to: singularity-milestone-one-hundred, rel: boosts, source: "wiki:Singularity", confidence: provisional}
+  - {from: singularity, to: singularity-milestone-singular-master, rel: boosts, source: "wiki:Singularity", confidence: uncertain}
+  - {from: singularity-tree-5-1, to: plague-stat-max-stage-completed, rel: boosts, op: mult, source: "wiki:Singularity", confidence: provisional}
+  - {from: singularity-tree-5-1, to: plague-stat-max-infected, rel: boosts, op: mult, source: "wiki:Singularity", confidence: provisional}
+  - {from: singularity-tree-5-1, to: plague-stat-total-infected, rel: boosts, op: mult, source: "wiki:Singularity", confidence: provisional}
+  - {from: singularity-tree-5-1, to: plague-stat-max-plp, rel: boosts, op: mult, source: "wiki:Singularity", confidence: provisional}
+  - {from: singularity-tree-5-1, to: plague-stat-max-plg, rel: boosts, op: mult, source: "wiki:Singularity", confidence: provisional}
+  - {from: singularity-tree-5-1, to: plague-stat-max-infected-in-universe, rel: boosts, op: mult, source: "wiki:Singularity", confidence: provisional}
+  - {from: singularity-tree-6-1, to: singularity-mult, rel: boosts, source: "wiki:Singularity", confidence: uncertain}
+  - {from: particles-pent-bonus-1, to: gold-gain, rel: boosts, op: exp, source: "game", confidence: uncertain}
+  - {from: tarot-the-tower, to: refine-node-86, rel: boosts, note: "Grants SMP EXP to all Special Minerals every second based on Relic 45, The Tower, and average SMP level (???/sec). Affected by Tarot Local Speed.", source: "wiki:Minerals/Refine_Tree", confidence: uncertain}
+  - {from: value-points, to: tarot-ace-of-swords, rel: boosts, note: "Attack Mult Gain from VP +^", source: "wiki:Tarot", confidence: provisional}
+  - {from: tarot-three-of-swords, to: attack-exponent, rel: boosts, op: exp, note: "Attacks Prestige Power +^", source: "wiki:Tarot", confidence: uncertain}
+  - {from: tarot-king-of-swords, to: fire-factor-1, rel: boosts, op: mult, note: "Unlocks 2nd wind factor and multiply 1st factor for all elements by x (aft. e308 softcap)", source: "wiki:Tarot", confidence: provisional}
+  - {from: tarot-king-of-swords, to: earth-factor-1, rel: boosts, op: mult, note: "Unlocks 2nd wind factor and multiply 1st factor for all elements by x (aft. e308 softcap)", source: "wiki:Tarot", confidence: provisional}
+  - {from: tarot-king-of-swords, to: wind-factor-1, rel: boosts, op: mult, note: "Unlocks 2nd wind factor and multiply 1st factor for all elements by x (aft. e308 softcap)", source: "wiki:Tarot", confidence: provisional}
+  - {from: tarot-king-of-swords, to: water-factor-1, rel: boosts, op: mult, note: "Unlocks 2nd wind factor and multiply 1st factor for all elements by x (aft. e308 softcap)", source: "wiki:Tarot", confidence: provisional}
+  - {from: tarot-five-of-wands, to: fire-factor-1, rel: boosts, op: exp, note: "All Elements Factor 1 +^", source: "wiki:Tarot", confidence: provisional}
+  - {from: tarot-five-of-wands, to: earth-factor-1, rel: boosts, op: exp, note: "All Elements Factor 1 +^", source: "wiki:Tarot", confidence: provisional}
+  - {from: tarot-five-of-wands, to: wind-factor-1, rel: boosts, op: exp, note: "All Elements Factor 1 +^", source: "wiki:Tarot", confidence: provisional}
+  - {from: tarot-five-of-wands, to: water-factor-1, rel: boosts, op: exp, note: "All Elements Factor 1 +^", source: "wiki:Tarot", confidence: provisional}
+  - {from: tarot-king-of-wands, to: fire-factor-1, rel: boosts, op: mult, note: "Unlocks 2nd fire factor and multiply 1st factor for all elements by x# (base 1,000) (aft. e308 softcap)", source: "wiki:Tarot", confidence: provisional}
+  - {from: tarot-king-of-wands, to: earth-factor-1, rel: boosts, op: mult, note: "Unlocks 2nd fire factor and multiply 1st factor for all elements by x# (base 1,000) (aft. e308 softcap)", source: "wiki:Tarot", confidence: provisional}
+  - {from: tarot-king-of-wands, to: wind-factor-1, rel: boosts, op: mult, note: "Unlocks 2nd fire factor and multiply 1st factor for all elements by x# (base 1,000) (aft. e308 softcap)", source: "wiki:Tarot", confidence: provisional}
+  - {from: tarot-king-of-wands, to: water-factor-1, rel: boosts, op: mult, note: "Unlocks 2nd fire factor and multiply 1st factor for all elements by x# (base 1,000) (aft. e308 softcap)", source: "wiki:Tarot", confidence: provisional}
+  - {from: tarot-king-of-pentacles, to: fire-factor-1, rel: boosts, op: mult, note: "Unlocks 2nd earth factor and multiply 1st factor for all elements by x (aft. e308 softcap)", source: "wiki:Tarot", confidence: provisional}
+  - {from: tarot-king-of-pentacles, to: earth-factor-1, rel: boosts, op: mult, note: "Unlocks 2nd earth factor and multiply 1st factor for all elements by x (aft. e308 softcap)", source: "wiki:Tarot", confidence: provisional}
+  - {from: tarot-king-of-pentacles, to: wind-factor-1, rel: boosts, op: mult, note: "Unlocks 2nd earth factor and multiply 1st factor for all elements by x (aft. e308 softcap)", source: "wiki:Tarot", confidence: provisional}
+  - {from: tarot-king-of-pentacles, to: water-factor-1, rel: boosts, op: mult, note: "Unlocks 2nd earth factor and multiply 1st factor for all elements by x (aft. e308 softcap)", source: "wiki:Tarot", confidence: provisional}
+  - {from: tarot-king-of-cups, to: fire-factor-1, rel: boosts, op: mult, note: "Unlocks 2nd water factor and multiply 1st factor for all elements by x (aft. e308 softcap)", source: "wiki:Tarot", confidence: provisional}
+  - {from: tarot-king-of-cups, to: earth-factor-1, rel: boosts, op: mult, note: "Unlocks 2nd water factor and multiply 1st factor for all elements by x (aft. e308 softcap)", source: "wiki:Tarot", confidence: provisional}
+  - {from: tarot-king-of-cups, to: wind-factor-1, rel: boosts, op: mult, note: "Unlocks 2nd water factor and multiply 1st factor for all elements by x (aft. e308 softcap)", source: "wiki:Tarot", confidence: provisional}
+  - {from: tarot-king-of-cups, to: water-factor-1, rel: boosts, op: mult, note: "Unlocks 2nd water factor and multiply 1st factor for all elements by x (aft. e308 softcap)", source: "wiki:Tarot", confidence: provisional}
+  - {from: tarot-the-hierophant, to: mineral-level, rel: boosts, op: add, note: "Levels Up all of your common minerals by # (base 1.000) (but can't be bigger than max spawn level + 50)", source: "wiki:Tarot", confidence: uncertain}
+  - {from: tarot-temperance, to: luck, rel: boosts, note: "Add # (base 3.000) zodiacs of that type which is in your Fortune Pars slot, but with stats you'd get on Unity", source: "wiki:Tarot", confidence: uncertain}
+  - {from: tarot-temperance, to: quality, rel: boosts, note: "Add # (base 3.000) zodiacs of that type which is in your Fortune Pars slot, but with stats you'd get on Unity", source: "wiki:Tarot", confidence: uncertain}
+  - {from: tarot-the-devil, to: tarot-suit-swords, rel: boosts, op: add, note: "Will boost 1st effect of all common tarot cards by +x (base 0.007) with a chance of 66%. With a chance 33% will apply one of 5 debuffs (descr. in help). Have 1% chance to take your soul (-1 Soul )", source: "wiki:Tarot", confidence: provisional}
+  - {from: tarot-the-devil, to: tarot-suit-wands, rel: boosts, op: add, note: "Will boost 1st effect of all common tarot cards by +x (base 0.007) with a chance of 66%. With a chance 33% will apply one of 5 debuffs (descr. in help). Have 1% chance to take your soul (-1 Soul )", source: "wiki:Tarot", confidence: provisional}
+  - {from: tarot-the-devil, to: tarot-suit-pentacles, rel: boosts, op: add, note: "Will boost 1st effect of all common tarot cards by +x (base 0.007) with a chance of 66%. With a chance 33% will apply one of 5 debuffs (descr. in help). Have 1% chance to take your soul (-1 Soul )", source: "wiki:Tarot", confidence: provisional}
+  - {from: tarot-the-devil, to: tarot-suit-cups, rel: boosts, op: add, note: "Will boost 1st effect of all common tarot cards by +x (base 0.007) with a chance of 66%. With a chance 33% will apply one of 5 debuffs (descr. in help). Have 1% chance to take your soul (-1 Soul )", source: "wiki:Tarot", confidence: provisional}
+  - {from: trial-easy-trial-2, to: zodiac-exp-factor, rel: boosts, source: "wiki:Trials", confidence: provisional}
+  - {from: trials, to: zodiac-exp-factor, rel: boosts, source: "wiki:Trials", confidence: provisional}
+  - {from: trial-easy-trial-5, to: zodiac-exp-factor, rel: boosts, source: "wiki:Trials", confidence: provisional}
+  - {from: max-score, to: zodiac-exp-factor, rel: boosts, source: "wiki:Trials", confidence: provisional}
+  - {from: trial-medium-trial-5, to: zodiac-exp-factor, rel: boosts, source: "wiki:Trials", confidence: provisional}
+  - {from: dilation-tree-points, to: zodiac-exp-factor, rel: boosts, source: "wiki:Trials", confidence: provisional}
+  - {from: trial-hard-trial-1, to: zodiac-exp-factor, rel: boosts, source: "wiki:Trials", confidence: provisional}
+  - {from: dilation-points, to: zodiac-exp-factor, rel: boosts, source: "wiki:Trials", confidence: provisional}
+  - {from: trial-hard-trial-2, to: zodiac-exp-factor, rel: boosts, source: "wiki:Trials", confidence: provisional}
+  - {from: laboratory, to: zodiac-exp-factor, rel: boosts, source: "wiki:Trials", confidence: provisional}
+  - {from: trial-hard-trial-4, to: zodiac-exp-factor, rel: boosts, source: "wiki:Trials", confidence: provisional}
+  - {from: animal-points, to: zodiac-exp-factor, rel: boosts, source: "wiki:Trials", confidence: provisional}
+  - {from: trial-hard-trial-6, to: zodiac-exp-factor, rel: boosts, source: "wiki:Trials", confidence: provisional}
+  - {from: eternity-points, to: zodiac-exp-factor, rel: boosts, source: "wiki:Trials", confidence: provisional}
+  - {from: trials, to: trial-insane-trial-2, rel: boosts, source: "wiki:Trials", confidence: provisional}
+  - {from: score, to: trial-insane-trial-5, rel: boosts, source: "wiki:Trials", confidence: provisional}
+  - {from: trial-insane-trial-6, to: unities, rel: boosts, op: add, source: "wiki:Trials", confidence: provisional}
+  - {from: mineral-local-speed, to: trial-insane-trial-6, rel: boosts, source: "wiki:Trials", confidence: uncertain}
+  - {from: tarot-artifact-temporal-bone, to: water-factor-2, rel: boosts, op: exp, source: "wiki:Tarot", confidence: uncertain}
+  - {from: tarot-artifact-sorrow-filters, to: fire-factor-3, rel: boosts, op: exp, source: "wiki:Tarot", confidence: provisional}
+  - {from: tarot-artifact-sorrow-filters, to: earth-factor-3, rel: boosts, op: exp, source: "wiki:Tarot", confidence: provisional}
+  - {from: tarot-artifact-sorrow-filters, to: wind-factor-3, rel: boosts, op: exp, source: "wiki:Tarot", confidence: provisional}
+  - {from: tarot-artifact-sorrow-filters, to: water-factor-3, rel: boosts, op: exp, source: "wiki:Tarot", confidence: provisional}
+  - {from: singularity-milestone-one-hundred, to: particle-multipliers, rel: boosts, op: mult, source: "wiki:Singularity", confidence: provisional}
 
   - from: refine-node-121
     to: singularity
@@ -7219,9 +7723,10 @@ edges:
     source: wiki:Singularity
     confidence: documented
 
-  # The vocabulary path has no unlock detection, so every one of these arrived
-  # as `boosts`. Unlocking is the whole reason the three tab nodes exist, so the
-  # generated edge is suppressed below and the relationship restated here.
+  # Unlocking is the whole reason the three tab nodes exist. The extractor reads
+  # "Unlock(s) <name>" as `unlocks` at `uncertain`; these hold the reading at
+  # `documented`. Horoscope of the Void says it without the verb, so its
+  # generated `boosts` is suppressed below.
   - from: singularity-milestone-accelerated-growth
     to: singularity-effects-tab
     rel: unlocks
@@ -8354,8 +8859,8 @@ edges:
     confidence: documented
 
   # "Particle Rank boosts ..." on the Refine Tree: the rank is what the node
-  # reads, so it is upstream. The generated edges point the other way and are
-  # suppressed below.
+  # reads, so it is upstream. The extractor reads the subject of "boosts" and
+  # "boosted by" as an input; these hold that reading at `provisional`.
   - from: particles-rank
     to: refine-node-138
     rel: boosts
@@ -8393,39 +8898,111 @@ edges:
     confidence: provisional
 
 suppress:
-  # Five edges whose relationship is real but whose `rel` is wrong, because the
-  # vocabulary path cannot tell an unlock from a boost. Each is restated above
-  # with the right `rel`.
-  - from: singularity-milestone-accelerated-growth
-    to: singularity-effects-tab
-    rel: boosts
-    reason: >-
-      "Unlock Effects Tab" is an unlock, and the curated edge says so.
+  # Audit of the generated `uncertain` edges: a wrong target, a backwards
+  # input, or no boost at all. The corrections sit in the audit block under
+  # `edges`.
+  - {from: dilation-node-top-3, to: score-exponent, rel: boosts, reason: "Supernova Score exponent requirement is powered to ^0.90 (no-node: supernova-requirement)"}
+  - {from: dilation-node-bottom-2, to: research-points, rel: boosts, reason: "Gives free RP Upgrade levels equal to 1% of unspent AP"}
+  - {from: dilation-node-bottom-2, to: animal-points, rel: boosts, reason: "free RP Upgrade levels equal to 1% of unspent AP"}
+  - {from: dilation-upgrade-3, to: research-points, rel: boosts, reason: "+ free levels to all RP upgrades"}
+  - {from: infinity-upgrade-1-1-infinity-generation-and-automation, to: infinities, rel: boosts, reason: "Generator mult × Infinities; \"This number boosts some Infinity upgrades. (1;1, ...)\""}
+  - {from: infinity-challenge-9, to: break-infinity, rel: boosts, reason: "Double Infinites gain + Break Infinity; \"After all 9 challenges are completed, you will have the option to Break Infinity\""}
+  - {from: refinement-points, to: refine-node-38, rel: boosts, reason: "You get more refine points based on your knuckles level: RfP^(1.01*lvl) (reverse refine-node-38->refinement-points already exists)"}
+  - {from: fire-node-1, to: score, rel: boosts, reason: "Increase power for factor 1 for fire by 0.25 / power on the score multiplier for fire"}
+  - {from: fire-node-2, to: ascension-power, rel: boosts, reason: "Increase Ascension Power from VP based on you current fire (attack-ascension-power: Gained from Value Points)"}
+  - {from: fire-node-2, to: value-points, rel: boosts, reason: "Increase Ascension Power from VP based on you current fire"}
+  - {from: earth-node-1, to: infinities, rel: boosts, reason: "Increase power for factor 1 for earth by 2 / power for Infinities multipliter for Earth"}
+  - {from: wind-node-1, to: eternities, rel: boosts, reason: "Increase power for factor 1 for wind by 3 / power for Eternities multiplier for Wind"}
+  - {from: water-node-5, to: elements, rel: boosts, reason: "Water boosts first node for all elements (at different rates)"}
+  - {from: refine-node-2, to: attacks, rel: boosts, reason: "Now you can bulk attacks (x10.00)"}
+  - {from: refine-node-3, to: attacks, rel: boosts, reason: "Attacks Prestige is a bit stronger; Attacks page: exponent increased by attack prestige"}
+  - {from: refine-node-21, to: unity, rel: boosts, reason: "\"Gold on Unity\" is a qualifier"}
+  - {from: refine-node-30, to: merge-level, rel: boosts, reason: "Relic 3 effect is powered to your current merge level + 1"}
+  - {from: refine-node-31, to: minerals, rel: boosts, reason: "Relic 14 also decreases base minerals cost (cost; sibling RN31->relic-14 covers)"}
+  - {from: refine-node-33, to: unity, rel: boosts, reason: "\"Gold on Unity\" is a qualifier"}
+  - {from: refine-node-45, to: trials, rel: boosts, reason: "PP Gain Bonus from Trials"}
+  - {from: refine-node-68, to: attack-level, rel: boosts, reason: "For every 100,000 attack levels gained reduce your SM Spawned Factor by 1 (also RN68 lowers sms-factor, a cost factor)"}
+  - {from: refine-node-75, to: elements, rel: boosts, reason: "Increase all elements base factor 2"}
+  - {from: refine-node-85, to: sacrifice-dust, rel: boosts, reason: "You now gain Sacrifice Dust (curated unlocks exists)"}
+  - {from: refine-node-85, to: minerals, rel: boosts, reason: "when deleting minerals"}
+  - {from: refine-node-86, to: special-minerals, rel: boosts, reason: "Grants SMP EXP to all Special Minerals (covered by smp edge)"}
+  - {from: refine-node-87, to: elements, rel: boosts, reason: "Relic 36's effect is ^3 and applied to all elements (Relic 36 boosts Earth Generation)"}
+  - {from: refine-node-92, to: tarot, rel: boosts, reason: "The Empress, The Emperor, The Lovers, and The Strength Tarot Cards are now set to their maximum"}
+  - {from: refine-node-111, to: erp, rel: boosts, reason: "Divides the ERP needed to craft (ERP is the cost)"}
+  - {from: refine-node-122, to: singularity, rel: boosts, reason: "Adds a Singularity Effect (Based on Singularities)"}
+  - {from: refine-node-129, to: singularity-mult, rel: boosts, reason: "to Singularity Mult Effects (mult is the input)"}
+  - {from: refine-node-131, to: singularity, rel: boosts, reason: "Singularity Count effects (count is the input)"}
+  - {from: refine-node-132, to: singularity, rel: boosts, reason: "Singularity Count Effect (count is the input)"}
+  - {from: refine-node-134, to: singularity, rel: boosts, reason: "Singularity Count Effects (count is the input)"}
+  - {from: refine-node-146, to: particles-alpha, rel: boosts, reason: "bare \"Alpha\" in \"Alpha & Beta generators\" (covered by particle-generators)"}
+  - {from: refine-node-147, to: particle-generators, rel: boosts, reason: "Beta Particles boost Alpha Generator Base a bit better (covered by RN147->particles-tier-bonus-1)"}
+  - {from: refine-node-154, to: plague-generators, rel: boosts, reason: "The PlG to PlP bonus is raised to ^1.5"}
+  - {from: refine-node-168, to: tarot, rel: boosts, reason: "Tarot Challenges Singularity factors (challenges are the input)"}
+  - {from: refine-node-168, to: singularity, rel: boosts, reason: "Tarot Challenges Singularity factors are x3 stronger"}
+  - {from: refine-node-174, to: sacrifice-dust, rel: boosts, reason: "Sacrifice dust spent after Lv.100 slightly increases"}
+  - {from: refine-node-176, to: particles-beta, rel: boosts, reason: "Beta Particle Prestige resets nothing ... every frame"}
+  - {from: refine-node-177, to: singularity, rel: boosts, reason: "Each time you perform a Singularity ... spark cost decreases"}
+  - {from: refine-node-179, to: particles-gamma, rel: boosts, reason: "Gamma Particle Prestige resets nothing ... every frame"}
+  - {from: refine-node-182, to: particles-epsilon, rel: boosts, reason: "ETP cost ... 5 Epsilon (Epsilon is the price)"}
+  - {from: refine-node-187, to: particles-delta, rel: boosts, reason: "Delta Prestige bonus is stronger (Delta prestige boosts Epsilon)"}
+  - {from: refine-node-187, to: prestige-bonus, rel: boosts, reason: "\"Delta Prestige bonus\" is not Revolution Prestige Bonus"}
+  - {from: refine-node-189, to: singular-zodiacs, rel: boosts, reason: "Destroying Ultima Singular Zodiacs now also decreases ETP cost"}
+  - {from: relic-1, to: damage-mult, rel: boosts, reason: "Attacks page: Cumulative Multiplier is product of Relics 1, 3 and 12 (curated relic-1->cumulative-mult covers it)"}
+  - {from: relic-3, to: damage-mult, rel: boosts, reason: "Attacks page: Cumulative Multiplier is product of Relics 1, 3 and 12 (curated relic-3->cumulative-mult covers it)"}
+  - {from: relic-13, to: attacks, rel: boosts, reason: "Exponent in Base Damage Formula; curated relic-13->score-damage-mult covers it"}
+  - {from: relic-16, to: attacks, rel: boosts, reason: "Multiplies mult gain for attacks; curated relic-16->mult-gain covers it"}
+  - {from: relic-18, to: attacks, rel: boosts, reason: "Ascension Power of Attacks Revolutions — group edge redundant"}
+  - {from: relic-19, to: attacks, rel: boosts, reason: "damage formula first divider; curated relic-19->score-damage-mult covers it"}
+  - {from: relic-45, to: special-minerals, rel: boosts, reason: "on merging special minerals — context, not target"}
+  - {from: relic-48, to: luck, rel: boosts, reason: "Multiplies power for Luck boost to Water; Elements: Water Factor 1 = Luck"}
+  - {from: relic-52, to: value-points, rel: boosts, reason: "Empowers Attack Ascension Power from VP — VP is the input"}
+  - {from: relic-53, to: tarot, rel: boosts, reason: "Empowers total Tarot Challenge reward (Sacrifice Dust gain) — reward is sacrifice dust"}
+  - {from: relic-57, to: tarot, rel: boosts, reason: "Boosts the first effect of common suit Tarot cards"}
+  - {from: relic-62, to: endoplasmic-reticula, rel: boosts, reason: "on Endoplasmic reticulum craft — context, not target"}
+  - {from: relic-63, to: endoplasmic-reticula, rel: boosts, reason: "effect of Endoplasmic Reticulum Upgrade 4 (PlP to ERP conversion Rate); Plague page: upgrade 4 = Conversion Rate"}
+  - {from: relic-67, to: plague, rel: boosts, reason: "chance of obtaining Achievement 600 after completing Earth Plague Stage — no-node: achievement-600"}
+  - {from: relic-72, to: particles-alpha, rel: boosts, reason: "base of Alpha and Beta Generators — covered by particle-generators edge"}
+  - {from: relic-74, to: particles-delta, rel: boosts, reason: "Multiplies Delta Prestige Effect; Particles page: Delta prestige boosts Epsilon"}
+  - {from: singularity-milestone-event-horizon-tax, to: singularity, rel: boosts, reason: "your Singularity Count will NOT increase"}
+  - {from: singularity-milestone-event-horizon-tax, to: singularity-mult, rel: boosts, reason: "The Atom Requirement for the next Singularity starts increasing"}
+  - {from: singularity-milestone-loop-feeds-loop, to: singularity, rel: boosts, reason: "Singularity Count acts as a factor for the next Singularity Mult"}
+  - {from: singularity-milestone-one-hundred, to: singularity, rel: boosts, reason: "by 1 + singularity / 100"}
+  - {from: singularity-milestone-singular-master, to: singularity, rel: boosts, reason: "Each singularity multipliers mastery gain by x1.01"}
+  - {from: singularity-tree-5-1, to: plague, rel: boosts, reason: "Plague Stats Rewards mult"}
+  - {from: singularity-tree-6-1, to: singularity, rel: boosts, reason: "Next Singularity nerf /X; nerd zone: gain = T / Mult^(0.5/STN6.1)"}
+  - {from: particles-pent-bonus-1, to: tarot, rel: boosts, reason: "Tarot gold: ... (real target gold-gain, see sibling edge)"}
+  - {from: particles-pent-bonus-1, to: gold, rel: boosts, reason: "wiki: Gold gain from Tarot has a better formula"}
+  - {from: epsilon-tree-a8, to: tarot, rel: boosts, reason: "Tarot Golden Resource base gain (golden-resources sibling covers it)"}
+  - {from: epsilon-tree-a16, to: particles-sparks, rel: boosts, reason: "Sparks Epsilon Gain Effect (boosts sparks' effect on Epsilon, not sparks; particles-epsilon sibling covers it)"}
+  - {from: tarot, to: refine-node-86, rel: boosts, reason: "based on Relic 45, The Tower ... Affected by Tarot Local Speed"}
+  - {from: tarot-ace-of-swords, to: value-points, rel: boosts, reason: "Attack Mult Gain from VP +^"}
+  - {from: tarot-two-of-swords, to: value-points, rel: boosts, reason: "Attacks Ascend Power from VP +^"}
+  - {from: tarot-three-of-swords, to: attacks, rel: boosts, reason: "Attacks Prestige Power +^"}
+  - {from: tarot-five-of-wands, to: elements, rel: boosts, reason: "All Elements Factor 1 +^"}
+  - {from: tarot-the-hierophant, to: minerals, rel: boosts, reason: "Levels Up all of your common minerals by #"}
+  - {from: tarot-temperance, to: planet-fortune-pars, rel: boosts, reason: "zodiacs of that type which is in your Fortune Pars slot; passive: Empowers Base Luck and quality"}
+  - {from: tarot-temperance, to: unity, rel: boosts, reason: "stats you'd get on Unity"}
+  - {from: tarot-the-devil, to: tarot, rel: boosts, reason: "boost 1st effect of all common tarot cards by +x"}
+  - {from: trial-medium-trial-3, to: dilation-tree-points, rel: boosts, reason: "unlocks Autobuy Dp Upgrades & DTP"}
+  - {from: trial-insane-trial-1, to: trials, rel: boosts, reason: "EC from trials"}
+  - {from: trial-insane-trial-2, to: trials, rel: boosts, reason: "Trials reward is changed to PP gain mult"}
+  - {from: trial-insane-trial-5, to: score, rel: boosts, reason: "set to your current score raised to DU Power Penalty"}
+  - {from: trial-insane-trial-5, to: du-power, rel: boosts, reason: "raised to DU Power Penalty"}
+  - {from: trial-insane-trial-6, to: unity, rel: boosts, reason: "Passively gain 1 Unity per second"}
+  - {from: trial-insane-trial-6, to: minerals, rel: boosts, reason: "multiplied by Minerals' Game Speed"}
+  - {from: trial-insane-trial-6, to: game-speed, rel: boosts, reason: "multiplied by Minerals' Game Speed"}
+  - {from: tarot-artifact-temporal-bone, to: quality, rel: boosts, reason: "Water Quality factor +^0.5/level"}
+  - {from: tarot-artifact-reality-anchors, to: endoplasmic-reticula, rel: boosts, reason: "Base VE from dissolving ERs"}
+  - {from: tarot-artifact-sorrow-filters, to: elements, rel: boosts, reason: "All Elements Factor 3 +^0.02/level"}
+  - {from: refine-node-169, to: singularity-tree-tab, rel: boosts, reason: "\"Singularity Tree nodes cannot exceed the price at Level 5\" caps a cost; it raises nothing."}
 
-  - from: singularity-milestone-spaghettification
-    to: singularity-tree-tab
-    rel: boosts
-    reason: >-
-      "Unlocks Tree Tab" is an unlock, and the curated edge says so.
-
-  - from: singularity-milestone-astral-property
-    to: singularity-houses-tab
-    rel: boosts
-    reason: >-
-      "Unlocks Houses Tab" is an unlock, and the curated edge says so.
-
+  # "You can now obtain" is an unlock with no verb for the extractor to see;
+  # the curated edge above says so.
   - from: singularity-milestone-horoscope-of-the-void
     to: singular-zodiacs
     rel: boosts
     reason: >-
       "You can now obtain Singular Zodiacs" is an unlock, and the curated edge
-      says so.
-
-  - from: refine-node-46
-    to: smp
-    rel: boosts
-    reason: >-
-      "Unlocks special minerals progression" is an unlock, and the curated edge
       says so.
 
   - from: special-mineral-black-gem
@@ -8451,22 +9028,6 @@ suppress:
       The relic boosts "Sun and Moon runes". Moon Runes claims its own words, but
       the elided "Sun runes" leaves a bare "Sun" that resolves to the Planet. The
       relic's edge to Sun Runes is curated instead.
-
-  - from: singularity-tree-7-1
-    to: zodiac-level
-    rel: boosts
-    reason: >-
-      The tree node raises a Singularity Zodiac's level. The twelve Singularity
-      Zodiacs are their own entities with their own levels, so this is not the
-      Astrology stat whose name it contains.
-
-  - from: singularity-tree-7-2
-    to: zodiac-level
-    rel: boosts
-    reason: >-
-      The tree node raises a Singularity Zodiac's level. The twelve Singularity
-      Zodiacs are their own entities with their own levels, so this is not the
-      Astrology stat whose name it contains.
 
   # PIG is the Plague layer's currency, written in capitals. The Eternity Zoo
   # animal named Pig is a different thing entirely, and the vocabulary matches
@@ -8564,40 +9125,6 @@ suppress:
       "Relic 45 effect is multiplied based on your fire (SMP Exp)" -- the node
       reads fire, not SMP. The edge to Relic 45 is the real one.
 
-  # "Unlocks <grade> Factor for singularity" names Singularity Mult's factor,
-  # not the Singularity count; the curated edges to singularity-mult replace
-  # these.
-  - from: particles-rank-bonus-2
-    to: singularity
-    rel: boosts
-    reason: >-
-      "Unlocks Rank Factor for singularity" -- a factor of Singularity Mult.
-
-  - from: particles-tier-bonus-4
-    to: singularity
-    rel: boosts
-    reason: >-
-      "Unlocks Tier Factor for singularity" -- a factor of Singularity Mult.
-
-  - from: particles-tetr-bonus-4
-    to: singularity
-    rel: boosts
-    reason: >-
-      "Unlocks Tetr Factor for singularity" -- a factor of Singularity Mult.
-
-  - from: particles-pent-bonus-4
-    to: singularity
-    rel: boosts
-    reason: >-
-      "Unlocks Pent Factor for singularity" -- a factor of Singularity Mult.
-
-  - from: refine-node-181
-    to: spark-mastery
-    rel: boosts
-    reason: >-
-      "Unlocks Spark Mastery Factor for Singularity" -- Spark Mastery feeds the
-      factor; the node does not raise it.
-
   # "The rank 8 bonus is 10 times stronger: +0.5 attack multiplier power per
   # rank" strengthens the Rank 8 bonus, which the curated edge to
   # particles-rank-bonus-4 says; "attack multiplier" here is that bonus's
@@ -8608,38 +9135,3 @@ suppress:
     reason: >-
       Restates the Rank 8 bonus it strengthens; the edge to
       particles-rank-bonus-4 carries it.
-
-  # Inputs read as targets on the Refine Tree; the curated reversals replace
-  # them.
-  - from: refine-node-138
-    to: particles-rank
-    rel: boosts
-    reason: >-
-      "Particle Rank boosts Refine Point gain" -- the node reads rank.
-
-  - from: refine-node-144
-    to: particles-rank
-    rel: boosts
-    reason: >-
-      "Particle Rank boosts gold" -- the node reads rank.
-
-  - from: refine-node-147
-    to: particles-beta
-    rel: boosts
-    reason: >-
-      "Beta Particles boost Alpha Generator Base a bit better" -- the node
-      strengthens how Beta boosts the Alpha generator; it does not produce Beta.
-
-  - from: refine-node-151
-    to: singularity-local-speed
-    rel: boosts
-    reason: >-
-      "(also affected by local singularity speed)" -- the node's passive gain
-      reads the speed; it does not raise it.
-
-  - from: refine-node-166
-    to: singularity-local-speed
-    rel: boosts
-    reason: >-
-      "Local Particles Speed is boosted by ^0.1 of Local Singularity Speed" --
-      the node reads the speed to boost Particles; it does not raise it.

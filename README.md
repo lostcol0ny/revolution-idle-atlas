@@ -219,16 +219,16 @@ come out, both with `source: game`:
   `particles-sparks` group.
   The game's help text states each; the prefixes live in
   `particles.MEMBER_LINKS`.
-- **Description matches**, `uncertain` and always `boosts`. The description of
-  a node only the game describes — one `atlas game` created, carrying `system`
-  — goes through the same resolver as wiki effect prose. A node a wiki page
-  already describes is matched on the wiki's effects alone, so one entity is
-  never matched twice in two wordings. On top of the resolver's "based on"
-  rule, the game marks an improver as an input: "Refinement node 141 improves
-  this bonus" and "(improved by refinement node 147)" give an edge *into* the
-  bonus. A grade the text names ("+0.01 per rank", "Particle Rank boosts
-  Luck") produces no edge: a bonus reads its grade, and the member link already
-  says so.
+- **Description matches**, `uncertain`. The description of a node only the
+  game describes — one `atlas game` created, carrying `system` — goes through
+  the same resolver as wiki effect prose (see [How prose is
+  read](#how-prose-is-read)). A node a wiki page already describes is matched
+  on the wiki's effects alone, so one entity is never matched twice in two
+  wordings. On top of the resolver's input rules, the game marks an improver as
+  an input: "Refinement node 141 improves this bonus" and "(improved by
+  refinement node 147)" give an edge *into* the bonus. A grade the text names
+  ("+0.01 per rank", "Particle Rank boosts Luck") produces no edge: a bonus
+  reads its grade, and the member link already says so.
 
 Correct a wrong one the usual way: a curated edge plus a `suppress` entry in
 `data/relationships.yaml`.
@@ -241,7 +241,8 @@ entity's name and its effects.
 
 Everything read through the manifest is deliberately low-confidence: swept nodes
 are `provisional` and swept edges are `uncertain`, and `boosts` unless the column
-is declared a requirement (below). A column
+is declared a requirement (below) or the sentence opens on an unlock (see [How
+prose is read](#how-prose-is-read)). A column
 heading is a guess about what a page means, and a wrong edge is worse than a
 missing one — a missing one shows up in `docs/coverage.md`, a wrong one just
 looks true. Correct anything wrong in `data/relationships.yaml`, which wins every
@@ -412,6 +413,33 @@ ALL-UPPERCASE alias is matched **case-sensitively** so that `AP` cannot fire ins
 characters are ignored unless they are ALL-UPPERCASE, where two is allowed. Every edge
 produced by prose matching is stamped `confidence: uncertain`, because prose is weaker
 evidence than a structural table cell.
+
+#### How prose is read
+
+A name found in a sentence is a target — `item boosts name` — unless the
+sentence's shape says otherwise. The rules live in `extract/refs.py` (`resolve`)
+and apply to every parser:
+
+- **Inputs point the other way.** A name after "based on", "by amount of",
+  "boosted by", "affected by" or "improved by", or before the verb "boost(s)"
+  ("Eternities ^2.00 boost DP gain"), is what the item reads, so the edge runs
+  `name → item`. The noun does not count: "a boost to X", "Luck boost to
+  Water" and the label "Singularity Mult Boost" name targets.
+- **Kept and waived things are not boosted.** A clause with "keep … on"
+  ("Keep Elements on Singularity Reset") or "does not spend" / "doesn't
+  decrease" yields no edge.
+- **A reset is not a target.** A name at most one word before "reset(s)"
+  ("on Unity Reset", "Alpha Prestige resets nothing") or right after "resets"
+  ("Resets SMS Factor to 5,000") yields no edge.
+- **An opening unlock is an unlock.** "Unlock(s) X" where X is the whole object
+  ("Unlocks Singularity", "Unlock runes and rune upgrades", "Unlocks Plague
+  Tab") gives `item unlocks X`. A name naming only a part or mode of the
+  object ("Unlocks Auto Unity", "Unlocks Spark Mastery Factor for
+  Singularity") yields no edge; what follows "on", "that", "which", "to" or
+  "in" is read as usual.
+- **A bracket glosses.** A name inside brackets ("(Attacks) Damage Mult",
+  "Relic 26 effect (improves Quality donut)", "(see Plague)") is a target only
+  when nothing outside the brackets names one.
 
 **Node `confidence`**: `documented`, `provisional`, `unknown`.
 

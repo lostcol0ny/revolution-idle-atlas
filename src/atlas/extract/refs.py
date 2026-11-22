@@ -2,7 +2,7 @@ import re
 from collections.abc import Iterable
 from dataclasses import dataclass
 
-from atlas.models import EdgeConfidence, Op
+from atlas.models import EdgeConfidence, Op, Rel
 
 _SLUG_RE = re.compile(r"[^a-z0-9]+")
 _COMMENT_RE = re.compile(r"<!--.*?-->", re.DOTALL)
@@ -221,6 +221,13 @@ class Reference:
     # True when the sentence named this node as something it reads rather than
     # something it changes. Read it through `endpoints` rather than directly.
     is_input: bool = False
+    # True when the sentence opens on "Unlock(s)" and this is the thing it
+    # names. Read it through `rel` rather than directly.
+    is_unlock: bool = False
+
+    @property
+    def rel(self) -> Rel:
+        return Rel.UNLOCKS if self.is_unlock else Rel.BOOSTS
 
     def endpoints(self, node_id: str) -> tuple[str, str]:
         """The (from, to) pair for an edge between `node_id` and this target.
@@ -292,14 +299,53 @@ def _effect_index(text: str, after: int) -> int | None:
     return ORDINALS[match.group(1).lower()] if match else None
 
 
-# Two markers, and only two, because these are the two the corpus actually
-# writes: 33 effect strings say "based on" or "by amount of" and no other
-# phrasing separates what an effect changes from what it merely measures.
+# "based on" and "by amount of" separate what an effect changes from what it
+# merely measures; so does a passive "boosted by", "affected by" or "improved
+# by" ("Local Particles Speed is boosted by ^0.1 of Local Singularity Speed").
 # "from", "multiplied by" and "per" were all considered and rejected — each
 # reads as an input in some sentences and as an operator or a qualifier in
-# others ("PP Gain Bonus from Trials", "multiplied by 5"), and reversing a real
+# others ("Gold Gain (from Attacks)", "multiplied by 5"), and reversing a real
 # target is a wrong edge exactly like failing to reverse an input is.
-_INPUT_MARKER_RE = re.compile(r"\bbased on\b|\bby amount of\b", re.IGNORECASE)
+_INPUT_MARKER_RE = re.compile(
+    r"\bbased on\b|\bby amount of\b|\b(?:boosted|affected|improved) by\b",
+    re.IGNORECASE,
+)
+# The verb, not the noun: "a boost to X", "Luck boost to Water" and the label
+# "Singularity Mult Boost" name a target, while "Eternities ^2.00 boost DP
+# gain" names an input before the word.
+_BOOST_VERB_RE = re.compile(
+    r"(?<!\ba )(?<!\bthe )\bboosts?\b(?!\s+to\b)(?=\s+\w)", re.IGNORECASE
+)
+# Clause openers for the subject of that verb. A colon or bracket starts a new
+# subject: "Fire Node 3: Attack level past 3600 boosts Fire generation". A full
+# stop only when space follows, so the one in "^2.00" does not.
+_SUBJECT_START_RE = re.compile(r"[.;!?](?=\s)|[:(]")
+
+# A clause is the unit the shape rules below read. A full stop must be
+# followed by space, so "x1.1" stays whole; " / " joins two effects in a cell.
+_CLAUSE_BREAK_RE = re.compile(r"[.;!?](?:\s+|$)|\s+/\s+")
+# A clause that names what an effect protects or waives, never what it raises:
+# "Keep Elements, Minerals and Tarot on Singularity Reset", "Buying Relics does
+# not spend gold", "Spawning common minerals doesn't decrease your gold". A
+# keep with no "on" is not a reset ("Keep the lowest cost for spawning").
+_INERT_CLAUSE_RE = re.compile(
+    r"\bkeep\b.*\bon\b|\b(?:does|do)(?:n't| not)\s+(?:spend|decrease)\b",
+    re.IGNORECASE,
+)
+# A name at most one word either side of "reset" names the reset or what it
+# wipes, not a target: "on Singularity Reset", "Alpha Prestige resets
+# nothing", "Resets SMS Factor to 5,000" — but "PP gain on reset" still names PP.
+_BEFORE_RESET_RE = re.compile(r"(?:\s+[\w']+)?\s+resets?\b", re.IGNORECASE)
+_AFTER_RESET_RE = re.compile(r"\bresets?\s+(?:[\w']+\s+)?$", re.IGNORECASE)
+_UNLOCK_OPENER_RE = re.compile(r"\s*unlocks?\s+(?:the\s+)?", re.IGNORECASE)
+# The unlocked object runs to the first word that starts saying what it does:
+# "Unlocks the Singularity Mult effect | on the base of all generators".
+_UNLOCK_OBJECT_STOP_RE = re.compile(r"\b(?:on|that|which|to|in)\b", re.IGNORECASE)
+# What follows the unlocked name when it is the whole object: "Unlocks
+# Singularity", "Unlock runes and rune upgrades", "Unlocks Plague Tab". Anything
+# else ("Unlocks Auto Unity", "Unlocks Rank Factor for singularity") is a part
+# or a mode of the named thing, not the thing.
+_UNLOCK_OBJECT_END_RE = re.compile(r"\s*(?:$|[.,;:!?(]|\band\b|\btab\b)", re.IGNORECASE)
 
 
 def _clause_end(text: str, marker_start: int) -> int:
@@ -324,10 +370,29 @@ def _clause_end(text: str, marker_start: int) -> int:
 
 
 def _input_spans(text: str) -> list[tuple[int, int]]:
-    return [
+    spans = [
         (match.end(), _clause_end(text, match.start()))
         for match in _INPUT_MARKER_RE.finditer(text)
     ]
+    for match in _BOOST_VERB_RE.finditer(text):
+        openers = list(_SUBJECT_START_RE.finditer(text, 0, match.start()))
+        start = openers[-1].end() if openers else 0
+        if text[start : match.start()].strip():
+            spans.append((start, match.start()))
+    return spans
+
+
+def _clauses(text: str) -> list[tuple[int, int]]:
+    bounds, start = [], 0
+    for match in _CLAUSE_BREAK_RE.finditer(text):
+        bounds.append((start, match.start()))
+        start = match.end()
+    bounds.append((start, len(text)))
+    return bounds
+
+
+def _paren_depth(text: str, at: int) -> int:
+    return text.count("(", 0, at) - text.count(")", 0, at)
 
 
 # 3 characters, or 2 when the surface form is ALL-UPPERCASE. The floor exists to
@@ -552,10 +617,44 @@ def resolve(text: str, vocabulary: Vocabulary | None = None) -> list[Reference]:
         ]
 
     spans = _input_spans(text)
+    clauses = _clauses(text)
+    # A bracket glosses what stands outside it: "(Attacks) Damage Mult",
+    # "Relic 26 effect (improves Quality donut)", "(see Plague)". A name inside
+    # one is a target only when nothing outside names one.
+    named_outside = any(_paren_depth(text, hit[0]) <= 0 for hit in marked)
     references: list[Reference] = []
     seen: set[tuple[str, int | None, bool]] = set()
     for start, target_id, end, from_vocabulary in sorted(marked, key=lambda hit: hit[0]):
+        clause_start, clause_end = next(
+            ((lower, upper) for lower, upper in clauses if lower <= start < upper),
+            (0, len(text)),
+        )
+        if _INERT_CLAUSE_RE.search(text, clause_start, clause_end):
+            continue
+        if _BEFORE_RESET_RE.match(text, end) or _AFTER_RESET_RE.search(text, clause_start, start):
+            continue
         is_input = any(lower <= start < upper for lower, upper in spans)
+        if (
+            from_vocabulary
+            and not is_input
+            and named_outside
+            and _paren_depth(text, start) > 0
+        ):
+            continue
+        opener = _UNLOCK_OPENER_RE.match(text, clause_start)
+        in_object = False
+        if opener is not None and not is_input:
+            stop = _UNLOCK_OBJECT_STOP_RE.search(text, opener.end(), clause_end)
+            in_object = start < (stop.start() if stop else clause_end)
+        is_unlock = (
+            in_object
+            and start == opener.end()
+            and _UNLOCK_OBJECT_END_RE.match(text, end) is not None
+        )
+        if in_object and from_vocabulary and not is_unlock:
+            # "Unlocks Auto Unity", "Unlocks Spark Mastery Factor for
+            # Singularity": the clause unlocks a part or mode of what it names.
+            continue
         reference = Reference(
             target_id,
             # Dropped rather than carried across the swap: the index counts into
@@ -564,6 +663,7 @@ def resolve(text: str, vocabulary: Vocabulary | None = None) -> list[Reference]:
             None if is_input else _effect_index(text, end),
             from_vocabulary,
             is_input,
+            is_unlock,
         )
         key = (reference.target_id, reference.targets_effect, reference.is_input)
         if key in seen:

@@ -6382,13 +6382,6 @@ nodes:
   - text: PlG Gain ^
 edges:
 - from: relic-1
-  to: attacks
-  rel: boosts
-  op: add
-  note: A Simple (flat) Boost to (Attacks) Damage Mult
-  source: wiki:Relics
-  confidence: uncertain
-- from: relic-1
   to: damage-mult
   rel: boosts
   op: add
@@ -6400,13 +6393,6 @@ edges:
   rel: boosts
   op: add
   note: A Boost to Zodiac Quality
-  source: wiki:Relics
-  confidence: uncertain
-- from: relic-3
-  to: attacks
-  rel: boosts
-  op: add
-  note: Zodiacs Level Sum (ZLM) Boost (Attacks) Damage Mult
   source: wiki:Relics
   confidence: uncertain
 - from: relic-3
@@ -6431,14 +6417,7 @@ edges:
   source: wiki:Relics
   confidence: uncertain
 - from: relic-7
-  to: attacks
-  rel: boosts
-  op: add
-  note: (Boosts) Attacks Lap Speed Mult
-  source: wiki:Relics
-  confidence: uncertain
-- from: relic-7
-  to: lap-speed
+  to: attack-circles
   rel: boosts
   op: add
   note: (Boosts) Attacks Lap Speed Mult
@@ -6446,13 +6425,6 @@ edges:
   confidence: uncertain
 - from: relic-9
   to: gold-gain
-  rel: boosts
-  op: add
-  note: (Boosts) Gold Gain (from Attacks)
-  source: wiki:Relics
-  confidence: uncertain
-- from: relic-9
-  to: attacks
   rel: boosts
   op: add
   note: (Boosts) Gold Gain (from Attacks)
@@ -6466,7 +6438,7 @@ edges:
   source: wiki:Relics
   confidence: uncertain
 - from: relic-11
-  to: supernova
+  to: supernova-rewards
   rel: boosts
   op: add
   note: Supernova Bonuses (are) Powered to X
@@ -6496,22 +6468,6 @@ edges:
     and Luck)
   source: wiki:Relics
   confidence: provisional
-- from: relic-15
-  to: quality
-  rel: boosts
-  op: add
-  note: Increases efficiency of relics 2 and 4 (Pinewood Bracelet and Four Leaf Clover for Zodiac Quality
-    and Luck)
-  source: wiki:Relics
-  confidence: uncertain
-- from: relic-15
-  to: luck
-  rel: boosts
-  op: add
-  note: Increases efficiency of relics 2 and 4 (Pinewood Bracelet and Four Leaf Clover for Zodiac Quality
-    and Luck)
-  source: wiki:Relics
-  confidence: uncertain
 - from: relic-16
   to: mult-gain
   rel: boosts
@@ -6533,13 +6489,6 @@ edges:
   note: Relic 9 is powered to X (Improves gold gain)
   source: wiki:Relics
   confidence: provisional
-- from: relic-17
-  to: gold-gain
-  rel: boosts
-  op: mult
-  note: Relic 9 is powered to X (Improves gold gain)
-  source: wiki:Relics
-  confidence: uncertain
 - from: relic-18
   to: ascension-power
   rel: boosts
@@ -6715,13 +6664,6 @@ edges:
   note: Adds base to Refine Node 2 (Attacks bulk leveling)
   source: wiki:Relics
   confidence: provisional
-- from: relic-38
-  to: attacks
-  rel: boosts
-  op: add
-  note: Adds base to Refine Node 2 (Attacks bulk leveling)
-  source: wiki:Relics
-  confidence: uncertain
 - from: relic-40
   to: relic-30
   rel: boosts
@@ -6771,22 +6713,8 @@ edges:
   note: Empowers Relic 45 (SMP EXP)
   source: wiki:Relics
   confidence: uncertain
-- from: relic-46
-  to: smp
-  rel: boosts
-  op: add
-  note: Empowers Relic 45 (SMP EXP)
-  source: wiki:Relics
-  confidence: uncertain
 - from: relic-47
   to: relic-33
-  rel: boosts
-  op: exp
-  note: Empowers Relic 33 (RfP Gain)
-  source: wiki:Relics
-  confidence: uncertain
-- from: relic-47
-  to: refinement-points
   rel: boosts
   op: exp
   note: Empowers Relic 33 (RfP Gain)
@@ -6808,13 +6736,6 @@ edges:
   confidence: uncertain
 - from: relic-50
   to: relic-38
-  rel: boosts
-  op: add
-  note: Multiplies Relic 38's effect (Attacks bulk leveling)
-  source: wiki:Relics
-  confidence: uncertain
-- from: relic-50
-  to: attacks
   rel: boosts
   op: add
   note: Multiplies Relic 38's effect (Attacks bulk leveling)
@@ -6843,13 +6764,6 @@ edges:
   confidence: uncertain
 - from: relic-53
   to: tarot
-  rel: boosts
-  op: exp
-  note: Empowers total Tarot Challenge reward (Sacrifice Dust gain)
-  source: wiki:Relics
-  confidence: uncertain
-- from: relic-53
-  to: sacrifice-dust
   rel: boosts
   op: exp
   note: Empowers total Tarot Challenge reward (Sacrifice Dust gain)
@@ -6925,13 +6839,6 @@ edges:
   note: Multiplies the effect of Endoplasmic Reticulum Upgrade 4 (PIP to ERP conversion Rate)
   source: wiki:Relics
   confidence: uncertain
-- from: relic-63
-  to: erp
-  rel: boosts
-  op: add
-  note: Multiplies the effect of Endoplasmic Reticulum Upgrade 4 (PIP to ERP conversion Rate)
-  source: wiki:Relics
-  confidence: uncertain
 - from: relic-66
   to: relic-62
   rel: boosts
@@ -6962,7 +6869,7 @@ edges:
   source: wiki:Relics
   confidence: uncertain
 - from: relic-71
-  to: singularity
+  to: singularity-tree-tab
   rel: boosts
   op: exp
   note: Divides the cost exponent of all Singularity Tree upgrades by /
@@ -6991,13 +6898,6 @@ edges:
   confidence: uncertain
 - from: relic-75
   to: spark-mastery
-  rel: boosts
-  op: add
-  note: Multiplies Mastery Gain (Spawning & Destroying sparks)
-  source: wiki:Relics
-  confidence: uncertain
-- from: relic-75
-  to: particles-sparks
   rel: boosts
   op: add
   note: Multiplies Mastery Gain (Spawning & Destroying sparks)
@@ -7048,7 +6948,7 @@ edges:
   confidence: documented
 - from: refine-node-5
   to: merge-level
-  rel: boosts
+  rel: unlocks
   note: Unlocks merge level (you get 1.00 exp per merge)
   source: wiki:Minerals/Refine_Tree
   confidence: uncertain
@@ -7116,12 +7016,6 @@ edges:
   rel: requires
   source: wiki:Minerals/Refine_Tree
   confidence: documented
-- from: refine-node-12
-  to: value-points
-  rel: boosts
-  note: Buying first ten mineral upgrades does not spend VP
-  source: wiki:Minerals/Refine_Tree
-  confidence: uncertain
 - from: refine-node-6
   to: refine-node-13
   rel: requires
@@ -7142,12 +7036,6 @@ edges:
   rel: requires
   source: wiki:Minerals/Refine_Tree
   confidence: documented
-- from: refine-node-15
-  to: gold
-  rel: boosts
-  note: Buying Relics does not spend gold
-  source: wiki:Minerals/Refine_Tree
-  confidence: uncertain
 - from: refine-node-8
   to: refine-node-16
   rel: requires
@@ -7187,7 +7075,7 @@ edges:
   confidence: documented
 - from: refine-node-18
   to: magnets
-  rel: boosts
+  rel: unlocks
   note: Unlock magnets and new mineral upgrades! Magnet base chance at the start is 1% on merge.
   source: wiki:Minerals/Refine_Tree
   confidence: uncertain
@@ -7224,39 +7112,15 @@ edges:
   source: wiki:Minerals/Refine_Tree
   confidence: uncertain
 - from: refine-node-21
-  to: attacks
-  rel: boosts
-  note: Gold on Unity (in Attacks) is multiplied by seconds since last Unity
-  source: wiki:Minerals/Refine_Tree
-  confidence: uncertain
-- from: refine-node-21
   to: refine-node-22
   rel: requires
   source: wiki:Minerals/Refine_Tree
   confidence: documented
-- from: refine-node-22
-  to: minerals
-  rel: boosts
-  note: Spawning common minerals doesn't decrease your gold
-  source: wiki:Minerals/Refine_Tree
-  confidence: uncertain
-- from: refine-node-22
-  to: gold
-  rel: boosts
-  note: Spawning common minerals doesn't decrease your gold
-  source: wiki:Minerals/Refine_Tree
-  confidence: uncertain
 - from: refine-node-21
   to: refine-node-23
   rel: requires
   source: wiki:Minerals/Refine_Tree
   confidence: documented
-- from: refine-node-23
-  to: polish-points
-  rel: boosts
-  note: Buying polish upgrades doesn't decrease your PP
-  source: wiki:Minerals/Refine_Tree
-  confidence: uncertain
 - from: refine-node-22
   to: refine-node-24
   rel: requires
@@ -7376,20 +7240,13 @@ edges:
   source: wiki:Minerals/Refine_Tree
   confidence: documented
 - from: refine-node-34
-  to: magnets
-  rel: boosts
-  note: Buying magnet mineral upgrades doesn't spend your magnets. And unlock autobuy for magnet mineral
-    upgrades
-  source: wiki:Minerals/Refine_Tree
-  confidence: uncertain
-- from: refine-node-34
   to: refine-node-35
   rel: requires
   source: wiki:Minerals/Refine_Tree
   confidence: documented
 - from: refine-node-35
   to: runes
-  rel: boosts
+  rel: unlocks
   note: Unlock runes and rune upgrades
   source: wiki:Minerals/Refine_Tree
   confidence: uncertain
@@ -7461,7 +7318,7 @@ edges:
   confidence: documented
 - from: refine-node-41
   to: special-minerals
-  rel: boosts
+  rel: unlocks
   note: Unlocks special minerals
   source: wiki:Minerals/Refine_Tree
   confidence: uncertain
@@ -7504,7 +7361,7 @@ edges:
   confidence: documented
 - from: refine-node-46
   to: smp
-  rel: boosts
+  rel: unlocks
   note: Unlocks special minerals progression
   source: wiki:Minerals/Refine_Tree
   confidence: uncertain
@@ -7567,13 +7424,6 @@ edges:
   rel: requires
   source: wiki:Minerals/Refine_Tree
   confidence: documented
-- from: refine-node-53
-  to: special-minerals
-  rel: boosts
-  note: Unlock automerge for special minerals (1 in 10,000 in game seconds, affected by local mineral
-    speed)
-  source: wiki:Minerals/Refine_Tree
-  confidence: uncertain
 - from: refine-node-50
   to: refine-node-54
   rel: requires
@@ -7592,7 +7442,7 @@ edges:
   confidence: documented
 - from: refine-node-55
   to: elements
-  rel: boosts
+  rel: unlocks
   note: Unlock Elements
   source: wiki:Minerals/Refine_Tree
   confidence: uncertain
@@ -7644,14 +7494,14 @@ edges:
   note: Passive Merge EXP is also boosted by Relic 28 and max spawn mineral level
   source: wiki:Minerals/Refine_Tree
   confidence: uncertain
-- from: refine-node-61
-  to: relic-28
+- from: relic-28
+  to: refine-node-61
   rel: boosts
   note: Passive Merge EXP is also boosted by Relic 28 and max spawn mineral level
   source: wiki:Minerals/Refine_Tree
   confidence: provisional
-- from: refine-node-61
-  to: mineral-level
+- from: mineral-level
+  to: refine-node-61
   rel: boosts
   note: Passive Merge EXP is also boosted by Relic 28 and max spawn mineral level
   source: wiki:Minerals/Refine_Tree
@@ -7666,24 +7516,6 @@ edges:
   rel: requires
   source: wiki:Minerals/Refine_Tree
   confidence: documented
-- from: refine-node-63
-  to: dilation-tree
-  rel: boosts
-  note: Keep Dilation Tree and DTP on Unity Reset
-  source: wiki:Minerals/Refine_Tree
-  confidence: uncertain
-- from: refine-node-63
-  to: dilation-tree-points
-  rel: boosts
-  note: Keep Dilation Tree and DTP on Unity Reset
-  source: wiki:Minerals/Refine_Tree
-  confidence: uncertain
-- from: refine-node-63
-  to: unity
-  rel: boosts
-  note: Keep Dilation Tree and DTP on Unity Reset
-  source: wiki:Minerals/Refine_Tree
-  confidence: uncertain
 - from: refine-node-61
   to: refine-node-64
   rel: requires
@@ -7739,14 +7571,7 @@ edges:
   confidence: documented
 - from: refine-node-70
   to: tarot
-  rel: boosts
-  note: Now you can spawn black special gems (1% chance). Unlocks Tarot. Resets SMS Factor to 5,000 if
-    it's >6,000 or decrease it by 1,000
-  source: wiki:Minerals/Refine_Tree
-  confidence: uncertain
-- from: refine-node-70
-  to: sms-factor
-  rel: boosts
+  rel: unlocks
   note: Now you can spawn black special gems (1% chance). Unlocks Tarot. Resets SMS Factor to 5,000 if
     it's >6,000 or decrease it by 1,000
   source: wiki:Minerals/Refine_Tree
@@ -7762,8 +7587,8 @@ edges:
   note: Get 0.01% of your PP gain on reset every second (affected by local minerals speed)
   source: wiki:Minerals/Refine_Tree
   confidence: uncertain
-- from: refine-node-71
-  to: minerals
+- from: mineral-local-speed
+  to: refine-node-71
   rel: boosts
   note: Get 0.01% of your PP gain on reset every second (affected by local minerals speed)
   source: wiki:Minerals/Refine_Tree
@@ -7877,13 +7702,6 @@ edges:
   source: wiki:Minerals/Refine_Tree
   confidence: documented
 - from: refine-node-85
-  to: special-minerals
-  rel: boosts
-  note: Unlocks Sacrifice tab for Special Minerals. You now gain Sacrifice Dust when deleting minerals,
-    using the Tower, or using the Delete Special Mineral macro block.
-  source: wiki:Minerals/Refine_Tree
-  confidence: uncertain
-- from: refine-node-85
   to: sacrifice-dust
   rel: boosts
   note: Unlocks Sacrifice tab for Special Minerals. You now gain Sacrifice Dust when deleting minerals,
@@ -7975,18 +7793,6 @@ edges:
   rel: requires
   source: wiki:Minerals/Refine_Tree
   confidence: documented
-- from: refine-node-89
-  to: tarot
-  rel: boosts
-  note: Unlocks Tarot Challenges! (All Special Minerals must be sacrificed)
-  source: wiki:Minerals/Refine_Tree
-  confidence: uncertain
-- from: refine-node-89
-  to: special-minerals
-  rel: boosts
-  note: Unlocks Tarot Challenges! (All Special Minerals must be sacrificed)
-  source: wiki:Minerals/Refine_Tree
-  confidence: uncertain
 - from: refine-node-87
   to: refine-node-90
   rel: requires
@@ -8036,8 +7842,8 @@ edges:
   rel: requires
   source: wiki:Minerals/Refine_Tree
   confidence: documented
-- from: refine-node-93
-  to: smp
+- from: smp
+  to: refine-node-93
   rel: boosts
   note: SMP Gem Efficiency also boosts the second Special Mineral sacrifce effect at a reduced rate
   source: wiki:Minerals/Refine_Tree
@@ -8117,7 +7923,7 @@ edges:
   confidence: documented
 - from: refine-node-103
   to: plague
-  rel: boosts
+  rel: unlocks
   note: Unlocks Plague Tab
   source: wiki:Minerals/Refine_Tree
   confidence: uncertain
@@ -8128,7 +7934,7 @@ edges:
   confidence: documented
 - from: refine-node-104
   to: endoplasmic-reticula
-  rel: boosts
+  rel: unlocks
   note: Unlocks Endoplasmic Reticulum
   source: wiki:Minerals/Refine_Tree
   confidence: uncertain
@@ -8137,8 +7943,8 @@ edges:
   rel: requires
   source: wiki:Minerals/Refine_Tree
   confidence: documented
-- from: refine-node-105
-  to: endoplasmic-reticula
+- from: endoplasmic-reticula
+  to: refine-node-105
   rel: boosts
   note: The Hierophant Passive Bonus is now boosted by the level of your equipped Endoplasmic Reticulum
   source: wiki:Minerals/Refine_Tree
@@ -8148,8 +7954,8 @@ edges:
   rel: requires
   source: wiki:Minerals/Refine_Tree
   confidence: documented
-- from: refine-node-106
-  to: endoplasmic-reticula
+- from: endoplasmic-reticula
+  to: refine-node-106
   rel: boosts
   note: Spread Power of your currently equipped Endoplasmic Reticulum also boosts Black Gem base effect
     (x???)
@@ -8296,7 +8102,7 @@ edges:
   confidence: documented
 - from: refine-node-121
   to: singularity
-  rel: boosts
+  rel: unlocks
   note: Unlocks Singularity
   source: wiki:Minerals/Refine_Tree
   confidence: uncertain
@@ -8361,7 +8167,7 @@ edges:
   source: wiki:Minerals/Refine_Tree
   confidence: documented
 - from: refine-node-126
-  to: atom-penalty
+  to: atoms-gain
   rel: boosts
   note: No longer applies an Atom gain penalty at 1e50
   source: wiki:Minerals/Refine_Tree
@@ -8372,7 +8178,7 @@ edges:
   source: wiki:Minerals/Refine_Tree
   confidence: documented
 - from: refine-node-127
-  to: atom-penalty
+  to: atoms-gain
   rel: boosts
   note: No longer applies an Atom gain penalty at 14e153
   source: wiki:Minerals/Refine_Tree
@@ -8388,7 +8194,7 @@ edges:
   source: wiki:Minerals/Refine_Tree
   confidence: documented
 - from: refine-node-128
-  to: atom-penalty
+  to: atoms-gain
   rel: boosts
   note: Makes the first Atom penalty weaker by 10% [per level]. At max level, removes it completely.
   source: wiki:Minerals/Refine_Tree
@@ -8493,8 +8299,8 @@ edges:
   rel: requires
   source: wiki:Minerals/Refine_Tree
   confidence: documented
-- from: refine-node-135
-  to: singularity-mult
+- from: singularity-mult
+  to: refine-node-135
   rel: boosts
   note: Adds a Singularity Mult effect that slightly boosts Luck
   source: wiki:Minerals/Refine_Tree
@@ -8526,8 +8332,8 @@ edges:
   rel: requires
   source: wiki:Minerals/Refine_Tree
   confidence: documented
-- from: refine-node-138
-  to: particles-rank
+- from: particles-rank
+  to: refine-node-138
   rel: boosts
   note: Particle Rank boosts Refine Point gain (^X / +0.001 per rank)
   source: wiki:Minerals/Refine_Tree
@@ -8602,8 +8408,8 @@ edges:
   rel: requires
   source: wiki:Minerals/Refine_Tree
   confidence: documented
-- from: refine-node-144
-  to: particles-rank
+- from: particles-rank
+  to: refine-node-144
   rel: boosts
   note: 'Particle Rank boosts gold: ^X (+0.01 per rank)'
   source: wiki:Minerals/Refine_Tree
@@ -8631,12 +8437,6 @@ edges:
   source: wiki:Minerals/Refine_Tree
   confidence: documented
 - from: refine-node-146
-  to: singularity-mult
-  rel: boosts
-  note: Unlocks the Singularity Mult effect on the base of Alpha & Beta generators
-  source: wiki:Minerals/Refine_Tree
-  confidence: uncertain
-- from: refine-node-146
   to: particles-alpha
   rel: boosts
   note: Unlocks the Singularity Mult effect on the base of Alpha & Beta generators
@@ -8653,8 +8453,8 @@ edges:
   rel: requires
   source: wiki:Minerals/Refine_Tree
   confidence: documented
-- from: refine-node-147
-  to: particles-beta
+- from: particles-beta
+  to: refine-node-147
   rel: boosts
   note: Beta Particles boost Alpha Generator Base a bit better (0.2 -> 0.3)
   source: wiki:Minerals/Refine_Tree
@@ -8709,8 +8509,8 @@ edges:
   note: You passively gain Singularity Multiplier every second (also affected by local singularity speed)
   source: wiki:Minerals/Refine_Tree
   confidence: uncertain
-- from: refine-node-151
-  to: singularity-local-speed
+- from: singularity-local-speed
+  to: refine-node-151
   rel: boosts
   note: You passively gain Singularity Multiplier every second (also affected by local singularity speed)
   source: wiki:Minerals/Refine_Tree
@@ -8747,19 +8547,13 @@ edges:
   rel: requires
   source: wiki:Minerals/Refine_Tree
   confidence: documented
-- from: refine-node-155
-  to: singularity-mult
-  rel: boosts
-  note: Unlocks the Singularity Mult effect on the base of all generators
-  source: wiki:Minerals/Refine_Tree
-  confidence: uncertain
 - from: refine-node-154
   to: refine-node-156
   rel: requires
   source: wiki:Minerals/Refine_Tree
   confidence: documented
 - from: refine-node-156
-  to: atom-penalty
+  to: atoms-gain
   rel: boosts
   note: Atom Penalty at 1e5,000 is x1.1 weaker now
   source: wiki:Minerals/Refine_Tree
@@ -8770,7 +8564,7 @@ edges:
   source: wiki:Minerals/Refine_Tree
   confidence: documented
 - from: refine-node-157
-  to: atom-penalty
+  to: atoms-gain
   rel: boosts
   note: Atom Penalty at 1e10,000 is x1.2 weaker now
   source: wiki:Minerals/Refine_Tree
@@ -8780,12 +8574,6 @@ edges:
   rel: requires
   source: wiki:Minerals/Refine_Tree
   confidence: documented
-- from: refine-node-158
-  to: particles-alpha
-  rel: boosts
-  note: Alpha particle upgrades do not spend alpha points
-  source: wiki:Minerals/Refine_Tree
-  confidence: uncertain
 - from: refine-node-144
   to: refine-node-159
   rel: requires
@@ -8824,7 +8612,7 @@ edges:
   source: wiki:Minerals/Refine_Tree
   confidence: documented
 - from: refine-node-163
-  to: singularity
+  to: singularity-tree-tab
   rel: boosts
   note: Singularity Tree levels now go 0 -> 2 -> 4 -> 6 -> 8 -> 10
   source: wiki:Minerals/Refine_Tree
@@ -8834,30 +8622,18 @@ edges:
   rel: requires
   source: wiki:Minerals/Refine_Tree
   confidence: documented
-- from: refine-node-164
-  to: particles-beta
-  rel: boosts
-  note: Beta particle upgrades do not spend beta points
-  source: wiki:Minerals/Refine_Tree
-  confidence: uncertain
 - from: refine-node-161
   to: refine-node-165
   rel: requires
   source: wiki:Minerals/Refine_Tree
   confidence: documented
-- from: refine-node-165
-  to: particles-gamma
-  rel: boosts
-  note: Gamma particle upgrades do not spend gemma points
-  source: wiki:Minerals/Refine_Tree
-  confidence: uncertain
 - from: refine-node-140
   to: refine-node-166
   rel: requires
   source: wiki:Minerals/Refine_Tree
   confidence: documented
-- from: refine-node-166
-  to: singularity-local-speed
+- from: singularity-local-speed
+  to: refine-node-166
   rel: boosts
   note: Local Particles Speed is boosted by ^0.1 of Local Singularity Speed
   source: wiki:Minerals/Refine_Tree
@@ -8868,7 +8644,7 @@ edges:
   source: wiki:Minerals/Refine_Tree
   confidence: documented
 - from: refine-node-167
-  to: singularity
+  to: singularity-tree-tab
   rel: boosts
   note: Singularity Tree levels now go 0 -> 4 -> 8 -> 10
   source: wiki:Minerals/Refine_Tree
@@ -8896,7 +8672,7 @@ edges:
   source: wiki:Minerals/Refine_Tree
   confidence: documented
 - from: refine-node-169
-  to: singularity
+  to: singularity-tree-tab
   rel: boosts
   note: Singularity Tree nodes cannot exceed the price at Level 5
   source: wiki:Minerals/Refine_Tree
@@ -8906,12 +8682,6 @@ edges:
   rel: requires
   source: wiki:Minerals/Refine_Tree
   confidence: documented
-- from: refine-node-170
-  to: particles-alpha
-  rel: boosts
-  note: Alpha Prestige resets nothing and is performed every frame
-  source: wiki:Minerals/Refine_Tree
-  confidence: uncertain
 - from: refine-node-170
   to: refine-node-171
   rel: requires
@@ -8929,7 +8699,7 @@ edges:
   source: wiki:Minerals/Refine_Tree
   confidence: documented
 - from: refine-node-172
-  to: singularity
+  to: singularity-tree-tab
   rel: boosts
   note: Singularity Tree levels now go 0 -> 5 -> 10
   source: wiki:Minerals/Refine_Tree
@@ -9036,18 +8806,6 @@ edges:
   rel: requires
   source: wiki:Minerals/Refine_Tree
   confidence: documented
-- from: refine-node-181
-  to: spark-mastery
-  rel: boosts
-  note: Unlocks Spark Mastery Factor for Singularity
-  source: wiki:Minerals/Refine_Tree
-  confidence: uncertain
-- from: refine-node-181
-  to: singularity
-  rel: boosts
-  note: Unlocks Spark Mastery Factor for Singularity
-  source: wiki:Minerals/Refine_Tree
-  confidence: uncertain
 - from: refine-node-181
   to: refine-node-182
   rel: requires
@@ -9169,12 +8927,6 @@ edges:
   rel: requires
   source: wiki:Minerals/Refine_Tree
   confidence: documented
-- from: refine-node-191
-  to: particles-delta
-  rel: boosts
-  note: Delta particle upgrades do not spend delta points
-  source: wiki:Minerals/Refine_Tree
-  confidence: uncertain
 - from: refine-node-137
   to: refine-node-192
   rel: requires
@@ -9379,12 +9131,6 @@ edges:
   targets_effect: 0
   source: wiki:Tarot
   confidence: provisional
-- from: tarot-king-of-swords
-  to: elements
-  rel: boosts
-  note: Unlocks 2nd wind factor and multiply 1st factor for all elements by x (aft. e308 softcap)
-  source: wiki:Tarot
-  confidence: uncertain
 - from: tarot-two-of-wands
   to: tarot-ace-of-wands
   rel: boosts
@@ -9512,13 +9258,6 @@ edges:
   targets_effect: 0
   source: wiki:Tarot
   confidence: provisional
-- from: tarot-king-of-wands
-  to: elements
-  rel: boosts
-  note: Unlocks 2nd fire factor and multiply 1st factor for all elements by x# (base 1,000) (aft. e308
-    softcap)
-  source: wiki:Tarot
-  confidence: uncertain
 - from: tarot-ace-of-pentacles
   to: gold-gain
   rel: boosts
@@ -9670,12 +9409,6 @@ edges:
   targets_effect: 0
   source: wiki:Tarot
   confidence: provisional
-- from: tarot-king-of-pentacles
-  to: elements
-  rel: boosts
-  note: Unlocks 2nd earth factor and multiply 1st factor for all elements by x (aft. e308 softcap)
-  source: wiki:Tarot
-  confidence: uncertain
 - from: tarot-ace-of-cups
   to: quality
   rel: boosts
@@ -9827,12 +9560,6 @@ edges:
   targets_effect: 0
   source: wiki:Tarot
   confidence: provisional
-- from: tarot-king-of-cups
-  to: elements
-  rel: boosts
-  note: Unlocks 2nd water factor and multiply 1st factor for all elements by x (aft. e308 softcap)
-  source: wiki:Tarot
-  confidence: uncertain
 - from: tarot-the-fool
   to: special-mineral-black-gem
   rel: boosts
@@ -10088,8 +9815,8 @@ edges:
   note: Increase Ascension Power from VP based on you current fire
   source: wiki:Elements
   confidence: uncertain
-- from: fire-node-3
-  to: attack-level
+- from: attack-level
+  to: fire-node-3
   rel: boosts
   note: 'Attack level past 3600 boosts Fire generation Formula is: $1 + \frac {(AttackLevel-3600)^2}{100}$'
   source: wiki:Elements
@@ -10106,12 +9833,6 @@ edges:
   note: Fire boosts Relic 26 effect (improves Quality donut)
   source: wiki:Elements
   confidence: provisional
-- from: fire-node-4
-  to: donut-quality
-  rel: boosts
-  note: Fire boosts Relic 26 effect (improves Quality donut)
-  source: wiki:Elements
-  confidence: uncertain
 - from: fire-node-5
   to: relic-31
   rel: boosts
@@ -10172,12 +9893,6 @@ edges:
   note: Earth boosts Relic 32 effect (Polish points gain)
   source: wiki:Elements
   confidence: provisional
-- from: earth-node-4
-  to: polish-points
-  rel: boosts
-  note: Earth boosts Relic 32 effect (Polish points gain)
-  source: wiki:Elements
-  confidence: uncertain
 - from: earth-node-5
   to: refine-node-50
   rel: boosts
@@ -10190,12 +9905,6 @@ edges:
   note: Earth boosts Relic 37 (Global Element Mult.)
   source: wiki:Elements
   confidence: provisional
-- from: earth-node-6
-  to: global-element-mult
-  rel: boosts
-  note: Earth boosts Relic 37 (Global Element Mult.)
-  source: wiki:Elements
-  confidence: uncertain
 - from: earth-node-8
   to: earth
   rel: boosts
@@ -10220,14 +9929,8 @@ edges:
   note: Wind boosts Relic 25 effect (Luck donut)
   source: wiki:Elements
   confidence: provisional
-- from: wind-node-3
-  to: donut-luck
-  rel: boosts
-  note: Wind boosts Relic 25 effect (Luck donut)
-  source: wiki:Elements
-  confidence: uncertain
-- from: wind-node-4
-  to: polish-points
+- from: polish-points
+  to: wind-node-4
   rel: boosts
   note: 'PP after 1.79e308 boosts Wind generation The Formula is: $1.01+(x-308)^2/100$ (Only the $(x-308)^2$
     is divided by 100)'
@@ -10246,12 +9949,6 @@ edges:
   note: Wind boosts Relic 33 effect (RfP gain)
   source: wiki:Elements
   confidence: provisional
-- from: wind-node-5
-  to: refinement-points
-  rel: boosts
-  note: Wind boosts Relic 33 effect (RfP gain)
-  source: wiki:Elements
-  confidence: uncertain
 - from: wind-node-6
   to: relic-1
   rel: boosts
@@ -10259,7 +9956,7 @@ edges:
   source: wiki:Elements
   confidence: provisional
 - from: wind-node-6
-  to: attacks
+  to: attack-ascension-power
   rel: boosts
   note: Relic 1 now also applies to Attacks Asc. Power
   source: wiki:Elements
@@ -10312,24 +10009,12 @@ edges:
   note: Water boosts Refine Node 18 effect (Magnet Chance)
   source: wiki:Elements
   confidence: provisional
-- from: water-node-2
-  to: magnet-chance
-  rel: boosts
-  note: Water boosts Refine Node 18 effect (Magnet Chance)
-  source: wiki:Elements
-  confidence: uncertain
 - from: water-node-3
   to: relic-24
   rel: boosts
   note: Water boosts Relic 24 effect (Game Speed Donut)
   source: wiki:Elements
   confidence: provisional
-- from: water-node-3
-  to: donut-game-speed
-  rel: boosts
-  note: Water boosts Relic 24 effect (Game Speed Donut)
-  source: wiki:Elements
-  confidence: uncertain
 - from: water-node-4
   to: relic-34
   rel: boosts
@@ -10452,7 +10137,7 @@ edges:
   source: wiki:Zodiacs
   confidence: uncertain
 - from: zodiac-gemini
-  to: laboratory
+  to: lab-mult
   rel: boosts
   source: wiki:Zodiacs
   confidence: uncertain
@@ -10507,7 +10192,7 @@ edges:
   source: wiki:Zodiacs
   confidence: uncertain
 - from: zodiac-libra
-  to: laboratory
+  to: lab-mult
   rel: boosts
   source: wiki:Zodiacs
   confidence: uncertain
@@ -10566,6 +10251,11 @@ edges:
   rel: boosts
   source: wiki:Zodiacs
   confidence: uncertain
+- from: zodiac-aquarius
+  to: lab-mult
+  rel: boosts
+  source: wiki:Zodiacs
+  confidence: uncertain
 - from: zodiac-pisces
   to: luck
   rel: boosts
@@ -10586,11 +10276,6 @@ edges:
   rel: boosts
   source: wiki:Trials
   confidence: uncertain
-- from: trial-easy-trial-2
-  to: trials
-  rel: boosts
-  source: wiki:Trials
-  confidence: uncertain
 - from: trial-easy-trial-3
   to: common-exponent
   rel: boosts
@@ -10598,17 +10283,12 @@ edges:
   confidence: uncertain
 - from: trial-easy-trial-4
   to: planet-mars
-  rel: boosts
-  source: wiki:Trials
-  confidence: uncertain
-- from: trial-easy-trial-5
-  to: max-score
-  rel: boosts
+  rel: unlocks
   source: wiki:Trials
   confidence: uncertain
 - from: trial-easy-trial-6
   to: planet-shop
-  rel: boosts
+  rel: unlocks
   source: wiki:Trials
   confidence: uncertain
 - from: trial-medium-trial-1
@@ -10617,42 +10297,7 @@ edges:
   source: wiki:Trials
   confidence: uncertain
 - from: trial-medium-trial-3
-  to: supernova
-  rel: boosts
-  source: wiki:Trials
-  confidence: uncertain
-- from: trial-medium-trial-3
   to: dilation-tree-points
-  rel: boosts
-  source: wiki:Trials
-  confidence: uncertain
-- from: trial-medium-trial-4
-  to: unity
-  rel: boosts
-  source: wiki:Trials
-  confidence: uncertain
-- from: trial-medium-trial-5
-  to: dilation-tree-points
-  rel: boosts
-  source: wiki:Trials
-  confidence: uncertain
-- from: trial-hard-trial-1
-  to: dilation-points
-  rel: boosts
-  source: wiki:Trials
-  confidence: uncertain
-- from: trial-hard-trial-2
-  to: laboratory
-  rel: boosts
-  source: wiki:Trials
-  confidence: uncertain
-- from: trial-hard-trial-4
-  to: animal-points
-  rel: boosts
-  source: wiki:Trials
-  confidence: uncertain
-- from: trial-hard-trial-6
-  to: eternity-points
   rel: boosts
   source: wiki:Trials
   confidence: uncertain
@@ -10663,16 +10308,6 @@ edges:
   confidence: uncertain
 - from: trial-insane-trial-1
   to: trials
-  rel: boosts
-  source: wiki:Trials
-  confidence: uncertain
-- from: trial-insane-trial-2
-  to: eternity-challenges
-  rel: boosts
-  source: wiki:Trials
-  confidence: uncertain
-- from: trial-insane-trial-2
-  to: unity
   rel: boosts
   source: wiki:Trials
   confidence: uncertain
@@ -10698,6 +10333,11 @@ edges:
   confidence: uncertain
 - from: trial-insane-trial-4
   to: eternity-challenges
+  rel: boosts
+  source: wiki:Trials
+  confidence: uncertain
+- from: eternity-challenges
+  to: trial-insane-trial-4
   rel: boosts
   source: wiki:Trials
   confidence: uncertain
@@ -10801,34 +10441,14 @@ edges:
   rel: boosts
   source: wiki:Plague
   confidence: uncertain
-- from: singularity-milestone-first-collapse
-  to: sms-factor
-  rel: boosts
-  source: wiki:Singularity
-  confidence: uncertain
 - from: singularity-milestone-accelerated-growth
   to: singularity-effects-tab
-  rel: boosts
-  source: wiki:Singularity
-  confidence: uncertain
-- from: singularity-milestone-event-horizon
-  to: plague
-  rel: boosts
-  source: wiki:Singularity
-  confidence: uncertain
-- from: singularity-milestone-event-horizon
-  to: singularity
-  rel: boosts
+  rel: unlocks
   source: wiki:Singularity
   confidence: uncertain
 - from: singularity-milestone-spaghettification
   to: singularity-tree-tab
-  rel: boosts
-  source: wiki:Singularity
-  confidence: uncertain
-- from: singularity-milestone-beyond-time
-  to: singularity
-  rel: boosts
+  rel: unlocks
   source: wiki:Singularity
   confidence: uncertain
 - from: singularity-milestone-event-horizon-tax
@@ -10838,26 +10458,6 @@ edges:
   confidence: uncertain
 - from: singularity-milestone-event-horizon-tax
   to: singularity-mult
-  rel: boosts
-  source: wiki:Singularity
-  confidence: uncertain
-- from: singularity-milestone-the-unforgotten
-  to: elements
-  rel: boosts
-  source: wiki:Singularity
-  confidence: uncertain
-- from: singularity-milestone-the-unforgotten
-  to: minerals
-  rel: boosts
-  source: wiki:Singularity
-  confidence: uncertain
-- from: singularity-milestone-the-unforgotten
-  to: tarot
-  rel: boosts
-  source: wiki:Singularity
-  confidence: uncertain
-- from: singularity-milestone-the-unforgotten
-  to: singularity
   rel: boosts
   source: wiki:Singularity
   confidence: uncertain
@@ -10873,7 +10473,7 @@ edges:
   confidence: uncertain
 - from: singularity-milestone-astral-property
   to: singularity-houses-tab
-  rel: boosts
+  rel: unlocks
   source: wiki:Singularity
   confidence: uncertain
 - from: singularity-milestone-self-synergism
@@ -10908,11 +10508,6 @@ edges:
   confidence: uncertain
 - from: singularity-milestone-quantum-dust
   to: special-mineral-black-gem
-  rel: boosts
-  source: wiki:Singularity
-  confidence: uncertain
-- from: singularity-milestone-matter-collapse
-  to: plague
   rel: boosts
   source: wiki:Singularity
   confidence: uncertain
@@ -10981,11 +10576,6 @@ edges:
   rel: boosts
   source: wiki:Singularity
   confidence: uncertain
-- from: singularity-milestone-infinite-infection
-  to: singularity
-  rel: boosts
-  source: wiki:Singularity
-  confidence: uncertain
 - from: singularity-tree-1
   to: singularity-mult
   rel: boosts
@@ -10997,12 +10587,12 @@ edges:
   source: wiki:Singularity
   confidence: uncertain
 - from: singularity-tree-3-1
-  to: atom-penalty
+  to: atoms-gain
   rel: boosts
   source: wiki:Singularity
   confidence: uncertain
 - from: singularity-tree-3-2
-  to: atom-penalty
+  to: atoms-gain
   rel: boosts
   source: wiki:Singularity
   confidence: uncertain
@@ -11032,32 +10622,22 @@ edges:
   source: wiki:Singularity
   confidence: uncertain
 - from: singularity-tree-6-2
-  to: atom-penalty
+  to: atoms-gain
   rel: boosts
   source: wiki:Singularity
   confidence: uncertain
 - from: singularity-tree-7-1
-  to: singularity
-  rel: boosts
-  source: wiki:Singularity
-  confidence: uncertain
-- from: singularity-tree-7-1
-  to: zodiac-level
+  to: singular-zodiacs
   rel: boosts
   source: wiki:Singularity
   confidence: uncertain
 - from: singularity-tree-7-2
-  to: singularity
-  rel: boosts
-  source: wiki:Singularity
-  confidence: uncertain
-- from: singularity-tree-7-2
-  to: zodiac-level
+  to: singular-zodiacs
   rel: boosts
   source: wiki:Singularity
   confidence: uncertain
 - from: singularity-tree-8
-  to: singularity
+  to: singularity-tree-tab
   rel: boosts
   source: wiki:Singularity
   confidence: uncertain
@@ -11241,8 +10821,8 @@ edges:
   rel: boosts
   source: wiki:Singularity
   confidence: uncertain
-- from: dilation-node-center-1
-  to: animal-points
+- from: animal-points
+  to: dilation-node-center-1
   rel: boosts
   source: wiki:Dilation_Tree
   confidence: uncertain
@@ -11256,8 +10836,8 @@ edges:
   rel: boosts
   source: wiki:Dilation_Tree
   confidence: uncertain
-- from: dilation-node-top-2
-  to: eternities
+- from: eternities
+  to: dilation-node-top-2
   rel: boosts
   source: wiki:Dilation_Tree
   confidence: uncertain
@@ -11287,7 +10867,7 @@ edges:
   source: wiki:Dilation_Tree
   confidence: uncertain
 - from: dilation-node-middle-3
-  to: supernova
+  to: supernova-rewards
   rel: boosts
   source: wiki:Dilation_Tree
   confidence: uncertain
@@ -11337,7 +10917,7 @@ edges:
   source: wiki:Eternity
   confidence: uncertain
 - from: dilation-upgrade-5
-  to: supernova
+  to: supernova-rewards
   rel: boosts
   source: wiki:Eternity
   confidence: uncertain
@@ -11461,8 +11041,8 @@ edges:
   rel: boosts
   source: wiki:Infinity
   confidence: uncertain
-- from: infinity-upgrade-12-1-first-but-better
-  to: infinities
+- from: infinities
+  to: infinity-upgrade-12-1-first-but-better
   rel: boosts
   source: wiki:Infinity
   confidence: uncertain
@@ -11483,11 +11063,6 @@ edges:
   confidence: uncertain
 - from: infinity-upgrade-14-2-efficiency-v
   to: generator-exponent
-  rel: boosts
-  source: wiki:Infinity
-  confidence: uncertain
-- from: infinity-upgrade-15-1-auto-infinity
-  to: infinities
   rel: boosts
   source: wiki:Infinity
   confidence: uncertain
@@ -11628,7 +11203,7 @@ edges:
   confidence: uncertain
 - from: infinity-upgrade-21-1-a-falling-star
   to: stars
-  rel: boosts
+  rel: unlocks
   source: wiki:Infinity
   confidence: uncertain
 - from: attack-level
@@ -11891,11 +11466,6 @@ edges:
   rel: boosts
   source: wiki:Tarot
   confidence: uncertain
-- from: tarot-artifact-perception-lens
-  to: plague
-  rel: boosts
-  source: wiki:Tarot
-  confidence: uncertain
 - from: tarot-artifact-ramus
   to: sacrifice-dust
   rel: boosts
@@ -11941,11 +11511,6 @@ edges:
   rel: boosts
   source: wiki:Tarot
   confidence: uncertain
-- from: tarot-artifact-occipital-bone
-  to: plague
-  rel: boosts
-  source: wiki:Tarot
-  confidence: uncertain
 - from: tarot-artifact-abundance-gears
   to: sacrifice-dust
   rel: boosts
@@ -11983,11 +11548,6 @@ edges:
   confidence: uncertain
 - from: tarot-artifact-reality-anchors
   to: endoplasmic-reticula
-  rel: boosts
-  source: wiki:Tarot
-  confidence: uncertain
-- from: tarot-artifact-reality-anchors
-  to: plague
   rel: boosts
   source: wiki:Tarot
   confidence: uncertain
@@ -12033,11 +11593,6 @@ edges:
   confidence: uncertain
 - from: tarot-artifact-trauma-alchemizer
   to: singularity-mult
-  rel: boosts
-  source: wiki:Tarot
-  confidence: uncertain
-- from: tarot-artifact-trauma-alchemizer
-  to: singularity
   rel: boosts
   source: wiki:Tarot
   confidence: uncertain
@@ -12097,7 +11652,7 @@ edges:
   source: wiki:Particles
   confidence: uncertain
 - from: particles-spark-blue
-  to: atom-penalty
+  to: atoms-gain
   rel: boosts
   source: wiki:Particles
   confidence: uncertain
@@ -12582,11 +12137,6 @@ edges:
   rel: requires
   source: game
   confidence: documented
-- from: particles-rank-bonus-2
-  to: singularity
-  rel: boosts
-  source: game
-  confidence: uncertain
 - from: particles-rank
   to: particles-rank-bonus-3
   rel: requires
@@ -12693,7 +12243,7 @@ edges:
   source: game
   confidence: documented
 - from: particles-rank-bonus-12
-  to: atom-penalty
+  to: atoms-gain
   rel: boosts
   source: game
   confidence: uncertain
@@ -12802,11 +12352,6 @@ edges:
   rel: requires
   source: game
   confidence: documented
-- from: particles-tier-bonus-4
-  to: singularity
-  rel: boosts
-  source: game
-  confidence: uncertain
 - from: particles-tier
   to: particles-tier-bonus-5
   rel: requires
@@ -12877,11 +12422,6 @@ edges:
   rel: requires
   source: game
   confidence: documented
-- from: particles-tetr-bonus-4
-  to: singularity
-  rel: boosts
-  source: game
-  confidence: uncertain
 - from: particles-tetr
   to: particles-tetr-bonus-5
   rel: requires
@@ -12962,11 +12502,6 @@ edges:
   rel: requires
   source: game
   confidence: documented
-- from: particles-pent-bonus-4
-  to: singularity
-  rel: boosts
-  source: game
-  confidence: uncertain
 - from: particles-pent
   to: particles-pent-bonus-5
   rel: requires
@@ -13003,7 +12538,7 @@ edges:
   source: game
   confidence: documented
 - from: epsilon-tree-a2
-  to: atom-penalty
+  to: atoms-gain
   rel: boosts
   source: game
   confidence: uncertain

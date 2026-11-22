@@ -67,7 +67,7 @@ def parse(raw: str, vocabulary: Vocabulary = Vocabulary.EMPTY) -> ExtractResult:
                     **{
                         "from": origin,
                         "to": target,
-                        "rel": "boosts",
+                        "rel": reference.rel,
                         "note": text,
                         "targets_effect": reference.targets_effect,
                         "source": SOURCE,

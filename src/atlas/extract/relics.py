@@ -76,12 +76,12 @@ def parse(raw: str, vocabulary: Vocabulary = Vocabulary.EMPTY) -> ExtractResult:
                     **{
                         "from": origin,
                         "to": target,
-                        "rel": "boosts",
+                        "rel": reference.rel,
                         # `op` is the relic's own per-level coefficient, so it
-                        # only describes an edge the relic drives. On a reversed
+                        # only describes a boost the relic drives. On a reversed
                         # edge the relic is the far end and the coefficient says
                         # nothing about how the input scales it.
-                        "op": None if reference.is_input else op,
+                        "op": None if reference.is_input or reference.is_unlock else op,
                         "note": text,
                         "targets_effect": reference.targets_effect,
                         "source": SOURCE,
