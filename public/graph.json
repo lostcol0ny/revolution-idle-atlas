@@ -26206,27 +26206,6 @@
       "to": "quality"
     },
     {
-      "confidence": "uncertain",
-      "from": "dilation",
-      "rel": "boosts",
-      "source": "game",
-      "to": "achievement-218"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "score",
-      "rel": "boosts",
-      "source": "game",
-      "to": "achievement-218"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "achievement-218",
-      "rel": "boosts",
-      "source": "game",
-      "to": "dilation-points"
-    },
-    {
       "confidence": "documented",
       "from": "achievement-219",
       "note": "Unlocks Fortune Pars",
@@ -32073,6 +32052,22 @@
       "rel": "requires",
       "source": "game:EPSILON_UNLOCK_REQUIREMENT",
       "to": "epsilon-tree-epsilon"
+    },
+    {
+      "confidence": "documented",
+      "from": "max-score",
+      "note": "Dilation score past e5e10 boosts DP gain more",
+      "rel": "boosts",
+      "source": "game:ACH_REWD_217",
+      "to": "achievement-218"
+    },
+    {
+      "confidence": "documented",
+      "from": "achievement-218",
+      "note": "Dilation score past e5e10 boosts DP gain more",
+      "rel": "boosts",
+      "source": "game:ACH_REWD_217",
+      "to": "dp-income"
     },
     {
       "confidence": "documented",
