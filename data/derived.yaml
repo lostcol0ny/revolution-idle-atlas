@@ -6444,12 +6444,25 @@ edges:
   note: Supernova Bonuses (are) Powered to X
   source: wiki:Relics
   confidence: uncertain
+- from: relics
+  to: relic-12
+  rel: boosts
+  note: Amount of unlocked relics boost attack
+  source: wiki:Relics
+  confidence: uncertain
 - from: relic-13
   to: attacks
   rel: boosts
   op: add
   note: Increases Exponent in (Attacks) Base Damage Formula Increases the Exponent in the Formula shown
     on the Relic tab, which improves Base Damage in Attacks
+  source: wiki:Relics
+  confidence: uncertain
+- from: relic-14
+  to: relics
+  rel: boosts
+  op: mult
+  note: Decreases costs of all relics
   source: wiki:Relics
   confidence: uncertain
 - from: relic-15
@@ -12932,13 +12945,28 @@ edges:
   rel: boosts
   source: game
   confidence: uncertain
+- from: achievement-226
+  to: relics
+  rel: boosts
+  source: game
+  confidence: uncertain
 - from: attack-level
   to: achievement-226
   rel: requires
   source: game
   confidence: uncertain
 - from: achievement-230
+  to: relics
+  rel: boosts
+  source: game
+  confidence: uncertain
+- from: achievement-230
   to: quality
+  rel: boosts
+  source: game
+  confidence: uncertain
+- from: achievement-231
+  to: relics
   rel: boosts
   source: game
   confidence: uncertain
@@ -12948,7 +12976,17 @@ edges:
   source: game
   confidence: uncertain
 - from: achievement-232
+  to: relics
+  rel: boosts
+  source: game
+  confidence: uncertain
+- from: achievement-232
   to: quality
+  rel: boosts
+  source: game
+  confidence: uncertain
+- from: achievement-233
+  to: relics
   rel: boosts
   source: game
   confidence: uncertain
@@ -12968,7 +13006,17 @@ edges:
   source: game
   confidence: uncertain
 - from: achievement-237
+  to: relics
+  rel: boosts
+  source: game
+  confidence: uncertain
+- from: achievement-237
   to: quality
+  rel: boosts
+  source: game
+  confidence: uncertain
+- from: achievement-239
+  to: relics
   rel: boosts
   source: game
   confidence: uncertain

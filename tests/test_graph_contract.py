@@ -335,10 +335,11 @@ def test_every_swept_edge_is_uncertain(graph: dict):
         if e["from"].startswith("tarot-challenge-") and e["to"] in cards
     }
 
-    # 18: of the 251 the sweep makes, the audit of the generated edges and the
-    # game-code check restated most at `documented` or replaced them; what is
-    # left is what neither a sentence nor the code reading settles.
-    assert len(swept) == 18, f"expected 18 swept edges, got {len(swept)}"
+    # 0: of the 251 the sweep makes, the audit of the generated edges and the
+    # two game-code checks restated every one at `documented` or replaced it.
+    # A new swept edge with no curated restatement fails the count, and the
+    # loop below still holds any that remain to `uncertain`.
+    assert len(swept) == 0, f"expected 0 swept edges, got {len(swept)}"
     shipped = {key(e): e for e in graph["edges"]}
     for edge in swept:
         assert edge in shipped, f"{edge} never reached the artifact"
