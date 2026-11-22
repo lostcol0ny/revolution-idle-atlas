@@ -325,12 +325,13 @@ def test_every_swept_edge_is_uncertain(graph: dict):
     swept -= {key(e) for e in curated.get("edges") or []}
     swept -= {key(s) for s in curated.get("suppress") or []}
 
-    # 253: the 239 `boosts` the Tarot challenges read out of their Penalty and
+    # 251: the 239 `boosts` the Tarot challenges read out of their Penalty and
     # Completion Requirement cells are gone from the old 490, since neither is a
-    # reward. The requirements return as `requires` into the challenge, and two
-    # of those start under a swept prefix: special-mineral-black-gem, and the
-    # curated zodiac-level, which `zodiac-` happens to cover.
-    assert len(swept) == 253, f"expected 253 swept edges, got {len(swept)}"
+    # reward. Plain threshold goals return as `requires` into the challenge, but
+    # none of those starts under a swept prefix: the two that did ("Destroy a
+    # Level 20 Black Gem", "...while the next expected Zodiac Level is 67+") are
+    # action goals, kept as text only.
+    assert len(swept) == 251, f"expected 251 swept edges, got {len(swept)}"
     shipped = {key(e): e for e in graph["edges"]}
     for edge in swept:
         assert edge in shipped, f"{edge} never reached the artifact"

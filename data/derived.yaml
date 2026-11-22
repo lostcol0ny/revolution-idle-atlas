@@ -11696,16 +11696,6 @@ edges:
   rel: requires
   source: wiki:Tarot
   confidence: uncertain
-- from: singularity
-  to: tarot-challenge-king-of-swords
-  rel: requires
-  source: wiki:Tarot
-  confidence: uncertain
-- from: attack-level
-  to: tarot-challenge-king-of-swords
-  rel: requires
-  source: wiki:Tarot
-  confidence: uncertain
 - from: elements
   to: tarot-challenge-two-of-wands
   rel: requires
@@ -11753,11 +11743,6 @@ edges:
   confidence: uncertain
 - from: elements
   to: tarot-challenge-queen-of-wands
-  rel: requires
-  source: wiki:Tarot
-  confidence: uncertain
-- from: singularity
-  to: tarot-challenge-king-of-wands
   rel: requires
   source: wiki:Tarot
   confidence: uncertain
@@ -11826,31 +11811,6 @@ edges:
   rel: requires
   source: wiki:Tarot
   confidence: uncertain
-- from: singularity
-  to: tarot-challenge-king-of-pentacles
-  rel: requires
-  source: wiki:Tarot
-  confidence: uncertain
-- from: value-points
-  to: tarot-challenge-king-of-pentacles
-  rel: requires
-  source: wiki:Tarot
-  confidence: uncertain
-- from: singularity
-  to: tarot-challenge-king-of-cups
-  rel: requires
-  source: wiki:Tarot
-  confidence: uncertain
-- from: zodiac-level
-  to: tarot-challenge-king-of-cups
-  rel: requires
-  source: wiki:Tarot
-  confidence: uncertain
-- from: special-mineral-black-gem
-  to: tarot-challenge-the-fool
-  rel: requires
-  source: wiki:Tarot
-  confidence: uncertain
 - from: elements
   to: tarot-challenge-the-magician
   rel: requires
@@ -11858,11 +11818,6 @@ edges:
   confidence: uncertain
 - from: mineral-level
   to: tarot-challenge-the-high-priestess
-  rel: requires
-  source: wiki:Tarot
-  confidence: uncertain
-- from: astrodust
-  to: tarot-challenge-the-empress
   rel: requires
   source: wiki:Tarot
   confidence: uncertain
@@ -11898,26 +11853,6 @@ edges:
   confidence: uncertain
 - from: mineral-local-speed
   to: tarot-challenge-the-hanged-man
-  rel: requires
-  source: wiki:Tarot
-  confidence: uncertain
-- from: relic-67
-  to: tarot-challenge-the-tower
-  rel: requires
-  source: wiki:Tarot
-  confidence: uncertain
-- from: singularity
-  to: tarot-challenge-the-star
-  rel: requires
-  source: wiki:Tarot
-  confidence: uncertain
-- from: singular-zodiacs
-  to: tarot-challenge-the-star
-  rel: requires
-  source: wiki:Tarot
-  confidence: uncertain
-- from: singularity
-  to: tarot-challenge-the-moon
   rel: requires
   source: wiki:Tarot
   confidence: uncertain

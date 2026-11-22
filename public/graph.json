@@ -22591,20 +22591,6 @@
     },
     {
       "confidence": "uncertain",
-      "from": "singularity",
-      "rel": "requires",
-      "source": "wiki:Tarot",
-      "to": "tarot-challenge-king-of-swords"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "attack-level",
-      "rel": "requires",
-      "source": "wiki:Tarot",
-      "to": "tarot-challenge-king-of-swords"
-    },
-    {
-      "confidence": "uncertain",
       "from": "elements",
       "rel": "requires",
       "source": "wiki:Tarot",
@@ -22672,13 +22658,6 @@
       "rel": "requires",
       "source": "wiki:Tarot",
       "to": "tarot-challenge-queen-of-wands"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "singularity",
-      "rel": "requires",
-      "source": "wiki:Tarot",
-      "to": "tarot-challenge-king-of-wands"
     },
     {
       "confidence": "uncertain",
@@ -22773,41 +22752,6 @@
     },
     {
       "confidence": "uncertain",
-      "from": "singularity",
-      "rel": "requires",
-      "source": "wiki:Tarot",
-      "to": "tarot-challenge-king-of-pentacles"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "value-points",
-      "rel": "requires",
-      "source": "wiki:Tarot",
-      "to": "tarot-challenge-king-of-pentacles"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "singularity",
-      "rel": "requires",
-      "source": "wiki:Tarot",
-      "to": "tarot-challenge-king-of-cups"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "zodiac-level",
-      "rel": "requires",
-      "source": "wiki:Tarot",
-      "to": "tarot-challenge-king-of-cups"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "special-mineral-black-gem",
-      "rel": "requires",
-      "source": "wiki:Tarot",
-      "to": "tarot-challenge-the-fool"
-    },
-    {
-      "confidence": "uncertain",
       "from": "elements",
       "rel": "requires",
       "source": "wiki:Tarot",
@@ -22819,13 +22763,6 @@
       "rel": "requires",
       "source": "wiki:Tarot",
       "to": "tarot-challenge-the-high-priestess"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "astrodust",
-      "rel": "requires",
-      "source": "wiki:Tarot",
-      "to": "tarot-challenge-the-empress"
     },
     {
       "confidence": "uncertain",
@@ -22875,35 +22812,6 @@
       "rel": "requires",
       "source": "wiki:Tarot",
       "to": "tarot-challenge-the-hanged-man"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "relic-67",
-      "rel": "requires",
-      "source": "wiki:Tarot",
-      "to": "tarot-challenge-the-tower"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "singularity",
-      "rel": "requires",
-      "source": "wiki:Tarot",
-      "to": "tarot-challenge-the-star"
-    },
-    {
-      "confidence": "documented",
-      "from": "singular-zodiacs",
-      "note": "Perform a Singularity with an Uncommon+ Singular Zodiac",
-      "rel": "requires",
-      "source": "wiki:Tarot",
-      "to": "tarot-challenge-the-star"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "singularity",
-      "rel": "requires",
-      "source": "wiki:Tarot",
-      "to": "tarot-challenge-the-moon"
     },
     {
       "confidence": "uncertain",
@@ -27632,6 +27540,14 @@
       "rel": "unlocks",
       "source": "wiki:Minerals",
       "to": "smp"
+    },
+    {
+      "confidence": "documented",
+      "from": "singular-zodiacs",
+      "note": "Perform a Singularity with an Uncommon+ Singular Zodiac",
+      "rel": "requires",
+      "source": "wiki:Tarot",
+      "to": "tarot-challenge-the-star"
     },
     {
       "confidence": "documented",
