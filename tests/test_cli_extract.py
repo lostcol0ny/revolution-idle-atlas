@@ -8,7 +8,7 @@ from atlas.extract.manifest import Manifest
 from atlas.extract.refs import Vocabulary
 from atlas.extract.result import DroppedEdge, ExtractResult
 from atlas.loader import load_dataset
-from atlas.models import Edge, Kind, Node
+from atlas.models import Edge, GameData, Kind, Node
 
 REAL_RAW = Path(__file__).resolve().parents[1] / "data" / "raw"
 
@@ -146,18 +146,21 @@ def test_extract_warns_about_dropped_edges_but_still_succeeds(
             )
         ],
     )
-    def run_all(raw_dir, vocabulary, external_ids, *, manifest):
+    def run_all(raw_dir, vocabulary, external_ids, *, manifest, game):
         # This stub is the only exercise the CLI's call into run_all gets, so it
         # asserts the shape rather than accepting anything. A `**kwargs` stub
-        # passes just as happily when the CLI stops handing over the vocabulary
-        # or the manifest, and neither omission is visible downstream: an empty
-        # vocabulary simply produces no stat edges and an absent manifest simply
-        # sweeps nothing. The keyword-only `manifest` is part of the assertion —
-        # passing it positionally raises TypeError here.
+        # passes just as happily when the CLI stops handing over the vocabulary,
+        # the manifest or the game file, and no omission is visible downstream:
+        # an empty vocabulary simply produces no stat edges, an absent manifest
+        # simply sweeps nothing and an absent game file simply adds no game
+        # edges. The keyword-only arguments are part of the assertion — passing
+        # them positionally raises TypeError here.
         assert raw_dir == tmp_path / "data" / "raw"
         assert isinstance(vocabulary, Vocabulary)
         assert isinstance(external_ids, frozenset)
         assert isinstance(manifest, Manifest)
+        # No data/game.yaml in this tree: an empty file, not a skipped one.
+        assert game == GameData()
         return stub
 
     monkeypatch.setattr("atlas.cli.run_all", run_all)

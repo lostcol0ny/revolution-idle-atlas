@@ -4,7 +4,14 @@ from pathlib import Path
 import pytest
 
 from atlas.cli import main
-from atlas.gamemap import GAME_FILE_REL_PATH, map_catalog, readable, to_yaml
+from atlas.gamemap import (
+    GAME_FILE_REL_PATH,
+    grade_thresholds,
+    map_catalog,
+    map_particles,
+    readable,
+    to_yaml,
+)
 from atlas.loader import load_game
 from atlas.models import Kind, Node
 
@@ -93,6 +100,7 @@ def test_numbered_names_verify_by_number_and_compose_a_label():
             "Increase Common Exponent by an amount",
         ),
         ("Raises Gold gain to ^{0}", "Raises Gold gain to an exponent"),
+        ("Atoms Nerf at e10K: /{0}", "Atoms Nerf at e10K: a divisor"),
         ("Gain +{0}% more VP", "Gain a percentage more VP"),
         ("Gain {0:F2}% more VP", "Gain a percentage more VP"),
         ("Costs are reduced by -{1}", "Costs are reduced by an amount"),
@@ -211,3 +219,103 @@ def test_game_needs_the_dataset_to_map_onto(tmp_path, monkeypatch):
     )
     assert main(["game", "--root", str(tmp_path)]) == 1
     assert not (tmp_path / GAME_FILE_REL_PATH).exists()
+
+
+GRADE_BONUSES_PAGE = """
+=== Grade Bonuses ===
+{| class="wikitable"
+|+
+! colspan="2" |Grade Bonuses
+|-
+!Threshold
+!Bonus
+|-
+! colspan="2" |Rank Bonuses
+|-
+|0
+|Alpha generator base
+|-
+|20
+|
+|-
+! colspan="2" |Tetr Bonuses
+|-
+|1
+|Unlock a free first Gamma generator level.
+|}
+
+=== Particle Prestige ===
+|-
+|5
+|Not a grade bonus
+"""
+
+
+def test_grade_thresholds_read_each_grade_section():
+    # An empty bonus cell still holds a threshold; text past the section does not.
+    assert grade_thresholds(GRADE_BONUSES_PAGE) == {"rank": ["0", "20"], "tetr": ["1"]}
+
+
+def test_particles_map_grade_bonuses_tree_effects_and_sparks():
+    strings = {
+        "PARTICLES_BONUS_RANK_0": "α generator base: +0.01 per rank.",
+        "PARTICLES_BONUS_RANK_1": "Golden Resource gain is multiplied by x{0}",
+        # The wiki lists one Tetr bonus and the game two: no pairing by position.
+        "PARTICLES_BONUS_TETR_0": "Luck ^(1 + tetr / 10).",
+        "PARTICLES_BONUS_TETR_1": "Attack gold gain ^(1 + 0.01 × tetr).",
+        "PARTICLES_BONUSES_RANK": "Rank bonuses",
+        "EPSILON_EFFECT_28": "Spark Luck",
+        "EPSILON_BOOST": "Boosts {0} efficiency",
+        "ENUM_SPARKTYPE_BLUE": "Blue",
+        "ENUM_SPARKTYPE_EFFECT_BLUE": "Atoms Nerf at e10K: /{0}",
+        "UNI_PARTICLES_SPARK_NAME": "{0} Spark",
+    }
+    nodes = [_node("particles-spark-blue", "Spark Blue", "particles")]
+    thresholds = {"rank": ["0", "3"], "tetr": ["1"]}
+    mapped, reports = map_particles(strings, nodes, thresholds)
+
+    assert [(n.id, n.name, n.description, n.system, n.kind) for n in mapped] == [
+        (
+            "particles-rank-bonus-1",
+            "Rank 0 Bonus",
+            "α generator base: +0.01 per rank.",
+            "particles-grades",
+            Kind.UPGRADE,
+        ),
+        (
+            "particles-rank-bonus-2",
+            "Rank 3 Bonus",
+            "Golden Resource gain is multiplied by a multiplier",
+            "particles-grades",
+            Kind.UPGRADE,
+        ),
+        (
+            "particles-tetr-bonus-1",
+            "Tetr Bonus #1",
+            "Luck ^(1 + tetr / 10).",
+            "particles-grades",
+            Kind.UPGRADE,
+        ),
+        (
+            "particles-tetr-bonus-2",
+            "Tetr Bonus #2",
+            "Attack gold gain ^(1 + 0.01 × tetr).",
+            "particles-grades",
+            Kind.UPGRADE,
+        ),
+        (
+            "epsilon-tree-node-29",
+            "Epsilon Tree Node 29 (Spark Luck)",
+            "Spark Luck",
+            "epsilon-tree",
+            Kind.TREE_NODE,
+        ),
+        # The wiki's spark node exists, so it is overlaid rather than created.
+        ("particles-spark-blue", "Blue Spark", "Atoms Nerf at e10K: a divisor", None, None),
+    ]
+    assert {prefix: (r.matched, r.added) for prefix, r in reports.items()} == {
+        "PARTICLES_BONUS_RANK": (0, 2),
+        "PARTICLES_BONUS_TETR": (0, 2),
+        "EPSILON_EFFECT": (0, 1),
+        "ENUM_SPARKTYPE": (1, 0),
+    }

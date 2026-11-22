@@ -1,9 +1,10 @@
 from pathlib import Path
 
-from atlas.extract import elements, refine_tree, relics, sweep, tarot
+from atlas.extract import elements, game_text, refine_tree, relics, sweep, tarot
 from atlas.extract.manifest import Manifest
 from atlas.extract.refs import Vocabulary
 from atlas.extract.result import ExtractResult, prune_dangling
+from atlas.models import GameData
 
 
 class ExtractError(Exception):
@@ -15,6 +16,7 @@ def run_all(
     vocabulary: Vocabulary = Vocabulary.EMPTY,
     external_ids: frozenset[str] = frozenset(),
     manifest: Manifest | None = None,
+    game: GameData | None = None,
 ) -> ExtractResult:
     """Run every parser over data/raw/ and drop edges with no endpoint.
 
@@ -46,6 +48,10 @@ def run_all(
     broke. A manifest entry is a guess about a page's shape, and one wrong guess
     must not block every build. Running last also means the four parsers' ids
     win `to_yaml`'s first-wins dedup wherever a swept name collides with one.
+
+    `game` is data/game.yaml. Its edges come after every wiki edge (see
+    extract/game_text.py), and the nodes it creates count as known when
+    pruning, since `atlas build` creates them from the same file.
     """
     combined = ExtractResult()
     for module in (relics, refine_tree, tarot, elements):
@@ -55,4 +61,7 @@ def run_all(
             raise ExtractError(f"{name} produced no nodes — its source page changed shape")
         combined.extend(result)
     combined.extend(sweep.extract(raw_dir, manifest or Manifest(), vocabulary))
+    if game is not None:
+        combined.extend(game_text.extract(game, vocabulary))
+        external_ids = external_ids | {entry.id for entry in game.nodes}
     return prune_dangling(combined, external_ids)

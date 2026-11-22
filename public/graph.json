@@ -10244,6 +10244,7 @@
     },
     {
       "confidence": "provisional",
+      "description": "Refine Points Gain: an exponent",
       "effects": [
         {
           "text": "RfP Gain ^"
@@ -10251,12 +10252,13 @@
       ],
       "id": "particles-spark-black",
       "kind": "upgrade",
-      "name": "Spark Black",
+      "name": "Black Spark",
       "system": "particles",
       "wiki": "Particles"
     },
     {
       "confidence": "provisional",
+      "description": "Local Singularity Speed Mult: a multiplier",
       "effects": [
         {
           "text": "Singularity Local Speed mult"
@@ -10264,12 +10266,13 @@
       ],
       "id": "particles-spark-white",
       "kind": "upgrade",
-      "name": "Spark White",
+      "name": "White Spark",
       "system": "particles",
       "wiki": "Particles"
     },
     {
       "confidence": "provisional",
+      "description": "Singularity Mult Factor: a multiplier",
       "effects": [
         {
           "text": "Singularity Mult Factor"
@@ -10277,12 +10280,13 @@
       ],
       "id": "particles-spark-red",
       "kind": "upgrade",
-      "name": "Spark Red",
+      "name": "Red Spark",
       "system": "particles",
       "wiki": "Particles"
     },
     {
       "confidence": "provisional",
+      "description": "Attack Exponent: a multiplier",
       "effects": [
         {
           "text": "Attack Exponent mult"
@@ -10290,12 +10294,13 @@
       ],
       "id": "particles-spark-orange",
       "kind": "upgrade",
-      "name": "Spark Orange",
+      "name": "Orange Spark",
       "system": "particles",
       "wiki": "Particles"
     },
     {
       "confidence": "provisional",
+      "description": "Gold Gain: an exponent",
       "effects": [
         {
           "text": "Gold Gain ^"
@@ -10303,12 +10308,13 @@
       ],
       "id": "particles-spark-yellow",
       "kind": "upgrade",
-      "name": "Spark Yellow",
+      "name": "Yellow Spark",
       "system": "particles",
       "wiki": "Particles"
     },
     {
       "confidence": "provisional",
+      "description": "Luck: an exponent",
       "effects": [
         {
           "text": "Astrology Luck ^"
@@ -10316,12 +10322,13 @@
       ],
       "id": "particles-spark-green",
       "kind": "upgrade",
-      "name": "Spark Green",
+      "name": "Green Spark",
       "system": "particles",
       "wiki": "Particles"
     },
     {
       "confidence": "provisional",
+      "description": "Particle Empowerers Mult: a multiplier",
       "effects": [
         {
           "text": "Particle Empowerers Mult"
@@ -10329,12 +10336,13 @@
       ],
       "id": "particles-spark-cyan",
       "kind": "upgrade",
-      "name": "Spark Cyan",
+      "name": "Cyan Spark",
       "system": "particles",
       "wiki": "Particles"
     },
     {
       "confidence": "provisional",
+      "description": "Atoms Nerf at e10K: a divisor",
       "effects": [
         {
           "text": "e10K Atom Penalty divider"
@@ -10342,12 +10350,13 @@
       ],
       "id": "particles-spark-blue",
       "kind": "upgrade",
-      "name": "Spark Blue",
+      "name": "Blue Spark",
       "system": "particles",
       "wiki": "Particles"
     },
     {
       "confidence": "provisional",
+      "description": "Spark Mastery Gain: a multiplier",
       "effects": [
         {
           "text": "Spark Mastery gain mult"
@@ -10355,12 +10364,13 @@
       ],
       "id": "particles-spark-pink",
       "kind": "upgrade",
-      "name": "Spark Pink",
+      "name": "Pink Spark",
       "system": "particles",
       "wiki": "Particles"
     },
     {
       "confidence": "provisional",
+      "description": "Plague Generators Gain: an exponent",
       "effects": [
         {
           "text": "PlG Gain ^"
@@ -10368,9 +10378,449 @@
       ],
       "id": "particles-spark-purple",
       "kind": "upgrade",
-      "name": "Spark Purple",
+      "name": "Purple Spark",
       "system": "particles",
       "wiki": "Particles"
+    },
+    {
+      "confidence": "documented",
+      "description": "α generator base: +0.01 per rank.",
+      "id": "particles-rank-bonus-1",
+      "kind": "upgrade",
+      "name": "Rank 0 Bonus",
+      "system": "particles-grades"
+    },
+    {
+      "confidence": "documented",
+      "description": "Unlocks Rank Factor for singularity",
+      "id": "particles-rank-bonus-2",
+      "kind": "upgrade",
+      "name": "Rank 3 Bonus",
+      "system": "particles-grades"
+    },
+    {
+      "confidence": "documented",
+      "description": "α generator base ×(1 + 0.1 × generator level). Refinement node 141 improves this bonus.",
+      "id": "particles-rank-bonus-3",
+      "kind": "upgrade",
+      "name": "Rank 5 Bonus",
+      "system": "particles-grades"
+    },
+    {
+      "confidence": "documented",
+      "description": "Attack exponent multiplied ×(1 + 0.05 × rank).",
+      "id": "particles-rank-bonus-4",
+      "kind": "upgrade",
+      "name": "Rank 8 Bonus",
+      "system": "particles-grades"
+    },
+    {
+      "confidence": "documented",
+      "description": "Rank boosts local singularity speed + 0.01 x Sqrt(rank). Softcap at 0.10",
+      "id": "particles-rank-bonus-5",
+      "kind": "upgrade",
+      "name": "Rank 10 Bonus",
+      "system": "particles-grades"
+    },
+    {
+      "confidence": "documented",
+      "description": "The base effects of Singularity Tree nodes 3.1 and 3.2 are multiplied by 1 + rank x 0.1",
+      "id": "particles-rank-bonus-6",
+      "kind": "upgrade",
+      "name": "Rank 11 Bonus",
+      "system": "particles-grades"
+    },
+    {
+      "confidence": "documented",
+      "description": "β generator base ×(1 + 0.25 × generator level).",
+      "id": "particles-rank-bonus-7",
+      "kind": "upgrade",
+      "name": "Rank 12 Bonus",
+      "system": "particles-grades"
+    },
+    {
+      "confidence": "documented",
+      "description": "Particle Rank boosts Luck by a value (+0.01 per rank)",
+      "id": "particles-rank-bonus-8",
+      "kind": "upgrade",
+      "name": "Rank 14 Bonus",
+      "system": "particles-grades"
+    },
+    {
+      "confidence": "documented",
+      "description": "The base effect of Singularity Tree node 6.2 is multiplied by 1 + rank x 0.05",
+      "id": "particles-rank-bonus-9",
+      "kind": "upgrade",
+      "name": "Rank 17 Bonus",
+      "system": "particles-grades"
+    },
+    {
+      "confidence": "documented",
+      "description": "Refine Node 142 effect improves by +0.005 per rank",
+      "id": "particles-rank-bonus-10",
+      "kind": "upgrade",
+      "name": "Rank 18 Bonus",
+      "system": "particles-grades"
+    },
+    {
+      "confidence": "documented",
+      "description": "Golden Resource gain is multiplied by a multiplier (10 x (Rank + 1) x (Tier + 1))",
+      "id": "particles-rank-bonus-11",
+      "kind": "upgrade",
+      "name": "Rank 20 Bonus",
+      "system": "particles-grades"
+    },
+    {
+      "confidence": "documented",
+      "description": "Remove the atom gain penalty at 1.6e256 atoms.",
+      "id": "particles-rank-bonus-12",
+      "kind": "upgrade",
+      "name": "Rank 30 Bonus",
+      "system": "particles-grades"
+    },
+    {
+      "confidence": "documented",
+      "description": "Sacrifice dust gain increased by ^1.1.",
+      "id": "particles-rank-bonus-13",
+      "kind": "upgrade",
+      "name": "Rank 32 Bonus",
+      "system": "particles-grades"
+    },
+    {
+      "confidence": "documented",
+      "description": "Relic 71 base effect is multiplied by 1 + Rank x 0.01",
+      "id": "particles-rank-bonus-14",
+      "kind": "upgrade",
+      "name": "Rank 35 Bonus",
+      "system": "particles-grades"
+    },
+    {
+      "confidence": "documented",
+      "description": "The rank 8 bonus is 10 times stronger: +0.5 attack multiplier power per rank.",
+      "id": "particles-rank-bonus-15",
+      "kind": "upgrade",
+      "name": "Rank 50 Bonus",
+      "system": "particles-grades"
+    },
+    {
+      "confidence": "documented",
+      "description": "All particle generator bases ×(1.01 ^ equipped ER level).",
+      "id": "particles-rank-bonus-16",
+      "kind": "upgrade",
+      "name": "Rank 80 Bonus",
+      "system": "particles-grades"
+    },
+    {
+      "confidence": "documented",
+      "description": "Each Rank multiplies mastery gain on spark spawn by x1.01",
+      "id": "particles-rank-bonus-17",
+      "kind": "upgrade",
+      "name": "Rank 150 Bonus",
+      "system": "particles-grades"
+    },
+    {
+      "confidence": "documented",
+      "description": "Multiplies the efficiency of all Epsilon Tree nodes based on your rank (+0.01 per 100 ranks): a multiplier",
+      "id": "particles-rank-bonus-18",
+      "kind": "upgrade",
+      "name": "Rank 500 Bonus",
+      "system": "particles-grades"
+    },
+    {
+      "confidence": "documented",
+      "description": "Unlock a free first β generator level. β generator base ×tier. α generator base ×(β + 1)^0.2 (improved by refinement node 147).",
+      "id": "particles-tier-bonus-1",
+      "kind": "upgrade",
+      "name": "Tier 1 Bonus",
+      "system": "particles-grades"
+    },
+    {
+      "confidence": "documented",
+      "description": "α generator and multiplier bases ×tier. α multiplier base also ×(1 + 0.5 × multiplier level).",
+      "id": "particles-tier-bonus-2",
+      "kind": "upgrade",
+      "name": "Tier 2 Bonus",
+      "system": "particles-grades"
+    },
+    {
+      "confidence": "documented",
+      "description": "Refinement point gain ^(1 + 0.001 × rank + 0.01 × tier).",
+      "id": "particles-tier-bonus-3",
+      "kind": "upgrade",
+      "name": "Tier 3 Bonus",
+      "system": "particles-grades"
+    },
+    {
+      "confidence": "documented",
+      "description": "Unlocks Tier Factor for singularity",
+      "id": "particles-tier-bonus-4",
+      "kind": "upgrade",
+      "name": "Tier 5 Bonus",
+      "system": "particles-grades"
+    },
+    {
+      "confidence": "documented",
+      "description": "Relic 73 base effect ×(1 + 0.01 × tier).",
+      "id": "particles-tier-bonus-5",
+      "kind": "upgrade",
+      "name": "Tier 10 Bonus",
+      "system": "particles-grades"
+    },
+    {
+      "confidence": "documented",
+      "description": "Relic 60 effect ×(1 + 0.1 × tier).",
+      "id": "particles-tier-bonus-6",
+      "kind": "upgrade",
+      "name": "Tier 20 Bonus",
+      "system": "particles-grades"
+    },
+    {
+      "confidence": "documented",
+      "description": "Multiplies the efficiency of all Epsilon Tree nodes based on your tier (+0.01 per 50 tiers): a multiplier",
+      "id": "particles-tier-bonus-7",
+      "kind": "upgrade",
+      "name": "Tier 200 Bonus",
+      "system": "particles-grades"
+    },
+    {
+      "confidence": "documented",
+      "description": "Unlock a free first γ generator level. β generator base ×(γ + 1)^0.25. Luck ^(1 + tier / 100 + tetr / 10).",
+      "id": "particles-tetr-bonus-1",
+      "kind": "upgrade",
+      "name": "Tetr Bonus #1",
+      "system": "particles-grades"
+    },
+    {
+      "confidence": "documented",
+      "description": "Attack gold gain ^(1 + 0.01 × tetr).",
+      "id": "particles-tetr-bonus-2",
+      "kind": "upgrade",
+      "name": "Tetr Bonus #2",
+      "system": "particles-grades"
+    },
+    {
+      "confidence": "documented",
+      "description": "Relic 72 effect ^(1 + 0.2 × tetr). Above tetr 10, this bonus uses 10 ×(tetr / 10)^0.32.",
+      "id": "particles-tetr-bonus-3",
+      "kind": "upgrade",
+      "name": "Tetr Bonus #3",
+      "system": "particles-grades"
+    },
+    {
+      "confidence": "documented",
+      "description": "Unlocks Tetr Factor for singularity",
+      "id": "particles-tetr-bonus-4",
+      "kind": "upgrade",
+      "name": "Tetr Bonus #4",
+      "system": "particles-grades"
+    },
+    {
+      "confidence": "documented",
+      "description": "All particle generator bases ×(1.2 ^ tetr).",
+      "id": "particles-tetr-bonus-5",
+      "kind": "upgrade",
+      "name": "Tetr Bonus #5",
+      "system": "particles-grades"
+    },
+    {
+      "confidence": "documented",
+      "description": "Singularity Tree Node 4.2 effect is multiplied by a multiplier per Ascension",
+      "id": "particles-tetr-bonus-6",
+      "kind": "upgrade",
+      "name": "Tetr Bonus #6",
+      "system": "particles-grades"
+    },
+    {
+      "confidence": "documented",
+      "description": "Multiplies the efficiency of all Epsilon Tree nodes based on your tetr (+0.01 per 20 tetrs): a multiplier",
+      "id": "particles-tetr-bonus-7",
+      "kind": "upgrade",
+      "name": "Tetr Bonus #7",
+      "system": "particles-grades"
+    },
+    {
+      "confidence": "documented",
+      "description": "Unlock a free first δ generator level. γ generator base ×(δ + 1)^0.25. Tarot gold: (gain × 100)^(1 + 0.1 × pent + 0.04 × tetr + 0.01 × tier) / 100.",
+      "id": "particles-pent-bonus-1",
+      "kind": "upgrade",
+      "name": "Pent 1 Bonus",
+      "system": "particles-grades"
+    },
+    {
+      "confidence": "documented",
+      "description": "Relics 70 and 73 base effects ×(1 + 0.01 × pent).",
+      "id": "particles-pent-bonus-2",
+      "kind": "upgrade",
+      "name": "Pent 2 Bonus",
+      "system": "particles-grades"
+    },
+    {
+      "confidence": "documented",
+      "description": "All particle generator bases ×(2 ^ pent).",
+      "id": "particles-pent-bonus-3",
+      "kind": "upgrade",
+      "name": "Pent 3 Bonus",
+      "system": "particles-grades"
+    },
+    {
+      "confidence": "documented",
+      "description": "Unlocks Pent Factor for singularity",
+      "id": "particles-pent-bonus-4",
+      "kind": "upgrade",
+      "name": "Pent 5 Bonus",
+      "system": "particles-grades"
+    },
+    {
+      "confidence": "documented",
+      "description": "Tetr 20 Milestone base effect is increased by 0.01 per Pent",
+      "id": "particles-pent-bonus-5",
+      "kind": "upgrade",
+      "name": "Pent 8 Bonus",
+      "system": "particles-grades"
+    },
+    {
+      "confidence": "documented",
+      "description": "Multiplies the efficiency of all Epsilon Tree nodes based on your pent (+0.01 per pent): a multiplier",
+      "id": "particles-pent-bonus-6",
+      "kind": "upgrade",
+      "name": "Pent 10 Bonus",
+      "system": "particles-grades"
+    },
+    {
+      "confidence": "documented",
+      "description": "Refine Points Gain is boosted by your pent (+0.01 per pent): an exponent",
+      "id": "particles-pent-bonus-7",
+      "kind": "upgrade",
+      "name": "Pent 25 Bonus",
+      "system": "particles-grades"
+    },
+    {
+      "confidence": "documented",
+      "description": "Red & Blue spark base mastery",
+      "id": "epsilon-tree-node-16",
+      "kind": "tree-node",
+      "name": "Epsilon Tree Node 16 (Red & Blue spark base mastery)",
+      "system": "epsilon-tree"
+    },
+    {
+      "confidence": "documented",
+      "description": "Atoms Nerf e25K",
+      "id": "epsilon-tree-node-17",
+      "kind": "tree-node",
+      "name": "Epsilon Tree Node 17 (Atoms Nerf e25K)",
+      "system": "epsilon-tree"
+    },
+    {
+      "confidence": "documented",
+      "description": "Orange spark base mastery",
+      "id": "epsilon-tree-node-18",
+      "kind": "tree-node",
+      "name": "Epsilon Tree Node 18 (Orange spark base mastery)",
+      "system": "epsilon-tree"
+    },
+    {
+      "confidence": "documented",
+      "description": "Attack HP Requirement",
+      "id": "epsilon-tree-node-19",
+      "kind": "tree-node",
+      "name": "Epsilon Tree Node 19 (Attack HP Requirement)",
+      "system": "epsilon-tree"
+    },
+    {
+      "confidence": "documented",
+      "description": "Yellow spark base mastery",
+      "id": "epsilon-tree-node-20",
+      "kind": "tree-node",
+      "name": "Epsilon Tree Node 20 (Yellow spark base mastery)",
+      "system": "epsilon-tree"
+    },
+    {
+      "confidence": "documented",
+      "description": "Sacrifice Dust Gain",
+      "id": "epsilon-tree-node-21",
+      "kind": "tree-node",
+      "name": "Epsilon Tree Node 21 (Sacrifice Dust Gain)",
+      "system": "epsilon-tree"
+    },
+    {
+      "confidence": "documented",
+      "description": "Green spark base mastery",
+      "id": "epsilon-tree-node-22",
+      "kind": "tree-node",
+      "name": "Epsilon Tree Node 22 (Green spark base mastery)",
+      "system": "epsilon-tree"
+    },
+    {
+      "confidence": "documented",
+      "description": "Tarot Golden Resource base gain",
+      "id": "epsilon-tree-node-23",
+      "kind": "tree-node",
+      "name": "Epsilon Tree Node 23 (Tarot Golden Resource base gain)",
+      "system": "epsilon-tree"
+    },
+    {
+      "confidence": "documented",
+      "description": "Cyan spark base mastery",
+      "id": "epsilon-tree-node-24",
+      "kind": "tree-node",
+      "name": "Epsilon Tree Node 24 (Cyan spark base mastery)",
+      "system": "epsilon-tree"
+    },
+    {
+      "confidence": "documented",
+      "description": "Particle Generator base multiplier per 67 levels",
+      "id": "epsilon-tree-node-25",
+      "kind": "tree-node",
+      "name": "Epsilon Tree Node 25 (Particle Generator base multiplier per 67 levels)",
+      "system": "epsilon-tree"
+    },
+    {
+      "confidence": "documented",
+      "description": "Purple spark base mastery",
+      "id": "epsilon-tree-node-26",
+      "kind": "tree-node",
+      "name": "Epsilon Tree Node 26 (Purple spark base mastery)",
+      "system": "epsilon-tree"
+    },
+    {
+      "confidence": "documented",
+      "description": "Endoplasmic Reticulum craft requirement",
+      "id": "epsilon-tree-node-27",
+      "kind": "tree-node",
+      "name": "Epsilon Tree Node 27 (Endoplasmic Reticulum craft requirement)",
+      "system": "epsilon-tree"
+    },
+    {
+      "confidence": "documented",
+      "description": "Pink spark base mastery",
+      "id": "epsilon-tree-node-28",
+      "kind": "tree-node",
+      "name": "Epsilon Tree Node 28 (Pink spark base mastery)",
+      "system": "epsilon-tree"
+    },
+    {
+      "confidence": "documented",
+      "description": "Spark Luck",
+      "id": "epsilon-tree-node-29",
+      "kind": "tree-node",
+      "name": "Epsilon Tree Node 29 (Spark Luck)",
+      "system": "epsilon-tree"
+    },
+    {
+      "confidence": "documented",
+      "description": "Black & White spark base mastery",
+      "id": "epsilon-tree-node-30",
+      "kind": "tree-node",
+      "name": "Epsilon Tree Node 30 (Black & White spark base mastery)",
+      "system": "epsilon-tree"
+    },
+    {
+      "confidence": "documented",
+      "description": "Sparks Epsilon Gain Effect",
+      "id": "epsilon-tree-node-31",
+      "kind": "tree-node",
+      "name": "Epsilon Tree Node 31 (Sparks Epsilon Gain Effect)",
+      "system": "epsilon-tree"
     },
     {
       "confidence": "documented",
@@ -14171,7 +14621,9 @@
     {
       "aliases": [
         "RfP",
-        "Refine Points"
+        "Refine Points",
+        "Refine Point",
+        "Refinement Point"
       ],
       "confidence": "documented",
       "effects": [
@@ -14700,6 +15152,337 @@
       "name": "Singular Zodiacs",
       "system": "singularity",
       "wiki": "Singularity#Houses"
+    },
+    {
+      "aliases": [
+        "Alpha Particles"
+      ],
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "The first particle, unlocked with the tab; Prestige boosts Beta production"
+        }
+      ],
+      "id": "particles-alpha",
+      "kind": "currency",
+      "name": "Alpha",
+      "system": "particles",
+      "wiki": "Particles"
+    },
+    {
+      "aliases": [
+        "Beta Particles"
+      ],
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Unlocked at Tier 1; Prestige boosts Gamma production"
+        }
+      ],
+      "id": "particles-beta",
+      "kind": "currency",
+      "name": "Beta",
+      "system": "particles",
+      "wiki": "Particles"
+    },
+    {
+      "aliases": [
+        "Gamma Particles"
+      ],
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Unlocked at Tetr 1; Prestige boosts Delta production"
+        }
+      ],
+      "id": "particles-gamma",
+      "kind": "currency",
+      "name": "Gamma",
+      "system": "particles",
+      "wiki": "Particles"
+    },
+    {
+      "aliases": [
+        "Delta Particles"
+      ],
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Unlocked at Pent 1; Prestige boosts Epsilon production"
+        }
+      ],
+      "id": "particles-delta",
+      "kind": "currency",
+      "name": "Delta",
+      "system": "particles",
+      "wiki": "Particles"
+    },
+    {
+      "aliases": [
+        "Epsilon Points"
+      ],
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Production is boosted by Delta Prestige and equipped sparks"
+        },
+        {
+          "text": "Spent to create sparks, buy Epsilon Tree Points, or raise its own capacity"
+        }
+      ],
+      "id": "particles-epsilon",
+      "kind": "currency",
+      "name": "Epsilon",
+      "system": "particles",
+      "wiki": "Particles#Epsilon"
+    },
+    {
+      "aliases": [
+        "Particle Generator",
+        "Alpha Generator",
+        "Alpha Generators",
+        "Beta Generator",
+        "Beta Generators",
+        "Gamma Generator",
+        "Gamma Generators",
+        "Delta Generator",
+        "Delta Generators",
+        "α generator",
+        "β generator",
+        "γ generator",
+        "δ generator"
+      ],
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Provides base production"
+        }
+      ],
+      "id": "particle-generators",
+      "kind": "stat",
+      "name": "Particle Generators",
+      "system": "particles",
+      "wiki": "Particles#Particle_Upgrades"
+    },
+    {
+      "aliases": [
+        "Particle Multiplier",
+        "Alpha Multiplier",
+        "Beta Multiplier",
+        "Gamma Multiplier",
+        "Delta Multiplier",
+        "α multiplier",
+        "β multiplier",
+        "γ multiplier",
+        "δ multiplier"
+      ],
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Multiplies production",
+          "op": "mult"
+        }
+      ],
+      "id": "particle-multipliers",
+      "kind": "stat",
+      "name": "Particle Multipliers",
+      "system": "particles",
+      "wiki": "Particles#Particle_Upgrades"
+    },
+    {
+      "aliases": [
+        "Particle Empowerer",
+        "Empowerer",
+        "Empowerers"
+      ],
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Raises production to a power",
+          "op": "exp"
+        }
+      ],
+      "id": "particle-empowerers",
+      "kind": "stat",
+      "name": "Particle Empowerers",
+      "system": "particles",
+      "wiki": "Particles#Particle_Upgrades"
+    },
+    {
+      "aliases": [
+        "Particle Tetrator",
+        "Tetrator",
+        "Tetrators"
+      ],
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Further increases the growth of production"
+        }
+      ],
+      "id": "particle-tetrators",
+      "kind": "stat",
+      "name": "Particle Tetrators",
+      "system": "particles",
+      "wiki": "Particles#Particle_Upgrades"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Requires Alpha; resets Alpha production"
+        }
+      ],
+      "id": "particles-rank",
+      "kind": "stat",
+      "name": "Particle Rank",
+      "system": "particles-grades",
+      "wiki": "Particles#Grades"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Requires Rank; resets Rank and Alpha and Beta production"
+        }
+      ],
+      "id": "particles-tier",
+      "kind": "stat",
+      "name": "Particle Tier",
+      "system": "particles-grades",
+      "wiki": "Particles#Grades"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Requires Tier; resets Rank, Tier, and Alpha through Gamma production"
+        }
+      ],
+      "id": "particles-tetr",
+      "kind": "stat",
+      "name": "Particle Tetr",
+      "system": "particles-grades",
+      "wiki": "Particles#Grades"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Requires Tetr; resets all three lower grades and Alpha through Delta production"
+        }
+      ],
+      "id": "particles-pent",
+      "kind": "stat",
+      "name": "Particle Pent",
+      "system": "particles-grades",
+      "wiki": "Particles#Grades"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Created with Epsilon in a random colour and rarity; one of each colour can be equipped"
+        }
+      ],
+      "id": "particles-sparks",
+      "kind": "group",
+      "name": "Sparks",
+      "system": "particles",
+      "wiki": "Particles#Sparks"
+    },
+    {
+      "aliases": [
+        "Mastery Gain"
+      ],
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Strengthens newly created sparks"
+        }
+      ],
+      "id": "spark-mastery",
+      "kind": "stat",
+      "name": "Spark Mastery",
+      "system": "particles",
+      "wiki": "Particles#Sparks"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Raises the chance of a spark of higher rarity"
+        }
+      ],
+      "id": "spark-luck",
+      "kind": "stat",
+      "name": "Spark Luck",
+      "system": "particles",
+      "wiki": "Particles#Sparks"
+    },
+    {
+      "aliases": [
+        "ETP",
+        "ETp"
+      ],
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Bought with Epsilon and spent on Epsilon Tree nodes"
+        }
+      ],
+      "id": "epsilon-tree-points",
+      "kind": "currency",
+      "name": "Epsilon Tree Points",
+      "system": "epsilon-tree",
+      "wiki": "Particles#Epsilon_Tree"
+    },
+    {
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Thirty-one nodes upgraded with ETP from the outside in; inner nodes raise the efficiency of the outer nodes they connect"
+        }
+      ],
+      "id": "epsilon-tree",
+      "kind": "group",
+      "name": "Epsilon Tree",
+      "system": "epsilon-tree",
+      "wiki": "Particles#Epsilon_Tree"
+    },
+    {
+      "aliases": [
+        "Atoms Nerf",
+        "Atom Nerf",
+        "Atom Gain Penalty"
+      ],
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "Divides Atom gain past each threshold"
+        }
+      ],
+      "id": "atom-penalty",
+      "kind": "stat",
+      "name": "Atom Penalty",
+      "system": "singularity",
+      "wiki": "Singularity"
+    },
+    {
+      "aliases": [
+        "Local Singularity Speed"
+      ],
+      "confidence": "provisional",
+      "effects": [
+        {
+          "text": "How fast the Singularity layer runs"
+        }
+      ],
+      "id": "singularity-local-speed",
+      "kind": "stat",
+      "name": "Singularity Local Speed",
+      "system": "singularity",
+      "wiki": "Singularity"
     }
   ],
   "edges": [
@@ -15420,6 +16203,51 @@
       "rel": "boosts",
       "source": "wiki:Relics",
       "to": "singularity"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "relic-72",
+      "note": "Multiplies the base of Alpha and Beta Generators",
+      "op": "add",
+      "rel": "boosts",
+      "source": "wiki:Relics",
+      "to": "particles-alpha"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "relic-72",
+      "note": "Multiplies the base of Alpha and Beta Generators",
+      "op": "add",
+      "rel": "boosts",
+      "source": "wiki:Relics",
+      "to": "particle-generators"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "relic-74",
+      "note": "Multiplies Delta Prestige Effect",
+      "op": "add",
+      "rel": "boosts",
+      "source": "wiki:Relics",
+      "to": "particles-delta"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "relic-75",
+      "note": "Multiplies Mastery Gain (Spawning & Destroying sparks)",
+      "op": "add",
+      "rel": "boosts",
+      "source": "wiki:Relics",
+      "to": "spark-mastery"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "relic-75",
+      "note": "Multiplies Mastery Gain (Spawning & Destroying sparks)",
+      "op": "add",
+      "rel": "boosts",
+      "source": "wiki:Relics",
+      "to": "particles-sparks"
     },
     {
       "confidence": "documented",
@@ -17233,7 +18061,7 @@
       "note": "No longer applies an Atom gain penalty at 1e50",
       "rel": "boosts",
       "source": "wiki:Minerals/Refine_Tree",
-      "to": "atoms-gain"
+      "to": "atom-penalty"
     },
     {
       "confidence": "documented",
@@ -17248,7 +18076,7 @@
       "note": "No longer applies an Atom gain penalty at 14e153",
       "rel": "boosts",
       "source": "wiki:Minerals/Refine_Tree",
-      "to": "atoms-gain"
+      "to": "atom-penalty"
     },
     {
       "confidence": "documented",
@@ -17263,6 +18091,14 @@
       "rel": "requires",
       "source": "wiki:Minerals/Refine_Tree",
       "to": "refine-node-128"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "refine-node-128",
+      "note": "Makes the first Atom penalty weaker by 10% [per level]. At max level, removes it completely.",
+      "rel": "boosts",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "atom-penalty"
     },
     {
       "confidence": "documented",
@@ -17429,7 +18265,7 @@
       "note": "Increases Local Singularity Speed Power by 0.02",
       "rel": "boosts",
       "source": "wiki:Minerals/Refine_Tree",
-      "to": "singularity"
+      "to": "singularity-local-speed"
     },
     {
       "confidence": "documented",
@@ -17446,6 +18282,14 @@
       "to": "refine-node-138"
     },
     {
+      "confidence": "uncertain",
+      "from": "refine-node-138",
+      "note": "Particle Rank boosts Refine Point gain (^X / +0.001 per rank)",
+      "rel": "boosts",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refinement-points"
+    },
+    {
       "confidence": "documented",
       "from": "refine-node-15",
       "rel": "requires",
@@ -17453,11 +18297,27 @@
       "to": "refine-node-139"
     },
     {
+      "confidence": "uncertain",
+      "from": "refine-node-139",
+      "note": "Multiplies Alpha Generator Base by x2",
+      "rel": "boosts",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "particle-generators"
+    },
+    {
       "confidence": "documented",
       "from": "refine-node-139",
       "rel": "requires",
       "source": "wiki:Minerals/Refine_Tree",
       "to": "refine-node-140"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "refine-node-140",
+      "note": "Multiplies Alpha Multiplier Base by x1 + level",
+      "rel": "boosts",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "particle-multipliers"
     },
     {
       "confidence": "documented",
@@ -17488,11 +18348,27 @@
       "to": "refine-node-142"
     },
     {
+      "confidence": "uncertain",
+      "from": "refine-node-142",
+      "note": "The base of all particle generators is multiplied by x1.25 every 10 levels",
+      "rel": "boosts",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "particle-generators"
+    },
+    {
       "confidence": "documented",
       "from": "refine-node-10",
       "rel": "requires",
       "source": "wiki:Minerals/Refine_Tree",
       "to": "refine-node-143"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "refine-node-143",
+      "note": "The base of all particle multipliers is multiplied by x2 every 7 levels",
+      "rel": "boosts",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "particle-multipliers"
     },
     {
       "confidence": "documented",
@@ -17517,6 +18393,14 @@
       "to": "refine-node-145"
     },
     {
+      "confidence": "uncertain",
+      "from": "refine-node-145",
+      "note": "Every 100 levels, the base of all particle generators is multiplied by x10",
+      "rel": "boosts",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "particle-generators"
+    },
+    {
       "confidence": "documented",
       "from": "refine-node-145",
       "rel": "requires",
@@ -17532,11 +18416,35 @@
       "to": "singularity-mult"
     },
     {
+      "confidence": "uncertain",
+      "from": "refine-node-146",
+      "note": "Unlocks the Singularity Mult effect on the base of Alpha & Beta generators",
+      "rel": "boosts",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "particles-alpha"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "refine-node-146",
+      "note": "Unlocks the Singularity Mult effect on the base of Alpha & Beta generators",
+      "rel": "boosts",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "particle-generators"
+    },
+    {
       "confidence": "documented",
       "from": "refine-node-10",
       "rel": "requires",
       "source": "wiki:Minerals/Refine_Tree",
       "to": "refine-node-147"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "refine-node-147",
+      "note": "Beta Particles boost Alpha Generator Base a bit better (0.2 -> 0.3)",
+      "rel": "boosts",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "particle-generators"
     },
     {
       "confidence": "documented",
@@ -17546,6 +18454,14 @@
       "to": "refine-node-148"
     },
     {
+      "confidence": "uncertain",
+      "from": "refine-node-148",
+      "note": "Empowerer base is increased by 0.001 every 20 levels for all particles",
+      "rel": "boosts",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "particle-empowerers"
+    },
+    {
       "confidence": "documented",
       "from": "refine-node-148",
       "rel": "requires",
@@ -17553,11 +18469,27 @@
       "to": "refine-node-149"
     },
     {
+      "confidence": "uncertain",
+      "from": "refine-node-149",
+      "note": "Multiplies Alpha Generator Base by x100",
+      "rel": "boosts",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "particle-generators"
+    },
+    {
       "confidence": "documented",
       "from": "refine-node-145",
       "rel": "requires",
       "source": "wiki:Minerals/Refine_Tree",
       "to": "refine-node-150"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "refine-node-150",
+      "note": "Multiplies Beta Multiplier Base by x1 + 0.5 * level",
+      "rel": "boosts",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "particle-multipliers"
     },
     {
       "confidence": "documented",
@@ -17573,14 +18505,6 @@
       "rel": "boosts",
       "source": "wiki:Minerals/Refine_Tree",
       "to": "singularity-mult"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "refine-node-151",
-      "note": "You passively gain Singularity Multiplier every second (also affected by local singularity speed)",
-      "rel": "boosts",
-      "source": "wiki:Minerals/Refine_Tree",
-      "to": "singularity"
     },
     {
       "confidence": "documented",
@@ -17642,6 +18566,14 @@
       "to": "refine-node-156"
     },
     {
+      "confidence": "uncertain",
+      "from": "refine-node-156",
+      "note": "Atom Penalty at 1e5,000 is x1.1 weaker now",
+      "rel": "boosts",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "atom-penalty"
+    },
+    {
       "confidence": "documented",
       "from": "refine-node-144",
       "rel": "requires",
@@ -17649,11 +18581,27 @@
       "to": "refine-node-157"
     },
     {
+      "confidence": "uncertain",
+      "from": "refine-node-157",
+      "note": "Atom Penalty at 1e10,000 is x1.2 weaker now",
+      "rel": "boosts",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "atom-penalty"
+    },
+    {
       "confidence": "documented",
       "from": "refine-node-144",
       "rel": "requires",
       "source": "wiki:Minerals/Refine_Tree",
       "to": "refine-node-158"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "refine-node-158",
+      "note": "Alpha particle upgrades do not spend alpha points",
+      "rel": "boosts",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "particles-alpha"
     },
     {
       "confidence": "documented",
@@ -17675,6 +18623,14 @@
       "rel": "requires",
       "source": "wiki:Minerals/Refine_Tree",
       "to": "refine-node-161"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "refine-node-161",
+      "note": "Every 1,000 levels, the base of all particle generators is multiplied by x1e10",
+      "rel": "boosts",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "particle-generators"
     },
     {
       "confidence": "documented",
@@ -17714,6 +18670,14 @@
       "to": "refine-node-164"
     },
     {
+      "confidence": "uncertain",
+      "from": "refine-node-164",
+      "note": "Beta particle upgrades do not spend beta points",
+      "rel": "boosts",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "particles-beta"
+    },
+    {
       "confidence": "documented",
       "from": "refine-node-161",
       "rel": "requires",
@@ -17721,19 +18685,19 @@
       "to": "refine-node-165"
     },
     {
+      "confidence": "uncertain",
+      "from": "refine-node-165",
+      "note": "Gamma particle upgrades do not spend gemma points",
+      "rel": "boosts",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "particles-gamma"
+    },
+    {
       "confidence": "documented",
       "from": "refine-node-140",
       "rel": "requires",
       "source": "wiki:Minerals/Refine_Tree",
       "to": "refine-node-166"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "refine-node-166",
-      "note": "Local Particles Speed is boosted by ^0.1 of Local Singularity Speed",
-      "rel": "boosts",
-      "source": "wiki:Minerals/Refine_Tree",
-      "to": "singularity"
     },
     {
       "confidence": "documented",
@@ -17796,11 +18760,27 @@
       "to": "refine-node-170"
     },
     {
+      "confidence": "uncertain",
+      "from": "refine-node-170",
+      "note": "Alpha Prestige resets nothing and is performed every frame",
+      "rel": "boosts",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "particles-alpha"
+    },
+    {
       "confidence": "documented",
       "from": "refine-node-170",
       "rel": "requires",
       "source": "wiki:Minerals/Refine_Tree",
       "to": "refine-node-171"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "refine-node-171",
+      "note": "Multiplies the base of Delta Generators and Multipliers by x100",
+      "rel": "boosts",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "particle-generators"
     },
     {
       "confidence": "documented",
@@ -17823,6 +18803,14 @@
       "rel": "requires",
       "source": "wiki:Minerals/Refine_Tree",
       "to": "refine-node-173"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "refine-node-173",
+      "note": "Every 100 levels, the base of all particle multipliers is multiplied by x10",
+      "rel": "boosts",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "particle-multipliers"
     },
     {
       "confidence": "documented",
@@ -17870,6 +18858,14 @@
       "to": "refine-node-176"
     },
     {
+      "confidence": "uncertain",
+      "from": "refine-node-176",
+      "note": "Beta Particle Prestige resets nothing and is automatically performed every frame",
+      "rel": "boosts",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "particles-beta"
+    },
+    {
       "confidence": "documented",
       "from": "refine-node-176",
       "rel": "requires",
@@ -17892,11 +18888,27 @@
       "to": "refine-node-178"
     },
     {
+      "confidence": "uncertain",
+      "from": "refine-node-178",
+      "note": "Mastery Gain is multiplied by xX (1 + pent / 10)",
+      "rel": "boosts",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "spark-mastery"
+    },
+    {
       "confidence": "documented",
       "from": "refine-node-177",
       "rel": "requires",
       "source": "wiki:Minerals/Refine_Tree",
       "to": "refine-node-179"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "refine-node-179",
+      "note": "Gamma Particle Prestige resets nothing and is automatically performed every frame",
+      "rel": "boosts",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "particles-gamma"
     },
     {
       "confidence": "documented",
@@ -17906,11 +18918,27 @@
       "to": "refine-node-180"
     },
     {
+      "confidence": "uncertain",
+      "from": "refine-node-180",
+      "note": "Increase the total number of sparks you can equip by 1",
+      "rel": "boosts",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "particles-sparks"
+    },
+    {
       "confidence": "documented",
       "from": "refine-node-180",
       "rel": "requires",
       "source": "wiki:Minerals/Refine_Tree",
       "to": "refine-node-181"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "refine-node-181",
+      "note": "Unlocks Spark Mastery Factor for Singularity",
+      "rel": "boosts",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "spark-mastery"
     },
     {
       "confidence": "uncertain",
@@ -17928,6 +18956,22 @@
       "to": "refine-node-182"
     },
     {
+      "confidence": "uncertain",
+      "from": "refine-node-182",
+      "note": "Each spark spawned after buying this node decreases ETP cost by 5 Epsilon (total reduction is softcapped after 100,000)",
+      "rel": "boosts",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "epsilon-tree-points"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "refine-node-182",
+      "note": "Each spark spawned after buying this node decreases ETP cost by 5 Epsilon (total reduction is softcapped after 100,000)",
+      "rel": "boosts",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "particles-epsilon"
+    },
+    {
       "confidence": "documented",
       "from": "refine-node-182",
       "rel": "requires",
@@ -17942,11 +18986,27 @@
       "to": "refine-node-184"
     },
     {
+      "confidence": "uncertain",
+      "from": "refine-node-184",
+      "note": "Equipped Endoplasmatic Reticulum Level boosts Spark Mastery gain (xX) (x1.01 per ER level)",
+      "rel": "boosts",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "spark-mastery"
+    },
+    {
       "confidence": "documented",
       "from": "refine-node-181",
       "rel": "requires",
       "source": "wiki:Minerals/Refine_Tree",
       "to": "refine-node-185"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "refine-node-185",
+      "note": "Destroying a spark now also grants mastery (^0.5 of this spark mastery)",
+      "rel": "boosts",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "spark-mastery"
     },
     {
       "confidence": "documented",
@@ -17956,11 +19016,27 @@
       "to": "refine-node-186"
     },
     {
+      "confidence": "uncertain",
+      "from": "refine-node-186",
+      "note": "Epsilon Capacity gain is multiplied by x2",
+      "rel": "boosts",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "particles-epsilon"
+    },
+    {
       "confidence": "documented",
       "from": "refine-node-183",
       "rel": "requires",
       "source": "wiki:Minerals/Refine_Tree",
       "to": "refine-node-187"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "refine-node-187",
+      "note": "Delta Prestige bonus is stronger based on your Pent (X1.01 per Pent)",
+      "rel": "boosts",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "particles-delta"
     },
     {
       "confidence": "uncertain",
@@ -18001,6 +19077,14 @@
       "to": "singular-zodiacs"
     },
     {
+      "confidence": "uncertain",
+      "from": "refine-node-189",
+      "note": "Destroying Ultima Singular Zodiacs now also decreases Epsilon Tree Points cost (Total reduction is softcapped after 100,000)",
+      "rel": "boosts",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "epsilon-tree-points"
+    },
+    {
       "confidence": "documented",
       "from": "refine-node-187",
       "rel": "requires",
@@ -18023,9 +19107,33 @@
       "to": "refine-node-191"
     },
     {
+      "confidence": "uncertain",
+      "from": "refine-node-191",
+      "note": "Delta particle upgrades do not spend delta points",
+      "rel": "boosts",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "particles-delta"
+    },
+    {
       "confidence": "documented",
       "from": "refine-node-137",
       "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-192"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "refine-node-192",
+      "note": "Epsilon Points generation is stronger based on your current Epsilon Points x1 (+0.01 per 10K Epsilon Points, capped at x10)",
+      "rel": "boosts",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "particles-epsilon"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "particles-epsilon",
+      "note": "Epsilon Points generation is stronger based on your current Epsilon Points x1 (+0.01 per 10K Epsilon Points, capped at x10)",
+      "rel": "boosts",
       "source": "wiki:Minerals/Refine_Tree",
       "to": "refine-node-192"
     },
@@ -18037,11 +19145,27 @@
       "to": "refine-node-196"
     },
     {
+      "confidence": "uncertain",
+      "from": "refine-node-196",
+      "note": "Multiplies Spark Mastery Gain on Spark Spawn by xX",
+      "rel": "boosts",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "spark-mastery"
+    },
+    {
       "confidence": "documented",
       "from": "refine-node-184",
       "rel": "requires",
       "source": "wiki:Minerals/Refine_Tree",
       "to": "refine-node-200"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "refine-node-200",
+      "note": "Multiplies Mastery Gain on Spark Destroy by xX",
+      "rel": "boosts",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "spark-mastery"
     },
     {
       "confidence": "uncertain",
@@ -20203,6 +21327,13 @@
       "from": "singularity-milestone-one-hundred",
       "rel": "boosts",
       "source": "wiki:Singularity",
+      "to": "particle-generators"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "singularity-milestone-one-hundred",
+      "rel": "boosts",
+      "source": "wiki:Singularity",
       "to": "singularity"
     },
     {
@@ -20211,6 +21342,13 @@
       "rel": "boosts",
       "source": "wiki:Singularity",
       "to": "singularity"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "singularity-milestone-singular-master",
+      "rel": "boosts",
+      "source": "wiki:Singularity",
+      "to": "spark-mastery"
     },
     {
       "confidence": "uncertain",
@@ -20253,6 +21391,13 @@
       "rel": "boosts",
       "source": "wiki:Singularity",
       "to": "luck"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "singularity-milestone-atom-particle-synergy",
+      "rel": "boosts",
+      "source": "wiki:Singularity",
+      "to": "particle-generators"
     },
     {
       "confidence": "uncertain",
@@ -20326,6 +21471,20 @@
     },
     {
       "confidence": "uncertain",
+      "from": "singularity-tree-3-1",
+      "rel": "boosts",
+      "source": "wiki:Singularity",
+      "to": "atom-penalty"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "singularity-tree-3-2",
+      "rel": "boosts",
+      "source": "wiki:Singularity",
+      "to": "atom-penalty"
+    },
+    {
+      "confidence": "uncertain",
       "from": "singularity-tree-4-1",
       "rel": "boosts",
       "source": "wiki:Singularity",
@@ -20358,6 +21517,13 @@
       "rel": "boosts",
       "source": "wiki:Singularity",
       "to": "singularity"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "singularity-tree-6-2",
+      "rel": "boosts",
+      "source": "wiki:Singularity",
+      "to": "atom-penalty"
     },
     {
       "confidence": "uncertain",
@@ -22953,7 +24119,21 @@
       "from": "tarot-challenge-the-sun",
       "rel": "boosts",
       "source": "wiki:Tarot",
+      "to": "particles-sparks"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-the-sun",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
       "to": "minerals"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot-challenge-the-sun",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "spark-mastery"
     },
     {
       "confidence": "uncertain",
@@ -23268,7 +24448,7 @@
       "from": "particles-spark-white",
       "rel": "boosts",
       "source": "wiki:Particles",
-      "to": "singularity"
+      "to": "singularity-local-speed"
     },
     {
       "confidence": "uncertain",
@@ -23300,10 +24480,843 @@
     },
     {
       "confidence": "uncertain",
+      "from": "particles-spark-cyan",
+      "rel": "boosts",
+      "source": "wiki:Particles",
+      "to": "particle-empowerers"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "particles-spark-blue",
+      "rel": "boosts",
+      "source": "wiki:Particles",
+      "to": "atom-penalty"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "particles-spark-pink",
+      "rel": "boosts",
+      "source": "wiki:Particles",
+      "to": "spark-mastery"
+    },
+    {
+      "confidence": "uncertain",
       "from": "particles-spark-purple",
       "rel": "boosts",
       "source": "wiki:Particles",
       "to": "plague-generators"
+    },
+    {
+      "confidence": "documented",
+      "from": "particles-rank",
+      "rel": "requires",
+      "source": "game",
+      "to": "particles-rank-bonus-1"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "particles-rank-bonus-1",
+      "rel": "boosts",
+      "source": "game",
+      "to": "particle-generators"
+    },
+    {
+      "confidence": "documented",
+      "from": "particles-rank",
+      "rel": "requires",
+      "source": "game",
+      "to": "particles-rank-bonus-2"
+    },
+    {
+      "confidence": "documented",
+      "from": "particles-rank",
+      "rel": "requires",
+      "source": "game",
+      "to": "particles-rank-bonus-3"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "particles-rank-bonus-3",
+      "rel": "boosts",
+      "source": "game",
+      "to": "particle-generators"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "refine-node-141",
+      "rel": "boosts",
+      "source": "game",
+      "to": "particles-rank-bonus-3"
+    },
+    {
+      "confidence": "documented",
+      "from": "particles-rank",
+      "rel": "requires",
+      "source": "game",
+      "to": "particles-rank-bonus-4"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "particles-rank-bonus-4",
+      "rel": "boosts",
+      "source": "game",
+      "to": "attack-exponent"
+    },
+    {
+      "confidence": "documented",
+      "from": "particles-rank",
+      "rel": "requires",
+      "source": "game",
+      "to": "particles-rank-bonus-5"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "particles-rank-bonus-5",
+      "rel": "boosts",
+      "source": "game",
+      "to": "singularity-local-speed"
+    },
+    {
+      "confidence": "documented",
+      "from": "particles-rank",
+      "rel": "requires",
+      "source": "game",
+      "to": "particles-rank-bonus-6"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "particles-rank-bonus-6",
+      "rel": "boosts",
+      "source": "game",
+      "to": "singularity-tree-3-1"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "particles-rank-bonus-6",
+      "rel": "boosts",
+      "source": "game",
+      "to": "singularity-tree-3-2"
+    },
+    {
+      "confidence": "documented",
+      "from": "particles-rank",
+      "rel": "requires",
+      "source": "game",
+      "to": "particles-rank-bonus-7"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "particles-rank-bonus-7",
+      "rel": "boosts",
+      "source": "game",
+      "to": "particle-generators"
+    },
+    {
+      "confidence": "documented",
+      "from": "particles-rank",
+      "rel": "requires",
+      "source": "game",
+      "to": "particles-rank-bonus-8"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "particles-rank-bonus-8",
+      "rel": "boosts",
+      "source": "game",
+      "to": "luck"
+    },
+    {
+      "confidence": "documented",
+      "from": "particles-rank",
+      "rel": "requires",
+      "source": "game",
+      "to": "particles-rank-bonus-9"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "particles-rank-bonus-9",
+      "rel": "boosts",
+      "source": "game",
+      "to": "singularity-tree-6-2"
+    },
+    {
+      "confidence": "documented",
+      "from": "particles-rank",
+      "rel": "requires",
+      "source": "game",
+      "to": "particles-rank-bonus-10"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "particles-rank-bonus-10",
+      "rel": "boosts",
+      "source": "game",
+      "to": "refine-node-142"
+    },
+    {
+      "confidence": "documented",
+      "from": "particles-rank",
+      "rel": "requires",
+      "source": "game",
+      "to": "particles-rank-bonus-11"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "particles-rank-bonus-11",
+      "rel": "boosts",
+      "source": "game",
+      "to": "golden-resources"
+    },
+    {
+      "confidence": "documented",
+      "from": "particles-rank",
+      "rel": "requires",
+      "source": "game",
+      "to": "particles-rank-bonus-12"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "particles-rank-bonus-12",
+      "rel": "boosts",
+      "source": "game",
+      "to": "atom-penalty"
+    },
+    {
+      "confidence": "documented",
+      "from": "particles-rank",
+      "rel": "requires",
+      "source": "game",
+      "to": "particles-rank-bonus-13"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "particles-rank-bonus-13",
+      "rel": "boosts",
+      "source": "game",
+      "to": "sacrifice-dust"
+    },
+    {
+      "confidence": "documented",
+      "from": "particles-rank",
+      "rel": "requires",
+      "source": "game",
+      "to": "particles-rank-bonus-14"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "particles-rank-bonus-14",
+      "rel": "boosts",
+      "source": "game",
+      "to": "relic-71"
+    },
+    {
+      "confidence": "documented",
+      "from": "particles-rank",
+      "rel": "requires",
+      "source": "game",
+      "to": "particles-rank-bonus-15"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "particles-rank-bonus-15",
+      "rel": "boosts",
+      "source": "game",
+      "to": "attack-mult"
+    },
+    {
+      "confidence": "documented",
+      "from": "particles-rank",
+      "rel": "requires",
+      "source": "game",
+      "to": "particles-rank-bonus-16"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "particles-rank-bonus-16",
+      "rel": "boosts",
+      "source": "game",
+      "to": "particle-generators"
+    },
+    {
+      "confidence": "documented",
+      "from": "particles-rank",
+      "rel": "requires",
+      "source": "game",
+      "to": "particles-rank-bonus-17"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "particles-rank-bonus-17",
+      "rel": "boosts",
+      "source": "game",
+      "to": "spark-mastery"
+    },
+    {
+      "confidence": "documented",
+      "from": "particles-rank",
+      "rel": "requires",
+      "source": "game",
+      "to": "particles-rank-bonus-18"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "particles-rank-bonus-18",
+      "rel": "boosts",
+      "source": "game",
+      "to": "epsilon-tree"
+    },
+    {
+      "confidence": "documented",
+      "from": "particles-tier",
+      "rel": "requires",
+      "source": "game",
+      "to": "particles-tier-bonus-1"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "particles-tier-bonus-1",
+      "rel": "boosts",
+      "source": "game",
+      "to": "particle-generators"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "refine-node-147",
+      "rel": "boosts",
+      "source": "game",
+      "to": "particles-tier-bonus-1"
+    },
+    {
+      "confidence": "documented",
+      "from": "particles-tier",
+      "rel": "requires",
+      "source": "game",
+      "to": "particles-tier-bonus-2"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "particles-tier-bonus-2",
+      "rel": "boosts",
+      "source": "game",
+      "to": "particle-generators"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "particles-tier-bonus-2",
+      "rel": "boosts",
+      "source": "game",
+      "to": "particle-multipliers"
+    },
+    {
+      "confidence": "documented",
+      "from": "particles-tier",
+      "rel": "requires",
+      "source": "game",
+      "to": "particles-tier-bonus-3"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "particles-tier-bonus-3",
+      "rel": "boosts",
+      "source": "game",
+      "to": "refinement-points"
+    },
+    {
+      "confidence": "documented",
+      "from": "particles-tier",
+      "rel": "requires",
+      "source": "game",
+      "to": "particles-tier-bonus-4"
+    },
+    {
+      "confidence": "documented",
+      "from": "particles-tier",
+      "rel": "requires",
+      "source": "game",
+      "to": "particles-tier-bonus-5"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "particles-tier-bonus-5",
+      "rel": "boosts",
+      "source": "game",
+      "to": "relic-73"
+    },
+    {
+      "confidence": "documented",
+      "from": "particles-tier",
+      "rel": "requires",
+      "source": "game",
+      "to": "particles-tier-bonus-6"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "particles-tier-bonus-6",
+      "rel": "boosts",
+      "source": "game",
+      "to": "relic-60"
+    },
+    {
+      "confidence": "documented",
+      "from": "particles-tier",
+      "rel": "requires",
+      "source": "game",
+      "to": "particles-tier-bonus-7"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "particles-tier-bonus-7",
+      "rel": "boosts",
+      "source": "game",
+      "to": "epsilon-tree"
+    },
+    {
+      "confidence": "documented",
+      "from": "particles-tetr",
+      "rel": "requires",
+      "source": "game",
+      "to": "particles-tetr-bonus-1"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "particles-tetr-bonus-1",
+      "rel": "boosts",
+      "source": "game",
+      "to": "particle-generators"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "particles-tetr-bonus-1",
+      "rel": "boosts",
+      "source": "game",
+      "to": "luck"
+    },
+    {
+      "confidence": "documented",
+      "from": "particles-tetr",
+      "rel": "requires",
+      "source": "game",
+      "to": "particles-tetr-bonus-2"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "particles-tetr-bonus-2",
+      "rel": "boosts",
+      "source": "game",
+      "to": "gold-gain"
+    },
+    {
+      "confidence": "documented",
+      "from": "particles-tetr",
+      "rel": "requires",
+      "source": "game",
+      "to": "particles-tetr-bonus-3"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "particles-tetr-bonus-3",
+      "rel": "boosts",
+      "source": "game",
+      "to": "relic-72"
+    },
+    {
+      "confidence": "documented",
+      "from": "particles-tetr",
+      "rel": "requires",
+      "source": "game",
+      "to": "particles-tetr-bonus-4"
+    },
+    {
+      "confidence": "documented",
+      "from": "particles-tetr",
+      "rel": "requires",
+      "source": "game",
+      "to": "particles-tetr-bonus-5"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "particles-tetr-bonus-5",
+      "rel": "boosts",
+      "source": "game",
+      "to": "particle-generators"
+    },
+    {
+      "confidence": "documented",
+      "from": "particles-tetr",
+      "rel": "requires",
+      "source": "game",
+      "to": "particles-tetr-bonus-6"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "particles-tetr-bonus-6",
+      "rel": "boosts",
+      "source": "game",
+      "to": "singularity-tree-4-2"
+    },
+    {
+      "confidence": "documented",
+      "from": "particles-tetr",
+      "rel": "requires",
+      "source": "game",
+      "to": "particles-tetr-bonus-7"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "particles-tetr-bonus-7",
+      "rel": "boosts",
+      "source": "game",
+      "to": "epsilon-tree"
+    },
+    {
+      "confidence": "documented",
+      "from": "particles-pent",
+      "rel": "requires",
+      "source": "game",
+      "to": "particles-pent-bonus-1"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "particles-pent-bonus-1",
+      "rel": "boosts",
+      "source": "game",
+      "to": "particle-generators"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "particles-pent-bonus-1",
+      "rel": "boosts",
+      "source": "game",
+      "to": "tarot"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "particles-pent-bonus-1",
+      "rel": "boosts",
+      "source": "game",
+      "to": "gold"
+    },
+    {
+      "confidence": "documented",
+      "from": "particles-pent",
+      "rel": "requires",
+      "source": "game",
+      "to": "particles-pent-bonus-2"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "particles-pent-bonus-2",
+      "rel": "boosts",
+      "source": "game",
+      "to": "relic-70"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "particles-pent-bonus-2",
+      "rel": "boosts",
+      "source": "game",
+      "to": "relic-73"
+    },
+    {
+      "confidence": "documented",
+      "from": "particles-pent",
+      "rel": "requires",
+      "source": "game",
+      "to": "particles-pent-bonus-3"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "particles-pent-bonus-3",
+      "rel": "boosts",
+      "source": "game",
+      "to": "particle-generators"
+    },
+    {
+      "confidence": "documented",
+      "from": "particles-pent",
+      "rel": "requires",
+      "source": "game",
+      "to": "particles-pent-bonus-4"
+    },
+    {
+      "confidence": "documented",
+      "from": "particles-pent",
+      "rel": "requires",
+      "source": "game",
+      "to": "particles-pent-bonus-5"
+    },
+    {
+      "confidence": "documented",
+      "from": "particles-pent",
+      "rel": "requires",
+      "source": "game",
+      "to": "particles-pent-bonus-6"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "particles-pent-bonus-6",
+      "rel": "boosts",
+      "source": "game",
+      "to": "epsilon-tree"
+    },
+    {
+      "confidence": "documented",
+      "from": "particles-pent",
+      "rel": "requires",
+      "source": "game",
+      "to": "particles-pent-bonus-7"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "particles-pent-bonus-7",
+      "rel": "boosts",
+      "source": "game",
+      "to": "refinement-points"
+    },
+    {
+      "confidence": "documented",
+      "from": "epsilon-tree",
+      "rel": "unlocks",
+      "source": "game",
+      "to": "epsilon-tree-node-16"
+    },
+    {
+      "confidence": "documented",
+      "from": "epsilon-tree",
+      "rel": "unlocks",
+      "source": "game",
+      "to": "epsilon-tree-node-17"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "epsilon-tree-node-17",
+      "rel": "boosts",
+      "source": "game",
+      "to": "atom-penalty"
+    },
+    {
+      "confidence": "documented",
+      "from": "epsilon-tree",
+      "rel": "unlocks",
+      "source": "game",
+      "to": "epsilon-tree-node-18"
+    },
+    {
+      "confidence": "documented",
+      "from": "epsilon-tree",
+      "rel": "unlocks",
+      "source": "game",
+      "to": "epsilon-tree-node-19"
+    },
+    {
+      "confidence": "documented",
+      "from": "epsilon-tree",
+      "rel": "unlocks",
+      "source": "game",
+      "to": "epsilon-tree-node-20"
+    },
+    {
+      "confidence": "documented",
+      "from": "epsilon-tree",
+      "rel": "unlocks",
+      "source": "game",
+      "to": "epsilon-tree-node-21"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "epsilon-tree-node-21",
+      "rel": "boosts",
+      "source": "game",
+      "to": "sacrifice-dust"
+    },
+    {
+      "confidence": "documented",
+      "from": "epsilon-tree",
+      "rel": "unlocks",
+      "source": "game",
+      "to": "epsilon-tree-node-22"
+    },
+    {
+      "confidence": "documented",
+      "from": "epsilon-tree",
+      "rel": "unlocks",
+      "source": "game",
+      "to": "epsilon-tree-node-23"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "epsilon-tree-node-23",
+      "rel": "boosts",
+      "source": "game",
+      "to": "tarot"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "epsilon-tree-node-23",
+      "rel": "boosts",
+      "source": "game",
+      "to": "golden-resources"
+    },
+    {
+      "confidence": "documented",
+      "from": "epsilon-tree",
+      "rel": "unlocks",
+      "source": "game",
+      "to": "epsilon-tree-node-24"
+    },
+    {
+      "confidence": "documented",
+      "from": "epsilon-tree",
+      "rel": "unlocks",
+      "source": "game",
+      "to": "epsilon-tree-node-25"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "epsilon-tree-node-25",
+      "rel": "boosts",
+      "source": "game",
+      "to": "particle-generators"
+    },
+    {
+      "confidence": "documented",
+      "from": "epsilon-tree",
+      "rel": "unlocks",
+      "source": "game",
+      "to": "epsilon-tree-node-26"
+    },
+    {
+      "confidence": "documented",
+      "from": "epsilon-tree",
+      "rel": "unlocks",
+      "source": "game",
+      "to": "epsilon-tree-node-27"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "epsilon-tree-node-27",
+      "rel": "boosts",
+      "source": "game",
+      "to": "endoplasmic-reticula"
+    },
+    {
+      "confidence": "documented",
+      "from": "epsilon-tree",
+      "rel": "unlocks",
+      "source": "game",
+      "to": "epsilon-tree-node-28"
+    },
+    {
+      "confidence": "documented",
+      "from": "epsilon-tree",
+      "rel": "unlocks",
+      "source": "game",
+      "to": "epsilon-tree-node-29"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "epsilon-tree-node-29",
+      "rel": "boosts",
+      "source": "game",
+      "to": "spark-luck"
+    },
+    {
+      "confidence": "documented",
+      "from": "epsilon-tree",
+      "rel": "unlocks",
+      "source": "game",
+      "to": "epsilon-tree-node-30"
+    },
+    {
+      "confidence": "documented",
+      "from": "epsilon-tree",
+      "rel": "unlocks",
+      "source": "game",
+      "to": "epsilon-tree-node-31"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "epsilon-tree-node-31",
+      "rel": "boosts",
+      "source": "game",
+      "to": "particles-sparks"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "epsilon-tree-node-31",
+      "rel": "boosts",
+      "source": "game",
+      "to": "particles-epsilon"
+    },
+    {
+      "confidence": "documented",
+      "from": "particles-sparks",
+      "rel": "unlocks",
+      "source": "game",
+      "to": "particles-spark-black"
+    },
+    {
+      "confidence": "documented",
+      "from": "particles-sparks",
+      "rel": "unlocks",
+      "source": "game",
+      "to": "particles-spark-blue"
+    },
+    {
+      "confidence": "documented",
+      "from": "particles-sparks",
+      "rel": "unlocks",
+      "source": "game",
+      "to": "particles-spark-cyan"
+    },
+    {
+      "confidence": "documented",
+      "from": "particles-sparks",
+      "rel": "unlocks",
+      "source": "game",
+      "to": "particles-spark-green"
+    },
+    {
+      "confidence": "documented",
+      "from": "particles-sparks",
+      "rel": "unlocks",
+      "source": "game",
+      "to": "particles-spark-orange"
+    },
+    {
+      "confidence": "documented",
+      "from": "particles-sparks",
+      "rel": "unlocks",
+      "source": "game",
+      "to": "particles-spark-pink"
+    },
+    {
+      "confidence": "documented",
+      "from": "particles-sparks",
+      "rel": "unlocks",
+      "source": "game",
+      "to": "particles-spark-purple"
+    },
+    {
+      "confidence": "documented",
+      "from": "particles-sparks",
+      "rel": "unlocks",
+      "source": "game",
+      "to": "particles-spark-red"
+    },
+    {
+      "confidence": "documented",
+      "from": "particles-sparks",
+      "rel": "unlocks",
+      "source": "game",
+      "to": "particles-spark-white"
+    },
+    {
+      "confidence": "documented",
+      "from": "particles-sparks",
+      "rel": "unlocks",
+      "source": "game",
+      "to": "particles-spark-yellow"
     },
     {
       "confidence": "uncertain",
@@ -26886,6 +28899,432 @@
       "rel": "requires",
       "source": "wiki:Tarot",
       "to": "tarot-challenge-the-sun"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-137",
+      "note": "The Particles tab unlocks after purchasing Refine Node 137",
+      "rel": "unlocks",
+      "source": "game:HELP_UNI_PARTICLES_DESC_1",
+      "to": "particles-alpha"
+    },
+    {
+      "confidence": "documented",
+      "from": "particles-alpha",
+      "note": "Alpha's grade requires a certain number of Alpha to rank up",
+      "rel": "requires",
+      "source": "wiki:Particles",
+      "to": "particles-rank"
+    },
+    {
+      "confidence": "documented",
+      "from": "particles-rank",
+      "rel": "requires",
+      "source": "game:PARTICLES_TIER_REQUIREMENT",
+      "to": "particles-tier"
+    },
+    {
+      "confidence": "documented",
+      "from": "particles-tier",
+      "rel": "requires",
+      "source": "game:PARTICLES_TETR_REQUIREMENT",
+      "to": "particles-tetr"
+    },
+    {
+      "confidence": "documented",
+      "from": "particles-tetr",
+      "rel": "requires",
+      "source": "game:PARTICLES_PENT_REQUIREMENT",
+      "to": "particles-pent"
+    },
+    {
+      "confidence": "documented",
+      "from": "particles-tier",
+      "rel": "unlocks",
+      "source": "wiki:Particles",
+      "to": "particles-beta"
+    },
+    {
+      "confidence": "documented",
+      "from": "particles-tetr",
+      "rel": "unlocks",
+      "source": "wiki:Particles",
+      "to": "particles-gamma"
+    },
+    {
+      "confidence": "documented",
+      "from": "particles-pent",
+      "rel": "unlocks",
+      "source": "wiki:Particles",
+      "to": "particles-delta"
+    },
+    {
+      "confidence": "documented",
+      "from": "particles-alpha",
+      "note": "Prestige uses accumulated particles to boost production of the next type",
+      "rel": "boosts",
+      "source": "game:HELP_UNI_PARTICLES_PRESTIGE_DESC_1",
+      "to": "particles-beta"
+    },
+    {
+      "confidence": "documented",
+      "from": "particles-beta",
+      "note": "Prestige uses accumulated particles to boost production of the next type",
+      "rel": "boosts",
+      "source": "game:HELP_UNI_PARTICLES_PRESTIGE_DESC_1",
+      "to": "particles-gamma"
+    },
+    {
+      "confidence": "documented",
+      "from": "particles-gamma",
+      "note": "Prestige uses accumulated particles to boost production of the next type",
+      "rel": "boosts",
+      "source": "game:HELP_UNI_PARTICLES_PRESTIGE_DESC_1",
+      "to": "particles-delta"
+    },
+    {
+      "confidence": "documented",
+      "from": "particles-delta",
+      "note": "Prestige uses accumulated particles to boost production of the next type",
+      "rel": "boosts",
+      "source": "game:HELP_UNI_PARTICLES_PRESTIGE_DESC_1",
+      "to": "particles-epsilon"
+    },
+    {
+      "confidence": "documented",
+      "from": "particle-generators",
+      "rel": "boosts",
+      "source": "game:HELP_UNI_PARTICLES_PRODUCTION_DESC_2",
+      "to": "particles-alpha"
+    },
+    {
+      "confidence": "documented",
+      "from": "particle-generators",
+      "rel": "boosts",
+      "source": "game:HELP_UNI_PARTICLES_PRODUCTION_DESC_2",
+      "to": "particles-beta"
+    },
+    {
+      "confidence": "documented",
+      "from": "particle-generators",
+      "rel": "boosts",
+      "source": "game:HELP_UNI_PARTICLES_PRODUCTION_DESC_2",
+      "to": "particles-gamma"
+    },
+    {
+      "confidence": "documented",
+      "from": "particle-generators",
+      "rel": "boosts",
+      "source": "game:HELP_UNI_PARTICLES_PRODUCTION_DESC_2",
+      "to": "particles-delta"
+    },
+    {
+      "confidence": "documented",
+      "from": "particle-multipliers",
+      "op": "mult",
+      "rel": "boosts",
+      "source": "game:HELP_UNI_PARTICLES_PRODUCTION_DESC_2",
+      "to": "particles-alpha"
+    },
+    {
+      "confidence": "documented",
+      "from": "particle-multipliers",
+      "op": "mult",
+      "rel": "boosts",
+      "source": "game:HELP_UNI_PARTICLES_PRODUCTION_DESC_2",
+      "to": "particles-beta"
+    },
+    {
+      "confidence": "documented",
+      "from": "particle-multipliers",
+      "op": "mult",
+      "rel": "boosts",
+      "source": "game:HELP_UNI_PARTICLES_PRODUCTION_DESC_2",
+      "to": "particles-gamma"
+    },
+    {
+      "confidence": "documented",
+      "from": "particle-multipliers",
+      "op": "mult",
+      "rel": "boosts",
+      "source": "game:HELP_UNI_PARTICLES_PRODUCTION_DESC_2",
+      "to": "particles-delta"
+    },
+    {
+      "confidence": "documented",
+      "from": "particle-empowerers",
+      "op": "exp",
+      "rel": "boosts",
+      "source": "game:HELP_UNI_PARTICLES_PRODUCTION_DESC_2",
+      "to": "particles-alpha"
+    },
+    {
+      "confidence": "documented",
+      "from": "particle-empowerers",
+      "op": "exp",
+      "rel": "boosts",
+      "source": "game:HELP_UNI_PARTICLES_PRODUCTION_DESC_2",
+      "to": "particles-beta"
+    },
+    {
+      "confidence": "documented",
+      "from": "particle-empowerers",
+      "op": "exp",
+      "rel": "boosts",
+      "source": "game:HELP_UNI_PARTICLES_PRODUCTION_DESC_2",
+      "to": "particles-gamma"
+    },
+    {
+      "confidence": "documented",
+      "from": "particle-empowerers",
+      "op": "exp",
+      "rel": "boosts",
+      "source": "game:HELP_UNI_PARTICLES_PRODUCTION_DESC_2",
+      "to": "particles-delta"
+    },
+    {
+      "confidence": "documented",
+      "from": "particle-tetrators",
+      "rel": "boosts",
+      "source": "game:HELP_UNI_PARTICLES_PRODUCTION_DESC_2",
+      "to": "particles-alpha"
+    },
+    {
+      "confidence": "documented",
+      "from": "particle-tetrators",
+      "rel": "boosts",
+      "source": "game:HELP_UNI_PARTICLES_PRODUCTION_DESC_2",
+      "to": "particles-beta"
+    },
+    {
+      "confidence": "documented",
+      "from": "particle-tetrators",
+      "rel": "boosts",
+      "source": "game:HELP_UNI_PARTICLES_PRODUCTION_DESC_2",
+      "to": "particles-gamma"
+    },
+    {
+      "confidence": "documented",
+      "from": "particle-tetrators",
+      "rel": "boosts",
+      "source": "game:HELP_UNI_PARTICLES_PRODUCTION_DESC_2",
+      "to": "particles-delta"
+    },
+    {
+      "confidence": "documented",
+      "from": "particles-epsilon",
+      "note": "Spend Epsilon to create a spark with a random color and rarity",
+      "rel": "requires",
+      "source": "game:HELP_UNI_PARTICLES_SPARKS_DESC_1",
+      "to": "particles-sparks"
+    },
+    {
+      "confidence": "documented",
+      "from": "particles-sparks",
+      "note": "Equip sparks to increase Epsilon production",
+      "rel": "boosts",
+      "source": "game:HELP_UNI_PARTICLES_SPARKS_DESC_2",
+      "to": "particles-epsilon"
+    },
+    {
+      "confidence": "documented",
+      "from": "spark-mastery",
+      "note": "Mastery strengthens newly created sparks",
+      "rel": "boosts",
+      "source": "game:HELP_UNI_PARTICLES_SPARKS_DESC_3",
+      "to": "particles-sparks"
+    },
+    {
+      "confidence": "documented",
+      "from": "spark-luck",
+      "note": "Luck increases the chance of obtaining sparks of higher rarity",
+      "rel": "boosts",
+      "source": "game:HELP_UNI_PARTICLES_SPARKS_DESC_3",
+      "to": "particles-sparks"
+    },
+    {
+      "confidence": "documented",
+      "from": "particles-epsilon",
+      "note": "Purchase Epsilon Tree Points (ETP) with Epsilon",
+      "rel": "requires",
+      "source": "game:HELP_UNI_PARTICLES_TREE_DESC_1",
+      "to": "epsilon-tree-points"
+    },
+    {
+      "confidence": "documented",
+      "from": "epsilon-tree-points",
+      "note": "Spend them to upgrade nodes",
+      "rel": "requires",
+      "source": "game:HELP_UNI_PARTICLES_TREE_DESC_1",
+      "to": "epsilon-tree"
+    },
+    {
+      "confidence": "documented",
+      "from": "particles-rank-bonus-2",
+      "note": "Unlocks Rank Factor for singularity",
+      "rel": "boosts",
+      "source": "game:PARTICLES_BONUS_RANK_1",
+      "to": "singularity-mult"
+    },
+    {
+      "confidence": "documented",
+      "from": "particles-tier-bonus-4",
+      "note": "Unlocks Tier Factor for singularity",
+      "rel": "boosts",
+      "source": "game:PARTICLES_BONUS_TIER_3",
+      "to": "singularity-mult"
+    },
+    {
+      "confidence": "documented",
+      "from": "particles-tetr-bonus-4",
+      "note": "Unlocks Tetr Factor for singularity",
+      "rel": "boosts",
+      "source": "game:PARTICLES_BONUS_TETR_3",
+      "to": "singularity-mult"
+    },
+    {
+      "confidence": "documented",
+      "from": "particles-pent-bonus-4",
+      "note": "Unlocks Pent Factor for singularity",
+      "rel": "boosts",
+      "source": "game:PARTICLES_BONUS_PENT_3",
+      "to": "singularity-mult"
+    },
+    {
+      "confidence": "documented",
+      "from": "particles-rank-bonus-15",
+      "note": "The rank 8 bonus is 10 times stronger",
+      "rel": "boosts",
+      "source": "game:PARTICLES_BONUS_RANK_14",
+      "to": "particles-rank-bonus-4"
+    },
+    {
+      "confidence": "documented",
+      "from": "particles-pent-bonus-5",
+      "note": "Tetr 20 Milestone base effect is increased by 0.01 per Pent",
+      "rel": "boosts",
+      "source": "game:PARTICLES_BONUS_PENT_4",
+      "to": "particles-tetr-bonus-6"
+    },
+    {
+      "confidence": "documented",
+      "from": "epsilon-tree-node-16",
+      "note": "Red & Blue spark base mastery",
+      "rel": "boosts",
+      "source": "game:EPSILON_EFFECT_15",
+      "to": "particles-spark-red"
+    },
+    {
+      "confidence": "documented",
+      "from": "epsilon-tree-node-16",
+      "note": "Red & Blue spark base mastery",
+      "rel": "boosts",
+      "source": "game:EPSILON_EFFECT_15",
+      "to": "particles-spark-blue"
+    },
+    {
+      "confidence": "documented",
+      "from": "epsilon-tree-node-18",
+      "note": "Orange spark base mastery",
+      "rel": "boosts",
+      "source": "game:EPSILON_EFFECT_17",
+      "to": "particles-spark-orange"
+    },
+    {
+      "confidence": "documented",
+      "from": "epsilon-tree-node-20",
+      "note": "Yellow spark base mastery",
+      "rel": "boosts",
+      "source": "game:EPSILON_EFFECT_19",
+      "to": "particles-spark-yellow"
+    },
+    {
+      "confidence": "documented",
+      "from": "epsilon-tree-node-22",
+      "note": "Green spark base mastery",
+      "rel": "boosts",
+      "source": "game:EPSILON_EFFECT_21",
+      "to": "particles-spark-green"
+    },
+    {
+      "confidence": "documented",
+      "from": "epsilon-tree-node-24",
+      "note": "Cyan spark base mastery",
+      "rel": "boosts",
+      "source": "game:EPSILON_EFFECT_23",
+      "to": "particles-spark-cyan"
+    },
+    {
+      "confidence": "documented",
+      "from": "epsilon-tree-node-26",
+      "note": "Purple spark base mastery",
+      "rel": "boosts",
+      "source": "game:EPSILON_EFFECT_25",
+      "to": "particles-spark-purple"
+    },
+    {
+      "confidence": "documented",
+      "from": "epsilon-tree-node-28",
+      "note": "Pink spark base mastery",
+      "rel": "boosts",
+      "source": "game:EPSILON_EFFECT_27",
+      "to": "particles-spark-pink"
+    },
+    {
+      "confidence": "documented",
+      "from": "epsilon-tree-node-30",
+      "note": "Black & White spark base mastery",
+      "rel": "boosts",
+      "source": "game:EPSILON_EFFECT_29",
+      "to": "particles-spark-black"
+    },
+    {
+      "confidence": "documented",
+      "from": "epsilon-tree-node-30",
+      "note": "Black & White spark base mastery",
+      "rel": "boosts",
+      "source": "game:EPSILON_EFFECT_29",
+      "to": "particles-spark-white"
+    },
+    {
+      "confidence": "provisional",
+      "from": "particles-rank",
+      "note": "Particle Rank boosts Refine Point gain (^X / +0.001 per rank)",
+      "rel": "boosts",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-138"
+    },
+    {
+      "confidence": "provisional",
+      "from": "particles-rank",
+      "note": "Particle Rank boosts gold: ^X (+0.01 per rank)",
+      "rel": "boosts",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-144"
+    },
+    {
+      "confidence": "provisional",
+      "from": "particles-beta",
+      "note": "Beta Particles boost Alpha Generator Base a bit better (0.2 -> 0.3)",
+      "rel": "boosts",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-147"
+    },
+    {
+      "confidence": "provisional",
+      "from": "singularity-local-speed",
+      "note": "You passively gain Singularity Multiplier every second (also affected by local singularity speed)",
+      "rel": "boosts",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-151"
+    },
+    {
+      "confidence": "provisional",
+      "from": "singularity-local-speed",
+      "note": "Local Particles Speed is boosted by ^0.1 of Local Singularity Speed",
+      "rel": "boosts",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-166"
     }
   ],
   "systems": [
@@ -27059,6 +29498,16 @@
       "id": "particles",
       "name": "Particles",
       "parent": "unity"
+    },
+    {
+      "id": "particles-grades",
+      "name": "Grades",
+      "parent": "particles"
+    },
+    {
+      "id": "epsilon-tree",
+      "name": "Epsilon Tree",
+      "parent": "particles"
     }
   ]
 }

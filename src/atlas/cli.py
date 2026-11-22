@@ -22,7 +22,7 @@ from atlas.game import (
     read_install,
     write_outputs,
 )
-from atlas.gamemap import GAME_FILE_REL_PATH, map_catalog
+from atlas.gamemap import GAME_FILE_REL_PATH, grade_thresholds, map_catalog, map_particles
 from atlas.gamemap import to_yaml as game_to_yaml
 from atlas.loader import SchemaError, load_dataset, load_game
 from atlas.merge import merge
@@ -101,6 +101,18 @@ def _load_inputs(root: Path) -> tuple[Dataset, Dataset] | None:
     return derived, curated
 
 
+def _load_game_file(root: Path) -> GameData | None:
+    """Load data/game.yaml, printing any failure. None means "do not build".
+
+    Absent on a checkout that has never run `atlas game`, and then empty: the
+    build is exactly the two-file merge, and extraction adds no game edges.
+    """
+    game_path = root / GAME_FILE_REL_PATH
+    if not game_path.is_file():
+        return GameData()
+    return _load(game_path, str(GAME_FILE_REL_PATH), load_game)
+
+
 def _build(root: Path, check_only: bool) -> int:
     display_path = str(DATASET_REL_PATH)
     inputs = _load_inputs(root)
@@ -108,14 +120,9 @@ def _build(root: Path, check_only: bool) -> int:
         return 1
     derived, curated = inputs
 
-    # Absent on a checkout that has never run `atlas game`; the build is then
-    # exactly the two-file merge.
-    game_path = root / GAME_FILE_REL_PATH
-    game: GameData | None = None
-    if game_path.is_file():
-        game = _load(game_path, str(GAME_FILE_REL_PATH), load_game)
-        if game is None:
-            return 1
+    game = _load_game_file(root)
+    if game is None:
+        return 1
 
     dataset, merge_problems = merge(
         derived,
@@ -191,12 +198,17 @@ def _extract(root: Path) -> int:
             return 1
         curated = loaded
 
+    game = _load_game_file(root)
+    if game is None:
+        return 1
+
     try:
         result = run_all(
             raw_dir,
             build_vocabulary(curated.nodes),
             frozenset(curated.node_ids()),
             manifest=load_manifest(root / SWEEP_REL_PATH),
+            game=game,
         )
     except SurfaceFormCollision as exc:
         print(f"{DATASET_REL_PATH}  error  {exc}", file=sys.stderr)
@@ -267,6 +279,18 @@ def _game(root: Path, install: Path) -> int:
     # the nodes it added itself.
     dataset, _ = merge(*inputs)
     game, reports, skipped = map_catalog(families, dataset.nodes, dump["buildid"])
+    # The wiki numbers grade bonuses by threshold; the game only by position.
+    particles_page = root / "data" / "raw" / "Particles.wikitext"
+    thresholds = (
+        grade_thresholds(particles_page.read_text(encoding="utf-8"))
+        if particles_page.is_file()
+        else {}
+    )
+    particles, particle_reports = map_particles(
+        dump["strings"], dataset.nodes, thresholds
+    )
+    game.nodes.extend(particles)
+    reports.update(particle_reports)
     (root / GAME_FILE_REL_PATH).write_text(
         game_to_yaml(game), encoding="utf-8", newline="\n"
     )
