@@ -132,3 +132,58 @@ def test_run_all_drops_edges_to_a_matched_node_the_wiki_lost(tmp_path, monkeypat
     assert [(d.from_id, d.to_id) for d in result.dropped] == [
         ("particles-sparks", "particles-spark-green")
     ]
+
+
+ACHIEVEMENT_VOCAB = Vocabulary(
+    [("Infinities", "infinities"), ("IP", "infinity-points"), ("Dilation", "dilation")]
+)
+
+
+def _achievement(description: str, *effects: str) -> GameNode:
+    return GameNode(
+        id="achievement-36",
+        name="Achievement 36 (Many of Them)",
+        description=description,
+        effects=list(effects),
+        system="achievements",
+        kind=Kind.ACHIEVEMENT,
+    )
+
+
+def _achievement_edges(entry: GameNode) -> set[tuple[str, str, str]]:
+    result = game_text.extract(GameData(nodes=[entry]), ACHIEVEMENT_VOCAB)
+    return {(e.from_, e.to, str(e.rel)) for e in result.edges}
+
+
+def test_an_achievement_boosts_from_its_reward_and_requires_its_threshold():
+    edges = _achievement_edges(_achievement("Reach 5 Infinities", "x2 IP gain"))
+    assert edges == {
+        ("achievement-36", "infinity-points", "boosts"),
+        ("infinities", "achievement-36", "requires"),
+    }
+
+
+def test_an_achievement_goal_never_boosts_what_it_names():
+    # The goal is what the player must reach, as a Tarot challenge's penalty is
+    # what it restricts; matching it would claim the achievement raises it.
+    # Without a reward there is no text an outgoing boost may come from.
+    for entry in (
+        _achievement("Reach 5 Infinities"),
+        _achievement("Reach a score of e5e10 in Dilation"),
+        _achievement("Reach a score of e5e10 in Dilation", "Faster optimization"),
+    ):
+        assert not any(rel == "boosts" for _, _, rel in _achievement_edges(entry))
+
+
+def test_an_achievement_goal_that_is_no_plain_threshold_requires_nothing():
+    edges = _achievement_edges(
+        _achievement("Reach a score of e5e10 in Dilation", "x2 IP gain")
+    )
+    assert edges == {("achievement-36", "infinity-points", "boosts")}
+
+
+def test_a_macro_block_reward_names_what_the_block_runs():
+    edges = _achievement_edges(
+        _achievement("Unite", "Unlocks macro block for Dilation. x2 IP gain")
+    )
+    assert edges == {("achievement-36", "infinity-points", "boosts")}

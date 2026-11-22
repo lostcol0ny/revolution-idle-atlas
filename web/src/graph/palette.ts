@@ -69,6 +69,9 @@ export const SYSTEM_COLOURS: Record<KnownSystem, string> = {
   // parent shade, the second rotates toward magenta instead of darkening again.
   'particles-grades': '#45307d',
   'epsilon-tree': '#6a3590',
+  // Plum: the hue furthest from every colour above that still carries white
+  // text, since achievements link into nearly every other system.
+  achievements: '#6b2d5c',
 };
 
 const KIND_BADGES: Record<Kind, string> = {
@@ -79,6 +82,7 @@ const KIND_BADGES: Record<Kind, string> = {
   'tarot-card': 'T',
   upgrade: 'U',
   group: 'G',
+  achievement: 'A',
 };
 
 // System ids come from the dataset, not from this file, so a node can legally
@@ -125,6 +129,8 @@ const SYSTEM_ICONS: Partial<Record<KnownSystem, string>> = {
   trials: '🏆',
   elements: '🔥',
   houses: '🏠',
+  // Not the trophy: Trials has it.
+  achievements: '🏅',
 };
 
 const UNKNOWN_SYSTEM_ICON = '◆';

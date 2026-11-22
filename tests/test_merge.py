@@ -537,3 +537,38 @@ def test_no_game_file_merges_exactly_as_without_one():
     without, _ = merge(_derived(), curated)
     empty, _ = merge(_derived(), curated, game=GameData())
     assert without == empty
+
+
+def test_game_effects_land_on_the_node_and_curated_effects_still_win():
+    game = _game(
+        GameNode(
+            id="achievement-36",
+            name="Achievement 36 (Many of Them)",
+            description="Reach 5 Infinities",
+            effects=["x2 IP gain"],
+            system="achievements",
+            kind=Kind.ACHIEVEMENT,
+        ),
+        GameNode(
+            id="achievement-44",
+            name="Achievement 44 (Four of Nine)",
+            effects=["x2 IP gain"],
+            system="achievements",
+            kind=Kind.ACHIEVEMENT,
+        ),
+    )
+    curated = Dataset(
+        nodes=[
+            Node(
+                id="achievement-44",
+                name="Achievement 44 (Four of Nine)",
+                system="achievements",
+                kind=Kind.ACHIEVEMENT,
+                effects=[Effect(text="IP gain doubled")],
+            )
+        ]
+    )
+    merged, problems = merge(Dataset(), curated, game=game)
+    assert problems == []
+    effects = {n.id: [e.text for e in n.effects] for n in merged.nodes}
+    assert effects == {"achievement-36": ["x2 IP gain"], "achievement-44": ["IP gain doubled"]}

@@ -7,14 +7,16 @@ from atlas.cli import main
 from atlas.gamemap import (
     GAME_FILE_REL_PATH,
     grade_thresholds,
+    map_achievements,
     map_catalog,
     map_particles,
     map_strings,
     readable,
     to_yaml,
+    wiki_achievements,
 )
 from atlas.loader import load_game
-from atlas.models import Kind, Node
+from atlas.models import GameData, Kind, Node
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -225,6 +227,7 @@ def test_named_families_match_by_normalised_name():
         ],
         "UNI_MIN_COMMON": [_entry(0, "Paper")],
         "ACH": [_entry(0, "A Million")],
+        "UNI_SKIN": [_entry(0, "Red")],
     }
     game, reports, skipped = map_catalog(families, nodes, None)
 
@@ -240,7 +243,8 @@ def test_named_families_match_by_normalised_name():
     ]
     # Mineral tiers are matched only, never created.
     assert reports["UNI_MIN_COMMON"].unmatched == ["#0 'Paper': no node"]
-    assert skipped == ["ACH"]
+    # Achievements are read from the strings by map_achievements instead.
+    assert skipped == ["UNI_SKIN"]
 
 
 def test_game_file_round_trips_through_the_loader(tmp_path):
@@ -408,6 +412,107 @@ def test_particles_map_grade_bonuses_tree_effects_and_sparks():
         "#3: not a known outer node (A1-A16 are #15-#30)",
         "#31: not a known outer node (A1-A16 are #15-#30)",
     ]
+
+
+ACHIEVEMENTS_PAGE = """
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_001.png
+| name = A Million
+| description = Reach 1,000,000 Score
+| reward = Unlock Leaderboard
+}}
+{{Achievement/NormalRowItem
+| icon = Achievement_normal_254.png
+| name = Golden Inflation
+| description = Reach about 1.08e308 Gold
+| reward = Empowers Relic 17 by ^1.01
+}}
+"""
+
+
+def test_achievements_with_a_reward_become_nodes():
+    strings = {
+        "ACH_NAME_0": "A Million",
+        "ACH_DESC_0": "Reach {0} Score",
+        "ACH_REWD_0": "Unlock Leaderboard",
+        # No reward: left out, and counted.
+        "ACH_NAME_1": "First Ascension",
+        "ACH_DESC_1": "Ascend a buyable",
+        # The wiki words the goal differently, so the placeholder is worded.
+        "ACH_NAME_253": "Golden Inflation",
+        "ACH_DESC_253": "Reach {0}+ Gold",
+        "ACH_REWD_253": "Empowers Relic 17 by ^1.01",
+        # A later achievement swaps the reward: the swap is a second effect.
+        "ACH_NAME_28": "Backwards",
+        "ACH_DESC_28": "Make White Mult > Pink Mult",
+        "ACH_REWD_28": "A fading sense of accomplishment",
+        "ACH_REWD_28_NEW": "Dilation Tree TOP-4 upgrades are 30% stronger",
+        # The running total is the player's, so it is dropped, not filled.
+        "ACH_NAME_442": "Now the Real Grind Begins",
+        "ACH_DESC_442": "Reach SMP Lv.20",
+        "ACH_REWD_442": "Total SMP EXP ({0}) boosts Sacrifice Dust gain (x{1})",
+        "ACH_NAME_10045": "Silence",
+        "ACH_DESC_10045": "Annoy him.",
+        "ACH_REWD_10045": "He stops.",
+        "ACH_REWARD_BASE": "They give x{0} to Mult gain.",
+    }
+    mapped, report = map_achievements(strings, [], wiki_achievements(ACHIEVEMENTS_PAGE))
+
+    assert [(n.id, n.name, n.description, n.effects, n.system, n.kind) for n in mapped] == [
+        (
+            "achievement-1",
+            "Achievement 1 (A Million)",
+            "Reach 1,000,000 Score",
+            ["Unlock Leaderboard"],
+            "achievements",
+            Kind.ACHIEVEMENT,
+        ),
+        (
+            "achievement-29",
+            "Achievement 29 (Backwards)",
+            "Make White Mult > Pink Mult",
+            [
+                "A fading sense of accomplishment",
+                "Dilation Tree TOP-4 upgrades are 30% stronger",
+            ],
+            "achievements",
+            Kind.ACHIEVEMENT,
+        ),
+        (
+            "achievement-254",
+            "Achievement 254 (Golden Inflation)",
+            "Reach a value+ Gold",
+            ["Empowers Relic 17 by ^1.01"],
+            "achievements",
+            Kind.ACHIEVEMENT,
+        ),
+        (
+            "achievement-443",
+            "Achievement 443 (Now the Real Grind Begins)",
+            "Reach SMP Lv.20",
+            ["Total SMP EXP boosts Sacrifice Dust gain"],
+            "achievements",
+            Kind.ACHIEVEMENT,
+        ),
+        (
+            "achievement-secret-46",
+            "Secret Achievement 46 (Silence)",
+            "Annoy him.",
+            ["He stops."],
+            "achievements",
+            Kind.ACHIEVEMENT,
+        ),
+    ]
+    assert (report.added, report.matched, report.left_out, report.unmatched) == (5, 0, 1, [])
+
+
+def test_achievement_effects_round_trip_through_the_game_file(tmp_path):
+    mapped, _ = map_achievements(
+        {"ACH_NAME_0": "A", "ACH_DESC_0": "Reach 5 X", "ACH_REWD_0": "x2 Y"}, [], {}
+    )
+    path = tmp_path / "game.yaml"
+    path.write_text(to_yaml(GameData(nodes=mapped)), encoding="utf-8")
+    assert load_game(path).nodes[0].effects == ["x2 Y"]
 
 
 def _described(strings: dict, nodes: list[Node]):

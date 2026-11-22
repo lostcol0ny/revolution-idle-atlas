@@ -11333,6 +11333,1949 @@
     },
     {
       "confidence": "documented",
+      "description": "Reach 1,000,000 Score",
+      "effects": [
+        {
+          "text": "Unlock Leaderboard"
+        }
+      ],
+      "id": "achievement-1",
+      "kind": "achievement",
+      "name": "Achievement 1 (A Million)",
+      "system": "achievements"
+    },
+    {
+      "confidence": "documented",
+      "description": "Prestige for the first time",
+      "effects": [
+        {
+          "text": "Unlock multi-buy"
+        }
+      ],
+      "id": "achievement-4",
+      "kind": "achievement",
+      "name": "Achievement 4 (Let's Prestige)",
+      "system": "achievements"
+    },
+    {
+      "confidence": "documented",
+      "description": "Buy White",
+      "effects": [
+        {
+          "text": "x1.05 Lap Speed"
+        }
+      ],
+      "id": "achievement-10",
+      "kind": "achievement",
+      "name": "Achievement 10 (Color Spectrum)",
+      "system": "achievements"
+    },
+    {
+      "confidence": "documented",
+      "description": "Play for 5 hours (unscaled playtime)",
+      "effects": [
+        {
+          "text": "x1.05 to all Mult gains"
+        }
+      ],
+      "id": "achievement-15",
+      "kind": "achievement",
+      "name": "Achievement 15 (Update When?)",
+      "system": "achievements"
+    },
+    {
+      "confidence": "documented",
+      "description": "Make all Promotions at least level 10",
+      "effects": [
+        {
+          "text": "Promotion 4 is slightly stronger"
+        }
+      ],
+      "id": "achievement-20",
+      "kind": "achievement",
+      "name": "Achievement 20 (Really Good Job)",
+      "system": "achievements"
+    },
+    {
+      "confidence": "documented",
+      "description": "Promote without Prestiging",
+      "effects": [
+        {
+          "text": "P.Mult gain ^1.01"
+        }
+      ],
+      "id": "achievement-21",
+      "kind": "achievement",
+      "name": "Achievement 21 (You Don't Need It)",
+      "system": "achievements"
+    },
+    {
+      "confidence": "documented",
+      "description": "Reach the 6th Ascension for Red, Orange, and Yellow",
+      "effects": [
+        {
+          "text": "x1.6 to the first 3 Colors' Mult gains"
+        }
+      ],
+      "id": "achievement-27",
+      "kind": "achievement",
+      "name": "Achievement 27 (Hell Yeah)",
+      "system": "achievements"
+    },
+    {
+      "confidence": "documented",
+      "description": "Make all Promotions at least level 50",
+      "effects": [
+        {
+          "text": "x1.1 to all Mult gains"
+        }
+      ],
+      "id": "achievement-28",
+      "kind": "achievement",
+      "name": "Achievement 28 (Real Boss)",
+      "system": "achievements"
+    },
+    {
+      "confidence": "documented",
+      "description": "Make White Mult > Pink Mult > Purple Mult, etc.",
+      "effects": [
+        {
+          "text": "A fading sense of accomplishment"
+        },
+        {
+          "text": "Dilation Tree TOP-4, MID-4, and BOT-4 upgrades are 30% stronger"
+        }
+      ],
+      "id": "achievement-29",
+      "kind": "achievement",
+      "name": "Achievement 29 (Backwards)",
+      "system": "achievements"
+    },
+    {
+      "confidence": "documented",
+      "description": "Unlock Automation",
+      "effects": [
+        {
+          "text": "x1.1 to the 1st Generator"
+        }
+      ],
+      "id": "achievement-35",
+      "kind": "achievement",
+      "name": "Achievement 35 (QOL)",
+      "system": "achievements"
+    },
+    {
+      "confidence": "documented",
+      "description": "Reach 5 Infinities",
+      "effects": [
+        {
+          "text": "x2 IP gain"
+        }
+      ],
+      "id": "achievement-36",
+      "kind": "achievement",
+      "name": "Achievement 36 (Many of Them)",
+      "system": "achievements"
+    },
+    {
+      "confidence": "documented",
+      "description": "Reach 1,000 GP",
+      "effects": [
+        {
+          "text": "x1.1 to the 1st Generator"
+        }
+      ],
+      "id": "achievement-37",
+      "kind": "achievement",
+      "name": "Achievement 37 (Generator Power)",
+      "system": "achievements"
+    },
+    {
+      "confidence": "documented",
+      "description": "Reach Infinity with all Promotions below level 20",
+      "effects": [
+        {
+          "text": "Promotion 4 is stronger"
+        }
+      ],
+      "id": "achievement-39",
+      "kind": "achievement",
+      "name": "Achievement 39 (Not So Promoted)",
+      "system": "achievements"
+    },
+    {
+      "confidence": "documented",
+      "description": "Complete Infinity Challenge 4",
+      "effects": [
+        {
+          "text": "x2 IP gain"
+        }
+      ],
+      "id": "achievement-44",
+      "kind": "achievement",
+      "name": "Achievement 44 (Four of Nine)",
+      "system": "achievements"
+    },
+    {
+      "confidence": "documented",
+      "description": "Have 50 Achievements",
+      "effects": [
+        {
+          "text": "Achievement bonus now also applies to Generators"
+        }
+      ],
+      "id": "achievement-51",
+      "kind": "achievement",
+      "name": "Achievement 51 (Can You Have Exactly 50?)",
+      "system": "achievements"
+    },
+    {
+      "confidence": "documented",
+      "description": "Reach Eternity",
+      "effects": [
+        {
+          "text": "Unlocks Macro Builder"
+        }
+      ],
+      "id": "achievement-70",
+      "kind": "achievement",
+      "name": "Achievement 70 (Eternal...)",
+      "system": "achievements"
+    },
+    {
+      "confidence": "documented",
+      "description": "Reach Eternity 4 times",
+      "effects": [
+        {
+          "text": "Unlocks macro blocks for Infinity Challenges"
+        }
+      ],
+      "id": "achievement-74",
+      "kind": "achievement",
+      "name": "Achievement 74 (Quadraeternal)",
+      "system": "achievements"
+    },
+    {
+      "confidence": "documented",
+      "description": "Unlock Eternity Challenges",
+      "effects": [
+        {
+          "text": "Unlocks macro block for breaking/fixing Infinity"
+        }
+      ],
+      "id": "achievement-76",
+      "kind": "achievement",
+      "name": "Achievement 76 (Eternally Challenging)",
+      "system": "achievements"
+    },
+    {
+      "confidence": "documented",
+      "description": "Reach 100 Eternities",
+      "effects": [
+        {
+          "text": "Unlocks macro block for Eternity"
+        }
+      ],
+      "id": "achievement-84",
+      "kind": "achievement",
+      "name": "Achievement 84 (One Hundred)",
+      "system": "achievements"
+    },
+    {
+      "confidence": "documented",
+      "description": "Reach 1.00e9 Infinities",
+      "effects": [
+        {
+          "text": "Infinity Gain x2"
+        }
+      ],
+      "id": "achievement-85",
+      "kind": "achievement",
+      "name": "Achievement 85 (Infinity Billionaire)",
+      "system": "achievements"
+    },
+    {
+      "confidence": "documented",
+      "description": "Buy your first DTP",
+      "effects": [
+        {
+          "text": "Unlocks macro block for Dilation"
+        }
+      ],
+      "id": "achievement-121",
+      "kind": "achievement",
+      "name": "Achievement 121 (The Seed of the Tree)",
+      "system": "achievements"
+    },
+    {
+      "confidence": "documented",
+      "description": "Respec the Dilation Tree after buying 6+ DTP",
+      "effects": [
+        {
+          "text": "+10% to all Dilation upgrade power"
+        }
+      ],
+      "id": "achievement-129",
+      "kind": "achievement",
+      "name": "Achievement 129 (We All Make Mistakes)",
+      "system": "achievements"
+    },
+    {
+      "confidence": "documented",
+      "description": "Have at least 1 TOP-4, 1 MID-4, and 1 BOT-4 Dilation Tree upgrade",
+      "effects": [
+        {
+          "text": "Changes the reward for Ach. 29"
+        }
+      ],
+      "id": "achievement-140",
+      "kind": "achievement",
+      "name": "Achievement 140 (It's Worth It Now)",
+      "system": "achievements"
+    },
+    {
+      "confidence": "documented",
+      "description": "Unite for the first time",
+      "effects": [
+        {
+          "text": "Keep pre-Unity automation unlocked"
+        }
+      ],
+      "id": "achievement-161",
+      "kind": "achievement",
+      "name": "Achievement 161 (New Global Prestige Layer)",
+      "system": "achievements"
+    },
+    {
+      "confidence": "documented",
+      "description": "Equip a Zodiac on the Sun",
+      "effects": [
+        {
+          "text": "Unlocks Mercury"
+        }
+      ],
+      "id": "achievement-162",
+      "kind": "achievement",
+      "name": "Achievement 162 (The Age of the Sun)",
+      "system": "achievements"
+    },
+    {
+      "confidence": "documented",
+      "description": "Have 2+ Unities",
+      "effects": [
+        {
+          "text": "Unlocks Venus"
+        }
+      ],
+      "id": "achievement-163",
+      "kind": "achievement",
+      "name": "Achievement 163 (Compatibility Test)",
+      "system": "achievements"
+    },
+    {
+      "confidence": "documented",
+      "description": "Have 3 Zodiacs equipped",
+      "effects": [
+        {
+          "text": "Unlocks the Trials tab"
+        }
+      ],
+      "id": "achievement-165",
+      "kind": "achievement",
+      "name": "Achievement 165 (Super Achievements?)",
+      "system": "achievements"
+    },
+    {
+      "confidence": "documented",
+      "description": "Complete the first easy trial",
+      "effects": [
+        {
+          "text": "Unlocks Moon"
+        }
+      ],
+      "id": "achievement-166",
+      "kind": "achievement",
+      "name": "Achievement 166 (To The Moon!)",
+      "system": "achievements"
+    },
+    {
+      "confidence": "documented",
+      "description": "Complete 3 trials",
+      "effects": [
+        {
+          "text": "Unlocks Unities EXP Factor"
+        }
+      ],
+      "id": "achievement-167",
+      "kind": "achievement",
+      "name": "Achievement 167 (More EXP Factors!)",
+      "system": "achievements"
+    },
+    {
+      "confidence": "documented",
+      "description": "Have 5 unities",
+      "effects": [
+        {
+          "text": "Unlocks automation for AP and animals"
+        }
+      ],
+      "id": "achievement-168",
+      "kind": "achievement",
+      "name": "Achievement 168 (It's getting grindy)",
+      "system": "achievements"
+    },
+    {
+      "confidence": "documented",
+      "description": "Have 10 unities",
+      "effects": [
+        {
+          "text": "Unlocks automation for lab and RP upgrades"
+        }
+      ],
+      "id": "achievement-169",
+      "kind": "achievement",
+      "name": "Achievement 169 (It's getting even more grindy)",
+      "system": "achievements"
+    },
+    {
+      "confidence": "documented",
+      "description": "Complete the easy trial group",
+      "effects": [
+        {
+          "text": "Unlocks Supernova automation and macro blocks for Eternity Challenges"
+        }
+      ],
+      "id": "achievement-170",
+      "kind": "achievement",
+      "name": "Achievement 170 (Super-easy!)",
+      "system": "achievements"
+    },
+    {
+      "confidence": "documented",
+      "description": "Perform supernova with 0 eternities",
+      "effects": [
+        {
+          "text": "Unlocks supernova exp factor"
+        }
+      ],
+      "id": "achievement-171",
+      "kind": "achievement",
+      "name": "Achievement 171 (Is it even possible??)",
+      "system": "achievements"
+    },
+    {
+      "confidence": "documented",
+      "description": "Get Lv. 5 Zodiac (through Unity)",
+      "effects": [
+        {
+          "text": "Unlock Jupiter"
+        }
+      ],
+      "id": "achievement-172",
+      "kind": "achievement",
+      "name": "Achievement 172 (Leveling up)",
+      "system": "achievements"
+    },
+    {
+      "confidence": "documented",
+      "description": "Complete the first medium trial",
+      "effects": [
+        {
+          "text": "x1.1 to zodiac quality"
+        }
+      ],
+      "id": "achievement-173",
+      "kind": "achievement",
+      "name": "Achievement 173 (Eternity is a goal now!)",
+      "system": "achievements"
+    },
+    {
+      "confidence": "documented",
+      "description": "Have 50 DTP",
+      "effects": [
+        {
+          "text": "Unlocks macro blocks for the Dilation Tree"
+        }
+      ],
+      "id": "achievement-177",
+      "kind": "achievement",
+      "name": "Achievement 177 (Making a long run)",
+      "system": "achievements"
+    },
+    {
+      "confidence": "documented",
+      "description": "Get Lv. 10 Zodiac (through Unity)",
+      "effects": [
+        {
+          "text": "Unlocks Saturn"
+        }
+      ],
+      "id": "achievement-181",
+      "kind": "achievement",
+      "name": "Achievement 181 (Destructive Planet)",
+      "system": "achievements"
+    },
+    {
+      "confidence": "documented",
+      "description": "Get Legendary+ Zodiac",
+      "effects": [
+        {
+          "text": "Unlocks Eternity Count Factor"
+        }
+      ],
+      "id": "achievement-182",
+      "kind": "achievement",
+      "name": "Achievement 182 (More Effects)",
+      "system": "achievements"
+    },
+    {
+      "confidence": "documented",
+      "description": "Reach and obtain a Lv. 20 Zodiac (through Unity)",
+      "effects": [
+        {
+          "text": "Unlocks Uranus"
+        }
+      ],
+      "id": "achievement-184",
+      "kind": "achievement",
+      "name": "Achievement 184 (Apprentice Level)",
+      "system": "achievements"
+    },
+    {
+      "confidence": "documented",
+      "description": "Get Lv. 30 Zodiac (through Unity)",
+      "effects": [
+        {
+          "text": "Unlocks Neptune"
+        }
+      ],
+      "id": "achievement-188",
+      "kind": "achievement",
+      "name": "Achievement 188 (Neptunian Powers)",
+      "system": "achievements"
+    },
+    {
+      "confidence": "documented",
+      "description": "Reach e2.00e10 score in Dilation",
+      "effects": [
+        {
+          "text": "Faster Auto-Ascend optimization"
+        }
+      ],
+      "id": "achievement-189",
+      "kind": "achievement",
+      "name": "Achievement 189 (I Don't Feel a Difference)",
+      "system": "achievements"
+    },
+    {
+      "confidence": "documented",
+      "description": "Get Lv. 40 Zodiac (through Unity)",
+      "effects": [
+        {
+          "text": "Unlocks Pluto"
+        }
+      ],
+      "id": "achievement-190",
+      "kind": "achievement",
+      "name": "Achievement 190 (Planet or Not?)",
+      "system": "achievements"
+    },
+    {
+      "confidence": "documented",
+      "description": "Complete 15 trials",
+      "effects": [
+        {
+          "text": "Unlocks Attacks"
+        }
+      ],
+      "id": "achievement-191",
+      "kind": "achievement",
+      "name": "Achievement 191 (Back to 2017)",
+      "system": "achievements"
+    },
+    {
+      "confidence": "documented",
+      "description": "Reach Attacks Level 1",
+      "effects": [
+        {
+          "text": "Score -> Damage Mult x10"
+        }
+      ],
+      "id": "achievement-192",
+      "kind": "achievement",
+      "name": "Achievement 192 (It Was a Long Ride)",
+      "system": "achievements"
+    },
+    {
+      "confidence": "documented",
+      "description": "Merge 3 Godly Zodiacs into a Divine Zodiac (or get a Divine+ Zodiac in Unity)",
+      "effects": [
+        {
+          "text": "Zodiac sell prices x3"
+        }
+      ],
+      "id": "achievement-193",
+      "kind": "achievement",
+      "name": "Achievement 193 (Merging Can Be Awesome)",
+      "system": "achievements"
+    },
+    {
+      "confidence": "documented",
+      "description": "Generate less than 0.05 Lab pts/s, but more than 0.01 Lab pts/s",
+      "effects": [
+        {
+          "text": "It's useless, but you can't get achievement 201 without this one"
+        }
+      ],
+      "id": "achievement-200",
+      "kind": "achievement",
+      "name": "Achievement 200 (Inefficiently Efficient)",
+      "system": "achievements"
+    },
+    {
+      "confidence": "documented",
+      "description": "Complete the first 200 achievements",
+      "effects": [
+        {
+          "text": "Better formula for achievement rewards"
+        }
+      ],
+      "id": "achievement-201",
+      "kind": "achievement",
+      "name": "Achievement 201 (Bicentennial Completionist)",
+      "system": "achievements"
+    },
+    {
+      "confidence": "documented",
+      "description": "Buy the third attack color",
+      "effects": [
+        {
+          "text": "Zodiac Quality x1.6"
+        }
+      ],
+      "id": "achievement-203",
+      "kind": "achievement",
+      "name": "Achievement 203 (Three's Company)",
+      "system": "achievements"
+    },
+    {
+      "confidence": "documented",
+      "description": "Get Lv. 50 Zodiac (through Unity)",
+      "effects": [
+        {
+          "text": "Unlocks Chiron"
+        }
+      ],
+      "id": "achievement-205",
+      "kind": "achievement",
+      "name": "Achievement 205 (The Wounded Healer)",
+      "system": "achievements"
+    },
+    {
+      "confidence": "documented",
+      "description": "Get Lv. 69 Zodiac (through Unity)",
+      "effects": [
+        {
+          "text": "x1.06969 to Zodiac Quality"
+        }
+      ],
+      "id": "achievement-207",
+      "kind": "achievement",
+      "name": "Achievement 207 (Nice... Level :P)",
+      "system": "achievements"
+    },
+    {
+      "confidence": "documented",
+      "description": "Reach a score of a value in Dilation",
+      "effects": [
+        {
+          "text": "Dilation score past e5e10 boosts DP gain more"
+        }
+      ],
+      "id": "achievement-218",
+      "kind": "achievement",
+      "name": "Achievement 218 (DP Score Is Important Again)",
+      "system": "achievements"
+    },
+    {
+      "confidence": "documented",
+      "description": "Get a Lv. 100+ Zodiac (through Unity)",
+      "effects": [
+        {
+          "text": "Unlocks Fortune Pars"
+        }
+      ],
+      "id": "achievement-219",
+      "kind": "achievement",
+      "name": "Achievement 219 (Do You Feel Lucky?)",
+      "system": "achievements"
+    },
+    {
+      "confidence": "documented",
+      "description": "Get an Immortal Zodiac through Unity",
+      "effects": [
+        {
+          "text": "You can get extra rarities based on your Luck (after ~550-600+ Luck)"
+        }
+      ],
+      "id": "achievement-220",
+      "kind": "achievement",
+      "name": "Achievement 220 (Best Rarity)",
+      "system": "achievements"
+    },
+    {
+      "confidence": "documented",
+      "description": "Reach Attacks Level 420",
+      "effects": [
+        {
+          "text": "All relics are 5% more effective"
+        }
+      ],
+      "id": "achievement-226",
+      "kind": "achievement",
+      "name": "Achievement 226 (L33T L3V3L)",
+      "system": "achievements"
+    },
+    {
+      "confidence": "documented",
+      "description": "Use a full Fire build (all 12 planet slots filled with Fire Zodiacs only) and reach a score of a value",
+      "effects": [
+        {
+          "text": "All relics are 1% more effective, all relic costs are divided by 5, and total quality for Fire Zodiacs is now raised to ^1.1"
+        }
+      ],
+      "id": "achievement-230",
+      "kind": "achievement",
+      "name": "Achievement 230 (Dance of Fire and Flames)",
+      "system": "achievements"
+    },
+    {
+      "confidence": "documented",
+      "description": "Use a full Earth build (all 12 planet slots filled with Earth Zodiacs only) and reach a value Infinities, a value IP, and a value Gen. Power Mult Gain",
+      "effects": [
+        {
+          "text": "All relics are 1% more effective, all relic costs are divided by 5, and total quality for Earth Zodiacs is now raised to ^1.1"
+        }
+      ],
+      "id": "achievement-231",
+      "kind": "achievement",
+      "name": "Achievement 231 (Growing Mountains)",
+      "system": "achievements"
+    },
+    {
+      "confidence": "documented",
+      "description": "Use a full Wind build (all 12 planet slots filled with Wind Zodiacs only) and reach a value Eternities and a value DP",
+      "effects": [
+        {
+          "text": "All relics are 1% more effective, all relic costs are divided by 5, and total quality for Wind Zodiacs is now raised to ^1.1"
+        }
+      ],
+      "id": "achievement-232",
+      "kind": "achievement",
+      "name": "Achievement 232 (I Feel It in the Wind, My Dear)",
+      "system": "achievements"
+    },
+    {
+      "confidence": "documented",
+      "description": "Use a full Water build (all 12 planet slots filled with Water Zodiacs only) and get an Immortal+5 Zodiac with a value+ Quality (through Unity)",
+      "effects": [
+        {
+          "text": "All relics are 1% more effective, all relic costs are divided by 5, and total quality for Water Zodiacs is now raised to ^1.1"
+        }
+      ],
+      "id": "achievement-233",
+      "kind": "achievement",
+      "name": "Achievement 233 (Swimming with Sharks)",
+      "system": "achievements"
+    },
+    {
+      "confidence": "documented",
+      "description": "Have 2,025+ Luck",
+      "effects": [
+        {
+          "text": "x1.01 to Luck"
+        }
+      ],
+      "id": "achievement-236",
+      "kind": "achievement",
+      "name": "Achievement 236 (The Most Lucky Year!)",
+      "system": "achievements"
+    },
+    {
+      "confidence": "documented",
+      "description": "Complete all element-themed achievements (230-233)",
+      "effects": [
+        {
+          "text": "All relics are 1% more effective, all relic costs are divided by 10, and total quality for all Zodiacs is now raised to ^1.05"
+        }
+      ],
+      "id": "achievement-237",
+      "kind": "achievement",
+      "name": "Achievement 237 (The Power of 4 Elements)",
+      "system": "achievements"
+    },
+    {
+      "confidence": "documented",
+      "description": "Get a Zodiac with Immortal+7 rarity or higher",
+      "effects": [
+        {
+          "text": "Unlocks the Luck factor..."
+        }
+      ],
+      "id": "achievement-238",
+      "kind": "achievement",
+      "name": "Achievement 238 (Too Rare...)",
+      "system": "achievements"
+    },
+    {
+      "confidence": "documented",
+      "description": "Reach Attacks Level 1,000+",
+      "effects": [
+        {
+          "text": "All Relics are 1% stronger per 1K Attack Levels (0.001% per level, SC: 10%)"
+        },
+        {
+          "text": "All Relics are 1% stronger per 1K Max Attack Levels (0.001% per level, SC: 10%)"
+        }
+      ],
+      "id": "achievement-239",
+      "kind": "achievement",
+      "name": "Achievement 239 (Where the Hard Leveling Goes...)",
+      "system": "achievements"
+    },
+    {
+      "confidence": "documented",
+      "description": "Reach Attacks Level 1,337+",
+      "effects": [
+        {
+          "text": "Unlocks Minerals"
+        }
+      ],
+      "id": "achievement-240",
+      "kind": "achievement",
+      "name": "Achievement 240 (3L33TArY L3V3L)",
+      "system": "achievements"
+    },
+    {
+      "confidence": "documented",
+      "description": "Merge two Minerals to get a new Level+1 Mineral",
+      "effects": [
+        {
+          "text": "Unlock Planet Loadouts"
+        }
+      ],
+      "id": "achievement-242",
+      "kind": "achievement",
+      "name": "Achievement 242 (Merge Incremental)",
+      "system": "achievements"
+    },
+    {
+      "confidence": "documented",
+      "description": "Get an Immortal+15 Zodiac (through Unity)",
+      "effects": [
+        {
+          "text": "Divides all relic costs by a value"
+        }
+      ],
+      "id": "achievement-247",
+      "kind": "achievement",
+      "name": "Achievement 247 (Insane Insane Rarity)",
+      "system": "achievements"
+    },
+    {
+      "confidence": "documented",
+      "description": "Reach Attack Level 2025",
+      "effects": [
+        {
+          "text": "Unlocks Attack Prestige (recommended later)"
+        }
+      ],
+      "id": "achievement-251",
+      "kind": "achievement",
+      "name": "Achievement 251 (This Year's Level)",
+      "system": "achievements"
+    },
+    {
+      "confidence": "documented",
+      "description": "Perform Polish Prestige",
+      "effects": [
+        {
+          "text": "Divides all relic costs by a value"
+        }
+      ],
+      "id": "achievement-252",
+      "kind": "achievement",
+      "name": "Achievement 252 (Sharpen Weapons)",
+      "system": "achievements"
+    },
+    {
+      "confidence": "documented",
+      "description": "Reach 1.08e308+ Gold",
+      "effects": [
+        {
+          "text": "Empowers Relic 17 by ^1.01"
+        }
+      ],
+      "id": "achievement-254",
+      "kind": "achievement",
+      "name": "Achievement 254 (Golden Inflation)",
+      "system": "achievements"
+    },
+    {
+      "confidence": "documented",
+      "description": "Reach Attack Level 2,250+",
+      "effects": [
+        {
+          "text": "Attack Prestige is a bit stronger"
+        }
+      ],
+      "id": "achievement-259",
+      "kind": "achievement",
+      "name": "Achievement 259 (A Cool Number)",
+      "system": "achievements"
+    },
+    {
+      "confidence": "documented",
+      "description": "Get a Level 50 Mineral",
+      "effects": [
+        {
+          "text": "Unlocks mineral auto-set level and auto-delete automation"
+        }
+      ],
+      "id": "achievement-260",
+      "kind": "achievement",
+      "name": "Achievement 260 (When Global Scalings Begin)",
+      "system": "achievements"
+    },
+    {
+      "confidence": "documented",
+      "description": "Get a Zodiac with Immortal+50 rarity or better (through Unity)",
+      "effects": [
+        {
+          "text": "You are more likely to get near-max-rarity Zodiacs"
+        }
+      ],
+      "id": "achievement-265",
+      "kind": "achievement",
+      "name": "Achievement 265 (Mega Rarities)",
+      "system": "achievements"
+    },
+    {
+      "confidence": "documented",
+      "description": "Get a Zodiac with Immortal+100 rarity or better (through Unity)",
+      "effects": [
+        {
+          "text": "You are even more likely to get near-max-rarity Zodiacs"
+        }
+      ],
+      "id": "achievement-266",
+      "kind": "achievement",
+      "name": "Achievement 266 (Ultra Rarities)",
+      "system": "achievements"
+    },
+    {
+      "confidence": "documented",
+      "description": "Complete the first insane trial",
+      "effects": [
+        {
+          "text": "PP Gain: x2"
+        }
+      ],
+      "id": "achievement-267",
+      "kind": "achievement",
+      "name": "Achievement 267 (This is INSANE!!!)",
+      "system": "achievements"
+    },
+    {
+      "confidence": "documented",
+      "description": "Merge a Level 69 Mineral",
+      "effects": [
+        {
+          "text": "Unlock macro block for loading Planet Loadouts"
+        }
+      ],
+      "id": "achievement-269",
+      "kind": "achievement",
+      "name": "Achievement 269 (Nice... mineral ;))",
+      "system": "achievements"
+    },
+    {
+      "confidence": "documented",
+      "description": "Perform a Refine Prestige",
+      "effects": [
+        {
+          "text": "Relic efficiency x1.01"
+        }
+      ],
+      "id": "achievement-270",
+      "kind": "achievement",
+      "name": "Achievement 270 (Refinery Empire)",
+      "system": "achievements"
+    },
+    {
+      "confidence": "documented",
+      "description": "Have 60+ EC completions",
+      "effects": [
+        {
+          "text": "Unlocks macro block for Refine Prestige and Polish Prestige"
+        }
+      ],
+      "id": "achievement-291",
+      "kind": "achievement",
+      "name": "Achievement 291 (Eternity Champion)",
+      "system": "achievements"
+    },
+    {
+      "confidence": "documented",
+      "description": "Reach Base Level 2+ for any Special Mineral in SMP",
+      "effects": [
+        {
+          "text": "x1.02 Rune generation"
+        }
+      ],
+      "id": "achievement-320",
+      "kind": "achievement",
+      "name": "Achievement 320 (Base Evolution)",
+      "system": "achievements"
+    },
+    {
+      "confidence": "documented",
+      "description": "Reach 1.08e308+ Polish Points",
+      "effects": [
+        {
+          "text": "Unlocks auto-spawn Special Minerals automation"
+        }
+      ],
+      "id": "achievement-326",
+      "kind": "achievement",
+      "name": "Achievement 326 (Polishing an Infinity)",
+      "system": "achievements"
+    },
+    {
+      "confidence": "documented",
+      "description": "Have a value+ of all elements",
+      "effects": [
+        {
+          "text": "Unlocks auto-buy relics automation"
+        }
+      ],
+      "id": "achievement-338",
+      "kind": "achievement",
+      "name": "Achievement 338 (Elemental Mastery)",
+      "system": "achievements"
+    },
+    {
+      "confidence": "documented",
+      "description": "Merge 3 Zodiacs with Immortal+1,000 Rarity",
+      "effects": [
+        {
+          "text": "You can now naturally get higher-rarity Zodiacs"
+        }
+      ],
+      "id": "achievement-342",
+      "kind": "achievement",
+      "name": "Achievement 342 (Here Come New Rarities)",
+      "system": "achievements"
+    },
+    {
+      "confidence": "documented",
+      "description": "Have a Mineral at Level 250+",
+      "effects": [
+        {
+          "text": "Unlocks macro block for Generate Elements"
+        }
+      ],
+      "id": "achievement-345",
+      "kind": "achievement",
+      "name": "Achievement 345 (Mineral Scaling)",
+      "system": "achievements"
+    },
+    {
+      "confidence": "documented",
+      "description": "Draw 4 Tarot Cards",
+      "effects": [
+        {
+          "text": "Get a free Chariot Card"
+        }
+      ],
+      "id": "achievement-365",
+      "kind": "achievement",
+      "name": "Achievement 365 (A Good Gift)",
+      "system": "achievements"
+    },
+    {
+      "confidence": "documented",
+      "description": "Get 20 Tarot Card Levels",
+      "effects": [
+        {
+          "text": "You can now get Arcana from draws"
+        }
+      ],
+      "id": "achievement-370",
+      "kind": "achievement",
+      "name": "Achievement 370 (A Pack of Cards)",
+      "system": "achievements"
+    },
+    {
+      "confidence": "documented",
+      "description": "Buy Relic 42 for the first time",
+      "effects": [
+        {
+          "text": "Unlocks Planet Loadout selection for Elements"
+        }
+      ],
+      "id": "achievement-380",
+      "kind": "achievement",
+      "name": "Achievement 380 (Better Chances - More Cards)",
+      "system": "achievements"
+    },
+    {
+      "confidence": "documented",
+      "description": "Reach a value ascensions for common revolutions",
+      "effects": [
+        {
+          "text": "Autoslowdown now works much faster"
+        }
+      ],
+      "id": "achievement-386",
+      "kind": "achievement",
+      "name": "Achievement 386 (Earth's Population as a Cap)",
+      "system": "achievements"
+    },
+    {
+      "confidence": "documented",
+      "description": "Have 10 different cards for each suit (Swords, Wands, Pentacles, Cups)",
+      "effects": [
+        {
+          "text": "You can now draw 10 cards at once"
+        }
+      ],
+      "id": "achievement-388",
+      "kind": "achievement",
+      "name": "Achievement 388 (From Ace to Ten)",
+      "system": "achievements"
+    },
+    {
+      "confidence": "documented",
+      "description": "Have a value+ Swords, Wands, Pentacles, and Cups resources",
+      "effects": [
+        {
+          "text": "Unlocks Tarot Upgrades"
+        }
+      ],
+      "id": "achievement-390",
+      "kind": "achievement",
+      "name": "Achievement 390 (Tarot Upgrades???)",
+      "system": "achievements"
+    },
+    {
+      "confidence": "documented",
+      "description": "Win the Wheel of Fortune 3 times in a row",
+      "effects": [
+        {
+          "text": "A sense of irritation from bad luck and a significant amount of wasted time"
+        }
+      ],
+      "id": "achievement-396",
+      "kind": "achievement",
+      "name": "Achievement 396 (Lucky Gambler)",
+      "system": "achievements"
+    },
+    {
+      "confidence": "documented",
+      "description": "Have 64+ different cards",
+      "effects": [
+        {
+          "text": "You can now draw 100 cards at once"
+        }
+      ],
+      "id": "achievement-397",
+      "kind": "achievement",
+      "name": "Achievement 397 (Super Tarot 64)",
+      "system": "achievements"
+    },
+    {
+      "confidence": "documented",
+      "description": "Have a level 12+ Black Gem",
+      "effects": [
+        {
+          "text": "Unlocks macro block for Delete All Black Gems"
+        }
+      ],
+      "id": "achievement-399",
+      "kind": "achievement",
+      "name": "Achievement 399 (Are you ready to unpack all these cards?)",
+      "system": "achievements"
+    },
+    {
+      "confidence": "documented",
+      "description": "Have 10,000+ Tarot card levels and 78 unique Tarot cards",
+      "effects": [
+        {
+          "text": "You can now use all your draws, and cards are less random (minimum: 300)"
+        }
+      ],
+      "id": "achievement-408",
+      "kind": "achievement",
+      "name": "Achievement 408 (Open them all!)",
+      "system": "achievements"
+    },
+    {
+      "confidence": "documented",
+      "description": "Buy Element Node 7 for all elements",
+      "effects": [
+        {
+          "text": "Unlocks macro block for Tarot Spawn"
+        }
+      ],
+      "id": "achievement-413",
+      "kind": "achievement",
+      "name": "Achievement 413 (Seventh Element)",
+      "system": "achievements"
+    },
+    {
+      "confidence": "documented",
+      "description": "Get a level 20 Special Mineral",
+      "effects": [
+        {
+          "text": "Unlocks Delete Special Minerals macro block"
+        }
+      ],
+      "id": "achievement-418",
+      "kind": "achievement",
+      "name": "Achievement 418 (Max Level for Special Minerals)",
+      "system": "achievements"
+    },
+    {
+      "confidence": "documented",
+      "description": "Have 1.00e1,000 of all elements",
+      "effects": [
+        {
+          "text": "Unlock bulk spawning for special minerals"
+        }
+      ],
+      "id": "achievement-420",
+      "kind": "achievement",
+      "name": "Achievement 420 (This is how life was created)",
+      "system": "achievements"
+    },
+    {
+      "confidence": "documented",
+      "description": "Have a value total card levels",
+      "effects": [
+        {
+          "text": "Unlocks macro block for Use Arcan"
+        }
+      ],
+      "id": "achievement-423",
+      "kind": "achievement",
+      "name": "Achievement 423 (Card Millionaire)",
+      "system": "achievements"
+    },
+    {
+      "confidence": "documented",
+      "description": "Obtain an Amazing Zodiac",
+      "effects": [
+        {
+          "text": "You can now obtain Amazing Zodiacs through Unity"
+        }
+      ],
+      "id": "achievement-426",
+      "kind": "achievement",
+      "name": "Achievement 426 (A-MAZING!)",
+      "system": "achievements"
+    },
+    {
+      "confidence": "documented",
+      "description": "Buy Relic 46",
+      "effects": [
+        {
+          "text": "Auto Ascend for attacks is now much faster"
+        }
+      ],
+      "id": "achievement-427",
+      "kind": "achievement",
+      "name": "Achievement 427 (A Great QoL)",
+      "system": "achievements"
+    },
+    {
+      "confidence": "documented",
+      "description": "Sacrifice all Special Minerals",
+      "effects": [
+        {
+          "text": "Unlocks Automation for buying Sun & Moon Rune Upgrades"
+        }
+      ],
+      "id": "achievement-432",
+      "kind": "achievement",
+      "name": "Achievement 432 (Simpler Times)",
+      "system": "achievements"
+    },
+    {
+      "confidence": "documented",
+      "description": "Upgrade all Tarot Upgrade 4 bonuses to Level 4+",
+      "effects": [
+        {
+          "text": "Unlocks Auto Tarot Upgrades"
+        }
+      ],
+      "id": "achievement-433",
+      "kind": "achievement",
+      "name": "Achievement 433 (Level Adjusters)",
+      "system": "achievements"
+    },
+    {
+      "confidence": "documented",
+      "description": "Reach 1.00e3,250 Fire",
+      "effects": [
+        {
+          "text": "Relic 14 is ^1.5 more effective"
+        }
+      ],
+      "id": "achievement-441",
+      "kind": "achievement",
+      "name": "Achievement 441 (A Truly Useful Achievement)",
+      "system": "achievements"
+    },
+    {
+      "confidence": "documented",
+      "description": "Reach SMP Lv.20 for all Special Minerals",
+      "effects": [
+        {
+          "text": "Total SMP EXP boosts Sacrifice Dust gain"
+        }
+      ],
+      "id": "achievement-443",
+      "kind": "achievement",
+      "name": "Achievement 443 (Now the Real Grind Begins)",
+      "system": "achievements"
+    },
+    {
+      "confidence": "documented",
+      "description": "Have all sacrificed Special Minerals at Lv.28+",
+      "effects": [
+        {
+          "text": "Unlocks Automation for buying Polish Enhancement Upgrades"
+        }
+      ],
+      "id": "achievement-450",
+      "kind": "achievement",
+      "name": "Achievement 450 (Level Up All of Them)",
+      "system": "achievements"
+    },
+    {
+      "confidence": "documented",
+      "description": "Reach Merge Level 10,000+",
+      "effects": [
+        {
+          "text": "Merge Experience now carries over when leveling up, and merging is now much faster"
+        }
+      ],
+      "id": "achievement-451",
+      "kind": "achievement",
+      "name": "Achievement 451 (QoL for Faster Merge Leveling)",
+      "system": "achievements"
+    },
+    {
+      "confidence": "documented",
+      "description": "Reach 100 Qa+ total Tarot levels",
+      "effects": [
+        {
+          "text": "Unlocks Auto Tarot Draw"
+        }
+      ],
+      "id": "achievement-464",
+      "kind": "achievement",
+      "name": "Achievement 464 (Better for Resource Generation)",
+      "system": "achievements"
+    },
+    {
+      "confidence": "documented",
+      "description": "Complete 18 Tarot Challenges",
+      "effects": [
+        {
+          "text": "Unlocks Automation for buying Special Minerals Progression Upgrades"
+        }
+      ],
+      "id": "achievement-466",
+      "kind": "achievement",
+      "name": "Achievement 466 (Challenging Tarots)",
+      "system": "achievements"
+    },
+    {
+      "confidence": "documented",
+      "description": "Purchase Wands 6 Tarot Upgrade",
+      "effects": [
+        {
+          "text": "Unlocks auto-prestige for Attacks"
+        }
+      ],
+      "id": "achievement-470",
+      "kind": "achievement",
+      "name": "Achievement 470 (W-A-N-D-S)",
+      "system": "achievements"
+    },
+    {
+      "confidence": "documented",
+      "description": "Obtain a Prime Zodiac",
+      "effects": [
+        {
+          "text": "You can now obtain Prime Zodiacs through Unity"
+        }
+      ],
+      "id": "achievement-482",
+      "kind": "achievement",
+      "name": "Achievement 482 (It's Your Time to Shine)",
+      "system": "achievements"
+    },
+    {
+      "confidence": "documented",
+      "description": "Have all sacrificed Special Minerals at Lv.50+",
+      "effects": [
+        {
+          "text": "Unlocks Flush Special Minerals macro block"
+        }
+      ],
+      "id": "achievement-492",
+      "kind": "achievement",
+      "name": "Achievement 492 (Fifty Shades of Minerals)",
+      "system": "achievements"
+    },
+    {
+      "confidence": "documented",
+      "description": "Reach a total of 75+ Artifact levels",
+      "effects": [
+        {
+          "text": "Unlocks automation for flushing to Artifacts"
+        }
+      ],
+      "id": "achievement-505",
+      "kind": "achievement",
+      "name": "Achievement 505 (Add Up Their Levels)",
+      "system": "achievements"
+    },
+    {
+      "confidence": "documented",
+      "description": "Complete 52 Tarot Challenges",
+      "effects": [
+        {
+          "text": "Unlocks Enter/Exit Tarot Challenge macro blocks"
+        }
+      ],
+      "id": "achievement-520",
+      "kind": "achievement",
+      "name": "Achievement 520 (All Basic Tarot Challenges Completed)",
+      "system": "achievements"
+    },
+    {
+      "confidence": "documented",
+      "description": "Craft ER with B rarity or better",
+      "effects": [
+        {
+          "text": "Unlocks Autocraft Endoplasmic Reticulum"
+        }
+      ],
+      "id": "achievement-534",
+      "kind": "achievement",
+      "name": "Achievement 534 (B Stands for Biohazard)",
+      "system": "achievements"
+    },
+    {
+      "confidence": "documented",
+      "description": "Complete all Towns plague stages 2-12",
+      "effects": [
+        {
+          "text": "Unlocks the option to auto-repeat Plague stages"
+        }
+      ],
+      "id": "achievement-537",
+      "kind": "achievement",
+      "name": "Achievement 537 (Local News Disaster)",
+      "system": "achievements"
+    },
+    {
+      "confidence": "documented",
+      "description": "Reach 1e10+ ViP",
+      "effects": [
+        {
+          "text": "Unlocks Auto Dissolve Endoplasmic Reticulum"
+        }
+      ],
+      "id": "achievement-548",
+      "kind": "achievement",
+      "name": "Achievement 548 (Very Important Pathogen)",
+      "system": "achievements"
+    },
+    {
+      "confidence": "documented",
+      "description": "Complete Dominican Republic stage 4-5",
+      "effects": [
+        {
+          "text": "Unlocks Enter Plague Stage and Exit Plague Stage macro blocks"
+        }
+      ],
+      "id": "achievement-550",
+      "kind": "achievement",
+      "name": "Achievement 550 (Vacation Gone Viral)",
+      "system": "achievements"
+    },
+    {
+      "confidence": "documented",
+      "description": "Craft Lv.30+ ER",
+      "effects": [
+        {
+          "text": "Unlocks Craft ER macro block"
+        }
+      ],
+      "id": "achievement-563",
+      "kind": "achievement",
+      "name": "Achievement 563 (Thirty Reticulums Later)",
+      "system": "achievements"
+    },
+    {
+      "confidence": "documented",
+      "description": "Complete the Temperance Tarot Challenge",
+      "effects": [
+        {
+          "text": "Multiplies Empress Effect by x100"
+        }
+      ],
+      "id": "achievement-576",
+      "kind": "achievement",
+      "name": "Achievement 576 (Random Zodiac Therapy)",
+      "system": "achievements"
+    },
+    {
+      "confidence": "documented",
+      "description": "Complete all Knight challenges",
+      "effects": [
+        {
+          "text": "Achievement 239 reward now is applied to Max Attack Level"
+        }
+      ],
+      "id": "achievement-581",
+      "kind": "achievement",
+      "name": "Achievement 581 (Four Knights Of The Apocalypse)",
+      "system": "achievements"
+    },
+    {
+      "confidence": "documented",
+      "description": "This achievement is unobtainable",
+      "effects": [
+        {
+          "text": "Unlocks Bonus Trial"
+        }
+      ],
+      "id": "achievement-600",
+      "kind": "achievement",
+      "name": "Achievement 600 (Literally Impossible, you have no chance to achieve this one)",
+      "system": "achievements"
+    },
+    {
+      "confidence": "documented",
+      "description": "Purchase Pentacle-11",
+      "effects": [
+        {
+          "text": "Divides the cost of Refine Nodes 121 and above by 1e5000"
+        }
+      ],
+      "id": "achievement-605",
+      "kind": "achievement",
+      "name": "Achievement 605 (Pentacle Collector)",
+      "system": "achievements"
+    },
+    {
+      "confidence": "documented",
+      "description": "Complete the Tower Challenge",
+      "effects": [
+        {
+          "text": "Divides the cost of Refine Nodes 121 and above by 1e4350"
+        }
+      ],
+      "id": "achievement-606",
+      "kind": "achievement",
+      "name": "Achievement 606 (The Tower Falls)",
+      "system": "achievements"
+    },
+    {
+      "confidence": "documented",
+      "description": "Reach a Singularity Multiplier of x5+",
+      "effects": [
+        {
+          "text": "Unlocks Singularize macro block"
+        }
+      ],
+      "id": "achievement-640",
+      "kind": "achievement",
+      "name": "Achievement 640 (Greater Strength)",
+      "system": "achievements"
+    },
+    {
+      "confidence": "documented",
+      "description": "Reach Level 100+ Base Spread Power",
+      "effects": [
+        {
+          "text": "Unlocks Buy Singularity Tree Node macro block"
+        }
+      ],
+      "id": "achievement-646",
+      "kind": "achievement",
+      "name": "Achievement 646 (Spread Specialist)",
+      "system": "achievements"
+    },
+    {
+      "confidence": "documented",
+      "description": "Complete all Tarot Queens Challenges",
+      "effects": [
+        {
+          "text": "Divides the cost of Refine Nodes 121 and above by 1e150"
+        }
+      ],
+      "id": "achievement-650",
+      "kind": "achievement",
+      "name": "Achievement 650 (Queen of Tarot)",
+      "system": "achievements"
+    },
+    {
+      "confidence": "documented",
+      "description": "Reach a Singularity Multiplier of x100+",
+      "effects": [
+        {
+          "text": "Unlocks Auto Singularity"
+        }
+      ],
+      "id": "achievement-659",
+      "kind": "achievement",
+      "name": "Achievement 659 (Singular Ascension)",
+      "system": "achievements"
+    },
+    {
+      "confidence": "documented",
+      "description": "Purchase Refine Node 136",
+      "effects": [
+        {
+          "text": "Unlocks root nodes in the Refine Tree."
+        }
+      ],
+      "id": "achievement-669",
+      "kind": "achievement",
+      "name": "Achievement 669 (Ultimate Refinement)",
+      "system": "achievements"
+    },
+    {
+      "confidence": "documented",
+      "description": "Get a Godly+ Singular Zodiac",
+      "effects": [
+        {
+          "text": "Unlocks auto-delete automation for Singular Zodiacs"
+        }
+      ],
+      "id": "achievement-670",
+      "kind": "achievement",
+      "name": "Achievement 670 (Golden Singularity)",
+      "system": "achievements"
+    },
+    {
+      "confidence": "documented",
+      "description": "Get a Rainbow+ Common Zodiac",
+      "effects": [
+        {
+          "text": "You can get Rainbow+ Common Zodiacs through Unity"
+        }
+      ],
+      "id": "achievement-675",
+      "kind": "achievement",
+      "name": "Achievement 675 (Rainbow Destiny)",
+      "system": "achievements"
+    },
+    {
+      "confidence": "documented",
+      "description": "Unlock Particles",
+      "effects": [
+        {
+          "text": "All singular buffs are set now at 1 atoms"
+        }
+      ],
+      "id": "achievement-680",
+      "kind": "achievement",
+      "name": "Achievement 680 (Small Things, Big Plans)",
+      "system": "achievements"
+    },
+    {
+      "confidence": "documented",
+      "description": "Prestige Alpha Particles for the first time",
+      "effects": [
+        {
+          "text": "Unlocks Automation for Ranking Up"
+        }
+      ],
+      "id": "achievement-690",
+      "kind": "achievement",
+      "name": "Achievement 690 (AlphaBET)",
+      "system": "achievements"
+    },
+    {
+      "confidence": "documented",
+      "description": "Upgrade Essence Density to Level 50+",
+      "effects": [
+        {
+          "text": "Endoplasmic Reticulum upgrades no longer spend Virus Points. Unlocks automation for ER upgrades"
+        }
+      ],
+      "id": "achievement-698",
+      "kind": "achievement",
+      "name": "Achievement 698 (Dense by Design)",
+      "system": "achievements"
+    },
+    {
+      "confidence": "documented",
+      "description": "Reach Tetr 1+",
+      "effects": [
+        {
+          "text": "You will get the maximum available rank on Rank Up"
+        }
+      ],
+      "id": "achievement-700",
+      "kind": "achievement",
+      "name": "Achievement 700 (Seven-Hundredth)",
+      "system": "achievements"
+    },
+    {
+      "confidence": "documented",
+      "description": "Generate 0.1+ Gamma Particles per second",
+      "effects": [
+        {
+          "text": "Unlocks Automation for Alpha Particles Upgrades"
+        }
+      ],
+      "id": "achievement-701",
+      "kind": "achievement",
+      "name": "Achievement 701 (Gamma Online)",
+      "system": "achievements"
+    },
+    {
+      "confidence": "documented",
+      "description": "Prestige Beta Particles for the first time",
+      "effects": [
+        {
+          "text": "Unlocks Automation for Tiering Up"
+        }
+      ],
+      "id": "achievement-703",
+      "kind": "achievement",
+      "name": "Achievement 703 (BetaGam)",
+      "system": "achievements"
+    },
+    {
+      "confidence": "documented",
+      "description": "Ascend Singularity Tree Node 1 to Ascension 100+",
+      "effects": [
+        {
+          "text": "Unlocks automation for Singularity Tree"
+        }
+      ],
+      "id": "achievement-705",
+      "kind": "achievement",
+      "name": "Achievement 705 (N.P.K)",
+      "system": "achievements"
+    },
+    {
+      "confidence": "documented",
+      "description": "Reach Pent 1+",
+      "effects": [
+        {
+          "text": "You will get the maximum available tier on Tier Up"
+        }
+      ],
+      "id": "achievement-710",
+      "kind": "achievement",
+      "name": "Achievement 710 (Fifth Gear)",
+      "system": "achievements"
+    },
+    {
+      "confidence": "documented",
+      "description": "Reach Pent 2+",
+      "effects": [
+        {
+          "text": "Unlocks Automation for Beta Particles Upgrades"
+        }
+      ],
+      "id": "achievement-711",
+      "kind": "achievement",
+      "name": "Achievement 711 (Beyond the Fifth Dimension)",
+      "system": "achievements"
+    },
+    {
+      "confidence": "documented",
+      "description": "Reach Tetr 10+",
+      "effects": [
+        {
+          "text": "Unlocks Automation for Gamma Particles Upgrades"
+        }
+      ],
+      "id": "achievement-718",
+      "kind": "achievement",
+      "name": "Achievement 718 (Towering Ambition)",
+      "system": "achievements"
+    },
+    {
+      "confidence": "documented",
+      "description": "Prestige Gamma Particles for the first time",
+      "effects": [
+        {
+          "text": "Unlocks Automation for Tetring Up"
+        }
+      ],
+      "id": "achievement-724",
+      "kind": "achievement",
+      "name": "Achievement 724 (Gamma Reborn)",
+      "system": "achievements"
+    },
+    {
+      "confidence": "documented",
+      "description": "Reach Spark Mastery 10+",
+      "effects": [
+        {
+          "text": "Unlocks Automation for Penting Up"
+        }
+      ],
+      "id": "achievement-734",
+      "kind": "achievement",
+      "name": "Achievement 734 (Learning to Shine)",
+      "system": "achievements"
+    },
+    {
+      "confidence": "documented",
+      "description": "Have Sparks of all 10 colors",
+      "effects": [
+        {
+          "text": "Unlocks the Spawn Spark macro block"
+        }
+      ],
+      "id": "achievement-737",
+      "kind": "achievement",
+      "name": "Achievement 737 (Every Shade of Spark)",
+      "system": "achievements"
+    },
+    {
+      "confidence": "documented",
+      "description": "Reach Pent 9+",
+      "effects": [
+        {
+          "text": "Unlocks Automation for Delta Particles Upgrades"
+        }
+      ],
+      "id": "achievement-738",
+      "kind": "achievement",
+      "name": "Achievement 738 (Penthouse)",
+      "system": "achievements"
+    },
+    {
+      "confidence": "documented",
+      "description": "Reach 11,000+ Epsilon",
+      "effects": [
+        {
+          "text": "Refine Node 148 effect is applied every 15 levels instead"
+        }
+      ],
+      "id": "achievement-739",
+      "kind": "achievement",
+      "name": "Achievement 739 (The Power of Expanding)",
+      "system": "achievements"
+    },
+    {
+      "confidence": "documented",
+      "description": "Reach Spark Mastery 10,000+",
+      "effects": [
+        {
+          "text": "Unlocks the Delete Spark macro block"
+        }
+      ],
+      "id": "achievement-746",
+      "kind": "achievement",
+      "name": "Achievement 746 (Sparks of Genius)",
+      "system": "achievements"
+    },
+    {
+      "confidence": "documented",
+      "description": "Obtain a Galactic+ Common Zodiac",
+      "effects": [
+        {
+          "text": "You can get Galactic+ Common Zodiacs through Unity"
+        }
+      ],
+      "id": "achievement-750",
+      "kind": "achievement",
+      "name": "Achievement 750 (Galactic Destiny)",
+      "system": "achievements"
+    },
+    {
+      "confidence": "documented",
+      "description": "Reach 100,000+ Epsilon",
+      "effects": [
+        {
+          "text": "Refine Node 148 effect is applied every 10 levels instead"
+        }
+      ],
+      "id": "achievement-752",
+      "kind": "achievement",
+      "name": "Achievement 752 (Epsilon Reserves)",
+      "system": "achievements"
+    },
+    {
+      "confidence": "documented",
+      "description": "Obtain a Spark of rarity S or higher",
+      "effects": [
+        {
+          "text": "Unlocks automatic Spark deletion"
+        }
+      ],
+      "id": "achievement-753",
+      "kind": "achievement",
+      "name": "Achievement 753 (Top of the Class)",
+      "system": "achievements"
+    },
+    {
+      "confidence": "documented",
+      "description": "Purchase a total of 1,000+ Epsilon Tree Points",
+      "effects": [
+        {
+          "text": "Unlocks automatic Spark spawning"
+        }
+      ],
+      "id": "achievement-757",
+      "kind": "achievement",
+      "name": "Achievement 757 (A Thousand Points to Grow)",
+      "system": "achievements"
+    },
+    {
+      "confidence": "documented",
+      "description": "Annoy the creepy Tarot Upgrades guy until he stops talking.",
+      "effects": [
+        {
+          "text": "The Tarot Upgrades guy won't bother you anymore."
+        }
+      ],
+      "id": "achievement-secret-46",
+      "kind": "achievement",
+      "name": "Secret Achievement 46 (Silence)",
+      "system": "achievements"
+    },
+    {
+      "confidence": "documented",
+      "description": "Let the Devil take your soul.",
+      "effects": [
+        {
+          "text": "The Devil can no longer take your soul."
+        }
+      ],
+      "id": "achievement-secret-49",
+      "kind": "achievement",
+      "name": "Secret Achievement 49 (Deal with a Devil)",
+      "system": "achievements"
+    },
+    {
+      "confidence": "documented",
       "id": "gold",
       "kind": "currency",
       "name": "Gold",
@@ -14923,7 +16866,8 @@
     },
     {
       "aliases": [
-        "Attack Levels"
+        "Attack Levels",
+        "Attacks Level"
       ],
       "confidence": "documented",
       "effects": [
@@ -16229,6 +18173,49 @@
       "name": "Singularity Local Speed",
       "system": "singularity",
       "wiki": "Singularity"
+    },
+    {
+      "aliases": [
+        "achievement rewards"
+      ],
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "Mult Gain $\\times (1 + 0.01 N)$"
+        },
+        {
+          "text": "From Achievement 51, Generators gain $\\times (1 + 0.01 N)$ as well"
+        },
+        {
+          "text": "From Achievement 201, Mult, Generators and Dilation Points gain $\\times 1.05^{N} \\times N^{N/20 - 10}$, and Zodiac Quality and Damage $\\times (N/50 - 2)$"
+        }
+      ],
+      "id": "achievement-bonus",
+      "kind": "stat",
+      "name": "Achievement Bonus",
+      "system": "achievements",
+      "wiki": "Achievements#Multiplier bonus"
+    },
+    {
+      "confidence": "documented",
+      "effects": [
+        {
+          "text": "+0.1% Time Flux gain for every Secret Achievement obtained"
+        }
+      ],
+      "id": "achievement-secret-bonus",
+      "kind": "stat",
+      "name": "Secret Achievement Bonus",
+      "system": "achievements",
+      "wiki": "Secret_Achievements"
+    },
+    {
+      "confidence": "documented",
+      "description": "Each achievement, secrets included, pays a one-off Souls or Time Flux reward on completion.",
+      "id": "achievement-completion",
+      "kind": "achievement",
+      "name": "Completing an achievement",
+      "system": "achievements"
     }
   ],
   "edges": [
@@ -25196,6 +27183,597 @@
     },
     {
       "confidence": "uncertain",
+      "from": "score",
+      "rel": "requires",
+      "source": "game",
+      "to": "achievement-1"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "achievement-10",
+      "rel": "boosts",
+      "source": "game",
+      "to": "lap-speed"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "achievement-20",
+      "rel": "boosts",
+      "source": "game",
+      "to": "promotion-4"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "achievement-36",
+      "rel": "boosts",
+      "source": "game",
+      "to": "infinity-points"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "infinities",
+      "rel": "requires",
+      "source": "game",
+      "to": "achievement-36"
+    },
+    {
+      "confidence": "documented",
+      "from": "generator-power",
+      "note": "Reach 1,000 GP",
+      "rel": "requires",
+      "source": "wiki:Achievements",
+      "to": "achievement-37"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "achievement-39",
+      "rel": "boosts",
+      "source": "game",
+      "to": "promotion-4"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "achievement-44",
+      "rel": "boosts",
+      "source": "game",
+      "to": "infinity-points"
+    },
+    {
+      "confidence": "documented",
+      "from": "achievement-51",
+      "note": "Achievement bonus now also applies to Generators",
+      "rel": "boosts",
+      "source": "game:ACH_REWD_50",
+      "to": "achievement-bonus"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "eternities",
+      "rel": "requires",
+      "source": "game",
+      "to": "achievement-84"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "achievement-85",
+      "rel": "boosts",
+      "source": "game",
+      "to": "infinities"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "infinities",
+      "rel": "requires",
+      "source": "game",
+      "to": "achievement-85"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "achievement-129",
+      "rel": "boosts",
+      "source": "game",
+      "to": "dilation"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "unities",
+      "rel": "requires",
+      "source": "game",
+      "to": "achievement-163"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "achievement-168",
+      "rel": "boosts",
+      "source": "game",
+      "to": "animal-points"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "achievement-168",
+      "rel": "boosts",
+      "source": "game",
+      "to": "animals"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "unities",
+      "rel": "requires",
+      "source": "game",
+      "to": "achievement-168"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "achievement-169",
+      "rel": "boosts",
+      "source": "game",
+      "to": "laboratory"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "unities",
+      "rel": "requires",
+      "source": "game",
+      "to": "achievement-169"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "achievement-173",
+      "rel": "boosts",
+      "source": "game",
+      "to": "quality"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "dilation-tree-points",
+      "rel": "requires",
+      "source": "game",
+      "to": "achievement-177"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "attack-level",
+      "rel": "requires",
+      "source": "game",
+      "to": "achievement-192"
+    },
+    {
+      "confidence": "documented",
+      "from": "achievement-201",
+      "note": "Better formula for achievement rewards",
+      "rel": "boosts",
+      "source": "game:ACH_REWD_200",
+      "to": "achievement-bonus"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "achievement-203",
+      "rel": "boosts",
+      "source": "game",
+      "to": "quality"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "achievement-207",
+      "rel": "boosts",
+      "source": "game",
+      "to": "quality"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "achievement-218",
+      "rel": "boosts",
+      "source": "game",
+      "to": "dilation-points"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "luck",
+      "rel": "boosts",
+      "source": "game",
+      "to": "achievement-220"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "attack-level",
+      "rel": "requires",
+      "source": "game",
+      "to": "achievement-226"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "achievement-230",
+      "rel": "boosts",
+      "source": "game",
+      "to": "quality"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "achievement-231",
+      "rel": "boosts",
+      "source": "game",
+      "to": "quality"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "achievement-232",
+      "rel": "boosts",
+      "source": "game",
+      "to": "quality"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "achievement-233",
+      "rel": "boosts",
+      "source": "game",
+      "to": "quality"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "achievement-236",
+      "rel": "boosts",
+      "source": "game",
+      "to": "luck"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "luck",
+      "rel": "requires",
+      "source": "game",
+      "to": "achievement-236"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "achievement-237",
+      "rel": "boosts",
+      "source": "game",
+      "to": "quality"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "attack-level",
+      "rel": "requires",
+      "source": "game",
+      "to": "achievement-239"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "attack-level",
+      "rel": "requires",
+      "source": "game",
+      "to": "achievement-240"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "attack-level",
+      "rel": "requires",
+      "source": "game",
+      "to": "achievement-251"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "achievement-254",
+      "rel": "boosts",
+      "source": "game",
+      "to": "relic-17"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "gold",
+      "rel": "requires",
+      "source": "game",
+      "to": "achievement-254"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "attack-level",
+      "rel": "requires",
+      "source": "game",
+      "to": "achievement-259"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "achievement-267",
+      "rel": "boosts",
+      "source": "game",
+      "to": "polish-points"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "eternity-challenges",
+      "rel": "requires",
+      "source": "game",
+      "to": "achievement-291"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "achievement-326",
+      "rel": "boosts",
+      "source": "game",
+      "to": "special-minerals"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "polish-points",
+      "rel": "requires",
+      "source": "game",
+      "to": "achievement-326"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "achievement-380",
+      "rel": "boosts",
+      "source": "game",
+      "to": "elements"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "achievement-390",
+      "rel": "boosts",
+      "source": "game",
+      "to": "tarot"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot",
+      "rel": "requires",
+      "source": "game",
+      "to": "achievement-408"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "achievement-420",
+      "rel": "boosts",
+      "source": "game",
+      "to": "special-minerals"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "achievement-426",
+      "rel": "boosts",
+      "source": "game",
+      "to": "unity"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "achievement-427",
+      "rel": "boosts",
+      "source": "game",
+      "to": "attacks"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "achievement-433",
+      "rel": "boosts",
+      "source": "game",
+      "to": "tarot"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "achievement-441",
+      "rel": "boosts",
+      "source": "game",
+      "to": "relic-14"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "achievement-443",
+      "rel": "boosts",
+      "source": "game",
+      "to": "sacrifice-dust"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "achievement-451",
+      "rel": "boosts",
+      "source": "game",
+      "to": "merge-experience"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "merge-level",
+      "rel": "requires",
+      "source": "game",
+      "to": "achievement-451"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "achievement-464",
+      "rel": "boosts",
+      "source": "game",
+      "to": "tarot-draws"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "tarot",
+      "rel": "requires",
+      "source": "game",
+      "to": "achievement-464"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "achievement-466",
+      "rel": "boosts",
+      "source": "game",
+      "to": "smp"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "achievement-470",
+      "rel": "boosts",
+      "source": "game",
+      "to": "attacks"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "achievement-482",
+      "rel": "boosts",
+      "source": "game",
+      "to": "unity"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "achievement-534",
+      "rel": "boosts",
+      "source": "game",
+      "to": "endoplasmic-reticula"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "achievement-537",
+      "rel": "boosts",
+      "source": "game",
+      "to": "plague"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "achievement-548",
+      "rel": "boosts",
+      "source": "game",
+      "to": "endoplasmic-reticula"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "virus-points",
+      "rel": "requires",
+      "source": "game",
+      "to": "achievement-548"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "singularity-mult",
+      "rel": "requires",
+      "source": "game",
+      "to": "achievement-640"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "achievement-659",
+      "rel": "boosts",
+      "source": "game",
+      "to": "singularity"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "singularity-mult",
+      "rel": "requires",
+      "source": "game",
+      "to": "achievement-659"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "achievement-669",
+      "rel": "boosts",
+      "source": "game",
+      "to": "refine-tree"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "achievement-670",
+      "rel": "boosts",
+      "source": "game",
+      "to": "singular-zodiacs"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "achievement-675",
+      "rel": "boosts",
+      "source": "game",
+      "to": "unity"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "achievement-698",
+      "rel": "boosts",
+      "source": "game",
+      "to": "endoplasmic-reticula"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "achievement-698",
+      "rel": "boosts",
+      "source": "game",
+      "to": "virus-points"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "achievement-701",
+      "rel": "boosts",
+      "source": "game",
+      "to": "particles-alpha"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "achievement-711",
+      "rel": "boosts",
+      "source": "game",
+      "to": "particles-beta"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "achievement-718",
+      "rel": "boosts",
+      "source": "game",
+      "to": "particles-gamma"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "spark-mastery",
+      "rel": "requires",
+      "source": "game",
+      "to": "achievement-734"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "achievement-738",
+      "rel": "boosts",
+      "source": "game",
+      "to": "particles-delta"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "achievement-739",
+      "rel": "boosts",
+      "source": "game",
+      "to": "refine-node-148"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "particles-epsilon",
+      "rel": "requires",
+      "source": "game",
+      "to": "achievement-739"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "spark-mastery",
+      "rel": "requires",
+      "source": "game",
+      "to": "achievement-746"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "achievement-750",
+      "rel": "boosts",
+      "source": "game",
+      "to": "unity"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "achievement-752",
+      "rel": "boosts",
+      "source": "game",
+      "to": "refine-node-148"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "particles-epsilon",
+      "rel": "requires",
+      "source": "game",
+      "to": "achievement-752"
+    },
+    {
+      "confidence": "uncertain",
       "from": "gold",
       "note": "Relic upgrade level scales with lifetime gold",
       "rel": "boosts",
@@ -29802,6 +32380,387 @@
       "rel": "boosts",
       "source": "wiki:Minerals/Refine_Tree",
       "to": "refine-node-166"
+    },
+    {
+      "confidence": "documented",
+      "from": "achievement-bonus",
+      "op": "mult",
+      "rel": "boosts",
+      "source": "wiki:Achievements",
+      "to": "mult-gain"
+    },
+    {
+      "confidence": "documented",
+      "from": "achievement-bonus",
+      "note": "From Achievement 51",
+      "op": "mult",
+      "rel": "boosts",
+      "source": "wiki:Achievements",
+      "to": "generator-mult"
+    },
+    {
+      "confidence": "documented",
+      "from": "achievement-bonus",
+      "note": "From Achievement 201",
+      "op": "mult",
+      "rel": "boosts",
+      "source": "wiki:Achievements",
+      "to": "dp-income"
+    },
+    {
+      "confidence": "documented",
+      "from": "achievement-bonus",
+      "note": "From Achievement 201",
+      "op": "mult",
+      "rel": "boosts",
+      "source": "wiki:Achievements",
+      "to": "quality"
+    },
+    {
+      "confidence": "documented",
+      "from": "achievement-bonus",
+      "note": "your Damage Multiplier from Achievement Rewards (Unlocked at Ach 201)",
+      "op": "mult",
+      "rel": "boosts",
+      "source": "wiki:Attacks",
+      "to": "cumulative-mult"
+    },
+    {
+      "confidence": "documented",
+      "from": "achievement-secret-bonus",
+      "note": "+0.1% Time Flux gain for every Secret Achievement obtained",
+      "rel": "boosts",
+      "source": "wiki:Secret_Achievements",
+      "to": "time-flux"
+    },
+    {
+      "confidence": "documented",
+      "from": "achievement-completion",
+      "note": "reward = +200, reward_type = souls; Secret Achievements pay Souls the same way",
+      "rel": "boosts",
+      "source": "wiki:Achievements",
+      "to": "souls"
+    },
+    {
+      "confidence": "documented",
+      "from": "achievement-completion",
+      "note": "reward = +15:00 TF, reward_type = time_flux",
+      "rel": "boosts",
+      "source": "wiki:Achievements",
+      "to": "time-flux"
+    },
+    {
+      "confidence": "documented",
+      "from": "achievement-21",
+      "note": "P.Mult gain ^1.01",
+      "op": "exp",
+      "rel": "boosts",
+      "source": "game:ACH_REWD_20",
+      "to": "prestige-mult"
+    },
+    {
+      "confidence": "documented",
+      "from": "dilation-node-top-4",
+      "note": "Have at least 1 TOP-4, 1 MID-4, and 1 BOT-4 Dilation Tree upgrade",
+      "rel": "requires",
+      "source": "game:ACH_DESC_139",
+      "to": "achievement-140"
+    },
+    {
+      "confidence": "documented",
+      "from": "dilation-node-middle-4",
+      "note": "Have at least 1 TOP-4, 1 MID-4, and 1 BOT-4 Dilation Tree upgrade",
+      "rel": "requires",
+      "source": "game:ACH_DESC_139",
+      "to": "achievement-140"
+    },
+    {
+      "confidence": "documented",
+      "from": "dilation-node-bottom-4",
+      "note": "Have at least 1 TOP-4, 1 MID-4, and 1 BOT-4 Dilation Tree upgrade",
+      "rel": "requires",
+      "source": "game:ACH_DESC_139",
+      "to": "achievement-140"
+    },
+    {
+      "confidence": "documented",
+      "from": "achievement-200",
+      "note": "It's useless, but you can't get achievement 201 without this one",
+      "rel": "requires",
+      "source": "game:ACH_REWD_199",
+      "to": "achievement-201"
+    },
+    {
+      "confidence": "documented",
+      "from": "achievement-140",
+      "note": "Changes the reward for Ach. 29",
+      "rel": "boosts",
+      "source": "game:ACH_REWD_139",
+      "targets_effect": 1,
+      "to": "achievement-29"
+    },
+    {
+      "confidence": "documented",
+      "from": "achievement-581",
+      "note": "Achievement 239 reward now is applied to Max Attack Level",
+      "rel": "boosts",
+      "source": "game:ACH_REWD_580",
+      "targets_effect": 1,
+      "to": "achievement-239"
+    },
+    {
+      "confidence": "documented",
+      "from": "achievement-230",
+      "note": "Complete all element-themed achievements (230-233)",
+      "rel": "requires",
+      "source": "game:ACH_DESC_236",
+      "to": "achievement-237"
+    },
+    {
+      "confidence": "documented",
+      "from": "achievement-231",
+      "note": "Complete all element-themed achievements (230-233)",
+      "rel": "requires",
+      "source": "game:ACH_DESC_236",
+      "to": "achievement-237"
+    },
+    {
+      "confidence": "documented",
+      "from": "achievement-232",
+      "note": "Complete all element-themed achievements (230-233)",
+      "rel": "requires",
+      "source": "game:ACH_DESC_236",
+      "to": "achievement-237"
+    },
+    {
+      "confidence": "documented",
+      "from": "achievement-233",
+      "note": "Complete all element-themed achievements (230-233)",
+      "rel": "requires",
+      "source": "game:ACH_DESC_236",
+      "to": "achievement-237"
+    },
+    {
+      "confidence": "documented",
+      "from": "achievement-29",
+      "note": "Dilation Tree TOP-4, MID-4, and BOT-4 upgrades are 30% stronger",
+      "rel": "boosts",
+      "source": "game:ACH_REWD_28_NEW",
+      "to": "dilation-node-top-4"
+    },
+    {
+      "confidence": "documented",
+      "from": "achievement-29",
+      "note": "Dilation Tree TOP-4, MID-4, and BOT-4 upgrades are 30% stronger",
+      "rel": "boosts",
+      "source": "game:ACH_REWD_28_NEW",
+      "to": "dilation-node-middle-4"
+    },
+    {
+      "confidence": "documented",
+      "from": "achievement-29",
+      "note": "Dilation Tree TOP-4, MID-4, and BOT-4 upgrades are 30% stronger",
+      "rel": "boosts",
+      "source": "game:ACH_REWD_28_NEW",
+      "to": "dilation-node-bottom-4"
+    },
+    {
+      "confidence": "documented",
+      "from": "achievement-15",
+      "note": "x1.05 to all Mult gains",
+      "op": "mult",
+      "rel": "boosts",
+      "source": "game:ACH_REWD_14",
+      "to": "mult-gain"
+    },
+    {
+      "confidence": "documented",
+      "from": "achievement-28",
+      "note": "x1.1 to all Mult gains",
+      "op": "mult",
+      "rel": "boosts",
+      "source": "game:ACH_REWD_27",
+      "to": "mult-gain"
+    },
+    {
+      "confidence": "documented",
+      "from": "achievement-35",
+      "note": "x1.1 to the 1st Generator",
+      "op": "mult",
+      "rel": "boosts",
+      "source": "game:ACH_REWD_34",
+      "to": "generator-1"
+    },
+    {
+      "confidence": "documented",
+      "from": "achievement-37",
+      "note": "x1.1 to the 1st Generator",
+      "op": "mult",
+      "rel": "boosts",
+      "source": "game:ACH_REWD_36",
+      "to": "generator-1"
+    },
+    {
+      "confidence": "documented",
+      "from": "achievement-192",
+      "note": "Score -> Damage Mult x10",
+      "op": "mult",
+      "rel": "boosts",
+      "source": "game:ACH_REWD_191",
+      "to": "score-damage-mult"
+    },
+    {
+      "confidence": "documented",
+      "from": "achievement-576",
+      "note": "Multiplies Empress Effect by x100",
+      "op": "mult",
+      "rel": "boosts",
+      "source": "game:ACH_REWD_575",
+      "to": "tarot-the-empress"
+    },
+    {
+      "confidence": "documented",
+      "from": "particles-tetr",
+      "note": "Reach Tetr 1+",
+      "rel": "requires",
+      "source": "game:ACH_DESC_699",
+      "to": "achievement-700"
+    },
+    {
+      "confidence": "documented",
+      "from": "particles-pent",
+      "note": "Reach Pent 1+",
+      "rel": "requires",
+      "source": "game:ACH_DESC_709",
+      "to": "achievement-710"
+    },
+    {
+      "confidence": "documented",
+      "from": "particles-pent",
+      "note": "Reach Pent 2+",
+      "rel": "requires",
+      "source": "game:ACH_DESC_710",
+      "to": "achievement-711"
+    },
+    {
+      "confidence": "documented",
+      "from": "particles-tetr",
+      "note": "Reach Tetr 10+",
+      "rel": "requires",
+      "source": "game:ACH_DESC_717",
+      "to": "achievement-718"
+    },
+    {
+      "confidence": "documented",
+      "from": "particles-pent",
+      "note": "Reach Pent 9+",
+      "rel": "requires",
+      "source": "game:ACH_DESC_737",
+      "to": "achievement-738"
+    },
+    {
+      "confidence": "documented",
+      "from": "achievement-162",
+      "note": "Unlocks Mercury",
+      "rel": "unlocks",
+      "source": "game:ACH_REWD_161",
+      "to": "planet-mercury"
+    },
+    {
+      "confidence": "documented",
+      "from": "achievement-163",
+      "note": "Unlocks Venus",
+      "rel": "unlocks",
+      "source": "game:ACH_REWD_162",
+      "to": "planet-venus"
+    },
+    {
+      "confidence": "documented",
+      "from": "achievement-165",
+      "note": "Unlocks the Trials tab",
+      "rel": "unlocks",
+      "source": "game:ACH_REWD_164",
+      "to": "trials"
+    },
+    {
+      "confidence": "documented",
+      "from": "achievement-166",
+      "note": "Unlocks Moon",
+      "rel": "unlocks",
+      "source": "game:ACH_REWD_165",
+      "to": "planet-moon"
+    },
+    {
+      "confidence": "documented",
+      "from": "achievement-172",
+      "note": "Unlock Jupiter",
+      "rel": "unlocks",
+      "source": "game:ACH_REWD_171",
+      "to": "planet-jupiter"
+    },
+    {
+      "confidence": "documented",
+      "from": "achievement-181",
+      "note": "Unlocks Saturn",
+      "rel": "unlocks",
+      "source": "game:ACH_REWD_180",
+      "to": "planet-saturn"
+    },
+    {
+      "confidence": "documented",
+      "from": "achievement-184",
+      "note": "Unlocks Uranus",
+      "rel": "unlocks",
+      "source": "game:ACH_REWD_183",
+      "to": "planet-uranus"
+    },
+    {
+      "confidence": "documented",
+      "from": "achievement-188",
+      "note": "Unlocks Neptune",
+      "rel": "unlocks",
+      "source": "game:ACH_REWD_187",
+      "to": "planet-neptune"
+    },
+    {
+      "confidence": "documented",
+      "from": "achievement-190",
+      "note": "Unlocks Pluto",
+      "rel": "unlocks",
+      "source": "game:ACH_REWD_189",
+      "to": "planet-pluto"
+    },
+    {
+      "confidence": "documented",
+      "from": "achievement-191",
+      "note": "Unlocks Attacks",
+      "rel": "unlocks",
+      "source": "game:ACH_REWD_190",
+      "to": "attacks"
+    },
+    {
+      "confidence": "documented",
+      "from": "achievement-205",
+      "note": "Unlocks Chiron",
+      "rel": "unlocks",
+      "source": "game:ACH_REWD_204",
+      "to": "planet-chiron"
+    },
+    {
+      "confidence": "documented",
+      "from": "achievement-219",
+      "note": "Unlocks Fortune Pars",
+      "rel": "unlocks",
+      "source": "game:ACH_REWD_218",
+      "to": "planet-fortune-pars"
+    },
+    {
+      "confidence": "documented",
+      "from": "achievement-240",
+      "note": "Unlocks Minerals",
+      "rel": "unlocks",
+      "source": "game:ACH_REWD_239",
+      "to": "minerals"
     }
   ],
   "systems": [
@@ -29985,6 +32944,10 @@
       "id": "epsilon-tree",
       "name": "Epsilon Tree",
       "parent": "particles"
+    },
+    {
+      "id": "achievements",
+      "name": "Achievements"
     }
   ]
 }

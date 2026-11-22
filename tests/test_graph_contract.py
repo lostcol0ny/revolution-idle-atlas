@@ -1108,3 +1108,31 @@ def test_the_epsilon_tree_matches_the_game_screen(graph: dict):
                 assert (child, parent, "requires") in edges
     for node in tree:
         assert ("epsilon-tree", node, "unlocks") in edges
+
+
+def test_no_achievement_boosts_anything_from_its_goal_alone():
+    # An achievement's description is the goal the player reaches. With every
+    # reward removed, nothing in data/game.yaml may still produce a boost out
+    # of an achievement: if one did, the goal would be read as an effect.
+    from atlas.extract import game_text
+    from atlas.extract.vocab import build_vocabulary
+    from atlas.loader import load_dataset, load_game
+
+    game = load_game(DATA / "game.yaml")
+    achievements = [n for n in game.nodes if n.id.startswith("achievement-")]
+    assert len(achievements) == 149
+    goals_only = game.model_copy(
+        update={"nodes": [n.model_copy(update={"effects": []}) for n in achievements]}
+    )
+    vocabulary = build_vocabulary(load_dataset(DATA / "relationships.yaml").nodes)
+    edges = game_text.extract(goals_only, vocabulary).edges
+    assert [(e.from_, e.to) for e in edges if e.rel == "boosts"] == []
+    # The goals still name their thresholds.
+    assert ("infinities", "achievement-36") in {(e.from_, e.to) for e in edges}
+
+
+def test_achievements_are_a_top_level_system(graph: dict):
+    systems = {s["id"]: s for s in graph["systems"]}
+    assert "parent" not in systems["achievements"]
+    kinds = {n["kind"] for n in graph["nodes"] if n["system"] == "achievements"}
+    assert kinds == {"achievement", "stat"}

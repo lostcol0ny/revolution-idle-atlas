@@ -166,15 +166,17 @@ git-ignored.
 `data/derived.yaml` and `data/relationships.yaml`, and writes the result to
 `data/game.yaml`, which **is** committed. Each entry is a node `id`, the game's
 `name` (left out when the game only describes the entity, so the node keeps
-the name it has), and its `description`, under the Steam `buildid` it was read
-from. Unity rich-text tags are stripped. The numbers the game fills in at
+the name it has), its `description` and, for an achievement, its `effects`
+(the reward), under the Steam `buildid` it was read from. Unity rich-text tags
+are stripped. The numbers the game fills in at
 runtime are worded by the sign beside them: `x{0}` becomes "a multiplier",
 `^{0}` "an exponent", `/{0}` "a divisor", `{0}%` "a percentage", `+{0}` "an
 amount", and a bare `{0}` "a value"; an operator chain such as `^^^{0}` keeps
 its operators ("^^^ a value"). A running total such as `(total: x{1})`,
 `(cur.: /{0})` or `(x{0} multiplier)`, or a closing `Currently: x{0}` line, is
 dropped, since it is the player's state rather than the entity's. `atlas build`
-overlays the name and description field by field on the generated node, and a
+overlays the name, description and effects field by field on the generated
+node, and a
 curated field still wins.
 
 Only families with a clear home in the graph are mapped:
@@ -195,6 +197,13 @@ reads three more families straight from the strings:
 | `PARTICLES_BONUS_<GRADE>_<n>` (Rank, Tier, Tetr, Pent) | `particles-<grade>-bonus-<n+1>` in `particles-grades` | By the wiki's Grade Bonuses threshold (`Rank 5 Bonus`), read from `data/raw/Particles.wikitext`, when the wiki lists exactly as many bonuses for that grade as the game has; otherwise by position (`Tetr Bonus #7`). The string is the description, with the formulas it spells out in plain text (`×(1 + 0.05 × rank)`) typeset as `$LaTeX$`; shorthand such as `^1.1` or `×tier` stays prose. |
 | `EPSILON_EFFECT_<n>` | `epsilon-tree-a<n-14>` in `epsilon-tree` | `Epsilon Tree A<n-14> (<effect>)`, the label the game's Epsilon Tree screen gives the node; the effect is also the description. Only the 16 outer nodes A1–A16 (15–30) have one, and only those indices, checked against the screen, are labelled: any other, including one a patch adds, is reported unmatched. The 15 inner nodes (`epsilon-tree-b1`…`b8`, `c1`…`c4`, `d1`, `d2` and the centre, `epsilon-tree-epsilon`) share the template "Boosts {0} efficiency", which names no node, so they and their edges are curated in `data/relationships.yaml`: each boosts the two nodes outside it and requires them first. |
 | `ENUM_SPARKTYPE_<COLOUR>`, `ENUM_SPARKTYPE_EFFECT_<COLOUR>` | `particles-spark-<colour>` | `UNI_PARTICLES_SPARK_NAME` (`Blue Spark`); the effect is the description. |
+
+Achievements key their reward apart from the name and requirement, so they are
+read from the strings as well:
+
+| Keys | Onto | Named |
+|---|---|---|
+| `ACH_NAME_<n>`, `ACH_DESC_<n>`, `ACH_REWD_<n>` | `achievement-<n+1>` in `achievements`, kind `achievement`; secrets (`n` from 10000) are `achievement-secret-<n-9999>` | `Achievement <n+1> (<name>)`, the number the game's own text cites ("Changes the reward for Ach. 29"); `Secret Achievement <n> (<name>)`. The requirement is the description and the reward the effect; an `ACH_REWD_<n>_NEW` that a later achievement swaps in is a second effect. Only the 149 achievements with a reward are mapped: the other 684 give Souls or Time Flux, which the game words nowhere, and are counted as left out. A threshold the game fills in at runtime ("Reach {0} Score") is taken from the row of the same name in `data/raw/Achievements.wikitext` when the wiki words the rest of the sentence exactly as the game does; otherwise it is worded as usual. |
 
 Each id is created when no node has it and overlaid when one does.
 
@@ -221,8 +230,8 @@ above, a threshold the wiki has no node for creates one in
 `eternity-milestones`. No node models a single tarot upgrade, so
 `UNI_TAROT_UPGRADE_EFFECT_*` is reported, not mapped.
 
-Every other family (achievements, `ACH`, among them) has no system to map onto
-and is listed as skipped. An entity in the first four catalog families that no node
+Every other family has no system to map onto and is listed as skipped. An
+entity in the first four catalog families that no node
 matches becomes a **new node** in the family's system, at confidence
 `documented`, carrying `system` and `kind` in its entry; common minerals are
 never created. Anything that cannot be placed — a name that disagrees with its
@@ -236,8 +245,8 @@ that names no system is a build **warning**; rerun `atlas game`.
 ### Edges from game text
 
 `atlas extract`, not `atlas game`, turns `data/game.yaml` into edges, so they
-follow the current vocabulary and CI rebuilds them without a game. Two kinds
-come out, both with `source: game`:
+follow the current vocabulary and CI rebuilds them without a game. Three kinds
+come out, all with `source: game`:
 
 - **Member links**, `documented`. Every grade bonus `requires` its grade
   (`particles-rank` and so on), every outer Epsilon Tree node (A1–A16) is
@@ -255,6 +264,15 @@ come out, both with `source: game`:
   bonus. A grade the text names ("+0.01 per rank", "Particle Rank boosts
   Luck") produces no edge: a bonus reads its grade, and the member link already
   says so.
+- **Achievement thresholds**, `uncertain` and always `requires`. An entry that
+  carries effects (an achievement's reward) is matched on those effects alone,
+  and its description is read as the goal the player reaches, never as
+  something the entry raises. A goal that opens with "Reach" or "Have" and
+  whose remainder is a plain threshold (see
+  [the sweep manifest](#the-sweep-manifest)) makes what it names `requires` the
+  achievement: "Reach 5 Infinities" gives `infinities` → `achievement-36`. A
+  reward sentence about a macro block makes no edge; the block scripts what it
+  names and changes nothing about it.
 
 Correct a wrong one the usual way: a curated edge plus a `suppress` entry in
 `data/relationships.yaml`.
@@ -404,7 +422,7 @@ A consumer may still keep a list of ids it has colours or ordering for
 and tolerate an id it has never seen.
 
 `kind`: `relic`, `stat`, `tree-node`, `currency`, `tarot-card`, `upgrade`,
-`group`.
+`group`, `achievement`.
 
 **Relic labels are composed, not stored.** A node whose `kind` is `relic` and whose `id`
 matches `relic-<n>` is emitted with `name` set to `Relic <n> (<name>)`. The composition
