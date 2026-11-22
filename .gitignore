@@ -9,3 +9,6 @@ docs/superpowers/
 .claude/worktrees/
 dist/
 .vercel
+
+# `atlas game` output: read from a local game install, never committed.
+data/game/

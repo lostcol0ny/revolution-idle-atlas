@@ -37,6 +37,7 @@ confidence the schema has.
 | `public/graph.json` | Generated. The contract with the frontend. Committed. |
 | `docs/coverage.md` | Generated. The curation to-do list. Committed. |
 | `bootstrap/` | Historical. Held one-off seeding scripts; all have been superseded by `atlas extract` and removed. |
+| `data/game/` | Local only, git-ignored. Written by `atlas game` from your own game install; see [Game files](#game-files). |
 
 `data/derived.yaml`, `public/graph.json` and `docs/coverage.md` are build
 products that are committed to the repository. CI rebuilds them and fails if the
@@ -60,6 +61,8 @@ uv run atlas build       # merge both dataset files, validate, then write the ar
 uv run atlas build --check   # validate only; write nothing
 uv run atlas extract     # parse data/raw/ into data/derived.yaml
 uv run atlas scrape      # re-fetch data/raw/ from the wiki
+uv sync --extra game     # also install UnityPy, needed only by `atlas game`
+uv run atlas game        # read English strings from a local game install into data/game/
 uv run pytest            # tests
 ```
 
@@ -95,6 +98,38 @@ would have produced, and everything else extracts as usual.
 `atlas scrape` talks to a live, volunteer-run wiki. Do not run it in a loop. A
 scheduled GitHub Actions workflow runs it daily and opens a pull request when the
 raw wikitext changes; that PR touches `data/raw/` only.
+
+## Game files
+
+`atlas game` reads the game's own English text from a local Steam install
+(`--install PATH`; the default is the standard Steam path on Windows). It needs
+the optional `game` dependency group (`uv sync --extra game`) and fails with a
+message naming what is missing when UnityPy or the install is absent. It never
+runs in CI, which has no game; its one test against a real install is skipped
+there.
+
+It opens two Unity Localization bundles under
+`Revolution Idle_Data/StreamingAssets/aa/StandaloneWindows64/`:
+`localization-assets-shared_assets_all.bundle`, which maps entry ids to keys,
+and `localization-string-tables-english(en)_assets_all.bundle`, which maps the
+same ids to English text. It writes two files:
+
+- `data/game/strings.en.json` — every string from the `menu` and `patch_note`
+  tables, keyed by localization key, with the Steam `buildid` (from
+  `steamapps/appmanifest_2763740.acf`, null if absent) and the Unity version.
+- `data/game/catalog.yaml` — every family with numbered `<PREFIX>_NAME_<n>` and
+  `<PREFIX>_DESC_<n>` keys (relics are `UNI_RELIC`), as `{index, name, desc}`
+  lists. A missing half is null, so a gap is visible.
+
+**The text is not value-free, and not a complete source of values either.**
+Many descriptions are templates whose numbers the game fills in at runtime
+(`{0}`), and its formulas are compiled code, not data. Others contain literal
+numbers, such as achievement thresholds.
+
+**`resources.assets` is never read.** Its TextAssets include developer test
+saves, some named after real players.
+
+Both outputs stay **local and are not committed**: `data/game/` is git-ignored.
 
 ## The sweep manifest
 
