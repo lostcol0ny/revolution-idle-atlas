@@ -50,7 +50,9 @@ function MathSpan({ latex }: { latex: string }) {
 /** Prose from graph.json, with its `$…$` segments typeset as inline math. */
 export function RichText({ text }: { text: string }) {
   const segments = useMemo(() => splitMath(text), [text]);
+  // The key includes the LaTeX: MathSpan seeds its state from its first
+  // formula, so a reused card must remount it rather than hand it a new one.
   return segments.map((segment, position) =>
-    segment.math ? <MathSpan key={position} latex={segment.text} /> : segment.text,
+    segment.math ? <MathSpan key={`${position}:${segment.text}`} latex={segment.text} /> : segment.text,
   );
 }
