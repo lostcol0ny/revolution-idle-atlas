@@ -10697,129 +10697,129 @@
     {
       "confidence": "documented",
       "description": "Red & Blue spark base mastery",
-      "id": "epsilon-tree-node-16",
+      "id": "epsilon-tree-a1",
       "kind": "tree-node",
-      "name": "Epsilon Tree Node 16 (Red & Blue spark base mastery)",
+      "name": "Epsilon Tree A1 (Red & Blue spark base mastery)",
       "system": "epsilon-tree"
     },
     {
       "confidence": "documented",
       "description": "Atoms Nerf e25K",
-      "id": "epsilon-tree-node-17",
+      "id": "epsilon-tree-a2",
       "kind": "tree-node",
-      "name": "Epsilon Tree Node 17 (Atoms Nerf e25K)",
+      "name": "Epsilon Tree A2 (Atoms Nerf e25K)",
       "system": "epsilon-tree"
     },
     {
       "confidence": "documented",
       "description": "Orange spark base mastery",
-      "id": "epsilon-tree-node-18",
+      "id": "epsilon-tree-a3",
       "kind": "tree-node",
-      "name": "Epsilon Tree Node 18 (Orange spark base mastery)",
+      "name": "Epsilon Tree A3 (Orange spark base mastery)",
       "system": "epsilon-tree"
     },
     {
       "confidence": "documented",
       "description": "Attack HP Requirement",
-      "id": "epsilon-tree-node-19",
+      "id": "epsilon-tree-a4",
       "kind": "tree-node",
-      "name": "Epsilon Tree Node 19 (Attack HP Requirement)",
+      "name": "Epsilon Tree A4 (Attack HP Requirement)",
       "system": "epsilon-tree"
     },
     {
       "confidence": "documented",
       "description": "Yellow spark base mastery",
-      "id": "epsilon-tree-node-20",
+      "id": "epsilon-tree-a5",
       "kind": "tree-node",
-      "name": "Epsilon Tree Node 20 (Yellow spark base mastery)",
+      "name": "Epsilon Tree A5 (Yellow spark base mastery)",
       "system": "epsilon-tree"
     },
     {
       "confidence": "documented",
       "description": "Sacrifice Dust Gain",
-      "id": "epsilon-tree-node-21",
+      "id": "epsilon-tree-a6",
       "kind": "tree-node",
-      "name": "Epsilon Tree Node 21 (Sacrifice Dust Gain)",
+      "name": "Epsilon Tree A6 (Sacrifice Dust Gain)",
       "system": "epsilon-tree"
     },
     {
       "confidence": "documented",
       "description": "Green spark base mastery",
-      "id": "epsilon-tree-node-22",
+      "id": "epsilon-tree-a7",
       "kind": "tree-node",
-      "name": "Epsilon Tree Node 22 (Green spark base mastery)",
+      "name": "Epsilon Tree A7 (Green spark base mastery)",
       "system": "epsilon-tree"
     },
     {
       "confidence": "documented",
       "description": "Tarot Golden Resource base gain",
-      "id": "epsilon-tree-node-23",
+      "id": "epsilon-tree-a8",
       "kind": "tree-node",
-      "name": "Epsilon Tree Node 23 (Tarot Golden Resource base gain)",
+      "name": "Epsilon Tree A8 (Tarot Golden Resource base gain)",
       "system": "epsilon-tree"
     },
     {
       "confidence": "documented",
       "description": "Cyan spark base mastery",
-      "id": "epsilon-tree-node-24",
+      "id": "epsilon-tree-a9",
       "kind": "tree-node",
-      "name": "Epsilon Tree Node 24 (Cyan spark base mastery)",
+      "name": "Epsilon Tree A9 (Cyan spark base mastery)",
       "system": "epsilon-tree"
     },
     {
       "confidence": "documented",
       "description": "Particle Generator base multiplier per 67 levels",
-      "id": "epsilon-tree-node-25",
+      "id": "epsilon-tree-a10",
       "kind": "tree-node",
-      "name": "Epsilon Tree Node 25 (Particle Generator base multiplier per 67 levels)",
+      "name": "Epsilon Tree A10 (Particle Generator base multiplier per 67 levels)",
       "system": "epsilon-tree"
     },
     {
       "confidence": "documented",
       "description": "Purple spark base mastery",
-      "id": "epsilon-tree-node-26",
+      "id": "epsilon-tree-a11",
       "kind": "tree-node",
-      "name": "Epsilon Tree Node 26 (Purple spark base mastery)",
+      "name": "Epsilon Tree A11 (Purple spark base mastery)",
       "system": "epsilon-tree"
     },
     {
       "confidence": "documented",
       "description": "Endoplasmic Reticulum craft requirement",
-      "id": "epsilon-tree-node-27",
+      "id": "epsilon-tree-a12",
       "kind": "tree-node",
-      "name": "Epsilon Tree Node 27 (Endoplasmic Reticulum craft requirement)",
+      "name": "Epsilon Tree A12 (Endoplasmic Reticulum craft requirement)",
       "system": "epsilon-tree"
     },
     {
       "confidence": "documented",
       "description": "Pink spark base mastery",
-      "id": "epsilon-tree-node-28",
+      "id": "epsilon-tree-a13",
       "kind": "tree-node",
-      "name": "Epsilon Tree Node 28 (Pink spark base mastery)",
+      "name": "Epsilon Tree A13 (Pink spark base mastery)",
       "system": "epsilon-tree"
     },
     {
       "confidence": "documented",
       "description": "Spark Luck",
-      "id": "epsilon-tree-node-29",
+      "id": "epsilon-tree-a14",
       "kind": "tree-node",
-      "name": "Epsilon Tree Node 29 (Spark Luck)",
+      "name": "Epsilon Tree A14 (Spark Luck)",
       "system": "epsilon-tree"
     },
     {
       "confidence": "documented",
       "description": "Black & White spark base mastery",
-      "id": "epsilon-tree-node-30",
+      "id": "epsilon-tree-a15",
       "kind": "tree-node",
-      "name": "Epsilon Tree Node 30 (Black & White spark base mastery)",
+      "name": "Epsilon Tree A15 (Black & White spark base mastery)",
       "system": "epsilon-tree"
     },
     {
       "confidence": "documented",
       "description": "Sparks Epsilon Gain Effect",
-      "id": "epsilon-tree-node-31",
+      "id": "epsilon-tree-a16",
       "kind": "tree-node",
-      "name": "Epsilon Tree Node 31 (Sparks Epsilon Gain Effect)",
+      "name": "Epsilon Tree A16 (Sparks Epsilon Gain Effect)",
       "system": "epsilon-tree"
     },
     {
@@ -15447,6 +15447,141 @@
       "id": "epsilon-tree",
       "kind": "group",
       "name": "Epsilon Tree",
+      "system": "epsilon-tree",
+      "wiki": "Particles#Epsilon_Tree"
+    },
+    {
+      "confidence": "provisional",
+      "description": "Boosts A1 and A2 efficiency",
+      "id": "epsilon-tree-b1",
+      "kind": "tree-node",
+      "name": "Epsilon Tree B1",
+      "system": "epsilon-tree",
+      "wiki": "Particles#Epsilon_Tree"
+    },
+    {
+      "confidence": "provisional",
+      "description": "Boosts A3 and A4 efficiency",
+      "id": "epsilon-tree-b2",
+      "kind": "tree-node",
+      "name": "Epsilon Tree B2",
+      "system": "epsilon-tree",
+      "wiki": "Particles#Epsilon_Tree"
+    },
+    {
+      "confidence": "provisional",
+      "description": "Boosts A5 and A6 efficiency",
+      "id": "epsilon-tree-b3",
+      "kind": "tree-node",
+      "name": "Epsilon Tree B3",
+      "system": "epsilon-tree",
+      "wiki": "Particles#Epsilon_Tree"
+    },
+    {
+      "confidence": "provisional",
+      "description": "Boosts A7 and A8 efficiency",
+      "id": "epsilon-tree-b4",
+      "kind": "tree-node",
+      "name": "Epsilon Tree B4",
+      "system": "epsilon-tree",
+      "wiki": "Particles#Epsilon_Tree"
+    },
+    {
+      "confidence": "provisional",
+      "description": "Boosts A9 and A10 efficiency",
+      "id": "epsilon-tree-b5",
+      "kind": "tree-node",
+      "name": "Epsilon Tree B5",
+      "system": "epsilon-tree",
+      "wiki": "Particles#Epsilon_Tree"
+    },
+    {
+      "confidence": "provisional",
+      "description": "Boosts A11 and A12 efficiency",
+      "id": "epsilon-tree-b6",
+      "kind": "tree-node",
+      "name": "Epsilon Tree B6",
+      "system": "epsilon-tree",
+      "wiki": "Particles#Epsilon_Tree"
+    },
+    {
+      "confidence": "provisional",
+      "description": "Boosts A13 and A14 efficiency",
+      "id": "epsilon-tree-b7",
+      "kind": "tree-node",
+      "name": "Epsilon Tree B7",
+      "system": "epsilon-tree",
+      "wiki": "Particles#Epsilon_Tree"
+    },
+    {
+      "confidence": "provisional",
+      "description": "Boosts A15 and A16 efficiency",
+      "id": "epsilon-tree-b8",
+      "kind": "tree-node",
+      "name": "Epsilon Tree B8",
+      "system": "epsilon-tree",
+      "wiki": "Particles#Epsilon_Tree"
+    },
+    {
+      "confidence": "provisional",
+      "description": "Boosts B1 and B2 efficiency",
+      "id": "epsilon-tree-c1",
+      "kind": "tree-node",
+      "name": "Epsilon Tree C1",
+      "system": "epsilon-tree",
+      "wiki": "Particles#Epsilon_Tree"
+    },
+    {
+      "confidence": "provisional",
+      "description": "Boosts B3 and B4 efficiency",
+      "id": "epsilon-tree-c2",
+      "kind": "tree-node",
+      "name": "Epsilon Tree C2",
+      "system": "epsilon-tree",
+      "wiki": "Particles#Epsilon_Tree"
+    },
+    {
+      "confidence": "provisional",
+      "description": "Boosts B5 and B6 efficiency",
+      "id": "epsilon-tree-c3",
+      "kind": "tree-node",
+      "name": "Epsilon Tree C3",
+      "system": "epsilon-tree",
+      "wiki": "Particles#Epsilon_Tree"
+    },
+    {
+      "confidence": "provisional",
+      "description": "Boosts B7 and B8 efficiency",
+      "id": "epsilon-tree-c4",
+      "kind": "tree-node",
+      "name": "Epsilon Tree C4",
+      "system": "epsilon-tree",
+      "wiki": "Particles#Epsilon_Tree"
+    },
+    {
+      "confidence": "provisional",
+      "description": "Boosts C1 and C2 efficiency",
+      "id": "epsilon-tree-d1",
+      "kind": "tree-node",
+      "name": "Epsilon Tree D1",
+      "system": "epsilon-tree",
+      "wiki": "Particles#Epsilon_Tree"
+    },
+    {
+      "confidence": "provisional",
+      "description": "Boosts C3 and C4 efficiency",
+      "id": "epsilon-tree-d2",
+      "kind": "tree-node",
+      "name": "Epsilon Tree D2",
+      "system": "epsilon-tree",
+      "wiki": "Particles#Epsilon_Tree"
+    },
+    {
+      "confidence": "provisional",
+      "description": "Boosts D1 and D2 efficiency",
+      "id": "epsilon-tree-epsilon",
+      "kind": "tree-node",
+      "name": "Epsilon Tree ε",
       "system": "epsilon-tree",
       "wiki": "Particles#Epsilon_Tree"
     },
@@ -25056,18 +25191,18 @@
       "from": "epsilon-tree",
       "rel": "unlocks",
       "source": "game",
-      "to": "epsilon-tree-node-16"
+      "to": "epsilon-tree-a1"
     },
     {
       "confidence": "documented",
       "from": "epsilon-tree",
       "rel": "unlocks",
       "source": "game",
-      "to": "epsilon-tree-node-17"
+      "to": "epsilon-tree-a2"
     },
     {
       "confidence": "uncertain",
-      "from": "epsilon-tree-node-17",
+      "from": "epsilon-tree-a2",
       "rel": "boosts",
       "source": "game",
       "to": "atom-penalty"
@@ -25077,32 +25212,32 @@
       "from": "epsilon-tree",
       "rel": "unlocks",
       "source": "game",
-      "to": "epsilon-tree-node-18"
+      "to": "epsilon-tree-a3"
     },
     {
       "confidence": "documented",
       "from": "epsilon-tree",
       "rel": "unlocks",
       "source": "game",
-      "to": "epsilon-tree-node-19"
+      "to": "epsilon-tree-a4"
     },
     {
       "confidence": "documented",
       "from": "epsilon-tree",
       "rel": "unlocks",
       "source": "game",
-      "to": "epsilon-tree-node-20"
+      "to": "epsilon-tree-a5"
     },
     {
       "confidence": "documented",
       "from": "epsilon-tree",
       "rel": "unlocks",
       "source": "game",
-      "to": "epsilon-tree-node-21"
+      "to": "epsilon-tree-a6"
     },
     {
       "confidence": "uncertain",
-      "from": "epsilon-tree-node-21",
+      "from": "epsilon-tree-a6",
       "rel": "boosts",
       "source": "game",
       "to": "sacrifice-dust"
@@ -25112,25 +25247,25 @@
       "from": "epsilon-tree",
       "rel": "unlocks",
       "source": "game",
-      "to": "epsilon-tree-node-22"
+      "to": "epsilon-tree-a7"
     },
     {
       "confidence": "documented",
       "from": "epsilon-tree",
       "rel": "unlocks",
       "source": "game",
-      "to": "epsilon-tree-node-23"
+      "to": "epsilon-tree-a8"
     },
     {
       "confidence": "uncertain",
-      "from": "epsilon-tree-node-23",
+      "from": "epsilon-tree-a8",
       "rel": "boosts",
       "source": "game",
       "to": "tarot"
     },
     {
       "confidence": "uncertain",
-      "from": "epsilon-tree-node-23",
+      "from": "epsilon-tree-a8",
       "rel": "boosts",
       "source": "game",
       "to": "golden-resources"
@@ -25140,18 +25275,18 @@
       "from": "epsilon-tree",
       "rel": "unlocks",
       "source": "game",
-      "to": "epsilon-tree-node-24"
+      "to": "epsilon-tree-a9"
     },
     {
       "confidence": "documented",
       "from": "epsilon-tree",
       "rel": "unlocks",
       "source": "game",
-      "to": "epsilon-tree-node-25"
+      "to": "epsilon-tree-a10"
     },
     {
       "confidence": "uncertain",
-      "from": "epsilon-tree-node-25",
+      "from": "epsilon-tree-a10",
       "rel": "boosts",
       "source": "game",
       "to": "particle-generators"
@@ -25161,18 +25296,18 @@
       "from": "epsilon-tree",
       "rel": "unlocks",
       "source": "game",
-      "to": "epsilon-tree-node-26"
+      "to": "epsilon-tree-a11"
     },
     {
       "confidence": "documented",
       "from": "epsilon-tree",
       "rel": "unlocks",
       "source": "game",
-      "to": "epsilon-tree-node-27"
+      "to": "epsilon-tree-a12"
     },
     {
       "confidence": "uncertain",
-      "from": "epsilon-tree-node-27",
+      "from": "epsilon-tree-a12",
       "rel": "boosts",
       "source": "game",
       "to": "endoplasmic-reticula"
@@ -25182,18 +25317,18 @@
       "from": "epsilon-tree",
       "rel": "unlocks",
       "source": "game",
-      "to": "epsilon-tree-node-28"
+      "to": "epsilon-tree-a13"
     },
     {
       "confidence": "documented",
       "from": "epsilon-tree",
       "rel": "unlocks",
       "source": "game",
-      "to": "epsilon-tree-node-29"
+      "to": "epsilon-tree-a14"
     },
     {
       "confidence": "uncertain",
-      "from": "epsilon-tree-node-29",
+      "from": "epsilon-tree-a14",
       "rel": "boosts",
       "source": "game",
       "to": "spark-luck"
@@ -25203,25 +25338,25 @@
       "from": "epsilon-tree",
       "rel": "unlocks",
       "source": "game",
-      "to": "epsilon-tree-node-30"
+      "to": "epsilon-tree-a15"
     },
     {
       "confidence": "documented",
       "from": "epsilon-tree",
       "rel": "unlocks",
       "source": "game",
-      "to": "epsilon-tree-node-31"
+      "to": "epsilon-tree-a16"
     },
     {
       "confidence": "uncertain",
-      "from": "epsilon-tree-node-31",
+      "from": "epsilon-tree-a16",
       "rel": "boosts",
       "source": "game",
       "to": "particles-sparks"
     },
     {
       "confidence": "uncertain",
-      "from": "epsilon-tree-node-31",
+      "from": "epsilon-tree-a16",
       "rel": "boosts",
       "source": "game",
       "to": "particles-epsilon"
@@ -29202,7 +29337,7 @@
     },
     {
       "confidence": "documented",
-      "from": "epsilon-tree-node-16",
+      "from": "epsilon-tree-a1",
       "note": "Red & Blue spark base mastery",
       "rel": "boosts",
       "source": "game:EPSILON_EFFECT_15",
@@ -29210,7 +29345,7 @@
     },
     {
       "confidence": "documented",
-      "from": "epsilon-tree-node-16",
+      "from": "epsilon-tree-a1",
       "note": "Red & Blue spark base mastery",
       "rel": "boosts",
       "source": "game:EPSILON_EFFECT_15",
@@ -29218,7 +29353,7 @@
     },
     {
       "confidence": "documented",
-      "from": "epsilon-tree-node-18",
+      "from": "epsilon-tree-a3",
       "note": "Orange spark base mastery",
       "rel": "boosts",
       "source": "game:EPSILON_EFFECT_17",
@@ -29226,7 +29361,7 @@
     },
     {
       "confidence": "documented",
-      "from": "epsilon-tree-node-20",
+      "from": "epsilon-tree-a5",
       "note": "Yellow spark base mastery",
       "rel": "boosts",
       "source": "game:EPSILON_EFFECT_19",
@@ -29234,7 +29369,7 @@
     },
     {
       "confidence": "documented",
-      "from": "epsilon-tree-node-22",
+      "from": "epsilon-tree-a7",
       "note": "Green spark base mastery",
       "rel": "boosts",
       "source": "game:EPSILON_EFFECT_21",
@@ -29242,7 +29377,7 @@
     },
     {
       "confidence": "documented",
-      "from": "epsilon-tree-node-24",
+      "from": "epsilon-tree-a9",
       "note": "Cyan spark base mastery",
       "rel": "boosts",
       "source": "game:EPSILON_EFFECT_23",
@@ -29250,7 +29385,7 @@
     },
     {
       "confidence": "documented",
-      "from": "epsilon-tree-node-26",
+      "from": "epsilon-tree-a11",
       "note": "Purple spark base mastery",
       "rel": "boosts",
       "source": "game:EPSILON_EFFECT_25",
@@ -29258,7 +29393,7 @@
     },
     {
       "confidence": "documented",
-      "from": "epsilon-tree-node-28",
+      "from": "epsilon-tree-a13",
       "note": "Pink spark base mastery",
       "rel": "boosts",
       "source": "game:EPSILON_EFFECT_27",
@@ -29266,7 +29401,7 @@
     },
     {
       "confidence": "documented",
-      "from": "epsilon-tree-node-30",
+      "from": "epsilon-tree-a15",
       "note": "Black & White spark base mastery",
       "rel": "boosts",
       "source": "game:EPSILON_EFFECT_29",
@@ -29274,11 +29409,596 @@
     },
     {
       "confidence": "documented",
-      "from": "epsilon-tree-node-30",
+      "from": "epsilon-tree-a15",
       "note": "Black & White spark base mastery",
       "rel": "boosts",
       "source": "game:EPSILON_EFFECT_29",
       "to": "particles-spark-white"
+    },
+    {
+      "confidence": "documented",
+      "from": "epsilon-tree",
+      "rel": "unlocks",
+      "source": "game:HELP_UNI_PARTICLES_TREE_DESC_1",
+      "to": "epsilon-tree-b1"
+    },
+    {
+      "confidence": "documented",
+      "from": "epsilon-tree-b1",
+      "note": "Boosts A1 and A2 efficiency",
+      "rel": "boosts",
+      "source": "game:EPSILON_BOOST",
+      "to": "epsilon-tree-a1"
+    },
+    {
+      "confidence": "documented",
+      "from": "epsilon-tree-a1",
+      "note": "Unlocks with enough levels in A1 and A2",
+      "rel": "requires",
+      "source": "game:EPSILON_UNLOCK_REQUIREMENT",
+      "to": "epsilon-tree-b1"
+    },
+    {
+      "confidence": "documented",
+      "from": "epsilon-tree-b1",
+      "note": "Boosts A1 and A2 efficiency",
+      "rel": "boosts",
+      "source": "game:EPSILON_BOOST",
+      "to": "epsilon-tree-a2"
+    },
+    {
+      "confidence": "documented",
+      "from": "epsilon-tree-a2",
+      "note": "Unlocks with enough levels in A1 and A2",
+      "rel": "requires",
+      "source": "game:EPSILON_UNLOCK_REQUIREMENT",
+      "to": "epsilon-tree-b1"
+    },
+    {
+      "confidence": "documented",
+      "from": "epsilon-tree",
+      "rel": "unlocks",
+      "source": "game:HELP_UNI_PARTICLES_TREE_DESC_1",
+      "to": "epsilon-tree-b2"
+    },
+    {
+      "confidence": "documented",
+      "from": "epsilon-tree-b2",
+      "note": "Boosts A3 and A4 efficiency",
+      "rel": "boosts",
+      "source": "game:EPSILON_BOOST",
+      "to": "epsilon-tree-a3"
+    },
+    {
+      "confidence": "documented",
+      "from": "epsilon-tree-a3",
+      "note": "Unlocks with enough levels in A3 and A4",
+      "rel": "requires",
+      "source": "game:EPSILON_UNLOCK_REQUIREMENT",
+      "to": "epsilon-tree-b2"
+    },
+    {
+      "confidence": "documented",
+      "from": "epsilon-tree-b2",
+      "note": "Boosts A3 and A4 efficiency",
+      "rel": "boosts",
+      "source": "game:EPSILON_BOOST",
+      "to": "epsilon-tree-a4"
+    },
+    {
+      "confidence": "documented",
+      "from": "epsilon-tree-a4",
+      "note": "Unlocks with enough levels in A3 and A4",
+      "rel": "requires",
+      "source": "game:EPSILON_UNLOCK_REQUIREMENT",
+      "to": "epsilon-tree-b2"
+    },
+    {
+      "confidence": "documented",
+      "from": "epsilon-tree",
+      "rel": "unlocks",
+      "source": "game:HELP_UNI_PARTICLES_TREE_DESC_1",
+      "to": "epsilon-tree-b3"
+    },
+    {
+      "confidence": "documented",
+      "from": "epsilon-tree-b3",
+      "note": "Boosts A5 and A6 efficiency",
+      "rel": "boosts",
+      "source": "game:EPSILON_BOOST",
+      "to": "epsilon-tree-a5"
+    },
+    {
+      "confidence": "documented",
+      "from": "epsilon-tree-a5",
+      "note": "Unlocks with enough levels in A5 and A6",
+      "rel": "requires",
+      "source": "game:EPSILON_UNLOCK_REQUIREMENT",
+      "to": "epsilon-tree-b3"
+    },
+    {
+      "confidence": "documented",
+      "from": "epsilon-tree-b3",
+      "note": "Boosts A5 and A6 efficiency",
+      "rel": "boosts",
+      "source": "game:EPSILON_BOOST",
+      "to": "epsilon-tree-a6"
+    },
+    {
+      "confidence": "documented",
+      "from": "epsilon-tree-a6",
+      "note": "Unlocks with enough levels in A5 and A6",
+      "rel": "requires",
+      "source": "game:EPSILON_UNLOCK_REQUIREMENT",
+      "to": "epsilon-tree-b3"
+    },
+    {
+      "confidence": "documented",
+      "from": "epsilon-tree",
+      "rel": "unlocks",
+      "source": "game:HELP_UNI_PARTICLES_TREE_DESC_1",
+      "to": "epsilon-tree-b4"
+    },
+    {
+      "confidence": "documented",
+      "from": "epsilon-tree-b4",
+      "note": "Boosts A7 and A8 efficiency",
+      "rel": "boosts",
+      "source": "game:EPSILON_BOOST",
+      "to": "epsilon-tree-a7"
+    },
+    {
+      "confidence": "documented",
+      "from": "epsilon-tree-a7",
+      "note": "Unlocks with enough levels in A7 and A8",
+      "rel": "requires",
+      "source": "game:EPSILON_UNLOCK_REQUIREMENT",
+      "to": "epsilon-tree-b4"
+    },
+    {
+      "confidence": "documented",
+      "from": "epsilon-tree-b4",
+      "note": "Boosts A7 and A8 efficiency",
+      "rel": "boosts",
+      "source": "game:EPSILON_BOOST",
+      "to": "epsilon-tree-a8"
+    },
+    {
+      "confidence": "documented",
+      "from": "epsilon-tree-a8",
+      "note": "Unlocks with enough levels in A7 and A8",
+      "rel": "requires",
+      "source": "game:EPSILON_UNLOCK_REQUIREMENT",
+      "to": "epsilon-tree-b4"
+    },
+    {
+      "confidence": "documented",
+      "from": "epsilon-tree",
+      "rel": "unlocks",
+      "source": "game:HELP_UNI_PARTICLES_TREE_DESC_1",
+      "to": "epsilon-tree-b5"
+    },
+    {
+      "confidence": "documented",
+      "from": "epsilon-tree-b5",
+      "note": "Boosts A9 and A10 efficiency",
+      "rel": "boosts",
+      "source": "game:EPSILON_BOOST",
+      "to": "epsilon-tree-a9"
+    },
+    {
+      "confidence": "documented",
+      "from": "epsilon-tree-a9",
+      "note": "Unlocks with enough levels in A9 and A10",
+      "rel": "requires",
+      "source": "game:EPSILON_UNLOCK_REQUIREMENT",
+      "to": "epsilon-tree-b5"
+    },
+    {
+      "confidence": "documented",
+      "from": "epsilon-tree-b5",
+      "note": "Boosts A9 and A10 efficiency",
+      "rel": "boosts",
+      "source": "game:EPSILON_BOOST",
+      "to": "epsilon-tree-a10"
+    },
+    {
+      "confidence": "documented",
+      "from": "epsilon-tree-a10",
+      "note": "Unlocks with enough levels in A9 and A10",
+      "rel": "requires",
+      "source": "game:EPSILON_UNLOCK_REQUIREMENT",
+      "to": "epsilon-tree-b5"
+    },
+    {
+      "confidence": "documented",
+      "from": "epsilon-tree",
+      "rel": "unlocks",
+      "source": "game:HELP_UNI_PARTICLES_TREE_DESC_1",
+      "to": "epsilon-tree-b6"
+    },
+    {
+      "confidence": "documented",
+      "from": "epsilon-tree-b6",
+      "note": "Boosts A11 and A12 efficiency",
+      "rel": "boosts",
+      "source": "game:EPSILON_BOOST",
+      "to": "epsilon-tree-a11"
+    },
+    {
+      "confidence": "documented",
+      "from": "epsilon-tree-a11",
+      "note": "Unlocks with enough levels in A11 and A12",
+      "rel": "requires",
+      "source": "game:EPSILON_UNLOCK_REQUIREMENT",
+      "to": "epsilon-tree-b6"
+    },
+    {
+      "confidence": "documented",
+      "from": "epsilon-tree-b6",
+      "note": "Boosts A11 and A12 efficiency",
+      "rel": "boosts",
+      "source": "game:EPSILON_BOOST",
+      "to": "epsilon-tree-a12"
+    },
+    {
+      "confidence": "documented",
+      "from": "epsilon-tree-a12",
+      "note": "Unlocks with enough levels in A11 and A12",
+      "rel": "requires",
+      "source": "game:EPSILON_UNLOCK_REQUIREMENT",
+      "to": "epsilon-tree-b6"
+    },
+    {
+      "confidence": "documented",
+      "from": "epsilon-tree",
+      "rel": "unlocks",
+      "source": "game:HELP_UNI_PARTICLES_TREE_DESC_1",
+      "to": "epsilon-tree-b7"
+    },
+    {
+      "confidence": "documented",
+      "from": "epsilon-tree-b7",
+      "note": "Boosts A13 and A14 efficiency",
+      "rel": "boosts",
+      "source": "game:EPSILON_BOOST",
+      "to": "epsilon-tree-a13"
+    },
+    {
+      "confidence": "documented",
+      "from": "epsilon-tree-a13",
+      "note": "Unlocks with enough levels in A13 and A14",
+      "rel": "requires",
+      "source": "game:EPSILON_UNLOCK_REQUIREMENT",
+      "to": "epsilon-tree-b7"
+    },
+    {
+      "confidence": "documented",
+      "from": "epsilon-tree-b7",
+      "note": "Boosts A13 and A14 efficiency",
+      "rel": "boosts",
+      "source": "game:EPSILON_BOOST",
+      "to": "epsilon-tree-a14"
+    },
+    {
+      "confidence": "documented",
+      "from": "epsilon-tree-a14",
+      "note": "Unlocks with enough levels in A13 and A14",
+      "rel": "requires",
+      "source": "game:EPSILON_UNLOCK_REQUIREMENT",
+      "to": "epsilon-tree-b7"
+    },
+    {
+      "confidence": "documented",
+      "from": "epsilon-tree",
+      "rel": "unlocks",
+      "source": "game:HELP_UNI_PARTICLES_TREE_DESC_1",
+      "to": "epsilon-tree-b8"
+    },
+    {
+      "confidence": "documented",
+      "from": "epsilon-tree-b8",
+      "note": "Boosts A15 and A16 efficiency",
+      "rel": "boosts",
+      "source": "game:EPSILON_BOOST",
+      "to": "epsilon-tree-a15"
+    },
+    {
+      "confidence": "documented",
+      "from": "epsilon-tree-a15",
+      "note": "Unlocks with enough levels in A15 and A16",
+      "rel": "requires",
+      "source": "game:EPSILON_UNLOCK_REQUIREMENT",
+      "to": "epsilon-tree-b8"
+    },
+    {
+      "confidence": "documented",
+      "from": "epsilon-tree-b8",
+      "note": "Boosts A15 and A16 efficiency",
+      "rel": "boosts",
+      "source": "game:EPSILON_BOOST",
+      "to": "epsilon-tree-a16"
+    },
+    {
+      "confidence": "documented",
+      "from": "epsilon-tree-a16",
+      "note": "Unlocks with enough levels in A15 and A16",
+      "rel": "requires",
+      "source": "game:EPSILON_UNLOCK_REQUIREMENT",
+      "to": "epsilon-tree-b8"
+    },
+    {
+      "confidence": "documented",
+      "from": "epsilon-tree",
+      "rel": "unlocks",
+      "source": "game:HELP_UNI_PARTICLES_TREE_DESC_1",
+      "to": "epsilon-tree-c1"
+    },
+    {
+      "confidence": "documented",
+      "from": "epsilon-tree-c1",
+      "note": "Boosts B1 and B2 efficiency",
+      "rel": "boosts",
+      "source": "game:EPSILON_BOOST",
+      "to": "epsilon-tree-b1"
+    },
+    {
+      "confidence": "documented",
+      "from": "epsilon-tree-b1",
+      "note": "Unlocks with enough levels in B1 and B2",
+      "rel": "requires",
+      "source": "game:EPSILON_UNLOCK_REQUIREMENT",
+      "to": "epsilon-tree-c1"
+    },
+    {
+      "confidence": "documented",
+      "from": "epsilon-tree-c1",
+      "note": "Boosts B1 and B2 efficiency",
+      "rel": "boosts",
+      "source": "game:EPSILON_BOOST",
+      "to": "epsilon-tree-b2"
+    },
+    {
+      "confidence": "documented",
+      "from": "epsilon-tree-b2",
+      "note": "Unlocks with enough levels in B1 and B2",
+      "rel": "requires",
+      "source": "game:EPSILON_UNLOCK_REQUIREMENT",
+      "to": "epsilon-tree-c1"
+    },
+    {
+      "confidence": "documented",
+      "from": "epsilon-tree",
+      "rel": "unlocks",
+      "source": "game:HELP_UNI_PARTICLES_TREE_DESC_1",
+      "to": "epsilon-tree-c2"
+    },
+    {
+      "confidence": "documented",
+      "from": "epsilon-tree-c2",
+      "note": "Boosts B3 and B4 efficiency",
+      "rel": "boosts",
+      "source": "game:EPSILON_BOOST",
+      "to": "epsilon-tree-b3"
+    },
+    {
+      "confidence": "documented",
+      "from": "epsilon-tree-b3",
+      "note": "Unlocks with enough levels in B3 and B4",
+      "rel": "requires",
+      "source": "game:EPSILON_UNLOCK_REQUIREMENT",
+      "to": "epsilon-tree-c2"
+    },
+    {
+      "confidence": "documented",
+      "from": "epsilon-tree-c2",
+      "note": "Boosts B3 and B4 efficiency",
+      "rel": "boosts",
+      "source": "game:EPSILON_BOOST",
+      "to": "epsilon-tree-b4"
+    },
+    {
+      "confidence": "documented",
+      "from": "epsilon-tree-b4",
+      "note": "Unlocks with enough levels in B3 and B4",
+      "rel": "requires",
+      "source": "game:EPSILON_UNLOCK_REQUIREMENT",
+      "to": "epsilon-tree-c2"
+    },
+    {
+      "confidence": "documented",
+      "from": "epsilon-tree",
+      "rel": "unlocks",
+      "source": "game:HELP_UNI_PARTICLES_TREE_DESC_1",
+      "to": "epsilon-tree-c3"
+    },
+    {
+      "confidence": "documented",
+      "from": "epsilon-tree-c3",
+      "note": "Boosts B5 and B6 efficiency",
+      "rel": "boosts",
+      "source": "game:EPSILON_BOOST",
+      "to": "epsilon-tree-b5"
+    },
+    {
+      "confidence": "documented",
+      "from": "epsilon-tree-b5",
+      "note": "Unlocks with enough levels in B5 and B6",
+      "rel": "requires",
+      "source": "game:EPSILON_UNLOCK_REQUIREMENT",
+      "to": "epsilon-tree-c3"
+    },
+    {
+      "confidence": "documented",
+      "from": "epsilon-tree-c3",
+      "note": "Boosts B5 and B6 efficiency",
+      "rel": "boosts",
+      "source": "game:EPSILON_BOOST",
+      "to": "epsilon-tree-b6"
+    },
+    {
+      "confidence": "documented",
+      "from": "epsilon-tree-b6",
+      "note": "Unlocks with enough levels in B5 and B6",
+      "rel": "requires",
+      "source": "game:EPSILON_UNLOCK_REQUIREMENT",
+      "to": "epsilon-tree-c3"
+    },
+    {
+      "confidence": "documented",
+      "from": "epsilon-tree",
+      "rel": "unlocks",
+      "source": "game:HELP_UNI_PARTICLES_TREE_DESC_1",
+      "to": "epsilon-tree-c4"
+    },
+    {
+      "confidence": "documented",
+      "from": "epsilon-tree-c4",
+      "note": "Boosts B7 and B8 efficiency",
+      "rel": "boosts",
+      "source": "game:EPSILON_BOOST",
+      "to": "epsilon-tree-b7"
+    },
+    {
+      "confidence": "documented",
+      "from": "epsilon-tree-b7",
+      "note": "Unlocks with enough levels in B7 and B8",
+      "rel": "requires",
+      "source": "game:EPSILON_UNLOCK_REQUIREMENT",
+      "to": "epsilon-tree-c4"
+    },
+    {
+      "confidence": "documented",
+      "from": "epsilon-tree-c4",
+      "note": "Boosts B7 and B8 efficiency",
+      "rel": "boosts",
+      "source": "game:EPSILON_BOOST",
+      "to": "epsilon-tree-b8"
+    },
+    {
+      "confidence": "documented",
+      "from": "epsilon-tree-b8",
+      "note": "Unlocks with enough levels in B7 and B8",
+      "rel": "requires",
+      "source": "game:EPSILON_UNLOCK_REQUIREMENT",
+      "to": "epsilon-tree-c4"
+    },
+    {
+      "confidence": "documented",
+      "from": "epsilon-tree",
+      "rel": "unlocks",
+      "source": "game:HELP_UNI_PARTICLES_TREE_DESC_1",
+      "to": "epsilon-tree-d1"
+    },
+    {
+      "confidence": "documented",
+      "from": "epsilon-tree-d1",
+      "note": "Boosts C1 and C2 efficiency",
+      "rel": "boosts",
+      "source": "game:EPSILON_BOOST",
+      "to": "epsilon-tree-c1"
+    },
+    {
+      "confidence": "documented",
+      "from": "epsilon-tree-c1",
+      "note": "Unlocks with enough levels in C1 and C2",
+      "rel": "requires",
+      "source": "game:EPSILON_UNLOCK_REQUIREMENT",
+      "to": "epsilon-tree-d1"
+    },
+    {
+      "confidence": "documented",
+      "from": "epsilon-tree-d1",
+      "note": "Boosts C1 and C2 efficiency",
+      "rel": "boosts",
+      "source": "game:EPSILON_BOOST",
+      "to": "epsilon-tree-c2"
+    },
+    {
+      "confidence": "documented",
+      "from": "epsilon-tree-c2",
+      "note": "Unlocks with enough levels in C1 and C2",
+      "rel": "requires",
+      "source": "game:EPSILON_UNLOCK_REQUIREMENT",
+      "to": "epsilon-tree-d1"
+    },
+    {
+      "confidence": "documented",
+      "from": "epsilon-tree",
+      "rel": "unlocks",
+      "source": "game:HELP_UNI_PARTICLES_TREE_DESC_1",
+      "to": "epsilon-tree-d2"
+    },
+    {
+      "confidence": "documented",
+      "from": "epsilon-tree-d2",
+      "note": "Boosts C3 and C4 efficiency",
+      "rel": "boosts",
+      "source": "game:EPSILON_BOOST",
+      "to": "epsilon-tree-c3"
+    },
+    {
+      "confidence": "documented",
+      "from": "epsilon-tree-c3",
+      "note": "Unlocks with enough levels in C3 and C4",
+      "rel": "requires",
+      "source": "game:EPSILON_UNLOCK_REQUIREMENT",
+      "to": "epsilon-tree-d2"
+    },
+    {
+      "confidence": "documented",
+      "from": "epsilon-tree-d2",
+      "note": "Boosts C3 and C4 efficiency",
+      "rel": "boosts",
+      "source": "game:EPSILON_BOOST",
+      "to": "epsilon-tree-c4"
+    },
+    {
+      "confidence": "documented",
+      "from": "epsilon-tree-c4",
+      "note": "Unlocks with enough levels in C3 and C4",
+      "rel": "requires",
+      "source": "game:EPSILON_UNLOCK_REQUIREMENT",
+      "to": "epsilon-tree-d2"
+    },
+    {
+      "confidence": "documented",
+      "from": "epsilon-tree",
+      "rel": "unlocks",
+      "source": "game:HELP_UNI_PARTICLES_TREE_DESC_1",
+      "to": "epsilon-tree-epsilon"
+    },
+    {
+      "confidence": "documented",
+      "from": "epsilon-tree-epsilon",
+      "note": "Boosts D1 and D2 efficiency",
+      "rel": "boosts",
+      "source": "game:EPSILON_BOOST",
+      "to": "epsilon-tree-d1"
+    },
+    {
+      "confidence": "documented",
+      "from": "epsilon-tree-d1",
+      "note": "Unlocks with enough levels in D1 and D2",
+      "rel": "requires",
+      "source": "game:EPSILON_UNLOCK_REQUIREMENT",
+      "to": "epsilon-tree-epsilon"
+    },
+    {
+      "confidence": "documented",
+      "from": "epsilon-tree-epsilon",
+      "note": "Boosts D1 and D2 efficiency",
+      "rel": "boosts",
+      "source": "game:EPSILON_BOOST",
+      "to": "epsilon-tree-d2"
+    },
+    {
+      "confidence": "documented",
+      "from": "epsilon-tree-d2",
+      "note": "Unlocks with enough levels in D1 and D2",
+      "rel": "requires",
+      "source": "game:EPSILON_UNLOCK_REQUIREMENT",
+      "to": "epsilon-tree-epsilon"
     },
     {
       "confidence": "provisional",

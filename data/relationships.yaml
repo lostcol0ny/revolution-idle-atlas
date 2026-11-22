@@ -3783,6 +3783,131 @@ nodes:
     effects:
       - text: Thirty-one nodes upgraded with ETP from the outside in; inner nodes raise the efficiency of the outer nodes they connect
 
+  # The fifteen inner nodes, as labelled on the game's Epsilon Tree screen. Each
+  # raises the efficiency of the two nodes outside it (EPSILON_BOOST) and
+  # unlocks once both have enough levels (EPSILON_UNLOCK_REQUIREMENT). The game
+  # writes no per-node string for them, so they are curated; A1-A16 come from
+  # data/game.yaml.
+  - id: epsilon-tree-b1
+    name: Epsilon Tree B1
+    system: epsilon-tree
+    kind: tree-node
+    wiki: Particles#Epsilon_Tree
+    confidence: provisional
+    description: Boosts A1 and A2 efficiency
+
+  - id: epsilon-tree-b2
+    name: Epsilon Tree B2
+    system: epsilon-tree
+    kind: tree-node
+    wiki: Particles#Epsilon_Tree
+    confidence: provisional
+    description: Boosts A3 and A4 efficiency
+
+  - id: epsilon-tree-b3
+    name: Epsilon Tree B3
+    system: epsilon-tree
+    kind: tree-node
+    wiki: Particles#Epsilon_Tree
+    confidence: provisional
+    description: Boosts A5 and A6 efficiency
+
+  - id: epsilon-tree-b4
+    name: Epsilon Tree B4
+    system: epsilon-tree
+    kind: tree-node
+    wiki: Particles#Epsilon_Tree
+    confidence: provisional
+    description: Boosts A7 and A8 efficiency
+
+  - id: epsilon-tree-b5
+    name: Epsilon Tree B5
+    system: epsilon-tree
+    kind: tree-node
+    wiki: Particles#Epsilon_Tree
+    confidence: provisional
+    description: Boosts A9 and A10 efficiency
+
+  - id: epsilon-tree-b6
+    name: Epsilon Tree B6
+    system: epsilon-tree
+    kind: tree-node
+    wiki: Particles#Epsilon_Tree
+    confidence: provisional
+    description: Boosts A11 and A12 efficiency
+
+  - id: epsilon-tree-b7
+    name: Epsilon Tree B7
+    system: epsilon-tree
+    kind: tree-node
+    wiki: Particles#Epsilon_Tree
+    confidence: provisional
+    description: Boosts A13 and A14 efficiency
+
+  - id: epsilon-tree-b8
+    name: Epsilon Tree B8
+    system: epsilon-tree
+    kind: tree-node
+    wiki: Particles#Epsilon_Tree
+    confidence: provisional
+    description: Boosts A15 and A16 efficiency
+
+  - id: epsilon-tree-c1
+    name: Epsilon Tree C1
+    system: epsilon-tree
+    kind: tree-node
+    wiki: Particles#Epsilon_Tree
+    confidence: provisional
+    description: Boosts B1 and B2 efficiency
+
+  - id: epsilon-tree-c2
+    name: Epsilon Tree C2
+    system: epsilon-tree
+    kind: tree-node
+    wiki: Particles#Epsilon_Tree
+    confidence: provisional
+    description: Boosts B3 and B4 efficiency
+
+  - id: epsilon-tree-c3
+    name: Epsilon Tree C3
+    system: epsilon-tree
+    kind: tree-node
+    wiki: Particles#Epsilon_Tree
+    confidence: provisional
+    description: Boosts B5 and B6 efficiency
+
+  - id: epsilon-tree-c4
+    name: Epsilon Tree C4
+    system: epsilon-tree
+    kind: tree-node
+    wiki: Particles#Epsilon_Tree
+    confidence: provisional
+    description: Boosts B7 and B8 efficiency
+
+  - id: epsilon-tree-d1
+    name: Epsilon Tree D1
+    system: epsilon-tree
+    kind: tree-node
+    wiki: Particles#Epsilon_Tree
+    confidence: provisional
+    description: Boosts C1 and C2 efficiency
+
+  - id: epsilon-tree-d2
+    name: Epsilon Tree D2
+    system: epsilon-tree
+    kind: tree-node
+    wiki: Particles#Epsilon_Tree
+    confidence: provisional
+    description: Boosts C3 and C4 efficiency
+
+  - id: epsilon-tree-epsilon
+    name: Epsilon Tree ε
+    system: epsilon-tree
+    kind: tree-node
+    wiki: Particles#Epsilon_Tree
+    confidence: provisional
+    description: Boosts D1 and D2 efficiency
+
   # One node for every Atom penalty threshold (e308, e10K, e25K, 1.6e256...):
   # the wiki and the game name each by its threshold, and a node per threshold
   # would split a handful of edges across seven nodes.
@@ -7645,74 +7770,587 @@ edges:
     confidence: documented
 
   # The Epsilon Tree's spark mastery nodes, each naming its colours.
-  - from: epsilon-tree-node-16
+  - from: epsilon-tree-a1
     to: particles-spark-red
     rel: boosts
     note: "Red & Blue spark base mastery"
     source: game:EPSILON_EFFECT_15
     confidence: documented
 
-  - from: epsilon-tree-node-16
+  - from: epsilon-tree-a1
     to: particles-spark-blue
     rel: boosts
     note: "Red & Blue spark base mastery"
     source: game:EPSILON_EFFECT_15
     confidence: documented
 
-  - from: epsilon-tree-node-18
+  - from: epsilon-tree-a3
     to: particles-spark-orange
     rel: boosts
     note: "Orange spark base mastery"
     source: game:EPSILON_EFFECT_17
     confidence: documented
 
-  - from: epsilon-tree-node-20
+  - from: epsilon-tree-a5
     to: particles-spark-yellow
     rel: boosts
     note: "Yellow spark base mastery"
     source: game:EPSILON_EFFECT_19
     confidence: documented
 
-  - from: epsilon-tree-node-22
+  - from: epsilon-tree-a7
     to: particles-spark-green
     rel: boosts
     note: "Green spark base mastery"
     source: game:EPSILON_EFFECT_21
     confidence: documented
 
-  - from: epsilon-tree-node-24
+  - from: epsilon-tree-a9
     to: particles-spark-cyan
     rel: boosts
     note: "Cyan spark base mastery"
     source: game:EPSILON_EFFECT_23
     confidence: documented
 
-  - from: epsilon-tree-node-26
+  - from: epsilon-tree-a11
     to: particles-spark-purple
     rel: boosts
     note: "Purple spark base mastery"
     source: game:EPSILON_EFFECT_25
     confidence: documented
 
-  - from: epsilon-tree-node-28
+  - from: epsilon-tree-a13
     to: particles-spark-pink
     rel: boosts
     note: "Pink spark base mastery"
     source: game:EPSILON_EFFECT_27
     confidence: documented
 
-  - from: epsilon-tree-node-30
+  - from: epsilon-tree-a15
     to: particles-spark-black
     rel: boosts
     note: "Black & White spark base mastery"
     source: game:EPSILON_EFFECT_29
     confidence: documented
 
-  - from: epsilon-tree-node-30
+  - from: epsilon-tree-a15
     to: particles-spark-white
     rel: boosts
     note: "Black & White spark base mastery"
     source: game:EPSILON_EFFECT_29
+    confidence: documented
+
+  # The Epsilon Tree's inner structure: each inner node boosts the two nodes
+  # outside it and requires them first. Every inner node also belongs to the
+  # group, as A1-A16 do through particles.MEMBER_LINKS.
+  - from: epsilon-tree
+    to: epsilon-tree-b1
+    rel: unlocks
+    source: game:HELP_UNI_PARTICLES_TREE_DESC_1
+    confidence: documented
+
+  - from: epsilon-tree-b1
+    to: epsilon-tree-a1
+    rel: boosts
+    note: "Boosts A1 and A2 efficiency"
+    source: game:EPSILON_BOOST
+    confidence: documented
+
+  - from: epsilon-tree-a1
+    to: epsilon-tree-b1
+    rel: requires
+    note: "Unlocks with enough levels in A1 and A2"
+    source: game:EPSILON_UNLOCK_REQUIREMENT
+    confidence: documented
+
+  - from: epsilon-tree-b1
+    to: epsilon-tree-a2
+    rel: boosts
+    note: "Boosts A1 and A2 efficiency"
+    source: game:EPSILON_BOOST
+    confidence: documented
+
+  - from: epsilon-tree-a2
+    to: epsilon-tree-b1
+    rel: requires
+    note: "Unlocks with enough levels in A1 and A2"
+    source: game:EPSILON_UNLOCK_REQUIREMENT
+    confidence: documented
+
+  - from: epsilon-tree
+    to: epsilon-tree-b2
+    rel: unlocks
+    source: game:HELP_UNI_PARTICLES_TREE_DESC_1
+    confidence: documented
+
+  - from: epsilon-tree-b2
+    to: epsilon-tree-a3
+    rel: boosts
+    note: "Boosts A3 and A4 efficiency"
+    source: game:EPSILON_BOOST
+    confidence: documented
+
+  - from: epsilon-tree-a3
+    to: epsilon-tree-b2
+    rel: requires
+    note: "Unlocks with enough levels in A3 and A4"
+    source: game:EPSILON_UNLOCK_REQUIREMENT
+    confidence: documented
+
+  - from: epsilon-tree-b2
+    to: epsilon-tree-a4
+    rel: boosts
+    note: "Boosts A3 and A4 efficiency"
+    source: game:EPSILON_BOOST
+    confidence: documented
+
+  - from: epsilon-tree-a4
+    to: epsilon-tree-b2
+    rel: requires
+    note: "Unlocks with enough levels in A3 and A4"
+    source: game:EPSILON_UNLOCK_REQUIREMENT
+    confidence: documented
+
+  - from: epsilon-tree
+    to: epsilon-tree-b3
+    rel: unlocks
+    source: game:HELP_UNI_PARTICLES_TREE_DESC_1
+    confidence: documented
+
+  - from: epsilon-tree-b3
+    to: epsilon-tree-a5
+    rel: boosts
+    note: "Boosts A5 and A6 efficiency"
+    source: game:EPSILON_BOOST
+    confidence: documented
+
+  - from: epsilon-tree-a5
+    to: epsilon-tree-b3
+    rel: requires
+    note: "Unlocks with enough levels in A5 and A6"
+    source: game:EPSILON_UNLOCK_REQUIREMENT
+    confidence: documented
+
+  - from: epsilon-tree-b3
+    to: epsilon-tree-a6
+    rel: boosts
+    note: "Boosts A5 and A6 efficiency"
+    source: game:EPSILON_BOOST
+    confidence: documented
+
+  - from: epsilon-tree-a6
+    to: epsilon-tree-b3
+    rel: requires
+    note: "Unlocks with enough levels in A5 and A6"
+    source: game:EPSILON_UNLOCK_REQUIREMENT
+    confidence: documented
+
+  - from: epsilon-tree
+    to: epsilon-tree-b4
+    rel: unlocks
+    source: game:HELP_UNI_PARTICLES_TREE_DESC_1
+    confidence: documented
+
+  - from: epsilon-tree-b4
+    to: epsilon-tree-a7
+    rel: boosts
+    note: "Boosts A7 and A8 efficiency"
+    source: game:EPSILON_BOOST
+    confidence: documented
+
+  - from: epsilon-tree-a7
+    to: epsilon-tree-b4
+    rel: requires
+    note: "Unlocks with enough levels in A7 and A8"
+    source: game:EPSILON_UNLOCK_REQUIREMENT
+    confidence: documented
+
+  - from: epsilon-tree-b4
+    to: epsilon-tree-a8
+    rel: boosts
+    note: "Boosts A7 and A8 efficiency"
+    source: game:EPSILON_BOOST
+    confidence: documented
+
+  - from: epsilon-tree-a8
+    to: epsilon-tree-b4
+    rel: requires
+    note: "Unlocks with enough levels in A7 and A8"
+    source: game:EPSILON_UNLOCK_REQUIREMENT
+    confidence: documented
+
+  - from: epsilon-tree
+    to: epsilon-tree-b5
+    rel: unlocks
+    source: game:HELP_UNI_PARTICLES_TREE_DESC_1
+    confidence: documented
+
+  - from: epsilon-tree-b5
+    to: epsilon-tree-a9
+    rel: boosts
+    note: "Boosts A9 and A10 efficiency"
+    source: game:EPSILON_BOOST
+    confidence: documented
+
+  - from: epsilon-tree-a9
+    to: epsilon-tree-b5
+    rel: requires
+    note: "Unlocks with enough levels in A9 and A10"
+    source: game:EPSILON_UNLOCK_REQUIREMENT
+    confidence: documented
+
+  - from: epsilon-tree-b5
+    to: epsilon-tree-a10
+    rel: boosts
+    note: "Boosts A9 and A10 efficiency"
+    source: game:EPSILON_BOOST
+    confidence: documented
+
+  - from: epsilon-tree-a10
+    to: epsilon-tree-b5
+    rel: requires
+    note: "Unlocks with enough levels in A9 and A10"
+    source: game:EPSILON_UNLOCK_REQUIREMENT
+    confidence: documented
+
+  - from: epsilon-tree
+    to: epsilon-tree-b6
+    rel: unlocks
+    source: game:HELP_UNI_PARTICLES_TREE_DESC_1
+    confidence: documented
+
+  - from: epsilon-tree-b6
+    to: epsilon-tree-a11
+    rel: boosts
+    note: "Boosts A11 and A12 efficiency"
+    source: game:EPSILON_BOOST
+    confidence: documented
+
+  - from: epsilon-tree-a11
+    to: epsilon-tree-b6
+    rel: requires
+    note: "Unlocks with enough levels in A11 and A12"
+    source: game:EPSILON_UNLOCK_REQUIREMENT
+    confidence: documented
+
+  - from: epsilon-tree-b6
+    to: epsilon-tree-a12
+    rel: boosts
+    note: "Boosts A11 and A12 efficiency"
+    source: game:EPSILON_BOOST
+    confidence: documented
+
+  - from: epsilon-tree-a12
+    to: epsilon-tree-b6
+    rel: requires
+    note: "Unlocks with enough levels in A11 and A12"
+    source: game:EPSILON_UNLOCK_REQUIREMENT
+    confidence: documented
+
+  - from: epsilon-tree
+    to: epsilon-tree-b7
+    rel: unlocks
+    source: game:HELP_UNI_PARTICLES_TREE_DESC_1
+    confidence: documented
+
+  - from: epsilon-tree-b7
+    to: epsilon-tree-a13
+    rel: boosts
+    note: "Boosts A13 and A14 efficiency"
+    source: game:EPSILON_BOOST
+    confidence: documented
+
+  - from: epsilon-tree-a13
+    to: epsilon-tree-b7
+    rel: requires
+    note: "Unlocks with enough levels in A13 and A14"
+    source: game:EPSILON_UNLOCK_REQUIREMENT
+    confidence: documented
+
+  - from: epsilon-tree-b7
+    to: epsilon-tree-a14
+    rel: boosts
+    note: "Boosts A13 and A14 efficiency"
+    source: game:EPSILON_BOOST
+    confidence: documented
+
+  - from: epsilon-tree-a14
+    to: epsilon-tree-b7
+    rel: requires
+    note: "Unlocks with enough levels in A13 and A14"
+    source: game:EPSILON_UNLOCK_REQUIREMENT
+    confidence: documented
+
+  - from: epsilon-tree
+    to: epsilon-tree-b8
+    rel: unlocks
+    source: game:HELP_UNI_PARTICLES_TREE_DESC_1
+    confidence: documented
+
+  - from: epsilon-tree-b8
+    to: epsilon-tree-a15
+    rel: boosts
+    note: "Boosts A15 and A16 efficiency"
+    source: game:EPSILON_BOOST
+    confidence: documented
+
+  - from: epsilon-tree-a15
+    to: epsilon-tree-b8
+    rel: requires
+    note: "Unlocks with enough levels in A15 and A16"
+    source: game:EPSILON_UNLOCK_REQUIREMENT
+    confidence: documented
+
+  - from: epsilon-tree-b8
+    to: epsilon-tree-a16
+    rel: boosts
+    note: "Boosts A15 and A16 efficiency"
+    source: game:EPSILON_BOOST
+    confidence: documented
+
+  - from: epsilon-tree-a16
+    to: epsilon-tree-b8
+    rel: requires
+    note: "Unlocks with enough levels in A15 and A16"
+    source: game:EPSILON_UNLOCK_REQUIREMENT
+    confidence: documented
+
+  - from: epsilon-tree
+    to: epsilon-tree-c1
+    rel: unlocks
+    source: game:HELP_UNI_PARTICLES_TREE_DESC_1
+    confidence: documented
+
+  - from: epsilon-tree-c1
+    to: epsilon-tree-b1
+    rel: boosts
+    note: "Boosts B1 and B2 efficiency"
+    source: game:EPSILON_BOOST
+    confidence: documented
+
+  - from: epsilon-tree-b1
+    to: epsilon-tree-c1
+    rel: requires
+    note: "Unlocks with enough levels in B1 and B2"
+    source: game:EPSILON_UNLOCK_REQUIREMENT
+    confidence: documented
+
+  - from: epsilon-tree-c1
+    to: epsilon-tree-b2
+    rel: boosts
+    note: "Boosts B1 and B2 efficiency"
+    source: game:EPSILON_BOOST
+    confidence: documented
+
+  - from: epsilon-tree-b2
+    to: epsilon-tree-c1
+    rel: requires
+    note: "Unlocks with enough levels in B1 and B2"
+    source: game:EPSILON_UNLOCK_REQUIREMENT
+    confidence: documented
+
+  - from: epsilon-tree
+    to: epsilon-tree-c2
+    rel: unlocks
+    source: game:HELP_UNI_PARTICLES_TREE_DESC_1
+    confidence: documented
+
+  - from: epsilon-tree-c2
+    to: epsilon-tree-b3
+    rel: boosts
+    note: "Boosts B3 and B4 efficiency"
+    source: game:EPSILON_BOOST
+    confidence: documented
+
+  - from: epsilon-tree-b3
+    to: epsilon-tree-c2
+    rel: requires
+    note: "Unlocks with enough levels in B3 and B4"
+    source: game:EPSILON_UNLOCK_REQUIREMENT
+    confidence: documented
+
+  - from: epsilon-tree-c2
+    to: epsilon-tree-b4
+    rel: boosts
+    note: "Boosts B3 and B4 efficiency"
+    source: game:EPSILON_BOOST
+    confidence: documented
+
+  - from: epsilon-tree-b4
+    to: epsilon-tree-c2
+    rel: requires
+    note: "Unlocks with enough levels in B3 and B4"
+    source: game:EPSILON_UNLOCK_REQUIREMENT
+    confidence: documented
+
+  - from: epsilon-tree
+    to: epsilon-tree-c3
+    rel: unlocks
+    source: game:HELP_UNI_PARTICLES_TREE_DESC_1
+    confidence: documented
+
+  - from: epsilon-tree-c3
+    to: epsilon-tree-b5
+    rel: boosts
+    note: "Boosts B5 and B6 efficiency"
+    source: game:EPSILON_BOOST
+    confidence: documented
+
+  - from: epsilon-tree-b5
+    to: epsilon-tree-c3
+    rel: requires
+    note: "Unlocks with enough levels in B5 and B6"
+    source: game:EPSILON_UNLOCK_REQUIREMENT
+    confidence: documented
+
+  - from: epsilon-tree-c3
+    to: epsilon-tree-b6
+    rel: boosts
+    note: "Boosts B5 and B6 efficiency"
+    source: game:EPSILON_BOOST
+    confidence: documented
+
+  - from: epsilon-tree-b6
+    to: epsilon-tree-c3
+    rel: requires
+    note: "Unlocks with enough levels in B5 and B6"
+    source: game:EPSILON_UNLOCK_REQUIREMENT
+    confidence: documented
+
+  - from: epsilon-tree
+    to: epsilon-tree-c4
+    rel: unlocks
+    source: game:HELP_UNI_PARTICLES_TREE_DESC_1
+    confidence: documented
+
+  - from: epsilon-tree-c4
+    to: epsilon-tree-b7
+    rel: boosts
+    note: "Boosts B7 and B8 efficiency"
+    source: game:EPSILON_BOOST
+    confidence: documented
+
+  - from: epsilon-tree-b7
+    to: epsilon-tree-c4
+    rel: requires
+    note: "Unlocks with enough levels in B7 and B8"
+    source: game:EPSILON_UNLOCK_REQUIREMENT
+    confidence: documented
+
+  - from: epsilon-tree-c4
+    to: epsilon-tree-b8
+    rel: boosts
+    note: "Boosts B7 and B8 efficiency"
+    source: game:EPSILON_BOOST
+    confidence: documented
+
+  - from: epsilon-tree-b8
+    to: epsilon-tree-c4
+    rel: requires
+    note: "Unlocks with enough levels in B7 and B8"
+    source: game:EPSILON_UNLOCK_REQUIREMENT
+    confidence: documented
+
+  - from: epsilon-tree
+    to: epsilon-tree-d1
+    rel: unlocks
+    source: game:HELP_UNI_PARTICLES_TREE_DESC_1
+    confidence: documented
+
+  - from: epsilon-tree-d1
+    to: epsilon-tree-c1
+    rel: boosts
+    note: "Boosts C1 and C2 efficiency"
+    source: game:EPSILON_BOOST
+    confidence: documented
+
+  - from: epsilon-tree-c1
+    to: epsilon-tree-d1
+    rel: requires
+    note: "Unlocks with enough levels in C1 and C2"
+    source: game:EPSILON_UNLOCK_REQUIREMENT
+    confidence: documented
+
+  - from: epsilon-tree-d1
+    to: epsilon-tree-c2
+    rel: boosts
+    note: "Boosts C1 and C2 efficiency"
+    source: game:EPSILON_BOOST
+    confidence: documented
+
+  - from: epsilon-tree-c2
+    to: epsilon-tree-d1
+    rel: requires
+    note: "Unlocks with enough levels in C1 and C2"
+    source: game:EPSILON_UNLOCK_REQUIREMENT
+    confidence: documented
+
+  - from: epsilon-tree
+    to: epsilon-tree-d2
+    rel: unlocks
+    source: game:HELP_UNI_PARTICLES_TREE_DESC_1
+    confidence: documented
+
+  - from: epsilon-tree-d2
+    to: epsilon-tree-c3
+    rel: boosts
+    note: "Boosts C3 and C4 efficiency"
+    source: game:EPSILON_BOOST
+    confidence: documented
+
+  - from: epsilon-tree-c3
+    to: epsilon-tree-d2
+    rel: requires
+    note: "Unlocks with enough levels in C3 and C4"
+    source: game:EPSILON_UNLOCK_REQUIREMENT
+    confidence: documented
+
+  - from: epsilon-tree-d2
+    to: epsilon-tree-c4
+    rel: boosts
+    note: "Boosts C3 and C4 efficiency"
+    source: game:EPSILON_BOOST
+    confidence: documented
+
+  - from: epsilon-tree-c4
+    to: epsilon-tree-d2
+    rel: requires
+    note: "Unlocks with enough levels in C3 and C4"
+    source: game:EPSILON_UNLOCK_REQUIREMENT
+    confidence: documented
+
+  - from: epsilon-tree
+    to: epsilon-tree-epsilon
+    rel: unlocks
+    source: game:HELP_UNI_PARTICLES_TREE_DESC_1
+    confidence: documented
+
+  - from: epsilon-tree-epsilon
+    to: epsilon-tree-d1
+    rel: boosts
+    note: "Boosts D1 and D2 efficiency"
+    source: game:EPSILON_BOOST
+    confidence: documented
+
+  - from: epsilon-tree-d1
+    to: epsilon-tree-epsilon
+    rel: requires
+    note: "Unlocks with enough levels in D1 and D2"
+    source: game:EPSILON_UNLOCK_REQUIREMENT
+    confidence: documented
+
+  - from: epsilon-tree-epsilon
+    to: epsilon-tree-d2
+    rel: boosts
+    note: "Boosts D1 and D2 efficiency"
+    source: game:EPSILON_BOOST
+    confidence: documented
+
+  - from: epsilon-tree-d2
+    to: epsilon-tree-epsilon
+    rel: requires
+    note: "Unlocks with enough levels in D1 and D2"
+    source: game:EPSILON_UNLOCK_REQUIREMENT
     confidence: documented
 
   # "Particle Rank boosts ..." on the Refine Tree: the rank is what the node

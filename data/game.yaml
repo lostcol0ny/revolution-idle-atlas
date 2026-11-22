@@ -489,83 +489,83 @@ nodes:
   description: 'Refine Points Gain is boosted by your pent (+0.01 per pent): an exponent'
   system: particles-grades
   kind: upgrade
-- id: epsilon-tree-node-16
-  name: Epsilon Tree Node 16 (Red & Blue spark base mastery)
+- id: epsilon-tree-a1
+  name: Epsilon Tree A1 (Red & Blue spark base mastery)
   description: Red & Blue spark base mastery
   system: epsilon-tree
   kind: tree-node
-- id: epsilon-tree-node-17
-  name: Epsilon Tree Node 17 (Atoms Nerf e25K)
+- id: epsilon-tree-a2
+  name: Epsilon Tree A2 (Atoms Nerf e25K)
   description: Atoms Nerf e25K
   system: epsilon-tree
   kind: tree-node
-- id: epsilon-tree-node-18
-  name: Epsilon Tree Node 18 (Orange spark base mastery)
+- id: epsilon-tree-a3
+  name: Epsilon Tree A3 (Orange spark base mastery)
   description: Orange spark base mastery
   system: epsilon-tree
   kind: tree-node
-- id: epsilon-tree-node-19
-  name: Epsilon Tree Node 19 (Attack HP Requirement)
+- id: epsilon-tree-a4
+  name: Epsilon Tree A4 (Attack HP Requirement)
   description: Attack HP Requirement
   system: epsilon-tree
   kind: tree-node
-- id: epsilon-tree-node-20
-  name: Epsilon Tree Node 20 (Yellow spark base mastery)
+- id: epsilon-tree-a5
+  name: Epsilon Tree A5 (Yellow spark base mastery)
   description: Yellow spark base mastery
   system: epsilon-tree
   kind: tree-node
-- id: epsilon-tree-node-21
-  name: Epsilon Tree Node 21 (Sacrifice Dust Gain)
+- id: epsilon-tree-a6
+  name: Epsilon Tree A6 (Sacrifice Dust Gain)
   description: Sacrifice Dust Gain
   system: epsilon-tree
   kind: tree-node
-- id: epsilon-tree-node-22
-  name: Epsilon Tree Node 22 (Green spark base mastery)
+- id: epsilon-tree-a7
+  name: Epsilon Tree A7 (Green spark base mastery)
   description: Green spark base mastery
   system: epsilon-tree
   kind: tree-node
-- id: epsilon-tree-node-23
-  name: Epsilon Tree Node 23 (Tarot Golden Resource base gain)
+- id: epsilon-tree-a8
+  name: Epsilon Tree A8 (Tarot Golden Resource base gain)
   description: Tarot Golden Resource base gain
   system: epsilon-tree
   kind: tree-node
-- id: epsilon-tree-node-24
-  name: Epsilon Tree Node 24 (Cyan spark base mastery)
+- id: epsilon-tree-a9
+  name: Epsilon Tree A9 (Cyan spark base mastery)
   description: Cyan spark base mastery
   system: epsilon-tree
   kind: tree-node
-- id: epsilon-tree-node-25
-  name: Epsilon Tree Node 25 (Particle Generator base multiplier per 67 levels)
+- id: epsilon-tree-a10
+  name: Epsilon Tree A10 (Particle Generator base multiplier per 67 levels)
   description: Particle Generator base multiplier per 67 levels
   system: epsilon-tree
   kind: tree-node
-- id: epsilon-tree-node-26
-  name: Epsilon Tree Node 26 (Purple spark base mastery)
+- id: epsilon-tree-a11
+  name: Epsilon Tree A11 (Purple spark base mastery)
   description: Purple spark base mastery
   system: epsilon-tree
   kind: tree-node
-- id: epsilon-tree-node-27
-  name: Epsilon Tree Node 27 (Endoplasmic Reticulum craft requirement)
+- id: epsilon-tree-a12
+  name: Epsilon Tree A12 (Endoplasmic Reticulum craft requirement)
   description: Endoplasmic Reticulum craft requirement
   system: epsilon-tree
   kind: tree-node
-- id: epsilon-tree-node-28
-  name: Epsilon Tree Node 28 (Pink spark base mastery)
+- id: epsilon-tree-a13
+  name: Epsilon Tree A13 (Pink spark base mastery)
   description: Pink spark base mastery
   system: epsilon-tree
   kind: tree-node
-- id: epsilon-tree-node-29
-  name: Epsilon Tree Node 29 (Spark Luck)
+- id: epsilon-tree-a14
+  name: Epsilon Tree A14 (Spark Luck)
   description: Spark Luck
   system: epsilon-tree
   kind: tree-node
-- id: epsilon-tree-node-30
-  name: Epsilon Tree Node 30 (Black & White spark base mastery)
+- id: epsilon-tree-a15
+  name: Epsilon Tree A15 (Black & White spark base mastery)
   description: Black & White spark base mastery
   system: epsilon-tree
   kind: tree-node
-- id: epsilon-tree-node-31
-  name: Epsilon Tree Node 31 (Sparks Epsilon Gain Effect)
+- id: epsilon-tree-a16
+  name: Epsilon Tree A16 (Sparks Epsilon Gain Effect)
   description: Sparks Epsilon Gain Effect
   system: epsilon-tree
   kind: tree-node

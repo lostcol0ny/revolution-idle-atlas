@@ -26,6 +26,6 @@ def grade_bonus_prefix(grade: str) -> str:
 # data/game.yaml, so CI needs no game to rebuild them.
 MEMBER_LINKS: tuple[tuple[str, str, Rel], ...] = (
     *((grade_bonus_prefix(g), grade_node(g), Rel.REQUIRES) for g in GRADES),
-    ("epsilon-tree-node-", "epsilon-tree", Rel.UNLOCKS),
+    ("epsilon-tree-a", "epsilon-tree", Rel.UNLOCKS),
     ("particles-spark-", "particles-sparks", Rel.UNLOCKS),
 )
