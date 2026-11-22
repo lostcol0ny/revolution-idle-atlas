@@ -13622,126 +13622,126 @@ edges:
   source: game
   confidence: uncertain
 - from: epsilon-tree
-  to: epsilon-tree-node-16
+  to: epsilon-tree-a1
   rel: unlocks
   source: game
   confidence: documented
 - from: epsilon-tree
-  to: epsilon-tree-node-17
+  to: epsilon-tree-a2
   rel: unlocks
   source: game
   confidence: documented
-- from: epsilon-tree-node-17
+- from: epsilon-tree-a2
   to: atom-penalty
   rel: boosts
   source: game
   confidence: uncertain
 - from: epsilon-tree
-  to: epsilon-tree-node-18
+  to: epsilon-tree-a3
   rel: unlocks
   source: game
   confidence: documented
 - from: epsilon-tree
-  to: epsilon-tree-node-19
+  to: epsilon-tree-a4
   rel: unlocks
   source: game
   confidence: documented
 - from: epsilon-tree
-  to: epsilon-tree-node-20
+  to: epsilon-tree-a5
   rel: unlocks
   source: game
   confidence: documented
 - from: epsilon-tree
-  to: epsilon-tree-node-21
+  to: epsilon-tree-a6
   rel: unlocks
   source: game
   confidence: documented
-- from: epsilon-tree-node-21
+- from: epsilon-tree-a6
   to: sacrifice-dust
   rel: boosts
   source: game
   confidence: uncertain
 - from: epsilon-tree
-  to: epsilon-tree-node-22
+  to: epsilon-tree-a7
   rel: unlocks
   source: game
   confidence: documented
 - from: epsilon-tree
-  to: epsilon-tree-node-23
+  to: epsilon-tree-a8
   rel: unlocks
   source: game
   confidence: documented
-- from: epsilon-tree-node-23
+- from: epsilon-tree-a8
   to: tarot
   rel: boosts
   source: game
   confidence: uncertain
-- from: epsilon-tree-node-23
+- from: epsilon-tree-a8
   to: golden-resources
   rel: boosts
   source: game
   confidence: uncertain
 - from: epsilon-tree
-  to: epsilon-tree-node-24
+  to: epsilon-tree-a9
   rel: unlocks
   source: game
   confidence: documented
 - from: epsilon-tree
-  to: epsilon-tree-node-25
+  to: epsilon-tree-a10
   rel: unlocks
   source: game
   confidence: documented
-- from: epsilon-tree-node-25
+- from: epsilon-tree-a10
   to: particle-generators
   rel: boosts
   source: game
   confidence: uncertain
 - from: epsilon-tree
-  to: epsilon-tree-node-26
+  to: epsilon-tree-a11
   rel: unlocks
   source: game
   confidence: documented
 - from: epsilon-tree
-  to: epsilon-tree-node-27
+  to: epsilon-tree-a12
   rel: unlocks
   source: game
   confidence: documented
-- from: epsilon-tree-node-27
+- from: epsilon-tree-a12
   to: endoplasmic-reticula
   rel: boosts
   source: game
   confidence: uncertain
 - from: epsilon-tree
-  to: epsilon-tree-node-28
+  to: epsilon-tree-a13
   rel: unlocks
   source: game
   confidence: documented
 - from: epsilon-tree
-  to: epsilon-tree-node-29
+  to: epsilon-tree-a14
   rel: unlocks
   source: game
   confidence: documented
-- from: epsilon-tree-node-29
+- from: epsilon-tree-a14
   to: spark-luck
   rel: boosts
   source: game
   confidence: uncertain
 - from: epsilon-tree
-  to: epsilon-tree-node-30
+  to: epsilon-tree-a15
   rel: unlocks
   source: game
   confidence: documented
 - from: epsilon-tree
-  to: epsilon-tree-node-31
+  to: epsilon-tree-a16
   rel: unlocks
   source: game
   confidence: documented
-- from: epsilon-tree-node-31
+- from: epsilon-tree-a16
   to: particles-sparks
   rel: boosts
   source: game
   confidence: uncertain
-- from: epsilon-tree-node-31
+- from: epsilon-tree-a16
   to: particles-epsilon
   rel: boosts
   source: game

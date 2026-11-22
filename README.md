@@ -176,7 +176,7 @@ reads three more families straight from the strings:
 | Keys | Onto | Named |
 |---|---|---|
 | `PARTICLES_BONUS_<GRADE>_<n>` (Rank, Tier, Tetr, Pent) | `particles-<grade>-bonus-<n+1>` in `particles-grades` | By the wiki's Grade Bonuses threshold (`Rank 5 Bonus`), read from `data/raw/Particles.wikitext`, when the wiki lists exactly as many bonuses for that grade as the game has; otherwise by position (`Tetr Bonus #7`). The string is the description, with the formulas it spells out in plain text (`×(1 + 0.05 × rank)`) typeset as `$LaTeX$`; shorthand such as `^1.1` or `×tier` stays prose. |
-| `EPSILON_EFFECT_<n>` | `epsilon-tree-node-<n+1>` in `epsilon-tree` | `Epsilon Tree Node <n+1> (<effect>)`; the effect is also the description. Only the 16 outer nodes (15–30) have one: the 15 inner nodes share the template "Boosts {0} efficiency", which names no node. |
+| `EPSILON_EFFECT_<n>` | `epsilon-tree-a<n-14>` in `epsilon-tree` | `Epsilon Tree A<n-14> (<effect>)`, the label the game's Epsilon Tree screen gives the node; the effect is also the description. Only the 16 outer nodes A1–A16 (15–30) have one. The 15 inner nodes (`epsilon-tree-b1`…`b8`, `c1`…`c4`, `d1`, `d2` and the centre, `epsilon-tree-epsilon`) share the template "Boosts {0} efficiency", which names no node, so they and their edges are curated in `data/relationships.yaml`: each boosts the two nodes outside it and requires them first. |
 | `ENUM_SPARKTYPE_<COLOUR>`, `ENUM_SPARKTYPE_EFFECT_<COLOUR>` | `particles-spark-<colour>` | `UNI_PARTICLES_SPARK_NAME` (`Blue Spark`); the effect is the description. |
 
 Each id is created when no node has it and overlaid when one does.
@@ -200,8 +200,9 @@ follow the current vocabulary and CI rebuilds them without a game. Two kinds
 come out, both with `source: game`:
 
 - **Member links**, `documented`. Every grade bonus `requires` its grade
-  (`particles-rank` and so on), every Epsilon Tree node is `unlocks`ed by the
-  `epsilon-tree` group, and every spark colour by the `particles-sparks` group.
+  (`particles-rank` and so on), every outer Epsilon Tree node (A1–A16) is
+  `unlocks`ed by the `epsilon-tree` group, and every spark colour by the
+  `particles-sparks` group.
   The game's help text states each; the prefixes live in
   `particles.MEMBER_LINKS`.
 - **Description matches**, `uncertain` and always `boosts`. The description of

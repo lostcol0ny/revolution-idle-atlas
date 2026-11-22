@@ -92,11 +92,12 @@ FAMILIES: dict[str, Family] = {
 # bonus, per Epsilon Tree effect and per spark colour.
 GRADE_SYSTEM = "particles-grades"
 _GRADE_BONUS_KEY = re.compile(r"PARTICLES_BONUS_(?P<grade>RANK|TIER|TETR|PENT)_(?P<index>\d+)")
-# Only the 16 outer nodes have effect text (indices 15-30). The 15 inner nodes
-# share one template, "Boosts {0} efficiency", filled with the outer nodes they
-# feed, which no string says.
+# Only the 16 outer nodes have effect text: EPSILON_EFFECT_15..30 are A1..A16
+# on the game's Epsilon Tree screen. The 15 inner nodes (B1-B8, C1-C4, D1, D2
+# and the centre) share the template "Boosts {0} efficiency" and are curated.
 EPSILON_TREE_SYSTEM = "epsilon-tree"
 _EPSILON_EFFECT_KEY = re.compile(r"EPSILON_EFFECT_(?P<index>\d+)")
+_FIRST_OUTER_EFFECT = 15
 SPARK_SYSTEM = "particles"
 _SPARK_EFFECT_KEY = re.compile(r"ENUM_SPARKTYPE_EFFECT_(?P<colour>[A-Z]+)")
 _SPARK_NAME = "UNI_PARTICLES_SPARK_NAME"
@@ -506,10 +507,14 @@ def map_particles(
     if effects:
         report = reports["EPSILON_EFFECT"] = FamilyReport()
         for index, text in effects:
+            label = index - _FIRST_OUTER_EFFECT + 1
+            if label < 1:
+                report.unmatched.append(f"#{index}: not an outer node (A1 is #15)")
+                continue
             effect = clean(text)
             mapped.append(_place(
-                f"epsilon-tree-node-{index + 1}",
-                f"Epsilon Tree Node {index + 1} ({effect})",
+                f"epsilon-tree-a{label}",
+                f"Epsilon Tree A{label} ({effect})",
                 effect,
                 EPSILON_TREE_SYSTEM,
                 Kind.TREE_NODE,

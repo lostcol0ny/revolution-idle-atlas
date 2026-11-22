@@ -1033,3 +1033,34 @@ def test_a_note_quoting_a_typeset_effect_is_typeset_too(graph: dict):
     notes = [e["note"] for e in graph["edges"] if e["from"] == "refine-node-10" and "note" in e]
     assert notes == [effect]
 
+
+def test_the_epsilon_tree_matches_the_game_screen(graph: dict):
+    # A1-A16 come from data/game.yaml, the 15 inner nodes from the curated file;
+    # the labels are the game's own. Each inner node boosts the two nodes
+    # outside it and requires them first, so a typo in one curated edge shows up
+    # here rather than as a quietly lopsided tree.
+    tree = {
+        n["id"]
+        for n in graph["nodes"]
+        if n["system"] == "epsilon-tree" and n["kind"] == "tree-node"
+    }
+    outer = [f"epsilon-tree-a{i}" for i in range(1, 17)]
+    layers = [
+        outer,
+        [f"epsilon-tree-b{i}" for i in range(1, 9)],
+        [f"epsilon-tree-c{i}" for i in range(1, 5)],
+        ["epsilon-tree-d1", "epsilon-tree-d2"],
+        ["epsilon-tree-epsilon"],
+    ]
+    assert tree == {node for layer in layers for node in layer}
+
+    edges = {(e["from"], e["to"], e["rel"]) for e in graph["edges"]}
+    for children, parents in zip(layers, layers[1:]):
+        for index, parent in enumerate(parents):
+            pair = children[2 * index : 2 * index + 2]
+            boosted = {to for frm, to, rel in edges if frm == parent and rel == "boosts"}
+            assert boosted == set(pair), parent
+            for child in pair:
+                assert (child, parent, "requires") in edges
+    for node in tree:
+        assert ("epsilon-tree", node, "unlocks") in edges

@@ -333,7 +333,10 @@ def test_particles_map_grade_bonuses_tree_effects_and_sparks():
         "PARTICLES_BONUS_TETR_0": "Luck ^(1 + tetr / 10).",
         "PARTICLES_BONUS_TETR_1": "Attack gold gain ^(1 + 0.01 × tetr).",
         "PARTICLES_BONUSES_RANK": "Rank bonuses",
+        # A14 on the game's Epsilon Tree screen: EPSILON_EFFECT_15 is A1.
         "EPSILON_EFFECT_28": "Spark Luck",
+        # Below 15 is no outer node, so it is reported rather than placed.
+        "EPSILON_EFFECT_3": "Inner",
         "EPSILON_BOOST": "Boosts {0} efficiency",
         "ENUM_SPARKTYPE_BLUE": "Blue",
         "ENUM_SPARKTYPE_EFFECT_BLUE": "Atoms Nerf at e10K: /{0}",
@@ -373,8 +376,8 @@ def test_particles_map_grade_bonuses_tree_effects_and_sparks():
             Kind.UPGRADE,
         ),
         (
-            "epsilon-tree-node-29",
-            "Epsilon Tree Node 29 (Spark Luck)",
+            "epsilon-tree-a14",
+            "Epsilon Tree A14 (Spark Luck)",
             "Spark Luck",
             "epsilon-tree",
             Kind.TREE_NODE,
@@ -388,3 +391,4 @@ def test_particles_map_grade_bonuses_tree_effects_and_sparks():
         "EPSILON_EFFECT": (0, 1),
         "ENUM_SPARKTYPE": (1, 0),
     }
+    assert reports["EPSILON_EFFECT"].unmatched == ["#3: not an outer node (A1 is #15)"]
