@@ -3,6 +3,8 @@ from atlas.models import (
     Dataset,
     Edge,
     Effect,
+    GameData,
+    GameNode,
     Kind,
     Node,
     NodeConfidence,
@@ -336,3 +338,106 @@ def test_two_derived_edges_with_same_key_but_distinct_payload_warn():
     # something has to pin which one actually survives. Without this the message
     # could be re-inverted and the suite would stay green.
     assert [e.targets_effect for e in merged.edges] == [1]
+
+
+def _game(*nodes: GameNode) -> GameData:
+    return GameData(buildid="1", nodes=list(nodes))
+
+
+def test_game_name_overlays_derived_and_curated_overlays_game():
+    game = _game(
+        GameNode(id="relic-38", name="Smart Man", description="Adds base to RN2"),
+        GameNode(id="relic-39", name="Windmill Pendant", description="Boosts wind"),
+    )
+    curated = Dataset(
+        nodes=[
+            Node(
+                id="relic-39",
+                name="Curated Pendant",
+                system="relics",
+                kind=Kind.RELIC,
+                description="Curated text",
+            )
+        ]
+    )
+    merged, problems = merge(_derived(), curated, game=game)
+
+    by_id = {n.id: n for n in merged.nodes}
+    assert problems == []
+    # derived < game: the game's name and description land, and every field the
+    # game does not carry is still the derived one.
+    assert by_id["relic-38"].name == "Smart Man"
+    assert by_id["relic-38"].description == "Adds base to RN2"
+    assert by_id["relic-38"].effects[0].per_level == "+1.00"
+    assert by_id["relic-38"].wiki == "Relics"
+    # game < curated, field by field.
+    assert by_id["relic-39"].name == "Curated Pendant"
+    assert by_id["relic-39"].description == "Curated text"
+    assert by_id["relic-39"].wiki == "Relics"
+
+
+def test_game_entity_with_no_node_is_created_between_derived_and_curated():
+    game = _game(
+        GameNode(id="relic-76", name="New Relic", system="relics", kind=Kind.RELIC)
+    )
+    curated = Dataset(
+        nodes=[Node(id="singularity", name="Singularity", system="unity", kind=Kind.CURRENCY)]
+    )
+    merged, problems = merge(_derived(), curated, game=game)
+
+    assert problems == []
+    assert [n.id for n in merged.nodes] == ["relic-38", "relic-39", "relic-76", "singularity"]
+    added = merged.nodes[2]
+    assert added.name == "New Relic"
+    assert added.system == "relics"
+    assert added.kind is Kind.RELIC
+    assert added.confidence is NodeConfidence.DOCUMENTED
+    assert added.line is None
+
+
+def test_game_entry_for_a_curated_only_node_sits_under_it():
+    game = _game(GameNode(id="lab", name="Laboratory (game)", description="Makes LP"))
+    curated = Dataset(
+        nodes=[
+            Node(id="first", name="First", system="unity", kind=Kind.STAT),
+            Node(id="lab", name="Lab", system="unity", kind=Kind.GROUP, line=9),
+        ]
+    )
+    merged, _ = merge(_derived(), curated, game=game)
+
+    # Keeps its place in the curated order, takes the game's description, and
+    # the curated name still wins.
+    assert [n.id for n in merged.nodes][-2:] == ["first", "lab"]
+    lab = merged.nodes[-1]
+    assert (lab.name, lab.description, lab.line) == ("Lab", "Makes LP", 9)
+
+
+def test_game_entry_matching_nothing_is_a_warning_not_a_node():
+    game = GameData(nodes=[GameNode(id="relic-99", name="Ghost", line=4)])
+    merged, problems = merge(_derived(), Dataset(), game=game, game_path="data/game.yaml")
+
+    assert "relic-99" not in merged.node_ids()
+    assert [(p.severity, p.path, p.line) for p in problems] == [
+        ("warning", "data/game.yaml", 4)
+    ]
+    assert "relic-99" in problems[0].message
+
+
+def test_duplicate_game_entry_is_an_error():
+    game = _game(
+        GameNode(id="relic-38", name="A", line=1),
+        GameNode(id="relic-38", name="B", line=2),
+    )
+    _, problems = merge(_derived(), Dataset(), game=game, game_path="data/game.yaml")
+    assert [(p.severity, p.path, p.line) for p in problems] == [
+        ("error", "data/game.yaml", 2)
+    ]
+
+
+def test_no_game_file_merges_exactly_as_without_one():
+    curated = Dataset(
+        nodes=[Node(id="relic-39", name="Windmill Pendant", system="relics", kind=Kind.RELIC)]
+    )
+    without, _ = merge(_derived(), curated)
+    empty, _ = merge(_derived(), curated, game=GameData())
+    assert without == empty

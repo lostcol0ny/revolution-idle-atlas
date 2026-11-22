@@ -21,7 +21,15 @@ its kind, wiki page and effects. A curated edge replaces the generated one
 wholesale. A `suppress:` entry deletes a generated edge outright — the one
 correction an overlay cannot express.
 
-A third file, `data/sweep.yaml`, is neither half of that pair. It is not data
+A third input, `data/game.yaml`, sits **between** them: precedence is
+`derived.yaml` < `game.yaml` < `relationships.yaml`. It holds the game's own name
+and description for the nodes it maps, so it corrects a wiki spelling, but a
+curated field still wins. It carries no edges. It is written only by
+`atlas game` on a machine with the game installed, never by `atlas extract` or
+`atlas build`, so CI rebuilds from the committed copy; when it is absent the
+build is exactly the two-file merge. See [Game files](#game-files).
+
+One more file, `data/sweep.yaml`, is neither half of that pair. It is not data
 about the game; it is a description of where in `data/raw/` to find data about
 the game. Editing it changes what `atlas extract` produces, so it is an input to
 the disposable half, and everything read through it arrives at the lowest
@@ -38,6 +46,7 @@ confidence the schema has.
 | `docs/coverage.md` | Generated. The curation to-do list. Committed. |
 | `bootstrap/` | Historical. Held one-off seeding scripts; all have been superseded by `atlas extract` and removed. |
 | `data/game/` | Local only, git-ignored. Written by `atlas game` from your own game install; see [Game files](#game-files). |
+| `data/game.yaml` | The game's names and descriptions, mapped onto node ids. Written by `atlas game`, read by `atlas build`. Committed. |
 
 `data/derived.yaml`, `public/graph.json` and `docs/coverage.md` are build
 products that are committed to the repository. CI rebuilds them and fails if the
@@ -62,7 +71,7 @@ uv run atlas build --check   # validate only; write nothing
 uv run atlas extract     # parse data/raw/ into data/derived.yaml
 uv run atlas scrape      # re-fetch data/raw/ from the wiki
 uv sync --extra game     # also install UnityPy, needed only by `atlas game`
-uv run atlas game        # read English strings from a local game install into data/game/
+uv run atlas game        # read English strings from a local game install into data/game/ and data/game.yaml
 uv run pytest            # tests
 ```
 
@@ -129,7 +138,44 @@ numbers, such as achievement thresholds.
 **`resources.assets` is never read.** Its TextAssets include developer test
 saves, some named after real players.
 
-Both outputs stay **local and are not committed**: `data/game/` is git-ignored.
+Both of those outputs stay **local and are not committed**: `data/game/` is
+git-ignored.
+
+### `data/game.yaml`
+
+`atlas game` then maps catalog families onto the nodes of the current
+`data/derived.yaml` and `data/relationships.yaml`, and writes the result to
+`data/game.yaml`, which **is** committed. Each entry is a node `id`, the game's
+`name`, and its `description`, under the Steam `buildid` it was read from.
+Unity rich-text tags are stripped. The numbers the game fills in at runtime are
+worded by the sign beside them: `x{0}` becomes "a multiplier", `^{0}` "an
+exponent", `{0}%` "a percentage", `+{0}` "an amount", and a bare `{0}` "a
+value"; a running total such as `(total: x{1})` is dropped, since it is the
+player's state rather than the entity's. `atlas build` overlays the name and
+description field by field on the generated node, and a curated field still
+wins.
+
+Only families with a clear home in the graph are mapped:
+
+| Family | Onto | Matched by |
+|---|---|---|
+| `UNI_RELIC` | `relic-<n+1>` | Index, then verified by name. A near spelling (`Magestic` / `Majestic`) passes and is reported as a rename; an unrelated name is reported as unmatched. |
+| `INF_CHL` | `infinity-challenge-<n+1>` | Index, verified by the `#<n+1>` the game writes in the name. Named `Infinity Challenge <n> (<title>)`. |
+| `ETR_RP_UPGRADE` | `rp-upgrade-<n+1>` | Same as `INF_CHL`; named `RP Upgrade <n> (<title>)`. |
+| `PLAGUE_ENDO_UPGRADE` | `plague-er-*` nodes in `plague` | Normalised name. |
+| `UNI_MIN_COMMON` | `mineral-*` nodes in `minerals` | Normalised name. No node models a single common-mineral tier, so today all 100 are unmatched. |
+
+Every other family (achievements, `ACH`, among them) has no system to map onto
+and is listed as skipped. An entity in the first four families that no node
+matches becomes a **new node** in the family's system, at confidence
+`documented`, carrying `system` and `kind` in its entry; common minerals are
+never created. Anything that cannot be placed — a name that disagrees with its
+index, a name two nodes share, an id already taken — is reported per family as
+unmatched rather than guessed. `atlas game` prints matched, added and unmatched
+counts per family.
+
+A game entry whose node has since disappeared (an extraction renamed its id) and
+that names no system is a build **warning**; rerun `atlas game`.
 
 ## The sweep manifest
 
@@ -217,10 +263,11 @@ systems, which is what keeps a system-less document byte-identical to an older
 v1 one. Everything added since v1 has been optional for the same reason.
 
 Node and edge order is deterministic: generated records come first in the order
-`atlas extract` produced them, then records that exist only in
-`data/relationships.yaml`, in that file's order. A curated record that overrides
-a generated one keeps the generated one's position. Keys within each object are
-sorted alphabetically. **Fields whose value is null or an empty list are omitted
+`atlas extract` produced them, then nodes that exist only in `data/game.yaml`,
+then records that exist only in `data/relationships.yaml`, in that file's
+order. A record that overrides an earlier one keeps the earlier one's position.
+Keys within each object are sorted alphabetically. **Fields whose value is null
+or an empty list are omitted
 entirely** rather than emitted as `null` or `[]`, so a consumer must treat "key
 absent" and "no value" as the same thing.
 
@@ -244,6 +291,7 @@ absent" and "no value" as the same thing.
 | `confidence` | enum | no | Defaults to `documented`. |
 | `effects` | array | no | What the entity does. Omitted when empty. |
 | `aliases` | array of string | no | Other names the wiki uses for this entity. Matching input, not display text. Omitted when empty. |
+| `description` | string | no | The game's own description, from `data/game.yaml`. Runtime numbers are worded ("by a multiplier"), never `{0}`. |
 
 `system` is a **free string**, deliberately. The taxonomy is data, not an enum:
 the declared systems live in this document's own `systems` array, and a
@@ -366,11 +414,10 @@ coefficients are out of scope and the pipeline does not carry them.
 
 `graph.json` carries `effects`, `targets_effect`, `aliases` and the `systems`
 hierarchy, and the sweep has added 131 more nodes to `data/derived.yaml` — but
-the React viewer still
-renders only v1's fields. No component reads `effects` or `targets_effect`, so
-the thing this pipeline exists to show is not yet visible in the UI. This is a
-recorded sequencing decision: the schema contract was fixed before any UI was
-built on it.
+the React viewer still renders only v1's fields plus `description`. No component
+reads `effects` or `targets_effect`, so the thing this pipeline exists to show is
+not yet visible in the UI. This is a recorded sequencing decision: the schema
+contract was fixed before any UI was built on it.
 
 Every edge produced by the sweep carries `confidence: uncertain`. A consumer that
 renders them identically to `documented` edges will present guesses as facts.
@@ -378,7 +425,7 @@ renders them identically to `documented` edges will present guesses as facts.
 ### Deployment
 
 Deployed to Vercel as static files. There is no `vercel.json` and no rewrite
-rules are needed — deep links use query parameters (`/?node=attack-power`),
+rules are needed — deep links use query parameters (`/?node=damage-mult`),
 not path segments, so every request already hits `/`.
 
 | Setting | Value |

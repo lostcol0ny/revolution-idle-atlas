@@ -3,6 +3,7 @@
   "nodes": [
     {
       "confidence": "documented",
+      "description": "A simple boost to Damage Mult",
       "effects": [
         {
           "text": "A Simple (flat) Boost to (Attacks) Damage Mult",
@@ -18,6 +19,7 @@
     },
     {
       "confidence": "documented",
+      "description": "A boost to Zodiac Quality",
       "effects": [
         {
           "text": "A Boost to Zodiac Quality",
@@ -33,6 +35,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Zodiac Level Sum (ZLM) boosts Damage Mult",
       "effects": [
         {
           "text": "Zodiacs Level Sum (ZLM) Boost (Attacks) Damage Mult",
@@ -48,6 +51,7 @@
     },
     {
       "confidence": "documented",
+      "description": "A boost to Luck",
       "effects": [
         {
           "text": "A Boost to (Zodiac) Luck",
@@ -63,6 +67,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Zodiac Sell Price Mult",
       "effects": [
         {
           "text": "Zodiac Sell Price Mult",
@@ -78,6 +83,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Common Exponent Mult",
       "effects": [
         {
           "text": "(Boosts) Common Exponent Mult",
@@ -93,6 +99,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Attack Lap Speed Mult",
       "effects": [
         {
           "text": "(Boosts) Attacks Lap Speed Mult",
@@ -108,6 +115,7 @@
     },
     {
       "confidence": "documented",
+      "description": "8th Relic Exp Factor",
       "effects": [
         {
           "text": "8th Relic (Zodiac) Exp Factor Adds a new Zodiac Exp Factor \"Relic 8\", increased by gaining more levels of this relic",
@@ -123,6 +131,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Gold Gain",
       "effects": [
         {
           "text": "(Boosts) Gold Gain (from Attacks)",
@@ -138,6 +147,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Power (^) to DP Gain",
       "effects": [
         {
           "text": "Power (^) to DP Gain Raises DP Gain to a power (^)",
@@ -153,6 +163,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Supernova bonuses powered to",
       "effects": [
         {
           "text": "Supernova Bonuses (are) Powered to X",
@@ -168,6 +179,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Unlocked relic count boosts attack",
       "effects": [
         {
           "text": "Amount of unlocked relics boost attack",
@@ -183,6 +195,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Increases the exponent in the base damage formula",
       "effects": [
         {
           "text": "Increases Exponent in (Attacks) Base Damage Formula Increases the Exponent in the Formula shown on the Relic tab, which improves Base Damage in Attacks",
@@ -198,6 +211,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Decreases the cost of all relics",
       "effects": [
         {
           "text": "Decreases costs of all relics",
@@ -213,6 +227,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Increases the effectiveness of Relics 2 and 4",
       "effects": [
         {
           "text": "Increases efficiency of relics 2 and 4 (Pinewood Bracelet and Four Leaf Clover for Zodiac Quality and Luck)",
@@ -228,6 +243,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Multiplies Mult Gain for Attacks",
       "effects": [
         {
           "text": "Multiplies mult gain for attacks",
@@ -243,6 +259,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Relic 9 is powered to",
       "effects": [
         {
           "text": "Relic 9 is powered to X (Improves gold gain)",
@@ -258,6 +275,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Increases the Ascension Power of Attack Revolutions",
       "effects": [
         {
           "text": "Increases Ascension Power of Attacks Revolutions",
@@ -273,6 +291,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Tetrates the first divider in the damage formula",
       "effects": [
         {
           "text": "Tetrates (Attacks) damage formula first divider Reduces the divider in the Formula shown on the Relic tab, which improves Base Damage in Attacks",
@@ -288,6 +307,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Relic 16 effect powered and Relic 18 effect multiplied to",
       "effects": [
         {
           "text": "Relic 16 effect is powered and Relic 18 effect multiplied to X & Y X and Y increase different amounts per relic level",
@@ -296,12 +316,13 @@
       ],
       "id": "relic-20",
       "kind": "relic",
-      "name": "Relic 20 (Magestic Halberd)",
+      "name": "Relic 20 (Majestic Halberd)",
       "system": "relics",
       "wiki": "Relics"
     },
     {
       "confidence": "documented",
+      "description": "Empowers Relic 17",
       "effects": [
         {
           "text": "Empowers Relic 17 Raises Relic 17 effect to a power (^) Improves Gold Gain",
@@ -317,6 +338,7 @@
     },
     {
       "confidence": "documented",
+      "description": "VP gain multiplier",
       "effects": [
         {
           "text": "Mult to VP gain Multiplies VP gain by X",
@@ -326,12 +348,13 @@
       ],
       "id": "relic-22",
       "kind": "relic",
-      "name": "Relic 22 (Nice easel)",
+      "name": "Relic 22 (Nice Easel)",
       "system": "relics",
       "wiki": "Relics"
     },
     {
       "confidence": "documented",
+      "description": "Empowers Relic 22",
       "effects": [
         {
           "text": "Empowers Relic 22 Raises Relic 22 effect to a power (^)",
@@ -347,6 +370,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Empowers Game Speed Donut",
       "effects": [
         {
           "text": "Empowers Game Speed Donut Raises Game Speed Donut effect to a power (^)",
@@ -362,6 +386,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Empowers Luck Donut",
       "effects": [
         {
           "text": "Empowers Luck Donut Raises Luck Donut effect to a power (^)",
@@ -371,12 +396,13 @@
       ],
       "id": "relic-25",
       "kind": "relic",
-      "name": "Relic 25 (Lucky Luck Crystal)",
+      "name": "Relic 25 (Lucky Crystal)",
       "system": "relics",
       "wiki": "Relics"
     },
     {
       "confidence": "documented",
+      "description": "Empowers Quality Donut",
       "effects": [
         {
           "text": "Empowers Quality Donut Raises Quality Donut effect to a power (^)",
@@ -392,6 +418,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Empowers the last Donut",
       "effects": [
         {
           "text": "Empowers last Donut Raises Zodiac Exp. Factor Donut effect to a power (^)",
@@ -407,6 +434,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Gain more merge EXP based on X^[mineral level], X =",
       "effects": [
         {
           "text": "You get more merge exp based on X^[mineral level]",
@@ -422,6 +450,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Refine Node 18 Effect",
       "effects": [
         {
           "text": "Refine Node 18 eff:",
@@ -437,6 +466,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Refine Node 1 effect",
       "effects": [
         {
           "text": "Refine Node 1 eff.",
@@ -452,6 +482,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Empowers Mineral Cost",
       "effects": [
         {
           "text": "Empowers Mineral Cost Raises (Common) Mineral Cost to a power (^)",
@@ -467,6 +498,7 @@
     },
     {
       "confidence": "documented",
+      "description": "PP Gain raised to the power of",
       "effects": [
         {
           "text": "PP Gain powered to",
@@ -482,6 +514,7 @@
     },
     {
       "confidence": "documented",
+      "description": "RfP Gain multiplied by",
       "effects": [
         {
           "text": "RfP Gain multiplied by",
@@ -497,6 +530,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Sun and Moon Rune generation speed",
       "effects": [
         {
           "text": "Sun and Moon runes gain speed",
@@ -512,6 +546,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Special Mineral Cost Fall",
       "effects": [
         {
           "text": "Special Minerals Cost Fall",
@@ -527,6 +562,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Boosts Earth Generation",
       "effects": [
         {
           "text": "Boosts Earth Generation",
@@ -542,6 +578,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Multiplies Global Element Mult.",
       "effects": [
         {
           "text": "Multiplies Global Element Mult",
@@ -557,6 +594,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Adds to the base of Refine Node 2",
       "effects": [
         {
           "text": "Adds base to Refine Node 2 (Attacks bulk leveling)",
@@ -572,6 +610,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Boosts the first Wind Node",
       "effects": [
         {
           "text": "Boosts First Wind Node",
@@ -587,6 +626,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Multiplies Relic 30's effect",
       "effects": [
         {
           "text": "Multiplies Relic 30 effect (RN1 Effect)",
@@ -602,6 +642,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Multiplies Black Gem effect",
       "effects": [
         {
           "text": "Multiplies Black Gem Eff.",
@@ -617,6 +658,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Multiplies Black Gem Chance",
       "effects": [
         {
           "text": "Multiplies Black Gem Chance",
@@ -632,6 +674,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Chance to get an additional Tarot card of the same type",
       "effects": [
         {
           "text": "Chance to get additional tarot card of the same type",
@@ -647,6 +690,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Increases the power of all Arcana by",
       "effects": [
         {
           "text": "Increases power of all arcanes (Arcans) by x%",
@@ -656,12 +700,13 @@
       ],
       "id": "relic-44",
       "kind": "relic",
-      "name": "Relic 44 (Ring Of Decieving)",
+      "name": "Relic 44 (Ring of Deceiving)",
       "system": "relics",
       "wiki": "Relics"
     },
     {
       "confidence": "documented",
+      "description": "Increases SMP Exp gained from merging special minerals and from completing The Tower",
       "effects": [
         {
           "text": "Increase SMP Exp you get on merging special minerals",
@@ -671,12 +716,13 @@
       ],
       "id": "relic-45",
       "kind": "relic",
-      "name": "Relic 45 (Star Of The Highest Hopes)",
+      "name": "Relic 45 (Star of the Highest Hopes)",
       "system": "relics",
       "wiki": "Relics"
     },
     {
       "confidence": "documented",
+      "description": "Empowers Relic 45's effect",
       "effects": [
         {
           "text": "Empowers Relic 45 (SMP EXP)",
@@ -692,6 +738,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Raises Relic 33's effect to the power of",
       "effects": [
         {
           "text": "Empowers Relic 33 (RfP Gain)",
@@ -707,6 +754,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Multiplies the power of the Water Luck factor",
       "effects": [
         {
           "text": "Multiplies power for Luck boost to Water",
@@ -722,6 +770,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Multiplies Sacrifice Dust gain by",
       "effects": [
         {
           "text": "Multiplies Sacrifice Dust gain",
@@ -737,6 +786,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Multiplies Relic 38's effect",
       "effects": [
         {
           "text": "Multiplies Relic 38's effect (Attacks bulk leveling)",
@@ -752,6 +802,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Multiplies Refine Node 7's effect",
       "effects": [
         {
           "text": "Multiplies Refine Node 7's effect",
@@ -767,6 +818,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Boosts Attack Ascension Power from VP",
       "effects": [
         {
           "text": "Empowers Attack Ascension Power from VP",
@@ -782,6 +834,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Boosts total Tarot Challenge reward (Sacrifice Dust gain)",
       "effects": [
         {
           "text": "Empowers total Tarot Challenge reward (Sacrifice Dust gain)",
@@ -797,6 +850,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Multiplies the base of Refine Node 90",
       "effects": [
         {
           "text": "Multiplies the base of Refine Node 90",
@@ -812,6 +866,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Multiplies The Devil's base effect",
       "effects": [
         {
           "text": "Multiplies The Devil's base effect",
@@ -827,6 +882,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Empowers Relic 41",
       "effects": [
         {
           "text": "Empowers Relic 41",
@@ -842,6 +898,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Boosts the first effect of common suit Tarot cards",
       "effects": [
         {
           "text": "Boosts the first effect of common suit Tarot cards",
@@ -857,6 +914,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Increases the efficiency of Refine Node 100 by",
       "effects": [
         {
           "text": "Increases Refine Node 100 efficiency by",
@@ -872,6 +930,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Multiplies Golden Resource gain when flushing to Artifacts",
       "effects": [
         {
           "text": "Multiplies Golden Resource gain when flushing to artifacts",
@@ -887,6 +946,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Empowers Relic 59",
       "effects": [
         {
           "text": "Empowers Relic 59",
@@ -902,6 +962,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Multiplies PlP per PlG",
       "effects": [
         {
           "text": "Multiplies PIP per PIG",
@@ -917,6 +978,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Multiplies Base Spread Power on Endoplasmic Reticulum craft",
       "effects": [
         {
           "text": "Multiplies Base Spread Power on Endoplasmic reticulum craft",
@@ -932,6 +994,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Multiplies the effect of Endoplasmic Reticulum Upgrade 4 (PlP to ERP conversion rate)",
       "effects": [
         {
           "text": "Multiplies the effect of Endoplasmic Reticulum Upgrade 4 (PIP to ERP conversion Rate)",
@@ -947,6 +1010,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Multiplies Crafting Mastery for ER",
       "effects": [
         {
           "text": "Multiplies Crafting Mastery for ER",
@@ -962,6 +1026,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Multiplies Essence Density Effect",
       "effects": [
         {
           "text": "Multiplies Essence Density Effect",
@@ -976,6 +1041,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Multiplies Relic 62 effect",
       "effects": [
         {
           "text": "Multiplies Relic 62 effect",
@@ -991,6 +1057,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Increases the chance of obtaining Achievement 600 after completing Earth Plague Stage (5-5)",
       "effects": [
         {
           "text": "Increases the chance of obtaining Achievement 600 after completing Earth Plague Stage (5-5) (Useless after getting Achievement #600)",
@@ -1006,6 +1073,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Multiplies Max Cure Needed Progress",
       "effects": [
         {
           "text": "Multiplies Max Cure Needed Progress",
@@ -1021,6 +1089,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Adds a buff in the beginning that boosts atoms gain",
       "effects": [
         {
           "text": "Adds a buff in the beginning that boosts atoms gain",
@@ -1036,6 +1105,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Empowers your luck",
       "effects": [
         {
           "text": "Empowers your luck",
@@ -1051,6 +1121,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Divides the cost exponent of all Singularity Tree upgrades by /",
       "effects": [
         {
           "text": "Divides the cost exponent of all Singularity Tree upgrades by /",
@@ -1066,6 +1137,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Multiplies the base of Alpha and Beta Generators",
       "effects": [
         {
           "text": "Multiplies the base of Alpha and Beta Generators",
@@ -1081,6 +1153,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Divides the exponent of the rank requirement",
       "effects": [
         {
           "text": "Divides the exponent of the rank requirement",
@@ -1096,6 +1169,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Multiplies Delta Prestige Effect",
       "effects": [
         {
           "text": "Multiplies Delta Prestige Effect",
@@ -1111,6 +1185,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Multiplies Mastery Gain (Spawning & Destroying sparks)",
       "effects": [
         {
           "text": "Multiplies Mastery Gain (Spawning & Destroying sparks)",
@@ -6397,6 +6472,7 @@
     },
     {
       "confidence": "provisional",
+      "description": "Increases the base Spread Power gained when crafting an ER",
       "effects": [
         {
           "text": "Increases base Spread Power on ER"
@@ -6410,6 +6486,7 @@
     },
     {
       "confidence": "provisional",
+      "description": "Increases the base Infectivity gained when crafting an ER",
       "effects": [
         {
           "text": "Increases base Infectivity on ER"
@@ -6423,6 +6500,7 @@
     },
     {
       "confidence": "provisional",
+      "description": "Increases the base Stealth gained when crafting an ER",
       "effects": [
         {
           "text": "Increases base Stealth on ER"
@@ -6436,6 +6514,7 @@
     },
     {
       "confidence": "provisional",
+      "description": "Increases the PlP conversion rate for ER crafting",
       "effects": [
         {
           "text": "Increases PlP to ERP conversion rate"
@@ -6449,6 +6528,7 @@
     },
     {
       "confidence": "provisional",
+      "description": "Increases the base amount of VE gained when dissolving newly crafted ERs",
       "effects": [
         {
           "text": "Increases base VE from dissolving ERs"
@@ -6462,6 +6542,7 @@
     },
     {
       "confidence": "provisional",
+      "description": "Increases the chance of crafting a better ER",
       "effects": [
         {
           "text": "Increases chances of crafting better ERs"
@@ -6475,6 +6556,7 @@
     },
     {
       "confidence": "provisional",
+      "description": "Increases ViP/s gained per VE",
       "effects": [
         {
           "text": "Increases ViP/s per VE"
@@ -6704,7 +6786,7 @@
       "id": "singularity-milestone-one-hundred",
       "kind": "upgrade",
       "name": "One Hundred",
-      "system": "singularity-milestones-atoms",
+      "system": "singularity-milestones-singularity",
       "wiki": "Singularity#Milestones"
     },
     {
@@ -10036,6 +10118,7 @@
     },
     {
       "confidence": "provisional",
+      "description": "Promotions 2 and 4 are disabled",
       "effects": [
         {
           "text": "Promotions 2 and 4 are stronger"
@@ -10043,12 +10126,13 @@
       ],
       "id": "infinity-challenge-1",
       "kind": "upgrade",
-      "name": "Infinity Challenge 1",
+      "name": "Infinity Challenge 1 (Ionized Speed)",
       "system": "infinity-challenges",
       "wiki": "Infinity"
     },
     {
       "confidence": "provisional",
+      "description": "Ascension Power is divided by 4",
       "effects": [
         {
           "text": "Ascension Power is multiplied by 1.2"
@@ -10056,12 +10140,13 @@
       ],
       "id": "infinity-challenge-2",
       "kind": "upgrade",
-      "name": "Infinity Challenge 2",
+      "name": "Infinity Challenge 2 (Descent)",
       "system": "infinity-challenges",
       "wiki": "Infinity"
     },
     {
       "confidence": "provisional",
+      "description": "Common Exponent is decreased by 0.4",
       "effects": [
         {
           "text": "Common Exp. is increased by +0.03"
@@ -10069,12 +10154,13 @@
       ],
       "id": "infinity-challenge-3",
       "kind": "upgrade",
-      "name": "Infinity Challenge 3",
+      "name": "Infinity Challenge 3 (The First Root)",
       "system": "infinity-challenges",
       "wiki": "Infinity"
     },
     {
       "confidence": "provisional",
+      "description": "Prestige and Promote gains are raised to ^0.4",
       "effects": [
         {
           "text": "+1 level to all promotions after Infinity"
@@ -10082,12 +10168,13 @@
       ],
       "id": "infinity-challenge-4",
       "kind": "upgrade",
-      "name": "Infinity Challenge 4",
+      "name": "Infinity Challenge 4 (Steep Climbs)",
       "system": "infinity-challenges",
       "wiki": "Infinity"
     },
     {
       "confidence": "provisional",
+      "description": "All Promotions are much weaker",
       "effects": [
         {
           "text": "All promotions are a bit stronger now"
@@ -10095,12 +10182,13 @@
       ],
       "id": "infinity-challenge-5",
       "kind": "upgrade",
-      "name": "Infinity Challenge 5",
+      "name": "Infinity Challenge 5 (Fired From Work)",
       "system": "infinity-challenges",
       "wiki": "Infinity"
     },
     {
       "confidence": "provisional",
+      "description": "Multipliers decay over time (minimum of 1)",
       "effects": [
         {
           "text": "All generators are twice as strong"
@@ -10108,12 +10196,13 @@
       ],
       "id": "infinity-challenge-6",
       "kind": "upgrade",
-      "name": "Infinity Challenge 6",
+      "name": "Infinity Challenge 6 (The Drain)",
       "system": "infinity-challenges",
       "wiki": "Infinity"
     },
     {
       "confidence": "provisional",
+      "description": "All Multipliers are divided by (time spent in Infinity)^2",
       "effects": [
         {
           "text": "All mults are mult. by (time in Infinity)^0.2"
@@ -10121,12 +10210,13 @@
       ],
       "id": "infinity-challenge-7",
       "kind": "upgrade",
-      "name": "Infinity Challenge 7",
+      "name": "Infinity Challenge 7 (Quadratic Division)",
       "system": "infinity-challenges",
       "wiki": "Infinity"
     },
     {
       "confidence": "provisional",
+      "description": "Ascensions are disabled",
       "effects": [
         {
           "text": "Base Ascension Power is increased by 2"
@@ -10134,12 +10224,13 @@
       ],
       "id": "infinity-challenge-8",
       "kind": "upgrade",
-      "name": "Infinity Challenge 8",
+      "name": "Infinity Challenge 8 (Noscensions)",
       "system": "infinity-challenges",
       "wiki": "Infinity"
     },
     {
       "confidence": "provisional",
+      "description": "You only have four colors",
       "effects": [
         {
           "text": "Double Infinites gain + Break Infinity"
@@ -10147,7 +10238,7 @@
       ],
       "id": "infinity-challenge-9",
       "kind": "upgrade",
-      "name": "Infinity Challenge 9",
+      "name": "Infinity Challenge 9 (Isolationism)",
       "system": "infinity-challenges",
       "wiki": "Infinity"
     },
@@ -10280,14 +10371,6 @@
       "name": "Spark Purple",
       "system": "particles",
       "wiki": "Particles"
-    },
-    {
-      "confidence": "documented",
-      "id": "attack-power",
-      "kind": "stat",
-      "name": "Attack Power",
-      "system": "attacks",
-      "wiki": "Unity#Attacks"
     },
     {
       "confidence": "documented",
@@ -12621,6 +12704,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Multiply IP gain by a multiplier",
       "effects": [
         {
           "text": "IP Gain",
@@ -12635,6 +12719,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Increase Ascension Power multiplier by an amount",
       "effects": [
         {
           "text": "Ascend Power",
@@ -12649,6 +12734,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Increase Star Base multiplier by an amount",
       "effects": [
         {
           "text": "Star Base Mult",
@@ -12663,6 +12749,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Increase EP gain multiplier by an amount",
       "effects": [
         {
           "text": "EP Gain",
@@ -12677,6 +12764,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Increase Gen. Power Exponent by an amount",
       "effects": [
         {
           "text": "Gen. Power Exponent",
@@ -12691,6 +12779,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Increase Common Exponent by an amount",
       "effects": [
         {
           "text": "Common Exponent",
@@ -23217,13 +23306,6 @@
       "to": "plague-generators"
     },
     {
-      "confidence": "documented",
-      "from": "relic-3",
-      "rel": "boosts",
-      "source": "wiki:Relics",
-      "to": "attack-power"
-    },
-    {
       "confidence": "uncertain",
       "from": "gold",
       "note": "Relic upgrade level scales with lifetime gold",
@@ -26791,11 +26873,11 @@
     },
     {
       "confidence": "documented",
-      "from": "tarot-challenge-the-star",
+      "from": "singular-zodiacs",
       "note": "Perform a Singularity with an Uncommon+ Singular Zodiac",
       "rel": "requires",
       "source": "wiki:Tarot",
-      "to": "singular-zodiacs"
+      "to": "tarot-challenge-the-star"
     },
     {
       "confidence": "documented",

@@ -1,4 +1,7 @@
-from atlas.models import Dataset, Edge, Node, Suppression
+from collections.abc import Sequence
+from typing import Any
+
+from atlas.models import Dataset, Edge, GameData, GameNode, Node, Suppression
 from atlas.problems import Problem
 
 EdgeKey = tuple[str, str, str]
@@ -15,7 +18,9 @@ def _edge_key(edge: Edge | Suppression) -> EdgeKey:
     return (edge.from_, edge.to, str(edge.rel))
 
 
-def _duplicate_node_problems(nodes: list[Node], path: str | None) -> list[Problem]:
+def _duplicate_node_problems(
+    nodes: Sequence[Node | GameNode], path: str | None
+) -> list[Problem]:
     """Report a node id that repeats within a single input file.
 
     `path` names the file being scanned and is carried on each Problem. These
@@ -54,19 +59,46 @@ def _duplicate_node_problems(nodes: list[Node], path: str | None) -> list[Proble
     return problems
 
 
-def _overlay(base: Node, override: Node) -> Node:
-    """Apply only the fields the override actually set.
+def _game_layer(
+    game: GameData,
+    fields: dict[str, dict[str, Any]],
+    curated_ids: set[str],
+    game_path: str | None,
+) -> tuple[dict[str, dict[str, Any]], list[Problem]]:
+    """Overlay the game's names and descriptions onto `fields` in place.
 
-    Pydantic defaults are indistinguishable from explicit values on the model
-    itself, so `model_fields_set` is the only way to tell "the curated file
-    said confidence: documented" from "the curated file said nothing". Without
-    it every curated node would silently reset the derived node's confidence
-    and wiki page to their defaults.
+    A game entity no generated node has is created here when the entry names
+    its system and kind. One that only a curated node has is returned instead,
+    to be applied under that node, so a curated-only node keeps its place in
+    the curated file's order.
     """
-    data = base.model_dump()
-    for field in override.model_fields_set:
-        data[field] = getattr(override, field)
-    return Node.model_validate(data)
+    under_curated: dict[str, dict[str, Any]] = {}
+    problems: list[Problem] = []
+    for entry in game.nodes:
+        data = fields.get(entry.id)
+        if data is None and entry.system is not None and entry.kind is not None:
+            data = fields[entry.id] = {
+                "id": entry.id,
+                "system": entry.system,
+                "kind": entry.kind,
+            }
+        elif data is None and entry.id in curated_ids:
+            data = under_curated[entry.id] = {}
+        elif data is None:
+            problems.append(Problem(
+                severity="warning",
+                message=(
+                    f"game entry '{entry.id}' matches no node and names no "
+                    f"system and kind to create one — rerun `atlas game`"
+                ),
+                line=entry.line,
+                path=game_path,
+            ))
+            continue
+        data["name"] = entry.name
+        if entry.description is not None:
+            data["description"] = entry.description
+    return under_curated, problems
 
 
 def merge(
@@ -74,34 +106,54 @@ def merge(
     curated: Dataset,
     derived_path: str | None = None,
     curated_path: str | None = None,
+    game: GameData | None = None,
+    game_path: str | None = None,
 ) -> tuple[Dataset, list[Problem]]:
-    """Combine the generated dataset with the curated one. Curated wins.
+    """Combine the generated dataset, the game's facts and the curated dataset.
 
-    `derived` is rewritten in full by every `atlas extract` run, so nothing in
-    it is durable; `curated` survives, which is why it holds the last word on
-    every field, and why `suppress` exists to delete generated edges outright.
+    Precedence is derived < game < curated. `derived` is rewritten in full by
+    every `atlas extract` run, so nothing in it is durable; `curated` survives,
+    which is why it holds the last word on every field, and why `suppress`
+    exists to delete generated edges outright. `game` sits between: it is the
+    game's own text, so it corrects a wiki name, but a curator still wins.
+    It carries nodes only, never edges.
 
-    `derived_path` and `curated_path` name the files the two datasets were read
-    from. They are only used to label problems, so they are optional — a caller
-    that omits them gets problems with no path and leaves the choice to whoever
-    renders them.
+    Nodes merge field by field. Pydantic defaults are indistinguishable from
+    explicit values on the model itself, so a curated node contributes only
+    its `model_fields_set` — the only way to tell "the curated file said
+    confidence: documented" from "the curated file said nothing". Without it
+    every curated node would silently reset the derived node's confidence and
+    wiki page to their defaults.
+
+    `derived_path`, `curated_path` and `game_path` name the files the inputs
+    were read from. They are only used to label problems, so they are optional
+    — a caller that omits them gets problems with no path and leaves the choice
+    to whoever renders them.
 
     Returns the merged dataset and any problems the merge itself found: a node
-    id repeated within one file (error), and a suppression that matched no edge
-    (warning).
+    id repeated within one file (error), a suppression that matched no edge
+    (warning), and a game entry that matched no node (warning).
     """
     # Collected before the dicts below collapse each id to one record, which is
-    # also the last moment at which the two inputs can still be told apart.
-    problems = _duplicate_node_problems(
-        derived.nodes, derived_path
-    ) + _duplicate_node_problems(curated.nodes, curated_path)
+    # also the last moment at which the inputs can still be told apart.
+    problems = (
+        _duplicate_node_problems(derived.nodes, derived_path)
+        + _duplicate_node_problems(curated.nodes, curated_path)
+        + _duplicate_node_problems(game.nodes if game else [], game_path)
+    )
 
-    nodes: dict[str, Node] = {}
-    for node in derived.nodes:
-        nodes[node.id] = node.model_copy(update={"line": None})
+    # model_dump drops `line`, so a generated record never keeps a line number.
+    fields = {node.id: node.model_dump() for node in derived.nodes}
+    under_curated: dict[str, dict[str, Any]] = {}
+    if game is not None:
+        under_curated, game_problems = _game_layer(
+            game, fields, curated.node_ids(), game_path
+        )
+        problems += game_problems
     for node in curated.nodes:
-        existing = nodes.get(node.id)
-        nodes[node.id] = _overlay(existing, node) if existing is not None else node
+        data = fields.setdefault(node.id, under_curated.pop(node.id, {}))
+        data.update({name: getattr(node, name) for name in node.model_fields_set})
+    nodes = [Node.model_validate(data) for data in fields.values()]
 
     edges: dict[EdgeKey, Edge] = {}
     for edge in derived.edges:
@@ -141,7 +193,7 @@ def merge(
 
     dataset = Dataset(
         systems=curated.systems,
-        nodes=list(nodes.values()),
+        nodes=nodes,
         edges=[e for key, e in edges.items() if key not in suppressed],
     )
     return dataset, problems

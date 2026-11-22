@@ -86,6 +86,8 @@ export interface GraphNode {
   wiki?: string;
   confidence?: NodeConfidence;
   effects?: GraphEffect[];
+  // The game's own text, with its runtime numbers worded ("by a multiplier").
+  description?: string;
 }
 
 export interface GraphEdge {

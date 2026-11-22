@@ -284,6 +284,11 @@ body {
   font-size: 17px;
 }
 
+.nodecard__description {
+  margin: 0 0 10px;
+  font-size: 13px;
+}
+
 .nodecard__heading {
   margin: 16px 0 6px;
   font-size: 12px;

@@ -1,4 +1,5 @@
 import json
+import shutil
 from pathlib import Path
 
 import pytest
@@ -19,6 +20,10 @@ from atlas.game import (
     read_install,
     write_outputs,
 )
+from atlas.gamemap import GAME_FILE_REL_PATH, clean
+from atlas.loader import load_game
+
+ROOT = Path(__file__).resolve().parents[1]
 
 SHARED = {
     11: {
@@ -205,13 +210,24 @@ def test_write_outputs_is_stable_and_lf(tmp_path):
 )
 def test_real_install(tmp_path):
     pytest.importorskip("UnityPy")
+    (tmp_path / "data").mkdir()
+    for name in ("relationships.yaml", "derived.yaml"):
+        shutil.copy(ROOT / "data" / name, tmp_path / "data" / name)
     assert main(["game", "--root", str(tmp_path)]) == 0
-    strings = json.loads((tmp_path / STRINGS_REL_PATH).read_text(encoding="utf-8"))
-    assert strings["strings"]["UNI_RELIC_NAME_0"] == "Silver Coin"
+    # Checked against the same run's own dump rather than pinned to a name or a
+    # count, so a game patch cannot break it; the committed-graph contract test
+    # owns the exact relic count.
+    strings = json.loads(
+        (tmp_path / STRINGS_REL_PATH).read_text(encoding="utf-8")
+    )["strings"]
     catalog = yaml.safe_load((tmp_path / CATALOG_REL_PATH).read_text(encoding="utf-8"))
     relics = catalog["families"]["UNI_RELIC"]
-    assert relics[0] == {
-        "index": 0,
-        "name": "Silver Coin",
-        "desc": strings["strings"]["UNI_RELIC_DESC_0"],
-    }
+    assert relics
+    for entry in relics:
+        index = entry["index"]
+        assert entry["name"] == strings.get(f"UNI_RELIC_NAME_{index}")
+        assert entry["desc"] == strings.get(f"UNI_RELIC_DESC_{index}")
+
+    game = load_game(tmp_path / GAME_FILE_REL_PATH)
+    mapped = {n.id: n.name for n in game.nodes if n.id.startswith("relic-")}
+    assert mapped == {f"relic-{e['index'] + 1}": clean(e["name"]) for e in relics}

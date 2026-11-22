@@ -78,6 +78,9 @@ class Node(BaseModel):
     cost: str | None = None
     confidence: NodeConfidence = NodeConfidence.DOCUMENTED
     effects: list[Effect] = Field(default_factory=list)
+    # The game's own description, from data/game.yaml. `atlas game` words the
+    # numbers the game fills in at runtime ("by x{0}" -> "by a multiplier").
+    description: str | None = None
     # Other names the wiki uses for the same entity. Read by
     # extract/vocab.py to build the resolver's vocabulary, which is the only
     # consumer — an alias is matching input, not display text.
@@ -129,3 +132,25 @@ class Dataset(BaseModel):
 
     def system_ids(self) -> set[str]:
         return {s.id for s in self.systems}
+
+
+class GameNode(BaseModel):
+    """One entity's facts from data/game.yaml, keyed by the node id it maps to."""
+
+    model_config = ConfigDict(extra="forbid")
+
+    id: str
+    name: str
+    description: str | None = None
+    # Set only on an entity no node matched when `atlas game` ran: what the
+    # build needs to create the node, since no other file describes it.
+    system: str | None = None
+    kind: Kind | None = None
+    line: int | None = Field(default=None, exclude=True)
+
+
+class GameData(BaseModel):
+    model_config = ConfigDict(extra="forbid")
+
+    buildid: str | None = None
+    nodes: list[GameNode] = Field(default_factory=list)

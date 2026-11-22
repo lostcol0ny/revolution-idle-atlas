@@ -466,14 +466,15 @@ def test_singularity_milestones_land_in_the_table_they_came_from(graph: dict):
     assert "Loop Feeds Loop" in by_system["singularity-milestones-singularity"]
     assert "Quantum Dust" in by_system["singularity-milestones-atoms"]
     assert "Full Deck" in by_system["singularity-milestones-progression"]
-    assert len(by_system["singularity-milestones-singularity"]) == 11
+    assert len(by_system["singularity-milestones-singularity"]) == 12
     assert len(by_system["singularity-milestones-progression"]) == 8
 
-    # The wiki files `One Hundred` under the Singularity table; the owner's
-    # reading of the live game puts it under Atoms, and a curated overlay moves
-    # it there. Pinned because an overlay that stops matching the swept id
-    # silently hands the row back to the wrong table.
-    assert "One Hundred" in by_system["singularity-milestones-atoms"]
+    # `One Hundred` is a Singularity milestone, where the wiki files it too. A
+    # curated overlay once moved it to Atoms, so this table now holds 12 names
+    # rather than 11. Pinned because the curated record restates the system,
+    # and an overlay that stops matching the swept id would go quiet.
+    assert "One Hundred" in by_system["singularity-milestones-singularity"]
+    assert "One Hundred" not in by_system["singularity-milestones-atoms"]
 
     # What is left on the layer itself has to be layer-level, or the split only
     # moved some of the content.
@@ -774,3 +775,19 @@ def test_no_er_upgrade_boosts_the_resource_it_consumes(graph: dict):
         ("singularity-milestone-virusologist", "virus-essence"),
     }
     assert backwards & {(e["from"], e["to"]) for e in graph["edges"]} == set()
+
+
+def test_game_file_names_and_describes_its_nodes(graph: dict):
+    # data/game.yaml sits between derived and curated: every relic it maps must
+    # reach the artifact under the game's own name, which is how the wiki's
+    # "Magestic Halberd" becomes the game's "Majestic Halberd".
+    game = _load_yaml("game.yaml")
+    by_id = {n["id"]: n for n in graph["nodes"]}
+    relics = [n for n in game["nodes"] if n["id"].startswith("relic-")]
+    assert len(relics) == 75
+    for entry in relics:
+        node = by_id[entry["id"]]
+        number = entry["id"].removeprefix("relic-")
+        assert node["name"] == f"Relic {number} ({entry['name']})"
+        assert node["description"] == entry["description"]
+    assert by_id["relic-20"]["name"] == "Relic 20 (Majestic Halberd)"
