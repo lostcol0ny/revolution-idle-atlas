@@ -12704,7 +12704,7 @@
     },
     {
       "confidence": "documented",
-      "description": "Multiply IP gain by x{0} (total: x{1})",
+      "description": "Multiply IP gain by a multiplier",
       "effects": [
         {
           "text": "IP Gain",
@@ -12719,7 +12719,7 @@
     },
     {
       "confidence": "documented",
-      "description": "Increase Ascension Power multiplier by +{0} (total: x{1})",
+      "description": "Increase Ascension Power multiplier by an amount",
       "effects": [
         {
           "text": "Ascend Power",
@@ -12734,7 +12734,7 @@
     },
     {
       "confidence": "documented",
-      "description": "Increase Star Base multiplier by +{0} (total: x{1})",
+      "description": "Increase Star Base multiplier by an amount",
       "effects": [
         {
           "text": "Star Base Mult",
@@ -12749,7 +12749,7 @@
     },
     {
       "confidence": "documented",
-      "description": "Increase EP gain multiplier by +{0} (total: x{1})",
+      "description": "Increase EP gain multiplier by an amount",
       "effects": [
         {
           "text": "EP Gain",
@@ -12764,7 +12764,7 @@
     },
     {
       "confidence": "documented",
-      "description": "Increase Gen. Power Exponent by +{0} (total: +{1})",
+      "description": "Increase Gen. Power Exponent by an amount",
       "effects": [
         {
           "text": "Gen. Power Exponent",
@@ -12779,7 +12779,7 @@
     },
     {
       "confidence": "documented",
-      "description": "Increase Common Exponent by +{0} (total: +{1})",
+      "description": "Increase Common Exponent by an amount",
       "effects": [
         {
           "text": "Common Exponent",

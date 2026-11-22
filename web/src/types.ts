@@ -86,7 +86,7 @@ export interface GraphNode {
   wiki?: string;
   confidence?: NodeConfidence;
   effects?: GraphEffect[];
-  // The game's own text; `{0}` placeholders are runtime values, kept verbatim.
+  // The game's own text, with its runtime numbers worded ("by a multiplier").
   description?: string;
 }
 

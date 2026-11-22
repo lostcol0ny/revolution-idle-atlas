@@ -257,22 +257,22 @@ nodes:
   description: You only have four colors
 - id: rp-upgrade-1
   name: RP Upgrade 1 (IP Gain)
-  description: 'Multiply IP gain by x{0} (total: x{1})'
+  description: Multiply IP gain by a multiplier
 - id: rp-upgrade-2
   name: RP Upgrade 2 (Ascension Power)
-  description: 'Increase Ascension Power multiplier by +{0} (total: x{1})'
+  description: Increase Ascension Power multiplier by an amount
 - id: rp-upgrade-3
   name: RP Upgrade 3 (Star Base Mult)
-  description: 'Increase Star Base multiplier by +{0} (total: x{1})'
+  description: Increase Star Base multiplier by an amount
 - id: rp-upgrade-4
   name: RP Upgrade 4 (EP Gain)
-  description: 'Increase EP gain multiplier by +{0} (total: x{1})'
+  description: Increase EP gain multiplier by an amount
 - id: rp-upgrade-5
   name: RP Upgrade 5 (Gen Power Exponent)
-  description: 'Increase Gen. Power Exponent by +{0} (total: +{1})'
+  description: Increase Gen. Power Exponent by an amount
 - id: rp-upgrade-6
   name: RP Upgrade 6 (Common Exponent)
-  description: 'Increase Common Exponent by +{0} (total: +{1})'
+  description: Increase Common Exponent by an amount
 - id: plague-er-base-spread-power
   name: Base Spread Power
   description: Increases the base Spread Power gained when crafting an ER

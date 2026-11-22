@@ -26,7 +26,22 @@ GAME_FILE_HEADER = (
     "# still wins every field. Do not hand-edit: the next run overwrites it.\n"
 )
 
-_TAG = re.compile(r"<[^>]*>")
+# Unity rich text: <color=#fff>, </color>, <sprite name=x>, <pos=5%>, <s>. Only
+# a tag-shaped run is dropped, so prose such as "<==" survives.
+_TAG = re.compile(r"</?[A-Za-z][\w-]*(?:[= ][^<>]*)?>")
+_LINE_BREAK = re.compile(r"<br\s*/?>", re.IGNORECASE)
+_PLACEHOLDER = r"\{\d+(?::[^{}]*)?\}"
+# A running total such as "(total: x{1})" is the player's state, not a
+# description of the entity, so it goes rather than being reworded.
+_RUNNING_TOTAL = re.compile(rf"\s*\((?:[^():]*:\s*)?[x+^-]?{_PLACEHOLDER}%?\)")
+# Most specific shape first: "x{0}%" is still a multiplier, "+{0}%" a percentage.
+_PHRASES = (
+    (re.compile(rf"(?<![A-Za-z])x{_PLACEHOLDER}%?"), "a multiplier"),
+    (re.compile(rf"\^{_PLACEHOLDER}"), "an exponent"),
+    (re.compile(rf"[+-]?{_PLACEHOLDER}%"), "a percentage"),
+    (re.compile(rf"[+-]{_PLACEHOLDER}"), "an amount"),
+    (re.compile(_PLACEHOLDER), "a value"),
+)
 # "#1 Ionized Speed", or "#1 IP Gain ({0})" where the game appends the level.
 _NUMBERED = re.compile(r"#(?P<number>\d+)\s+(?P<title>.+?)(?:\s*\(\{\d+\}\))?")
 _NON_ALNUM = re.compile(r"[^0-9a-z]")
@@ -83,7 +98,19 @@ class FamilyReport:
 
 def clean(text: str) -> str:
     """Drop Unity rich-text tags and collapse whitespace."""
-    return " ".join(_TAG.sub("", text).split())
+    return " ".join(_TAG.sub("", _LINE_BREAK.sub(" ", text)).split())
+
+
+def readable(text: str) -> str:
+    """Clean a description and word its runtime placeholders.
+
+    The game fills `{0}` in at runtime, so a bare token tells a reader
+    nothing; the symbol beside it says what sort of number it is.
+    """
+    text = _RUNNING_TOTAL.sub("", clean(text))
+    for pattern, phrase in _PHRASES:
+        text = pattern.sub(phrase, text)
+    return text
 
 
 def _norm(name: str) -> str:
@@ -168,7 +195,7 @@ def _map_family(
             GameNode(
                 id=node_id,
                 name=name,
-                description=clean(desc) if desc else None,
+                description=readable(desc) if desc else None,
                 system=family.system if existing is None else None,
                 kind=family.add_as if existing is None else None,
             )

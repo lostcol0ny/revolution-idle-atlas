@@ -1,8 +1,10 @@
 import shutil
 from pathlib import Path
 
+import pytest
+
 from atlas.cli import main
-from atlas.gamemap import GAME_FILE_REL_PATH, map_catalog, to_yaml
+from atlas.gamemap import GAME_FILE_REL_PATH, map_catalog, readable, to_yaml
 from atlas.loader import load_game
 from atlas.models import Kind, Node
 
@@ -68,16 +70,49 @@ def test_numbered_names_verify_by_number_and_compose_a_label():
             _entry(0, "<color=#D8BBF4>#1</color> Ionized Speed", "Promotions disabled"),
             _entry(1, "<color=#D8BBF4>#3</color> Out Of Order"),
         ],
-        "ETR_RP_UPGRADE": [_entry(0, "#1 IP Gain ({0})", "Multiply IP gain by x{0}")],
+        "ETR_RP_UPGRADE": [
+            _entry(0, "#1 IP Gain ({0})", "Multiply IP gain by x{0} (total: x{1})")
+        ],
     }
     game, reports, _ = map_catalog(families, nodes, None)
 
     assert [(n.id, n.name, n.description) for n in game.nodes] == [
         ("infinity-challenge-1", "Infinity Challenge 1 (Ionized Speed)", "Promotions disabled"),
-        # Placeholders are the game's runtime values and are kept verbatim.
-        ("rp-upgrade-1", "RP Upgrade 1 (IP Gain)", "Multiply IP gain by x{0}"),
+        # Descriptions are reworded where game.yaml is written, not in the UI.
+        ("rp-upgrade-1", "RP Upgrade 1 (IP Gain)", "Multiply IP gain by a multiplier"),
     ]
     assert reports["INF_CHL"].unmatched == ["#1 '#3 Out Of Order': does not read as #2"]
+
+
+@pytest.mark.parametrize(
+    ("raw", "expected"),
+    [
+        ("Multiply IP gain by x{0} (total: x{1})", "Multiply IP gain by a multiplier"),
+        (
+            "Increase Common Exponent by +{0} (total: +{1})",
+            "Increase Common Exponent by an amount",
+        ),
+        ("Raises Gold gain to ^{0}", "Raises Gold gain to an exponent"),
+        ("Gain +{0}% more VP", "Gain a percentage more VP"),
+        ("Gain {0:F2}% more VP", "Gain a percentage more VP"),
+        ("Costs are reduced by -{1}", "Costs are reduced by an amount"),
+        # Awkward before a noun, but only achievements use this shape and they
+        # are not mapped.
+        ("Reach {0} Score", "Reach a value Score"),
+        # A parenthesis holding more than a number is prose and stays.
+        ("Boost (per level: x{0}, capped)", "Boost (per level: a multiplier, capped)"),
+    ],
+)
+def test_readable_words_runtime_placeholders(raw, expected):
+    assert readable(raw) == expected
+
+
+def test_readable_strips_rich_text_but_not_prose_brackets():
+    raw = (
+        "<color=#D8BBF4>Ritual</color>:<br><pos=5%>Rotate <s>twice</s> "
+        "<sprite name=troll> <gradient=\"Fire\">x{0}</gradient> <== here"
+    )
+    assert readable(raw) == "Ritual: Rotate twice a multiplier <== here"
 
 
 def test_named_families_match_by_normalised_name():

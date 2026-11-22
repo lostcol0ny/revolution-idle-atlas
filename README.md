@@ -146,10 +146,14 @@ git-ignored.
 `atlas game` then maps catalog families onto the nodes of the current
 `data/derived.yaml` and `data/relationships.yaml`, and writes the result to
 `data/game.yaml`, which **is** committed. Each entry is a node `id`, the game's
-`name`, and its `description` (Unity rich-text tags stripped; `{0}` placeholders
-kept, since they are values the game fills in at runtime), under the Steam
-`buildid` it was read from. `atlas build` overlays the name and description
-field by field on the generated node, and a curated field still wins.
+`name`, and its `description`, under the Steam `buildid` it was read from.
+Unity rich-text tags are stripped. The numbers the game fills in at runtime are
+worded by the sign beside them: `x{0}` becomes "a multiplier", `^{0}` "an
+exponent", `{0}%` "a percentage", `+{0}` "an amount", and a bare `{0}` "a
+value"; a running total such as `(total: x{1})` is dropped, since it is the
+player's state rather than the entity's. `atlas build` overlays the name and
+description field by field on the generated node, and a curated field still
+wins.
 
 Only families with a clear home in the graph are mapped:
 
@@ -287,7 +291,7 @@ absent" and "no value" as the same thing.
 | `confidence` | enum | no | Defaults to `documented`. |
 | `effects` | array | no | What the entity does. Omitted when empty. |
 | `aliases` | array of string | no | Other names the wiki uses for this entity. Matching input, not display text. Omitted when empty. |
-| `description` | string | no | The game's own description, from `data/game.yaml`. May contain `{0}`-style placeholders the game fills in at runtime. |
+| `description` | string | no | The game's own description, from `data/game.yaml`. Runtime numbers are worded ("by a multiplier"), never `{0}`. |
 
 `system` is a **free string**, deliberately. The taxonomy is data, not an enum:
 the declared systems live in this document's own `systems` array, and a

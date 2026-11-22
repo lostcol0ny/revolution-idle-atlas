@@ -78,9 +78,8 @@ class Node(BaseModel):
     cost: str | None = None
     confidence: NodeConfidence = NodeConfidence.DOCUMENTED
     effects: list[Effect] = Field(default_factory=list)
-    # The game's own description, as its English strings write it. Supplied
-    # by data/game.yaml; `{0}`-style placeholders are values the game fills in
-    # at runtime and are kept verbatim.
+    # The game's own description, from data/game.yaml. `atlas game` words the
+    # numbers the game fills in at runtime ("by x{0}" -> "by a multiplier").
     description: str | None = None
     # Other names the wiki uses for the same entity. Read by
     # extract/vocab.py to build the resolver's vocabulary, which is the only
