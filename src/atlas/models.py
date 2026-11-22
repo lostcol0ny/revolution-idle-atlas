@@ -11,6 +11,7 @@ class Kind(StrEnum):
     TAROT_CARD = "tarot-card"
     UPGRADE = "upgrade"
     GROUP = "group"
+    ACHIEVEMENT = "achievement"
 
 
 class Rel(StrEnum):
@@ -143,6 +144,10 @@ class GameNode(BaseModel):
     # None when the game only describes the entity: the node keeps its name.
     name: str | None = None
     description: str | None = None
+    # What the entity does, when the game words that apart from its
+    # description: an achievement's reward. The description is then what the
+    # entity asks of the player rather than what it does.
+    effects: list[str] = Field(default_factory=list)
     # Set only on an entity no node matched when `atlas game` ran: what the
     # build needs to create the node, since no other file describes it.
     system: str | None = None

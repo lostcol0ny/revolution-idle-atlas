@@ -23,11 +23,14 @@ from atlas.game import (
     write_outputs,
 )
 from atlas.gamemap import (
+    ACHIEVEMENT_PREFIX,
     GAME_FILE_REL_PATH,
     grade_thresholds,
+    map_achievements,
     map_catalog,
     map_particles,
     map_strings,
+    wiki_achievements,
 )
 from atlas.gamemap import to_yaml as game_to_yaml
 from atlas.loader import SchemaError, load_dataset, load_game
@@ -300,6 +303,15 @@ def _game(root: Path, install: Path) -> int:
     described, string_reports = map_strings(dump["strings"], dataset.nodes)
     game.nodes.extend(described)
     reports.update(string_reports)
+    achievements_page = root / "data" / "raw" / "Achievements.wikitext"
+    achievements, reports[ACHIEVEMENT_PREFIX] = map_achievements(
+        dump["strings"],
+        dataset.nodes,
+        wiki_achievements(achievements_page.read_text(encoding="utf-8"))
+        if achievements_page.is_file()
+        else {},
+    )
+    game.nodes.extend(achievements)
     (root / GAME_FILE_REL_PATH).write_text(
         game_to_yaml(game), encoding="utf-8", newline="\n"
     )
@@ -311,6 +323,8 @@ def _game(root: Path, install: Path) -> int:
         )
         for line in report.renamed:
             print(f"    renamed {line}")
+        if report.left_out:
+            print(f"    left out {report.left_out} with no reward")
         for line in report.unmatched[:UNMATCHED_SHOWN]:
             print(f"    unmatched {line}")
         if len(report.unmatched) > UNMATCHED_SHOWN:
