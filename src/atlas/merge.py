@@ -84,7 +84,7 @@ def _game_layer(
     curated_ids: set[str],
     game_path: str | None,
 ) -> tuple[dict[str, dict[str, Any]], list[Problem]]:
-    """Overlay the game's names and descriptions onto `fields` in place.
+    """Overlay the game's names, descriptions and effects onto `fields` in place.
 
     A game entity no generated node has is created here when the entry names
     its system and kind. One that only a curated node has is returned instead,
@@ -117,6 +117,8 @@ def _game_layer(
         data["name"] = entry.name
         if entry.description is not None:
             data["description"] = entry.description
+        if entry.effects:
+            data["effects"] = [{"text": text} for text in entry.effects]
     return under_curated, problems
 
 

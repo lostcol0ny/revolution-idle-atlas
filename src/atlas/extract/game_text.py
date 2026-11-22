@@ -3,7 +3,7 @@
 Read by `atlas extract` rather than by `atlas game`, so the edges follow the
 current vocabulary and CI rebuilds them without a game install.
 
-Two kinds of edge come out:
+Three kinds of edge come out:
 
 - Every member of a Particles family is joined to the node it hangs off
   (`particles.MEMBER_LINKS`). The game's help text states these plainly, so they
@@ -11,7 +11,11 @@ Two kinds of edge come out:
 - The description of a node only the game describes — one `atlas game`
   created, carrying `system` — is matched like wiki effect prose. A node a wiki
   page already describes keeps the wiki's effects as its only matched text, so
-  one entity is never matched twice in two wordings.
+  one entity is never matched twice in two wordings. When the entry carries
+  effects (an achievement's reward), those are matched instead.
+- An entry with effects has a description that says what it asks of the
+  player. A goal that is a plain threshold ("Reach 5 Infinities") makes what
+  it names a `requires` of the entry.
 """
 
 import re
@@ -19,7 +23,8 @@ from dataclasses import replace
 
 from atlas.extract.refs import Reference, Vocabulary, resolve
 from atlas.extract.result import ExtractResult
-from atlas.models import Edge, EdgeConfidence, GameData, Rel
+from atlas.extract.sweep import is_plain_threshold
+from atlas.models import Edge, EdgeConfidence, GameData, Kind, Rel
 from atlas.particles import GRADES, MEMBER_LINKS, grade_node
 
 SOURCE = "game"
@@ -34,6 +39,21 @@ _IMPROVED_BY = re.compile(r"\(\s*improved by\b([^()]*)\)", re.IGNORECASE)
 # Luck"); it never changes it. The grade's own `requires` edge already says
 # the bonus depends on it.
 _GRADE_IDS = frozenset(grade_node(grade) for grade in GRADES)
+# "Reach 5 Infinities", "Have 2,025+ Luck": the verb goes, and what is left
+# must pass the sweep's plain-threshold rule, so "Reach a score of e5e10 in
+# Dilation" and "Have Sparks of all 10 colors" make no edge.
+_GOAL_VERB = re.compile(r"^(?:reach|have)\s+(?:at least\s+)?", re.IGNORECASE)
+# "Unlocks macro block for Dilation": a macro block scripts what it names for
+# the player's macros, and changes nothing about it.
+_MACRO_BLOCK = re.compile(r"\bmacro blocks?\b", re.IGNORECASE)
+
+
+def _threshold(goal: str) -> str | None:
+    verb = _GOAL_VERB.match(goal)
+    if verb is None:
+        return None
+    rest = goal[verb.end() :]
+    return rest if is_plain_threshold(rest) else None
 
 
 def _as_input(reference: Reference) -> Reference:
@@ -64,10 +84,22 @@ def extract(game: GameData, vocabulary: Vocabulary) -> ExtractResult:
         for prefix, parent, rel in MEMBER_LINKS:
             if entry.id.startswith(prefix):
                 edges.append(Edge(from_=parent, to=entry.id, rel=rel, source=SOURCE))
-        if entry.system is None or entry.description is None:
+        if entry.system is None:
             continue
+        # An achievement's description is its goal ("Reach 5 Infinities"), which
+        # the achievement never raises; only its reward may boost anything.
+        goal_only = entry.kind == Kind.ACHIEVEMENT or bool(entry.effects)
+        if goal_only:
+            texts = [
+                sentence
+                for effect in entry.effects
+                for sentence in _SENTENCE_BREAK.split(effect)
+                if not _MACRO_BLOCK.search(sentence)
+            ]
+        else:
+            texts = [entry.description] if entry.description else []
         seen: set[tuple[str, str]] = set()
-        for reference in _references(entry.description, vocabulary):
+        for reference in (r for text in texts for r in _references(text, vocabulary)):
             if reference.target_id in _GRADE_IDS or reference.target_id == entry.id:
                 continue
             origin, target = reference.endpoints(entry.id)
@@ -87,4 +119,21 @@ def extract(game: GameData, vocabulary: Vocabulary) -> ExtractResult:
                     confidence=EdgeConfidence.UNCERTAIN,
                 )
             )
+        goal = _threshold(entry.description) if goal_only and entry.description else None
+        if goal is None:
+            continue
+        # A grade is a fine prerequisite ("Reach Tetr 1+"); it is excluded
+        # above only because a grade bonus reads its grade.
+        prerequisites = dict.fromkeys(r.target_id for r in resolve(goal, vocabulary))
+        prerequisites.pop(entry.id, None)
+        edges += [
+            Edge(
+                from_=prerequisite,
+                to=entry.id,
+                rel=Rel.REQUIRES,
+                source=SOURCE,
+                confidence=EdgeConfidence.UNCERTAIN,
+            )
+            for prerequisite in prerequisites
+        ]
     return ExtractResult(edges=edges)

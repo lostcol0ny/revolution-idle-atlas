@@ -44,6 +44,7 @@ export const KNOWN_SYSTEMS = [
   'particles',
   'particles-grades',
   'epsilon-tree',
+  'achievements',
 ] as const;
 export type KnownSystem = (typeof KNOWN_SYSTEMS)[number];
 export type System = string;
@@ -56,6 +57,7 @@ export const KINDS = [
   'tarot-card',
   'upgrade',
   'group',
+  'achievement',
 ] as const;
 export type Kind = (typeof KINDS)[number];
 

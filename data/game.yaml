@@ -599,3 +599,1048 @@ nodes:
 - id: particles-spark-yellow
   name: Yellow Spark
   description: 'Gold Gain: an exponent'
+- id: achievement-1
+  name: Achievement 1 (A Million)
+  description: Reach 1,000,000 Score
+  effects:
+  - Unlock Leaderboard
+  system: achievements
+  kind: achievement
+- id: achievement-4
+  name: Achievement 4 (Let's Prestige)
+  description: Prestige for the first time
+  effects:
+  - Unlock multi-buy
+  system: achievements
+  kind: achievement
+- id: achievement-10
+  name: Achievement 10 (Color Spectrum)
+  description: Buy White
+  effects:
+  - x1.05 Lap Speed
+  system: achievements
+  kind: achievement
+- id: achievement-15
+  name: Achievement 15 (Update When?)
+  description: Play for 5 hours (unscaled playtime)
+  effects:
+  - x1.05 to all Mult gains
+  system: achievements
+  kind: achievement
+- id: achievement-20
+  name: Achievement 20 (Really Good Job)
+  description: Make all Promotions at least level 10
+  effects:
+  - Promotion 4 is slightly stronger
+  system: achievements
+  kind: achievement
+- id: achievement-21
+  name: Achievement 21 (You Don't Need It)
+  description: Promote without Prestiging
+  effects:
+  - P.Mult gain ^1.01
+  system: achievements
+  kind: achievement
+- id: achievement-27
+  name: Achievement 27 (Hell Yeah)
+  description: Reach the 6th Ascension for Red, Orange, and Yellow
+  effects:
+  - x1.6 to the first 3 Colors' Mult gains
+  system: achievements
+  kind: achievement
+- id: achievement-28
+  name: Achievement 28 (Real Boss)
+  description: Make all Promotions at least level 50
+  effects:
+  - x1.1 to all Mult gains
+  system: achievements
+  kind: achievement
+- id: achievement-29
+  name: Achievement 29 (Backwards)
+  description: Make White Mult > Pink Mult > Purple Mult, etc.
+  effects:
+  - A fading sense of accomplishment
+  - Dilation Tree TOP-4, MID-4, and BOT-4 upgrades are 30% stronger
+  system: achievements
+  kind: achievement
+- id: achievement-35
+  name: Achievement 35 (QOL)
+  description: Unlock Automation
+  effects:
+  - x1.1 to the 1st Generator
+  system: achievements
+  kind: achievement
+- id: achievement-36
+  name: Achievement 36 (Many of Them)
+  description: Reach 5 Infinities
+  effects:
+  - x2 IP gain
+  system: achievements
+  kind: achievement
+- id: achievement-37
+  name: Achievement 37 (Generator Power)
+  description: Reach a value GP
+  effects:
+  - x1.1 to the 1st Generator
+  system: achievements
+  kind: achievement
+- id: achievement-39
+  name: Achievement 39 (Not So Promoted)
+  description: Reach Infinity with all Promotions below level 20
+  effects:
+  - Promotion 4 is stronger
+  system: achievements
+  kind: achievement
+- id: achievement-44
+  name: Achievement 44 (Four of Nine)
+  description: Complete Infinity Challenge 4
+  effects:
+  - x2 IP gain
+  system: achievements
+  kind: achievement
+- id: achievement-51
+  name: Achievement 51 (Can You Have Exactly 50?)
+  description: Have 50 Achievements
+  effects:
+  - Achievement bonus now also applies to Generators
+  system: achievements
+  kind: achievement
+- id: achievement-70
+  name: Achievement 70 (Eternal...)
+  description: Reach Eternity
+  effects:
+  - Unlocks Macro Builder
+  system: achievements
+  kind: achievement
+- id: achievement-74
+  name: Achievement 74 (Quadraeternal)
+  description: Reach Eternity 4 times
+  effects:
+  - Unlocks macro blocks for Infinity Challenges
+  system: achievements
+  kind: achievement
+- id: achievement-76
+  name: Achievement 76 (Eternally Challenging)
+  description: Unlock Eternity Challenges
+  effects:
+  - Unlocks macro block for breaking/fixing Infinity
+  system: achievements
+  kind: achievement
+- id: achievement-84
+  name: Achievement 84 (One Hundred)
+  description: Reach 100 Eternities
+  effects:
+  - Unlocks macro block for Eternity
+  system: achievements
+  kind: achievement
+- id: achievement-85
+  name: Achievement 85 (Infinity Billionaire)
+  description: Reach 1.00e9 Infinities
+  effects:
+  - Infinity Gain x2
+  system: achievements
+  kind: achievement
+- id: achievement-121
+  name: Achievement 121 (The Seed of the Tree)
+  description: Buy your first DTP
+  effects:
+  - Unlocks macro block for Dilation
+  system: achievements
+  kind: achievement
+- id: achievement-129
+  name: Achievement 129 (We All Make Mistakes)
+  description: Respec the Dilation Tree after buying 6+ DTP
+  effects:
+  - +10% to all Dilation upgrade power
+  system: achievements
+  kind: achievement
+- id: achievement-140
+  name: Achievement 140 (It's Worth It Now)
+  description: Have at least 1 TOP-4, 1 MID-4, and 1 BOT-4 Dilation Tree upgrade
+  effects:
+  - Changes the reward for Ach. 29
+  system: achievements
+  kind: achievement
+- id: achievement-161
+  name: Achievement 161 (New Global Prestige Layer)
+  description: Unite for the first time
+  effects:
+  - Keep pre-Unity automation unlocked
+  system: achievements
+  kind: achievement
+- id: achievement-162
+  name: Achievement 162 (The Age of the Sun)
+  description: Equip a Zodiac on the Sun
+  effects:
+  - Unlocks Mercury
+  system: achievements
+  kind: achievement
+- id: achievement-163
+  name: Achievement 163 (Compatibility Test)
+  description: Have 2+ Unities
+  effects:
+  - Unlocks Venus
+  system: achievements
+  kind: achievement
+- id: achievement-165
+  name: Achievement 165 (Super Achievements?)
+  description: Have 3 Zodiacs equipped
+  effects:
+  - Unlocks the Trials tab
+  system: achievements
+  kind: achievement
+- id: achievement-166
+  name: Achievement 166 (To The Moon!)
+  description: Complete the first easy trial
+  effects:
+  - Unlocks Moon
+  system: achievements
+  kind: achievement
+- id: achievement-167
+  name: Achievement 167 (More EXP Factors!)
+  description: Complete 3 trials
+  effects:
+  - Unlocks Unities EXP Factor
+  system: achievements
+  kind: achievement
+- id: achievement-168
+  name: Achievement 168 (It's getting grindy)
+  description: Have 5 unities
+  effects:
+  - Unlocks automation for AP and animals
+  system: achievements
+  kind: achievement
+- id: achievement-169
+  name: Achievement 169 (It's getting even more grindy)
+  description: Have 10 unities
+  effects:
+  - Unlocks automation for lab and RP upgrades
+  system: achievements
+  kind: achievement
+- id: achievement-170
+  name: Achievement 170 (Super-easy!)
+  description: Complete the easy trial group
+  effects:
+  - Unlocks Supernova automation and macro blocks for Eternity Challenges
+  system: achievements
+  kind: achievement
+- id: achievement-171
+  name: Achievement 171 (Is it even possible??)
+  description: Perform supernova with 0 eternities
+  effects:
+  - Unlocks supernova exp factor
+  system: achievements
+  kind: achievement
+- id: achievement-172
+  name: Achievement 172 (Leveling up)
+  description: Get Lv. 5 Zodiac (through Unity)
+  effects:
+  - Unlock Jupiter
+  system: achievements
+  kind: achievement
+- id: achievement-173
+  name: Achievement 173 (Eternity is a goal now!)
+  description: Complete the first medium trial
+  effects:
+  - x1.1 to zodiac quality
+  system: achievements
+  kind: achievement
+- id: achievement-177
+  name: Achievement 177 (Making a long run)
+  description: Have 50 DTP
+  effects:
+  - Unlocks macro blocks for the Dilation Tree
+  system: achievements
+  kind: achievement
+- id: achievement-181
+  name: Achievement 181 (Destructive Planet)
+  description: Get Lv. 10 Zodiac (through Unity)
+  effects:
+  - Unlocks Saturn
+  system: achievements
+  kind: achievement
+- id: achievement-182
+  name: Achievement 182 (More Effects)
+  description: Get Legendary+ Zodiac
+  effects:
+  - Unlocks Eternity Count Factor
+  system: achievements
+  kind: achievement
+- id: achievement-184
+  name: Achievement 184 (Apprentice Level)
+  description: Reach and obtain a Lv. 20 Zodiac (through Unity)
+  effects:
+  - Unlocks Uranus
+  system: achievements
+  kind: achievement
+- id: achievement-188
+  name: Achievement 188 (Neptunian Powers)
+  description: Get Lv. 30 Zodiac (through Unity)
+  effects:
+  - Unlocks Neptune
+  system: achievements
+  kind: achievement
+- id: achievement-189
+  name: Achievement 189 (I Don't Feel a Difference)
+  description: Reach a value score in Dilation
+  effects:
+  - Faster Auto-Ascend optimization
+  system: achievements
+  kind: achievement
+- id: achievement-190
+  name: Achievement 190 (Planet or Not?)
+  description: Get Lv. 40 Zodiac (through Unity)
+  effects:
+  - Unlocks Pluto
+  system: achievements
+  kind: achievement
+- id: achievement-191
+  name: Achievement 191 (Back to 2017)
+  description: Complete 15 trials
+  effects:
+  - Unlocks Attacks
+  system: achievements
+  kind: achievement
+- id: achievement-192
+  name: Achievement 192 (It Was a Long Ride)
+  description: Reach Attacks Level 1
+  effects:
+  - Score -> Damage Mult x10
+  system: achievements
+  kind: achievement
+- id: achievement-193
+  name: Achievement 193 (Merging Can Be Awesome)
+  description: Merge 3 Godly Zodiacs into a Divine Zodiac (or get a Divine+ Zodiac in Unity)
+  effects:
+  - Zodiac sell prices x3
+  system: achievements
+  kind: achievement
+- id: achievement-200
+  name: Achievement 200 (Inefficiently Efficient)
+  description: Generate less than 0.05 Lab pts/s, but more than 0.01 Lab pts/s
+  effects:
+  - It's useless, but you can't get achievement 201 without this one
+  system: achievements
+  kind: achievement
+- id: achievement-201
+  name: Achievement 201 (Bicentennial Completionist)
+  description: Complete the first 200 achievements
+  effects:
+  - Better formula for achievement rewards
+  system: achievements
+  kind: achievement
+- id: achievement-203
+  name: Achievement 203 (Three's Company)
+  description: Buy the third attack color
+  effects:
+  - Zodiac Quality x1.6
+  system: achievements
+  kind: achievement
+- id: achievement-205
+  name: Achievement 205 (The Wounded Healer)
+  description: Get Lv. 50 Zodiac (through Unity)
+  effects:
+  - Unlocks Chiron
+  system: achievements
+  kind: achievement
+- id: achievement-207
+  name: Achievement 207 (Nice... Level :P)
+  description: Get Lv. 69 Zodiac (through Unity)
+  effects:
+  - x1.06969 to Zodiac Quality
+  system: achievements
+  kind: achievement
+- id: achievement-218
+  name: Achievement 218 (DP Score Is Important Again)
+  description: Reach a score of a value in Dilation
+  effects:
+  - Dilation score past e5e10 boosts DP gain more
+  system: achievements
+  kind: achievement
+- id: achievement-219
+  name: Achievement 219 (Do You Feel Lucky?)
+  description: Get a Lv. 100+ Zodiac (through Unity)
+  effects:
+  - Unlocks Fortune Pars
+  system: achievements
+  kind: achievement
+- id: achievement-220
+  name: Achievement 220 (Best Rarity)
+  description: Get an Immortal Zodiac through Unity
+  effects:
+  - You can get extra rarities based on your Luck (after ~550-600+ Luck)
+  system: achievements
+  kind: achievement
+- id: achievement-226
+  name: Achievement 226 (L33T L3V3L)
+  description: Reach Attacks Level 420
+  effects:
+  - All relics are 5% more effective
+  system: achievements
+  kind: achievement
+- id: achievement-230
+  name: Achievement 230 (Dance of Fire and Flames)
+  description: Use a full Fire build (all 12 planet slots filled with Fire Zodiacs only) and reach a score of a value
+  effects:
+  - All relics are 1% more effective, all relic costs are divided by 5, and total quality for Fire Zodiacs is now raised to ^1.1
+  system: achievements
+  kind: achievement
+- id: achievement-231
+  name: Achievement 231 (Growing Mountains)
+  description: Use a full Earth build (all 12 planet slots filled with Earth Zodiacs only) and reach a value Infinities, a value IP, and a value Gen. Power Mult Gain
+  effects:
+  - All relics are 1% more effective, all relic costs are divided by 5, and total quality for Earth Zodiacs is now raised to ^1.1
+  system: achievements
+  kind: achievement
+- id: achievement-232
+  name: Achievement 232 (I Feel It in the Wind, My Dear)
+  description: Use a full Wind build (all 12 planet slots filled with Wind Zodiacs only) and reach a value Eternities and a value DP
+  effects:
+  - All relics are 1% more effective, all relic costs are divided by 5, and total quality for Wind Zodiacs is now raised to ^1.1
+  system: achievements
+  kind: achievement
+- id: achievement-233
+  name: Achievement 233 (Swimming with Sharks)
+  description: Use a full Water build (all 12 planet slots filled with Water Zodiacs only) and get an Immortal+5 Zodiac with a value+ Quality (through Unity)
+  effects:
+  - All relics are 1% more effective, all relic costs are divided by 5, and total quality for Water Zodiacs is now raised to ^1.1
+  system: achievements
+  kind: achievement
+- id: achievement-236
+  name: Achievement 236 (The Most Lucky Year!)
+  description: Have 2,025+ Luck
+  effects:
+  - x1.01 to Luck
+  system: achievements
+  kind: achievement
+- id: achievement-237
+  name: Achievement 237 (The Power of 4 Elements)
+  description: Complete all element-themed achievements (230-233)
+  effects:
+  - All relics are 1% more effective, all relic costs are divided by 10, and total quality for all Zodiacs is now raised to ^1.05
+  system: achievements
+  kind: achievement
+- id: achievement-238
+  name: Achievement 238 (Too Rare...)
+  description: Get a Zodiac with Immortal+7 rarity or higher
+  effects:
+  - Unlocks the Luck factor...
+  system: achievements
+  kind: achievement
+- id: achievement-239
+  name: Achievement 239 (Where the Hard Leveling Goes...)
+  description: Reach Attacks Level 1,000+
+  effects:
+  - 'All Relics are 1% stronger per 1K Attack Levels (0.001% per level, SC: 10%)'
+  - 'All Relics are 1% stronger per 1K Max Attack Levels (0.001% per level, SC: 10%)'
+  system: achievements
+  kind: achievement
+- id: achievement-240
+  name: Achievement 240 (3L33TArY L3V3L)
+  description: Reach Attacks Level 1,337+
+  effects:
+  - Unlocks Minerals
+  system: achievements
+  kind: achievement
+- id: achievement-242
+  name: Achievement 242 (Merge Incremental)
+  description: Merge two Minerals to get a new Level+1 Mineral
+  effects:
+  - Unlock Planet Loadouts
+  system: achievements
+  kind: achievement
+- id: achievement-247
+  name: Achievement 247 (Insane Insane Rarity)
+  description: Get an Immortal+15 Zodiac (through Unity)
+  effects:
+  - Divides all relic costs by a value
+  system: achievements
+  kind: achievement
+- id: achievement-251
+  name: Achievement 251 (This Year's Level)
+  description: Reach Attack Level 2025
+  effects:
+  - Unlocks Attack Prestige (recommended later)
+  system: achievements
+  kind: achievement
+- id: achievement-252
+  name: Achievement 252 (Sharpen Weapons)
+  description: Perform Polish Prestige
+  effects:
+  - Divides all relic costs by a value
+  system: achievements
+  kind: achievement
+- id: achievement-254
+  name: Achievement 254 (Golden Inflation)
+  description: Reach 1.08e308+ Gold
+  effects:
+  - Empowers Relic 17 by ^1.01
+  system: achievements
+  kind: achievement
+- id: achievement-259
+  name: Achievement 259 (A Cool Number)
+  description: Reach Attack Level 2,250+
+  effects:
+  - Attack Prestige is a bit stronger
+  system: achievements
+  kind: achievement
+- id: achievement-260
+  name: Achievement 260 (When Global Scalings Begin)
+  description: Get a Level 50 Mineral
+  effects:
+  - Unlocks mineral auto-set level and auto-delete automation
+  system: achievements
+  kind: achievement
+- id: achievement-265
+  name: Achievement 265 (Mega Rarities)
+  description: Get a Zodiac with Immortal+50 rarity or better (through Unity)
+  effects:
+  - You are more likely to get near-max-rarity Zodiacs
+  system: achievements
+  kind: achievement
+- id: achievement-266
+  name: Achievement 266 (Ultra Rarities)
+  description: Get a Zodiac with Immortal+100 rarity or better (through Unity)
+  effects:
+  - You are even more likely to get near-max-rarity Zodiacs
+  system: achievements
+  kind: achievement
+- id: achievement-267
+  name: Achievement 267 (This is INSANE!!!)
+  description: Complete the first insane trial
+  effects:
+  - 'PP Gain: x2'
+  system: achievements
+  kind: achievement
+- id: achievement-269
+  name: Achievement 269 (Nice... mineral ;))
+  description: Merge a Level 69 Mineral
+  effects:
+  - Unlock macro block for loading Planet Loadouts
+  system: achievements
+  kind: achievement
+- id: achievement-270
+  name: Achievement 270 (Refinery Empire)
+  description: Perform a Refine Prestige
+  effects:
+  - Relic efficiency x1.01
+  system: achievements
+  kind: achievement
+- id: achievement-291
+  name: Achievement 291 (Eternity Champion)
+  description: Have 60+ EC completions
+  effects:
+  - Unlocks macro block for Refine Prestige and Polish Prestige
+  system: achievements
+  kind: achievement
+- id: achievement-320
+  name: Achievement 320 (Base Evolution)
+  description: Reach Base Level 2+ for any Special Mineral in SMP
+  effects:
+  - x1.02 Rune generation
+  system: achievements
+  kind: achievement
+- id: achievement-326
+  name: Achievement 326 (Polishing an Infinity)
+  description: Reach 1.08e308+ Polish Points
+  effects:
+  - Unlocks auto-spawn Special Minerals automation
+  system: achievements
+  kind: achievement
+- id: achievement-338
+  name: Achievement 338 (Elemental Mastery)
+  description: Have a value+ of all elements
+  effects:
+  - Unlocks auto-buy relics automation
+  system: achievements
+  kind: achievement
+- id: achievement-342
+  name: Achievement 342 (Here Come New Rarities)
+  description: Merge 3 Zodiacs with Immortal+1,000 Rarity
+  effects:
+  - You can now naturally get higher-rarity Zodiacs
+  system: achievements
+  kind: achievement
+- id: achievement-345
+  name: Achievement 345 (Mineral Scaling)
+  description: Have a Mineral at Level 250+
+  effects:
+  - Unlocks macro block for Generate Elements
+  system: achievements
+  kind: achievement
+- id: achievement-365
+  name: Achievement 365 (A Good Gift)
+  description: Draw 4 Tarot Cards
+  effects:
+  - Get a free Chariot Card
+  system: achievements
+  kind: achievement
+- id: achievement-370
+  name: Achievement 370 (A Pack of Cards)
+  description: Get 20 Tarot Card Levels
+  effects:
+  - You can now get Arcana from draws
+  system: achievements
+  kind: achievement
+- id: achievement-380
+  name: Achievement 380 (Better Chances - More Cards)
+  description: Buy Relic 42 for the first time
+  effects:
+  - Unlocks Planet Loadout selection for Elements
+  system: achievements
+  kind: achievement
+- id: achievement-386
+  name: Achievement 386 (Earth's Population as a Cap)
+  description: Reach a value ascensions for common revolutions
+  effects:
+  - Autoslowdown now works much faster
+  system: achievements
+  kind: achievement
+- id: achievement-388
+  name: Achievement 388 (From Ace to Ten)
+  description: Have 10 different cards for each suit (Swords, Wands, Pentacles, Cups)
+  effects:
+  - You can now draw 10 cards at once
+  system: achievements
+  kind: achievement
+- id: achievement-390
+  name: Achievement 390 (Tarot Upgrades???)
+  description: Have a value+ Swords, Wands, Pentacles, and Cups resources
+  effects:
+  - Unlocks Tarot Upgrades
+  system: achievements
+  kind: achievement
+- id: achievement-396
+  name: Achievement 396 (Lucky Gambler)
+  description: Win the Wheel of Fortune 3 times in a row
+  effects:
+  - A sense of irritation from bad luck and a significant amount of wasted time
+  system: achievements
+  kind: achievement
+- id: achievement-397
+  name: Achievement 397 (Super Tarot 64)
+  description: Have 64+ different cards
+  effects:
+  - You can now draw 100 cards at once
+  system: achievements
+  kind: achievement
+- id: achievement-399
+  name: Achievement 399 (Are you ready to unpack all these cards?)
+  description: Have a level 12+ Black Gem
+  effects:
+  - Unlocks macro block for Delete All Black Gems
+  system: achievements
+  kind: achievement
+- id: achievement-408
+  name: Achievement 408 (Open them all!)
+  description: Have 10,000+ Tarot card levels and 78 unique Tarot cards
+  effects:
+  - 'You can now use all your draws, and cards are less random (minimum: 300)'
+  system: achievements
+  kind: achievement
+- id: achievement-413
+  name: Achievement 413 (Seventh Element)
+  description: Buy Element Node 7 for all elements
+  effects:
+  - Unlocks macro block for Tarot Spawn
+  system: achievements
+  kind: achievement
+- id: achievement-418
+  name: Achievement 418 (Max Level for Special Minerals)
+  description: Get a level 20 Special Mineral
+  effects:
+  - Unlocks Delete Special Minerals macro block
+  system: achievements
+  kind: achievement
+- id: achievement-420
+  name: Achievement 420 (This is how life was created)
+  description: Have 1.00e1,000 of all elements
+  effects:
+  - Unlock bulk spawning for special minerals
+  system: achievements
+  kind: achievement
+- id: achievement-423
+  name: Achievement 423 (Card Millionaire)
+  description: Have a value total card levels
+  effects:
+  - Unlocks macro block for Use Arcan
+  system: achievements
+  kind: achievement
+- id: achievement-426
+  name: Achievement 426 (A-MAZING!)
+  description: Obtain an Amazing Zodiac
+  effects:
+  - You can now obtain Amazing Zodiacs through Unity
+  system: achievements
+  kind: achievement
+- id: achievement-427
+  name: Achievement 427 (A Great QoL)
+  description: Buy Relic 46
+  effects:
+  - Auto Ascend for attacks is now much faster
+  system: achievements
+  kind: achievement
+- id: achievement-432
+  name: Achievement 432 (Simpler Times)
+  description: Sacrifice all Special Minerals
+  effects:
+  - Unlocks Automation for buying Sun & Moon Rune Upgrades
+  system: achievements
+  kind: achievement
+- id: achievement-433
+  name: Achievement 433 (Level Adjusters)
+  description: Upgrade all Tarot Upgrade 4 bonuses to Level 4+
+  effects:
+  - Unlocks Auto Tarot Upgrades
+  system: achievements
+  kind: achievement
+- id: achievement-441
+  name: Achievement 441 (A Truly Useful Achievement)
+  description: Reach 1.00e3,250 Fire
+  effects:
+  - Relic 14 is ^1.5 more effective
+  system: achievements
+  kind: achievement
+- id: achievement-443
+  name: Achievement 443 (Now the Real Grind Begins)
+  description: Reach SMP Lv.20 for all Special Minerals
+  effects:
+  - Total SMP EXP boosts Sacrifice Dust gain
+  system: achievements
+  kind: achievement
+- id: achievement-450
+  name: Achievement 450 (Level Up All of Them)
+  description: Have all sacrificed Special Minerals at Lv.28+
+  effects:
+  - Unlocks Automation for buying Polish Enhancement Upgrades
+  system: achievements
+  kind: achievement
+- id: achievement-451
+  name: Achievement 451 (QoL for Faster Merge Leveling)
+  description: Reach Merge Level 10,000+
+  effects:
+  - Merge Experience now carries over when leveling up, and merging is now much faster
+  system: achievements
+  kind: achievement
+- id: achievement-464
+  name: Achievement 464 (Better for Resource Generation)
+  description: Reach 100 Qa+ total Tarot levels
+  effects:
+  - Unlocks Auto Tarot Draw
+  system: achievements
+  kind: achievement
+- id: achievement-466
+  name: Achievement 466 (Challenging Tarots)
+  description: Complete 18 Tarot Challenges
+  effects:
+  - Unlocks Automation for buying Special Minerals Progression Upgrades
+  system: achievements
+  kind: achievement
+- id: achievement-470
+  name: Achievement 470 (W-A-N-D-S)
+  description: Purchase Wands 6 Tarot Upgrade
+  effects:
+  - Unlocks auto-prestige for Attacks
+  system: achievements
+  kind: achievement
+- id: achievement-482
+  name: Achievement 482 (It's Your Time to Shine)
+  description: Obtain a Prime Zodiac
+  effects:
+  - You can now obtain Prime Zodiacs through Unity
+  system: achievements
+  kind: achievement
+- id: achievement-492
+  name: Achievement 492 (Fifty Shades of Minerals)
+  description: Have all sacrificed Special Minerals at Lv.50+
+  effects:
+  - Unlocks Flush Special Minerals macro block
+  system: achievements
+  kind: achievement
+- id: achievement-505
+  name: Achievement 505 (Add Up Their Levels)
+  description: Reach a total of 75+ Artifact levels
+  effects:
+  - Unlocks automation for flushing to Artifacts
+  system: achievements
+  kind: achievement
+- id: achievement-520
+  name: Achievement 520 (All Basic Tarot Challenges Completed)
+  description: Complete 52 Tarot Challenges
+  effects:
+  - Unlocks Enter/Exit Tarot Challenge macro blocks
+  system: achievements
+  kind: achievement
+- id: achievement-534
+  name: Achievement 534 (B Stands for Biohazard)
+  description: Craft ER with B rarity or better
+  effects:
+  - Unlocks Autocraft Endoplasmic Reticulum
+  system: achievements
+  kind: achievement
+- id: achievement-537
+  name: Achievement 537 (Local News Disaster)
+  description: Complete all Towns plague stages 2-12
+  effects:
+  - Unlocks the option to auto-repeat Plague stages
+  system: achievements
+  kind: achievement
+- id: achievement-548
+  name: Achievement 548 (Very Important Pathogen)
+  description: Reach 1e10+ ViP
+  effects:
+  - Unlocks Auto Dissolve Endoplasmic Reticulum
+  system: achievements
+  kind: achievement
+- id: achievement-550
+  name: Achievement 550 (Vacation Gone Viral)
+  description: Complete Dominican Republic stage 4-5
+  effects:
+  - Unlocks Enter Plague Stage and Exit Plague Stage macro blocks
+  system: achievements
+  kind: achievement
+- id: achievement-563
+  name: Achievement 563 (Thirty Reticulums Later)
+  description: Craft Lv.30+ ER
+  effects:
+  - Unlocks Craft ER macro block
+  system: achievements
+  kind: achievement
+- id: achievement-576
+  name: Achievement 576 (Random Zodiac Therapy)
+  description: Complete the Temperance Tarot Challenge
+  effects:
+  - Multiplies Empress Effect by x100
+  system: achievements
+  kind: achievement
+- id: achievement-581
+  name: Achievement 581 (Four Knights Of The Apocalypse)
+  description: Complete all Knight challenges
+  effects:
+  - Achievement 239 reward now is applied to Max Attack Level
+  system: achievements
+  kind: achievement
+- id: achievement-600
+  name: Achievement 600 (Literally Impossible, you have no chance to achieve this one)
+  description: This achievement is unobtainable
+  effects:
+  - Unlocks Bonus Trial
+  system: achievements
+  kind: achievement
+- id: achievement-605
+  name: Achievement 605 (Pentacle Collector)
+  description: Purchase Pentacle-11
+  effects:
+  - Divides the cost of Refine Nodes 121 and above by 1e5000
+  system: achievements
+  kind: achievement
+- id: achievement-606
+  name: Achievement 606 (The Tower Falls)
+  description: Complete the Tower Challenge
+  effects:
+  - Divides the cost of Refine Nodes 121 and above by 1e4350
+  system: achievements
+  kind: achievement
+- id: achievement-640
+  name: Achievement 640 (Greater Strength)
+  description: Reach a Singularity Multiplier of x5+
+  effects:
+  - Unlocks Singularize macro block
+  system: achievements
+  kind: achievement
+- id: achievement-646
+  name: Achievement 646 (Spread Specialist)
+  description: Reach Level 100+ Base Spread Power
+  effects:
+  - Unlocks Buy Singularity Tree Node macro block
+  system: achievements
+  kind: achievement
+- id: achievement-650
+  name: Achievement 650 (Queen of Tarot)
+  description: Complete all Tarot Queens Challenges
+  effects:
+  - Divides the cost of Refine Nodes 121 and above by 1e150
+  system: achievements
+  kind: achievement
+- id: achievement-659
+  name: Achievement 659 (Singular Ascension)
+  description: Reach a Singularity Multiplier of x100+
+  effects:
+  - Unlocks Auto Singularity
+  system: achievements
+  kind: achievement
+- id: achievement-669
+  name: Achievement 669 (Ultimate Refinement)
+  description: Purchase Refine Node 136
+  effects:
+  - Unlocks root nodes in the Refine Tree.
+  system: achievements
+  kind: achievement
+- id: achievement-670
+  name: Achievement 670 (Golden Singularity)
+  description: Get a Godly+ Singular Zodiac
+  effects:
+  - Unlocks auto-delete automation for Singular Zodiacs
+  system: achievements
+  kind: achievement
+- id: achievement-675
+  name: Achievement 675 (Rainbow Destiny)
+  description: Get a Rainbow+ Common Zodiac
+  effects:
+  - You can get Rainbow+ Common Zodiacs through Unity
+  system: achievements
+  kind: achievement
+- id: achievement-680
+  name: Achievement 680 (Small Things, Big Plans)
+  description: Unlock Particles
+  effects:
+  - All singular buffs are set now at 1 atoms
+  system: achievements
+  kind: achievement
+- id: achievement-690
+  name: Achievement 690 (AlphaBET)
+  description: Prestige Alpha Particles for the first time
+  effects:
+  - Unlocks Automation for Ranking Up
+  system: achievements
+  kind: achievement
+- id: achievement-698
+  name: Achievement 698 (Dense by Design)
+  description: Upgrade Essence Density to Level 50+
+  effects:
+  - Endoplasmic Reticulum upgrades no longer spend Virus Points. Unlocks automation for ER upgrades
+  system: achievements
+  kind: achievement
+- id: achievement-700
+  name: Achievement 700 (Seven-Hundredth)
+  description: Reach Tetr 1+
+  effects:
+  - You will get the maximum available rank on Rank Up
+  system: achievements
+  kind: achievement
+- id: achievement-701
+  name: Achievement 701 (Gamma Online)
+  description: Generate 0.1+ Gamma Particles per second
+  effects:
+  - Unlocks Automation for Alpha Particles Upgrades
+  system: achievements
+  kind: achievement
+- id: achievement-703
+  name: Achievement 703 (BetaGam)
+  description: Prestige Beta Particles for the first time
+  effects:
+  - Unlocks Automation for Tiering Up
+  system: achievements
+  kind: achievement
+- id: achievement-705
+  name: Achievement 705 (N.P.K)
+  description: Ascend Singularity Tree Node 1 to Ascension 100+
+  effects:
+  - Unlocks automation for Singularity Tree
+  system: achievements
+  kind: achievement
+- id: achievement-710
+  name: Achievement 710 (Fifth Gear)
+  description: Reach Pent 1+
+  effects:
+  - You will get the maximum available tier on Tier Up
+  system: achievements
+  kind: achievement
+- id: achievement-711
+  name: Achievement 711 (Beyond the Fifth Dimension)
+  description: Reach Pent 2+
+  effects:
+  - Unlocks Automation for Beta Particles Upgrades
+  system: achievements
+  kind: achievement
+- id: achievement-718
+  name: Achievement 718 (Towering Ambition)
+  description: Reach Tetr 10+
+  effects:
+  - Unlocks Automation for Gamma Particles Upgrades
+  system: achievements
+  kind: achievement
+- id: achievement-724
+  name: Achievement 724 (Gamma Reborn)
+  description: Prestige Gamma Particles for the first time
+  effects:
+  - Unlocks Automation for Tetring Up
+  system: achievements
+  kind: achievement
+- id: achievement-734
+  name: Achievement 734 (Learning to Shine)
+  description: Reach Spark Mastery 10+
+  effects:
+  - Unlocks Automation for Penting Up
+  system: achievements
+  kind: achievement
+- id: achievement-737
+  name: Achievement 737 (Every Shade of Spark)
+  description: Have Sparks of all 10 colors
+  effects:
+  - Unlocks the Spawn Spark macro block
+  system: achievements
+  kind: achievement
+- id: achievement-738
+  name: Achievement 738 (Penthouse)
+  description: Reach Pent 9+
+  effects:
+  - Unlocks Automation for Delta Particles Upgrades
+  system: achievements
+  kind: achievement
+- id: achievement-739
+  name: Achievement 739 (The Power of Expanding)
+  description: Reach 11,000+ Epsilon
+  effects:
+  - Refine Node 148 effect is applied every 15 levels instead
+  system: achievements
+  kind: achievement
+- id: achievement-746
+  name: Achievement 746 (Sparks of Genius)
+  description: Reach Spark Mastery 10,000+
+  effects:
+  - Unlocks the Delete Spark macro block
+  system: achievements
+  kind: achievement
+- id: achievement-750
+  name: Achievement 750 (Galactic Destiny)
+  description: Obtain a Galactic+ Common Zodiac
+  effects:
+  - You can get Galactic+ Common Zodiacs through Unity
+  system: achievements
+  kind: achievement
+- id: achievement-752
+  name: Achievement 752 (Epsilon Reserves)
+  description: Reach 100,000+ Epsilon
+  effects:
+  - Refine Node 148 effect is applied every 10 levels instead
+  system: achievements
+  kind: achievement
+- id: achievement-753
+  name: Achievement 753 (Top of the Class)
+  description: Obtain a Spark of rarity S or higher
+  effects:
+  - Unlocks automatic Spark deletion
+  system: achievements
+  kind: achievement
+- id: achievement-757
+  name: Achievement 757 (A Thousand Points to Grow)
+  description: Purchase a total of 1,000+ Epsilon Tree Points
+  effects:
+  - Unlocks automatic Spark spawning
+  system: achievements
+  kind: achievement
+- id: achievement-secret-46
+  name: Secret Achievement 46 (Silence)
+  description: Annoy the creepy Tarot Upgrades guy until he stops talking.
+  effects:
+  - The Tarot Upgrades guy won't bother you anymore.
+  system: achievements
+  kind: achievement
+- id: achievement-secret-49
+  name: Secret Achievement 49 (Deal with a Devil)
+  description: Let the Devil take your soul.
+  effects:
+  - The Devil can no longer take your soul.
+  system: achievements
+  kind: achievement

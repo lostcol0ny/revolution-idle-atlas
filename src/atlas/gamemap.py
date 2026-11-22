@@ -15,7 +15,7 @@ from typing import Any
 
 import yaml
 
-from atlas.extract.refs import escape_prose, slugify
+from atlas.extract.refs import escape_prose, label_text, slugify, template_fields
 from atlas.models import GameData, GameNode, Kind, Node
 from atlas.particles import GRADES, grade_bonus_prefix
 
@@ -105,6 +105,23 @@ _SPARK_EFFECT_KEY = re.compile(r"ENUM_SPARKTYPE_EFFECT_(?P<colour>[A-Z]+)")
 _SPARK_NAME = "UNI_PARTICLES_SPARK_NAME"
 _GRADE_HEADER = re.compile(r"!.*\|\s*(?P<grade>Rank|Tier|Tetr|Pent) Bonuses")
 
+# Achievements pair a name and a requirement (`ACH_NAME_<n>`, `ACH_DESC_<n>`)
+# with an optional reward (`ACH_REWD_<n>`). Only those with a reward are mapped:
+# the rest give Souls or Time Flux, which the wiki lists and the game words
+# nowhere, so they would be nodes with no effect and no edge. A later
+# achievement can swap a reward for `ACH_REWD_<n>_NEW` ("Changes the reward for
+# Ach. 29"), which becomes the node's second effect.
+ACHIEVEMENT_PREFIX = "ACH"
+ACHIEVEMENT_SYSTEM = "achievements"
+_ACHIEVEMENT_NAME_KEY = re.compile(r"ACH_NAME_(?P<index>\d+)")
+_ACHIEVEMENT_REWARD_KEY = re.compile(r"ACH_REWD_(?P<index>\d+)")
+# Secrets share the key space from 10000; the game counts both lists from 1.
+_SECRET_BASE = 10000
+_WIKI_ACHIEVEMENT = re.compile(r"\{\{Achievement/NormalRowItem(?P<body>.*?)\n\}\}", re.DOTALL)
+# A threshold as the wiki writes one: "1,000,000", "1.08e308", "e5.00e10",
+# "1e5000", "100 Qa".
+_WIKI_AMOUNT = r"(e?\d[\d.,]*(?:e\d[\d.,]*)?(?: ?[A-Z][a-z]?)?)"
+
 
 @dataclass
 class FamilyReport:
@@ -113,6 +130,8 @@ class FamilyReport:
     unmatched: list[str] = field(default_factory=list)
     # A match whose game name differs from the node's current name.
     renamed: list[str] = field(default_factory=list)
+    # Entities the family deliberately leaves out, such as rewardless achievements.
+    left_out: int = 0
 
 
 def clean(text: str) -> str:
@@ -412,7 +431,11 @@ def map_catalog(
             continue
         mapped, reports[prefix] = _map_family(family, families[prefix], by_id)
         game.nodes.extend(mapped)
-    skipped = [prefix for prefix in families if prefix not in FAMILIES]
+    # Achievements key their rewards apart from the name and description pair,
+    # so map_achievements reads them from the strings instead.
+    skipped = [
+        prefix for prefix in families if prefix not in FAMILIES and prefix != ACHIEVEMENT_PREFIX
+    ]
     return game, reports, skipped
 
 
@@ -443,6 +466,7 @@ def _place(
     kind: Kind,
     nodes: Mapping[str, Node],
     report: FamilyReport,
+    effects: Iterable[str] = (),
 ) -> GameNode:
     existing = nodes.get(node_id)
     if existing is None:
@@ -453,6 +477,7 @@ def _place(
         id=node_id,
         name=name,
         description=description,
+        effects=list(effects),
         system=system if existing is None else None,
         kind=kind if existing is None else None,
     )
@@ -548,10 +573,99 @@ def map_particles(
     return mapped, reports
 
 
+def wiki_achievements(wikitext: str) -> dict[str, dict[str, str]]:
+    """The wiki's Achievements rows by normalised name; a name used twice is dropped."""
+    rows: dict[str, dict[str, str]] = {}
+    repeated: set[str] = set()
+    for match in _WIKI_ACHIEVEMENT.finditer(wikitext):
+        fields = template_fields(match["body"])
+        key = _norm(fields.get("name", ""))
+        if key in rows:
+            repeated.add(key)
+        rows[key] = fields
+    return {key: row for key, row in rows.items() if key and key not in repeated}
+
+
+def _filled(template: str, wiki: str | None) -> str:
+    """Word a game string, taking the numbers it leaves to runtime from the wiki.
+
+    An achievement's threshold is a constant the game still fills in at runtime
+    ("Reach {0} Score"). When the wiki words the same achievement exactly as the
+    game does around the number ("Reach 1,000,000 Score"), the number is taken
+    from it; any other wording leaves the placeholder to `readable`.
+    """
+    text = clean(_RUNNING_TOTAL.sub("", template))
+    parts = re.split(_PLACEHOLDER, text)
+    if wiki and len(parts) > 1:
+        match = re.fullmatch(
+            _WIKI_AMOUNT.join(map(re.escape, parts)), " ".join(label_text(wiki).split())
+        )
+        if match is not None:
+            text = "".join(
+                part + value for part, value in zip(parts, (*match.groups(), ""), strict=True)
+            )
+    return readable(text)
+
+
+def map_achievements(
+    strings: Mapping[str, str],
+    nodes: Iterable[Node],
+    wiki: Mapping[str, Mapping[str, str]],
+) -> tuple[list[GameNode], FamilyReport]:
+    """Map every achievement with a reward onto `achievement-<n>`.
+
+    `n` counts from 1, the number the game's own text cites ("Changes the
+    reward for Ach. 29" is `ACH_REWD_28_NEW`); secrets are
+    `achievement-secret-<n>`. The requirement is the description and the
+    reward the effect. `wiki` is `wiki_achievements` of the Achievements page,
+    read only for the thresholds the game leaves to runtime.
+    """
+    by_id = {n.id: n for n in nodes}
+    report = FamilyReport()
+    mapped: list[GameNode] = []
+    named = {
+        int(m["index"]) for key in strings if (m := _ACHIEVEMENT_NAME_KEY.fullmatch(key))
+    }
+    rewarded = sorted(
+        int(m["index"]) for key in strings if (m := _ACHIEVEMENT_REWARD_KEY.fullmatch(key))
+    )
+    report.left_out = len(named - set(rewarded))
+    for index in rewarded:
+        if index not in named:
+            report.unmatched.append(f"#{index}: the game has no name for it")
+            continue
+        title = clean(strings[f"ACH_NAME_{index}"])
+        if index < _SECRET_BASE:
+            number = index + 1
+            node_id, name = f"achievement-{number}", f"Achievement {number} ({title})"
+            row = wiki.get(_norm(title), {})
+        else:
+            number = index - _SECRET_BASE + 1
+            node_id = f"achievement-secret-{number}"
+            name = f"Secret Achievement {number} ({title})"
+            row = {}
+        requirement = strings.get(f"ACH_DESC_{index}")
+        effects = [_filled(strings[f"ACH_REWD_{index}"], row.get("reward"))]
+        swapped = strings.get(f"ACH_REWD_{index}_NEW")
+        if swapped:
+            effects.append(readable(swapped))
+        mapped.append(_place(
+            node_id,
+            name,
+            _filled(requirement, row.get("description")) if requirement else None,
+            ACHIEVEMENT_SYSTEM,
+            Kind.ACHIEVEMENT,
+            by_id,
+            report,
+            effects,
+        ))
+    return mapped, report
+
+
 def to_yaml(game: GameData) -> str:
     doc = {
         "buildid": game.buildid,
-        "nodes": [n.model_dump(mode="json", exclude_none=True) for n in game.nodes],
+        "nodes": [n.model_dump(mode="json", exclude_defaults=True) for n in game.nodes],
     }
     return GAME_FILE_HEADER + yaml.safe_dump(
         doc, sort_keys=False, allow_unicode=True, width=1_000_000

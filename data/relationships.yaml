@@ -160,6 +160,12 @@ systems:
   - id: epsilon-tree
     name: Epsilon Tree
     parent: particles
+  # A top-level menu outside every prestige layer: its rewards land in all of
+  # them, from Revolution's Mult Gain to Particles' automation, so filing it
+  # under one layer would misplace most of its edges.
+  # The nodes come from the game's strings through data/game.yaml.
+  - id: achievements
+    name: Achievements
 
 nodes:
   - id: gold
@@ -2735,7 +2741,7 @@ nodes:
 
   - id: attack-level
     name: Attack Level
-    aliases: [Attack Levels]
+    aliases: [Attack Levels, Attacks Level]
     system: attacks
     kind: stat
     wiki: Attacks
@@ -4101,6 +4107,32 @@ nodes:
     effects:
       - text: Sword LOGPOW base
         per_level: '$0.09 + 0.01 \times \text{level}$'
+
+  # The bonus every completed achievement grants, from the wiki's "Multiplier
+  # bonus" section, where N is the number of achievements completed. The game
+  # words the same three stages in ACH_REWARD_BASE, ACH_REWARD_UPGRADE and
+  # ACH_REWARD_UPGRADE_2. The single achievements are created from the game's
+  # strings through data/game.yaml.
+  - id: achievement-bonus
+    name: Achievement Bonus
+    aliases: [achievement rewards]
+    system: achievements
+    kind: stat
+    wiki: Achievements#Multiplier bonus
+    confidence: documented
+    effects:
+      - text: 'Mult Gain $\times (1 + 0.01 N)$'
+      - text: 'From Achievement 51, Generators gain $\times (1 + 0.01 N)$ as well'
+      - text: 'From Achievement 201, Mult, Generators and Dilation Points gain $\times 1.05^{N} \times N^{N/20 - 10}$, and Zodiac Quality and Damage $\times (N/50 - 2)$'
+
+  - id: achievement-secret-bonus
+    name: Secret Achievement Bonus
+    system: achievements
+    kind: stat
+    wiki: Secret_Achievements
+    confidence: documented
+    effects:
+      - text: +0.1% Time Flux gain for every Secret Achievement obtained
 
 edges:
   - from: gold
@@ -8392,6 +8424,316 @@ edges:
     source: wiki:Minerals/Refine_Tree
     confidence: provisional
 
+  # Achievements. The bonus completed achievements grant, then what the game's
+  # achievement text states and the vocabulary cannot read: rewards that
+  # unlock, cite another achievement by number, or name their target in a way
+  # no alias covers.
+  - from: achievement-bonus
+    to: mult-gain
+    rel: boosts
+    op: mult
+    source: wiki:Achievements
+    confidence: documented
+
+  - from: achievement-bonus
+    to: generator-mult
+    rel: boosts
+    op: mult
+    note: From Achievement 51
+    source: wiki:Achievements
+    confidence: documented
+
+  - from: achievement-bonus
+    to: dp-income
+    rel: boosts
+    op: mult
+    note: From Achievement 201
+    source: wiki:Achievements
+    confidence: documented
+
+  - from: achievement-bonus
+    to: quality
+    rel: boosts
+    op: mult
+    note: From Achievement 201
+    source: wiki:Achievements
+    confidence: documented
+
+  - from: achievement-bonus
+    to: cumulative-mult
+    rel: boosts
+    op: mult
+    note: "your Damage Multiplier from Achievement Rewards (Unlocked at Ach 201)"
+    source: wiki:Attacks
+    confidence: documented
+
+  - from: achievement-secret-bonus
+    to: time-flux
+    rel: boosts
+    note: "+0.1% Time Flux gain for every Secret Achievement obtained"
+    source: wiki:Secret_Achievements
+    confidence: documented
+
+  - from: achievement-51
+    to: achievement-bonus
+    rel: boosts
+    note: "Achievement bonus now also applies to Generators"
+    source: game:ACH_REWD_50
+    confidence: documented
+
+  - from: achievement-201
+    to: achievement-bonus
+    rel: boosts
+    note: "Better formula for achievement rewards"
+    source: game:ACH_REWD_200
+    confidence: documented
+
+  - from: achievement-200
+    to: achievement-201
+    rel: requires
+    note: "It's useless, but you can't get achievement 201 without this one"
+    source: game:ACH_REWD_199
+    confidence: documented
+
+  - from: achievement-140
+    to: achievement-29
+    rel: boosts
+    targets_effect: 1
+    note: "Changes the reward for Ach. 29"
+    source: game:ACH_REWD_139
+    confidence: documented
+
+  - from: achievement-581
+    to: achievement-239
+    rel: boosts
+    targets_effect: 1
+    note: "Achievement 239 reward now is applied to Max Attack Level"
+    source: game:ACH_REWD_580
+    confidence: documented
+
+  - from: achievement-230
+    to: achievement-237
+    rel: requires
+    note: "Complete all element-themed achievements (230-233)"
+    source: game:ACH_DESC_236
+    confidence: documented
+
+  - from: achievement-231
+    to: achievement-237
+    rel: requires
+    note: "Complete all element-themed achievements (230-233)"
+    source: game:ACH_DESC_236
+    confidence: documented
+
+  - from: achievement-232
+    to: achievement-237
+    rel: requires
+    note: "Complete all element-themed achievements (230-233)"
+    source: game:ACH_DESC_236
+    confidence: documented
+
+  - from: achievement-233
+    to: achievement-237
+    rel: requires
+    note: "Complete all element-themed achievements (230-233)"
+    source: game:ACH_DESC_236
+    confidence: documented
+
+  - from: achievement-29
+    to: dilation-node-top-4
+    rel: boosts
+    note: "Dilation Tree TOP-4, MID-4, and BOT-4 upgrades are 30% stronger"
+    source: game:ACH_REWD_28_NEW
+    confidence: documented
+
+  - from: achievement-29
+    to: dilation-node-middle-4
+    rel: boosts
+    note: "Dilation Tree TOP-4, MID-4, and BOT-4 upgrades are 30% stronger"
+    source: game:ACH_REWD_28_NEW
+    confidence: documented
+
+  - from: achievement-29
+    to: dilation-node-bottom-4
+    rel: boosts
+    note: "Dilation Tree TOP-4, MID-4, and BOT-4 upgrades are 30% stronger"
+    source: game:ACH_REWD_28_NEW
+    confidence: documented
+
+  - from: achievement-15
+    to: mult-gain
+    rel: boosts
+    op: mult
+    note: "x1.05 to all Mult gains"
+    source: game:ACH_REWD_14
+    confidence: documented
+
+  - from: achievement-28
+    to: mult-gain
+    rel: boosts
+    op: mult
+    note: "x1.1 to all Mult gains"
+    source: game:ACH_REWD_27
+    confidence: documented
+
+  - from: achievement-35
+    to: generator-1
+    rel: boosts
+    op: mult
+    note: "x1.1 to the 1st Generator"
+    source: game:ACH_REWD_34
+    confidence: documented
+
+  - from: achievement-37
+    to: generator-1
+    rel: boosts
+    op: mult
+    note: "x1.1 to the 1st Generator"
+    source: game:ACH_REWD_36
+    confidence: documented
+
+  - from: achievement-192
+    to: score-damage-mult
+    rel: boosts
+    op: mult
+    note: "Score -> Damage Mult x10"
+    source: game:ACH_REWD_191
+    confidence: documented
+
+  - from: achievement-576
+    to: tarot-the-empress
+    rel: boosts
+    op: mult
+    note: "Multiplies Empress Effect by x100"
+    source: game:ACH_REWD_575
+    confidence: documented
+
+  - from: particles-tetr
+    to: achievement-700
+    rel: requires
+    note: "Reach Tetr 1+"
+    source: game:ACH_DESC_699
+    confidence: documented
+
+  - from: particles-pent
+    to: achievement-710
+    rel: requires
+    note: "Reach Pent 1+"
+    source: game:ACH_DESC_709
+    confidence: documented
+
+  - from: particles-pent
+    to: achievement-711
+    rel: requires
+    note: "Reach Pent 2+"
+    source: game:ACH_DESC_710
+    confidence: documented
+
+  - from: particles-tetr
+    to: achievement-718
+    rel: requires
+    note: "Reach Tetr 10+"
+    source: game:ACH_DESC_717
+    confidence: documented
+
+  - from: particles-pent
+    to: achievement-738
+    rel: requires
+    note: "Reach Pent 9+"
+    source: game:ACH_DESC_737
+    confidence: documented
+
+  - from: achievement-162
+    to: planet-mercury
+    rel: unlocks
+    note: "Unlocks Mercury"
+    source: game:ACH_REWD_161
+    confidence: documented
+
+  - from: achievement-163
+    to: planet-venus
+    rel: unlocks
+    note: "Unlocks Venus"
+    source: game:ACH_REWD_162
+    confidence: documented
+
+  - from: achievement-165
+    to: trials
+    rel: unlocks
+    note: "Unlocks the Trials tab"
+    source: game:ACH_REWD_164
+    confidence: documented
+
+  - from: achievement-166
+    to: planet-moon
+    rel: unlocks
+    note: "Unlocks Moon"
+    source: game:ACH_REWD_165
+    confidence: documented
+
+  - from: achievement-172
+    to: planet-jupiter
+    rel: unlocks
+    note: "Unlock Jupiter"
+    source: game:ACH_REWD_171
+    confidence: documented
+
+  - from: achievement-181
+    to: planet-saturn
+    rel: unlocks
+    note: "Unlocks Saturn"
+    source: game:ACH_REWD_180
+    confidence: documented
+
+  - from: achievement-184
+    to: planet-uranus
+    rel: unlocks
+    note: "Unlocks Uranus"
+    source: game:ACH_REWD_183
+    confidence: documented
+
+  - from: achievement-188
+    to: planet-neptune
+    rel: unlocks
+    note: "Unlocks Neptune"
+    source: game:ACH_REWD_187
+    confidence: documented
+
+  - from: achievement-190
+    to: planet-pluto
+    rel: unlocks
+    note: "Unlocks Pluto"
+    source: game:ACH_REWD_189
+    confidence: documented
+
+  - from: achievement-191
+    to: attacks
+    rel: unlocks
+    note: "Unlocks Attacks"
+    source: game:ACH_REWD_190
+    confidence: documented
+
+  - from: achievement-205
+    to: planet-chiron
+    rel: unlocks
+    note: "Unlocks Chiron"
+    source: game:ACH_REWD_204
+    confidence: documented
+
+  - from: achievement-219
+    to: planet-fortune-pars
+    rel: unlocks
+    note: "Unlocks Fortune Pars"
+    source: game:ACH_REWD_218
+    confidence: documented
+
+  - from: achievement-240
+    to: minerals
+    rel: unlocks
+    note: "Unlocks Minerals"
+    source: game:ACH_REWD_239
+    confidence: documented
+
 suppress:
   # Five edges whose relationship is real but whose `rel` is wrong, because the
   # vocabulary path cannot tell an unlock from a boost. Each is restated above
@@ -8643,3 +8985,182 @@ suppress:
     reason: >-
       "Local Particles Speed is boosted by ^0.1 of Local Singularity Speed" --
       the node reads the speed to boost Particles; it does not raise it.
+
+  # Achievement rewards the vocabulary misreads. Unlocks and the edges
+  # restated above with a better target come first.
+  - from: achievement-162
+    to: planet-mercury
+    rel: boosts
+    reason: '"Unlocks Mercury" is an unlock, and the curated edge says so.'
+
+  - from: achievement-163
+    to: planet-venus
+    rel: boosts
+    reason: '"Unlocks Venus" is an unlock, and the curated edge says so.'
+
+  - from: achievement-165
+    to: trials
+    rel: boosts
+    reason: '"Unlocks the Trials tab" is an unlock, and the curated edge says so.'
+
+  - from: achievement-166
+    to: planet-moon
+    rel: boosts
+    reason: '"Unlocks Moon" is an unlock, and the curated edge says so.'
+
+  - from: achievement-172
+    to: planet-jupiter
+    rel: boosts
+    reason: '"Unlock Jupiter" is an unlock, and the curated edge says so.'
+
+  - from: achievement-181
+    to: planet-saturn
+    rel: boosts
+    reason: '"Unlocks Saturn" is an unlock, and the curated edge says so.'
+
+  - from: achievement-184
+    to: planet-uranus
+    rel: boosts
+    reason: '"Unlocks Uranus" is an unlock, and the curated edge says so.'
+
+  - from: achievement-188
+    to: planet-neptune
+    rel: boosts
+    reason: '"Unlocks Neptune" is an unlock, and the curated edge says so.'
+
+  - from: achievement-190
+    to: planet-pluto
+    rel: boosts
+    reason: '"Unlocks Pluto" is an unlock, and the curated edge says so.'
+
+  - from: achievement-191
+    to: attacks
+    rel: boosts
+    reason: '"Unlocks Attacks" is an unlock, and the curated edge says so.'
+
+  - from: achievement-205
+    to: planet-chiron
+    rel: boosts
+    reason: '"Unlocks Chiron" is an unlock, and the curated edge says so.'
+
+  - from: achievement-219
+    to: planet-fortune-pars
+    rel: boosts
+    reason: '"Unlocks Fortune Pars" is an unlock, and the curated edge says so.'
+
+  - from: achievement-240
+    to: minerals
+    rel: boosts
+    reason: '"Unlocks Minerals" is an unlock, and the curated edge says so.'
+
+  - from: achievement-29
+    to: dilation-tree
+    rel: boosts
+    reason: >-
+      "Dilation Tree TOP-4, MID-4, and BOT-4 upgrades are 30% stronger" names
+      three nodes, restated above.
+
+  - from: achievement-192
+    to: score
+    rel: boosts
+    reason: >-
+      "Score -> Damage Mult x10" strengthens the conversion, restated above as
+      score-damage-mult; Score is what it reads.
+
+  - from: achievement-192
+    to: damage-mult
+    rel: boosts
+    reason: >-
+      "Score -> Damage Mult x10" strengthens the conversion, restated above as
+      score-damage-mult.
+
+  - from: achievement-581
+    to: attack-level
+    rel: boosts
+    reason: >-
+      "Achievement 239 reward now is applied to Max Attack Level" changes
+      achievement 239's reward, restated above; it raises no level.
+
+  - from: achievement-21
+    to: mult-gain
+    rel: boosts
+    reason: >-
+      "P.Mult gain ^1.01" is Promotion Mult gain; "Mult gain" matched inside it.
+
+  - from: achievement-167
+    to: unities
+    rel: boosts
+    reason: >-
+      "Unlocks Unities EXP Factor" -- the factor reads the Unity count.
+
+  - from: achievement-169
+    to: research-points
+    rel: boosts
+    reason: >-
+      "Unlocks automation for lab and RP upgrades" buys RP upgrades; "RP"
+      matched inside the upgrades' name.
+
+  - from: achievement-171
+    to: supernova
+    rel: boosts
+    reason: >-
+      "Unlocks supernova exp factor" -- the factor reads the Supernova count.
+
+  - from: achievement-218
+    to: dilation
+    rel: boosts
+    reason: >-
+      "Dilation score past e5e10 boosts DP gain more" -- the score is the
+      input; DP gain is the target.
+
+  - from: achievement-218
+    to: score
+    rel: boosts
+    reason: >-
+      "Dilation score past e5e10 boosts DP gain more" -- the score is the
+      input; DP gain is the target.
+
+  - from: achievement-238
+    to: luck
+    rel: boosts
+    reason: >-
+      "Unlocks the Luck factor..." -- the factor reads Luck.
+
+  - from: achievement-239
+    to: attack-level
+    rel: boosts
+    reason: >-
+      "All Relics are 1% stronger per 1K Attack Levels" -- the level is the
+      input; the relics are the target.
+
+  - from: achievement-396
+    to: luck
+    rel: boosts
+    reason: >-
+      "A sense of irritation from bad luck and a significant amount of wasted
+      time" is a joke, not a reward.
+
+  - from: achievement-432
+    to: planet-sun
+    rel: boosts
+    reason: >-
+      "Sun & Moon Rune Upgrades" are Minerals' runes, not the planets.
+
+  - from: achievement-432
+    to: planet-moon
+    rel: boosts
+    reason: >-
+      "Sun & Moon Rune Upgrades" are Minerals' runes, not the planets.
+
+  - from: achievement-443
+    to: smp
+    rel: boosts
+    reason: >-
+      "Total SMP EXP boosts Sacrifice Dust gain" -- SMP EXP is the input.
+
+  - from: achievement-secret-46
+    to: tarot
+    rel: boosts
+    reason: >-
+      "The Tarot Upgrades guy won't bother you anymore." silences a character;
+      it changes nothing in Tarot.
