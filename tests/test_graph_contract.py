@@ -55,7 +55,7 @@ def test_the_two_previously_stale_relics_carry_their_real_names(graph: dict):
 
 
 def test_no_relic_is_left_with_a_bare_number_label(graph: dict):
-    # Nothing in the curated file should override any of the 70 relics, so every
+    # Nothing in the curated file should override any of the 75 relics, so every
     # one of them must carry a real wiki name in parentheses. A bare "Relic N"
     # means a placeholder name has crept back into relationships.yaml and is
     # masking the derived name again — the exact fault the `relationships.yaml`
@@ -65,14 +65,14 @@ def test_no_relic_is_left_with_a_bare_number_label(graph: dict):
     assert offenders == []
 
 
-def test_all_seventy_relics_are_present_and_composed(graph: dict):
+def test_every_relic_is_present_and_composed(graph: dict):
     composed = re.compile(r"^Relic \d+ \(.+\)$")
     relics = [
         n
         for n in graph["nodes"]
         if n["kind"] == "relic" and re.match(r"^relic-\d+$", n["id"])
     ]
-    assert len(relics) == 70
+    assert len(relics) == 75
     uncomposed = [n["id"] for n in relics if not composed.match(n["name"])]
     assert uncomposed == []
 
@@ -173,13 +173,14 @@ def test_the_sweep_reached_the_graph(graph: dict):
         "special-mineral-": 10,
         "zodiac-": 12,
         "trial-": 25,
-        "plague-er-": 4,
+        "plague-er-": 7,
         "plague-stat-": 6,
-        "singularity-milestone-": 27,
+        "singularity-milestone-": 31,
         "singularity-tree-": 13,
         "singularity-zodiac-": 12,
         "dilation-node-": 13,
         "dilation-upgrade-": 9,
+        "particles-spark-": 10,
     }
     derived = _load_yaml("derived.yaml")
     shipped = {n["id"] for n in graph["nodes"]}
@@ -324,7 +325,7 @@ def test_every_swept_edge_is_uncertain(graph: dict):
     swept -= {key(e) for e in curated.get("edges") or []}
     swept -= {key(s) for s in curated.get("suppress") or []}
 
-    assert len(swept) == 467, f"expected 467 swept edges, got {len(swept)}"
+    assert len(swept) == 481, f"expected 481 swept edges, got {len(swept)}"
     shipped = {key(e): e for e in graph["edges"]}
     for edge in swept:
         assert edge in shipped, f"{edge} never reached the artifact"
@@ -441,7 +442,7 @@ def test_singularity_milestones_land_in_the_table_they_came_from(graph: dict):
     # The three milestone sub-tabs are three tables on one page with identical
     # Name/Requirement/Reward columns. Nothing but the `|+` caption tells them
     # apart, so this is the test for the caption selector as much as for the
-    # hierarchy: drop `caption:` from the sweep entries and all 27 swept
+    # hierarchy: drop `caption:` from the sweep entries and all 31 swept
     # milestones pile into whichever system the last matching entry names, which
     # is a graph that still builds, still validates and is silently wrong.
     parents = {s["id"]: s.get("parent") for s in graph["systems"]}
@@ -465,12 +466,13 @@ def test_singularity_milestones_land_in_the_table_they_came_from(graph: dict):
     assert "Loop Feeds Loop" in by_system["singularity-milestones-singularity"]
     assert "Quantum Dust" in by_system["singularity-milestones-atoms"]
     assert "Full Deck" in by_system["singularity-milestones-progression"]
-    assert len(by_system["singularity-milestones-singularity"]) == 10
+    assert len(by_system["singularity-milestones-singularity"]) == 11
     assert len(by_system["singularity-milestones-progression"]) == 8
 
-    # `One Hundred` has an empty Reward cell, so the sweep skips it and it is
-    # curated in by hand. Pinned because a hand-written node covering a gap in
-    # the page is the kind of thing a later re-sweep quietly drops.
+    # The wiki files `One Hundred` under the Singularity table; the owner's
+    # reading of the live game puts it under Atoms, and a curated overlay moves
+    # it there. Pinned because an overlay that stops matching the swept id
+    # silently hands the row back to the wrong table.
     assert "One Hundred" in by_system["singularity-milestones-atoms"]
 
     # What is left on the layer itself has to be layer-level, or the split only
@@ -486,17 +488,17 @@ def test_singularity_milestones_land_in_the_table_they_came_from(graph: dict):
 
 
 def test_tarot_challenges_are_split_from_the_cards(graph: dict):
-    # 75 challenges and 78 cards were one flat list of 161. They are separate
-    # entities -- a card is drawn, its challenge is entered -- and the page gives
-    # the challenges their own section, so the sidebar gives them their own row.
+    # 76 challenges and 78 cards are separate entities -- a card is drawn, its
+    # challenge is entered -- and the page gives the challenges their own
+    # section, so the sidebar gives them their own row.
     parents = {s["id"]: s.get("parent") for s in graph["systems"]}
     assert parents["tarot-challenges"] == "tarot"
 
     challenges = [n for n in graph["nodes"] if n["system"] == "tarot-challenges"]
-    assert len(challenges) == 75
+    assert len(challenges) == 76
     # Every one of them, and only them. A card that drifted into the challenge
-    # system would still leave the count at 75 if a challenge drifted the other
-    # way, so the count alone is not enough.
+    # system would still leave the count unchanged if a challenge drifted the
+    # other way, so the count alone is not enough.
     assert all(n["id"].startswith("tarot-challenge-") for n in challenges)
     assert not any(
         n["id"].startswith("tarot-challenge-")
@@ -755,7 +757,7 @@ def test_the_plague_resource_chain_runs_end_to_end(graph: dict):
 def test_every_er_upgrade_requires_virus_points(graph: dict):
     upgrades = {n["id"] for n in graph["nodes"]
                 if n["id"].startswith("plague-er-")}
-    assert len(upgrades) == 4
+    assert len(upgrades) == 7
     spends = {e["to"] for e in graph["edges"]
               if e["from"] == "virus-points" and e["rel"] == "requires"}
     assert upgrades <= spends

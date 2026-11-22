@@ -148,6 +148,10 @@ systems:
   - id: houses
     name: Houses
     parent: unity
+  # Particles is the ninth Unity sub-tab, unlocked by Refine Node 137.
+  - id: particles
+    name: Particles
+    parent: unity
 
 nodes:
   - id: attack-power
@@ -3117,14 +3121,14 @@ nodes:
     kind: upgrade
     effects:
       - text: 3.00x VP Gain
-      - text: 'Sacrificed: Attacks HP is powered to ^(1/X)'
+      - text: 'Sacrificed: Attacks HP is powered to ^(1/X) ((1 + (level / 26) x 0.25), not confirmed)'
 
   - id: special-mineral-blue-gem
     name: Blue Gem
     system: minerals
     kind: upgrade
     effects:
-      - text: Cost Increase is powered to ^0.99
+      - text: Cost Increase is powered to ^0.99. ^(1/(1+0.01))
       - text: 'Sacrificed: Global Element Mult is powered to ^X (1.1 + ((level - 26)^2) x 0.01, not confirmed)'
 
   - id: special-mineral-green-gem
@@ -3132,7 +3136,7 @@ nodes:
     system: minerals
     kind: upgrade
     effects:
-      - text: Cost fall is powered to ^1.01
+      - text: Cost fall is powered to +^0.01
       - text: 'Sacrificed: multiplies the first effect (Resource Generation) of Common Tarot Cards'
 
   - id: special-mineral-pink-gem
@@ -3141,14 +3145,14 @@ nodes:
     kind: upgrade
     effects:
       - text: Luck and Quality Bonus +0.05
-      - text: 'Sacrificed: Luck is powered to ^X (base 1.03 at level 27, +0.03 per level, not confirmed)'
+      - text: 'Sacrificed: Luck is powered to ^X (base 1.03 at level 27, +0.03 per level)'
 
   - id: special-mineral-yellow-gem
     name: Yellow Gem
     system: minerals
     kind: upgrade
     effects:
-      - text: Gold gain is multiplied by 10
+      - text: 10.00x Gold gain
       - text: 'Sacrificed: Relic 14''s effect is powered to ^X (1000 + ((level - 27)^2) x 100, not confirmed)'
 
   - id: special-mineral-orange-gem
@@ -3181,14 +3185,14 @@ nodes:
     kind: upgrade
     effects:
       - text: Make the game speed +0.05x faster
-      - text: 'Sacrificed: divides the Mineral Local Speed softcaps by X (base 1.01 at level 27, +0.01 per level, not confirmed)'
+      - text: 'Sacrificed: divides the Mineral Local Speed softcaps by X (base 1.01 at level 27, +0.01 per level)'
 
   - id: special-mineral-black-gem
     name: Black Gem
     system: minerals
     kind: upgrade
     effects:
-      - text: Tarot Draws +0.10 (draws are granted when deleted)
+      - text: Tarot Draws +0.20 (draws are granted when deleted)
       - text: 'Sacrificed: boosts Refine Node 79''s effect (base 2 at level 27, +1 per level, not confirmed)'
 
   - id: fire
@@ -3363,15 +3367,22 @@ nodes:
     wiki: Minerals#Special_Minerals_Progression_(Refine_Node_46)
     confidence: documented
 
+  # The ER stat, not the ER upgrade that raises it. The Plague page's ER
+  # Upgrades table names its first row "Base Spread Power" and the sweep mints
+  # that as `plague-er-base-spread-power`; this node is what that upgrade, the
+  # Houses' "Base Spread Multi" and Refine Node 114 all act on. The name says
+  # "ER" so the two do not read identically in the sidebar, and the wiki's own
+  # wording stays an alias so prose still resolves here.
+  #
   # "Base Spread" is the alias the Houses table uses ("Base Spread Multi"). The
   # bare word "Spread Power" is deliberately not an alias: the plague-type
   # descriptions use it qualitatively ("Excellent Spread Power") and would
   # resolve into edges that assert a boost the wiki never states.
   - id: base-spread-power
-    name: Base Spread Power
-    aliases: [Base Spread]
+    name: ER Base Spread Power
+    aliases: [Base Spread Power, Base Spread]
     system: plague
-    kind: upgrade
+    kind: stat
     wiki: Plague
     confidence: provisional
 
@@ -3389,25 +3400,16 @@ nodes:
     wiki: Singularity#Tree
     confidence: provisional
 
-  # The sweep skips this row: its Reward cell is empty, and a row with no effect
-  # text yields no record. That is the right default -- an undocumented reward is
-  # nothing to assert -- but it makes the milestone list read as complete when it
-  # is one short, so the node is curated in.
-  #
-  # Effect-less on purpose, and not a gap to chase: the milestone is reachable but
-  # its reward is unimplemented, so the empty cell is the wiki being accurate
-  # rather than incomplete. The two rows below it are still literal "COMING SOON"
-  # and get no node at all, having no name to give one.
-  #
   # Filed under Atoms on the owner's reading of the live game. The wiki disagrees:
   # it puts "One Hundred" in the Singularity Milestones table at "100 Singularity".
-  # Revisit if the page is ever updated -- one of the two is out of date.
+  # Revisit if the page is ever updated -- one of the two is out of date. The
+  # reward the sweep reads off that row is kept; only the placement is overridden.
   - id: singularity-milestone-one-hundred
     name: One Hundred
     system: singularity-milestones-atoms
     kind: upgrade
     wiki: Singularity#Milestones
-    confidence: unknown
+    confidence: provisional
 
   - id: singularity-houses-tab
     name: Houses Tab
@@ -3416,23 +3418,22 @@ nodes:
     wiki: Singularity#Houses
     confidence: provisional
 
-  # The wiki's "Singular zodiac effects" table fills in only its `First effect`
-  # column: `Second Effect` is blank in all twelve rows and there is no third
-  # column at all. The sweep reproduces that table faithfully, so the gap is
-  # upstream, and the twelve entries below restate `effects` in full from a
-  # screenshot of a maxed-out set in the owner's game.
+  # The wiki's "Singular zodiac effects" table now fills all three tiers, and it
+  # agrees with the twelve entries below, which were restated from a screenshot
+  # of a maxed-out set in the owner's game before the wiki had them. They stay
+  # curated because the tier is in the column heading, which a swept effect
+  # loses, and because the page spells the same effect differently from row to
+  # row ("Base Spread Mult" and "Base Spread Multi", "Attack Exponent Mult" and
+  # "Attack Exponent Multi").
   #
   # The second effect unlocks at the Divine rarity and the third at Rainbow.
   # That gate lives in `text` because `Effect` forbids extra fields and has
   # nowhere else to put it.
   #
-  # The wording is still the wiki's own. Every one of the twelve effects appears
-  # as some house's `First effect`, so this invents no vocabulary -- the
-  # screenshot supplies only which effects a house gets, not what they are
-  # called. Two of those spellings look like mistakes and are not to be
+  # Two of the wiki's spellings look like mistakes and are not to be
   # corrected: "Disolve" is how the wiki writes it, and "PlP per PlG" is a
-  # lowercase L for Plague, which a sans-serif screenshot renders identically to
-  # a capital I. Rewriting either one stops it naming the node it names.
+  # lowercase L for Plague. Rewriting either one stops it naming the node it
+  # names.
   #
   # The assignment is a rotation, which is the cheapest way to check this block
   # against the game: number the effects in house order and house n gets n, n+4
@@ -3440,9 +3441,8 @@ nodes:
   # single transposition breaks the pattern visibly.
   #
   # `effects` replaces the derived list wholesale rather than extending it, so
-  # these will hide `Second Effect` if the wiki ever fills it in. That is the
-  # cost of curating the whole list, and the reason every entry restates a first
-  # effect that is already correct.
+  # a wiki edit to any of these cells is masked here until this block is
+  # updated to match.
 
   - id: singularity-zodiac-aries
     name: Singular Zodiac Aries
@@ -6553,6 +6553,27 @@ edges:
     source: wiki:Plague
     confidence: documented
 
+  - from: virus-points
+    to: plague-er-base-spread-power
+    rel: requires
+    note: ViP is what ER upgrades are spent on
+    source: wiki:Plague
+    confidence: documented
+
+  - from: virus-points
+    to: plague-er-base-infectivity
+    rel: requires
+    note: ViP is what ER upgrades are spent on
+    source: wiki:Plague
+    confidence: documented
+
+  - from: virus-points
+    to: plague-er-base-stealth
+    rel: requires
+    note: ViP is what ER upgrades are spent on
+    source: wiki:Plague
+    confidence: documented
+
   # The Buff & Penalties table is deliberately absent from data/sweep.yaml
   # because each row is an atom threshold rather than a named entity. The three
   # tree nodes that weaken those penalties still act on the resource the table's
@@ -7037,6 +7058,14 @@ suppress:
       The relic boosts "Sun and Moon runes". Moon Runes claims its own words, but
       the elided "Sun runes" leaves a bare "Sun" that resolves to the Planet. The
       relic's edge to Sun Runes is curated instead.
+
+  - from: tarot-challenge-the-sun
+    to: planet-sun
+    rel: boosts
+    reason: >-
+      "Every time you use The Sun card" -- the Tarot card, which the
+      challenge is named for, not the Planet. The bare "Sun" left after
+      "The" resolves to the Planet.
 
   - from: singularity-tree-7-1
     to: zodiac-level

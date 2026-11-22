@@ -4393,6 +4393,126 @@ nodes:
   effects:
   - text: All Singularity Tree Upgrade Efficiency
     per_level: '.001'
+- id: singularity-zodiac-aries
+  name: Singular Zodiac Aries
+  system: houses
+  kind: upgrade
+  wiki: Singularity
+  confidence: provisional
+  effects:
+  - text: Fire Element Factor 3
+  - text: Sacrifice Dust Gain ^
+  - text: Attack Exponent Mult
+- id: singularity-zodiac-taurus
+  name: Singular Zodiac Taurus
+  system: houses
+  kind: upgrade
+  wiki: Singularity
+  confidence: provisional
+  effects:
+  - text: Earth Element Factor 3
+  - text: PlP per PlG mult
+  - text: Golden Resources Gain
+- id: singularity-zodiac-gemini
+  name: Singular Zodiac Gemini
+  system: houses
+  kind: upgrade
+  wiki: Singularity
+  confidence: provisional
+  effects:
+  - text: Wind Element Factor 3
+  - text: VE on Dissolve mult
+  - text: Black Gem Effect ^
+- id: singularity-zodiac-cancer
+  name: Singular Zodiac Cancer
+  system: houses
+  kind: upgrade
+  wiki: Singularity
+  confidence: provisional
+  effects:
+  - text: Water Element Factor 3
+  - text: Base Spread Mult
+  - text: Singularity Mult Boost
+- id: singularity-zodiac-leo
+  name: Singular Zodiac Leo
+  system: houses
+  kind: upgrade
+  wiki: Singularity
+  confidence: provisional
+  effects:
+  - text: Sacrifice Dust Gain
+  - text: Attack Exponent Mult
+  - text: Fire Element Factor 3
+- id: singularity-zodiac-virgo
+  name: Singular Zodiac Virgo
+  system: houses
+  kind: upgrade
+  wiki: Singularity
+  confidence: provisional
+  effects:
+  - text: PlP per PlG Multi
+  - text: Golden Resource Gain
+  - text: Earth Element Factor 3
+- id: singularity-zodiac-libra
+  name: Singular Zodiac Libra
+  system: houses
+  kind: upgrade
+  wiki: Singularity
+  confidence: provisional
+  effects:
+  - text: VE on Disolve Multi
+  - text: Black Gem Effect ^
+  - text: Wind Element Factor 3
+- id: singularity-zodiac-scorpio
+  name: Singular Zodiac Scorpio
+  system: houses
+  kind: upgrade
+  wiki: Singularity
+  confidence: provisional
+  effects:
+  - text: Base Spread Multi
+  - text: Singularity Mult Boost
+  - text: Water Element Factor 3
+- id: singularity-zodiac-saggitarius
+  name: Singular Zodiac Saggitarius
+  system: houses
+  kind: upgrade
+  wiki: Singularity
+  confidence: provisional
+  effects:
+  - text: Attack Exponent Multi
+  - text: Fire Element Factor 3
+  - text: Sacrifice Dust Gain
+- id: singularity-zodiac-capricorn
+  name: Singular Zodiac Capricorn
+  system: houses
+  kind: upgrade
+  wiki: Singularity
+  confidence: provisional
+  effects:
+  - text: Golden Resources Gain
+  - text: Earth Element Factor 3
+  - text: PlP per PlG Multi
+- id: singularity-zodiac-aquarius
+  name: Singular Zodiac Aquarius
+  system: houses
+  kind: upgrade
+  wiki: Singularity
+  confidence: provisional
+  effects:
+  - text: Black Gem Effect
+  - text: Wind Element Factor 3
+  - text: VE on Disolve Multi
+- id: singularity-zodiac-pisces
+  name: Singular Zodiac Pisces
+  system: houses
+  kind: upgrade
+  wiki: Singularity
+  confidence: provisional
+  effects:
+  - text: Singularity Mult Boost
+  - text: Water Element Factor 3
+  - text: Base Spread Multi
 - id: dilation-node-center-1
   name: Center 1
   system: dilation-tree
@@ -6180,6 +6300,86 @@ nodes:
   confidence: provisional
   effects:
   - text: Double Infinites gain + Break Infinity
+- id: particles-spark-black
+  name: Spark Black
+  system: particles
+  kind: upgrade
+  wiki: Particles
+  confidence: provisional
+  effects:
+  - text: RfP Gain ^
+- id: particles-spark-white
+  name: Spark White
+  system: particles
+  kind: upgrade
+  wiki: Particles
+  confidence: provisional
+  effects:
+  - text: Singularity Local Speed mult
+- id: particles-spark-red
+  name: Spark Red
+  system: particles
+  kind: upgrade
+  wiki: Particles
+  confidence: provisional
+  effects:
+  - text: Singularity Mult Factor
+- id: particles-spark-orange
+  name: Spark Orange
+  system: particles
+  kind: upgrade
+  wiki: Particles
+  confidence: provisional
+  effects:
+  - text: Attack Exponent mult
+- id: particles-spark-yellow
+  name: Spark Yellow
+  system: particles
+  kind: upgrade
+  wiki: Particles
+  confidence: provisional
+  effects:
+  - text: Gold Gain ^
+- id: particles-spark-green
+  name: Spark Green
+  system: particles
+  kind: upgrade
+  wiki: Particles
+  confidence: provisional
+  effects:
+  - text: Astrology Luck ^
+- id: particles-spark-cyan
+  name: Spark Cyan
+  system: particles
+  kind: upgrade
+  wiki: Particles
+  confidence: provisional
+  effects:
+  - text: Particle Empowerers Mult
+- id: particles-spark-blue
+  name: Spark Blue
+  system: particles
+  kind: upgrade
+  wiki: Particles
+  confidence: provisional
+  effects:
+  - text: e10K Atom Penalty divider
+- id: particles-spark-pink
+  name: Spark Pink
+  system: particles
+  kind: upgrade
+  wiki: Particles
+  confidence: provisional
+  effects:
+  - text: Spark Mastery gain mult
+- id: particles-spark-purple
+  name: Spark Purple
+  system: particles
+  kind: upgrade
+  wiki: Particles
+  confidence: provisional
+  effects:
+  - text: PlG Gain ^
 edges:
 - from: relic-1
   to: attacks
@@ -10539,6 +10739,186 @@ edges:
   rel: boosts
   source: wiki:Singularity
   confidence: uncertain
+- from: singularity-zodiac-aries
+  to: fire-factor-3
+  rel: boosts
+  source: wiki:Singularity
+  confidence: uncertain
+- from: singularity-zodiac-aries
+  to: sacrifice-dust
+  rel: boosts
+  source: wiki:Singularity
+  confidence: uncertain
+- from: singularity-zodiac-aries
+  to: attack-exponent
+  rel: boosts
+  source: wiki:Singularity
+  confidence: uncertain
+- from: singularity-zodiac-taurus
+  to: earth-factor-3
+  rel: boosts
+  source: wiki:Singularity
+  confidence: uncertain
+- from: singularity-zodiac-taurus
+  to: plp-per-plg
+  rel: boosts
+  source: wiki:Singularity
+  confidence: uncertain
+- from: singularity-zodiac-taurus
+  to: golden-resources
+  rel: boosts
+  source: wiki:Singularity
+  confidence: uncertain
+- from: singularity-zodiac-gemini
+  to: wind-factor-3
+  rel: boosts
+  source: wiki:Singularity
+  confidence: uncertain
+- from: singularity-zodiac-gemini
+  to: virus-essence
+  rel: boosts
+  source: wiki:Singularity
+  confidence: uncertain
+- from: singularity-zodiac-gemini
+  to: special-mineral-black-gem
+  rel: boosts
+  source: wiki:Singularity
+  confidence: uncertain
+- from: singularity-zodiac-cancer
+  to: water-factor-3
+  rel: boosts
+  source: wiki:Singularity
+  confidence: uncertain
+- from: singularity-zodiac-cancer
+  to: base-spread-power
+  rel: boosts
+  source: wiki:Singularity
+  confidence: uncertain
+- from: singularity-zodiac-cancer
+  to: singularity-mult
+  rel: boosts
+  source: wiki:Singularity
+  confidence: uncertain
+- from: singularity-zodiac-leo
+  to: sacrifice-dust
+  rel: boosts
+  source: wiki:Singularity
+  confidence: uncertain
+- from: singularity-zodiac-leo
+  to: attack-exponent
+  rel: boosts
+  source: wiki:Singularity
+  confidence: uncertain
+- from: singularity-zodiac-leo
+  to: fire-factor-3
+  rel: boosts
+  source: wiki:Singularity
+  confidence: uncertain
+- from: singularity-zodiac-virgo
+  to: plp-per-plg
+  rel: boosts
+  source: wiki:Singularity
+  confidence: uncertain
+- from: singularity-zodiac-virgo
+  to: golden-resources
+  rel: boosts
+  source: wiki:Singularity
+  confidence: uncertain
+- from: singularity-zodiac-virgo
+  to: earth-factor-3
+  rel: boosts
+  source: wiki:Singularity
+  confidence: uncertain
+- from: singularity-zodiac-libra
+  to: virus-essence
+  rel: boosts
+  source: wiki:Singularity
+  confidence: uncertain
+- from: singularity-zodiac-libra
+  to: special-mineral-black-gem
+  rel: boosts
+  source: wiki:Singularity
+  confidence: uncertain
+- from: singularity-zodiac-libra
+  to: wind-factor-3
+  rel: boosts
+  source: wiki:Singularity
+  confidence: uncertain
+- from: singularity-zodiac-scorpio
+  to: base-spread-power
+  rel: boosts
+  source: wiki:Singularity
+  confidence: uncertain
+- from: singularity-zodiac-scorpio
+  to: singularity-mult
+  rel: boosts
+  source: wiki:Singularity
+  confidence: uncertain
+- from: singularity-zodiac-scorpio
+  to: water-factor-3
+  rel: boosts
+  source: wiki:Singularity
+  confidence: uncertain
+- from: singularity-zodiac-saggitarius
+  to: attack-exponent
+  rel: boosts
+  source: wiki:Singularity
+  confidence: uncertain
+- from: singularity-zodiac-saggitarius
+  to: fire-factor-3
+  rel: boosts
+  source: wiki:Singularity
+  confidence: uncertain
+- from: singularity-zodiac-saggitarius
+  to: sacrifice-dust
+  rel: boosts
+  source: wiki:Singularity
+  confidence: uncertain
+- from: singularity-zodiac-capricorn
+  to: golden-resources
+  rel: boosts
+  source: wiki:Singularity
+  confidence: uncertain
+- from: singularity-zodiac-capricorn
+  to: earth-factor-3
+  rel: boosts
+  source: wiki:Singularity
+  confidence: uncertain
+- from: singularity-zodiac-capricorn
+  to: plp-per-plg
+  rel: boosts
+  source: wiki:Singularity
+  confidence: uncertain
+- from: singularity-zodiac-aquarius
+  to: special-mineral-black-gem
+  rel: boosts
+  source: wiki:Singularity
+  confidence: uncertain
+- from: singularity-zodiac-aquarius
+  to: wind-factor-3
+  rel: boosts
+  source: wiki:Singularity
+  confidence: uncertain
+- from: singularity-zodiac-aquarius
+  to: virus-essence
+  rel: boosts
+  source: wiki:Singularity
+  confidence: uncertain
+- from: singularity-zodiac-pisces
+  to: singularity-mult
+  rel: boosts
+  source: wiki:Singularity
+  confidence: uncertain
+- from: singularity-zodiac-pisces
+  to: water-factor-3
+  rel: boosts
+  source: wiki:Singularity
+  confidence: uncertain
+- from: singularity-zodiac-pisces
+  to: base-spread-power
+  rel: boosts
+  source: wiki:Singularity
+  confidence: uncertain
 - from: dilation-node-center-1
   to: animal-points
   rel: boosts
@@ -12433,4 +12813,39 @@ edges:
   to: break-infinity
   rel: boosts
   source: wiki:Infinity
+  confidence: uncertain
+- from: particles-spark-black
+  to: refinement-points
+  rel: boosts
+  source: wiki:Particles
+  confidence: uncertain
+- from: particles-spark-white
+  to: singularity
+  rel: boosts
+  source: wiki:Particles
+  confidence: uncertain
+- from: particles-spark-red
+  to: singularity-mult
+  rel: boosts
+  source: wiki:Particles
+  confidence: uncertain
+- from: particles-spark-orange
+  to: attack-exponent
+  rel: boosts
+  source: wiki:Particles
+  confidence: uncertain
+- from: particles-spark-yellow
+  to: gold-gain
+  rel: boosts
+  source: wiki:Particles
+  confidence: uncertain
+- from: particles-spark-green
+  to: luck
+  rel: boosts
+  source: wiki:Particles
+  confidence: uncertain
+- from: particles-spark-purple
+  to: plague-generators
+  rel: boosts
+  source: wiki:Particles
   confidence: uncertain

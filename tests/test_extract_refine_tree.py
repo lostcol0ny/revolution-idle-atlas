@@ -79,11 +79,11 @@ def test_a_node_naming_itself_produces_no_self_loop():
     assert edges == []
 
 
-def test_the_real_page_yields_one_hundred_and_thirty_six_nodes():
+def test_the_real_page_yields_every_node():
     result = extract(RAW_DIR)
-    assert len(result.nodes) == 136
+    assert len(result.nodes) == 200
     requires = [e for e in result.edges if e.rel == "requires"]
-    assert len(requires) == 158
+    assert len(requires) == 218
     assert any(e.rel == "boosts" for e in result.edges)
 
 
@@ -96,9 +96,9 @@ def test_the_real_page_orients_requires_from_parent_to_child():
     assert ("refine-node-2", "refine-node-1") not in edges
 
 
-def test_the_real_page_yields_eighteen_boosts_edges():
+def test_the_real_page_yields_its_boosts_edges():
     boosts = [e for e in extract(RAW_DIR).edges if e.rel == "boosts"]
-    assert len(boosts) == 18
+    assert len(boosts) == 19
     assert not any(e.from_ == e.to for e in boosts)
 
 
