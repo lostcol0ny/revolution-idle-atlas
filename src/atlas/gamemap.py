@@ -16,7 +16,8 @@ from typing import Any
 import yaml
 
 from atlas.extract.refs import escape_prose, slugify
-from atlas.models import GameData, GameNode, Kind, Node, Rel
+from atlas.models import GameData, GameNode, Kind, Node
+from atlas.particles import GRADES, grade_bonus_prefix
 
 GAME_FILE_REL_PATH = Path("data", "game.yaml")
 
@@ -89,7 +90,6 @@ FAMILIES: dict[str, Family] = {
 
 # Particles keeps its text outside the _NAME_/_DESC_ pairs: one key per grade
 # bonus, per Epsilon Tree effect and per spark colour.
-GRADES = ("rank", "tier", "tetr", "pent")
 GRADE_SYSTEM = "particles-grades"
 _GRADE_BONUS_KEY = re.compile(r"PARTICLES_BONUS_(?P<grade>RANK|TIER|TETR|PENT)_(?P<index>\d+)")
 # Only the 16 outer nodes have effect text (indices 15-30). The 15 inner nodes
@@ -101,28 +101,6 @@ SPARK_SYSTEM = "particles"
 _SPARK_EFFECT_KEY = re.compile(r"ENUM_SPARKTYPE_EFFECT_(?P<colour>[A-Z]+)")
 _SPARK_NAME = "UNI_PARTICLES_SPARK_NAME"
 _GRADE_HEADER = re.compile(r"!.*\|\s*(?P<grade>Rank|Tier|Tetr|Pent) Bonuses")
-
-
-def grade_node(grade: str) -> str:
-    return f"particles-{grade}"
-
-
-def _grade_bonus_prefix(grade: str) -> str:
-    return f"particles-{grade}-bonus-"
-
-
-# The node every member of a Particles family hangs off, and how. Grades unlock
-# their bonuses (HELP_UNI_PARTICLES_GRADES_DESC_1). Tree nodes and spark
-# colours belong to curated group nodes, the way attack-circles holds its
-# circles: the game buys tree nodes with ETP (HELP_UNI_PARTICLES_TREE_DESC_1)
-# and creates sparks from Epsilon (HELP_UNI_PARTICLES_SPARKS_DESC_1), and those
-# edges attach once, to the group. `atlas extract` turns these into edges from
-# data/game.yaml, so CI needs no game to rebuild them.
-MEMBER_LINKS: tuple[tuple[str, str, Rel], ...] = (
-    *((_grade_bonus_prefix(g), grade_node(g), Rel.REQUIRES) for g in GRADES),
-    ("epsilon-tree-node-", "epsilon-tree", Rel.UNLOCKS),
-    ("particles-spark-", "particles-sparks", Rel.UNLOCKS),
-)
 
 
 @dataclass
@@ -336,7 +314,7 @@ def map_particles(
                 f"{label} {wiki[position]} Bonus" if aligned else f"{label} Bonus #{index + 1}"
             )
             mapped.append(_place(
-                f"{_grade_bonus_prefix(grade)}{index + 1}",
+                f"{grade_bonus_prefix(grade)}{index + 1}",
                 name,
                 readable(text),
                 GRADE_SYSTEM,

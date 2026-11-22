@@ -83,7 +83,8 @@ function FitOnChange({ signature }: { signature: string }) {
       mounted.current = true;
       return;
     }
-    void fitView({ ...FIT_OPTIONS, duration: 200 });
+    const still = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    void fitView({ ...FIT_OPTIONS, duration: still ? 0 : 200 });
   }, [signature, fitView]);
   return null;
 }

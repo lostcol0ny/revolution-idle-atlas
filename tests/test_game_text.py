@@ -95,23 +95,37 @@ def test_singularity_tree_nodes_resolve_by_number():
     assert [r.target_id for r in refs] == ["singularity-tree-3-1", "singularity-tree-3-2"]
 
 
-def test_run_all_keeps_edges_to_nodes_only_the_game_creates(tmp_path, monkeypatch):
+def _run_with(monkeypatch, tmp_path, game: GameData):
     filler = ExtractResult(
         nodes=[Node(id="relic-1", name="One", system="relics", kind=Kind.RELIC)]
     )
     stub = types.SimpleNamespace(extract=lambda _raw_dir, _vocab=None: filler)
     for name in ("relics", "refine_tree", "tarot", "elements"):
         monkeypatch.setattr(extract_module, name, stub)
-
-    game = GameData(nodes=[_bonus("particles-rank-bonus-1", "Relic 1 effect ×rank.")])
-    result = extract_module.run_all(
+    return extract_module.run_all(
         tmp_path,
         VOCAB,
-        frozenset({"particles-rank"}),
+        frozenset({"particles-rank", "particles-sparks"}),
         game=game,
     )
+
+
+def test_run_all_keeps_edges_to_nodes_only_the_game_creates(tmp_path, monkeypatch):
+    game = GameData(nodes=[_bonus("particles-rank-bonus-1", "Relic 1 effect ×rank.")])
+    result = _run_with(monkeypatch, tmp_path, game)
     assert {(e.from_, e.to) for e in result.edges} == {
         ("particles-rank", "particles-rank-bonus-1"),
         ("particles-rank-bonus-1", "relic-1"),
     }
     assert result.dropped == []
+
+
+def test_run_all_drops_edges_to_a_matched_node_the_wiki_lost(tmp_path, monkeypatch):
+    # An entry without system and kind only overlays a wiki node. Once that node
+    # is gone the build creates nothing for it, so its edges must not survive.
+    game = GameData(nodes=[GameNode(id="particles-spark-green", name="Green Spark")])
+    result = _run_with(monkeypatch, tmp_path, game)
+    assert result.edges == []
+    assert [(d.from_id, d.to_id) for d in result.dropped] == [
+        ("particles-sparks", "particles-spark-green")
+    ]

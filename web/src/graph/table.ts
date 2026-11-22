@@ -107,8 +107,9 @@ export function buildRows(
     if (node === undefined || !systems.has(node.system)) return;
     const out = groupLinks(index.outgoing.get(id) ?? [], (edge) => edge.to, index);
     const inc = groupLinks(index.incoming.get(id) ?? [], (edge) => edge.from, index);
-    const text = [node.name, node.description ?? ''];
-    for (const effect of node.effects ?? []) text.push(effect.text, effect.per_level ?? '');
+    const prose = [node.description, ...(node.effects ?? []).flatMap((effect) => [effect.text, effect.per_level])];
+    // Names are labels, not prose: they carry no escapes or math to strip.
+    const text = [node.name, ...prose.filter((field) => field !== undefined).map(readableText)];
     rows.push({
       node,
       position,
@@ -117,7 +118,7 @@ export function buildRows(
       incoming: inc.groups,
       outgoingCount: out.count,
       incomingCount: inc.count,
-      haystack: text.map(readableText).join('\n').toLowerCase(),
+      haystack: text.join('\n').toLowerCase(),
     });
   });
   return rows;

@@ -23,7 +23,10 @@ function renderMath(katex: Katex, latex: string): string | null {
 function MathSpan({ latex }: { latex: string }) {
   const [html, setHtml] = useState(() => rendered.get(latex));
   useEffect(() => {
-    if (rendered.has(latex)) return;
+    if (rendered.has(latex)) {
+      setHtml(rendered.get(latex));
+      return;
+    }
     let live = true;
     katexLoad ??= Promise.all([import('katex'), import('katex/dist/katex.min.css')]).then(
       ([module]) => module.default,

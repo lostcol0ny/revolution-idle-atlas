@@ -6,7 +6,7 @@ current vocabulary and CI rebuilds them without a game install.
 Two kinds of edge come out:
 
 - Every member of a Particles family is joined to the node it hangs off
-  (`gamemap.MEMBER_LINKS`). The game's help text states these plainly, so they
+  (`particles.MEMBER_LINKS`). The game's help text states these plainly, so they
   are `documented`.
 - The description of a node only the game describes — one `atlas game`
   created, carrying `system` — is matched like wiki effect prose. A node a wiki
@@ -19,8 +19,8 @@ from dataclasses import replace
 
 from atlas.extract.refs import Reference, Vocabulary, resolve
 from atlas.extract.result import ExtractResult
-from atlas.gamemap import GRADES, MEMBER_LINKS, grade_node
 from atlas.models import Edge, EdgeConfidence, GameData, Rel
+from atlas.particles import GRADES, MEMBER_LINKS, grade_node
 
 SOURCE = "game"
 

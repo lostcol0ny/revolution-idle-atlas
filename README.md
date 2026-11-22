@@ -201,7 +201,7 @@ come out, both with `source: game`:
   (`particles-rank` and so on), every Epsilon Tree node is `unlocks`ed by the
   `epsilon-tree` group, and every spark colour by the `particles-sparks` group.
   The game's help text states each; the prefixes live in
-  `gamemap.MEMBER_LINKS`.
+  `particles.MEMBER_LINKS`.
 - **Description matches**, `uncertain` and always `boosts`. The description of
   a node only the game describes — one `atlas game` created, carrying `system`
   — goes through the same resolver as wiki effect prose. A node a wiki page

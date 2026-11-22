@@ -78,27 +78,30 @@ export function Sidebar({
         type="search"
         placeholder="e.g. Gold, Tarot…"
         autoComplete="off"
+        autoCorrect="off"
+        autoCapitalize="none"
+        spellCheck={false}
         value={filter}
         onChange={(event) => setFilter(event.target.value)}
       />
 
+      {/* Always mounted: a live region inserted together with its first
+          message is usually not announced. */}
+      <p className="muted filter-count" role="status">
+        {matches === null ? '' : matches.length === 1 ? '1 match' : `${matches.length} matches`}
+      </p>
       {matches !== null ? (
-        <>
-          <p className="muted filter-count" role="status">
-            {matches.length === 1 ? '1 match' : `${matches.length} matches`}
-          </p>
-          <ul className="node-list node-list--flat">
-            {matches.map((node) => (
-              <NodeRow
-                key={node.id}
-                node={node}
-                selected={node.id === selectedId}
-                onSelect={onSelect}
-                showIcon
-              />
-            ))}
-          </ul>
-        </>
+        <ul className="node-list node-list--flat" role="list">
+          {matches.map((node) => (
+            <NodeRow
+              key={node.id}
+              node={node}
+              selected={node.id === selectedId}
+              onSelect={onSelect}
+              showIcon
+            />
+          ))}
+        </ul>
       ) : (
         <nav aria-label="Systems">
           {tree.map((system) => (

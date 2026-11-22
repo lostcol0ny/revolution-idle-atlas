@@ -77,7 +77,7 @@ export function NodeCard({
 
   return (
     <div className="nodecard">
-      <h2 className="nodecard__name">{node.name}</h2>
+      <h1 className="nodecard__name">{node.name}</h1>
       {node.description !== undefined && (
         <p className="nodecard__description">
           <RichText text={node.description} />
@@ -122,11 +122,18 @@ export function NodeCard({
         </p>
       )}
 
+      {incoming.length + outgoing.length > 0 && (
+        <p className="nodecard__key">
+          <span className="edgerow__guessed">guessed</span> means the link is believed to exist, but how it works
+          is not established.
+        </p>
+      )}
+
       <h3 className="nodecard__heading">Feeds this ({incoming.length})</h3>
       {incoming.length === 0 ? (
         <p className="muted">Nothing documented feeds this node.</p>
       ) : (
-        <ul className="edgelist">
+        <ul className="edgelist" role="list">
           {incoming.map((edge, position) => (
             <EdgeRow
               key={`in-${position}`}
@@ -143,7 +150,7 @@ export function NodeCard({
       {outgoing.length === 0 ? (
         <p className="muted">This node feeds nothing documented.</p>
       ) : (
-        <ul className="edgelist">
+        <ul className="edgelist" role="list">
           {outgoing.map((edge, position) => (
             <EdgeRow
               key={`out-${position}`}

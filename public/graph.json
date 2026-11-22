@@ -18938,14 +18938,6 @@
       "note": "Unlocks Spark Mastery Factor for Singularity",
       "rel": "boosts",
       "source": "wiki:Minerals/Refine_Tree",
-      "to": "spark-mastery"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "refine-node-181",
-      "note": "Unlocks Spark Mastery Factor for Singularity",
-      "rel": "boosts",
-      "source": "wiki:Minerals/Refine_Tree",
       "to": "singularity"
     },
     {
@@ -24119,13 +24111,6 @@
       "from": "tarot-challenge-the-sun",
       "rel": "boosts",
       "source": "wiki:Tarot",
-      "to": "particles-sparks"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-the-sun",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
       "to": "minerals"
     },
     {
@@ -24715,13 +24700,6 @@
       "rel": "requires",
       "source": "game",
       "to": "particles-rank-bonus-15"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "particles-rank-bonus-15",
-      "rel": "boosts",
-      "source": "game",
-      "to": "attack-mult"
     },
     {
       "confidence": "documented",
@@ -29189,6 +29167,22 @@
       "rel": "boosts",
       "source": "game:PARTICLES_BONUS_PENT_3",
       "to": "singularity-mult"
+    },
+    {
+      "confidence": "provisional",
+      "from": "spark-mastery",
+      "note": "Unlocks Spark Mastery Factor for Singularity",
+      "rel": "boosts",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-181"
+    },
+    {
+      "confidence": "provisional",
+      "from": "particles-sparks",
+      "note": "Random special minerals in colors corresponding to your currently equipped sparks",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "tarot-challenge-the-sun"
     },
     {
       "confidence": "documented",

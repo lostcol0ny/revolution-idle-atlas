@@ -1,4 +1,4 @@
-import { memo, useDeferredValue, useMemo, useState, type JSX } from 'react';
+import { memo, useDeferredValue, useId, useMemo, useState, type JSX } from 'react';
 import type { GraphIndex } from '../graph/adjacency';
 import { systemColour, systemIcon } from '../graph/palette';
 import {
@@ -34,6 +34,13 @@ const CONFIDENCE_TITLE = {
   unknown: 'Unknown: placeholder, nothing curated yet',
 } as const;
 
+const SORT_LABELS: Record<SortKey, string> = {
+  name: 'Name',
+  kind: 'Kind',
+  outgoing: 'Boosts',
+  incoming: 'Boosted by',
+};
+
 export function SystemTable({
   index,
   systemId,
@@ -53,6 +60,7 @@ export function SystemTable({
     return buildRows(index, subtreeIds(system), names);
   }, [index, system]);
 
+  const filterId = useId();
   const [query, setQuery] = useState('');
   const [sort, setSort] = useState<Sort | null>(null);
   // A new system is a new page: the old filter would silently hide its rows.
@@ -80,12 +88,12 @@ export function SystemTable({
 
   const nested = system.children.length > 0;
 
-  const sortHeader = (key: SortKey, label: string) => {
+  const sortHeader = (key: SortKey) => {
     const active = sort?.key === key ? sort.dir : null;
     return (
-      <th scope="col" aria-sort={active === null ? undefined : active === 'asc' ? 'ascending' : 'descending'}>
+      <th scope="col" role="columnheader" aria-sort={active === null ? undefined : active === 'asc' ? 'ascending' : 'descending'}>
         <button type="button" className="stable__sort" onClick={() => setSort(nextSort(sort, key))}>
-          {label}
+          {SORT_LABELS[key]}
           <span className="stable__arrow" aria-hidden="true">
             {active === 'asc' ? '▲' : active === 'desc' ? '▼' : '↕'}
           </span>
@@ -109,7 +117,7 @@ export function SystemTable({
           {nested && `, ${system.direct} here and the rest in ${system.children.length} sub-${system.children.length === 1 ? 'system' : 'systems'}`}
         </p>
         {nested && (
-          <ul className="stable__chips" aria-label="Sub-systems">
+          <ul className="stable__chips" role="list" aria-label="Sub-systems">
             {system.children.map((child) => (
               <li key={child.id}>
                 <button
@@ -128,37 +136,57 @@ export function SystemTable({
       </header>
 
       <div className="stable__toolbar">
+        <label className="stable__label" htmlFor={filterId}>
+          Filter {system.name}
+        </label>
         <input
+          id={filterId}
           className="stable__filter"
           type="search"
-          aria-label={`Filter ${system.name} by name, description or effect`}
-          placeholder="Filter by name, description or effect…"
+          placeholder="Name, description or effect…"
+          autoComplete="off"
+          autoCorrect="off"
+          autoCapitalize="none"
+          spellCheck={false}
           value={query}
           onChange={(event) => setQuery(event.target.value)}
         />
         <span className="stable__muted" role="status">
           {visible.length === rows.length ? `${rows.length} shown` : `${visible.length} of ${rows.length} shown`}
+          {sort !== null &&
+            `, sorted by ${SORT_LABELS[sort.key]}, ${sort.dir === 'asc' ? 'ascending' : 'descending'}`}
         </span>
       </div>
+      <p className="stable__key stable__muted">
+        Badges: <strong>documented</strong> is confirmed by a source, <strong>provisional</strong> is from a source
+        but not yet confirmed, <strong>unknown</strong> is a placeholder. A link marked
+        <span className="stable__uncertain" aria-hidden="true">?</span> is uncertain: believed to exist, mechanism not
+        established.
+      </p>
 
-      <table className="stable__table">
+      {/* Explicit roles: Safari drops table semantics once the card layout sets display: block. */}
+      <table className="stable__table" role="table">
         <caption className="stable__sr">
           Everything in {system.name}. Column headers with arrows sort the table; links open an item.
         </caption>
-        <thead>
-          <tr>
-            {sortHeader('name', 'Name')}
-            {sortHeader('kind', 'Kind')}
-            <th scope="col" className="stable__unsortable">Description</th>
-            <th scope="col" className="stable__unsortable">Effects</th>
-            {sortHeader('outgoing', 'Boosts')}
-            {sortHeader('incoming', 'Boosted by')}
+        <thead role="rowgroup">
+          <tr role="row">
+            {sortHeader('name')}
+            {sortHeader('kind')}
+            <th scope="col" role="columnheader" className="stable__unsortable">
+              Description
+            </th>
+            <th scope="col" role="columnheader" className="stable__unsortable">
+              Effects
+            </th>
+            {sortHeader('outgoing')}
+            {sortHeader('incoming')}
           </tr>
         </thead>
-        <tbody>
+        <tbody role="rowgroup">
           {visible.length === 0 ? (
-            <tr>
-              <td colSpan={6} className="stable__muted">
+            <tr role="row">
+              <td role="cell" colSpan={6} className="stable__muted">
                 Nothing matches “{deferredQuery.trim()}”.
               </td>
             </tr>
@@ -198,8 +226,8 @@ const Row = memo(function Row({
   const href = wikiUrl(node.wiki);
 
   return (
-    <tr>
-      <th scope="row">
+    <tr role="row">
+      <th scope="row" role="rowheader">
         <button type="button" className="stable__link stable__name" onClick={() => onSelectNode(node.id)}>
           {node.name}
         </button>
@@ -219,15 +247,15 @@ const Row = memo(function Row({
           )}
         </div>
       </th>
-      <td data-label="Kind">{node.kind.replace('-', ' ')}</td>
-      <td data-label="Description">
+      <td role="cell" data-label="Kind">{node.kind.replace('-', ' ')}</td>
+      <td role="cell" data-label="Description">
         {node.description !== undefined ? (
           <RichText text={node.description} />
         ) : (
           <span className="stable__muted">—</span>
         )}
       </td>
-      <td data-label="Effects">
+      <td role="cell" data-label="Effects">
         {node.effects === undefined || node.effects.length === 0 ? (
           <span className="stable__muted">—</span>
         ) : (
@@ -246,10 +274,10 @@ const Row = memo(function Row({
           </ul>
         )}
       </td>
-      <td data-label="Boosts">
+      <td role="cell" data-label="Boosts">
         <Links groups={row.outgoing} labels={OUT_LABELS} onSelectNode={onSelectNode} />
       </td>
-      <td data-label="Boosted by">
+      <td role="cell" data-label="Boosted by">
         <Links groups={row.incoming} labels={IN_LABELS} onSelectNode={onSelectNode} />
       </td>
     </tr>

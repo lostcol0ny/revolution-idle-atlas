@@ -40,6 +40,7 @@ export default function App() {
   const [load, setLoad] = useState<LoadState>({ status: 'loading' });
   const [urlState, setUrlState, fromHistory] = useUrlState();
   const [attempt, setAttempt] = useState(0);
+  const [browseOpen, setBrowseOpen] = useState(false);
 
   useEffect(() => {
     let cancelled = false;
@@ -182,15 +183,37 @@ export default function App() {
       </header>
 
       <div className="layout">
+        {/* Phones only (see styles.css): the sidebar folds away so the
+            content leads instead of starting halfway down the screen. */}
+        <button
+          type="button"
+          className="browse-toggle"
+          aria-expanded={browseOpen}
+          aria-controls="sidebar"
+          onClick={() => setBrowseOpen((open) => !open)}
+        >
+          {browseOpen ? 'Hide browse' : 'Browse systems and items'}
+        </button>
         {/* Two complementary landmarks on one page are indistinguishable to a
             screen reader without names — both announce as "complementary". */}
-        <aside ref={sidebarRef} className="sidebar" aria-label="Browse systems and items">
+        <aside
+          id="sidebar"
+          ref={sidebarRef}
+          className={browseOpen ? 'sidebar' : 'sidebar sidebar--folded'}
+          aria-label="Browse systems and items"
+        >
           <Sidebar
             index={ready}
             selectedId={view.kind === 'item' ? view.nodeId : null}
             selectedSystemId={view.kind === 'system' ? view.systemId : null}
-            onSelect={selectNode}
-            onSelectSystem={selectSystem}
+            onSelect={(nodeId) => {
+              setBrowseOpen(false);
+              selectNode(nodeId);
+            }}
+            onSelectSystem={(systemId) => {
+              setBrowseOpen(false);
+              selectSystem(systemId);
+            }}
           />
         </aside>
         <main
@@ -294,8 +317,11 @@ function useViewArrival(
     window.scrollTo(0, offset[1]);
 
     // Someone stepping through the sidebar keeps their place in it; pulling
-    // focus to the heading would cost them a trip back on every item.
-    if (sidebarRef.current?.contains(document.activeElement)) return;
+    // focus to the heading would cost them a trip back on every item. On a
+    // phone the sidebar folds away once they pick something, and then the
+    // heading is where they should land.
+    const sidebar = sidebarRef.current;
+    if (sidebar?.contains(document.activeElement) && sidebar.checkVisibility()) return;
 
     // The item view's main pane is a canvas, so its heading is the detail card's.
     const heading = main.querySelector('h1') ?? detailRef.current?.querySelector('h1, h2');

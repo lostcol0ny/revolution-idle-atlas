@@ -3730,7 +3730,7 @@ nodes:
     effects:
       - text: Requires Tetr; resets all three lower grades and Alpha through Delta production
 
-  # The ten colours hang off this group (gamemap.MEMBER_LINKS), the way the
+  # The ten colours hang off this group (particles.MEMBER_LINKS), the way the
   # attack circles hang off attack-circles.
   - id: particles-sparks
     name: Sparks
@@ -3770,7 +3770,7 @@ nodes:
     effects:
       - text: Bought with Epsilon and spent on Epsilon Tree nodes
 
-  # The sixteen outer nodes hang off this group (gamemap.MEMBER_LINKS). Named
+  # The sixteen outer nodes hang off this group (particles.MEMBER_LINKS). Named
   # so that "all Epsilon Tree nodes" claims its span before "Epsilon" does.
   - id: epsilon-tree
     name: Epsilon Tree
@@ -7440,6 +7440,24 @@ edges:
     source: game:PARTICLES_BONUS_PENT_3
     confidence: documented
 
+  # "Unlocks Spark Mastery Factor for Singularity": Spark Mastery is the
+  # factor's input, the same shape as the grade factors above.
+  - from: spark-mastery
+    to: refine-node-181
+    rel: boosts
+    note: "Unlocks Spark Mastery Factor for Singularity"
+    source: wiki:Minerals/Refine_Tree
+    confidence: provisional
+
+  # The Sun's minerals come in the colours of the equipped sparks, one per
+  # spark, so the equipped sparks feed the challenge.
+  - from: particles-sparks
+    to: tarot-challenge-the-sun
+    rel: boosts
+    note: "Random special minerals in colors corresponding to your currently equipped sparks"
+    source: wiki:Tarot
+    confidence: provisional
+
   # Bonuses that strengthen another bonus, which the game names by grade and
   # threshold rather than by anything the matcher can read.
   - from: particles-rank-bonus-15
@@ -7831,6 +7849,31 @@ suppress:
     rel: boosts
     reason: >-
       "Unlocks Pent Factor for singularity" -- a factor of Singularity Mult.
+
+  - from: refine-node-181
+    to: spark-mastery
+    rel: boosts
+    reason: >-
+      "Unlocks Spark Mastery Factor for Singularity" -- Spark Mastery feeds the
+      factor; the node does not raise it.
+
+  - from: tarot-challenge-the-sun
+    to: particles-sparks
+    rel: boosts
+    reason: >-
+      "Minerals in colors corresponding to your currently equipped sparks" --
+      the challenge reads the equipped sparks; it does not create them.
+
+  # "The rank 8 bonus is 10 times stronger: +0.5 attack multiplier power per
+  # rank" strengthens the Rank 8 bonus, which the curated edge to
+  # particles-rank-bonus-4 says; "attack multiplier" here is that bonus's
+  # wording, not Attack Mult.
+  - from: particles-rank-bonus-15
+    to: attack-mult
+    rel: boosts
+    reason: >-
+      Restates the Rank 8 bonus it strengthens; the edge to
+      particles-rank-bonus-4 carries it.
 
   # Inputs read as targets on the Refine Tree; the curated reversals replace
   # them.

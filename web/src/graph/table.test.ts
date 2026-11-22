@@ -37,7 +37,8 @@ const doc: GraphDocument = {
       kind: 'tree-node',
       effects: [{ text: 'Increases mineral base', per_level: '+1 per level' }],
     }),
-    node('ore', { name: 'Ore', description: 'Dug from the ground at $x^2$ \\$ each' }),
+    // A name is a plain label: its backslash is a character, not an escape.
+    node('ore', { name: 'Ore C:\\$', description: 'Dug from the ground at $x^2$ \\$ each' }),
     node('relic-9', { name: 'Relic 9', system: 'relics', kind: 'relic' }),
     node('unity-pts', { name: 'Unity Points', system: 'unity', kind: 'currency' }),
   ],
@@ -132,6 +133,7 @@ describe('filterRows', () => {
     expect(ids(filterRows(rows, 'ground at x^2'))).toEqual(['ore']);
     expect(ids(filterRows(rows, '$ each'))).toEqual(['ore']);
     expect(ids(filterRows(rows, '$x^2$'))).toEqual([]);
+    expect(ids(filterRows(rows, 'c:\\$'))).toEqual(['ore']);
   });
 
   it('returns everything for a blank query', () => {

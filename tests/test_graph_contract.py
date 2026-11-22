@@ -325,7 +325,9 @@ def test_every_swept_edge_is_uncertain(graph: dict):
     swept -= {key(e) for e in curated.get("edges") or []}
     swept -= {key(s) for s in curated.get("suppress") or []}
 
-    assert len(swept) == 491, f"expected 491 swept edges, got {len(swept)}"
+    # 490: the Particles vocabulary added 11 swept edges over the old 480, and
+    # The Sun challenge's edge to the Sparks group is suppressed as an input.
+    assert len(swept) == 490, f"expected 490 swept edges, got {len(swept)}"
     shipped = {key(e): e for e in graph["edges"]}
     for edge in swept:
         assert edge in shipped, f"{edge} never reached the artifact"

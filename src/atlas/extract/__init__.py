@@ -50,8 +50,10 @@ def run_all(
     win `to_yaml`'s first-wins dedup wherever a swept name collides with one.
 
     `game` is data/game.yaml. Its edges come after every wiki edge (see
-    extract/game_text.py), and the nodes it creates count as known when
-    pruning, since `atlas build` creates them from the same file.
+    extract/game_text.py), and the nodes it creates — entries carrying a system
+    and kind — count as known when pruning, since `atlas build` creates them
+    from the same file. An entry overlaying a wiki node does not: if that node
+    vanishes, the build has nothing to create, and its edges must drop here.
     """
     combined = ExtractResult()
     for module in (relics, refine_tree, tarot, elements):
@@ -63,5 +65,9 @@ def run_all(
     combined.extend(sweep.extract(raw_dir, manifest or Manifest(), vocabulary))
     if game is not None:
         combined.extend(game_text.extract(game, vocabulary))
-        external_ids = external_ids | {entry.id for entry in game.nodes}
+        external_ids = external_ids | {
+            entry.id
+            for entry in game.nodes
+            if entry.system is not None and entry.kind is not None
+        }
     return prune_dangling(combined, external_ids)

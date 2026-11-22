@@ -58,7 +58,11 @@ _BARE_DOLLAR_RE = re.compile(r"(?<!\\)((?:\\\\)*)\$")
 
 
 def _math_segment(latex: str) -> str:
-    latex = _BARE_DOLLAR_RE.sub(r"\1\\$", normalise_space(latex))
+    latex = normalise_space(latex)
+    # An odd trailing backslash run would escape the closing delimiter (`$x\$`).
+    while (len(latex) - len(latex.rstrip("\\"))) % 2:
+        latex = latex[:-1].rstrip()
+    latex = _BARE_DOLLAR_RE.sub(r"\1\\$", latex)
     return f"${latex}$" if latex else ""
 
 
@@ -77,13 +81,27 @@ def plain_text(raw: str) -> str:
     sentence around it: the wiki writes "(Only the <math>(x-308)^2</math> is
     divided by 100)".
     """
+    return _strip_markup(raw, prose=True)
+
+
+def label_text(raw: str) -> str:
+    """Like `plain_text`, for names and captions: no escapes, no `$` delimiters.
+
+    Labels are shown and matched as plain strings, so a <math> block keeps only
+    its LaTeX source.
+    """
+    return _strip_markup(raw, prose=False)
+
+
+def _strip_markup(raw: str, *, prose: bool) -> str:
     text = _COMMENT_RE.sub("", raw)
     # Formulas are parked behind placeholders so the link, template and quote
     # rules below never rewrite LaTeX ("{{", "|", "''" are all legal in it).
     formulas: list[str] = []
 
     def park(match: re.Match[str]) -> str:
-        formulas.append(_math_segment(match.group(1)))
+        latex = match.group(1)
+        formulas.append(_math_segment(latex) if prose else normalise_space(latex))
         return f"\x00{len(formulas) - 1}\x00"
 
     text = _MATH_RE.sub(park, text)
@@ -103,7 +121,8 @@ def plain_text(raw: str) -> str:
     text = _BREAK_RE.sub(" ", text)
     text = _HTML_TAG_RE.sub("", text)
     text = text.replace("'''", "").replace("''", "")
-    text = escape_prose(text)
+    if prose:
+        text = escape_prose(text)
     text = _PLACEHOLDER_RE.sub(lambda m: formulas[int(m.group(1))], text)
     return normalise_space(text)
 

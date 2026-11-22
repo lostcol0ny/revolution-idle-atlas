@@ -1,4 +1,6 @@
+/* Cards switch on the table's own width: the sidebar takes a varying share of the screen. */
 .stable {
+  container-type: inline-size;
   padding: 16px 20px 32px;
   color: var(--fg);
 }
@@ -14,12 +16,12 @@
   align-items: center;
   gap: 10px;
   margin: 0 0 4px;
-  font-size: 24px;
+  font-size: 1.6rem;
 }
 
 .stable__muted {
   color: var(--muted);
-  font-size: 13px;
+  font-size: 0.8667rem;
 }
 
 .stable__header > .stable__muted {
@@ -43,7 +45,7 @@
   background: var(--surface);
   color: var(--fg);
   font: inherit;
-  font-size: 13px;
+  font-size: 0.8667rem;
   cursor: pointer;
 }
 
@@ -54,8 +56,18 @@
 .stable__toolbar {
   display: flex;
   align-items: center;
-  gap: 12px;
-  margin-bottom: 8px;
+  flex-wrap: wrap;
+  gap: 8px 12px;
+  margin-bottom: 6px;
+}
+
+.stable__label {
+  font-size: 0.8667rem;
+  font-weight: 600;
+}
+
+.stable__key {
+  margin: 0 0 8px;
 }
 
 .stable__filter {
@@ -67,12 +79,14 @@
   background: var(--surface);
   color: var(--fg);
   font: inherit;
+  /* iOS zooms into inputs under 16px; the 15px root rules out max(1rem, 1em). */
+  font-size: max(16px, 1em);
 }
 
 .stable__table {
   width: 100%;
   border-collapse: collapse;
-  font-size: 13px;
+  font-size: 0.8667rem;
   line-height: 1.4;
 }
 
@@ -108,11 +122,18 @@
   min-width: 180px;
 }
 
+/* The button fills its header cell so the whole cell is the target. */
+.stable__table thead th:has(.stable__sort) {
+  padding: 0;
+}
+
 .stable__sort {
-  display: inline-flex;
+  display: flex;
   align-items: center;
   gap: 4px;
-  padding: 0;
+  inline-size: 100%;
+  min-block-size: 24px;
+  padding: 6px 8px;
   border: none;
   background: none;
   color: inherit;
@@ -123,7 +144,7 @@
 
 .stable__arrow {
   color: var(--muted);
-  font-size: 10px;
+  font-size: 0.6667rem;
 }
 
 .stable__link,
@@ -152,7 +173,7 @@
 .stable__uncertain {
   margin-left: 1px;
   color: var(--edge-uncertain);
-  font-size: 11px;
+  font-size: 0.7333rem;
   font-weight: 700;
   vertical-align: super;
 }
@@ -166,7 +187,7 @@
 }
 
 .stable__sub {
-  font-size: 12px;
+  font-size: 0.8rem;
 }
 
 .stable__badge {
@@ -174,7 +195,7 @@
   border: 1px solid var(--border);
   border-radius: 8px;
   color: var(--muted);
-  font-size: 11px;
+  font-size: 0.7333rem;
 }
 
 .stable__badge--provisional,
@@ -196,7 +217,7 @@
 
 .stable__per-level {
   color: var(--muted);
-  font-size: 12px;
+  font-size: 0.8rem;
 }
 
 .stable__linklist {
@@ -218,12 +239,20 @@
 
 .stable__rel {
   color: var(--muted);
-  font-size: 12px;
+  font-size: 0.8rem;
 }
 
 .stable__more {
+  min-block-size: 24px;
   margin-top: 4px;
-  font-size: 12px;
+  font-size: 0.8rem;
+}
+
+@media (pointer: coarse) {
+  .stable__sort,
+  .stable__more {
+    min-block-size: 44px;
+  }
 }
 
 .stable__chip:focus-visible,
@@ -251,7 +280,9 @@
   .stable {
     padding: 12px;
   }
+}
 
+@container (width < 720px) {
   .stable__table,
   .stable__table thead,
   .stable__table tbody,
@@ -292,7 +323,7 @@
     content: attr(data-label);
     display: block;
     color: var(--muted);
-    font-size: 11px;
+    font-size: 0.7333rem;
     text-transform: uppercase;
   }
 }

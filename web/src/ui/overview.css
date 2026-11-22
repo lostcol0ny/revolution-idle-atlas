@@ -164,3 +164,41 @@
 .ov-edge-faint.ov-edge-on path {
   opacity: 0.9;
 }
+
+/* Keeps labels legible on phones; the scroll box pans instead of shrinking the map. */
+.overview-scroll svg {
+  min-inline-size: 720px;
+}
+
+.overview-links {
+  margin-top: 0.75rem;
+}
+
+.overview-links summary {
+  cursor: pointer;
+  color: var(--muted);
+}
+
+.overview-links table {
+  margin-top: 0.5rem;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+}
+
+.overview-links caption {
+  text-align: left;
+  color: var(--muted);
+  padding-bottom: 0.25rem;
+}
+
+.overview-links th,
+.overview-links td {
+  padding: 0.2rem 0.75rem 0.2rem 0;
+  border-bottom: 1px solid var(--border);
+  text-align: left;
+}
+
+.overview-links td:nth-child(n + 3),
+.overview-links th:nth-child(n + 3) {
+  text-align: right;
+}

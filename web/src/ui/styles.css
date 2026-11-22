@@ -50,7 +50,10 @@
   --font-emoji: 'Segoe UI Emoji', 'Apple Color Emoji', 'Noto Color Emoji', sans-serif;
 
   font-family: var(--font);
-  font-size: 15px;
+  /* 15px at the browser's default 16px, but follows the reader's setting. */
+  font-size: 93.75%;
+  /* Height of the table's sticky header row, with a little to spare. */
+  --sticky-head: 48px;
   line-height: 1.45;
   color: var(--fg);
   /* Hands the UA dark scrollbars, form controls and caret. */
@@ -151,7 +154,7 @@ code {
   gap: 8px;
   flex: none;
   color: var(--fg);
-  font-size: 17px;
+  font-size: 1.1333rem;
   font-weight: 700;
   letter-spacing: 0.01em;
   text-decoration: none;
@@ -159,7 +162,7 @@ code {
 }
 
 .brand__mark {
-  font-size: 20px;
+  font-size: 1.3333rem;
   background: var(--rainbow);
   background-clip: text;
   -webkit-background-clip: text;
@@ -177,7 +180,7 @@ code {
   margin: 0;
   padding: 0;
   list-style: none;
-  font-size: 14px;
+  font-size: 0.9333rem;
 }
 
 .crumbs li {
@@ -230,6 +233,12 @@ code {
   position: relative;
   min-width: 0;
   overflow-y: auto;
+  /* Keeps a focused row from tucking under the table's sticky header. */
+  scroll-padding-top: var(--sticky-head);
+}
+
+.browse-toggle {
+  display: none;
 }
 
 .canvas--graph {
@@ -291,6 +300,36 @@ h2[tabindex='-1']:focus-visible {
     max-height: 45vh;
   }
 
+  .sidebar--folded {
+    display: none;
+  }
+
+  .browse-toggle {
+    display: block;
+    margin: 10px 14px;
+    padding: 8px 14px;
+    border: 1px solid var(--control-border);
+    border-radius: var(--radius);
+    background: var(--surface);
+    color: var(--fg);
+    font: inherit;
+    text-align: left;
+    cursor: pointer;
+  }
+
+  .browse-toggle::before {
+    content: '▸ ';
+  }
+
+  .browse-toggle[aria-expanded='true']::before {
+    content: '▾ ';
+  }
+
+  /* The window scrolls here rather than .canvas. */
+  html {
+    scroll-padding-top: var(--sticky-head);
+  }
+
   .canvas {
     overflow: visible;
   }
@@ -319,12 +358,12 @@ h2[tabindex='-1']:focus-visible {
   border: 1px solid var(--banner-border);
   border-radius: var(--radius);
   background: var(--banner-bg);
-  font-size: 14px;
+  font-size: 0.9333rem;
 }
 
 .muted {
   color: var(--muted);
-  font-size: 14px;
+  font-size: 0.9333rem;
 }
 
 /* Not `button.link`: the detail panel puts a cross-link button and a wiki
@@ -363,7 +402,7 @@ h2[tabindex='-1']:focus-visible {
   border-radius: 999px;
   padding: 3px 12px;
   font: inherit;
-  font-size: 13px;
+  font-size: 0.8667rem;
   cursor: pointer;
 }
 
@@ -391,7 +430,7 @@ h2[tabindex='-1']:focus-visible {
   display: block;
   margin: 0 0 4px 2px;
   color: var(--muted);
-  font-size: 13px;
+  font-size: 0.8667rem;
   font-weight: 600;
   letter-spacing: 0.03em;
   text-transform: uppercase;
@@ -406,6 +445,8 @@ h2[tabindex='-1']:focus-visible {
   background: var(--bg);
   color: var(--fg);
   font: inherit;
+  /* Under 16px iOS Safari zooms on focus. 1rem is only 15px here. */
+  font-size: max(16px, 1em);
 }
 
 .filter::placeholder {
@@ -414,6 +455,10 @@ h2[tabindex='-1']:focus-visible {
 
 .filter-count {
   margin: 0 0 6px 2px;
+}
+
+.filter-count:empty {
+  margin: 0;
 }
 
 .group-header {
@@ -442,7 +487,7 @@ h2[tabindex='-1']:focus-visible {
   border-radius: 6px;
   background: none;
   color: var(--muted);
-  font-size: 16px;
+  font-size: 1.0667rem;
   cursor: pointer;
 }
 
@@ -462,7 +507,7 @@ h2[tabindex='-1']:focus-visible {
   background: none;
   color: var(--fg);
   font: inherit;
-  font-size: 14px;
+  font-size: 0.9333rem;
   text-align: left;
   cursor: pointer;
 }
@@ -482,7 +527,7 @@ h2[tabindex='-1']:focus-visible {
   border-radius: 50%;
   background: var(--bg);
   font-family: var(--font-emoji);
-  font-size: 12px;
+  font-size: 0.8rem;
   line-height: 1;
 }
 
@@ -492,7 +537,7 @@ h2[tabindex='-1']:focus-visible {
   border-radius: 999px;
   background: var(--surface);
   color: var(--muted);
-  font-size: 12px;
+  font-size: 0.8rem;
 }
 
 .node-list {
@@ -517,7 +562,7 @@ h2[tabindex='-1']:focus-visible {
   color: var(--fg);
   cursor: pointer;
   font: inherit;
-  font-size: 14px;
+  font-size: 0.9333rem;
   text-align: left;
 }
 
@@ -534,7 +579,7 @@ h2[tabindex='-1']:focus-visible {
 .node-row__icon {
   flex: none;
   font-family: var(--font-emoji);
-  font-size: 12px;
+  font-size: 0.8rem;
 }
 
 /* Several controls strip their native background and border, so the focus
@@ -550,6 +595,17 @@ summary:focus-visible,
 .chip:focus-visible {
   outline: 2px solid var(--focus);
   outline-offset: 2px;
+}
+
+/* Windows High Contrast drops backgrounds and box-shadows, which is all that
+   marks a selected row or a pressed chip otherwise. */
+@media (forced-colors: active) {
+  .group-header.selected,
+  .node-row.selected,
+  .chip--on {
+    outline: 2px solid Highlight;
+    outline-offset: -2px;
+  }
 }
 
 /* --- Graph nodes --------------------------------------------------------- */

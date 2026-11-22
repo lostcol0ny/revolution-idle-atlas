@@ -1,7 +1,8 @@
-import { useMemo, useState, type JSX } from 'react';
+import { useMemo, useState, type JSX, type MouseEvent } from 'react';
 import type { GraphIndex } from '../graph/adjacency';
 import { buildOverview, type OverviewEdge } from '../graph/overview';
 import { systemColour, systemIcon } from '../graph/palette';
+import { toSearch } from '../graph/urlState';
 import './overview.css';
 
 const BOX_W = 150;
@@ -154,26 +155,23 @@ export function Overview(props: { index: GraphIndex; onSelectSystem: (id: string
             {overview.systems.map((s) => {
               const at = placed.boxes.get(s.id);
               if (at === undefined) return null;
-              const select = () => onSelectSystem(s.id);
+              // Same contract as App's NavLink: a real link that navigates in place on a plain click.
+              const onClick = (event: MouseEvent<Element>) => {
+                if (event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+                event.preventDefault();
+                onSelectSystem(s.id);
+              };
               return (
-                <g
-                  key={s.id}
+                <g key={s.id} transform={`translate(${at.x - BOX_W / 2},${at.y - BOX_H / 2})`}>
+                <a
                   className="ov-node"
-                  transform={`translate(${at.x - BOX_W / 2},${at.y - BOX_H / 2})`}
-                  role="button"
-                  tabIndex={0}
+                  href={`${window.location.pathname}${toSearch({ nodeId: null, systemId: s.id, depth: null })}`}
                   aria-label={`${s.name}, ${s.count} items`}
-                  onClick={select}
+                  onClick={onClick}
                   onMouseEnter={() => setFocus(s.id)}
                   onMouseLeave={() => setFocus(null)}
                   onFocus={() => setFocus(s.id)}
                   onBlur={() => setFocus(null)}
-                  onKeyDown={(e) => {
-                    if (e.key === 'Enter' || e.key === ' ') {
-                      e.preventDefault();
-                      select();
-                    }
-                  }}
                 >
                   <rect width={BOX_W} height={BOX_H} rx={8} style={{ stroke: systemColour(s.id) }} />
                   <text x={10} y={25} className="ov-node-name">
@@ -182,16 +180,41 @@ export function Overview(props: { index: GraphIndex; onSelectSystem: (id: string
                   <text x={10} y={46} className="ov-node-count">
                     {s.count} items
                   </text>
+                </a>
                 </g>
               );
             })}
           </svg>
         </div>
+        <details className="overview-links">
+          <summary>Links as a table</summary>
+          <table>
+            <caption>Boosts between systems{showAll ? '' : ', as drawn on the map'}</caption>
+            <thead>
+              <tr>
+                <th scope="col">From</th>
+                <th scope="col">To</th>
+                <th scope="col">Boosts</th>
+                <th scope="col">Guessed</th>
+              </tr>
+            </thead>
+            <tbody>
+              {shown.map((e) => (
+                <tr key={`${e.from}>${e.to}`}>
+                  <td>{names.get(e.from)}</td>
+                  <td>{names.get(e.to)}</td>
+                  <td>{e.total}</td>
+                  <td>{e.uncertain}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </details>
       </section>
 
       <section aria-labelledby="overview-cards-title">
         <h2 id="overview-cards-title">All systems</h2>
-        <ul className="overview-cards">
+        <ul className="overview-cards" role="list">
           {overview.systems.map((s) => (
             <li key={s.id}>
               <button
