@@ -22500,1774 +22500,318 @@
     },
     {
       "confidence": "uncertain",
-      "from": "tarot-challenge-ace-of-swords",
-      "rel": "boosts",
+      "from": "attack-level",
+      "rel": "requires",
       "source": "wiki:Tarot",
-      "to": "attack-level"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-two-of-swords",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "game-speed"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-two-of-swords",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "attack-level"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-three-of-swords",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "game-speed"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-three-of-swords",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "attack-level"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-four-of-swords",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "attack-level"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-four-of-swords",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "attack-mult"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-four-of-swords",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "game-speed"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-four-of-swords",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "mult-gain"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-five-of-swords",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "attack-level"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-five-of-swords",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "attack-mult"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-five-of-swords",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "game-speed"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-five-of-swords",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "mult-gain"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-six-of-swords",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "attack-level"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-six-of-swords",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "gold"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-six-of-swords",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "attack-mult"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-six-of-swords",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "game-speed"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-six-of-swords",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "ascension-power"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-six-of-swords",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "gold-gain"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-seven-of-swords",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "attack-level"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-seven-of-swords",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "gold"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-seven-of-swords",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "attack-mult"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-seven-of-swords",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "game-speed"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-seven-of-swords",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "gold-gain"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-seven-of-swords",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "ascension-power"
+      "to": "tarot-challenge-ace-of-swords"
     },
     {
       "confidence": "uncertain",
       "from": "attack-level",
-      "rel": "boosts",
+      "rel": "requires",
+      "source": "wiki:Tarot",
+      "to": "tarot-challenge-two-of-swords"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "attack-level",
+      "rel": "requires",
+      "source": "wiki:Tarot",
+      "to": "tarot-challenge-three-of-swords"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "attack-level",
+      "rel": "requires",
+      "source": "wiki:Tarot",
+      "to": "tarot-challenge-four-of-swords"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "attack-level",
+      "rel": "requires",
+      "source": "wiki:Tarot",
+      "to": "tarot-challenge-five-of-swords"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "attack-level",
+      "rel": "requires",
+      "source": "wiki:Tarot",
+      "to": "tarot-challenge-six-of-swords"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "attack-level",
+      "rel": "requires",
       "source": "wiki:Tarot",
       "to": "tarot-challenge-seven-of-swords"
     },
     {
       "confidence": "uncertain",
-      "from": "tarot-challenge-eight-of-swords",
-      "rel": "boosts",
+      "from": "attack-level",
+      "rel": "requires",
       "source": "wiki:Tarot",
-      "to": "attack-level"
+      "to": "tarot-challenge-eight-of-swords"
     },
     {
       "confidence": "uncertain",
-      "from": "tarot-challenge-eight-of-swords",
-      "rel": "boosts",
+      "from": "attack-level",
+      "rel": "requires",
       "source": "wiki:Tarot",
-      "to": "attack-mult"
+      "to": "tarot-challenge-nine-of-swords"
     },
     {
       "confidence": "uncertain",
-      "from": "tarot-challenge-eight-of-swords",
-      "rel": "boosts",
+      "from": "attack-level",
+      "rel": "requires",
       "source": "wiki:Tarot",
-      "to": "ascension-power"
+      "to": "tarot-challenge-ten-of-swords"
     },
     {
       "confidence": "uncertain",
-      "from": "tarot-challenge-eight-of-swords",
-      "rel": "boosts",
+      "from": "attack-level",
+      "rel": "requires",
       "source": "wiki:Tarot",
-      "to": "mult-gain"
+      "to": "tarot-challenge-page-of-swords"
     },
     {
       "confidence": "uncertain",
-      "from": "tarot-challenge-nine-of-swords",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "attack-level"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-nine-of-swords",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "attack-mult"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-nine-of-swords",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "score"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-nine-of-swords",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "game-speed"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-ten-of-swords",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "attack-level"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-ten-of-swords",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "attack-mult"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-ten-of-swords",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "game-speed"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-ten-of-swords",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "mult-gain"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-page-of-swords",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "attack-level"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-page-of-swords",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "attack-mult"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-page-of-swords",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "game-speed"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-page-of-swords",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "mult-gain"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-knight-of-swords",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "attack-level"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-knight-of-swords",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "attack-mult"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-knight-of-swords",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "game-speed"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-knight-of-swords",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "mult-gain"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "endoplasmic-reticula",
-      "rel": "boosts",
+      "from": "attack-level",
+      "rel": "requires",
       "source": "wiki:Tarot",
       "to": "tarot-challenge-knight-of-swords"
     },
     {
       "confidence": "uncertain",
-      "from": "tarot-challenge-queen-of-swords",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "attack-level"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-queen-of-swords",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "attack-mult"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-queen-of-swords",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "game-speed"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-queen-of-swords",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "mult-gain"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "singularity-mult",
-      "rel": "boosts",
+      "from": "attack-level",
+      "rel": "requires",
       "source": "wiki:Tarot",
       "to": "tarot-challenge-queen-of-swords"
     },
     {
       "confidence": "uncertain",
-      "from": "tarot-challenge-king-of-swords",
-      "rel": "boosts",
+      "from": "elements",
+      "rel": "requires",
       "source": "wiki:Tarot",
-      "to": "attack-level"
+      "to": "tarot-challenge-two-of-wands"
     },
     {
       "confidence": "uncertain",
-      "from": "tarot-challenge-king-of-swords",
-      "rel": "boosts",
+      "from": "elements",
+      "rel": "requires",
       "source": "wiki:Tarot",
-      "to": "attack-mult"
+      "to": "tarot-challenge-three-of-wands"
     },
     {
       "confidence": "uncertain",
-      "from": "tarot-challenge-king-of-swords",
-      "rel": "boosts",
+      "from": "elements",
+      "rel": "requires",
       "source": "wiki:Tarot",
-      "to": "game-speed"
+      "to": "tarot-challenge-six-of-wands"
     },
     {
       "confidence": "uncertain",
-      "from": "tarot-challenge-king-of-swords",
-      "rel": "boosts",
+      "from": "elements",
+      "rel": "requires",
       "source": "wiki:Tarot",
-      "to": "mult-gain"
+      "to": "tarot-challenge-seven-of-wands"
     },
     {
       "confidence": "uncertain",
-      "from": "singularity",
-      "rel": "boosts",
+      "from": "elements",
+      "rel": "requires",
       "source": "wiki:Tarot",
-      "to": "tarot-challenge-king-of-swords"
+      "to": "tarot-challenge-eight-of-wands"
     },
     {
       "confidence": "uncertain",
-      "from": "attack-level",
-      "rel": "boosts",
+      "from": "elements",
+      "rel": "requires",
       "source": "wiki:Tarot",
-      "to": "tarot-challenge-king-of-swords"
+      "to": "tarot-challenge-nine-of-wands"
     },
     {
       "confidence": "uncertain",
-      "from": "tarot-challenge-king-of-swords",
-      "rel": "boosts",
+      "from": "elements",
+      "rel": "requires",
       "source": "wiki:Tarot",
-      "to": "singularity"
+      "to": "tarot-challenge-ten-of-wands"
     },
     {
       "confidence": "uncertain",
-      "from": "tarot-challenge-ace-of-wands",
-      "rel": "boosts",
+      "from": "elements",
+      "rel": "requires",
       "source": "wiki:Tarot",
-      "to": "elements"
+      "to": "tarot-challenge-page-of-wands"
     },
     {
       "confidence": "uncertain",
-      "from": "tarot-challenge-ace-of-wands",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "relic-36"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-ace-of-wands",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "global-element-mult"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-two-of-wands",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "elements"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-two-of-wands",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "relic-36"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-two-of-wands",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "global-element-mult"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-three-of-wands",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "elements"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-three-of-wands",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "relic-36"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-three-of-wands",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "global-element-mult"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-four-of-wands",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "elements"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-four-of-wands",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "global-element-mult"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-five-of-wands",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "elements"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-five-of-wands",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "global-element-mult"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-six-of-wands",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "elements"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-six-of-wands",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "global-element-mult"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-six-of-wands",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "fire-node-3"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-six-of-wands",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "wind-node-4"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-six-of-wands",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "relic-36"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-seven-of-wands",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "elements"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-seven-of-wands",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "relic-36"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-seven-of-wands",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "game-speed"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-seven-of-wands",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "global-element-mult"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-eight-of-wands",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "elements"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-eight-of-wands",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "relic-36"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-eight-of-wands",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "game-speed"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-eight-of-wands",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "global-element-mult"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-nine-of-wands",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "elements"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-nine-of-wands",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "relic-36"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-nine-of-wands",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "game-speed"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-nine-of-wands",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "global-element-mult"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-ten-of-wands",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "elements"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-ten-of-wands",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "relic-36"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-ten-of-wands",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "game-speed"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-ten-of-wands",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "global-element-mult"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-page-of-wands",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "elements"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-knight-of-wands",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "elements"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-knight-of-wands",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "relic-36"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-knight-of-wands",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "game-speed"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-knight-of-wands",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "global-element-mult"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "endoplasmic-reticula",
-      "rel": "boosts",
+      "from": "elements",
+      "rel": "requires",
       "source": "wiki:Tarot",
       "to": "tarot-challenge-knight-of-wands"
     },
     {
       "confidence": "uncertain",
-      "from": "tarot-challenge-queen-of-wands",
-      "rel": "boosts",
+      "from": "elements",
+      "rel": "requires",
       "source": "wiki:Tarot",
-      "to": "elements"
+      "to": "tarot-challenge-queen-of-wands"
     },
     {
       "confidence": "uncertain",
-      "from": "tarot-challenge-queen-of-wands",
-      "rel": "boosts",
+      "from": "mineral-level",
+      "rel": "requires",
       "source": "wiki:Tarot",
-      "to": "singularity-mult"
+      "to": "tarot-challenge-ace-of-pentacles"
     },
     {
       "confidence": "uncertain",
-      "from": "tarot-challenge-queen-of-wands",
-      "rel": "boosts",
+      "from": "mineral-level",
+      "rel": "requires",
       "source": "wiki:Tarot",
-      "to": "global-element-mult"
+      "to": "tarot-challenge-two-of-pentacles"
     },
     {
       "confidence": "uncertain",
-      "from": "tarot-challenge-queen-of-wands",
-      "rel": "boosts",
+      "from": "mineral-level",
+      "rel": "requires",
       "source": "wiki:Tarot",
-      "to": "singularity"
+      "to": "tarot-challenge-three-of-pentacles"
     },
     {
       "confidence": "uncertain",
-      "from": "tarot-challenge-king-of-wands",
-      "rel": "boosts",
+      "from": "mineral-level",
+      "rel": "requires",
       "source": "wiki:Tarot",
-      "to": "global-element-mult"
+      "to": "tarot-challenge-four-of-pentacles"
     },
     {
       "confidence": "uncertain",
-      "from": "tarot-challenge-king-of-wands",
-      "rel": "boosts",
+      "from": "value-points",
+      "rel": "requires",
       "source": "wiki:Tarot",
-      "to": "singularity-mult"
+      "to": "tarot-challenge-five-of-pentacles"
     },
     {
       "confidence": "uncertain",
-      "from": "tarot-challenge-king-of-wands",
-      "rel": "boosts",
+      "from": "mineral-level",
+      "rel": "requires",
       "source": "wiki:Tarot",
-      "to": "tarot"
+      "to": "tarot-challenge-six-of-pentacles"
     },
     {
       "confidence": "uncertain",
-      "from": "tarot-challenge-king-of-wands",
-      "rel": "boosts",
+      "from": "mineral-level",
+      "rel": "requires",
       "source": "wiki:Tarot",
-      "to": "singularity"
+      "to": "tarot-challenge-seven-of-pentacles"
     },
     {
       "confidence": "uncertain",
-      "from": "tarot-challenge-ace-of-pentacles",
-      "rel": "boosts",
+      "from": "mineral-level",
+      "rel": "requires",
       "source": "wiki:Tarot",
-      "to": "mineral-level"
+      "to": "tarot-challenge-eight-of-pentacles"
     },
     {
       "confidence": "uncertain",
-      "from": "tarot-challenge-two-of-pentacles",
-      "rel": "boosts",
+      "from": "mineral-level",
+      "rel": "requires",
       "source": "wiki:Tarot",
-      "to": "special-mineral-red-gem"
+      "to": "tarot-challenge-nine-of-pentacles"
     },
     {
       "confidence": "uncertain",
-      "from": "tarot-challenge-two-of-pentacles",
-      "rel": "boosts",
+      "from": "mineral-level",
+      "rel": "requires",
       "source": "wiki:Tarot",
-      "to": "value-points"
+      "to": "tarot-challenge-ten-of-pentacles"
     },
     {
       "confidence": "uncertain",
-      "from": "tarot-challenge-two-of-pentacles",
-      "rel": "boosts",
+      "from": "mineral-level",
+      "rel": "requires",
       "source": "wiki:Tarot",
-      "to": "relic-23"
+      "to": "tarot-challenge-page-of-pentacles"
     },
     {
       "confidence": "uncertain",
-      "from": "tarot-challenge-two-of-pentacles",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "polish-sword"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-two-of-pentacles",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "mineral-level"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-three-of-pentacles",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "relic-14"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-three-of-pentacles",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "relic-31"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-three-of-pentacles",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "game-speed"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-three-of-pentacles",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "mineral-level"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-four-of-pentacles",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "special-mineral-red-gem"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-four-of-pentacles",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "magnets"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-four-of-pentacles",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "mineral-level"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-five-of-pentacles",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "value-points"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-six-of-pentacles",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "gold"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-six-of-pentacles",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "relic-14"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-six-of-pentacles",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "relic-31"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-six-of-pentacles",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "gold-gain"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-six-of-pentacles",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "mineral-level"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-seven-of-pentacles",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "gold"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-seven-of-pentacles",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "relic-14"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-seven-of-pentacles",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "relic-31"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-seven-of-pentacles",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "gold-gain"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-seven-of-pentacles",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "game-speed"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-seven-of-pentacles",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "mineral-level"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-eight-of-pentacles",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "gold"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-eight-of-pentacles",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "relic-14"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-eight-of-pentacles",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "relic-31"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-eight-of-pentacles",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "attack-level"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-eight-of-pentacles",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "mineral-level"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-nine-of-pentacles",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "value-points"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-nine-of-pentacles",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "mineral-level"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-ten-of-pentacles",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "special-mineral-red-gem"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-ten-of-pentacles",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "magnets"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-ten-of-pentacles",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "merge-experience"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-ten-of-pentacles",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "game-speed"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-ten-of-pentacles",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "relic-22"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-ten-of-pentacles",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "polish-sword"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-ten-of-pentacles",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "mineral-level"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-page-of-pentacles",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "mineral-level"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-knight-of-pentacles",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "special-mineral-red-gem"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-knight-of-pentacles",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "magnets"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-knight-of-pentacles",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "merge-experience"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-knight-of-pentacles",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "game-speed"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-knight-of-pentacles",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "relic-22"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-knight-of-pentacles",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "polish-sword"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "endoplasmic-reticula",
-      "rel": "boosts",
+      "from": "mineral-level",
+      "rel": "requires",
       "source": "wiki:Tarot",
       "to": "tarot-challenge-knight-of-pentacles"
     },
     {
       "confidence": "uncertain",
-      "from": "tarot-challenge-knight-of-pentacles",
-      "rel": "boosts",
+      "from": "mineral-level",
+      "rel": "requires",
       "source": "wiki:Tarot",
-      "to": "mineral-level"
+      "to": "tarot-challenge-queen-of-pentacles"
     },
     {
       "confidence": "uncertain",
-      "from": "tarot-challenge-queen-of-pentacles",
-      "rel": "boosts",
+      "from": "elements",
+      "rel": "requires",
       "source": "wiki:Tarot",
-      "to": "special-mineral-red-gem"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-queen-of-pentacles",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "magnets"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-queen-of-pentacles",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "merge-experience"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-queen-of-pentacles",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "singularity-mult"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-queen-of-pentacles",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "relic-22"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-queen-of-pentacles",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "polish-sword"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-queen-of-pentacles",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "mineral-level"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-king-of-pentacles",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "special-mineral-red-gem"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-king-of-pentacles",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "magnets"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-king-of-pentacles",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "merge-experience"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-king-of-pentacles",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "singularity-mult"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-king-of-pentacles",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "relic-22"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-king-of-pentacles",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "polish-sword"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-king-of-pentacles",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "singularity"
+      "to": "tarot-challenge-the-magician"
     },
     {
       "confidence": "uncertain",
       "from": "mineral-level",
-      "rel": "boosts",
+      "rel": "requires",
       "source": "wiki:Tarot",
-      "to": "tarot-challenge-king-of-pentacles"
+      "to": "tarot-challenge-the-high-priestess"
     },
     {
       "confidence": "uncertain",
-      "from": "tarot-challenge-king-of-pentacles",
-      "rel": "boosts",
+      "from": "mineral-level",
+      "rel": "requires",
       "source": "wiki:Tarot",
-      "to": "value-points"
+      "to": "tarot-challenge-the-emperor"
     },
     {
       "confidence": "uncertain",
-      "from": "tarot-challenge-ace-of-cups",
-      "rel": "boosts",
+      "from": "mineral-level",
+      "rel": "requires",
       "source": "wiki:Tarot",
-      "to": "unity"
+      "to": "tarot-challenge-the-hierophant"
     },
     {
       "confidence": "uncertain",
-      "from": "tarot-challenge-two-of-cups",
-      "rel": "boosts",
+      "from": "merge-level",
+      "rel": "requires",
       "source": "wiki:Tarot",
-      "to": "unity"
+      "to": "tarot-challenge-the-lovers"
     },
     {
       "confidence": "uncertain",
-      "from": "tarot-challenge-two-of-cups",
-      "rel": "boosts",
+      "from": "sms-factor",
+      "rel": "requires",
       "source": "wiki:Tarot",
-      "to": "luck"
+      "to": "tarot-challenge-justice"
     },
     {
       "confidence": "uncertain",
-      "from": "tarot-challenge-three-of-cups",
-      "rel": "boosts",
+      "from": "tarot-resources",
+      "rel": "requires",
       "source": "wiki:Tarot",
-      "to": "unity"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-three-of-cups",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "luck"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-four-of-cups",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "unity"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-four-of-cups",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "luck"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-five-of-cups",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "unity"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-six-of-cups",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "unity"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-six-of-cups",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "value-points"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-seven-of-cups",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "unity"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-seven-of-cups",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "luck"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-eight-of-cups",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "unity"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-eight-of-cups",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "luck"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-eight-of-cups",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "quality"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-nine-of-cups",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "unity"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-nine-of-cups",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "relic-8"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-ten-of-cups",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "unity"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-page-of-cups",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "unity"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-knight-of-cups",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "unity"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-queen-of-cups",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "unity"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-queen-of-cups",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "singularity-mult"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-king-of-cups",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "unity"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "singularity",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "tarot-challenge-king-of-cups"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-king-of-cups",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "singularity"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-king-of-cups",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "zodiac-level"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-the-fool",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "special-minerals"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-the-fool",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "special-mineral-black-gem"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-the-magician",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "elements"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-the-magician",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "global-element-mult"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-the-high-priestess",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "special-mineral-red-gem"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-the-high-priestess",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "relic-22"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-the-high-priestess",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "polish-sword"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-the-high-priestess",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "magnets"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-the-high-priestess",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "mineral-level"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-the-empress",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "astrodust"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-the-emperor",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "relic-14"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-the-emperor",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "relic-31"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-the-emperor",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "mineral-level"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-the-hierophant",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "minerals"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-the-hierophant",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "mineral-level"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-the-lovers",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "merge-experience"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-the-lovers",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "relic-28"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-the-lovers",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "merge-level"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-justice",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "tarot"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-justice",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "sms-factor"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-the-hermit",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "tarot-resources"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-the-hermit",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "tarot"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-wheel-of-fortune",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "tarot-draws"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-wheel-of-fortune",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "tarot"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-strength",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "attack-level"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-strength",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "attack-mult"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-strength",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "game-speed"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-strength",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "mult-gain"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-strength",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "attack-exponent"
+      "to": "tarot-challenge-the-hermit"
     },
     {
       "confidence": "uncertain",
       "from": "attack-level",
-      "rel": "boosts",
+      "rel": "requires",
       "source": "wiki:Tarot",
       "to": "tarot-challenge-strength"
     },
     {
       "confidence": "uncertain",
-      "from": "tarot-challenge-the-hanged-man",
-      "rel": "boosts",
+      "from": "mineral-local-speed",
+      "rel": "requires",
       "source": "wiki:Tarot",
-      "to": "polish-points"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-the-hanged-man",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "special-minerals"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-the-hanged-man",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "mineral-local-speed"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-death",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "tarot"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-temperance",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "planet-fortune-pars"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-temperance",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "tarot"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-the-tower",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "relic-67"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-the-tower",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "score"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-the-tower",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "plague-points"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-the-tower",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "endoplasmic-reticula"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-the-star",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "singularity"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-the-star",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "unity"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-the-star",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "donut-luck"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-the-star",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "special-mineral-pink-gem"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-the-moon",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "singularity"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-the-moon",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "unity"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-the-moon",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "tarot"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-the-moon",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "quality"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-the-moon",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "planet-moon"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "quality",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "tarot-challenge-the-moon"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "planet-moon",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "tarot-challenge-the-moon"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-the-sun",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "special-minerals"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-the-sun",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "minerals"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-the-sun",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "spark-mastery"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "special-minerals",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "tarot-challenge-the-sun"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "singularity",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
-      "to": "tarot-challenge-the-sun"
+      "to": "tarot-challenge-the-hanged-man"
     },
     {
       "confidence": "uncertain",
@@ -24625,6 +23169,614 @@
       "rel": "boosts",
       "source": "wiki:Particles",
       "to": "plague-generators"
+    },
+    {
+      "confidence": "documented",
+      "from": "tarot-challenge-ace-of-swords",
+      "note": "Each Challenge provides a boost to the respective cards effect",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "tarot-ace-of-swords"
+    },
+    {
+      "confidence": "documented",
+      "from": "tarot-challenge-two-of-swords",
+      "note": "Each Challenge provides a boost to the respective cards effect",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "tarot-two-of-swords"
+    },
+    {
+      "confidence": "documented",
+      "from": "tarot-challenge-three-of-swords",
+      "note": "Each Challenge provides a boost to the respective cards effect",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "tarot-three-of-swords"
+    },
+    {
+      "confidence": "documented",
+      "from": "tarot-challenge-four-of-swords",
+      "note": "Each Challenge provides a boost to the respective cards effect",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "tarot-four-of-swords"
+    },
+    {
+      "confidence": "documented",
+      "from": "tarot-challenge-five-of-swords",
+      "note": "Each Challenge provides a boost to the respective cards effect",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "tarot-five-of-swords"
+    },
+    {
+      "confidence": "documented",
+      "from": "tarot-challenge-six-of-swords",
+      "note": "Each Challenge provides a boost to the respective cards effect",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "tarot-six-of-swords"
+    },
+    {
+      "confidence": "documented",
+      "from": "tarot-challenge-seven-of-swords",
+      "note": "Each Challenge provides a boost to the respective cards effect",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "tarot-seven-of-swords"
+    },
+    {
+      "confidence": "documented",
+      "from": "tarot-challenge-eight-of-swords",
+      "note": "Each Challenge provides a boost to the respective cards effect",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "tarot-eight-of-swords"
+    },
+    {
+      "confidence": "documented",
+      "from": "tarot-challenge-nine-of-swords",
+      "note": "Each Challenge provides a boost to the respective cards effect",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "tarot-nine-of-swords"
+    },
+    {
+      "confidence": "documented",
+      "from": "tarot-challenge-ten-of-swords",
+      "note": "Each Challenge provides a boost to the respective cards effect",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "tarot-ten-of-swords"
+    },
+    {
+      "confidence": "documented",
+      "from": "tarot-challenge-page-of-swords",
+      "note": "Each Challenge provides a boost to the respective cards effect",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "tarot-page-of-swords"
+    },
+    {
+      "confidence": "documented",
+      "from": "tarot-challenge-knight-of-swords",
+      "note": "Each Challenge provides a boost to the respective cards effect",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "tarot-knight-of-swords"
+    },
+    {
+      "confidence": "documented",
+      "from": "tarot-challenge-queen-of-swords",
+      "note": "Each Challenge provides a boost to the respective cards effect",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "tarot-queen-of-swords"
+    },
+    {
+      "confidence": "documented",
+      "from": "tarot-challenge-king-of-swords",
+      "note": "Each Challenge provides a boost to the respective cards effect",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "tarot-king-of-swords"
+    },
+    {
+      "confidence": "documented",
+      "from": "tarot-challenge-ace-of-wands",
+      "note": "Each Challenge provides a boost to the respective cards effect",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "tarot-ace-of-wands"
+    },
+    {
+      "confidence": "documented",
+      "from": "tarot-challenge-two-of-wands",
+      "note": "Each Challenge provides a boost to the respective cards effect",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "tarot-two-of-wands"
+    },
+    {
+      "confidence": "documented",
+      "from": "tarot-challenge-three-of-wands",
+      "note": "Each Challenge provides a boost to the respective cards effect",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "tarot-three-of-wands"
+    },
+    {
+      "confidence": "documented",
+      "from": "tarot-challenge-four-of-wands",
+      "note": "Each Challenge provides a boost to the respective cards effect",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "tarot-four-of-wands"
+    },
+    {
+      "confidence": "documented",
+      "from": "tarot-challenge-five-of-wands",
+      "note": "Each Challenge provides a boost to the respective cards effect",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "tarot-five-of-wands"
+    },
+    {
+      "confidence": "documented",
+      "from": "tarot-challenge-six-of-wands",
+      "note": "Each Challenge provides a boost to the respective cards effect",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "tarot-six-of-wands"
+    },
+    {
+      "confidence": "documented",
+      "from": "tarot-challenge-seven-of-wands",
+      "note": "Each Challenge provides a boost to the respective cards effect",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "tarot-seven-of-wands"
+    },
+    {
+      "confidence": "documented",
+      "from": "tarot-challenge-eight-of-wands",
+      "note": "Each Challenge provides a boost to the respective cards effect",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "tarot-eight-of-wands"
+    },
+    {
+      "confidence": "documented",
+      "from": "tarot-challenge-nine-of-wands",
+      "note": "Each Challenge provides a boost to the respective cards effect",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "tarot-nine-of-wands"
+    },
+    {
+      "confidence": "documented",
+      "from": "tarot-challenge-ten-of-wands",
+      "note": "Each Challenge provides a boost to the respective cards effect",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "tarot-ten-of-wands"
+    },
+    {
+      "confidence": "documented",
+      "from": "tarot-challenge-page-of-wands",
+      "note": "Each Challenge provides a boost to the respective cards effect",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "tarot-page-of-wands"
+    },
+    {
+      "confidence": "documented",
+      "from": "tarot-challenge-knight-of-wands",
+      "note": "Each Challenge provides a boost to the respective cards effect",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "tarot-knight-of-wands"
+    },
+    {
+      "confidence": "documented",
+      "from": "tarot-challenge-queen-of-wands",
+      "note": "Each Challenge provides a boost to the respective cards effect",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "tarot-queen-of-wands"
+    },
+    {
+      "confidence": "documented",
+      "from": "tarot-challenge-king-of-wands",
+      "note": "Each Challenge provides a boost to the respective cards effect",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "tarot-king-of-wands"
+    },
+    {
+      "confidence": "documented",
+      "from": "tarot-challenge-ace-of-pentacles",
+      "note": "Each Challenge provides a boost to the respective cards effect",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "tarot-ace-of-pentacles"
+    },
+    {
+      "confidence": "documented",
+      "from": "tarot-challenge-two-of-pentacles",
+      "note": "Each Challenge provides a boost to the respective cards effect",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "tarot-two-of-pentacles"
+    },
+    {
+      "confidence": "documented",
+      "from": "tarot-challenge-three-of-pentacles",
+      "note": "Each Challenge provides a boost to the respective cards effect",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "tarot-three-of-pentacles"
+    },
+    {
+      "confidence": "documented",
+      "from": "tarot-challenge-four-of-pentacles",
+      "note": "Each Challenge provides a boost to the respective cards effect",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "tarot-four-of-pentacles"
+    },
+    {
+      "confidence": "documented",
+      "from": "tarot-challenge-five-of-pentacles",
+      "note": "Each Challenge provides a boost to the respective cards effect",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "tarot-five-of-pentacles"
+    },
+    {
+      "confidence": "documented",
+      "from": "tarot-challenge-six-of-pentacles",
+      "note": "Each Challenge provides a boost to the respective cards effect",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "tarot-six-of-pentacles"
+    },
+    {
+      "confidence": "documented",
+      "from": "tarot-challenge-seven-of-pentacles",
+      "note": "Each Challenge provides a boost to the respective cards effect",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "tarot-seven-of-pentacles"
+    },
+    {
+      "confidence": "documented",
+      "from": "tarot-challenge-eight-of-pentacles",
+      "note": "Each Challenge provides a boost to the respective cards effect",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "tarot-eight-of-pentacles"
+    },
+    {
+      "confidence": "documented",
+      "from": "tarot-challenge-nine-of-pentacles",
+      "note": "Each Challenge provides a boost to the respective cards effect",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "tarot-nine-of-pentacles"
+    },
+    {
+      "confidence": "documented",
+      "from": "tarot-challenge-ten-of-pentacles",
+      "note": "Each Challenge provides a boost to the respective cards effect",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "tarot-ten-of-pentacles"
+    },
+    {
+      "confidence": "documented",
+      "from": "tarot-challenge-page-of-pentacles",
+      "note": "Each Challenge provides a boost to the respective cards effect",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "tarot-page-of-pentacles"
+    },
+    {
+      "confidence": "documented",
+      "from": "tarot-challenge-knight-of-pentacles",
+      "note": "Each Challenge provides a boost to the respective cards effect",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "tarot-knight-of-pentacles"
+    },
+    {
+      "confidence": "documented",
+      "from": "tarot-challenge-queen-of-pentacles",
+      "note": "Each Challenge provides a boost to the respective cards effect",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "tarot-queen-of-pentacles"
+    },
+    {
+      "confidence": "documented",
+      "from": "tarot-challenge-king-of-pentacles",
+      "note": "Each Challenge provides a boost to the respective cards effect",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "tarot-king-of-pentacles"
+    },
+    {
+      "confidence": "documented",
+      "from": "tarot-challenge-ace-of-cups",
+      "note": "Each Challenge provides a boost to the respective cards effect",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "tarot-ace-of-cups"
+    },
+    {
+      "confidence": "documented",
+      "from": "tarot-challenge-two-of-cups",
+      "note": "Each Challenge provides a boost to the respective cards effect",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "tarot-two-of-cups"
+    },
+    {
+      "confidence": "documented",
+      "from": "tarot-challenge-three-of-cups",
+      "note": "Each Challenge provides a boost to the respective cards effect",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "tarot-three-of-cups"
+    },
+    {
+      "confidence": "documented",
+      "from": "tarot-challenge-four-of-cups",
+      "note": "Each Challenge provides a boost to the respective cards effect",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "tarot-four-of-cups"
+    },
+    {
+      "confidence": "documented",
+      "from": "tarot-challenge-five-of-cups",
+      "note": "Each Challenge provides a boost to the respective cards effect",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "tarot-five-of-cups"
+    },
+    {
+      "confidence": "documented",
+      "from": "tarot-challenge-six-of-cups",
+      "note": "Each Challenge provides a boost to the respective cards effect",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "tarot-six-of-cups"
+    },
+    {
+      "confidence": "documented",
+      "from": "tarot-challenge-seven-of-cups",
+      "note": "Each Challenge provides a boost to the respective cards effect",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "tarot-seven-of-cups"
+    },
+    {
+      "confidence": "documented",
+      "from": "tarot-challenge-eight-of-cups",
+      "note": "Each Challenge provides a boost to the respective cards effect",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "tarot-eight-of-cups"
+    },
+    {
+      "confidence": "documented",
+      "from": "tarot-challenge-nine-of-cups",
+      "note": "Each Challenge provides a boost to the respective cards effect",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "tarot-nine-of-cups"
+    },
+    {
+      "confidence": "documented",
+      "from": "tarot-challenge-ten-of-cups",
+      "note": "Each Challenge provides a boost to the respective cards effect",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "tarot-ten-of-cups"
+    },
+    {
+      "confidence": "documented",
+      "from": "tarot-challenge-page-of-cups",
+      "note": "Each Challenge provides a boost to the respective cards effect",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "tarot-page-of-cups"
+    },
+    {
+      "confidence": "documented",
+      "from": "tarot-challenge-knight-of-cups",
+      "note": "Each Challenge provides a boost to the respective cards effect",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "tarot-knight-of-cups"
+    },
+    {
+      "confidence": "documented",
+      "from": "tarot-challenge-queen-of-cups",
+      "note": "Each Challenge provides a boost to the respective cards effect",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "tarot-queen-of-cups"
+    },
+    {
+      "confidence": "documented",
+      "from": "tarot-challenge-king-of-cups",
+      "note": "Each Challenge provides a boost to the respective cards effect",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "tarot-king-of-cups"
+    },
+    {
+      "confidence": "documented",
+      "from": "tarot-challenge-the-fool",
+      "note": "Each Challenge provides a boost to the respective cards effect",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "tarot-the-fool"
+    },
+    {
+      "confidence": "documented",
+      "from": "tarot-challenge-the-magician",
+      "note": "Each Challenge provides a boost to the respective cards effect",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "tarot-the-magician"
+    },
+    {
+      "confidence": "documented",
+      "from": "tarot-challenge-the-high-priestess",
+      "note": "Each Challenge provides a boost to the respective cards effect",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "tarot-the-high-priestess"
+    },
+    {
+      "confidence": "documented",
+      "from": "tarot-challenge-the-empress",
+      "note": "Each Challenge provides a boost to the respective cards effect",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "tarot-the-empress"
+    },
+    {
+      "confidence": "documented",
+      "from": "tarot-challenge-the-emperor",
+      "note": "Each Challenge provides a boost to the respective cards effect",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "tarot-the-emperor"
+    },
+    {
+      "confidence": "documented",
+      "from": "tarot-challenge-the-hierophant",
+      "note": "Each Challenge provides a boost to the respective cards effect",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "tarot-the-hierophant"
+    },
+    {
+      "confidence": "documented",
+      "from": "tarot-challenge-the-lovers",
+      "note": "Each Challenge provides a boost to the respective cards effect",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "tarot-the-lovers"
+    },
+    {
+      "confidence": "documented",
+      "from": "tarot-challenge-the-chariot",
+      "note": "Each Challenge provides a boost to the respective cards effect",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "tarot-the-chariot"
+    },
+    {
+      "confidence": "documented",
+      "from": "tarot-challenge-justice",
+      "note": "Each Challenge provides a boost to the respective cards effect",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "tarot-justice"
+    },
+    {
+      "confidence": "documented",
+      "from": "tarot-challenge-the-hermit",
+      "note": "Each Challenge provides a boost to the respective cards effect",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "tarot-the-hermit"
+    },
+    {
+      "confidence": "documented",
+      "from": "tarot-challenge-wheel-of-fortune",
+      "note": "Each Challenge provides a boost to the respective cards effect",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "tarot-wheel-of-fortune"
+    },
+    {
+      "confidence": "documented",
+      "from": "tarot-challenge-strength",
+      "note": "Each Challenge provides a boost to the respective cards effect",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "tarot-the-strength"
+    },
+    {
+      "confidence": "documented",
+      "from": "tarot-challenge-the-hanged-man",
+      "note": "Each Challenge provides a boost to the respective cards effect",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "tarot-the-hanged-man"
+    },
+    {
+      "confidence": "documented",
+      "from": "tarot-challenge-death",
+      "note": "Each Challenge provides a boost to the respective cards effect",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "tarot-death"
+    },
+    {
+      "confidence": "documented",
+      "from": "tarot-challenge-temperance",
+      "note": "Each Challenge provides a boost to the respective cards effect",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "tarot-temperance"
+    },
+    {
+      "confidence": "documented",
+      "from": "tarot-challenge-the-devil",
+      "note": "Each Challenge provides a boost to the respective cards effect",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "tarot-the-devil"
+    },
+    {
+      "confidence": "documented",
+      "from": "tarot-challenge-the-tower",
+      "note": "Each Challenge provides a boost to the respective cards effect",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "tarot-the-tower"
+    },
+    {
+      "confidence": "documented",
+      "from": "tarot-challenge-the-star",
+      "note": "Each Challenge provides a boost to the respective cards effect",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "tarot-the-star"
+    },
+    {
+      "confidence": "documented",
+      "from": "tarot-challenge-the-moon",
+      "note": "Each Challenge provides a boost to the respective cards effect",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "tarot-the-moon"
+    },
+    {
+      "confidence": "documented",
+      "from": "tarot-challenge-the-sun",
+      "note": "Each Challenge provides a boost to the respective cards effect",
+      "rel": "boosts",
+      "source": "wiki:Tarot",
+      "to": "tarot-the-sun"
     },
     {
       "confidence": "documented",

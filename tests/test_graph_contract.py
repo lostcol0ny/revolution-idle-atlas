@@ -324,14 +324,58 @@ def test_every_swept_edge_is_uncertain(graph: dict):
     swept = {key(e) for e in derived["edges"] if e["from"].startswith(prefixes)}
     swept -= {key(e) for e in curated.get("edges") or []}
     swept -= {key(s) for s in curated.get("suppress") or []}
+    # The challenge -> card rewards leave swept challenge nodes but are made by
+    # the Tarot parser from the page's prose, not by the sweep from a column.
+    cards = {n["id"] for n in derived["nodes"] if n.get("kind") == "tarot-card"}
+    swept -= {
+        key(e)
+        for e in derived["edges"]
+        if e["from"].startswith("tarot-challenge-") and e["to"] in cards
+    }
 
-    # 490: the Particles vocabulary added 11 swept edges over the old 480, and
-    # The Sun challenge's edge to the Sparks group is suppressed as an input.
-    assert len(swept) == 490, f"expected 490 swept edges, got {len(swept)}"
+    # 251: the 239 `boosts` the Tarot challenges read out of their Penalty and
+    # Completion Requirement cells are gone from the old 490, since neither is a
+    # reward. Plain threshold goals return as `requires` into the challenge, but
+    # none of those starts under a swept prefix: the two that did ("Destroy a
+    # Level 20 Black Gem", "...while the next expected Zodiac Level is 67+") are
+    # action goals, kept as text only.
+    assert len(swept) == 251, f"expected 251 swept edges, got {len(swept)}"
     shipped = {key(e): e for e in graph["edges"]}
     for edge in swept:
         assert edge in shipped, f"{edge} never reached the artifact"
         assert shipped[edge].get("confidence") == "uncertain", edge
+
+
+def test_tarot_challenges_require_their_goals_and_boost_their_cards(graph: dict):
+    # The swept goals are prose read through a column heading, so they ship as
+    # `uncertain`; only plain thresholds ("Attack Level 3250") make one. The
+    # reward is stated once in the page's prose and lands on each challenge's
+    # own card as `documented`.
+    derived = _load_yaml("derived.yaml")
+    curated = _load_yaml("relationships.yaml")
+    curated_keys = {(e["from"], e["to"], e["rel"]) for e in curated.get("edges") or []}
+    shipped = {(e["from"], e["to"], e["rel"]): e for e in graph["edges"]}
+
+    requires = [
+        (e["from"], e["to"], e["rel"])
+        for e in derived["edges"]
+        if e["rel"] == "requires" and e["to"].startswith("tarot-challenge-")
+    ]
+    assert len(requires) == 45, f"expected 45 goal edges, got {len(requires)}"
+    for edge in requires:
+        assert edge not in curated_keys, edge
+        assert shipped[edge].get("confidence") == "uncertain", edge
+
+    rewards = [
+        e
+        for e in graph["edges"]
+        if e["from"].startswith("tarot-challenge-") and e["rel"] == "boosts"
+    ]
+    assert len(rewards) == 76
+    assert {e["to"] for e in rewards} <= {
+        n["id"] for n in graph["nodes"] if n["kind"] == "tarot-card"
+    }
+    assert {e.get("confidence") for e in rewards} == {"documented"}
 
 
 def test_each_gem_keeps_the_spawn_effect_the_sweep_read_for_it(graph: dict):

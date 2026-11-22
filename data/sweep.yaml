@@ -321,9 +321,15 @@ pages:
   # Five tables, one per suit, sharing three columns. Every row is named for the
   # card that gates the challenge, so the 76 ids are distinct without a suit to
   # disambiguate them, and they do not collide with the `tarot-<card>` nodes the
-  # Tarot parser mints. `Penalty` is swept even though it is a restriction: here
-  # it is also the only text naming what the challenge touches, and the
-  # completion requirement beside it names the resource that has to be reached.
+  # Tarot parser mints. No column is a reward: the page states the payoff once,
+  # in prose above the tables, so nothing here may produce `boosts`;
+  # `tarot.challenge_rewards` turns that prose into one challenge -> card edge.
+  # `Penalty` is text only. It names what the challenge resets and nerfs, and
+  # its "penalty becomes weaker based on X" clauses run on to the end of the
+  # cell, so reversing them as inputs would also pull in every reset after them.
+  # `Completion Requirement` is the goal. A plain threshold ("Attack Level 3250")
+  # makes the stat it names a prerequisite of the challenge; an action goal
+  # ("Perform a Singularity at ...", "Unite with ...") is text only.
   - reader: wikitable
     page: Tarot
     system: tarot-challenges
@@ -331,7 +337,8 @@ pages:
     id_prefix: tarot-challenge
     name_prefix: Tarot Challenge
     name_columns: [Challenge]
-    effect_columns: [Penalty, Completion Requirement]
+    text_columns: [Penalty]
+    requirement_columns: [Completion Requirement]
 
   # The four artifacts are stacked in one table behind colspan divider rows the
   # reader skips, which is survivable only because part names are distinct across

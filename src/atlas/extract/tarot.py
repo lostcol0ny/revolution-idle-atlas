@@ -263,6 +263,80 @@ def parse(raw: str, vocabulary: Vocabulary = Vocabulary.EMPTY) -> ExtractResult:
     return result
 
 
+# The system `data/sweep.yaml` gives the challenge rows. The tables carry a
+# penalty and a goal but no reward; the reward is stated once, in prose above
+# them (Tarot.wikitext, "== Tarot Challenges =="): "Each Challenge provides a
+# boost to the respective cards effect, and a boost to the first effect of
+# every card in that suit."
+CHALLENGE_SYSTEM = "tarot-challenges"
+_CHALLENGE_REWARD_RE = re.compile(
+    r"Each Challenge provides a boost to the respective card'?s'? effect", re.IGNORECASE
+)
+
+
+def _card_key(node_id: str, prefix: str) -> str:
+    # The page lists the challenge "Strength" against the card "The Strength".
+    return node_id.removeprefix(prefix).removeprefix("the-")
+
+
+def challenge_rewards(raw: str, nodes: list[Node]) -> ExtractResult:
+    """One `challenge -> card` boost per Tarot challenge, from the page's prose.
+
+    Only the first half of the sentence becomes edges. "A boost to the first
+    effect of every card in that suit" would be fourteen more per suit challenge
+    and says nothing of which suit an Arcan challenge counts as; "All of your
+    Tarot Challenges combined boost Sacrifice Dust gain" is a boost from the set,
+    not from any one challenge, and no node stands for the set.
+
+    The edges exist only while the page still says so: without the sentence
+    there are none, and a warning says why. A challenge with no card of its name
+    is a warning too, rather than an edge to a guessed id.
+    """
+    result = ExtractResult()
+    challenges = [node for node in nodes if node.system == CHALLENGE_SYSTEM]
+    if not challenges:
+        return result
+    sentence = _CHALLENGE_REWARD_RE.search(raw)
+    if sentence is None:
+        result.warnings.append(
+            f"tarot page '{PAGE}': the sentence giving each challenge's reward to "
+            "its card is gone, so no challenge -> card edges were made"
+        )
+        return result
+    cards = {
+        _card_key(node.id, f"{SYSTEM}-"): node.id
+        for node in nodes
+        if node.system == SYSTEM and node.kind == "tarot-card"
+    }
+    for challenge in challenges:
+        card = cards.get(_card_key(challenge.id, f"{SYSTEM}-challenge-"))
+        if card is None:
+            result.warnings.append(
+                f"tarot page '{PAGE}': challenge '{challenge.id}' names no card "
+                "on the page, so it boosts nothing"
+            )
+            continue
+        result.edges.append(
+            Edge(
+                **{
+                    "from": challenge.id,
+                    "to": card,
+                    "rel": "boosts",
+                    "note": sentence.group(0),
+                    "source": SOURCE,
+                    "confidence": EdgeConfidence.DOCUMENTED,
+                }
+            )
+        )
+    return result
+
+
 def extract(raw_dir: Path, vocabulary: Vocabulary = Vocabulary.EMPTY) -> ExtractResult:
     """Extract tarot cards from the raw Tarot wiki page."""
     return parse((raw_dir / "Tarot.wikitext").read_text(encoding="utf-8"), vocabulary)
+
+
+def extract_challenge_rewards(raw_dir: Path, nodes: list[Node]) -> ExtractResult:
+    """`challenge_rewards` over the raw Tarot page."""
+    raw = (raw_dir / "Tarot.wikitext").read_text(encoding="utf-8")
+    return challenge_rewards(raw, nodes)

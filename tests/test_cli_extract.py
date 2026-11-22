@@ -206,7 +206,10 @@ def test_run_all_prunes_dangling_edges(tmp_path, monkeypatch):
     # Build four SimpleNamespace stubs so run_all's module-tuple iteration works
     # without touching the filesystem or the network.
     def _stub(result: ExtractResult) -> types.SimpleNamespace:
-        return types.SimpleNamespace(extract=lambda _raw_dir, _vocab=None: result)
+        return types.SimpleNamespace(
+            extract=lambda _raw_dir, _vocab=None: result,
+            extract_challenge_rewards=lambda _raw_dir, _nodes: ExtractResult(),
+        )
 
     monkeypatch.setattr(extract_module, "relics", _stub(stub_with_dangling))
     monkeypatch.setattr(extract_module, "refine_tree", _stub(filler))

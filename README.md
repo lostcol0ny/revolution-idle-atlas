@@ -91,12 +91,14 @@ matches no edge, or a generated edge colliding with an earlier one on
 
 Some warnings belong to `atlas extract` and appear only on an extraction run: a
 manifest page that yields no records, a page named in the manifest with no file
-in `data/raw/`, two manifest entries minting the same node id, or a Tarot card
-whose name another node already claims. Looking for them after `atlas build`
-finds nothing, because that command reads neither `data/sweep.yaml` nor
-`data/raw/`. Each one names its own subject rather than a file to open, because
-the fix can lie in the manifest, in `data/relationships.yaml`, or nowhere at all
-when the wiki has simply been re-worded.
+in `data/raw/`, two manifest entries minting the same node id, a Tarot card
+whose name another node already claims, a Tarot challenge with no card of its
+name, or a Tarot page that no longer states the challenge reward (below).
+Looking for them after `atlas build` finds nothing, because that command reads
+neither `data/sweep.yaml` nor `data/raw/`. Each one names its own subject rather
+than a file to open, because the fix can lie in the manifest, in
+`data/relationships.yaml`, or nowhere at all when the wiki has simply been
+re-worded.
 
 A manifest page yielding no records is a **warning and not an error**, unlike one
 of the four hand-written parsers producing no nodes, which is fatal. Those four
@@ -108,6 +110,16 @@ A colliding Tarot card name is warned about for the same reason. Card names are
 read off a page volunteers edit, so a rename can put a card in contest with a
 curated node; the card loses its place in the page vocabulary and the edges it
 would have produced, and everything else extracts as usual.
+
+The Tarot challenge tables have no reward column; the page states the reward
+once, in prose above them: "Each Challenge provides a boost to the respective
+cards effect". While that sentence is on the page, `atlas extract` gives every
+swept challenge one `documented` `boosts` edge to its card, matched by name with
+a leading "The" ignored (the challenge "Strength" is the card "The Strength").
+The rest of that paragraph makes no edges: "a boost to the first effect of every
+card in that suit" would be fourteen per challenge, and "All of your Tarot
+Challenges combined boost Sacrifice Dust gain" is a boost from the set, not
+from one challenge.
 
 `atlas scrape` talks to a live, volunteer-run wiki. Do not run it in a loop. A
 scheduled GitHub Actions workflow runs it daily and opens a pull request when the
@@ -226,7 +238,8 @@ entry names a page and says which of its columns or template fields carry an
 entity's name and its effects.
 
 Everything read through the manifest is deliberately low-confidence: swept nodes
-are `provisional` and swept edges are `uncertain` and always `boosts`. A column
+are `provisional` and swept edges are `uncertain`, and `boosts` unless the column
+is declared a requirement (below). A column
 heading is a guess about what a page means, and a wrong edge is worse than a
 missing one — a missing one shows up in `docs/coverage.md`, a wrong one just
 looks true. Correct anything wrong in `data/relationships.yaml`, which wins every
@@ -250,8 +263,24 @@ Fields common to both:
 | Field | Required | Notes |
 |---|---|---|
 | `name_columns` | yes | One or more header names, joined by a space. Two are needed when neither identifies a row alone — `Dilation_Tree` rows are an `Axis` plus an `Index`. |
-| `effect_columns` | yes | One or more header names. **Each becomes a separate effect**, because a Zodiac really does have four independent bonuses. |
+| `effect_columns` | one of these three | Header names. **Each becomes a separate effect**, because a Zodiac really does have four independent bonuses. What an effect names becomes `node → named` `boosts`. |
+| `text_columns` | one of these three | Header names kept on the node as effects, after `effect_columns`, and matched into no edge. For a restriction: a Tarot challenge's `Penalty` names the stats it resets and nerfs, and the matcher could only call that a boost. |
+| `requirement_columns` | one of these three | Header names kept on the node as effects, after `text_columns`. A **plain threshold** cell turns what it names into `named → node` `requires`: a Tarot challenge's `Completion Requirement` ("Attack Level 3250") is a goal to reach, not something the challenge raises. Any other cell is text only (see below). |
 | `per_level_column` | no | Only valid alongside exactly one `effect_columns` entry; with two there would be no way to say which effect it scales. |
+
+An entry needs at least one column among the three column lists, and a column
+may appear in only one of them.
+
+A requirement cell is a plain threshold when its amount (`3250`, `105+`, `1e20+`,
+`111,111+`, `x5e9`) sits at its start or its end and it holds no condition word
+(`with`, `while`, `at`, `when`, `during`, `by`, `after`, `before`, `until`,
+`within`): "Attack Level 3250", "105+ Max Mineral Level", "Merge Level 250+". An
+action goal puts its number mid-sentence or behind a condition, and what it names
+is not a stat to raise: in "Sell a Zodiac for exactly 67 Astrodust" the Astrodust
+is the sale's proceeds, and in "Perform a Singularity at Attack Level 5005+" the
+Singularity is a reset to perform. Such a cell stays on the node and makes no
+edge. The rule reads the shape rather than a list of verbs, because "Merge Level
+250+" opens with one.
 
 `reader: record_template`:
 

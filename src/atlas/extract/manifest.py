@@ -62,11 +62,35 @@ class WikitableEntry(_Entry):
     caption: str | None = None
     # A list because one row can carry several effects: a Zodiac has four
     # bonus columns and each is a separate effect, not one concatenated blob.
-    effect_columns: list[str] = Field(min_length=1)
+    # Each reference in these becomes `node -> reference` `boosts`. Empty when
+    # the table states no payoff at all, as on Tarot's challenge tables.
+    effect_columns: list[str] = []
+    # Kept on the node as effects, after `effect_columns`, but matched into no
+    # edge. For a restriction such as a challenge's penalty: "Resets Attack
+    # Level" names a stat the row nerfs, and only `boosts` would come out of it.
+    text_columns: list[str] = []
+    # Kept on the node as effects, after `text_columns`. A plain threshold cell
+    # ("Attack Level 3250", see `sweep.is_plain_threshold`) makes each reference
+    # `reference -> node` `requires`, prerequisite first: it is what finishing a
+    # challenge takes, not something the challenge raises. Any other cell, an
+    # action goal such as "Perform a Singularity at ...", makes no edge.
+    requirement_columns: list[str] = []
     per_level_column: str | None = None
 
     @model_validator(mode="after")
-    def _per_level_needs_one_effect(self) -> Self:
+    def _columns_are_consistent(self) -> Self:
+        columns = [*self.effect_columns, *self.text_columns, *self.requirement_columns]
+        if not columns:
+            raise ValueError(
+                "a wikitable entry needs at least one of effect_columns, "
+                "text_columns or requirement_columns"
+            )
+        repeated = sorted({name for name in columns if columns.count(name) > 1})
+        if repeated:
+            raise ValueError(
+                f"column(s) {repeated} named more than once — a column is an "
+                "effect, text or a requirement, and only once"
+            )
         if self.per_level_column is not None and len(self.effect_columns) != 1:
             raise ValueError(
                 "per_level_column requires exactly one effect_column, "

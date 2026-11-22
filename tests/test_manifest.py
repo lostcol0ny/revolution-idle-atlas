@@ -70,6 +70,39 @@ def test_empty_name_columns_is_rejected():
         Manifest.model_validate({"pages": [_wikitable(name_columns=[])]})
 
 
+def test_a_wikitable_entry_with_no_columns_to_read_is_rejected():
+    with pytest.raises(ValidationError, match="at least one"):
+        Manifest.model_validate({"pages": [_wikitable(effect_columns=[])]})
+
+
+def test_a_table_with_no_payoff_can_still_be_swept_for_text_and_requirements():
+    # Tarot's challenge tables carry a penalty and a completion requirement and
+    # no reward column, so neither of their columns may be an effect column.
+    manifest = Manifest.model_validate(
+        {
+            "pages": [
+                _wikitable(
+                    effect_columns=[],
+                    text_columns=["Penalty"],
+                    requirement_columns=["Completion Requirement"],
+                )
+            ]
+        }
+    )
+    entry = manifest.pages[0]
+    assert entry.text_columns == ["Penalty"]
+    assert entry.requirement_columns == ["Completion Requirement"]
+
+
+def test_one_column_in_two_roles_is_rejected():
+    # A cell read as both an effect and a requirement would emit the same
+    # reference once each way, a two-node cycle asserted from one sentence.
+    with pytest.raises(ValidationError, match="more than once"):
+        Manifest.model_validate(
+            {"pages": [_wikitable(requirement_columns=["Bonus 1"])]}
+        )
+
+
 def test_per_level_column_requires_exactly_one_effect_column():
     # per_level describes one effect's scaling. With two effect columns there is
     # no way to say which one it belongs to, so the ambiguity is rejected at

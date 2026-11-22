@@ -99,7 +99,10 @@ def _run_with(monkeypatch, tmp_path, game: GameData):
     filler = ExtractResult(
         nodes=[Node(id="relic-1", name="One", system="relics", kind=Kind.RELIC)]
     )
-    stub = types.SimpleNamespace(extract=lambda _raw_dir, _vocab=None: filler)
+    stub = types.SimpleNamespace(
+        extract=lambda _raw_dir, _vocab=None: filler,
+        extract_challenge_rewards=lambda _raw_dir, _nodes: ExtractResult(),
+    )
     for name in ("relics", "refine_tree", "tarot", "elements"):
         monkeypatch.setattr(extract_module, name, stub)
     return extract_module.run_all(
