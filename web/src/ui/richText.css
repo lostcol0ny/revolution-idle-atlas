@@ -1,0 +1,9 @@
+/* KaTeX inherits `color` from its parent, so formulas follow the theme text
+   colour; only its oversized default em (1.21) is brought back towards prose. */
+.richtext__math .katex {
+  font-size: 1.08em;
+}
+
+code.richtext__math {
+  color: var(--muted);
+}

@@ -115,6 +115,10 @@ def test_readable_strips_rich_text_but_not_prose_brackets():
     assert readable(raw) == "Ritual: Rotate twice a multiplier <== here"
 
 
+def test_readable_escapes_dollars_so_they_cannot_open_inline_math():
+    assert readable("$ {0}") == "\\$ a value"
+
+
 def test_named_families_match_by_normalised_name():
     nodes = [
         _node("plague-er-base-stealth", "Base Stealth", "plague"),

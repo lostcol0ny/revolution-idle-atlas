@@ -1,4 +1,5 @@
 import type { GraphIndex } from './adjacency';
+import { readableText } from './mathText';
 import { buildSystemTree, type SystemTreeNode } from './systems';
 import type { EdgeConfidence, GraphEdge, GraphNode, Rel, System } from '../types';
 
@@ -116,7 +117,7 @@ export function buildRows(
       incoming: inc.groups,
       outgoingCount: out.count,
       incomingCount: inc.count,
-      haystack: text.join('\n').toLowerCase(),
+      haystack: text.map(readableText).join('\n').toLowerCase(),
     });
   });
   return rows;

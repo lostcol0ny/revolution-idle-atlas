@@ -2,6 +2,7 @@ import type { GraphIndex } from '../graph/adjacency';
 import { edgeConfidence } from '../graph/ego';
 import type { GraphEdge, GraphNode } from '../types';
 import { sourceLabel, wikiUrl } from '../graph/wiki';
+import { RichText } from './RichText';
 import './graph.css';
 
 function EdgeRow({
@@ -47,7 +48,11 @@ function EdgeRow({
           <span className="muted">{confidence}</span>
         )}
       </div>
-      {edge.note !== undefined && <div className="edgerow__note">{edge.note}</div>}
+      {edge.note !== undefined && (
+        <div className="edgerow__note">
+          <RichText text={edge.note} />
+        </div>
+      )}
     </li>
   );
 }
@@ -74,7 +79,9 @@ export function NodeCard({
     <div className="nodecard">
       <h2 className="nodecard__name">{node.name}</h2>
       {node.description !== undefined && (
-        <p className="nodecard__description">{node.description}</p>
+        <p className="nodecard__description">
+          <RichText text={node.description} />
+        </p>
       )}
       {node.effects !== undefined && node.effects.length > 0 && (
         <>
@@ -82,9 +89,12 @@ export function NodeCard({
           <ul className="nodecard__effects">
             {node.effects.map((effect, position) => (
               <li key={position}>
-                {effect.text}
+                <RichText text={effect.text} />
                 {effect.per_level !== undefined && (
-                  <span className="nodecard__per-level"> ({effect.per_level} per level)</span>
+                  <span className="nodecard__per-level">
+                    {' ('}
+                    <RichText text={effect.per_level} /> per level)
+                  </span>
                 )}
               </li>
             ))}

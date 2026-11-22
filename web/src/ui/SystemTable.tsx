@@ -16,6 +16,7 @@ import {
 } from '../graph/table';
 import { wikiUrl } from '../graph/wiki';
 import type { Rel } from '../types';
+import { RichText } from './RichText';
 import './table.css';
 
 // `requires` points prerequisite -> dependant, so its verb reads backwards
@@ -220,7 +221,11 @@ const Row = memo(function Row({
       </th>
       <td data-label="Kind">{node.kind.replace('-', ' ')}</td>
       <td data-label="Description">
-        {node.description ?? <span className="stable__muted">—</span>}
+        {node.description !== undefined ? (
+          <RichText text={node.description} />
+        ) : (
+          <span className="stable__muted">—</span>
+        )}
       </td>
       <td data-label="Effects">
         {node.effects === undefined || node.effects.length === 0 ? (
@@ -229,8 +234,13 @@ const Row = memo(function Row({
           <ul className="stable__effects">
             {node.effects.map((effect, position) => (
               <li key={position}>
-                {effect.text}
-                {effect.per_level !== undefined && <span className="stable__per-level"> {effect.per_level}</span>}
+                <RichText text={effect.text} />
+                {effect.per_level !== undefined && (
+                  <span className="stable__per-level">
+                    {' '}
+                    <RichText text={effect.per_level} />
+                  </span>
+                )}
               </li>
             ))}
           </ul>

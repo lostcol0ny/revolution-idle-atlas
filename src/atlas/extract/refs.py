@@ -43,24 +43,50 @@ def _unwrap_template(match: re.Match[str]) -> str:
     return ""
 
 
-def _unwrap_math(match: re.Match[str]) -> str:
-    # Dropping the formula also broke the sentence around it: the wiki writes
-    # "(Only the <math>(x-308)^2</math> is divided by 100)", which came out as
-    # "(Only the is divided by 100)". Keeping the LaTeX verbatim is the honest
-    # option -- rendering it would put half a LaTeX translator in an extraction
-    # layer, and only two effect texts in the corpus carry math at all.
-    return normalise_space(match.group(1))
+def escape_prose(text: str) -> str:
+    """Escape prose so the only bare `$` in a text field delimits inline math.
+
+    The text format is `$LaTeX$` for math and backslash escapes everywhere
+    else: `\\$` is a literal dollar and `\\\\` a literal backslash. Escaping the
+    backslash too is what keeps "C:\\" before a formula from reading as `\\$`.
+    """
+    return text.replace("\\", "\\\\").replace("$", "\\$")
+
+
+# A `$` behind an even run of backslashes (none included) is bare in LaTeX.
+_BARE_DOLLAR_RE = re.compile(r"(?<!\\)((?:\\\\)*)\$")
+
+
+def _math_segment(latex: str) -> str:
+    latex = _BARE_DOLLAR_RE.sub(r"\1\\$", normalise_space(latex))
+    return f"${latex}$" if latex else ""
+
+
+# NUL cannot occur in wikitext, so a placeholder built from it can never collide
+# with page content, and none of the markup rules below can match across it.
+_PLACEHOLDER_RE = re.compile("\x00(\\d+)\x00")
 
 
 def plain_text(raw: str) -> str:
-    """Wiki markup in, readable plain text out.
+    """Wiki markup in, readable text out, with formulas as `$…$` inline math.
 
-    The output goes into graph.json and from there straight into React as a
-    text node. It must never carry markup, because the frontend is forbidden
-    from rendering HTML and would otherwise show the braces to the reader.
+    The output goes into graph.json and from there into React. It must never
+    carry wiki or HTML markup. The one structure it keeps is a <math> block,
+    re-delimited as `$LaTeX$` for the frontend to typeset; a literal `$`
+    anywhere else is written `\\$`. Dropping a formula would also break the
+    sentence around it: the wiki writes "(Only the <math>(x-308)^2</math> is
+    divided by 100)".
     """
     text = _COMMENT_RE.sub("", raw)
-    text = _MATH_RE.sub(_unwrap_math, text)
+    # Formulas are parked behind placeholders so the link, template and quote
+    # rules below never rewrite LaTeX ("{{", "|", "''" are all legal in it).
+    formulas: list[str] = []
+
+    def park(match: re.Match[str]) -> str:
+        formulas.append(_math_segment(match.group(1)))
+        return f"\x00{len(formulas) - 1}\x00"
+
+    text = _MATH_RE.sub(park, text)
     text = _FILE_LINK_RE.sub("", text)
     # _TEMPLATE_RE only matches an innermost {{...}} pair, so nested templates
     # need repeated passes. Five is far beyond the observed depth of two, and
@@ -77,6 +103,8 @@ def plain_text(raw: str) -> str:
     text = _BREAK_RE.sub(" ", text)
     text = _HTML_TAG_RE.sub("", text)
     text = text.replace("'''", "").replace("''", "")
+    text = escape_prose(text)
+    text = _PLACEHOLDER_RE.sub(lambda m: formulas[int(m.group(1))], text)
     return normalise_space(text)
 
 

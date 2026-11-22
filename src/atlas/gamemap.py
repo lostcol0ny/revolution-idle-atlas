@@ -15,7 +15,7 @@ from typing import Any
 
 import yaml
 
-from atlas.extract.refs import slugify
+from atlas.extract.refs import escape_prose, slugify
 from atlas.models import GameData, GameNode, Kind, Node
 
 GAME_FILE_REL_PATH = Path("data", "game.yaml")
@@ -110,7 +110,8 @@ def readable(text: str) -> str:
     text = _RUNNING_TOTAL.sub("", clean(text))
     for pattern, phrase in _PHRASES:
         text = pattern.sub(phrase, text)
-    return text
+    # Same text format as wiki prose: `$` would otherwise open inline math.
+    return escape_prose(text)
 
 
 def _norm(name: str) -> str:

@@ -37,7 +37,7 @@ const doc: GraphDocument = {
       kind: 'tree-node',
       effects: [{ text: 'Increases mineral base', per_level: '+1 per level' }],
     }),
-    node('ore', { name: 'Ore', description: 'Dug from the ground' }),
+    node('ore', { name: 'Ore', description: 'Dug from the ground at $x^2$ \\$ each' }),
     node('relic-9', { name: 'Relic 9', system: 'relics', kind: 'relic' }),
     node('unity-pts', { name: 'Unity Points', system: 'unity', kind: 'currency' }),
   ],
@@ -126,6 +126,12 @@ describe('filterRows', () => {
   it('requires every word, in any order', () => {
     expect(ids(filterRows(rows, 'base increases'))).toEqual(['refine-1']);
     expect(ids(filterRows(rows, 'base ground'))).toEqual([]);
+  });
+
+  it('matches inline math as readable text, not by its delimiters or escapes', () => {
+    expect(ids(filterRows(rows, 'ground at x^2'))).toEqual(['ore']);
+    expect(ids(filterRows(rows, '$ each'))).toEqual(['ore']);
+    expect(ids(filterRows(rows, '$x^2$'))).toEqual([]);
   });
 
   it('returns everything for a blank query', () => {

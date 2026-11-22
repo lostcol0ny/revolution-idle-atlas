@@ -5179,7 +5179,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "Attack level past 3600 boosts Fire generation Formula is: 1 + \\frac {(AttackLevel-3600)^2}{100}"
+          "text": "Attack level past 3600 boosts Fire generation Formula is: $1 + \\frac {(AttackLevel-3600)^2}{100}$"
         }
       ],
       "id": "fire-node-3",
@@ -5465,7 +5465,7 @@
       "confidence": "documented",
       "effects": [
         {
-          "text": "PP after 1.79e308 boosts Wind generation The Formula is: 1.01+(x-308)^2/100 (Only the (x-308)^2 is divided by 100)"
+          "text": "PP after 1.79e308 boosts Wind generation The Formula is: $1.01+(x-308)^2/100$ (Only the $(x-308)^2$ is divided by 100)"
         }
       ],
       "id": "wind-node-4",
@@ -19178,7 +19178,7 @@
     {
       "confidence": "uncertain",
       "from": "fire-node-3",
-      "note": "Attack level past 3600 boosts Fire generation Formula is: 1 + \\frac {(AttackLevel-3600)^2}{100}",
+      "note": "Attack level past 3600 boosts Fire generation Formula is: $1 + \\frac {(AttackLevel-3600)^2}{100}$",
       "rel": "boosts",
       "source": "wiki:Elements",
       "to": "attack-level"
@@ -19186,7 +19186,7 @@
     {
       "confidence": "uncertain",
       "from": "fire-node-3",
-      "note": "Attack level past 3600 boosts Fire generation Formula is: 1 + \\frac {(AttackLevel-3600)^2}{100}",
+      "note": "Attack level past 3600 boosts Fire generation Formula is: $1 + \\frac {(AttackLevel-3600)^2}{100}$",
       "rel": "boosts",
       "source": "wiki:Elements",
       "to": "fire"
@@ -19354,7 +19354,7 @@
     {
       "confidence": "uncertain",
       "from": "wind-node-4",
-      "note": "PP after 1.79e308 boosts Wind generation The Formula is: 1.01+(x-308)^2/100 (Only the (x-308)^2 is divided by 100)",
+      "note": "PP after 1.79e308 boosts Wind generation The Formula is: $1.01+(x-308)^2/100$ (Only the $(x-308)^2$ is divided by 100)",
       "rel": "boosts",
       "source": "wiki:Elements",
       "to": "polish-points"
@@ -19362,7 +19362,7 @@
     {
       "confidence": "uncertain",
       "from": "wind-node-4",
-      "note": "PP after 1.79e308 boosts Wind generation The Formula is: 1.01+(x-308)^2/100 (Only the (x-308)^2 is divided by 100)",
+      "note": "PP after 1.79e308 boosts Wind generation The Formula is: $1.01+(x-308)^2/100$ (Only the $(x-308)^2$ is divided by 100)",
       "rel": "boosts",
       "source": "wiki:Elements",
       "to": "wind"

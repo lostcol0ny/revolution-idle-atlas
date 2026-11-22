@@ -324,6 +324,13 @@ An entry in a node's `effects` array.
 | `per_level` | string | no | **A string, not a number.** Kept exactly as the wiki writes it, including forms like `+(?)` and `*^`. The wiki's own notation carries information a parsed number cannot: `+(?)` means the operator is known and the coefficient is not. |
 | `op` | enum | no | How the effect combines, when known. |
 
+**Prose fields carry inline math.** `text`, `per_level`, a node's `description` and an
+edge's `note` are prose in one small format: a wiki `<math>` block becomes `$LaTeX$`,
+and outside it a backslash escapes the next character (`\$` is a literal dollar, `\\` a
+backslash), so the only bare `$` in a field delimits math. The viewer typesets those
+segments with KaTeX and filters on the text with delimiters and escapes removed. Curated
+text in `data/relationships.yaml` follows the same rule.
+
 `aliases` exist because the wiki names one stat several ways — "Special Minerals Merge
 Factor", "SMMF" and "Merge Factor" are one node. The extraction layer matches effect prose
 against every node's `name` plus its `aliases`, longest surface form first. An
