@@ -165,15 +165,17 @@ git-ignored.
 `atlas game` then maps catalog families onto the nodes of the current
 `data/derived.yaml` and `data/relationships.yaml`, and writes the result to
 `data/game.yaml`, which **is** committed. Each entry is a node `id`, the game's
-`name`, and its `description`, under the Steam `buildid` it was read from.
-Unity rich-text tags are stripped. The numbers the game fills in at runtime are
-worded by the sign beside them: `x{0}` becomes "a multiplier", `^{0}` "an
-exponent", `/{0}` "a divisor", `{0}%` "a percentage", `+{0}` "an amount", and a
-bare `{0}` "a value"; a running total such as `(total: x{1})` or a closing
-`Currently: x{0}` line is dropped, since
-it is the player's state rather than the entity's. `atlas build` overlays the
-name and description field by field on the generated node, and a curated field
-still wins.
+`name` (left out when the game only describes the entity, so the node keeps
+the name it has), and its `description`, under the Steam `buildid` it was read
+from. Unity rich-text tags are stripped. The numbers the game fills in at
+runtime are worded by the sign beside them: `x{0}` becomes "a multiplier",
+`^{0}` "an exponent", `/{0}` "a divisor", `{0}%` "a percentage", `+{0}` "an
+amount", and a bare `{0}` "a value"; an operator chain such as `^^^{0}` keeps
+its operators ("^^^ a value"). A running total such as `(total: x{1})`,
+`(cur.: /{0})` or `(x{0} multiplier)`, or a closing `Currently: x{0}` line, is
+dropped, since it is the player's state rather than the entity's. `atlas build`
+overlays the name and description field by field on the generated node, and a
+curated field still wins.
 
 Only families with a clear home in the graph are mapped:
 
@@ -201,14 +203,16 @@ an entity with no node, or outside the checked index range, is reported.
 
 | Keys | Onto | Matched by |
 |---|---|---|
-| `UNI_MIN_REF_NODE_REWARD_<n>` | `refine-node-<n+1>` | Index, for 0–199, each checked against the wiki effect of that node. |
-| `UNI_ELEM_TREE_NODE_EFFECT_<ELEMENT>_<n>` | `<element>-node-<n+1>` | Index, for the checked ranges: Fire and Water 0–10, Wind 0–11, Earth 0–9. |
+| `UNI_MIN_REF_NODE_REWARD_<n>` | `refine-node-<n+1>` | Index, for 0–199, each checked against the wiki effect of that node. Description only. |
+| `UNI_ELEM_TREE_NODE_EFFECT_<ELEMENT>_<n>` | `<element>-node-<n+1>` | Index, for the checked ranges: Fire and Water 0–10, Wind 0–11, Earth 0–9. Description only. |
 | `ETR_CHA_REWD_<n>`, `ETR_CHL_NAME_<n>` | `eternity-challenge-<n+1>` | Index, verified by the `#<n+1>` in the name; named `Eternity Challenge <n> (<title>)`. |
 | `INF_UPGRADE_NAME_<a>_<b>`, `INF_UPGRADE_REWD_<a>_<b>` | the `infinity-upgrade-<a>-<b>-*` node | Grid cell, verified by name; named `<a>;<b> <title>`. |
 | `ETR_ANL_NAME_<a>_<b>`, `ETR_ANL_REWD_<a>_<b>` | `animal-*` in `animals` | Normalised name, else one near spelling. |
-| `SING_MILESTONES_NAME_<SING\|ATOM>_<n>`, `…_REWD_…` | `singularity-milestone-*` in the track's system | Same. |
+| `SING_MILESTONES_NAME_<SING\|ATOM\|PROG>_<n>`, `…_REWD_…` | `singularity-milestone-*` in the track's system | Same. |
 | `TAROT_ARTIFACT_PART_NAME_<SUIT>_<n>`, `TAROT_ARTIFACT_PART_<n>_EFFECT_<SUIT>` | `tarot-artifact-*` | Same. |
-| `UNI_TAROT_CARD_<SUIT>_<n>` with `…_EFFECT_1_…`/`…_EFFECT_2_…` | `tarot-*` in `tarot` | Same; both effects make the description. The card's `…_<SUIT>_REWARD_<n>` describes `tarot-challenge-<card>`. |
+| `UNI_TAROT_CARD_<SUIT>_<n>` with `…_EFFECT_1_…`/`…_EFFECT_2_…` | `tarot-*` in `tarot` | Same; the effects make the description, leaving out the Arcana's `Cooldown Time: {0}`. The card's `…_<SUIT>_REWARD_<n>` describes `tarot-challenge-<card>` (description only). |
+
+No two entities map onto the same node; a second one is reported.
 
 `ETR_MIL_REWD_<k>` is milestone k+1 on the game's Eternity › Milestones screen,
 mapped onto `eternity-milestone-<Eternities needed>` using the thresholds read

@@ -116,6 +116,10 @@ def test_numbered_names_verify_by_number_and_compose_a_label():
             "Generator 1 is stronger.",
         ),
         ("Passive gains.<br>Currently: {1}/{2}", "Passive gains."),
+        ("Wind divides base cost (cur.: /{0})", "Wind divides base cost"),
+        ("Earth boosts its own factor 2 (x{0} multiplier)", "Earth boosts its own factor 2"),
+        # An operator chain keeps its operators rather than reading "^^an exponent".
+        ("Mineral cost increase is raised to ^^^{0}", "Mineral cost increase is raised to ^^^ a value"),
     ],
 )
 def test_readable_words_runtime_placeholders(raw, expected):
@@ -430,8 +434,9 @@ def test_refine_and_element_effects_map_by_checked_index():
     )
     # Overlaid onto the wiki's nodes, keeping their names; never created.
     assert mapped == [
-        ("refine-node-1", "Refine Node 1", "Increases Mineral base by 1", None, None),
-        ("fire-node-11", "Fire Node 11", "Unlocks the third factor for Fire", None, None),
+        # Description only: the node keeps whatever name the wiki gives it.
+        ("refine-node-1", None, "Increases Mineral base by 1", None, None),
+        ("fire-node-11", None, "Unlocks the third factor for Fire", None, None),
     ]
     assert reports["UNI_MIN_REF_NODE_REWARD"].unmatched == ["#200: beyond the checked #0-#199"]
     assert reports["UNI_ELEM_TREE_NODE_EFFECT"].unmatched == [
@@ -519,6 +524,8 @@ def test_animals_milestones_and_artifact_parts_match_by_name():
         _node("singularity-milestone-first-thousand", "First Thousand",
               "singularity-milestones-singularity"),
         _node("tarot-artifact-zygomatics", "Zygomatics", "tarot-artifacts"),
+        _node("singularity-milestone-full-deck", "Full Deck",
+              "singularity-milestones-progression"),
     ]
     mapped, reports = _described(
         {
@@ -530,11 +537,16 @@ def test_animals_milestones_and_artifact_parts_match_by_name():
             "SING_MILESTONES_REWD_ATOM_0": "Sacrifice Dust Gain: ^1.05",
             "TAROT_ARTIFACT_PART_NAME_WAND_6": "Zygomatic Bones",
             "TAROT_ARTIFACT_PART_6_EFFECT_WAND": "Wand LOGPOW base: {0}",
+            "SING_MILESTONES_NAME_PROG_2": "Full Deck",
+            "SING_MILESTONES_REWD_PROG_2": "Black Gem Eff. is powered to ^1.05",
         },
         nodes,
     )
     assert mapped == [
         ("animal-meta-cat", "Meta-cat", "x1.01 to Stardust Exponent", None, None),
+        # Sorted by key, so the PROG track comes before SING.
+        ("singularity-milestone-full-deck", "Full Deck",
+         "Black Gem Eff. is powered to ^1.05", None, None),
         ("singularity-milestone-event-horizon", "Event Horizon",
          "Keep Plague on Singularity Reset.", None, None),
         ("tarot-artifact-zygomatics", "Zygomatic Bones", "Wand LOGPOW base: a value", None, None),
@@ -547,7 +559,7 @@ def test_animals_milestones_and_artifact_parts_match_by_name():
     ]
 
 
-def test_tarot_cards_take_both_effects_and_their_challenge_reward():
+def test_tarot_cards_take_their_effects_and_their_challenge_reward():
     nodes = [
         _node("tarot-two-of-cups", "Two of Cups", "tarot", Kind.TAROT_CARD),
         _node("tarot-the-strength", "The Strength", "tarot", Kind.TAROT_CARD),
@@ -556,11 +568,16 @@ def test_tarot_cards_take_both_effects_and_their_challenge_reward():
     mapped, reports = _described(
         {
             "UNI_TAROT_CARD_CUP_1": "Two of Cups",
-            "UNI_TAROT_CARD_EFFECT_1_CUP_1": "Cups 1 first effect mult: x{0}",
+            # A sentence is followed by a sentence, not by "; ".
+            "UNI_TAROT_CARD_EFFECT_1_CUP_1": "Cups 1 first effect mult: x{0}.",
             "UNI_TAROT_CARD_EFFECT_2_CUP_1": "Relic 37 Effect: +^{0}",
             "UNI_TAROT_CARD_CUP_REWARD_1": "Two of Cups base effects: x{0}",
+            # A second key naming the same card cannot map onto it again.
+            "UNI_TAROT_CARD_WAND_1": "Two of Cups",
             "UNI_TAROT_CARD_ARCAN_11": "Strength",
             "UNI_TAROT_CARD_EFFECT_1_ARCAN_11": "Slowly changes Attack Exponent by {0}",
+            # Every Arcana has one; it says nothing about the card.
+            "UNI_TAROT_CARD_EFFECT_2_ARCAN_11": "Cooldown Time: {0}",
             "UNI_TAROT_CARD_ARCAN_REWARD_11": "Arcan Power Bonus: x{0}",
             "UNI_TAROT_UPGRADE_EFFECT_CUP_0": "Increases Tarot Local Speed Power by +{0}",
         },
@@ -568,10 +585,12 @@ def test_tarot_cards_take_both_effects_and_their_challenge_reward():
     )
     assert mapped == [
         ("tarot-the-strength", "Strength", "Slowly changes Attack Exponent by a value", None, None),
-        ("tarot-challenge-strength", "Tarot Challenge Strength",
-         "Reward: Arcan Power Bonus: a multiplier", None, None),
+        ("tarot-challenge-strength", None, "Reward: Arcan Power Bonus: a multiplier", None, None),
         ("tarot-two-of-cups", "Two of Cups",
-         "Cups 1 first effect mult: a multiplier; Relic 37 Effect: +an exponent", None, None),
+         "Cups 1 first effect mult: a multiplier. Relic 37 Effect: +an exponent", None, None),
+    ]
+    assert reports["UNI_TAROT_CARD"].unmatched == [
+        "UNI_TAROT_CARD_WAND_1: tarot-two-of-cups is already mapped"
     ]
     assert reports["UNI_TAROT_CARD_REWARD"].unmatched == [
         "UNI_TAROT_CARD_CUP_1: no node tarot-challenge-two-of-cups"

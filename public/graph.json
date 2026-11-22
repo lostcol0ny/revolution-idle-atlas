@@ -1453,7 +1453,7 @@
     },
     {
       "confidence": "documented",
-      "description": "Mineral cost increase is raised to ^^an exponent",
+      "description": "Mineral cost increase is raised to ^^^ a value",
       "effects": [
         {
           "text": "Mineral cost increase is pentated to 0.85 (^^^0.85)"
@@ -4953,7 +4953,7 @@
     },
     {
       "confidence": "documented",
-      "description": "Instantly spawns a Black Gem with Lv.a value; Cooldown Time: a value",
+      "description": "Instantly spawns a Black Gem with Lv.a value",
       "effects": [
         {
           "text": "Instantly spawns a black gem with Lv.# (base lvl + 1)"
@@ -4967,7 +4967,7 @@
     },
     {
       "confidence": "documented",
-      "description": "Gain a value seconds of production for your currently generated element (you must be generating an element to use this Arcan).; Cooldown Time: a value",
+      "description": "Gain a value seconds of production for your currently generated element (you must be generating an element to use this Arcan).",
       "effects": [
         {
           "text": "You will get # (base 3,600) seconds of production of currently generating element (you have to generate any element to use this arcan)"
@@ -4981,7 +4981,7 @@
     },
     {
       "confidence": "documented",
-      "description": "Increases Refine Node 1's effect by a multiplier for a while; Cooldown Time: a value",
+      "description": "Increases Refine Node 1's effect by a multiplier for a while",
       "effects": [
         {
           "text": "Increases Refine Node 1 effect by x# (base 2.000) during some times"
@@ -4995,7 +4995,7 @@
     },
     {
       "confidence": "documented",
-      "description": "Slowly increases and decreases Zodiac sell cost by a multiplier; Cooldown Time: a value",
+      "description": "Slowly increases and decreases Zodiac sell cost by a multiplier",
       "effects": [
         {
           "text": "Slowly Increases and Decreases Zodiac Sell Cost by x# (base 10.00)"
@@ -5009,7 +5009,7 @@
     },
     {
       "confidence": "documented",
-      "description": "Slowly increases and decreases Mineral Cost Exp by a value; Cooldown Time: a value",
+      "description": "Slowly increases and decreases Mineral Cost Exp by a value",
       "effects": [
         {
           "text": "Slowly Increases and Decreases Mineral Cost Exp by # (base 0.200)"
@@ -5023,7 +5023,7 @@
     },
     {
       "confidence": "documented",
-      "description": "Levels up all your common Minerals by a value (but not above max spawn level + 50); Cooldown Time: a value",
+      "description": "Levels up all your common Minerals by a value (but not above max spawn level + 50)",
       "effects": [
         {
           "text": "Levels Up all of your common minerals by # (base 1.000) (but can't be bigger than max spawn level + 50)"
@@ -5037,7 +5037,7 @@
     },
     {
       "confidence": "documented",
-      "description": "Slowly increases and decreases Relic 28 Effect by a multiplier; Cooldown Time: a value",
+      "description": "Slowly increases and decreases Relic 28 Effect by a multiplier",
       "effects": [
         {
           "text": "Slowly Increases and Decreases Relic 28 effect by # (base 0.100)"
@@ -5051,7 +5051,7 @@
     },
     {
       "confidence": "documented",
-      "description": "Decrease your SMS Factor by a value; Cooldown Time: a value",
+      "description": "Decrease your SMS Factor by a value",
       "effects": [
         {
           "text": "Decreases your SMS factor by # (base 1,000)"
@@ -5065,7 +5065,7 @@
     },
     {
       "confidence": "documented",
-      "description": "Keeps the lowest cost for spawning upcoming Special Minerals (a value secs); Cooldown Time: a value",
+      "description": "Keeps the lowest cost for spawning upcoming Special Minerals (a value secs)",
       "effects": [
         {
           "text": "Keep the lowest cost for spawning next Special Minerals (4.000 secs)"
@@ -5079,7 +5079,7 @@
     },
     {
       "confidence": "documented",
-      "description": "Makes other Tarot Arcana a multiplier more effective for a while; Cooldown Time: a value",
+      "description": "Makes other Tarot Arcana a multiplier more effective for a while",
       "effects": [
         {
           "text": "Make Other Tarot Arcans be x# (base 1.050) more effective for some time"
@@ -5093,7 +5093,7 @@
     },
     {
       "confidence": "documented",
-      "description": "Gambling :D - 50% chance to gain more Tarot Draws, 50% chance to lose them. Maximum gain/loss: a value (they can go negative, but you need a positive number of draws to use this); Cooldown Time: a value",
+      "description": "Gambling :D - 50% chance to gain more Tarot Draws, 50% chance to lose them. Maximum gain/loss: a value (they can go negative, but you need a positive number of draws to use this)",
       "effects": [
         {
           "text": "Gambling :D - 50% - get more tarot draws, 50% - lost them. Max amount of gain/lose - # (base 10.00) (they can go negative, but you need positive amount of draws to use it)"
@@ -5107,7 +5107,7 @@
     },
     {
       "confidence": "documented",
-      "description": "Slowly increases and decreases Attack Exponent by a value; Cooldown Time: a value",
+      "description": "Slowly increases and decreases Attack Exponent by a value",
       "effects": [
         {
           "text": "Slowly Increases and Decreases your Attack Exponent by # (base 0.100)"
@@ -5121,7 +5121,7 @@
     },
     {
       "confidence": "documented",
-      "description": "Makes Polish Knuckles count as an amount levels; Cooldown Time: a value",
+      "description": "Makes Polish Knuckles count as an amount levels",
       "effects": [
         {
           "text": "Makes Polish Knuckles +# (base 40.00) levels effective"
@@ -5135,7 +5135,7 @@
     },
     {
       "confidence": "documented",
-      "description": "While this skill is active, it will randomly perform Refine Prestige, granting a multiplier more RfP; Cooldown Time: a value",
+      "description": "While this skill is active, it will randomly perform Refine Prestige, granting a multiplier more RfP",
       "effects": [
         {
           "text": "During this skill is active will randomly perform refine prestige, granting x# (base 10.00) more RfP"
@@ -5149,7 +5149,7 @@
     },
     {
       "confidence": "documented",
-      "description": "Add a value Zodiacs of the type in your Fortune Pars slot, but with the stats you'd get from Unity; Cooldown Time: a value",
+      "description": "Add a value Zodiacs of the type in your Fortune Pars slot, but with the stats you'd get from Unity",
       "effects": [
         {
           "text": "Add # (base 3.000) zodiacs of that type which is in your Fortune Pars slot, but with stats you'd get on Unity"
@@ -5163,7 +5163,7 @@
     },
     {
       "confidence": "documented",
-      "description": "Boosts the 1st effect of all common Tarot cards by +a multiplier with a 66% chance. With a 33% chance, it applies one of 5 debuffs (described in Help). It has a 1% chance to take your soul.; Cooldown Time: a value",
+      "description": "Boosts the 1st effect of all common Tarot cards by +a multiplier with a 66% chance. With a 33% chance, it applies one of 5 debuffs (described in Help). It has a 1% chance to take your soul.",
       "effects": [
         {
           "text": "Will boost 1st effect of all common tarot cards by +x (base 0.007) with a chance of 66%. With a chance 33% will apply one of 5 debuffs (descr. in help). Have 1% chance to take your soul (-1 Soul )"
@@ -5177,7 +5177,7 @@
     },
     {
       "confidence": "documented",
-      "description": "Destroys a random Special Gem, granting this gem a value^[Gem Lv] SMP; Cooldown Time: a value",
+      "description": "Destroys a random Special Gem, granting this gem a value^[Gem Lv] SMP",
       "effects": [
         {
           "text": "Will destroy random special gem granting #^[Gem Lv] (base 1.800) SMP to this gem"
@@ -5191,7 +5191,7 @@
     },
     {
       "confidence": "documented",
-      "description": "Multiplies your Luck by your number of powered stars, raised to an exponent; Cooldown Time: a value",
+      "description": "Multiplies your Luck by your number of powered stars, raised to an exponent",
       "effects": [
         {
           "text": "Multiplies Your Luck by amount of stars you have powered to ^# (base 0.400)"
@@ -5205,7 +5205,7 @@
     },
     {
       "confidence": "documented",
-      "description": "Upgrade the Zodiac in the Moon position to a multiplier quality, but it becomes weaker after e1,000 quality; Cooldown Time: a value",
+      "description": "Upgrade the Zodiac in the Moon position to a multiplier quality, but it becomes weaker after e1,000 quality",
       "effects": [
         {
           "text": "Upgrades zodiac on moon postiton (position) x# (base 1,000) quality. But it's weaker after e1,000 quality"
@@ -5219,7 +5219,7 @@
     },
     {
       "confidence": "documented",
-      "description": "Grants a value levels to a random card you already own; Cooldown Time: a value",
+      "description": "Grants a value levels to a random card you already own",
       "effects": [
         {
           "text": "Gives # (base 1.000) levels to a random card you already have"
@@ -5233,7 +5233,7 @@
     },
     {
       "confidence": "documented",
-      "description": "Equalizes your Tarot resources and increases their values by an exponent; Cooldown Time: a value",
+      "description": "Equalizes your Tarot resources and increases their values by an exponent",
       "effects": [
         {
           "text": "Makes your tarot resources be equal and increase their values by ^# (base 0.800) of they value"
@@ -5247,7 +5247,7 @@
     },
     {
       "confidence": "documented",
-      "description": "Decreases the cooldowns of all previous Arcana by a value sec; Cooldown Time: a value",
+      "description": "Decreases the cooldowns of all previous Arcana by a value sec",
       "effects": [
         {
           "text": "Decrease cooldowns of all previous arcanes (Arcans) by # (base 4,000) sec (seconds)"
@@ -5513,7 +5513,7 @@
     },
     {
       "confidence": "documented",
-      "description": "Fire boosts its own factor 2 (a multiplier multiplier)",
+      "description": "Fire boosts its own factor 2",
       "effects": [
         {
           "text": "Fire boosts its own factor 2"
@@ -5667,7 +5667,7 @@
     },
     {
       "confidence": "documented",
-      "description": "Earth boosts its own factor 2 (a multiplier multiplier)",
+      "description": "Earth boosts its own factor 2",
       "effects": [
         {
           "text": "Earth boosts it's own factor 2"
@@ -5737,7 +5737,7 @@
     },
     {
       "confidence": "documented",
-      "description": "Current Wind divides Special Mineral base cost (cur.: a divisor)",
+      "description": "Current Wind divides Special Mineral base cost",
       "effects": [
         {
           "text": "Current wind divides base special mineral cost"
@@ -5807,7 +5807,7 @@
     },
     {
       "confidence": "documented",
-      "description": "Wind boosts its own factor 2 (a multiplier multiplier)",
+      "description": "Wind boosts its own factor 2",
       "effects": [
         {
           "text": "Wind boosts its own factor 2"
@@ -5975,7 +5975,7 @@
     },
     {
       "confidence": "documented",
-      "description": "Water boosts its own factor 2 (a multiplier multiplier)",
+      "description": "Water boosts its own factor 2",
       "effects": [
         {
           "text": "Water boosts is own factor 2"
@@ -7292,6 +7292,7 @@
     },
     {
       "confidence": "provisional",
+      "description": "SMP gain is powered by ^1.1",
       "effects": [
         {
           "text": "SMP Gain ^1.1"
@@ -7305,6 +7306,7 @@
     },
     {
       "confidence": "provisional",
+      "description": "Factor 2 power for Water is multiplied by 10",
       "effects": [
         {
           "text": "Factor 2 power for water is multiplied by x10"
@@ -7318,6 +7320,7 @@
     },
     {
       "confidence": "provisional",
+      "description": "Black Gem Eff. is powered to ^1.05",
       "effects": [
         {
           "text": "Black Gem Effect ^1.05"
@@ -7331,6 +7334,7 @@
     },
     {
       "confidence": "provisional",
+      "description": "Sacrifice Dust gain is powered to ^1.05",
       "effects": [
         {
           "text": "Sacrifice Dust Gain ^1.05"
@@ -7344,6 +7348,7 @@
     },
     {
       "confidence": "provisional",
+      "description": "Golden Resource gain is powered to ^1.02",
       "effects": [
         {
           "text": "Golden Resource Gain ^1.02"
@@ -7357,6 +7362,7 @@
     },
     {
       "confidence": "provisional",
+      "description": "ViP per VE mult a multiplier",
       "effects": [
         {
           "text": "ViP per VE mult x1000"
@@ -7370,6 +7376,7 @@
     },
     {
       "confidence": "provisional",
+      "description": "Atom gain: an exponent",
       "effects": [
         {
           "text": "Atom Gain ^1.02"
@@ -7383,6 +7390,7 @@
     },
     {
       "confidence": "provisional",
+      "description": "Keep all progression milestones on Singularize",
       "effects": [
         {
           "text": "Keep all progression milestones on Singularity"
@@ -13867,7 +13875,7 @@
       ],
       "id": "eternity-challenge-1",
       "kind": "upgrade",
-      "name": "Eternity Challenge 1",
+      "name": "Eternity Challenge 1 (Slow as a Snail)",
       "system": "eternity-challenges",
       "wiki": "Eternity_Challenges"
     },
@@ -13885,7 +13893,7 @@
       ],
       "id": "eternity-challenge-2",
       "kind": "upgrade",
-      "name": "Eternity Challenge 2",
+      "name": "Eternity Challenge 2 (Solid Root)",
       "system": "eternity-challenges",
       "wiki": "Eternity_Challenges"
     },
@@ -13903,7 +13911,7 @@
       ],
       "id": "eternity-challenge-3",
       "kind": "upgrade",
-      "name": "Eternity Challenge 3",
+      "name": "Eternity Challenge 3 (Clear Night Sky)",
       "system": "eternity-challenges",
       "wiki": "Eternity_Challenges"
     },
@@ -13921,7 +13929,7 @@
       ],
       "id": "eternity-challenge-4",
       "kind": "upgrade",
-      "name": "Eternity Challenge 4",
+      "name": "Eternity Challenge 4 (Burning Voltage)",
       "system": "eternity-challenges",
       "wiki": "Eternity_Challenges"
     },
@@ -13939,7 +13947,7 @@
       ],
       "id": "eternity-challenge-5",
       "kind": "upgrade",
-      "name": "Eternity Challenge 5",
+      "name": "Eternity Challenge 5 (Ascended to Nothing)",
       "system": "eternity-challenges",
       "wiki": "Eternity_Challenges"
     },
@@ -13957,7 +13965,7 @@
       ],
       "id": "eternity-challenge-6",
       "kind": "upgrade",
-      "name": "Eternity Challenge 6",
+      "name": "Eternity Challenge 6 (Fired Yet Again)",
       "system": "eternity-challenges",
       "wiki": "Eternity_Challenges"
     },
@@ -13975,7 +13983,7 @@
       ],
       "id": "eternity-challenge-7",
       "kind": "upgrade",
-      "name": "Eternity Challenge 7",
+      "name": "Eternity Challenge 7 (A Failed Experiment)",
       "system": "eternity-challenges",
       "wiki": "Eternity_Challenges"
     },
@@ -13993,7 +14001,7 @@
       ],
       "id": "eternity-challenge-8",
       "kind": "upgrade",
-      "name": "Eternity Challenge 8",
+      "name": "Eternity Challenge 8 (Bounded Infinity)",
       "system": "eternity-challenges",
       "wiki": "Eternity_Challenges"
     },
@@ -14011,7 +14019,7 @@
       ],
       "id": "eternity-challenge-9",
       "kind": "upgrade",
-      "name": "Eternity Challenge 9",
+      "name": "Eternity Challenge 9 (Wrecked Generators)",
       "system": "eternity-challenges",
       "wiki": "Eternity_Challenges"
     },
@@ -14029,7 +14037,7 @@
       ],
       "id": "eternity-challenge-10",
       "kind": "upgrade",
-      "name": "Eternity Challenge 10",
+      "name": "Eternity Challenge 10 (Super Dilation)",
       "system": "eternity-challenges",
       "wiki": "Eternity_Challenges"
     },
