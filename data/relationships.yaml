@@ -4818,7 +4818,7 @@ edges:
   - from: animal-cow
     to: eternity-points
     rel: boosts
-    note: EP Gain × (1+(Σ^0.5))
+    note: 'EP Gain $\times (1 + (\Sigma^{0.5}))$'
     source: wiki:Animals
     confidence: documented
 
@@ -5560,7 +5560,7 @@ edges:
   - from: dilation-penalties
     to: lap-speed
     rel: boosts
-    note: (Laps Speed ^0.10) / 10
+    note: '$(\text{Laps Speed}^{0.10}) / 10$'
     source: wiki:Dilation
     confidence: documented
 
