@@ -97,7 +97,9 @@ _GRADE_BONUS_KEY = re.compile(r"PARTICLES_BONUS_(?P<grade>RANK|TIER|TETR|PENT)_(
 # and the centre) share the template "Boosts {0} efficiency" and are curated.
 EPSILON_TREE_SYSTEM = "epsilon-tree"
 _EPSILON_EFFECT_KEY = re.compile(r"EPSILON_EFFECT_(?P<index>\d+)")
-_FIRST_OUTER_EFFECT = 15
+# The indices checked against the game screen. Anything outside, a new node a
+# patch adds included, is reported until someone places it on the screen.
+_OUTER_EFFECTS = range(15, 31)
 SPARK_SYSTEM = "particles"
 _SPARK_EFFECT_KEY = re.compile(r"ENUM_SPARKTYPE_EFFECT_(?P<colour>[A-Z]+)")
 _SPARK_NAME = "UNI_PARTICLES_SPARK_NAME"
@@ -507,10 +509,12 @@ def map_particles(
     if effects:
         report = reports["EPSILON_EFFECT"] = FamilyReport()
         for index, text in effects:
-            label = index - _FIRST_OUTER_EFFECT + 1
-            if label < 1:
-                report.unmatched.append(f"#{index}: not an outer node (A1 is #15)")
+            if index not in _OUTER_EFFECTS:
+                report.unmatched.append(
+                    f"#{index}: not a known outer node (A1-A16 are #15-#30)"
+                )
                 continue
+            label = index - _OUTER_EFFECTS.start + 1
             effect = clean(text)
             mapped.append(_place(
                 f"epsilon-tree-a{label}",
