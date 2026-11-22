@@ -64,6 +64,7 @@ export const SYSTEM_COLOURS: Record<KnownSystem, string> = {
   // Darker Singularity, the way refine-tree is darker Minerals: a child system
   // reads as its parent's shade rather than competing with it.
   houses: '#574235',
+  particles: '#5a3fa0',
 };
 
 const KIND_BADGES: Record<Kind, string> = {

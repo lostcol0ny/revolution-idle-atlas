@@ -504,7 +504,7 @@ Statue
 |67
 |Galactic Mind
 | [[File:Relic 067.png|128px|link=]]
-|Increases the chance of obtaining Achievement 600 after completing Earth Plague Stage (5-5)
+|Increases the chance of obtaining Achievement 600 after completing Earth Plague Stage (5-5) (Useless after getting Achievement #600)
 | +2.55% (?)
 | Attack level 40,067
 |-
@@ -528,10 +528,45 @@ Statue
 |Empowers your luck
 | +^(?)
 | Attack level 45,800
+|-
+|71
+| Dangerous Owl
+| [[File:Relic 71.png|128px|link=]]
+|Divides the cost exponent of all Singularity Tree upgrades by /
+| +^0.003(?)
+| Attack level 46,300
+|-
+|72
+|Cheremsha
+| [[File:Relic 072.png|128px|link=]]
+|Multiplies the base of Alpha and Beta Generators
+| +22(?)
+| Attack level 47,500
+|-
+|73
+|Stalking Statue
+| [[File:Relic 073.png|128px|link=]]
+|Divides the exponent of the rank requirement
+| +/0.003 (?)
+| Attack level 50,000
+|-
+|74
+|Pocket Blackjack
+| [[File:Relic 074.png|128px|link=]]
+|Multiplies Delta Prestige Effect
+| +x0.003(?)
+| Attack level 60,000
+|-
+|75
+|Boro-Boro
+| [[File:Relic 075.png|128px|link=]]
+|Multiplies Mastery Gain (Spawning & Destroying sparks)
+| +0.03(?)
+| Attack level 90,000
 |}
 
 == (?)Sacrificing ==
-After reaching 301 levels of any relic, it can be sacrificed. This will make a purple level counter appear below the regular level counter, and this will be set to the amount of relics you already had before you sacrificed it. After this, the level requirement is set to one above the previous sacrificed amount. The price will NOT be reset, but levels can be regained through spawning [[Minerals]]. The sacrifice level will boost the respective relic's bonus a decent amount, so relics should always be sacrificed, especially when late into minerals progression.
+After reaching 301 levels of any relic, it can be sacrificed. This will make a purple level counter appear below the regular level counter, and this will be set to the level of the relic on sacrifice. Sacrificing a relic will reset its level to 1. The price will NOT be reset, but levels can be regained through spawning [[Minerals]] until the level the relic had on sacrifice is reached. The sacrifice level will boost the respective relic's bonus a decent amount, so relics should always be sacrificed, especially when late into minerals progression.
 
 = Notes =
 

@@ -89,6 +89,20 @@ Every time you ascend the circle, Mult Gain and Damage Mult get multiplied by As
 [[File:Enemy HP by Attack Level.webp|120px|thumb|right|Table showing Enemy HP at select Attack Levels]]
 A list of Enemy HP values at select Attack Levels is provided to the right. For all enemy HP values and Gold calculations, you will need to use the Excel-Sheet provided here: [https://discord.com/channels/481594050999353345/1368509750777741342/1384085504928256092 Attack Gold & HP Scaling Calculator v2]
 
+Emeny HP formula: <code><big><math>10^m
+\text{ where } m= \begin{cases}m_1=\left(2+\frac{x^{2}+x}{2}\log\left(1.001\right)+x\log\left(1.01\right)+\log\left(1+0.05x\right)\right) 
+\\ m_2=m_1\cdot\left(1+\frac{x-1000}{1100}\right), & \text{if }x\text{ is larger than 1000}
+\\ m_3=m_2\cdot\left(1+\frac{x-2000}{256}\right), & \text{if }x\text{ is larger than 2000}
+\\ m_4=m_3\cdot\left(1+\frac{x-3000}{64}\right), & \text{if }x\text{ is larger than 3000} 
+\\ m_5=m_4\cdot\left(1+\frac{x-5000}{32}\right), & \text{if }x\text{ is larger than 5000} 
+\\ m_6=m_5\cdot\left(1+\frac{x-7000}{16}\right), & \text{if }x\text{ is larger than 7000}
+\\ m_7=m_6\cdot\left(1+\frac{x-10000}{10}\right), & \text{if }x\text{ is larger than 10000} 
+\\ m_8=m_7\cdot\left(1+\frac{x-20000}{4}\right), & \text{if }x\text{ is larger than 20000} 
+\\ m_9=m_8\cdot\left(1+\frac{x-30000}{2}\right), & \text{if }x\text{ is larger than 30000}
+\\ m_{10}=m_9\cdot\left(1+x-40000\right), & \text{if }x\text{ is larger than 40000} \end{cases}</math></big></code>
+
+(x is level) (lv >40000 unconfirmed)
+
 === Enemy HP Bar ===
 Displays the amount of damage your Attack Circles need to deal to advance to the next Attack Level. Your current Attack level is shown to the left. 
 
@@ -117,7 +131,7 @@ Mult Gain = <code><math>\text{Base Mult Gain displayed in and improved by Relic 
 Relic 20 raises both Base Mult Gain AND multiplies Ascension Power. This leads to some sort of positive feedback loop that makes the concept of farming Attack Multipliers the single most important game mechanic to progress through attacks.
 
 === Cumulative Multiplier ===
-The number shown on the top right of Attacks tab. Product of the Multipliers gained from Relics 1 (Silver Coin), 3 (Copper Bunny Statuette) and 12 (Sandstone Chest) as well as your Damage Multiplier from Achievement Rewards (Unlocked at Ach 201 for a current Maximum of x4.4 at 320/320 achievements).
+The number shown on the top right of Attacks tab. Product of the Multipliers gained from Relics 1 (Silver Coin), 3 (Copper Bunny Statuette) and 12 (Sandstone Chest) as well as your Damage Multiplier from Achievement Rewards (Unlocked at Ach 201 for a current Maximum of x13.4 at 770/770 achievements).
 
 The main component for the Cumulative Multiplier is Relic 3 (Copper Bunny Statuette). This Multiplier is greatly improved by increasing your Zodiac Levels.
 

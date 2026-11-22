@@ -85,9 +85,9 @@ def test_a_question_mark_in_the_coefficient_downgrades_confidence():
     assert edges[("relic-66", "relic-62")].confidence is EdgeConfidence.UNCERTAIN
 
 
-def test_the_real_page_yields_seventy_relics():
+def test_the_real_page_yields_every_relic():
     result = extract(RAW_DIR)
-    assert len(result.nodes) == 70
+    assert len(result.nodes) == 75
     assert [n.id for n in result.nodes][:3] == ["relic-1", "relic-2", "relic-3"]
     # Documents the wiki's current shape — one Effect column per relic row —
     # not the parser's handling of multi-effect relics. If the page grew a

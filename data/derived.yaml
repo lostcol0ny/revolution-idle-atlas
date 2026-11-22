@@ -673,7 +673,8 @@ nodes:
   wiki: Relics
   confidence: documented
   effects:
-  - text: Increases the chance of obtaining Achievement 600 after completing Earth Plague Stage (5-5)
+  - text: 'Increases the chance of obtaining Achievement 600 after completing Earth Plague Stage (5-5)
+      (Useless after getting Achievement #600)'
     per_level: +2.55% (?)
     op: add
 - id: relic-68
@@ -706,6 +707,56 @@ nodes:
   - text: Empowers your luck
     per_level: +^(?)
     op: exp
+- id: relic-71
+  name: Dangerous Owl
+  system: relics
+  kind: relic
+  wiki: Relics
+  confidence: documented
+  effects:
+  - text: Divides the cost exponent of all Singularity Tree upgrades by /
+    per_level: +^0.003(?)
+    op: exp
+- id: relic-72
+  name: Cheremsha
+  system: relics
+  kind: relic
+  wiki: Relics
+  confidence: documented
+  effects:
+  - text: Multiplies the base of Alpha and Beta Generators
+    per_level: +22(?)
+    op: add
+- id: relic-73
+  name: Stalking Statue
+  system: relics
+  kind: relic
+  wiki: Relics
+  confidence: documented
+  effects:
+  - text: Divides the exponent of the rank requirement
+    per_level: +/0.003 (?)
+    op: add
+- id: relic-74
+  name: Pocket Blackjack
+  system: relics
+  kind: relic
+  wiki: Relics
+  confidence: documented
+  effects:
+  - text: Multiplies Delta Prestige Effect
+    per_level: +x0.003(?)
+    op: add
+- id: relic-75
+  name: Boro-Boro
+  system: relics
+  kind: relic
+  wiki: Relics
+  confidence: documented
+  effects:
+  - text: Multiplies Mastery Gain (Spawning & Destroying sparks)
+    per_level: +0.03(?)
+    op: add
 - id: refine-node-1
   name: Refine Node 1
   system: refine-tree
@@ -1634,7 +1685,7 @@ nodes:
   wiki: Minerals/Refine_Tree
   confidence: documented
   effects:
-  - text: Multiples Max Cure Progress by 1.2^level
+  - text: Multiples Max Cure Progress by 1.2 per level
 - id: refine-node-116
   name: Refine Node 116
   system: refine-tree
@@ -1803,6 +1854,524 @@ nodes:
   confidence: documented
   effects:
   - text: Increases Local Singularity Speed Power by 0.02
+- id: refine-node-137
+  name: Refine Node 137
+  system: refine-tree
+  kind: tree-node
+  wiki: Minerals/Refine_Tree
+  confidence: documented
+  effects:
+  - text: Unlock Particles
+- id: refine-node-138
+  name: Refine Node 138
+  system: refine-tree
+  kind: tree-node
+  wiki: Minerals/Refine_Tree
+  confidence: documented
+  effects:
+  - text: Particle Rank boosts Refine Point gain (^X / +0.001 per rank)
+- id: refine-node-139
+  name: Refine Node 139
+  system: refine-tree
+  kind: tree-node
+  wiki: Minerals/Refine_Tree
+  confidence: documented
+  effects:
+  - text: Multiplies Alpha Generator Base by x2
+- id: refine-node-140
+  name: Refine Node 140
+  system: refine-tree
+  kind: tree-node
+  wiki: Minerals/Refine_Tree
+  confidence: documented
+  effects:
+  - text: Multiplies Alpha Multiplier Base by x1 + level
+- id: refine-node-141
+  name: Refine Node 141
+  system: refine-tree
+  kind: tree-node
+  wiki: Minerals/Refine_Tree
+  confidence: documented
+  effects:
+  - text: Rank 5 Reward is x3 more effective
+- id: refine-node-142
+  name: Refine Node 142
+  system: refine-tree
+  kind: tree-node
+  wiki: Minerals/Refine_Tree
+  confidence: documented
+  effects:
+  - text: The base of all particle generators is multiplied by x1.25 every 10 levels
+- id: refine-node-143
+  name: Refine Node 143
+  system: refine-tree
+  kind: tree-node
+  wiki: Minerals/Refine_Tree
+  confidence: documented
+  effects:
+  - text: The base of all particle multipliers is multiplied by x2 every 7 levels
+- id: refine-node-144
+  name: Refine Node 144
+  system: refine-tree
+  kind: tree-node
+  wiki: Minerals/Refine_Tree
+  confidence: documented
+  effects:
+  - text: 'Particle Rank boosts gold: ^X (+0.01 per rank)'
+- id: refine-node-145
+  name: Refine Node 145
+  system: refine-tree
+  kind: tree-node
+  wiki: Minerals/Refine_Tree
+  confidence: documented
+  effects:
+  - text: Every 100 levels, the base of all particle generators is multiplied by x10
+- id: refine-node-146
+  name: Refine Node 146
+  system: refine-tree
+  kind: tree-node
+  wiki: Minerals/Refine_Tree
+  confidence: documented
+  effects:
+  - text: Unlocks the Singularity Mult effect on the base of Alpha & Beta generators
+- id: refine-node-147
+  name: Refine Node 147
+  system: refine-tree
+  kind: tree-node
+  wiki: Minerals/Refine_Tree
+  confidence: documented
+  effects:
+  - text: Beta Particles boost Alpha Generator Base a bit better (0.2 -> 0.3)
+- id: refine-node-148
+  name: Refine Node 148
+  system: refine-tree
+  kind: tree-node
+  wiki: Minerals/Refine_Tree
+  confidence: documented
+  effects:
+  - text: Empowerer base is increased by 0.001 every 20 levels for all particles
+- id: refine-node-149
+  name: Refine Node 149
+  system: refine-tree
+  kind: tree-node
+  wiki: Minerals/Refine_Tree
+  confidence: documented
+  effects:
+  - text: Multiplies Alpha Generator Base by x100
+- id: refine-node-150
+  name: Refine Node 150
+  system: refine-tree
+  kind: tree-node
+  wiki: Minerals/Refine_Tree
+  confidence: documented
+  effects:
+  - text: Multiplies Beta Multiplier Base by x1 + 0.5 * level
+- id: refine-node-151
+  name: Refine Node 151
+  system: refine-tree
+  kind: tree-node
+  wiki: Minerals/Refine_Tree
+  confidence: documented
+  effects:
+  - text: You passively gain Singularity Multiplier every second (also affected by local singularity speed)
+- id: refine-node-152
+  name: Refine Node 152
+  system: refine-tree
+  kind: tree-node
+  wiki: Minerals/Refine_Tree
+  confidence: documented
+  effects:
+  - text: Decreases base requirement for Tier, Tetr and Pent by 1
+- id: refine-node-153
+  name: Refine Node 153
+  system: refine-tree
+  kind: tree-node
+  wiki: Minerals/Refine_Tree
+  confidence: documented
+  effects:
+  - text: Rank Up resets nothing now
+- id: refine-node-154
+  name: Refine Node 154
+  system: refine-tree
+  kind: tree-node
+  wiki: Minerals/Refine_Tree
+  confidence: documented
+  effects:
+  - text: The PlG to PlP bonus is raised to ^1.5
+- id: refine-node-155
+  name: Refine Node 155
+  system: refine-tree
+  kind: tree-node
+  wiki: Minerals/Refine_Tree
+  confidence: documented
+  effects:
+  - text: Unlocks the Singularity Mult effect on the base of all generators
+- id: refine-node-156
+  name: Refine Node 156
+  system: refine-tree
+  kind: tree-node
+  wiki: Minerals/Refine_Tree
+  confidence: documented
+  effects:
+  - text: Atom Penalty at 1e5,000 is x1.1 weaker now
+- id: refine-node-157
+  name: Refine Node 157
+  system: refine-tree
+  kind: tree-node
+  wiki: Minerals/Refine_Tree
+  confidence: documented
+  effects:
+  - text: Atom Penalty at 1e10,000 is x1.2 weaker now
+- id: refine-node-158
+  name: Refine Node 158
+  system: refine-tree
+  kind: tree-node
+  wiki: Minerals/Refine_Tree
+  confidence: documented
+  effects:
+  - text: Alpha particle upgrades do not spend alpha points
+- id: refine-node-159
+  name: Refine Node 159
+  system: refine-tree
+  kind: tree-node
+  wiki: Minerals/Refine_Tree
+  confidence: documented
+  effects:
+  - text: Tier Up resets nothing now
+- id: refine-node-160
+  name: Refine Node 160
+  system: refine-tree
+  kind: tree-node
+  wiki: Minerals/Refine_Tree
+  confidence: documented
+  effects:
+  - text: Divides Tier Up requirement by x1 + 0.02 * level (rounded up)
+- id: refine-node-161
+  name: Refine Node 161
+  system: refine-tree
+  kind: tree-node
+  wiki: Minerals/Refine_Tree
+  confidence: documented
+  effects:
+  - text: Every 1,000 levels, the base of all particle generators is multiplied by x1e10
+- id: refine-node-162
+  name: Refine Node 162
+  system: refine-tree
+  kind: tree-node
+  wiki: Minerals/Refine_Tree
+  confidence: documented
+  effects:
+  - text: Luck is raised to ^1.1
+- id: refine-node-163
+  name: Refine Node 163
+  system: refine-tree
+  kind: tree-node
+  wiki: Minerals/Refine_Tree
+  confidence: documented
+  effects:
+  - text: Singularity Tree levels now go 0 -> 2 -> 4 -> 6 -> 8 -> 10
+- id: refine-node-164
+  name: Refine Node 164
+  system: refine-tree
+  kind: tree-node
+  wiki: Minerals/Refine_Tree
+  confidence: documented
+  effects:
+  - text: Beta particle upgrades do not spend beta points
+- id: refine-node-165
+  name: Refine Node 165
+  system: refine-tree
+  kind: tree-node
+  wiki: Minerals/Refine_Tree
+  confidence: documented
+  effects:
+  - text: Gamma particle upgrades do not spend gemma points
+- id: refine-node-166
+  name: Refine Node 166
+  system: refine-tree
+  kind: tree-node
+  wiki: Minerals/Refine_Tree
+  confidence: documented
+  effects:
+  - text: Local Particles Speed is boosted by ^0.1 of Local Singularity Speed
+- id: refine-node-167
+  name: Refine Node 167
+  system: refine-tree
+  kind: tree-node
+  wiki: Minerals/Refine_Tree
+  confidence: documented
+  effects:
+  - text: Singularity Tree levels now go 0 -> 4 -> 8 -> 10
+- id: refine-node-168
+  name: Refine Node 168
+  system: refine-tree
+  kind: tree-node
+  wiki: Minerals/Refine_Tree
+  confidence: documented
+  effects:
+  - text: Tarot Challenges Singularity factors are x3 stronger (before softcap)
+- id: refine-node-169
+  name: Refine Node 169
+  system: refine-tree
+  kind: tree-node
+  wiki: Minerals/Refine_Tree
+  confidence: documented
+  effects:
+  - text: Singularity Tree nodes cannot exceed the price at Level 5
+- id: refine-node-170
+  name: Refine Node 170
+  system: refine-tree
+  kind: tree-node
+  wiki: Minerals/Refine_Tree
+  confidence: documented
+  effects:
+  - text: Alpha Prestige resets nothing and is performed every frame
+- id: refine-node-171
+  name: Refine Node 171
+  system: refine-tree
+  kind: tree-node
+  wiki: Minerals/Refine_Tree
+  confidence: documented
+  effects:
+  - text: Multiplies the base of Delta Generators and Multipliers by x100
+- id: refine-node-172
+  name: Refine Node 172
+  system: refine-tree
+  kind: tree-node
+  wiki: Minerals/Refine_Tree
+  confidence: documented
+  effects:
+  - text: Singularity Tree levels now go 0 -> 5 -> 10
+- id: refine-node-173
+  name: Refine Node 173
+  system: refine-tree
+  kind: tree-node
+  wiki: Minerals/Refine_Tree
+  confidence: documented
+  effects:
+  - text: Every 100 levels, the base of all particle multipliers is multiplied by x10
+- id: refine-node-174
+  name: Refine Node 174
+  system: refine-tree
+  kind: tree-node
+  wiki: Minerals/Refine_Tree
+  confidence: documented
+  effects:
+  - text: Sacrifice dust spent after Lv.100 slightly increases the base of Special Minerals effect 2 (+0.01
+      per e1,000 to the effect 2 base)
+- id: refine-node-175
+  name: Refine Node 175
+  system: refine-tree
+  kind: tree-node
+  wiki: Minerals/Refine_Tree
+  confidence: documented
+  effects:
+  - text: Equipped Endoplasmatic Reticulum Level empowers luck (^X) (^1.001 per ER level)
+- id: refine-node-176
+  name: Refine Node 176
+  system: refine-tree
+  kind: tree-node
+  wiki: Minerals/Refine_Tree
+  confidence: documented
+  effects:
+  - text: Beta Particle Prestige resets nothing and is automatically performed every frame
+- id: refine-node-177
+  name: Refine Node 177
+  system: refine-tree
+  kind: tree-node
+  wiki: Minerals/Refine_Tree
+  confidence: documented
+  effects:
+  - text: Each time you perform a Singularity after e25,000 atoms, spark cost decreases as if you had
+      spawned 1 fewer spark in total
+- id: refine-node-178
+  name: Refine Node 178
+  system: refine-tree
+  kind: tree-node
+  wiki: Minerals/Refine_Tree
+  confidence: documented
+  effects:
+  - text: Mastery Gain is multiplied by xX (1 + pent / 10)
+- id: refine-node-179
+  name: Refine Node 179
+  system: refine-tree
+  kind: tree-node
+  wiki: Minerals/Refine_Tree
+  confidence: documented
+  effects:
+  - text: Gamma Particle Prestige resets nothing and is automatically performed every frame
+- id: refine-node-180
+  name: Refine Node 180
+  system: refine-tree
+  kind: tree-node
+  wiki: Minerals/Refine_Tree
+  confidence: documented
+  effects:
+  - text: Increase the total number of sparks you can equip by 1
+- id: refine-node-181
+  name: Refine Node 181
+  system: refine-tree
+  kind: tree-node
+  wiki: Minerals/Refine_Tree
+  confidence: documented
+  effects:
+  - text: Unlocks Spark Mastery Factor for Singularity
+- id: refine-node-182
+  name: Refine Node 182
+  system: refine-tree
+  kind: tree-node
+  wiki: Minerals/Refine_Tree
+  confidence: documented
+  effects:
+  - text: Each spark spawned after buying this node decreases ETP cost by 5 Epsilon (total reduction is
+      softcapped after 100,000)
+- id: refine-node-183
+  name: Refine Node 183
+  system: refine-tree
+  kind: tree-node
+  wiki: Minerals/Refine_Tree
+  confidence: documented
+  effects:
+  - text: Decreases base requirement for Tier, Tetr and Pent by 1 again
+- id: refine-node-184
+  name: Refine Node 184
+  system: refine-tree
+  kind: tree-node
+  wiki: Minerals/Refine_Tree
+  confidence: documented
+  effects:
+  - text: Equipped Endoplasmatic Reticulum Level boosts Spark Mastery gain (xX) (x1.01 per ER level)
+- id: refine-node-185
+  name: Refine Node 185
+  system: refine-tree
+  kind: tree-node
+  wiki: Minerals/Refine_Tree
+  confidence: documented
+  effects:
+  - text: Destroying a spark now also grants mastery (^0.5 of this spark mastery)
+- id: refine-node-186
+  name: Refine Node 186
+  system: refine-tree
+  kind: tree-node
+  wiki: Minerals/Refine_Tree
+  confidence: documented
+  effects:
+  - text: Epsilon Capacity gain is multiplied by x2
+- id: refine-node-187
+  name: Refine Node 187
+  system: refine-tree
+  kind: tree-node
+  wiki: Minerals/Refine_Tree
+  confidence: documented
+  effects:
+  - text: Delta Prestige bonus is stronger based on your Pent (X1.01 per Pent)
+- id: refine-node-188
+  name: Refine Node 188
+  system: refine-tree
+  kind: tree-node
+  wiki: Minerals/Refine_Tree
+  confidence: documented
+  effects:
+  - text: Attack exponent is multiplied by 1 + 0.1 * Log10(mastery) (softcap at x10)
+- id: refine-node-189
+  name: Refine Node 189
+  system: refine-tree
+  kind: tree-node
+  wiki: Minerals/Refine_Tree
+  confidence: documented
+  effects:
+  - text: Destroying Ultima Singular Zodiacs now also decreases Epsilon Tree Points cost (Total reduction
+      is softcapped after 100,000)
+- id: refine-node-190
+  name: Refine Node 190
+  system: refine-tree
+  kind: tree-node
+  wiki: Minerals/Refine_Tree
+  confidence: documented
+  effects:
+  - text: Improves the effect of Refine Node 185 (destroying a spark grants mastery) based on the spark's
+      rarity (+0.025 to the power per rarity tier from F)
+- id: refine-node-191
+  name: Refine Node 191
+  system: refine-tree
+  kind: tree-node
+  wiki: Minerals/Refine_Tree
+  confidence: documented
+  effects:
+  - text: Delta particle upgrades do not spend delta points
+- id: refine-node-192
+  name: Refine Node 192
+  system: refine-tree
+  kind: tree-node
+  wiki: Minerals/Refine_Tree
+  confidence: documented
+  effects:
+  - text: Epsilon Points generation is stronger based on your current Epsilon Points x1 (+0.01 per 10K
+      Epsilon Points, capped at x10)
+- id: refine-node-193
+  name: Refine Node 193
+  system: refine-tree
+  kind: tree-node
+  wiki: Minerals/Refine_Tree
+  confidence: documented
+  effects:
+  - text: ???
+- id: refine-node-194
+  name: Refine Node 194
+  system: refine-tree
+  kind: tree-node
+  wiki: Minerals/Refine_Tree
+  confidence: documented
+  effects:
+  - text: ???
+- id: refine-node-195
+  name: Refine Node 195
+  system: refine-tree
+  kind: tree-node
+  wiki: Minerals/Refine_Tree
+  confidence: documented
+  effects:
+  - text: ???
+- id: refine-node-196
+  name: Refine Node 196
+  system: refine-tree
+  kind: tree-node
+  wiki: Minerals/Refine_Tree
+  confidence: documented
+  effects:
+  - text: Multiplies Spark Mastery Gain on Spark Spawn by xX
+- id: refine-node-197
+  name: Refine Node 197
+  system: refine-tree
+  kind: tree-node
+  wiki: Minerals/Refine_Tree
+  confidence: documented
+  effects:
+  - text: ???
+- id: refine-node-198
+  name: Refine Node 198
+  system: refine-tree
+  kind: tree-node
+  wiki: Minerals/Refine_Tree
+  confidence: documented
+  effects:
+  - text: ???
+- id: refine-node-199
+  name: Refine Node 199
+  system: refine-tree
+  kind: tree-node
+  wiki: Minerals/Refine_Tree
+  confidence: documented
+  effects:
+  - text: ???
+- id: refine-node-200
+  name: Refine Node 200
+  system: refine-tree
+  kind: tree-node
+  wiki: Minerals/Refine_Tree
+  confidence: documented
+  effects:
+  - text: Multiplies Mastery Gain on Spark Destroy by xX
 - id: tarot-ace-of-swords
   name: Ace of Swords
   system: tarot
@@ -2507,7 +3076,7 @@ nodes:
   wiki: Elements
   confidence: documented
   effects:
-  - text: Score Exponent
+  - text: Common Exponent
 - id: fire-factor-3
   name: Fire Factor 3
   system: elements
@@ -2957,7 +3526,7 @@ nodes:
   wiki: Minerals
   confidence: provisional
   effects:
-  - text: Cost Increase is powered to ^0.99
+  - text: Cost Increase is powered to ^0.99. ^(1/(1+0.01))
 - id: special-mineral-green-gem
   name: Green Gem
   system: minerals
@@ -2965,7 +3534,7 @@ nodes:
   wiki: Minerals
   confidence: provisional
   effects:
-  - text: Cost fall is powered to ^1.01
+  - text: Cost fall is powered to +^0.01
 - id: special-mineral-pink-gem
   name: Pink Gem
   system: minerals
@@ -2981,7 +3550,7 @@ nodes:
   wiki: Minerals
   confidence: provisional
   effects:
-  - text: Gold gain is multiplied by 10
+  - text: 10.00x Gold gain
 - id: special-mineral-orange-gem
   name: Orange Gem
   system: minerals
@@ -3021,7 +3590,7 @@ nodes:
   wiki: Minerals
   confidence: provisional
   effects:
-  - text: Tarot Draws +0.10 (draws are granted when deleted)
+  - text: Tarot Draws +0.20 (draws are granted when deleted)
 - id: zodiac-aries
   name: Aries
   system: astrology
@@ -3354,6 +3923,30 @@ nodes:
   confidence: provisional
   effects:
   - text: Divides all refine nodes costs past 120 by /1e6750
+- id: plague-er-base-spread-power
+  name: Base Spread Power
+  system: plague
+  kind: upgrade
+  wiki: Plague
+  confidence: provisional
+  effects:
+  - text: Increases base Spread Power on ER
+- id: plague-er-base-infectivity
+  name: Base Infectivity
+  system: plague
+  kind: upgrade
+  wiki: Plague
+  confidence: provisional
+  effects:
+  - text: Increases base Infectivity on ER
+- id: plague-er-base-stealth
+  name: Base Stealth
+  system: plague
+  kind: upgrade
+  wiki: Plague
+  confidence: provisional
+  effects:
+  - text: Increases base Stealth on ER
 - id: plague-er-conversion-rate
   name: Conversion Rate
   system: plague
@@ -3515,6 +4108,22 @@ nodes:
   confidence: provisional
   effects:
   - text: Singularity Mult acts as a factor for the next Singularity Mult
+- id: singularity-milestone-one-hundred
+  name: One Hundred
+  system: singularity-milestones-singularity
+  kind: upgrade
+  wiki: Singularity
+  confidence: provisional
+  effects:
+  - text: Multiplies the base of all particle generators and multipliers by 1 + singularity / 100
+- id: singularity-milestone-singular-master
+  name: Singular Master
+  system: singularity-milestones-singularity
+  kind: upgrade
+  wiki: Singularity
+  confidence: provisional
+  effects:
+  - text: Each singularity multipliers mastery gain by x1.01
 - id: singularity-milestone-first-thousand
   name: First Thousand
   system: singularity-milestones-atoms
@@ -3587,6 +4196,22 @@ nodes:
   confidence: provisional
   effects:
   - text: Atoms past e1000 boost luck for a little (new effect)
+- id: singularity-milestone-atom-particle-synergy
+  name: Atom-Particle Synergy
+  system: singularity-milestones-atoms
+  kind: upgrade
+  wiki: Singularity
+  confidence: provisional
+  effects:
+  - text: Max Atoms boost the base of all particle generators (+0.1 per e1,000 atoms)
+- id: singularity-milestone-ten-thousand-dimensions
+  name: Ten Thousand Dimensions
+  system: singularity-milestones-atoms
+  kind: upgrade
+  wiki: Singularity
+  confidence: provisional
+  effects:
+  - text: Max Atoms (after 1e10,000) slightly boost Refine Points
 - id: singularity-milestone-special-sacrificer
   name: Special Sacrificer
   system: singularity-milestones-progression
@@ -3667,7 +4292,7 @@ nodes:
   wiki: Singularity
   confidence: provisional
   effects:
-  - text: Increases Gold gain
+  - text: Gold Gain ^
     per_level: '.001'
 - id: singularity-tree-3-1
   name: Tree Node 3.1
@@ -3676,7 +4301,7 @@ nodes:
   wiki: Singularity
   confidence: provisional
   effects:
-  - text: Weaken e308 penalty
+  - text: e308 Atom penalty /X
     per_level: '.01'
 - id: singularity-tree-3-2
   name: Tree Node 3.2
@@ -3685,7 +4310,7 @@ nodes:
   wiki: Singularity
   confidence: provisional
   effects:
-  - text: Weaken e500 penalty
+  - text: e500 Atom penalty /X
     per_level: '.01'
 - id: singularity-tree-4-1
   name: Tree Node 4.1
@@ -3694,7 +4319,7 @@ nodes:
   wiki: Singularity
   confidence: provisional
   effects:
-  - text: Increase Refine Points gain
+  - text: RfP Gain ^
     per_level: '.001'
 - id: singularity-tree-4-2
   name: Tree Node 4.2
@@ -3703,7 +4328,7 @@ nodes:
   wiki: Singularity
   confidence: provisional
   effects:
-  - text: Increase Golden Resource gain
+  - text: Golden Resource gain mult
     per_level: '.25'
 - id: singularity-tree-5-1
   name: Tree Node 5.1
@@ -3712,7 +4337,7 @@ nodes:
   wiki: Singularity
   confidence: provisional
   effects:
-  - text: Increase Plague Stats Rewards
+  - text: Plague Stats Rewards mult
     per_level: '.01'
 - id: singularity-tree-5-2
   name: Tree Node 5.2
@@ -3721,7 +4346,7 @@ nodes:
   wiki: Singularity
   confidence: provisional
   effects:
-  - text: Increase Plague Generators Reward
+  - text: PlG Rewards ^
     per_level: '.03'
 - id: singularity-tree-6-1
   name: Tree Node 6.1
@@ -3730,7 +4355,7 @@ nodes:
   wiki: Singularity
   confidence: provisional
   effects:
-  - text: Weaken next Singularity nerf
+  - text: Next Singularity nerf /X
     per_level: '.05'
 - id: singularity-tree-6-2
   name: Tree Node 6.2
@@ -3739,7 +4364,7 @@ nodes:
   wiki: Singularity
   confidence: provisional
   effects:
-  - text: Weaken e1,000 Atom Penalty
+  - text: e1000 Atom Penalty /X
     per_level: '.02'
 - id: singularity-tree-7-1
   name: Tree Node 7.1
@@ -3748,7 +4373,7 @@ nodes:
   wiki: Singularity
   confidence: provisional
   effects:
-  - text: Increase First Singularity Zodiac Level Mult
+  - text: First Singularity Zodiac Level Mult
     per_level: '.006'
 - id: singularity-tree-7-2
   name: Tree Node 7.2
@@ -3776,6 +4401,8 @@ nodes:
   confidence: provisional
   effects:
   - text: Fire Element Factor 3
+  - text: Sacrifice Dust Gain ^
+  - text: Attack Exponent Mult
 - id: singularity-zodiac-taurus
   name: Singular Zodiac Taurus
   system: houses
@@ -3784,6 +4411,8 @@ nodes:
   confidence: provisional
   effects:
   - text: Earth Element Factor 3
+  - text: PlP per PlG mult
+  - text: Golden Resources Gain
 - id: singularity-zodiac-gemini
   name: Singular Zodiac Gemini
   system: houses
@@ -3792,6 +4421,8 @@ nodes:
   confidence: provisional
   effects:
   - text: Wind Element Factor 3
+  - text: VE on Dissolve mult
+  - text: Black Gem Effect ^
 - id: singularity-zodiac-cancer
   name: Singular Zodiac Cancer
   system: houses
@@ -3801,6 +4432,7 @@ nodes:
   effects:
   - text: Water Element Factor 3
   - text: Base Spread Mult
+  - text: Singularity Mult Boost
 - id: singularity-zodiac-leo
   name: Singular Zodiac Leo
   system: houses
@@ -3809,6 +4441,8 @@ nodes:
   confidence: provisional
   effects:
   - text: Sacrifice Dust Gain
+  - text: Attack Exponent Mult
+  - text: Fire Element Factor 3
 - id: singularity-zodiac-virgo
   name: Singular Zodiac Virgo
   system: houses
@@ -3817,6 +4451,8 @@ nodes:
   confidence: provisional
   effects:
   - text: PlP per PlG Multi
+  - text: Golden Resource Gain
+  - text: Earth Element Factor 3
 - id: singularity-zodiac-libra
   name: Singular Zodiac Libra
   system: houses
@@ -3825,6 +4461,8 @@ nodes:
   confidence: provisional
   effects:
   - text: VE on Disolve Multi
+  - text: Black Gem Effect ^
+  - text: Wind Element Factor 3
 - id: singularity-zodiac-scorpio
   name: Singular Zodiac Scorpio
   system: houses
@@ -3834,6 +4472,7 @@ nodes:
   effects:
   - text: Base Spread Multi
   - text: Singularity Mult Boost
+  - text: Water Element Factor 3
 - id: singularity-zodiac-saggitarius
   name: Singular Zodiac Saggitarius
   system: houses
@@ -3842,6 +4481,8 @@ nodes:
   confidence: provisional
   effects:
   - text: Attack Exponent Multi
+  - text: Fire Element Factor 3
+  - text: Sacrifice Dust Gain
 - id: singularity-zodiac-capricorn
   name: Singular Zodiac Capricorn
   system: houses
@@ -3850,6 +4491,8 @@ nodes:
   confidence: provisional
   effects:
   - text: Golden Resources Gain
+  - text: Earth Element Factor 3
+  - text: PlP per PlG Multi
 - id: singularity-zodiac-aquarius
   name: Singular Zodiac Aquarius
   system: houses
@@ -3859,6 +4502,7 @@ nodes:
   effects:
   - text: Black Gem Effect
   - text: Wind Element Factor 3
+  - text: VE on Disolve Multi
 - id: singularity-zodiac-pisces
   name: Singular Zodiac Pisces
   system: houses
@@ -3868,6 +4512,7 @@ nodes:
   effects:
   - text: Singularity Mult Boost
   - text: Water Element Factor 3
+  - text: Base Spread Multi
 - id: dilation-node-center-1
   name: Center 1
   system: dilation-tree
@@ -5193,6 +5838,21 @@ nodes:
       is set to 1. Adds a dynamic penalty that heavily nerfs Atom gain, but becomes weaker based on the
       quality of the zodiac in the Moon Slot.
   - text: Perform a Singularity with 1e1000+ Atoms
+- id: tarot-challenge-the-sun
+  name: Tarot Challenge The Sun
+  system: tarot-challenges
+  kind: upgrade
+  wiki: Tarot
+  confidence: provisional
+  effects:
+  - text: You need Refine Node 195 to start the challenge. You can spawn special minerals in this challenge.
+      Every time you use The Sun card, you will get random special minerals in colors corresponding to
+      your currently equipped sparks. The amount of minerals is amount of your currently equipped sparks.
+      The Sun card cooldown is 5 seconds but it decrease only when you spawn a spark by 1 second. Your
+      mastery gain is based on amount of merged special minerals during the challenge with the formula
+      (Red / (Red + 5)) x (Orange / (Orange + 5)) x (Yellow / (Yellow + 5)) ... etc. x Base. Singularity
+      will reset the challenge
+  - text: Spawn a spark with 1e9 mastery to complete the challenge
 - id: tarot-artifact-glass-surface
   name: Glass Surface
   system: tarot-artifacts
@@ -5640,6 +6300,86 @@ nodes:
   confidence: provisional
   effects:
   - text: Double Infinites gain + Break Infinity
+- id: particles-spark-black
+  name: Spark Black
+  system: particles
+  kind: upgrade
+  wiki: Particles
+  confidence: provisional
+  effects:
+  - text: RfP Gain ^
+- id: particles-spark-white
+  name: Spark White
+  system: particles
+  kind: upgrade
+  wiki: Particles
+  confidence: provisional
+  effects:
+  - text: Singularity Local Speed mult
+- id: particles-spark-red
+  name: Spark Red
+  system: particles
+  kind: upgrade
+  wiki: Particles
+  confidence: provisional
+  effects:
+  - text: Singularity Mult Factor
+- id: particles-spark-orange
+  name: Spark Orange
+  system: particles
+  kind: upgrade
+  wiki: Particles
+  confidence: provisional
+  effects:
+  - text: Attack Exponent mult
+- id: particles-spark-yellow
+  name: Spark Yellow
+  system: particles
+  kind: upgrade
+  wiki: Particles
+  confidence: provisional
+  effects:
+  - text: Gold Gain ^
+- id: particles-spark-green
+  name: Spark Green
+  system: particles
+  kind: upgrade
+  wiki: Particles
+  confidence: provisional
+  effects:
+  - text: Astrology Luck ^
+- id: particles-spark-cyan
+  name: Spark Cyan
+  system: particles
+  kind: upgrade
+  wiki: Particles
+  confidence: provisional
+  effects:
+  - text: Particle Empowerers Mult
+- id: particles-spark-blue
+  name: Spark Blue
+  system: particles
+  kind: upgrade
+  wiki: Particles
+  confidence: provisional
+  effects:
+  - text: e10K Atom Penalty divider
+- id: particles-spark-pink
+  name: Spark Pink
+  system: particles
+  kind: upgrade
+  wiki: Particles
+  confidence: provisional
+  effects:
+  - text: Spark Mastery gain mult
+- id: particles-spark-purple
+  name: Spark Purple
+  system: particles
+  kind: upgrade
+  wiki: Particles
+  confidence: provisional
+  effects:
+  - text: PlG Gain ^
 edges:
 - from: relic-1
   to: attacks
@@ -6203,7 +6943,8 @@ edges:
   to: plague
   rel: boosts
   op: add
-  note: Increases the chance of obtaining Achievement 600 after completing Earth Plague Stage (5-5)
+  note: 'Increases the chance of obtaining Achievement 600 after completing Earth Plague Stage (5-5) (Useless
+    after getting Achievement #600)'
   source: wiki:Relics
   confidence: uncertain
 - from: relic-69
@@ -6218,6 +6959,13 @@ edges:
   rel: boosts
   op: exp
   note: Empowers your luck
+  source: wiki:Relics
+  confidence: uncertain
+- from: relic-71
+  to: singularity
+  rel: boosts
+  op: exp
+  note: Divides the cost exponent of all Singularity Tree upgrades by /
   source: wiki:Relics
   confidence: uncertain
 - from: refine-node-1
@@ -7727,6 +8475,455 @@ edges:
   note: Increases Local Singularity Speed Power by 0.02
   source: wiki:Minerals/Refine_Tree
   confidence: uncertain
+- from: refine-node-16
+  to: refine-node-137
+  rel: requires
+  source: wiki:Minerals/Refine_Tree
+  confidence: documented
+- from: refine-node-14
+  to: refine-node-138
+  rel: requires
+  source: wiki:Minerals/Refine_Tree
+  confidence: documented
+- from: refine-node-15
+  to: refine-node-139
+  rel: requires
+  source: wiki:Minerals/Refine_Tree
+  confidence: documented
+- from: refine-node-139
+  to: refine-node-140
+  rel: requires
+  source: wiki:Minerals/Refine_Tree
+  confidence: documented
+- from: refine-node-14
+  to: refine-node-141
+  rel: requires
+  source: wiki:Minerals/Refine_Tree
+  confidence: documented
+- from: refine-node-138
+  to: refine-node-141
+  rel: requires
+  source: wiki:Minerals/Refine_Tree
+  confidence: documented
+- from: refine-node-10
+  to: refine-node-142
+  rel: requires
+  source: wiki:Minerals/Refine_Tree
+  confidence: documented
+- from: refine-node-13
+  to: refine-node-142
+  rel: requires
+  source: wiki:Minerals/Refine_Tree
+  confidence: documented
+- from: refine-node-10
+  to: refine-node-143
+  rel: requires
+  source: wiki:Minerals/Refine_Tree
+  confidence: documented
+- from: refine-node-143
+  to: refine-node-144
+  rel: requires
+  source: wiki:Minerals/Refine_Tree
+  confidence: documented
+- from: refine-node-144
+  to: gold
+  rel: boosts
+  note: 'Particle Rank boosts gold: ^X (+0.01 per rank)'
+  source: wiki:Minerals/Refine_Tree
+  confidence: uncertain
+- from: refine-node-13
+  to: refine-node-145
+  rel: requires
+  source: wiki:Minerals/Refine_Tree
+  confidence: documented
+- from: refine-node-145
+  to: refine-node-146
+  rel: requires
+  source: wiki:Minerals/Refine_Tree
+  confidence: documented
+- from: refine-node-146
+  to: singularity-mult
+  rel: boosts
+  note: Unlocks the Singularity Mult effect on the base of Alpha & Beta generators
+  source: wiki:Minerals/Refine_Tree
+  confidence: uncertain
+- from: refine-node-10
+  to: refine-node-147
+  rel: requires
+  source: wiki:Minerals/Refine_Tree
+  confidence: documented
+- from: refine-node-143
+  to: refine-node-148
+  rel: requires
+  source: wiki:Minerals/Refine_Tree
+  confidence: documented
+- from: refine-node-148
+  to: refine-node-149
+  rel: requires
+  source: wiki:Minerals/Refine_Tree
+  confidence: documented
+- from: refine-node-145
+  to: refine-node-150
+  rel: requires
+  source: wiki:Minerals/Refine_Tree
+  confidence: documented
+- from: refine-node-145
+  to: refine-node-151
+  rel: requires
+  source: wiki:Minerals/Refine_Tree
+  confidence: documented
+- from: refine-node-151
+  to: singularity-mult
+  rel: boosts
+  note: You passively gain Singularity Multiplier every second (also affected by local singularity speed)
+  source: wiki:Minerals/Refine_Tree
+  confidence: uncertain
+- from: refine-node-151
+  to: singularity
+  rel: boosts
+  note: You passively gain Singularity Multiplier every second (also affected by local singularity speed)
+  source: wiki:Minerals/Refine_Tree
+  confidence: uncertain
+- from: refine-node-151
+  to: refine-node-152
+  rel: requires
+  source: wiki:Minerals/Refine_Tree
+  confidence: documented
+- from: refine-node-151
+  to: refine-node-153
+  rel: requires
+  source: wiki:Minerals/Refine_Tree
+  confidence: documented
+- from: refine-node-151
+  to: refine-node-154
+  rel: requires
+  source: wiki:Minerals/Refine_Tree
+  confidence: documented
+- from: refine-node-154
+  to: plague-generators
+  rel: boosts
+  note: The PlG to PlP bonus is raised to ^1.5
+  source: wiki:Minerals/Refine_Tree
+  confidence: uncertain
+- from: refine-node-154
+  to: plague-points
+  rel: boosts
+  note: The PlG to PlP bonus is raised to ^1.5
+  source: wiki:Minerals/Refine_Tree
+  confidence: uncertain
+- from: refine-node-154
+  to: refine-node-155
+  rel: requires
+  source: wiki:Minerals/Refine_Tree
+  confidence: documented
+- from: refine-node-155
+  to: singularity-mult
+  rel: boosts
+  note: Unlocks the Singularity Mult effect on the base of all generators
+  source: wiki:Minerals/Refine_Tree
+  confidence: uncertain
+- from: refine-node-154
+  to: refine-node-156
+  rel: requires
+  source: wiki:Minerals/Refine_Tree
+  confidence: documented
+- from: refine-node-144
+  to: refine-node-157
+  rel: requires
+  source: wiki:Minerals/Refine_Tree
+  confidence: documented
+- from: refine-node-144
+  to: refine-node-158
+  rel: requires
+  source: wiki:Minerals/Refine_Tree
+  confidence: documented
+- from: refine-node-144
+  to: refine-node-159
+  rel: requires
+  source: wiki:Minerals/Refine_Tree
+  confidence: documented
+- from: refine-node-154
+  to: refine-node-160
+  rel: requires
+  source: wiki:Minerals/Refine_Tree
+  confidence: documented
+- from: refine-node-160
+  to: refine-node-161
+  rel: requires
+  source: wiki:Minerals/Refine_Tree
+  confidence: documented
+- from: refine-node-160
+  to: refine-node-162
+  rel: requires
+  source: wiki:Minerals/Refine_Tree
+  confidence: documented
+- from: refine-node-162
+  to: luck
+  rel: boosts
+  note: Luck is raised to ^1.1
+  source: wiki:Minerals/Refine_Tree
+  confidence: uncertain
+- from: refine-node-162
+  to: refine-node-163
+  rel: requires
+  source: wiki:Minerals/Refine_Tree
+  confidence: documented
+- from: refine-node-163
+  to: singularity
+  rel: boosts
+  note: Singularity Tree levels now go 0 -> 2 -> 4 -> 6 -> 8 -> 10
+  source: wiki:Minerals/Refine_Tree
+  confidence: uncertain
+- from: refine-node-162
+  to: refine-node-164
+  rel: requires
+  source: wiki:Minerals/Refine_Tree
+  confidence: documented
+- from: refine-node-161
+  to: refine-node-165
+  rel: requires
+  source: wiki:Minerals/Refine_Tree
+  confidence: documented
+- from: refine-node-140
+  to: refine-node-166
+  rel: requires
+  source: wiki:Minerals/Refine_Tree
+  confidence: documented
+- from: refine-node-166
+  to: singularity
+  rel: boosts
+  note: Local Particles Speed is boosted by ^0.1 of Local Singularity Speed
+  source: wiki:Minerals/Refine_Tree
+  confidence: uncertain
+- from: refine-node-166
+  to: refine-node-167
+  rel: requires
+  source: wiki:Minerals/Refine_Tree
+  confidence: documented
+- from: refine-node-167
+  to: singularity
+  rel: boosts
+  note: Singularity Tree levels now go 0 -> 4 -> 8 -> 10
+  source: wiki:Minerals/Refine_Tree
+  confidence: uncertain
+- from: refine-node-167
+  to: refine-node-168
+  rel: requires
+  source: wiki:Minerals/Refine_Tree
+  confidence: documented
+- from: refine-node-168
+  to: tarot
+  rel: boosts
+  note: Tarot Challenges Singularity factors are x3 stronger (before softcap)
+  source: wiki:Minerals/Refine_Tree
+  confidence: uncertain
+- from: refine-node-168
+  to: singularity
+  rel: boosts
+  note: Tarot Challenges Singularity factors are x3 stronger (before softcap)
+  source: wiki:Minerals/Refine_Tree
+  confidence: uncertain
+- from: refine-node-167
+  to: refine-node-169
+  rel: requires
+  source: wiki:Minerals/Refine_Tree
+  confidence: documented
+- from: refine-node-169
+  to: singularity
+  rel: boosts
+  note: Singularity Tree nodes cannot exceed the price at Level 5
+  source: wiki:Minerals/Refine_Tree
+  confidence: uncertain
+- from: refine-node-167
+  to: refine-node-170
+  rel: requires
+  source: wiki:Minerals/Refine_Tree
+  confidence: documented
+- from: refine-node-170
+  to: refine-node-171
+  rel: requires
+  source: wiki:Minerals/Refine_Tree
+  confidence: documented
+- from: refine-node-170
+  to: refine-node-172
+  rel: requires
+  source: wiki:Minerals/Refine_Tree
+  confidence: documented
+- from: refine-node-172
+  to: singularity
+  rel: boosts
+  note: Singularity Tree levels now go 0 -> 5 -> 10
+  source: wiki:Minerals/Refine_Tree
+  confidence: uncertain
+- from: refine-node-140
+  to: refine-node-173
+  rel: requires
+  source: wiki:Minerals/Refine_Tree
+  confidence: documented
+- from: refine-node-173
+  to: refine-node-174
+  rel: requires
+  source: wiki:Minerals/Refine_Tree
+  confidence: documented
+- from: refine-node-174
+  to: sacrifice-dust
+  rel: boosts
+  note: Sacrifice dust spent after Lv.100 slightly increases the base of Special Minerals effect 2 (+0.01
+    per e1,000 to the effect 2 base)
+  source: wiki:Minerals/Refine_Tree
+  confidence: uncertain
+- from: refine-node-174
+  to: special-minerals
+  rel: boosts
+  note: Sacrifice dust spent after Lv.100 slightly increases the base of Special Minerals effect 2 (+0.01
+    per e1,000 to the effect 2 base)
+  source: wiki:Minerals/Refine_Tree
+  confidence: uncertain
+- from: refine-node-173
+  to: refine-node-175
+  rel: requires
+  source: wiki:Minerals/Refine_Tree
+  confidence: documented
+- from: refine-node-175
+  to: luck
+  rel: boosts
+  note: Equipped Endoplasmatic Reticulum Level empowers luck (^X) (^1.001 per ER level)
+  source: wiki:Minerals/Refine_Tree
+  confidence: uncertain
+- from: refine-node-174
+  to: refine-node-176
+  rel: requires
+  source: wiki:Minerals/Refine_Tree
+  confidence: documented
+- from: refine-node-176
+  to: refine-node-177
+  rel: requires
+  source: wiki:Minerals/Refine_Tree
+  confidence: documented
+- from: refine-node-177
+  to: singularity
+  rel: boosts
+  note: Each time you perform a Singularity after e25,000 atoms, spark cost decreases as if you had spawned
+    1 fewer spark in total
+  source: wiki:Minerals/Refine_Tree
+  confidence: uncertain
+- from: refine-node-177
+  to: refine-node-178
+  rel: requires
+  source: wiki:Minerals/Refine_Tree
+  confidence: documented
+- from: refine-node-177
+  to: refine-node-179
+  rel: requires
+  source: wiki:Minerals/Refine_Tree
+  confidence: documented
+- from: refine-node-137
+  to: refine-node-180
+  rel: requires
+  source: wiki:Minerals/Refine_Tree
+  confidence: documented
+- from: refine-node-180
+  to: refine-node-181
+  rel: requires
+  source: wiki:Minerals/Refine_Tree
+  confidence: documented
+- from: refine-node-181
+  to: singularity
+  rel: boosts
+  note: Unlocks Spark Mastery Factor for Singularity
+  source: wiki:Minerals/Refine_Tree
+  confidence: uncertain
+- from: refine-node-181
+  to: refine-node-182
+  rel: requires
+  source: wiki:Minerals/Refine_Tree
+  confidence: documented
+- from: refine-node-182
+  to: refine-node-183
+  rel: requires
+  source: wiki:Minerals/Refine_Tree
+  confidence: documented
+- from: refine-node-182
+  to: refine-node-184
+  rel: requires
+  source: wiki:Minerals/Refine_Tree
+  confidence: documented
+- from: refine-node-181
+  to: refine-node-185
+  rel: requires
+  source: wiki:Minerals/Refine_Tree
+  confidence: documented
+- from: refine-node-185
+  to: refine-node-186
+  rel: requires
+  source: wiki:Minerals/Refine_Tree
+  confidence: documented
+- from: refine-node-183
+  to: refine-node-187
+  rel: requires
+  source: wiki:Minerals/Refine_Tree
+  confidence: documented
+- from: refine-node-187
+  to: prestige-bonus
+  rel: boosts
+  note: Delta Prestige bonus is stronger based on your Pent (X1.01 per Pent)
+  source: wiki:Minerals/Refine_Tree
+  confidence: uncertain
+- from: refine-node-183
+  to: refine-node-188
+  rel: requires
+  source: wiki:Minerals/Refine_Tree
+  confidence: documented
+- from: refine-node-188
+  to: attack-exponent
+  rel: boosts
+  note: Attack exponent is multiplied by 1 + 0.1 * Log10(mastery) (softcap at x10)
+  source: wiki:Minerals/Refine_Tree
+  confidence: uncertain
+- from: refine-node-187
+  to: refine-node-189
+  rel: requires
+  source: wiki:Minerals/Refine_Tree
+  confidence: documented
+- from: refine-node-189
+  to: singular-zodiacs
+  rel: boosts
+  note: Destroying Ultima Singular Zodiacs now also decreases Epsilon Tree Points cost (Total reduction
+    is softcapped after 100,000)
+  source: wiki:Minerals/Refine_Tree
+  confidence: uncertain
+- from: refine-node-187
+  to: refine-node-190
+  rel: requires
+  source: wiki:Minerals/Refine_Tree
+  confidence: documented
+- from: refine-node-190
+  to: refine-node-185
+  rel: boosts
+  note: Improves the effect of Refine Node 185 (destroying a spark grants mastery) based on the spark's
+    rarity (+0.025 to the power per rarity tier from F)
+  source: wiki:Minerals/Refine_Tree
+  confidence: provisional
+- from: refine-node-180
+  to: refine-node-191
+  rel: requires
+  source: wiki:Minerals/Refine_Tree
+  confidence: documented
+- from: refine-node-137
+  to: refine-node-192
+  rel: requires
+  source: wiki:Minerals/Refine_Tree
+  confidence: documented
+- from: refine-node-185
+  to: refine-node-196
+  rel: requires
+  source: wiki:Minerals/Refine_Tree
+  confidence: documented
+- from: refine-node-184
+  to: refine-node-200
+  rel: requires
+  source: wiki:Minerals/Refine_Tree
+  confidence: documented
 - from: tarot-ace-of-swords
   to: attack-mult
   rel: boosts
@@ -8491,10 +9688,10 @@ edges:
   note: Score
   source: wiki:Elements
   confidence: uncertain
-- from: score-exponent
+- from: common-exponent
   to: fire-factor-2
   rel: boosts
-  note: Score Exponent
+  note: Common Exponent
   source: wiki:Elements
   confidence: uncertain
 - from: tarot-king-of-wands
@@ -9242,6 +10439,11 @@ edges:
   rel: boosts
   source: wiki:Trials
   confidence: uncertain
+- from: plague-er-base-spread-power
+  to: base-spread-power
+  rel: boosts
+  source: wiki:Plague
+  confidence: uncertain
 - from: plague-er-conversion-rate
   to: plague-points
   rel: boosts
@@ -9387,6 +10589,16 @@ edges:
   rel: boosts
   source: wiki:Singularity
   confidence: uncertain
+- from: singularity-milestone-one-hundred
+  to: singularity
+  rel: boosts
+  source: wiki:Singularity
+  confidence: uncertain
+- from: singularity-milestone-singular-master
+  to: singularity
+  rel: boosts
+  source: wiki:Singularity
+  confidence: uncertain
 - from: singularity-milestone-first-thousand
   to: sacrifice-dust
   rel: boosts
@@ -9419,6 +10631,11 @@ edges:
   confidence: uncertain
 - from: singularity-milestone-universe-under-pressure
   to: luck
+  rel: boosts
+  source: wiki:Singularity
+  confidence: uncertain
+- from: singularity-milestone-ten-thousand-dimensions
+  to: refinement-points
   rel: boosts
   source: wiki:Singularity
   confidence: uncertain
@@ -9527,13 +10744,43 @@ edges:
   rel: boosts
   source: wiki:Singularity
   confidence: uncertain
+- from: singularity-zodiac-aries
+  to: sacrifice-dust
+  rel: boosts
+  source: wiki:Singularity
+  confidence: uncertain
+- from: singularity-zodiac-aries
+  to: attack-exponent
+  rel: boosts
+  source: wiki:Singularity
+  confidence: uncertain
 - from: singularity-zodiac-taurus
   to: earth-factor-3
   rel: boosts
   source: wiki:Singularity
   confidence: uncertain
+- from: singularity-zodiac-taurus
+  to: plp-per-plg
+  rel: boosts
+  source: wiki:Singularity
+  confidence: uncertain
+- from: singularity-zodiac-taurus
+  to: golden-resources
+  rel: boosts
+  source: wiki:Singularity
+  confidence: uncertain
 - from: singularity-zodiac-gemini
   to: wind-factor-3
+  rel: boosts
+  source: wiki:Singularity
+  confidence: uncertain
+- from: singularity-zodiac-gemini
+  to: virus-essence
+  rel: boosts
+  source: wiki:Singularity
+  confidence: uncertain
+- from: singularity-zodiac-gemini
+  to: special-mineral-black-gem
   rel: boosts
   source: wiki:Singularity
   confidence: uncertain
@@ -9547,8 +10794,23 @@ edges:
   rel: boosts
   source: wiki:Singularity
   confidence: uncertain
+- from: singularity-zodiac-cancer
+  to: singularity-mult
+  rel: boosts
+  source: wiki:Singularity
+  confidence: uncertain
 - from: singularity-zodiac-leo
   to: sacrifice-dust
+  rel: boosts
+  source: wiki:Singularity
+  confidence: uncertain
+- from: singularity-zodiac-leo
+  to: attack-exponent
+  rel: boosts
+  source: wiki:Singularity
+  confidence: uncertain
+- from: singularity-zodiac-leo
+  to: fire-factor-3
   rel: boosts
   source: wiki:Singularity
   confidence: uncertain
@@ -9557,8 +10819,28 @@ edges:
   rel: boosts
   source: wiki:Singularity
   confidence: uncertain
+- from: singularity-zodiac-virgo
+  to: golden-resources
+  rel: boosts
+  source: wiki:Singularity
+  confidence: uncertain
+- from: singularity-zodiac-virgo
+  to: earth-factor-3
+  rel: boosts
+  source: wiki:Singularity
+  confidence: uncertain
 - from: singularity-zodiac-libra
   to: virus-essence
+  rel: boosts
+  source: wiki:Singularity
+  confidence: uncertain
+- from: singularity-zodiac-libra
+  to: special-mineral-black-gem
+  rel: boosts
+  source: wiki:Singularity
+  confidence: uncertain
+- from: singularity-zodiac-libra
+  to: wind-factor-3
   rel: boosts
   source: wiki:Singularity
   confidence: uncertain
@@ -9572,13 +10854,38 @@ edges:
   rel: boosts
   source: wiki:Singularity
   confidence: uncertain
+- from: singularity-zodiac-scorpio
+  to: water-factor-3
+  rel: boosts
+  source: wiki:Singularity
+  confidence: uncertain
 - from: singularity-zodiac-saggitarius
   to: attack-exponent
   rel: boosts
   source: wiki:Singularity
   confidence: uncertain
+- from: singularity-zodiac-saggitarius
+  to: fire-factor-3
+  rel: boosts
+  source: wiki:Singularity
+  confidence: uncertain
+- from: singularity-zodiac-saggitarius
+  to: sacrifice-dust
+  rel: boosts
+  source: wiki:Singularity
+  confidence: uncertain
 - from: singularity-zodiac-capricorn
   to: golden-resources
+  rel: boosts
+  source: wiki:Singularity
+  confidence: uncertain
+- from: singularity-zodiac-capricorn
+  to: earth-factor-3
+  rel: boosts
+  source: wiki:Singularity
+  confidence: uncertain
+- from: singularity-zodiac-capricorn
+  to: plp-per-plg
   rel: boosts
   source: wiki:Singularity
   confidence: uncertain
@@ -9592,6 +10899,11 @@ edges:
   rel: boosts
   source: wiki:Singularity
   confidence: uncertain
+- from: singularity-zodiac-aquarius
+  to: virus-essence
+  rel: boosts
+  source: wiki:Singularity
+  confidence: uncertain
 - from: singularity-zodiac-pisces
   to: singularity-mult
   rel: boosts
@@ -9599,6 +10911,11 @@ edges:
   confidence: uncertain
 - from: singularity-zodiac-pisces
   to: water-factor-3
+  rel: boosts
+  source: wiki:Singularity
+  confidence: uncertain
+- from: singularity-zodiac-pisces
+  to: base-spread-power
   rel: boosts
   source: wiki:Singularity
   confidence: uncertain
@@ -11262,6 +12579,36 @@ edges:
   rel: boosts
   source: wiki:Tarot
   confidence: uncertain
+- from: tarot-challenge-the-sun
+  to: refine-node-195
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-challenge-the-sun
+  to: special-minerals
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-challenge-the-sun
+  to: planet-sun
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: tarot-challenge-the-sun
+  to: minerals
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: special-minerals
+  to: tarot-challenge-the-sun
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
+- from: singularity
+  to: tarot-challenge-the-sun
+  rel: boosts
+  source: wiki:Tarot
+  confidence: uncertain
 - from: tarot-artifact-glass-surface
   to: sacrifice-dust
   rel: boosts
@@ -11466,4 +12813,39 @@ edges:
   to: break-infinity
   rel: boosts
   source: wiki:Infinity
+  confidence: uncertain
+- from: particles-spark-black
+  to: refinement-points
+  rel: boosts
+  source: wiki:Particles
+  confidence: uncertain
+- from: particles-spark-white
+  to: singularity
+  rel: boosts
+  source: wiki:Particles
+  confidence: uncertain
+- from: particles-spark-red
+  to: singularity-mult
+  rel: boosts
+  source: wiki:Particles
+  confidence: uncertain
+- from: particles-spark-orange
+  to: attack-exponent
+  rel: boosts
+  source: wiki:Particles
+  confidence: uncertain
+- from: particles-spark-yellow
+  to: gold-gain
+  rel: boosts
+  source: wiki:Particles
+  confidence: uncertain
+- from: particles-spark-green
+  to: luck
+  rel: boosts
+  source: wiki:Particles
+  confidence: uncertain
+- from: particles-spark-purple
+  to: plague-generators
+  rel: boosts
+  source: wiki:Particles
   confidence: uncertain

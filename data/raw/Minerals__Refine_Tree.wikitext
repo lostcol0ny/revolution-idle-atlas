@@ -3,8 +3,10 @@
 |+'''Refine Tree Node List'''<br/><small>''To edit this table, please [https://revolutionidle.wiki.gg/wiki/Minerals/Refine_Tree?action=edit click here].''</small>
 </includeonly><noinclude>
 {|class="wikitable sortable" style="width:100%"
-|+'''Refine Tree Node List'''
+{{Map:Refine Tree}}
+<i>(Note to editors: put new refine node info in the table below, the map will be updated AFTER all info gets there since it takes a long time)</i>
 
+|+'''Refine Tree Node List'''
 ! Node !! Max Level !! width = 120px| Initial Cost 
 !Cost increase per level!! Effect !! Requires
 {{RN|1| max = 997 | rfp = 1 
@@ -407,11 +409,11 @@
 | rfp increase = x1e16
 | effect = Decrease the base cooldown of all artifacts for flushing by X hours (+1/level)
 | req = 93,96 }}
-{{RN|101| max = 1 | rfp = 
+{{RN|101| max = 1 | rfp = 1e2,250
 | rfp increase = 
 | effect = Achievement 443 reward is powered to ^2
 | req = 100 }}
-{{RN|102| max = 1 | rfp = 
+{{RN|102| max = 1 | rfp = 1e2,350
 | rfp increase = 
 | effect = Unlocks Automation for upgrading Artifact Parts
 | req = 100 }}
@@ -427,28 +429,28 @@
 | rfp increase = 
 | effect = The Hierophant Passive Bonus is now boosted by the level of your equipped Endoplasmic Reticulum
 | req = 96 }}
-{{RN|106| max = 1 | rfp = 
+{{RN|106| max = 1 | rfp = 1e2,650
 | rfp increase = 
 | effect = Spread Power of your currently equipped Endoplasmic Reticulum also boosts Black Gem base effect (x???)
 | req = 105 }}
-{{RN|107| max = 1 | rfp = 
+{{RN|107| max = 1 | rfp = 1e2,800
 | rfp increase = 
 | effect = Divides cooldown of all artifacts by 2
 | req = 105 }}
-{{RN|108| max = 1 | rfp = 
+{{RN|108| max = 1 | rfp = 1e2,870
 | rfp increase = 
 | effect = Max PIP now boosts sacrifice dust gain (x???)
 | req = 107 }}
-{{RN|109| max = 1 | rfp = 
+{{RN|109| max = 1 | rfp = 1e2,940
 | rfp increase = 
 | effect = Multiplies PIP per PIG by x10
 | req = 107 }}
-{{RN|110| max = 1 | rfp = 
+{{RN|110| max = 1 | rfp = 1e3,010
 | rfp increase = 
 | effect = Multiplies Crafting Mastery by x1.1
 | req = 98 }}
-{{RN|111| max = 25 | rfp = 
-| rfp increase = 
+{{RN|111| max = 25 | rfp = 1e3,050
+| rfp increase = x1e10
 | effect = Divides the ERP needed to craft an Endoplasmic Reticulum by x1.5^level
 | req = 95,96,105 }}
 {{RN|112| max = 1 | rfp = 5.9e3,141 
@@ -463,9 +465,9 @@
 | rfp increase = 
 | effect = Multiplies Base Spread Power (on ER craft) by x1.25
 | req = 99 }}
-{{RN|115| max = 20 | rfp = 
-| rfp increase = 
-| effect = Multiples Max Cure Progress by 1.2^level
+{{RN|115| max = 20 | rfp = 1e3,300
+| rfp increase = ~x4.6e16
+| effect = Multiples Max Cure Progress by 1.2 per level
 | req = 113 }}
 {{RN|116| max = 1 | rfp = 1e3,450
 | rfp increase = 
@@ -487,8 +489,8 @@
 | rfp increase = 
 | effect = Multiplies Attack Exponent by x1
 | req = 112,113 }}
-| colspan=6 style="text-align:center;background-color:red"| '''Note: Ach. 605 & 606 and Bonus Trial #1 lower the costs of the following nodes to the listed values.'''
-{{RN|121| max = 1 | rfp = 
+| colspan=6 style="text-align:center;background-color:red"| '''Note: Ach. 605, 606, 650 and Bonus Trial #1 lower the costs of the following nodes to the listed values.'''
+{{RN|121| max = 1 | rfp = 1e3,900
 | rfp increase = 
 | effect = Unlocks Singularity
 | req = 120 }}
@@ -528,7 +530,7 @@
 | rfp increase = x1e35(?)
 | effect = Multiples Refine Node 125 Effect by x?
 | req = 114 }}
-{{RN|131| max = 1 | rfp = 
+{{RN|131| max = 1 | rfp = 1e5,550
 | rfp increase = 
 | effect = Adds Atom Gain to Singularity Count effects
 | req = 130 }}
@@ -552,4 +554,261 @@
 | rfp increase = 
 | effect = Increases Local Singularity Speed Power by 0.02
 | req = 125 }}
+{{RN|137| max = 1 | rfp = 1e7,200
+| rfp increase = 
+| effect = Unlock Particles
+| req = 16 }}
+{{RN|138| max = 1 | rfp = 1e7,210
+| rfp increase = 
+| effect = Particle Rank boosts Refine Point gain (^X / +0.001 per rank)
+| req = 14 }}
+{{RN|139| max = 1 | rfp = 1e7,300
+| rfp increase = 
+| effect = Multiplies Alpha Generator Base by x2
+| req = 15 }}
+{{RN|140| max = 9 | rfp = 1e7,400
+| rfp increase = 1e10
+| effect = Multiplies Alpha Multiplier Base by x1 + level
+| req = 139 }}
+{{RN|141| max = 1 | rfp = 1e7,450
+| rfp increase = 
+| effect = Rank 5 Reward is x3 more effective
+| req = 14, 138 }}
+{{RN|142| max = 1 | rfp = 1e7,500
+| rfp increase = 
+| effect = The base of all particle generators is multiplied by x1.25 every 10 levels
+| req = 10, 13 }}
+{{RN|143| max = 1 | rfp = 1e7,600
+| rfp increase = 
+| effect = The base of all particle multipliers is multiplied by x2 every 7 levels
+| req = 10 }}
+{{RN|144| max = 6 | rfp = 1e7,700
+| rfp increase = 1e100
+| effect = Particle Rank boosts gold: ^X (+0.01 per rank)
+| req = 143 }}
+{{RN|145| max = 1 | rfp = 1e8,000
+| rfp increase = 
+| effect = Every 100 levels, the base of all particle generators is multiplied by x10
+| req = 13 }}
+{{RN|146| max = 1 | rfp = 1e8,300
+| rfp increase = 
+| effect = Unlocks the Singularity Mult effect on the base of Alpha & Beta generators
+| req = 145 }}
+{{RN|147| max = 1 | rfp = 1e8,800
+| rfp increase = 
+| effect = Beta Particles boost Alpha Generator Base a bit better (0.2 -> 0.3)
+| req = 10 }}
+{{RN|148| max = 1 | rfp = 1e9,200
+| rfp increase = 
+| effect = Empowerer base is increased by 0.001 every 20 levels for all particles
+| req = 143 }}
+{{RN|149| max = 1 | rfp = 1e9,400
+| rfp increase = 
+| effect = Multiplies Alpha Generator Base by x100
+| req = 148 }}
+{{RN|150| max = 11 | rfp = 1e9,600
+| rfp increase = 
+| effect = Multiplies Beta Multiplier Base by x1 + 0.5 * level
+| req = 145 }}
+{{RN|151| max = 1 | rfp = 1e10,000
+| rfp increase = 
+| effect = You passively gain Singularity Multiplier every second (also affected by local singularity speed)
+| req = 145 }}
+{{RN|152| max = 1 | rfp = 1e11,000
+| rfp increase = 
+| effect = Decreases base requirement for Tier, Tetr and Pent by 1
+| req = 151 }}
+{{RN|153| max = 1 | rfp = 1e12,000
+| rfp increase = 
+| effect = Rank Up resets nothing now
+| req = 151 }}
+{{RN|154| max = 1 | rfp = 1e12,500
+| rfp increase = 
+| effect = The PlG to PlP bonus is raised to ^1.5
+| req = 151 }}
+{{RN|155| max = 1 | rfp = 1e13,000
+| rfp increase = 
+| effect = Unlocks the Singularity Mult effect on the base of all generators
+| req = 154 }}
+{{RN|156| max = 1 | rfp = 1e14,000
+| rfp increase = 
+| effect = Atom Penalty at 1e5,000 is x1.1 weaker now
+| req = 154 }}
+{{RN|157| max = 1 | rfp = 1e15,000
+| rfp increase = 
+| effect = Atom Penalty at 1e10,000 is x1.2 weaker now
+| req = 144 }}
+{{RN|158| max = 1 | rfp = 1e16,000
+| rfp increase = 
+| effect = Alpha particle upgrades do not spend alpha points
+| req = 144 }}
+{{RN|159| max = 1 | rfp = 1e17,000
+| rfp increase = 
+| effect = Tier Up resets nothing now
+| req = 144 }}
+{{RN|160| max = 10 | rfp = 1e18,000
+| rfp increase = 1e1,000
+| effect = Divides Tier Up requirement by x1 + 0.02 * level (rounded up)
+| req = 154 }}
+{{RN|161| max = 1 | rfp = 1e22,000
+| rfp increase = 
+| effect = Every 1,000 levels, the base of all particle generators is multiplied by x1e10
+| req = 160 }}
+{{RN|162| max = 1 | rfp = 1e25,000
+| rfp increase = 
+| effect = Luck is raised to ^1.1
+| req = 160 }}
+{{RN|163| max = 1 | rfp = 1e27,500
+| rfp increase = 
+| effect = Singularity Tree levels now go 0 -> 2 -> 4 -> 6 -> 8 -> 10
+| req = 162 }}
+{{RN|164| max = 1 | rfp = 1e30,000
+| rfp increase = 
+| effect = Beta particle upgrades do not spend beta points
+| req = 162 }}
+{{RN|165| max = 1 | rfp = 1e32,000
+| rfp increase = 
+| effect = Gamma particle upgrades do not spend gemma points
+| req = 161 }}
+{{RN|166| max = 1 | rfp = 1e33,333
+| rfp increase = 
+| effect = Local Particles Speed is boosted by ^0.1 of Local Singularity Speed
+| req = 140 }}
+{{RN|167| max = 1 | rfp = 1e35,000
+| rfp increase = 
+| effect = Singularity Tree levels now go 0 -> 4 -> 8 -> 10
+| req = 166 }}
+{{RN|168| max = 1 | rfp = 1e36,500
+| rfp increase = 
+| effect = Tarot Challenges Singularity factors are x3 stronger (before softcap)
+| req = 167 }}
+{{RN|169| max = 1 | rfp = 1e42,500
+| rfp increase = 
+| effect = Singularity Tree nodes cannot exceed the price at Level 5
+| req = 167 }}
+{{RN|170| max = 1 | rfp = 1e45,000
+| rfp increase = 
+| effect = Alpha Prestige resets nothing and is performed every frame
+| req = 167 }}
+{{RN|171| max = 1 | rfp = 1e48,000
+| rfp increase = 
+| effect = Multiplies the base of Delta Generators and Multipliers by x100
+| req = 170 }}
+{{RN|172| max = 1 | rfp = 1e50,000
+| rfp increase = 
+| effect = Singularity Tree levels now go 0 -> 5 -> 10
+| req = 170 }}
+{{RN|173| max = 1 | rfp = 1e53,000
+| rfp increase = 
+| effect = Every 100 levels, the base of all particle multipliers is multiplied by x10
+| req = 140 }}
+{{RN|174| max = 1 | rfp = 1e57,000
+| rfp increase = 
+| effect = Sacrifice dust spent after Lv.100 slightly increases the base of Special Minerals effect 2 (+0.01 per e1,000 to the effect 2 base)
+| req = 173 }}
+{{RN|175| max = 1 | rfp = 1e60,000
+| rfp increase = 
+| effect = Equipped Endoplasmatic Reticulum Level empowers luck (^X) (^1.001 per ER level)
+| req = 173 }}
+{{RN|176| max = 1 | rfp = 6.7e67,670
+| rfp increase = 
+| effect = Beta Particle Prestige resets nothing and is automatically performed every frame
+| req = 174 }}
+{{RN|177| max = 1 | rfp = 1e75,000
+| rfp increase = 
+| effect = Each time you perform a Singularity after e25,000 atoms, spark cost decreases as if you had spawned 1 fewer spark in total
+| req = 176 }}
+{{RN|178| max = 1 | rfp = 1e80,000
+| rfp increase = 
+| effect = Mastery Gain is multiplied by xX (1 + pent / 10)
+| req = 177 }}
+{{RN|179| max = 1 | rfp = 1e84,000
+| rfp increase = 
+| effect = Gamma Particle Prestige resets nothing and is automatically performed every frame
+| req = 177 }}
+{{RN|180| max = 1 | rfp = 1e88,000
+| rfp increase = 
+| effect = Increase the total number of sparks you can equip by 1
+| req = 137 }}
+{{RN|181| max = 1 | rfp = 1e92,500
+| rfp increase = 
+| effect = Unlocks Spark Mastery Factor for Singularity
+| req = 180 }}
+{{RN|182| max = 1 | rfp = e100,000
+| rfp increase = 
+| effect = Each spark spawned after buying this node decreases ETP cost by 5 Epsilon (total reduction is softcapped after 100,000)
+| req = 181 }}
+{{RN|183| max = 1 | rfp = e105,000
+| rfp increase = 
+| effect = Decreases base requirement for Tier, Tetr and Pent by 1 again
+| req = 182 }}
+{{RN|184| max = 1 | rfp = e110,000
+| rfp increase = 
+| effect = Equipped Endoplasmatic Reticulum Level boosts Spark Mastery gain (xX) (x1.01 per ER level)
+| req = 182 }}
+{{RN|185| max = 1 | rfp = e120,000
+| rfp increase = 
+| effect = Destroying a spark now also grants mastery (^0.5 of this spark mastery)
+| req = 181 }}
+{{RN|186| max = 1 | rfp = e125,000
+| rfp increase = 
+| effect = Epsilon Capacity gain is multiplied by x2
+| req = 185 }}
+{{RN|187| max = 1 | rfp = e130,000
+| rfp increase = 
+| effect = Delta Prestige bonus is stronger based on your Pent (X1.01 per Pent)
+| req = 183 }}
+{{RN|188| max = 1 | rfp = e135,000
+| rfp increase = 
+| effect = Attack exponent is multiplied by 1 + 0.1 * Log10(mastery) (softcap at x10)
+| req = 183 }}
+{{RN|189| max = 1 | rfp = e140,000
+| rfp increase = 
+| effect = Destroying Ultima Singular Zodiacs now also decreases Epsilon Tree Points cost (Total reduction is softcapped after 100,000)
+| req = 187 }}
+{{RN|190| max = 1 | rfp = e150,000
+| rfp increase = 
+| effect = Improves the effect of Refine Node 185 (destroying a spark grants mastery) based on the spark's rarity (+0.025 to the power per rarity tier from F)
+| req = 187 }}
+{{RN|191| max = 1 | rfp = e175,000
+| rfp increase = 
+| effect = Delta particle upgrades do not spend delta points
+| req = 180 }}
+{{RN|192| max = 1 | rfp = e200,000
+| rfp increase = 
+| effect = Epsilon Points generation is stronger based on your current Epsilon Points x1 (+0.01 per 10K Epsilon Points, capped at x10)
+| req = 137 }}
+{{RN|193| max = 1 | rfp = ???
+| rfp increase = 
+| effect = ???
+| req = ??? }}
+{{RN|194| max = 1 | rfp = ???
+| rfp increase = 
+| effect = ???
+| req = ??? }}
+{{RN|195| max = 1 | rfp = ???
+| rfp increase = 
+| effect = ???
+| req = ??? }}
+| colspan=6 style="text-align:center;background-color:red"| '''Note: Sun challenge completion further lowers the cost of the following nodes (divides by e100,000,000) to the listed values .'''
+{{RN|196| max = 10 | rfp = e1,100,000
+| rfp increase = 
+| effect = Multiplies Spark Mastery Gain on Spark Spawn by xX
+| req = 185 }}
+{{RN|197| max = 1 | rfp = ???
+| rfp increase = 
+| effect = ???
+| req = ??? }}
+{{RN|198| max = 1 | rfp = ???
+| rfp increase = 
+| effect = ???
+| req = ??? }}
+{{RN|199| max = 1 | rfp = ???
+| rfp increase = 
+| effect = ???
+| req = ??? }}
+{{RN|200| max = 5 | rfp = e1,600,000
+| rfp increase = 
+| effect = Multiplies Mastery Gain on Spark Destroy by xX
+| req = 184 }}
 |}

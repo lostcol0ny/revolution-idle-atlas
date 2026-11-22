@@ -54,7 +54,7 @@
 #   Planet_Shop — prose for the four donuts and the four zodiac features, plus
 #     code blocks of formulae. No table.
 #
-# Tables surveyed but deliberately excluded from all nine swept pages:
+# Tables surveyed but deliberately excluded from all ten swept pages:
 #
 #   Singularity — Atom Threshold|Base Value|Resource Affected|Modifiable?*|Modification Source (14 rows)
 #     The "Resource Affected" column names other graph nodes, but the table
@@ -155,6 +155,20 @@
 #     second effect to an already-extracted node is not something a manifest
 #     entry can express.
 #
+#   Particles — Upgrade|Base Cost|Cost Scaling (4 rows)
+#     Prices only. Every cost scaling reads "???" and no column says what an
+#     upgrade does to anything.
+#
+#   Particles — Particle|Grade (4 rows)
+#     Which grade unlocks which particle. Structural, no effect column.
+#
+#   Particles — Threshold|Bonus (38 rows)
+#     Real effects, but the rows are named by threshold alone ("1", "3", "5")
+#     and the Rank, Tier, Tetr and Pent sections that tell them apart are
+#     colspan divider rows the reader skips. Seven thresholds repeat across
+#     sections, so the duplicate-id guard would drop the later copies, the same
+#     failure as the Tarot upgrades above.
+#
 pages:
   - reader: record_template
     page: Minerals
@@ -250,10 +264,10 @@ pages:
     effect_columns: [Effect]
     per_level_column: Initial Increase/lvl
 
-  # `Second Effect` is blank in all twelve rows today. It is read anyway:
-  # these gain a second and third effect at higher tiers, so `effects` is a
-  # list and reading the column now means no code change when the wiki
-  # documents them.
+  # One column per tier: the second effect unlocks at Divine and the third at
+  # Rainbow, and the headings carry that gate in parentheses. The header text
+  # is matched exactly, so a re-worded heading empties this entry and
+  # `atlas extract` warns that the page yielded no records.
   - reader: wikitable
     page: Singularity
     system: houses
@@ -267,7 +281,7 @@ pages:
     # deep-links to are unchanged.
     name_prefix: Singular Zodiac
     name_columns: [Zodiac]
-    effect_columns: [First effect, Second Effect]
+    effect_columns: [First Effect, Second Effect (Divine+), Third Effect (Rainbow+)]
 
   - reader: wikitable
     page: Dilation_Tree
@@ -305,7 +319,7 @@ pages:
     effect_columns: [Effect]
 
   # Five tables, one per suit, sharing three columns. Every row is named for the
-  # card that gates the challenge, so the 75 ids are distinct without a suit to
+  # card that gates the challenge, so the 76 ids are distinct without a suit to
   # disambiguate them, and they do not collide with the `tarot-<card>` nodes the
   # Tarot parser mints. `Penalty` is swept even though it is a restriction: here
   # it is also the only text naming what the challenge touches, and the
@@ -344,3 +358,15 @@ pages:
     name_prefix: Infinity Challenge
     name_columns: [Challenge]
     effect_columns: [Reward]
+
+  # `Comments` is play advice ("equip, Refine, and unequip after"), not an
+  # effect. The colours alone ("Black", "Blue") say nothing in a search box,
+  # so `name_prefix` supplies the noun.
+  - reader: wikitable
+    page: Particles
+    system: particles
+    kind: upgrade
+    id_prefix: particles-spark
+    name_prefix: Spark
+    name_columns: [Spark Color]
+    effect_columns: [Effect]

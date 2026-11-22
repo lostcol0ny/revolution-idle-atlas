@@ -1,0 +1,261 @@
+[[File:Screenshot 2026-11-14 111252.png|thumb|the Particles Tab]]
+{{New Content}}
+Particles is a late-game feature unlocked by purchasing Refine Node 137. It is the ninth sub-tab in Unity
+There are 5 types of Particles: Alpha (α), Beta (β), Gamma (γ), Delta (δ), and Epsilon (ε). Only Alpha is unlocked at the start, each other Particle must be unlocked through their respective tier-up.
+
+=== Particle Upgrades ===
+Alpha through Gamma each come with the same set of 4 upgrades, each of which affect that particle's generation:
+{| class="wikitable"
+|+
+! colspan="3" |Particle Upgrades
+|-
+!Upgrade
+!Base Cost
+!Cost Scaling
+|-
+|Generator
+|Free (0)
+|???
+|-
+|Multiplier
+|10
+|???
+|-
+|Empowerer
+|1000
+|???
+|-
+|Tetrator
+|1e25
+|???
+|}
+Each upgrade affects generation how you think they would: multiplier multiplies generation and empowerer empowers it. (Note that Tetration in this game isn't actually tetration and is instead more of a LOGPOW function, which essentially empowers log(x).)
+
+=== Grades ===
+The particles Beta - Delta are all unlocked with their respective grade-up. They are as follows:
+{| class="wikitable"
+|+
+! colspan="2" |Grade Types
+|-
+!Particle
+!Grade
+|-
+|Alpha
+|Rank-up
+|-
+|Beta
+|Tier
+|-
+|Gamma
+|Tetr 
+|-
+|Delta
+|Pent
+|}
+(Tetr is likely short for Tetra, and Pent is likely short for Penta.)
+
+The final particle, Epsilon, does not have its own grade, and Alpha's grade requires a certain number of Alpha (the particle) to rank up.
+
+Each grade type requires a certain amount of the grade below it (i.e Tetr requires a certain Tier to increase.) Ranking up will reset all ranks before it and previous Particle upgrades.
+
+=== Grade Bonuses ===
+[[File:Particle Grade Bonuses.png|thumb|the Grade Bonuses page]]
+Increasing these Grades will provide bonuses similar to the many Milestone systems in the game. They can be found by clicking the small Bonuses button in the top right.
+
+(The wording will not match exactly with what is written in-game, these have been modified to hopefully improve readability.)
+{| class="wikitable"
+|+
+! colspan="2" |Grade Bonuses
+|-
+!Threshold
+!Bonus
+|-
+! colspan="2" |Rank Bonuses
+|-
+|0
+|Alpha generator base: +0.01 per rank
+|-
+|3
+|Unlocks Rank Factor for Singularity
+|-
+|5
+|Alpha generator base: x(1+0.1*generator level) RN141 improves this bonus.
+|-
+|8
+|Attack Exponent mult: +0.05x per Rank
+|-
+|10
+|Rank increases Singularity Local Speed power: <math>+0.01*\sqrt{Rank}</math>
+|-
+|11
+|The base effects of Singularity Tree Nodes 3.1 and 3.2 are multiplied +0.1x per Rank
+|-
+|12
+|Beta generator base is multiplied by (1+0.25*Beta Generator level)
+|-
+|14
+|Particle Rank boosts Astrology Luck: +^0.01 per Rank
+|-
+|17
+|The base effect of Singularity Tree node 6.2 is multiplied by 1 + rank x 0.05
+|-
+|18
+|Refine Node 142 effect improves by +0.005 per rank
+|-
+|20
+|
+|-
+|30
+|Remove the 1.6e256 Atom penalty
+|-
+|32
+|Sacrifice Dust gain ^1.1
+|-
+|35
+|Relic 71 base effect is multiplied +0.01x per Rank
+|-
+|50
+|Rank 8 bonus is 10 times stronger: +0.05x per Rank ==> +0.5x per Rank
+|-
+|80
+|All Particle generator bases x(1.01^ER level)
+|-
+|150
+|Each Rank multiplies Spark Mastery gain x1.01
+|-
+|500
+|Multiplies the efficiency of all Epsilon tree nodes based on your rank (+0.01 per 100 ranks)
+|-
+! colspan="2" |Tier Bonuses
+|-
+|1
+|Unlock a free first Beta generator level. Beta generator base is multiplied by Tier, and Alpha generator base is x(Beta + 1)^0.2, improved with RN147.
+|-
+|2
+|Alpha generator and multiplier bases are multiplied by Tier. Alpha multiplier base is also multiplied by (1+0.5*multiplier level).
+|-
+|3
+|RfP gain ^(1 + 0.001 x rank + 0.01 x tier)
+|-
+|5
+|Unlocks Tier Factor for singularity
+|-
+|10
+|Relic 73 base effect x(1 + 0.01 x tier).
+|-
+|20
+|Relic 60 effect x(1 + 0.1 x tier).
+|-
+|200
+|Multiplies the efficiency of all Epsilon tree nodes based on your tier (+0.01 per 50 tiers)
+|-
+! colspan="2" |Tetr Bonuses
+|-
+|1
+|Unlock a free first Gamma generator level. Beta generator base is x(Gamma + 1)^0.25, and Luck is ^(1 + tier/100 + tetr/10)
+|-
+|3
+|Attack gold gain ^(1 + 0.01 x tetr).
+|-
+|5
+|Relic 72 effect ^(1 + 0.2 x tetr). Above tetr 10, this bonus uses 10x(tetr/10)^0.32
+|-
+|8
+|Unlocks Tetr Factor for singularity
+|-
+|10
+|All particle generator bases x(1.2^tetr).
+|-
+|20
+|Singularity Tree Node 4.2 effect is multiplied by x1.1 per Ascension.
+|-
+! colspan="2" |Pent Bonuses
+|-
+|1
+|Unlock a free first Delta generator level. Gamma generator base is x(Delta + 1)^0.25. Gold gain from Tarot has a better formula: (gain x 100)^(1+ 0.1 x Pent + 0.04 x Tetr + 0.01 x Tier) / 100.
+|-
+|2
+|Relics 70 and 73 base effects x(1 + 0.01 x pent).
+|-
+|3
+|All Particle generator bases x(2^pent)
+|-
+|5
+|Unlock Pent as a Singularity Mult Factor
+|-
+|8
+|Tetr 20 milestone base effect is increased +0.01 per Pent
+|-
+|10
+|Multiplies the efficiency of all Epsilon tree nodes based on your pent(+0.01 per pent)
+|-
+|25
+|Refine Points Gain is boosted by your pent (+0.01 per pent)
+|}
+
+=== Particle Prestige ===
+Particle Prestige is a very simple mechanic where, if you have more than 1e20 of any particle, you can prestige it and its respective upgrades to boost the generation of the next particle. (i.e. Alpha boosts Beta when prestiged) Each boost starts at a base of 1x except for Delta's boost to Epsilon which starts at x0 instead. (the formula still jumps to 1 when prestige is available)
+
+=== Epsilon ===
+Epsilon is different from all of the other particles. It does not have its own grade, and its upgrades are vastly different. It is also capped at a base of 10,000, though this can be increased wi
+
+==== Sparks ====
+Epsilon can be used to spawn Sparks, at a base cost of 1000 Epsilon and increasing by 100 per Spark spawned. Each Spark has its own effect, determined based on 2 stats: Rarity and Mastery.
+
+Rarity is very similar to that of ERs, as it presents itself more like a tier system. There are 14 rarities/tiers: F, E, D, C, C+, B, B+, A, A+, S, SS, SSS, 4S, and Star ('''★)'''. Of course, the chances of each rarity are determined by a seperate Spark Luck stat.
+[[File:Sparks.png|thumb|Sparks]]
+Mastery is gained when spawning a Spark, seen right above the Spawn button. It is very similar to Zodiac Quality.
+{| class="wikitable"
+|+
+! colspan="3" |Spark Effects
+|-
+!Spark Color
+!Effect
+!Comments
+|-
+|Black
+|RfP Gain ^
+|Really good for pushing Refine Tree, equip, Refine, and unequip after
+|-
+|White
+|Singularity Local Speed mult
+|Pairs well with Blue for Atom pushes
+|-
+|Red
+|Singularity Mult Factor
+|Good for Singularity mult
+|-
+|Orange
+|Attack Exponent mult
+|Good for Attack Levels, again only equip for a short time to push Attacks and unequip
+|-
+|Yellow
+|Gold Gain ^
+|Great for Gold
+|-
+|Green
+|Astrology Luck ^
+|Pairs nicely with other Luck boosts, recommend to do during Atom pushes for better Zodiacs
+|-
+|Cyan
+|Particle Empowerers Mult
+|Helps a lot with pushing Particle amounts; equip and do any rank-ups necessary
+|-
+|Blue
+|e10K Atom Penalty divider
+|Pairs nicely with White, together they help a LOT with Atom pushes
+|-
+|Pink
+|Spark Mastery gain mult
+|ALWAYS have this equipped when spawning Sparks
+|-
+|Purple
+|PlG Gain ^
+|This one's nice to have on hand; equip occasionally when trying to push PlG and ERs
+|}
+Only one spark of a certain color can be equipped at a time. At the beginning, you have only 3 Spark slots. One extra can be obtained per RN180, 195 and 199.
+
+==== Epsilon Tree ====
+[[File:Epsilon Tree.png|thumb|the Epsilon Tree]]
+Unlocked along with Epsilon, here you can purchase Epsilon Tree Points, or ETP to spend on a large upgrade tree. It functions very similar to the Dilation Tree, each upgrade can instead be upgraded infinitely, and the upgrades towards the center require all previous upgrades to unlock and purchase. There is no way to respec the tree, but levels in tree nodes can be sold for an amount equal to half the price of your next ETP. Epsilon can also be "prestiged" here to increase its max capacity.
+{{Stub|notes=need upgrades and stuff}}{{Main navbox}}
