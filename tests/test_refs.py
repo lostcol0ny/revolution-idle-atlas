@@ -634,9 +634,36 @@ def test_an_unlisted_template_is_still_decoration():
     assert plain_text("Gold {{Icon|gold}} gain") == "Gold gain"
 
 
-def test_a_line_break_becomes_a_space_not_nothing():
+def test_a_line_break_becomes_a_clause_separator_in_prose_and_a_space_in_a_label():
     # A <br/> is a sentence boundary. Stripped to nothing it joins the last word
     # of one sentence to the first word of the next.
-    assert plain_text("Unlock Tab<br/>SMS Factor is 0") == "Unlock Tab SMS Factor is 0"
-    assert plain_text("a<br>b") == "a b"
-    assert plain_text("a<BR />b") == "a b"
+    assert plain_text("Unlock Tab<br/>SMS Factor is 0") == "Unlock Tab / SMS Factor is 0"
+    assert plain_text("a<br>b") == "a / b"
+    assert plain_text("a<BR />b") == "a / b"
+    assert label_text("a<br>b") == "a b"
+
+
+def test_a_line_break_ends_an_unlock_clause():
+    # "Unlock Milestones Tab<br />SMS Factor is locked at 0" is two statements;
+    # read as one, the unlock rule swallowed the second.
+    vocab = Vocabulary([("SMS Factor", "sms-factor")])
+    text = plain_text("Unlock Milestones Tab<br />SMS Factor is locked at 0")
+    assert [(r.target_id, r.rel) for r in resolve(text, vocab)] == [("sms-factor", "boosts")]
+
+
+def test_a_slash_ends_an_unlocked_object():
+    vocab = Vocabulary([("Stars", "stars"), ("Luck", "luck")])
+    refs = resolve("Unlocks Stars / Boosts Luck", vocab)
+    assert [(r.target_id, r.rel) for r in refs] == [("stars", "unlocks"), ("luck", "boosts")]
+
+
+def test_a_slash_starts_a_new_subject():
+    vocab = Vocabulary(
+        [("Gold", "gold"), ("Eternities", "eternities"), ("DP", "dilation-points")]
+    )
+    refs = resolve("Doubles Gold / Eternities boost DP gain", vocab)
+    assert [(r.target_id, r.is_input) for r in refs] == [
+        ("gold", False),
+        ("eternities", True),
+        ("dilation-points", False),
+    ]

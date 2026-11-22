@@ -4034,7 +4034,7 @@ nodes:
   wiki: Singularity
   confidence: provisional
   effects:
-  - text: Unlock Milestones Tab SMS Factor is locked at 0
+  - text: Unlock Milestones Tab / SMS Factor is locked at 0
 - id: singularity-milestone-accelerated-growth
   name: Accelerated Growth
   system: singularity-milestones-singularity
@@ -4050,7 +4050,7 @@ nodes:
   wiki: Singularity
   confidence: provisional
   effects:
-  - text: Keep Plague on Singularity Reset Plague Generator Awards no longer decrease
+  - text: Keep Plague on Singularity Reset / Plague Generator Awards no longer decrease
 - id: singularity-milestone-spaghettification
   name: Spaghettification
   system: singularity-milestones-singularity
@@ -10441,9 +10441,19 @@ edges:
   rel: boosts
   source: wiki:Plague
   confidence: uncertain
+- from: singularity-milestone-first-collapse
+  to: sms-factor
+  rel: boosts
+  source: wiki:Singularity
+  confidence: uncertain
 - from: singularity-milestone-accelerated-growth
   to: singularity-effects-tab
   rel: unlocks
+  source: wiki:Singularity
+  confidence: uncertain
+- from: singularity-milestone-event-horizon
+  to: plague-generators
+  rel: boosts
   source: wiki:Singularity
   confidence: uncertain
 - from: singularity-milestone-spaghettification

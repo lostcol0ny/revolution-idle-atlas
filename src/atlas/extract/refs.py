@@ -116,9 +116,12 @@ def _strip_markup(raw: str, *, prose: bool) -> str:
         text = unwrapped
     text = _PIPED_LINK_RE.sub(r"\1", text)
     text = _PLAIN_LINK_RE.sub(r"\1", text)
-    # A <br> is a sentence boundary, so it becomes a space. _HTML_TAG_RE below
-    # would delete it outright and weld the two sentences into one word.
-    text = _BREAK_RE.sub(" ", text)
+    # A <br> ends a statement. In prose it becomes " / ", the separator the
+    # wiki itself writes between two effects in one cell, so resolve() reads
+    # "Unlock Milestones Tab<br />SMS Factor is locked at 0" as two clauses. In
+    # a label it is a space. _HTML_TAG_RE below would delete it outright and
+    # weld the two halves into one word.
+    text = _BREAK_RE.sub(" / " if prose else " ", text)
     text = _HTML_TAG_RE.sub("", text)
     text = text.replace("'''", "").replace("''", "")
     if prose:
@@ -316,10 +319,10 @@ _INPUT_MARKER_RE = re.compile(
 _BOOST_VERB_RE = re.compile(
     r"(?<!\ba )(?<!\bthe )\bboosts?\b(?!\s+to\b)(?=\s+\w)", re.IGNORECASE
 )
-# Clause openers for the subject of that verb. A colon or bracket starts a new
-# subject: "Fire Node 3: Attack level past 3600 boosts Fire generation". A full
-# stop only when space follows, so the one in "^2.00" does not.
-_SUBJECT_START_RE = re.compile(r"[.;!?](?=\s)|[:(]")
+# Clause openers for the subject of that verb. A colon, bracket or " / " starts
+# a new subject: "Fire Node 3: Attack level past 3600 boosts Fire generation".
+# A full stop only when space follows, so the one in "^2.00" does not.
+_SUBJECT_START_RE = re.compile(r"[.;!?](?=\s)|[:(]|\s/\s")
 
 # A clause is the unit the shape rules below read. A full stop must be
 # followed by space, so "x1.1" stays whole; " / " joins two effects in a cell.
@@ -342,10 +345,11 @@ _UNLOCK_OPENER_RE = re.compile(r"\s*unlocks?\s+(?:the\s+)?", re.IGNORECASE)
 # "Unlocks the Singularity Mult effect | on the base of all generators".
 _UNLOCK_OBJECT_STOP_RE = re.compile(r"\b(?:on|that|which|to|in)\b", re.IGNORECASE)
 # What follows the unlocked name when it is the whole object: "Unlocks
-# Singularity", "Unlock runes and rune upgrades", "Unlocks Plague Tab". Anything
-# else ("Unlocks Auto Unity", "Unlocks Rank Factor for singularity") is a part
-# or a mode of the named thing, not the thing.
-_UNLOCK_OBJECT_END_RE = re.compile(r"\s*(?:$|[.,;:!?(]|\band\b|\btab\b)", re.IGNORECASE)
+# Singularity", "Unlock runes and rune upgrades", "Unlocks Plague Tab",
+# "Unlocks Stars / ...". Anything else ("Unlocks Auto Unity", "Unlocks Rank
+# Factor for singularity") is a part or a mode of the named thing, not the
+# thing.
+_UNLOCK_OBJECT_END_RE = re.compile(r"\s*(?:$|[.,;:!?(/]|\band\b|\btab\b)", re.IGNORECASE)
 
 
 def _clause_end(text: str, marker_start: int) -> int:

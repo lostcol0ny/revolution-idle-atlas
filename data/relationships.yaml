@@ -3266,7 +3266,7 @@ nodes:
 
   - id: plague-generators
     name: Plague Generators
-    aliases: [PlG]
+    aliases: [PlG, Plague Generator]
     system: plague
     kind: currency
     wiki: Plague
@@ -4284,27 +4284,12 @@ edges:
   - {from: relic-32, to: polish-points, rel: boosts, op: add, note: "PP Gain powered to", source: "wiki:Relics", confidence: documented}
   - {from: relic-33, to: refinement-points, rel: boosts, op: add, note: "RfP Gain multiplied by", source: "wiki:Relics", confidence: documented}
   - {from: relic-34, to: rune-moon, rel: boosts, op: add, note: "Sun and Moon runes gain speed", source: "wiki:Relics", confidence: documented}
-  - {from: relic-36, to: earth, rel: boosts, op: add, note: "Boosts Earth Generation", source: "wiki:Relics", confidence: documented}
   - {from: relic-37, to: global-element-mult, rel: boosts, op: add, note: "Multiplies Global Element Mult", source: "wiki:Relics", confidence: documented}
   - {from: relic-41, to: special-mineral-black-gem, rel: boosts, op: add, note: "Multiplies Black Gem Eff.", source: "wiki:Relics", confidence: documented}
   - {from: relic-45, to: smp, rel: boosts, op: add, note: "Increase SMP Exp you get on merging special minerals", source: "wiki:Relics", confidence: documented}
-  - {from: relic-46, to: relic-45, rel: boosts, op: add, note: "Empowers Relic 45 (SMP EXP)", source: "wiki:Relics", confidence: documented}
-  - {from: relic-47, to: relic-33, rel: boosts, op: exp, note: "Empowers Relic 33 (RfP Gain)", source: "wiki:Relics", confidence: documented}
-  - {from: relic-49, to: sacrifice-dust, rel: boosts, op: add, note: "Multiplies Sacrifice Dust gain", source: "wiki:Relics", confidence: documented}
-  - {from: relic-50, to: relic-38, rel: boosts, op: add, note: "Multiplies Relic 38's effect (Attacks bulk leveling)", source: "wiki:Relics", confidence: documented}
-  - {from: relic-51, to: refine-node-7, rel: boosts, op: add, note: "Multiplies Refine Node 7's effect", source: "wiki:Relics", confidence: documented}
-  - {from: relic-52, to: attack-ascension-power, rel: boosts, op: exp, note: "Empowers Attack Ascension Power from VP", source: "wiki:Relics", confidence: documented}
-  - {from: relic-53, to: sacrifice-dust, rel: boosts, op: exp, note: "Empowers total Tarot Challenge reward (Sacrifice Dust gain)", source: "wiki:Relics", confidence: documented}
-  - {from: relic-54, to: refine-node-90, rel: boosts, op: add, note: "Multiplies the base of Refine Node 90", source: "wiki:Relics", confidence: documented}
-  - {from: relic-56, to: relic-41, rel: boosts, op: mult, note: "Empowers Relic 41", source: "wiki:Relics", confidence: documented}
-  - {from: relic-58, to: refine-node-100, rel: boosts, op: add, note: "Increases Refine Node 100 efficiency by", source: "wiki:Relics", confidence: documented}
-  - {from: relic-59, to: golden-resources, rel: boosts, op: add, note: "Multiplies Golden Resource gain when flushing to artifacts", source: "wiki:Relics", confidence: documented}
-  - {from: relic-60, to: relic-59, rel: boosts, op: exp, note: "Empowers Relic 59", source: "wiki:Relics", confidence: documented}
-  - {from: relic-62, to: base-spread-power, rel: boosts, op: add, note: "Multiplies Base Spread Power on Endoplasmic reticulum craft", source: "wiki:Relics", confidence: documented}
-  - {from: relic-66, to: relic-62, rel: boosts, op: add, note: "Multiplies Relic 62 effect", source: "wiki:Relics", confidence: documented}
-  - {from: relic-70, to: luck, rel: boosts, op: exp, note: "Empowers your luck", source: "wiki:Relics", confidence: documented}
-  - {from: relic-72, to: particle-generators, rel: boosts, op: add, note: "Multiplies the base of Alpha and Beta Generators", source: "wiki:Relics", confidence: documented}
-  - {from: relic-75, to: spark-mastery, rel: boosts, op: add, note: "Multiplies Mastery Gain (Spawning & Destroying sparks)", source: "wiki:Relics", confidence: documented}
+  # Relic 53's per-level cell is hedged ("?"), so this stays `uncertain`; it is
+  # curated only because the bracket rule no longer finds the target.
+  - {from: relic-53, to: sacrifice-dust, rel: boosts, op: exp, note: "Empowers total Tarot Challenge reward (Sacrifice Dust gain)", source: "wiki:Relics", confidence: uncertain}
   - {from: quality, to: water-factor-2, rel: boosts, note: "Zodiac Quality", source: "wiki:Elements", confidence: documented}
   - {from: zodiac-aries, to: mult-gain, rel: boosts, source: "wiki:Zodiacs", confidence: documented}
   - {from: zodiac-aries, to: ascension-power, rel: boosts, source: "wiki:Zodiacs", confidence: documented}
@@ -4547,7 +4532,6 @@ edges:
   - {from: relic-57, to: tarot-suit-cups, rel: boosts, note: "Boosts the first effect of common suit Tarot cards", source: "wiki:Relics", confidence: provisional}
   - {from: relic-63, to: plague-er-conversion-rate, rel: boosts, op: mult, note: "Multiplies the effect of Endoplasmic Reticulum Upgrade 4 (PIP to ERP conversion Rate)", source: "wiki:Relics", confidence: provisional}
   - {from: relic-74, to: particles-epsilon, rel: boosts, op: mult, note: "Multiplies Delta Prestige Effect", source: "wiki:Relics", confidence: uncertain}
-  - {from: singularity-milestone-event-horizon, to: plague-generators, rel: boosts, source: "wiki:Singularity", confidence: uncertain}
   - {from: singularity, to: singularity-milestone-loop-feeds-loop, rel: boosts, source: "wiki:Singularity", confidence: provisional}
   - {from: singularity, to: singularity-milestone-one-hundred, rel: boosts, source: "wiki:Singularity", confidence: provisional}
   - {from: singularity, to: singularity-milestone-singular-master, rel: boosts, source: "wiki:Singularity", confidence: uncertain}

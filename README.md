@@ -444,7 +444,8 @@ evidence than a structural table cell.
 
 A name found in a sentence is a target — `item boosts name` — unless the
 sentence's shape says otherwise. The rules live in `extract/refs.py` (`resolve`)
-and apply to every parser:
+and apply to every parser. They read one clause at a time: a full stop,
+semicolon, " / " or a wiki `<br>` (which prose text shows as " / ") ends one.
 
 - **Inputs point the other way.** A name after "based on", "by amount of",
   "boosted by", "affected by" or "improved by", or before the verb "boost(s)"
@@ -455,8 +456,8 @@ and apply to every parser:
   ("Keep Elements on Singularity Reset") or "does not spend" / "doesn't
   decrease" yields no edge.
 - **A reset is not a target.** A name at most one word before "reset(s)"
-  ("on Unity Reset", "Alpha Prestige resets nothing") or right after "resets"
-  ("Resets SMS Factor to 5,000") yields no edge.
+  ("on Unity Reset", "Alpha Prestige resets nothing") or at most one word
+  after "resets" ("Resets SMS Factor to 5,000") yields no edge.
 - **An opening unlock is an unlock.** "Unlock(s) X" where X is the whole object
   ("Unlocks Singularity", "Unlock runes and rune upgrades", "Unlocks Plague
   Tab") gives `item unlocks X`. A name naming only a part or mode of the
