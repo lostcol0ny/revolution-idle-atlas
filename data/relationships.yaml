@@ -6740,6 +6740,15 @@ edges:
     source: wiki:Tarot
     confidence: documented
 
+  # Prerequisite first, the direction the Refine Tree's own `requires` edges
+  # run (refine-node-1 -> refine-node-2).
+  - from: refine-node-195
+    to: tarot-challenge-the-sun
+    rel: requires
+    note: You need Refine Node 195 to start the challenge
+    source: wiki:Tarot
+    confidence: documented
+
   # The Divine and Rainbow effects the twelve Singular Zodiacs gained above.
   # Written out because `merge` does not resolve curated effect text -- edges
   # come from extraction or from this file, and extraction cannot see a
@@ -7034,6 +7043,13 @@ suppress:
     reason: >-
       The Singular Zodiac is the challenge's entry condition, not something the
       challenge boosts. Curated as `requires` instead.
+
+  - from: tarot-challenge-the-sun
+    to: refine-node-195
+    rel: boosts
+    reason: >-
+      "You need Refine Node 195 to start the challenge" -- the node gates the
+      challenge, the challenge does not boost it. Curated as `requires` instead.
 
   - from: special-mineral-black-gem
     to: wind-node-10

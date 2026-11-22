@@ -22857,13 +22857,6 @@
       "from": "tarot-challenge-the-sun",
       "rel": "boosts",
       "source": "wiki:Tarot",
-      "to": "refine-node-195"
-    },
-    {
-      "confidence": "uncertain",
-      "from": "tarot-challenge-the-sun",
-      "rel": "boosts",
-      "source": "wiki:Tarot",
       "to": "special-minerals"
     },
     {
@@ -26803,6 +26796,14 @@
       "rel": "requires",
       "source": "wiki:Tarot",
       "to": "singular-zodiacs"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-195",
+      "note": "You need Refine Node 195 to start the challenge",
+      "rel": "requires",
+      "source": "wiki:Tarot",
+      "to": "tarot-challenge-the-sun"
     }
   ],
   "systems": [
