@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { systemColour } from './palette';
+import { systemColour, systemIcon } from './palette';
 import { KNOWN_SYSTEMS } from '../types';
 
 // palette.ts asserts in prose that every system colour carries white label text
@@ -33,5 +33,19 @@ describe('unknown system colours', () => {
     const colour = systemColour('a-system-that-does-not-exist');
     expect(colour).toMatch(/^#[0-9a-f]{6}$/);
     expect(contrastWithWhite(colour)).toBeGreaterThanOrEqual(WCAG_AA_NORMAL_TEXT);
+  });
+});
+
+describe('system icons', () => {
+  const fallback = systemIcon('a-system-that-does-not-exist');
+
+  it.each(KNOWN_SYSTEMS)('gives every declared system a glyph of its own layer: %s', (system) => {
+    expect(systemIcon(system)).not.toBe(fallback);
+  });
+
+  it('shows a sub-tab with its parent tab', () => {
+    expect(systemIcon('tarot-challenges')).toBe(systemIcon('tarot'));
+    expect(systemIcon('singularity-milestones-atoms')).toBe(systemIcon('singularity'));
+    expect(systemIcon('unity-some-future-tab')).toBe(systemIcon('unity'));
   });
 });

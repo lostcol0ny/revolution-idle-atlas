@@ -1,23 +1,35 @@
-import { useCallback, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import type { UrlState } from '../graph/urlState';
 import { parseUrlState, toSearch } from '../graph/urlState';
 
 /**
- * The URL is the state. Uses replaceState rather than pushState: the graph is
- * the navigation surface, so a six-node exploration should not cost six back
- * presses to escape. The URL stays shareable either way.
+ * The URL is the state. Moving to another node or system pushes a history
+ * entry so Back retraces the route; a depth change on the same view replaces
+ * it, so flicking through depths does not cost a back press each.
  */
 export function useUrlState(): [UrlState, (next: Partial<UrlState>) => void] {
-  const [state, setState] = useState<UrlState>(() =>
-    parseUrlState(window.location.search),
-  );
+  const [state, setState] = useState<UrlState>(() => parseUrlState(window.location.search));
 
+  useEffect(() => {
+    const onPop = () => setState(parseUrlState(window.location.search));
+    window.addEventListener('popstate', onPop);
+    return () => window.removeEventListener('popstate', onPop);
+  }, []);
+
+  // Reads the current state from the URL rather than from a setState updater:
+  // updaters run twice under StrictMode, which would push every entry twice.
   const update = useCallback((next: Partial<UrlState>) => {
-    setState((current) => {
-      const merged = { ...current, ...next };
-      window.history.replaceState(null, '', toSearch(merged));
-      return merged;
-    });
+    const current = parseUrlState(window.location.search);
+    const merged = { ...current, ...next };
+    const search = toSearch(merged);
+    if (search === toSearch(current)) return;
+    const url = `${window.location.pathname}${search}${window.location.hash}`;
+    if (merged.nodeId === current.nodeId && merged.systemId === current.systemId) {
+      window.history.replaceState(null, '', url);
+    } else {
+      window.history.pushState(null, '', url);
+    }
+    setState(merged);
   }, []);
 
   return [state, update];

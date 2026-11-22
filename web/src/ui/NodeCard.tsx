@@ -1,6 +1,8 @@
 import type { GraphIndex } from '../graph/adjacency';
+import { edgeConfidence } from '../graph/ego';
 import type { GraphEdge, GraphNode } from '../types';
 import { sourceLabel, wikiUrl } from '../graph/wiki';
+import './graph.css';
 
 function EdgeRow({
   edge,
@@ -15,7 +17,7 @@ function EdgeRow({
 }) {
   const other = index.nodes.get(otherId);
   const source = sourceLabel(edge.source);
-  const confidence = edge.confidence ?? 'documented';
+  const confidence = edgeConfidence(edge);
 
   return (
     <li className="edgerow">
@@ -34,7 +36,16 @@ function EdgeRow({
           <span className="muted">{source.text}</span>
         )}
         <span className="sep">·</span>
-        <span className="muted">{confidence}</span>
+        {confidence === 'uncertain' ? (
+          <span
+            className="edgerow__guessed"
+            title="Believed to exist, but how it works is not established."
+          >
+            guessed
+          </span>
+        ) : (
+          <span className="muted">{confidence}</span>
+        )}
       </div>
       {edge.note !== undefined && <div className="edgerow__note">{edge.note}</div>}
     </li>
@@ -64,6 +75,21 @@ export function NodeCard({
       <h2 className="nodecard__name">{node.name}</h2>
       {node.description !== undefined && (
         <p className="nodecard__description">{node.description}</p>
+      )}
+      {node.effects !== undefined && node.effects.length > 0 && (
+        <>
+          <h3 className="nodecard__heading">Effects</h3>
+          <ul className="nodecard__effects">
+            {node.effects.map((effect, position) => (
+              <li key={position}>
+                {effect.text}
+                {effect.per_level !== undefined && (
+                  <span className="nodecard__per-level"> ({effect.per_level} per level)</span>
+                )}
+              </li>
+            ))}
+          </ul>
+        </>
       )}
       <dl className="nodecard__facts">
         <dt>id</dt>

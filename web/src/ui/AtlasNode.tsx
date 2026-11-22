@@ -1,7 +1,7 @@
 import { Handle, Position as HandlePosition } from '@xyflow/react';
 import type { Node, NodeProps } from '@xyflow/react';
 import type { Kind, System } from '../types';
-import { kindBadge, systemColour } from '../graph/palette';
+import { kindBadge, systemColour, systemIcon } from '../graph/palette';
 
 /**
  * Declared as a `type` alias, not an `interface`. React Flow v12 constrains
@@ -19,20 +19,22 @@ export type AtlasNodeData = {
 export type AtlasFlowNode = Node<AtlasNodeData, 'atlas'>;
 
 export function AtlasNode({ data }: NodeProps<AtlasFlowNode>) {
-  const colour = systemColour(data.system);
   return (
     <div
       className={data.isRoot ? 'atlas-node atlas-node--root' : 'atlas-node'}
-      style={{ background: colour }}
+      style={{ background: systemColour(data.system) }}
       title={`${data.label} — ${data.system} · ${data.kind}`}
     >
       <Handle type="target" position={HandlePosition.Left} />
+      <span className="atlas-node__icon" aria-hidden="true">
+        {systemIcon(data.system)}
+      </span>
+      <span className="atlas-node__label">{data.label}</span>
       {/* role="img" is what makes aria-label binding; on a bare span it is
           advisory and assistive tech may drop it, leaving a lone "R" or "$". */}
       <span className="atlas-node__badge" role="img" aria-label={data.kind}>
         {kindBadge(data.kind)}
       </span>
-      <span className="atlas-node__label">{data.label}</span>
       <Handle type="source" position={HandlePosition.Right} />
     </div>
   );

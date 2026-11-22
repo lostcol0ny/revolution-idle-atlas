@@ -91,6 +91,48 @@ export function kindBadge(kind: Kind): string {
   return KIND_BADGES[kind];
 }
 
+// One glyph per layer and per tab with an identity of its own. Sub-tabs named
+// `<parent>-<suffix>` (`tarot-challenges`, `singularity-milestones-atoms`) are
+// left out on purpose: `systemIcon` walks up the id, so they read as their
+// parent. The glyph sits next to a visible system name, never in place of one.
+const SYSTEM_ICONS: Partial<Record<KnownSystem, string>> = {
+  revolution: '🔄',
+  infinity: '♾️',
+  generators: '⚙️',
+  stars: '⭐',
+  eternity: '⏳',
+  animals: '🐾',
+  laboratory: '🧪',
+  supernova: '💥',
+  dilation: '🌀',
+  unity: '☯️',
+  tarot: '🃏',
+  relics: '🏺',
+  minerals: '💎',
+  // Not `refine`-prefixed, so the id walk cannot find Minerals for it.
+  'refine-tree': '💎',
+  plague: '☣️',
+  singularity: '🕳️',
+  particles: '⚛️',
+  attacks: '⚔️',
+  astrology: '🔮',
+  trials: '🏆',
+  elements: '🔥',
+  houses: '🏠',
+};
+
+const UNKNOWN_SYSTEM_ICON = '◆';
+
+export function systemIcon(system: string): string {
+  // Trimming one `-segment` at a time reaches the nearest ancestor with a glyph
+  // for every `<parent>-<suffix>` id, declared or not.
+  for (let id = system; id.length > 0; id = id.slice(0, Math.max(0, id.lastIndexOf('-')))) {
+    const icon = SYSTEM_ICONS[id as KnownSystem];
+    if (icon !== undefined) return icon;
+  }
+  return UNKNOWN_SYSTEM_ICON;
+}
+
 // `rel` gets two channels — line style and lightness. Style separates the
 // categories; lightness separates signal from background. Both are needed
 // because `requires` is just over half of edges and the app's subject is the rest.

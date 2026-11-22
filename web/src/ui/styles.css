@@ -1,35 +1,59 @@
-/* One dark theme, no toggle. Every colour below is a variable so that adding a
-   light one later is a second block rather than a re-audit of this file. */
+/* One dark theme, no toggle: the game's own deep-space look. Every colour is a
+   variable so slice stylesheets (table.css, overview.css, graph.css) share it,
+   and a light theme later is a second block rather than a re-audit.
+   Text pairs are checked against --surface-2, the lightest panel shade:
+   --fg 12.6:1, --muted 6.7:1, --accent 9.5:1. */
 :root {
-  --sidebar-width: 280px;
-  --panel-width: 320px;
+  --sidebar-width: 290px;
+  --panel-width: 340px;
+  --topbar-height: 56px;
+  --radius: 10px;
 
-  --bg: #0f172a;
-  --surface: #172033;
-  --border: #2b374d;
-  --divider: #1e293b;
-  --hover: #1e293b;
-  --text: #e2e8f0;
-  --muted: #94a3b8;
-  --accent: #7dd3fc;
-  /* The selected row inverts rather than tinting: at this contrast a tint
-     strong enough to read is nearly the inverted swatch anyway. */
-  --selected-bg: #e2e8f0;
-  --selected-text: #0f172a;
-  --banner-bg: #3b2f0b;
-  --banner-border: #a16207;
+  --bg: #0c0b24;
+  --surface: #161540;
+  --surface-2: #232158;
+  --fg: #eeebff;
+  --muted: #aeaad6;
+  /* Dividers only. Anything a reader must find the edge of (inputs, buttons)
+     uses --control-border, which clears the 3:1 non-text minimum. */
+  --border: #2f2c6a;
+  --control-border: #7a74c4;
+  --accent: #7fdcff;
+  --focus: #ffd166;
+  --selected-bg: #34307a;
+  --banner-bg: #3a2a10;
+  --banner-border: #c48a1a;
+
+  /* The game's rainbow, for brand flourishes only — never behind text. */
+  --rainbow: linear-gradient(
+    90deg,
+    #ff5f7e,
+    #ffa94d,
+    #ffe066,
+    #69f0ae,
+    #5ed8ff,
+    #9d7bff,
+    #ff6ad5
+  );
+
+  --edge-documented: #e6e3ff;
+  --edge-uncertain: #9893c9;
 
   /* Every system colour is dark enough to carry white label text, which leaves
-     the darkest of them at 1.5:1 against this background -- the fill vanishes
-     and the label appears to float. The rim, not the fill, is what gives a node
-     an edge here, so it is not decoration. */
-  --node-rim: rgba(255, 255, 255, 0.38);
-  --node-root-rim: #f8fafc;
+     the darkest of them close to this background -- the fill vanishes and the
+     label appears to float. The rim, not the fill, is what gives a node an
+     edge here, so it is not decoration. */
+  --node-rim: rgba(255, 255, 255, 0.4);
+  --node-root-rim: #ffffff;
 
-  font-family: system-ui, -apple-system, sans-serif;
-  color: var(--text);
-  /* Hands the UA dark scrollbars, form controls and caret. Without it the
-     sidebar and detail panel keep bright scrollbars down their whole length. */
+  --font: 'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', Arial, sans-serif;
+  --font-emoji: 'Segoe UI Emoji', 'Apple Color Emoji', 'Noto Color Emoji', sans-serif;
+
+  font-family: var(--font);
+  font-size: 15px;
+  line-height: 1.45;
+  color: var(--fg);
+  /* Hands the UA dark scrollbars, form controls and caret. */
   color-scheme: dark;
 }
 
@@ -39,39 +63,230 @@
 
 body {
   margin: 0;
-  background: var(--bg);
+  background:
+    radial-gradient(ellipse at 15% -10%, rgba(157, 123, 255, 0.18), transparent 55%),
+    radial-gradient(ellipse at 90% 110%, rgba(94, 216, 255, 0.12), transparent 50%),
+    var(--bg);
+  background-attachment: fixed;
 }
 
 #root {
   height: 100vh;
 }
 
+h1,
+h2,
+h3 {
+  line-height: 1.25;
+}
+
+code {
+  font-size: 0.92em;
+  padding: 1px 5px;
+  border-radius: 4px;
+  background: var(--surface-2);
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* --- App shell ---------------------------------------------------------- */
+
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.skip-link {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  z-index: 100;
+  padding: 8px 14px;
+  border-radius: var(--radius);
+  background: var(--surface-2);
+  color: var(--fg);
+  transform: translateY(-200%);
+}
+
+.skip-link:focus-visible {
+  transform: none;
+}
+
+.topbar {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex: 0 0 var(--topbar-height);
+  padding: 0 18px;
+  background: rgba(22, 21, 64, 0.85);
+  border-bottom: 1px solid var(--border);
+}
+
+.topbar::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+  height: 2px;
+  background: var(--rainbow);
+  opacity: 0.8;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  flex: none;
+  color: var(--fg);
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  text-decoration: none;
+  border-radius: 6px;
+}
+
+.brand__mark {
+  font-size: 20px;
+  background: var(--rainbow);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.crumbs {
+  min-width: 0;
+}
+
+.crumbs ol {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 14px;
+}
+
+.crumbs li {
+  display: flex;
+  align-items: center;
+  min-width: 0;
+}
+
+.crumbs li + li::before {
+  content: '›';
+  margin: 0 8px;
+  color: var(--muted);
+}
+
+.crumbs a {
+  color: var(--accent);
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+.crumbs a:hover {
+  text-decoration: underline;
+}
+
+.crumbs [aria-current='page'] {
+  overflow: hidden;
+  color: var(--fg);
+  font-weight: 600;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
 .layout {
   display: flex;
-  height: 100%;
+  flex: 1 1 auto;
+  min-height: 0;
 }
 
 .sidebar {
   width: var(--sidebar-width);
   flex: 0 0 var(--sidebar-width);
-  border-right: 1px solid var(--border);
   overflow-y: auto;
-  padding: 12px;
+  padding: 14px 10px 14px 12px;
+  background: rgba(22, 21, 64, 0.6);
+  border-right: 1px solid var(--border);
 }
 
 .canvas {
   flex: 1 1 auto;
   position: relative;
   min-width: 0;
+  overflow-y: auto;
+}
+
+.canvas--graph {
+  overflow: hidden;
+}
+
+.canvas:focus {
+  outline: none;
 }
 
 .detail {
   width: var(--panel-width);
   flex: none;
   overflow-y: auto;
+  padding: 16px 18px;
+  background: rgba(22, 21, 64, 0.6);
   border-left: 1px solid var(--border);
-  padding: 12px 14px;
 }
+
+@media (max-width: 900px) {
+  #root {
+    height: auto;
+    min-height: 100vh;
+  }
+
+  .topbar {
+    flex-wrap: wrap;
+    gap: 4px 16px;
+    padding: 10px 14px;
+  }
+
+  .layout {
+    flex-direction: column;
+  }
+
+  .sidebar,
+  .detail {
+    width: auto;
+    flex: none;
+    border: none;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .sidebar {
+    max-height: 45vh;
+  }
+
+  .canvas {
+    overflow: visible;
+  }
+
+  .canvas--graph {
+    height: 75vh;
+  }
+}
+
+/* --- Screens and messages ----------------------------------------------- */
 
 .screen {
   display: flex;
@@ -85,15 +300,17 @@ body {
 }
 
 .banner {
+  margin: 12px 16px 0;
+  padding: 10px 14px;
+  border: 1px solid var(--banner-border);
+  border-radius: var(--radius);
   background: var(--banner-bg);
-  border-bottom: 1px solid var(--banner-border);
-  padding: 8px 12px;
-  font-size: 13px;
+  font-size: 14px;
 }
 
 .muted {
   color: var(--muted);
-  font-size: 13px;
+  font-size: 14px;
 }
 
 /* Not `button.link`: the detail panel puts a cross-link button and a wiki
@@ -109,50 +326,157 @@ body {
   text-decoration: underline;
 }
 
+.button {
+  padding: 8px 18px;
+  border: 1px solid var(--control-border);
+  border-radius: 999px;
+  background: var(--surface-2);
+  color: var(--fg);
+  font: inherit;
+  cursor: pointer;
+}
+
+.button:hover {
+  background: var(--selected-bg);
+}
+
+/* --- Shared primitives (graph toolbar, tables) --------------------------- */
+
+.chip {
+  border: 1px solid var(--control-border);
+  background: var(--surface);
+  color: var(--fg);
+  border-radius: 999px;
+  padding: 3px 12px;
+  font: inherit;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.chip:hover {
+  background: var(--surface-2);
+}
+
+.chip--on {
+  background: var(--fg);
+  border-color: var(--fg);
+  color: var(--bg);
+}
+
+.chip--on:hover {
+  background: var(--fg);
+}
+
+.sep {
+  color: var(--muted);
+}
+
+/* --- Sidebar ------------------------------------------------------------- */
+
+.filter-label {
+  display: block;
+  margin: 0 0 4px 2px;
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
 .filter {
   width: 100%;
-  padding: 6px 8px;
-  margin-bottom: 8px;
-  border: 1px solid var(--border);
-  border-radius: 4px;
+  padding: 8px 12px;
+  margin-bottom: 10px;
+  border: 1px solid var(--control-border);
+  border-radius: var(--radius);
+  background: var(--bg);
+  color: var(--fg);
   font: inherit;
+}
+
+.filter::placeholder {
+  color: var(--muted);
+}
+
+.filter-count {
+  margin: 0 0 6px 2px;
 }
 
 .group-header {
   display: flex;
   align-items: center;
-  gap: 8px;
-  width: 100%;
-  padding: 6px 4px;
-  background: none;
-  border: none;
-  cursor: pointer;
-  font: inherit;
-  text-align: left;
-  text-transform: capitalize;
+  gap: 2px;
+  border-radius: 8px;
 }
 
 .group-header:hover {
-  background: var(--hover);
+  background: var(--surface-2);
+}
+
+.group-header.selected {
+  background: var(--selected-bg);
+  box-shadow: inset 3px 0 0 var(--accent);
 }
 
 .caret {
-  width: 8px;
-  flex: 0 0 8px;
+  display: grid;
+  place-items: center;
+  flex: 0 0 24px;
+  height: 28px;
+  padding: 0;
+  border: none;
+  border-radius: 6px;
+  background: none;
   color: var(--muted);
-  font-size: 9px;
-  line-height: 1;
+  font-size: 16px;
+  cursor: pointer;
 }
 
-.swatch {
-  width: 10px;
-  height: 10px;
-  border-radius: 2px;
-  flex: 0 0 10px;
+.caret:hover {
+  color: var(--fg);
+}
+
+.group-name {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 1 1 auto;
+  min-width: 0;
+  padding: 5px 6px 5px 2px;
+  border: none;
+  border-radius: 6px;
+  background: none;
+  color: var(--fg);
+  font: inherit;
+  font-size: 14px;
+  text-align: left;
+  cursor: pointer;
+}
+
+.group-name__text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.system-icon {
+  display: grid;
+  place-items: center;
+  flex: 0 0 24px;
+  height: 24px;
+  border: 2px solid;
+  border-radius: 50%;
+  background: var(--bg);
+  font-family: var(--font-emoji);
+  font-size: 12px;
+  line-height: 1;
 }
 
 .count {
   margin-left: auto;
+  padding: 0 7px;
+  border-radius: 999px;
+  background: var(--surface);
   color: var(--muted);
   font-size: 12px;
 }
@@ -160,116 +484,100 @@ body {
 .node-list {
   list-style: none;
   margin: 0 0 4px;
-  padding: 0 0 0 18px;
+  padding: 0 0 0 22px;
+}
+
+.node-list--flat {
+  padding-left: 0;
 }
 
 .node-row {
-  display: block;
+  display: flex;
+  align-items: center;
+  gap: 6px;
   width: 100%;
-  padding: 4px 6px;
+  padding: 4px 8px;
   background: none;
   border: none;
-  border-radius: 4px;
+  border-radius: 6px;
+  color: var(--fg);
   cursor: pointer;
   font: inherit;
-  font-size: 13px;
+  font-size: 14px;
   text-align: left;
 }
 
 .node-row:hover {
-  background: var(--hover);
+  background: var(--surface-2);
 }
 
 .node-row.selected {
   background: var(--selected-bg);
-  color: var(--selected-text);
+  box-shadow: inset 3px 0 0 var(--accent);
+  font-weight: 600;
 }
 
-/* These buttons strip their native background and border, so the focus
-   affordance stops being the browser's responsibility and becomes ours. This
-   covers every chrome-less control in the app: the sidebar's ~140 targets, the
-   depth chips, and the detail panel's cross-links. */
-.group-header:focus-visible,
-.node-row:focus-visible,
-.filter:focus-visible,
-.chip:focus-visible,
-.link:focus-visible {
-  outline: 2px solid var(--accent);
+.node-row__icon {
+  flex: none;
+  font-family: var(--font-emoji);
+  font-size: 12px;
+}
+
+/* Several controls strip their native background and border, so the focus
+   affordance stops being the browser's responsibility and becomes ours. One
+   rule for every interactive element keeps the ring identical app-wide. */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+summary:focus-visible,
+[tabindex]:not([tabindex='-1']):focus-visible,
+.chip:focus-visible {
+  outline: 2px solid var(--focus);
   outline-offset: 2px;
 }
 
-.graphview {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  min-height: 0;
-}
-
-.graphview__toolbar {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  padding: 8px 12px;
-  border-bottom: 1px solid var(--border);
-  font-size: 13px;
-}
-
-.graphview__toolbar .muted:last-child {
-  margin-left: auto;
-}
-
-.chip {
-  border: 1px solid var(--border);
-  background: var(--surface);
-  color: var(--text);
-  border-radius: 999px;
-  padding: 2px 10px;
-  font-size: 12px;
-  cursor: pointer;
-}
-
-.chip--on {
-  background: var(--selected-bg);
-  border-color: var(--selected-bg);
-  color: var(--selected-text);
-}
-
-.graphview .react-flow {
-  flex: 1;
-  min-height: 0;
-}
+/* --- Graph nodes --------------------------------------------------------- */
 
 .atlas-node {
+  position: relative;
   display: flex;
   align-items: center;
   gap: 8px;
   box-sizing: border-box;
   width: 180px;
   height: 56px;
-  padding: 0 10px;
+  padding: 0 22px 0 8px;
   border: 2px solid var(--node-rim);
-  border-radius: 6px;
+  border-radius: var(--radius);
   color: #fff;
-  font-size: 13px;
+  font-size: 14px;
+  font-weight: 600;
   line-height: 1.2;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.35);
 }
 
 .atlas-node--root {
   border-color: var(--node-root-rim);
-  border-width: 4px;
-  box-shadow: 0 0 0 2px var(--bg), 0 0 0 5px var(--node-root-rim);
+  border-width: 3px;
+  box-shadow:
+    0 0 0 2px var(--bg),
+    0 0 0 5px var(--node-root-rim),
+    0 0 18px 6px rgba(127, 220, 255, 0.45);
 }
 
-.atlas-node__badge {
-  flex: none;
+.atlas-node__icon {
   display: grid;
   place-items: center;
-  width: 20px;
-  height: 20px;
+  flex: none;
+  width: 26px;
+  height: 26px;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.22);
-  font-size: 11px;
-  font-weight: 700;
+  background: rgba(0, 0, 0, 0.3);
+  font-family: var(--font-emoji);
+  font-size: 14px;
+  font-weight: 400;
 }
 
 .atlas-node__label {
@@ -279,69 +587,17 @@ body {
   -webkit-box-orient: vertical;
 }
 
-.nodecard__name {
-  margin: 0 0 8px;
-  font-size: 17px;
-}
-
-.nodecard__description {
-  margin: 0 0 10px;
-  font-size: 13px;
-}
-
-.nodecard__heading {
-  margin: 16px 0 6px;
-  font-size: 12px;
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-  color: var(--muted);
-}
-
-.nodecard__facts {
+.atlas-node__badge {
+  position: absolute;
+  top: 4px;
+  right: 4px;
   display: grid;
-  grid-template-columns: auto 1fr;
-  gap: 2px 10px;
-  margin: 0;
-  font-size: 13px;
-}
-
-.nodecard__facts dt {
-  color: var(--muted);
-}
-
-.nodecard__facts dd {
-  margin: 0;
-}
-
-.edgelist {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.edgerow {
-  padding: 6px 0;
-  border-bottom: 1px solid var(--divider);
-  font-size: 13px;
-}
-
-.edgerow__line {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: baseline;
-  gap: 4px;
-}
-
-.edgerow__rel {
-  font-weight: 600;
-}
-
-.edgerow__note {
-  margin-top: 3px;
-  color: var(--muted);
-  font-size: 12px;
-}
-
-.sep {
-  color: var(--border);
+  place-items: center;
+  width: 16px;
+  height: 16px;
+  border-radius: 4px;
+  background: rgba(0, 0, 0, 0.35);
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 1;
 }
