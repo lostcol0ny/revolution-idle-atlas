@@ -10970,7 +10970,7 @@
     },
     {
       "confidence": "documented",
-      "description": "Reach a value GP",
+      "description": "Reach 1,000 GP",
       "effects": [
         {
           "text": "x1.1 to the 1st Generator"
@@ -17577,6 +17577,9 @@
         },
         {
           "text": "From Achievement 201, Mult, Generators and Dilation Points gain $\\times 1.05^{N} \\times N^{N/20 - 10}$, and Zodiac Quality and Damage $\\times (N/50 - 2)$"
+        },
+        {
+          "text": "Each achievement also pays a one-off reward of Souls or Time Flux"
         }
       ],
       "id": "achievement-bonus",
@@ -31826,6 +31829,47 @@
       "rel": "boosts",
       "source": "wiki:Secret_Achievements",
       "to": "time-flux"
+    },
+    {
+      "confidence": "documented",
+      "from": "achievement-secret-bonus",
+      "note": "Most Secret Achievements also pay a one-off reward of Souls or Time Flux",
+      "rel": "boosts",
+      "source": "wiki:Secret_Achievements",
+      "to": "souls"
+    },
+    {
+      "confidence": "documented",
+      "from": "achievement-bonus",
+      "note": "Each achievement also pays a one-off reward, such as +350 souls",
+      "rel": "boosts",
+      "source": "observed",
+      "to": "souls"
+    },
+    {
+      "confidence": "documented",
+      "from": "achievement-bonus",
+      "note": "Each achievement also pays a one-off reward, such as +30:00 TF",
+      "rel": "boosts",
+      "source": "observed",
+      "to": "time-flux"
+    },
+    {
+      "confidence": "documented",
+      "from": "achievement-21",
+      "note": "P.Mult gain ^1.01",
+      "op": "exp",
+      "rel": "boosts",
+      "source": "game:ACH_REWD_20",
+      "to": "prestige-mult"
+    },
+    {
+      "confidence": "documented",
+      "from": "generator-power",
+      "note": "Reach 1,000 GP",
+      "rel": "requires",
+      "source": "observed",
+      "to": "achievement-37"
     },
     {
       "confidence": "documented",

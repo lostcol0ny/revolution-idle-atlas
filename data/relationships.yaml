@@ -4124,6 +4124,7 @@ nodes:
       - text: 'Mult Gain $\times (1 + 0.01 N)$'
       - text: 'From Achievement 51, Generators gain $\times (1 + 0.01 N)$ as well'
       - text: 'From Achievement 201, Mult, Generators and Dilation Points gain $\times 1.05^{N} \times N^{N/20 - 10}$, and Zodiac Quality and Damage $\times (N/50 - 2)$'
+      - text: Each achievement also pays a one-off reward of Souls or Time Flux
 
   - id: achievement-secret-bonus
     name: Secret Achievement Bonus
@@ -4133,6 +4134,14 @@ nodes:
     confidence: documented
     effects:
       - text: +0.1% Time Flux gain for every Secret Achievement obtained
+
+  # The game fills this threshold in at runtime and the wiki has no row for it;
+  # the number was read from the achievement in the game.
+  - id: achievement-37
+    name: Achievement 37 (Generator Power)
+    system: achievements
+    kind: achievement
+    description: Reach 1,000 GP
 
 edges:
   - from: gold
@@ -8474,6 +8483,42 @@ edges:
     source: wiki:Secret_Achievements
     confidence: documented
 
+  - from: achievement-secret-bonus
+    to: souls
+    rel: boosts
+    note: Most Secret Achievements also pay a one-off reward of Souls or Time Flux
+    source: wiki:Secret_Achievements
+    confidence: documented
+
+  - from: achievement-bonus
+    to: souls
+    rel: boosts
+    note: "Each achievement also pays a one-off reward, such as +350 souls"
+    source: observed
+    confidence: documented
+
+  - from: achievement-bonus
+    to: time-flux
+    rel: boosts
+    note: "Each achievement also pays a one-off reward, such as +30:00 TF"
+    source: observed
+    confidence: documented
+
+  - from: achievement-21
+    to: prestige-mult
+    rel: boosts
+    op: exp
+    note: "P.Mult gain ^1.01"
+    source: game:ACH_REWD_20
+    confidence: documented
+
+  - from: generator-power
+    to: achievement-37
+    rel: requires
+    note: "Reach 1,000 GP"
+    source: observed
+    confidence: documented
+
   - from: achievement-51
     to: achievement-bonus
     rel: boosts
@@ -9085,7 +9130,8 @@ suppress:
     to: mult-gain
     rel: boosts
     reason: >-
-      "P.Mult gain ^1.01" is Promotion Mult gain; "Mult gain" matched inside it.
+      "P.Mult gain ^1.01" is Prestige Mult gain, restated above; "Mult gain"
+      matched inside it.
 
   - from: achievement-167
     to: unities
