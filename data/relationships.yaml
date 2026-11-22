@@ -2076,7 +2076,7 @@ nodes:
         per_level: Completing one difficulty awards one free AP
 
   - id: eternity-challenge-1
-    name: Eternity Challenge 1
+    name: Eternity Challenge 1 (Slow as a Snail)
     system: eternity-challenges
     kind: upgrade
     wiki: Eternity_Challenges
@@ -2087,7 +2087,7 @@ nodes:
         per_level: x2 at difficulty 1, x500 at difficulty 6
 
   - id: eternity-challenge-2
-    name: Eternity Challenge 2
+    name: Eternity Challenge 2 (Solid Root)
     system: eternity-challenges
     kind: upgrade
     wiki: Eternity_Challenges
@@ -2098,7 +2098,7 @@ nodes:
         per_level: +0.03 at difficulty 1, +0.30 at difficulty 6
 
   - id: eternity-challenge-3
-    name: Eternity Challenge 3
+    name: Eternity Challenge 3 (Clear Night Sky)
     system: eternity-challenges
     kind: upgrade
     wiki: Eternity_Challenges
@@ -2109,7 +2109,7 @@ nodes:
         per_level: +1 at difficulty 1, +50 at difficulty 6
 
   - id: eternity-challenge-4
-    name: Eternity Challenge 4
+    name: Eternity Challenge 4 (Burning Voltage)
     system: eternity-challenges
     kind: upgrade
     wiki: Eternity_Challenges
@@ -2120,7 +2120,7 @@ nodes:
         per_level: x1.03 at difficulty 1, x1.25 at difficulty 6
 
   - id: eternity-challenge-5
-    name: Eternity Challenge 5
+    name: Eternity Challenge 5 (Ascended to Nothing)
     system: eternity-challenges
     kind: upgrade
     wiki: Eternity_Challenges
@@ -2131,7 +2131,7 @@ nodes:
         per_level: x1.5 at difficulty 1, x75 at difficulty 6
 
   - id: eternity-challenge-6
-    name: Eternity Challenge 6
+    name: Eternity Challenge 6 (Fired Yet Again)
     system: eternity-challenges
     kind: upgrade
     wiki: Eternity_Challenges
@@ -2142,7 +2142,7 @@ nodes:
         per_level: x1.05 at difficulty 1, x1.4 at difficulty 6
 
   - id: eternity-challenge-7
-    name: Eternity Challenge 7
+    name: Eternity Challenge 7 (A Failed Experiment)
     system: eternity-challenges
     kind: upgrade
     wiki: Eternity_Challenges
@@ -2153,7 +2153,7 @@ nodes:
         per_level: +5 at difficulty 1, +100 at difficulty 6
 
   - id: eternity-challenge-8
-    name: Eternity Challenge 8
+    name: Eternity Challenge 8 (Bounded Infinity)
     system: eternity-challenges
     kind: upgrade
     wiki: Eternity_Challenges
@@ -2164,7 +2164,7 @@ nodes:
         per_level: ^1.02 at difficulty 1, ^1.30 at difficulty 6
 
   - id: eternity-challenge-9
-    name: Eternity Challenge 9
+    name: Eternity Challenge 9 (Wrecked Generators)
     system: eternity-challenges
     kind: upgrade
     wiki: Eternity_Challenges
@@ -2175,7 +2175,7 @@ nodes:
         per_level: x1.1 at difficulty 1, x1.7 at difficulty 6
 
   - id: eternity-challenge-10
-    name: Eternity Challenge 10
+    name: Eternity Challenge 10 (Super Dilation)
     system: eternity-challenges
     kind: upgrade
     wiki: Eternity_Challenges

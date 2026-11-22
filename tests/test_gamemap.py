@@ -9,6 +9,7 @@ from atlas.gamemap import (
     grade_thresholds,
     map_catalog,
     map_particles,
+    map_strings,
     readable,
     to_yaml,
 )
@@ -109,6 +110,16 @@ def test_numbered_names_verify_by_number_and_compose_a_label():
         ("Reach {0} Score", "Reach a value Score"),
         # A parenthesis holding more than a number is prose and stays.
         ("Boost (per level: x{0}, capped)", "Boost (per level: a multiplier, capped)"),
+        # A closing "Currently:" line is the player's state, like a total.
+        (
+            "Generator 1 is stronger.<br><color=#A7FF38>Currently: x{0}</color>",
+            "Generator 1 is stronger.",
+        ),
+        ("Passive gains.<br>Currently: {1}/{2}", "Passive gains."),
+        ("Wind divides base cost (cur.: /{0})", "Wind divides base cost"),
+        ("Earth boosts its own factor 2 (x{0} multiplier)", "Earth boosts its own factor 2"),
+        # An operator chain keeps its operators rather than reading "^^an exponent".
+        ("Mineral cost increase is raised to ^^^{0}", "Mineral cost increase is raised to ^^^ a value"),
     ],
 )
 def test_readable_words_runtime_placeholders(raw, expected):
@@ -397,3 +408,191 @@ def test_particles_map_grade_bonuses_tree_effects_and_sparks():
         "#3: not a known outer node (A1-A16 are #15-#30)",
         "#31: not a known outer node (A1-A16 are #15-#30)",
     ]
+
+
+def _described(strings: dict, nodes: list[Node]):
+    mapped, reports = map_strings(strings, nodes)
+    return [(n.id, n.name, n.description, n.system, n.kind) for n in mapped], reports
+
+
+def test_refine_and_element_effects_map_by_checked_index():
+    nodes = [
+        _node("refine-node-1", "Refine Node 1", "refine-tree", Kind.TREE_NODE),
+        _node("fire-node-11", "Fire Node 11", "elements"),
+    ]
+    mapped, reports = _described(
+        {
+            "UNI_MIN_REF_NODE_REWARD_0": "Increases Mineral base by 1 (Current: {0})",
+            # Past the checked range, and the shape of a key that is not an entity.
+            "UNI_MIN_REF_NODE_REWARD_200": "A node a patch added",
+            "UNI_MIN_REF_NODE_REWARD_0_NEW": "New",
+            "UNI_ELEM_TREE_NODE_EFFECT_FIRE_10": "Unlocks the third factor for Fire",
+            "UNI_ELEM_TREE_NODE_EFFECT_FIRE_11": "Beyond the checked nodes",
+            "UNI_ELEM_TREE_NODE_EFFECT_WIND_0": "Wind with no node",
+        },
+        nodes,
+    )
+    # Overlaid onto the wiki's nodes, keeping their names; never created.
+    assert mapped == [
+        # Description only: the node keeps whatever name the wiki gives it.
+        ("refine-node-1", None, "Increases Mineral base by 1", None, None),
+        ("fire-node-11", None, "Unlocks the third factor for Fire", None, None),
+    ]
+    assert reports["UNI_MIN_REF_NODE_REWARD"].unmatched == ["#200: beyond the checked #0-#199"]
+    assert reports["UNI_ELEM_TREE_NODE_EFFECT"].unmatched == [
+        "FIRE #11: not a checked node",
+        "WIND #0: no node wind-node-1",
+    ]
+
+
+def test_eternity_challenges_verify_by_number_and_milestones_by_threshold():
+    nodes = [_node(f"eternity-challenge-{n}", f"Eternity Challenge {n}", "eternity-challenges")
+             for n in (1, 2)]
+    nodes.append(_node("eternity-milestone-5", "Eternity Milestone (5 Eternities)",
+                       "eternity-milestones"))
+    mapped, reports = _described(
+        {
+            "ETR_CHL_NAME_0": "<color=#CEE0F7>#1</color> Slow as a Snail",
+            "ETR_CHA_REWD_0": "x{0} to Lap Speed",
+            # A name that reads as another number does not vouch for the index.
+            "ETR_CHL_NAME_1": "#3 Solid Root",
+            "ETR_CHA_REWD_1": "+{0} to Common Exponent",
+            # Milestone 4 needs 5 Eternities; milestone 7 (12) has no wiki node.
+            "ETR_MIL_REWD_3": "Buying Revolutions no longer consumes Score",
+            "ETR_MIL_REWD_6": "Unlock Autobuy for Infinity Upgrades",
+            "ETR_MIL_REWD_11": "A milestone a patch added",
+        },
+        nodes,
+    )
+    assert mapped == [
+        (
+            "eternity-challenge-1",
+            "Eternity Challenge 1 (Slow as a Snail)",
+            "a multiplier to Lap Speed",
+            None,
+            None,
+        ),
+        ("eternity-milestone-5", "Eternity Milestone (5 Eternities)",
+         "Buying Revolutions no longer consumes Score", None, None),
+        ("eternity-milestone-12", "Eternity Milestone (12 Eternities)",
+         "Unlock Autobuy for Infinity Upgrades", "eternity-milestones", Kind.UPGRADE),
+    ]
+    assert reports["ETR_CHA"].unmatched == ["#1 '#3 Solid Root': not a checked challenge"]
+    report = reports["ETR_MIL"]
+    assert (report.matched, report.added) == (1, 1)
+    assert report.unmatched == ["#11: no threshold checked in the game"]
+
+
+def test_infinity_upgrades_match_their_grid_cell_and_verify_by_name():
+    nodes = [
+        _node("infinity-upgrade-6-1-mighty-ascend", "6;1 Mighty Ascend", "infinity-upgrades"),
+        _node("infinity-upgrade-7-1-challenges", "7;1 Challenges!", "infinity-upgrades"),
+    ]
+    mapped, reports = _described(
+        {
+            "INF_UPGRADE_NAME_6_1": "Mighty Ascension",
+            "INF_UPGRADE_REWD_6_1": "Ascension Power base is increased by <color=#A7FF38>2</color>",
+            # The cell holds a different upgrade: the index has slipped.
+            "INF_UPGRADE_NAME_7_1": "Auto Work",
+            "INF_UPGRADE_NAME_8_1": "Generator and Time",
+        },
+        nodes,
+    )
+    assert mapped == [(
+        "infinity-upgrade-6-1-mighty-ascend",
+        "6;1 Mighty Ascension",
+        "Ascension Power base is increased by 2",
+        None,
+        None,
+    )]
+    report = reports["INF_UPGRADE"]
+    assert report.renamed == [
+        "infinity-upgrade-6-1-mighty-ascend: '6;1 Mighty Ascend' -> '6;1 Mighty Ascension'"
+    ]
+    assert report.unmatched == [
+        "7;1 'Auto Work': infinity-upgrade-7-1-challenges",
+        "8;1 'Generator and Time': no node",
+    ]
+
+
+def test_animals_milestones_and_artifact_parts_match_by_name():
+    nodes = [
+        _node("animal-meta-cat", "Meta Cat", "animals"),
+        _node("singularity-milestone-event-horizon", "Event Horizon",
+              "singularity-milestones-singularity"),
+        # Same name, other track: an ATOM milestone never lands on it.
+        _node("singularity-milestone-first-thousand", "First Thousand",
+              "singularity-milestones-singularity"),
+        _node("tarot-artifact-zygomatics", "Zygomatics", "tarot-artifacts"),
+        _node("singularity-milestone-full-deck", "Full Deck",
+              "singularity-milestones-progression"),
+    ]
+    mapped, reports = _described(
+        {
+            "ETR_ANL_NAME_1_9": "Meta-cat",
+            "ETR_ANL_REWD_1_9": "x1.01 to Stardust Exponent",
+            "SING_MILESTONES_NAME_SING_2": "Event Horizon",
+            "SING_MILESTONES_REWD_SING_2": "Keep Plague on Singularity Reset.",
+            "SING_MILESTONES_NAME_ATOM_0": "First Thousand",
+            "SING_MILESTONES_REWD_ATOM_0": "Sacrifice Dust Gain: ^1.05",
+            "TAROT_ARTIFACT_PART_NAME_WAND_6": "Zygomatic Bones",
+            "TAROT_ARTIFACT_PART_6_EFFECT_WAND": "Wand LOGPOW base: {0}",
+            "SING_MILESTONES_NAME_PROG_2": "Full Deck",
+            "SING_MILESTONES_REWD_PROG_2": "Black Gem Eff. is powered to ^1.05",
+        },
+        nodes,
+    )
+    assert mapped == [
+        ("animal-meta-cat", "Meta-cat", "x1.01 to Stardust Exponent", None, None),
+        # Sorted by key, so the PROG track comes before SING.
+        ("singularity-milestone-full-deck", "Full Deck",
+         "Black Gem Eff. is powered to ^1.05", None, None),
+        ("singularity-milestone-event-horizon", "Event Horizon",
+         "Keep Plague on Singularity Reset.", None, None),
+        ("tarot-artifact-zygomatics", "Zygomatic Bones", "Wand LOGPOW base: a value", None, None),
+    ]
+    assert reports["SING_MILESTONES"].unmatched == [
+        "SING_MILESTONES_NAME_ATOM_0 'First Thousand': no node of that name"
+    ]
+    assert reports["TAROT_ARTIFACT_PART"].renamed == [
+        "tarot-artifact-zygomatics: 'Zygomatics' -> 'Zygomatic Bones'"
+    ]
+
+
+def test_tarot_cards_take_their_effects_and_their_challenge_reward():
+    nodes = [
+        _node("tarot-two-of-cups", "Two of Cups", "tarot", Kind.TAROT_CARD),
+        _node("tarot-the-strength", "The Strength", "tarot", Kind.TAROT_CARD),
+        _node("tarot-challenge-strength", "Tarot Challenge Strength", "tarot-challenges"),
+    ]
+    mapped, reports = _described(
+        {
+            "UNI_TAROT_CARD_CUP_1": "Two of Cups",
+            # A sentence is followed by a sentence, not by "; ".
+            "UNI_TAROT_CARD_EFFECT_1_CUP_1": "Cups 1 first effect mult: x{0}.",
+            "UNI_TAROT_CARD_EFFECT_2_CUP_1": "Relic 37 Effect: +^{0}",
+            "UNI_TAROT_CARD_CUP_REWARD_1": "Two of Cups base effects: x{0}",
+            # A second key naming the same card cannot map onto it again.
+            "UNI_TAROT_CARD_WAND_1": "Two of Cups",
+            "UNI_TAROT_CARD_ARCAN_11": "Strength",
+            "UNI_TAROT_CARD_EFFECT_1_ARCAN_11": "Slowly changes Attack Exponent by {0}",
+            # Every Arcana has one; it says nothing about the card.
+            "UNI_TAROT_CARD_EFFECT_2_ARCAN_11": "Cooldown Time: {0}",
+            "UNI_TAROT_CARD_ARCAN_REWARD_11": "Arcan Power Bonus: x{0}",
+            "UNI_TAROT_UPGRADE_EFFECT_CUP_0": "Increases Tarot Local Speed Power by +{0}",
+        },
+        nodes,
+    )
+    assert mapped == [
+        ("tarot-the-strength", "Strength", "Slowly changes Attack Exponent by a value", None, None),
+        ("tarot-challenge-strength", None, "Reward: Arcan Power Bonus: a multiplier", None, None),
+        ("tarot-two-of-cups", "Two of Cups",
+         "Cups 1 first effect mult: a multiplier. Relic 37 Effect: +an exponent", None, None),
+    ]
+    assert reports["UNI_TAROT_CARD"].unmatched == [
+        "UNI_TAROT_CARD_WAND_1: tarot-two-of-cups is already mapped"
+    ]
+    assert reports["UNI_TAROT_CARD_REWARD"].unmatched == [
+        "UNI_TAROT_CARD_CUP_1: no node tarot-challenge-two-of-cups"
+    ]
+    assert reports["UNI_TAROT_UPGRADE_EFFECT"].matched == 0
