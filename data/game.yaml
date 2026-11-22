@@ -1361,6 +1361,39 @@ nodes:
 - id: eternity-challenge-10
   name: Eternity Challenge 10 (Super Dilation)
   description: a multiplier to DP gain
+- id: eternity-milestone-1
+  name: Eternity Milestone (1 Eternity)
+  description: Unlock Eternity Milestones
+- id: eternity-milestone-2
+  name: Eternity Milestone (2 Eternities)
+  description: Automation is kept on Eternity
+- id: eternity-milestone-3
+  name: Eternity Milestone (3 Eternities)
+  description: Unlock the Eternity Zoo
+- id: eternity-milestone-5
+  name: Eternity Milestone (5 Eternities)
+  description: Buying Revolutions no longer consumes Score
+- id: eternity-milestone-7
+  name: Eternity Milestone (7 Eternities)
+  description: Unlock the Auto IP Adjuster
+- id: eternity-milestone-8
+  name: Eternity Milestone (8 Eternities)
+  description: Unlock Eternity Challenges
+- id: eternity-milestone-12
+  name: Eternity Milestone (12 Eternities)
+  description: Unlock Autobuy for Infinity Upgrades
+- id: eternity-milestone-14
+  name: Eternity Milestone (14 Eternities)
+  description: Unlock Autobuy for Infinity Generators
+- id: eternity-milestone-16
+  name: Eternity Milestone (16 Eternities)
+  description: Unlock automation for Stars and Star Upgrades, and Auto Eternity
+- id: eternity-milestone-32
+  name: Eternity Milestone (32 Eternities)
+  description: 'Break Eternity: IP is no longer hard-capped during Eternities'
+- id: eternity-milestone-100
+  name: Eternity Milestone (100 Eternities)
+  description: x1.05 to IP gain per Eternity (soft-capped at 1,000)
 - id: infinity-upgrade-1-1-infinity-generation-and-automation
   name: 1;1 Infinity Generation & Automation
   description: Generator a value multiplier is multiplied by Infinities and unlocks Automation and Autobuy.

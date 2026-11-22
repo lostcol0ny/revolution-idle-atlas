@@ -572,10 +572,11 @@ _SING_MILESTONE_SYSTEMS = {
 _TAROT_CARD_KEY = re.compile(r"UNI_TAROT_CARD_(?P<suit>ARCAN|CUP|PENTACLE|SWORD|WAND)_(?P<index>\d+)")
 _ARTIFACT_PART_KEY = re.compile(r"TAROT_ARTIFACT_PART_NAME_(?P<suit>[A-Z]+)_(?P<index>\d+)")
 _TAROT_UPGRADE_KEY = re.compile(r"UNI_TAROT_UPGRADE_EFFECT_(?P<suit>[A-Z]+)_(?P<index>\d+)")
-# The game lists these milestones in its own order, which skips eternity
-# counts the wiki numbers its nodes by (REWD_3 reads as the 5-Eternity node);
-# which count each index unlocks at is only visible in the game.
+# The Eternities each milestone needs, read off the game's Eternity >
+# Milestones screen: REWD_<k> is milestone k+1. The wiki numbers its nodes by
+# this count, so REWD_3 (5 Eternities) is eternity-milestone-5.
 _ETERNITY_MILESTONE_KEY = re.compile(r"ETR_MIL_REWD_(?P<index>\d+)")
+_ETERNITY_MILESTONE_THRESHOLDS = (1, 2, 3, 5, 7, 8, 12, 14, 16, 32, 100)
 
 
 def _matches(
@@ -674,10 +675,21 @@ def map_strings(
             readable(text), by_id, report, f"#{index}",
         ))
 
-    for m, _ in _matches(strings, _ETERNITY_MILESTONE_KEY):
-        report_for("ETR_MIL").unmatched.append(
-            f"#{m['index']}: the game's order skips the wiki's eternity counts"
-        )
+    for m, text in _matches(strings, _ETERNITY_MILESTONE_KEY):
+        report, index = report_for("ETR_MIL"), int(m["index"])
+        if index >= len(_ETERNITY_MILESTONE_THRESHOLDS):
+            report.unmatched.append(f"#{index}: no threshold checked in the game")
+            continue
+        count = _ETERNITY_MILESTONE_THRESHOLDS[index]
+        mapped.append(_place(
+            f"eternity-milestone-{count}",
+            f"Eternity Milestone ({count} {'Eternity' if count == 1 else 'Eternities'})",
+            readable(text),
+            "eternity-milestones",
+            Kind.UPGRADE,
+            by_id,
+            report,
+        ))
 
     for m, title in _matches(strings, _INFINITY_UPGRADE_KEY):
         row, col = m["row"], m["col"]

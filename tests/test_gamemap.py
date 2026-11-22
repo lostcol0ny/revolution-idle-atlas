@@ -440,9 +440,11 @@ def test_refine_and_element_effects_map_by_checked_index():
     ]
 
 
-def test_eternity_challenges_verify_by_number_and_milestones_are_held_back():
+def test_eternity_challenges_verify_by_number_and_milestones_by_threshold():
     nodes = [_node(f"eternity-challenge-{n}", f"Eternity Challenge {n}", "eternity-challenges")
              for n in (1, 2)]
+    nodes.append(_node("eternity-milestone-5", "Eternity Milestone (5 Eternities)",
+                       "eternity-milestones"))
     mapped, reports = _described(
         {
             "ETR_CHL_NAME_0": "<color=#CEE0F7>#1</color> Slow as a Snail",
@@ -450,21 +452,30 @@ def test_eternity_challenges_verify_by_number_and_milestones_are_held_back():
             # A name that reads as another number does not vouch for the index.
             "ETR_CHL_NAME_1": "#3 Solid Root",
             "ETR_CHA_REWD_1": "+{0} to Common Exponent",
+            # Milestone 4 needs 5 Eternities; milestone 7 (12) has no wiki node.
             "ETR_MIL_REWD_3": "Buying Revolutions no longer consumes Score",
+            "ETR_MIL_REWD_6": "Unlock Autobuy for Infinity Upgrades",
+            "ETR_MIL_REWD_11": "A milestone a patch added",
         },
         nodes,
     )
-    assert mapped == [(
-        "eternity-challenge-1",
-        "Eternity Challenge 1 (Slow as a Snail)",
-        "a multiplier to Lap Speed",
-        None,
-        None,
-    )]
-    assert reports["ETR_CHA"].unmatched == ["#1 '#3 Solid Root': not a checked challenge"]
-    assert reports["ETR_MIL"].unmatched == [
-        "#3: the game's order skips the wiki's eternity counts"
+    assert mapped == [
+        (
+            "eternity-challenge-1",
+            "Eternity Challenge 1 (Slow as a Snail)",
+            "a multiplier to Lap Speed",
+            None,
+            None,
+        ),
+        ("eternity-milestone-5", "Eternity Milestone (5 Eternities)",
+         "Buying Revolutions no longer consumes Score", None, None),
+        ("eternity-milestone-12", "Eternity Milestone (12 Eternities)",
+         "Unlock Autobuy for Infinity Upgrades", "eternity-milestones", Kind.UPGRADE),
     ]
+    assert reports["ETR_CHA"].unmatched == ["#1 '#3 Solid Root': not a checked challenge"]
+    report = reports["ETR_MIL"]
+    assert (report.matched, report.added) == (1, 1)
+    assert report.unmatched == ["#11: no threshold checked in the game"]
 
 
 def test_infinity_upgrades_match_their_grid_cell_and_verify_by_name():

@@ -210,9 +210,12 @@ an entity with no node, or outside the checked index range, is reported.
 | `TAROT_ARTIFACT_PART_NAME_<SUIT>_<n>`, `TAROT_ARTIFACT_PART_<n>_EFFECT_<SUIT>` | `tarot-artifact-*` | Same. |
 | `UNI_TAROT_CARD_<SUIT>_<n>` with `…_EFFECT_1_…`/`…_EFFECT_2_…` | `tarot-*` in `tarot` | Same; both effects make the description. The card's `…_<SUIT>_REWARD_<n>` describes `tarot-challenge-<card>`. |
 
-`ETR_MIL_REWD_<n>` is reported, not mapped: the game lists eternity milestones
-in an order that skips the eternity counts the wiki numbers them by. No node
-models a single tarot upgrade, so `UNI_TAROT_UPGRADE_EFFECT_*` is reported too.
+`ETR_MIL_REWD_<k>` is milestone k+1 on the game's Eternity › Milestones screen,
+mapped onto `eternity-milestone-<Eternities needed>` using the thresholds read
+off that screen (1, 2, 3, 5, 7, 8, 12, 14, 16, 32, 100). Unlike the families
+above, a threshold the wiki has no node for creates one in
+`eternity-milestones`. No node models a single tarot upgrade, so
+`UNI_TAROT_UPGRADE_EFFECT_*` is reported, not mapped.
 
 Every other family (achievements, `ACH`, among them) has no system to map onto
 and is listed as skipped. An entity in the first four catalog families that no node

@@ -12134,6 +12134,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Unlock Eternity Milestones",
       "effects": [
         {
           "text": "Unlocks Eternity Milestones"
@@ -12147,6 +12148,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Automation is kept on Eternity",
       "effects": [
         {
           "text": "Starting from this Eternity, keeps all Automations"
@@ -12160,6 +12162,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Unlock the Eternity Zoo",
       "effects": [
         {
           "text": "Unlocks Eternity Zoo"
@@ -12173,6 +12176,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Buying Revolutions no longer consumes Score",
       "effects": [
         {
           "text": "Buying Revolutions (colors) no longer takes away Score"
@@ -12186,6 +12190,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Unlock the Auto IP Adjuster",
       "effects": [
         {
           "text": "Unlocks Auto IP Adjuster"
@@ -12199,6 +12204,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Unlock Eternity Challenges",
       "effects": [
         {
           "text": "Unlocks Eternity Challenges"
@@ -12212,6 +12218,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Unlock Autobuy for Infinity Upgrades",
       "effects": [
         {
           "text": "Unlocks Automation for Infinity Upgrades"
@@ -12225,6 +12232,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Unlock Autobuy for Infinity Generators",
       "effects": [
         {
           "text": "Unlocks Automation for Generators"
@@ -12238,6 +12246,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Unlock automation for Stars and Star Upgrades, and Auto Eternity",
       "effects": [
         {
           "text": "Unlocks Automation for Stars and Star/Stardust upgrades, and Auto Eternity"
@@ -12251,6 +12260,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Break Eternity: IP is no longer hard-capped during Eternities",
       "effects": [
         {
           "text": "Breaks Eternity - IP is no longer limited to ~1.79e308 IP"
@@ -12264,6 +12274,7 @@
     },
     {
       "confidence": "documented",
+      "description": "x1.05 to IP gain per Eternity (soft-capped at 1,000)",
       "effects": [
         {
           "text": "x1.05 to IP gain for each Eternity, softcapped at 1,000"
