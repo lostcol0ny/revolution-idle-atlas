@@ -114,7 +114,8 @@ def _game_layer(
                 path=game_path,
             ))
             continue
-        data["name"] = entry.name
+        if entry.name is not None:
+            data["name"] = entry.name
         if entry.description is not None:
             data["description"] = entry.description
         if entry.effects:

@@ -29,6 +29,7 @@ from atlas.gamemap import (
     map_achievements,
     map_catalog,
     map_particles,
+    map_strings,
     wiki_achievements,
 )
 from atlas.gamemap import to_yaml as game_to_yaml
@@ -299,6 +300,9 @@ def _game(root: Path, install: Path) -> int:
     )
     game.nodes.extend(particles)
     reports.update(particle_reports)
+    described, string_reports = map_strings(dump["strings"], dataset.nodes)
+    game.nodes.extend(described)
+    reports.update(string_reports)
     achievements_page = root / "data" / "raw" / "Achievements.wikitext"
     achievements, reports[ACHIEVEMENT_PREFIX] = map_achievements(
         dump["strings"],

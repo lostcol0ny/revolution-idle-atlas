@@ -165,14 +165,18 @@ git-ignored.
 `atlas game` then maps catalog families onto the nodes of the current
 `data/derived.yaml` and `data/relationships.yaml`, and writes the result to
 `data/game.yaml`, which **is** committed. Each entry is a node `id`, the game's
-`name`, its `description` and, for an achievement, its `effects` (the reward),
-under the Steam `buildid` it was read from.
-Unity rich-text tags are stripped. The numbers the game fills in at runtime are
-worded by the sign beside them: `x{0}` becomes "a multiplier", `^{0}` "an
-exponent", `/{0}` "a divisor", `{0}%` "a percentage", `+{0}` "an amount", and a
-bare `{0}` "a value"; a running total such as `(total: x{1})` is dropped, since
-it is the player's state rather than the entity's. `atlas build` overlays the
-name, description and effects field by field on the generated node, and a
+`name` (left out when the game only describes the entity, so the node keeps
+the name it has), its `description` and, for an achievement, its `effects`
+(the reward), under the Steam `buildid` it was read from. Unity rich-text tags
+are stripped. The numbers the game fills in at
+runtime are worded by the sign beside them: `x{0}` becomes "a multiplier",
+`^{0}` "an exponent", `/{0}` "a divisor", `{0}%` "a percentage", `+{0}` "an
+amount", and a bare `{0}` "a value"; an operator chain such as `^^^{0}` keeps
+its operators ("^^^ a value"). A running total such as `(total: x{1})`,
+`(cur.: /{0})` or `(x{0} multiplier)`, or a closing `Currently: x{0}` line, is
+dropped, since it is the player's state rather than the entity's. `atlas build`
+overlays the name, description and effects field by field on the generated
+node, and a
 curated field still wins.
 
 Only families with a clear home in the graph are mapped:
@@ -202,6 +206,29 @@ read from the strings as well:
 | `ACH_NAME_<n>`, `ACH_DESC_<n>`, `ACH_REWD_<n>` | `achievement-<n+1>` in `achievements`, kind `achievement`; secrets (`n` from 10000) are `achievement-secret-<n-9999>` | `Achievement <n+1> (<name>)`, the number the game's own text cites ("Changes the reward for Ach. 29"); `Secret Achievement <n> (<name>)`. The requirement is the description and the reward the effect; an `ACH_REWD_<n>_NEW` that a later achievement swaps in is a second effect. Only the 149 achievements with a reward are mapped: the other 684 give Souls or Time Flux, which the game words nowhere, and are counted as left out. A threshold the game fills in at runtime ("Reach {0} Score") is taken from the row of the same name in `data/raw/Achievements.wikitext` when the wiki words the rest of the sentence exactly as the game does; otherwise it is worded as usual. |
 
 Each id is created when no node has it and overlaid when one does.
+
+More families describe nodes the wiki already has. These never create a node:
+an entity with no node, or outside the checked index range, is reported.
+
+| Keys | Onto | Matched by |
+|---|---|---|
+| `UNI_MIN_REF_NODE_REWARD_<n>` | `refine-node-<n+1>` | Index, for 0–199, each checked against the wiki effect of that node. Description only. |
+| `UNI_ELEM_TREE_NODE_EFFECT_<ELEMENT>_<n>` | `<element>-node-<n+1>` | Index, for the checked ranges: Fire and Water 0–10, Wind 0–11, Earth 0–9. Description only. |
+| `ETR_CHA_REWD_<n>`, `ETR_CHL_NAME_<n>` | `eternity-challenge-<n+1>` | Index, verified by the `#<n+1>` in the name; named `Eternity Challenge <n> (<title>)`. |
+| `INF_UPGRADE_NAME_<a>_<b>`, `INF_UPGRADE_REWD_<a>_<b>` | the `infinity-upgrade-<a>-<b>-*` node | Grid cell, verified by name; named `<a>;<b> <title>`. |
+| `ETR_ANL_NAME_<a>_<b>`, `ETR_ANL_REWD_<a>_<b>` | `animal-*` in `animals` | Normalised name, else one near spelling. |
+| `SING_MILESTONES_NAME_<SING\|ATOM\|PROG>_<n>`, `…_REWD_…` | `singularity-milestone-*` in the track's system | Same. |
+| `TAROT_ARTIFACT_PART_NAME_<SUIT>_<n>`, `TAROT_ARTIFACT_PART_<n>_EFFECT_<SUIT>` | `tarot-artifact-*` | Same. |
+| `UNI_TAROT_CARD_<SUIT>_<n>` with `…_EFFECT_1_…`/`…_EFFECT_2_…` | `tarot-*` in `tarot` | Same; the effects make the description, leaving out the Arcana's `Cooldown Time: {0}`. The card's `…_<SUIT>_REWARD_<n>` describes `tarot-challenge-<card>` (description only). |
+
+No two entities map onto the same node; a second one is reported.
+
+`ETR_MIL_REWD_<k>` is milestone k+1 on the game's Eternity › Milestones screen,
+mapped onto `eternity-milestone-<Eternities needed>` using the thresholds read
+off that screen (1, 2, 3, 5, 7, 8, 12, 14, 16, 32, 100). Unlike the families
+above, a threshold the wiki has no node for creates one in
+`eternity-milestones`. No node models a single tarot upgrade, so
+`UNI_TAROT_UPGRADE_EFFECT_*` is reported, not mapped.
 
 Every other family has no system to map onto and is listed as skipped. An
 entity in the first four catalog families that no node

@@ -1,6 +1,6 @@
 from enum import StrEnum
 
-from pydantic import BaseModel, ConfigDict, Field
+from pydantic import BaseModel, ConfigDict, Field, model_validator
 
 
 class Kind(StrEnum):
@@ -141,7 +141,8 @@ class GameNode(BaseModel):
     model_config = ConfigDict(extra="forbid")
 
     id: str
-    name: str
+    # None when the game only describes the entity: the node keeps its name.
+    name: str | None = None
     description: str | None = None
     # What the entity does, when the game words that apart from its
     # description: an achievement's reward. The description is then what the
@@ -152,6 +153,14 @@ class GameNode(BaseModel):
     system: str | None = None
     kind: Kind | None = None
     line: int | None = Field(default=None, exclude=True)
+
+    @model_validator(mode="after")
+    def _says_something(self) -> "GameNode":
+        if self.name is None and self.description is None:
+            raise ValueError("a game entry needs a name or a description")
+        if self.name is None and self.system is not None:
+            raise ValueError("a game entry that creates a node needs a name")
+        return self
 
 
 class GameData(BaseModel):
