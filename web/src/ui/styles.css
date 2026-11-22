@@ -240,6 +240,20 @@ code {
   outline: none;
 }
 
+/* Headings take focus when a view opens. A pointer click shows no ring there
+   (it is not :focus-visible); arriving by keyboard does. */
+h1[tabindex='-1']:focus,
+h2[tabindex='-1']:focus {
+  outline: none;
+}
+
+h1[tabindex='-1']:focus-visible,
+h2[tabindex='-1']:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 4px;
+  border-radius: 4px;
+}
+
 .detail {
   width: var(--panel-width);
   flex: none;

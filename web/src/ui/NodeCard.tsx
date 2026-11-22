@@ -93,7 +93,7 @@ export function NodeCard({
                 {effect.per_level !== undefined && (
                   <span className="nodecard__per-level">
                     {' ('}
-                    <RichText text={effect.per_level} /> per level)
+                    <RichText text={effect.per_level} />)
                   </span>
                 )}
               </li>

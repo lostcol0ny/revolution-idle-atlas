@@ -6,12 +6,19 @@ import { parseUrlState, toSearch } from '../graph/urlState';
  * The URL is the state. Moving to another node or system pushes a history
  * entry so Back retraces the route; a depth change on the same view replaces
  * it, so flicking through depths does not cost a back press each.
+ *
+ * The third value is true when the current state arrived by Back/Forward, so
+ * the caller can restore that entry's scroll instead of starting at the top.
  */
-export function useUrlState(): [UrlState, (next: Partial<UrlState>) => void] {
-  const [state, setState] = useState<UrlState>(() => parseUrlState(window.location.search));
+export function useUrlState(): [UrlState, (next: Partial<UrlState>) => void, boolean] {
+  const [state, setState] = useState(() => ({
+    url: parseUrlState(window.location.search),
+    fromHistory: false,
+  }));
 
   useEffect(() => {
-    const onPop = () => setState(parseUrlState(window.location.search));
+    const onPop = () =>
+      setState({ url: parseUrlState(window.location.search), fromHistory: true });
     window.addEventListener('popstate', onPop);
     return () => window.removeEventListener('popstate', onPop);
   }, []);
@@ -29,8 +36,8 @@ export function useUrlState(): [UrlState, (next: Partial<UrlState>) => void] {
     } else {
       window.history.pushState(null, '', url);
     }
-    setState(merged);
+    setState({ url: merged, fromHistory: false });
   }, []);
 
-  return [state, update];
+  return [state.url, update, state.fromHistory];
 }
