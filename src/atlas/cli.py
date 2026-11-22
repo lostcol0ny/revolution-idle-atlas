@@ -22,7 +22,13 @@ from atlas.game import (
     read_install,
     write_outputs,
 )
-from atlas.gamemap import GAME_FILE_REL_PATH, grade_thresholds, map_catalog, map_particles
+from atlas.gamemap import (
+    GAME_FILE_REL_PATH,
+    grade_thresholds,
+    map_catalog,
+    map_particles,
+    map_strings,
+)
 from atlas.gamemap import to_yaml as game_to_yaml
 from atlas.loader import SchemaError, load_dataset, load_game
 from atlas.merge import merge
@@ -291,6 +297,9 @@ def _game(root: Path, install: Path) -> int:
     )
     game.nodes.extend(particles)
     reports.update(particle_reports)
+    described, string_reports = map_strings(dump["strings"], dataset.nodes)
+    game.nodes.extend(described)
+    reports.update(string_reports)
     (root / GAME_FILE_REL_PATH).write_text(
         game_to_yaml(game), encoding="utf-8", newline="\n"
     )
