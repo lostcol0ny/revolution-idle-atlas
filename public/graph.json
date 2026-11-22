@@ -1201,6 +1201,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Increases Mineral base by 1",
       "effects": [
         {
           "text": "Increases mineral base by 1 (starts at 3)"
@@ -1214,6 +1215,7 @@
     },
     {
       "confidence": "documented",
+      "description": "You can now bulk attack",
       "effects": [
         {
           "text": "Now you can bulk attacks (x10.00)"
@@ -1227,6 +1229,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Attack Prestige is a bit stronger",
       "effects": [
         {
           "text": "Attacks Prestige is a bit stronger"
@@ -1240,6 +1243,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Polish Sword effect an exponent",
       "effects": [
         {
           "text": "Polish sword eff. x1.1 (maxes at x2)"
@@ -1253,6 +1257,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Unlocks Merge Level (you get a value EXP per merge)",
       "effects": [
         {
           "text": "Unlocks merge level (you get 1.00 exp per merge)"
@@ -1266,6 +1271,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Unlocks automerge (triggers every a value in-game seconds, affected by local mineral speed mult)",
       "effects": [
         {
           "text": "Unlocks automerge (it happens every 600 ingame seconds, affected by local mineral speed mult)"
@@ -1279,6 +1285,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Gold Gain Common Mineral Upgrade effect is raised to an exponent",
       "effects": [
         {
           "text": "Gold Gain common mineral upgrade effect is powered to ^2.00"
@@ -1292,6 +1299,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Relic 12 effect is powered to an exponent",
       "effects": [
         {
           "text": "Relic 12 effect powered to ^128"
@@ -1305,6 +1313,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Polish Axe is a multiplier stronger",
       "effects": [
         {
           "text": "Polish Axe is 1.5x stronger"
@@ -1318,6 +1327,7 @@
     },
     {
       "confidence": "documented",
+      "description": "PP Gain is powered to an exponent",
       "effects": [
         {
           "text": "PP gain is powered to $^{1 + 0.1 \\times \\text{lvl}}$ (+0.1, maxes at ^2)"
@@ -1331,6 +1341,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Unlocks autobuy for Mineral Upgrades",
       "effects": [
         {
           "text": "Unlocks autobuy for mineral upgrades"
@@ -1344,6 +1355,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Buying first ten mineral upgrades does not spend VP",
       "effects": [
         {
           "text": "Buying first ten mineral upgrades does not spend VP"
@@ -1357,6 +1369,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Unlocks autobuy for Attack Buyables",
       "effects": [
         {
           "text": "Unlocks autobuy for attack buyables"
@@ -1370,6 +1383,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Unlocks Auto Ascend for Attack Buyables",
       "effects": [
         {
           "text": "Unlocks autoascend for attack buyables"
@@ -1383,6 +1397,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Buying Relics does not spend gold",
       "effects": [
         {
           "text": "Buying Relics does not spend gold"
@@ -1396,6 +1411,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Merge Level Bonus Effect a multiplier",
       "effects": [
         {
           "text": "Merge Level Bonus Eff. $\\times (1.0 + 0.5 \\times \\text{lvl})$ (maxes at x50)"
@@ -1409,6 +1425,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Relic 20's effect is multiplied by the number of the last Refine Upgrade bought",
       "effects": [
         {
           "text": "Relic 20's eff. is multiplied by the highest refine upgrade bought number (e.g. x17 for N17)"
@@ -1422,6 +1439,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Unlocks magnets and new Mineral Upgrades! Current base Magnet chance: a percentage on merge.",
       "effects": [
         {
           "text": "Unlock magnets and new mineral upgrades! Magnet base chance at the start is 1% on merge."
@@ -1435,6 +1453,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Mineral cost increase is raised to ^^an exponent",
       "effects": [
         {
           "text": "Mineral cost increase is pentated to 0.85 (^^^0.85)"
@@ -1448,6 +1467,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Mineral cost fall is raised to an exponent",
       "effects": [
         {
           "text": "Mineral cost fall is powered to ^1.50"
@@ -1461,6 +1481,7 @@
     },
     {
       "confidence": "documented",
+      "description": "On Unity, gain 100% of the gold/s you would gain at your current attack level",
       "effects": [
         {
           "text": "Gold on Unity (in Attacks) is multiplied by seconds since last Unity"
@@ -1474,6 +1495,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Spawning Common Minerals does not reduce your gold",
       "effects": [
         {
           "text": "Spawning common minerals doesn't decrease your gold"
@@ -1487,6 +1509,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Buying Polish Upgrades does not reduce your PP",
       "effects": [
         {
           "text": "Buying polish upgrades doesn't decrease your PP"
@@ -1500,6 +1523,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Relic 23 is a multiplier stronger (+0.1)",
       "effects": [
         {
           "text": "Relic 23 is $\\times (1 + 0.1 \\times \\text{lvl})$ stronger (maxes at x3)"
@@ -1513,6 +1537,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Refine Node 19 effect is a multiplier stronger (divided by a value)",
       "effects": [
         {
           "text": "RN19 effect is 1.03x stronger (power divided by 1.03)"
@@ -1526,6 +1551,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Refine Node 20 effect is a multiplier stronger (multiplied by a value)",
       "effects": [
         {
           "text": "RN20 effect is x1.1 stronger (power multiplied by 1.1)"
@@ -1539,6 +1565,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Base Mineral Cost is powered to an exponent",
       "effects": [
         {
           "text": "Base mineral cost is powered to ^0.93"
@@ -1552,6 +1579,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Unlocks Polishing Enhancement",
       "effects": [
         {
           "text": "Unlocks polishing enhance"
@@ -1565,6 +1593,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Relic 23 is stronger based on your Axe Level: x(1 + Lv/100)",
       "effects": [
         {
           "text": "Relic 23 is stronger based on your Axe Level: $\\times (1 + 0.01 \\times \\text{lvl})$"
@@ -1578,6 +1607,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Relic 3 effect is powered to your current Merge Level + 1",
       "effects": [
         {
           "text": "Relic 3 effect is powered to your current merge level + 1"
@@ -1591,6 +1621,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Relic 14 also works for Mineral Cost",
       "effects": [
         {
           "text": "Relic 14 also decreases base minerals cost by the same number"
@@ -1604,6 +1635,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Unlocks autobuy for polish upgrades",
       "effects": [
         {
           "text": "Unlocks autobuy for polish upgrades"
@@ -1617,6 +1649,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Gain 100% of the gold earned on Unity as current gold (also affected by game speed)",
       "effects": [
         {
           "text": "Get 100% of your Gold on Unity every second"
@@ -1630,6 +1663,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Buying magnet mineral upgrades doesn't spend magnets and unlocks autobuy for those upgrades",
       "effects": [
         {
           "text": "Buying magnet mineral upgrades doesn't spend your magnets. And unlock autobuy for magnet mineral upgrades"
@@ -1643,6 +1677,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Unlocks Runes and Rune Upgrades",
       "effects": [
         {
           "text": "Unlock runes and rune upgrades"
@@ -1656,6 +1691,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Refine Node 27 effect: a multiplier",
       "effects": [
         {
           "text": "RN27 effect: $\\times (1 - 0.01 \\times \\text{lvl})$ (maxes at x0.8)"
@@ -1669,6 +1705,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Polish Knuckles are 20% more effective",
       "effects": [
         {
           "text": "Polish Knuckles are 20% more effective"
@@ -1682,6 +1719,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Gain more refine points based on your Knuckles Level (+1% per level)",
       "effects": [
         {
           "text": "You get more refine points based on your knuckles level: $\\text{RfP}^{1.01 \\times \\text{lvl}}$"
@@ -1695,6 +1733,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Relic 18 effect is now cubed",
       "effects": [
         {
           "text": "Relic 18 effect is cubed now (e.g. 2e6 -> 8e18)"
@@ -1708,6 +1747,7 @@
     },
     {
       "confidence": "documented",
+      "description": "VP and PP gain multipliers from magnet upgrades are powered to an exponent",
       "effects": [
         {
           "text": "Magnet upgrades for VP gain and PP gain mults are powered to $^{1.1 \\times \\text{lvl}}$ (maxes at ^3)"
@@ -1721,6 +1761,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Unlocks Special Minerals",
       "effects": [
         {
           "text": "Unlocks special minerals"
@@ -1734,6 +1775,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Special Mineral Cost Fall is multiplied by a value",
       "effects": [
         {
           "text": "Special mineral cost fall is multiplied by 5"
@@ -1747,6 +1789,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Refine Node 25 effect is a multiplier stronger",
       "effects": [
         {
           "text": "RN25 effect is 1.03x stronger"
@@ -1760,6 +1803,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Increases the Special Mineral grid size.",
       "effects": [
         {
           "text": "Increases height and width of special grid by 1 (maxes at 9x9)"
@@ -1773,6 +1817,7 @@
     },
     {
       "confidence": "documented",
+      "description": "PP Gain Bonus from Trials is now much larger",
       "effects": [
         {
           "text": "PP Gain Bonus from Trials is much bigger now"
@@ -1786,6 +1831,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Unlocks Special Minerals Progression",
       "effects": [
         {
           "text": "Unlocks special minerals progression"
@@ -1799,6 +1845,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Sun Rune generation is a multiplier faster",
       "effects": [
         {
           "text": "Sun runes generation is 1.2x faster"
@@ -1812,6 +1859,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Moon Rune generation is a multiplier faster",
       "effects": [
         {
           "text": "Moon runes generation is 1.2x faster"
@@ -1825,6 +1873,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Refine Node 43 effect is a multiplier stronger",
       "effects": [
         {
           "text": "RN43 effect is x1.01 stronger"
@@ -1838,6 +1887,7 @@
     },
     {
       "confidence": "documented",
+      "description": "RfP Gain a multiplier",
       "effects": [
         {
           "text": "RfP gain $\\times (2^{\\text{lvl}})$ (maxes at x1,024)"
@@ -1851,6 +1901,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Special Mineral cost decay speed is multiplied by a multiplier",
       "effects": [
         {
           "text": "Special Mineral Cost fall speed is multiplied by x2.00"
@@ -1864,6 +1915,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Multiplies all Polish Enhancement effects by a multiplier",
       "effects": [
         {
           "text": "Multiplies all polish enhance effects by x1.02"
@@ -1877,6 +1929,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Unlock automerge for Special Minerals (once every a value in-game seconds, affected by local mineral speed)",
       "effects": [
         {
           "text": "Unlock automerge for special minerals (1 in 10,000 in game seconds, affected by local mineral speed)"
@@ -1890,6 +1943,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Boosts Relic 31 by an exponent",
       "effects": [
         {
           "text": "Buffs Relic 31 by ^1.10"
@@ -1903,6 +1957,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Unlock Elements",
       "effects": [
         {
           "text": "Unlock Elements"
@@ -1916,6 +1971,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Multiplies the 2nd Refine Node's effect by a multiplier",
       "effects": [
         {
           "text": "Multiplies 2nd Refine Node effect by x3.00"
@@ -1929,6 +1985,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Multiplies Global Element Mult. by a multiplier",
       "effects": [
         {
           "text": "Multiplies Global Element Mult by x10.00"
@@ -1942,6 +1999,7 @@
     },
     {
       "confidence": "documented",
+      "description": "RN 7's effect is multiplied by a multiplier",
       "effects": [
         {
           "text": "RN 7 effect is multiplied by x1.10"
@@ -1955,6 +2013,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Makes the first node of each element stronger",
       "effects": [
         {
           "text": "Makes First Node of each element stronger (they become Fire= 0.5, Earth= 3.50, Wind= 4.20, Water= 1.11)"
@@ -1968,6 +2027,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Multiplies Global Element Mult.",
       "effects": [
         {
           "text": "Multiplies Global Element Mult (x2.00 per level, maxes at x1.07e9)"
@@ -1981,6 +2041,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Passive Merge EXP is also boosted by Relic 28 and max mineral spawn level",
       "effects": [
         {
           "text": "Passive Merge EXP is also boosted by Relic 28 and max spawn mineral level"
@@ -1994,6 +2055,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Multiplies the first Wind Factor by a multiplier",
       "effects": [
         {
           "text": "Multiplies First Wind Factor by x10.00"
@@ -2007,6 +2069,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Keep Dilation Tree and DTP on Unity Reset",
       "effects": [
         {
           "text": "Keep Dilation Tree and DTP on Unity Reset"
@@ -2020,6 +2083,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Boosts Relic 4 by an exponent",
       "effects": [
         {
           "text": "Boosts Relic 4 (^1.00) (+^0.50 per level, maxes at ^5.00)"
@@ -2033,6 +2097,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Empowers Relic 5 to an exponent",
       "effects": [
         {
           "text": "Empowers Relic 5 to ^2.00"
@@ -2046,6 +2111,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Sacrificing relics no longer resets relic levels and now automatically sets them to max level",
       "effects": [
         {
           "text": "Sacrificing relics doesn't reset relic level and automatically set to max level"
@@ -2059,6 +2125,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Attack Prestige resets nothing",
       "effects": [
         {
           "text": "Attack Prestige resets nothing"
@@ -2072,6 +2139,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Every a value Attack Levels gained reduces your SM Spawned Factor by 1",
       "effects": [
         {
           "text": "For every 100,000 attack levels gained reduce your SM Spawned Factor by 1"
@@ -2085,6 +2153,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Multiplies the first Mineral upgrade efficiency by a multiplier",
       "effects": [
         {
           "text": "Multiplies First Mineral Eff. by x1.00 (+x0.01 per level, maxes at x1.10) (improves the effect of the first Mineral Upgrade: Max Level)"
@@ -2098,6 +2167,7 @@
     },
     {
       "confidence": "documented",
+      "description": "You can now spawn Black Special Gems (1% chance). Unlocks Tarot. Resets SMS Factor to 5,000 if it's >6,000, otherwise decreases it by 1,000",
       "effects": [
         {
           "text": "Now you can spawn black special gems (1% chance). Unlocks Tarot. Resets SMS Factor to 5,000 if it's >6,000 or decrease it by 1,000"
@@ -2111,6 +2181,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Gain 0.01% of your PP gain on reset every second (affected by local minerals speed)",
       "effects": [
         {
           "text": "Get 0.01% of your PP gain on reset every second (affected by local minerals speed)"
@@ -2124,6 +2195,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Increases the size of both Mineral grids.",
       "effects": [
         {
           "text": "Increase width and height of both mineral grids by 1.00"
@@ -2137,6 +2209,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Multiplies RN1 effect by a multiplier",
       "effects": [
         {
           "text": "Multiplies RN1 effect by x10.00"
@@ -2150,6 +2223,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Makes all suit Tarot upgrade 2 effects a multiplier stronger",
       "effects": [
         {
           "text": "Makes effect of all suit tarot upgrade 2 - x1.50 stronger"
@@ -2163,6 +2237,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Increases the base of all elements' factor 2 by a value",
       "effects": [
         {
           "text": "Increase all elements base factor 2 by (+?/level)"
@@ -2176,6 +2251,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Relic 37 is an exponent more effective",
       "effects": [
         {
           "text": "Relic 37 is ^1.50 more effective"
@@ -2189,6 +2265,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Multiplies the first effect of all non-Arcana cards by a multiplier",
       "effects": [
         {
           "text": "Multiplies first effect of all non-arcan cards by x1.50"
@@ -2202,6 +2279,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Doubles RN 77's effect",
       "effects": [
         {
           "text": "Doubles RN77 effect"
@@ -2215,6 +2293,7 @@
     },
     {
       "confidence": "documented",
+      "description": "You get a multiplier cards per draw",
       "effects": [
         {
           "text": "You get x2.00 cards from drawing"
@@ -2228,6 +2307,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Increases the size of both Mineral grids.",
       "effects": [
         {
           "text": "Increase the RN72 effect by 1.00"
@@ -2241,6 +2321,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Strengthens The Devil's base effect by a multiplier",
       "effects": [
         {
           "text": "The Devil's base effect is 10x stonger"
@@ -2254,6 +2335,7 @@
     },
     {
       "confidence": "documented",
+      "description": "The Tower now destroys the first gem instead of a random one.",
       "effects": [
         {
           "text": "The Tower now destroys the first gem instead of a random gem"
@@ -2267,6 +2349,7 @@
     },
     {
       "confidence": "documented",
+      "description": "The Wheel of Fortune now has a 99% chance to win.",
       "effects": [
         {
           "text": "The Wheel of Fortune now has a 99% chance to win"
@@ -2280,6 +2363,7 @@
     },
     {
       "confidence": "documented",
+      "description": "The Death now activates instantly.",
       "effects": [
         {
           "text": "The Death now activates instantly"
@@ -2293,6 +2377,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Unlocks the Sacrifice tab for Special Minerals. You now gain Sacrifice Dust when deleting Minerals, using The Tower, or using the Delete Special Mineral macro block.",
       "effects": [
         {
           "text": "Unlocks Sacrifice tab for Special Minerals. You now gain Sacrifice Dust when deleting minerals, using the Tower, or using the Delete Special Mineral macro block."
@@ -2306,6 +2391,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Grants SMP EXP to all Special Minerals every second based on Relic 45, The Tower, and average SMP level (a value/sec). Affected by Tarot Local Speed.",
       "effects": [
         {
           "text": "Grants SMP EXP to all Special Minerals every second based on Relic 45, The Tower, and average SMP level (???/sec). Affected by Tarot Local Speed."
@@ -2319,6 +2405,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Raises Relic 36's effect to an exponent and applies it to all Elements",
       "effects": [
         {
           "text": "Relic 36's effect is ^3 and applied to all elements"
@@ -2332,6 +2419,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Increases Relic 46's soft cap by a value",
       "effects": [
         {
           "text": "Increase Relic 46 softcap by 1"
@@ -2345,6 +2433,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Unlocks Tarot Challenges! (All Special Minerals must be sacrificed)",
       "effects": [
         {
           "text": "Unlocks Tarot Challenges! (All Special Minerals must be sacrificed)"
@@ -2358,6 +2447,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Multiplies Sacrifice Dust gain and the base of Relic 45 by a multiplier",
       "effects": [
         {
           "text": "Multiplies Sacrifice Dust gain and Relic 45 base (x2/level, max 4.29e9)"
@@ -2371,6 +2461,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Element node effects are boosted as if you had a multiplier more of this resource",
       "effects": [
         {
           "text": "Element nodes effects are boosted as if you had x1e1000 more of that element"
@@ -2384,6 +2475,7 @@
     },
     {
       "confidence": "documented",
+      "description": "The Empress, The Emperor, The Lovers, and Strength effects are now set to their maximum values",
       "effects": [
         {
           "text": "The Empress, The Emperor, The Lovers, and The Strength Tarot Cards are now set to their maximum strength values."
@@ -2397,6 +2489,7 @@
     },
     {
       "confidence": "documented",
+      "description": "SMP Gem Efficiency also boosts the second Special Mineral Sacrifice effect at a reduced rate",
       "effects": [
         {
           "text": "SMP Gem Efficiency also boosts the second Special Mineral sacrifce effect at a reduced rate"
@@ -2410,6 +2503,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Slightly reduces the soft cap of Fire 2 Upgrade",
       "effects": [
         {
           "text": "Slightly reduces the Fire Node 2 softcap"
@@ -2423,6 +2517,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Polish Spear effect is set to an exponent",
       "effects": [
         {
           "text": "Polish Spear effect ^5000"
@@ -2436,6 +2531,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Multiplies Special Mineral bulk spawn by a multiplier",
       "effects": [
         {
           "text": "Multiplies Special Mineral bulk spawn by 10"
@@ -2449,6 +2545,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Achievement 443 reward is raised to an exponent",
       "effects": [
         {
           "text": "Ach 443 reward is ^5"
@@ -2462,6 +2559,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Polish Sword effect is raised to an exponent",
       "effects": [
         {
           "text": "Polish Sword Effect is ^1000"
@@ -2475,6 +2573,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Unlocks Artifacts",
       "effects": [
         {
           "text": "Unlock Artifacts!"
@@ -2488,6 +2587,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Reduces the base flushing cooldown of all Artifacts by a value hours",
       "effects": [
         {
           "text": "Decrease the base cooldown of all artifacts for flushing by X hours (+1/level)"
@@ -2501,6 +2601,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Achievement 443 reward is powered to an exponent",
       "effects": [
         {
           "text": "Achievement 443 reward is powered to ^2"
@@ -2514,6 +2615,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Unlocks Automation for upgrading Artifact Parts",
       "effects": [
         {
           "text": "Unlocks Automation for upgrading Artifact Parts"
@@ -2527,6 +2629,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Unlocks Plague Tab",
       "effects": [
         {
           "text": "Unlocks Plague Tab"
@@ -2540,6 +2643,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Unlocks Endoplasmic Reticulum",
       "effects": [
         {
           "text": "Unlocks Endoplasmic Reticulum"
@@ -2553,6 +2657,7 @@
     },
     {
       "confidence": "documented",
+      "description": "The Hierophant Passive Bonus is now boosted by the level of your equipped Endoplasmic Reticulum",
       "effects": [
         {
           "text": "The Hierophant Passive Bonus is now boosted by the level of your equipped Endoplasmic Reticulum"
@@ -2566,6 +2671,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Spread Power of your currently equipped Endoplasmic Reticulum also boosts Black Gem base effect",
       "effects": [
         {
           "text": "Spread Power of your currently equipped Endoplasmic Reticulum also boosts Black Gem base effect (x???)"
@@ -2579,6 +2685,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Divides cooldown of all artifacts by a value",
       "effects": [
         {
           "text": "Divides cooldown of all artifacts by 2"
@@ -2592,6 +2699,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Max PlP now boosts sacrifice dust gain",
       "effects": [
         {
           "text": "Max PIP now boosts sacrifice dust gain (x???)"
@@ -2605,6 +2713,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Multiplies PlP per PlG by a multiplier",
       "effects": [
         {
           "text": "Multiplies PIP per PIG by x10"
@@ -2618,6 +2727,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Multiplies Crafting Mastery by a multiplier",
       "effects": [
         {
           "text": "Multiplies Crafting Mastery by x1.1"
@@ -2631,6 +2741,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Divides the ERP needed to craft an Endoplasmic Reticulum by a value",
       "effects": [
         {
           "text": "Divides the ERP needed to craft an Endoplasmic Reticulum by $\\times 1.5^{\\text{level}}$"
@@ -2644,6 +2755,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Multiplies golden resources gain by xπ",
       "effects": [
         {
           "text": "Multiplies golden resoucres gain by xπ (x3.14)"
@@ -2657,6 +2769,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Multiplies Essence Density ER Upgrade by a multiplier",
       "effects": [
         {
           "text": "Multiplies Essence Density ER Upgrade by x20"
@@ -2670,6 +2783,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Multiplies Base Spread Power (on ER craft) by a multiplier",
       "effects": [
         {
           "text": "Multiplies Base Spread Power (on ER craft) by x1.25"
@@ -2683,6 +2797,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Multiplies Max Cure Progress by a multiplier",
       "effects": [
         {
           "text": "Multiples Max Cure Progress by 1.2 per level"
@@ -2696,6 +2811,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Max Infected and Total Infected effects are powered to an exponent",
       "effects": [
         {
           "text": "Max Infected and Total Infected effects are powered to ^2"
@@ -2709,6 +2825,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Gives an amount effective levels to all Endoplasmic Reticulum upgrades",
       "effects": [
         {
           "text": "Gives +10 effective levels to all Endoplasmic Reticulum upgrades"
@@ -2722,6 +2839,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Divides artifact flush cooldown by a multiplier again",
       "effects": [
         {
           "text": "Divides All Artifact Flush Cooldowns by x2"
@@ -2735,6 +2853,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Max PlP effect is powered to an exponent",
       "effects": [
         {
           "text": "Map PIP Effect is powered to ^1.25"
@@ -2748,6 +2867,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Multiplies Attack Exponent by a multiplier",
       "effects": [
         {
           "text": "Multiplies Attack Exponent by x1"
@@ -2761,6 +2881,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Unlocks Singularity!",
       "effects": [
         {
           "text": "Unlocks Singularity"
@@ -2774,6 +2895,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Adds a Singularity Effect (based on Singularity) that boosts your base Spread Speed",
       "effects": [
         {
           "text": "Adds a Singularity Effect (Based on Singularities) that boosts Spread Speed"
@@ -2787,6 +2909,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Multiplies PlG Rewards by a multiplier",
       "effects": [
         {
           "text": "Multiplies PIG Rewards by x10"
@@ -2800,6 +2923,7 @@
     },
     {
       "confidence": "documented",
+      "description": "PlG Rewards are powered to an exponent",
       "effects": [
         {
           "text": "PIG Rewards are powered to ^1.05"
@@ -2813,6 +2937,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Adds Refine Node 125 as a Singularity Mult factor",
       "effects": [
         {
           "text": "Adds Refine Node 125 as a Singularity Mult Factor"
@@ -2826,6 +2951,7 @@
     },
     {
       "confidence": "documented",
+      "description": "No longer applies an Atom gain penalty at a value",
       "effects": [
         {
           "text": "No longer applies an Atom gain penalty at 1e50"
@@ -2839,6 +2965,7 @@
     },
     {
       "confidence": "documented",
+      "description": "No longer applies an Atom gain penalty at a value",
       "effects": [
         {
           "text": "No longer applies an Atom gain penalty at 14e153"
@@ -2852,6 +2979,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Makes the first Atom penalty weaker by a percentage. At max level, removes it completely.",
       "effects": [
         {
           "text": "Makes the first Atom penalty weaker by 10% [per level]. At max level, removes it completely."
@@ -2865,6 +2993,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Adds Refine Points to Singularity Mult Effects",
       "effects": [
         {
           "text": "Adds Refine Points to Singularity Mult Effects"
@@ -2878,6 +3007,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Multiplies Refine Node 125 Effect by a multiplier",
       "effects": [
         {
           "text": "Multiples Refine Node 125 Effect by x?"
@@ -2891,6 +3021,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Adds Atom Gain to Singularity Count Effects",
       "effects": [
         {
           "text": "Adds Atom Gain to Singularity Count effects"
@@ -2904,6 +3035,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Adds Golden Resource Gain to Singularity Count Effect",
       "effects": [
         {
           "text": "Adds Golden Resource Gain to Singularity Count Effect"
@@ -2917,6 +3049,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Empowers your current luck: an exponent",
       "effects": [
         {
           "text": "Empowers your current luck: ^1 + level/100"
@@ -2930,6 +3063,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Adds Refine Points to Singularity Count Effects",
       "effects": [
         {
           "text": "Adds Refine Points to Singularity Count Effects"
@@ -2943,6 +3077,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Adds a Singularity Mult effect that slightly boosts Luck",
       "effects": [
         {
           "text": "Adds a Singularity Mult effect that slightly boosts Luck"
@@ -2956,6 +3091,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Increases Local Singularity Speed Power by a value",
       "effects": [
         {
           "text": "Increases Local Singularity Speed Power by 0.02"
@@ -2969,6 +3105,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Unlocks Particles",
       "effects": [
         {
           "text": "Unlock Particles"
@@ -2982,6 +3119,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Particle Rank boosts Refine Point gain (an exponent / +0.001 per rank)",
       "effects": [
         {
           "text": "Particle Rank boosts Refine Point gain (^X / +0.001 per rank)"
@@ -2995,6 +3133,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Multiplies Alpha Generator Base by a multiplier",
       "effects": [
         {
           "text": "Multiplies Alpha Generator Base by x2"
@@ -3008,6 +3147,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Multiplies Alpha Multiplier Base by a multiplier",
       "effects": [
         {
           "text": "Multiplies Alpha Multiplier Base by x1 + level"
@@ -3021,6 +3161,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Rank 5 Reward is a multiplier more effective",
       "effects": [
         {
           "text": "Rank 5 Reward is x3 more effective"
@@ -3034,6 +3175,7 @@
     },
     {
       "confidence": "documented",
+      "description": "The base of all particle generators is multiplied by a multiplier every 10 levels",
       "effects": [
         {
           "text": "The base of all particle generators is multiplied by x1.25 every 10 levels"
@@ -3047,6 +3189,7 @@
     },
     {
       "confidence": "documented",
+      "description": "The base of all particle multipliers is multiplied by a multiplier every 7 levels",
       "effects": [
         {
           "text": "The base of all particle multipliers is multiplied by x2 every 7 levels"
@@ -3060,6 +3203,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Particle Rank boosts gold: an exponent (an amount per rank)",
       "effects": [
         {
           "text": "Particle Rank boosts gold: ^X (+0.01 per rank)"
@@ -3073,6 +3217,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Every 100 levels, the base of all particle generators is multiplied by a multiplier",
       "effects": [
         {
           "text": "Every 100 levels, the base of all particle generators is multiplied by x10"
@@ -3086,6 +3231,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Unlocks the Singularity Mult effect on the base of Alpha & Beta Generators",
       "effects": [
         {
           "text": "Unlocks the Singularity Mult effect on the base of Alpha & Beta generators"
@@ -3099,6 +3245,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Beta Particles boost Alpha Generator Base a bit better (a value -> a value)",
       "effects": [
         {
           "text": "Beta Particles boost Alpha Generator Base a bit better (0.2 -> 0.3)"
@@ -3112,6 +3259,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Empowerer base is increased by 0.001 every 20 levels for all particles",
       "effects": [
         {
           "text": "Empowerer base is increased by 0.001 every 20 levels for all particles"
@@ -3125,6 +3273,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Multiplies Alpha Generator Base by a multiplier",
       "effects": [
         {
           "text": "Multiplies Alpha Generator Base by x100"
@@ -3138,6 +3287,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Multiplies Beta Multiplier Base by a multiplier",
       "effects": [
         {
           "text": "Multiplies Beta Multiplier Base by x1 + 0.5 * level"
@@ -3151,6 +3301,7 @@
     },
     {
       "confidence": "documented",
+      "description": "You passively gain Singularity Mult every second (also affected by local singularity speed)",
       "effects": [
         {
           "text": "You passively gain Singularity Multiplier every second (also affected by local singularity speed)"
@@ -3164,6 +3315,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Decreases base requirement for Tier, Tetr and Pent by 1",
       "effects": [
         {
           "text": "Decreases base requirement for Tier, Tetr and Pent by 1"
@@ -3177,6 +3329,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Rank Up resets nothing now",
       "effects": [
         {
           "text": "Rank Up resets nothing now"
@@ -3190,6 +3343,7 @@
     },
     {
       "confidence": "documented",
+      "description": "The PlG to PlP bonus is raised to an exponent",
       "effects": [
         {
           "text": "The PlG to PlP bonus is raised to ^1.5"
@@ -3203,6 +3357,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Unlocks the Singularity Mult effect on the base of all generators",
       "effects": [
         {
           "text": "Unlocks the Singularity Mult effect on the base of all generators"
@@ -3216,6 +3371,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Atom Penalty at 1e5,000 is a multiplier weaker now",
       "effects": [
         {
           "text": "Atom Penalty at 1e5,000 is x1.1 weaker now"
@@ -3229,6 +3385,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Atom Penalty at 1e10,000 is a multiplier weaker now",
       "effects": [
         {
           "text": "Atom Penalty at 1e10,000 is x1.2 weaker now"
@@ -3242,6 +3399,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Alpha particle upgrades do not spend alpha points",
       "effects": [
         {
           "text": "Alpha particle upgrades do not spend alpha points"
@@ -3255,6 +3413,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Tier Up resets nothing now",
       "effects": [
         {
           "text": "Tier Up resets nothing now"
@@ -3268,6 +3427,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Divides Tier Requirement by a multiplier (rounded up)",
       "effects": [
         {
           "text": "Divides Tier Up requirement by x1 + 0.02 * level (rounded up)"
@@ -3281,6 +3441,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Every 1,000 levels, the base of all particle generators is multiplied by a multiplier",
       "effects": [
         {
           "text": "Every 1,000 levels, the base of all particle generators is multiplied by x1e10"
@@ -3294,6 +3455,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Luck is raised to an exponent",
       "effects": [
         {
           "text": "Luck is raised to ^1.1"
@@ -3307,6 +3469,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Singularity Tree node levels now go 0 -> 2 -> 4 -> 6 -> 8 -> 10",
       "effects": [
         {
           "text": "Singularity Tree levels now go 0 -> 2 -> 4 -> 6 -> 8 -> 10"
@@ -3320,6 +3483,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Beta particle upgrades do not spend beta points",
       "effects": [
         {
           "text": "Beta particle upgrades do not spend beta points"
@@ -3333,6 +3497,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Gamma particle upgrades do not spend gamma points",
       "effects": [
         {
           "text": "Gamma particle upgrades do not spend gemma points"
@@ -3346,6 +3511,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Local Particles Speed is boosted by ^0.1 of Local Singularity Speed",
       "effects": [
         {
           "text": "Local Particles Speed is boosted by ^0.1 of Local Singularity Speed"
@@ -3359,6 +3525,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Singularity Tree node levels now go 0 -> 4 -> 8 -> 10",
       "effects": [
         {
           "text": "Singularity Tree levels now go 0 -> 4 -> 8 -> 10"
@@ -3372,6 +3539,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Tarot Challenges Singularity factors are a multiplier stronger (before softcap)",
       "effects": [
         {
           "text": "Tarot Challenges Singularity factors are x3 stronger (before softcap)"
@@ -3385,6 +3553,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Singularity Tree node costs cannot exceed the price at Level 5",
       "effects": [
         {
           "text": "Singularity Tree nodes cannot exceed the price at Level 5"
@@ -3398,6 +3567,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Alpha Particle Prestige resets nothing and is automatically performed every frame",
       "effects": [
         {
           "text": "Alpha Prestige resets nothing and is performed every frame"
@@ -3411,6 +3581,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Multiplies the base of Delta Generators and Multipliers by a multiplier",
       "effects": [
         {
           "text": "Multiplies the base of Delta Generators and Multipliers by x100"
@@ -3424,6 +3595,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Singularity Tree node levels now go 0 -> 5 -> 10",
       "effects": [
         {
           "text": "Singularity Tree levels now go 0 -> 5 -> 10"
@@ -3437,6 +3609,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Every 100 levels, the base of all particle multipliers is multiplied by a multiplier",
       "effects": [
         {
           "text": "Every 100 levels, the base of all particle multipliers is multiplied by x10"
@@ -3450,6 +3623,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Sacrifice dust spent after Lv.100 slightly increases the base of Special Minerals effect 2 (+0.01 per e1,000 to the effect 2 base)",
       "effects": [
         {
           "text": "Sacrifice dust spent after Lv.100 slightly increases the base of Special Minerals effect 2 (+0.01 per e1,000 to the effect 2 base)"
@@ -3463,6 +3637,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Equipped Endoplasmic Reticulum Level empowers luck (^1.001 per ER level)",
       "effects": [
         {
           "text": "Equipped Endoplasmatic Reticulum Level empowers luck (^X) (^1.001 per ER level)"
@@ -3476,6 +3651,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Beta Particle Prestige resets nothing and is automatically performed every frame",
       "effects": [
         {
           "text": "Beta Particle Prestige resets nothing and is automatically performed every frame"
@@ -3489,6 +3665,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Each time you perform a singularity after e25,000 atoms, spark cost decreases as if you had spawned 1 fewer spark in total",
       "effects": [
         {
           "text": "Each time you perform a Singularity after e25,000 atoms, spark cost decreases as if you had spawned 1 fewer spark in total"
@@ -3502,6 +3679,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Mastery Gain is multiplied by a multiplier (1 + pent / 10)",
       "effects": [
         {
           "text": "Mastery Gain is multiplied by xX ($1 + \\text{pent} / 10$)"
@@ -3515,6 +3693,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Gamma Particle Prestige resets nothing and is automatically performed every frame",
       "effects": [
         {
           "text": "Gamma Particle Prestige resets nothing and is automatically performed every frame"
@@ -3528,6 +3707,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Increases the total number of sparks you can equip by 1",
       "effects": [
         {
           "text": "Increase the total number of sparks you can equip by 1"
@@ -3541,6 +3721,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Unlocks Spark Mastery Factor for singularity",
       "effects": [
         {
           "text": "Unlocks Spark Mastery Factor for Singularity"
@@ -3554,6 +3735,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Each spark spawned after buying this node decreases ETP cost by 5 ε (total reduction is softcapped after 100,000)",
       "effects": [
         {
           "text": "Each spark spawned after buying this node decreases ETP cost by 5 Epsilon (total reduction is softcapped after 100,000)"
@@ -3567,6 +3749,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Decreases base requirement for Tier, Tetr and Pent by 1 again",
       "effects": [
         {
           "text": "Decreases base requirement for Tier, Tetr and Pent by 1 again"
@@ -3580,6 +3763,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Equipped Endoplasmic Reticulum Level boosts Spark Mastery gain (x1.01 per ER level)",
       "effects": [
         {
           "text": "Equipped Endoplasmatic Reticulum Level boosts Spark Mastery gain (xX) (x1.01 per ER level)"
@@ -3593,6 +3777,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Destroying a spark now also grants mastery (^0.5 of this spark's mastery)",
       "effects": [
         {
           "text": "Destroying a spark now also grants mastery (^0.5 of this spark mastery)"
@@ -3606,6 +3791,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Epsilon Capacity gain is multiplied by a multiplier",
       "effects": [
         {
           "text": "Epsilon Capacity gain is multiplied by x2"
@@ -3619,6 +3805,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Delta Prestige bonus is stronger based on your pent (x1.01 per Pent): a multiplier",
       "effects": [
         {
           "text": "Delta Prestige bonus is stronger based on your Pent (X1.01 per Pent)"
@@ -3632,6 +3819,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Attack exponent is multiplied by 1 + 0.1 x Log10(mastery) (softcap at x10): a multiplier",
       "effects": [
         {
           "text": "Attack exponent is multiplied by $1 + 0.1 \\times \\log_{10}(\\text{mastery})$ (softcap at x10)"
@@ -3645,6 +3833,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Destroying Ultima Singular Zodiacs now also decreases Epsilon Tree Point cost. (Total reduction is softcapped after 100,000)",
       "effects": [
         {
           "text": "Destroying Ultima Singular Zodiacs now also decreases Epsilon Tree Points cost (Total reduction is softcapped after 100,000)"
@@ -3658,6 +3847,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Improves the effect of Refine Node 185 (destroying a spark grants mastery) based on the spark's rarity (+0.025 to the power per rarity tier from F)",
       "effects": [
         {
           "text": "Improves the effect of Refine Node 185 (destroying a spark grants mastery) based on the spark's rarity (+0.025 to the power per rarity tier from F)"
@@ -3671,6 +3861,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Delta particle upgrades do not spend delta points",
       "effects": [
         {
           "text": "Delta particle upgrades do not spend delta points"
@@ -3684,6 +3875,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Epsilon Points generation is stronger based on your current Epsilon Points: a multiplier (+0.01 per 10K Epsilon Points, capped at x10)",
       "effects": [
         {
           "text": "Epsilon Points generation is stronger based on your current Epsilon Points x1 (+0.01 per 10K Epsilon Points, capped at x10)"
@@ -3697,6 +3889,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Delta Particle Prestige resets nothing and is automatically performed every frame",
       "effects": [
         {
           "text": "???"
@@ -3710,6 +3903,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Refine Node 186 effect is better based on your Spark Luck ^ 0.5 : a multiplier",
       "effects": [
         {
           "text": "???"
@@ -3723,6 +3917,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Increases total sparks you can equip by 1. Allows you to start Sun Tarot Challenge",
       "effects": [
         {
           "text": "???"
@@ -3736,6 +3931,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Multiplies Spark Mastery Gain on Spark Spawn by a multiplier",
       "effects": [
         {
           "text": "Multiplies Spark Mastery Gain on Spark Spawn by xX"
@@ -3749,6 +3945,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Multiplies Singular Tree Node A14 Efficiency by a multiplier",
       "effects": [
         {
           "text": "???"
@@ -3762,6 +3959,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Multiplies Singular Tree Node A16 Efficiency by a multiplier",
       "effects": [
         {
           "text": "???"
@@ -3775,6 +3973,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Increases total sparks you can equip by 1.",
       "effects": [
         {
           "text": "???"
@@ -3788,6 +3987,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Multiplies Mastery Gain on Spark Destroy by a multiplier",
       "effects": [
         {
           "text": "Multiplies Mastery Gain on Spark Destroy by xX"
@@ -3801,6 +4001,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Base Swords Generation: a value/s; Attack Mult Gain from VP: +an exponent",
       "effects": [
         {
           "text": "Base Swords Generation /s"
@@ -3817,6 +4018,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Swords 1 first effect mult: a multiplier; Attack Ascend Power from VP: +an exponent",
       "effects": [
         {
           "text": "Swords 1 first effect mult x"
@@ -3833,6 +4035,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Swords 2 first effect mult: a multiplier; Attack Prestige Power: +an exponent",
       "effects": [
         {
           "text": "Swords 2 first effect mult x"
@@ -3849,6 +4052,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Swords 3 first effect mult: a multiplier; Relic 3 Power: +an exponent",
       "effects": [
         {
           "text": "Swords 3 first effect mult x"
@@ -3865,6 +4069,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Swords 4 first effect mult: a multiplier; Relic 13 Power: +a multiplier",
       "effects": [
         {
           "text": "Swords 4 first effect mult x"
@@ -3881,6 +4086,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Swords 5 first effect mult: a multiplier; Relic 20 Effect: +a multiplier",
       "effects": [
         {
           "text": "Swords 5 first effect mult x"
@@ -3897,6 +4103,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Swords 6 first effect mult: a multiplier; Refine Node 4 Effect: +a multiplier",
       "effects": [
         {
           "text": "Swords 6 first effect mult x"
@@ -3913,6 +4120,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Swords 7 first effect mult: a multiplier; Polish Sword Effect: +an exponent",
       "effects": [
         {
           "text": "Swords 7 first effect mult x"
@@ -3929,6 +4137,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Swords 8 first effect mult: a multiplier; DTU MID-2 is +a multiplier stronger",
       "effects": [
         {
           "text": "Swords 8 first effect mult x"
@@ -3945,6 +4154,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Swords 9 first effect mult: a multiplier; Increases Atk. Exp by an amount",
       "effects": [
         {
           "text": "Swords 9 first effect mult x"
@@ -3961,6 +4171,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Swords 10 first effect mult: a multiplier; The first 10 Swords Tarot card effects are +a multiplier stronger",
       "effects": [
         {
           "text": "Swords 10 first effect mult x"
@@ -3977,6 +4188,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Swords Page first effect multiplier: a multiplier; Common EXP multiplier +a multiplier",
       "effects": [
         {
           "text": "Swords Page first effect mult x"
@@ -3993,6 +4205,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Swords Knight first effect multiplier: a multiplier; Achievement 232 reward is multiplied by +a multiplier",
       "effects": [
         {
           "text": "Swords Knight first effect mult x"
@@ -4009,6 +4222,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Swords Queen first effect multiplier: a multiplier; Unlocks the second wind factor and multiplies factor 1 for all elements by a multiplier (after the e308 softcap)",
       "effects": [
         {
           "text": "Swords Queen first effect mult x"
@@ -4025,6 +4239,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Base Wands Generation: a value/s; Fire Factor 1: +an exponent",
       "effects": [
         {
           "text": "Base Wands Generations /s"
@@ -4041,6 +4256,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Wands 1 first effect mult: a multiplier; Earth Factor 1: +an exponent",
       "effects": [
         {
           "text": "Wands 1 first effect mult x"
@@ -4057,6 +4273,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Wands 2 first effect mult: a multiplier; Wind Factor 1: +an exponent",
       "effects": [
         {
           "text": "Wands 2 first effect mult x"
@@ -4073,6 +4290,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Wands 3 first effect mult: a multiplier; Water Factor 1: +an exponent",
       "effects": [
         {
           "text": "Wands 3 first effect mult x"
@@ -4089,6 +4307,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Wands 4 first effect mult: a multiplier; All Elements Factor 1: +an exponent",
       "effects": [
         {
           "text": "Wands 4 first effect mult x"
@@ -4105,6 +4324,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Wands 5 first effect mult: a multiplier; Fire Node 3 Effect: +an exponent",
       "effects": [
         {
           "text": "Wands 5 first effect mult x"
@@ -4121,6 +4341,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Wands 6 first effect mult: a multiplier; Water Node 1 Effect: +an exponent",
       "effects": [
         {
           "text": "Wands 6 first effect mult x"
@@ -4137,6 +4358,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Wands 7 first effect mult: a multiplier; Elements Local Speed: +an exponent",
       "effects": [
         {
           "text": "Wands 7 first effect mult x"
@@ -4153,6 +4375,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Wands 8 first effect mult: a multiplier; Infinity Upgrade (2;1) is +a multiplier stronger",
       "effects": [
         {
           "text": "Wands 8 first effect mult x"
@@ -4169,6 +4392,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Wands 9 first effect mult: a multiplier; Makes the first node of each element +a multiplier stronger",
       "effects": [
         {
           "text": "Wands 9 first effect mult x"
@@ -4185,6 +4409,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Wands 10 first effect mult: a multiplier; The first 10 Wands Tarot card effects are +a multiplier stronger",
       "effects": [
         {
           "text": "Wands 10 first effect mult x"
@@ -4201,6 +4426,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Wands Page first effect multiplier: a multiplier; Tarot Arcana cooldowns /(1 + a value)",
       "effects": [
         {
           "text": "Wands Page first effect mult x"
@@ -4217,6 +4443,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Wands Knight first effect multiplier: a multiplier; Achievement 230 rewards are multiplied by (1 + a value)",
       "effects": [
         {
           "text": "Wands Knight first effect mult x"
@@ -4233,6 +4460,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Wands Queen first effect multiplier: a multiplier; Unlocks the second fire factor and multiplies factor 1 for all elements by a multiplier (after the e308 softcap)",
       "effects": [
         {
           "text": "Wands Queen first effect mult x"
@@ -4249,6 +4477,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Base Pentacles Generation: a value/s; Gold Gain: +an exponent",
       "effects": [
         {
           "text": "Base Pentacles Generation /s"
@@ -4265,6 +4494,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Pentacles 1 first effect mult: a multiplier; Zodiac Sell Cost: a multiplier",
       "effects": [
         {
           "text": "Pentacles 1 first effect mult x"
@@ -4281,6 +4511,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Pentacles 2 first effect mult: a multiplier; Relic 36 Effect: +an exponent",
       "effects": [
         {
           "text": "Pentacles 2 first effect mult x"
@@ -4297,6 +4528,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Pentacles 3 first effect mult: a multiplier; Luck Donut Power: +an exponent",
       "effects": [
         {
           "text": "Pentacles 3 first effect mult x"
@@ -4313,6 +4545,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Pentacles 4 first effect mult: a multiplier; Zodiac Sacrifice Power: +an exponent",
       "effects": [
         {
           "text": "Pentacles 4 first effect mult x"
@@ -4329,6 +4562,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Pentacles 5 first effect mult: a multiplier; Relic 28 Effect: +an exponent",
       "effects": [
         {
           "text": "Pentacles 5 first effect mult x"
@@ -4345,6 +4579,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Pentacles 6 first effect mult: a multiplier; Relic 31 Softcap is +a multiplier weaker",
       "effects": [
         {
           "text": "Pentacles 6 first effect mult x"
@@ -4361,6 +4596,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Pentacles 7 first effect mult: a multiplier; Post 300 Mineral Cost Scaling is +a multiplier weaker",
       "effects": [
         {
           "text": "Pentacles 7 first effect mult x"
@@ -4377,6 +4613,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Pentacles 8 first effect mult: a multiplier; Relic 17 is +a multiplier stronger",
       "effects": [
         {
           "text": "Pentacles 8 first effect mult x"
@@ -4393,6 +4630,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Pentacles 9 first effect mult: a multiplier; Makes Pentacles 8's effect +a multiplier stronger",
       "effects": [
         {
           "text": "Pentacles 9 first effect mult x"
@@ -4409,6 +4647,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Pentacles 10 first effect mult: a multiplier; The first 10 Pentacles Tarot card effects are +a multiplier stronger",
       "effects": [
         {
           "text": "Pentacles 10 first effect mult x"
@@ -4425,6 +4664,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Pentacles Page first effect multiplier: a multiplier; Relic 41 effect multiplier +a multiplier",
       "effects": [
         {
           "text": "Pentacles Page first effect mult x"
@@ -4441,6 +4681,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Pentacles Knight first effect multiplier: a multiplier; Achievement 231 reward is multiplied by +a multiplier",
       "effects": [
         {
           "text": "Pentacles Knight first effect mult x"
@@ -4457,6 +4698,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Pentacles Queen first effect multiplier: a multiplier; Unlocks the second earth factor and multiplies factor 1 for all elements by a multiplier (after the e308 softcap)",
       "effects": [
         {
           "text": "Pentacles Queen first effect mult x"
@@ -4473,6 +4715,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Base Cups Generation: a value/s; Zodiac Quality: +an exponent",
       "effects": [
         {
           "text": "Base Cups Generation /s"
@@ -4489,6 +4732,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Cups 1 first effect mult: a multiplier; Relic 37 Effect: +an exponent",
       "effects": [
         {
           "text": "Cups 1 first effect mult x"
@@ -4505,6 +4749,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Cups 2 first effect mult: a multiplier; Relic 33 Effect: a multiplier",
       "effects": [
         {
           "text": "Cups 2 first effect mult x"
@@ -4521,6 +4766,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Cups 3 first effect mult: a multiplier; Relic 14 Power: +an exponent",
       "effects": [
         {
           "text": "Cups 3 first effect mult x"
@@ -4537,6 +4783,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Cups 4 first effect mult: a multiplier; Refine Node 16 Effect: +a multiplier",
       "effects": [
         {
           "text": "Cups 4 first effect mult x"
@@ -4553,6 +4800,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Cups 5 first effect mult: a multiplier; Polish Spear Effect: +an exponent",
       "effects": [
         {
           "text": "Cups 5 first effect mult x"
@@ -4569,6 +4817,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Cups 6 first effect mult: a multiplier; Refine Node 52 Effect: +a multiplier",
       "effects": [
         {
           "text": "Cups 6 first effect mult x"
@@ -4585,6 +4834,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Cups 7 first effect mult: a multiplier; Runes Generation: +a multiplier (Rounded Total)",
       "effects": [
         {
           "text": "Cups 7 first effect mult x"
@@ -4601,6 +4851,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Cups 8 first effect mult: a multiplier; Basically divides the base mineral cost exponent by +/- a value",
       "effects": [
         {
           "text": "Cups 8 first effect mult x"
@@ -4617,6 +4868,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Cups 9 first effect mult: a multiplier; Post 100 Polish Upgrades Cost Scaling is +a multiplier weaker",
       "effects": [
         {
           "text": "Cups 9 first effect mult x"
@@ -4633,6 +4885,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Cups 10 first effect mult: a multiplier; The first 10 Cups Tarot card effects are +a multiplier stronger",
       "effects": [
         {
           "text": "Cups 10 first effect mult x"
@@ -4649,6 +4902,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Cups Page first effect multiplier: a multiplier; Special Minerals Merge Factor (SMMF) an amount",
       "effects": [
         {
           "text": "Cups Page first effect mult x"
@@ -4665,6 +4919,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Cups Knight first effect multiplier: a multiplier; Achievement 233 reward is multiplied by +a multiplier",
       "effects": [
         {
           "text": "Cups Knight first effect mult x"
@@ -4681,6 +4936,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Cups Queen first effect multiplier: a multiplier; Unlocks the second water factor and multiplies factor 1 for all elements by a multiplier (after the e308 softcap)",
       "effects": [
         {
           "text": "Cups Queen first effect mult x"
@@ -4697,6 +4953,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Instantly spawns a Black Gem with Lv.a value; Cooldown Time: a value",
       "effects": [
         {
           "text": "Instantly spawns a black gem with Lv.# (base lvl + 1)"
@@ -4710,6 +4967,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Gain a value seconds of production for your currently generated element (you must be generating an element to use this Arcan).; Cooldown Time: a value",
       "effects": [
         {
           "text": "You will get # (base 3,600) seconds of production of currently generating element (you have to generate any element to use this arcan)"
@@ -4723,6 +4981,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Increases Refine Node 1's effect by a multiplier for a while; Cooldown Time: a value",
       "effects": [
         {
           "text": "Increases Refine Node 1 effect by x# (base 2.000) during some times"
@@ -4736,6 +4995,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Slowly increases and decreases Zodiac sell cost by a multiplier; Cooldown Time: a value",
       "effects": [
         {
           "text": "Slowly Increases and Decreases Zodiac Sell Cost by x# (base 10.00)"
@@ -4749,6 +5009,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Slowly increases and decreases Mineral Cost Exp by a value; Cooldown Time: a value",
       "effects": [
         {
           "text": "Slowly Increases and Decreases Mineral Cost Exp by # (base 0.200)"
@@ -4762,6 +5023,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Levels up all your common Minerals by a value (but not above max spawn level + 50); Cooldown Time: a value",
       "effects": [
         {
           "text": "Levels Up all of your common minerals by # (base 1.000) (but can't be bigger than max spawn level + 50)"
@@ -4775,6 +5037,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Slowly increases and decreases Relic 28 Effect by a multiplier; Cooldown Time: a value",
       "effects": [
         {
           "text": "Slowly Increases and Decreases Relic 28 effect by # (base 0.100)"
@@ -4788,6 +5051,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Decrease your SMS Factor by a value; Cooldown Time: a value",
       "effects": [
         {
           "text": "Decreases your SMS factor by # (base 1,000)"
@@ -4801,6 +5065,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Keeps the lowest cost for spawning upcoming Special Minerals (a value secs); Cooldown Time: a value",
       "effects": [
         {
           "text": "Keep the lowest cost for spawning next Special Minerals (4.000 secs)"
@@ -4814,6 +5079,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Makes other Tarot Arcana a multiplier more effective for a while; Cooldown Time: a value",
       "effects": [
         {
           "text": "Make Other Tarot Arcans be x# (base 1.050) more effective for some time"
@@ -4827,6 +5093,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Gambling :D - 50% chance to gain more Tarot Draws, 50% chance to lose them. Maximum gain/loss: a value (they can go negative, but you need a positive number of draws to use this); Cooldown Time: a value",
       "effects": [
         {
           "text": "Gambling :D - 50% - get more tarot draws, 50% - lost them. Max amount of gain/lose - # (base 10.00) (they can go negative, but you need positive amount of draws to use it)"
@@ -4840,6 +5107,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Slowly increases and decreases Attack Exponent by a value; Cooldown Time: a value",
       "effects": [
         {
           "text": "Slowly Increases and Decreases your Attack Exponent by # (base 0.100)"
@@ -4847,12 +5115,13 @@
       ],
       "id": "tarot-the-strength",
       "kind": "tarot-card",
-      "name": "The Strength",
+      "name": "Strength",
       "system": "tarot",
       "wiki": "Tarot"
     },
     {
       "confidence": "documented",
+      "description": "Makes Polish Knuckles count as an amount levels; Cooldown Time: a value",
       "effects": [
         {
           "text": "Makes Polish Knuckles +# (base 40.00) levels effective"
@@ -4866,6 +5135,7 @@
     },
     {
       "confidence": "documented",
+      "description": "While this skill is active, it will randomly perform Refine Prestige, granting a multiplier more RfP; Cooldown Time: a value",
       "effects": [
         {
           "text": "During this skill is active will randomly perform refine prestige, granting x# (base 10.00) more RfP"
@@ -4879,6 +5149,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Add a value Zodiacs of the type in your Fortune Pars slot, but with the stats you'd get from Unity; Cooldown Time: a value",
       "effects": [
         {
           "text": "Add # (base 3.000) zodiacs of that type which is in your Fortune Pars slot, but with stats you'd get on Unity"
@@ -4892,6 +5163,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Boosts the 1st effect of all common Tarot cards by +a multiplier with a 66% chance. With a 33% chance, it applies one of 5 debuffs (described in Help). It has a 1% chance to take your soul.; Cooldown Time: a value",
       "effects": [
         {
           "text": "Will boost 1st effect of all common tarot cards by +x (base 0.007) with a chance of 66%. With a chance 33% will apply one of 5 debuffs (descr. in help). Have 1% chance to take your soul (-1 Soul )"
@@ -4905,6 +5177,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Destroys a random Special Gem, granting this gem a value^[Gem Lv] SMP; Cooldown Time: a value",
       "effects": [
         {
           "text": "Will destroy random special gem granting #^[Gem Lv] (base 1.800) SMP to this gem"
@@ -4918,6 +5191,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Multiplies your Luck by your number of powered stars, raised to an exponent; Cooldown Time: a value",
       "effects": [
         {
           "text": "Multiplies Your Luck by amount of stars you have powered to ^# (base 0.400)"
@@ -4931,6 +5205,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Upgrade the Zodiac in the Moon position to a multiplier quality, but it becomes weaker after e1,000 quality; Cooldown Time: a value",
       "effects": [
         {
           "text": "Upgrades zodiac on moon postiton (position) x# (base 1,000) quality. But it's weaker after e1,000 quality"
@@ -4944,6 +5219,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Grants a value levels to a random card you already own; Cooldown Time: a value",
       "effects": [
         {
           "text": "Gives # (base 1.000) levels to a random card you already have"
@@ -4957,6 +5233,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Equalizes your Tarot resources and increases their values by an exponent; Cooldown Time: a value",
       "effects": [
         {
           "text": "Makes your tarot resources be equal and increase their values by ^# (base 0.800) of they value"
@@ -4970,6 +5247,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Decreases the cooldowns of all previous Arcana by a value sec; Cooldown Time: a value",
       "effects": [
         {
           "text": "Decrease cooldowns of all previous arcanes (Arcans) by # (base 4,000) sec (seconds)"
@@ -5151,6 +5429,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Increase the power of Fire Factor 1 by a value",
       "effects": [
         {
           "text": "Increase power for factor 1 for fire by 0.25 Increases the power on the score multiplier for fire"
@@ -5164,6 +5443,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Increase Asc. Power from VP based on your current Fire",
       "effects": [
         {
           "text": "Increase Ascension Power from VP based on you current fire"
@@ -5177,6 +5457,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Attack Levels past 3,600 boost your Fire Generation",
       "effects": [
         {
           "text": "Attack level past 3600 boosts Fire generation Formula is: $1 + \\frac {(AttackLevel-3600)^2}{100}$"
@@ -5190,6 +5471,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Fire boosts Relic 26's effect",
       "effects": [
         {
           "text": "Fire boosts Relic 26 effect (improves Quality donut)"
@@ -5203,6 +5485,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Fire boosts Relic 31's effect",
       "effects": [
         {
           "text": "Fire boosts Relic 31 effect (mineral cost)"
@@ -5216,6 +5499,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Fire boosts the base of RN 60",
       "effects": [
         {
           "text": "Fire adds base to Refine Tree Node 60"
@@ -5229,6 +5513,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Fire boosts its own factor 2 (a multiplier multiplier)",
       "effects": [
         {
           "text": "Fire boosts its own factor 2"
@@ -5242,6 +5527,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Wands boost Fire generation (factor 1)",
       "effects": [
         {
           "text": "Wands boost Fire generation (factor 1)"
@@ -5255,6 +5541,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Fire boosts the first card bonuses of all Wands cards: a multiplier",
       "effects": [
         {
           "text": "Fire boosts first card bonuses for all wands cards"
@@ -5268,6 +5555,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Relic 45's effect is multiplied based on your Fire: a multiplier",
       "effects": [
         {
           "text": "Relic 45 effect is multiplied based on your fire (SMP Exp)"
@@ -5281,6 +5569,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Unlocks the third factor for Fire",
       "effects": [
         {
           "text": "Unlocks third factor for fire"
@@ -5294,6 +5583,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Increase the power of Earth Factor 1 by a value",
       "effects": [
         {
           "text": "Increase power for factor 1 for earth by 2 Increases power for Infinities multipliter for Earth"
@@ -5307,6 +5597,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Earth boosts Refine Node 1's effect",
       "effects": [
         {
           "text": "Earth boosts Refine Node 1 effect"
@@ -5320,6 +5611,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Earth boosts Gold Gain",
       "effects": [
         {
           "text": "Earth boosts Gold Gain"
@@ -5333,6 +5625,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Earth boosts Relic 32's effect",
       "effects": [
         {
           "text": "Earth boosts Relic 32 effect (Polish points gain)"
@@ -5346,6 +5639,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Earth adds to the base of RN 50",
       "effects": [
         {
           "text": "Earth adds base to Refine Node 50"
@@ -5359,6 +5653,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Earth boosts Relic 37",
       "effects": [
         {
           "text": "Earth boosts Relic 37 (Global Element Mult.)"
@@ -5372,6 +5667,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Earth boosts its own factor 2 (a multiplier multiplier)",
       "effects": [
         {
           "text": "Earth boosts it's own factor 2"
@@ -5385,6 +5681,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Pentacles boost Earth generation (factor 1)",
       "effects": [
         {
           "text": "Pentacles boost Earth Generation (factor 1)"
@@ -5398,6 +5695,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Earth boosts the first card bonuses of all Pentacles cards: a multiplier",
       "effects": [
         {
           "text": "Earth boosts first card bonuses for all pentacles cards"
@@ -5411,6 +5709,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Unlocks the third factor for Earth",
       "effects": [
         {
           "text": "Unlocks third factor for earth"
@@ -5424,6 +5723,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Increase the power of Wind Factor 1 by a value",
       "effects": [
         {
           "text": "Increase power for factor 1 for wind by 3 Increases power for Eternities multiplier for Wind"
@@ -5437,6 +5737,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Current Wind divides Special Mineral base cost (cur.: a divisor)",
       "effects": [
         {
           "text": "Current wind divides base special mineral cost"
@@ -5450,6 +5751,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Wind boosts Relic 25's effect",
       "effects": [
         {
           "text": "Wind boosts Relic 25 effect (Luck donut)"
@@ -5463,6 +5765,7 @@
     },
     {
       "confidence": "documented",
+      "description": "PP (past 1.08e308) boosts your Wind Generation",
       "effects": [
         {
           "text": "PP after 1.79e308 boosts Wind generation The Formula is: $1.01+(x-308)^2/100$ (Only the $(x-308)^2$ is divided by 100)"
@@ -5476,6 +5779,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Wind boosts Relic 33's effect",
       "effects": [
         {
           "text": "Wind boosts Relic 33 effect (RfP gain)"
@@ -5489,6 +5793,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Relic 1 now applies to Attack Asc. Power",
       "effects": [
         {
           "text": "Relic 1 now also applies to Attacks Asc. Power"
@@ -5502,6 +5807,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Wind boosts its own factor 2 (a multiplier multiplier)",
       "effects": [
         {
           "text": "Wind boosts its own factor 2"
@@ -5515,6 +5821,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Swords boost Wind generation (factor 1)",
       "effects": [
         {
           "text": "Swords boost Wind Generation (factor 1)"
@@ -5528,6 +5835,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Wind boosts the first card bonuses of all Swords cards: a multiplier",
       "effects": [
         {
           "text": "Wind boosts first card bonuses for all swords cards"
@@ -5541,6 +5849,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Relic 41's effect is multiplied based on your Wind: a multiplier",
       "effects": [
         {
           "text": "Relic 41 effect is multiplied based on your wind (Black Gem Effect, for Tarot Draws)"
@@ -5554,6 +5863,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Wind slowly boosts RN69: a multiplier",
       "effects": [
         {
           "text": "Wind slowly boosts Refine Node 69"
@@ -5567,6 +5877,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Unlocks the third factor for Wind",
       "effects": [
         {
           "text": "Unlocks third factor for wind"
@@ -5580,6 +5891,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Each Water Zodiac multiplies your Luck by a multiplier",
       "effects": [
         {
           "text": "Each Water Zodiac multiplies your luck by x1.1"
@@ -5593,6 +5905,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Water boosts Refine Node 18's effect",
       "effects": [
         {
           "text": "Water boosts Refine Node 18 effect (Magnet Chance)"
@@ -5606,6 +5919,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Water boosts Relic 24's effect",
       "effects": [
         {
           "text": "Water boosts Relic 24 effect (Game Speed Donut)"
@@ -5619,6 +5933,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Water boosts Relic 34's effect",
       "effects": [
         {
           "text": "Water boosts Relic 34 effect (Rune Generation Speed)"
@@ -5632,6 +5947,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Water boosts the first node of all elements (at different rates)",
       "effects": [
         {
           "text": "Water boosts first node for all elements (at different rates)"
@@ -5645,6 +5961,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Multiplies the base of RN 60 by a multiplier",
       "effects": [
         {
           "text": "Multiplies Refine Node 60 base by x2"
@@ -5658,6 +5975,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Water boosts its own factor 2 (a multiplier multiplier)",
       "effects": [
         {
           "text": "Water boosts is own factor 2"
@@ -5671,6 +5989,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Cups boost Water generation (factor 1)",
       "effects": [
         {
           "text": "Cups boost Water generation"
@@ -5684,6 +6003,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Water boosts the first card bonuses of all Cups cards: a multiplier",
       "effects": [
         {
           "text": "Water boosts first card bonuses for all cups cards"
@@ -5697,6 +6017,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Water boosts Global Element Multiplier: a multiplier",
       "effects": [
         {
           "text": "Water boosts Global Element Mult"
@@ -5710,6 +6031,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Unlocks the third factor for Water",
       "effects": [
         {
           "text": "Unlocks third factor for water"
@@ -6648,6 +6970,7 @@
     },
     {
       "confidence": "provisional",
+      "description": "Unlocks Milestones. The SMS factor is now always 0 and cannot grow",
       "effects": [
         {
           "text": "Unlock Milestones Tab SMS Factor is locked at 0"
@@ -6661,6 +6984,7 @@
     },
     {
       "confidence": "provisional",
+      "description": "Unlocks Effects Tab",
       "effects": [
         {
           "text": "Unlock Effects Tab"
@@ -6674,6 +6998,7 @@
     },
     {
       "confidence": "provisional",
+      "description": "Keep Plague on Singularity Reset. Plague Generator rewards no longer decrease.",
       "effects": [
         {
           "text": "Keep Plague on Singularity Reset Plague Generator Awards no longer decrease"
@@ -6687,6 +7012,7 @@
     },
     {
       "confidence": "provisional",
+      "description": "Unlocks Tree Tab",
       "effects": [
         {
           "text": "Unlocks Tree Tab"
@@ -6700,6 +7026,7 @@
     },
     {
       "confidence": "provisional",
+      "description": "Keep Artifacts on Singularity Reset",
       "effects": [
         {
           "text": "Keep Artifacts on Singularity Reset"
@@ -6713,6 +7040,7 @@
     },
     {
       "confidence": "provisional",
+      "description": "The Atom requirement for the next Singularity starts increasing. You can still trigger a Singularity at 1.8e308 Atoms to gain Singularity Mult, but your Singularity Count will not increase",
       "effects": [
         {
           "text": "The Atom Requirement for the next Singularity starts increasing. You can still perform a Singularity at 1.8e308 Atoms to get Singularity Mult, but your Singularity Count will NOT increase."
@@ -6726,6 +7054,7 @@
     },
     {
       "confidence": "provisional",
+      "description": "Keep Elements, Minerals and Tarot on Singularity Reset",
       "effects": [
         {
           "text": "Keep Elements, Minerals and Tarot on Singularity Reset"
@@ -6739,6 +7068,7 @@
     },
     {
       "confidence": "provisional",
+      "description": "Singularity Count acts as a factor for the next Singularity Mult",
       "effects": [
         {
           "text": "Singularity Count acts as a factor for the next Singularity Mult"
@@ -6752,6 +7082,7 @@
     },
     {
       "confidence": "provisional",
+      "description": "Unlocks Houses Tab",
       "effects": [
         {
           "text": "Unlocks Houses Tab"
@@ -6765,6 +7096,7 @@
     },
     {
       "confidence": "provisional",
+      "description": "Singularity Mult acts as a factor for the next Singularity Mult",
       "effects": [
         {
           "text": "Singularity Mult acts as a factor for the next Singularity Mult"
@@ -6778,6 +7110,7 @@
     },
     {
       "confidence": "provisional",
+      "description": "Multiplies the base of all particle generators and multipliers by 1 + Singularity / 100",
       "effects": [
         {
           "text": "Multiplies the base of all particle generators and multipliers by $1 + \\text{singularity} / 100$"
@@ -6791,6 +7124,7 @@
     },
     {
       "confidence": "provisional",
+      "description": "Each singularity multiplies mastery gain by x1.01",
       "effects": [
         {
           "text": "Each singularity multipliers mastery gain by x1.01"
@@ -6804,6 +7138,7 @@
     },
     {
       "confidence": "provisional",
+      "description": "Sacrifice Dust Gain: ^1.05",
       "effects": [
         {
           "text": "Sacrifice Dust Gain: ^1.1"
@@ -6817,6 +7152,7 @@
     },
     {
       "confidence": "provisional",
+      "description": "Black Gem Efficiency: ^1.1",
       "effects": [
         {
           "text": "Black Gem Efficiency: ^1.1"
@@ -6830,6 +7166,7 @@
     },
     {
       "confidence": "provisional",
+      "description": "Elements Factors 1 and 2 powers x3",
       "effects": [
         {
           "text": "Element Factors 1 and 2 powers x3"
@@ -6843,6 +7180,7 @@
     },
     {
       "confidence": "provisional",
+      "description": "Divides last elements nodes upgrades costs by a value",
       "effects": [
         {
           "text": "Divides last element nodes upgrades cost by 1e300"
@@ -6856,6 +7194,7 @@
     },
     {
       "confidence": "provisional",
+      "description": "Allows you to auto-select the highest Plague stage",
       "effects": [
         {
           "text": "Unlocks Auto-Highest Plague Stage"
@@ -6869,6 +7208,7 @@
     },
     {
       "confidence": "provisional",
+      "description": "SMP Exp Requirements: ^0.75",
       "effects": [
         {
           "text": "SMP Exp Requirements: ^0.75"
@@ -6882,6 +7222,7 @@
     },
     {
       "confidence": "provisional",
+      "description": "Atoms are now unlocked as a Singularity Mult factor",
       "effects": [
         {
           "text": "Atoms are now unlocked as a Singularity Mult Factor"
@@ -6895,6 +7236,7 @@
     },
     {
       "confidence": "provisional",
+      "description": "You can now obtain Singular Zodiacs if you have already unlocked Houses",
       "effects": [
         {
           "text": "You can now obtain Singular Zodiacs if you have already unlocked houses"
@@ -6902,12 +7244,13 @@
       ],
       "id": "singularity-milestone-horoscope-of-the-void",
       "kind": "upgrade",
-      "name": "Horoscope of the Void",
+      "name": "Horoscope Of The Void",
       "system": "singularity-milestones-atoms",
       "wiki": "Singularity"
     },
     {
       "confidence": "provisional",
+      "description": "Atoms past e1,000 boost luck for a little (new effect)",
       "effects": [
         {
           "text": "Atoms past e1000 boost luck for a little (new effect)"
@@ -6921,6 +7264,7 @@
     },
     {
       "confidence": "provisional",
+      "description": "Max Atoms boost the base of all particle generators (+0.1 per e1,000 atoms)",
       "effects": [
         {
           "text": "Max Atoms boost the base of all particle generators (+0.1 per e1,000 atoms)"
@@ -6934,6 +7278,7 @@
     },
     {
       "confidence": "provisional",
+      "description": "Max Atoms (after 1e10,000) slightly boost Refine Points",
       "effects": [
         {
           "text": "Max Atoms (after 1e10,000) slightly boost Refine Points"
@@ -7791,6 +8136,7 @@
     },
     {
       "confidence": "provisional",
+      "description": "Generator a value multiplier is multiplied by Infinities and unlocks Automation and Autobuy.",
       "effects": [
         {
           "text": "Generator mult × Infinities & unlocks Autobuy"
@@ -7798,12 +8144,13 @@
       ],
       "id": "infinity-upgrade-1-1-infinity-generation-and-automation",
       "kind": "upgrade",
-      "name": "1;1 Infinity Generation and Automation",
+      "name": "1;1 Infinity Generation & Automation",
       "system": "infinity-upgrades",
       "wiki": "Infinity"
     },
     {
       "confidence": "provisional",
+      "description": "Common Exponent is increased by a value",
       "effects": [
         {
           "text": "+0.01 to Common Exponent"
@@ -7817,6 +8164,7 @@
     },
     {
       "confidence": "provisional",
+      "description": "Unlock Auto Ascension",
       "effects": [
         {
           "text": "Unlocks Auto Ascension"
@@ -7830,6 +8178,7 @@
     },
     {
       "confidence": "provisional",
+      "description": "Lap speed is multiplied by x1.1",
       "effects": [
         {
           "text": "x1.1 to lap speed"
@@ -7843,6 +8192,7 @@
     },
     {
       "confidence": "provisional",
+      "description": "Lap speed is multiplied by x1.2",
       "effects": [
         {
           "text": "x1.2 to lap speed"
@@ -7856,6 +8206,7 @@
     },
     {
       "confidence": "provisional",
+      "description": "Prestige Mult gain is increased based on time spent in Infinity",
       "effects": [
         {
           "text": "Boosts Prestige mult based on time in Infinity"
@@ -7869,6 +8220,7 @@
     },
     {
       "confidence": "provisional",
+      "description": "Common Exponent gain is multiplied based on your number of Infinities (before softcaps).",
       "effects": [
         {
           "text": "Boosts Common Exponent based on Infinities"
@@ -7882,6 +8234,7 @@
     },
     {
       "confidence": "provisional",
+      "description": "Unlock Auto Prestige",
       "effects": [
         {
           "text": "Unlocks Automation for Prestiging"
@@ -7895,6 +8248,7 @@
     },
     {
       "confidence": "provisional",
+      "description": "Ascension Power base is increased by 2",
       "effects": [
         {
           "text": "Gives +2 to Ascension Power"
@@ -7902,12 +8256,13 @@
       ],
       "id": "infinity-upgrade-6-1-mighty-ascend",
       "kind": "upgrade",
-      "name": "6;1 Mighty Ascend",
+      "name": "6;1 Mighty Ascension",
       "system": "infinity-upgrades",
       "wiki": "Infinity"
     },
     {
       "confidence": "provisional",
+      "description": "Ascension Power is multiplied based on your Infinities.",
       "effects": [
         {
           "text": "Boosts Ascension Power based on Infinities"
@@ -7921,6 +8276,7 @@
     },
     {
       "confidence": "provisional",
+      "description": "Unlock Challenges",
       "effects": [
         {
           "text": "Unlocks Infinity Challenges"
@@ -7934,6 +8290,7 @@
     },
     {
       "confidence": "provisional",
+      "description": "Generator 1 is stronger based on time spent in the current Infinity.",
       "effects": [
         {
           "text": "Boosts Gen 1 based on time in Infinity"
@@ -7941,12 +8298,13 @@
       ],
       "id": "infinity-upgrade-8-1-generator-time",
       "kind": "upgrade",
-      "name": "8;1 Generator & Time",
+      "name": "8;1 Generator and Time",
       "system": "infinity-upgrades",
       "wiki": "Infinity"
     },
     {
       "confidence": "provisional",
+      "description": "Generator 1 is stronger based on current Generator Power.",
       "effects": [
         {
           "text": "Boosts Gen 1 based on Gen Power"
@@ -7954,12 +8312,13 @@
       ],
       "id": "infinity-upgrade-8-2-generator-power",
       "kind": "upgrade",
-      "name": "8;2 Generator & Power",
+      "name": "8;2 Generator and Power",
       "system": "infinity-upgrades",
       "wiki": "Infinity"
     },
     {
       "confidence": "provisional",
+      "description": "Generator 1 is 5x stronger",
       "effects": [
         {
           "text": "Gen 1 ×5"
@@ -7967,12 +8326,13 @@
       ],
       "id": "infinity-upgrade-8-3-generator-constant",
       "kind": "upgrade",
-      "name": "8;3 Generator & Constant",
+      "name": "8;3 Generator and Constant",
       "system": "infinity-upgrades",
       "wiki": "Infinity"
     },
     {
       "confidence": "provisional",
+      "description": "Generator 2 is stronger based on time spent in the current Infinity.",
       "effects": [
         {
           "text": "Boosts Gen 2 based on time in Infinity"
@@ -7980,12 +8340,13 @@
       ],
       "id": "infinity-upgrade-9-1-generator-2-time",
       "kind": "upgrade",
-      "name": "9;1 Generator 2 & Time",
+      "name": "9;1 Generator 2 and Time",
       "system": "infinity-upgrades",
       "wiki": "Infinity"
     },
     {
       "confidence": "provisional",
+      "description": "Generator 2 is 3x stronger",
       "effects": [
         {
           "text": "Gen 2 ×3"
@@ -7993,12 +8354,13 @@
       ],
       "id": "infinity-upgrade-9-2-generator-2-constant",
       "kind": "upgrade",
-      "name": "9;2 Generator 2 & Constant",
+      "name": "9;2 Generator 2 and Constant",
       "system": "infinity-upgrades",
       "wiki": "Infinity"
     },
     {
       "confidence": "provisional",
+      "description": "Unlock Promotion Automation",
       "effects": [
         {
           "text": "Unlocks Automation for Promotions"
@@ -8012,6 +8374,7 @@
     },
     {
       "confidence": "provisional",
+      "description": "Generator 1 is stronger based on your current IP.",
       "effects": [
         {
           "text": "Boosts Gen 1 based on current IP"
@@ -8025,6 +8388,7 @@
     },
     {
       "confidence": "provisional",
+      "description": "Generator 2 is stronger based on your current IP.",
       "effects": [
         {
           "text": "Boosts Gen 2 based on current IP"
@@ -8038,6 +8402,7 @@
     },
     {
       "confidence": "provisional",
+      "description": "Infinities boost Generator 2 at a reduced rate.",
       "effects": [
         {
           "text": "Infinities boost Gen 2"
@@ -8045,12 +8410,13 @@
       ],
       "id": "infinity-upgrade-12-1-first-but-better",
       "kind": "upgrade",
-      "name": "12;1 First, but better",
+      "name": "12;1 First, but Better",
       "system": "infinity-upgrades",
       "wiki": "Infinity"
     },
     {
       "confidence": "provisional",
+      "description": "Base Ascension Power is increased by 1",
       "effects": [
         {
           "text": "Gives +1 to Ascension Power"
@@ -8064,6 +8430,7 @@
     },
     {
       "confidence": "provisional",
+      "description": "Promotion 1 is stronger based on its level",
       "effects": [
         {
           "text": "Promotion 1 stronger based on its level"
@@ -8071,12 +8438,13 @@
       ],
       "id": "infinity-upgrade-14-1-first-for-the-first",
       "kind": "upgrade",
-      "name": "14;1 First for the first",
+      "name": "14;1 First for the First",
       "system": "infinity-upgrades",
       "wiki": "Infinity"
     },
     {
       "confidence": "provisional",
+      "description": "Generator Exponent base is increased to 0.75",
       "effects": [
         {
           "text": "Gen Exponent base is increased to 0.75"
@@ -8090,6 +8458,7 @@
     },
     {
       "confidence": "provisional",
+      "description": "Unlock Infinity Automation",
       "effects": [
         {
           "text": "Unlocks Automation for Infinities"
@@ -8103,6 +8472,7 @@
     },
     {
       "confidence": "provisional",
+      "description": "IP is multiplied based on total Challenge time.",
       "effects": [
         {
           "text": "Boosts IP gain based on challenge times"
@@ -8116,6 +8486,7 @@
     },
     {
       "confidence": "provisional",
+      "description": "Generator 1 is multiplied based on total Challenge time.",
       "effects": [
         {
           "text": "Boosts Gen 1 based on challenge times"
@@ -8129,6 +8500,7 @@
     },
     {
       "confidence": "provisional",
+      "description": "Generator 2 is multiplied based on total Challenge time.",
       "effects": [
         {
           "text": "Boosts Gen 2 based on challenge times"
@@ -8142,6 +8514,7 @@
     },
     {
       "confidence": "provisional",
+      "description": "IP is multiplied based on Infinities.",
       "effects": [
         {
           "text": "Boosts IP gain based on Infinities"
@@ -8149,12 +8522,13 @@
       ],
       "id": "infinity-upgrade-16-1-infinity-to-ip",
       "kind": "upgrade",
-      "name": "16;1 Infinity to IP",
+      "name": "16;1 Infinities to IP",
       "system": "infinity-upgrades",
       "wiki": "Infinity"
     },
     {
       "confidence": "provisional",
+      "description": "Ascension Power is multiplied based on your Infinities.",
       "effects": [
         {
           "text": "Boosts Ascension Power based on Infinities"
@@ -8168,6 +8542,7 @@
     },
     {
       "confidence": "provisional",
+      "description": "Promotion 4 is stronger based on 9th Challenge time.",
       "effects": [
         {
           "text": "Boosts Promotion 4 based on challenge 9 time"
@@ -8181,6 +8556,7 @@
     },
     {
       "confidence": "provisional",
+      "description": "Generator 3 is stronger based on your Infinities.",
       "effects": [
         {
           "text": "Boosts Gen 3 based on Infinities"
@@ -8194,6 +8570,7 @@
     },
     {
       "confidence": "provisional",
+      "description": "Infinities are multiplied based on total Challenge time.",
       "effects": [
         {
           "text": "Boosts Infinities based on challenge times"
@@ -8207,6 +8584,7 @@
     },
     {
       "confidence": "provisional",
+      "description": "Generator 1 is 10x stronger",
       "effects": [
         {
           "text": "Gen 1 ×10"
@@ -8214,12 +8592,13 @@
       ],
       "id": "infinity-upgrade-17-3-boost-to-the-first",
       "kind": "upgrade",
-      "name": "17;3 Boost to the first",
+      "name": "17;3 Boost for the First",
       "system": "infinity-upgrades",
       "wiki": "Infinity"
     },
     {
       "confidence": "provisional",
+      "description": "Trigger passive Infinity gains every a value times your fastest Infinity time.",
       "effects": [
         {
           "text": "Passive Infinities based on fastest Infinity"
@@ -8233,6 +8612,7 @@
     },
     {
       "confidence": "provisional",
+      "description": "Generator 4 is stronger based on bought Generator 3.",
       "effects": [
         {
           "text": "Boosts Gen 4 based on bought Gen 3s"
@@ -8246,6 +8626,7 @@
     },
     {
       "confidence": "provisional",
+      "description": "Generator 3 is stronger based on bought Generator 2.",
       "effects": [
         {
           "text": "Boosts Gen 3 based on bought Gen 2s"
@@ -8259,6 +8640,7 @@
     },
     {
       "confidence": "provisional",
+      "description": "Generator Exponent base is increased to 0.9",
       "effects": [
         {
           "text": "Gen Exponent base is increased to 0.9"
@@ -8266,12 +8648,13 @@
       ],
       "id": "infinity-upgrade-19-1-almost-one",
       "kind": "upgrade",
-      "name": "19;1 Almost one",
+      "name": "19;1 Almost One",
       "system": "infinity-upgrades",
       "wiki": "Infinity"
     },
     {
       "confidence": "provisional",
+      "description": "Promotion 3 is stronger based on Generator Mult.",
       "effects": [
         {
           "text": "Boosts Promotion 3 based on Gen Mult"
@@ -8285,6 +8668,7 @@
     },
     {
       "confidence": "provisional",
+      "description": "Lap speed is multiplied by x3",
       "effects": [
         {
           "text": "×3 to lap speed"
@@ -8298,6 +8682,7 @@
     },
     {
       "confidence": "provisional",
+      "description": "All Generators are stronger based on your fastest Infinity.",
       "effects": [
         {
           "text": "Boost Generators based on fastest Infinity"
@@ -8305,12 +8690,13 @@
       ],
       "id": "infinity-upgrade-20-1-as-fast-as-strong",
       "kind": "upgrade",
-      "name": "20;1 As fast as strong",
+      "name": "20;1 As Fast as Strong",
       "system": "infinity-upgrades",
       "wiki": "Infinity"
     },
     {
       "confidence": "provisional",
+      "description": "Generator Exponent is increased based on Generator Power.",
       "effects": [
         {
           "text": "Boosts Gen Exponent based on Gen Power"
@@ -8324,6 +8710,7 @@
     },
     {
       "confidence": "provisional",
+      "description": "Unlock Stars",
       "effects": [
         {
           "text": "Unlocks Stars"
@@ -8337,6 +8724,7 @@
     },
     {
       "confidence": "provisional",
+      "description": "Reward: Ace of Swords base effects: a multiplier",
       "effects": [
         {
           "text": "Resets Attack Levels. Attack and Damage mults are logarithmed. You cannot gain them during the challenge."
@@ -8353,6 +8741,7 @@
     },
     {
       "confidence": "provisional",
+      "description": "Reward: Two of Swords base effects: a multiplier",
       "effects": [
         {
           "text": "Game Speed, Attack, and Damage mults are put to double Log10 of their values. You cannot gain them during the challenge. (Double Log10 means $\\log_{10}(\\log_{10}(X))$.)"
@@ -8369,6 +8758,7 @@
     },
     {
       "confidence": "provisional",
+      "description": "Reward: Three of Swords base effects: a multiplier",
       "effects": [
         {
           "text": "Game Speed, Attack and Damage mults are logarithmed, raised to ^0.05, then divided by 10. You cannot gain them during the challenge."
@@ -8385,6 +8775,7 @@
     },
     {
       "confidence": "provisional",
+      "description": "Reward: Four of Swords base effects: a multiplier",
       "effects": [
         {
           "text": "Resets Attack Levels and attack mults are set to 1. Game speed and other mults are logarithmed. Mult gain is put to double log10."
@@ -8401,6 +8792,7 @@
     },
     {
       "confidence": "provisional",
+      "description": "Reward: Five of Swords base effects: a multiplier",
       "effects": [
         {
           "text": "Resets Attack Levels and attack mults are set to 1. Game speed and other mults are logarithmed. Mult gain is logarithmed and ^0.2."
@@ -8417,6 +8809,7 @@
     },
     {
       "confidence": "provisional",
+      "description": "Reward: Six of Swords base effects: a multiplier",
       "effects": [
         {
           "text": "Resets Attack Levels and gold and attack mults are set to 1. Game speed and other mults are logarithmed. Ascension power is reduced to double Log10. Gold gain is logarithmed."
@@ -8433,6 +8826,7 @@
     },
     {
       "confidence": "provisional",
+      "description": "Reward: Seven of Swords base effects: a multiplier",
       "effects": [
         {
           "text": "Resets Attack Levels and gold and attack mults are set to 1. Game speed and gold gain is logarithmed. Other mults are reduced to double Log10. Ascension Power is heavily nerfed, but the penalty weakens based on Attack Level."
@@ -8449,6 +8843,7 @@
     },
     {
       "confidence": "provisional",
+      "description": "Reward: Eight of Swords base effects: a multiplier",
       "effects": [
         {
           "text": "Resets Attack Levels and attack mults are set to 1. Ascension Power and all other mults are set to 1. Mult gain only comes from Attack Prestige."
@@ -8465,6 +8860,7 @@
     },
     {
       "confidence": "provisional",
+      "description": "Reward: Nine of Swords base effects: a multiplier",
       "effects": [
         {
           "text": "Resets Attack levels and mults. Only attack mult from score is effective, and it is $^{1/10^{10}}$. Game Speed is reduced to double Log10."
@@ -8481,6 +8877,7 @@
     },
     {
       "confidence": "provisional",
+      "description": "Reward: Ten of Swords base effects: a multiplier",
       "effects": [
         {
           "text": "Resets Attack Levels and sets Attack mults to 1. Game speed and other mults are logarithmed. Mult gain is set to Sword's LOGPOW."
@@ -8497,6 +8894,7 @@
     },
     {
       "confidence": "provisional",
+      "description": "Reward: Page of Swords base effects: a multiplier",
       "effects": [
         {
           "text": "Resets Attack Levels and sets Attack mults to 1, Game speed and other multipliers are logarithmed. Mult Gain is set to Sword's LOGPOW twice."
@@ -8513,6 +8911,7 @@
     },
     {
       "confidence": "provisional",
+      "description": "Reward: Knight of Swords base effects: a multiplier",
       "effects": [
         {
           "text": "Resets Attack Levels and sets Attack mults to 1, Game speed and other multipliers are logarithmed. Mult Gain is heavily nerfed, but this penalty becomes weaker based on the spread power of your equipped Endoplasmic Reticulum."
@@ -8529,6 +8928,7 @@
     },
     {
       "confidence": "provisional",
+      "description": "Reward: Queen of Swords base effects: a multiplier",
       "effects": [
         {
           "text": "Resets Attack Level and sets Attack mults to 1, Game speed and other multipliers are logarithmed. Mult Gain is heavily nerfed, but this penalty becomes weaker based on your current Singularity Mult"
@@ -8545,6 +8945,7 @@
     },
     {
       "confidence": "provisional",
+      "description": "Reward: King of Swords base effects: a multiplier. Adds a Completed Sword Challenges Singularity Factor",
       "effects": [
         {
           "text": "Requires 1.8e308 Atoms to enter. Resets Attack Level and sets Attack mults to 1, Game speed and other multipliers are logarithmed, then raised to ^0.3, Mult gain is heavily nerfed, but this penalty becomes weaker based on your current Atoms, Entering the challenge performs a Singularity and resets Atoms to 1. Adds a dynamic penalty that heavily nerfs Atom gain, but this becomes weaker based on your current attack level."
@@ -8561,6 +8962,7 @@
     },
     {
       "confidence": "provisional",
+      "description": "Reward: Ace of Wands base effects: a multiplier",
       "effects": [
         {
           "text": "Reset all of your elements. First two element factors, Relic 36, and Global Element mult are logarithmed."
@@ -8577,6 +8979,7 @@
     },
     {
       "confidence": "provisional",
+      "description": "Reward: Two of Wands base effects: a multiplier",
       "effects": [
         {
           "text": "Reset all of your elements. First two element factors, Relic 36, and Global Element mult are put to double Log10 of their values. Upgrades Fire-3 and Wind-4 are useless. The Magician is disabled."
@@ -8593,6 +8996,7 @@
     },
     {
       "confidence": "provisional",
+      "description": "Reward: Three of Wands base effects: a multiplier",
       "effects": [
         {
           "text": "Reset all of your elements. First two element factors, Relic 36, and Global Element mult are put to double Log10 of their values, and divided by 1000. Upgrades Fire-3 and Wind-4 are useless. The Magician is disabled."
@@ -8609,6 +9013,7 @@
     },
     {
       "confidence": "provisional",
+      "description": "Reward: Four of Wands base effects: a multiplier",
       "effects": [
         {
           "text": "Reset all of your elements except Earth and Water. Global Element Mult is divided by 1e10000."
@@ -8625,6 +9030,7 @@
     },
     {
       "confidence": "provisional",
+      "description": "Reward: Five of Wands base effects: a multiplier",
       "effects": [
         {
           "text": "Resets all elements to 1. Global Element mult is nerfed a lot, but it increases the more elements you have."
@@ -8641,6 +9047,7 @@
     },
     {
       "confidence": "provisional",
+      "description": "Reward: Six of Wands base effects: a multiplier",
       "effects": [
         {
           "text": "Resets all elements to 0. All factors are set to 1 and Global Element mult is set to 1/1e10 for the duration of the challenge. The Magician, Fire Node 3, Wind Node 4, and Relic 36 are useless."
@@ -8657,6 +9064,7 @@
     },
     {
       "confidence": "provisional",
+      "description": "Reward: Seven of Wands base effects: a multiplier",
       "effects": [
         {
           "text": "Resets all elements to 1. All three factors, Relic 36, game speed and Global Element mult are logarithmed. Nodes Fire-3 and Wind-4 are useless. The Magician is disabled."
@@ -8673,6 +9081,7 @@
     },
     {
       "confidence": "provisional",
+      "description": "Reward: Eight of Wands base effects: a multiplier",
       "effects": [
         {
           "text": "Resets all elements to 1. Relic 36, game speed and Global Element mult are logarithmed. Nodes Fire-3 and Wind-4 are useless. The Magician is disabled. Adds a heavy softcap for first 2 factors after x10."
@@ -8689,6 +9098,7 @@
     },
     {
       "confidence": "provisional",
+      "description": "Reward: Nine of Wands base effects: a multiplier",
       "effects": [
         {
           "text": "Resets all elements to 1. Relic 36, game speed and Global Element mult are logarithmed. Nodes Fire-3 and Wind-4 are useless. The Magician is disabled. Elements Third factor is -1, then /10."
@@ -8705,6 +9115,7 @@
     },
     {
       "confidence": "provisional",
+      "description": "Reward: Ten of Wands base effects: a multiplier",
       "effects": [
         {
           "text": "Resets all elements to 1. Relic 36, game speed, and Global element mult are put to Wand's LOGPOW. Nodes Fire-3 and Wind-4 are useless. The Magician is disabled. Factor 1 and 2 are also put to Wand's LOGPOW."
@@ -8721,6 +9132,7 @@
     },
     {
       "confidence": "provisional",
+      "description": "Reward: Page of Wands base effects: a multiplier",
       "effects": [
         {
           "text": "Reset your Elements to 1. The total gain of each Element is set to the Wand's LOGPOW."
@@ -8737,6 +9149,7 @@
     },
     {
       "confidence": "provisional",
+      "description": "Reward: Knight of Wands base effects: a multiplier",
       "effects": [
         {
           "text": "Reset your Elements to 1. Relic 36 game speed and Global Element mult are logarithmed. Nodes Fire-3 and Wind-4 are useless. The Magician is disabled. All factors are nerfed, but this penalty becomes weaker based on the Infectivity of your equipped Endoplasmic Reticulum."
@@ -8753,6 +9166,7 @@
     },
     {
       "confidence": "provisional",
+      "description": "Reward: Queen of Wands base effects: a multiplier",
       "effects": [
         {
           "text": "Reset your Elements to 1. Element factors 1 and 2 are capped at 2 raised to your current Singularity mult. Nodes Fire-3 and Wind-4 are useless. The Magician is disabled. Global Element mult is capped at 1000 raised to your current Singularity Count. Local Element Speed is capped at 1."
@@ -8769,6 +9183,7 @@
     },
     {
       "confidence": "provisional",
+      "description": "Reward: King of Wands base effects: a multiplier. Adds a Completed Wand Challenges Singularity Factor",
       "effects": [
         {
           "text": "Requires 1.8e308 Atoms to enter ,Element factors 1 and 2 are capped at your current Atoms. Nodes Fire-3 and Wind-4 are useless. The Magician is disabled. Global Element mult is capped at your current Singularity mult. Local Element Speed is capped at 1. King Tarot cards and other multipliers are useless. Entering Performs a Singularity and resets atoms to 1. Adds a Dynamic Penalty that heavily nerfs Atom Gain, but becomes weaker based on your current Fire"
@@ -8785,6 +9200,7 @@
     },
     {
       "confidence": "provisional",
+      "description": "Reward: Ace of Pentacles base effects: a multiplier",
       "effects": [
         {
           "text": "Performs Refine Prestige. First Mineral upgrade cost scaling is much heavier."
@@ -8801,6 +9217,7 @@
     },
     {
       "confidence": "provisional",
+      "description": "Reward: Two of Pentacles base effects: a multiplier",
       "effects": [
         {
           "text": "Performs Refine Prestige. RN1, RN16, Red Gem, VP Gain Mult Magnet upgrade, Relic 23 effect, and Polish Sword values are logarithmed. The Hierophant is disabled."
@@ -8817,6 +9234,7 @@
     },
     {
       "confidence": "provisional",
+      "description": "Reward: Three of Pentacles base effects: a multiplier",
       "effects": [
         {
           "text": "Performs Refine Prestige. Blue and Green Gems are useless. Mineral cost growth is much heavier. Relic 14 and 31 are useless. Local game speed is capped at x777. The Hierophant is disabled."
@@ -8833,6 +9251,7 @@
     },
     {
       "confidence": "provisional",
+      "description": "Reward: Four of Pentacles base effects: a multiplier",
       "effects": [
         {
           "text": "Performs Refine Prestige. Red Gem is useless, and you cannot obtain magnets."
@@ -8849,6 +9268,7 @@
     },
     {
       "confidence": "provisional",
+      "description": "Reward: Five of Pentacles base effects: a multiplier",
       "effects": [
         {
           "text": "Performs Refine Prestige. VP Gain is logarithmed."
@@ -8865,6 +9285,7 @@
     },
     {
       "confidence": "provisional",
+      "description": "Reward: Six of Pentacles base effects: a multiplier",
       "effects": [
         {
           "text": "Performs Refine Prestige and resets Gold. Blue, Green, Yellow gems, along with Relic 14 and 31 are all useless. Gold Gain is logarithmed."
@@ -8881,6 +9302,7 @@
     },
     {
       "confidence": "provisional",
+      "description": "Reward: Seven of Pentacles base effects: a multiplier",
       "effects": [
         {
           "text": "Performs Refine Prestige and resets Gold. Blue, Green, gems, along with Relic 14 and 31 are all useless. Gold Gain is $^{1/1{,}000{,}000{,}000}$ and game speed is logarithmed."
@@ -8897,6 +9319,7 @@
     },
     {
       "confidence": "provisional",
+      "description": "Reward: Eight of Pentacles base effects: a multiplier",
       "effects": [
         {
           "text": "Performs Refine Prestige and resets Gold. Blue, Green, gems, along with Relic 14 and 31 are all useless. Gold is calculated based only off of Attack Level."
@@ -8913,6 +9336,7 @@
     },
     {
       "confidence": "provisional",
+      "description": "Reward: Nine of Pentacles base effects: a multiplier",
       "effects": [
         {
           "text": "Performs Refine Prestige. Mineral base is much worse; it's nerfed exponentially. (mineral base is the number the VP gain is multiplied by per level increase)"
@@ -8929,6 +9353,7 @@
     },
     {
       "confidence": "provisional",
+      "description": "Reward: Ten of Pentacles base effects: a multiplier",
       "effects": [
         {
           "text": "Performs Refine Prestige. Red Gem is useless. You cant get magnets nor merge XP. RN1, Game speed, Relic 22, and Polish Sword values are all set to Sword's LOGPOW"
@@ -8945,6 +9370,7 @@
     },
     {
       "confidence": "provisional",
+      "description": "Reward: Page of Pentacles base effects: a multiplier",
       "effects": [
         {
           "text": "Performs Refine Prestige. Base Max level Upgrade Effect is multiplied by Pentacle's base LOGPOW."
@@ -8961,6 +9387,7 @@
     },
     {
       "confidence": "provisional",
+      "description": "Reward: Knight of Pentacles base effects: a multiplier",
       "effects": [
         {
           "text": "Performs Refine Prestige. Red Gem is useless. You cant get magnets nor merge XP. RN1, Game Speed, Relic 22, and Polish Sword values are heavily nerfed, but this penalty becomes weaker based on the Stealth of your equipped Endoplasmic Reticulum."
@@ -8977,6 +9404,7 @@
     },
     {
       "confidence": "provisional",
+      "description": "Reward: Queen of Pentacles base effects: a multiplier",
       "effects": [
         {
           "text": "Performs Refine Prestige. Red Gem is useless. You cant get magnets nor merge XP. RN1's effect is capped by your current Singularity mult. Local Mineral Speed is capped at 10x. Relic 22 and Polish Sword are useless"
@@ -8993,6 +9421,7 @@
     },
     {
       "confidence": "provisional",
+      "description": "Reward: King of Pentacles base effects: a multiplier. Adds a Completed Pentacles Challenges Singularity Factor",
       "effects": [
         {
           "text": "Requires 1.8e308 Atoms to enter. Performs Refine Prestige. Red Gem is useless. You cant get magnets nor merge XP. RN1's effect is capped at $\\log_{10}(\\text{atoms}) + 1$. Local Mineral Speed is capped at 100x. The First Mineral upgrades effect is capped at the Square Root of your Singularity mult rounded down. Relic 22 and Polish Sword are useless. Entering Performs a Singularity and resets atoms to 1. Adds a Dynamic Penalty that heavily nerfs Atom Gain, but becomes weaker based on your Max Mineral Level"
@@ -9009,6 +9438,7 @@
     },
     {
       "confidence": "provisional",
+      "description": "Reward: Ace of Cups base effects: a multiplier",
       "effects": [
         {
           "text": "Performs Unity Reset. All Zodiac EXP factors are logarithmed."
@@ -9025,6 +9455,7 @@
     },
     {
       "confidence": "provisional",
+      "description": "Reward: Two of Cups base effects: a multiplier",
       "effects": [
         {
           "text": "Performs Unity Reset. Luck is logarithmed, divided by 1000, then increased by 1."
@@ -9041,6 +9472,7 @@
     },
     {
       "confidence": "provisional",
+      "description": "Reward: Three of Cups base effects: a multiplier",
       "effects": [
         {
           "text": "Performs Unity Reset. Luck is $^{1/999}$"
@@ -9057,6 +9489,7 @@
     },
     {
       "confidence": "provisional",
+      "description": "Reward: Four of Cups base effects: a multiplier",
       "effects": [
         {
           "text": "Performs Unity Reset. Luck is heavily reduced, but the penalty weakens based off of the highest rarity Zodiac obtained during the challenge."
@@ -9073,6 +9506,7 @@
     },
     {
       "confidence": "provisional",
+      "description": "Reward: Five of Cups base effects: a multiplier",
       "effects": [
         {
           "text": "Performs Unity Reset. All Zodiac EXP factors are reduced to double Log10 of their values."
@@ -9089,6 +9523,7 @@
     },
     {
       "confidence": "provisional",
+      "description": "Reward: Six of Cups base effects: a multiplier",
       "effects": [
         {
           "text": "Performs Unity Reset. Max VP factor is disabled."
@@ -9105,6 +9540,7 @@
     },
     {
       "confidence": "provisional",
+      "description": "Reward: Seven of Cups base effects: a multiplier",
       "effects": [
         {
           "text": "Performs a Unity Reset. Your luck is heavily reduced, but the penalty weakens each time you Unite during this challenge."
@@ -9121,6 +9557,7 @@
     },
     {
       "confidence": "provisional",
+      "description": "Reward: Eight of Cups base effects: a multiplier",
       "effects": [
         {
           "text": "Performs a Unity Reset. Your luck and quality are heavily reduced, but the penalty weakens based off of the highest quality Zodiac you unite with during this challenge."
@@ -9137,6 +9574,7 @@
     },
     {
       "confidence": "provisional",
+      "description": "Reward: Nine of Cups base effects: a multiplier",
       "effects": [
         {
           "text": "Performs Unity Reset. All Zodiac EXP factors are useless, besides the Relic 8 factor, which is logarithmed."
@@ -9153,6 +9591,7 @@
     },
     {
       "confidence": "provisional",
+      "description": "Reward: Ten of Cups base effects: a multiplier",
       "effects": [
         {
           "text": "Performs a Unity Reset. All Zodiac EXP factors are set to Cup's LOGPOW."
@@ -9169,6 +9608,7 @@
     },
     {
       "confidence": "provisional",
+      "description": "Reward: Page of Cups base effects: a multiplier",
       "effects": [
         {
           "text": "Performs a Unity Reset. Total Factors multiplication is set to Cup's LOGPOW."
@@ -9185,6 +9625,7 @@
     },
     {
       "confidence": "provisional",
+      "description": "Reward: Knight of Cups base effects: a multiplier",
       "effects": [
         {
           "text": "Performs a Unity Reset. All Factors are heavily nerfed, but this penalty becomes weaker based on your total infected population"
@@ -9201,6 +9642,7 @@
     },
     {
       "confidence": "provisional",
+      "description": "Reward: Queen of Cups base effects: a multiplier",
       "effects": [
         {
           "text": "Performs a Unity Reset. Current Zodiac EXP is capped at your next Singularity Mult raised to the 5th power, plue 1"
@@ -9217,6 +9659,7 @@
     },
     {
       "confidence": "provisional",
+      "description": "Reward: King of Cups base effects: a multiplier. Adds a Completed Cups Challenges Singularity Factor",
       "effects": [
         {
           "text": "Requires 1.8e308 Atoms to enter. Performs a Unity Reset. All Factors are set to Log2 of their values and are heavily nerfed. This Penalty becomes weaker based on your current Atom Count. Entering performs a Singularity and resets atoms to 1. Adds a Dynamic Penalty that heavily nerfs Atom Gain, but becomes weaker based on the highest level Zodiac you've obtained during the Challenge."
@@ -9233,6 +9676,7 @@
     },
     {
       "confidence": "provisional",
+      "description": "Reward: The Fool card now has an additional effect and becomes a passive bonus. Arcan Power Bonus: a multiplier",
       "effects": [
         {
           "text": "All other arcans are disabled, and all special minerals are removed. You can only spawn Black Gems via The Fool, but the bonus is reduced by 10 (pre-caps)."
@@ -9249,6 +9693,7 @@
     },
     {
       "confidence": "provisional",
+      "description": "Reward: The Magician card now has an additional effect and becomes a passive bonus. Arcan Power Bonus: a multiplier",
       "effects": [
         {
           "text": "Resets your Elements. You can only generate them using the Magician skill, but the Global Element mult decreases with each use."
@@ -9265,6 +9710,7 @@
     },
     {
       "confidence": "provisional",
+      "description": "Reward: The High Priestess card now has an additional effect and becomes a passive bonus. Arcan Power Bonus: a multiplier",
       "effects": [
         {
           "text": "Performs Refine Prestige. Red Gem, Relic 22, and Polish Sword are useless. You can no longer obtain magnets or merge levels. RN1's effect is $^{1/10000}$ (pre-skill)."
@@ -9281,6 +9727,7 @@
     },
     {
       "confidence": "provisional",
+      "description": "Reward: The Empress card now has an additional effect and becomes a passive bonus. Arcan Power Bonus: a multiplier",
       "effects": [
         {
           "text": "Base sell cost for Zodiacs is set to 1. Using The Empress will gradually increase this from 1 to 100. Auto-sell Zodiacs is disabled."
@@ -9297,6 +9744,7 @@
     },
     {
       "confidence": "provisional",
+      "description": "Reward: The Emperor card now has an additional effect and becomes a passive bonus. Arcan Power Bonus: a multiplier",
       "effects": [
         {
           "text": "Performs Refine Prestige. Blue and Green gems are useless. Mineral cost growth is much steeper and increases over time. Relics 14 and 31 are useless. Use the card to decrease Mineral cost."
@@ -9313,6 +9761,7 @@
     },
     {
       "confidence": "provisional",
+      "description": "Reward: The Hierophant card now has an additional effect and becomes a passive bonus. Arcan Power Bonus: a multiplier",
       "effects": [
         {
           "text": "Performs Refine Prestige. You can only spawn level 1 minerals no matter what. The Hierophant's cooldown is 50x shorter."
@@ -9329,6 +9778,7 @@
     },
     {
       "confidence": "provisional",
+      "description": "Reward: The Lovers card now has an additional effect and becomes a passive bonus. Arcan Power Bonus: a multiplier",
       "effects": [
         {
           "text": "Performs Refine Prestige. Passive Merge EXP is disabled. Relic 28 effect is ^0.04 after all bonuses. Max mineral spawn level is capped at Merge Level + 1."
@@ -9345,6 +9795,7 @@
     },
     {
       "confidence": "provisional",
+      "description": "Reward: The Chariot card now has an additional effect and becomes a passive bonus. Arcan Power Bonus: a multiplier",
       "effects": [
         {
           "text": "None (yeah this challenge is just kind of a benchmark)"
@@ -9361,6 +9812,7 @@
     },
     {
       "confidence": "provisional",
+      "description": "Reward: The Justice card now has an additional effect and becomes a passive bonus. Arcan Power Bonus: a multiplier",
       "effects": [
         {
           "text": "Tarot Local Speed is capped at 1. Chariot Passive Effect is also capped at 1."
@@ -9377,6 +9829,7 @@
     },
     {
       "confidence": "provisional",
+      "description": "Reward: The Hermit card now has an additional effect and becomes a passive bonus. Arcan Power Bonus: a multiplier",
       "effects": [
         {
           "text": "Resets Tarot resources. Tarot Local speed and both effects are heavily reduced (cooldowns are greatly increased), but the penalty weakens with each use of The Hermit. The Hermit's duration is also capped at one second."
@@ -9393,6 +9846,7 @@
     },
     {
       "confidence": "provisional",
+      "description": "Reward: The Wheel of Fortune card now has an additional effect and becomes a passive bonus. Arcan Power Bonus: a multiplier",
       "effects": [
         {
           "text": "Resets your Tarot draws to the sum of all Artifact levels. Draws cannot be gained in any way except winning the wheel, but the chance of winning is heavily reduced. Losing the wheel will weaken this penalty. Skill cooldown time is multiplied by 10, and Tarot local speed is capped at 1."
@@ -9409,6 +9863,7 @@
     },
     {
       "confidence": "provisional",
+      "description": "Reward: The Strength card now has an additional effect and becomes a passive bonus. Arcan Power Bonus: a multiplier",
       "effects": [
         {
           "text": "Resets attack levels and attack mult is set to 1. Game Speed, other mults, mult gain are set to Mean LOGPOW / 2 (Mean LOGPOW is the average LOGPOW across all suits). Attack Exponent base is set to 0 and can only be increased via The Strength. The Strength's duration is set to 0.1 seconds and the effect is heavily reduced, but the penalty weakens based on Attack Level."
@@ -9425,6 +9880,7 @@
     },
     {
       "confidence": "provisional",
+      "description": "Reward: The Hanged Man card now has an additional effect and becomes a passive bonus. Arcana Power Bonus: a multiplier",
       "effects": [
         {
           "text": "Performs a Refine Prestige and resets your Polish Upgrades and Polish Points. You cant gain any polish points, Special Minerals and Special Minerals Sacrifice are useless."
@@ -9441,6 +9897,7 @@
     },
     {
       "confidence": "provisional",
+      "description": "Reward: The Death card now has an additional effect and becomes a passive bonus. Arcana Power Bonus: a multiplier",
       "effects": [
         {
           "text": "Activating the death tarot card secretly selects a random time between 0 and 60 seconds. You must perform a refine prestige while Death is still active."
@@ -9457,6 +9914,7 @@
     },
     {
       "confidence": "provisional",
+      "description": "Reward: The Temperance card now has an additional effect and becomes a passive bonus. Arcana Power Bonus: a multiplier. You can now configure your next Unity Zodiacs in the Astrology tab's Settings menu.",
       "effects": [
         {
           "text": "At the start of the challenge, you receive a random low-stat Temperate Zodiac in your inventory. It must be placed into your Fortune Pars slot immediately. Each time you use temperance you receive a temperance zodiac based off the one in your Fortune Pars spot. 67% chance its the same zodiac, 20% chance you receive a different zodiac of the same element, 10% chance to receive an adjacent zodiac, 3% chance to receive the opposite zodiac. Tarot local speed is capped at 1x and Tarot skill cooldown timer is multiplied by x10"
@@ -9473,6 +9931,7 @@
     },
     {
       "confidence": "provisional",
+      "description": "Reward: The Devil card now has an additional effect and becomes a passive bonus. Arcana Power Bonus: a multiplier",
       "effects": [
         {
           "text": "When you use this arcana card, it spawns 10 chads on the screen."
@@ -9489,6 +9948,7 @@
     },
     {
       "confidence": "provisional",
+      "description": "Reward: The Tower card now has an additional effect and becomes a passive bonus. Arcana Power Bonus: a multiplier",
       "effects": [
         {
           "text": "You need 20,000 infected in the universe stage to enter this challenge, While inside the challenge, using the tower arcana has a chance to complete the challenge based off of the chance given by Relic 67, If it fails, reset Universe High Score, Plague points, and get rid of all of your Endoplasmic Reticulums."
@@ -9505,6 +9965,7 @@
     },
     {
       "confidence": "provisional",
+      "description": "Reward: The Star card now has an additional effect and becomes a passive bonus. Arcana Power Bonus: a multiplier",
       "effects": [
         {
           "text": "You need 1.8e308 atoms to enter this challenge, Performs a Singularity reset and a Unity reset, Luck donut base is set and 1 and the first effect for the Pink Gem is useless, The star effect is also applied to the luck donut instead."
@@ -9521,6 +9982,7 @@
     },
     {
       "confidence": "provisional",
+      "description": "Reward: The Moon card now has an additional effect and becomes a passive bonus. Arcana Power Bonus: a multiplier",
       "effects": [
         {
           "text": "You need 1.8e308 atoms to enter this challenge, Performs a Singularity reset and a Unity reset, Tarot Local speed is capped at 10x, sets the quality of the zodiac in the Moon slot to 1. You can upgrade it by using The Moon, but everytime you change zodiacs, the zodiac in the Moon slot's quality is set to 1. Adds a dynamic penalty that heavily nerfs Atom gain, but becomes weaker based on the quality of the zodiac in the Moon Slot."
@@ -9537,6 +9999,7 @@
     },
     {
       "confidence": "provisional",
+      "description": "Reward: The Sun card now has an additional effect and becomes a passive bonus. Arcana Power Bonus: a multiplier. Divides the cost of Refine Nodes 196 and above by a value.",
       "effects": [
         {
           "text": "You need Refine Node 195 to start the challenge. You can spawn special minerals in this challenge. Every time you use The Sun card, you will get random special minerals in colors corresponding to your currently equipped sparks. The amount of minerals is amount of your currently equipped sparks. The Sun card cooldown is 5 seconds but it decrease only when you spawn a spark by 1 second. Your mastery gain is based on amount of merged special minerals during the challenge with the formula $(\\text{Red} / (\\text{Red} + 5)) \\times (\\text{Orange} / (\\text{Orange} + 5)) \\times (\\text{Yellow} / (\\text{Yellow} + 5)) \\times \\cdots \\times \\text{Base}$. Singularity will reset the challenge"
@@ -9553,6 +10016,7 @@
     },
     {
       "confidence": "provisional",
+      "description": "Multiplies Sacrifice Dust gain by a multiplier",
       "effects": [
         {
           "text": "Sacrifice Dust Gain",
@@ -9568,6 +10032,7 @@
     },
     {
       "confidence": "provisional",
+      "description": "Relic 24 effect: a multiplier",
       "effects": [
         {
           "text": "Relic 24 Effect",
@@ -9583,6 +10048,7 @@
     },
     {
       "confidence": "provisional",
+      "description": "Relic 56 effect: a multiplier",
       "effects": [
         {
           "text": "Relic 56 Effect",
@@ -9598,6 +10064,7 @@
     },
     {
       "confidence": "provisional",
+      "description": "Relic 13 effect: a multiplier",
       "effects": [
         {
           "text": "Relic 13 Effect",
@@ -9613,6 +10080,7 @@
     },
     {
       "confidence": "provisional",
+      "description": "Relic 2 effect: an exponent",
       "effects": [
         {
           "text": "Relic 2 Effect",
@@ -9628,6 +10096,7 @@
     },
     {
       "confidence": "provisional",
+      "description": "Relic 21 effect: a multiplier",
       "effects": [
         {
           "text": "Relic 21 Effect",
@@ -9643,6 +10112,7 @@
     },
     {
       "confidence": "provisional",
+      "description": "Sword LOGPOW base: a value",
       "effects": [
         {
           "text": "Sword LOGPOW base",
@@ -9657,6 +10127,7 @@
     },
     {
       "confidence": "provisional",
+      "description": "Base Spread Power on Endoplasmic Reticulum Craft Multiplier: a multiplier",
       "effects": [
         {
           "text": "Base Spread Power on ER Craft (see Plague",
@@ -9672,6 +10143,7 @@
     },
     {
       "confidence": "provisional",
+      "description": "Multiplies Sacrifice Dust gain by a multiplier",
       "effects": [
         {
           "text": "Sacrifice Dust Gain",
@@ -9687,6 +10159,7 @@
     },
     {
       "confidence": "provisional",
+      "description": "Relic 25 effect: a multiplier",
       "effects": [
         {
           "text": "Relic 25 Effect",
@@ -9702,6 +10175,7 @@
     },
     {
       "confidence": "provisional",
+      "description": "Relic 8 effect: an exponent",
       "effects": [
         {
           "text": "Relic 8 Effect",
@@ -9717,6 +10191,7 @@
     },
     {
       "confidence": "provisional",
+      "description": "Relic 14 effect: an exponent",
       "effects": [
         {
           "text": "Relic 14 Effect",
@@ -9732,6 +10207,7 @@
     },
     {
       "confidence": "provisional",
+      "description": "Relic 2 effect: an exponent",
       "effects": [
         {
           "text": "Relic 2 Effect",
@@ -9747,6 +10223,7 @@
     },
     {
       "confidence": "provisional",
+      "description": "Refine Node 7 effect: a multiplier",
       "effects": [
         {
           "text": "Refine Node 7 Effect",
@@ -9756,12 +10233,13 @@
       ],
       "id": "tarot-artifact-infraorbitals",
       "kind": "upgrade",
-      "name": "Infraorbitals",
+      "name": "Infraorbital Bones",
       "system": "tarot-artifacts",
       "wiki": "Tarot"
     },
     {
       "confidence": "provisional",
+      "description": "Wand LOGPOW base: a value",
       "effects": [
         {
           "text": "Wands LOGPOW base",
@@ -9770,12 +10248,13 @@
       ],
       "id": "tarot-artifact-zygomatics",
       "kind": "upgrade",
-      "name": "Zygomatics",
+      "name": "Zygomatic Bones",
       "system": "tarot-artifacts",
       "wiki": "Tarot"
     },
     {
       "confidence": "provisional",
+      "description": "Relic 52 effect: a multiplier",
       "effects": [
         {
           "text": "Relic 52 Effect",
@@ -9791,6 +10270,7 @@
     },
     {
       "confidence": "provisional",
+      "description": "The Hermit base effect: a multiplier",
       "effects": [
         {
           "text": "The Hermit base effect",
@@ -9806,6 +10286,7 @@
     },
     {
       "confidence": "provisional",
+      "description": "Raises Water Quality Factor to an exponent",
       "effects": [
         {
           "text": "Water Quality factor",
@@ -9821,6 +10302,7 @@
     },
     {
       "confidence": "provisional",
+      "description": "Plague Points per Plague Generator Multiplier: a multiplier",
       "effects": [
         {
           "text": "PlP per PlG mult (see Plague)",
@@ -9836,6 +10318,7 @@
     },
     {
       "confidence": "provisional",
+      "description": "Multiplies Sacrifice Dust gain by a multiplier",
       "effects": [
         {
           "text": "Sacrifice Dust Gain",
@@ -9851,6 +10334,7 @@
     },
     {
       "confidence": "provisional",
+      "description": "Relic 26 effect: a multiplier",
       "effects": [
         {
           "text": "Relic 26 Effect",
@@ -9866,6 +10350,7 @@
     },
     {
       "confidence": "provisional",
+      "description": "Polish Spear effect: an exponent",
       "effects": [
         {
           "text": "Polish Sword effect",
@@ -9881,6 +10366,7 @@
     },
     {
       "confidence": "provisional",
+      "description": "The Hierophant Challenge effect: a multiplier",
       "effects": [
         {
           "text": "The Hierophant effect",
@@ -9896,6 +10382,7 @@
     },
     {
       "confidence": "provisional",
+      "description": "Relic 2 effect: an exponent",
       "effects": [
         {
           "text": "Relic 2 Effect",
@@ -9911,6 +10398,7 @@
     },
     {
       "confidence": "provisional",
+      "description": "Yellow Gem base effect: a multiplier",
       "effects": [
         {
           "text": "Yellow Gem base effect",
@@ -9926,6 +10414,7 @@
     },
     {
       "confidence": "provisional",
+      "description": "Pentacle LOGPOW base: a value",
       "effects": [
         {
           "text": "Pentacles LOGPOW base",
@@ -9940,6 +10429,7 @@
     },
     {
       "confidence": "provisional",
+      "description": "Raises Earth 2 Node to an exponent",
       "effects": [
         {
           "text": "Earth Node 2 effect",
@@ -9955,6 +10445,7 @@
     },
     {
       "confidence": "provisional",
+      "description": "Base Virus Essence from Dissolving Endoplasmic Reticulums: a multiplier",
       "effects": [
         {
           "text": "Base VE from dissolving ERs (see Plague)",
@@ -9970,6 +10461,7 @@
     },
     {
       "confidence": "provisional",
+      "description": "Multiplies Sacrifice Dust gain by a multiplier",
       "effects": [
         {
           "text": "Sacrifice Dust Gain",
@@ -9985,6 +10477,7 @@
     },
     {
       "confidence": "provisional",
+      "description": "Relic 27 effect: a multiplier",
       "effects": [
         {
           "text": "Relic 27 Effect",
@@ -10000,6 +10493,7 @@
     },
     {
       "confidence": "provisional",
+      "description": "Factor 3 for all Elements: an exponent",
       "effects": [
         {
           "text": "All Elements Factor 3",
@@ -10015,6 +10509,7 @@
     },
     {
       "confidence": "provisional",
+      "description": "Relic 2 effect: an exponent",
       "effects": [
         {
           "text": "Relic 2 Effect",
@@ -10029,6 +10524,7 @@
     },
     {
       "confidence": "provisional",
+      "description": "Relic 2 effect: an exponent",
       "effects": [
         {
           "text": "Relic 2 Effect",
@@ -10044,6 +10540,7 @@
     },
     {
       "confidence": "provisional",
+      "description": "Polish Spear effect: a multiplier",
       "effects": [
         {
           "text": "Polish Spear effect",
@@ -10059,6 +10556,7 @@
     },
     {
       "confidence": "provisional",
+      "description": "Cup LOGPOW base: a value",
       "effects": [
         {
           "text": "Cups LOGPOW base",
@@ -10073,6 +10571,7 @@
     },
     {
       "confidence": "provisional",
+      "description": "All Polishing Enhancement effects: a multiplier",
       "effects": [
         {
           "text": "Polish Enhance effects",
@@ -10088,6 +10587,7 @@
     },
     {
       "confidence": "provisional",
+      "description": "Relic 32 effect: a multiplier",
       "effects": [
         {
           "text": "Relic 32 Effect",
@@ -10103,6 +10603,7 @@
     },
     {
       "confidence": "provisional",
+      "description": "Singularity Multiplier: a multiplier",
       "effects": [
         {
           "text": "Singularity Multiplier (see Singularity)",
@@ -11948,6 +12449,7 @@
     {
       "confidence": "documented",
       "cost": "1 AP",
+      "description": "IP gain is multiplied by your number of Eternities",
       "effects": [
         {
           "text": "IP gain x Σ"
@@ -11962,6 +12464,7 @@
     {
       "confidence": "documented",
       "cost": "2 AP",
+      "description": "+0.02 to Common Exponent",
       "effects": [
         {
           "text": "Score Exponent + 0.02"
@@ -11976,6 +12479,7 @@
     {
       "confidence": "documented",
       "cost": "4 AP",
+      "description": "IP gain is multiplied by the number of completed Eternity Milestones",
       "effects": [
         {
           "text": "IP gain × Completed EM"
@@ -11990,6 +12494,7 @@
     {
       "confidence": "documented",
       "cost": "4 AP",
+      "description": "+1 to Star Base",
       "effects": [
         {
           "text": "+1 Star Base"
@@ -12004,6 +12509,7 @@
     {
       "confidence": "documented",
       "cost": "10 AP",
+      "description": "x2 to EP gain",
       "effects": [
         {
           "text": "EP Gain × 2"
@@ -12018,6 +12524,7 @@
     {
       "confidence": "documented",
       "cost": "14 AP",
+      "description": "x1.01 to Common Exponent",
       "effects": [
         {
           "text": "Score Exponent x 1.01"
@@ -12032,6 +12539,7 @@
     {
       "confidence": "documented",
       "cost": "18 AP",
+      "description": "x1.01 to Generator Exponent",
       "effects": [
         {
           "text": "Generator Exponent x 1.01"
@@ -12046,6 +12554,7 @@
     {
       "confidence": "documented",
       "cost": "22 AP",
+      "description": "x1.001 to Common Exponent",
       "effects": [
         {
           "text": "Score Exponent × 1.001"
@@ -12060,6 +12569,7 @@
     {
       "confidence": "documented",
       "cost": "26 AP",
+      "description": "x1.01 to Stardust Base",
       "effects": [
         {
           "text": "Star Base x 1.01"
@@ -12074,6 +12584,7 @@
     {
       "confidence": "documented",
       "cost": "2 AP",
+      "description": "+0.03 to Common Exponent",
       "effects": [
         {
           "text": "Score Exponent + 0.03"
@@ -12088,6 +12599,7 @@
     {
       "confidence": "documented",
       "cost": "3 AP",
+      "description": "x1.4 to Lap Speed",
       "effects": [
         {
           "text": "Lap Speed × 1.4"
@@ -12102,6 +12614,7 @@
     {
       "confidence": "documented",
       "cost": "4 AP",
+      "description": "Infinity gain is multiplied by the number of completed Animal Milestones",
       "effects": [
         {
           "text": "IP gain × Completed AM"
@@ -12116,6 +12629,7 @@
     {
       "confidence": "documented",
       "cost": "2 AP",
+      "description": "x3 to Generator Mults",
       "effects": [
         {
           "text": "Generator Multiplier × 3"
@@ -12130,6 +12644,7 @@
     {
       "confidence": "documented",
       "cost": "12 AP",
+      "description": "x1.1 to Generator Exponent",
       "effects": [
         {
           "text": "Generator Exponent × 1.1"
@@ -12144,6 +12659,7 @@
     {
       "confidence": "documented",
       "cost": "16 AP",
+      "description": "a multiplier to IP gain",
       "effects": [
         {
           "text": "IP Gain × 10B (1e10)"
@@ -12158,6 +12674,7 @@
     {
       "confidence": "documented",
       "cost": "20 AP",
+      "description": "x1.01 to Generator Exponent",
       "effects": [
         {
           "text": "Generator Exponent × 1.01"
@@ -12172,6 +12689,7 @@
     {
       "confidence": "documented",
       "cost": "24 AP",
+      "description": "x1.001 to Common Exponent",
       "effects": [
         {
           "text": "Score Exponent × 1.001"
@@ -12186,6 +12704,7 @@
     {
       "confidence": "documented",
       "cost": "28 AP",
+      "description": "x1.01 to Stardust Base",
       "effects": [
         {
           "text": "Star Base × 1.01"
@@ -12200,6 +12719,7 @@
     {
       "confidence": "documented",
       "cost": "2 AP",
+      "description": "IP gain is multiplied by the number of Animals purchased",
       "effects": [
         {
           "text": "IP gain × Animals Bought"
@@ -12214,6 +12734,7 @@
     {
       "confidence": "documented",
       "cost": "3 AP",
+      "description": "x2 to Lap Speed",
       "effects": [
         {
           "text": "Lap Speed x 2"
@@ -12228,6 +12749,7 @@
     {
       "confidence": "documented",
       "cost": "2 AP",
+      "description": "x1.45 to last Promotion power",
       "effects": [
         {
           "text": "Promo 4 Power × 1.45"
@@ -12242,6 +12764,7 @@
     {
       "confidence": "documented",
       "cost": "3 AP",
+      "description": "x10 to first Promotion power",
       "effects": [
         {
           "text": "Promo 1 Power × 10"
@@ -12256,6 +12779,7 @@
     {
       "confidence": "documented",
       "cost": "14 AP",
+      "description": "+0.05 to Common Exponent",
       "effects": [
         {
           "text": "Score Exponent + 0.05"
@@ -12270,6 +12794,7 @@
     {
       "confidence": "documented",
       "cost": "18 AP",
+      "description": "a multiplier to IP gain",
       "effects": [
         {
           "text": "IP Gain × 10M (1e7)"
@@ -12284,6 +12809,7 @@
     {
       "confidence": "documented",
       "cost": "22 AP",
+      "description": "x1.01 to Generator Exponent",
       "effects": [
         {
           "text": "Generator Exponent × 1.01"
@@ -12298,6 +12824,7 @@
     {
       "confidence": "documented",
       "cost": "26 AP",
+      "description": "x1.001 to Common Exponent",
       "effects": [
         {
           "text": "Score Exponent × 1.001"
@@ -12312,6 +12839,7 @@
     {
       "confidence": "documented",
       "cost": "30 AP",
+      "description": "x1.01 to Stardust Base",
       "effects": [
         {
           "text": "Star Base × 1.01"
@@ -12326,6 +12854,7 @@
     {
       "confidence": "documented",
       "cost": "2 AP",
+      "description": "IP gain is multiplied by the number of completed Eternity Challenges",
       "effects": [
         {
           "text": "IP gain × ECs Finished"
@@ -12340,6 +12869,7 @@
     {
       "confidence": "documented",
       "cost": "2 AP",
+      "description": "x3 to Lap Speed",
       "effects": [
         {
           "text": "Lap Speed x 3"
@@ -12354,6 +12884,7 @@
     {
       "confidence": "documented",
       "cost": "3 AP",
+      "description": "x1.5 to third Promotion power",
       "effects": [
         {
           "text": "Promo 3 Power × 1.5"
@@ -12368,6 +12899,7 @@
     {
       "confidence": "documented",
       "cost": "4 AP",
+      "description": "EP is multiplied by 1 + Eternities^0.5",
       "effects": [
         {
           "text": "EP Gain $\\times (1 + (\\Sigma^{0.5}))$"
@@ -12382,6 +12914,7 @@
     {
       "confidence": "documented",
       "cost": "16 AP",
+      "description": "+0.1 to Stardust Exponent",
       "effects": [
         {
           "text": "Stardust Exponent + 0.1"
@@ -12396,6 +12929,7 @@
     {
       "confidence": "documented",
       "cost": "20 AP",
+      "description": "a multiplier to IP gain",
       "effects": [
         {
           "text": "IP Gain × 1M (1e6)"
@@ -12410,6 +12944,7 @@
     {
       "confidence": "documented",
       "cost": "24 AP",
+      "description": "x1.01 to Generator Exponent",
       "effects": [
         {
           "text": "Generator Exponent × 1.01"
@@ -12424,6 +12959,7 @@
     {
       "confidence": "documented",
       "cost": "28 AP",
+      "description": "x1.001 to Common Exponent",
       "effects": [
         {
           "text": "Score Exponent × 1.001"
@@ -12438,6 +12974,7 @@
     {
       "confidence": "documented",
       "cost": "32 AP",
+      "description": "x1.01 to Stardust Base",
       "effects": [
         {
           "text": "Star Base × 1.01"
@@ -12452,6 +12989,7 @@
     {
       "confidence": "documented",
       "cost": "2 AP",
+      "description": "IP Gain x100",
       "effects": [
         {
           "text": "IP gain × 100"
@@ -12466,6 +13004,7 @@
     {
       "confidence": "documented",
       "cost": "3 AP",
+      "description": "x5 to Lap Speed",
       "effects": [
         {
           "text": "Lap Speed × 5"
@@ -12480,6 +13019,7 @@
     {
       "confidence": "documented",
       "cost": "4 AP",
+      "description": "x1.1 to Generator Exponent",
       "effects": [
         {
           "text": "Generator Exponent × 1.1"
@@ -12494,6 +13034,7 @@
     {
       "confidence": "documented",
       "cost": "4 AP",
+      "description": "x1.3 to Star Base",
       "effects": [
         {
           "text": "Star Base × 1.3"
@@ -12508,6 +13049,7 @@
     {
       "confidence": "documented",
       "cost": "18 AP",
+      "description": "x1.5 to Star Base",
       "effects": [
         {
           "text": "Star Base × 1.5"
@@ -12522,6 +13064,7 @@
     {
       "confidence": "documented",
       "cost": "22 AP",
+      "description": "a multiplier to IP gain",
       "effects": [
         {
           "text": "IP Gain × 1M (1e6)"
@@ -12536,6 +13079,7 @@
     {
       "confidence": "documented",
       "cost": "26 AP",
+      "description": "x1.01 to Generator Exponent",
       "effects": [
         {
           "text": "Generator Exponent x 1.01"
@@ -12550,6 +13094,7 @@
     {
       "confidence": "documented",
       "cost": "30 AP",
+      "description": "x1.001 to Common Exponent",
       "effects": [
         {
           "text": "Score Exponent x 1.001"
@@ -12564,6 +13109,7 @@
     {
       "confidence": "documented",
       "cost": "34 AP",
+      "description": "x1.01 to Stardust Base",
       "effects": [
         {
           "text": "Star Base x 1.01"
@@ -12578,6 +13124,7 @@
     {
       "confidence": "documented",
       "cost": "12 AP",
+      "description": "x1.01 to Common Exponent",
       "effects": [
         {
           "text": "Score Exponent × 1.01"
@@ -12592,6 +13139,7 @@
     {
       "confidence": "documented",
       "cost": "12 AP",
+      "description": "x1.05 to Generator Exponent",
       "effects": [
         {
           "text": "Generator Exponent × 1.05"
@@ -12606,6 +13154,7 @@
     {
       "confidence": "documented",
       "cost": "12 AP",
+      "description": "x2 to Ascension Power",
       "effects": [
         {
           "text": "Ascension Power × 2"
@@ -12620,6 +13169,7 @@
     {
       "confidence": "documented",
       "cost": "12 AP",
+      "description": "+0.05 to Stardust Exponent",
       "effects": [
         {
           "text": "Stardust Exponent + 0.05"
@@ -12634,6 +13184,7 @@
     {
       "confidence": "documented",
       "cost": "20 AP",
+      "description": "x1.05 to Stardust Exponent",
       "effects": [
         {
           "text": "Stardust Exponent × 1.05"
@@ -12648,6 +13199,7 @@
     {
       "confidence": "documented",
       "cost": "24 AP",
+      "description": "a multiplier to IP gain",
       "effects": [
         {
           "text": "IP Gain × 1M (1e6)"
@@ -12662,6 +13214,7 @@
     {
       "confidence": "documented",
       "cost": "28 AP",
+      "description": "x1.01 to Generator Exponent",
       "effects": [
         {
           "text": "Generator Exponent x 1.01"
@@ -12676,6 +13229,7 @@
     {
       "confidence": "documented",
       "cost": "32 AP",
+      "description": "x1.001 to Common Exponent",
       "effects": [
         {
           "text": "Score Exponent x 1.001"
@@ -12690,6 +13244,7 @@
     {
       "confidence": "documented",
       "cost": "36 AP",
+      "description": "x1.01 to Stardust Base",
       "effects": [
         {
           "text": "Star Base x 1.01"
@@ -12704,6 +13259,7 @@
     {
       "confidence": "documented",
       "cost": "14 AP",
+      "description": "x1.3 to Star Base",
       "effects": [
         {
           "text": "Star Base × 1.3"
@@ -12718,6 +13274,7 @@
     {
       "confidence": "documented",
       "cost": "14 AP",
+      "description": "x1.005 to Common Exponent",
       "effects": [
         {
           "text": "Score Exponent x 1.005"
@@ -12732,6 +13289,7 @@
     {
       "confidence": "documented",
       "cost": "14 AP",
+      "description": "x1.03 to Stardust Exponent",
       "effects": [
         {
           "text": "Stardust Exponent × 1.03"
@@ -12746,6 +13304,7 @@
     {
       "confidence": "documented",
       "cost": "14 AP",
+      "description": "x1.02 to Stardust Exponent",
       "effects": [
         {
           "text": "Stardust Exponent × 1.02"
@@ -12760,6 +13319,7 @@
     {
       "confidence": "documented",
       "cost": "22 AP",
+      "description": "x1.01 to Stardust Exponent",
       "effects": [
         {
           "text": "Stardust Exponent × 1.01"
@@ -12774,6 +13334,7 @@
     {
       "confidence": "documented",
       "cost": "26 AP",
+      "description": "a multiplier to IP gain",
       "effects": [
         {
           "text": "IP Gain × 1M (1e6)"
@@ -12788,6 +13349,7 @@
     {
       "confidence": "documented",
       "cost": "30 AP",
+      "description": "x1.01 to Generator Exponent",
       "effects": [
         {
           "text": "Generator Exponent x 1.01"
@@ -12802,6 +13364,7 @@
     {
       "confidence": "documented",
       "cost": "34 AP",
+      "description": "x1.001 to Common Exponent",
       "effects": [
         {
           "text": "Score Exponent x 1.001"
@@ -12816,6 +13379,7 @@
     {
       "confidence": "documented",
       "cost": "38 AP",
+      "description": "x1.01 to Stardust Base",
       "effects": [
         {
           "text": "Star Base x 1.01"
@@ -12830,6 +13394,7 @@
     {
       "confidence": "documented",
       "cost": "16 AP",
+      "description": "+0.01 to Common Exponent",
       "effects": [
         {
           "text": "Score Exponent + 0.01"
@@ -12844,6 +13409,7 @@
     {
       "confidence": "documented",
       "cost": "16 AP",
+      "description": "+0.01 to Common Exponent",
       "effects": [
         {
           "text": "Score Exponent + 0.01"
@@ -12858,6 +13424,7 @@
     {
       "confidence": "documented",
       "cost": "16 AP",
+      "description": "+0.01 to Common Exponent",
       "effects": [
         {
           "text": "Score Exponent + 0.01"
@@ -12872,6 +13439,7 @@
     {
       "confidence": "documented",
       "cost": "16 AP",
+      "description": "+0.01 to Common Exponent",
       "effects": [
         {
           "text": "Score Exponent + 0.01"
@@ -12886,6 +13454,7 @@
     {
       "confidence": "documented",
       "cost": "24 AP",
+      "description": "+0.01 to Common Exponent",
       "effects": [
         {
           "text": "Score Exponent + 0.01"
@@ -12900,6 +13469,7 @@
     {
       "confidence": "documented",
       "cost": "28 AP",
+      "description": "a multiplier to IP gain",
       "effects": [
         {
           "text": "IP Gain × 1M (1e6)"
@@ -12914,6 +13484,7 @@
     {
       "confidence": "documented",
       "cost": "32 AP",
+      "description": "x1.01 to Generator Exponent",
       "effects": [
         {
           "text": "Generator Exponent x 1.01"
@@ -12928,6 +13499,7 @@
     {
       "confidence": "documented",
       "cost": "36 AP",
+      "description": "x1.001 to Common Exponent",
       "effects": [
         {
           "text": "Score Exponent x 1.001"
@@ -12942,6 +13514,7 @@
     {
       "confidence": "documented",
       "cost": "40 AP",
+      "description": "x1.01 to Stardust Base",
       "effects": [
         {
           "text": "Stardust Base x 1.01"
@@ -12956,6 +13529,7 @@
     {
       "confidence": "documented",
       "cost": "18 AP",
+      "description": "x1.01 to Stardust Exponent",
       "effects": [
         {
           "text": "Stardust Exponent × 1.01"
@@ -12970,6 +13544,7 @@
     {
       "confidence": "documented",
       "cost": "18 AP",
+      "description": "x1.01 to Stardust Exponent",
       "effects": [
         {
           "text": "Stardust Exponent × 1.01"
@@ -12984,6 +13559,7 @@
     {
       "confidence": "documented",
       "cost": "18 AP",
+      "description": "x1.01 to Stardust Exponent",
       "effects": [
         {
           "text": "Stardust Exponent × 1.01"
@@ -12998,6 +13574,7 @@
     {
       "confidence": "documented",
       "cost": "18 AP",
+      "description": "x1.01 to Stardust Exponent",
       "effects": [
         {
           "text": "Stardust Exponent × 1.01"
@@ -13012,6 +13589,7 @@
     {
       "confidence": "documented",
       "cost": "26 AP",
+      "description": "x1.01 to Stardust Exponent",
       "effects": [
         {
           "text": "Stardust Exponent × 1.01"
@@ -13026,6 +13604,7 @@
     {
       "confidence": "documented",
       "cost": "30 AP",
+      "description": "a multiplier to IP gain",
       "effects": [
         {
           "text": "IP Gain × 1M (1e6)"
@@ -13040,6 +13619,7 @@
     {
       "confidence": "documented",
       "cost": "34 AP",
+      "description": "x1.01 to Generator Exponent",
       "effects": [
         {
           "text": "Generator Exponent x1.01"
@@ -13054,6 +13634,7 @@
     {
       "confidence": "documented",
       "cost": "38 AP",
+      "description": "x1.001 to Common Exponent",
       "effects": [
         {
           "text": "Score Exponent x1.001"
@@ -13068,6 +13649,7 @@
     {
       "confidence": "documented",
       "cost": "100 AP",
+      "description": "+0.1 to Common Exponent",
       "effects": [
         {
           "text": "Score Exponent + 0.1"
@@ -13262,6 +13844,7 @@
     },
     {
       "confidence": "documented",
+      "description": "a multiplier to Lap Speed",
       "effects": [
         {
           "text": "Handicap: Lap Speed"
@@ -13279,6 +13862,7 @@
     },
     {
       "confidence": "documented",
+      "description": "an amount to Common Exponent",
       "effects": [
         {
           "text": "Handicap: Common Exponent"
@@ -13296,6 +13880,7 @@
     },
     {
       "confidence": "documented",
+      "description": "an amount to Star Base",
       "effects": [
         {
           "text": "Handicap: Stars"
@@ -13313,6 +13898,7 @@
     },
     {
       "confidence": "documented",
+      "description": "a multiplier to Generator Exponent",
       "effects": [
         {
           "text": "Handicap: Generator Exponent"
@@ -13330,6 +13916,7 @@
     },
     {
       "confidence": "documented",
+      "description": "a multiplier to Ascension Power",
       "effects": [
         {
           "text": "Handicap: Ascension Power"
@@ -13347,6 +13934,7 @@
     },
     {
       "confidence": "documented",
+      "description": "a multiplier to Prestige bonuses",
       "effects": [
         {
           "text": "Handicap: Promotion and Prestige Bonus"
@@ -13364,6 +13952,7 @@
     },
     {
       "confidence": "documented",
+      "description": "an amount free levels to all RP upgrades",
       "effects": [
         {
           "text": "Handicap: RP upgrades"
@@ -13381,6 +13970,7 @@
     },
     {
       "confidence": "documented",
+      "description": "IP gain is raised to an exponent",
       "effects": [
         {
           "text": "Handicap: IP gain"
@@ -13398,6 +13988,7 @@
     },
     {
       "confidence": "documented",
+      "description": "Generator Exponent is multiplied by a multiplier",
       "effects": [
         {
           "text": "Handicap: Generators"
@@ -13415,6 +14006,7 @@
     },
     {
       "confidence": "documented",
+      "description": "a multiplier to DP gain",
       "effects": [
         {
           "text": "Handicap: Dilation debuffs"

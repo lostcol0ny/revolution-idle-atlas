@@ -35,6 +35,10 @@ _PLACEHOLDER = r"\{\d+(?::[^{}]*)?\}"
 # A running total such as "(total: x{1})" is the player's state, not a
 # description of the entity, so it goes rather than being reworded.
 _RUNNING_TOTAL = re.compile(rf"\s*\((?:[^():]*:\s*)?[x+^-]?{_PLACEHOLDER}%?\)")
+# The same, as a closing line: "... based on your IP.<br>Currently: x{0}".
+_CURRENT_STATE = re.compile(
+    rf"\s*Currently:\s*[x+^-]?{_PLACEHOLDER}(?:/{_PLACEHOLDER})?%?$"
+)
 # Most specific shape first: "x{0}%" is still a multiplier, "+{0}%" a percentage.
 _PHRASES = (
     (re.compile(rf"(?<![A-Za-z])x{_PLACEHOLDER}%?"), "a multiplier"),
@@ -128,7 +132,7 @@ def readable(text: str, *, formulas: bool = False) -> str:
     typesets the arithmetic a description spells out in plain text (see
     `typeset`); without it the whole text stays prose.
     """
-    text = _RUNNING_TOTAL.sub("", clean(text))
+    text = _CURRENT_STATE.sub("", _RUNNING_TOTAL.sub("", clean(text)))
     for pattern, phrase in _PHRASES:
         text = pattern.sub(phrase, text)
     # Same text format as wiki prose: `$` would otherwise open inline math.
@@ -546,6 +550,194 @@ def map_particles(
                 report,
             ))
     return mapped, reports
+
+
+# Index ranges below are the ones checked text-by-text against the wiki's
+# effects for the node of the same number; an index outside is reported.
+_REFINE_REWARD_KEY = re.compile(r"UNI_MIN_REF_NODE_REWARD_(?P<index>\d+)")
+_REFINE_REWARDS = range(200)
+_ELEMENT_EFFECT_KEY = re.compile(r"UNI_ELEM_TREE_NODE_EFFECT_(?P<element>[A-Z]+)_(?P<index>\d+)")
+_ELEMENT_EFFECTS = {"FIRE": range(11), "WATER": range(11), "WIND": range(12), "EARTH": range(10)}
+_ETERNITY_CHALLENGE_KEY = re.compile(r"ETR_CHA_REWD_(?P<index>\d+)")
+_ETERNITY_CHALLENGES = range(10)
+_INFINITY_UPGRADE_KEY = re.compile(r"INF_UPGRADE_NAME_(?P<row>\d+)_(?P<col>\d+)")
+# The wiki prefixes each infinity upgrade with its grid cell: "6;1 Mighty Ascend".
+_GRID_CELL = re.compile(r"\d+;\d+\s+")
+_ANIMAL_KEY = re.compile(r"ETR_ANL_NAME_(?P<row>\d+)_(?P<col>\d+)")
+_SING_MILESTONE_KEY = re.compile(r"SING_MILESTONES_NAME_(?P<track>SING|ATOM)_(?P<index>\d+)")
+_SING_MILESTONE_SYSTEMS = {
+    "SING": "singularity-milestones-singularity",
+    "ATOM": "singularity-milestones-atoms",
+}
+_TAROT_CARD_KEY = re.compile(r"UNI_TAROT_CARD_(?P<suit>ARCAN|CUP|PENTACLE|SWORD|WAND)_(?P<index>\d+)")
+_ARTIFACT_PART_KEY = re.compile(r"TAROT_ARTIFACT_PART_NAME_(?P<suit>[A-Z]+)_(?P<index>\d+)")
+_TAROT_UPGRADE_KEY = re.compile(r"UNI_TAROT_UPGRADE_EFFECT_(?P<suit>[A-Z]+)_(?P<index>\d+)")
+# The game lists these milestones in its own order, which skips eternity
+# counts the wiki numbers its nodes by (REWD_3 reads as the 5-Eternity node);
+# which count each index unlocks at is only visible in the game.
+_ETERNITY_MILESTONE_KEY = re.compile(r"ETR_MIL_REWD_(?P<index>\d+)")
+
+
+def _matches(
+    strings: Mapping[str, str], pattern: re.Pattern[str]
+) -> list[tuple[re.Match[str], str]]:
+    found = [(m, text) for key, text in strings.items() if (m := pattern.fullmatch(key))]
+    # Numerically, so the game file lists node 2 before node 10.
+    return sorted(
+        found,
+        key=lambda pair: tuple(int(g) if g.isdigit() else g for g in pair[0].groups()),
+    )
+
+
+def _overlay(
+    node_id: str,
+    name: str | None,
+    description: str | None,
+    nodes: Mapping[str, Node],
+    report: FamilyReport,
+    label: str,
+) -> GameNode | None:
+    """Describe an existing node; a game entity without one is reported."""
+    node = nodes.get(node_id)
+    if node is None:
+        report.unmatched.append(f"{label}: no node {node_id}")
+        return None
+    report.matched += 1
+    if name is not None and _norm(name) != _norm(node.name):
+        report.renamed.append(f"{node_id}: {node.name!r} -> {name!r}")
+    return GameNode(id=node_id, name=name or node.name, description=description)
+
+
+def _namesake(
+    title: str, members: list[Node], report: FamilyReport, label: str
+) -> str | None:
+    """The one member named `title`, exactly or else as a near spelling."""
+    for same in (lambda n: _norm(n.name) == _norm(title), lambda n: _same_name(n.name, title)):
+        found = [n.id for n in members if same(n)]
+        if len(found) == 1:
+            return found[0]
+        if found:
+            report.unmatched.append(f"{label} {title!r}: names {', '.join(found)}")
+            return None
+    report.unmatched.append(f"{label} {title!r}: no node of that name")
+    return None
+
+
+def map_strings(
+    strings: Mapping[str, str], nodes: Iterable[Node]
+) -> tuple[list[GameNode], dict[str, FamilyReport]]:
+    """Describe existing nodes from the game's keyed texts outside _NAME_/_DESC_.
+
+    Never creates a node: each entity matches one by a number checked against
+    the wiki's effects, or by its name.
+    """
+    by_id = {n.id: n for n in nodes}
+    mapped: list[GameNode | None] = []
+    reports: dict[str, FamilyReport] = {}
+
+    def members(system: str, prefix: str) -> list[Node]:
+        return [n for n in by_id.values() if n.system == system and n.id.startswith(prefix)]
+
+    def report_for(family: str) -> FamilyReport:
+        return reports.setdefault(family, FamilyReport())
+
+    for m, text in _matches(strings, _REFINE_REWARD_KEY):
+        report, index = report_for("UNI_MIN_REF_NODE_REWARD"), int(m["index"])
+        if index not in _REFINE_REWARDS:
+            report.unmatched.append(f"#{index}: beyond the checked #0-#{_REFINE_REWARDS.stop - 1}")
+            continue
+        mapped.append(_overlay(
+            f"refine-node-{index + 1}", None, readable(text), by_id, report, f"#{index}"
+        ))
+
+    for m, text in _matches(strings, _ELEMENT_EFFECT_KEY):
+        element, index = m["element"], int(m["index"])
+        report = report_for("UNI_ELEM_TREE_NODE_EFFECT")
+        if index not in _ELEMENT_EFFECTS.get(element, range(0)):
+            report.unmatched.append(f"{element} #{index}: not a checked node")
+            continue
+        mapped.append(_overlay(
+            f"{element.lower()}-node-{index + 1}", None, readable(text), by_id, report,
+            f"{element} #{index}",
+        ))
+
+    for m, text in _matches(strings, _ETERNITY_CHALLENGE_KEY):
+        report, index = report_for("ETR_CHA"), int(m["index"])
+        title = clean(strings.get(f"ETR_CHL_NAME_{index}", ""))
+        numbered = _NUMBERED.fullmatch(title)
+        if index not in _ETERNITY_CHALLENGES or numbered is None or int(numbered["number"]) != index + 1:
+            report.unmatched.append(f"#{index} {title!r}: not a checked challenge")
+            continue
+        mapped.append(_overlay(
+            f"eternity-challenge-{index + 1}",
+            f"Eternity Challenge {index + 1} ({numbered['title']})",
+            readable(text), by_id, report, f"#{index}",
+        ))
+
+    for m, _ in _matches(strings, _ETERNITY_MILESTONE_KEY):
+        report_for("ETR_MIL").unmatched.append(
+            f"#{m['index']}: the game's order skips the wiki's eternity counts"
+        )
+
+    for m, title in _matches(strings, _INFINITY_UPGRADE_KEY):
+        row, col = m["row"], m["col"]
+        report, title = report_for("INF_UPGRADE"), clean(title)
+        cell = [n for n in by_id.values() if n.id.startswith(f"infinity-upgrade-{row}-{col}-")]
+        if len(cell) != 1 or not _same_name(_GRID_CELL.sub("", cell[0].name, count=1), title):
+            found = ", ".join(n.id for n in cell) or "no node"
+            report.unmatched.append(f"{row};{col} {title!r}: {found}")
+            continue
+        desc = strings.get(f"INF_UPGRADE_REWD_{row}_{col}")
+        mapped.append(_overlay(
+            cell[0].id, f"{row};{col} {title}", readable(desc) if desc else None,
+            by_id, report, f"{row};{col}",
+        ))
+
+    named = (
+        ("ETR_ANL", _ANIMAL_KEY, lambda m: ("animals", "animal-"),
+         lambda m: f"ETR_ANL_REWD_{m['row']}_{m['col']}"),
+        ("SING_MILESTONES", _SING_MILESTONE_KEY,
+         lambda m: (_SING_MILESTONE_SYSTEMS[m["track"]], "singularity-milestone-"),
+         lambda m: f"SING_MILESTONES_REWD_{m['track']}_{m['index']}"),
+        ("TAROT_ARTIFACT_PART", _ARTIFACT_PART_KEY, lambda m: ("tarot-artifacts", "tarot-artifact-"),
+         lambda m: f"TAROT_ARTIFACT_PART_{m['index']}_EFFECT_{m['suit']}"),
+    )
+    for family, pattern, home, desc_key in named:
+        for m, title in _matches(strings, pattern):
+            report, title = report_for(family), clean(title)
+            node_id = _namesake(title, members(*home(m)), report, m.string)
+            if node_id is not None:
+                desc = strings.get(desc_key(m))
+                mapped.append(_overlay(
+                    node_id, title, readable(desc) if desc else None, by_id, report, m.string
+                ))
+
+    for m, title in _matches(strings, _TAROT_CARD_KEY):
+        suit, index = m["suit"], m["index"]
+        report, title = report_for("UNI_TAROT_CARD"), clean(title)
+        node_id = _namesake(title, members("tarot", "tarot-"), report, m.string)
+        if node_id is None:
+            continue
+        effects = [
+            readable(strings[key])
+            for n in (1, 2)
+            if (key := f"UNI_TAROT_CARD_EFFECT_{n}_{suit}_{index}") in strings
+        ]
+        mapped.append(_overlay(
+            node_id, title, "; ".join(effects) or None, by_id, report, m.string
+        ))
+        reward = strings.get(f"UNI_TAROT_CARD_{suit}_REWARD_{index}")
+        if reward is not None:
+            mapped.append(_overlay(
+                f"tarot-challenge-{slugify(title)}", None, f"Reward: {readable(reward)}",
+                by_id, report_for("UNI_TAROT_CARD_REWARD"), m.string,
+            ))
+
+    for m, _ in _matches(strings, _TAROT_UPGRADE_KEY):
+        report_for("UNI_TAROT_UPGRADE_EFFECT").unmatched.append(
+            f"{m.string}: no node models a single tarot upgrade"
+        )
+    return [g for g in mapped if g is not None], reports
 
 
 def to_yaml(game: GameData) -> str:

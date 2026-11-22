@@ -599,3 +599,1779 @@ nodes:
 - id: particles-spark-yellow
   name: Yellow Spark
   description: 'Gold Gain: an exponent'
+- id: refine-node-1
+  name: Refine Node 1
+  description: Increases Mineral base by 1
+- id: refine-node-2
+  name: Refine Node 2
+  description: You can now bulk attack
+- id: refine-node-3
+  name: Refine Node 3
+  description: Attack Prestige is a bit stronger
+- id: refine-node-4
+  name: Refine Node 4
+  description: Polish Sword effect an exponent
+- id: refine-node-5
+  name: Refine Node 5
+  description: Unlocks Merge Level (you get a value EXP per merge)
+- id: refine-node-6
+  name: Refine Node 6
+  description: Unlocks automerge (triggers every a value in-game seconds, affected by local mineral speed mult)
+- id: refine-node-7
+  name: Refine Node 7
+  description: Gold Gain Common Mineral Upgrade effect is raised to an exponent
+- id: refine-node-8
+  name: Refine Node 8
+  description: Relic 12 effect is powered to an exponent
+- id: refine-node-9
+  name: Refine Node 9
+  description: Polish Axe is a multiplier stronger
+- id: refine-node-10
+  name: Refine Node 10
+  description: PP Gain is powered to an exponent
+- id: refine-node-11
+  name: Refine Node 11
+  description: Unlocks autobuy for Mineral Upgrades
+- id: refine-node-12
+  name: Refine Node 12
+  description: Buying first ten mineral upgrades does not spend VP
+- id: refine-node-13
+  name: Refine Node 13
+  description: Unlocks autobuy for Attack Buyables
+- id: refine-node-14
+  name: Refine Node 14
+  description: Unlocks Auto Ascend for Attack Buyables
+- id: refine-node-15
+  name: Refine Node 15
+  description: Buying Relics does not spend gold
+- id: refine-node-16
+  name: Refine Node 16
+  description: Merge Level Bonus Effect a multiplier
+- id: refine-node-17
+  name: Refine Node 17
+  description: Relic 20's effect is multiplied by the number of the last Refine Upgrade bought
+- id: refine-node-18
+  name: Refine Node 18
+  description: 'Unlocks magnets and new Mineral Upgrades! Current base Magnet chance: a percentage on merge.'
+- id: refine-node-19
+  name: Refine Node 19
+  description: Mineral cost increase is raised to ^^an exponent
+- id: refine-node-20
+  name: Refine Node 20
+  description: Mineral cost fall is raised to an exponent
+- id: refine-node-21
+  name: Refine Node 21
+  description: On Unity, gain 100% of the gold/s you would gain at your current attack level
+- id: refine-node-22
+  name: Refine Node 22
+  description: Spawning Common Minerals does not reduce your gold
+- id: refine-node-23
+  name: Refine Node 23
+  description: Buying Polish Upgrades does not reduce your PP
+- id: refine-node-24
+  name: Refine Node 24
+  description: Relic 23 is a multiplier stronger (+0.1)
+- id: refine-node-25
+  name: Refine Node 25
+  description: Refine Node 19 effect is a multiplier stronger (divided by a value)
+- id: refine-node-26
+  name: Refine Node 26
+  description: Refine Node 20 effect is a multiplier stronger (multiplied by a value)
+- id: refine-node-27
+  name: Refine Node 27
+  description: Base Mineral Cost is powered to an exponent
+- id: refine-node-28
+  name: Refine Node 28
+  description: Unlocks Polishing Enhancement
+- id: refine-node-29
+  name: Refine Node 29
+  description: 'Relic 23 is stronger based on your Axe Level: x(1 + Lv/100)'
+- id: refine-node-30
+  name: Refine Node 30
+  description: Relic 3 effect is powered to your current Merge Level + 1
+- id: refine-node-31
+  name: Refine Node 31
+  description: Relic 14 also works for Mineral Cost
+- id: refine-node-32
+  name: Refine Node 32
+  description: Unlocks autobuy for polish upgrades
+- id: refine-node-33
+  name: Refine Node 33
+  description: Gain 100% of the gold earned on Unity as current gold (also affected by game speed)
+- id: refine-node-34
+  name: Refine Node 34
+  description: Buying magnet mineral upgrades doesn't spend magnets and unlocks autobuy for those upgrades
+- id: refine-node-35
+  name: Refine Node 35
+  description: Unlocks Runes and Rune Upgrades
+- id: refine-node-36
+  name: Refine Node 36
+  description: 'Refine Node 27 effect: a multiplier'
+- id: refine-node-37
+  name: Refine Node 37
+  description: Polish Knuckles are 20% more effective
+- id: refine-node-38
+  name: Refine Node 38
+  description: Gain more refine points based on your Knuckles Level (+1% per level)
+- id: refine-node-39
+  name: Refine Node 39
+  description: Relic 18 effect is now cubed
+- id: refine-node-40
+  name: Refine Node 40
+  description: VP and PP gain multipliers from magnet upgrades are powered to an exponent
+- id: refine-node-41
+  name: Refine Node 41
+  description: Unlocks Special Minerals
+- id: refine-node-42
+  name: Refine Node 42
+  description: Special Mineral Cost Fall is multiplied by a value
+- id: refine-node-43
+  name: Refine Node 43
+  description: Refine Node 25 effect is a multiplier stronger
+- id: refine-node-44
+  name: Refine Node 44
+  description: Increases the Special Mineral grid size.
+- id: refine-node-45
+  name: Refine Node 45
+  description: PP Gain Bonus from Trials is now much larger
+- id: refine-node-46
+  name: Refine Node 46
+  description: Unlocks Special Minerals Progression
+- id: refine-node-47
+  name: Refine Node 47
+  description: Sun Rune generation is a multiplier faster
+- id: refine-node-48
+  name: Refine Node 48
+  description: Moon Rune generation is a multiplier faster
+- id: refine-node-49
+  name: Refine Node 49
+  description: Refine Node 43 effect is a multiplier stronger
+- id: refine-node-50
+  name: Refine Node 50
+  description: RfP Gain a multiplier
+- id: refine-node-51
+  name: Refine Node 51
+  description: Special Mineral cost decay speed is multiplied by a multiplier
+- id: refine-node-52
+  name: Refine Node 52
+  description: Multiplies all Polish Enhancement effects by a multiplier
+- id: refine-node-53
+  name: Refine Node 53
+  description: Unlock automerge for Special Minerals (once every a value in-game seconds, affected by local mineral speed)
+- id: refine-node-54
+  name: Refine Node 54
+  description: Boosts Relic 31 by an exponent
+- id: refine-node-55
+  name: Refine Node 55
+  description: Unlock Elements
+- id: refine-node-56
+  name: Refine Node 56
+  description: Multiplies the 2nd Refine Node's effect by a multiplier
+- id: refine-node-57
+  name: Refine Node 57
+  description: Multiplies Global Element Mult. by a multiplier
+- id: refine-node-58
+  name: Refine Node 58
+  description: RN 7's effect is multiplied by a multiplier
+- id: refine-node-59
+  name: Refine Node 59
+  description: Makes the first node of each element stronger
+- id: refine-node-60
+  name: Refine Node 60
+  description: Multiplies Global Element Mult.
+- id: refine-node-61
+  name: Refine Node 61
+  description: Passive Merge EXP is also boosted by Relic 28 and max mineral spawn level
+- id: refine-node-62
+  name: Refine Node 62
+  description: Multiplies the first Wind Factor by a multiplier
+- id: refine-node-63
+  name: Refine Node 63
+  description: Keep Dilation Tree and DTP on Unity Reset
+- id: refine-node-64
+  name: Refine Node 64
+  description: Boosts Relic 4 by an exponent
+- id: refine-node-65
+  name: Refine Node 65
+  description: Empowers Relic 5 to an exponent
+- id: refine-node-66
+  name: Refine Node 66
+  description: Sacrificing relics no longer resets relic levels and now automatically sets them to max level
+- id: refine-node-67
+  name: Refine Node 67
+  description: Attack Prestige resets nothing
+- id: refine-node-68
+  name: Refine Node 68
+  description: Every a value Attack Levels gained reduces your SM Spawned Factor by 1
+- id: refine-node-69
+  name: Refine Node 69
+  description: Multiplies the first Mineral upgrade efficiency by a multiplier
+- id: refine-node-70
+  name: Refine Node 70
+  description: You can now spawn Black Special Gems (1% chance). Unlocks Tarot. Resets SMS Factor to 5,000 if it's >6,000, otherwise decreases it by 1,000
+- id: refine-node-71
+  name: Refine Node 71
+  description: Gain 0.01% of your PP gain on reset every second (affected by local minerals speed)
+- id: refine-node-72
+  name: Refine Node 72
+  description: Increases the size of both Mineral grids.
+- id: refine-node-73
+  name: Refine Node 73
+  description: Multiplies RN1 effect by a multiplier
+- id: refine-node-74
+  name: Refine Node 74
+  description: Makes all suit Tarot upgrade 2 effects a multiplier stronger
+- id: refine-node-75
+  name: Refine Node 75
+  description: Increases the base of all elements' factor 2 by a value
+- id: refine-node-76
+  name: Refine Node 76
+  description: Relic 37 is an exponent more effective
+- id: refine-node-77
+  name: Refine Node 77
+  description: Multiplies the first effect of all non-Arcana cards by a multiplier
+- id: refine-node-78
+  name: Refine Node 78
+  description: Doubles RN 77's effect
+- id: refine-node-79
+  name: Refine Node 79
+  description: You get a multiplier cards per draw
+- id: refine-node-80
+  name: Refine Node 80
+  description: Increases the size of both Mineral grids.
+- id: refine-node-81
+  name: Refine Node 81
+  description: Strengthens The Devil's base effect by a multiplier
+- id: refine-node-82
+  name: Refine Node 82
+  description: The Tower now destroys the first gem instead of a random one.
+- id: refine-node-83
+  name: Refine Node 83
+  description: The Wheel of Fortune now has a 99% chance to win.
+- id: refine-node-84
+  name: Refine Node 84
+  description: The Death now activates instantly.
+- id: refine-node-85
+  name: Refine Node 85
+  description: Unlocks the Sacrifice tab for Special Minerals. You now gain Sacrifice Dust when deleting Minerals, using The Tower, or using the Delete Special Mineral macro block.
+- id: refine-node-86
+  name: Refine Node 86
+  description: Grants SMP EXP to all Special Minerals every second based on Relic 45, The Tower, and average SMP level (a value/sec). Affected by Tarot Local Speed.
+- id: refine-node-87
+  name: Refine Node 87
+  description: Raises Relic 36's effect to an exponent and applies it to all Elements
+- id: refine-node-88
+  name: Refine Node 88
+  description: Increases Relic 46's soft cap by a value
+- id: refine-node-89
+  name: Refine Node 89
+  description: Unlocks Tarot Challenges! (All Special Minerals must be sacrificed)
+- id: refine-node-90
+  name: Refine Node 90
+  description: Multiplies Sacrifice Dust gain and the base of Relic 45 by a multiplier
+- id: refine-node-91
+  name: Refine Node 91
+  description: Element node effects are boosted as if you had a multiplier more of this resource
+- id: refine-node-92
+  name: Refine Node 92
+  description: The Empress, The Emperor, The Lovers, and Strength effects are now set to their maximum values
+- id: refine-node-93
+  name: Refine Node 93
+  description: SMP Gem Efficiency also boosts the second Special Mineral Sacrifice effect at a reduced rate
+- id: refine-node-94
+  name: Refine Node 94
+  description: Slightly reduces the soft cap of Fire 2 Upgrade
+- id: refine-node-95
+  name: Refine Node 95
+  description: Polish Spear effect is set to an exponent
+- id: refine-node-96
+  name: Refine Node 96
+  description: Multiplies Special Mineral bulk spawn by a multiplier
+- id: refine-node-97
+  name: Refine Node 97
+  description: Achievement 443 reward is raised to an exponent
+- id: refine-node-98
+  name: Refine Node 98
+  description: Polish Sword effect is raised to an exponent
+- id: refine-node-99
+  name: Refine Node 99
+  description: Unlocks Artifacts
+- id: refine-node-100
+  name: Refine Node 100
+  description: Reduces the base flushing cooldown of all Artifacts by a value hours
+- id: refine-node-101
+  name: Refine Node 101
+  description: Achievement 443 reward is powered to an exponent
+- id: refine-node-102
+  name: Refine Node 102
+  description: Unlocks Automation for upgrading Artifact Parts
+- id: refine-node-103
+  name: Refine Node 103
+  description: Unlocks Plague Tab
+- id: refine-node-104
+  name: Refine Node 104
+  description: Unlocks Endoplasmic Reticulum
+- id: refine-node-105
+  name: Refine Node 105
+  description: The Hierophant Passive Bonus is now boosted by the level of your equipped Endoplasmic Reticulum
+- id: refine-node-106
+  name: Refine Node 106
+  description: Spread Power of your currently equipped Endoplasmic Reticulum also boosts Black Gem base effect
+- id: refine-node-107
+  name: Refine Node 107
+  description: Divides cooldown of all artifacts by a value
+- id: refine-node-108
+  name: Refine Node 108
+  description: Max PlP now boosts sacrifice dust gain
+- id: refine-node-109
+  name: Refine Node 109
+  description: Multiplies PlP per PlG by a multiplier
+- id: refine-node-110
+  name: Refine Node 110
+  description: Multiplies Crafting Mastery by a multiplier
+- id: refine-node-111
+  name: Refine Node 111
+  description: Divides the ERP needed to craft an Endoplasmic Reticulum by a value
+- id: refine-node-112
+  name: Refine Node 112
+  description: Multiplies golden resources gain by xπ
+- id: refine-node-113
+  name: Refine Node 113
+  description: Multiplies Essence Density ER Upgrade by a multiplier
+- id: refine-node-114
+  name: Refine Node 114
+  description: Multiplies Base Spread Power (on ER craft) by a multiplier
+- id: refine-node-115
+  name: Refine Node 115
+  description: Multiplies Max Cure Progress by a multiplier
+- id: refine-node-116
+  name: Refine Node 116
+  description: Max Infected and Total Infected effects are powered to an exponent
+- id: refine-node-117
+  name: Refine Node 117
+  description: Gives an amount effective levels to all Endoplasmic Reticulum upgrades
+- id: refine-node-118
+  name: Refine Node 118
+  description: Divides artifact flush cooldown by a multiplier again
+- id: refine-node-119
+  name: Refine Node 119
+  description: Max PlP effect is powered to an exponent
+- id: refine-node-120
+  name: Refine Node 120
+  description: Multiplies Attack Exponent by a multiplier
+- id: refine-node-121
+  name: Refine Node 121
+  description: Unlocks Singularity!
+- id: refine-node-122
+  name: Refine Node 122
+  description: Adds a Singularity Effect (based on Singularity) that boosts your base Spread Speed
+- id: refine-node-123
+  name: Refine Node 123
+  description: Multiplies PlG Rewards by a multiplier
+- id: refine-node-124
+  name: Refine Node 124
+  description: PlG Rewards are powered to an exponent
+- id: refine-node-125
+  name: Refine Node 125
+  description: Adds Refine Node 125 as a Singularity Mult factor
+- id: refine-node-126
+  name: Refine Node 126
+  description: No longer applies an Atom gain penalty at a value
+- id: refine-node-127
+  name: Refine Node 127
+  description: No longer applies an Atom gain penalty at a value
+- id: refine-node-128
+  name: Refine Node 128
+  description: Makes the first Atom penalty weaker by a percentage. At max level, removes it completely.
+- id: refine-node-129
+  name: Refine Node 129
+  description: Adds Refine Points to Singularity Mult Effects
+- id: refine-node-130
+  name: Refine Node 130
+  description: Multiplies Refine Node 125 Effect by a multiplier
+- id: refine-node-131
+  name: Refine Node 131
+  description: Adds Atom Gain to Singularity Count Effects
+- id: refine-node-132
+  name: Refine Node 132
+  description: Adds Golden Resource Gain to Singularity Count Effect
+- id: refine-node-133
+  name: Refine Node 133
+  description: 'Empowers your current luck: an exponent'
+- id: refine-node-134
+  name: Refine Node 134
+  description: Adds Refine Points to Singularity Count Effects
+- id: refine-node-135
+  name: Refine Node 135
+  description: Adds a Singularity Mult effect that slightly boosts Luck
+- id: refine-node-136
+  name: Refine Node 136
+  description: Increases Local Singularity Speed Power by a value
+- id: refine-node-137
+  name: Refine Node 137
+  description: Unlocks Particles
+- id: refine-node-138
+  name: Refine Node 138
+  description: Particle Rank boosts Refine Point gain (an exponent / +0.001 per rank)
+- id: refine-node-139
+  name: Refine Node 139
+  description: Multiplies Alpha Generator Base by a multiplier
+- id: refine-node-140
+  name: Refine Node 140
+  description: Multiplies Alpha Multiplier Base by a multiplier
+- id: refine-node-141
+  name: Refine Node 141
+  description: Rank 5 Reward is a multiplier more effective
+- id: refine-node-142
+  name: Refine Node 142
+  description: The base of all particle generators is multiplied by a multiplier every 10 levels
+- id: refine-node-143
+  name: Refine Node 143
+  description: The base of all particle multipliers is multiplied by a multiplier every 7 levels
+- id: refine-node-144
+  name: Refine Node 144
+  description: 'Particle Rank boosts gold: an exponent (an amount per rank)'
+- id: refine-node-145
+  name: Refine Node 145
+  description: Every 100 levels, the base of all particle generators is multiplied by a multiplier
+- id: refine-node-146
+  name: Refine Node 146
+  description: Unlocks the Singularity Mult effect on the base of Alpha & Beta Generators
+- id: refine-node-147
+  name: Refine Node 147
+  description: Beta Particles boost Alpha Generator Base a bit better (a value -> a value)
+- id: refine-node-148
+  name: Refine Node 148
+  description: Empowerer base is increased by 0.001 every 20 levels for all particles
+- id: refine-node-149
+  name: Refine Node 149
+  description: Multiplies Alpha Generator Base by a multiplier
+- id: refine-node-150
+  name: Refine Node 150
+  description: Multiplies Beta Multiplier Base by a multiplier
+- id: refine-node-151
+  name: Refine Node 151
+  description: You passively gain Singularity Mult every second (also affected by local singularity speed)
+- id: refine-node-152
+  name: Refine Node 152
+  description: Decreases base requirement for Tier, Tetr and Pent by 1
+- id: refine-node-153
+  name: Refine Node 153
+  description: Rank Up resets nothing now
+- id: refine-node-154
+  name: Refine Node 154
+  description: The PlG to PlP bonus is raised to an exponent
+- id: refine-node-155
+  name: Refine Node 155
+  description: Unlocks the Singularity Mult effect on the base of all generators
+- id: refine-node-156
+  name: Refine Node 156
+  description: Atom Penalty at 1e5,000 is a multiplier weaker now
+- id: refine-node-157
+  name: Refine Node 157
+  description: Atom Penalty at 1e10,000 is a multiplier weaker now
+- id: refine-node-158
+  name: Refine Node 158
+  description: Alpha particle upgrades do not spend alpha points
+- id: refine-node-159
+  name: Refine Node 159
+  description: Tier Up resets nothing now
+- id: refine-node-160
+  name: Refine Node 160
+  description: Divides Tier Requirement by a multiplier (rounded up)
+- id: refine-node-161
+  name: Refine Node 161
+  description: Every 1,000 levels, the base of all particle generators is multiplied by a multiplier
+- id: refine-node-162
+  name: Refine Node 162
+  description: Luck is raised to an exponent
+- id: refine-node-163
+  name: Refine Node 163
+  description: Singularity Tree node levels now go 0 -> 2 -> 4 -> 6 -> 8 -> 10
+- id: refine-node-164
+  name: Refine Node 164
+  description: Beta particle upgrades do not spend beta points
+- id: refine-node-165
+  name: Refine Node 165
+  description: Gamma particle upgrades do not spend gamma points
+- id: refine-node-166
+  name: Refine Node 166
+  description: Local Particles Speed is boosted by ^0.1 of Local Singularity Speed
+- id: refine-node-167
+  name: Refine Node 167
+  description: Singularity Tree node levels now go 0 -> 4 -> 8 -> 10
+- id: refine-node-168
+  name: Refine Node 168
+  description: Tarot Challenges Singularity factors are a multiplier stronger (before softcap)
+- id: refine-node-169
+  name: Refine Node 169
+  description: Singularity Tree node costs cannot exceed the price at Level 5
+- id: refine-node-170
+  name: Refine Node 170
+  description: Alpha Particle Prestige resets nothing and is automatically performed every frame
+- id: refine-node-171
+  name: Refine Node 171
+  description: Multiplies the base of Delta Generators and Multipliers by a multiplier
+- id: refine-node-172
+  name: Refine Node 172
+  description: Singularity Tree node levels now go 0 -> 5 -> 10
+- id: refine-node-173
+  name: Refine Node 173
+  description: Every 100 levels, the base of all particle multipliers is multiplied by a multiplier
+- id: refine-node-174
+  name: Refine Node 174
+  description: Sacrifice dust spent after Lv.100 slightly increases the base of Special Minerals effect 2 (+0.01 per e1,000 to the effect 2 base)
+- id: refine-node-175
+  name: Refine Node 175
+  description: Equipped Endoplasmic Reticulum Level empowers luck (^1.001 per ER level)
+- id: refine-node-176
+  name: Refine Node 176
+  description: Beta Particle Prestige resets nothing and is automatically performed every frame
+- id: refine-node-177
+  name: Refine Node 177
+  description: Each time you perform a singularity after e25,000 atoms, spark cost decreases as if you had spawned 1 fewer spark in total
+- id: refine-node-178
+  name: Refine Node 178
+  description: Mastery Gain is multiplied by a multiplier (1 + pent / 10)
+- id: refine-node-179
+  name: Refine Node 179
+  description: Gamma Particle Prestige resets nothing and is automatically performed every frame
+- id: refine-node-180
+  name: Refine Node 180
+  description: Increases the total number of sparks you can equip by 1
+- id: refine-node-181
+  name: Refine Node 181
+  description: Unlocks Spark Mastery Factor for singularity
+- id: refine-node-182
+  name: Refine Node 182
+  description: Each spark spawned after buying this node decreases ETP cost by 5 ε (total reduction is softcapped after 100,000)
+- id: refine-node-183
+  name: Refine Node 183
+  description: Decreases base requirement for Tier, Tetr and Pent by 1 again
+- id: refine-node-184
+  name: Refine Node 184
+  description: Equipped Endoplasmic Reticulum Level boosts Spark Mastery gain (x1.01 per ER level)
+- id: refine-node-185
+  name: Refine Node 185
+  description: Destroying a spark now also grants mastery (^0.5 of this spark's mastery)
+- id: refine-node-186
+  name: Refine Node 186
+  description: Epsilon Capacity gain is multiplied by a multiplier
+- id: refine-node-187
+  name: Refine Node 187
+  description: 'Delta Prestige bonus is stronger based on your pent (x1.01 per Pent): a multiplier'
+- id: refine-node-188
+  name: Refine Node 188
+  description: 'Attack exponent is multiplied by 1 + 0.1 x Log10(mastery) (softcap at x10): a multiplier'
+- id: refine-node-189
+  name: Refine Node 189
+  description: Destroying Ultima Singular Zodiacs now also decreases Epsilon Tree Point cost. (Total reduction is softcapped after 100,000)
+- id: refine-node-190
+  name: Refine Node 190
+  description: Improves the effect of Refine Node 185 (destroying a spark grants mastery) based on the spark's rarity (+0.025 to the power per rarity tier from F)
+- id: refine-node-191
+  name: Refine Node 191
+  description: Delta particle upgrades do not spend delta points
+- id: refine-node-192
+  name: Refine Node 192
+  description: 'Epsilon Points generation is stronger based on your current Epsilon Points: a multiplier (+0.01 per 10K Epsilon Points, capped at x10)'
+- id: refine-node-193
+  name: Refine Node 193
+  description: Delta Particle Prestige resets nothing and is automatically performed every frame
+- id: refine-node-194
+  name: Refine Node 194
+  description: 'Refine Node 186 effect is better based on your Spark Luck ^ 0.5 : a multiplier'
+- id: refine-node-195
+  name: Refine Node 195
+  description: Increases total sparks you can equip by 1. Allows you to start Sun Tarot Challenge
+- id: refine-node-196
+  name: Refine Node 196
+  description: Multiplies Spark Mastery Gain on Spark Spawn by a multiplier
+- id: refine-node-197
+  name: Refine Node 197
+  description: Multiplies Singular Tree Node A14 Efficiency by a multiplier
+- id: refine-node-198
+  name: Refine Node 198
+  description: Multiplies Singular Tree Node A16 Efficiency by a multiplier
+- id: refine-node-199
+  name: Refine Node 199
+  description: Increases total sparks you can equip by 1.
+- id: refine-node-200
+  name: Refine Node 200
+  description: Multiplies Mastery Gain on Spark Destroy by a multiplier
+- id: earth-node-1
+  name: Earth Node 1
+  description: Increase the power of Earth Factor 1 by a value
+- id: earth-node-2
+  name: Earth Node 2
+  description: Earth boosts Refine Node 1's effect
+- id: earth-node-3
+  name: Earth Node 3
+  description: Earth boosts Gold Gain
+- id: earth-node-4
+  name: Earth Node 4
+  description: Earth boosts Relic 32's effect
+- id: earth-node-5
+  name: Earth Node 5
+  description: Earth adds to the base of RN 50
+- id: earth-node-6
+  name: Earth Node 6
+  description: Earth boosts Relic 37
+- id: earth-node-7
+  name: Earth Node 7
+  description: Earth boosts its own factor 2 (a multiplier multiplier)
+- id: earth-node-8
+  name: Earth Node 8
+  description: Pentacles boost Earth generation (factor 1)
+- id: earth-node-9
+  name: Earth Node 9
+  description: 'Earth boosts the first card bonuses of all Pentacles cards: a multiplier'
+- id: earth-node-10
+  name: Earth Node 10
+  description: Unlocks the third factor for Earth
+- id: fire-node-1
+  name: Fire Node 1
+  description: Increase the power of Fire Factor 1 by a value
+- id: fire-node-2
+  name: Fire Node 2
+  description: Increase Asc. Power from VP based on your current Fire
+- id: fire-node-3
+  name: Fire Node 3
+  description: Attack Levels past 3,600 boost your Fire Generation
+- id: fire-node-4
+  name: Fire Node 4
+  description: Fire boosts Relic 26's effect
+- id: fire-node-5
+  name: Fire Node 5
+  description: Fire boosts Relic 31's effect
+- id: fire-node-6
+  name: Fire Node 6
+  description: Fire boosts the base of RN 60
+- id: fire-node-7
+  name: Fire Node 7
+  description: Fire boosts its own factor 2 (a multiplier multiplier)
+- id: fire-node-8
+  name: Fire Node 8
+  description: Wands boost Fire generation (factor 1)
+- id: fire-node-9
+  name: Fire Node 9
+  description: 'Fire boosts the first card bonuses of all Wands cards: a multiplier'
+- id: fire-node-10
+  name: Fire Node 10
+  description: 'Relic 45''s effect is multiplied based on your Fire: a multiplier'
+- id: fire-node-11
+  name: Fire Node 11
+  description: Unlocks the third factor for Fire
+- id: water-node-1
+  name: Water Node 1
+  description: Each Water Zodiac multiplies your Luck by a multiplier
+- id: water-node-2
+  name: Water Node 2
+  description: Water boosts Refine Node 18's effect
+- id: water-node-3
+  name: Water Node 3
+  description: Water boosts Relic 24's effect
+- id: water-node-4
+  name: Water Node 4
+  description: Water boosts Relic 34's effect
+- id: water-node-5
+  name: Water Node 5
+  description: Water boosts the first node of all elements (at different rates)
+- id: water-node-6
+  name: Water Node 6
+  description: Multiplies the base of RN 60 by a multiplier
+- id: water-node-7
+  name: Water Node 7
+  description: Water boosts its own factor 2 (a multiplier multiplier)
+- id: water-node-8
+  name: Water Node 8
+  description: Cups boost Water generation (factor 1)
+- id: water-node-9
+  name: Water Node 9
+  description: 'Water boosts the first card bonuses of all Cups cards: a multiplier'
+- id: water-node-10
+  name: Water Node 10
+  description: 'Water boosts Global Element Multiplier: a multiplier'
+- id: water-node-11
+  name: Water Node 11
+  description: Unlocks the third factor for Water
+- id: wind-node-1
+  name: Wind Node 1
+  description: Increase the power of Wind Factor 1 by a value
+- id: wind-node-2
+  name: Wind Node 2
+  description: 'Current Wind divides Special Mineral base cost (cur.: a divisor)'
+- id: wind-node-3
+  name: Wind Node 3
+  description: Wind boosts Relic 25's effect
+- id: wind-node-4
+  name: Wind Node 4
+  description: PP (past 1.08e308) boosts your Wind Generation
+- id: wind-node-5
+  name: Wind Node 5
+  description: Wind boosts Relic 33's effect
+- id: wind-node-6
+  name: Wind Node 6
+  description: Relic 1 now applies to Attack Asc. Power
+- id: wind-node-7
+  name: Wind Node 7
+  description: Wind boosts its own factor 2 (a multiplier multiplier)
+- id: wind-node-8
+  name: Wind Node 8
+  description: Swords boost Wind generation (factor 1)
+- id: wind-node-9
+  name: Wind Node 9
+  description: 'Wind boosts the first card bonuses of all Swords cards: a multiplier'
+- id: wind-node-10
+  name: Wind Node 10
+  description: 'Relic 41''s effect is multiplied based on your Wind: a multiplier'
+- id: wind-node-11
+  name: Wind Node 11
+  description: 'Wind slowly boosts RN69: a multiplier'
+- id: wind-node-12
+  name: Wind Node 12
+  description: Unlocks the third factor for Wind
+- id: eternity-challenge-1
+  name: Eternity Challenge 1 (Slow as a Snail)
+  description: a multiplier to Lap Speed
+- id: eternity-challenge-2
+  name: Eternity Challenge 2 (Solid Root)
+  description: an amount to Common Exponent
+- id: eternity-challenge-3
+  name: Eternity Challenge 3 (Clear Night Sky)
+  description: an amount to Star Base
+- id: eternity-challenge-4
+  name: Eternity Challenge 4 (Burning Voltage)
+  description: a multiplier to Generator Exponent
+- id: eternity-challenge-5
+  name: Eternity Challenge 5 (Ascended to Nothing)
+  description: a multiplier to Ascension Power
+- id: eternity-challenge-6
+  name: Eternity Challenge 6 (Fired Yet Again)
+  description: a multiplier to Prestige bonuses
+- id: eternity-challenge-7
+  name: Eternity Challenge 7 (A Failed Experiment)
+  description: an amount free levels to all RP upgrades
+- id: eternity-challenge-8
+  name: Eternity Challenge 8 (Bounded Infinity)
+  description: IP gain is raised to an exponent
+- id: eternity-challenge-9
+  name: Eternity Challenge 9 (Wrecked Generators)
+  description: Generator Exponent is multiplied by a multiplier
+- id: eternity-challenge-10
+  name: Eternity Challenge 10 (Super Dilation)
+  description: a multiplier to DP gain
+- id: infinity-upgrade-1-1-infinity-generation-and-automation
+  name: 1;1 Infinity Generation & Automation
+  description: Generator a value multiplier is multiplied by Infinities and unlocks Automation and Autobuy.
+- id: infinity-upgrade-2-1-exponential-box
+  name: 2;1 Exponential Box
+  description: Common Exponent is increased by a value
+- id: infinity-upgrade-2-2-auto-ascend
+  name: 2;2 Auto Ascend
+  description: Unlock Auto Ascension
+- id: infinity-upgrade-3-1-fast-laps
+  name: 3;1 Fast Laps
+  description: Lap speed is multiplied by x1.1
+- id: infinity-upgrade-4-1-even-faster-laps
+  name: 4;1 Even Faster Laps
+  description: Lap speed is multiplied by x1.2
+- id: infinity-upgrade-5-1-long-term-prestiging
+  name: 5;1 Long-Term Prestiging
+  description: Prestige Mult gain is increased based on time spent in Infinity
+- id: infinity-upgrade-5-2-solid-exponent
+  name: 5;2 Solid Exponent
+  description: Common Exponent gain is multiplied based on your number of Infinities (before softcaps).
+- id: infinity-upgrade-5-3-auto-prestige
+  name: 5;3 Auto Prestige
+  description: Unlock Auto Prestige
+- id: infinity-upgrade-6-1-mighty-ascend
+  name: 6;1 Mighty Ascension
+  description: Ascension Power base is increased by 2
+- id: infinity-upgrade-6-2-ascend-to-ascend
+  name: 6;2 Ascend to Ascend
+  description: Ascension Power is multiplied based on your Infinities.
+- id: infinity-upgrade-7-1-challenges
+  name: 7;1 Challenges!
+  description: Unlock Challenges
+- id: infinity-upgrade-8-1-generator-time
+  name: 8;1 Generator and Time
+  description: Generator 1 is stronger based on time spent in the current Infinity.
+- id: infinity-upgrade-8-2-generator-power
+  name: 8;2 Generator and Power
+  description: Generator 1 is stronger based on current Generator Power.
+- id: infinity-upgrade-8-3-generator-constant
+  name: 8;3 Generator and Constant
+  description: Generator 1 is 5x stronger
+- id: infinity-upgrade-9-1-generator-2-time
+  name: 9;1 Generator 2 and Time
+  description: Generator 2 is stronger based on time spent in the current Infinity.
+- id: infinity-upgrade-9-2-generator-2-constant
+  name: 9;2 Generator 2 and Constant
+  description: Generator 2 is 3x stronger
+- id: infinity-upgrade-10-1-auto-work
+  name: 10;1 Auto Work
+  description: Unlock Promotion Automation
+- id: infinity-upgrade-11-1-weak-generators
+  name: 11;1 Weak Generators
+  description: Generator 1 is stronger based on your current IP.
+- id: infinity-upgrade-11-2-medium-generators
+  name: 11;2 Medium Generators
+  description: Generator 2 is stronger based on your current IP.
+- id: infinity-upgrade-12-1-first-but-better
+  name: 12;1 First, but Better
+  description: Infinities boost Generator 2 at a reduced rate.
+- id: infinity-upgrade-13-1-a-little-gift
+  name: 13;1 A Little Gift
+  description: Base Ascension Power is increased by 1
+- id: infinity-upgrade-14-1-first-for-the-first
+  name: 14;1 First for the First
+  description: Promotion 1 is stronger based on its level
+- id: infinity-upgrade-14-2-efficiency-v
+  name: 14;2 Efficiency V
+  description: Generator Exponent base is increased to 0.75
+- id: infinity-upgrade-15-1-auto-infinity
+  name: 15;1 Auto Infinity
+  description: Unlock Infinity Automation
+- id: infinity-upgrade-15-2-fast-ip-gain
+  name: 15;2 Fast IP Gain
+  description: IP is multiplied based on total Challenge time.
+- id: infinity-upgrade-15-3-first-generator-power
+  name: 15;3 First Generator Power
+  description: Generator 1 is multiplied based on total Challenge time.
+- id: infinity-upgrade-15-4-second-generator-power
+  name: 15;4 Second Generator Power
+  description: Generator 2 is multiplied based on total Challenge time.
+- id: infinity-upgrade-16-1-infinity-to-ip
+  name: 16;1 Infinities to IP
+  description: IP is multiplied based on Infinities.
+- id: infinity-upgrade-16-2-stronger-ascension-power
+  name: 16;2 Stronger Ascension Power
+  description: Ascension Power is multiplied based on your Infinities.
+- id: infinity-upgrade-16-3-empowered-promotions
+  name: 16;3 Empowered Promotions
+  description: Promotion 4 is stronger based on 9th Challenge time.
+- id: infinity-upgrade-17-1-third-s-turn
+  name: 17;1 Third's Turn
+  description: Generator 3 is stronger based on your Infinities.
+- id: infinity-upgrade-17-2-faster-infinity-gain
+  name: 17;2 Faster Infinity Gain
+  description: Infinities are multiplied based on total Challenge time.
+- id: infinity-upgrade-17-3-boost-to-the-first
+  name: 17;3 Boost for the First
+  description: Generator 1 is 10x stronger
+- id: infinity-upgrade-18-1-passive-infinities
+  name: 18;1 Passive Infinities
+  description: Trigger passive Infinity gains every a value times your fastest Infinity time.
+- id: infinity-upgrade-18-2-fourth-from-third
+  name: 18;2 Fourth from Third
+  description: Generator 4 is stronger based on bought Generator 3.
+- id: infinity-upgrade-18-3-third-from-second
+  name: 18;3 Third from Second
+  description: Generator 3 is stronger based on bought Generator 2.
+- id: infinity-upgrade-19-1-almost-one
+  name: 19;1 Almost One
+  description: Generator Exponent base is increased to 0.9
+- id: infinity-upgrade-19-2-age-of-inflation
+  name: 19;2 Age of Inflation
+  description: Promotion 3 is stronger based on Generator Mult.
+- id: infinity-upgrade-19-3-challenge-efficiency
+  name: 19;3 Challenge Efficiency
+  description: Lap speed is multiplied by x3
+- id: infinity-upgrade-20-1-as-fast-as-strong
+  name: 20;1 As Fast as Strong
+  description: All Generators are stronger based on your fastest Infinity.
+- id: infinity-upgrade-20-2-dynamic-generator-exponent
+  name: 20;2 Dynamic Generator Exponent
+  description: Generator Exponent is increased based on Generator Power.
+- id: infinity-upgrade-21-1-a-falling-star
+  name: 21;1 A Falling Star
+  description: Unlock Stars
+- id: animal-cat
+  name: Cat
+  description: IP gain is multiplied by your number of Eternities
+- id: animal-dog
+  name: Dog
+  description: +0.03 to Common Exponent
+- id: animal-parrot
+  name: Parrot
+  description: IP gain is multiplied by the number of Animals purchased
+- id: animal-fish
+  name: Fish
+  description: IP gain is multiplied by the number of completed Eternity Challenges
+- id: animal-ferret
+  name: Ferret
+  description: IP Gain x100
+- id: animal-gopher
+  name: Gopher
+  description: x1.01 to Common Exponent
+- id: animal-rabbit
+  name: Rabbit
+  description: x1.3 to Star Base
+- id: animal-hedgehog
+  name: Hedgehog
+  description: +0.01 to Common Exponent
+- id: animal-meta-cat
+  name: Meta-cat
+  description: x1.01 to Stardust Exponent
+- id: animal-mouse
+  name: Mouse
+  description: +0.02 to Common Exponent
+- id: animal-hamster
+  name: Hamster
+  description: x1.4 to Lap Speed
+- id: animal-guinea-pig
+  name: Guinea pig
+  description: x2 to Lap Speed
+- id: animal-jerboa
+  name: Jerboa
+  description: x3 to Lap Speed
+- id: animal-chinchilla
+  name: Chinchilla
+  description: x5 to Lap Speed
+- id: animal-squirrel
+  name: Squirrel
+  description: x1.05 to Generator Exponent
+- id: animal-rat
+  name: Rat
+  description: x1.005 to Common Exponent
+- id: animal-mole
+  name: Mole
+  description: +0.01 to Common Exponent
+- id: animal-jackalope
+  name: Jackalope
+  description: x1.01 to Stardust Exponent
+- id: animal-chicken
+  name: Chicken
+  description: IP gain is multiplied by the number of completed Eternity Milestones
+- id: animal-pigeon
+  name: Pigeon
+  description: Infinity gain is multiplied by the number of completed Animal Milestones
+- id: animal-rooster
+  name: Rooster
+  description: x1.45 to last Promotion power
+- id: animal-duck
+  name: Duck
+  description: x1.5 to third Promotion power
+- id: animal-goose
+  name: Goose
+  description: x1.1 to Generator Exponent
+- id: animal-pheasant
+  name: Pheasant
+  description: x2 to Ascension Power
+- id: animal-peacock
+  name: Peacock
+  description: x1.03 to Stardust Exponent
+- id: animal-owl
+  name: Owl
+  description: +0.01 to Common Exponent
+- id: animal-phoenix
+  name: Phoenix
+  description: x1.01 to Stardust Exponent
+- id: animal-pig
+  name: Pig
+  description: +1 to Star Base
+- id: animal-goat
+  name: Goat
+  description: x3 to Generator Mults
+- id: animal-sheep
+  name: Sheep
+  description: x10 to first Promotion power
+- id: animal-cow
+  name: Cow
+  description: EP is multiplied by 1 + Eternities^0.5
+- id: animal-horse
+  name: Horse
+  description: x1.3 to Star Base
+- id: animal-bull
+  name: Bull
+  description: +0.05 to Stardust Exponent
+- id: animal-llama
+  name: Llama
+  description: x1.02 to Stardust Exponent
+- id: animal-alpaca
+  name: Alpaca
+  description: +0.01 to Common Exponent
+- id: animal-unicorn
+  name: Unicorn
+  description: x1.01 to Stardust Exponent
+- id: animal-snake
+  name: Snake
+  description: x2 to EP gain
+- id: animal-frog
+  name: Frog
+  description: x1.1 to Generator Exponent
+- id: animal-toad
+  name: Toad
+  description: +0.05 to Common Exponent
+- id: animal-turtle
+  name: Turtle
+  description: +0.1 to Stardust Exponent
+- id: animal-chameleon
+  name: Chameleon
+  description: x1.5 to Star Base
+- id: animal-sea-turtle
+  name: Sea turtle
+  description: x1.05 to Stardust Exponent
+- id: animal-lizard
+  name: Lizard
+  description: x1.01 to Stardust Exponent
+- id: animal-crocodile
+  name: Crocodile
+  description: +0.01 to Common Exponent
+- id: animal-hydra
+  name: Hydra
+  description: x1.01 to Stardust Exponent
+- id: animal-zebra
+  name: Zebra
+  description: x1.01 to Common Exponent
+- id: animal-giraffe
+  name: Giraffe
+  description: a multiplier to IP gain
+- id: animal-lion
+  name: Lion
+  description: a multiplier to IP gain
+- id: animal-hippo
+  name: Hippo
+  description: a multiplier to IP gain
+- id: animal-rhino
+  name: Rhino
+  description: a multiplier to IP gain
+- id: animal-elephant
+  name: Elephant
+  description: a multiplier to IP gain
+- id: animal-anteater
+  name: Ant-eater
+  description: a multiplier to IP gain
+- id: animal-koala
+  name: Koala
+  description: a multiplier to IP gain
+- id: animal-pegasus
+  name: Pegasus
+  description: a multiplier to IP gain
+- id: animal-bunny
+  name: Bunny
+  description: x1.01 to Generator Exponent
+- id: animal-fox
+  name: Fox
+  description: x1.01 to Generator Exponent
+- id: animal-wolf
+  name: Wolf
+  description: x1.01 to Generator Exponent
+- id: animal-bear
+  name: Bear
+  description: x1.01 to Generator Exponent
+- id: animal-raccoon
+  name: Raccoon
+  description: x1.01 to Generator Exponent
+- id: animal-badger
+  name: Badger
+  description: x1.01 to Generator Exponent
+- id: animal-panda
+  name: Panda
+  description: x1.01 to Generator Exponent
+- id: animal-wombat
+  name: Wombat
+  description: x1.01 to Generator Exponent
+- id: animal-hippogriff
+  name: Hippogriff
+  description: x1.01 to Generator Exponent
+- id: animal-boar
+  name: Boar
+  description: x1.001 to Common Exponent
+- id: animal-panther
+  name: Panther
+  description: x1.001 to Common Exponent
+- id: animal-beaver
+  name: Beaver
+  description: x1.001 to Common Exponent
+- id: animal-yak
+  name: Yak
+  description: x1.001 to Common Exponent
+- id: animal-bobcat
+  name: Bobcat
+  description: x1.001 to Common Exponent
+- id: animal-tiger
+  name: Tiger
+  description: x1.001 to Common Exponent
+- id: animal-hyena
+  name: Hyena
+  description: x1.001 to Common Exponent
+- id: animal-monkey
+  name: Monkey
+  description: x1.001 to Common Exponent
+- id: animal-dragon
+  name: Dragon
+  description: x1.001 to Common Exponent
+- id: animal-penguin
+  name: Penguin
+  description: x1.01 to Stardust Base
+- id: animal-polar-bear
+  name: Polar bear
+  description: x1.01 to Stardust Base
+- id: animal-seal
+  name: Seal
+  description: x1.01 to Stardust Base
+- id: animal-walrus
+  name: Walrus
+  description: x1.01 to Stardust Base
+- id: animal-dolphin
+  name: Dolphin
+  description: x1.01 to Stardust Base
+- id: animal-orca
+  name: Orca
+  description: x1.01 to Stardust Base
+- id: animal-bat
+  name: Bat
+  description: x1.01 to Stardust Base
+- id: animal-eagle
+  name: Eagle
+  description: x1.01 to Stardust Base
+- id: animal-nu
+  name: Nu
+  description: +0.1 to Common Exponent
+- id: singularity-milestone-first-thousand
+  name: First Thousand
+  description: 'Sacrifice Dust Gain: ^1.05'
+- id: singularity-milestone-quantum-dust
+  name: Quantum Dust
+  description: 'Black Gem Efficiency: ^1.1'
+- id: singularity-milestone-atomic-flow
+  name: Atomic Flow
+  description: Elements Factors 1 and 2 powers x3
+- id: singularity-milestone-nuclear-bloom
+  name: Nuclear Bloom
+  description: Divides last elements nodes upgrades costs by a value
+- id: singularity-milestone-matter-collapse
+  name: Matter Collapse
+  description: Allows you to auto-select the highest Plague stage
+- id: singularity-milestone-quantum-pressure
+  name: Quantum Pressure
+  description: 'SMP Exp Requirements: ^0.75'
+- id: singularity-milestone-atom-overflow
+  name: Atom Overflow
+  description: Atoms are now unlocked as a Singularity Mult factor
+- id: singularity-milestone-horoscope-of-the-void
+  name: Horoscope Of The Void
+  description: You can now obtain Singular Zodiacs if you have already unlocked Houses
+- id: singularity-milestone-universe-under-pressure
+  name: Universe Under Pressure
+  description: Atoms past e1,000 boost luck for a little (new effect)
+- id: singularity-milestone-atom-particle-synergy
+  name: Atom-Particle Synergy
+  description: Max Atoms boost the base of all particle generators (+0.1 per e1,000 atoms)
+- id: singularity-milestone-ten-thousand-dimensions
+  name: Ten Thousand Dimensions
+  description: Max Atoms (after 1e10,000) slightly boost Refine Points
+- id: singularity-milestone-first-collapse
+  name: First Collapse
+  description: Unlocks Milestones. The SMS factor is now always 0 and cannot grow
+- id: singularity-milestone-accelerated-growth
+  name: Accelerated Growth
+  description: Unlocks Effects Tab
+- id: singularity-milestone-event-horizon
+  name: Event Horizon
+  description: Keep Plague on Singularity Reset. Plague Generator rewards no longer decrease.
+- id: singularity-milestone-spaghettification
+  name: Spaghettification
+  description: Unlocks Tree Tab
+- id: singularity-milestone-beyond-time
+  name: Beyond Time
+  description: Keep Artifacts on Singularity Reset
+- id: singularity-milestone-event-horizon-tax
+  name: Event Horizon Tax
+  description: The Atom requirement for the next Singularity starts increasing. You can still trigger a Singularity at 1.8e308 Atoms to gain Singularity Mult, but your Singularity Count will not increase
+- id: singularity-milestone-the-unforgotten
+  name: The Unforgotten
+  description: Keep Elements, Minerals and Tarot on Singularity Reset
+- id: singularity-milestone-loop-feeds-loop
+  name: Loop Feeds Loop
+  description: Singularity Count acts as a factor for the next Singularity Mult
+- id: singularity-milestone-astral-property
+  name: Astral Property
+  description: Unlocks Houses Tab
+- id: singularity-milestone-self-synergism
+  name: Self Synergism
+  description: Singularity Mult acts as a factor for the next Singularity Mult
+- id: singularity-milestone-one-hundred
+  name: One Hundred
+  description: Multiplies the base of all particle generators and multipliers by 1 + Singularity / 100
+- id: singularity-milestone-singular-master
+  name: Singular Master
+  description: Each singularity multiplies mastery gain by x1.01
+- id: tarot-artifact-heart-chamber
+  name: Heart Chamber
+  description: Multiplies Sacrifice Dust gain by a multiplier
+- id: tarot-artifact-empathy-valves
+  name: Empathy Valves
+  description: 'Relic 27 effect: a multiplier'
+- id: tarot-artifact-sorrow-filters
+  name: Sorrow Filters
+  description: 'Factor 3 for all Elements: an exponent'
+- id: tarot-artifact-joy-reservoir
+  name: Joy Reservoir
+  description: 'Relic 2 effect: an exponent'
+- id: tarot-artifact-memory-liquid
+  name: Memory Liquid
+  description: 'Relic 2 effect: an exponent'
+- id: tarot-artifact-connection-handles
+  name: Connection Handles
+  description: 'Polish Spear effect: a multiplier'
+- id: tarot-artifact-authenticity-glaze
+  name: Authenticity Glaze
+  description: 'Cup LOGPOW base: a value'
+- id: tarot-artifact-inner-reflection-surface
+  name: Inner Reflection Surface
+  description: 'All Polishing Enhancement effects: a multiplier'
+- id: tarot-artifact-vulnerability-aperture
+  name: Vulnerability Aperture
+  description: 'Relic 32 effect: a multiplier'
+- id: tarot-artifact-trauma-alchemizer
+  name: Trauma Alchemizer
+  description: 'Singularity Multiplier: a multiplier'
+- id: tarot-artifact-abundance-gears
+  name: Abundance Gears
+  description: Multiplies Sacrifice Dust gain by a multiplier
+- id: tarot-artifact-manifestation-pistons
+  name: Manifestation Pistons
+  description: 'Relic 26 effect: a multiplier'
+- id: tarot-artifact-fortune-cogs
+  name: Fortune Cogs
+  description: 'Polish Spear effect: an exponent'
+- id: tarot-artifact-stability-foundation
+  name: Stability Foundation
+  description: 'The Hierophant Challenge effect: a multiplier'
+- id: tarot-artifact-growth-chambers
+  name: Growth Chambers
+  description: 'Relic 2 effect: an exponent'
+- id: tarot-artifact-wealth-circulation-system
+  name: Wealth Circulation System
+  description: 'Yellow Gem base effect: a multiplier'
+- id: tarot-artifact-value-assessors
+  name: Value Assessors
+  description: 'Pentacle LOGPOW base: a value'
+- id: tarot-artifact-legacy-encoders
+  name: Legacy Encoders
+  description: Raises Earth 2 Node to an exponent
+- id: tarot-artifact-reality-anchors
+  name: Reality Anchors
+  description: 'Base Virus Essence from Dissolving Endoplasmic Reticulums: a multiplier'
+- id: tarot-artifact-glass-surface
+  name: Glass Surface
+  description: Multiplies Sacrifice Dust gain by a multiplier
+- id: tarot-artifact-silver-backing
+  name: Silver Backing
+  description: 'Relic 24 effect: a multiplier'
+- id: tarot-artifact-obsidian-frame
+  name: Obsidian Frame
+  description: 'Relic 56 effect: a multiplier'
+- id: tarot-artifact-focal-point
+  name: Focal Point
+  description: 'Relic 13 effect: a multiplier'
+- id: tarot-artifact-light-refractors
+  name: Light Refractors
+  description: 'Relic 2 effect: an exponent'
+- id: tarot-artifact-truth-facets
+  name: Truth Facets
+  description: 'Relic 21 effect: a multiplier'
+- id: tarot-artifact-memory-crystal
+  name: Memory Crystal
+  description: 'Sword LOGPOW base: a value'
+- id: tarot-artifact-perception-lens
+  name: Perception Lens
+  description: 'Base Spread Power on Endoplasmic Reticulum Craft Multiplier: a multiplier'
+- id: tarot-artifact-ramus
+  name: Ramus
+  description: Multiplies Sacrifice Dust gain by a multiplier
+- id: tarot-artifact-mandible
+  name: Mandible
+  description: 'Relic 25 effect: a multiplier'
+- id: tarot-artifact-teeth
+  name: Teeth
+  description: 'Relic 8 effect: an exponent'
+- id: tarot-artifact-maxilla
+  name: Maxilla
+  description: 'Relic 14 effect: an exponent'
+- id: tarot-artifact-nasal-bone
+  name: Nasal Bone
+  description: 'Relic 2 effect: an exponent'
+- id: tarot-artifact-infraorbitals
+  name: Infraorbital Bones
+  description: 'Refine Node 7 effect: a multiplier'
+- id: tarot-artifact-zygomatics
+  name: Zygomatic Bones
+  description: 'Wand LOGPOW base: a value'
+- id: tarot-artifact-frontal-bone
+  name: Frontal Bone
+  description: 'Relic 52 effect: a multiplier'
+- id: tarot-artifact-parietal-bone
+  name: Parietal Bone
+  description: 'The Hermit base effect: a multiplier'
+- id: tarot-artifact-temporal-bone
+  name: Temporal Bone
+  description: Raises Water Quality Factor to an exponent
+- id: tarot-artifact-occipital-bone
+  name: Occipital Bone
+  description: 'Plague Points per Plague Generator Multiplier: a multiplier'
+- id: tarot-the-fool
+  name: The Fool
+  description: 'Instantly spawns a Black Gem with Lv.a value; Cooldown Time: a value'
+- id: tarot-challenge-the-fool
+  name: Tarot Challenge The Fool
+  description: 'Reward: The Fool card now has an additional effect and becomes a passive bonus. Arcan Power Bonus: a multiplier'
+- id: tarot-the-magician
+  name: The Magician
+  description: 'Gain a value seconds of production for your currently generated element (you must be generating an element to use this Arcan).; Cooldown Time: a value'
+- id: tarot-challenge-the-magician
+  name: Tarot Challenge The Magician
+  description: 'Reward: The Magician card now has an additional effect and becomes a passive bonus. Arcan Power Bonus: a multiplier'
+- id: tarot-the-high-priestess
+  name: The High Priestess
+  description: 'Increases Refine Node 1''s effect by a multiplier for a while; Cooldown Time: a value'
+- id: tarot-challenge-the-high-priestess
+  name: Tarot Challenge The High Priestess
+  description: 'Reward: The High Priestess card now has an additional effect and becomes a passive bonus. Arcan Power Bonus: a multiplier'
+- id: tarot-the-empress
+  name: The Empress
+  description: 'Slowly increases and decreases Zodiac sell cost by a multiplier; Cooldown Time: a value'
+- id: tarot-challenge-the-empress
+  name: Tarot Challenge The Empress
+  description: 'Reward: The Empress card now has an additional effect and becomes a passive bonus. Arcan Power Bonus: a multiplier'
+- id: tarot-the-emperor
+  name: The Emperor
+  description: 'Slowly increases and decreases Mineral Cost Exp by a value; Cooldown Time: a value'
+- id: tarot-challenge-the-emperor
+  name: Tarot Challenge The Emperor
+  description: 'Reward: The Emperor card now has an additional effect and becomes a passive bonus. Arcan Power Bonus: a multiplier'
+- id: tarot-the-hierophant
+  name: The Hierophant
+  description: 'Levels up all your common Minerals by a value (but not above max spawn level + 50); Cooldown Time: a value'
+- id: tarot-challenge-the-hierophant
+  name: Tarot Challenge The Hierophant
+  description: 'Reward: The Hierophant card now has an additional effect and becomes a passive bonus. Arcan Power Bonus: a multiplier'
+- id: tarot-the-lovers
+  name: The Lovers
+  description: 'Slowly increases and decreases Relic 28 Effect by a multiplier; Cooldown Time: a value'
+- id: tarot-challenge-the-lovers
+  name: Tarot Challenge The Lovers
+  description: 'Reward: The Lovers card now has an additional effect and becomes a passive bonus. Arcan Power Bonus: a multiplier'
+- id: tarot-the-chariot
+  name: The Chariot
+  description: 'Decrease your SMS Factor by a value; Cooldown Time: a value'
+- id: tarot-challenge-the-chariot
+  name: Tarot Challenge The Chariot
+  description: 'Reward: The Chariot card now has an additional effect and becomes a passive bonus. Arcan Power Bonus: a multiplier'
+- id: tarot-justice
+  name: Justice
+  description: 'Keeps the lowest cost for spawning upcoming Special Minerals (a value secs); Cooldown Time: a value'
+- id: tarot-challenge-justice
+  name: Tarot Challenge Justice
+  description: 'Reward: The Justice card now has an additional effect and becomes a passive bonus. Arcan Power Bonus: a multiplier'
+- id: tarot-the-hermit
+  name: The Hermit
+  description: 'Makes other Tarot Arcana a multiplier more effective for a while; Cooldown Time: a value'
+- id: tarot-challenge-the-hermit
+  name: Tarot Challenge The Hermit
+  description: 'Reward: The Hermit card now has an additional effect and becomes a passive bonus. Arcan Power Bonus: a multiplier'
+- id: tarot-wheel-of-fortune
+  name: Wheel of Fortune
+  description: 'Gambling :D - 50% chance to gain more Tarot Draws, 50% chance to lose them. Maximum gain/loss: a value (they can go negative, but you need a positive number of draws to use this); Cooldown Time: a value'
+- id: tarot-challenge-wheel-of-fortune
+  name: Tarot Challenge Wheel of Fortune
+  description: 'Reward: The Wheel of Fortune card now has an additional effect and becomes a passive bonus. Arcan Power Bonus: a multiplier'
+- id: tarot-the-strength
+  name: Strength
+  description: 'Slowly increases and decreases Attack Exponent by a value; Cooldown Time: a value'
+- id: tarot-challenge-strength
+  name: Tarot Challenge Strength
+  description: 'Reward: The Strength card now has an additional effect and becomes a passive bonus. Arcan Power Bonus: a multiplier'
+- id: tarot-the-hanged-man
+  name: The Hanged Man
+  description: 'Makes Polish Knuckles count as an amount levels; Cooldown Time: a value'
+- id: tarot-challenge-the-hanged-man
+  name: Tarot Challenge The Hanged Man
+  description: 'Reward: The Hanged Man card now has an additional effect and becomes a passive bonus. Arcana Power Bonus: a multiplier'
+- id: tarot-death
+  name: Death
+  description: 'While this skill is active, it will randomly perform Refine Prestige, granting a multiplier more RfP; Cooldown Time: a value'
+- id: tarot-challenge-death
+  name: Tarot Challenge Death
+  description: 'Reward: The Death card now has an additional effect and becomes a passive bonus. Arcana Power Bonus: a multiplier'
+- id: tarot-temperance
+  name: Temperance
+  description: 'Add a value Zodiacs of the type in your Fortune Pars slot, but with the stats you''d get from Unity; Cooldown Time: a value'
+- id: tarot-challenge-temperance
+  name: Tarot Challenge Temperance
+  description: 'Reward: The Temperance card now has an additional effect and becomes a passive bonus. Arcana Power Bonus: a multiplier. You can now configure your next Unity Zodiacs in the Astrology tab''s Settings menu.'
+- id: tarot-the-devil
+  name: The Devil
+  description: 'Boosts the 1st effect of all common Tarot cards by +a multiplier with a 66% chance. With a 33% chance, it applies one of 5 debuffs (described in Help). It has a 1% chance to take your soul.; Cooldown Time: a value'
+- id: tarot-challenge-the-devil
+  name: Tarot Challenge The Devil
+  description: 'Reward: The Devil card now has an additional effect and becomes a passive bonus. Arcana Power Bonus: a multiplier'
+- id: tarot-the-tower
+  name: The Tower
+  description: 'Destroys a random Special Gem, granting this gem a value^[Gem Lv] SMP; Cooldown Time: a value'
+- id: tarot-challenge-the-tower
+  name: Tarot Challenge The Tower
+  description: 'Reward: The Tower card now has an additional effect and becomes a passive bonus. Arcana Power Bonus: a multiplier'
+- id: tarot-the-star
+  name: The Star
+  description: 'Multiplies your Luck by your number of powered stars, raised to an exponent; Cooldown Time: a value'
+- id: tarot-challenge-the-star
+  name: Tarot Challenge The Star
+  description: 'Reward: The Star card now has an additional effect and becomes a passive bonus. Arcana Power Bonus: a multiplier'
+- id: tarot-the-moon
+  name: The Moon
+  description: 'Upgrade the Zodiac in the Moon position to a multiplier quality, but it becomes weaker after e1,000 quality; Cooldown Time: a value'
+- id: tarot-challenge-the-moon
+  name: Tarot Challenge The Moon
+  description: 'Reward: The Moon card now has an additional effect and becomes a passive bonus. Arcana Power Bonus: a multiplier'
+- id: tarot-the-sun
+  name: The Sun
+  description: 'Grants a value levels to a random card you already own; Cooldown Time: a value'
+- id: tarot-challenge-the-sun
+  name: Tarot Challenge The Sun
+  description: 'Reward: The Sun card now has an additional effect and becomes a passive bonus. Arcana Power Bonus: a multiplier. Divides the cost of Refine Nodes 196 and above by a value.'
+- id: tarot-judgement
+  name: Judgement
+  description: 'Equalizes your Tarot resources and increases their values by an exponent; Cooldown Time: a value'
+- id: tarot-the-world
+  name: The World
+  description: 'Decreases the cooldowns of all previous Arcana by a value sec; Cooldown Time: a value'
+- id: tarot-ace-of-cups
+  name: Ace of Cups
+  description: 'Base Cups Generation: a value/s; Zodiac Quality: +an exponent'
+- id: tarot-challenge-ace-of-cups
+  name: Tarot Challenge Ace of Cups
+  description: 'Reward: Ace of Cups base effects: a multiplier'
+- id: tarot-two-of-cups
+  name: Two of Cups
+  description: 'Cups 1 first effect mult: a multiplier; Relic 37 Effect: +an exponent'
+- id: tarot-challenge-two-of-cups
+  name: Tarot Challenge Two of Cups
+  description: 'Reward: Two of Cups base effects: a multiplier'
+- id: tarot-three-of-cups
+  name: Three of Cups
+  description: 'Cups 2 first effect mult: a multiplier; Relic 33 Effect: a multiplier'
+- id: tarot-challenge-three-of-cups
+  name: Tarot Challenge Three of Cups
+  description: 'Reward: Three of Cups base effects: a multiplier'
+- id: tarot-four-of-cups
+  name: Four of Cups
+  description: 'Cups 3 first effect mult: a multiplier; Relic 14 Power: +an exponent'
+- id: tarot-challenge-four-of-cups
+  name: Tarot Challenge Four of Cups
+  description: 'Reward: Four of Cups base effects: a multiplier'
+- id: tarot-five-of-cups
+  name: Five of Cups
+  description: 'Cups 4 first effect mult: a multiplier; Refine Node 16 Effect: +a multiplier'
+- id: tarot-challenge-five-of-cups
+  name: Tarot Challenge Five of Cups
+  description: 'Reward: Five of Cups base effects: a multiplier'
+- id: tarot-six-of-cups
+  name: Six of Cups
+  description: 'Cups 5 first effect mult: a multiplier; Polish Spear Effect: +an exponent'
+- id: tarot-challenge-six-of-cups
+  name: Tarot Challenge Six of Cups
+  description: 'Reward: Six of Cups base effects: a multiplier'
+- id: tarot-seven-of-cups
+  name: Seven of Cups
+  description: 'Cups 6 first effect mult: a multiplier; Refine Node 52 Effect: +a multiplier'
+- id: tarot-challenge-seven-of-cups
+  name: Tarot Challenge Seven of Cups
+  description: 'Reward: Seven of Cups base effects: a multiplier'
+- id: tarot-eight-of-cups
+  name: Eight of Cups
+  description: 'Cups 7 first effect mult: a multiplier; Runes Generation: +a multiplier (Rounded Total)'
+- id: tarot-challenge-eight-of-cups
+  name: Tarot Challenge Eight of Cups
+  description: 'Reward: Eight of Cups base effects: a multiplier'
+- id: tarot-nine-of-cups
+  name: Nine of Cups
+  description: 'Cups 8 first effect mult: a multiplier; Basically divides the base mineral cost exponent by +/- a value'
+- id: tarot-challenge-nine-of-cups
+  name: Tarot Challenge Nine of Cups
+  description: 'Reward: Nine of Cups base effects: a multiplier'
+- id: tarot-ten-of-cups
+  name: Ten of Cups
+  description: 'Cups 9 first effect mult: a multiplier; Post 100 Polish Upgrades Cost Scaling is +a multiplier weaker'
+- id: tarot-challenge-ten-of-cups
+  name: Tarot Challenge Ten of Cups
+  description: 'Reward: Ten of Cups base effects: a multiplier'
+- id: tarot-page-of-cups
+  name: Page of Cups
+  description: 'Cups 10 first effect mult: a multiplier; The first 10 Cups Tarot card effects are +a multiplier stronger'
+- id: tarot-challenge-page-of-cups
+  name: Tarot Challenge Page of Cups
+  description: 'Reward: Page of Cups base effects: a multiplier'
+- id: tarot-knight-of-cups
+  name: Knight of Cups
+  description: 'Cups Page first effect multiplier: a multiplier; Special Minerals Merge Factor (SMMF) an amount'
+- id: tarot-challenge-knight-of-cups
+  name: Tarot Challenge Knight of Cups
+  description: 'Reward: Knight of Cups base effects: a multiplier'
+- id: tarot-queen-of-cups
+  name: Queen of Cups
+  description: 'Cups Knight first effect multiplier: a multiplier; Achievement 233 reward is multiplied by +a multiplier'
+- id: tarot-challenge-queen-of-cups
+  name: Tarot Challenge Queen of Cups
+  description: 'Reward: Queen of Cups base effects: a multiplier'
+- id: tarot-king-of-cups
+  name: King of Cups
+  description: 'Cups Queen first effect multiplier: a multiplier; Unlocks the second water factor and multiplies factor 1 for all elements by a multiplier (after the e308 softcap)'
+- id: tarot-challenge-king-of-cups
+  name: Tarot Challenge King of Cups
+  description: 'Reward: King of Cups base effects: a multiplier. Adds a Completed Cups Challenges Singularity Factor'
+- id: tarot-ace-of-pentacles
+  name: Ace of Pentacles
+  description: 'Base Pentacles Generation: a value/s; Gold Gain: +an exponent'
+- id: tarot-challenge-ace-of-pentacles
+  name: Tarot Challenge Ace of Pentacles
+  description: 'Reward: Ace of Pentacles base effects: a multiplier'
+- id: tarot-two-of-pentacles
+  name: Two of Pentacles
+  description: 'Pentacles 1 first effect mult: a multiplier; Zodiac Sell Cost: a multiplier'
+- id: tarot-challenge-two-of-pentacles
+  name: Tarot Challenge Two of Pentacles
+  description: 'Reward: Two of Pentacles base effects: a multiplier'
+- id: tarot-three-of-pentacles
+  name: Three of Pentacles
+  description: 'Pentacles 2 first effect mult: a multiplier; Relic 36 Effect: +an exponent'
+- id: tarot-challenge-three-of-pentacles
+  name: Tarot Challenge Three of Pentacles
+  description: 'Reward: Three of Pentacles base effects: a multiplier'
+- id: tarot-four-of-pentacles
+  name: Four of Pentacles
+  description: 'Pentacles 3 first effect mult: a multiplier; Luck Donut Power: +an exponent'
+- id: tarot-challenge-four-of-pentacles
+  name: Tarot Challenge Four of Pentacles
+  description: 'Reward: Four of Pentacles base effects: a multiplier'
+- id: tarot-five-of-pentacles
+  name: Five of Pentacles
+  description: 'Pentacles 4 first effect mult: a multiplier; Zodiac Sacrifice Power: +an exponent'
+- id: tarot-challenge-five-of-pentacles
+  name: Tarot Challenge Five of Pentacles
+  description: 'Reward: Five of Pentacles base effects: a multiplier'
+- id: tarot-six-of-pentacles
+  name: Six of Pentacles
+  description: 'Pentacles 5 first effect mult: a multiplier; Relic 28 Effect: +an exponent'
+- id: tarot-challenge-six-of-pentacles
+  name: Tarot Challenge Six of Pentacles
+  description: 'Reward: Six of Pentacles base effects: a multiplier'
+- id: tarot-seven-of-pentacles
+  name: Seven of Pentacles
+  description: 'Pentacles 6 first effect mult: a multiplier; Relic 31 Softcap is +a multiplier weaker'
+- id: tarot-challenge-seven-of-pentacles
+  name: Tarot Challenge Seven of Pentacles
+  description: 'Reward: Seven of Pentacles base effects: a multiplier'
+- id: tarot-eight-of-pentacles
+  name: Eight of Pentacles
+  description: 'Pentacles 7 first effect mult: a multiplier; Post 300 Mineral Cost Scaling is +a multiplier weaker'
+- id: tarot-challenge-eight-of-pentacles
+  name: Tarot Challenge Eight of Pentacles
+  description: 'Reward: Eight of Pentacles base effects: a multiplier'
+- id: tarot-nine-of-pentacles
+  name: Nine of Pentacles
+  description: 'Pentacles 8 first effect mult: a multiplier; Relic 17 is +a multiplier stronger'
+- id: tarot-challenge-nine-of-pentacles
+  name: Tarot Challenge Nine of Pentacles
+  description: 'Reward: Nine of Pentacles base effects: a multiplier'
+- id: tarot-ten-of-pentacles
+  name: Ten of Pentacles
+  description: 'Pentacles 9 first effect mult: a multiplier; Makes Pentacles 8''s effect +a multiplier stronger'
+- id: tarot-challenge-ten-of-pentacles
+  name: Tarot Challenge Ten of Pentacles
+  description: 'Reward: Ten of Pentacles base effects: a multiplier'
+- id: tarot-page-of-pentacles
+  name: Page of Pentacles
+  description: 'Pentacles 10 first effect mult: a multiplier; The first 10 Pentacles Tarot card effects are +a multiplier stronger'
+- id: tarot-challenge-page-of-pentacles
+  name: Tarot Challenge Page of Pentacles
+  description: 'Reward: Page of Pentacles base effects: a multiplier'
+- id: tarot-knight-of-pentacles
+  name: Knight of Pentacles
+  description: 'Pentacles Page first effect multiplier: a multiplier; Relic 41 effect multiplier +a multiplier'
+- id: tarot-challenge-knight-of-pentacles
+  name: Tarot Challenge Knight of Pentacles
+  description: 'Reward: Knight of Pentacles base effects: a multiplier'
+- id: tarot-queen-of-pentacles
+  name: Queen of Pentacles
+  description: 'Pentacles Knight first effect multiplier: a multiplier; Achievement 231 reward is multiplied by +a multiplier'
+- id: tarot-challenge-queen-of-pentacles
+  name: Tarot Challenge Queen of Pentacles
+  description: 'Reward: Queen of Pentacles base effects: a multiplier'
+- id: tarot-king-of-pentacles
+  name: King of Pentacles
+  description: 'Pentacles Queen first effect multiplier: a multiplier; Unlocks the second earth factor and multiplies factor 1 for all elements by a multiplier (after the e308 softcap)'
+- id: tarot-challenge-king-of-pentacles
+  name: Tarot Challenge King of Pentacles
+  description: 'Reward: King of Pentacles base effects: a multiplier. Adds a Completed Pentacles Challenges Singularity Factor'
+- id: tarot-ace-of-swords
+  name: Ace of Swords
+  description: 'Base Swords Generation: a value/s; Attack Mult Gain from VP: +an exponent'
+- id: tarot-challenge-ace-of-swords
+  name: Tarot Challenge Ace of Swords
+  description: 'Reward: Ace of Swords base effects: a multiplier'
+- id: tarot-two-of-swords
+  name: Two of Swords
+  description: 'Swords 1 first effect mult: a multiplier; Attack Ascend Power from VP: +an exponent'
+- id: tarot-challenge-two-of-swords
+  name: Tarot Challenge Two of Swords
+  description: 'Reward: Two of Swords base effects: a multiplier'
+- id: tarot-three-of-swords
+  name: Three of Swords
+  description: 'Swords 2 first effect mult: a multiplier; Attack Prestige Power: +an exponent'
+- id: tarot-challenge-three-of-swords
+  name: Tarot Challenge Three of Swords
+  description: 'Reward: Three of Swords base effects: a multiplier'
+- id: tarot-four-of-swords
+  name: Four of Swords
+  description: 'Swords 3 first effect mult: a multiplier; Relic 3 Power: +an exponent'
+- id: tarot-challenge-four-of-swords
+  name: Tarot Challenge Four of Swords
+  description: 'Reward: Four of Swords base effects: a multiplier'
+- id: tarot-five-of-swords
+  name: Five of Swords
+  description: 'Swords 4 first effect mult: a multiplier; Relic 13 Power: +a multiplier'
+- id: tarot-challenge-five-of-swords
+  name: Tarot Challenge Five of Swords
+  description: 'Reward: Five of Swords base effects: a multiplier'
+- id: tarot-six-of-swords
+  name: Six of Swords
+  description: 'Swords 5 first effect mult: a multiplier; Relic 20 Effect: +a multiplier'
+- id: tarot-challenge-six-of-swords
+  name: Tarot Challenge Six of Swords
+  description: 'Reward: Six of Swords base effects: a multiplier'
+- id: tarot-seven-of-swords
+  name: Seven of Swords
+  description: 'Swords 6 first effect mult: a multiplier; Refine Node 4 Effect: +a multiplier'
+- id: tarot-challenge-seven-of-swords
+  name: Tarot Challenge Seven of Swords
+  description: 'Reward: Seven of Swords base effects: a multiplier'
+- id: tarot-eight-of-swords
+  name: Eight of Swords
+  description: 'Swords 7 first effect mult: a multiplier; Polish Sword Effect: +an exponent'
+- id: tarot-challenge-eight-of-swords
+  name: Tarot Challenge Eight of Swords
+  description: 'Reward: Eight of Swords base effects: a multiplier'
+- id: tarot-nine-of-swords
+  name: Nine of Swords
+  description: 'Swords 8 first effect mult: a multiplier; DTU MID-2 is +a multiplier stronger'
+- id: tarot-challenge-nine-of-swords
+  name: Tarot Challenge Nine of Swords
+  description: 'Reward: Nine of Swords base effects: a multiplier'
+- id: tarot-ten-of-swords
+  name: Ten of Swords
+  description: 'Swords 9 first effect mult: a multiplier; Increases Atk. Exp by an amount'
+- id: tarot-challenge-ten-of-swords
+  name: Tarot Challenge Ten of Swords
+  description: 'Reward: Ten of Swords base effects: a multiplier'
+- id: tarot-page-of-swords
+  name: Page of Swords
+  description: 'Swords 10 first effect mult: a multiplier; The first 10 Swords Tarot card effects are +a multiplier stronger'
+- id: tarot-challenge-page-of-swords
+  name: Tarot Challenge Page of Swords
+  description: 'Reward: Page of Swords base effects: a multiplier'
+- id: tarot-knight-of-swords
+  name: Knight of Swords
+  description: 'Swords Page first effect multiplier: a multiplier; Common EXP multiplier +a multiplier'
+- id: tarot-challenge-knight-of-swords
+  name: Tarot Challenge Knight of Swords
+  description: 'Reward: Knight of Swords base effects: a multiplier'
+- id: tarot-queen-of-swords
+  name: Queen of Swords
+  description: 'Swords Knight first effect multiplier: a multiplier; Achievement 232 reward is multiplied by +a multiplier'
+- id: tarot-challenge-queen-of-swords
+  name: Tarot Challenge Queen of Swords
+  description: 'Reward: Queen of Swords base effects: a multiplier'
+- id: tarot-king-of-swords
+  name: King of Swords
+  description: 'Swords Queen first effect multiplier: a multiplier; Unlocks the second wind factor and multiplies factor 1 for all elements by a multiplier (after the e308 softcap)'
+- id: tarot-challenge-king-of-swords
+  name: Tarot Challenge King of Swords
+  description: 'Reward: King of Swords base effects: a multiplier. Adds a Completed Sword Challenges Singularity Factor'
+- id: tarot-ace-of-wands
+  name: Ace of Wands
+  description: 'Base Wands Generation: a value/s; Fire Factor 1: +an exponent'
+- id: tarot-challenge-ace-of-wands
+  name: Tarot Challenge Ace of Wands
+  description: 'Reward: Ace of Wands base effects: a multiplier'
+- id: tarot-two-of-wands
+  name: Two of Wands
+  description: 'Wands 1 first effect mult: a multiplier; Earth Factor 1: +an exponent'
+- id: tarot-challenge-two-of-wands
+  name: Tarot Challenge Two of Wands
+  description: 'Reward: Two of Wands base effects: a multiplier'
+- id: tarot-three-of-wands
+  name: Three of Wands
+  description: 'Wands 2 first effect mult: a multiplier; Wind Factor 1: +an exponent'
+- id: tarot-challenge-three-of-wands
+  name: Tarot Challenge Three of Wands
+  description: 'Reward: Three of Wands base effects: a multiplier'
+- id: tarot-four-of-wands
+  name: Four of Wands
+  description: 'Wands 3 first effect mult: a multiplier; Water Factor 1: +an exponent'
+- id: tarot-challenge-four-of-wands
+  name: Tarot Challenge Four of Wands
+  description: 'Reward: Four of Wands base effects: a multiplier'
+- id: tarot-five-of-wands
+  name: Five of Wands
+  description: 'Wands 4 first effect mult: a multiplier; All Elements Factor 1: +an exponent'
+- id: tarot-challenge-five-of-wands
+  name: Tarot Challenge Five of Wands
+  description: 'Reward: Five of Wands base effects: a multiplier'
+- id: tarot-six-of-wands
+  name: Six of Wands
+  description: 'Wands 5 first effect mult: a multiplier; Fire Node 3 Effect: +an exponent'
+- id: tarot-challenge-six-of-wands
+  name: Tarot Challenge Six of Wands
+  description: 'Reward: Six of Wands base effects: a multiplier'
+- id: tarot-seven-of-wands
+  name: Seven of Wands
+  description: 'Wands 6 first effect mult: a multiplier; Water Node 1 Effect: +an exponent'
+- id: tarot-challenge-seven-of-wands
+  name: Tarot Challenge Seven of Wands
+  description: 'Reward: Seven of Wands base effects: a multiplier'
+- id: tarot-eight-of-wands
+  name: Eight of Wands
+  description: 'Wands 7 first effect mult: a multiplier; Elements Local Speed: +an exponent'
+- id: tarot-challenge-eight-of-wands
+  name: Tarot Challenge Eight of Wands
+  description: 'Reward: Eight of Wands base effects: a multiplier'
+- id: tarot-nine-of-wands
+  name: Nine of Wands
+  description: 'Wands 8 first effect mult: a multiplier; Infinity Upgrade (2;1) is +a multiplier stronger'
+- id: tarot-challenge-nine-of-wands
+  name: Tarot Challenge Nine of Wands
+  description: 'Reward: Nine of Wands base effects: a multiplier'
+- id: tarot-ten-of-wands
+  name: Ten of Wands
+  description: 'Wands 9 first effect mult: a multiplier; Makes the first node of each element +a multiplier stronger'
+- id: tarot-challenge-ten-of-wands
+  name: Tarot Challenge Ten of Wands
+  description: 'Reward: Ten of Wands base effects: a multiplier'
+- id: tarot-page-of-wands
+  name: Page of Wands
+  description: 'Wands 10 first effect mult: a multiplier; The first 10 Wands Tarot card effects are +a multiplier stronger'
+- id: tarot-challenge-page-of-wands
+  name: Tarot Challenge Page of Wands
+  description: 'Reward: Page of Wands base effects: a multiplier'
+- id: tarot-knight-of-wands
+  name: Knight of Wands
+  description: 'Wands Page first effect multiplier: a multiplier; Tarot Arcana cooldowns /(1 + a value)'
+- id: tarot-challenge-knight-of-wands
+  name: Tarot Challenge Knight of Wands
+  description: 'Reward: Knight of Wands base effects: a multiplier'
+- id: tarot-queen-of-wands
+  name: Queen of Wands
+  description: 'Wands Knight first effect multiplier: a multiplier; Achievement 230 rewards are multiplied by (1 + a value)'
+- id: tarot-challenge-queen-of-wands
+  name: Tarot Challenge Queen of Wands
+  description: 'Reward: Queen of Wands base effects: a multiplier'
+- id: tarot-king-of-wands
+  name: King of Wands
+  description: 'Wands Queen first effect multiplier: a multiplier; Unlocks the second fire factor and multiplies factor 1 for all elements by a multiplier (after the e308 softcap)'
+- id: tarot-challenge-king-of-wands
+  name: Tarot Challenge King of Wands
+  description: 'Reward: King of Wands base effects: a multiplier. Adds a Completed Wand Challenges Singularity Factor'

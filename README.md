@@ -169,7 +169,8 @@ git-ignored.
 Unity rich-text tags are stripped. The numbers the game fills in at runtime are
 worded by the sign beside them: `x{0}` becomes "a multiplier", `^{0}` "an
 exponent", `/{0}` "a divisor", `{0}%` "a percentage", `+{0}` "an amount", and a
-bare `{0}` "a value"; a running total such as `(total: x{1})` is dropped, since
+bare `{0}` "a value"; a running total such as `(total: x{1})` or a closing
+`Currently: x{0}` line is dropped, since
 it is the player's state rather than the entity's. `atlas build` overlays the
 name and description field by field on the generated node, and a curated field
 still wins.
@@ -194,6 +195,24 @@ reads three more families straight from the strings:
 | `ENUM_SPARKTYPE_<COLOUR>`, `ENUM_SPARKTYPE_EFFECT_<COLOUR>` | `particles-spark-<colour>` | `UNI_PARTICLES_SPARK_NAME` (`Blue Spark`); the effect is the description. |
 
 Each id is created when no node has it and overlaid when one does.
+
+More families describe nodes the wiki already has. These never create a node:
+an entity with no node, or outside the checked index range, is reported.
+
+| Keys | Onto | Matched by |
+|---|---|---|
+| `UNI_MIN_REF_NODE_REWARD_<n>` | `refine-node-<n+1>` | Index, for 0–199, each checked against the wiki effect of that node. |
+| `UNI_ELEM_TREE_NODE_EFFECT_<ELEMENT>_<n>` | `<element>-node-<n+1>` | Index, for the checked ranges: Fire and Water 0–10, Wind 0–11, Earth 0–9. |
+| `ETR_CHA_REWD_<n>`, `ETR_CHL_NAME_<n>` | `eternity-challenge-<n+1>` | Index, verified by the `#<n+1>` in the name; named `Eternity Challenge <n> (<title>)`. |
+| `INF_UPGRADE_NAME_<a>_<b>`, `INF_UPGRADE_REWD_<a>_<b>` | the `infinity-upgrade-<a>-<b>-*` node | Grid cell, verified by name; named `<a>;<b> <title>`. |
+| `ETR_ANL_NAME_<a>_<b>`, `ETR_ANL_REWD_<a>_<b>` | `animal-*` in `animals` | Normalised name, else one near spelling. |
+| `SING_MILESTONES_NAME_<SING\|ATOM>_<n>`, `…_REWD_…` | `singularity-milestone-*` in the track's system | Same. |
+| `TAROT_ARTIFACT_PART_NAME_<SUIT>_<n>`, `TAROT_ARTIFACT_PART_<n>_EFFECT_<SUIT>` | `tarot-artifact-*` | Same. |
+| `UNI_TAROT_CARD_<SUIT>_<n>` with `…_EFFECT_1_…`/`…_EFFECT_2_…` | `tarot-*` in `tarot` | Same; both effects make the description. The card's `…_<SUIT>_REWARD_<n>` describes `tarot-challenge-<card>`. |
+
+`ETR_MIL_REWD_<n>` is reported, not mapped: the game lists eternity milestones
+in an order that skips the eternity counts the wiki numbers them by. No node
+models a single tarot upgrade, so `UNI_TAROT_UPGRADE_EFFECT_*` is reported too.
 
 Every other family (achievements, `ACH`, among them) has no system to map onto
 and is listed as skipped. An entity in the first four catalog families that no node
