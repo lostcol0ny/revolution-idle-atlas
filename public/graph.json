@@ -17577,9 +17577,6 @@
         },
         {
           "text": "From Achievement 201, Mult, Generators and Dilation Points gain $\\times 1.05^{N} \\times N^{N/20 - 10}$, and Zodiac Quality and Damage $\\times (N/50 - 2)$"
-        },
-        {
-          "text": "Each achievement also pays a one-off reward of Souls or Time Flux"
         }
       ],
       "id": "achievement-bonus",
@@ -17600,6 +17597,14 @@
       "name": "Secret Achievement Bonus",
       "system": "achievements",
       "wiki": "Secret_Achievements"
+    },
+    {
+      "confidence": "documented",
+      "description": "Each achievement, secrets included, pays a one-off Souls or Time Flux reward on completion.",
+      "id": "achievement-completion",
+      "kind": "achievement",
+      "name": "Completing an achievement",
+      "system": "achievements"
     }
   ],
   "edges": [
@@ -31832,24 +31837,16 @@
     },
     {
       "confidence": "documented",
-      "from": "achievement-secret-bonus",
-      "note": "Most Secret Achievements also pay a one-off reward of Souls or Time Flux",
-      "rel": "boosts",
-      "source": "wiki:Secret_Achievements",
-      "to": "souls"
-    },
-    {
-      "confidence": "documented",
-      "from": "achievement-bonus",
-      "note": "Each achievement also pays a one-off reward, such as +350 souls",
+      "from": "achievement-completion",
+      "note": "+350 souls; Secret Achievements pay one-off Souls the same way",
       "rel": "boosts",
       "source": "observed",
       "to": "souls"
     },
     {
       "confidence": "documented",
-      "from": "achievement-bonus",
-      "note": "Each achievement also pays a one-off reward, such as +30:00 TF",
+      "from": "achievement-completion",
+      "note": "+30:00 TF",
       "rel": "boosts",
       "source": "observed",
       "to": "time-flux"

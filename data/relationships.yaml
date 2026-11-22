@@ -4124,7 +4124,6 @@ nodes:
       - text: 'Mult Gain $\times (1 + 0.01 N)$'
       - text: 'From Achievement 51, Generators gain $\times (1 + 0.01 N)$ as well'
       - text: 'From Achievement 201, Mult, Generators and Dilation Points gain $\times 1.05^{N} \times N^{N/20 - 10}$, and Zodiac Quality and Damage $\times (N/50 - 2)$'
-      - text: Each achievement also pays a one-off reward of Souls or Time Flux
 
   - id: achievement-secret-bonus
     name: Secret Achievement Bonus
@@ -4134,6 +4133,16 @@ nodes:
     confidence: documented
     effects:
       - text: +0.1% Time Flux gain for every Secret Achievement obtained
+
+  # The one-off payout each achievement makes when it completes, as opposed to
+  # the aggregate multipliers above. The game shows it per achievement
+  # ("+350 souls", "+30:00 TF"); secrets pay the same way.
+  - id: achievement-completion
+    name: Completing an achievement
+    system: achievements
+    kind: achievement
+    confidence: documented
+    description: Each achievement, secrets included, pays a one-off Souls or Time Flux reward on completion.
 
   # The game fills this threshold in at runtime and the wiki has no row for it;
   # the number was read from the achievement in the game.
@@ -8483,24 +8492,17 @@ edges:
     source: wiki:Secret_Achievements
     confidence: documented
 
-  - from: achievement-secret-bonus
+  - from: achievement-completion
     to: souls
     rel: boosts
-    note: Most Secret Achievements also pay a one-off reward of Souls or Time Flux
-    source: wiki:Secret_Achievements
-    confidence: documented
-
-  - from: achievement-bonus
-    to: souls
-    rel: boosts
-    note: "Each achievement also pays a one-off reward, such as +350 souls"
+    note: "+350 souls; Secret Achievements pay one-off Souls the same way"
     source: observed
     confidence: documented
 
-  - from: achievement-bonus
+  - from: achievement-completion
     to: time-flux
     rel: boosts
-    note: "Each achievement also pays a one-off reward, such as +30:00 TF"
+    note: "+30:00 TF"
     source: observed
     confidence: documented
 
