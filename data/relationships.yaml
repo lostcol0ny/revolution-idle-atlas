@@ -3400,13 +3400,9 @@ nodes:
     wiki: Singularity#Tree
     confidence: provisional
 
-  # Filed under Atoms on the owner's reading of the live game. The wiki disagrees:
-  # it puts "One Hundred" in the Singularity Milestones table at "100 Singularity".
-  # Revisit if the page is ever updated -- one of the two is out of date. The
-  # reward the sweep reads off that row is kept; only the placement is overridden.
   - id: singularity-milestone-one-hundred
     name: One Hundred
-    system: singularity-milestones-atoms
+    system: singularity-milestones-singularity
     kind: upgrade
     wiki: Singularity#Milestones
     confidence: provisional
@@ -6733,8 +6729,8 @@ edges:
     source: wiki:Minerals
     confidence: documented
 
-  - from: tarot-challenge-the-star
-    to: singular-zodiacs
+  - from: singular-zodiacs
+    to: tarot-challenge-the-star
     rel: requires
     note: Perform a Singularity with an Uncommon+ Singular Zodiac
     source: wiki:Tarot

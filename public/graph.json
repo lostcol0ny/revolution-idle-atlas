@@ -6704,7 +6704,7 @@
       "id": "singularity-milestone-one-hundred",
       "kind": "upgrade",
       "name": "One Hundred",
-      "system": "singularity-milestones-atoms",
+      "system": "singularity-milestones-singularity",
       "wiki": "Singularity#Milestones"
     },
     {
@@ -26791,11 +26791,11 @@
     },
     {
       "confidence": "documented",
-      "from": "tarot-challenge-the-star",
+      "from": "singular-zodiacs",
       "note": "Perform a Singularity with an Uncommon+ Singular Zodiac",
       "rel": "requires",
       "source": "wiki:Tarot",
-      "to": "singular-zodiacs"
+      "to": "tarot-challenge-the-star"
     },
     {
       "confidence": "documented",

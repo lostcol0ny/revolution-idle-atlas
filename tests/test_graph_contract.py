@@ -466,14 +466,15 @@ def test_singularity_milestones_land_in_the_table_they_came_from(graph: dict):
     assert "Loop Feeds Loop" in by_system["singularity-milestones-singularity"]
     assert "Quantum Dust" in by_system["singularity-milestones-atoms"]
     assert "Full Deck" in by_system["singularity-milestones-progression"]
-    assert len(by_system["singularity-milestones-singularity"]) == 11
+    assert len(by_system["singularity-milestones-singularity"]) == 12
     assert len(by_system["singularity-milestones-progression"]) == 8
 
-    # The wiki files `One Hundred` under the Singularity table; the owner's
-    # reading of the live game puts it under Atoms, and a curated overlay moves
-    # it there. Pinned because an overlay that stops matching the swept id
-    # silently hands the row back to the wrong table.
-    assert "One Hundred" in by_system["singularity-milestones-atoms"]
+    # `One Hundred` is a Singularity milestone, where the wiki files it too. A
+    # curated overlay once moved it to Atoms, so this table now holds 12 names
+    # rather than 11. Pinned because the curated record restates the system,
+    # and an overlay that stops matching the swept id would go quiet.
+    assert "One Hundred" in by_system["singularity-milestones-singularity"]
+    assert "One Hundred" not in by_system["singularity-milestones-atoms"]
 
     # What is left on the layer itself has to be layer-level, or the split only
     # moved some of the content.
