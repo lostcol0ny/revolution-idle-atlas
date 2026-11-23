@@ -1,9 +1,9 @@
 
-Relics are a part of the core gameplay loop of [[Unity]], they are unlocked along with [[Attacks]] after completing '''15''' [[Trials|trials]], they can be found as the third tab in the unity section. Relics can be purchased with gold that is obtained from the attacks tab, each relic has a different purchase price that increases exponentially based of how much of that relic you have purchased. There are '''70''' relics that apply buffs to [[Attacks]], [[Score]], [[Zodiacs]], [[Minerals]] as well as other relics. The main gameplay surrounding relics involves farming gold from attacks which will be reinvested into increasing your attack level, gold can then also be used to increase the stats of your zodiacs and score calculations to help progress the rest of the game.
+Relics are a part of the core gameplay loop of [[Unity]], they are unlocked along with [[Attacks]] after completing '''15''' [[Trials|trials]], they can be found as the third tab in the unity section. Relics can be purchased with gold that is obtained from the attacks tab, each relic has a different purchase price that increases exponentially based of how much of that relic you have purchased. There are '''75''' relics that apply buffs to [[Attacks]], [[Score]], [[Zodiacs]], [[Minerals]] as well as other relics. The main gameplay surrounding relics involves farming gold from attacks which will be reinvested into increasing your attack level, gold can then also be used to increase the stats of your zodiacs and score calculations to help progress the rest of the game.
 [[File:Relic tab header.png|center|thumb|1500px|Relics tab header, details the player's current score-to-damage formula on the left, current gold count and number of unlocked relics in the middle and the player's highest attack level reached, their attack ascension power and attack Mult Gain bonus on the right]]
 
-Below the header is an array of 70 relics, each showing the current number of each relic purchased, the stats they give, and the cost to buy another one of that Relic.
-All 70 relics and their effects are listed in the table below.
+Below the header is an array of 75 relics, each showing the current number of each relic purchased, the stats they give, and the cost to buy another one of that Relic.
+All 75 relics and their effects are listed in the table below.
 
 {| class="wikitable sortable"
 ! colspan="6" |Relics
@@ -260,8 +260,7 @@ Raises Zodiac Exp. Factor Donut effect to a power (^)
 |Attack level 3,300
 |-
 |33
-|Weapon Evolution 
-Statue
+|Weapon Evolution Statue
 |[[File:Relic 033.png|128px|link=]]
 |[[Minerals#Refinement|RfP Gain]] multiplied by
 | +0.12
