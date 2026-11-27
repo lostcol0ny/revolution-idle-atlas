@@ -121,13 +121,25 @@ At various atom thresholds you will gain a buff or penalty. These buffs/penaltie
 |1.00e5000
 |^0.2
 |Atoms Gain
-|
+|Weakened with RN156
 |-
 |PENALTY
 |1.00e10000
 |^0.1
 |Atoms Gain
-|Seems to prevent post-endgame progression
+|Weakened with RN157 and Blue Spark
+|-
+|PENALTY
+|1.00e25000
+|^0.1
+|Atoms Gain
+|
+|-
+|PENALTY
+|1.00e50000
+|^0.2
+|Atoms Gain
+|
 |}*Values stated to be unmodifiable may be modifiable later in progression
 
 == Singularity Mult Gain Factors ==

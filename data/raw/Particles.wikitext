@@ -257,5 +257,168 @@ Only one spark of a certain color can be equipped at a time. At the beginning, y
 
 ==== Epsilon Tree ====
 [[File:Epsilon Tree.png|thumb|the Epsilon Tree]]
-Unlocked along with Epsilon, here you can purchase Epsilon Tree Points, or ETP to spend on a large upgrade tree. It functions very similar to the Dilation Tree, each upgrade can instead be upgraded infinitely, and the upgrades towards the center require all previous upgrades to unlock and purchase. There is no way to respec the tree, but levels in tree nodes can be sold for an amount equal to half the price of your next ETP. Epsilon can also be "prestiged" here to increase its max capacity.
-{{Stub|notes=need upgrades and stuff}}{{Main navbox}}
+Unlocked along with Epsilon, here you can purchase Epsilon Tree Points, or ETP to spend on a large upgrade tree. It functions very similar to the Dilation Tree, each upgrade can instead be upgraded infinitely, and the upgrades towards the center require all previous upgrades to unlock and purchase. There is no way to respec the tree, but levels in tree nodes can be sold for an amount equal to half the price of your next ETP. Epsilon can also be "prestiged" here to increase its max instead.
+{| class="wikitable"
+|+
+!Node
+!Effect
+!Unlock Requirement
+!Base ETP Cost
+|-
+|A1
+|Red and Blue Spark Base Mastery (x)
+|N/A
+|1
+|-
+|A2
+|Atoms Nerf e25,000 (/)
+|N/A
+|1
+|-
+|A3
+|Orange Spark Base Mastery (x)
+|N/A
+|1
+|-
+|A4
+|Attack HP Requirement (/^)
+|N/A
+|1
+|-
+|A5
+|Yellow Spark Base Mastery (x)
+|N/A
+|1
+|-
+|A6
+|Sacrifice Dust Gain (^)
+|N/A
+|1
+|-
+|A7
+|Green Spark Base Mastery (x)
+|N/A
+|1
+|-
+|A8
+|Tarot Golden Resource Base Gain (^)
+|N/A
+|1
+|-
+|A9
+|Cyan Spark Base Mastery (x)
+|N/A
+|1
+|-
+|A10
+|Particle Generator Base Multiplier per 67 Levels (x)
+|N/A
+|1
+|-
+|A11
+|Purple Spark Base Mastery (x)
+|N/A
+|1
+|-
+|A12
+|Endoplasmic Reticulum Craft Requirement (/^)
+|N/A
+|1
+|-
+|A13
+|Pink Spark Base Mastery (x)
+|N/A
+|1
+|-
+|A14
+|Spark Luck (x)
+|N/A
+|1
+|-
+|A15
+|Black and White Spark Base Mastery (x)
+|N/A
+|1
+|-
+|A16
+|Sparks Epsilon Gain Effect (x)
+|N/A
+|1
+|-
+|B1
+|Boosts A1 and A2 Efficiency (x)
+|5 points in A1 and A2
+|2
+|-
+|B2
+|Boosts A3 and A4 Efficiency (x)
+|5 points in A3 and A4
+|2
+|-
+|B3
+|Boosts A5 and A6 Efficiency (x)
+|5 points in A5 and A6
+|2
+|-
+|B4
+|Boosts A7 and A8 Efficiency (x)
+|5 points in A7 and A8
+|2
+|-
+|B5
+|Boosts A9 and A10 Efficiency (x)
+|5 points in A9 and A10
+|2
+|-
+|B6
+|Boosts A11 and A12 Efficiency (x)
+|5 points in A11 and A12
+|2
+|-
+|B7
+|Boosts A13 and A14 Efficiency (x)
+|5 points in A13 and A14
+|2
+|-
+|B8
+|Boosts A15 and A16 Efficiency (x)
+|5 points in A15 and A16
+|2
+|-
+|C1
+|Boosts B1 and B2 Efficiency (x)
+|5 points in B1 and B2
+|4
+|-
+|C2
+|Boosts B3 and B4 Efficiency (x)
+|5 points in B3 and B4
+|4
+|-
+|C3
+|Boosts B5 and B6 Efficiency (x)
+|5 points in B5 and B6
+|4
+|-
+|C4
+|Boosts B7 and B8 Efficiency (x)
+|5 points in B7 and B8
+|4
+|-
+|D1
+|Boosts C1 and C2 Efficiency (x)
+|5 points in C1 and C2
+|7
+|-
+|D2
+|Boosts C3 and C4 Efficiency (x)
+|5 points in C3 and C4
+|7
+|-
+|E
+|Boosts D1 and D2 Efficiency (x)
+|5 points in D1 and D2
+|10
+|}
+
+{{Main navbox}}

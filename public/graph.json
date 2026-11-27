@@ -3892,7 +3892,7 @@
       "description": "Delta Particle Prestige resets nothing and is automatically performed every frame",
       "effects": [
         {
-          "text": "???"
+          "text": "Delta Particle Prestige resets nothing and is automatically performed every frame"
         }
       ],
       "id": "refine-node-193",
@@ -3906,7 +3906,7 @@
       "description": "Refine Node 186 effect is better based on your Spark Luck ^ 0.5 : a multiplier",
       "effects": [
         {
-          "text": "???"
+          "text": "Refine Node 186 effect is better based on your Spark Luck ^0.5 (xX)"
         }
       ],
       "id": "refine-node-194",
@@ -3920,7 +3920,7 @@
       "description": "Increases total sparks you can equip by 1. Allows you to start Sun Tarot Challenge",
       "effects": [
         {
-          "text": "???"
+          "text": "Increase the total number of sparks you can equip by 1. allows you to start sun terot challenge"
         }
       ],
       "id": "refine-node-195",
@@ -3962,7 +3962,7 @@
       "description": "Multiplies Singular Tree Node A16 Efficiency by a multiplier",
       "effects": [
         {
-          "text": "???"
+          "text": "Multiplies Singular Tree Node A16 Efficiency by x1.25"
         }
       ],
       "id": "refine-node-198",
@@ -3976,7 +3976,7 @@
       "description": "Increases total sparks you can equip by 1.",
       "effects": [
         {
-          "text": "???"
+          "text": "Increases total sparks you can equip by 1."
         }
       ],
       "id": "refine-node-199",
@@ -21217,6 +21217,67 @@
     },
     {
       "confidence": "documented",
+      "from": "refine-node-192",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-193"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "refine-node-193",
+      "note": "Delta Particle Prestige resets nothing and is automatically performed every frame",
+      "rel": "boosts",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "particles-delta"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-192",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-194"
+    },
+    {
+      "confidence": "provisional",
+      "from": "refine-node-194",
+      "note": "Refine Node 186 effect is better based on your Spark Luck ^0.5 (xX)",
+      "rel": "boosts",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-186"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "spark-luck",
+      "note": "Refine Node 186 effect is better based on your Spark Luck ^0.5 (xX)",
+      "rel": "boosts",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-194"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-194",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-195"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "refine-node-195",
+      "note": "Increase the total number of sparks you can equip by 1. allows you to start sun terot challenge",
+      "rel": "boosts",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "particles-sparks"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "refine-node-195",
+      "note": "Increase the total number of sparks you can equip by 1. allows you to start sun terot challenge",
+      "rel": "boosts",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "planet-sun"
+    },
+    {
+      "confidence": "documented",
       "from": "refine-node-185",
       "rel": "requires",
       "source": "wiki:Minerals/Refine_Tree",
@@ -21229,6 +21290,28 @@
       "rel": "boosts",
       "source": "wiki:Minerals/Refine_Tree",
       "to": "spark-mastery"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-191",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-198"
+    },
+    {
+      "confidence": "documented",
+      "from": "refine-node-191",
+      "rel": "requires",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "refine-node-199"
+    },
+    {
+      "confidence": "uncertain",
+      "from": "refine-node-199",
+      "note": "Increases total sparks you can equip by 1.",
+      "rel": "boosts",
+      "source": "wiki:Minerals/Refine_Tree",
+      "to": "particles-sparks"
     },
     {
       "confidence": "documented",

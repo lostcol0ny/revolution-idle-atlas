@@ -778,18 +778,18 @@
 | rfp increase = 
 | effect = Epsilon Points generation is stronger based on your current Epsilon Points x1 (+0.01 per 10K Epsilon Points, capped at x10)
 | req = 137 }}
-{{RN|193| max = 1 | rfp = ???
+{{RN|193| max = 1 | rfp = e225,000
 | rfp increase = 
-| effect = ???
-| req = ??? }}
-{{RN|194| max = 1 | rfp = ???
+| effect = Delta Particle Prestige resets nothing and is automatically performed every frame
+| req = 192 }}
+{{RN|194| max = 1 | rfp = e450,000
 | rfp increase = 
-| effect = ???
-| req = ??? }}
-{{RN|195| max = 1 | rfp = ???
+| effect = Refine Node 186 effect is better based on your Spark Luck ^0.5 (xX)
+| req = 192 }}
+{{RN|195| max = 1 | rfp = e1,000,000
 | rfp increase = 
-| effect = ???
-| req = ??? }}
+| effect = Increase the total number of sparks you can equip by 1. allows you to start sun terot challenge
+| req = 194 }}
 | colspan=6 style="text-align:center;background-color:red"| '''Note: Sun challenge completion further lowers the cost of the following nodes (divides by e100,000,000) to the listed values .'''
 {{RN|196| max = 10 | rfp = e1,100,000
 | rfp increase = 
@@ -799,14 +799,14 @@
 | rfp increase = 
 | effect = ???
 | req = ??? }}
-{{RN|198| max = 1 | rfp = ???
+{{RN|198| max = 1 | rfp = e1,350,000
 | rfp increase = 
-| effect = ???
-| req = ??? }}
-{{RN|199| max = 1 | rfp = ???
+| effect = Multiplies Singular Tree Node A16 Efficiency by x1.25
+| req = 191 }}
+{{RN|199| max = 1 | rfp = e1,500,000
 | rfp increase = 
-| effect = ???
-| req = ??? }}
+| effect = Increases total sparks you can equip by 1.
+| req = 191 }}
 {{RN|200| max = 5 | rfp = e1,600,000
 | rfp increase = 
 | effect = Multiplies Mastery Gain on Spark Destroy by xX
