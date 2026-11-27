@@ -2315,7 +2315,7 @@ nodes:
   wiki: Minerals/Refine_Tree
   confidence: documented
   effects:
-  - text: ???
+  - text: Delta Particle Prestige resets nothing and is automatically performed every frame
 - id: refine-node-194
   name: Refine Node 194
   system: refine-tree
@@ -2323,7 +2323,7 @@ nodes:
   wiki: Minerals/Refine_Tree
   confidence: documented
   effects:
-  - text: ???
+  - text: Refine Node 186 effect is better based on your Spark Luck ^0.5 (xX)
 - id: refine-node-195
   name: Refine Node 195
   system: refine-tree
@@ -2331,7 +2331,7 @@ nodes:
   wiki: Minerals/Refine_Tree
   confidence: documented
   effects:
-  - text: ???
+  - text: Increase the total number of sparks you can equip by 1. allows you to start sun terot challenge
 - id: refine-node-196
   name: Refine Node 196
   system: refine-tree
@@ -2355,7 +2355,7 @@ nodes:
   wiki: Minerals/Refine_Tree
   confidence: documented
   effects:
-  - text: ???
+  - text: Multiplies Singular Tree Node A16 Efficiency by x1.25
 - id: refine-node-199
   name: Refine Node 199
   system: refine-tree
@@ -2363,7 +2363,7 @@ nodes:
   wiki: Minerals/Refine_Tree
   confidence: documented
   effects:
-  - text: ???
+  - text: Increases total sparks you can equip by 1.
 - id: refine-node-200
   name: Refine Node 200
   system: refine-tree
@@ -8959,6 +8959,51 @@ edges:
     Points, capped at x10)
   source: wiki:Minerals/Refine_Tree
   confidence: uncertain
+- from: refine-node-192
+  to: refine-node-193
+  rel: requires
+  source: wiki:Minerals/Refine_Tree
+  confidence: documented
+- from: refine-node-193
+  to: particles-delta
+  rel: boosts
+  note: Delta Particle Prestige resets nothing and is automatically performed every frame
+  source: wiki:Minerals/Refine_Tree
+  confidence: uncertain
+- from: refine-node-192
+  to: refine-node-194
+  rel: requires
+  source: wiki:Minerals/Refine_Tree
+  confidence: documented
+- from: refine-node-194
+  to: refine-node-186
+  rel: boosts
+  note: Refine Node 186 effect is better based on your Spark Luck ^0.5 (xX)
+  source: wiki:Minerals/Refine_Tree
+  confidence: provisional
+- from: spark-luck
+  to: refine-node-194
+  rel: boosts
+  note: Refine Node 186 effect is better based on your Spark Luck ^0.5 (xX)
+  source: wiki:Minerals/Refine_Tree
+  confidence: uncertain
+- from: refine-node-194
+  to: refine-node-195
+  rel: requires
+  source: wiki:Minerals/Refine_Tree
+  confidence: documented
+- from: refine-node-195
+  to: particles-sparks
+  rel: boosts
+  note: Increase the total number of sparks you can equip by 1. allows you to start sun terot challenge
+  source: wiki:Minerals/Refine_Tree
+  confidence: uncertain
+- from: refine-node-195
+  to: planet-sun
+  rel: boosts
+  note: Increase the total number of sparks you can equip by 1. allows you to start sun terot challenge
+  source: wiki:Minerals/Refine_Tree
+  confidence: uncertain
 - from: refine-node-185
   to: refine-node-196
   rel: requires
@@ -8968,6 +9013,22 @@ edges:
   to: spark-mastery
   rel: boosts
   note: Multiplies Spark Mastery Gain on Spark Spawn by xX
+  source: wiki:Minerals/Refine_Tree
+  confidence: uncertain
+- from: refine-node-191
+  to: refine-node-198
+  rel: requires
+  source: wiki:Minerals/Refine_Tree
+  confidence: documented
+- from: refine-node-191
+  to: refine-node-199
+  rel: requires
+  source: wiki:Minerals/Refine_Tree
+  confidence: documented
+- from: refine-node-199
+  to: particles-sparks
+  rel: boosts
+  note: Increases total sparks you can equip by 1.
   source: wiki:Minerals/Refine_Tree
   confidence: uncertain
 - from: refine-node-184
